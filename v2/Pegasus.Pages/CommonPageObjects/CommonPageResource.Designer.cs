@@ -610,6 +610,42 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Capítulo 02: La vida universitaria (ORGANIZED BY CONTENT TYPE).
+        /// </summary>
+        internal static string ComonPage_Capítulo02_FolderName {
+            get {
+                return ResourceManager.GetString("ComonPage_Capítulo02_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capítulo 03: Estamos en casa (ORGANIZED BY CONTENT TYPE).
+        /// </summary>
+        internal static string ComonPage_Capítulo03_FolderName {
+            get {
+                return ResourceManager.GetString("ComonPage_Capítulo03_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capítulo 05: ¡A divertirse! La música y el cine (ORGANIZED BY CONTENT TYPE).
+        /// </summary>
+        internal static string ComonPage_Capítulo05_FolderName {
+            get {
+                return ResourceManager.GetString("ComonPage_Capítulo05_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capítulo 06: ¡Sí, lo sé! (ORGANIZED BY CONTENT TYPE).
+        /// </summary>
+        internal static string ComonPage_Capítulo06_FolderName {
+            get {
+                return ResourceManager.GetString("ComonPage_Capítulo06_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Course Materials.
         /// </summary>
         internal static string ComonPage_Course_TabName {
@@ -723,6 +759,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string ComonPage_Wait_Time {
             get {
                 return ResourceManager.GetString("ComonPage_Wait_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [title$=&apos;STUDENT ACTIVITIES MANUAL&apos;].
+        /// </summary>
+        internal static string ComonPage_WL_SubFolder_Name {
+            get {
+                return ResourceManager.GetString("ComonPage_WL_SubFolder_Name", resourceCulture);
             }
         }
     }

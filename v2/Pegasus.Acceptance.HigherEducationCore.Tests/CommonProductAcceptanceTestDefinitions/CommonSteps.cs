@@ -87,6 +87,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Correct Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
+            bool gh = base.IsPopupPresent((popUpName),10);
             //Is Pop Up Present
             Boolean isPopUpExist = base.IsWindowsExists(popUpName);
             //Assert We Have Correct Pop Up Window Opened
@@ -697,7 +698,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             // select particular window here
             base.SelectWindow(base.GetPageTitle);
-
+            if (activityUnderTabName.Equals("Gradebook"))
             // select grade book right iframe here
             new GBInstructorUXPage().SelectGradebookFrame();
 
@@ -770,6 +771,45 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            
         }
 
+        /// <summary>
+        /// Verify folder asset is present.
+        /// </summary>
+        /// <param name="expectedFolderAssetName">This is a activity folder name.</param>
+        [Then(@"I should see ""(.*)"" asset")]
+        public void VerifyFolderAssetPresent(string expectedFolderAssetName)
+        {
+            //Verify expected folder name is same as actual folder name
+            Logger.LogMethodEntry("CommonSteps",
+              "VerifyFolderAssetPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Assert expected and actual folder values
+            Logger.LogAssertion("VerifyFolderAssetPresent",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedFolderAssetName,
+                    new CalendarHedDefaultUxPage().
+                    GetActualFolderName(expectedFolderAssetName)));
+            Logger.LogMethodExit("CommonSteps",
+                "VerifyFolderAssetPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Drag And Drop The Folder To The CurrentDate.
+        /// </summary>
+        /// <param name="activityName">This the activity folder name.</param>
+        [When(@"I drag and drop the ""(.*)"" folder to the current date")]
+        public void DragAndDropTheFolderToTheCurrentDate(string activityName)
+        {
+            // Drag and drop a folder asset to current date.
+            Logger.LogMethodEntry("CommonSteps",
+               "DragAndDropFolderToCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Drag and drop a folder asset to current date.
+            new CalendarHedDefaultUxPage().DragAndDropFolderAsset(activityName);
+            Logger.LogMethodExit("CommonSteps",
+              "DragAndDropFolderToCurrentDate",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

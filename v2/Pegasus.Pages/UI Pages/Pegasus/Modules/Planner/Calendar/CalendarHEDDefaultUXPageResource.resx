@@ -462,4 +462,13 @@
   <data name="CalendarHEDDefaultUXPageResource_CheckBox_Attribute_Value" xml:space="preserve">
     <value>id</value>
   </data>
+  <data name="CalendarHEDDefaultUXPageResource_CmenuID_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='Classcmenu_main' and not(@style='display:none;')]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_CmenuOption_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/div[@id='cmenuCont']/div[@title='{1}']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Properties_Attribute" xml:space="preserve">
+    <value>Id</value>
+  </data>
 </root>

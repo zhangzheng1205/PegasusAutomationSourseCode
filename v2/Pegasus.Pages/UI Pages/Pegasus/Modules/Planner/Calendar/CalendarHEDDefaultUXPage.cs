@@ -1999,7 +1999,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             return base.GetWebElementPropertiesByXPath(
                string.Format(CalendarHEDDefaultUXPageResource
-                 .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, assetName))
+                 .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, "STUDENT ACTIVITIES MANUAL"))
                  .FindElement(By.XPath(".."))
                  .GetAttribute(CalendarHEDDefaultUXPageResource
                  .CalendarHEDDefaultUXPage_NodeId_Value);
@@ -2277,16 +2277,8 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarHEDDefaultUXPage_Element_Time));
                 //Get the cmenuid of the asset
                 string cMenuId = GetCMenuID(assetName);
-                if (assetName == "Read the eText: Chapter 5")
-                {
-                    this.SelectOptionInCmenuforLinkActivity(cmenuOption, cMenuId);
-                }
                 // Select an option in cmenu
-                else
-                {
-                    this.SelectOptionInCmenu(cmenuOption, cMenuId);
-                }
-                
+                    this.SelectOptionInCmenu(cmenuOption, cMenuId);                
             }
             catch (Exception e)
             {
@@ -2294,35 +2286,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        private void SelectOptionInCmenuforLinkActivity(string cmenuOption, string cMenuId)
-        {
-            // Select an option in cmenu
-            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectOptionInCmenu",
-              base.IsTakeScreenShotDuringEntryExit);
-            IWebElement getCMenu = base.GetWebElementPropertiesByXPath(String.
-                Format((CalendarHEDDefaultUXPageResource.
-                CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator), cMenuId));
-            Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-              CalendarHEDDefaultUXPage_Element_Time));
-            base.PerformMouseHoverByJavaScriptExecutor(getCMenu);
-            base.ClickByJavaScriptExecutor(getCMenu);
-            Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-               CalendarHEDDefaultUXPage_Element_Time));
-            //Select an option in cmenu
-            //bool hjg = base.IsElementPresent(By.ClassName("Classcmenu_main"), 10);
-            //IWebElement getCmenuOption = base.GetWebElementPropertiesByClassName("Classcmenu_main");
-            //getCmenuOption.GetAttribute("Text");
-
-            IWebElement cMenuOption = base.GetWebElementPropertiesByXPath(String.
-                Format(("//div[@id='PegMenu128']/div[@id='cmenuCont']/div[@title='{0}']"), cmenuOption));
-            Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                CalendarHEDDefaultUXPage_Element_Time));
-            base.ClickByJavaScriptExecutor(cMenuOption);
-            logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectOptionInCmenu",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
+        }       
 
         /// <summary>
         /// Select an option in cmenu.
@@ -2343,14 +2307,24 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getCMenu);
             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                CalendarHEDDefaultUXPage_Element_Time));
-            //Select an option in cmenu
-            bool hjg = base.IsElementPresent(By.ClassName("Classcmenu_main"), 10);
-            IWebElement getCmenuOption = base.GetWebElementPropertiesByClassName("Classcmenu_main");
-            getCmenuOption.GetAttribute("Text");
-
+            //Get the ID value of the cmenu
+            base.WaitForElement(By.XPath(
+                CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPageResource_CmenuID_XPath_Locator));
+            IWebElement getCmenuOption = base.GetWebElementPropertiesByXPath(
+                CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPageResource_CmenuID_XPath_Locator);
+            string idValue = getCmenuOption.GetAttribute(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPageResource_Properties_Attribute);
+            //Click on activity cmenu option
+            base.WaitForElement(By.XPath(string.Format(
+                CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPageResource_CmenuOption_XPath_Locator,
+                idValue, cmenuOption)));
             IWebElement cMenuOption = base.GetWebElementPropertiesByXPath(String.
                 Format((CalendarHEDDefaultUXPageResource.
-                CalendarHEDDefauktUXPage_AssetCmenuOption_Xpath_Locator), cmenuOption));
+                CalendarHEDDefaultUXPageResource_CmenuOption_XPath_Locator),
+                idValue, cmenuOption));            
             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_Element_Time));
             base.ClickByJavaScriptExecutor(cMenuOption);

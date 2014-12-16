@@ -774,11 +774,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;Classcmenu_main&apos; and not(@style=&apos;display:none;&apos;)].
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_CmenuID_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_CmenuID_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@title=&apos;{0}&apos;].
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_CmenuOption_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_CmenuOption_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;{0}&apos;]/div[@id=&apos;cmenuCont&apos;]/div[@title=&apos;{1}&apos;].
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_CmenuOption_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_CmenuOption_XPath_Locator", resourceCulture);
             }
         }
         
@@ -995,6 +1013,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPageResource_OptionText_Xpath_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_OptionText_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_Properties_Attribute {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_Properties_Attribute", resourceCulture);
             }
         }
         

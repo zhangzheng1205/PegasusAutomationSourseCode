@@ -5,6 +5,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using System.Collections.Generic;
 
 namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
     ProductAcceptanceTestDefinitions
@@ -721,6 +722,266 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                    IsAssetAssigned(assetName)));
             Logger.LogMethodExit("CourseContent", "ConfirmAssetAssignedStatus",
             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see the current date highlighted in the calendar frame")]
+        public void VerifyCurrentDateInCalendar()
+        {
+            //Verify if the current date highlighted in the calendar frame
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyTheCurrentDateHighlightedInTheCalendar",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyCurrentDateHighlighted",
+                    ScenarioContext.Current.ScenarioInfo.
+                       Title, () => Assert.IsTrue(
+                     new CalendarHedDefaultUxPage().IsCurrentDateHighlighted()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyTheCurrentDateHighlightedInTheCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify due date icon is diplayed in assigned date.
+        /// </summary>       
+        [Then(@"I should see due date icon displayed in current date")]
+        public void VerifyDueDateIconDisplayed()
+        {
+            // Verify due date icon is diplayed in assigned date
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "VerifyDueDateIconDisplayed",
+              base.IsTakeScreenShotDuringEntryExit);
+            // Verify due date icon is diplayed in assigned date
+            Logger.LogAssertion("VerifyDueDateIconDisplayed",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new CalendarHedDefaultUxPage()
+                   .IsActivityDueDateIconPresent()));
+            Logger.LogMethodEntry("AssignmentCalendar",
+             "VerifyDueDateIconDisplayed",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Selects the check box of activity.
+        /// </summary>
+        /// <param name="activityCount">Number of activity for which checkbox to be checked.</param>
+        /// <param name="folderName">This is Activity folder name.</param>
+        [When(@"I select the check box of any (.*) activities in ""(.*)""")]
+        public void SelectCheckBoxOfActivity(
+            int activityCount, String folderName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "SelectCheckBoxOfActivity",
+                          base.IsTakeScreenShotDuringEntryExit);
+            var calendarHedDefaultUxPage =
+                new CalendarHedDefaultUxPage();
+            String activityId = calendarHedDefaultUxPage.GetAssetId(folderName);
+            calendarHedDefaultUxPage.SelectCheckBoxOfActivity(activityCount,
+                activityId);
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "SelectCheckBoxOfActivity",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Assign/UnAssign link button state.
+        /// </summary>
+        [Then(@"I should see Assign/Unassign link in active state on the content frame header")]
+        public void VerifyAssignUnassignLinkState()
+        {
+            // Verify Assign/UnAssign link button state
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "VerifyAssignUnassignLinkState",
+                          base.IsTakeScreenShotDuringEntryExit);
+            // Verify Assign/UnAssign link button state
+            Assert.IsTrue(new CalendarHedDefaultUxPage()
+                .IsAssignedUnAssignedButtonEnabled());
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "VerifyAssignUnassignLinkState",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Clicks on Assign/Unassign link button.
+        /// </summary>
+        [When(@"I click on assign/Unassign link displayed in content frame header")]
+        public void ClickOnAssignUnassignLink()
+        {
+            // Clicks on Assign/Unassign link button
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "ClickOnAssignUnassignLink",
+                          base.IsTakeScreenShotDuringEntryExit);
+            // Clicks on Assign/Unassign link button
+            new CalendarHedDefaultUxPage()
+                .ClickOnAssignUnassignButton();
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "ClickOnAssignUnassignLink",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Verify Check mark in assigned status column.
+        /// </summary>
+        [Then(@"I should see the check mark in assigned status column next to the assets")]
+        public void VerifyCheckMarkInAssignedStatusColumn()
+        {
+            // Verify Check mark in assigned status column
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "VerifyCheckMarkInAssignedStatusColumn",
+                          base.IsTakeScreenShotDuringEntryExit);
+            List<Activity> assignedActivityList =
+                Activity.Get(a => a.IsAssigned == true);
+            List<Activity> unAssignedActivityList =
+                Activity.Get(a => a.IsAssigned == false);
+            CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
+                new CalendarHedDefaultUxPage();
+            // Verify Check mark in assigned status column
+            foreach (Activity unAssignedActivity in unAssignedActivityList)
+            {
+                Assert.IsTrue(calendarHEDDefaultUXPage
+                    .IsAssetAssigned(unAssignedActivity.ActivityId));
+                unAssignedActivity.IsAssigned = true;
+                unAssignedActivity.UpdateActivityInMemory(unAssignedActivity);
+            }
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "VerifyCheckMarkInAssignedStatusColumn",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Drag and Drop selected  assets to current date.
+        /// </summary>
+        [When(@"I should drag and drop multiple assets along with ""(.*)"" to the current date")]
+        public void DragAndDropMultipleAssetsToCurrentDate(string activityName)
+        {
+            // Drag and drop multiple assets to current date
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "DragAndDropMultipleAssetsToCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Drag and drop multiple assets to current date
+            new CalendarHedDefaultUxPage().DragAndDropMultipleActivities(activityName);
+            Logger.LogMethodExit("AssignmentCalendar",
+             "DragAndDropMultipleAssetsToCurrentDate",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Current date.
+        /// </summary>
+        [When(@"I select the current date")]
+        public void SelectCurrentDate()
+        {
+            //Select Current Date
+            Logger.LogMethodEntry("AssignmentCalendar", "SelectCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Select Current Date
+            new CalendarHedDefaultUxPage().SelectCurrentDateFromCalendar();
+            Logger.LogMethodExit("AssignmentCalendar", "SelectCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the assigned content in the day view.
+        /// </summary>     
+        [Then(@"I should see the assigned content ""(.*)"" in the day view")]
+        public void VerifyAssignedContent(string assetName)
+        {
+            //Verify the assigned content in the day view
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyAssignedContent",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyAssignedContentText",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(assetName,
+                    new CalendarHedDefaultUxPage().GetAssignAssetText(assetName)));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyAssignedContent",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Assigning the asset with duedate and scheduling with start and end date
+        /// </summary>
+        [When(@"I assign and schedule the asset and save")]
+        public void AssignAndScheduleTheAssetAndSave()
+        {
+            Logger.LogMethodEntry("CourseContent", "AssignAndScheduleTheAssetAndSave",
+               base.IsTakeScreenShotDuringEntryExit);
+            AssignContentPage assignContent = new AssignContentPage();
+            //Selecting assign radio button
+            assignContent.SelectAssignedRadiobutton();
+            //Setting due date
+            assignContent.GetAndFillDueDate();
+            //Setting the start date and end date
+            assignContent.SetStartAndEndDate();
+            Logger.LogMethodExit("CourseContent", "AssignAndScheduleTheAssetAndSave",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on the cmenu option of the asset.
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="assetName">This is a asset name.</param>
+        [When(@"I select cmenu ""(.*)"" of activity ""(.*)""")]
+        public void SelectCmenuOfActivity(string cmenuOption, string assetName)
+        {
+            // Click on the cmenu option of the asset
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+            //click on cmenu option
+            new CalendarHedDefaultUxPage().SelectActivityCmenu
+                (cmenuOption, assetName);           
+            Logger.LogMethodExit("AssignmentCalendar",
+                "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Assign the asset to the current date,set start and end date,mark notification and save.
+        /// </summary>
+        [When(@"I assign the asset for current date in the properties popup")]
+        public void AssignTheAssetforStartDateIcon()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "AssignTheAsset",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow("Assign");
+            AssignContentPage assignContentPage = new AssignContentPage();
+            //Select 'Assigned' radiobutton
+            assignContentPage.SelectAssignRadiobuttonInAssignWindow();
+            //Select current date
+            assignContentPage.SelectCurrentDateInAssignWindow();
+            //Set start and end date
+            assignContentPage.SetStartAndEndDateAssignWindow();
+            //Check availability notification
+            assignContentPage.CheckAvailabilityNotification();
+            //Save the properties
+            assignContentPage.SaveProperties();
+            Logger.LogMethodExit("AssignmentCalendar",
+                "AssignTheAsset",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verifying Start Date Flag is Present.
+        /// </summary>
+        [Then(@"I should see the startdate Icon in calendar frame")]
+        public void VerifyTheStartdateIconInCalendarFrame()
+        {
+            // Verifying Start Date Flag is Present
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyTheStartdateIconInCalendarFrame",
+                                base.IsTakeScreenShotDuringEntryExit);
+            //Verify Start Date Flag Presence by Assert.
+            Logger.LogAssertion("VerifyingStartDateFlag",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                        () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                            IsStartDateFlagDisplayed()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyTheStartdateIconInCalendarFrame",
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
