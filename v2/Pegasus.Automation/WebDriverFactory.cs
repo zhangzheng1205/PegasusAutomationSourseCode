@@ -98,7 +98,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public static IWebDriver GetInstance()
         {
             IWebDriver webDriver = null;
-            
+
             if (_isRemote)
             {
                 DesiredCapabilities remoteCapability;
@@ -205,6 +205,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream doc docx xls xlsx pdf txt zip");
             profile.SetPreference("dom.max_script_run_time", 0);
             profile.EnableNativeEvents = true;
+            profile.SetPreference("browser.cache.disk.enable", false);
+            profile.SetPreference("browser.cache.memory.enable", false);
+            profile.SetPreference("browser.cache.offline.enable", false);
+            profile.SetPreference("network.http.use-cache", false);
             IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
             // set page load duration
             webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
@@ -212,10 +216,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             Cursor.Position = new Point(Screen.PrimaryScreen.Bounds.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2);
             return webDriver;
         }
-
-
-
-
         /// <summary>
         /// Returns an instance of Safari based driver.
         /// </summary>
@@ -234,37 +234,19 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Chrome based driver</returns>
         private static IWebDriver ChromeWebDriver()
         {
-            // chrome preferences
-            var chromeOptions = new ChromeOptionsWithPrefs
-            {
-                Prefs = new Dictionary<string, object>
-                {
-                    {"download.default_directory", DownloadFilePath},
-                    {"download.prompt_for_download", false},
-                    {"profile.default_content_settings.popups", 0},
-                    {"intl.accept_languages", "nl"},
-                    {"dom.max_chrome_script_run_time", 0}
-                }
-            };
+            // chrome options
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments("disable-application-cache");
+            chromeOptions.AddArguments("disk-cache-size=0");
 
-            // chrome capabilities
-            var desiredCapabilities = DesiredCapabilities.Chrome();
-            desiredCapabilities.SetCapability(ChromeOptions.Capability, chromeOptions);
             // chrome driver path
             string chromeDriverPath = (Path.GetDirectoryName
                 (Assembly.GetExecutingAssembly().GetName().CodeBase)
                 + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", "");
+
             // create chrome browser instance
             IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(3));
             return webDriver;
-        }
-
-        /// <summary>
-        /// Property Chrome Options With Preferences.
-        /// </summary>
-        public class ChromeOptionsWithPrefs : ChromeOptions
-        {
-            public Dictionary<string, object> Prefs { get; set; }
         }
 
         /// <summary>
