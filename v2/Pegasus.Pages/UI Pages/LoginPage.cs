@@ -121,6 +121,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedMilAcceptanceStudent:
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
+                    case User.UserTypeEnum.WLCsSmsInstructor:
                         _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
@@ -572,6 +573,8 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedMilPPEStudent:
                     case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.HSSProgramAdmin:
+                    case User.UserTypeEnum.WLCsSmsInstructor:
+                    case User.UserTypeEnum.WLCsSmsStudent:
                         //Enter SMS User Name    
                         this.EnterSmsUserName(userName);
                         break;
@@ -767,6 +770,8 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HedMilPPEStudent:
                 case User.UserTypeEnum.HedProgramAdmin:
                 case User.UserTypeEnum.HSSProgramAdmin:
+                case User.UserTypeEnum.WLCsSmsInstructor:
+                case User.UserTypeEnum.WLCsSmsStudent:
                     //Validate Hed SMS User Login    
                     isLoginSuccessful = this.IsSmsUserLoggedIn(false);
                     break;

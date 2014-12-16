@@ -575,6 +575,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
+                    case User.UserTypeEnum.WLProgramAdmin:
                         switch (courseTypeEnum)
                         {
                             //Course Type Enum
@@ -606,6 +607,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedTeacherAssistant:
                     case User.UserTypeEnum.CsSmsStudent:
                     case User.UserTypeEnum.HSSCsSmsStudent:
+                    case User.UserTypeEnum.WLCsSmsStudent:
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -634,6 +636,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
+                    case User.UserTypeEnum.WLCsSmsInstructor:
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
