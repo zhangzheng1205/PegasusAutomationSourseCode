@@ -32,7 +32,7 @@ Then I should be on the "Today's View" page
 Scenario: Assign more than one content using Assign Unassign link by Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-When I select "SAM 02-02 ¿Qué clases tienen? [Vocabulario 1. Las materias y las especialidades]" in "Calendar" by "HSSCsSmsInstructor"
+When I select "SAM 02-02 ¿Qué clases tienen? [Vocabulario 1. Las materias y las especialidades]" in "Calendar" by "WLCsSmsInstructor"
 And I select the check box of any 2 activities in "STUDENT ACTIVITIES MANUAL"
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
@@ -47,7 +47,7 @@ Then I should be on the "Today's View" page
 Scenario: Assign one content using Assign Unassign link by Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-When I select "SAM 03-01 ¿Qué hacemos en casa? [Vocabulario 1. La casa]" in "Calendar" by "HSSCsSmsInstructor"
+When I select "SAM 03-01 ¿Qué hacemos en casa? [Vocabulario 1. La casa]" in "Calendar" by "WLCsSmsInstructor"
 And I select the check box of any 1 activities in "STUDENT ACTIVITIES MANUAL"
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
@@ -63,7 +63,7 @@ Scenario: Drag and drop the more than one assets to current date in Assignment c
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see the current date highlighted in the calendar frame
-When I select "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]" in "Calendar" by "HSSCsSmsInstructor"
+When I select "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]" in "Calendar" by "WLCsSmsInstructor"
 And I select the check box of any 2 activities in "STUDENT ACTIVITIES MANUAL"
 And I should drag and drop multiple assets along with "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]" to the current date
 Then I should see due date icon displayed in current date
@@ -91,7 +91,7 @@ Then I should be on the "Today's View" page
 Scenario: To validate the display of start date icon in calendar frame by Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-When I select "SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]" in "Calendar" by "HSSCsSmsInstructor"
+When I select "SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]" in "Calendar" by "WLCsSmsInstructor"
 And I select cmenu "Assignment Properties" of activity "SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]" 
 Then I should see the "Assign" popup
 When I assign the asset for current date in the properties popup

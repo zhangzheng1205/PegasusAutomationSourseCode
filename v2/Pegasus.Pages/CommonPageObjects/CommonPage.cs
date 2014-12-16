@@ -1397,6 +1397,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 {
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
+                    case User.UserTypeEnum.WLCsSmsInstructor:
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -1479,7 +1480,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                     userTypeEnum, activityUnderTabName);
                                         break;
-                                    case "Capítulo 06: ¡Sí, lo sé! (ORGANIZED BY CONTENT TYPE)":
+                                    case "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]":
                                         this.NavigateToCapítulo06ActivitiesFolder(CommonPageResource.
                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                    userTypeEnum, activityUnderTabName);
@@ -1491,6 +1492,7 @@ namespace Pegasus.Pages.CommonPageObjects
                         break;
                     case User.UserTypeEnum.HSSCsSmsStudent:
                     case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.WLCsSmsStudent:
                         switch (activityUnderTabName)
                         {
                             case "Course Materials":

@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorAssignmentCalendar", "               As a CS Instructor \r\n\t\t\tI want to manage all the coursespace instr" +
-                    "uctor assignment calendar related usecases \r\n\t\t\tso that I would validate all the" +
-                    " coursespace instructor assignment calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorAssignmentCalendar", "               As a CS Instructor \n\t\t\tI want to manage all the coursespace instru" +
+                    "ctor assignment calendar related usecases \n\t\t\tso that I would validate all the c" +
+                    "oursespace instructor assignment calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -136,7 +136,7 @@ testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 35
 testRunner.When("I select \"SAM 02-02 ¿Qué clases tienen? [Vocabulario 1. Las materias y las especi" +
-                    "alidades]\" in \"Calendar\" by \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    "alidades]\" in \"Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 36
 testRunner.And("I select the check box of any 2 activities in \"STUDENT ACTIVITIES MANUAL\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
@@ -167,7 +167,7 @@ testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 50
 testRunner.When("I select \"SAM 03-01 ¿Qué hacemos en casa? [Vocabulario 1. La casa]\" in \"Calendar\"" +
-                    " by \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    " by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 51
 testRunner.And("I select the check box of any 1 activities in \"STUDENT ACTIVITIES MANUAL\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
@@ -200,7 +200,7 @@ testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((Tech
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 66
 testRunner.When("I select \"SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]\" in \"" +
-                    "Calendar\" by \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    "Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 67
 testRunner.And("I select the check box of any 2 activities in \"STUDENT ACTIVITIES MANUAL\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 68
@@ -258,7 +258,7 @@ testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 94
 testRunner.When("I select \"SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]\" in " +
-                    "\"Calendar\" by \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    "\"Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 95
 testRunner.And("I select cmenu \"Assignment Properties\" of activity \"SAM 05-01 Artistas famosos. [" +
                     "Vocabulario 1. El mundo de la música]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
