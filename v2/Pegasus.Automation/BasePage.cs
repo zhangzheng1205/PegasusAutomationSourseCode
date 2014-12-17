@@ -977,7 +977,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetTitleAttributeValueByLocator(By by)
+        private String GetTitleAttributeValueByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("Title");
@@ -992,7 +992,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetHrefAttributeValueByLocator(By by)
+        private String GetHrefAttributeValueByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("href");
@@ -1003,7 +1003,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue">Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
-        protected string GetHrefAttributeValueByXPath(String xPathValue)
+        protected String GetHrefAttributeValueByXPath(String xPathValue)
         {
             return GetHrefAttributeValueByLocator(By.XPath(xPathValue));
         }
@@ -1017,7 +1017,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetValueAttributeByLocator(By by)
+        private String GetValueAttributeByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("value");
@@ -1028,7 +1028,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
-        protected string GetValueAttributeByXPath(String xPathValue)
+        protected String GetValueAttributeByXPath(String xPathValue)
         {
             return GetValueAttributeByLocator(By.XPath(xPathValue));
         }
@@ -1038,7 +1038,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue"> Retrieves The name of the attribute by locating Id value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Id value.</returns>
-        protected string GetValueAttributeById(String idAttributeValue)
+        protected String GetValueAttributeById(String idAttributeValue)
         {
             return GetValueAttributeByLocator(By.Id(idAttributeValue));
         }
@@ -1048,7 +1048,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath attribute value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath attribute value.</returns>
-        protected string GetTitleAttributeValueByXPath(String xPathValue)
+        protected String GetTitleAttributeValueByXPath(String xPathValue)
         {
             return GetTitleAttributeValueByLocator(By.XPath(xPathValue));
         }
@@ -1058,7 +1058,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue"> Retrieves The name of the attribute by locating id attribute value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating id attribute value.</returns>
-        protected string GetTitleAttributeValueById(String idAttributeValue)
+        protected String GetTitleAttributeValueById(String idAttributeValue)
         {
             return GetTitleAttributeValueByLocator(By.Id(idAttributeValue));
         }
@@ -1072,7 +1072,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetInnerTextAttributeValueByLocator(By by)
+        private String GetInnerTextAttributeValueByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("innerText");
@@ -1083,7 +1083,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue"> Retrieves The name of the attribute by locating id attribute value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating id attribute value.</returns>
-        protected string GetInnerTextAttributeValueById(String idAttributeValue)
+        protected String GetInnerTextAttributeValueById(String idAttributeValue)
         {
             return GetInnerTextAttributeValueByLocator(By.Id(idAttributeValue));
         }
@@ -1093,7 +1093,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
-        protected string GetInnerTextAttributeValueByXPath(String xPathValue)
+        protected String GetInnerTextAttributeValueByXPath(String xPathValue)
         {
             return GetInnerTextAttributeValueByLocator(By.XPath(xPathValue));
         }
@@ -1107,7 +1107,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetClassAttributeValue(By by)
+        private String GetClassAttributeValue(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("class");
@@ -1146,6 +1146,54 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Get the value of a the given class of the element by locating CssSelector attribute value.
+        /// </summary>
+        /// <param name="cssSelectorValue"> Retrieves The name of the attribute by locating 
+        /// CssSelector attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating CssSelector attribute value.</returns>
+        protected String GetClassAttributeValueByCssSelector(String cssSelectorValue)
+        {
+            return GetClassAttributeValue(By.CssSelector(cssSelectorValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given class of the element by locating XPath attribute value.
+        /// </summary>
+        /// <param name="xPathValue"> Retrieves The name of the attribute by locating 
+        /// XPath attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating XPath attribute value.</returns>
+        protected String GetClassAttributeValueByXPath(String xPathValue)
+        {
+            return GetClassAttributeValue(By.XPath(xPathValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given class of the element by locating LinkText attribute value.
+        /// </summary>
+        /// <param name="linkTextValue"> Retrieves The name of the attribute by locating 
+        /// LinkText attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating LinkText attribute value.</returns>
+        protected String GetClassAttributeValueByLinkText(String linkTextValue)
+        {
+            return GetClassAttributeValue(By.LinkText(linkTextValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given class of the element by locating TagName attribute value.
+        /// </summary>
+        /// <param name="locatorTagNameValue"> Retrieves The name of the attribute by locating 
+        /// TagName attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating TagName attribute value.</returns>
+        protected String GetClassAttributeValueByTagName(String locatorTagNameValue)
+        {
+            return GetClassAttributeValue(By.TagName(locatorTagNameValue));
+        }
+
+        /// <summary>
         /// Get the style attribute value of a web element.
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>
@@ -1154,7 +1202,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetStyleAttributeValue(By by)
+        private String GetStyleAttributeValue(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("style");
@@ -1180,6 +1228,72 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected String GetStyleAttributeValueByXPath(String xPathValue)
         {
             return GetStyleAttributeValue(By.XPath(xPathValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given CssSelector of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="cssSelectorValue"> Retrieves the style of the attribute by locating CssSelector value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating CssSelector value.</returns>
+        protected String GetStyleAttributeValueByCssSelector(String cssSelectorValue)
+        {
+            return GetStyleAttributeValue(By.CssSelector(cssSelectorValue));
+        }
+        
+        /// <summary>
+        /// Get the value of a the given PartialLinkText of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="partialLinkTextValue"> Retrieves the style of the attribute by locating PartialLinkText value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating PartialLinkText value.</returns>
+        protected String GetStyleAttributeValueByPartialLinkText(String partialLinkTextValue)
+        {
+            return GetStyleAttributeValue(By.PartialLinkText(partialLinkTextValue));
+        }
+        
+        /// <summary>
+        /// Get the value of a the given Name of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="nameValue"> Retrieves the style of the attribute by locating Name value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Name value.</returns>
+        protected String GetStyleAttributeValueByName(String nameValue)
+        {
+            return GetStyleAttributeValue(By.Name(nameValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given Link Text of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="linkTextValue"> Retrieves the style of the attribute by locating Link Text value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Link Text value.</returns>
+        protected String GetStyleAttributeValueByLinkText(String linkTextValue)
+        {
+            return GetStyleAttributeValue(By.LinkText(linkTextValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given Tag Name of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="locatorTagNameValue"> Retrieves the style of the attribute by locating Tag Name value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Tag Name value.</returns>
+        protected String GetStyleAttributeValueByTagName(String locatorTagNameValue)
+        {
+            return GetStyleAttributeValue(By.TagName(locatorTagNameValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given Class Name of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="classNameValue"> Retrieves the style of the attribute by locating Tag Class Name value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Tag Class Name value.</returns>
+        protected String GetStyleAttributeValueByClassName(String classNameValue)
+        {
+            return GetStyleAttributeValue(By.ClassName(classNameValue));
         }
 
         #endregion
