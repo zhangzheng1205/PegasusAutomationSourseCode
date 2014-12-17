@@ -132,6 +132,8 @@ Then I should be on the "Course Materials" page
 When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
 Then I submit the essay activity
 Then I should see "Not passed" for "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose:Student submits sam activity  from Course Calendar tab and score 100
 #Test Case Id:peg-22418
@@ -142,6 +144,8 @@ Then I should be on the "Course Materials" page
 When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
 And I submit the SAM Activity to score '100'
 Then I should see "Passed" for "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose:Student submits sam activity  from Course Calendar tab and score 0
 #Test Case Id:peg-22405
@@ -152,6 +156,8 @@ Then I should be on the "Course Materials" page
 When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
 And I submit SAM Activity to score '0'
 Then I should see "Not passed" for "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
 #Test Case Id:peg-22432
