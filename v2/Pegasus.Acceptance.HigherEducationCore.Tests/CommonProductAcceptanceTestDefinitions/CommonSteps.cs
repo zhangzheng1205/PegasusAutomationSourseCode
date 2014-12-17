@@ -699,16 +699,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // select particular window here
             base.SelectWindow(base.GetPageTitle);
             if (activityUnderTabName.Equals("Gradebook"))
-            // select grade book right iframe here
-            new GBInstructorUXPage().SelectGradebookFrame();
-
+            {
+                // select grade book left iframe here
+                new GBInstructorUXPage().SelectGradebookFrameInWL();
+            }
             // make sleep intentionally to load frame completely
             Thread.Sleep(15000);
-
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
-               activityName, activityUnderTabName, userTypeEnum);
-            
+               activityName, activityUnderTabName, userTypeEnum);            
             Logger.LogMethodExit("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);

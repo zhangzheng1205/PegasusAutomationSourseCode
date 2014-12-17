@@ -191,3 +191,19 @@ And I should search student "CsSmsStudent" from student frame in view submission
 Then I should see "Decline" and "Accept" options in instructor view submission page
 When I select the option "Accept" in view submission page
 Then I should see "32" score in view submission page
+
+#Purpose: :Instructor Providing comments to essay activity WL
+#TestCase Id: peg-22422
+#PEGASUS-30121
+##MySpanishLabProgram
+Scenario: Instructor Providing comments to essay activity WL
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Gradebook" by "WLCsSmsInstructor"
+And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
+Then I should be on the "View Submission" page

@@ -756,6 +756,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.HSSCsSmsInstructor:
                 case User.UserTypeEnum.HedProgramAdmin:
+                case User.UserTypeEnum.WLCsSmsInstructor:
                     switch (activityUnderTabName)
                     {
                         //Generate Activity Result by Student Report
@@ -1415,6 +1416,15 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPageResource.CommonPage_Chapter3_Sensation_and_Perception_FolderName,
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
+
+                                    case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]":                                        
+                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                            "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)",
+                                            CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
+                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                           "STUDENT ACTIVITIES MANUAL",
+                                           CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
+                                        break;
                                 }
                                 break;
 
@@ -2062,7 +2072,8 @@ namespace Pegasus.Pages.CommonPageObjects
          Logger.LogMethodExit("CommonPage", "NavigateToCapítulo05ActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
+        
     }
 }
 
