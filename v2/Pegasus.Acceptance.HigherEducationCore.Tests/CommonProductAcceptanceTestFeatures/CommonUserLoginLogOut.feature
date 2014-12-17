@@ -245,12 +245,12 @@ Given I am on the "Global Home" page
 When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsStudent"
 
 #Purpose: Logout as Student
-Scenario: User Logout as SMS Student
+Scenario: User Logout as WLStudent
 When I "Sign out" from the "WLCsSmsStudent"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Logout as SMS Instructor
-Scenario: User Logout as Program Admin
+Scenario: User Logout as WLInstructor
 When I "Sign out" from the "WLCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
