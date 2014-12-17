@@ -701,7 +701,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             if (activityUnderTabName.Equals("Gradebook"))
             {
                 // select grade book left iframe here
-                new GBInstructorUXPage().SelectGradebookFrameInWL();
+                new GBInstructorUXPage().SelectGradebookFrame();
             }
             // make sleep intentionally to load frame completely
             Thread.Sleep(15000);
