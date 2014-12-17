@@ -1999,7 +1999,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             return base.GetWebElementPropertiesByXPath(
                string.Format(CalendarHEDDefaultUXPageResource
-                 .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, "STUDENT ACTIVITIES MANUAL"))
+                 .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, assetName))
                  .FindElement(By.XPath(".."))
                  .GetAttribute(CalendarHEDDefaultUXPageResource
                  .CalendarHEDDefaultUXPage_NodeId_Value);
