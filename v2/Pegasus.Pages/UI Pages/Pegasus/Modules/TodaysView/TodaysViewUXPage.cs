@@ -3300,7 +3300,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.CssSelector(TodaysViewUXPageResource.
                         TodayViewUXPageResource_Subtab_Count_CSS_Locator));
                     //Get Tab Count
-                    int getSubTabCount = base.GetElementCountByCSSSelector(TodaysViewUXPageResource.
+                    int getSubTabCount = base.GetElementCountByCssSelector(TodaysViewUXPageResource.
                         TodayViewUXPageResource_Subtab_Count_CSS_Locator);
                     for (int csTabCountNo = Convert.ToInt32(
                         TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);

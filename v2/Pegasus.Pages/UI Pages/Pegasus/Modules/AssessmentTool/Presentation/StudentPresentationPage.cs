@@ -5952,7 +5952,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 base.WaitForElement(By.CssSelector(StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_QuestionCount_Value));
-                int QuestionCount = base.GetElementCountByCSSSelector(
+                int QuestionCount = base.GetElementCountByCssSelector(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
                 if (OptionType.Equals(StudentPresentationPageResource.
