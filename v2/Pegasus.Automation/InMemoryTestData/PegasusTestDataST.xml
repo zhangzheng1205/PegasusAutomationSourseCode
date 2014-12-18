@@ -247,7 +247,7 @@
       <CourseType>HSSMyPsychLabProgram</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>ST_HSS_AutoSection</SectionName>
+      <SectionName>410bef98-e6ae-4666-8a0e-1344f958e1ba</SectionName>
       <SectionId>CRSKLEF-12000713</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
@@ -634,7 +634,7 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>4976</LastName>
       <UserType>WLCsSmsStudent</UserType>
-      <UserId>Hed_User_SMS_STU_UC5</UserId>
+      <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
