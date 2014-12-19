@@ -527,7 +527,7 @@ testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01
 #line 204
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 205
-testRunner.And("I select the student \"CsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 206
 testRunner.And("and provide \"Good Performance\" feedback for the activity submitted by student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 207
@@ -558,7 +558,7 @@ testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01
 #line 219
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 220
-testRunner.And("I select the student \"CsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 221
 testRunner.And("I provide \"1\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 222
@@ -589,8 +589,8 @@ testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01
 #line 234
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 235
-testRunner.And("I select the \'Zero\' scoring \"CsSmsStudent\" from student frame in view submission " +
-                    "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the \'Zero\' scoring \"WLCsSmsStudent\" from student frame in view submissio" +
+                    "n page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 236
 testRunner.And("I provide \"0\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 237
@@ -621,7 +621,7 @@ testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01
 #line 249
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 250
-testRunner.And("I select the student \"CsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 251
 testRunner.And("I provide \"0\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 252
@@ -663,7 +663,7 @@ testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01
 #line 269
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 270
-testRunner.And("I select the student \"CsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 272
 testRunner.And("I click on \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 273

@@ -27,12 +27,7 @@ Then I should see the successfull message "Your message has been sent." in "Cour
 #Test Case Id:peg-16744
 #PEGASUS-29247
 Scenario: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-Then I should be on the "Today's View" page
+When I navigate to "Todays view" tab
 Then I should see the "Instructor Grading (1)" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Instructor Grading (1)" channel
 When I click on the "Instructor Grading (1)" option

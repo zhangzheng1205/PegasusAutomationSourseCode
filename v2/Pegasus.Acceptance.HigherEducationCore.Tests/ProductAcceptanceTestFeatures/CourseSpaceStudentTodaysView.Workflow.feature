@@ -61,9 +61,7 @@ And I should see the "Click on the icons below & follow the on-screen instructio
 #TestCase Id: peg-16751
 #US:PEGASUS-29237
 Scenario: Student views Alert update in "Instructor Comments" channel of Todays View page
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsStudent"
-Then I should be on the "Today's View" page
+When I navigate to "Todays view" tab
 Then I should see the "Instructor Comments (1)" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Instructor Comments (1)" channel
 When I click on the "Instructor Comments" option

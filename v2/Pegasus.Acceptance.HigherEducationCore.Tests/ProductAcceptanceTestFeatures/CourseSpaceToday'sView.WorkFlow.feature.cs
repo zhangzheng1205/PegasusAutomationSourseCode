@@ -126,25 +126,14 @@ testRunner.Then("I should see the successfull message \"Your message has been se
 #line 29
 this.ScenarioSetup(scenarioInfo);
 #line 30
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I navigate to \"Todays view\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 34
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"HSSCsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 36
 testRunner.Then("I should see the \"Instructor Grading (1)\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 37
+#line 32
 testRunner.And("I should see the alert count updated as \"1\" in \"Instructor Grading (1)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
+#line 33
 testRunner.When("I click on the \"Instructor Grading (1)\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
+#line 34
 testRunner.Then("I should see the activity \"SAM Activity:SAM 01-05 Heritage Language: tu español. " +
                     "[Vocabulario 1. La familia]\" in the Instructor grading channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
