@@ -191,17 +191,12 @@ And I should search student "CsSmsStudent" from student frame in view submission
 Then I should see "Decline" and "Accept" options in instructor view submission page
 When I select the option "Accept" in view submission page
 Then I should see "32" score in view submission page
-#------------------------------------------------------------------
+
 #Purpose: :Instructor Providing comments to essay activity WL
 #TestCase Id: peg-22422
 #PEGASUS-30121
 ##MySpanishLabProgram
 Scenario: Instructor Providing comments to essay activity WL
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
 When I navigate to "Gradebook" tab of the "Gradebook" page
 Then I should be on the "Gradebook" page
 When I search for "SAM 01-05" in "Gradebook" window
@@ -217,11 +212,6 @@ Then I should be on the "Gradebook" page
 #PEGASUS-30120
 ##MySpanishLabProgram
 Scenario: Instructor grading essay activity with maximum score
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
 When I navigate to "Gradebook" tab of the "Gradebook" page
 Then I should be on the "Gradebook" page
 When I search for "SAM 01-05" in "Gradebook" window
@@ -237,11 +227,6 @@ Then I should be on the "Gradebook" page
 #PEGASUS-30122
 ##MySpanishLabProgram
 Scenario: Instructor grading essay activity with minimum score
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
 When I navigate to "Gradebook" tab of the "Gradebook" page
 Then I should be on the "Gradebook" page
 When I search for "SAM 01-05" in "Gradebook" window
@@ -257,6 +242,21 @@ Then I should be on the "Gradebook" page
 #PEGASUS-30124
 ##MySpanishLabProgram
 Scenario: Instructor grading lernosity activity and providing score 0
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I search for "SAM 01-19" in "Gradebook" window
+And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
+Then I should be on the "View Submission" page
+And I select the student "CsSmsStudent" from student frame in view submission page
+And I provide "0" for the activity
+And I click on "Save and Close"
+Then I should be on the "Gradebook" page
+
+#Purpose: :Instructor providing feedback to lernosity activity 
+#TestCase Id: peg-22434
+#PEGASUS-30126
+##MySpanishLabProgram
+Scenario: Instructor providing feedback to lernosity activity 
 Given I browsed the login url for "WLCsSmsInstructor"
 When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
@@ -268,9 +268,10 @@ When I search for "SAM 01-19" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
 Then I should be on the "View Submission" page
 And I select the student "CsSmsStudent" from student frame in view submission page
-And I provide "0" for the activity
+
 And I click on "Save and Close"
 Then I should be on the "Gradebook" page
+
 
 
 

@@ -1321,7 +1321,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <summary>
         /// Instructor giving Feedback for the activity submitted by student.
         /// </summary>
-        /// <param name="feedbackText">This is the Feedback.</param>
+        /// <param name="feedbackText">This is the Feedbacktext.</param>
         [Then(@"and provide ""(.*)"" feedback for the activity submitted by student")]
         public void ProvideFeedbackForTheActivitySubmittedByStudent(string feedbackText)
         {
