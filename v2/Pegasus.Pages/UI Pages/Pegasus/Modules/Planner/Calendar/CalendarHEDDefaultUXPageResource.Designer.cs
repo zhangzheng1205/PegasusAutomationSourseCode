@@ -584,6 +584,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #titleSearch.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource__CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource__CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //input[@class=&apos;dvAddNotesButtonCss&apos;].
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_AddNote_Xpath_Locator {
@@ -752,6 +761,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPageResource_CalendarIcon_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_CalendarIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtSearch.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator", resourceCulture);
             }
         }
         
@@ -1112,6 +1130,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPageResource_ViewBy_Dropdown_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_ViewBy_Dropdown_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ViewHideFilerImage.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator", resourceCulture);
             }
         }
         

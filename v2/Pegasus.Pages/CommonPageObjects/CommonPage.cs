@@ -1185,7 +1185,7 @@ namespace Pegasus.Pages.CommonPageObjects
             int getFolderCount = Convert.ToInt32(CommonPageResource.
                 ComonPage_Folder_Count_Initial_Value);
             string getFolderText = string.Empty;
-            //Get Folder Count
+            //Get Folder Count 
             base.WaitForElement(By.XPath(CommonPageResource.
                 ComonPage_Folder_Count_Xpath_Locator));
             getFolderCount = base.GetElementCountByXPath(CommonPageResource.
@@ -1417,7 +1417,8 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
 
-                                    case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]":                                        
+                                    case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]": 
+                                    case "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.":
                                         this.NavigateToActivityFolderInInstructorGradebook(
                                             "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)",
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
@@ -2072,6 +2073,7 @@ namespace Pegasus.Pages.CommonPageObjects
          Logger.LogMethodExit("CommonPage", "NavigateToCapítulo05ActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         
     }

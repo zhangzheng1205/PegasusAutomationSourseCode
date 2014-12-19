@@ -62,11 +62,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to id.
+        /// </summary>
+        internal static string ViewSubmission_Page_Activity_Attribute {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Activity_Attribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //*[@actionId=&apos;1&apos;].
         /// </summary>
         internal static string ViewSubmission_Page_Activity_Cmenu_Option_Name_Xpath_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_Activity_Cmenu_Option_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtEssayScore.
+        /// </summary>
+        internal static string ViewSubmission_Page_Activity_InputId {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Activity_InputId", resourceCulture);
             }
         }
         
@@ -94,6 +112,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_Activity_Time_Value {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_Activity_Time_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #divSection_1 div:nth-of-type({0}).
+        /// </summary>
+        internal static string ViewSubmission_Page_ActivityID_CSS_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ActivityID_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Feedback.
+        /// </summary>
+        internal static string ViewSubmission_Page_AddFeedback_PartialLinkText_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_AddFeedback_PartialLinkText_Locator", resourceCulture);
             }
         }
         
@@ -143,6 +179,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string ViewSubmission_Page_Cancel_PartialLinkText_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Cancel_PartialLinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to VS_SubmissionList_DateTimeColumn.
         /// </summary>
         internal static string ViewSubmission_Page_DateTimeColumn_SubmissionList_ClassName_Locator {
@@ -157,6 +202,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_Edit_Link_Id_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_Edit_Link_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtFeedback.
+        /// </summary>
+        internal static string ViewSubmission_Page_FeedbackTextbox_Id_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_FeedbackTextbox_Id_Locator", resourceCulture);
             }
         }
         
@@ -296,6 +350,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;divSection_1&apos;]/div.
+        /// </summary>
+        internal static string ViewSubmission_Page_QuestionCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_QuestionCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblGradeBook.
         /// </summary>
         internal static string ViewSubmission_Page_RevisedGrade_Id_Locator {
@@ -310,6 +373,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_Save_Button_Id_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_Save_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string ViewSubmission_Page_Save_PartialLinkText_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Save_PartialLinkText_Locator", resourceCulture);
             }
         }
         
