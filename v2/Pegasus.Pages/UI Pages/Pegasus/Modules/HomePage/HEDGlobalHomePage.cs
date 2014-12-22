@@ -572,7 +572,9 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedWsInstructor:
+                    case User.UserTypeEnum.AmpWSInstructor:
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.AmpProgramAdmin:
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.WLProgramAdmin:
@@ -582,6 +584,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.ProgramCourse:
                             case Course.CourseTypeEnum.MyItLabProgramCourse:
                             case Course.CourseTypeEnum.MySpanishLabMaster:
+                            case Course.CourseTypeEnum.AmpWSCourse:
                             case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                             case Course.CourseTypeEnum.MyItLabSIMMasterCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
@@ -599,6 +602,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MySpanishLabTestingMaster:
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabProgram:
+                            case Course.CourseTypeEnum.AmpProgramCourse:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;
@@ -608,6 +612,8 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.CsSmsStudent:
                     case User.UserTypeEnum.HSSCsSmsStudent:
                     case User.UserTypeEnum.WLCsSmsStudent:
+                    case User.UserTypeEnum.AmpCsSmsStudent:
+
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -625,6 +631,7 @@ namespace Pegasus.Pages.UI_Pages
                                     HEDGlobalHomePageResource.HEDGlobalHome_Page_SectionValue);
                                 break;
                             case Course.CourseTypeEnum.InstructorCourse:
+                            case Course.CourseTypeEnum.AmpInstructorCourse:
                             case Course.CourseTypeEnum.MyTestInstructorCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.HedMyItLabPPECourse:
@@ -635,6 +642,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.WLCsSmsInstructor:
                         switch (courseTypeEnum)
@@ -645,8 +653,9 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyItLabProgramCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.InstructorCourse:
-                           
-                            
+                            case Course.CourseTypeEnum.AmpInstructorCourse:
+
+
                                 //Open the Program Course
                                 this.OpenTheCourse(course.Name);
                                 break;
