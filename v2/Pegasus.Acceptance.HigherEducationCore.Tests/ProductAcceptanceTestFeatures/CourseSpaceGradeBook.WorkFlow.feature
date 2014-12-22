@@ -256,7 +256,7 @@ And I provide "0" for the activity
 And I click on "Save and Close"
 And I should be on the "Gradebook" page
 
-#Purpose: :Instructor providing feedback to lernosity activity 
+#Purpose: Instructor providing feedback to lernosity activity 
 #TestCase Id: peg-22434
 #PEGASUS-30126
 #MySpanishLabProgram
