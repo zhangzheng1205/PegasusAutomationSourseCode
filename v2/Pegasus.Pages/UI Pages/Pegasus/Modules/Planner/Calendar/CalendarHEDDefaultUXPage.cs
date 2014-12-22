@@ -2653,7 +2653,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator));
                 base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator, chapterName);
+                    CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator, 
+                    chapterName);
+                //Press 'ENTER' key
+                //base.PressKey("{ENTER}");
                 base.PressEnterKeyById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator);
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
