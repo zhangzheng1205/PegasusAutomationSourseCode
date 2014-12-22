@@ -78,8 +78,15 @@ namespace Pegasus.Automation.DataTransferObjects
             HSSMyPsychLabProgram = 51,
             HSSMyPsychLabMaster = 52,
             MySpanishLabProgram=53,
+<<<<<<< HEAD
             MySpanishLabMasterMyTest =54,
             MySpanishLabProgramMyTest = 55
+=======
+            //Amplifier Course
+            AmpWSCourse = 54,
+            AmpProgramCourse = 55,
+            AmpInstructorCourse = 56
+>>>>>>> b0f65be74c0a4e185efa0de605e26234ea2c107e
         }
 
         /// <summary>

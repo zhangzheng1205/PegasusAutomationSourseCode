@@ -2568,5 +2568,57 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
             return IsActivityDueDateIconPresent;
         }
-    }
+
+        /// <summary>
+        /// Search the activity chapter name in gradebook window.
+        /// </summary>
+        /// <param name="chapterName">This is the chapter name.</param>
+        /// <param name="windowName">This is the window name.</param>
+        public void SearchActivityInGradebook(string chapterName, string windowName)
+        {
+            //Search the activity chapter name in gradebook window
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SearchActivityInGradebook",
+             base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on 'View Filters'
+                base.SelectWindow(windowName);
+                base.FocusOnElementById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator));
+                IWebElement getViewFilter = base.GetWebElementPropertiesById(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+                base.ClickByJavaScriptExecutor(getViewFilter);
+                //Click on 'Title Search'
+                base.SelectWindow(windowName);
+                base.WaitForElement(By.CssSelector(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource__CSS_Locator));
+                IWebElement getTitleSearch = base.
+                    GetWebElementPropertiesByCssSelector(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource__CSS_Locator);
+                base.ClickByJavaScriptExecutor(getTitleSearch);
+                //Enter the 'Chapter name' to search
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator));
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator, 
+                    chapterName);
+                //Press 'ENTER' key
+                //base.PressKey("{ENTER}");
+                base.PressEnterKeyById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator);
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                       CalendarHEDDefaultUXPage_SleepTime));
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+          logger.LogMethodExit("CalendarHEDDefaultUXPage", "SearchActivityInGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+      } 
+   }
 }

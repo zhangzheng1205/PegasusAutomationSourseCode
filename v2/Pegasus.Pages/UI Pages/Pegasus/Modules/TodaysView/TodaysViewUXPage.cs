@@ -3516,8 +3516,7 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             //get Activities Row Count
             int getActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
-                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath
-                );
+                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath);
             //Iterate for Respective Activity In Table
             for (
                 int setActivityRowCount =
@@ -3913,7 +3912,7 @@ namespace Pegasus.Pages.UI_Pages
 
 
         /// <summary>
-        ///Click on the activity to display its details. 
+        ///Click on the activity to display its details and click on 'Mark as read'. 
         /// </summary>
         /// <param name="activityButton">This is the button name.</param>
         public void OpenActivityDetails(string activityButton)
@@ -3937,6 +3936,7 @@ namespace Pegasus.Pages.UI_Pages
                     TodayViewUXPageResource_Activity_WindowName);
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodayViewUXPageResource_ActivityCloseButton_Id_Locator), 10);
+                //Click on 'Close'
                 IWebElement getClose = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
                     TodayViewUXPageResource_ActivityCloseButton_Id_Locator);
                 base.ClickByJavaScriptExecutor(getClose);

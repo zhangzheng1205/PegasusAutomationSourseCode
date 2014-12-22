@@ -221,7 +221,7 @@ Given I am on the "Global Home" page
 When I enter in the "MySpanishLabProgram" from the Global Home page as "WLProgramAdmin"
 
 #Purpose: Verify The User Login As CourseSpaceSMSInstructor To MySpanishLabProgram Course
-Scenario: User Login As CsSMSInstructor and Navigate To MySpanishLabProgram Course
+Scenario: User Login As WLCsSMSInstructor and Navigate To MySpanishLabProgram Course
 Given I browsed the login url for "WLCsSmsInstructor"
 When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
@@ -229,7 +229,7 @@ Given I am on the "Global Home" page
 When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
 
 #Purpose: Verify The User Login As CourseSpaceSMSStudent To MySpanishLabProgram Course
-Scenario: User Login As CsSMSStudent and Navigate To MySpanishLabProgram Course
+Scenario: User Login As WLCsSMSStudent and Navigate To MySpanishLabProgram Course
 Given I browsed the login url for "WLCsSmsStudent"
 When I logged into the Pegasus as "WLCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
@@ -237,7 +237,7 @@ Given I am on the "Global Home" page
 When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsStudent"
 
 #Purpose: Login as Zero Score SMS Student
-Scenario: User login as SMS student to score zero percent
+Scenario: User login as WLCsSMSStudent to score zero percent
 Given I browsed the login url for "WLCsSmsStudent"
 When I login as "scoring 0" into the pegasus as "WLCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully

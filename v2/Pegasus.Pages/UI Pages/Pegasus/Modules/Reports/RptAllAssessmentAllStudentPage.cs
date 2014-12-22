@@ -328,6 +328,13 @@ namespace Pegasus.Pages
                             zeroScoreStudentName = user.LastName + ", " + user.FirstName;
                             break;
                         }
+                    case User.UserTypeEnum.WLCsSmsStudent:
+                        {
+                            User user = User.Get(CommonResource.CommonResource
+                                                   .SMS_STU_UC5);
+                            zeroScoreStudentName = user.LastName + ", " + user.FirstName;
+                            break;
+                        }
                 }
             }
             catch (Exception e)

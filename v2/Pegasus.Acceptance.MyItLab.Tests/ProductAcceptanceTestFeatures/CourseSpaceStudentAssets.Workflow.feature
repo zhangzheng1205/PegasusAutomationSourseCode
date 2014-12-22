@@ -73,3 +73,20 @@ Then I should be on the "Course Materials" page
 When I open the activity named as "Test"
 And I submit the "Test" activity
 Then I should see the "Correct Answer" in the 'Test Presentation Page'
+
+#Purpose : Submitting Sim 5 Powerpoint activity
+#Test case ID : peg-32519
+Scenario: Submitting Sim 5 Powerpoint activity
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+And I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
+And I attempt questions in "PowerPoint Chapter 1 Skill-Based Training" with "10" attempts
+Then I should be on the "Course Materials" page
+And I should see the "Passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
+And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page

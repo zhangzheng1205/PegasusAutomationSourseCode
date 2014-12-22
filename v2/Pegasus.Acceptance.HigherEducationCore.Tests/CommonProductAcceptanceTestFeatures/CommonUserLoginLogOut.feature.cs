@@ -688,11 +688,11 @@ testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home pag
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSMSInstructor and Navigate To MySpanishLabProgram Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As WLCsSMSInstructor and Navigate To MySpanishLabProgram Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginAsCsSMSInstructorAndNavigateToMySpanishLabProgramCourse()
+        public virtual void UserLoginAsWLCsSMSInstructorAndNavigateToMySpanishLabProgramCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSInstructor and Navigate To MySpanishLabProgram Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WLCsSMSInstructor and Navigate To MySpanishLabProgram Course", ((string[])(null)));
 #line 224
 this.ScenarioSetup(scenarioInfo);
 #line 225
@@ -711,11 +711,11 @@ testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home pag
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSMSStudent and Navigate To MySpanishLabProgram Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As WLCsSMSStudent and Navigate To MySpanishLabProgram Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginAsCsSMSStudentAndNavigateToMySpanishLabProgramCourse()
+        public virtual void UserLoginAsWLCsSMSStudentAndNavigateToMySpanishLabProgramCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSStudent and Navigate To MySpanishLabProgram Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WLCsSMSStudent and Navigate To MySpanishLabProgram Course", ((string[])(null)));
 #line 232
 this.ScenarioSetup(scenarioInfo);
 #line 233
@@ -734,11 +734,11 @@ testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home pag
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User login as SMS student to score zero percent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User login as WLCsSMSStudent to score zero percent")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginAsSMSStudentToScoreZeroPercent()
+        public virtual void UserLoginAsWLCsSMSStudentToScoreZeroPercent()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User login as SMS student to score zero percent", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User login as WLCsSMSStudent to score zero percent", ((string[])(null)));
 #line 240
 this.ScenarioSetup(scenarioInfo);
 #line 241

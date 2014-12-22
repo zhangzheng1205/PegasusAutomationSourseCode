@@ -195,15 +195,83 @@ Then I should see "32" score in view submission page
 #Purpose: :Instructor Providing comments to essay activity WL
 #TestCase Id: peg-22422
 #PEGASUS-30121
-##MySpanishLabProgram
+#MySpanishLabProgram
+# Pre Condition: Activity should be submitted by student
 Scenario: Instructor Providing comments to essay activity WL
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
 When I navigate to "Gradebook" tab of the "Gradebook" page
 Then I should be on the "Gradebook" page
-When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Gradebook" by "WLCsSmsInstructor"
+When I search for "SAM 01-05" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
 Then I should be on the "View Submission" page
+And I select the student "WLCsSmsStudent" from student frame in view submission page
+And I provide "Good Performance" feedback for the activity submitted by student
+And I click on "Save and Close"
+And I should be on the "Gradebook" page
+
+#Purpose: :Instructor grading essay activity with maximum score in WL
+#TestCase Id: peg-22420
+#PEGASUS-30120
+#MySpanishLabProgram
+# Pre Condition: Activity should be submitted by student
+Scenario: Instructor grading essay activity with maximum score
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I search for "SAM 01-05" in "Gradebook" window
+And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
+Then I should be on the "View Submission" page
+And I select the student "WLCsSmsStudent" from student frame in view submission page
+And I provide "1" for the activity
+And I click on "Save and Close"
+And I should be on the "Gradebook" page
+
+#Purpose: :Instructor grading essay activity with minimum score in WL
+#TestCase Id: peg-22421
+#PEGASUS-30122
+#MySpanishLabProgram
+# Pre Condition: Activity should be submitted by student
+Scenario: Instructor grading essay activity with minimum score
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I search for "SAM 01-05" in "Gradebook" window
+And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
+Then I should be on the "View Submission" page
+And I select the 'Zero' scoring "WLCsSmsStudent" from student frame in view submission page
+And I provide "0" for the activity
+And I click on "Save and Close"
+And I should be on the "Gradebook" page
+
+#Purpose: :Instructor grading lernosity activity and providing score 0
+#TestCase Id: peg-22433
+#PEGASUS-30124
+#MySpanishLabProgram
+# Pre Condition: Activity should be submitted by student
+Scenario: Instructor grading lernosity activity and providing score 0
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I search for "SAM 01-19" in "Gradebook" window
+And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
+Then I should be on the "View Submission" page
+And I select the student "WLCsSmsStudent" from student frame in view submission page
+And I provide "0" for the activity
+And I click on "Save and Close"
+And I should be on the "Gradebook" page
+
+#Purpose: :Instructor providing feedback to lernosity activity 
+#TestCase Id: peg-22434
+#PEGASUS-30126
+#MySpanishLabProgram
+# Pre Condition: Activity should be submitted by student
+Scenario: Instructor providing feedback to lernosity activity 
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I search for "SAM 01-19" in "Gradebook" window
+And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
+Then I should be on the "View Submission" page
+And I select the student "WLCsSmsStudent" from student frame in view submission page
+
+And I click on "Save and Close"
+And I should be on the "Gradebook" page
+
+
+
+

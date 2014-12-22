@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceGradeBook", "                   As a CS Instructor \n\t\t\tI want to manage all the coursespace gr" +
-                    "adebook related usecases \n\t\t\tso that I would validate all the gradebook scenario" +
-                    "s are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceGradeBook", "                   As a CS Instructor \r\n\t\t\tI want to manage all the coursespace g" +
+                    "radebook related usecases \r\n\t\t\tso that I would validate all the gradebook scenar" +
+                    "ios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -513,31 +513,150 @@ testRunner.Then("I should see \"32\" score in view submission page", ((string)(n
         public virtual void InstructorProvidingCommentsToEssayActivityWL()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Providing comments to essay activity WL", ((string[])(null)));
-#line 199
-this.ScenarioSetup(scenarioInfo);
 #line 200
-testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 201
-testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 202
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 203
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 204
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLCsSmsInstruc" +
-                    "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 205
 testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 206
+#line 202
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 207
-testRunner.When("I select \"SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]\" i" +
-                    "n \"Gradebook\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 208
+#line 203
+testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 204
 testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-05 Heritage Languag" +
                     "e: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 209
+#line 205
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 206
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 207
+testRunner.And("I provide \"Good Performance\" feedback for the activity submitted by student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 208
+testRunner.And("I click on \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 209
+testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor grading essay activity with maximum score")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceGradeBook")]
+        public virtual void InstructorGradingEssayActivityWithMaximumScore()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor grading essay activity with maximum score", ((string[])(null)));
+#line 216
+this.ScenarioSetup(scenarioInfo);
+#line 217
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 218
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 219
+testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 220
+testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-05 Heritage Languag" +
+                    "e: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 221
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 222
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 223
+testRunner.And("I provide \"1\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 224
+testRunner.And("I click on \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 225
+testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor grading essay activity with minimum score")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceGradeBook")]
+        public virtual void InstructorGradingEssayActivityWithMinimumScore()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor grading essay activity with minimum score", ((string[])(null)));
+#line 232
+this.ScenarioSetup(scenarioInfo);
+#line 233
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 234
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 235
+testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 236
+testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-05 Heritage Languag" +
+                    "e: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 237
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 238
+testRunner.And("I select the \'Zero\' scoring \"WLCsSmsStudent\" from student frame in view submissio" +
+                    "n page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 239
+testRunner.And("I provide \"0\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 240
+testRunner.And("I click on \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 241
+testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor grading lernosity activity and providing score 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceGradeBook")]
+        public virtual void InstructorGradingLernosityActivityAndProvidingScore0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor grading lernosity activity and providing score 0", ((string[])(null)));
+#line 248
+this.ScenarioSetup(scenarioInfo);
+#line 249
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 250
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 251
+testRunner.When("I search for \"SAM 01-19\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 252
+testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-19 Singular y plura" +
+                    "l.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 253
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 254
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 255
+testRunner.And("I provide \"0\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 256
+testRunner.And("I click on \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 257
+testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor providing feedback to lernosity activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceGradeBook")]
+        public virtual void InstructorProvidingFeedbackToLernosityActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor providing feedback to lernosity activity", ((string[])(null)));
+#line 264
+this.ScenarioSetup(scenarioInfo);
+#line 265
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 266
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 267
+testRunner.When("I search for \"SAM 01-19\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 268
+testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-19 Singular y plura" +
+                    "l.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 269
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 270
+testRunner.And("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 272
+testRunner.And("I click on \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 273
+testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
