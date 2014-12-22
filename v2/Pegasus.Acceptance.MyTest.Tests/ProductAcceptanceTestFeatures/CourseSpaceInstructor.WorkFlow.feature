@@ -64,7 +64,8 @@ Then I should see "MyTestInstructorCourse" on the Global Home page in Active Sta
 #MyTestInstructorCourse Scenario
 #Purpose: Create new Test in MyTest Tab By SMS Instructor
 #TestCase Id : HED_MYTest_PWF_001 
-Scenario: Create New Test By SMS Instructor
+#TestLink Id: peg-9129
+Scenario: MyTest activity creation By SMS Instructor
 When I navigate to "MyTest" tab
 Then I should be on the "MyTest" page
 When I click on the "Create New Test" link in Manage Your Tests and created Test using "TrueFalse" question
@@ -120,24 +121,70 @@ Then I should able to see Display of Download cmenu options for test
 #MyTestInstructorCourse Scenario
 #Purpose: Downloading the questions in word format
 #TestCase Id: HED_MYTest_PWF_084
-Scenario: Downloading the questions in word format By SMS Instructor
-When I navigate to the "MyTest" tab
+Scenario: Downloading the questions in word format with scramble question order by SMS Instructor
+When I navigate to "MyTest" tab
 Then I should be on the "MyTest" page
 When I select "Download as Word (.doc)" c-menu option from the Test drop down
 Then I should see print details are in disabled state by default
 When I select the "Create multiple versions" checkbox on My Test Download Page
 Then I should see "Scramble question order" dropdown option is selected bydefault
+When I select the "Scramble question order" option in drop down
+And I select the "Include area for student response" checkbox on My Test Download Page
+Then I should see "As blank on left side of test" radio is selected bydefault
+When I select the "Include answer key in" checkbox on My Test Download Page
+Then I should see "Separate file" radio button is selected bydefault
+When I click on download button on MyTest download popup
+And I click on print download button in download popup
+And I click on cancel button on MyTest download popup
+Then I should see ".zip" file in the dowloaded folder
+
+#MyTestInstructorCourse Scenario
+#Purpose: Downloading the questions in word format
+#TestCase Id: HED_MYTest_PWF_084
+Scenario: Downloading the questions in word format with scramble answer order by SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
+When I select "Download as Word (.doc)" c-menu option from the Test drop down
+Then I should see print details are in disabled state by default
+When I select the "Create multiple versions" checkbox on My Test Download Page
+Then I should see "Scramble question order" dropdown option is selected bydefault
+When I select the "Scramble answer order" option in drop down
+And I select the "Include area for student response" checkbox on My Test Download Page
+Then I should see "As blank on left side of test" radio is selected bydefault
+When I select the "Include answer key in" checkbox on My Test Download Page
+Then I should see "Separate file" radio button is selected bydefault
+When I click on download button on MyTest download popup
+And I click on print download button in download popup
+And I click on cancel button on MyTest download popup
+Then I should see ".zip" file in the dowloaded folder
+
+
+#MyTestInstructorCourse Scenario
+#Purpose: Downloading the questions in word format
+#TestCase Id: HED_MYTest_PWF_084
+Scenario: Downloading the questions in word format with Scramble question and answer order by SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
+When I select "Download as Word (.doc)" c-menu option from the Test drop down
+Then I should see print details are in disabled state by default
+When I select the "Create multiple versions" checkbox on My Test Download Page
+Then I should see "Scramble question order" dropdown option is selected bydefault
+When I select the "Scramble question and answer order" option in drop down
+And I select the "Include area for student response" checkbox on My Test Download Page
 When I select the "Include area for student response" checkbox on My Test Download Page
 Then I should see "As blank on left side of test" radio is selected bydefault
 When I select the "Include answer key in" checkbox on My Test Download Page
 Then I should see "Separate file" radio button is selected bydefault
-When I click On cancel button on MyTest download popup
+When I click on download button on MyTest download popup
+And I click on print download button in download popup
+And I click on cancel button on MyTest download popup
+Then I should see ".zip" file in the dowloaded folder
 
 #MyTestInstructorCourse Scenario
 #Purpose: Downloading the questions in PDF format
 #TestCase Id: HED_MYTest_PWF_085
 Scenario: Downloading the questions in PDF format By SMS Instructor
-When I navigate to the "MyTest" tab
+When I navigate to "MyTest" tab
 Then I should be on the "MyTest" page
 When I select "Download as PDF (.pdf)" c-menu option from the Test drop down
 Then I should see print details are in disabled state by default
@@ -147,7 +194,19 @@ When I select the "Include area for student response" checkbox on My Test Downlo
 Then I should see "As blank on left side of test" radio is selected bydefault
 When I select the "Include answer key in" checkbox on My Test Download Page
 Then I should see "Separate file" radio button is selected bydefault
-When I click On cancel button on MyTest download popup
+When I click on download button on MyTest download popup
+And I click on print download button in download popup
+And I click on cancel button on MyTest download popup
+Then I should see ".zip" file in the dowloaded folder
+
+#MyTestInstructorCourse Scenario
+#Purpose: Downloading the questions in PDF format
+#TestCase Id: HED_MYTest_PWF_085
+Scenario: Downloading the questions in blackboard pool manager format By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
+When I select "Download Blackboard Pool Manager" c-menu option from the Test drop down
+Then I should see ".zip" file in the dowloaded folder
 
 #MyTestInstructorCourse Scenario
 #Purpose : Options c-menu for Test Folder 

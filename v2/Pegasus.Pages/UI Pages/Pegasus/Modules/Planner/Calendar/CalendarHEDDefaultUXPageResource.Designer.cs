@@ -756,6 +756,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;div[eventstartdatetime= &apos;&quot;.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_Calendar_EventStartDateTime_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_Calendar_EventStartDateTime_CssSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot; 00:00:00&apos;]&quot;.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_Calendar_EventStartDateTime_Value {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_Calendar_EventStartDateTime_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to dueImgAssignment.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_CalendarIcon_Id_Locator {
@@ -1103,6 +1121,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPageResource_ShownItems_Option_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_ShownItems_Option_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MM/dd/yyyy.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_SystemCurrentDate_Format {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_SystemCurrentDate_Format", resourceCulture);
             }
         }
         

@@ -172,9 +172,6 @@ namespace Pegasus.Pages.UI_Pages
                 Guid questionNameGuid = Guid.NewGuid();
                 //Select Window
                 this.SelectTrueAndFalseWindow();
-                //Wait for the element
-                base.WaitForElement(By.Id(TrueFalsePageResource.
-                    TrueFalse_Page_QuestionName_Title_Id_Locator));
                 base.FocusOnElementById(TrueFalsePageResource.
                         TrueFalse_Page_QuestionName_Title_Id_Locator);
                 //Fill the Question name title text
@@ -187,9 +184,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.FillTheDiscriptionForHTMLEditor();
                 //Select Window
                 this.SelectTrueAndFalseWindow();
-                base.WaitForElement(By.Id(TrueFalsePageResource.
-                TrueFalse_Page_AddAnswer_Button_Id_Locator));
-                IWebElement getAddTextButton = base.GetWebElementPropertiesById
+               IWebElement getAddTextButton = base.GetWebElementPropertiesById
                     (TrueFalsePageResource.
                 TrueFalse_Page_AddAnswer_Button_Id_Locator);
                 base.ClickByJavaScriptExecutor(getAddTextButton);

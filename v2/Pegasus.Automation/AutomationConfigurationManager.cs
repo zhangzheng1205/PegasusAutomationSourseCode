@@ -103,7 +103,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             string applicationWsurl;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
-            {     
+            {
                 case "ST":
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootST_Key];
@@ -112,7 +112,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CGIE_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootCGIE_Key];
                     break;
-                case "PPE":                    
+                case "PPE":
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_PPE_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootPPE_Key];
                     break;
@@ -149,7 +149,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             get
             {
                 return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_TESTDATA_PATH_Key)
-                    ?? Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\..\\..\\..\\Pegasus.Pages";
+                    ?? Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)
+                    + "\\..\\..\\..\\Pegasus.Pages".Replace("file:\\", "");
             }
         }
 
@@ -161,7 +162,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             get
             {
                 return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_DOWNLOAD_PATH_Key)
-                    ?? Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\..\\..\\..\\Pegasus.Pages";
+                       ?? Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName
+                           (System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase))))
+                       + "\\Pegasus.Pages\\ApplicationDownloadedFiles";
             }
         }
 

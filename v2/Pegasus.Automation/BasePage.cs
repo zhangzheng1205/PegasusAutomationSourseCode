@@ -445,6 +445,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         /// <summary>
         /// Use this method to simulate focus on element by typing null value into an element by
+        /// CssSelector attribute value, which may set its value.
+        /// </summary>
+        /// <param name="cssSelectorValue">This is the CssSelector Attribute Value.</param>
+        protected void FocusOnElementByCssSelector(String cssSelectorValue)
+        {
+            FillEmptyText(By.CssSelector(cssSelectorValue));
+        }
+
+        /// <summary>
+        /// Use this method to simulate focus on element by typing null value into an element by
         /// Class name attribute value, which may set its value.
         /// </summary>
         /// <param name="classNameAttributeValue">This is the Class name Attribute Value.</param>
