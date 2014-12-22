@@ -70,7 +70,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
-        /// Resets the singleton
+        /// Resets the singleton.
         /// </summary>
         public void ResetSingleton()
         {

@@ -268,7 +268,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CreateActivity", "CreateMyTestActivityUsingQuestion",
                  base.IsTakeScreenShotDuringEntryExit);
             //Create New Test
-            new MyTestGridUXPage().ClickOnLinkToSelect();
+            new MyTestGridUxPage().ClickOnLinkToSelect();
             //Created Page Class Object
             PaperTestUxPage paperTestUXPage = new PaperTestUxPage();
             //Select Create Question

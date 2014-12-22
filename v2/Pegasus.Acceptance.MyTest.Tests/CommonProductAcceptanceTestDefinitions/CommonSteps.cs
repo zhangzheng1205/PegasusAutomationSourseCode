@@ -133,7 +133,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,
-                    new MyTestGridUXPage().GetSuccessMessageInMyTestTab()));
+                    new MyTestGridUxPage().GetSuccessMessageInMyTestTab()));
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -310,8 +310,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
         [BeforeTestRun]
         public static void Setup()
         {
-            //Reset Webdriver Instance
-            new CommonSteps().ResetWebdriver();
+            
         }
 
         /// <summary>

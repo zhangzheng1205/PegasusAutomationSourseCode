@@ -44,7 +44,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string _browserName;
         private static string _applicationTestEnvironmentName;
         private static string _remoteHubUrl;
-        
+
         /// <summary>
         /// Get Environment Variables.
         /// </summary>
@@ -241,6 +241,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("disable-application-cache");
             chromeOptions.AddArguments("disk-cache-size=0");
+            chromeOptions.AddUserProfilePreference("intl.accept_languages", "nl");
+            chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
+            chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
 
             // chrome driver path
             string chromeDriverPath = (Path.GetDirectoryName

@@ -126,7 +126,8 @@ namespace Pegasus.Pages.UI_Pages
                  "ClickToDownloadButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                IWebElement downloadButtonObject = base.GetWebElementPropertiesByCssSelector("input[id='ibtnOk']");
+                IWebElement downloadButtonObject = base.GetWebElementPropertiesByCssSelector
+                    (MyTestUXPageResource.MyTestPage_Download_Button_CssSelector_Locator);
                 // click on button
                 base.ClickByJavaScriptExecutor(downloadButtonObject);
             }
@@ -148,20 +149,20 @@ namespace Pegasus.Pages.UI_Pages
                  "ClickToDownloadAllZipButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                bool isFrameLoaded = base.IsElementPresent(By.Id("lightboxid"), 5);
-                if (!isFrameLoaded)
+                // select current window
+                this.SelectMyTestWindow();
+                base.SwitchToIFrameById(MyTestUXPageResource
+                    .MyTestPage_DownloadFile_Lightbox_Id_Locator);
+                bool isDownloadAllButtonPresent = base.IsElementPresent
+                    (By.Id(MyTestUXPageResource.MyTestPage_DownloadAll_Button_Id_Locator), 20);
+                // switch iframe
+                if (!isDownloadAllButtonPresent)
                 {
-                    while (base.IsElementPresent(By.Id("lightboxid"), 5))
-                    {
-                        base.RefreshIFrameByJavaScriptExecutor("lightboxid");
-                        base.SwitchToIFrameById("lightboxid");
-                        break;
-                    }
+                    this.SelectMyTestWindow();
+                    base.SwitchToIFrameById(MyTestUXPageResource.MyTestPage_DownloadFile_Lightbox_Id_Locator);
                 }
-                else { base.SwitchToIFrameById("lightboxid"); }
-                base.RefreshIFrameByJavaScriptExecutor("lightboxid");
-                bool aa = base.IsElementPresent(By.Id("ibtndownloadall"), 2);
-                IWebElement allDownloadButtonObject = base.GetWebElementPropertiesById("ibtndownloadall");
+                IWebElement allDownloadButtonObject = base.GetWebElementPropertiesById
+                    (MyTestUXPageResource.MyTestPage_DownloadAll_Button_Id_Locator);
                 // click on button
                 base.ClickByJavaScriptExecutor(allDownloadButtonObject);
                 base.SwitchToDefaultPageContent();
@@ -175,6 +176,20 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select MyTest Window.
+        /// </summary>
+        private void SelectMyTestWindow()
+        {
+            Logger.LogMethodEntry("MyTestUXPage", "SelectMyTestWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select window
+            base.WaitUntilWindowLoads(MyTestUXPageResource.MyTestPage_Window_Title_Name);
+            base.SelectWindow(MyTestUXPageResource.MyTestPage_Window_Title_Name);
+            Logger.LogMethodExit("MyTestUXPage", "SelectMyTestWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Get Downloaded File Extentions.
         /// </summary>
         /// <returns>Downloaded File Extensions List.</returns>
@@ -185,6 +200,7 @@ namespace Pegasus.Pages.UI_Pages
             var downloadedFileExtensions = new[] { string.Empty };
             try
             {
+                Thread.Sleep(5000);
                 // get files extension
                 downloadedFileExtensions = Directory.GetFiles(
                     AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""))
@@ -211,7 +227,9 @@ namespace Pegasus.Pages.UI_Pages
                  "SelectQuestionOrderForDownloadTest", base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.SelectDropDownValueThroughTextById("drpQuestionOrder", questionOrderName);
+                Thread.Sleep(2000);
+                base.SelectDropDownValueThroughTextById(MyTestUXPageResource
+                    .MyTestPage_QuestionOrder_DropDown_Id_Locator, questionOrderName);
             }
             catch (Exception e)
             {

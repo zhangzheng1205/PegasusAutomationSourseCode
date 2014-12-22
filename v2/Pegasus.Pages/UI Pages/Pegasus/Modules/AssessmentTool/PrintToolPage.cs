@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using Pearson.Pegasus.TestAutomation.Frameworks;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
 using System.Threading;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.PegasusTest;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
 
@@ -18,7 +16,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
              Logger.GetInstance(typeof(PrintToolPage));
 
         /// <summary>
@@ -169,10 +167,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Wait for table element 
-                base.WaitForElement(By.XPath(PrintToolPageResource.
-                    PrintToolPage_Table_Row_Xpath_Locator));
-                //Select print option check box
+                // select print option check box
                 this.SelectCheckBoxOfOption(printOptionName);
             }
             catch (Exception e)

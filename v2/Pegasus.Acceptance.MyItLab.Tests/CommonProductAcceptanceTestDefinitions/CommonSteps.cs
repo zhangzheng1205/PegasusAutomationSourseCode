@@ -368,7 +368,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,
-                    new MyTestGridUXPage().GetSuccessMessageInMyTestTab()));
+                    new MyTestGridUxPage().GetSuccessMessageInMyTestTab()));
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }

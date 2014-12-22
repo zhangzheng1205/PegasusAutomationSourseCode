@@ -690,4 +690,7 @@
   <data name="TodayViewUXPageResource_SelectActivity_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span/div[1]/div</value>
   </data>
+  <data name="TodayViewUXPageResource_MainTab_SelectedTab_BackColor_Class_Value" xml:space="preserve">
+    <value>currentmenuBackcolor</value>
+  </data>
 </root>

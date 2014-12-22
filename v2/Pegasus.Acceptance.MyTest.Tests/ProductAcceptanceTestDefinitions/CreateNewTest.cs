@@ -38,7 +38,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             Logger.LogMethodEntry("CreateNewTest", "CreateMyTestActivityUsingQuestion",
                  base.IsTakeScreenShotDuringEntryExit);
             //Create New Test
-            new MyTestGridUXPage().ClickOnLinkToSelect();
+            new MyTestGridUxPage().ClickOnLinkToSelect();
             //Created Page Class Object
             var paperTestUxPage = new PaperTestUxPage();
             //Select Create Question
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             Logger.LogMethodEntry("CreateNewTest", "ClickCMenuOptionInTheMyTestActivity",
                    base.IsTakeScreenShotDuringEntryExit);
             //Click on cmenu option
-            new MyTestGridUXPage().ClickMyTestCMenuOption(cMenuOptionName);
+            new MyTestGridUxPage().ClickMyTestCMenuOption(cMenuOptionName);
             //Logger exit
             Logger.LogMethodExit("CreateNewTest", "ClickCMenuOptionInTheMyTestActivity",
                    base.IsTakeScreenShotDuringEntryExit);
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                 "ClickCMenuOptionInTheMyTestActivityInCourseSpace",
                    base.IsTakeScreenShotDuringEntryExit);
             //Click on cmenu option in CourseSpace
-            new MyTestGridUXPage().ClickMyTestCMenuOptionInCourseSpace
+            new MyTestGridUxPage().ClickMyTestCMenuOptionInCourseSpace
                 (cMenuOptionName, activityTypeEnum);
             //Logger exit
             Logger.LogMethodExit("CreateNewTest",
@@ -227,7 +227,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             Logger.LogMethodEntry("CreateNewTest", "ClickOkButtonInConfirmationPopup",
                base.IsTakeScreenShotDuringEntryExit);
             //Click the OK button
-            new MyTestGridUXPage().ClickTheOkButtonInConfirmationPopup();
+            new MyTestGridUxPage().ClickTheOkButtonInConfirmationPopup();
             Logger.LogMethodExit("CreateNewTest", "ClickOkButtonInConfirmationPopup",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -338,7 +338,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(CreateNewTestResource.
                     CreateNewTest_HeaderOptions_Displayed,
-                    new MyTestGridUXPage().
+                    new MyTestGridUxPage().
                     GetDisplayOfHeaderOptionsInManageYourTest()));
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyTheDisplayOfHeaderOptionsInManageYourTest",
@@ -447,7 +447,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Validate the display of View All Tests button 
             Logger.LogAssertion("VerifyManageTestYourButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(elementText, new MyTestGridUXPage().
+                () => Assert.AreEqual(elementText, new MyTestGridUxPage().
                     DisplayOfManageYourTestFrame()));
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
@@ -507,7 +507,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                 "ClickOnImageCMenuOptionFromTestDropDown",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click The Image Cmenu Option From Test DropDown
-            new MyTestGridUXPage().ClickTheImageCmenuOptionFromTestDropDown
+            new MyTestGridUxPage().ClickTheImageCmenuOptionFromTestDropDown
                 (activityTypeEnum);
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnImageCMenuOptionFromTestDropDown",
@@ -533,7 +533,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(row[CreateNewTestResource.
                     CreateNewTest_Expected_Cmenu_Options_Displayed],
-                    new MyTestGridUXPage().
+                    new MyTestGridUxPage().
                     GetDisplayedCmenuOptionsForDownload(row[CreateNewTestResource.
                     CreateNewTest_Actual_Cmenu_Options_Displayed])));
             }
@@ -561,7 +561,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(row[CreateNewTestResource.
                     CreateNewTest_Expected_Cmenu_Options_Displayed],
-                    new MyTestGridUXPage().
+                    new MyTestGridUxPage().
                     GetDisplayOfCmenuOptionForCreatedTest(row[CreateNewTestResource.
                     CreateNewTest_Actual_Cmenu_Options_Displayed])));
             }

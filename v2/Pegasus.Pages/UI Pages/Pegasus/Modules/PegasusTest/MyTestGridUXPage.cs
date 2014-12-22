@@ -12,13 +12,13 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This Class Handles Creation of MyTest Actions
     /// </summary>
-    public class MyTestGridUXPage : BasePage
+    public class MyTestGridUxPage : BasePage
     {
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
-            Logger.GetInstance(typeof(MyTestGridUXPage));
+        private static readonly Logger Logger =
+            Logger.GetInstance(typeof(MyTestGridUxPage));
 
         /// <summary>
         /// Create New Test.
@@ -50,21 +50,17 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on Create New Test Link.
         /// </summary>
-        /// <param name="linkName">This is a link name.</param>
         private void ClickOnCreateNewTestLink()
         {
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickOnCreateNewTestLink",
                base.IsTakeScreenShotDuringEntryExit);
-            //Wait for the element
-            base.WaitForElement(By.Id(MyTestGridUXPageResource.
-                MyTestGridUX_Page_CreateNewTest_Id_Locator));
-            //Focus on element
+           // focus on element
             base.FocusOnElementById(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator);
             IWebElement getCreateNewTestLinkProperty = base.
                 GetWebElementPropertiesById(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator);
-            //Click the "Create New Test" Link
+            // click the "Create New Test" Link
             base.ClickByJavaScriptExecutor(getCreateNewTestLinkProperty);
             Logger.LogMethodExit("MyTestGridUXPage", "ClickOnCreateNewTestLink",
                base.IsTakeScreenShotDuringEntryExit);
@@ -341,7 +337,6 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on MyTest Activity CMenu Option.
         /// </summary>
-        /// <param name="cMenuOptionName">This is cmenu option name.</param>
         /// <param name="setActivityRowCount">This is activiy row count.</param>
         private void ClickMyTestActivityCMenuOpenOption
             (int setActivityRowCount)

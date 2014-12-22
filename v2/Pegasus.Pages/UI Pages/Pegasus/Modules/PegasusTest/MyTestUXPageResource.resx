@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MyTestPage_DownloadAll_Button_Id_Locator" xml:space="preserve">
+    <value>ibtndownloadall</value>
+  </data>
   <data name="MyTestPage_DownloadFile_Lightbox_Id_Locator" xml:space="preserve">
     <value>lightboxid</value>
+  </data>
+  <data name="MyTestPage_Download_Button_CssSelector_Locator" xml:space="preserve">
+    <value>input[id='ibtnOk']</value>
+  </data>
+  <data name="MyTestPage_QuestionOrder_DropDown_Id_Locator" xml:space="preserve">
+    <value>drpQuestionOrder</value>
   </data>
   <data name="MyTestPage_UpgradeTo_ClassID_Locator" xml:space="preserve">
     <value>ancupd</value>
@@ -131,5 +140,8 @@
   </data>
   <data name="MyTestPage_Upgrade_Window_Name" xml:space="preserve">
     <value>frmUpgrade</value>
+  </data>
+  <data name="MyTestPage_Window_Title_Name" xml:space="preserve">
+    <value>MyTest</value>
   </data>
 </root>
