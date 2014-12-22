@@ -206,9 +206,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_SubstringSecond_Value));
             //Initialize VariableVariable
-            int activityColumnNumber = Convert.ToInt32(MyTestGridUXPageResource.
-                MyTestGridUX_Page_IntIntializer_Value);            
-            string getTextFromActivityText = string.Empty; 
+            string getTextFromActivityText; 
             do
             {
                 //Get The MyTest Activity Table Text
@@ -221,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             while (!getTextFromActivityText.Contains(newActivityName));
             //Get the Test RowCount
-            activityColumnNumber = this.SelectMyTestActivityInManageYourTestFrame
+            int activityColumnNumber = this.SelectMyTestActivityInManageYourTestFrame
                 (activityName);            
             Logger.LogMethodExit("MyTestGridUXPage", "SelectMyTestInManageYourTest",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -236,14 +234,9 @@ namespace Pegasus.Pages.UI_Pages
             //Get The MyTest Activity Table Text
             Logger.LogMethodEntry("MyTestGridUXPage","GetTheMyTestActivityTableText",
                        base.IsTakeScreenShotDuringEntryExit);
-            string getTextFromActivityText = string.Empty; 
-            //Wait For Element
-            base.WaitForElement(By.XPath(MyTestGridUXPageResource.
-                MyTestGridUX_Page_Table_Contents_XPath_Locator));
-            //Get the table content
-            getTextFromActivityText =
-            base.GetElementTextByXPath(MyTestGridUXPageResource.
-            MyTestGridUX_Page_Table_Contents_XPath_Locator).Trim();
+           //Get the table content
+            string getTextFromActivityText = base.GetElementTextByXPath(MyTestGridUXPageResource.
+                MyTestGridUX_Page_Table_Contents_XPath_Locator).Trim();
             Thread.Sleep(Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_Thred_Time));
             Logger.LogMethodExit("MyTestGridUXPage", "GetTheMyTestActivityTableText",

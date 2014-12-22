@@ -122,6 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.WLCsSmsInstructor:
+                    case User.UserTypeEnum.MyTestSmsInstructor:
                         _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
@@ -575,6 +576,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.WLCsSmsInstructor:
                     case User.UserTypeEnum.WLCsSmsStudent:
+                    case User.UserTypeEnum.MyTestSmsInstructor:
                         //Enter SMS User Name    
                         this.EnterSmsUserName(userName);
                         break;
@@ -671,12 +673,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter User Name
             Logger.LogMethodEntry("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(LoginPageResource.
-                Login_Page_LoginName_TextBox_Id_Locator));
-            //Clear the text of text box
-            base.ClearTextById(LoginPageResource.
-                Login_Page_LoginName_TextBox_Id_Locator);
-            //Insert User Name in Username TextBox
+          // Insert User Name in Username TextBox
             base.FillTextBoxById(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator, userName);
             Logger.LogMethodExit("LoginPage", "EnterSmsUserName",
@@ -772,6 +769,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HSSProgramAdmin:
                 case User.UserTypeEnum.WLCsSmsInstructor:
                 case User.UserTypeEnum.WLCsSmsStudent:
+                case User.UserTypeEnum.MyTestSmsInstructor:
                     //Validate Hed SMS User Login    
                     isLoginSuccessful = this.IsSmsUserLoggedIn(false);
                     break;

@@ -13,7 +13,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
     /// Thi class handle all action on My Test download.
     /// </summary>
     [Binding]
-    class DownloadMyTest:PegasusBaseTestFixture
+    class DownloadMyTest : PegasusBaseTestFixture
     {
         /// <summary>
         /// The static instance of the logger for the class.
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Validate the selected dropdown option in Create Multiple Versions section.
         /// </summary>
-        /// <param name="dropDownElementName">This is name of dropdown option</param>
+        /// <param name="dropDownOptionName">This is name of dropdown option</param>
         [Then(@"I should see ""(.*)"" dropdown option is selected bydefault")]
         public void IsDropDownOptionSeletced(string dropDownOptionName)
         {
@@ -102,7 +102,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                    .GetTextOfSelectedDropDownOption()));
             //Logger Exit
             Logger.LogMethodExit("DownloadMyTest",
-                "IsDropDownOptionSeletced",base.IsTakeScreenShotDuringEntryExit);
+                "IsDropDownOptionSeletced", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Click on cancel button on MY test download popup.
         /// </summary>
-       [When(@"I click On cancel button on MyTest download popup")]
+        [When(@"I click on cancel button on MyTest download popup")]
         public void ClickOnCancelButtonOnMyTestDownloadPopup()
         {
             //Logger Entry
@@ -146,21 +146,78 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Initialize Pegasus test before test execution starts
+        /// Click On Download Button On MyTest Download Popup.
         /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
+        [When(@"I click on download button on MyTest download popup")]
+        public void ClickOnDownloadButtonOnMyTestDownloadPopup()
         {
-
+            // logger entry
+            Logger.LogMethodEntry("DownloadMyTest",
+                "ClickOnDownloadButtonOnMyTestDownloadPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+            new MyTestUxPage().ClickToDownloadButton();
+            // logger exit
+            Logger.LogMethodExit("DownloadMyTest",
+                "ClickOnDownloadButtonOnMyTestDownloadPopup",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
+        /// Click On Print Download Button In Download Popup.
         /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
+        [When(@"I click on print download button in download popup")]
+        public void ClickOnPrintDownloadButtonInDownloadPopup()
         {
-
+            // logger exit
+            Logger.LogMethodEntry("DownloadMyTest",
+                "ClickOnPrintDownloadButtonInDownloadPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+            new MyTestUxPage().ClickToDownloadAllZipButton();
+            // logger exit
+            Logger.LogMethodExit("DownloadMyTest",
+                "ClickOnPrintDownloadButtonInDownloadPopup",
+                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify File Extention In The Dowloaded Folder.
+        /// </summary>
+        /// <param name="downloadedFileExtention">This is expected file extention.</param>
+        [Then(@"I should see ""(.*)"" file in the dowloaded folder")]
+        public void VerifyFileInTheDowloadedFolder(string downloadedFileExtention)
+        {
+            // logger entry
+            Logger.LogMethodEntry("DownloadMyTest","VerifyFileInTheDowloadedFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            String[] downloadedFilesExtentionInFolder = new MyTestUxPage().GetFileExtentionsFromDownloadedFolder();
+            foreach (var downloadedFileExtentionInFolder in downloadedFilesExtentionInFolder)
+            {
+                //Verify the extention of downloded files
+                string currentFileExtention = downloadedFileExtentionInFolder;
+                Logger.LogAssertion("VerifyFileInTheDowloadedFolder",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(downloadedFileExtention, currentFileExtention));
+            }
+            // logger exit
+            Logger.LogMethodExit("DownloadMyTest","VerifyFileInTheDowloadedFolder", 
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The Question Order Option In DropDown For Test Download.
+        /// </summary>
+        /// <param name="dropdownTextForQuestionOrder">This is question order dropdown value.</param>
+        [When(@"I select the ""(.*)"" option in drop down")]
+        public void SelectTheOptionInDropDownForTestDownload(string dropdownTextForQuestionOrder)
+        {
+            // logger entry
+            Logger.LogMethodEntry("DownloadMyTest", "SelectTheOptionInDropDownForTestDownload",
+                base.IsTakeScreenShotDuringEntryExit);
+            new MyTestUxPage().SelectQuestionOrderForDownloadTest(dropdownTextForQuestionOrder);
+            // logger exit
+            Logger.LogMethodExit("DownloadMyTest", "SelectTheOptionInDropDownForTestDownload",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

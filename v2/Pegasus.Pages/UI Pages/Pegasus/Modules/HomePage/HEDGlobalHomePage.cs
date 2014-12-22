@@ -576,7 +576,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.WLProgramAdmin:
-                        switch (courseTypeEnum)
+                    switch (courseTypeEnum)
                         {
                             //Course Type Enum
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -637,6 +637,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.WLCsSmsInstructor:
+                        case User.UserTypeEnum.MyTestSmsInstructor:
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -653,6 +654,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyITLabOffice2013Program:
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabProgram:
+                            case Course.CourseTypeEnum.MySpanishLabProgramMyTest:
                                 //Open the Course
                                 this.OpenTheCourse(course.SectionName);
                                 break;
@@ -777,9 +779,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Clicks on the course name
                 //base.FillEmptyTextByPartialLinkText(courseName);
-               
+
                 base.WaitForElement(By.LinkText(courseName));
-               // base.WaitForElement(By.PartialLinkText(courseName));
+                // base.WaitForElement(By.PartialLinkText(courseName));
                 IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
                     (courseName);
                 base.ClickByJavaScriptExecutor(getCourseName);
@@ -1326,7 +1328,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("HEDGlobalHomePage","IsCoursePresentInGlobalHomePage",
+            Logger.LogMethodExit("HEDGlobalHomePage", "IsCoursePresentInGlobalHomePage",
                 base.IsTakeScreenShotDuringEntryExit);
             return isCourseText;
         }
@@ -1358,8 +1360,8 @@ namespace Pegasus.Pages.UI_Pages
                 HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator);
             //store date and time in memory
             String instance = currentDate + " " + currentTime;
-            DateTime datetime= Convert.ToDateTime(instance);
-          //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
+            DateTime datetime = Convert.ToDateTime(instance);
+            //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             user.CurrentProfileDateTime = datetime;
             Logger.LogMethodExit("HEDGlobalHomePage", "setUserCurrentDate",
@@ -1367,9 +1369,9 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-       /// <summary>
-       /// Select MyProfile Iframe.
-       /// </summary>
+        /// <summary>
+        /// Select MyProfile Iframe.
+        /// </summary>
         private void SelectMyProfileIframe()
         {
             //Select MyProfile Iframe

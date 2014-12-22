@@ -230,7 +230,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                   "ClickOnOKButtonInUpgradePage",
                       base.IsTakeScreenShotDuringEntryExit);
             //Click The OK Button In UpgrdePage
-            new MyTestUXPage().ClickTheOkButtonInUpgradePage();
+            new MyTestUxPage().ClickTheOkButtonInUpgradePage();
             Logger.LogMethodExit("InstructorSearchCatalog",
                "ClickOnOKButtonInUpgradePage",
                    base.IsTakeScreenShotDuringEntryExit);

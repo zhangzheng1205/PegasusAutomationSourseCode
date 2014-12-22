@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MyTestPage_DownloadFile_Lightbox_Id_Locator" xml:space="preserve">
+    <value>lightboxid</value>
+  </data>
   <data name="MyTestPage_UpgradeTo_ClassID_Locator" xml:space="preserve">
     <value>ancupd</value>
   </data>
