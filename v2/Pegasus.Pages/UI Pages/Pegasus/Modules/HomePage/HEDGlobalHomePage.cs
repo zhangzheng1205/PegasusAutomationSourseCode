@@ -354,9 +354,9 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     default:
                         //Get Instructor Course ID
-                        string getInstructorCourseID = this.GetInstructorCourseId(courseTypeEnum);
+                        string getInstructorCourseId = this.GetInstructorCourseId(courseTypeEnum);
                         //Store Instructor Course Id In Memory
-                        this.StoreInstructorCourseIdInMemory(getInstructorCourseID, courseTypeEnum);
+                        this.StoreInstructorCourseIdInMemory(getInstructorCourseId, courseTypeEnum);
                         break;
                 }
             }
@@ -446,16 +446,16 @@ namespace Pegasus.Pages.UI_Pages
             base.FillEmptyTextByXPath(string.Format(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCount));
             // Get the Text of Row 
-            string getInstructorCourseID = base.GetElementTextByXPath
+            string getInstructorCourseId = base.GetElementTextByXPath
                 (string.Format(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Course_Table_ActiveSpan_XPath_Locator,
                 courseDivCount));
             //Get Instructor Course Text Line Number
-            int getInstructorCourseTextLineNumber = getInstructorCourseID.IndexOf(' ');
-            getInstructorCourseID = getInstructorCourseID.Substring(getInstructorCourseTextLineNumber).Trim();
+            int getInstructorCourseTextLineNumber = getInstructorCourseId.IndexOf(' ');
+            getInstructorCourseId = getInstructorCourseId.Substring(getInstructorCourseTextLineNumber).Trim();
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "GetInstructorCourseIdFromFirstDiv", base.IsTakeScreenShotDuringEntryExit);
-            return getInstructorCourseID;
+            return getInstructorCourseId;
         }
 
         /// <summary>
@@ -572,13 +572,12 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedWsInstructor:
-                    case User.UserTypeEnum.AmpWSInstructor:
                     case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.AmpProgramAdmin:
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.WLProgramAdmin:
-                    switch (courseTypeEnum)
+                        switch (courseTypeEnum)
                         {
                             //Course Type Enum
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -645,7 +644,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.WLCsSmsInstructor:
-                        case User.UserTypeEnum.MyTestSmsInstructor:
+                    case User.UserTypeEnum.MyTestSmsInstructor:
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:

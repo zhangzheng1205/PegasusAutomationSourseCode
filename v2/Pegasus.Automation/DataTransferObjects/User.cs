@@ -131,15 +131,12 @@ namespace Pearson.Pegasus.TestAutomation.
             WLCsSmsInstructor = 62,
             WLCsSmsStudent = 63,
             WLProgramAdmin = 64,
-<<<<<<< HEAD
             MyTestSmsInstructor = 65,
-            MyTestCsSmsStudent = 66
-=======
+            MyTestCsSmsStudent = 66,
             AmpWSInstructor = 65,
             AmpCsSmsInstructor = 66,
             AmpCsSmsStudent = 67,
             AmpProgramAdmin = 68
->>>>>>> b0f65be74c0a4e185efa0de605e26234ea2c107e
             #endregion
         }
 
