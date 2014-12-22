@@ -391,17 +391,31 @@ namespace Pegasus.Pages.UI_Pages
          }
 
          /// <summary>
-         /// Select Activity By Student In WL.
+         /// Student launch the activity from Course Material tab.
          /// </summary>
-         /// <param name="activityNamr">This is the activity Name.</param>
+         /// <param name="activityName">This is the activity name.</param>
          public void SelectActivityByStudentInWL(string activityName)
          {
+             //Student launch the activity from Course Material tab
              logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
                          base.IsTakeScreenShotDuringEntryExit);
-             base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Window_Title_Name_HED);
-             base.SwitchToIFrame(CoursePreviewUXPageResource.CoursePreviewUX_Page_Iframe_Id_Locator);
-             IWebElement getactivityName = base.GetWebElementPropertiesByPartialLinkText(activityName);
-             base.ClickByJavaScriptExecutor(getactivityName);
+             try
+             {
+                 //Select window
+                 base.SelectWindow(CoursePreviewUXPageResource.
+                     CoursePreviewUX_Page_Window_Title_Name_HED);
+                 //Switch to the Iframe
+                 base.SwitchToIFrame(CoursePreviewUXPageResource.
+                     CoursePreviewUX_Page_Iframe_Id_Locator);
+                 //Click on the activity
+                 IWebElement getactivityName = base.
+                     GetWebElementPropertiesByPartialLinkText(activityName);
+                 base.ClickByJavaScriptExecutor(getactivityName);
+             }
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+             }
              logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
                           base.IsTakeScreenShotDuringEntryExit);
 
@@ -440,12 +454,11 @@ namespace Pegasus.Pages.UI_Pages
          }
 
          /// <summary>
-         /// Answer WL Essay Activity
+         /// Submit the Essay activity in WL.
          /// </summary>
-         /// <param name="answerField"></param>
          public void AnswerWLEssayActivity()
          {
-             //Answer the SAM Activity
+             //Answer the Essay Activity
              logger.LogMethodEntry("CourseContentUXPage", "AnswerWLEssayActivity",
                    base.IsTakeScreenShotDuringEntryExit);
              try
@@ -479,13 +492,12 @@ namespace Pegasus.Pages.UI_Pages
                  IWebElement getFinishButton = base.GetWebElementPropertiesByPartialLinkText
                      (CoursePreviewUXPageResource.CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
                  base.ClickByJavaScriptExecutor(getFinishButton);
-                 //submit the activity
-                 //base.SwitchToLastOpenedWindow();
                  //Click on Finish button
                  base.WaitForElement(By.Id(CoursePreviewUXPageResource.CoursePreviewUX_Page_Finish_Button_Id_Locator));
                  IWebElement finishButton = base.GetWebElementPropertiesById(
                      CoursePreviewUXPageResource.CoursePreviewUX_Page_Finish_Button_Id_Locator);
                  base.ClickByJavaScriptExecutor(finishButton);
+                 //Click on 'Return to course'
                  base.WaitForElement(By.Id(CoursePreviewUXPageResource.CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator));
                  IWebElement returnToCourse = base.GetWebElementPropertiesById(
                     CoursePreviewUXPageResource.CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
@@ -500,23 +512,29 @@ namespace Pegasus.Pages.UI_Pages
          }
 
          /// <summary>
-         /// Verify The Actvity Status of WL Activity
+         /// Verify The Activity Status of WL Activity.
          /// </summary>
-         public string VerifyinrTheActvityStatusofWLActivity(string activityName)
+         /// <param name="activityName">This is the activity name.</param>
+         /// <returns>The Activity status.</returns>
+         public string GetTheActivityStatusofWLActivity(string activityName)
          {
 
-             logger.LogMethodEntry("CourseContentUXPage", "VerifyinrTheActvityStatusofWLActivity",
+             logger.LogMethodEntry("CourseContentUXPage", 
+                 "GetTheActivityStatusofWLActivity",
                  base.IsTakeScreenShotDuringEntryExit);
              string getWLactivityStatus = string.Empty;
              try
              {
                  //Selecting Window.
-                 base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Window_Title_Name_HED);
-                 base.SwitchToIFrame(CoursePreviewUXPageResource.CoursePreviewUX_Page_Iframe_Id_Locator);
-                 //Verifyinr The Actvity Status.
-                 IWebElement getactivityId = base.GetWebElementPropertiesByPartialLinkText(string.Format(activityName));
-                 string identity = getactivityId.GetAttribute("id");
-                 string textactivityId = identity.Split('_')[1];
+                 base.SelectWindow(CoursePreviewUXPageResource.
+                     CoursePreviewUX_Page_Window_Title_Name_HED);
+                 base.SwitchToIFrame(CoursePreviewUXPageResource.
+                     CoursePreviewUX_Page_Iframe_Id_Locator);
+                 //Verify The Actvity Status.
+                 IWebElement getactivityId = base.
+                     GetWebElementPropertiesByPartialLinkText(string.Format(activityName));
+                 string activityId = getactivityId.GetAttribute("id");
+                 string textactivityId = activityId.Split('_')[1];
                  string activityStatusId = "spanStatus" + '_' + textactivityId;
                  base.WaitForElement(By.Id(activityStatusId));
                  getWLactivityStatus = base.GetElementTextById(activityStatusId);
@@ -526,11 +544,12 @@ namespace Pegasus.Pages.UI_Pages
 
                  ExceptionHandler.HandleException(e);
              }
-             logger.LogMethodEntry("CoursePreviewUXPage", "VerifyinrTheActvityStatusofWLActivity",
+             logger.LogMethodEntry("CoursePreviewUXPage", 
+                 "GetTheActivityStatusofWLActivity",
                          base.IsTakeScreenShotDuringEntryExit);
              return getWLactivityStatus;
-
          }
+
          /// <summary>
          /// 
          /// </summary>

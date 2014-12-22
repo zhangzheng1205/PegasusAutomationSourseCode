@@ -60,6 +60,7 @@ And I should see the "Click on the icons below & follow the on-screen instructio
 #Purpose: Student views Alert update in "Instructor Comments" channel of Todays View page
 #TestCase Id: peg-16751
 #US:PEGASUS-29237
+#MySpanishLabProgram
 Scenario: Student views Alert update in "Instructor Comments" channel of Todays View page
 When I navigate to "Todays view" tab
 Then I should see the "Instructor Comments (1)" channels in 'Todays view' page

@@ -26,6 +26,7 @@ Then I should see the successfull message "Your message has been sent." in "Cour
 #Purpose: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
 #Test Case Id:peg-16744
 #PEGASUS-29247
+#MySpanishLabProgram
 Scenario: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
 When I navigate to "Todays view" tab
 Then I should see the "Instructor Grading (1)" channels in 'Todays view' page

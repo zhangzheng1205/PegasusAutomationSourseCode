@@ -123,17 +123,17 @@ testRunner.Then("I should see the successfull message \"Your message has been se
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor should be notified with alert count in \"Instructor Grading\" channel wh" +
                     "en student submits Manual Gradable activities", ((string[])(null)));
-#line 29
-this.ScenarioSetup(scenarioInfo);
 #line 30
-testRunner.When("I navigate to \"Todays view\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 31
-testRunner.Then("I should see the \"Instructor Grading (1)\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Todays view\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
-testRunner.And("I should see the alert count updated as \"1\" in \"Instructor Grading (1)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the \"Instructor Grading (1)\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 33
-testRunner.When("I click on the \"Instructor Grading (1)\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I should see the alert count updated as \"1\" in \"Instructor Grading (1)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
+testRunner.When("I click on the \"Instructor Grading (1)\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
 testRunner.Then("I should see the activity \"SAM Activity:SAM 01-05 Heritage Language: tu español. " +
                     "[Vocabulario 1. La familia]\" in the Instructor grading channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

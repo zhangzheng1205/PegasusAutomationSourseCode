@@ -290,7 +290,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <summary>
         /// Verify Instructor Comments channel in Today's View Page.
         /// </summary>
-        /// <param name="channels">Channels.</param>
+        /// <param name="channels">Channels name.</param>
         [Then(@"I should see the ""(.*)"" channels in 'Todays view' page")]
         public void VerifyChanneslInTodaysViewPage(string channels)
         {
@@ -353,7 +353,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Assert the Activity Name In The Instructor Comments Channel 
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(activityName, new TodaysViewUxPage().GetActivityNameOfInstructorCommentsChannel(activityName)));
+                () => Assert.AreEqual(activityName,
+                    new TodaysViewUxPage().
+                    GetActivityNameOfInstructorCommentsChannel(activityName)));
             Logger.LogMethodEntry("TodaysView", "VerifyActivityNameInChannel",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -402,7 +404,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <summary>
         /// Activity Displayed In The Instructor Grading Channel
         /// </summary>
-        /// <param name="activityName"></param>
+        /// <param name="activityName">This is the activity name.</param>
         [Then(@"I should see the activity ""(.*)"" in the Instructor grading channel")]
         public void ActivityDisplayedInTheInstructorGradingChannel(string activityName)
         {
@@ -414,7 +416,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Assert we have correct Contents of Getting Started
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
                   ScenarioInfo.Title, () => Assert.AreEqual
-                      (activityName, new TodaysViewUxPage().GetActivityNameOfInstructorCommentsChannel(activityName)));
+                      (activityName, new TodaysViewUxPage().
+                      GetActivityNameOfInstructorCommentsChannel(activityName)));
             Logger.LogMethodExit("TodaysView", "VerifyTheGettingStartedContentText",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -442,6 +445,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         [When(@"I Click on ""(.*)"" button displayed in the right frame")]
         public void MarkAsReadForTheActivity(string activityButton)
         {
+            //Click on 'Mark as read' for the activity.
             Logger.LogMethodEntry("TodaysView", "MarkAsReadForTheActivity",
                   base.IsTakeScreenShotDuringEntryExit);
             new TodaysViewUxPage().OpenActivityDetails(activityButton);
