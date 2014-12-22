@@ -126,6 +126,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.WLCsSmsInstructor:
                     case User.UserTypeEnum.MyTestSmsInstructor:
+                    case User.UserTypeEnum.WLCsSmsStudent:
                         _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource

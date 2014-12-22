@@ -188,6 +188,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //And The Required Tab Is Not Present
             new TodaysViewUxPage().ClickTheMoreLinkIfPresent(tabName);
             //Wait For Element
+            base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
             IWebElement getTabNameProperty = base.
