@@ -2583,18 +2583,15 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Click on 'View Filters'
                 base.SelectWindow(windowName);
-                base.FocusOnElementById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
-                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator));
-                IWebElement getViewFilter = base.GetWebElementPropertiesById(
-                    CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+                base.FocusOnElementByCssSelector(CalendarHEDDefaultUXPageResource.
+                   CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+                IWebElement getViewFilter = base.
+                    GetWebElementPropertiesByCssSelector
+                    (CalendarHEDDefaultUXPageResource.
+                   CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
                 base.ClickByJavaScriptExecutor(getViewFilter);
                 //Click on 'Title Search'
-                base.SelectWindow(windowName);
-                base.WaitForElement(By.CssSelector(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource__CSS_Locator));
+                base.SelectWindow(windowName);               
                 IWebElement getTitleSearch = base.
                     GetWebElementPropertiesByCssSelector(
                     CalendarHEDDefaultUXPageResource.
