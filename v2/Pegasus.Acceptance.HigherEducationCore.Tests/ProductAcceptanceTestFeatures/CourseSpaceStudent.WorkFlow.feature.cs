@@ -383,10 +383,11 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]\" i" +
                     "n \"Course Materials\" page by \"WlCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 133
-testRunner.Then("I submit the essay activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I submit the essay activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 134
-testRunner.And("I should see \"Not passed\" for \"SAM 01-05 Heritage Language: tu español. [Vocabula" +
-                    "rio 1. La familia]\" in \"Course Materials\" page by \"WlCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see \"Not passed\" status for the activity \"SAM 01-05 Heritage Language: t" +
+                    "u español. [Vocabulario 1. La familia]\" in \"Course Materials\" page by \"WlCsSmsSt" +
+                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 135
 testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 136
@@ -413,8 +414,8 @@ testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La 
 #line 146
 testRunner.And("I submit the SAM Activity to score \'100\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 147
-testRunner.Then("I should see \"Passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La fa" +
-                    "milia]\" in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"Passed\" status for the activity \"SAM 01-02 Las familias hispanas. [" +
+                    "Vocabulario 1. La familia]\" in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 148
 testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 149
@@ -441,8 +442,8 @@ testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La 
 #line 159
 testRunner.And("I submit SAM Activity to score \'0\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 160
-testRunner.Then("I should see \"Not passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. L" +
-                    "a familia]\" in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"Not passed\" status for the activity \"SAM 01-02 Las familias hispana" +
+                    "s. [Vocabulario 1. La familia]\" in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 161
 testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 162
@@ -469,8 +470,8 @@ testRunner.When("I select \"SAM 01-19 Singular y plural.\" in \"Course Materia
 #line 172
 testRunner.Then("I submit the learnocity activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 173
-testRunner.And("I should see \"Not passed\" for \"SAM 01-19 Singular y plural.\" in \"Course Materials" +
-                    "\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \"Not passed\" status for the activity \"SAM 01-19 Singular y plural.\" " +
+                    "in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -203,10 +203,10 @@ Then I should be on the "Gradebook" page
 When I search for "SAM 01-05" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
 Then I should be on the "View Submission" page
-And I select the student "WLCsSmsStudent" from student frame in view submission page
+When I select the student "WLCsSmsStudent" from student frame in view submission page
 And I provide "Good Performance" feedback for the activity submitted by student
-And I click on "Save and Close"
-And I should be on the "Gradebook" page
+And I click "Save and Close"
+Then I should be on the "Gradebook" page
 
 #Purpose: :Instructor grading essay activity with maximum score in WL
 #TestCase Id: peg-22420
@@ -219,10 +219,10 @@ Then I should be on the "Gradebook" page
 When I search for "SAM 01-05" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
 Then I should be on the "View Submission" page
-And I select the student "WLCsSmsStudent" from student frame in view submission page
+When I select the student "WLCsSmsStudent" from student frame in view submission page
 And I provide "1" for the activity
-And I click on "Save and Close"
-And I should be on the "Gradebook" page
+And I click "Save and Close"
+Then I should be on the "Gradebook" page
 
 #Purpose: :Instructor grading essay activity with minimum score in WL
 #TestCase Id: peg-22421
@@ -235,10 +235,10 @@ Then I should be on the "Gradebook" page
 When I search for "SAM 01-05" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
 Then I should be on the "View Submission" page
-And I select the 'Zero' scoring "WLCsSmsStudent" from student frame in view submission page
+When I select the 'Zero' scoring "WLCsSmsStudent" from student frame in view submission page
 And I provide "0" for the activity
-And I click on "Save and Close"
-And I should be on the "Gradebook" page
+And I click "Save and Close"
+Then I should be on the "Gradebook" page
 
 #Purpose: :Instructor grading lernosity activity and providing score 0
 #TestCase Id: peg-22433
@@ -251,10 +251,10 @@ Then I should be on the "Gradebook" page
 When I search for "SAM 01-19" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
 Then I should be on the "View Submission" page
-And I select the student "WLCsSmsStudent" from student frame in view submission page
+When I select the student "WLCsSmsStudent" from student frame in view submission page
 And I provide "0" for the activity
-And I click on "Save and Close"
-And I should be on the "Gradebook" page
+And I click "Save and Close"
+Then I should be on the "Gradebook" page
 
 #Purpose: Instructor providing feedback to lernosity activity 
 #TestCase Id: peg-22434
@@ -267,10 +267,10 @@ Then I should be on the "Gradebook" page
 When I search for "SAM 01-19" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
 Then I should be on the "View Submission" page
-And I select the student "WLCsSmsStudent" from student frame in view submission page
+When I select the student "WLCsSmsStudent" from student frame in view submission page
 
-And I click on "Save and Close"
-And I should be on the "Gradebook" page
+And I click "Save and Close"
+Then I should be on the "Gradebook" page
 
 
 

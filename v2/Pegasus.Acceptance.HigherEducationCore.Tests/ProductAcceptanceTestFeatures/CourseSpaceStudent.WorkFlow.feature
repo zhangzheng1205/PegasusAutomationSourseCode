@@ -130,8 +130,8 @@ Scenario:Student submits Essay activity from Course Calendar tab
 When I navigate to "Assignments" tab
 Then I should be on the "Course Materials" page
 When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
-Then I submit the essay activity
-And I should see "Not passed" for "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
+And I submit the essay activity
+Then I should see "Not passed" status for the activity "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
 When I navigate to the "Today's View" tab
 Then I should be on the "Today's View" page
 
@@ -144,7 +144,7 @@ When I navigate to "Assignments" tab
 Then I should be on the "Course Materials" page
 When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 And I submit the SAM Activity to score '100'
-Then I should see "Passed" for "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
+Then I should see "Passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 When I navigate to the "Today's View" tab
 Then I should be on the "Today's View" page
 
@@ -157,7 +157,7 @@ When I navigate to "Assignments" tab
 Then I should be on the "Course Materials" page
 When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 And I submit SAM Activity to score '0'
-Then I should see "Not passed" for "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
+Then I should see "Not passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 When I navigate to the "Today's View" tab
 Then I should be on the "Today's View" page
 
@@ -170,7 +170,7 @@ When I navigate to "Assignments" tab and selected "Course Calendar" subtab
 Then I should be on the "Course Materials" page
 When I select "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
 Then I submit the learnocity activity
-And I should see "Not passed" for "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
+And I should see "Not passed" status for the activity "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
 
 
 

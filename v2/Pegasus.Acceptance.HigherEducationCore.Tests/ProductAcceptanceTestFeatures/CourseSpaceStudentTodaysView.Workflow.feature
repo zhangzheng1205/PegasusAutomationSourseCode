@@ -68,5 +68,5 @@ And I should see the alert count updated as "1" in "Instructor Comments (1)" cha
 When I click on the "Instructor Comments" option
 Then I should see the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in the Instructor Comments channel
 When I click on "View All Submissions" of the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
-And I Click on "Mark as Read" button displayed in the right frame
+And I click on "Mark as Read" button displayed in the right frame
 Then I should see the alert count updated as "0" in "Instructor Comments (0)" channel

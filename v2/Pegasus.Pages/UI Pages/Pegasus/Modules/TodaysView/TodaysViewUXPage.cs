@@ -3923,14 +3923,11 @@ namespace Pegasus.Pages.UI_Pages
                         TodayViewUXPageResource_SelectActivity_XPath_Locator);
                 base.ClickByJavaScriptExecutor(getActivityDetails);
                 //Click on 'Mark as Read' option
-                base.WaitForElement(By.PartialLinkText(activityButton), 10);
                 IWebElement getMarkAsRead = base.GetWebElementPropertiesByPartialLinkText(activityButton);
                 base.ClickByJavaScriptExecutor(getMarkAsRead);
                 //Close 'View Submission'
                 base.SelectWindow(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Activity_WindowName);
-                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                    TodayViewUXPageResource_ActivityCloseButton_Id_Locator), 10);
                 //Click on 'Close'
                 IWebElement getClose = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
                     TodayViewUXPageResource_ActivityCloseButton_Id_Locator);

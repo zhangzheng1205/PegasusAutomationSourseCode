@@ -205,7 +205,7 @@ testRunner.Then("I should see the activity \"SAM Activity : SAM 01-05 Heritage L
 testRunner.When("I click on \"View All Submissions\" of the activity \"SAM Activity : SAM 01-05 Herit" +
                     "age Language: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 71
-testRunner.And("I Click on \"Mark as Read\" button displayed in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"Mark as Read\" button displayed in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 72
 testRunner.Then("I should see the alert count updated as \"0\" in \"Instructor Comments (0)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

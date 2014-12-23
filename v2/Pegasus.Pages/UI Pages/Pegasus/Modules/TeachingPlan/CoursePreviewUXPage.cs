@@ -402,11 +402,7 @@ namespace Pegasus.Pages.UI_Pages
              try
              {
                  //Select window
-                 base.SelectWindow(CoursePreviewUXPageResource.
-                     CoursePreviewUX_Page_Window_Title_Name_HED);
-                 //Switch to the Iframe
-                 base.SwitchToIFrame(CoursePreviewUXPageResource.
-                     CoursePreviewUX_Page_Iframe_Id_Locator);
+                 new StudentPresentationPage().SelectWindowAndFrame();
                  //Click on the activity
                  IWebElement getactivityName = base.
                      GetWebElementPropertiesByPartialLinkText(activityName);
@@ -419,142 +415,13 @@ namespace Pegasus.Pages.UI_Pages
              logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
                           base.IsTakeScreenShotDuringEntryExit);
 
-         }
-
-         /// <summary>
-         /// Submitting the WL Essay Activity By Student.
-         /// </summary>
-         /// <param name="answerField"></param>
-         public void SubmittingtheWLEssayActivityByStudent(int answerField)
-         {
-             logger.LogMethodEntry("CoursePreviewUXPage", "SubmittingtheWLEssayActivityByStudent",
-                          base.IsTakeScreenShotDuringEntryExit);
-             try
-             {
-
-                 base.WaitUntilWindowLoads(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
-                 base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
-                 base.WaitForElement(By.CssSelector(string.Format(CoursePreviewUXPageResource.
-                      CoursePreviewUX_Page_Activity_Properties_CSS_Selector, answerField)));
-                 string getId = base.GetWebElementPropertiesByCssSelector
-                     (String.Format(CoursePreviewUXPageResource.
-                     CoursePreviewUX_Page_Activity_Properties_CSS_Selector, answerField)).GetAttribute("id");
-
-                 string textId = getId.Split('_')[1];
-                 base.WaitForElement(By.Id(textId));
-                 base.FillTextBoxById(textId, CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Essay_Text_to_Fill);
-             }
-             catch (Exception e)
-             {
-
-                 ExceptionHandler.HandleException(e);
-             }
-             logger.LogMethodEntry("CoursePreviewUXPage", "SubmittingtheWLEssayActivityByStudent",
-                         base.IsTakeScreenShotDuringEntryExit);
-         }
-
-         /// <summary>
-         /// Submit the Essay activity in WL.
-         /// </summary>
-         public void AnswerWLEssayActivity()
-         {
-             //Answer the Essay Activity
-             logger.LogMethodEntry("CourseContentUXPage", "AnswerWLEssayActivity",
-                   base.IsTakeScreenShotDuringEntryExit);
-             try
-             {
-                 //Input answer to the activity questions
-                 this.SubmittingtheWLEssayActivityByStudent(1);
-                 this.SubmittingtheWLEssayActivityByStudent(2);
-                 this.SubmittingtheWLEssayActivityByStudent(3);
-                 this.SubmittingtheWLEssayActivityByStudent(4);
-                 // Submitt WL Activity
-                 this.SubmittWLActivity();
-             }
-             catch (Exception e)
-             {
-                 ExceptionHandler.HandleException(e);
-             }
-             logger.LogMethodExit("CourseContentUXPage", "AnswerWLEssayActivity",
-                   base.IsTakeScreenShotDuringEntryExit);
-         }
-
-         /// <summary>
-         /// Submitt WL Activity
-         /// </summary>
-         public void SubmittWLActivity()
-         {
-             logger.LogMethodEntry("CourseContentUXPage", "SubmittWLActivity",
-                 base.IsTakeScreenShotDuringEntryExit);
-             try
-             {
-                 //Click on submit button
-                 IWebElement getFinishButton = base.GetWebElementPropertiesByPartialLinkText
-                     (CoursePreviewUXPageResource.CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
-                 base.ClickByJavaScriptExecutor(getFinishButton);
-                 //Click on Finish button
-                 base.WaitForElement(By.Id(CoursePreviewUXPageResource.CoursePreviewUX_Page_Finish_Button_Id_Locator));
-                 IWebElement finishButton = base.GetWebElementPropertiesById(
-                     CoursePreviewUXPageResource.CoursePreviewUX_Page_Finish_Button_Id_Locator);
-                 base.ClickByJavaScriptExecutor(finishButton);
-                 //Click on 'Return to course'
-                 base.WaitForElement(By.Id(CoursePreviewUXPageResource.CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator));
-                 IWebElement returnToCourse = base.GetWebElementPropertiesById(
-                    CoursePreviewUXPageResource.CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
-                 base.PerformMouseClickAction(returnToCourse);
-             }
-             catch (Exception e)
-             {
-                 ExceptionHandler.HandleException(e);
-             }
-             logger.LogMethodEntry("CoursePreviewUXPage", "SubmittWLActivity",
-                         base.IsTakeScreenShotDuringEntryExit);
-         }
-
-         /// <summary>
-         /// Verify The Activity Status of WL Activity.
-         /// </summary>
-         /// <param name="activityName">This is the activity name.</param>
-         /// <returns>The Activity status.</returns>
-         public string GetTheActivityStatusofWLActivity(string activityName)
-         {
-
-             logger.LogMethodEntry("CourseContentUXPage", 
-                 "GetTheActivityStatusofWLActivity",
-                 base.IsTakeScreenShotDuringEntryExit);
-             string getWLactivityStatus = string.Empty;
-             try
-             {
-                 //Selecting Window.
-                 base.SelectWindow(CoursePreviewUXPageResource.
-                     CoursePreviewUX_Page_Window_Title_Name_HED);
-                 base.SwitchToIFrame(CoursePreviewUXPageResource.
-                     CoursePreviewUX_Page_Iframe_Id_Locator);
-                 //Verify The Actvity Status.
-                 IWebElement getactivityId = base.
-                     GetWebElementPropertiesByPartialLinkText(string.Format(activityName));
-                 string activityId = getactivityId.GetAttribute("id");
-                 string textactivityId = activityId.Split('_')[1];
-                 string activityStatusId = "spanStatus" + '_' + textactivityId;
-                 base.WaitForElement(By.Id(activityStatusId));
-                 getWLactivityStatus = base.GetElementTextById(activityStatusId);
-             }
-             catch (Exception e)
-             {
-
-                 ExceptionHandler.HandleException(e);
-             }
-             logger.LogMethodEntry("CoursePreviewUXPage", 
-                 "GetTheActivityStatusofWLActivity",
-                         base.IsTakeScreenShotDuringEntryExit);
-             return getWLactivityStatus;
-         }
+         }  
 
          /// <summary>
          /// 
          /// </summary>
          /// <param name="recordButtonNumber"></param>
-         public void SubmittingtheWLLearnocityActivityByStudent()
+         public void SubmittingtheLearnocityActivityByStudent()
          {
              try
              {
@@ -569,10 +436,9 @@ namespace Pegasus.Pages.UI_Pages
                      Thread.Sleep(5000);
                      base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
                      base.ClickByJavaScriptExecutor(recordButtonList[i]);
-                     Thread.Sleep(10000);
                  }
                  // Submitt WL Activity
-                 this.SubmittWLActivity();
+                 new CourseContentUXPage().SubmitActivity();
              }
              catch (Exception e)
              {

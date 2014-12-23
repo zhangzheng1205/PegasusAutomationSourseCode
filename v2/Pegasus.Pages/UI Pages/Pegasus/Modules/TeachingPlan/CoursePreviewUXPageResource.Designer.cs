@@ -142,15 +142,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #nextQuextion div:nth-of-type({0}).
-        /// </summary>
-        internal static string CoursePreviewUX_Page_Activity_Properties_CSS_Selector {
-            get {
-                return ResourceManager.GetString("CoursePreviewUX_Page_Activity_Properties_CSS_Selector", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to id.
         /// </summary>
         internal static string CoursePreviewUX_Page_Activity_WebElement_Property_Name {
@@ -205,15 +196,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl0:APH:btnfinish.
-        /// </summary>
-        internal static string CoursePreviewUX_Page_Finish_Button_Id_Locator {
-            get {
-                return ResourceManager.GetString("CoursePreviewUX_Page_Finish_Button_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ifrmCoursePreview.
         /// </summary>
         internal static string CoursePreviewUX_Page_Iframe_Id_Locator {
@@ -259,29 +241,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl0:btnReturnCourse.
-        /// </summary>
-        internal static string CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator {
-            get {
-                return ResourceManager.GetString("CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 5000.
         /// </summary>
         internal static string CoursePreviewUX_Page_Sleep_Time {
             get {
                 return ResourceManager.GetString("CoursePreviewUX_Page_Sleep_Time", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Finish: Submit for Grading.
-        /// </summary>
-        internal static string CoursePreviewUX_Page_Submit_Button_LinkText_Locator {
-            get {
-                return ResourceManager.GetString("CoursePreviewUX_Page_Submit_Button_LinkText_Locator", resourceCulture);
             }
         }
         

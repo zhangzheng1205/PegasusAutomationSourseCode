@@ -737,14 +737,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// Submitting The WL Essay Activity
         /// </summary>
-        [Then(@"I submit the essay activity")]
+        [When(@"I submit the essay activity")]
         public void SubmittingTheWLEssayActivity()
         {
             //Submit the activity in WL
             Logger.LogMethodEntry("CommonSteps",
              "SubmittingTheWLEssayActivity",
              base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().AnswerWLEssayActivity();
+            new CourseContentUXPage().SubmitWordLanguageEssayActivity();
             Logger.LogMethodExit("CommonSteps",
                "SubmittingTheWLEssayActivity",
                base.IsTakeScreenShotDuringEntryExit);
@@ -757,7 +757,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="activityName">This is the activity name.</param>
         /// <param name="windowTitle">This is the window name.</param>
         /// <param name="studentName">This is the user type enum.</param>
-        [Then(@"I should see ""(.*)"" for ""(.*)"" in ""(.*)"" page by ""(.*)""")]
+        [Then(@"I should see ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" page by ""(.*)""")]
         public void VerifyingWLActivityStatusAfterSubmission(
             string activityStatus, string activityName,
             string windowTitle, string studentName)
@@ -769,8 +769,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activityStatus,
-            new CoursePreviewUXPage().
-            GetTheActivityStatusofWLActivity(activityName)));
+            new CourseContentUXPage().
+            GetTheActivityStatusofWordLanguageActivity(activityName)));
             Logger.LogMethodExit("CommonSteps",
                "VerifyingWLActivityStatusAfterSubmission",
                base.IsTakeScreenShotDuringEntryExit);
@@ -825,7 +825,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CommonSteps",
               "SubmitTheLearnocityActivity",
               base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().SubmittingtheWLLearnocityActivityByStudent();
+            new CoursePreviewUXPage().SubmittingtheLearnocityActivityByStudent();
             Logger.LogMethodExit("CommonSteps",
                "SubmitTheLearnocityActivity",
                base.IsTakeScreenShotDuringEntryExit);

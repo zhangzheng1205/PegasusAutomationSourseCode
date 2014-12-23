@@ -1245,7 +1245,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Click on 'Save and Close'.
         /// </summary>
         /// <param name="buttonName">This is the button name.</param>
-        [Then(@"I click on ""(.*)""")]
+        [When(@"I click ""(.*)""")]
         public void ClickSaveAndCLose(string buttonName)
         {
             //Click on 'Save and Close'
@@ -1261,7 +1261,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Select student from View submission window.
         /// </summary>
         /// <param name="userTypeEnum">This is the User.</param>
-        [Then(@"I select the student ""(.*)"" from student frame in view submission page")]
+        [When(@"I select the student ""(.*)"" from student frame in view submission page")]
         public void SelectTheStudentFromStudentFrameInViewSubmissionPage(
             User.UserTypeEnum userTypeEnum)
         {
@@ -1283,7 +1283,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Select the Zero Score Student in View Submission window.
         /// </summary>
         /// <param name="userTypeEnum">This is the user.</param>
-        [Then(@"I select the 'Zero' scoring ""(.*)"" from student frame in view submission page")]
+        [When(@"I select the '(.*)' scoring ""(.*)"" from student frame in view submission page")]
         public void SelectZeroScoreStudentViewSubmissionPage(
             User.UserTypeEnum userTypeEnum)
         {
@@ -1305,7 +1305,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Instructor giving Feedback for the activity submitted by student.
         /// </summary>
         /// <param name="feedbackText">This is the Feedbacktext.</param>
-        [Then(@"I provide ""(.*)"" feedback for the activity submitted by student")]
+        [When(@"I provide ""(.*)"" feedback for the activity submitted by student")]
         public void ProvideFeedbackForTheActivitySubmittedByStudent(
             string feedbackText)
         {
@@ -1344,7 +1344,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Instructor providing score for the activity submitted by student.
         /// </summary>
         /// <param name="score">This is the activity score.</param>
-        [Then(@"I provide ""(.*)"" for the activity")]
+        [When(@"I provide ""(.*)"" for the activity")]
         public void ProvideEssayActivityScore(string score)
         {
             //Instructor providing score for the activity submitted by student

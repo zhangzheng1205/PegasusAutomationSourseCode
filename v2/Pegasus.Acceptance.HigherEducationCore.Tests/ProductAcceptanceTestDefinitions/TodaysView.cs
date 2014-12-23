@@ -442,7 +442,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Perform 'Mark as read' for the activity.
         /// </summary>
         /// <param name="activityButton">This is the button name.</param>
-        [When(@"I Click on ""(.*)"" button displayed in the right frame")]
+        [When(@"I click on ""(.*)"" button displayed in the right frame")]
         public void MarkAsReadForTheActivity(string activityButton)
         {
             //Click on 'Mark as read' for the activity.
