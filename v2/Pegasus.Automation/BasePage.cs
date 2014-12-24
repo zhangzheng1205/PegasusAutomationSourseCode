@@ -647,6 +647,19 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Get the value of a the given attribute of the element by specified locator attribute value.
+        /// </summary>
+        /// <param name="by">The locator to be used.</param>
+        /// <param name="propertyName">The attribute whose value is to be returned.</param>
+        /// <returns>The attribute's current value or null if the value is not set by locator attribute value.</returns>
+        protected string GetWebElementPropertyValue(By by, string propertyName)
+        {
+            base.WaitForElement(by);
+            IWebElement webElement = GetWebElementProperties(by);
+            return webElement.GetAttribute(propertyName);
+        }
+
+        /// <summary>
         /// Defines the interface through which the user controls elements on the page by XPath value.
         /// </summary>
         /// <param name="xPathValue">Retrieves HTML Element by XPath.</param>
