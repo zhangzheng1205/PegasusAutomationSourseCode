@@ -126,16 +126,14 @@ testRunner.Then("I should see the successfull message \"Your message has been se
 #line 30
 this.ScenarioSetup(scenarioInfo);
 #line 31
-testRunner.When("I navigate to \"Todays view\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
 testRunner.Then("I should see the \"Instructor Grading (1)\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 32
 testRunner.And("I should see the alert count updated as \"1\" in \"Instructor Grading (1)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
+#line 33
 testRunner.When("I click on the \"Instructor Grading (1)\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
-testRunner.Then("I should see the activity \"SAM Activity:SAM 01-05 Heritage Language: tu español. " +
-                    "[Vocabulario 1. La familia]\" in the Instructor grading channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 34
+testRunner.Then("I should see the \"SAM Activity:SAM 01-05 Heritage Language: tu español. [Vocabula" +
+                    "rio 1. La familia]\" activity in the Instructor grading channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

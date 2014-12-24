@@ -191,22 +191,20 @@ testRunner.And("I should see the \"Click on the icons below & follow the on-scre
 #line 64
 this.ScenarioSetup(scenarioInfo);
 #line 65
-testRunner.When("I navigate to \"Todays view\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
 testRunner.Then("I should see the \"Instructor Comments (1)\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 66
 testRunner.And("I should see the alert count updated as \"1\" in \"Instructor Comments (1)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 67
 testRunner.When("I click on the \"Instructor Comments\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 68
 testRunner.Then("I should see the activity \"SAM Activity : SAM 01-05 Heritage Language: tu español" +
                     ". [Vocabulario 1. La familia]\" in the Instructor Comments channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
+#line 69
 testRunner.When("I click on \"View All Submissions\" of the activity \"SAM Activity : SAM 01-05 Herit" +
                     "age Language: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 70
 testRunner.And("I click on \"Mark as Read\" button displayed in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
+#line 71
 testRunner.Then("I should see the alert count updated as \"0\" in \"Instructor Comments (0)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

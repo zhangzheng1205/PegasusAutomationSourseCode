@@ -3510,6 +3510,9 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Variable
             string getActivityName = string.Empty;
             //get Activities Row Count
+            base.SwitchToLastOpenedWindow();
+            bool jg = base.IsElementPresent(By.XPath(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath), 10);
             int getActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
                 TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath);
             //Iterate for Respective Activity In Table
@@ -3939,6 +3942,25 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "OpenActivityDetails",
                     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fetch the activity name from Instructor grading channel.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <returns>Activity name.</returns>
+        public string GetActivityNameOfInstrucorGradingChannel(string activityName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage",
+                "GetActivityNameOfInstrucorGradingChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            bool djfh = base.IsElementPresent(By.PartialLinkText(activityName), 10);
+            getActivityName = base.GetElementTextByPartialLinkText(activityName);
+            Logger.LogMethodExit("TodaysViewUXPage", 
+                "GetActivityNameOfInstrucorGradingChannel",
+                   base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
         }
     }
 }

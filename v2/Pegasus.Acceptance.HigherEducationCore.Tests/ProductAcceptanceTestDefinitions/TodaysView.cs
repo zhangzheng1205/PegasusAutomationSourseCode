@@ -423,6 +423,26 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityName"></param>
+        [Then(@"I should see the ""(.*)"" activity in the Instructor grading channel")]
+        public void VerifyActivityInTheInstructorGradingChannel(string activityName)
+        {
+            //Verify The Activity Name In The Instructor Comments Channel           
+            Logger.LogMethodEntry("TodaysView", "VerifyActivityInTheInstructorGradingChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the Activity Name In The Instructor Comments Channel 
+            Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName,
+                    new TodaysViewUxPage().
+                    GetActivityNameOfInstrucorGradingChannel(activityName)));
+            Logger.LogMethodEntry("TodaysView", "VerifyActivityInTheInstructorGradingChannel",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click on the activity cmenu.
         /// </summary>
         /// <param name="cmenuOption">This is the cmenu option.</param>

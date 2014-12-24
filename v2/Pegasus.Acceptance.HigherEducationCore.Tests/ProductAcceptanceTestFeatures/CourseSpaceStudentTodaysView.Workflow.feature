@@ -62,7 +62,6 @@ And I should see the "Click on the icons below & follow the on-screen instructio
 #US:PEGASUS-29237
 #MySpanishLabProgram
 Scenario: Student views Alert update in "Instructor Comments" channel of Todays View page
-When I navigate to "Todays view" tab
 Then I should see the "Instructor Comments (1)" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Instructor Comments (1)" channel
 When I click on the "Instructor Comments" option
