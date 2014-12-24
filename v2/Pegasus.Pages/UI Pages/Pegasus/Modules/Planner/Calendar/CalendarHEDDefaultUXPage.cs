@@ -2582,14 +2582,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Click on 'View Filters'
-                base.SelectWindow(windowName);
-                base.FocusOnElementByCssSelector(CalendarHEDDefaultUXPageResource.
-                   CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
-                IWebElement getViewFilter = base.
-                    GetWebElementPropertiesByCssSelector
-                    (CalendarHEDDefaultUXPageResource.
-                   CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
-                base.ClickByJavaScriptExecutor(getViewFilter);
+               this.ClickViewFilterInGradeBook(windowName);
                 //Click on 'Title Search'
                 base.SelectWindow(windowName);               
                 IWebElement getTitleSearch = base.
@@ -2603,12 +2596,11 @@ namespace Pegasus.Pages.UI_Pages
                 base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator, 
                     chapterName);
-                //Press 'ENTER' key
-                //base.PressKey("{ENTER}");
+                //Press 'ENTER' key             
                 base.PressEnterKeyById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                       CalendarHEDDefaultUXPage_SleepTime));
+                base.WaitUntilWindowLoads(windowName);
+                this.ClickViewFilterInGradeBook(windowName);
             }
             catch (Exception e)
             {
@@ -2616,6 +2608,26 @@ namespace Pegasus.Pages.UI_Pages
             }
           logger.LogMethodExit("CalendarHEDDefaultUXPage", "SearchActivityInGradebook",
               base.IsTakeScreenShotDuringEntryExit);
-      } 
+      }
+
+        /// <summary>
+        /// Click on View Filter In Grade Book.
+        /// </summary>
+        /// <param name="windowName">This is the Window Name.</param>
+        private void ClickViewFilterInGradeBook(string windowName)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickViewFilterInGradeBook",
+           base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow(windowName);
+            base.FocusOnElementByCssSelector(CalendarHEDDefaultUXPageResource.
+               CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+            IWebElement getViewFilter = base.
+                GetWebElementPropertiesByCssSelector
+                (CalendarHEDDefaultUXPageResource.
+               CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+            base.PerformClickAction(getViewFilter);
+            logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickViewFilterInGradeBook",
+           base.IsTakeScreenShotDuringEntryExit);
+        } 
    }
 }
