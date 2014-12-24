@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudentTodaysView", "               As a CS Student \r\n\t\t\tI want to manage all the coursespace student " +
-                    "Today\'s View related usecases \r\n\t\t\tso that I would validate all the coursespace " +
-                    "student scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudentTodaysView", "               As a CS Student \n\t\t\tI want to manage all the coursespace student T" +
+                    "oday\'s View related usecases \n\t\t\tso that I would validate all the coursespace st" +
+                    "udent scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -205,7 +205,9 @@ testRunner.When("I click on \"View All Submissions\" of the activity \"SAM Activ
 #line 70
 testRunner.And("I click on \"Mark as Read\" button displayed in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 71
-testRunner.Then("I should see the alert count updated as \"0\" in \"Instructor Comments (0)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Instructor Comments (0)\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 72
+testRunner.And("I should see the alert count updated as \"0\" in \"Instructor Comments (0)\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
