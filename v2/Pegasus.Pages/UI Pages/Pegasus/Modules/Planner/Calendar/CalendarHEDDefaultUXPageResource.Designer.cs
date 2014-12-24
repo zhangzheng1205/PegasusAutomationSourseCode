@@ -1134,6 +1134,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #txtSearch.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_TextSearch_CSS_ID_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_TextSearch_CSS_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_TimeToWaitForElement {

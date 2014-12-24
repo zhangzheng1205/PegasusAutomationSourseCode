@@ -1283,7 +1283,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Select the Zero Score Student in View Submission window.
         /// </summary>
         /// <param name="userTypeEnum">This is the user.</param>
-        [When(@"I select the '(.*)' scoring ""(.*)"" from student frame in view submission page")]
+        [When(@"I select the 'Zero' scoring ""(.*)"" from student frame in view submission page")]
         public void SelectZeroScoreStudentViewSubmissionPage(
             User.UserTypeEnum userTypeEnum)
         {

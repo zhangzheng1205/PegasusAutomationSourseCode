@@ -534,6 +534,10 @@ testRunner.And("I provide \"Good Performance\" feedback for the activity submitt
 testRunner.And("I click \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 209
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 210
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 211
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -544,27 +548,31 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         public virtual void InstructorGradingEssayActivityWithMaximumScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor grading essay activity with maximum score", ((string[])(null)));
-#line 216
-this.ScenarioSetup(scenarioInfo);
-#line 217
-testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 218
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 219
-testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 220
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 221
+testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 222
 testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-05 Heritage Languag" +
                     "e: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 221
-testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 222
-testRunner.When("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 223
-testRunner.And("I provide \"1\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 224
-testRunner.And("I click \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 225
+testRunner.And("I provide \"1\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 226
+testRunner.And("I click \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 227
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 228
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 229
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -575,28 +583,32 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         public virtual void InstructorGradingEssayActivityWithMinimumScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor grading essay activity with minimum score", ((string[])(null)));
-#line 232
-this.ScenarioSetup(scenarioInfo);
-#line 233
-testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 234
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 235
-testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 236
+this.ScenarioSetup(scenarioInfo);
+#line 237
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 238
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 239
+testRunner.When("I search for \"SAM 01-05\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 240
 testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-05 Heritage Languag" +
                     "e: tu español. [Vocabulario 1. La familia]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 237
+#line 241
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 238
+#line 242
 testRunner.When("I select the \'Zero\' scoring \"WLCsSmsStudent\" from student frame in view submissio" +
                     "n page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 239
+#line 243
 testRunner.And("I provide \"0\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 240
+#line 244
 testRunner.And("I click \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 241
+#line 245
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 246
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 247
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -607,27 +619,31 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         public virtual void InstructorGradingLernosityActivityAndProvidingScore0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor grading lernosity activity and providing score 0", ((string[])(null)));
-#line 248
+#line 254
 this.ScenarioSetup(scenarioInfo);
-#line 249
+#line 255
 testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 250
+#line 256
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 251
+#line 257
 testRunner.When("I search for \"SAM 01-19\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 252
+#line 258
 testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-19 Singular y plura" +
                     "l.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 253
+#line 259
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 254
+#line 260
 testRunner.When("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 255
+#line 261
 testRunner.And("I provide \"0\" for the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 256
+#line 262
 testRunner.And("I click \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 257
+#line 263
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 264
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 265
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -638,25 +654,29 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         public virtual void InstructorProvidingFeedbackToLernosityActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor providing feedback to lernosity activity", ((string[])(null)));
-#line 264
+#line 272
 this.ScenarioSetup(scenarioInfo);
-#line 265
+#line 273
 testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 266
+#line 274
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 267
+#line 275
 testRunner.When("I search for \"SAM 01-19\" in \"Gradebook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 268
+#line 276
 testRunner.And("I click on cmenu option \"ViewAllSubmissions\" of asset \"SAM 01-19 Singular y plura" +
                     "l.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 269
+#line 277
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 270
+#line 278
 testRunner.When("I select the student \"WLCsSmsStudent\" from student frame in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 272
+#line 280
 testRunner.And("I click \"Save and Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 273
+#line 281
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 282
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 283
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

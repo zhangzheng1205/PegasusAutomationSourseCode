@@ -2581,9 +2581,11 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitUntilWindowLoads(windowName);
                 //Click on 'View Filters'
                this.ClickViewFilterInGradeBook(windowName);
                 //Click on 'Title Search'
+               base.WaitUntilWindowLoads(windowName);
                 base.SelectWindow(windowName);               
                 IWebElement getTitleSearch = base.
                     GetWebElementPropertiesByCssSelector(
@@ -2593,6 +2595,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter the 'Chapter name' to search
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator));
+                base.ClearTextByCssSelector(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_TextSearch_CSS_ID_Locator);
                 base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator, 
                     chapterName);

@@ -1556,9 +1556,8 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Click on the given student in View Submission page.
-        /// </summary>
-        /// <param name="lastname">Last name of the student.</param>
-        /// <param name="firstname">First name of the student.</param>
+      /// </summary>
+      /// <param name="studentName">This is the Student Name</param>
         public void ClickStudentByLastAndFirstName(string studentName)
         {
             logger.LogMethodEntry("ViewSubmissionPage",
@@ -1607,7 +1606,7 @@ namespace Pegasus.Pages.UI_Pages
                     "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);            
         }
         
-          /// <summary>
+        /// <summary>
           ///  Provide feedback to the student.
           /// </summary>
           /// <param name="feedbackText">This is the Feedback that has to be given.</param>
@@ -1624,18 +1623,19 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.PartialLinkText(ViewSubmissionPageResource.
                     ViewSubmission_Page_AddFeedback_PartialLinkText_Locator));
                 IWebElement getFeedbackButton = base.
-                    GetWebElementPropertiesByPartialLinkText(ViewSubmissionPageResource.
+                GetWebElementPropertiesByPartialLinkText(ViewSubmissionPageResource.
                     ViewSubmission_Page_AddFeedback_PartialLinkText_Locator);
                 base.ClickByJavaScriptExecutor(getFeedbackButton);
-                this.SelectViewSubmissionWindow();
+                base.SwitchToLastOpenedWindow();
                 //Enter the Feedback in the textbox
+                bool jh = base.IsElementPresent(By.Id("txtFeedback"),10);
                 base.FillTextBoxById(ViewSubmissionPageResource.
-                    ViewSubmission_Page_FeedbackTextbox_Id_Locator, feedbackText);
+                  ViewSubmission_Page_FeedbackTextbox_Id_Locator, feedbackText);
                 //CLick on 'Save'
                 base.WaitForElement(By.PartialLinkText(ViewSubmissionPageResource.
                     ViewSubmission_Page_Save_PartialLinkText_Locator));
                 IWebElement getSaveButton = base.
-                    GetWebElementPropertiesByPartialLinkText(ViewSubmissionPageResource.
+                GetWebElementPropertiesByPartialLinkText(ViewSubmissionPageResource.
                     ViewSubmission_Page_Save_PartialLinkText_Locator);
                 base.ClickByJavaScriptExecutor(getSaveButton);
                 base.ClickButtonByPartialLinkText(ViewSubmissionPageResource.
@@ -1663,7 +1663,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 this.SelectViewSubmissionWindow();
                 base.WaitForElement(By.PartialLinkText(buttonName));
-                IWebElement getSaveAndClose = base.GetWebElementPropertiesByPartialLinkText(buttonName);
+                IWebElement getSaveAndClose = 
+                    base.GetWebElementPropertiesByPartialLinkText(buttonName);
                 base.ClickByJavaScriptExecutor(getSaveAndClose);
             }
             catch (Exception e)
@@ -1675,7 +1676,7 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-         /// <summary>
+        /// <summary>
         /// Instructor grading student for WL Essay Activity.
          /// </summary>
          /// <param name="score">This is the activity score.</param>
@@ -1691,17 +1692,20 @@ namespace Pegasus.Pages.UI_Pages
                     this.SelectViewSubmissionWindow();             
                     //Get essay question count.
                     int getCount = base.GetElementCountByXPath(
-                        ViewSubmissionPageResource.ViewSubmission_Page_QuestionCount_XPath_Locator);
+                        ViewSubmissionPageResource.
+                        ViewSubmission_Page_QuestionCount_XPath_Locator);
                     for (int i = 3; i <= getCount; i++)
                     {
-                        IWebElement getactivityId = base.GetWebElementPropertiesByCssSelector(
+                        IWebElement getactivityId = base.
+                            GetWebElementPropertiesByCssSelector(
                             string.Format(ViewSubmissionPageResource.
                             ViewSubmission_Page_ActivityID_CSS_Locator, i));
                         string activityId = getactivityId.GetAttribute(
-                            ViewSubmissionPageResource.ViewSubmission_Page_Activity_Attribute);
+                            ViewSubmissionPageResource.
+                            ViewSubmission_Page_Activity_Attribute);
                         string textactivityId = activityId.Split('_')[1];
                         string activityInputId = ViewSubmissionPageResource.
-                            ViewSubmission_Page_Activity_InputId + '_' + textactivityId;
+                     ViewSubmission_Page_Activity_InputId + '_' + textactivityId;
                         //Fill the textbox with score 
                         base.WaitForElement(By.Id(activityInputId));
                         base.FillTextBoxById(activityInputId, score);                       

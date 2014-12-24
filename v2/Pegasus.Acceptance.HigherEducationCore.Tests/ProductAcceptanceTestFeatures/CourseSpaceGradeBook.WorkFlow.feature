@@ -207,6 +207,8 @@ When I select the student "WLCsSmsStudent" from student frame in view submission
 And I provide "Good Performance" feedback for the activity submitted by student
 And I click "Save and Close"
 Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose: :Instructor grading essay activity with maximum score in WL
 #TestCase Id: peg-22420
@@ -223,6 +225,8 @@ When I select the student "WLCsSmsStudent" from student frame in view submission
 And I provide "1" for the activity
 And I click "Save and Close"
 Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose: :Instructor grading essay activity with minimum score in WL
 #TestCase Id: peg-22421
@@ -239,6 +243,8 @@ When I select the 'Zero' scoring "WLCsSmsStudent" from student frame in view sub
 And I provide "0" for the activity
 And I click "Save and Close"
 Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose: :Instructor grading lernosity activity and providing score 0
 #TestCase Id: peg-22433
@@ -255,6 +261,8 @@ When I select the student "WLCsSmsStudent" from student frame in view submission
 And I provide "0" for the activity
 And I click "Save and Close"
 Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose: Instructor providing feedback to lernosity activity 
 #TestCase Id: peg-22434
@@ -271,6 +279,8 @@ When I select the student "WLCsSmsStudent" from student frame in view submission
 
 And I click "Save and Close"
 Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 
 
