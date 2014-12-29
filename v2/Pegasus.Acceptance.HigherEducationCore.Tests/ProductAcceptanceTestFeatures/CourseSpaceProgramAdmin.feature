@@ -14,11 +14,6 @@ And I create Section from "MySpanishLabMaster" Template as a Program Admin
 #Purpose: Validate Section to get out from the assigned to copy state in WL
 #MySpanishLabProgram
 Scenario: Validate Section To Get Out From Assigned To Copy State in WL
-Given I browsed the login url for "WLProgramAdmin"
-When I logged into the Pegasus as "WLProgramAdmin" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLProgramAdmin"
 When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I verify the Section created from "MySpanishLabProgram" course Template for AssignedToCopy state

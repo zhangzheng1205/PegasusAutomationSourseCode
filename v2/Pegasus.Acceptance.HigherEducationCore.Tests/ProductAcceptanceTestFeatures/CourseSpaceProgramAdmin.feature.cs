@@ -99,24 +99,13 @@ testRunner.And("I create Section from \"MySpanishLabMaster\" Template as a Progr
 #line 16
 this.ScenarioSetup(scenarioInfo);
 #line 17
-testRunner.Given("I browsed the login url for \"WLProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
-testRunner.When("I logged into the Pegasus as \"WLProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLProgramAdmin" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
 testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 18
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 24
+#line 19
 testRunner.When("I verify the Section created from \"MySpanishLabProgram\" course Template for Assig" +
                     "nedToCopy state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
+#line 20
 testRunner.Then("I should see the Section created from \"MySpanishLabProgram\" course Template to be" +
                     " successfully out of AssignedToCopy state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
