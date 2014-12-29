@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     case Course.CourseTypeEnum.MySpanishLabMaster:
                         new ManageTemplatePage().StoreSectionID(sectionName,
-                            Course.CourseTypeEnum.ProgramCourse);
+                            Course.CourseTypeEnum.MySpanishLabProgram);
                         break;
                     case Course.CourseTypeEnum.HedMyPsychLabMaster:
                         new ManageTemplatePage().StoreSectionID(sectionName,
@@ -62,11 +62,7 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.MyITLabForOffice2013Master:
                         new ManageTemplatePage().StoreSectionID(sectionName,
                             Course.CourseTypeEnum.MyITLabOffice2013Program);
-                        break;
-                    
-
-                    
-
+                        break;  
                 }
             }
             catch (Exception e)
@@ -185,12 +181,12 @@ namespace Pegasus.Pages.UI_Pages
                 case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
                 case Course.CourseTypeEnum.MyITLabForOffice2013Master:
                 case Course.CourseTypeEnum.HSSMyPsychLabMaster:
+                case Course.CourseTypeEnum.MySpanishLabMaster:
                     // Enter section count in Drop Down box
                     base.FillTextBoxById(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.
                             AddNewSection_Page_MilCourse_Section_NoList_Value);
-                    break;
-                case Course.CourseTypeEnum.MySpanishLabMaster:
+                    break;                
                 case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                 case Course.CourseTypeEnum.GraderITSIM5Course:
                     // Enter section count in Drop Down box

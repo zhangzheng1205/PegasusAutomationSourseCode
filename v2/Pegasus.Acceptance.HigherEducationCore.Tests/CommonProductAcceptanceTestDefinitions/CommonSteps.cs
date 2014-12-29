@@ -645,24 +645,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTabAsProgramAdministrator",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
-        /// <summary>
-        /// Navigate To Tab Of The Particular Page.
-        /// </summary>
-        /// <param name="tabName">This is Tab Name.</param>
-        /// <param name="pageName">This is Page Name.</param>
-        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as PAdmin")]
-        public void NavigateToTabInProgramAdminPage(
-            string subNavigationTabName, string subNavigationTabParentWindowName)
-        {
-            // navigate program administrator page
-            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
-                base.IsTakeScreenShotDuringEntryExit);
-            new ProgramAdminToolPage().NavigateProgramAdminTabs(
-                subNavigationTabParentWindowName, subNavigationTabName);
-            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
+        
         /// <summary>
         /// Navigating to the folder where given asset exists.
         /// </summary>
@@ -829,6 +812,24 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps",
                "SubmitTheLearnocityActivity",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Tab Of The Particular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as Admin")]
+        public void NavigateToTabInProgramAdminPage(
+            string subNavigationTabName, string subNavigationTabParentWindowName)
+        {
+            // navigate program administrator page
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ProgramAdminToolPage().NavigateProgramAdminTabs(
+                subNavigationTabParentWindowName, subNavigationTabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
