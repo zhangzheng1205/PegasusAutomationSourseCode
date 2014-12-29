@@ -791,11 +791,11 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Logout as Coursespace Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Logout as WLCoursespace Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLogoutAsCoursespaceAdmin()
+        public virtual void UserLogoutAsWLCoursespaceAdmin()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logout as Coursespace Admin", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logout as WLCoursespace Admin", ((string[])(null)));
 #line 258
 this.ScenarioSetup(scenarioInfo);
 #line 259

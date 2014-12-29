@@ -255,7 +255,7 @@ When I "Sign out" from the "WLCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Logout as Coursespace Admin
-Scenario: User Logout as Coursespace Admin
+Scenario: User Logout as WLCoursespace Admin
 When I "Sign out" from the "WLProgramAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
