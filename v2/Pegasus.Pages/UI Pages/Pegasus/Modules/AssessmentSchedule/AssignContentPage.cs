@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
                 int rowCount = 1;
                 //Select Assign Window
                 this.SelectAssignWindow();
-                // Fetch all attributes of class div
+                //Fetch all attributes of class div
                 IWebElement classDivElement = base.GetWebElementPropertiesById
                     (AssignContentPageResource.AssignContent_Page_SelectClasses_Div_Id);
                 while (classDivElement.Text.Contains(className))
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                     }
                     else
                     {
-                        // increase row count by one
+                        //Increase row count by one
                         rowCount = rowCount + 1;
                     }
                 }
@@ -111,8 +111,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SelectClassOnAssignWindow",
                base.IsTakeScreenShotDuringEntryExit);
-
-
         }
 
         /// <summary>
@@ -941,10 +939,11 @@ namespace Pegasus.Pages.UI_Pages
             { 
                 // Get the current date and time
                 User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
-                DateTime instance = user.CurrentProfileDateTime.AddMinutes(30);
+                DateTime instance = user.CurrentProfileDateTime.AddMinutes(460);
                 String currentTime = instance.ToString();
 
-                string date = currentTime.Split(' ')[0];
+                string systemDate = DateTime.Now.Date.ToString("dd/MM/yyyy");
+                //string date = currentTime.Split(' ')[0];
                 string hour = (currentTime.Split(' ')[1]).Split(':')[0];
                 string minutes = (currentTime.Split(' ')[1]).Split(':')[1];
                 string dayTime = currentTime.Split(' ')[2];
@@ -956,7 +955,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClearTextById(AssignContentPageResource
                .AssignContent_Page_DueDate_TextBox_Id_Locator);
                 base.FillTextBoxById(AssignContentPageResource
-                .AssignContent_Page_DueDate_TextBox_Id_Locator, date);
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, systemDate);
                 //clear current hours
                 base.ClearTextById(AssignContentPageResource
                     .AssignContent_Page_Hours_TextBox_Id_Locator);
@@ -1409,6 +1408,134 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage", "SelectNotAssignedRadiobutton",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fetch title from assign pop up.
+        /// </summary>
+        /// <returns>Assign pop up title.</returns>
+        public string GetAssignWindowPopUpTitle()
+        {
+            //Get assign window title
+            logger.LogMethodEntry("AssignContentPage", "GetAssignWindowPopUpTitle",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Select the assign window
+            base.SwitchToLastOpenedWindow();
+            //Get window title
+            string popUpTitle = base.GetPageTitle;  
+            logger.LogMethodExit("AssignContentPage", "GetAssignWindowPopUpTitle",
+                base.IsTakeScreenShotDuringEntryExit);
+            return popUpTitle;
+
+        }
+
+        /// <summary>
+        /// Click on save and assign button in assign window.
+        /// </summary>
+        public void ClickOnSaveAndAssignButton()
+        {
+            //Click on save and assign button
+            logger.LogMethodEntry("AssignContentPage", "ClickOnSaveAndAssignButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            this.SelectAssignWindow();
+            //Click on save and assign button
+            IWebElement getSaveAndAssignButtonProperty = base.GetWebElementPropertiesByCssSelector(
+                AssignContentPageResource.AssignContent_Page_SaveandAssign_Button_CssSelector);
+            base.ClickByJavaScriptExecutor(getSaveAndAssignButtonProperty);
+            logger.LogMethodExit("AssignContentPage", "ClickOnSaveAndAssignButton",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Validate the assign window existance.
+        /// </summary>
+        /// <returns>True or False.</returns>
+        public bool IsAssignWindowClosed()
+        {
+            //Validate closue of assign window
+            logger.LogMethodEntry("AssignContentPage", "IsAssignWindowClosed",
+               base.IsTakeScreenShotDuringEntryExit);
+             bool isAssignPopUpClosed = base.IsPopUpClosed(Convert.ToInt32(AssignContentPageResource.
+                    AssignContent_Page_Window_Count));
+             logger.LogMethodExit("AssignContentPage", "IsAssignWindowClosed",
+                 base.IsTakeScreenShotDuringEntryExit);
+             return isAssignPopUpClosed;
+
+        }
+
+        /// <summary>
+        /// Enter system current date and time.
+        /// </summary>
+        public void EnterCurrentDateAndTime()
+        {
+            //Click on save and assign button
+            logger.LogMethodEntry("AssignContentPage", "EnterCurrentDateAndTime",
+               base.IsTakeScreenShotDuringEntryExit);
+            try{
+
+                // Get the current date and time
+                string systemTime = DateTime.Now.ToShortTimeString();
+                string systemDate = DateTime.Now.Date.ToString("MM/dd/yyyy");
+                string hour = systemTime.Split(':')[0];
+                string min = (systemTime.Split(':')[1]).Split(' ')[0];
+                string dayTime = systemTime.Split(' ')[1];
+                
+               
+                // Enter the due date in due date text box
+                base.WaitForElement(By.Id(AssignContentPageResource
+               .AssignContent_Page_DueDate_TextBox_Id_Locator));
+                base.ClearTextById(AssignContentPageResource
+               .AssignContent_Page_DueDate_TextBox_Id_Locator);
+                base.FillTextBoxById(AssignContentPageResource
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, systemDate);
+                //clear current hours
+                base.ClearTextById(AssignContentPageResource
+                    .AssignContent_Page_Hours_TextBox_Id_Locator);
+                //enter current hours
+                base.FillTextBoxById(AssignContentPageResource
+                   .AssignContent_Page_Hours_TextBox_Id_Locator, hour);
+                base.ClearTextById(AssignContentPageResource
+                   .AssignContent_Page_Minutes_TextBox_Id_Locator);
+                //// enter after 3 minutes from current minute value
+                base.FillTextBoxById(AssignContentPageResource
+                   .AssignContent_Page_Minutes_TextBox_Id_Locator, min);
+                //enter am/pm 
+                base.SelectDropDownValueThroughTextById("CMBAMPMDUEDT", dayTime);
+                 } 
+            
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "GetAndFillDueDate",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on button in assign pop up.
+        /// </summary>
+        public void ClickOkButtonInAssignWindow()
+        {
+            //Click on ok button
+            logger.LogMethodEntry("AssignContentPage", "ClickOkButtonInAssignWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(AssignContentPageResource
+                .AssignContent_Page_OkButton_Xpath));
+                //Get Element Property
+                IWebElement getOkButton = base.GetWebElementPropertiesByXPath(AssignContentPageResource
+               .AssignContent_Page_OkButton_Xpath);
+                //Click on OK button
+                base.ClickByJavaScriptExecutor(getOkButton);
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "ClickOkButtonInAssignWindow",
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 
