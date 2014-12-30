@@ -267,4 +267,19 @@
   <data name="CoursePreviewMainUX_Page_Iframe_Id_Locator" xml:space="preserve">
     <value>ifrmRight</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_LCC_ShownStatusColumn_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[3]/span</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_LCC_Status_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div/span</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator" xml:space="preserve">
+    <value>frmCourseContainer</value>
+  </data>
 </root>

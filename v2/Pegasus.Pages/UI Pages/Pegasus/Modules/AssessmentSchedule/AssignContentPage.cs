@@ -1420,7 +1420,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("AssignContentPage", "GetAssignWindowPopUpTitle",
                base.IsTakeScreenShotDuringEntryExit);
             //Select the assign window
-            base.SwitchToLastOpenedWindow();
+            this.SelectAssignWindow();
             //Get window title
             string popUpTitle = base.GetPageTitle;  
             logger.LogMethodExit("AssignContentPage", "GetAssignWindowPopUpTitle",
@@ -1502,6 +1502,14 @@ namespace Pegasus.Pages.UI_Pages
                    .AssignContent_Page_Minutes_TextBox_Id_Locator, min);
                 //enter am/pm 
                 base.SelectDropDownValueThroughTextById("CMBAMPMDUEDT", dayTime);
+
+                //store date and time in memory
+                String instance = systemDate + " " + systemTime;
+                DateTime datetime = Convert.ToDateTime(instance);
+                //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
+                User user = User.Get(User.UserTypeEnum.DPCsTeacher);
+                user.CurrentProfileDateTime = datetime;
+
                  } 
             
             catch (Exception e)

@@ -297,6 +297,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                
                 //Select Window               
                 base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
                 //Get Class Count
@@ -314,9 +315,13 @@ namespace Pegasus.Pages.UI_Pages
                     string classNameText = base.GetElementTextByXPath(string.Format(
                         HomePageResource.HomePage_ClassName_Link_Xpath_Locator, initialCount)).Trim();
                     if (classNameText == className)
-                    {  // Click on Class Link
-                        base.ClickLinkByXPath(string.Format(HomePageResource.
-                            HomePage_ClassName_Link_Xpath_Locator, initialCount)); break;
+                    {  
+                        // Click on Class Link
+                        IWebElement classNameProperties = base.GetWebElementPropertiesByXPath(
+                            string.Format(HomePageResource.
+                            HomePage_ClassName_Link_Xpath_Locator, initialCount));
+                        base.ClickByJavaScriptExecutor(classNameProperties);
+                        break;
                     }
                 }
             }

@@ -3,13 +3,6 @@
 					I want to manage all the coursespace teacher  related usecases 
 					so that I would validate all the coursespace teacher scenarios are working fine.
 
-#Purpose: Open CSTeacher Url
-Background:
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
-Given I am on the "Home" page
-
 #Purpose: To View CS System Announcement
 Scenario: View System Announcement by CS Teacher
 When I navigate to the "Home" tab
@@ -207,6 +200,19 @@ Then I should see the successfull message "Your message has been sent." in the s
 When I close the mail popup
 Then I should see the mail popup closed successfully
 
+#Test case id: peg-22536
+#Purpose: Validate assigned LCC display in Manage courework  tab
+Scenario: Teacher validates the display of assigned LCC in Manage course work
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "Class digits 6" class
+Then I should be on the "Classes" page
+When I navigate to the "Manage Coursework" tab
+Then I should see assigned LCC "1-1 Homework"
+And I should see status as "Not started" for LCC "1-1 Homework"
+And I should see the due date for LCC "1-1 Homework"
+And I should see "All" text in Shown to column for LCC "1-1 Homework"
+And I should see Assigned icon for LCC "1-1 Homework"
 
 
 

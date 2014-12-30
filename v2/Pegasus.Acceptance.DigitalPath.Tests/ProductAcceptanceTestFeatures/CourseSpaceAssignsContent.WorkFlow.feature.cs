@@ -123,6 +123,77 @@ testRunner.And("I close the \"Print tool\" window", ((string)(null)), ((TechTalk
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher performs simple assign in Curriculum tab for Lesson type activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAssignsContent")]
+        public virtual void TeacherPerformsSimpleAssignInCurriculumTabForLessonTypeActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher performs simple assign in Curriculum tab for Lesson type activity", ((string[])(null)));
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 32
+testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
+testRunner.And("I expand the folder \"Expressions and Equations\" in Curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+testRunner.And("I expand the sub folder \"Variables and Expressions\" in Curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+testRunner.And("I select cmenu option \"Assign\" of \"Lesson 1-1: Numerical Expressions\" activity in" +
+                    " Curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+testRunner.Then("I should see \"Assign\" pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+testRunner.When("I select the class \"Class digits 6\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+testRunner.And("I select the current date and due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+testRunner.And("I click on Save and Assign button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+testRunner.And("I click on Ok button in Assign pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+testRunner.Then("I should see Assign pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher performs simple assign in Planner tab for LCC")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAssignsContent")]
+        public virtual void TeacherPerformsSimpleAssignInPlannerTabForLCC()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher performs simple assign in Planner tab for LCC", ((string[])(null)));
+#line 45
+this.ScenarioSetup(scenarioInfo);
+#line 46
+testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 47
+testRunner.And("I expand the folder \"Expressions and Equations\" in Planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 48
+testRunner.And("I expand the sub folder \"Variables and Expressions\" in Planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 49
+testRunner.And("I expand the leaf folder \"1-1 Homework\" in Planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
+testRunner.And("I select cmenu option \"Assign\" of \"1-1 Homework\" activity in Planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+testRunner.And("I click on Ok button in Alert pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 52
+testRunner.Then("I should see \"Assign\" pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 53
+testRunner.When("I select the class \"Class digits 6\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+testRunner.And("I select the current date and due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 55
+testRunner.And("I click on Save and Assign button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 56
+testRunner.And("I click on Ok button in Assign pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+testRunner.Then("I should see Assign pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 58
+testRunner.And("I should see the assigned content \"1-1 Homework\" in Calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

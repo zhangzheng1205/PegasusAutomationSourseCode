@@ -36,6 +36,10 @@ namespace Pegasus.Pages.UI_Pages
         int minutesToWait = Int32.Parse(ConfigurationManager.
              AppSettings["AssignedToCopyInterval"]);
 
+        private static string divFolderNodeID;
+        private static string divSubFolderNodeID;
+        private static string divLeafFolderNodeID;
+
         /// <summary>
         /// Search Asset in Planner Tab
         /// </summary>
@@ -804,7 +808,7 @@ namespace Pegasus.Pages.UI_Pages
                       (CalendarDefaultGlobalUXPageResource
                       .CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id);
                 base.SwitchToDefaultPageContent();
-            }
+            }   
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -815,5 +819,295 @@ namespace Pegasus.Pages.UI_Pages
             return getCalendarTitle;
         }
 
+        /// <summary>
+        /// Expand the folder in planner tab.
+        /// </summary>
+        /// <param name="folderName">Name of the folder to expand.</param>
+        public void ExpandFolderInPlannerTab(string folderName)
+        {
+            
+            //Expand the folder in Curriculum tab
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ExpandFolderInPlannerTab",
+                  base.IsTakeScreenShotDuringEntryExit);
+            this.SelectWindowAndSwitchToFrame();
+            //Get the folders count in Planner tab
+            int getFolderCount = base.GetElementCountByXPath(
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator);
+            //Loop through folders to find the expected folder
+            for (int i = 1; i <= getFolderCount; i++)
+            {
+                //Get the folder name
+                string getFolderName = base.GetElementTextByXPath(string.Format
+                    (CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator, i));
+                //Check whether fetched folder name is same as expected folder name
+                if (folderName.Equals(getFolderName))
+                {
+                    IWebElement expandButtonProperties = base.GetWebElementPropertiesByXPath(
+                        string.Format(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_FolderExpandButton_Xpath_Locator, i));
+                    //Expand the folder
+                    base.ClickByJavaScriptExecutor(expandButtonProperties);
+                    //Store the node ID of folder which needs to be used in order to find sub folder
+                    divFolderNodeID = base.GetWebElementPropertiesByXPath(string.Format(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator, i)).GetAttribute("nodeid");
+                    break;
+                }
+
+            }
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ExpandFolderInPlannerTab",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expand the sub folder in planner tab.
+        /// </summary>
+        /// <param name="subFolderName">Name of the sub folde to expand.</param>
+        public void ExpandSubFolderInPlannerTab(string subFolderName)
+        {
+            //Expand the folder in Curriculum tab
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ExpandSubFolderInPlannerTab",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Create the div ID of subfolder
+            string subfolderDivId = "ContainerID_" + divFolderNodeID;
+            //Get subfolder count
+            int getSubFolderCount = base.GetElementCountByXPath(
+                string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator, subfolderDivId));
+            //Loop through sub folders to find the expected sub folder
+            for (int j = 1; j <= getSubFolderCount; j++)
+            
+            {
+                //Get subfolder name
+                string getSubFolderName = base.GetElementTextByXPath(string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator,subfolderDivId, j));
+                //Check whether fetched sub folder name is same as expected sub folder name
+                if (subFolderName.Equals(getSubFolderName))
+                {
+                    
+                    IWebElement subFolderExpandButton = base.GetWebElementPropertiesByXPath(
+                        string.Format(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator,subfolderDivId, j));
+                    //Expand the sub folder
+                    base.ClickByJavaScriptExecutor(subFolderExpandButton);
+                    //Store the node ID of sub folder which needs to be used in order to find leaf folder
+                    divSubFolderNodeID = base.GetWebElementPropertiesByXPath(string.
+                        Format(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, subfolderDivId, j)).
+                        GetAttribute("nodeid");
+                    break;
+                }
+
+            }
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ExpandSubFolderInPlannerTab",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expand the lead folder in planner tab.
+        /// </summary>
+        /// <param name="leafFolderName">Name of leaf folder to expan</param>
+        public void LeafFolderExpansionInPlannerTab(string leafFolderName)
+        {
+            //Expand the folder in Curriculum tab
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "LeafFolderExpansionInPlannerTab",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Create the div ID of leaf folder
+            string leafFolderDivId = "ContainerID_" + divSubFolderNodeID;
+            //Get leaf folders count
+            int getSubFolderCount = base.GetElementCountByXPath(
+                string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator, leafFolderDivId));
+            //Loop through leaf folders to find the expected sub folder
+            for (int j = 1; j <= getSubFolderCount; j++)
+            {
+                try
+                {
+                    //Check whether Subfolder is visible
+                    bool isLeafFolderExpandNameExists = base.IsElementPresent(By.XPath(string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)), 5);
+                    //Scroll down the frame till subfolder is visible
+                    while (isLeafFolderExpandNameExists == false)
+                    {
+                        IJavaScriptExecutor js = (IJavaScriptExecutor)WebDriver;
+                        js.ExecuteScript("arguments[0].scrollTop = arguments[1];", base.
+                            GetWebElementPropertiesById("TreeViewContainer"), 100);
+
+                        //base.PressKey(Keys.PageDown);
+                        isLeafFolderExpandNameExists = base.IsElementPresent(By.XPath(string.
+                Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)), 5);
+                    }
+
+                    //Get leaf folder name
+                    string getLeafFolderName = base.GetElementTextByXPath(string.
+                        Format(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j));
+                    //Check whether fetched leaf folder name is same as expected sub folder name
+                    if (leafFolderName.Equals(getLeafFolderName))
+                    {
+                        //Store the node ID of leaf folder which needs to be used in order to find activity inside leaf folder
+                        divLeafFolderNodeID = base.GetWebElementPropertiesByXPath(string.Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)).
+                            GetAttribute("nodeid");
+                        IWebElement subFolderExpandButton = base.GetWebElementPropertiesByXPath(
+                            string.Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator, leafFolderDivId, j));
+                        //Expand the leaf folder
+                        base.ClickByJavaScriptExecutor(subFolderExpandButton);
+                        break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
+
+            }
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "LeafFolderExpansionInPlannerTab",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Find the activity within leaf folder and click on Cmenu Option.
+        /// </summary>
+        /// <param name="cmenuOption">Cmenu name.</param>
+        /// <param name="activityName">Activity name to find.</param>
+        public void FindActivityAndClickOnCmenu(string cmenuOption, string activityName)
+        {
+            //Find activity in planner tab
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "FindActivityAndClickOnCmenu",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Create the div ID of activity
+            string activityDivId = "ContainerID_" + divLeafFolderNodeID;
+            int getSubFolderContentsCount = base.GetElementCountByXPath(
+                string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator, activityDivId));
+            for (int k = 1; k <= getSubFolderContentsCount; k++)
+            {
+                string getLessonName = base.GetElementTextByXPath(string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k));
+                if (activityName.Equals(getLessonName))
+                {
+
+                    try
+                    {
+                        //MouseHover On Activity
+                        this.MouseHoverOnActivityInPlannerTOC(string.
+                       Format(CalendarDefaultGlobalUXPageResource.
+                       CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k));
+                        //Click on Activity Cmenu Icon               
+                        base.WaitForElement(By.XPath
+                            (string.Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator, activityDivId, k)));
+                        //Get HTML peroperty of Cmenu icon
+                        bool activityCmenu = base.IsElementPresent(By.XPath(string.Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator, activityDivId, k)
+                            ),5);
+                        IWebElement getPropertyOfCmenuIcon =
+                            base.GetWebElementPropertiesByXPath(
+                            string.Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator, activityDivId, k));
+                          base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
+                        //Wait for Cmenu option to display
+                          this.ClickOnCmenuOptionInPlannerTab(cmenuOption);
+                          base.SwitchToDefaultPageContent();
+                    }
+                    catch (Exception e)
+                    {
+                        ExceptionHandler.HandleException(e);
+                    }
+
+                    break;
+                }
+
+            }
+        }
+
+
+        /// <summary>
+        /// MouseHover On Activity in Planner
+        /// </summary>
+        private void MouseHoverOnActivityInPlannerTOC(String assetPath)
+        {
+            //MouseHover On Activity
+            logger.LogMethodEntry("ContentLibraryPage",
+                "MouseHoverOnActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            bool isActivityExists = base.IsElementPresent(By.XPath
+                (assetPath),5);
+            base.WaitForElement(By.XPath(assetPath));
+            //Mouse Hover On Searched Activity Name
+            IWebElement testName = base.GetWebElementPropertiesByXPath(assetPath);
+            base.PerformMouseHoverByJavaScriptExecutor(testName);
+            logger.LogMethodExit("ContentLibraryPage",
+                "MouseHoverOnActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void ClickOnCmenuOptionInPlannerTab(string cmenuOption)
+        {
+            logger.LogMethodEntry("ContentLibraryPage", "GetCmenuOptions",
+               base.IsTakeScreenShotDuringEntryExit);
+            int getCmenuOptionCount = base.GetElementCountByXPath(
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_LCC_CmenuCount_Xpath_Locator);
+            for (int i = 1; i <= getCmenuOptionCount; i++)
+            {
+                string getCmenuOption = base.GetElementTextByXPath(string.Format(
+                    CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator, i));
+                if (cmenuOption.Equals(getCmenuOption))
+                {
+                    IWebElement getCmenuProperties = base.GetWebElementPropertiesByXPath(string.Format(
+                    CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator, i));
+                    base.ClickByJavaScriptExecutor(getCmenuProperties);
+                    break;
+                }
+
+            }
+
+        }
+
+        /// <summary>
+        /// Get assigned content displayed in calendar frame in planner tab.
+        /// </summary>
+        /// <param name="assignedActivityTitle">Activity name.</param>
+        /// <returns>Assigned activity name.</returns>
+        public string GetAssignedContentTitle(string assignedActivityTitle)
+         {
+            //Get assigned activity title
+             logger.LogMethodEntry("ContentLibraryPage", "GetAssignedContentTitle",
+                base.IsTakeScreenShotDuringEntryExit);
+             string getAssignedContentTitle = null;
+            //Select planner tab.
+             this.SelectWindowAndSwitchToFrame();
+            //Fetch the contents count in calendar frame
+             int getAssignedContentsCount = base.GetElementCountByXPath(
+                 CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator);
+            try{
+
+            for(int i=2; i<=getAssignedContentsCount; i++)
+            {
+                //Fetch title
+                getAssignedContentTitle = base.GetElementTextByXPath(
+                   string.Format(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator,i));
+                if(assignedActivityTitle.Equals(getAssignedContentTitle))
+                {
+                    break;
+                }
+            }
+
+                }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryPage",
+                "GetAssignedContentTitle",
+                 base.IsTakeScreenShotDuringEntryExit);
+            return getAssignedContentTitle;
+         }       
+    
     }
 }

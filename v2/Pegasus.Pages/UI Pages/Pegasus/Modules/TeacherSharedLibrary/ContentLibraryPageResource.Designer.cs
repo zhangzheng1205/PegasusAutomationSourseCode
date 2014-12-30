@@ -98,6 +98,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContent&apos;]/table.
+        /// </summary>
+        internal static string ContentLibrary_Page_Folder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibrary_Page_Folder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string ContentLibrary_Page_ForLoopInitialization_Value {
@@ -112,6 +121,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         internal static string ContentLibrary_Page_Frame_Id_Locator {
             get {
                 return ResourceManager.GetString("ContentLibrary_Page_Frame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn21Nodes&apos;]/table[{0}]/tbody/tr/td[4]//tr/td[2]/table/tbody/tr/td[2]//img.
+        /// </summary>
+        internal static string ContentLibrary_Page_Lessson_CmenuIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibrary_Page_Lessson_CmenuIcon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn2Nodes&apos;]/table.
+        /// </summary>
+        internal static string ContentLibrary_Page_SubFolder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibrary_Page_SubFolder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn2Nodes&apos;]/table[{0}]/tbody/tr/td[3]//td[2]//td[1].
+        /// </summary>
+        internal static string ContentLibrary_Page_SubFolder_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibrary_Page_SubFolder_Name_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -233,11 +269,74 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContent&apos;]/table[{0}]/tbody/tr/td[1]//img.
+        /// </summary>
+        internal static string ContnetLibrary_Page_FolderExpandButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_FolderExpandButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContent&apos;]/table[{0}]/tbody/tr/td[2].
+        /// </summary>
+        internal static string ContnetLibrary_Page_FolderName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_FolderName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 20000.
         /// </summary>
         internal static string ContnetLibrary_Page_FrameRefresh_CustomTimeToWait_Value {
             get {
                 return ResourceManager.GetString("ContnetLibrary_Page_FrameRefresh_CustomTimeToWait_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;divmainCmenu&apos;]/table/tbody/tr/td/div[2]/a.
+        /// </summary>
+        internal static string ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn21Nodes&apos;]/table[{0}]/tbody/tr/td[4]//td[3]//span/img.
+        /// </summary>
+        internal static string ContnetLibrary_Page_Lesson_CmenuIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_Lesson_CmenuIcon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;divmainCmenu&apos;]/table/tbody/tr/td/div[2]/a[{0}].
+        /// </summary>
+        internal static string ContnetLibrary_Page_Lesson_CmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_Lesson_CmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ucContentManager_tvContentt27.
+        /// </summary>
+        internal static string ContnetLibrary_Page_LessonName_Id_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_LessonName_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn21Nodes&apos;]/table[{0}]/tbody/tr/td[4]//td[2]//td[1].
+        /// </summary>
+        internal static string ContnetLibrary_Page_LessonName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_LessonName_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -292,6 +391,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         internal static string ContnetLibrary_Page_SkillLink_Id_Locator {
             get {
                 return ResourceManager.GetString("ContnetLibrary_Page_SkillLink_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn21Nodes&apos;]/table.
+        /// </summary>
+        internal static string ContnetLibrary_Page_SubFolderContents_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_SubFolderContents_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ucContentManager_tvContentn2Nodes&apos;]/table[{0}]/tbody/tr/td[2]//a/img.
+        /// </summary>
+        internal static string ContnetLibrary_Page_SubFolderExpandButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_SubFolderExpandButton_Xpath_Locator", resourceCulture);
             }
         }
         
