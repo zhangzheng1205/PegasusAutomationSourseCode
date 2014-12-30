@@ -423,9 +423,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
-        /// 
+        /// Verify the activity name in Instructor grading channel.
         /// </summary>
-        /// <param name="activityName"></param>
+        /// <param name="activityName">This is the activity name.</param>
         [Then(@"I should see the ""(.*)"" activity in the Instructor grading channel")]
         public void VerifyActivityInTheInstructorGradingChannel(string activityName)
         {

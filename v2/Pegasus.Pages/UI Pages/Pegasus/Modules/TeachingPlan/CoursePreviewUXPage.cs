@@ -394,10 +394,10 @@ namespace Pegasus.Pages.UI_Pages
          /// Student launch the activity from Course Material tab.
          /// </summary>
          /// <param name="activityName">This is the activity name.</param>
-         public void SelectActivityByStudentInWL(string activityName)
+         public void SelectActivityByStudentInWordLanguage(string activityName)
          {
              //Student launch the activity from Course Material tab
-             logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
+             logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWordLanguage",
                          base.IsTakeScreenShotDuringEntryExit);
              try
              {
@@ -412,10 +412,11 @@ namespace Pegasus.Pages.UI_Pages
              {
                  ExceptionHandler.HandleException(e);
              }
-             logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
+             logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWordLanguage",
                           base.IsTakeScreenShotDuringEntryExit);
 
          }  
+         
 
          /// <summary>
          /// 

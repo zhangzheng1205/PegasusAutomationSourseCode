@@ -132,8 +132,6 @@ Then I should be on the "Course Materials" page
 When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
 And I submit the essay activity
 Then I should see "Not passed" status for the activity "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
-When I navigate to the "Today's View" tab
-Then I should be on the "Today's View" page
 
 #Purpose: Student submits sam activity from Course Calendar tab and score 100
 #Test Case Id:peg-22418
@@ -145,8 +143,6 @@ Then I should be on the "Course Materials" page
 When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 And I submit the SAM Activity to score '100'
 Then I should see "Passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
-When I navigate to the "Today's View" tab
-Then I should be on the "Today's View" page
 
 #Purpose:Student submits sam activity from Course Calendar tab and score 0
 #Test Case Id:peg-22405
@@ -158,8 +154,6 @@ Then I should be on the "Course Materials" page
 When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 And I submit SAM Activity to score '0'
 Then I should see "Not passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
-When I navigate to the "Today's View" tab
-Then I should be on the "Today's View" page
 
 #Purpose: Student submits Learsonsity activity  from Course Calendar tab
 #Test Case Id:peg-22432

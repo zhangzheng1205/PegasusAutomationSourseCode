@@ -102,7 +102,7 @@ testRunner.Then("I should see the order of assigned contents in calendar same as
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
@@ -114,10 +114,6 @@ testRunner.When("I drag and drop the \"Capítulo 01: ¿Quiénes somos? (ORGANIZE
                     "lder to the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
 testRunner.Then("I should see due date icon displayed in current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -128,27 +124,23 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void AssignMoreThanOneContentUsingAssignUnassignLinkByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign more than one content using Assign Unassign link by Instructor", ((string[])(null)));
-#line 32
+#line 30
 this.ScenarioSetup(scenarioInfo);
-#line 33
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 31
+testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 33
 testRunner.When("I select \"SAM 02-02 ¿Qué clases tienen? [Vocabulario 1. Las materias y las especi" +
                     "alidades]\" in \"Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 34
 testRunner.And("I select the check box of any 2 activities in \"STUDENT ACTIVITIES MANUAL\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
+#line 35
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 38
+#line 36
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
+#line 37
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -159,27 +151,23 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void AssignOneContentUsingAssignUnassignLinkByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign one content using Assign Unassign link by Instructor", ((string[])(null)));
-#line 47
+#line 43
 this.ScenarioSetup(scenarioInfo);
-#line 48
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 44
+testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 46
 testRunner.When("I select \"SAM 03-01 ¿Qué hacemos en casa? [Vocabulario 1. La casa]\" in \"Calendar\"" +
                     " by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 47
 testRunner.And("I select the check box of any 1 activities in \"STUDENT ACTIVITIES MANUAL\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 48
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
+#line 49
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 50
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 55
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -190,28 +178,24 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void DragAndDropTheMoreThanOneAssetsToCurrentDateInAssignmentCalendar()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop the more than one assets to current date in Assignment calendar", ((string[])(null)));
-#line 62
+#line 56
 this.ScenarioSetup(scenarioInfo);
-#line 63
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 57
+testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 58
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
+#line 59
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 60
 testRunner.When("I select \"SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]\" in \"" +
                     "Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 61
 testRunner.And("I select the check box of any 2 activities in \"STUDENT ACTIVITIES MANUAL\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 62
 testRunner.And("I should drag and drop multiple assets along with \"SAM 06-01 Descripciones. [Revi" +
                     "ew: Capítulos Preliminar A,  1 y 2]\" to the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 69
+#line 63
 testRunner.Then("I should see due date icon displayed in current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -222,24 +206,20 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void ToCheckTheCurrentDateAssignedContentInTheCalendarByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the current date assigned content in the calendar by Instructor", ((string[])(null)));
-#line 77
+#line 69
 this.ScenarioSetup(scenarioInfo);
-#line 78
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
+#line 70
+testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 71
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
+#line 72
 testRunner.And("I should see \"Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
+#line 73
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
+#line 74
 testRunner.When("I select the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 83
+#line 75
 testRunner.Then("I should see the assigned content \"Readiness Check 01\" in the day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 84
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -250,31 +230,42 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void ToValidateTheDisplayOfStartDateIconInCalendarFrameByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate the display of start date icon in calendar frame by Instructor", ((string[])(null)));
-#line 91
+#line 81
 this.ScenarioSetup(scenarioInfo);
+#line 82
+testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 83
+testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 84
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 85
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 86
+testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLCsSmsInstruc" +
+                    "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 87
+testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
+testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 89
+testRunner.When("I select \"SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]\" in " +
+                    "\"Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 90
+testRunner.And("I select cmenu \"Assignment Properties\" of activity \"SAM 05-01 Artistas famosos. [" +
+                    "Vocabulario 1. El mundo de la música]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 91
+testRunner.Then("I should see the \"Assign\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 92
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I assign the asset for current date in the properties popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 93
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 94
-testRunner.When("I select \"SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]\" in " +
-                    "\"Calendar\" by \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 95
-testRunner.And("I select cmenu \"Assignment Properties\" of activity \"SAM 05-01 Artistas famosos. [" +
-                    "Vocabulario 1. El mundo de la música]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 96
-testRunner.Then("I should see the \"Assign\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 97
-testRunner.When("I assign the asset for current date in the properties popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 99
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 100
+#line 95
 testRunner.And("I should see the startdate Icon in calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 101
+#line 96
 testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 97
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

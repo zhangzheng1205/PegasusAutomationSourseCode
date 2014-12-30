@@ -2088,6 +2088,11 @@ namespace Pegasus.Pages.UI_Pages
                 "AnswerSAMActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select the Activity Window.
+        /// </summary>
+        /// <param name="windowName">This is the window name.</param>
         public void SelectActivityWindow(string windowName)
         {
             Logger.LogMethodEntry("CourseContentUXPage",
@@ -2137,10 +2142,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Submitting the WL Essay Activity By Student.
         /// </summary>
         /// <param name="answerField">This is the answer field value.</param>
-        public void SubmittingtheWLEssayActivityByStudent(int answerField)
+        public void SubmittingtheWordLanguageEssayActivityByStudent(int questionNumber)
         {
             Logger.LogMethodEntry("CourseContentUXPage",
-                "SubmittingtheWLEssayActivityByStudent",
+                "SubmittingtheWordLanguageEssayActivityByStudent",
                          base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2149,7 +2154,7 @@ namespace Pegasus.Pages.UI_Pages
                 string getActivityId = base.GetWebElementPropertiesByCssSelector
                     (String.Format(CourseContentUXPageResource.
                     CoursePreviewUX_Page_Activity_Properties_CSS_Selector,
-                    answerField)).GetAttribute(CourseContentUXPageResource.
+                    questionNumber)).GetAttribute(CourseContentUXPageResource.
                 CourseContentUXPage_WL_SAMActivity_Attribute);
                 string activityId = getActivityId.Split('_')[1];
                 base.FillTextBoxById(activityId,
@@ -2161,8 +2166,8 @@ namespace Pegasus.Pages.UI_Pages
 
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodEntry("CourseContentUXPage", 
-                "SubmittingtheWLEssayActivityByStudent",
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmittingtheWordLanguageEssayActivityByStudent",
                         base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2177,14 +2182,14 @@ namespace Pegasus.Pages.UI_Pages
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                for (int i = Convert.ToInt16(CourseContentUXPageResource.
+                for (int questionNumber = Convert.ToInt16(CourseContentUXPageResource.
                     CourseContentUXPage_ActivityLoop_Initializer_Value);
-                    i <= Convert.ToInt16(
+                    questionNumber <= Convert.ToInt16(
                     CourseContentUXPageResource.
-                    CourseContentUXPage_ActivityLoop_Limit_Value); i++)
+                    CourseContentUXPage_ActivityLoop_Limit_Value); questionNumber++)
                 {
                     //Input answer to the activity questions
-                    this.SubmittingtheWLEssayActivityByStudent(i);
+                    this.SubmittingtheWordLanguageEssayActivityByStudent(questionNumber);
                 }
                 // Submitt WL Activity
                 this.SubmitActivity();
@@ -2243,7 +2248,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CourseContentUXPage",
                 "GetTheActivityStatusofWordLanguageActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            string getWLactivityStatus = string.Empty;
+            string getactivityStatus = string.Empty;
             try
             {
                 //Selecting Window.
@@ -2260,7 +2265,7 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPageResource.
                     CourseContentUXPage_WLActivity_AppendSymbol + textactivityId;
                 base.WaitForElement(By.Id(activityStatusId));
-                getWLactivityStatus = base.GetElementTextById(activityStatusId);
+                getactivityStatus = base.GetElementTextById(activityStatusId);
             }
             catch (Exception e)
             {
@@ -2270,7 +2275,7 @@ namespace Pegasus.Pages.UI_Pages
            Logger.LogMethodEntry("CoursePreviewUXPage",
                 "GetTheActivityStatusofWordLanguageActivity",
                         base.IsTakeScreenShotDuringEntryExit);
-            return getWLactivityStatus;
+            return getactivityStatus;
         }
 
     }

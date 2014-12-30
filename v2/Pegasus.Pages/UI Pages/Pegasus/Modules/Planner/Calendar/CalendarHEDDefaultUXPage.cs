@@ -2604,6 +2604,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.PressEnterKeyById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator);
                 base.WaitUntilWindowLoads(windowName);
+                //Click on 'View Filter' 
                 this.ClickViewFilterInGradeBook(windowName);
             }
             catch (Exception e)

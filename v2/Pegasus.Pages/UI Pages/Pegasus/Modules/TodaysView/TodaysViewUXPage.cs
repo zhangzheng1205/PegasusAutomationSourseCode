@@ -3926,7 +3926,8 @@ namespace Pegasus.Pages.UI_Pages
                         TodayViewUXPageResource_SelectActivity_XPath_Locator);
                 base.ClickByJavaScriptExecutor(getActivityDetails);
                 //Click on 'Mark as Read' option
-                IWebElement getMarkAsRead = base.GetWebElementPropertiesByPartialLinkText(activityButton);
+                IWebElement getMarkAsRead = base.
+                    GetWebElementPropertiesByPartialLinkText(activityButton);
                 base.ClickByJavaScriptExecutor(getMarkAsRead);
                 //Close 'View Submission'
                 base.SelectWindow(TodaysViewUXPageResource.
@@ -3955,7 +3956,6 @@ namespace Pegasus.Pages.UI_Pages
                 "GetActivityNameOfInstrucorGradingChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             string getActivityName = string.Empty;
-            bool djfh = base.IsElementPresent(By.PartialLinkText(activityName), 10);
             getActivityName = base.GetElementTextByPartialLinkText(activityName);
             Logger.LogMethodExit("TodaysViewUXPage", 
                 "GetActivityNameOfInstrucorGradingChannel",
