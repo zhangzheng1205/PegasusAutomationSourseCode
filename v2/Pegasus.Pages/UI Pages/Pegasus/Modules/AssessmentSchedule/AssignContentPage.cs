@@ -1160,7 +1160,7 @@ namespace Pegasus.Pages.UI_Pages
                                         break;
                                     //Double click on date if 'IE' browser
                                     case PegasusBaseTestFixture.InternetExplorer:
-                                        base.DoubleClickInIEByJavaScriptExecuter(getDateValue);
+                                        base.DoubleClickInIeByJavaScriptExecuter(getDateValue);
                                         break;
                                 }
                             }

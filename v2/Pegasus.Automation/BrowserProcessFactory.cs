@@ -40,7 +40,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (processes != null)
             {
                 processes.Union(Process.GetProcessesByName("IEDriverServer.exe"));
-                processes.Union(Process.GetProcessesByName("chromedriver"));
+                processes.Union(Process.GetProcessesByName("chromedriver.exe"));
 
             }
             return processes;

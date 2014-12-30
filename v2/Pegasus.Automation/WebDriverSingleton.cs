@@ -15,10 +15,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private readonly ISelenium _selenium = null;
         private readonly string _browser;
 
-        // download file path
-        private static readonly string DownloadFilePath = (AutomationConfigurationManager.
-            DownloadFilePath + "\\ApplicationDownloadedFiles").Replace("file:\\", "");
-
         /// <summary>
         /// Get browser instance.
         /// </summary>
@@ -74,11 +70,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
-        /// Resets the singleton
+        /// Resets the singleton.
         /// </summary>
         public void ResetSingleton()
         {
-            Cleanup();
             _webDriverSingleton = new WebDriverSingleton();
         }
 
@@ -87,12 +82,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         protected WebDriverSingleton()
         {
+            Cleanup();
             WebDriverFactory.Init();
             _browser = WebDriverFactory.GetBrowser();
             _webDriver = WebDriverFactory.GetInstance();
-            Array.ForEach(Directory.GetFiles(DownloadFilePath), File.Delete);
-            _selenium = new WebDriverBackedSelenium(_webDriver, AutomationConfigurationManager.WorkSpaceUrlRoot);
-            _webDriver.Navigate().GoToUrl(AutomationConfigurationManager.WorkSpaceUrlRoot + "frmlogin.aspx?mode=admin");
+            Array.ForEach(Directory.GetFiles(AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", "")), File.Delete);
             _webDriver.Manage().Cookies.DeleteAllCookies();
             _webDriver.Manage().Window.Maximize();
         }

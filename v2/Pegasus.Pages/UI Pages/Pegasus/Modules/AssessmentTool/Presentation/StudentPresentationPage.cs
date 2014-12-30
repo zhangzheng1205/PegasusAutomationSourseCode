@@ -1744,7 +1744,45 @@ namespace Pegasus.Pages.UI_Pages
                 getActivitySubmittedStatus = base.GetElementTextByXPath(string.
                 Format(StudentPresentationPageResource.
                 StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
-                //Select main Window
+                ////Select main Window
+                //base.SelectWindow(StudentPresentationPageResource.
+                //    StudentPresentation_Page_BaseWindow_Title_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivitySubmittedStatus;
+        }
+
+        /// <summary>
+        /// Get Status Of Submitted Activity In CourseMaterial.
+        /// </summary>
+        /// <param name="assetName">This is Activity Name.</param>
+        /// <returns>Activity Status.</returns>
+        public string GetStatusOfSubmittedActivityInCourseMaterialforHSS(string assetName)
+        {
+            //Get Status Of Submitted Activity In CourseMaterial
+            logger.LogMethodEntry("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText variable
+            string getActivitySubmittedStatus = string.Empty;
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                //Get The Activity Name In CourseMaterial
+                int activityColumnCount =
+                    this.GetTheActivityNameInCourseMaterial(assetName);
+                //Get the status text
+                getActivitySubmittedStatus = base.GetElementTextByXPath(string.
+                Format(StudentPresentationPageResource.
+                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                ////Select main Window
                 base.SelectWindow(StudentPresentationPageResource.
                     StudentPresentation_Page_BaseWindow_Title_Name);
             }
@@ -5952,7 +5990,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 base.WaitForElement(By.CssSelector(StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_QuestionCount_Value));
-                int QuestionCount = base.GetElementCountByCSSSelector(
+                int QuestionCount = base.GetElementCountByCssSelector(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
                 if (OptionType.Equals(StudentPresentationPageResource.

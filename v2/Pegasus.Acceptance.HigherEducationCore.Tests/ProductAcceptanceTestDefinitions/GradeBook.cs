@@ -5,6 +5,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Pages;
 
 namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
     ProductAcceptanceTestDefinitions
@@ -479,7 +480,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
                  IsTakeScreenShotDuringEntryExit);
-        }
+        }   
+ 
         /// <summary>
         /// Verify Display of Cmenu Option in Asset Cmenu Options
         /// </summary>
@@ -1237,6 +1239,121 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             new ViewSubmissionPage().IsDeclineAcceptOptionDisplayedInstructor(declineOption, acceptOption);
             Logger.LogMethodExit("Gradebook", "VerifyOptionsInViewSubmissionPageInstructor",
                 base.IsTakeScreenShotDuringEntryExit);
-        }	
+        }
+
+        /// <summary>
+        /// Click on 'Save and Close'.
+        /// </summary>
+        /// <param name="buttonName">This is the button name.</param>
+        [When(@"I click ""(.*)""")]
+        public void ClickSaveAndCLose(string buttonName)
+        {
+            //Click on 'Save and Close'
+            Logger.LogMethodEntry("Gradebook", "VerifyOptionsInViewSubmissionPageInstructor",
+                 base.IsTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().SaveAndCloseViewSubmission(buttonName);
+            Logger.LogMethodExit("Gradebook", "VerifyOptionsInViewSubmissionPageInstructor",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Select student from View submission window.
+        /// </summary>
+        /// <param name="userTypeEnum">This is the User.</param>
+        [When(@"I select the student ""(.*)"" from student frame in view submission page")]
+        public void SelectTheStudentFromStudentFrameInViewSubmissionPage(
+            User.UserTypeEnum userTypeEnum)
+        {
+            //Select student from View submission window
+            Logger.LogMethodEntry("Gradebook",
+                "SelectTheStudentFromStudentFrameInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            string studentName = user.LastName + ", " + user.FirstName;
+            // Search the particular student and perform click for that
+            new ViewSubmissionPage().ClickStudentByLastAndFirstName(studentName);
+            Logger.LogMethodExit("Gradebook", 
+                "SelectTheStudentFromStudentFrameInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the Zero Score Student in View Submission window.
+        /// </summary>
+        /// <param name="userTypeEnum">This is the user.</param>
+        [When(@"I select the 'Zero' scoring ""(.*)"" from student frame in view submission page")]
+        public void SelectZeroScoreStudentViewSubmissionPage(
+            User.UserTypeEnum userTypeEnum)
+        {
+            //Select the Zero Score Student in View Submission window
+            Logger.LogMethodEntry("Gradebook",
+                "SelectZeroScoreStudentViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            string studentName = new RptAllAssessmentAllStudentPage().
+                  GetZeroScoreUsername(userTypeEnum);
+            // Search the particular student and perform click on the student
+            new ViewSubmissionPage().ClickStudentByLastAndFirstName(studentName);
+            Logger.LogMethodExit("Gradebook",
+                "SelectZeroScoreStudentViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Instructor giving Feedback for the activity submitted by student.
+        /// </summary>
+        /// <param name="feedbackText">This is the Feedbacktext.</param>
+        [When(@"I provide ""(.*)"" feedback for the activity submitted by student")]
+        public void ProvideFeedbackForTheActivitySubmittedByStudent(
+            string feedbackText)
+        {
+            //Instructor giving Feedback for the activity submitted by student
+            Logger.LogMethodEntry("Gradebook", 
+                "ProvideFeedbackForTheActivitySubmittedByStudent",
+               base.IsTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().InstructorFeedbackToStudent(feedbackText);
+            Logger.LogMethodExit("Gradebook", 
+                "ProvideFeedbackForTheActivitySubmittedByStudent",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search the SAM activity chapter name in Gradebook window.
+        /// </summary>
+        /// <param name="chapterName">This is the chapter name.</param>
+        /// <param name="windowName">This is the window name.</param>
+        [When(@"I search for ""(.*)"" in ""(.*)"" window")]
+        public void SearchSAMChapterName(string chapterName, string windowName)
+        {
+            //Search the SAM activity chapter name in Gradebook window
+            Logger.LogMethodEntry("GradeBook", "SearchSAMChapterName",
+                  IsTakeScreenShotDuringEntryExit);
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Frame
+            gbInstructorPage.SelectGradebookFrame();
+            //Search the Chapter name
+            new CalendarHedDefaultUxPage().SearchActivityInGradebook(
+                chapterName, windowName);
+            Logger.LogMethodExit("GradeBook", "SearchSAMChapterName",
+                 IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Instructor providing score for the activity submitted by student.
+        /// </summary>
+        /// <param name="score">This is the activity score.</param>
+        [When(@"I provide ""(.*)"" for the activity")]
+        public void ProvideEssayActivityScore(string score)
+        {
+            //Instructor providing score for the activity submitted by student
+            Logger.LogMethodEntry("Gradebook", "ProvideEssayActivityScore",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().
+                InstructorgradingStudentforWLEssayActivity(score);
+            Logger.LogMethodExit("Gradebook", "ProvideEssayActivityScore",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -15,13 +15,13 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This Class Handles Creation of MyTest Activity Actions.
     /// </summary>
-    public class PaperTestUXPage : BasePage
+    public class PaperTestUxPage : BasePage
     {
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
-            Logger.GetInstance(typeof(PaperTestUXPage));
+        private static readonly Logger Logger =
+            Logger.GetInstance(typeof(PaperTestUxPage));
 
         /// <summary>
         /// Select To Create Question.
@@ -35,13 +35,13 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select MyTest Window
+                // select MyTest window
                 this.SelectMyTestWindow();
-                //Click on create question 
+                // click on create question 
                 this.ClickOnCreateQuestionAndGroupLink();
-                //Select Question
+                // select Question
                 this.SelectQuestionType(questionTypeEnum);
-                //Wait for popup load
+                // wait for popup load
                 Thread.Sleep(Convert.ToInt32(PaperTestUXPageResource.
                     PaperTestUX_Page_CreateQuestion_Time_Value));
             }
@@ -60,19 +60,10 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnCreateQuestionAndGroupLink",
                base.IsTakeScreenShotDuringEntryExit);
-            //Wait for the Element
-            base.WaitForElement(By.Id(PaperTestUXPageResource.
-                PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator));
-            base.FocusOnElementById(PaperTestUXPageResource.
-                PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator);
-            //Get the web element
-            IWebElement getQuestionLinkProperty =
-                base.GetWebElementPropertiesById(PaperTestUXPageResource.
-                PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator);
-            //Click the "Create Question" link
-            base.ClickByJavaScriptExecutor(getQuestionLinkProperty);
+            IWebElement createQuestionGroupObject = base.GetWebElementPropertiesByCssSelector("img[id='Img4']");
+            base.ClickByJavaScriptExecutor(createQuestionGroupObject);
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnCreateQuestionAndGroupLink",
-               base.IsTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,22 +143,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select MyTest Window
+                // select MyTest window
                 this.SelectMyTestWindow();
-                //Wait for page refresh 
+                // wait for page refresh 
                 Thread.Sleep(Convert.ToInt32(
                     PaperTestUXPageResource.PaperTestUX_Page_Thred_Time_Value));
-                //Wait for the element
-                base.WaitForElement(By.Id(PaperTestUXPageResource.
-                    PaperTestUX_Page_SaveButton_Id_Locator));
-                base.FocusOnElementById(PaperTestUXPageResource.
-                    PaperTestUX_Page_SaveButton_Id_Locator);
-                IWebElement getSaveButton=base.GetWebElementPropertiesById
-                    (PaperTestUXPageResource.
-                    PaperTestUX_Page_SaveButton_Id_Locator);
-                //Click the "Save" Button
-                base.ClickByJavaScriptExecutor(getSaveButton);
-                //Save And Close Activity
+                IWebElement saveButtonObject = base.GetWebElementPropertiesByCssSelector("img[id='Img1']");
+                // click save button
+                base.ClickByJavaScriptExecutor(saveButtonObject);
+                // save and close activity
                 this.SaveAndCloseActivity();
             }
             catch (Exception e)
@@ -183,22 +167,15 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SaveAndCloseActivity()
         {
-            //Save And Close Activity
+            // save and close activity
             Logger.LogMethodEntry("PaperTestUXPage", "SaveAndCloseActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Wait for the element
-            base.WaitForElement(By.Id(PaperTestUXPageResource.
-                PaperTestUX_Page_Save_Menu_Id_Locator));
-            base.WaitForElement(By.Id(PaperTestUXPageResource.
-                PaperTestUX_Page_SaveAndClose_Button_Id_Locator));
-            //Focus on the "Save And Close" link
-            base.FocusOnElementById(PaperTestUXPageResource.
-                PaperTestUX_Page_SaveAndClose_Button_Id_Locator);
-            IWebElement getSaveCloseButton = base.GetWebElementPropertiesById
-                (PaperTestUXPageResource.
-                PaperTestUX_Page_SaveAndClose_Button_Id_Locator);
-            //Click the "Save And Close" Link
-            base.ClickByJavaScriptExecutor(getSaveCloseButton);
+            // wait for page render 
+            Thread.Sleep(Convert.ToInt32(
+                PaperTestUXPageResource.PaperTestUX_Page_Thred_Time_Value));
+            IWebElement getSaveCloseButtonObject = base.GetWebElementPropertiesByCssSelector("span[id='_ctl0__ctl0_phBody_PageContent_lnkSaveClose']");
+            // click the save and close link
+            base.ClickByJavaScriptExecutor(getSaveCloseButtonObject);
             Thread.Sleep(Convert.ToInt32(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateMyTest_Mesg_Time_Value));
             Logger.LogMethodEntry("PaperTestUXPage", "SaveAndCloseActivity",
@@ -370,7 +347,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.PartialLinkText(folderName));
             base.FillEmptyTextByPartialLinkText(folderName);
             //Click on Question Folder
-            base.ClickLinkByPartialLinkText(folderName);            
+            base.ClickLinkByPartialLinkText(folderName);
             Thread.Sleep(Convert.ToInt32(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateQuestion_Time_Value));
             // Logger Exit
@@ -390,7 +367,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select window
-                this.SelectMyTestWindow();                
+                this.SelectMyTestWindow();
                 //Wait for element 
                 base.WaitForElement(By.Id(PaperTestUXPageResource.
                     PaperTestUX_Page_Close_Button_Id_Locator));
@@ -434,7 +411,7 @@ namespace Pegasus.Pages.UI_Pages
                     PaperTestUX_Page_Cancel_Test_Popup_Save_Button_Id_Locator),
                 Convert.ToInt32(PaperTestUXPageResource.
                 PaperTestUX_Page_Wait_Time_InSecond)))
-            {                
+            {
                 //Wait for save button
                 base.WaitForElement(By.Id(PaperTestUXPageResource.
                     PaperTestUX_Page_Cancel_Test_Popup_Save_Button_Id_Locator));

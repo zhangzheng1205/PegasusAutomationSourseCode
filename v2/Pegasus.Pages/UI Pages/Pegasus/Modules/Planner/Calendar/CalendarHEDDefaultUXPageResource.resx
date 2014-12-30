@@ -471,4 +471,25 @@
   <data name="CalendarHEDDefaultUXPageResource_Properties_Attribute" xml:space="preserve">
     <value>Id</value>
   </data>
+  <data name="CalendarHEDDefaultUXPageResource_Calendar_EventStartDateTime_CssSelector_Locator" xml:space="preserve">
+    <value>"div[eventstartdatetime= '"</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Calendar_EventStartDateTime_Value" xml:space="preserve">
+    <value>" 00:00:00']"</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_SystemCurrentDate_Format" xml:space="preserve">
+    <value>MM/dd/yyyy</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator" xml:space="preserve">
+    <value>txtSearch</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator" xml:space="preserve">
+    <value>#viewFilter</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource__CSS_Locator" xml:space="preserve">
+    <value>#titleSearch</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_TextSearch_CSS_ID_Locator" xml:space="preserve">
+    <value>#txtSearch</value>
+  </data>
 </root>

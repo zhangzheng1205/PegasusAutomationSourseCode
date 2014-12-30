@@ -147,8 +147,10 @@ namespace Pegasus.Pages.CommonPageObjects
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.AmpProgramAdmin:
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -296,6 +298,8 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+
         /// <summary>
         /// Navigate To Access Coursespace Section Amplifier Folder.
         /// </summary>
@@ -370,7 +374,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
                 //Switch to the iframe usertype is WS instructor
-                if (User.UserTypeEnum.HedWsInstructor.Equals(userTypeEnum))
+                if (User.UserTypeEnum.AmpWSInstructor.Equals(userTypeEnum))
                 {
                     base.SwitchToIFrameById(CommonPageResource.
                         ComonPage_MainCourse_FrameID);
@@ -739,6 +743,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // Get User Type
                 case User.UserTypeEnum.CsSmsStudent:
+                case User.UserTypeEnum.AmpCsSmsStudent:
                 case User.UserTypeEnum.HSSCsSmsStudent:
                     switch (activityUnderTabName)
                     {
@@ -754,8 +759,11 @@ namespace Pegasus.Pages.CommonPageObjects
                     }
                     break;
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.AmpCsSmsInstructor:
                 case User.UserTypeEnum.HSSCsSmsInstructor:
                 case User.UserTypeEnum.HedProgramAdmin:
+                case User.UserTypeEnum.AmpProgramAdmin:
+                case User.UserTypeEnum.WLCsSmsInstructor:
                     switch (activityUnderTabName)
                     {
                         //Generate Activity Result by Student Report
@@ -1184,7 +1192,7 @@ namespace Pegasus.Pages.CommonPageObjects
             int getFolderCount = Convert.ToInt32(CommonPageResource.
                 ComonPage_Folder_Count_Initial_Value);
             string getFolderText = string.Empty;
-            //Get Folder Count
+            //Get Folder Count 
             base.WaitForElement(By.XPath(CommonPageResource.
                 ComonPage_Folder_Count_Xpath_Locator));
             getFolderCount = base.GetElementCountByXPath(CommonPageResource.
@@ -1414,6 +1422,16 @@ namespace Pegasus.Pages.CommonPageObjects
                                         this.NavigateToActivityFolderInInstructorGradebook(
                                             CommonPageResource.CommonPage_Chapter3_Sensation_and_Perception_FolderName,
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
+                                        break;
+
+                                    case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]": 
+                                    case "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.":
+                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                            "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)",
+                                            CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
+                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                           "STUDENT ACTIVITIES MANUAL",
+                                           CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                 }
                                 break;
@@ -1869,7 +1887,7 @@ namespace Pegasus.Pages.CommonPageObjects
             switch (userTypeEnum)
             {
                 //Verify the link in workspace
-                case User.UserTypeEnum.HedWsInstructor:
+                case User.UserTypeEnum.AmpWSInstructor:
                     base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
                     base.SwitchToIFrameById(CommonPageResource.
                        ComonPage_MainCourse_FrameID);
@@ -1883,6 +1901,8 @@ namespace Pegasus.Pages.CommonPageObjects
                 //Verify the link in course space
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.HedProgramAdmin:
+                case User.UserTypeEnum.AmpProgramAdmin:
+                case User.UserTypeEnum.AmpCsSmsInstructor:
                     base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
                     base.SwitchToIFrameById(CommonPageResource.
                         CommonPage_Course_Materials_iFrame);
@@ -1897,6 +1917,7 @@ namespace Pegasus.Pages.CommonPageObjects
                     break;
                 //Verify the link in course space
                 case User.UserTypeEnum.CsSmsStudent:
+                case User.UserTypeEnum.AmpCsSmsStudent:
                     base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
                     base.SwitchToIFrameById(CommonPageResource.
                         CommonPage_Course_Materials_iFrame);
@@ -2062,7 +2083,9 @@ namespace Pegasus.Pages.CommonPageObjects
          Logger.LogMethodExit("CommonPage", "NavigateToCapítulo05ActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
+
+        
     }
 }
 

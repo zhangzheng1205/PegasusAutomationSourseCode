@@ -531,7 +531,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheSAMActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            new CourseContentUXPage().AnswerWLSAMActivityToScore100();
+            new CourseContentUXPage().SubmitSAMActivityToScore100();
             Logger.LogMethodExit("ActivitySubmission",
                "SubmitTheSAMActivity",
                base.IsTakeScreenShotDuringEntryExit);
@@ -547,7 +547,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheSAMActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            new CourseContentUXPage().AnswerWLSAMActivityToScore0();
+            new CourseContentUXPage().SubmitSAMActivityToScore0();
             Logger.LogMethodExit("ActivitySubmission",
                "SubmitTheSAMActivity",
                base.IsTakeScreenShotDuringEntryExit);

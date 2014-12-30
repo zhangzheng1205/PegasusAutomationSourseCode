@@ -518,6 +518,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("ProgramAdmin", "SearchTheSectionHEDCore",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Save Button click to create course Manage Template section
         /// </summary>
@@ -535,7 +536,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
-        /// click on the copy button, during the copy of the template/section as template inside the program 
+        /// click on the copy button, during the copy of the template/section as template inside the program.
         /// </summary>
         /// <param name="p0"></param>
         /// <param name="p1"></param>
@@ -551,7 +552,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
-        /// Copying the section from section inside the program
+        /// Copying the section from section inside the program.
         /// </summary>
         /// <param name="Button"></param>
         /// <param name="Oparation"></param>
@@ -565,7 +566,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("ProgramAdmin", "ClickonCopySectionButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
+              
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

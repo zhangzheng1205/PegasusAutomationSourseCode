@@ -233,11 +233,21 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Hss_Automation</Name>
+      <Name>WL_ST_Automation</Name>
+      <CourseType>MySpanishLabProgram</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <SectionName>WL_ST_Section</SectionName>
+      <SectionId>CRSKL1F-12000796</SectionId>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>ST_HSS_Automation</Name>
       <CourseType>HSSMyPsychLabProgram</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>Hss_AutomationSection</SectionName>
+      <SectionName>410bef98-e6ae-4666-8a0e-1344f958e1ba</SectionName>
       <SectionId>CRSKLEF-12000713</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
@@ -487,6 +497,17 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>hss_automation_SMSinstructor</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@excelindia.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>0402</LastName>
+      <UserType>WLCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
       <Name>f5cdfa26-08e5-4933-bdc7-ad0f895422d2</Name>
       <Password>password1</Password>
       <Email>manish.singh@excelindia.com</Email>
@@ -505,6 +526,17 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>88c6</LastName>
       <UserType>HSSProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>gokul_instructor</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@excelindia.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>88c6</LastName>
+      <UserType>WLProgramAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
@@ -579,6 +611,30 @@
       <LastName>06c5</LastName>
       <UserType>CsSmsStudent</UserType>
       <UserId>Hed_User_SMS_STU_UC2</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>hss_automation_SMSstudent</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@excelindia.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>9c92</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Zero Score "WLCsSMSStudent".-->
+    <User>
+      <Name>715d0a48-22b2-4738-8572-aa11c0dea621</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@excelindia.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>4976</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>

@@ -445,6 +445,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         /// <summary>
         /// Use this method to simulate focus on element by typing null value into an element by
+        /// CssSelector attribute value, which may set its value.
+        /// </summary>
+        /// <param name="cssSelectorValue">This is the CssSelector Attribute Value.</param>
+        protected void FocusOnElementByCssSelector(String cssSelectorValue)
+        {
+            FillEmptyText(By.CssSelector(cssSelectorValue));
+        }
+
+        /// <summary>
+        /// Use this method to simulate focus on element by typing null value into an element by
         /// Class name attribute value, which may set its value.
         /// </summary>
         /// <param name="classNameAttributeValue">This is the Class name Attribute Value.</param>
@@ -493,8 +503,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <remarks>This is working with google chome and other browsers.</remarks>
         protected void PerformFocusOnElementActionById(string idLocator)
         {
-            IWebElement IdLoctorProperty = GetWebElementPropertiesById(idLocator);
-            PerformFocusOnElementAction(IdLoctorProperty);
+            IWebElement idLoctorProperty = GetWebElementPropertiesById(idLocator);
+            PerformFocusOnElementAction(idLoctorProperty);
         }
 
         /// <summary>
@@ -506,8 +516,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <remarks>This is working with google chome and other browsers.</remarks>
         protected void PerformFocusOnElementActionByXPath(string xPathLocator)
         {
-            IWebElement IdLoctorProperty = GetWebElementPropertiesByXPath(xPathLocator);
-            PerformFocusOnElementAction(IdLoctorProperty);
+            IWebElement idLoctorProperty = GetWebElementPropertiesByXPath(xPathLocator);
+            PerformFocusOnElementAction(idLoctorProperty);
         }
 
         /// <summary>
@@ -519,8 +529,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <remarks>This is working with google chome and other browsers.</remarks>
         protected void PerformFocusOnElementActionByClassName(string classNameLocator)
         {
-            IWebElement IdLoctorProperty = GetWebElementPropertiesByClassName(classNameLocator);
-            PerformFocusOnElementAction(IdLoctorProperty);
+            IWebElement idLoctorProperty = GetWebElementPropertiesByClassName(classNameLocator);
+            PerformFocusOnElementAction(idLoctorProperty);
         }
 
 
@@ -634,6 +644,19 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by);
+        }
+
+        /// <summary>
+        /// Get the value of a the given attribute of the element by specified locator attribute value.
+        /// </summary>
+        /// <param name="by">The locator to be used.</param>
+        /// <param name="propertyName">The attribute whose value is to be returned.</param>
+        /// <returns>The attribute's current value or null if the value is not set by locator attribute value.</returns>
+        protected string GetWebElementPropertyValue(By by, string propertyName)
+        {
+            base.WaitForElement(by);
+            IWebElement webElement = GetWebElementProperties(by);
+            return webElement.GetAttribute(propertyName);
         }
 
         /// <summary>
@@ -977,7 +1000,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetTitleAttributeValueByLocator(By by)
+        private String GetTitleAttributeValueByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("Title");
@@ -992,7 +1015,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetHrefAttributeValueByLocator(By by)
+        private String GetHrefAttributeValueByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("href");
@@ -1003,7 +1026,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue">Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
-        protected string GetHrefAttributeValueByXPath(String xPathValue)
+        protected String GetHrefAttributeValueByXPath(String xPathValue)
         {
             return GetHrefAttributeValueByLocator(By.XPath(xPathValue));
         }
@@ -1017,7 +1040,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetValueAttributeByLocator(By by)
+        private String GetValueAttributeByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("value");
@@ -1028,7 +1051,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
-        protected string GetValueAttributeByXPath(String xPathValue)
+        protected String GetValueAttributeByXPath(String xPathValue)
         {
             return GetValueAttributeByLocator(By.XPath(xPathValue));
         }
@@ -1038,7 +1061,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue"> Retrieves The name of the attribute by locating Id value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Id value.</returns>
-        protected string GetValueAttributeById(String idAttributeValue)
+        protected String GetValueAttributeById(String idAttributeValue)
         {
             return GetValueAttributeByLocator(By.Id(idAttributeValue));
         }
@@ -1048,7 +1071,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath attribute value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath attribute value.</returns>
-        protected string GetTitleAttributeValueByXPath(String xPathValue)
+        protected String GetTitleAttributeValueByXPath(String xPathValue)
         {
             return GetTitleAttributeValueByLocator(By.XPath(xPathValue));
         }
@@ -1058,7 +1081,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue"> Retrieves The name of the attribute by locating id attribute value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating id attribute value.</returns>
-        protected string GetTitleAttributeValueById(String idAttributeValue)
+        protected String GetTitleAttributeValueById(String idAttributeValue)
         {
             return GetTitleAttributeValueByLocator(By.Id(idAttributeValue));
         }
@@ -1072,7 +1095,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetInnerTextAttributeValueByLocator(By by)
+        private String GetInnerTextAttributeValueByLocator(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("innerText");
@@ -1083,7 +1106,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue"> Retrieves The name of the attribute by locating id attribute value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating id attribute value.</returns>
-        protected string GetInnerTextAttributeValueById(String idAttributeValue)
+        protected String GetInnerTextAttributeValueById(String idAttributeValue)
         {
             return GetInnerTextAttributeValueByLocator(By.Id(idAttributeValue));
         }
@@ -1093,7 +1116,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
-        protected string GetInnerTextAttributeValueByXPath(String xPathValue)
+        protected String GetInnerTextAttributeValueByXPath(String xPathValue)
         {
             return GetInnerTextAttributeValueByLocator(By.XPath(xPathValue));
         }
@@ -1107,7 +1130,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetClassAttributeValue(By by)
+        private String GetClassAttributeValue(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("class");
@@ -1146,6 +1169,54 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Get the value of a the given class of the element by locating CssSelector attribute value.
+        /// </summary>
+        /// <param name="cssSelectorValue"> Retrieves The name of the attribute by locating 
+        /// CssSelector attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating CssSelector attribute value.</returns>
+        protected String GetClassAttributeValueByCssSelector(String cssSelectorValue)
+        {
+            return GetClassAttributeValue(By.CssSelector(cssSelectorValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given class of the element by locating XPath attribute value.
+        /// </summary>
+        /// <param name="xPathValue"> Retrieves The name of the attribute by locating 
+        /// XPath attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating XPath attribute value.</returns>
+        protected String GetClassAttributeValueByXPath(String xPathValue)
+        {
+            return GetClassAttributeValue(By.XPath(xPathValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given class of the element by locating LinkText attribute value.
+        /// </summary>
+        /// <param name="linkTextValue"> Retrieves The name of the attribute by locating 
+        /// LinkText attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating LinkText attribute value.</returns>
+        protected String GetClassAttributeValueByLinkText(String linkTextValue)
+        {
+            return GetClassAttributeValue(By.LinkText(linkTextValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given class of the element by locating TagName attribute value.
+        /// </summary>
+        /// <param name="locatorTagNameValue"> Retrieves The name of the attribute by locating 
+        /// TagName attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating TagName attribute value.</returns>
+        protected String GetClassAttributeValueByTagName(String locatorTagNameValue)
+        {
+            return GetClassAttributeValue(By.TagName(locatorTagNameValue));
+        }
+
+        /// <summary>
         /// Get the style attribute value of a web element.
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>
@@ -1154,7 +1225,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Will return the current value, even if this has been modified after the page has been loaded. 
         /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
-        private string GetStyleAttributeValue(By by)
+        private String GetStyleAttributeValue(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("style");
@@ -1180,6 +1251,72 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected String GetStyleAttributeValueByXPath(String xPathValue)
         {
             return GetStyleAttributeValue(By.XPath(xPathValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given CssSelector of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="cssSelectorValue"> Retrieves the style of the attribute by locating CssSelector value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating CssSelector value.</returns>
+        protected String GetStyleAttributeValueByCssSelector(String cssSelectorValue)
+        {
+            return GetStyleAttributeValue(By.CssSelector(cssSelectorValue));
+        }
+        
+        /// <summary>
+        /// Get the value of a the given PartialLinkText of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="partialLinkTextValue"> Retrieves the style of the attribute by locating PartialLinkText value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating PartialLinkText value.</returns>
+        protected String GetStyleAttributeValueByPartialLinkText(String partialLinkTextValue)
+        {
+            return GetStyleAttributeValue(By.PartialLinkText(partialLinkTextValue));
+        }
+        
+        /// <summary>
+        /// Get the value of a the given Name of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="nameValue"> Retrieves the style of the attribute by locating Name value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Name value.</returns>
+        protected String GetStyleAttributeValueByName(String nameValue)
+        {
+            return GetStyleAttributeValue(By.Name(nameValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given Link Text of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="linkTextValue"> Retrieves the style of the attribute by locating Link Text value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Link Text value.</returns>
+        protected String GetStyleAttributeValueByLinkText(String linkTextValue)
+        {
+            return GetStyleAttributeValue(By.LinkText(linkTextValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given Tag Name of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="locatorTagNameValue"> Retrieves the style of the attribute by locating Tag Name value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Tag Name value.</returns>
+        protected String GetStyleAttributeValueByTagName(String locatorTagNameValue)
+        {
+            return GetStyleAttributeValue(By.TagName(locatorTagNameValue));
+        }
+
+        /// <summary>
+        /// Get the value of a the given Class Name of the element by locating style attribute value.
+        /// </summary>
+        /// <param name="classNameValue"> Retrieves the style of the attribute by locating Tag Class Name value.</param>
+        /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
+        /// <returns>The attribute's current value or null if the value is not set by locating Tag Class Name value.</returns>
+        protected String GetStyleAttributeValueByClassName(String classNameValue)
+        {
+            return GetStyleAttributeValue(By.ClassName(classNameValue));
         }
 
         #endregion
@@ -1552,7 +1689,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         ///  Retrieves Html inner text occurs within this string by cssSelector attribute value of the element .
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>
-        /// <param name="xPathValue">Retrieves HTML Element Attribute value by cssSelector.</param>
+        /// <param name="cssSelectorValue">Retrieves HTML Element Attribute value by cssSelector.</param>
         /// <returns>Retrieves Html inner text to find in the specified string.</returns>
         protected String GetElementInnerTextByCssSelector(String cssSelectorValue)
         {
@@ -1609,11 +1746,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Returns the number of nodes that match the specified css selector
         /// </summary>
-        /// <param name="CSSSelectorValue"> The css selector expression to evaluate.</param>
+        /// <param name="cssSelectorValue"> The css selector expression to evaluate.</param>
         /// <returns>the number of nodes that match the specified css selector.</returns>
-        protected int GetElementCountByCSSSelector(String CSSSelectorValue)
+        protected int GetElementCountByCssSelector(String cssSelectorValue)
         {
-            return GetElementCount(By.CssSelector(CSSSelectorValue));
+            return GetElementCount(By.CssSelector(cssSelectorValue));
         }
 
         #endregion
@@ -1658,10 +1795,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// An abstraction allowing the driver to access the browser's 
         /// history and to navigate to a given URL.
         /// </summary>
-        /// <param name="browseURL">This is Url to navigate in the browser address bar.</param>
-        protected void NavigateToBrowseUrl(String browseURL)
+        /// <param name="browseUrl">This is Url to navigate in the browser address bar.</param>
+        protected void NavigateToBrowseUrl(String browseUrl)
         {
-            WebDriver.Navigate().GoToUrl(browseURL);
+            WebDriver.Navigate().GoToUrl(browseUrl);
         }
 
         #endregion
@@ -1681,12 +1818,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             new Actions(WebDriver).Click(webElement).Perform();
         }
-
-        protected void ClickAction(IWebElement webElement)
-        {
-            new Actions(WebDriver).Click(webElement);
-        }
-
 
         /// <summary>
         ///  Moves the mouse to the middle of the element.
@@ -1760,7 +1891,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
         /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
         /// Builds a CompositeAction containing all actions specified by the method calls.</see>
-        /// /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
+        /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
         /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
         /// Clicks in the middle of the given element. Equivalent to: Actions.moveToElement(onElement).click()</seealso>
         /// <see cref="Click">Clicks at the current mouse location.</see>
@@ -1777,7 +1908,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
         /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
         /// Builds a CompositeAction containing all actions specified by the method calls.</see>
-        /// /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
+        /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
         /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
         /// Clicks in the middle of the given element. Equivalent to: Actions.moveToElement(onElement).click()</seealso>
         /// <see cref="Click">Clicks at the current mouse location.</see>
@@ -1794,7 +1925,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
         /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
         /// Builds a CompositeAction containing all actions specified by the method calls.</see>
-        /// /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
+        /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
         /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
         /// Clicks in the middle of the given element. Equivalent to: Actions.moveToElement(onElement).click()</seealso>
         /// <see cref="Click">Clicks at the current mouse location.</see>
@@ -1824,13 +1955,14 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         /// <summary>
         /// A convenience method that performs click-and-hold at the location of the source element, 
-        /// moves to the location of the target element, then releases the mouse.
+        /// moves to the location of the target element based on offset, then releases the mouse.
         /// </summary>
         /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
         /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
         /// Builds a CompositeAction containing all actions specified by the method calls.</see>
         /// <param name="sourceElementLocation">element to emulate button down at.</param>
-        /// <param name="targetElementLocation">element to move to and release the mouse at.</param>
+        /// <param name="offsetX">horizontal move offset.</param>
+        /// <param name="offsetY">vertical move offset.</param>
         protected void PerformDragAndDropToOffset(IWebElement sourceElementLocation, int offsetX, int offsetY)
         {
             new Actions(WebDriver).DragAndDropToOffset(sourceElementLocation, offsetX, offsetY).Perform();
@@ -1900,11 +2032,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             new Actions(WebDriver).KeyDown(keyValue).Click(element1).Click(element2).KeyUp(keyValue).Perform();
         }
 
+        /// <summary>
+        /// Perform key up. 
+        /// </summary>
+        /// <param name="keyValue">This is a key name to perform up action.</param>
+        /// <see cref="KeyUp">This is a key event to perform key up.</see>
+        /// <see cref="Actions">Interface representing a single user-interaction action.</see>/>
+        /// <see cref="Perform">User-interaction action.</see>/>
         protected void PerformKeyUp(String keyValue)
         {
             new Actions(WebDriver).KeyUp(keyValue).Perform();
         }
-
 
         #endregion
 
@@ -1929,7 +2067,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Performs double click on a web element when the browser is 'Chrome' or 'Firefox'.
         /// </summary>
-        /// <param name="webElement">Represents an HTML element. Generally, 
+        /// <param name="iWebElemnt">Represents an HTML element. Generally, 
         /// all interesting operations to do with interacting with a page will be performed through this interface.</param>
         /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
         /// The script fragment provided will be executed as the body of an anonymous function.</see>
@@ -1945,13 +2083,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Performs double click on a web element when the browser is 'IE'.
         /// </summary>
-        /// <param name="webElement">Represents an HTML element. Generally, 
+        /// <param name="iWebElement">Represents an HTML element. Generally, 
         /// all interesting operations to do with interacting with a page will be performed through this interface.</param>
         /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
         /// The script fragment provided will be executed as the body of an anonymous function.</see>
         /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
         /// access to the mechanism to do so.</seealso>
-        protected void DoubleClickInIEByJavaScriptExecuter(IWebElement iWebElement)
+        protected void DoubleClickInIeByJavaScriptExecuter(IWebElement iWebElement)
         {
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("arguments[0].fireEvent('ondblclick');", iWebElement);
         }
@@ -2117,7 +2255,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>
         /// <param name="textToFill">This is Text to Fill in the Text Area.</param>
-        private void FillTexttoInnerHtmlByJavaScriptExecutor(By by, string textToFill)
+        private void FillTexttoInnerHtmlByJavaScriptExecutor(By by, String textToFill)
         {
             base.WaitForElement(by);
             IWebElement iWebElementName = WebDriver.FindElement(by);
@@ -2182,7 +2320,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Press Enter Key By locating element CssSelector attribute value. 
         /// </summary>
-        /// <param name="xPathAttributeValue">This is HTML Element CssSelector Attribute value.</param>
+        /// <param name="cssSelectorAttributeValue">This is HTML Element CssSelector Attribute value.</param>
         protected void PressEnterKeyByCssSelector(String cssSelectorAttributeValue)
         {
             PressEnterKey(By.CssSelector(cssSelectorAttributeValue));
@@ -2215,6 +2353,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="iWebElement">The IWebElement interface represents an HTML element. 
         /// Generally, all interesting operations to do with interacting with a page will be performed through this interface.</param>
+        /// <see cref="KeyDown">This is a key event to perform key down.</see>
+        /// <see cref="Actions">Interface representing a single user-interaction action.</see>/>
+        /// <see cref="SendKeys">This method to simulate typing into an element, 
+        /// which may set its value.</see>
+        /// <see cref="Perform">User-interaction action.</see>/>
         protected void PressCtrlBKey(IWebElement iWebElement)
         {
             // ASCII code 1 for Ctrl-B
@@ -2246,16 +2389,29 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
-        /// Perform Control key down.
+        /// Perform control key down. 
         /// </summary>
-        protected void PerformCTRLKeyDown()
+        /// <see cref="KeyDown">This is a key event to perform key down.</see>
+        /// <see cref="Keys">Representations of pressable keys that aren't text. </see>/>
+        /// <see cref="Actions">Interface representing a single user-interaction action.</see>/>
+        /// <see cref="SendKeys">This method to simulate typing into an element, 
+        /// which may set its value.</see>
+        /// <see cref="Perform">User-interaction action.</see>/>
+        protected void PerformControlKeyDown()
         {
             new Actions(WebDriver).KeyDown(Keys.Control).Perform();
         }
+
         /// <summary>
-        /// Perform Control key up.
+        /// Perform control key up. 
         /// </summary>
-        protected void PerformCTRLKeyUp()
+        /// <see cref="KeyUp">This is a key event to perform key up.</see>
+        /// <see cref="Keys">Representations of pressable keys that aren't text. </see>/>
+        /// <see cref="Actions">Interface representing a single user-interaction action.</see>/>
+        /// <see cref="SendKeys">This method to simulate typing into an element, 
+        /// which may set its value.</see>
+        /// <see cref="Perform">User-interaction action.</see>/>
+        protected void PerformControlKeyUp()
         {
             new Actions(WebDriver).KeyUp(Keys.Control).Perform();
         }
@@ -2278,7 +2434,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Dismisses the alert.
         /// </summary>
-        /// /// <see cref="IAlert">Defines the interface through which the user 
+        /// <see cref="IAlert">Defines the interface through which the user 
         /// can manipulate JavaScript alerts.</see>
         protected void DismissAlert()
         {
@@ -2454,11 +2610,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Get the width for an DOM-element based on the xpath selector.
         /// </summary>
-        /// <param name="XPathValue">This is the xpath value.</param>
+        /// <param name="xPathValue">This is the xpath value.</param>
         /// <returns>Height of the DOM-element based on the xpath selector.</returns>
-        protected Double GetElementHeightByXPath(String XPathValue)
+        protected Double GetElementHeightByXPath(String xPathValue)
         {
-            return GetElementHeight(By.XPath(XPathValue));
+            return GetElementHeight(By.XPath(xPathValue));
         }
 
         /// <summary>
@@ -2485,11 +2641,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Get the width for an DOM-element based on the xpath selector.
         /// </summary>
-        /// <param name="XPathValue">This is the xpath value.</param>
+        /// <param name="xPathValue">This is the xpath value.</param>
         /// <returns>Width of the DOM-element based on the xpath selector.</returns>
-        protected Double GetElementWidthByXPath(String XPathValue)
+        protected Double GetElementWidthByXPath(String xPathValue)
         {
-            return GetElementWidth(By.XPath(XPathValue));
+            return GetElementWidth(By.XPath(xPathValue));
         }
 
         /// <summary>

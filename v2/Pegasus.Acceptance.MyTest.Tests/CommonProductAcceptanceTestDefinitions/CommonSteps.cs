@@ -133,7 +133,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,
-                    new MyTestGridUXPage().GetSuccessMessageInMyTestTab()));
+                    new MyTestGridUxPage().GetSuccessMessageInMyTestTab()));
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -159,6 +159,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
                 GetWebElementPropertiesByPartialLinkText(tabName);
             //Click on Tab   
             ClickByJavaScriptExecutor(getTabProperty);
+            //Wait Till Thinking Indicator Loads
+            bool isThinkingIndicatorLoading = base.IsThinkingIndicatorLoading();
+            //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
+            if (isThinkingIndicatorLoading)
+            {
+                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
+            }
             //Wait For Page Load 
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                  CommonSteps_SleepTime_Value));
@@ -285,7 +293,6 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="tabName">This is Tab Name.</param>
         [When(@"I navigate to ""(.*)"" tab")]
-
         public void NavigateToTab(string tabName)
         {
             //Navigate to Tab
@@ -303,8 +310,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
         [BeforeTestRun]
         public static void Setup()
         {
-            //Reset Webdriver Instance
-            new CommonSteps().ResetWebdriver();
+            
         }
 
         /// <summary>

@@ -1438,12 +1438,12 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B3_Cell_ID_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F3_Cell_ID_Locator);
             // Press and hold the CTRL key
-            base.PerformCTRLKeyDown();
+            base.PerformControlKeyDown();
             // select the desired cell range
             this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A4_Cell_ID_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A8_Cell_ID_Locator);
             // perform CTRL key up
-            base.PerformCTRLKeyUp();
+            base.PerformControlKeyUp();
 
             // open the Cell Style dropdown
             this.OpenCellStyleDropdown();
@@ -1611,13 +1611,13 @@ namespace Pegasus.Pages.UI_Pages
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator,
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator);
             //Click and hold the CTRL keyboard key
-            base.PerformCTRLKeyDown();
+            base.PerformControlKeyDown();
             //Select the desired Cell range
             this.SelectCellRange(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B8_Cell_Id_Locator,
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E8_Cell_Id_Locator);
             //Key up the CTRL keyboard key
-            base.PerformCTRLKeyUp();
+            base.PerformControlKeyUp();
             //Apply the Account Number Format to the cell ranges selected above
             this.ApplyAccountNumberFormat();
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));

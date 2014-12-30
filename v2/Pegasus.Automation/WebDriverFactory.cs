@@ -44,7 +44,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string _browserName;
         private static string _applicationTestEnvironmentName;
         private static string _remoteHubUrl;
-        private static readonly string DownloadFilePath = (AutomationConfigurationManager.DownloadFilePath + "\\ApplicationDownloadedFiles").Replace("file:\\", "");
 
         /// <summary>
         /// Get Environment Variables.
@@ -200,10 +199,14 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             String getExecutingPath = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
             // set profile preferences
             profile.SetPreference("FireFox" + DateTime.Now.Ticks + ".log", getExecutingPath);
+            profile.SetPreference("browser.helperApps.alwaysAsk.force", false);
             profile.SetPreference("browser.download.folderList", 2);
-            profile.SetPreference("browser.download.dir", DownloadFilePath);
-            profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream doc docx xls xlsx pdf txt zip");
-            profile.SetPreference("dom.max_script_run_time", 0);
+            profile.SetPreference("browser.download.dir", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
+            profile.SetPreference("services.sync.prefs.sync.browser.download.manager.showWhenStarting", false);
+            profile.SetPreference("browser.download.useDownloadDir", true);
+            profile.SetPreference("browser.download.downloadDir", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
+            profile.SetPreference("browser.download.defaultFolder", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
+            profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip, application/x-zip, application/x-zip-compressed, application/download, application/octet-stream");
             profile.EnableNativeEvents = true;
             profile.SetPreference("browser.cache.disk.enable", false);
             profile.SetPreference("browser.cache.memory.enable", false);
@@ -238,6 +241,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("disable-application-cache");
             chromeOptions.AddArguments("disk-cache-size=0");
+            chromeOptions.AddUserProfilePreference("intl.accept_languages", "nl");
+            chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
+            chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
 
             // chrome driver path
             string chromeDriverPath = (Path.GetDirectoryName

@@ -12,13 +12,13 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This Class Handles Creation of MyTest Actions
     /// </summary>
-    public class MyTestGridUXPage : BasePage
+    public class MyTestGridUxPage : BasePage
     {
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
-            Logger.GetInstance(typeof(MyTestGridUXPage));
+        private static readonly Logger Logger =
+            Logger.GetInstance(typeof(MyTestGridUxPage));
 
         /// <summary>
         /// Create New Test.
@@ -50,21 +50,17 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on Create New Test Link.
         /// </summary>
-        /// <param name="linkName">This is a link name.</param>
         private void ClickOnCreateNewTestLink()
         {
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickOnCreateNewTestLink",
                base.IsTakeScreenShotDuringEntryExit);
-            //Wait for the element
-            base.WaitForElement(By.Id(MyTestGridUXPageResource.
-                MyTestGridUX_Page_CreateNewTest_Id_Locator));
-            //Focus on element
+           // focus on element
             base.FocusOnElementById(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator);
             IWebElement getCreateNewTestLinkProperty = base.
                 GetWebElementPropertiesById(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator);
-            //Click the "Create New Test" Link
+            // click the "Create New Test" Link
             base.ClickByJavaScriptExecutor(getCreateNewTestLinkProperty);
             Logger.LogMethodExit("MyTestGridUXPage", "ClickOnCreateNewTestLink",
                base.IsTakeScreenShotDuringEntryExit);
@@ -206,9 +202,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_SubstringSecond_Value));
             //Initialize VariableVariable
-            int activityColumnNumber = Convert.ToInt32(MyTestGridUXPageResource.
-                MyTestGridUX_Page_IntIntializer_Value);            
-            string getTextFromActivityText = string.Empty; 
+            string getTextFromActivityText; 
             do
             {
                 //Get The MyTest Activity Table Text
@@ -221,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             while (!getTextFromActivityText.Contains(newActivityName));
             //Get the Test RowCount
-            activityColumnNumber = this.SelectMyTestActivityInManageYourTestFrame
+            int activityColumnNumber = this.SelectMyTestActivityInManageYourTestFrame
                 (activityName);            
             Logger.LogMethodExit("MyTestGridUXPage", "SelectMyTestInManageYourTest",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -236,14 +230,9 @@ namespace Pegasus.Pages.UI_Pages
             //Get The MyTest Activity Table Text
             Logger.LogMethodEntry("MyTestGridUXPage","GetTheMyTestActivityTableText",
                        base.IsTakeScreenShotDuringEntryExit);
-            string getTextFromActivityText = string.Empty; 
-            //Wait For Element
-            base.WaitForElement(By.XPath(MyTestGridUXPageResource.
-                MyTestGridUX_Page_Table_Contents_XPath_Locator));
-            //Get the table content
-            getTextFromActivityText =
-            base.GetElementTextByXPath(MyTestGridUXPageResource.
-            MyTestGridUX_Page_Table_Contents_XPath_Locator).Trim();
+           //Get the table content
+            string getTextFromActivityText = base.GetElementTextByXPath(MyTestGridUXPageResource.
+                MyTestGridUX_Page_Table_Contents_XPath_Locator).Trim();
             Thread.Sleep(Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_Thred_Time));
             Logger.LogMethodExit("MyTestGridUXPage", "GetTheMyTestActivityTableText",
@@ -348,7 +337,6 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on MyTest Activity CMenu Option.
         /// </summary>
-        /// <param name="cMenuOptionName">This is cmenu option name.</param>
         /// <param name="setActivityRowCount">This is activiy row count.</param>
         private void ClickMyTestActivityCMenuOpenOption
             (int setActivityRowCount)

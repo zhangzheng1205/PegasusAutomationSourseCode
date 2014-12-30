@@ -205,6 +205,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 6.
+        /// </summary>
+        internal static string CourseContentUXPage_ActivityLoop_End_Value {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_ActivityLoop_End_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string CourseContentUXPage_ActivityLoop_Initializer_Value {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_ActivityLoop_Initializer_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4.
+        /// </summary>
+        internal static string CourseContentUXPage_ActivityLoop_Limit_Value {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_ActivityLoop_Limit_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}]//td[@class=&apos;CC_composenew TextInListViews&apos;].
         /// </summary>
         internal static string CourseContentUXPage_ActivityName_By_ClassName_Xpath_Locator {
@@ -835,6 +862,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_AppendSymbol {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_AppendSymbol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to spanStatus.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_AppendText {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_AppendText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le Madre.
         /// </summary>
         internal static string CourseContentUXPage_WLActivity_Q1_Answer {
@@ -894,6 +939,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CourseContentUXPage_WLActivity_WrongAnswer {
             get {
                 return ResourceManager.GetString("CourseContentUXPage_WLActivity_WrongAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to essay.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Activity_Essay_Text_to_Fill {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Activity_Essay_Text_to_Fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #nextQuextion div:nth-of-type({0}).
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Activity_Properties_CSS_Selector {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Activity_Properties_CSS_Selector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0:APH:btnfinish.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Finish_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Finish_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0:btnReturnCourse.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finish: Submit for Grading.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Submit_Button_LinkText_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Submit_Button_LinkText_Locator", resourceCulture);
             }
         }
     }

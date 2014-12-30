@@ -2014,43 +2014,17 @@ namespace Pegasus.Pages.UI_Pages
             return ID;
         }
 
-
-        ///// <summary>
-        ///// Launch the WL activity.
-        ///// </summary>
-        ///// <param name="activityName">This is the activity name.</param>
-        //public void SelectActivityByStudentInWL(string activityName)
-        //{
-        //    //Launch the WL activity
-        //    Logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
-        //                base.IsTakeScreenShotDuringEntryExit);
-        //    try
-        //    {
-        //        base.SelectWindow(CourseContentUXPageResource.
-        //            CourseContentUXPage_WLActivityWindow_Name);
-        //        base.SwitchToIFrame("ifrmCoursePreview");
-        //        IWebElement getactivityName = base.GetWebElementPropertiesByLinkText(activityName);
-        //        base.ClickByJavaScriptExecutor(getactivityName);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        ExceptionHandler.HandleException(e);
-        //    }
-        //    Logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
-        //                 base.IsTakeScreenShotDuringEntryExit);
-
-        //}
-
         /// <summary>
-        /// Answer and submit the SAM Activity.
+        /// Answer and submit the SAM Activity to score 100.
         /// </summary>
-        public void AnswerWLSAMActivityToScore100()
+        public void SubmitSAMActivityToScore100()
         {
-            //Answer the SAM Activity
-            Logger.LogMethodEntry("CourseContentUXPage", "AnswerWLSAMActivity",
+            //Answer the SAM Activity to score 100
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmitSAMActivityToScore100",
                   base.IsTakeScreenShotDuringEntryExit);
             try
-            {
+            {               
                 //Input answer to the activity questions
                 this.AnswerSAMActivity(1, CourseContentUXPageResource
                     .CourseContentUXPage_WLActivity_Q1_Answer);
@@ -2062,16 +2036,17 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPage_WLActivity_Q4_Answer);
                 this.AnswerSAMActivity(5, CourseContentUXPageResource.
                     CourseContentUXPage_WLActivity_Q5_Answer);
-                this.AnswerSAMActivity(6, CourseContentUXPageResource.
+                    this.AnswerSAMActivity(6, CourseContentUXPageResource.
                     CourseContentUXPage_WLActivity_Q6_Answer);
                 //submit the activity
-                new CoursePreviewUXPage().SubmittWLActivity();
+            this.SubmitActivity();
             }
             catch (Exception e)
             {
                ExceptionHandler.HandleException(e);
             }
-             Logger.LogMethodExit("CourseContentUXPage", "AnswerWLSAMActivity",
+             Logger.LogMethodExit("CourseContentUXPage",
+                 "SubmitSAMActivityToScore100",
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2079,70 +2054,224 @@ namespace Pegasus.Pages.UI_Pages
         /// Answer the SAM activity questions based on field value.
         /// </summary>
         /// <param name="answerFieldValue">This is the answer field value.</param>
+        /// <param name="fieldAnswer">This is the answer text.</param>       
         public void AnswerSAMActivity(int answerFieldValue, string fieldAnswer)
         {
             //Answer the SAM activity questions based on field value
-            Logger.LogMethodEntry("CourseContentUXPage", "AnswerSAMActivity",
+            Logger.LogMethodEntry("CourseContentUXPage", 
+                "AnswerSAMActivity",
                   base.IsTakeScreenShotDuringEntryExit);
            try
             {
                 //Switch to Activity window
-                base.WaitUntilWindowLoads(CourseContentUXPageResource.
-                    CourseContentUXPage_WL_ActivityWindowName);
-                base.SelectWindow(CourseContentUXPageResource.
-                    CourseContentUXPage_WL_ActivityWindowName);                         
-                IWebElement getAnswerField = base.GetWebElementPropertiesByCssSelector(
+                this.SelectActivityWindow(CourseContentUXPageResource.
+                    CourseContentUXPage_WL_ActivityWindowName);                       
+                IWebElement getAnswerField = base.
+                    GetWebElementPropertiesByCssSelector(
                     string.Format(CourseContentUXPageResource.
                     CourseContentUXPage_WL_SAMActivity_AnswerField_CSS_Locator,
                     answerFieldValue));
-                string getAnswerFieldId = getAnswerField.GetAttribute(CourseContentUXPageResource.
+                string getAnswerFieldId = getAnswerField.GetAttribute(
+                    CourseContentUXPageResource.
                 CourseContentUXPage_WL_SAMActivity_Attribute);
                 string textId = getAnswerFieldId.Split('_')[1];
                 string getId = textId + getAnswerFieldId +
-                    CourseContentUXPageResource.CourseContentUXPage_WL_SAMActivity_AppendText;
-                base.WaitForElement(By.Id(getId));
+                    CourseContentUXPageResource.
+                    CourseContentUXPage_WL_SAMActivity_AppendText;
                 base.FillTextBoxById(getId, fieldAnswer);
             }
             catch (Exception e)
             {
              ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("CourseContentUXPage", "AnswerSAMActivity",
+            Logger.LogMethodExit("CourseContentUXPage", 
+                "AnswerSAMActivity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+        public void SelectActivityWindow(string windowName)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SelectActivityWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Switch to Activity window
+            base.WaitUntilWindowLoads(windowName);
+            base.SelectWindow(windowName);
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SelectActivityWindow",
                    base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
         /// Answer and submit the SAM Activity to score 0.
         /// </summary>
-        public void AnswerWLSAMActivityToScore0()
+        public void SubmitSAMActivityToScore0()
         {
             //Answer the SAM Activity to score 0
-            Logger.LogMethodEntry("CourseContentUXPage", "AnswerWLSAMActivity",
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmitSAMActivityToScore0",
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Input answer to the activity questions
-                this.AnswerSAMActivity(1, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_WrongAnswer);
-                this.AnswerSAMActivity(2, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_WrongAnswer);
-                this.AnswerSAMActivity(3, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_WrongAnswer);
-                this.AnswerSAMActivity(4, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_WrongAnswer);
-                this.AnswerSAMActivity(5, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_WrongAnswer);
-                this.AnswerSAMActivity(6, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_WrongAnswer);
+                for (int i = Convert.ToInt16(CourseContentUXPageResource.
+                    CourseContentUXPage_ActivityLoop_Initializer_Value);
+                    i <= Convert.ToInt16(CourseContentUXPageResource.
+                    CourseContentUXPage_ActivityLoop_End_Value); i++)
+                {
+                    this.AnswerSAMActivity(i, CourseContentUXPageResource.
+                        CourseContentUXPage_WLActivity_WrongAnswer);                    
+                }
                 //submit the activity
-                new CoursePreviewUXPage().SubmittWLActivity();
+               this.SubmitActivity();
             }
             catch (Exception e)
             {
               ExceptionHandler.HandleException(e);
             }
-             Logger.LogMethodExit("CourseContentUXPage", "AnswerWLSAMActivity",
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SubmitSAMActivityToScore0",
                    base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Submitting the WL Essay Activity By Student.
+        /// </summary>
+        /// <param name="answerField">This is the answer field value.</param>
+        public void SubmittingtheWLEssayActivityByStudent(int answerField)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmittingtheWLEssayActivityByStudent",
+                         base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                this.SelectActivityWindow(CourseContentUXPageResource.
+                   CourseContentUXPage_WL_ActivityWindowName);
+                string getActivityId = base.GetWebElementPropertiesByCssSelector
+                    (String.Format(CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Activity_Properties_CSS_Selector,
+                    answerField)).GetAttribute(CourseContentUXPageResource.
+                CourseContentUXPage_WL_SAMActivity_Attribute);
+                string activityId = getActivityId.Split('_')[1];
+                base.FillTextBoxById(activityId,
+                    CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Activity_Essay_Text_to_Fill);
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("CourseContentUXPage", 
+                "SubmittingtheWLEssayActivityByStudent",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit the Essay activity in WL.
+        /// </summary>
+        public void SubmitWordLanguageEssayActivity()
+        {
+            //Answer the Essay Activity
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmitWordLanguageEssayActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                for (int i = Convert.ToInt16(CourseContentUXPageResource.
+                    CourseContentUXPage_ActivityLoop_Initializer_Value);
+                    i <= Convert.ToInt16(
+                    CourseContentUXPageResource.
+                    CourseContentUXPage_ActivityLoop_Limit_Value); i++)
+                {
+                    //Input answer to the activity questions
+                    this.SubmittingtheWLEssayActivityByStudent(i);
+                }
+                // Submitt WL Activity
+                this.SubmitActivity();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SubmitWordLanguageEssayActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submitt WL Activity
+        /// </summary>
+        public void SubmitActivity()
+        {
+           Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on submit button
+                IWebElement getFinishButton = base.
+                    GetWebElementPropertiesByPartialLinkText
+                    (CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
+                base.ClickByJavaScriptExecutor(getFinishButton);
+                //Click on Finish button
+                IWebElement finishButton = base.GetWebElementPropertiesById(
+                    CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Finish_Button_Id_Locator);
+                base.ClickByJavaScriptExecutor(finishButton);
+                //Click on 'Return to course'
+                IWebElement returnToCourse = base.GetWebElementPropertiesById(
+                   CourseContentUXPageResource.
+                   CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
+                base.PerformMouseClickAction(returnToCourse);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify The Activity Status of WL Activity.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <returns>The Activity status.</returns>
+        public string GetTheActivityStatusofWordLanguageActivity(string activityName)
+        {
+
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "GetTheActivityStatusofWordLanguageActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getWLactivityStatus = string.Empty;
+            try
+            {
+                //Selecting Window.
+                new StudentPresentationPage().SelectWindowAndFrame();
+                //Verify The Actvity Status.
+                IWebElement getactivityId = base.
+                    GetWebElementPropertiesByPartialLinkText(string.Format(activityName));
+                string activityId = getactivityId.GetAttribute(
+                    CourseContentUXPageResource.
+                CourseContentUXPage_WL_SAMActivity_Attribute);
+                string textactivityId = activityId.Split('_')[1];
+                string activityStatusId = CourseContentUXPageResource.
+                    CourseContentUXPage_WLActivity_AppendText + 
+                    CourseContentUXPageResource.
+                    CourseContentUXPage_WLActivity_AppendSymbol + textactivityId;
+                base.WaitForElement(By.Id(activityStatusId));
+                getWLactivityStatus = base.GetElementTextById(activityStatusId);
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+           Logger.LogMethodEntry("CoursePreviewUXPage",
+                "GetTheActivityStatusofWordLanguageActivity",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getWLactivityStatus;
+        }
+
     }
 }

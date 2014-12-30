@@ -126,9 +126,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// 
+        /// Verify the Display of enrolled section in Homepage.
         /// </summary>
-        /// <param name="courseTypeEnum"></param>
+        /// <param name="courseTypeEnum">This is the course type enum.</param>
         [Then(@"I should see enrolled ""(.*)"" Section course in Global Home Page")]
         public void VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage
             (Course.CourseTypeEnum courseTypeEnum)
@@ -171,6 +171,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "DisplayOfEnrolledInstructorCourseInGlobalHomePage",
                   base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Enroll SMS Instructor in course.
         /// </summary>

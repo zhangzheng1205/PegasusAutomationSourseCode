@@ -2018,9 +2018,11 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
-            base.WaitForElement(By.XPath(GBInstructorUXPageResource.
+            bool sdfn = base.IsElementPresent(By.XPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator), 10);
+             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_AcitivityNames_Xpath_Locator));
-            //Getting the counts of Activity  
+            //Getting the counts of Activity  `
             int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_AcitivityNames_Xpath_Locator);
             for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
@@ -2521,7 +2523,8 @@ namespace Pegasus.Pages.UI_Pages
             // Click The Cmenu Icon In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickTheCmenuIconInGradebook",
                          base.IsTakeScreenShotDuringEntryExit);
-            //Wait for the cmenu icon
+            base.FocusOnElementByXPath(String.Format(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount));
             base.WaitForElement(By.XPath(String.Format(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount)));            
             //Get Element Property
@@ -4158,7 +4161,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("LoginContentPage", "FetchTheUserDetails",
              base.IsTakeScreenShotDuringEntryExit);
             return user;
-        }
+        }        
     }
 }
 

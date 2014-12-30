@@ -55,11 +55,11 @@ Given I am on the "Global Home" page
 
 #Purpose:Verify The User Login As CsSmsInstructor and Navigate to MyTestBankCourse Course
 Scenario: User Login As CsSmsInstructor and Navigate to MyTestBankCourse Course
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Given I browsed the login url for "MyTestSmsInstructor"
+When I logged into the Pegasus as "MyTestSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "MyTestBankCourse" from the Global Home page as "CsSmsInstructor"
+When I enter in the "MySpanishLabProgramMyTest" from the Global Home page as "CsSmsInstructor"
 
 #Purpose:Verify The User Login As CsSmsInstructor and Navigate to MyTestInstructorCourse
 Scenario: User Login As CsSmsInstructor and Navigate to MyTestInstructorCourse

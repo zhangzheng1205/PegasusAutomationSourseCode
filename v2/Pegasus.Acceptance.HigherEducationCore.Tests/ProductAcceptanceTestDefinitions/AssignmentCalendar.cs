@@ -829,16 +829,15 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodEntry("AssignmentCalendar",
                  "VerifyCheckMarkInAssignedStatusColumn",
                           base.IsTakeScreenShotDuringEntryExit);
-            List<Activity> assignedActivityList =
-                Activity.Get(a => a.IsAssigned == true);
+            Activity.Get(a => a.IsAssigned == true);
             List<Activity> unAssignedActivityList =
                 Activity.Get(a => a.IsAssigned == false);
-            CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
+            var calendarHedDefaultUxPage =
                 new CalendarHedDefaultUxPage();
             // Verify Check mark in assigned status column
             foreach (Activity unAssignedActivity in unAssignedActivityList)
             {
-                Assert.IsTrue(calendarHEDDefaultUXPage
+                Assert.IsTrue(calendarHedDefaultUxPage
                     .IsAssetAssigned(unAssignedActivity.ActivityId));
                 unAssignedActivity.IsAssigned = true;
                 unAssignedActivity.UpdateActivityInMemory(unAssignedActivity);

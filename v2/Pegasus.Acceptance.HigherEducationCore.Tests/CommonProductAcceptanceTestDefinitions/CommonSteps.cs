@@ -188,6 +188,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //And The Required Tab Is Not Present
             new TodaysViewUxPage().ClickTheMoreLinkIfPresent(tabName);
             //Wait For Element
+            base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
             IWebElement getTabNameProperty = base.
@@ -331,7 +332,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,
-                    new MyTestGridUXPage().GetSuccessMessageInMyTestTab()));
+                    new MyTestGridUxPage().GetSuccessMessageInMyTestTab()));
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -644,24 +645,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTabAsProgramAdministrator",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
-        /// <summary>
-        /// Navigate To Tab Of The Particular Page.
-        /// </summary>
-        /// <param name="tabName">This is Tab Name.</param>
-        /// <param name="pageName">This is Page Name.</param>
-        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as PAdmin")]
-        public void NavigateToTabInProgramAdminPage(
-            string subNavigationTabName, string subNavigationTabParentWindowName)
-        {
-            // navigate program administrator page
-            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
-                base.IsTakeScreenShotDuringEntryExit);
-            new ProgramAdminToolPage().NavigateProgramAdminTabs(
-                subNavigationTabParentWindowName, subNavigationTabName);
-            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
+        
         /// <summary>
         /// Navigating to the folder where given asset exists.
         /// </summary>
@@ -699,72 +683,77 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // select particular window here
             base.SelectWindow(base.GetPageTitle);
             if (activityUnderTabName.Equals("Gradebook"))
-            // select grade book right iframe here
-            new GBInstructorUXPage().SelectGradebookFrame();
-
+            {
+                // select grade book left iframe here
+                new GBInstructorUXPage().SelectGradebookFrame();
+            }
             // make sleep intentionally to load frame completely
             Thread.Sleep(15000);
-
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
-               activityName, activityUnderTabName, userTypeEnum);
-            
+               activityName, activityUnderTabName, userTypeEnum);            
             Logger.LogMethodExit("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Selecting The Given WL Activity
+        /// Launch the activity fron 'Course Material' tab.
         /// </summary>
-        /// <param name="p0"></param>
-        /// <param name="p1"></param>
-        /// <param name="p2"></param>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="windowTitle">This is the Window name.</param>
+        /// <param name="studentName">This is the User type enum.</param>
         [When(@"I select ""(.*)"" in ""(.*)"" page by ""(.*)""")]
         public void SelectingTheGivenWLActivity(string activityName, 
             string windowTitle, User.UserTypeEnum studentName)
         {
+            //Launch the activity fron 'Course Material' tab
             Logger.LogMethodEntry("CommonSteps",
              "SelectingTheGivenWLActivity",
              base.IsTakeScreenShotDuringEntryExit);
             new CoursePreviewUXPage().SelectActivityByStudentInWL(activityName);
             Logger.LogMethodExit("CommonSteps",
                "SelectingTheGivenWLActivity",
-               base.IsTakeScreenShotDuringEntryExit);
-          
+               base.IsTakeScreenShotDuringEntryExit);          
         }
+
         /// <summary>
         /// Submitting The WL Essay Activity
         /// </summary>
-        [Then(@"I submit the essay activity")]
+        [When(@"I submit the essay activity")]
         public void SubmittingTheWLEssayActivity()
         {
+            //Submit the activity in WL
             Logger.LogMethodEntry("CommonSteps",
              "SubmittingTheWLEssayActivity",
              base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().AnswerWLEssayActivity();
+            new CourseContentUXPage().SubmitWordLanguageEssayActivity();
             Logger.LogMethodExit("CommonSteps",
                "SubmittingTheWLEssayActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+        
         /// <summary>
-        /// Verifying WL Activity Status After Submission
+        /// Verifying WL Activity Status After Submission in Course Material tab.
         /// </summary>
-        /// <param name="p0"></param>
-        /// <param name="p1"></param>
-        /// <param name="p2"></param>
-        /// <param name="studentName"></param>
-        [Then(@"I should see ""(.*)"" for ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void VerifyingWLActivityStatusAfterSubmission(string activityStatus, string activityName, string windowTitle, string studentName)
+        /// <param name="activityStatus">This is the activity status.</param>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="windowTitle">This is the window name.</param>
+        /// <param name="studentName">This is the user type enum.</param>
+        [Then(@"I should see ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" page by ""(.*)""")]
+        public void VerifyingWLActivityStatusAfterSubmission(
+            string activityStatus, string activityName,
+            string windowTitle, string studentName)
         {
             Logger.LogMethodEntry("CommonSteps",
             "VerifyingWLActivityStatusAfterSubmission",
             base.IsTakeScreenShotDuringEntryExit);
-            //Assert we have correct activity status displayed.
+            //Verify the Activity status
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activityStatus,
-            new CoursePreviewUXPage().VerifyinrTheActvityStatusofWLActivity(activityName)));
+            new CourseContentUXPage().
+            GetTheActivityStatusofWordLanguageActivity(activityName)));
             Logger.LogMethodExit("CommonSteps",
                "VerifyingWLActivityStatusAfterSubmission",
                base.IsTakeScreenShotDuringEntryExit);
@@ -819,10 +808,28 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CommonSteps",
               "SubmitTheLearnocityActivity",
               base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().SubmittingtheWLLearnocityActivityByStudent();
+            new CoursePreviewUXPage().SubmittingtheLearnocityActivityByStudent();
             Logger.LogMethodExit("CommonSteps",
                "SubmitTheLearnocityActivity",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Tab Of The Particular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as Admin")]
+        public void NavigateToTabInProgramAdminPage(
+            string subNavigationTabName, string subNavigationTabParentWindowName)
+        {
+            // navigate program administrator page
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ProgramAdminToolPage().NavigateProgramAdminTabs(
+                subNavigationTabParentWindowName, subNavigationTabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

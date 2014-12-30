@@ -225,6 +225,50 @@ testRunner.Then("I should see the \"Correct Answer\" in the \'Test Presentation 
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Submitting Sim 5 Powerpoint activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentAssets")]
+        public virtual void SubmittingSim5PowerpointActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submitting Sim 5 Powerpoint activity", ((string[])(null)));
+#line 79
+this.ScenarioSetup(scenarioInfo);
+#line 80
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 81
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 82
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 83
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 84
+testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
+                    "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 85
+testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 86
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 87
+testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
+                    "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
+testRunner.And("I launch the \"PowerPoint Chapter 1 Skill-Based Training\" activity in content by \"" +
+                    "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 89
+testRunner.And("I attempt questions in \"PowerPoint Chapter 1 Skill-Based Training\" with \"10\" atte" +
+                    "mpts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 90
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 91
+testRunner.And("I should see the \"Passed\" status for the activity \"PowerPoint Chapter 1 Skill-Bas" +
+                    "ed Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 92
+testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Skill-Based Tra" +
+                    "ining\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

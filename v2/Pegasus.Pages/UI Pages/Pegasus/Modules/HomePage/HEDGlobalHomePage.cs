@@ -354,9 +354,9 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     default:
                         //Get Instructor Course ID
-                        string getInstructorCourseID = this.GetInstructorCourseId(courseTypeEnum);
+                        string getInstructorCourseId = this.GetInstructorCourseId(courseTypeEnum);
                         //Store Instructor Course Id In Memory
-                        this.StoreInstructorCourseIdInMemory(getInstructorCourseID, courseTypeEnum);
+                        this.StoreInstructorCourseIdInMemory(getInstructorCourseId, courseTypeEnum);
                         break;
                 }
             }
@@ -446,16 +446,16 @@ namespace Pegasus.Pages.UI_Pages
             base.FillEmptyTextByXPath(string.Format(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCount));
             // Get the Text of Row 
-            string getInstructorCourseID = base.GetElementTextByXPath
+            string getInstructorCourseId = base.GetElementTextByXPath
                 (string.Format(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Course_Table_ActiveSpan_XPath_Locator,
                 courseDivCount));
             //Get Instructor Course Text Line Number
-            int getInstructorCourseTextLineNumber = getInstructorCourseID.IndexOf(' ');
-            getInstructorCourseID = getInstructorCourseID.Substring(getInstructorCourseTextLineNumber).Trim();
+            int getInstructorCourseTextLineNumber = getInstructorCourseId.IndexOf(' ');
+            getInstructorCourseId = getInstructorCourseId.Substring(getInstructorCourseTextLineNumber).Trim();
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "GetInstructorCourseIdFromFirstDiv", base.IsTakeScreenShotDuringEntryExit);
-            return getInstructorCourseID;
+            return getInstructorCourseId;
         }
 
         /// <summary>
@@ -573,6 +573,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedWsInstructor:
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.AmpProgramAdmin:
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.WLProgramAdmin:
@@ -582,6 +583,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.ProgramCourse:
                             case Course.CourseTypeEnum.MyItLabProgramCourse:
                             case Course.CourseTypeEnum.MySpanishLabMaster:
+                            case Course.CourseTypeEnum.AmpWSCourse:
                             case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                             case Course.CourseTypeEnum.MyItLabSIMMasterCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
@@ -599,6 +601,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MySpanishLabTestingMaster:
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabProgram:
+                            case Course.CourseTypeEnum.AmpProgramCourse:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;
@@ -608,6 +611,8 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.CsSmsStudent:
                     case User.UserTypeEnum.HSSCsSmsStudent:
                     case User.UserTypeEnum.WLCsSmsStudent:
+                    case User.UserTypeEnum.AmpCsSmsStudent:
+
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -625,6 +630,7 @@ namespace Pegasus.Pages.UI_Pages
                                     HEDGlobalHomePageResource.HEDGlobalHome_Page_SectionValue);
                                 break;
                             case Course.CourseTypeEnum.InstructorCourse:
+                            case Course.CourseTypeEnum.AmpInstructorCourse:
                             case Course.CourseTypeEnum.MyTestInstructorCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.HedMyItLabPPECourse:
@@ -635,8 +641,10 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.WLCsSmsInstructor:
+                    case User.UserTypeEnum.MyTestSmsInstructor:
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -645,14 +653,16 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyItLabProgramCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.InstructorCourse:
-                           
-                            
+                            case Course.CourseTypeEnum.AmpInstructorCourse:
+
+
                                 //Open the Program Course
                                 this.OpenTheCourse(course.Name);
                                 break;
                             case Course.CourseTypeEnum.MyITLabOffice2013Program:
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabProgram:
+                            case Course.CourseTypeEnum.MySpanishLabProgramMyTest:
                                 //Open the Course
                                 this.OpenTheCourse(course.SectionName);
                                 break;
@@ -777,9 +787,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Clicks on the course name
                 //base.FillEmptyTextByPartialLinkText(courseName);
-               
+
                 base.WaitForElement(By.LinkText(courseName));
-               // base.WaitForElement(By.PartialLinkText(courseName));
+                // base.WaitForElement(By.PartialLinkText(courseName));
                 IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
                     (courseName);
                 base.ClickByJavaScriptExecutor(getCourseName);
@@ -1326,7 +1336,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("HEDGlobalHomePage","IsCoursePresentInGlobalHomePage",
+            Logger.LogMethodExit("HEDGlobalHomePage", "IsCoursePresentInGlobalHomePage",
                 base.IsTakeScreenShotDuringEntryExit);
             return isCourseText;
         }
@@ -1358,8 +1368,8 @@ namespace Pegasus.Pages.UI_Pages
                 HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator);
             //store date and time in memory
             String instance = currentDate + " " + currentTime;
-            DateTime datetime= Convert.ToDateTime(instance);
-          //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
+            DateTime datetime = Convert.ToDateTime(instance);
+            //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             user.CurrentProfileDateTime = datetime;
             Logger.LogMethodExit("HEDGlobalHomePage", "setUserCurrentDate",
@@ -1367,9 +1377,9 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-       /// <summary>
-       /// Select MyProfile Iframe.
-       /// </summary>
+        /// <summary>
+        /// Select MyProfile Iframe.
+        /// </summary>
         private void SelectMyProfileIframe()
         {
             //Select MyProfile Iframe

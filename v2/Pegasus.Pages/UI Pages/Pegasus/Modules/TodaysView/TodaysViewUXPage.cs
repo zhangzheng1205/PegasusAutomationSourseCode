@@ -3296,11 +3296,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCourseSpaceUserMainTab(parentTabName);
                 if (childTabName != "Default Value")
                 {
-                    //Get Subtab Counts
-                    base.WaitForElement(By.CssSelector(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Subtab_Count_CSS_Locator));
                     //Get Tab Count
-                    int getSubTabCount = base.GetElementCountByCSSSelector(TodaysViewUXPageResource.
+                    int getSubTabCount = base.GetElementCountByCssSelector(TodaysViewUXPageResource.
                         TodayViewUXPageResource_Subtab_Count_CSS_Locator);
                     for (int csTabCountNo = Convert.ToInt32(
                         TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
@@ -3322,7 +3319,7 @@ namespace Pegasus.Pages.UI_Pages
                             else
                             {
                                 //Select The Tab
-                                this.ClickonTab(childTabName);
+                                this.ClickOnTab(childTabName);
                                 break;
                             }
                         }
@@ -3352,16 +3349,16 @@ namespace Pegasus.Pages.UI_Pages
             //Get Tab Property
             string getTabClassAttribute =
                 base.GetClassAttributeValueByPartialLinkText(mainTabName);
-            if (getTabClassAttribute ==
-                TodaysViewUXPageResource.TodayViewUXPageResource_MainTab_SelectedTab_Value)
+            if (getTabClassAttribute.Equals(TodaysViewUXPageResource.TodayViewUXPageResource_MainTab_SelectedTab_Value)
+                 || getTabClassAttribute.Equals(TodaysViewUXPageResource.TodayViewUXPageResource_MainTab_SelectedTab_BackColor_Class_Value))
             {
-                //Select Window
+                // select current open window
                 base.SelectWindow(base.GetPageTitle);
             }
             else
             {
-                //Select The Tab
-                this.ClickonTab(mainTabName);
+                // select window
+                this.ClickOnTab(mainTabName);
             }
             Logger.LogMethodExit("TodaysViewUXPage", "SelectCourseSpaceUserMainTab",
                base.IsTakeScreenShotDuringEntryExit);
@@ -3371,22 +3368,20 @@ namespace Pegasus.Pages.UI_Pages
         /// Click on Tab.
         /// </summary>
         /// <param name="tabName">This is Tab Name.</param>
-        private void ClickonTab(string tabName)
+        private void ClickOnTab(string tabName)
         {
             //Click on Tab
-            Logger.LogMethodEntry("TodaysViewUXPage", "ClickonTab",
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
             new TodaysViewUxPage().ClickTheMoreLinkIfPresent(tabName);
-            //Wait For Element
-            base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
             IWebElement getTabNameProperty = base.
                 GetWebElementPropertiesByPartialLinkText(tabName);
             //Click on Tab 
             base.ClickByJavaScriptExecutor(getTabNameProperty);
-            Logger.LogMethodExit("TodaysViewUXPage", "ClickonTab",
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOnTab",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -3515,9 +3510,11 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Variable
             string getActivityName = string.Empty;
             //get Activities Row Count
+            base.SwitchToLastOpenedWindow();
+            bool jg = base.IsElementPresent(By.XPath(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath), 10);
             int getActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
-                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath
-                );
+                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath);
             //Iterate for Respective Activity In Table
             for (
                 int setActivityRowCount =
@@ -3798,7 +3795,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Get the message displayed in the window
                 getActualMessage = base.GetElementInnerTextById(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator);
-                
+
             }
             catch (Exception e)
             {
@@ -3832,27 +3829,27 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="activityName"></param>
         /// <returns>getActivityName</returns>
         public string GetActivityNameOfInstructorGradingChannel(string activityName)
-    {
-        Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameOfInstructorGradingChannel",
-                    base.IsTakeScreenShotDuringEntryExit);
-             string getActivityName = string.Empty;
-             try
-             {
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameOfInstructorGradingChannel",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            try
+            {
 
-                 base.SelectWindow(TodaysViewUXPageResource.TodaysViewUXPageResource_WindowsTitle);
-                 getActivityName = base.GetElementTextByPartialLinkText(activityName);
+                base.SelectWindow(TodaysViewUXPageResource.TodaysViewUXPageResource_WindowsTitle);
+                getActivityName = base.GetElementTextByPartialLinkText(activityName);
 
-             }
-             catch (Exception e)
-             {
-                 
-                 ExceptionHandler.HandleException(e);
-             }
-        Logger.LogMethodExit("TodaysViewUXPage", "GetActivityNameOfInstructorGradingChannel",
-                          base.IsTakeScreenShotDuringEntryExit);
-        return getActivityName;
+            }
+            catch (Exception e)
+            {
 
-    }
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetActivityNameOfInstructorGradingChannel",
+                              base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+
+        }
         /// <summary>
         /// Click on the cmenu of the activity.
         /// </summary>
@@ -3913,7 +3910,7 @@ namespace Pegasus.Pages.UI_Pages
 
 
         /// <summary>
-        ///Click on the activity to display its details. 
+        ///Click on the activity to display its details and click on 'Mark as read'. 
         /// </summary>
         /// <param name="activityButton">This is the button name.</param>
         public void OpenActivityDetails(string activityButton)
@@ -3929,14 +3926,12 @@ namespace Pegasus.Pages.UI_Pages
                         TodayViewUXPageResource_SelectActivity_XPath_Locator);
                 base.ClickByJavaScriptExecutor(getActivityDetails);
                 //Click on 'Mark as Read' option
-                base.WaitForElement(By.PartialLinkText(activityButton), 10);
                 IWebElement getMarkAsRead = base.GetWebElementPropertiesByPartialLinkText(activityButton);
                 base.ClickByJavaScriptExecutor(getMarkAsRead);
                 //Close 'View Submission'
                 base.SelectWindow(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Activity_WindowName);
-                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                    TodayViewUXPageResource_ActivityCloseButton_Id_Locator), 10);
+                //Click on 'Close'
                 IWebElement getClose = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
                     TodayViewUXPageResource_ActivityCloseButton_Id_Locator);
                 base.ClickByJavaScriptExecutor(getClose);
@@ -3947,6 +3942,25 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "OpenActivityDetails",
                     base.IsTakeScreenShotDuringEntryExit);
-        } 
+        }
+
+        /// <summary>
+        /// Fetch the activity name from Instructor grading channel.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <returns>Activity name.</returns>
+        public string GetActivityNameOfInstrucorGradingChannel(string activityName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage",
+                "GetActivityNameOfInstrucorGradingChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            bool djfh = base.IsElementPresent(By.PartialLinkText(activityName), 10);
+            getActivityName = base.GetElementTextByPartialLinkText(activityName);
+            Logger.LogMethodExit("TodaysViewUXPage", 
+                "GetActivityNameOfInstrucorGradingChannel",
+                   base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
     }
 }

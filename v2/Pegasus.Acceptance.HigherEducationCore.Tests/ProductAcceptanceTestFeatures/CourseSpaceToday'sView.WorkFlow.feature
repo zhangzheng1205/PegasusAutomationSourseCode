@@ -26,15 +26,10 @@ Then I should see the successfull message "Your message has been sent." in "Cour
 #Purpose: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
 #Test Case Id:peg-16744
 #PEGASUS-29247
+#MySpanishLabProgram
 Scenario: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-Then I should be on the "Today's View" page
 Then I should see the "Instructor Grading (1)" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Instructor Grading (1)" channel
 When I click on the "Instructor Grading (1)" option
-Then I should see the activity "SAM Activity:SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in the Instructor grading channel
+Then I should see the "SAM Activity:SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" activity in the Instructor grading channel
                                 

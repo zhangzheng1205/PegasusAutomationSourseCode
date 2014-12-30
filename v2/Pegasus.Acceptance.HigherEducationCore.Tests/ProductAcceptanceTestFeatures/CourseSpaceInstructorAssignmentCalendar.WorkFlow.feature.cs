@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorAssignmentCalendar", "               As a CS Instructor \n\t\t\tI want to manage all the coursespace instru" +
-                    "ctor assignment calendar related usecases \n\t\t\tso that I would validate all the c" +
-                    "oursespace instructor assignment calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorAssignmentCalendar", "               As a CS Instructor \r\n\t\t\tI want to manage all the coursespace instr" +
+                    "uctor assignment calendar related usecases \r\n\t\t\tso that I would validate all the" +
+                    " coursespace instructor assignment calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

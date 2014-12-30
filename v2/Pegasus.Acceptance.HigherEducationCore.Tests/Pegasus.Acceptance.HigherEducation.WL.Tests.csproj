@@ -340,6 +340,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpacePreviewsContent.WorkFlow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceProgramAdmin.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceQuestionLibrary.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -359,6 +364,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceStudentContainerAssets.WorkFlow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudentEnrollment.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceStudentEnrollment.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGradebook.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -572,13 +582,25 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.5.15.2.BVTTestPlan.HSS.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.HedCore.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.SpotCheckTest.HedCore.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.GradeBook.BVT.WL.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ActivitySubmission.BVT.WL.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.TodaysView.BVT.WL.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.AssignmentCalendar.BVT.WL.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.WL.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature">
@@ -665,6 +687,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpacePreviewsContent.WorkFlow.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceProgramAdmin.feature.cs</LastGenOutput>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceQuestionLibrary.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceQuestionLibrary.WorkFlow.feature.cs</LastGenOutput>
@@ -680,6 +706,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentContainerAssets.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceStudentContainerAssets.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentEnrollment.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceStudentEnrollment.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGradebook.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

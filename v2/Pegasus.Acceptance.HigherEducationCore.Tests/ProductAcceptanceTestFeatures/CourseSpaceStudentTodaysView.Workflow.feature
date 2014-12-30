@@ -60,14 +60,13 @@ And I should see the "Click on the icons below & follow the on-screen instructio
 #Purpose: Student views Alert update in "Instructor Comments" channel of Todays View page
 #TestCase Id: peg-16751
 #US:PEGASUS-29237
+#MySpanishLabProgram
 Scenario: Student views Alert update in "Instructor Comments" channel of Todays View page
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsStudent"
-Then I should be on the "Today's View" page
 Then I should see the "Instructor Comments (1)" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Instructor Comments (1)" channel
 When I click on the "Instructor Comments" option
 Then I should see the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in the Instructor Comments channel
 When I click on "View All Submissions" of the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
-And I Click on "Mark as Read" button displayed in the right frame
-Then I should see the alert count updated as "0" in "Instructor Comments (0)" channel
+And I click on "Mark as Read" button displayed in the right frame
+Then I should see the "Instructor Comments (0)" channels in 'Todays view' page
+And I should see the alert count updated as "0" in "Instructor Comments (0)" channel

@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent", "                As a CS Student \n\t\t\tI want to manage all the coursespace student " +
-                    "related usecases \n\t\t\tso that I would validate all the coursespace student scenar" +
-                    "ios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent", "                As a CS Student \r\n\t\t\tI want to manage all the coursespace student" +
+                    " related usecases \r\n\t\t\tso that I would validate all the coursespace student scen" +
+                    "arios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -368,73 +368,86 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits Essay activity  from Course Calendar tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits Essay activity from Course Calendar tab")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent")]
         public virtual void StudentSubmitsEssayActivityFromCourseCalendarTab()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits Essay activity  from Course Calendar tab", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits Essay activity from Course Calendar tab", ((string[])(null)));
 #line 129
 this.ScenarioSetup(scenarioInfo);
 #line 130
-testRunner.When("I navigate to \"Assignments\" tab and selected \"Course Calendar\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 131
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 132
 testRunner.When("I select \"SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]\" i" +
-                    "n \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    "n \"Course Materials\" page by \"WlCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 133
-testRunner.Then("I submit the essay activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I submit the essay activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 134
-testRunner.Then("I should see \"Not passed\" for \"SAM 01-05 Heritage Language: tu español. [Vocabula" +
-                    "rio 1. La familia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"Not passed\" status for the activity \"SAM 01-05 Heritage Language: t" +
+                    "u español. [Vocabulario 1. La familia]\" in \"Course Materials\" page by \"WlCsSmsSt" +
+                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 135
+testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 136
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits sam activity  from Course Calendar tab and score 100\"")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits sam activity from Course Calendar tab and score 100")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent")]
         public virtual void StudentSubmitsSamActivityFromCourseCalendarTabAndScore100()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity  from Course Calendar tab and score 100\"", ((string[])(null)));
-#line 139
-this.ScenarioSetup(scenarioInfo);
-#line 140
-testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 141
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity from Course Calendar tab and score 100", ((string[])(null)));
 #line 142
-testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]\" in \"Cours" +
-                    "e Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 143
-testRunner.And("I submit the SAM Activity to score \'100\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 144
-testRunner.Then("I should see \"Passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La fa" +
-                    "milia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 145
+testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]\" in \"Cours" +
+                    "e Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 146
+testRunner.And("I submit the SAM Activity to score \'100\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 147
+testRunner.Then("I should see \"Passed\" status for the activity \"SAM 01-02 Las familias hispanas. [" +
+                    "Vocabulario 1. La familia]\" in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 148
+testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 149
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits sam activity  from Course Calendar tab and score 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits sam activity from Course Calendar tab and score 0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent")]
         public virtual void StudentSubmitsSamActivityFromCourseCalendarTabAndScore0()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity  from Course Calendar tab and score 0", ((string[])(null)));
-#line 149
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity from Course Calendar tab and score 0", ((string[])(null)));
+#line 155
 this.ScenarioSetup(scenarioInfo);
-#line 150
+#line 156
 testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 157
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 152
+#line 158
 testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]\" in \"Cours" +
-                    "e Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 153
+                    "e Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 159
 testRunner.And("I submit SAM Activity to score \'0\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 154
-testRunner.Then("I should see \"Not passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. L" +
-                    "a familia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 160
+testRunner.Then("I should see \"Not passed\" status for the activity \"SAM 01-02 Las familias hispana" +
+                    "s. [Vocabulario 1. La familia]\" in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 161
+testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 162
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -445,31 +458,20 @@ testRunner.Then("I should see \"Not passed\" for \"SAM 01-02 Las familias hispan
         public virtual void StudentSubmitsLearsonsityActivityFromCourseCalendarTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits Learsonsity activity  from Course Calendar tab", ((string[])(null)));
-#line 159
-this.ScenarioSetup(scenarioInfo);
-#line 160
-testRunner.Given("I browsed the login url for \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 161
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 162
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 163
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 164
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"HSSCsSmsStuden" +
-                    "t\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
-testRunner.When("I navigate to \"Assignments\" tab and selected \"Course Calendar\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 166
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
-testRunner.When("I select \"SAM 01-19 Singular y plural.\" in \"Course Materials\" page by \"HSSCsSmsSt" +
-                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 168
-testRunner.Then("I submit the learnocity activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 169
-testRunner.Then("I should see \"Not passed\" for \"SAM 01-19 Singular y plural.\" in \"Course Materials" +
-                    "\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Assignments\" tab and selected \"Course Calendar\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 170
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 171
+testRunner.When("I select \"SAM 01-19 Singular y plural.\" in \"Course Materials\" page by \"WLCsSmsStu" +
+                    "dent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 172
+testRunner.Then("I submit the learnocity activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 173
+testRunner.And("I should see \"Not passed\" status for the activity \"SAM 01-19 Singular y plural.\" " +
+                    "in \"Course Materials\" page by \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
