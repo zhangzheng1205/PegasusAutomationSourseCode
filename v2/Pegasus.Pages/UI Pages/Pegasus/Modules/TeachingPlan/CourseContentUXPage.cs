@@ -2104,11 +2104,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Answer and submit the SAM Activity to score 0.
         /// </summary>
-        public void SubmitSAMActivityToScore0()
+        public void SubmitSamActivityToScore0()
         {
             //Answer the SAM Activity to score 0
             Logger.LogMethodEntry("CourseContentUXPage",
-                "SubmitSAMActivityToScore0",
+                "SubmitSamActivityToScore0",
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2129,7 +2129,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage",
-                "SubmitSAMActivityToScore0",
+                "SubmitSamActivityToScore0",
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2137,10 +2137,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Submitting the WL Essay Activity By Student.
         /// </summary>
         /// <param name="answerField">This is the answer field value.</param>
-        public void SubmittingtheWLEssayActivityByStudent(int answerField)
+        public void SubmittingWorldLanguageEssayActivityByStudent(int answerField)
         {
             Logger.LogMethodEntry("CourseContentUXPage",
-                "SubmittingtheWLEssayActivityByStudent",
+                "SubmittingWorldLanguageEssayActivityByStudent",
                          base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2152,17 +2152,16 @@ namespace Pegasus.Pages.UI_Pages
                     answerField)).GetAttribute(CourseContentUXPageResource.
                 CourseContentUXPage_WL_SAMActivity_Attribute);
                 string activityId = getActivityId.Split('_')[1];
-                base.FillTextBoxById(activityId,
-                    CourseContentUXPageResource.
-                    CoursePreviewUX_Page_Activity_Essay_Text_to_Fill);
+                Guid guidAnswerText = Guid.NewGuid();
+                base.FillTextBoxById(activityId, guidAnswerText.ToString());
             }
             catch (Exception e)
             {
 
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodEntry("CourseContentUXPage", 
-                "SubmittingtheWLEssayActivityByStudent",
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmittingWorldLanguageEssayActivityByStudent",
                         base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2184,7 +2183,7 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPage_ActivityLoop_Limit_Value); i++)
                 {
                     //Input answer to the activity questions
-                    this.SubmittingtheWLEssayActivityByStudent(i);
+                    this.SubmittingWorldLanguageEssayActivityByStudent(i);
                 }
                 // Submitt WL Activity
                 this.SubmitActivity();
@@ -2199,7 +2198,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Submitt WL Activity
+        /// Submitt WL Activity.
         /// </summary>
         public void SubmitActivity()
         {
@@ -2218,11 +2217,12 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPageResource.
                     CoursePreviewUX_Page_Finish_Button_Id_Locator);
                 base.ClickByJavaScriptExecutor(finishButton);
+                Thread.Sleep(2000);
                 //Click on 'Return to course'
                 IWebElement returnToCourse = base.GetWebElementPropertiesById(
                    CourseContentUXPageResource.
                    CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
-                base.PerformMouseClickAction(returnToCourse);
+                base.ClickByJavaScriptExecutor(returnToCourse);
             }
             catch (Exception e)
             {

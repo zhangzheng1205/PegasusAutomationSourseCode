@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission;
 using Pegasus.Pages.Exceptions;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Text.RegularExpressions;
 
 namespace Pegasus.Pages.UI_Pages
@@ -22,7 +20,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(ViewSubmissionPage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(ViewSubmissionPage));
 
         /// <summary>
         ///Click the StudyPlan Triangle Option Cmenu
@@ -30,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickTheStudyPlanTriangleOptionCmenu()
         {
             //Click the StudyPlan Triangle Option Cmenu
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheStudyPlanTriangleOptionCmenu",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickTheStudyPlanTriangleOptionCmenu",
                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
@@ -57,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                 ViewSubmission_Page_Activity_Cmenu_Option_Name_Xpath_Locator);
             //Click on View Submission Cmenu Option
             base.ClickByJavaScriptExecutor(getViewSubmissionOption);
-            logger.LogMethodExit("ViewSubmissionPage", "ClickTheStudyPlanTriangleOptionCmenu",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickTheStudyPlanTriangleOptionCmenu",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -68,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickTheTestTraingleOptionCmenu(int setRowCount)
         {
             //Click The Test Traingle Option Cmenu 
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheTestTraingleOptionCmenu",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickTheTestTraingleOptionCmenu",
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -102,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "ClickTheTestTraingleOptionCmenu",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickTheTestTraingleOptionCmenu",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -113,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetScoreResultInViewSubmissionPage()
         {
             // Get Score Result In View Submission Page
-            logger.LogMethodEntry("ViewSubmissionPage", "GetScoreResultInViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetScoreResultInViewSubmissionPage",
                  base.IsTakeScreenShotDuringEntryExit);
             //Intialize the activity score variable
             string getActivityScore = string.Empty;
@@ -152,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "GetScoreResultInViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage", "GetScoreResultInViewSubmissionPage",
              base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
@@ -163,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         private void CloseViewSubmissionButton()
         {
             //Close View Submission Button
-            logger.LogMethodEntry("ViewSubmissionPage", "CloseViewSubmissionButton",
+            Logger.LogMethodEntry("ViewSubmissionPage", "CloseViewSubmissionButton",
                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -175,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
                 ViewSubmission_Page_ViewSubmission_Closebtn_Id_Locator);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
                  ViewSubmission_Page_ViewGrade_Button_Time_Value));
-            logger.LogMethodExit("ViewSubmissionPage", "CloseViewSubmissionButton",
+            Logger.LogMethodExit("ViewSubmissionPage", "CloseViewSubmissionButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -187,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
             Activity.ActivityTypeEnum activityTypeEnum)
         {
             // Click The Grades Tab Cmenu Option
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheGradesTabCmenuOption",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickTheGradesTabCmenuOption",
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -225,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "ClickTheGradesTabCmenuOption",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickTheGradesTabCmenuOption",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -237,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Check The Asset Name Contains In Grades Tab
-            logger.LogMethodEntry("ViewSubmissionPage", "CheckTheAssetNameContainsInGradesTab",
+            Logger.LogMethodEntry("ViewSubmissionPage", "CheckTheAssetNameContainsInGradesTab",
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -269,7 +267,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "CheckTheAssetNameContainsInGradesTab",
+            Logger.LogMethodExit("ViewSubmissionPage", "CheckTheAssetNameContainsInGradesTab",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -279,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectAssignedItemsOption()
         {
             //Select Assigned Items Option
-            logger.LogMethodEntry("ViewSubmissionPage", "SelectAssignedItemsOption",
+            Logger.LogMethodEntry("ViewSubmissionPage", "SelectAssignedItemsOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for Assigned Items Option
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -291,7 +289,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAssignedItemsOption);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewGrade_Button_Time_Value));
-            logger.LogMethodExit("ViewSubmissionPage", "SelectAssignedItemsOption",
+            Logger.LogMethodExit("ViewSubmissionPage", "SelectAssignedItemsOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -302,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetViewAllSubmissionCount()
         {
             //Get View All Submission Count
-            logger.LogMethodEntry("ViewSubmissionPage", "GetViewAllSubmissionCount",
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetViewAllSubmissionCount",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             int getSubmissionCount = Convert.ToInt32(ViewSubmissionPageResource.
@@ -324,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "GetViewAllSubmissionCount",
+            Logger.LogMethodExit("ViewSubmissionPage", "GetViewAllSubmissionCount",
                            base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionCount.ToString();
         }
@@ -335,7 +333,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ExpandTheStudentInViewSubmission()
         {
             //Expand The Student In ViewSubmission
-            logger.LogMethodEntry("ViewSubmissionPage", "ExpandTheStudentInViewSubmission",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ExpandTheStudentInViewSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
@@ -347,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getExpandButton);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
                 ViewSubmission_Page_Activity_Time_Value));
-            logger.LogMethodExit("ViewSubmissionPage", "ExpandTheStudentInViewSubmission",
+            Logger.LogMethodExit("ViewSubmissionPage", "ExpandTheStudentInViewSubmission",
                            base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -357,14 +355,14 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectViewSubmissionWindow()
         {
             //Select View Submission Window
-            logger.LogMethodEntry("ViewSubmissionPage", "SelectViewSubmissionWindow",
+            Logger.LogMethodEntry("ViewSubmissionPage", "SelectViewSubmissionWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select the window          
             base.WaitUntilWindowLoads(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Window_Name);
             base.SelectWindow(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Window_Name);
-            logger.LogMethodExit("ViewSubmissionPage", "SelectViewSubmissionWindow",
+            Logger.LogMethodExit("ViewSubmissionPage", "SelectViewSubmissionWindow",
                           base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -375,7 +373,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetGradefromViewSubmissionPage()
         {
             //Get Grade from View Submission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "GetGradefromViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
@@ -395,7 +393,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "GetGradefromViewSubmissionPage",
                            base.IsTakeScreenShotDuringEntryExit);
             return getGrade.Substring(Convert.ToInt32(ViewSubmissionPageResource.
@@ -410,7 +408,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnSaveButton()
         {
             //Click On Save Button
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "ClickOnSaveButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
@@ -422,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveCloseButton);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
                   ViewSubmission_Page_ViewGrade_Button_Time_Value));
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                "ClickOnSaveButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -433,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EditGradesInViewSubmissionPage()
         {
             //Edit Grades In ViewSubmission Page
-            logger.LogMethodEntry("ViewSubmissionPage", "EditGradesInViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage", "EditGradesInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -460,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "EditGradesInViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage", "EditGradesInViewSubmissionPage",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -470,7 +468,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnUpdateButtonInViewSubmission()
         {
             //Click On Update Button In ViewSubmission
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickOnUpdateButtonInViewSubmission",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickOnUpdateButtonInViewSubmission",
                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -479,7 +477,7 @@ namespace Pegasus.Pages.UI_Pages
                 (ViewSubmissionPageResource.ViewSubmission_Page_Update_Button_Id_Locator);
             //Click on 'Update' Button
             base.ClickByJavaScriptExecutor(getUpdateButton);
-            logger.LogMethodExit("ViewSubmissionPage", "ClickOnUpdateButtonInViewSubmission",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickOnUpdateButtonInViewSubmission",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -489,7 +487,7 @@ namespace Pegasus.Pages.UI_Pages
         private void UpdateTheGradeInViewSubmission()
         {
             //Update The Grade In ViewSubmission
-            logger.LogMethodEntry("ViewSubmissionPage", "UpdateTheGradeInViewSubmission",
+            Logger.LogMethodEntry("ViewSubmissionPage", "UpdateTheGradeInViewSubmission",
                base.IsTakeScreenShotDuringEntryExit);
             //Fill Edit Grade Score Value
             this.FillEditGradeScoreValue(ViewSubmissionPageResource.
@@ -497,7 +495,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill Edit Grade Max Score Value
             this.FillEditGradeMaximumScoreValue(ViewSubmissionPageResource.
                 ViewSubmission_Page_MaxValue_ScoreValue);
-            logger.LogMethodExit("ViewSubmissionPage", "UpdateTheGradeInViewSubmission",
+            Logger.LogMethodExit("ViewSubmissionPage", "UpdateTheGradeInViewSubmission",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -508,7 +506,7 @@ namespace Pegasus.Pages.UI_Pages
         private void FillEditGradeScoreValue(string scoreValue)
         {
             // Fill Edit Grade ScoreValue
-            logger.LogMethodEntry("ViewSubmissionPage", "FillEditGradeScoreValue",
+            Logger.LogMethodEntry("ViewSubmissionPage", "FillEditGradeScoreValue",
                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -518,7 +516,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill The Score Value
             base.FillTextBoxById(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_ScoreValue_Id_Locator, scoreValue);
-            logger.LogMethodExit("ViewSubmissionPage", "FillEditGradeScoreValue",
+            Logger.LogMethodExit("ViewSubmissionPage", "FillEditGradeScoreValue",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -529,7 +527,7 @@ namespace Pegasus.Pages.UI_Pages
         private void FillEditGradeMaximumScoreValue(string maximumScoreValue)
         {
             //Fill Edit Grade Maximum ScoreValue
-            logger.LogMethodEntry("ViewSubmissionPage", "FillEditGradeMaximumScoreValue",
+            Logger.LogMethodEntry("ViewSubmissionPage", "FillEditGradeMaximumScoreValue",
                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -539,7 +537,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill the Max Score Value
             base.FillTextBoxById(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_MaxScoreValue_Id_Locator, maximumScoreValue);
-            logger.LogMethodExit("ViewSubmissionPage", "FillEditGradeMaximumScoreValue",
+            Logger.LogMethodExit("ViewSubmissionPage", "FillEditGradeMaximumScoreValue",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -549,7 +547,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickTheEditLink()
         {
             //Click The Edit Link
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheEditLink",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickTheEditLink",
                base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(3000);
             //Wait for the 'Edit' link
@@ -559,7 +557,7 @@ namespace Pegasus.Pages.UI_Pages
                 (ViewSubmissionPageResource.ViewSubmission_Page_Edit_Link_Id_Locator);
             //Click on 'Edit' link
             base.ClickByJavaScriptExecutor(getEditLink);
-            logger.LogMethodExit("ViewSubmissionPage", "ClickTheEditLink",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickTheEditLink",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -569,7 +567,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickTheStudentExpandLink()
         {
             //Click The Student Expand Link
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheStudentExpandLink",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickTheStudentExpandLink",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -582,7 +580,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "ClickTheStudentExpandLink",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickTheStudentExpandLink",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -592,7 +590,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickExpandButton()
         {
             //Click The Expand Link
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickExpandButton",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickExpandButton",
                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
@@ -602,7 +600,7 @@ namespace Pegasus.Pages.UI_Pages
                 ViewSubmission_Page_ViewSubmission_Allsubmission_Xpath_Locator);
             //Click on Expand student link
             base.ClickByJavaScriptExecutor(getExpanStudentName);
-            logger.LogMethodExit("ViewSubmissionPage", "ClickExpandButton",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickExpandButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -613,7 +611,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetGradefromStudentViewSubmissionPage()
         {
             // Get Grade from Student ViewSubmission Page
-            logger.LogMethodEntry("ViewSubmissionPage", "GetGradefromStudentViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetGradefromStudentViewSubmissionPage",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getGrade = string.Empty;
@@ -627,7 +625,7 @@ namespace Pegasus.Pages.UI_Pages
                     ViewSubmission_Page_ViewSubmission_ScoreResult_Class_Locator);
                 //Split the value
                 getGrade = getGrade.Substring((getGrade.IndexOf(ViewSubmissionPageResource.
-                    ViewSubmission_Page_ViewSubmission_ScoreResult_Char) - Convert.ToInt32
+                    ViewSubmission_Page_ViewSubmission_ScoreResult_Char, StringComparison.Ordinal) - Convert.ToInt32
                     (ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Score_SplitValue)),
                     Convert.ToInt32(ViewSubmissionPageResource.
                     ViewSubmission_Page_ViewSubmission_Score_SplitValue)).Trim();
@@ -636,7 +634,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "GetGradefromStudentViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage", "GetGradefromStudentViewSubmissionPage",
               base.IsTakeScreenShotDuringEntryExit);
             return getGrade;
         }
@@ -648,7 +646,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetSubmittedGradeInViewSubmissionPage()
         {
             //Get Submitted Grade In ViewSubmission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "GetSubmittedGradeInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
@@ -672,7 +670,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "GetSubmittedGradeInViewSubmissionPage",
                            base.IsTakeScreenShotDuringEntryExit);
             return getScore;
@@ -684,7 +682,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectTheSubmissionFrame()
         {
             //Select the Submission Frame
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "SelectTheSubmissionFrame", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -699,7 +697,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "SelectTheSubmissionFrame", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -710,7 +708,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetQuestionStatus()
         {
             //Get The Question Status
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "GetQuestionStatus", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getQuestionStatus = string.Empty;
@@ -730,7 +728,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "GetQuestionStatus", base.IsTakeScreenShotDuringEntryExit);
             return getQuestionStatus;
         }
@@ -742,7 +740,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetTotalTimeTaken()
         {
             //Logger Entry
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                "GetTotalTimeTaken", base.IsTakeScreenShotDuringEntryExit);
             string getTextOfDivTime = string.Empty;
             try
@@ -770,7 +768,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             //Logger Exit
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
               "GetTotalTimeTaken", base.IsTakeScreenShotDuringEntryExit);
             //Return the actual time taken 
             return getTextOfDivTime;
@@ -783,7 +781,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetSubmissionCountInViewSubmission()
         {
             //Get Submission Count In View Submission
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                "GetSubmissionCountInViewSubmission", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSubmissionCount = string.Empty; ;
@@ -806,7 +804,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
               "GetSubmissionCountInViewSubmission", base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionCount;
         }
@@ -817,7 +815,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectSubmissionInViewSubmissionWindow()
         {
             //
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
               "SelectSubmissionInViewSubmissionWindow", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -835,7 +833,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
               "SelectSubmissionInViewSubmissionWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -845,7 +843,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectSendMessageOption()
         {
             //Select Send Message Option
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
               "SelectSendMessageOption", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -862,7 +860,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "SelectSendMessageOption", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -873,7 +871,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetSaveForLaterDisplayMessage()
         {
             //Get SaveForLater Display Message
-            logger.LogMethodEntry("ViewSubmissionPage", "GetSaveForLaterDisplayMessage",
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetSaveForLaterDisplayMessage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             string getDisplayMessage = string.Empty;
@@ -896,7 +894,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodEntry("ViewSubmissionPage", "GetSaveForLaterDisplayMessage",
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetSaveForLaterDisplayMessage",
                 base.IsTakeScreenShotDuringEntryExit);
             return getDisplayMessage;
         }
@@ -907,7 +905,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ExpandTheStudentSubmission()
         {
             //Expand The Student Submission
-            logger.LogMethodEntry("ViewSubmissionPage", "ExpandTheStudentSubmission",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ExpandTheStudentSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
@@ -919,7 +917,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getExpandButton);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
                 ViewSubmission_Page_Activity_Time_Value));
-            logger.LogMethodEntry("ViewSubmissionPage", "ExpandTheStudentSubmission",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ExpandTheStudentSubmission",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -929,7 +927,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EditTheManualGradeInViewSubmissionPage()
         {
             // Edit The Manual Grade In View Submission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "EditTheManualGradeInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             try
@@ -960,7 +958,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "EditTheManualGradeInViewSubmissionPage",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -972,7 +970,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetAttemptByTheStudentInSubmissionPage()
         {
             //Get Submission Count In View Submission
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "GetAttemptByTheStudentInSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
@@ -992,7 +990,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
               "GetAttemptByTheStudentInSubmissionPage",
               base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionCount;
@@ -1004,7 +1002,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EditTheScoreInViewSubmissionPage()
         {
             //Edit The Score In ViewSubmission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "EditTheManualGradeInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             try
@@ -1018,7 +1016,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "EditTheManualGradeInViewSubmissionPage",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1029,7 +1027,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickonSubmissionGrade()
         {
             //Click on Submission Grade
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickonSubmissionGrade",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickonSubmissionGrade",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1049,21 +1047,20 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "ClickonSubmissionGrade",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickonSubmissionGrade",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Get Grade In Student ViewSubmission Page.
         /// </summary>
-        /// <returns>Grade</returns>
+        /// <returns>Grade.</returns>
         public String GetGradeInStudentViewSubmissionPage()
         {
             // Get Grade In Student ViewSubmission Page
-            logger.LogMethodEntry("ViewSubmissionPage", "GetGradeInStudentViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetGradeInStudentViewSubmissionPage",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getGrade = string.Empty;
             string getSplittedGrade = string.Empty;
             try
             {
@@ -1071,7 +1068,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.ClassName(ViewSubmissionPageResource.
                     ViewSubmission_Page_ViewSubmission_ScoreResult_Class_Locator));
                 //Get Grade
-                getGrade = base.GetElementTextByClassName(ViewSubmissionPageResource.
+                string getGrade = base.GetElementTextByClassName(ViewSubmissionPageResource.
                     ViewSubmission_Page_ViewSubmission_ScoreResult_Class_Locator);
                 //Get Splitted Grade
                 getSplittedGrade = Regex.Split(getGrade, ViewSubmissionPageResource.
@@ -1088,7 +1085,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "GetGradeInStudentViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage", "GetGradeInStudentViewSubmissionPage",
               base.IsTakeScreenShotDuringEntryExit);
             return getSplittedGrade;
         }
@@ -1096,14 +1093,16 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select The Cmenu Option Of Asset.
         /// </summary>
-        /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
+        /// <param name="assetCmenuOptionEnum">This is asset cmenu options.</param>
         /// <param name="assetName">This is Asset name.</param>
+        /// <param name="activityTypeEnum">This is asset type enum.</param>
+        /// <param name="assetId">Thia is asset Id.</param>
         public void SelectAssetCMenuOption(
           GBInstructorUXPage.AssetCmenuOptionEnum assetCmenuOptionEnum,
           string assetName, Activity.ActivityTypeEnum activityTypeEnum, string assetId)
         {
             //Select The Cmenu Option Of Asset
-            logger.LogMethodEntry("ViewSubmissionPage", "SelectAssetCMenuOption",
+            Logger.LogMethodEntry("ViewSubmissionPage", "SelectAssetCMenuOption",
            base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1114,20 +1113,23 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "SelectAssetCMenuOption",
+            Logger.LogMethodExit("ViewSubmissionPage", "SelectAssetCMenuOption",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Click On Cmenu Of Asset.
         /// </summary>
-        /// <param name="getActivityColumnCount">This is asset count.</param>
-        /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option.</param>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="assetId">Thia is asset Id.</param>
+        /// <param name="assetCmenuOptionEnum">This is asset cmenu option name.</param>
+        /// <param name="activityTypeEnum">This is asset type enum.</param>
         private void ClickOnCmenuOfAsset(
               GBInstructorUXPage.AssetCmenuOptionEnum assetCmenuOptionEnum,
              Activity.ActivityTypeEnum activityTypeEnum, string assetName, string assetId)
         {
             //Click On Cmenu 
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickOnCmenuOfAsset",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickOnCmenuOfAsset",
             base.IsTakeScreenShotDuringEntryExit);
             // It opens the c-menu 
             ClickOnCmenuAssetIcon(assetName, assetId);
@@ -1139,7 +1141,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
 
             }
-            logger.LogMethodExit("ViewSubmissionPage", "ClickOnCmenuOfAsset",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickOnCmenuOfAsset",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1149,7 +1151,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectViewSubmissionCmenuOption()
         {
             //Select View Submission Cmenu Option
-            logger.LogMethodEntry("ViewSubmissionPage", "SelectViewSubmissionCmenuOption",
+            Logger.LogMethodEntry("ViewSubmissionPage", "SelectViewSubmissionCmenuOption",
                                    base.IsTakeScreenShotDuringEntryExit);
             // Wait for the cmenu
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
@@ -1159,18 +1161,19 @@ namespace Pegasus.Pages.UI_Pages
                 (ViewSubmissionPageResource.
                 ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator);
             base.ClickByJavaScriptExecutor(getViewAllSubmissionCmenu);
-            logger.LogMethodExit("ViewSubmissionPage", "SelectViewSubmissionCmenuOption",
+            Logger.LogMethodExit("ViewSubmissionPage", "SelectViewSubmissionCmenuOption",
                                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Click The Cmenu Icon In Asset.
         /// </summary>
-        /// <param name="getActivityColumnCount">This is Asset column count.</param>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="assetId">This is asset Id.</param>
         private void ClickOnCmenuAssetIcon(string assetName, string assetId)
         {
             // Click The Cmenu Icon In Asset
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheCmenuIcon",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickTheCmenuIcon",
                          base.IsTakeScreenShotDuringEntryExit);
 
             // This function is used to check the iframe and if exists then switch to that frame
@@ -1194,7 +1197,7 @@ namespace Pegasus.Pages.UI_Pages
             //Perform Mouse Click Action
             base.PerformMouseClickAction(getCmenuIconProperty);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.ViewSubmission_Page_SleepTime_Value));
-            logger.LogMethodExit("ViewSubmissionPage", "ClickTheCmenuIcon",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickTheCmenuIcon",
                           base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1204,7 +1207,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectIFrame(string assetName)
         {
             //Select IFrame
-            logger.LogMethodEntry("ViewSubmissionPage", "SelectIFrame",
+            Logger.LogMethodEntry("ViewSubmissionPage", "SelectIFrame",
                base.IsTakeScreenShotDuringEntryExit);
             //This condition checks Iframe exists  
             if (base.IsElementPresent(By.Id(ViewSubmissionPageResource.
@@ -1219,7 +1222,7 @@ namespace Pegasus.Pages.UI_Pages
 
             }
 
-            logger.LogMethodExit("ViewSubmissionPage", "SelectIFrame",
+            Logger.LogMethodExit("ViewSubmissionPage", "SelectIFrame",
                 base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
@@ -1228,14 +1231,13 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns></returns>
         private string ClickOnImageIcon(string assetId, string assetName)
         {
-            logger.LogMethodEntry("ViewSubmissionPage", "ClickOnImageIcon",
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickOnImageIcon",
             base.IsTakeScreenShotDuringEntryExit);
-            string strViewSubmissionXpath;
             // Modified the xpath for the To Do tab based on the assetid
-            strViewSubmissionXpath = ViewSubmissionPageResource.ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator;
+            string strViewSubmissionXpath = ViewSubmissionPageResource.ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator;
             base.PerformMouseHoverAction(base.GetWebElementPropertiesByPartialLinkText(assetName));
             strViewSubmissionXpath = strViewSubmissionXpath.Replace("assetId", assetId);
-            if (base.IsElementPresent(By.XPath(strViewSubmissionXpath),5)) { }
+            if (base.IsElementPresent(By.XPath(strViewSubmissionXpath), 5)) { }
             else
             {
                 // Modified the xpath for the Assignment/CourseMaterial/Completed based on the assetid
@@ -1243,7 +1245,7 @@ namespace Pegasus.Pages.UI_Pages
                 strViewSubmissionXpath = strViewSubmissionXpath.Replace("assetId", assetId);
 
             }
-            logger.LogMethodExit("ViewSubmissionPage", "ClickOnImageIcon",
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickOnImageIcon",
             base.IsTakeScreenShotDuringEntryExit);
             return strViewSubmissionXpath;
         }
@@ -1255,7 +1257,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetSubmissionScoreInViewSubmissionPage()
         {
             //Get Submission Score In View Submission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "GetSubmissionScoreInViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
@@ -1264,19 +1266,19 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Click on Submission Grade
                 this.ClickonSubmissionGrade();
-                bool dfdf=base.IsElementPresent(By.Id(ViewSubmissionPageResource.
-                    ViewSubmission_Page_GradeScore_Id_Locator),10);
+                bool dfdf = base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_Page_GradeScore_Id_Locator), 10);
                 //Get Submission Grade
                 getSubmissionScore = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_GradeScore_Id_Locator);
-                getSubmissionScore = (System.Text.RegularExpressions.Regex.Split(getSubmissionScore,
+                getSubmissionScore = (Regex.Split(getSubmissionScore,
                     ": (.*)%")[1]).Split('.')[0];
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "GetSubmissionScoreInViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionScore;
@@ -1289,7 +1291,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetSubmissionScoreByStudent(string lastname, string firstname)
         {
             //Get Submitted Grade In ViewSubmission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "GetSubmissionScoreByStudent",
                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
@@ -1313,13 +1315,13 @@ namespace Pegasus.Pages.UI_Pages
                     ViewSubmission_Page_ViewSubmission_Grade_Delimiter, string.Empty).Trim();
                 //close the view submission window
                 base.CloseBrowserWindow();
-              
+
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "GetSubmissionScoreInViewSubmissionPageHEDCore",
                            base.IsTakeScreenShotDuringEntryExit);
             return getScore;
@@ -1333,7 +1335,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns></returns>
         public IWebElement SearchStudentByLastAndFirstName(string lastname, string firstname)
         {
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);
             string name = lastname + ", " + firstname;
             IWebElement getSubmissionGradeProperty = null;
@@ -1360,22 +1362,22 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 }
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                     "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionGradeProperty;
         }
         /// <summary>
         /// Click on particular student by combination of last and first name
         /// </summary>
-        /// <param name="studentName"></param>
+        /// <param name="getStudentProperty">This is webelement property.</param>
         public void ClickStudent(IWebElement getStudentProperty)
         {
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "ClickStudent", base.IsTakeScreenShotDuringEntryExit);
             // Click on particular student index
             base.ClickByJavaScriptExecutor(getStudentProperty);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.ViewSubmission_Page_SleepTime_Value));
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "ClickStudent", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1385,7 +1387,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns></returns>
         public string GetStudentScore()
         {
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "GetStudentScore", base.IsTakeScreenShotDuringEntryExit);
             string getScore = string.Empty;
             //Select View Submission Window
@@ -1401,7 +1403,7 @@ namespace Pegasus.Pages.UI_Pages
                 ViewSubmission_Page_ViewSubmission_Grade_Delimiter, string.Empty).Trim();
             //close the view submission window
             base.CloseBrowserWindow();
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "GetStudentScore", base.IsTakeScreenShotDuringEntryExit);
 
             return getScore;
@@ -1412,7 +1414,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectLastSubmissionInViewSubmissionWindow()
         {
             //
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "SelectLastSubmissionInViewSubmissionWindow", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1433,7 +1435,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "SelectLastSubmissionInViewSubmissionWindow", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
@@ -1451,10 +1453,10 @@ namespace Pegasus.Pages.UI_Pages
             ViewSubmissionPageResource.ViewSubmission_Page_StatusSpecialCharacter_Char));
 
             //populate Gradebook Grade from View Submission page
-            string GradebookGrade = getGradebookGradeTextElements[1].ToString().Trim();
+            string gradebookGrade = getGradebookGradeTextElements[1].ToString(CultureInfo.InvariantCulture).Trim();
 
             //return Gradebook Grade from View Submission page
-            return GradebookGrade;
+            return gradebookGrade;
         }
 
         /// <summary>
@@ -1465,7 +1467,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsDeclineAcceptOptionDisplayed(string declineOption, string acceptOption)
         {
             //Verify Decline and Accept Option Displayed in View Submission Page for Past Due Submission
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "IsDeclineAcceptOptionDisplayed",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
@@ -1486,7 +1488,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "IsDeclineAcceptOptionDisplayed",
             base.IsTakeScreenShotDuringEntryExit);
             return (isDeclineOptionDisplayed && isAcceptOptionDisplayed);
@@ -1499,7 +1501,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnButtonInViewSubmissionPage(string buttonName)
         {
             //Click On Button In View Submission Page
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "ClickOnButtonInViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
             try
@@ -1516,7 +1518,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "ClickOnButtonInViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1529,7 +1531,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsDeclineAcceptOptionDisplayedInstructor(string declineOption, string acceptOption)
         {
             //Verify Decline and Accept Option Displayed in View Submission Page for Past Due Submission
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
                 "IsDeclineAcceptOptionDisplayedInstructor",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
@@ -1548,7 +1550,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
+            Logger.LogMethodExit("ViewSubmissionPage",
                 "IsDeclineAcceptOptionDisplayedInstructor",
             base.IsTakeScreenShotDuringEntryExit);
             return (isDeclineOptionDisplayed && isAcceptOptionDisplayed);
@@ -1556,11 +1558,11 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Click on the given student in View Submission page.
-      /// </summary>
-      /// <param name="studentName">This is the Student Name</param>
+        /// </summary>
+        /// <param name="studentName">This is the Student Name</param>
         public void ClickStudentByLastAndFirstName(string studentName)
         {
-            logger.LogMethodEntry("ViewSubmissionPage",
+            Logger.LogMethodEntry("ViewSubmissionPage",
             "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             string getScore = string.Empty;
@@ -1578,7 +1580,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     string getStudent = base.GetTitleAttributeValueByXPath(
                         String.Format(ViewSubmissionPageResource.
-                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, 
+                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator,
                         studentIndex));
                     base.WaitForElement(By.XPath(
                         string.Format(ViewSubmissionPageResource.
@@ -1591,7 +1593,7 @@ namespace Pegasus.Pages.UI_Pages
                         IWebElement getStudentName = base.
                             GetWebElementPropertiesByXPath(
                              string.Format(ViewSubmissionPageResource.
-                             ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, 
+                             ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator,
                              studentIndex));
                         base.ClickByJavaScriptExecutor(getStudentName);
                         break;
@@ -1602,19 +1604,19 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
-                    "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);            
+            Logger.LogMethodExit("ViewSubmissionPage",
+                    "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
-          ///  Provide feedback to the student.
-          /// </summary>
-          /// <param name="feedbackText">This is the Feedback that has to be given.</param>
+        ///  Provide feedback to the student.
+        /// </summary>
+        /// <param name="feedbackText">This is the Feedback that has to be given.</param>
         public void InstructorFeedbackToStudent(string feedbackText)
         {
             //Provide feedback to the student
-            logger.LogMethodEntry("ViewSubmissionPage",
-                        "InstructorFeedbackToStudent", 
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                        "InstructorFeedbackToStudent",
                         base.IsTakeScreenShotDuringEntryExit);
             this.SelectViewSubmissionWindow();
             try
@@ -1628,25 +1630,24 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getFeedbackButton);
                 base.SwitchToLastOpenedWindow();
                 //Enter the Feedback in the textbox
-                bool jh = base.IsElementPresent(By.Id("txtFeedback"),10);
                 base.FillTextBoxById(ViewSubmissionPageResource.
                   ViewSubmission_Page_FeedbackTextbox_Id_Locator, feedbackText);
                 //CLick on 'Save'
-                base.WaitForElement(By.PartialLinkText(ViewSubmissionPageResource.
-                    ViewSubmission_Page_Save_PartialLinkText_Locator));
-                IWebElement getSaveButton = base.
-                GetWebElementPropertiesByPartialLinkText(ViewSubmissionPageResource.
-                    ViewSubmission_Page_Save_PartialLinkText_Locator);
+                IWebElement getSaveButton = base.GetWebElementPropertiesByCssSelector
+                    (ViewSubmissionPageResource.ViewSubmission_Page_Feedback_Save_Button_CssSelector_Locator);
                 base.ClickByJavaScriptExecutor(getSaveButton);
-                base.ClickButtonByPartialLinkText(ViewSubmissionPageResource.
-                    ViewSubmission_Page_Cancel_PartialLinkText_Locator);
+                // close pop up in case is open
+                if (!base.IsPopUpClosed(3, 5))
+                {
+                    base.CloseBrowserWindow();
+                }
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage",
-                    "InstructorFeedbackToStudent", 
+            Logger.LogMethodExit("ViewSubmissionPage",
+                    "InstructorFeedbackToStudent",
                     base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1657,13 +1658,13 @@ namespace Pegasus.Pages.UI_Pages
         public void SaveAndCloseViewSubmission(string buttonName)
         {
             //Save and close the 'View Submission' window
-            logger.LogMethodEntry("ViewSubmissionPage", "SaveAndCloseViewSubmission",
+            Logger.LogMethodEntry("ViewSubmissionPage", "SaveAndCloseViewSubmission",
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.SelectViewSubmissionWindow();
                 base.WaitForElement(By.PartialLinkText(buttonName));
-                IWebElement getSaveAndClose = 
+                IWebElement getSaveAndClose =
                     base.GetWebElementPropertiesByPartialLinkText(buttonName);
                 base.ClickByJavaScriptExecutor(getSaveAndClose);
             }
@@ -1671,53 +1672,52 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ViewSubmissionPage", "SaveAndCloseViewSubmission",
+            Logger.LogMethodExit("ViewSubmissionPage", "SaveAndCloseViewSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
 
         }
 
         /// <summary>
         /// Instructor grading student for WL Essay Activity.
-         /// </summary>
-         /// <param name="score">This is the activity score.</param>
-        public void InstructorgradingStudentforWLEssayActivity(string score)
+        /// </summary>
+        /// <param name="score">This is the activity score.</param>
+        public void InstructorgradingStudentforWorldLanguageEssayActivity(string score)
         {
             //Instructor grading student for WL Essay Activity
-            logger.LogMethodEntry("ViewSubmissionPage", "VerifyinrTheActvityStatusofWLActivity",
+            Logger.LogMethodEntry("ViewSubmissionPage", "InstructorgradingStudentforWorldLanguageEssayActivity",
                     base.IsTakeScreenShotDuringEntryExit);
-                string getWLactivityStatus = string.Empty;
-                try
+            try
+            {
+                //Selecting Window.
+                this.SelectViewSubmissionWindow();
+                //Get essay question count.
+                int getCount = base.GetElementCountByXPath(
+                    ViewSubmissionPageResource.
+                    ViewSubmission_Page_QuestionCount_XPath_Locator);
+                for (int i = 3; i <= getCount; i++)
                 {
-                    //Selecting Window.
-                    this.SelectViewSubmissionWindow();             
-                    //Get essay question count.
-                    int getCount = base.GetElementCountByXPath(
+                    IWebElement getactivityId = base.
+                        GetWebElementPropertiesByCssSelector(
+                        string.Format(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ActivityID_CSS_Locator, i));
+                    string activityId = getactivityId.GetAttribute(
                         ViewSubmissionPageResource.
-                        ViewSubmission_Page_QuestionCount_XPath_Locator);
-                    for (int i = 3; i <= getCount; i++)
-                    {
-                        IWebElement getactivityId = base.
-                            GetWebElementPropertiesByCssSelector(
-                            string.Format(ViewSubmissionPageResource.
-                            ViewSubmission_Page_ActivityID_CSS_Locator, i));
-                        string activityId = getactivityId.GetAttribute(
-                            ViewSubmissionPageResource.
-                            ViewSubmission_Page_Activity_Attribute);
-                        string textactivityId = activityId.Split('_')[1];
-                        string activityInputId = ViewSubmissionPageResource.
-                     ViewSubmission_Page_Activity_InputId + '_' + textactivityId;
-                        //Fill the textbox with score 
-                        base.WaitForElement(By.Id(activityInputId));
-                        base.FillTextBoxById(activityInputId, score);                       
-                    }                   
+                        ViewSubmission_Page_Activity_Attribute);
+                    string textactivityId = activityId.Split('_')[1];
+                    string activityInputId = ViewSubmissionPageResource.
+                 ViewSubmission_Page_Activity_InputId + '_' + textactivityId;
+                    //Fill the textbox with score 
+                    base.WaitForElement(By.Id(activityInputId));
+                    base.FillTextBoxById(activityInputId, score);
                 }
-                catch (Exception e)
-                {
+            }
+            catch (Exception e)
+            {
 
-                    ExceptionHandler.HandleException(e);
-                }
-                logger.LogMethodEntry("ViewSubmissionPage", "VerifyinrTheActvityStatusofWLActivity",
-                            base.IsTakeScreenShotDuringEntryExit);   
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage", "InstructorgradingStudentforWorldLanguageEssayActivity",
+                        base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

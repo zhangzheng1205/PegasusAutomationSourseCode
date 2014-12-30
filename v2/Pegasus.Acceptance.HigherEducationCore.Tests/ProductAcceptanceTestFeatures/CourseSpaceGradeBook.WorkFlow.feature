@@ -276,7 +276,6 @@ When I search for "SAM 01-19" in "Gradebook" window
 And I click on cmenu option "ViewAllSubmissions" of asset "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording."
 Then I should be on the "View Submission" page
 When I select the student "WLCsSmsStudent" from student frame in view submission page
-
 And I click "Save and Close"
 Then I should be on the "Gradebook" page
 When I navigate to "Today's View" tab

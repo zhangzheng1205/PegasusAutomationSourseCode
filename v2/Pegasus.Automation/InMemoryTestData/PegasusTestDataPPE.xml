@@ -16,7 +16,7 @@
     </Organization>
   </ArrayOfOrganization>
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
-  WLCsSmsInstructor<ArrayOfCourse>
+ <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
       <Name>Digits-GradeCourse</Name>
@@ -600,7 +600,7 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e5c6</LastName>
+      <LastName>e77b</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>

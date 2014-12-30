@@ -28,22 +28,22 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <param name="assetCmenu">This is Asset Cmenu type enum.</param>
         /// <param name="assetName">This is Asset name.</param>
         [When(@"I click on cmenu option ""(.*)"" of asset ""(.*)""")]
-        public void ClickOnCmenuOfAssetInGradebookHED(string assetCmenu,
+        public void ClickOnCmenuOfAssetInGradebookHed(string assetCmenu,
             string assetName)
         {
             //Click On Cmenu Of Asset In Gradebook
-            Logger.LogMethodEntry("GradeBook", 
-                "ClickOnCmenuOfAssetInGradebookHED",
+            Logger.LogMethodEntry("GradeBook",
+                "ClickOnCmenuOfAssetInGradebookHed",
                   IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Frame
             gbInstructorPage.SelectGradebookFrame();
             //Select The Cmenu Option Of Asset
-            gbInstructorPage.SelectTheCmenuOptionOfAssetHED(
+            gbInstructorPage.SelectTheCmenuOptionOfAssetHed(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
-            Logger.LogMethodExit("GradeBook", 
-                "ClickOnCmenuOfAssetInGradebookHED",
+            Logger.LogMethodExit("GradeBook",
+                "ClickOnCmenuOfAssetInGradebookHed",
                  IsTakeScreenShotDuringEntryExit);
         }
 

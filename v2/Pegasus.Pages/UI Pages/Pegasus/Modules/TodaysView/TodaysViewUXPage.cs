@@ -1123,7 +1123,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitUntilWindowLoads(TodaysViewUXPageResource
                     .TodaysViewUXPageResource_WindowsTitle);
                 // Wait for given element load
-                base.WaitForElement(By.Id("divTreeContainer"));
+                base.WaitForElement(By.Id(TodaysViewUXPageResource
+                    .TodaysViewUXPageResource_Page_TreeViewControlID));
                 // Get text of given element
                 name = base.GetElementTextById(TodaysViewUXPageResource
                     .TodaysViewUXPageResource_Tree_View_DivID).Contains(studentName) ? studentName : name;
@@ -1390,13 +1391,13 @@ namespace Pegasus.Pages.UI_Pages
                                  base.IsTakeScreenShotDuringEntryExit);
             switch (base.Browser)
             {
-                case PegasusBaseTestFixture.InternetExplorer:
+                case InternetExplorer:
                     {
                         //Get assignment title from Internet explorer
                         assignmentTitle = this.GetAssignmentTitleInInternetExplorer(assignmentTitle, columnNo);
                         break;
                     }
-                case PegasusBaseTestFixture.FireFox:
+                case FireFox:
                     {
                         //Get assignment title from Firefox
                         assignmentTitle = this.GetAssignmentTitleInFireFox(assignmentTitle, columnNo);
@@ -1846,7 +1847,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetSectionIDAfterEnterInsideSection",
                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getSectionID = string.Empty;
+            string getSectionId = string.Empty;
             try
             {
                 //Select Window
@@ -1855,7 +1856,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_SectionID_Id_Locator));
                 //Get Section ID
-                getSectionID = base.GetElementTextById(TodaysViewUXPageResource.
+                getSectionId = base.GetElementTextById(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_SectionID_Id_Locator);
             }
             catch (Exception e)
@@ -1865,7 +1866,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "GetSectionIDAfterEnterInsideSection",
               base.IsTakeScreenShotDuringEntryExit);
             //Returns Section ID
-            return getSectionID;
+            return getSectionId;
         }
 
         /// <summary>
@@ -3481,8 +3482,7 @@ namespace Pegasus.Pages.UI_Pages
             string getInstructorCommentsText = string.Empty;
             try
             {
-                //Wait for the Alert channel to load
-                base.WaitForElement(By.PartialLinkText(channelName));
+                base.SelectDefaultWindow();
                 //Get Instructor Comments Text
                 getInstructorCommentsText =
                        base.GetElementTextByPartialLinkText(channelName);
@@ -3858,7 +3858,6 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickActivityCmenu",
                    base.IsTakeScreenShotDuringEntryExit);
-            string getActivityName = string.Empty;
             try
             {
                 //get Activities Row Count
@@ -3870,8 +3869,7 @@ namespace Pegasus.Pages.UI_Pages
                         setActivityRowCount <= getActivitiesRowCount; setActivityRowCount++)
                 {
                     //Get The Activity Name From List   
-                    getActivityName =
-                        base.GetElementInnerTextByXPath(String.Format(TodaysViewUXPageResource.
+                    string getActivityName = base.GetElementInnerTextByXPath(String.Format(TodaysViewUXPageResource.
                         TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath,
                         setActivityRowCount));
                     if (getActivityName.Contains(activityName))
@@ -3954,10 +3952,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage",
                 "GetActivityNameOfInstrucorGradingChannel",
                 base.IsTakeScreenShotDuringEntryExit);
-            string getActivityName = string.Empty;
-            bool djfh = base.IsElementPresent(By.PartialLinkText(activityName), 10);
-            getActivityName = base.GetElementTextByPartialLinkText(activityName);
-            Logger.LogMethodExit("TodaysViewUXPage", 
+            string getActivityName = base.GetElementTextByPartialLinkText(activityName);
+            Logger.LogMethodExit("TodaysViewUXPage",
                 "GetActivityNameOfInstrucorGradingChannel",
                    base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;

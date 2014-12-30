@@ -28,8 +28,7 @@ Then I should see the successfull message "Your message has been sent." in "Cour
 #PEGASUS-29247
 #MySpanishLabProgram
 Scenario: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
-Then I should see the "Instructor Grading (1)" channels in 'Todays view' page
-And I should see the alert count updated as "1" in "Instructor Grading (1)" channel
-When I click on the "Instructor Grading (1)" option
-Then I should see the "SAM Activity:SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" activity in the Instructor grading channel
+Then I should see the "Unread Comments (1)" channels in 'Todays view' page
+And I should see the alert count updated as "1" in "Unread Comments (1)" channel
+
                                 

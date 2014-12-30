@@ -51,7 +51,6 @@ When I select "SAM 03-01 ¿Qué hacemos en casa? [Vocabulario 1. La casa]" in "C
 And I select the check box of any 1 activities in "STUDENT ACTIVITIES MANUAL"
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
-Then I should see the check mark in assigned status column next to the assets
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 

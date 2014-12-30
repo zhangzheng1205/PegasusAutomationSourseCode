@@ -4,15 +4,11 @@ using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Threading;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
-using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.CommonPageObjects;
 using System.Configuration;
 using System.Diagnostics;
-using System.Globalization;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -24,7 +20,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(CoursePreviewUXPage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(CoursePreviewUXPage));
         /// <summary>
         /// Get To Do Page window Title.
         /// If Window is accessible then window title should be as expected.
@@ -34,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetToDoTabWindowTitle(string tabName)
         {
             //Get Window Title 
-            logger.LogMethodEntry("CoursePreviewUXPage", "GetToDoTabWindowTitle",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetToDoTabWindowTitle",
                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the variable
             string newTabName = tabName;
@@ -48,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitUntilPageGetSwitchedSuccessfully(newTabName);
             //Get Page Title
             string getWindowTitle = base.GetPageTitle;
-            logger.LogMethodEntry("CoursePreviewUXPage", "GetToDoTabWindowTitle",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetToDoTabWindowTitle",
                base.IsTakeScreenShotDuringEntryExit);
             return getWindowTitle;
         }
@@ -58,14 +54,14 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectCourseMaterialsWindow()
         {
             //Select Window
-            logger.LogMethodEntry("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             base.SelectWindow(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
-            logger.LogMethodExit("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
+            Logger.LogMethodExit("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
@@ -74,14 +70,14 @@ namespace Pegasus.Pages.UI_Pages
         private void SwitchToIframe()
         {
             //Switch To Iframe
-            logger.LogMethodEntry("CoursePreviewUXPage", "SwitchToIframe",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "SwitchToIframe",
                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator));
             //Switch To Frame
             base.SwitchToIFrame(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
-            logger.LogMethodExit("CoursePreviewUXPage", "SwitchToIframe",
+            Logger.LogMethodExit("CoursePreviewUXPage", "SwitchToIframe",
                 base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
@@ -92,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetActivityNameInCourseMaterialsTab(string assetName)
         {
             // Get Activity Name In Course Materials Tab
-            logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityNameInCourseMaterialsTab",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityNameInCourseMaterialsTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize getActivityText variable
             string getActivityName = string.Empty;
@@ -133,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
                 
             }
-            logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityNameInCourseMaterialsTab",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityNameInCourseMaterialsTab",
                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
@@ -144,22 +140,22 @@ namespace Pegasus.Pages.UI_Pages
         public void LaunchEText()
         {
             // Launches the Etext Window
-            logger.LogMethodEntry("CoursePreviewUXPage", "LaunchEText",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "LaunchEText",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Etext_Link));
-                IWebElement EtextLink = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.
+                IWebElement etextLink = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Etext_Link);
                 // Launches the Etext Window
-                base.ClickByJavaScriptExecutor(EtextLink);
+                base.ClickByJavaScriptExecutor(etextLink);
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("CoursePreviewUXPage", "LaunchEText",
+            Logger.LogMethodExit("CoursePreviewUXPage", "LaunchEText",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -169,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
         public void CloseEtextWindow()
         {
             // close the 'Etext' window
-            logger.LogMethodEntry("CoursePreviewUXPage", "CloseEtextWindow",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "CloseEtextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -181,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("CoursePreviewUXPage", "CloseEtextWindow",
+            Logger.LogMethodExit("CoursePreviewUXPage", "CloseEtextWindow",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -194,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
         public void WaitForPastDueDateIcon(string activityName, 
             string activityUnderTabName, User.UserTypeEnum userType)
         {
-            logger.LogMethodEntry("CoursePreviewUXPage", "WaitForPastDueDateIcon",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "WaitForPastDueDateIcon",
                 base.IsTakeScreenShotDuringEntryExit);
             // Wait for past due date icon to be displayed
             try
@@ -228,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("CoursePreviewUXPage", "WaitForPastDueDateIcon",
+            Logger.LogMethodExit("CoursePreviewUXPage", "WaitForPastDueDateIcon",
                base.IsTakeScreenShotDuringEntryExit);
 
         }
@@ -241,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         private string  GetActivityClassName(string activityName)
         {
              // Returns the class name of the icon of the activity
-            logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityClassName",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityClassName",
             base.IsTakeScreenShotDuringEntryExit);
             // Returns the class name of the icon of the activity
             string activityLinkId = base.GetWebElementPropertiesByLinkText(activityName)
@@ -255,22 +251,21 @@ namespace Pegasus.Pages.UI_Pages
                 Format(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator, pastDueDateIconId)).
                 GetAttribute("class");
-            logger.LogMethodExit("CoursePreviewUXPage", "GetActivityClassName",
+            Logger.LogMethodExit("CoursePreviewUXPage", "GetActivityClassName",
                 base.IsTakeScreenShotDuringEntryExit);
             return pastDueDateClass;
             }
 
         /// <summary>
-       /// Launch the asset from ToDO Tab.
+       /// Launch the asset from To Do Tab.
        /// </summary>        
        /// <param name="assetName">This is the asset name.</param>
         public void LaunchAssetFromToDoTab(string assetName)
             {
-                //Launch the asset from ToDO Tab
-                logger.LogMethodEntry("LauncheTextPage", "LaunchAssetFromToDoTab",
+                //Launch the asset from To Do Tab
+                Logger.LogMethodEntry("LauncheTextPage", "LaunchAssetFromToDoTab",
                             base.IsTakeScreenShotDuringEntryExit);
-                string getAssetName = string.Empty;
-                try
+            try
                 {
                   //Switch to Iframe
                   base.SwitchToIFrame(CoursePreviewUXPageResource.
@@ -279,10 +274,10 @@ namespace Pegasus.Pages.UI_Pages
                   int getCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
                       CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator);
                   for (int assetSearch = 2; assetSearch <= getCount; assetSearch++)
-                   {
+                  {
                       //Get asset name     
-                      getAssetName = base.GetElementTextByXPath(String.Format(CoursePreviewUXPageResource.
-                            CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
+                      string getAssetName = base.GetElementTextByXPath(String.Format(CoursePreviewUXPageResource.
+                          CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
                       if (getAssetName == assetName)
                        {
                          base.WaitForElement(By.XPath(String.Format(CoursePreviewUXPageResource.
@@ -293,13 +288,13 @@ namespace Pegasus.Pages.UI_Pages
                          base.ClickByJavaScriptExecutor(selectAsset);
                          break;
                        }
-                   }
-               }
+                  }
+                }
               catch (Exception e)
               {
                   ExceptionHandler.HandleException(e);
               }
-             logger.LogMethodExit("LauncheTextPage", "LaunchAssetFromToDoTab",
+             Logger.LogMethodExit("LauncheTextPage", "LaunchAssetFromToDoTab",
                    base.IsTakeScreenShotDuringEntryExit);
          }
 
@@ -311,10 +306,9 @@ namespace Pegasus.Pages.UI_Pages
          public string GetAssetStatus(string assetStatus)
             {      
               //Get the status of the asset
-                logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
+                Logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
                         base.IsTakeScreenShotDuringEntryExit);
-                string getAssetStatus = string.Empty;
-                try
+            try
                 {
                     base.SwitchToIFrame(CoursePreviewUXPageResource.
                             CouresPreviewUX_Page_TodoPage_Iframe_Name);
@@ -324,9 +318,9 @@ namespace Pegasus.Pages.UI_Pages
                     {
                         base.WaitForElement(By.XPath(String.Format(CoursePreviewUXPageResource.
                             CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator, statusSearch)));
-                        getAssetStatus = base.GetElementTextByXPath(String.Format(
+                        string getAssetStatus = base.GetElementTextByXPath(String.Format(
                             CoursePreviewUXPageResource.
-                            CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator, statusSearch));
+                                CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator, statusSearch));
                         if (getAssetStatus == assetStatus)
                         {
                             base.WaitForElement(By.XPath(string.Format(CoursePreviewUXPageResource.
@@ -345,7 +339,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     ExceptionHandler.HandleException(e);
                 }
-                logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
+                Logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
                       base.IsTakeScreenShotDuringEntryExit);
                 return assetStatus;
             }
@@ -357,7 +351,7 @@ namespace Pegasus.Pages.UI_Pages
        /// <returns>The asset name.</returns>
          public string GetAssetNameInCompletedTab(string assetName)
          {
-             logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
+             Logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
                      base.IsTakeScreenShotDuringEntryExit);
              string assetNameInCompleted = string.Empty;
              //Click on Completed tab
@@ -383,7 +377,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              //Select main Window
              base.SelectWindow("Course Materials");
-             logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
+             Logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
                               base.IsTakeScreenShotDuringEntryExit);
              return assetNameInCompleted;
 
@@ -394,10 +388,10 @@ namespace Pegasus.Pages.UI_Pages
          /// Student launch the activity from Course Material tab.
          /// </summary>
          /// <param name="activityName">This is the activity name.</param>
-         public void SelectActivityByStudentInWL(string activityName)
+         public void SelectActivityByStudentInWorldLanguage(string activityName)
          {
              //Student launch the activity from Course Material tab
-             logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
+             Logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWorldLanguage",
                          base.IsTakeScreenShotDuringEntryExit);
              try
              {
@@ -412,7 +406,7 @@ namespace Pegasus.Pages.UI_Pages
              {
                  ExceptionHandler.HandleException(e);
              }
-             logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
+             Logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWorldLanguage",
                           base.IsTakeScreenShotDuringEntryExit);
 
          }  

@@ -327,4 +327,7 @@
   <data name="ViewSubmission_Page_QuestionCount_XPath_Locator" xml:space="preserve">
     <value>//div[@id='divSection_1']/div</value>
   </data>
+  <data name="ViewSubmission_Page_Feedback_Save_Button_CssSelector_Locator" xml:space="preserve">
+    <value>a#btnSave span span</value>
+  </data>
 </root>

@@ -60,13 +60,13 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Get the data from memory
             Activity activity = Activity.Get(Activity.ActivityTypeEnum.Quiz);
             //Open the Activity For Grading
-            new GBInstructorUXPage().OpenActivityForGradingInHED(
+            new GBInstructorUXPage().OpenActivityForGradingInHed(
                 activity.Name);
             //Grade the Activity
             new GBGradeBatchUpdationPage().GradetheActivityInHED();
             Logger.LogMethodExit("GradeBook", "ManuallyGradeTheActivity",
                base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
 
         /// <summary>
         /// Click On The Content Cmenu Icon.
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 "ClickOnTheContentCmenuIcon",
                  base.IsTakeScreenShotDuringEntryExit);
             //Click On The Content Cmenu Icon
-            new GBInstructorUXPage().ClickOnTheFirstColumnCmenuIconHEDCore();
+            new GBInstructorUXPage().ClickOnTheFirstColumnCmenuIconHedCore();
             Logger.LogMethodExit("GradeBook",
                 "ClickOnTheContentCmenuIcon",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -259,27 +259,27 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Associate the Activity to MyCourse Frame.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
-        /// <param name="behavoiralModeTypeEnum">This is Behavioral Mode Type Enum.</param>
+        /// <param name="activityModeTypeEnum">This is activity mode type enum.</param>
         [When(@"I associate the ""(.*)"" activity of behavioral mode ""(.*)"" to MyCourse frame")]
         public void AssociateTheActivityToMyCourseFrame(Activity.ActivityTypeEnum activityTypeEnum,
-            Activity.ActivityBehavioralModesEnum ActivityModeTypeEnum)
+            Activity.ActivityBehavioralModesEnum activityModeTypeEnum)
         {
             //Associate the Activity to MyCourse Frame
             Logger.LogMethodEntry("GradeBook", "AssociateTheActivityToMyCourseFrame",
                 IsTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            ContentLibraryUXPage contentLibraryUxPage = new ContentLibraryUXPage();
             //Fetch the data from memory
-            Activity activity = Activity.Get(activityTypeEnum, ActivityModeTypeEnum);
+            Activity activity = Activity.Get(activityTypeEnum, activityModeTypeEnum);
             //Select Window
-            contentLibraryUXPage.SelectTheWindowName(GradeBookResource.
+            contentLibraryUxPage.SelectTheWindowName(GradeBookResource.
                 GradeBook_Coursematerials_Window_Title);
             //Select the frame
-            contentLibraryUXPage.SelectAndSwitchtoFrame(GradeBookResource.
+            contentLibraryUxPage.SelectAndSwitchtoFrame(GradeBookResource.
                 GradeBook_Coursematerials_LeftFrame_Id_Locator);
             // Select the activity
-            contentLibraryUXPage.SelectActivity(activity.Name);
+            contentLibraryUxPage.SelectActivity(activity.Name);
             // Click on Activity Add Button
-            contentLibraryUXPage.ClickOnActivityAddButton();
+            contentLibraryUxPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("GradeBook", "AssociateTheActivityToMyCourseFrame",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -326,17 +326,17 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
-            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            ContentLibraryUXPage contentLibraryUxPage = new ContentLibraryUXPage();
             //Select Window
-            contentLibraryUXPage.SelectTheWindowName(GradeBookResource.
+            contentLibraryUxPage.SelectTheWindowName(GradeBookResource.
                 GradeBook_Coursematerials_Window_Title);
             //Select the frame
-            contentLibraryUXPage.SelectAndSwitchtoFrame(GradeBookResource.
+            contentLibraryUxPage.SelectAndSwitchtoFrame(GradeBookResource.
                 GradeBook_Coursematerials_LeftFrame_Id_Locator);
             // Select the activity
-            contentLibraryUXPage.SelectActivity(activity.Name);
+            contentLibraryUxPage.SelectActivity(activity.Name);
             // Click on Activity Add Button
-            contentLibraryUXPage.ClickOnActivityAddButton();
+            contentLibraryUxPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("GradeBook", "AssociateContentsToMyCourseFrame",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -416,7 +416,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 "VerifyActivityStatusInGradebook",
                 IsTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Navigate To The Subfolder Of Asset In Gradebook.
         /// </summary>       
@@ -426,19 +426,19 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         {
             // Navigate To The Subfolder Of Asset In Gradebook
             Logger.LogMethodEntry("GradeBook", "NavigateToTheSubfolderOfAssetInGradebook",
-                 IsTakeScreenShotDuringEntryExit);           
+                 IsTakeScreenShotDuringEntryExit);
             //Navigate Inside Folder Asset
             new GBFoldersPage().NavigateInsideSubFolderAsset((GBFoldersPage.SubFolderAssetEnum)Enum.
                 Parse(typeof(GBFoldersPage.SubFolderAssetEnum), subFolderName));
             Logger.LogMethodExit("GradeBook", "NavigateToTheSubfolderOfAssetInGradebook",
                 IsTakeScreenShotDuringEntryExit);
-        }       
+        }
 
         /// <summary>
         /// Click On Cmenu Of Asset In Gradebook.
         /// </summary>
-        /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
-        /// <param name="assetName">This is Asset name</param>
+        /// <param name="assetCmenu">This is asset cmenu name.</param>
+        /// <param name="activityTypeEnum">This is asset type enum.</param>
         [When(@"I click on cmenu ""(.*)"" of asset ""(.*)""")]
         public void ClickOnCmenuOfAssetInGradebook(string assetCmenu,
             Activity.ActivityTypeEnum activityTypeEnum)
@@ -465,28 +465,28 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
         /// <param name="assetName">This is Asset name</param>
         [When(@"I click on cmenu option ""(.*)"" of asset ""(.*)""")]
-        public void ClickOnCmenuOfAssetInGradebookHED(string assetCmenu,
+        public void ClickOnCmenuOfAssetInGradebookHed(string assetCmenu,
             string assetName)
         {
             //Click On Cmenu Of Asset In Gradebook
-            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
                   IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Frame
             gbInstructorPage.SelectGradebookFrame();
             //Select The Cmenu Option Of Asset
-            gbInstructorPage.SelectTheCmenuOptionOfAssetHED(
+            gbInstructorPage.SelectTheCmenuOptionOfAssetHed(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
-            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
                  IsTakeScreenShotDuringEntryExit);
-        }   
- 
+        }
+
         /// <summary>
         /// Verify Display of Cmenu Option in Asset Cmenu Options
         /// </summary>
         /// <param name="cmenuOption">This is Cmenu Option</param>
-        /// <param name="assetName">This is Asset Name</param>
+        /// <param name="activityTypeEnum">This is asset type enum.</param>
         [Then(@"I should see cmenu ""(.*)"" of asset ""(.*)""")]
         public void VerifyDisplayofCmenuOptionInAssetCmenuOptions(string cmenuOption,
             Activity.ActivityTypeEnum activityTypeEnum)
@@ -631,10 +631,10 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
         /// <param name="assetName">This is Asset name</param>
         [When(@"I click on cmenu ""(.*)"" of asset ""(.*)"" in TA")]
-        public void ClickOnCmenuOfAssetInGradebookforTA(string assetCmenu, string assetName)
+        public void ClickOnCmenuOfAssetInGradebookforTa(string assetCmenu, string assetName)
         {
             //Click On Cmenu Of Asset In Gradebook for TA
-            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookforTA",
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookforTa",
                   IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Frame
@@ -643,7 +643,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             gbInstructorPage.SelectTheCmenuOptionOfAssetinTA(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
-            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookforTA",
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookforTa",
                  IsTakeScreenShotDuringEntryExit);
         }
 
@@ -653,11 +653,11 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="assetCmenu">This is Asset Cmenu</param>
         /// <param name="assetName">This is Asset Name</param>
         [When(@"I click on cmenu ""(.*)"" of asset ""(.*)"" in Custom View for TA")]
-        public void ClickOnCmenuOfAssetInCustomViewforTA(string assetCmenu,
+        public void ClickOnCmenuOfAssetInCustomViewforTa(string assetCmenu,
             string assetName)
         {
             //Click On Cmenu Of Asset in CustomView in TA
-            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInCustomViewforTA",
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInCustomViewforTa",
                   IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Custom View Window and Frame
@@ -666,7 +666,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             gbInstructorPage.SelectTheCmenuOptionOfAssetinTA(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
-            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInCustomViewforTA",
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInCustomViewforTa",
                  IsTakeScreenShotDuringEntryExit);
         }
 
@@ -676,12 +676,12 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="cmenuOption">This is Cmenu Option</param>
         /// <param name="assetName">This is Asset Name</param>
         [Then(@"I should see cmenu ""(.*)"" of asset ""(.*)"" in TA")]
-        public void VerifyDisplayofCmenuOptionInAssetCmenuOptionsinTA(string cmenuOption,
+        public void VerifyDisplayofCmenuOptionInAssetCmenuOptionsinTa(string cmenuOption,
             string assetName)
         {
             //Verify Display of Cmenu Option in Asset Cmenu Options in TA
             Logger.LogMethodEntry("GradeBook",
-                "VerifyDisplayofCmenuOptionInAssetCmenuOptionsinTA",
+                "VerifyDisplayofCmenuOptionInAssetCmenuOptionsinTa",
            base.IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Frame
@@ -692,14 +692,14 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 () => Assert.AreEqual(cmenuOption, gbInstructorPage.
                     GetCmenuOptionofAssetinTA(cmenuOption, assetName)));
             Logger.LogMethodExit("GradeBook",
-                "VerifyDisplayofCmenuOptionInAssetCmenuOptionsinTA",
+                "VerifyDisplayofCmenuOptionInAssetCmenuOptionsinTa",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Click On Activity Under Grade Cell Cmenu Options.
         /// </summary>
-        /// <param name="assetName">This is Asset name</param>
+        /// <param name="activityTypeEnum">This is Asset Type Enum.</param>
         [When(@"I click on Grade cell cmenu options of asset ""(.*)""")]
         public void ClickOnActivityUnderGradeCellCmenuOptions(
             Activity.ActivityTypeEnum activityTypeEnum)
@@ -707,13 +707,12 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Click On Activity Under Grade Cell Cmenu Options
             Logger.LogMethodEntry("GradeBook", "ClickOnActivityUnderGradeCellCmenuOptions",
                   IsTakeScreenShotDuringEntryExit);
-            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             Activity activity = Activity.Get(activityTypeEnum);
             //Click The Activity Under Grade Cell Cmenu
             new GBInstructorUXPage().ClickTheActivityUnderGradeCellCmenu(activity.Name);
             Logger.LogMethodExit("GradeBook", "ClickOnActivityUnderGradeCellCmenuOptions",
                 IsTakeScreenShotDuringEntryExit);
-        }       
+        }
 
         /// <summary>
         /// Verify The Cmenu Under Grade Cell Activity
@@ -803,19 +802,19 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="userTypeEnum">This is User Type Enum</param>
         [Then(@"I should see the grade icon of ""(.*)"" for ""(.*)""")]
         public void VerifyGradeIconforAssetGrade(string assetName, User.UserTypeEnum userTypeEnum)
-       {
-           //Verify the Updated Grade
-           Logger.LogMethodEntry("GradeBook","VerifyGradeIconforAssetGrade",
-                base.IsTakeScreenShotDuringEntryExit);
-           //Fetch the data from memory
-           User user = User.Get(userTypeEnum);
-           //Verify Updated Grade
-           Logger.LogAssertion("VerifyGradeIconforAssetGrade", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.IsTrue(new GBInstructorUXPage().IsGradeCellIconPresent
-                   (assetName,user.LastName,user.FirstName)));
-           Logger.LogMethodExit("GradeBook","VerifyGradeIconforAssetGrade",
-           base.IsTakeScreenShotDuringEntryExit);
-       }
+        {
+            //Verify the Updated Grade
+            Logger.LogMethodEntry("GradeBook", "VerifyGradeIconforAssetGrade",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            //Verify Updated Grade
+            Logger.LogAssertion("VerifyGradeIconforAssetGrade", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new GBInstructorUXPage().IsGradeCellIconPresent
+                    (assetName, user.LastName, user.FirstName)));
+            Logger.LogMethodExit("GradeBook", "VerifyGradeIconforAssetGrade",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Verify The Instructor Updated View Grade History Score.
@@ -854,7 +853,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                  base.IsTakeScreenShotDuringEntryExit);
             //Verify Columns Displayed In Gradebook
             Logger.LogAssertion("VerifyColumnsDisplayedInGradebook", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.IsTrue (
+                Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new GBStudentUXPage().IsColumnsDisplayedInGradebook()));
             //Verify Filter option Displayed In Gradebook
             Logger.LogAssertion("VerifyFilteroptionDisplayedInGradebook", ScenarioContext.
@@ -871,7 +870,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         public void VerifyTheFolderNavigationFrameAndFilterDropdown()
         {
             // Verify The Folder Navigation Frame And Filter Dropdown
-            Logger.LogMethodEntry("GradeBook","VerifyTheFolderNavigationFrameAndFilterDropdown",
+            Logger.LogMethodEntry("GradeBook", "VerifyTheFolderNavigationFrameAndFilterDropdown",
                  base.IsTakeScreenShotDuringEntryExit);
             //Verify Folder Frame Displayed In Gradebook
             Logger.LogAssertion("VerifyFolderFrameDisplayedInGradebook", ScenarioContext.
@@ -881,7 +880,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogAssertion("VerifyColumnsDisplayedInGradebook", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new GBStudentUXPage().IsFilterDropDownDisplayedInGradebook()));
-            Logger.LogMethodExit("GradeBook","VerifyTheFolderNavigationFrameAndFilterDropdown",
+            Logger.LogMethodExit("GradeBook", "VerifyTheFolderNavigationFrameAndFilterDropdown",
            base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -921,15 +920,15 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="activityTestTypeEnum">This ia Test Activity type</param>
         /// <param name="behavoirlaModeTypeEnum">This ia Test Activity behaviaral mode type</param>
         [When(@"I select checkbox of ""(.*)"" activity of behavioral mode ""(.*)""")]
-        public void SelectCheckboxOfActivitiesInTotalColumn(Activity.ActivityTypeEnum 
-            activityTestTypeEnum, Activity.ActivityBehavioralModesEnum 
+        public void SelectCheckboxOfActivitiesInTotalColumn(Activity.ActivityTypeEnum
+            activityTestTypeEnum, Activity.ActivityBehavioralModesEnum
             behavoirlaModeTypeEnum)
         {
             // Select Checkbox Of Activities In TotalColumn
             Logger.LogMethodEntry("GradeBook", "SelectCheckboxOfActivitiesInTotalColumn",
                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
-            Activity activity = Activity.Get(activityTestTypeEnum, behavoirlaModeTypeEnum);            
+            Activity activity = Activity.Get(activityTestTypeEnum, behavoirlaModeTypeEnum);
             //Sending first activity to for loop
             new GBInstructorUXPage().SelectActivityFromLeftFrame(activity.Name);
             Logger.LogMethodExit("GradeBook", "SelectCheckboxOfActivitiesInTotalColumn",
@@ -950,7 +949,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("GradeBook", "ClickAddButtonToAddActivities",
                base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Enter Value In WeightBox.
         /// </summary>
@@ -961,15 +960,15 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         {
             //Enter integer values in weight box 
             Logger.LogMethodEntry("GradeBook", "EnterValueInWeightBox",
-                base.IsTakeScreenShotDuringEntryExit);           
-            GBInstructorUXPage gbInstructorUXPage = new GBInstructorUXPage(); 
+                base.IsTakeScreenShotDuringEntryExit);
+            GBInstructorUXPage gbInstructorUxPage = new GBInstructorUXPage();
             //Enter value in First text box
-            gbInstructorUXPage.EnterTheValueInTotalWeightTextbox((
+            gbInstructorUxPage.EnterTheValueInTotalWeightTextbox((
                 GBInstructorUXPage.TextTypeEnum)Enum.
                 Parse(typeof(GBInstructorUXPage.TextTypeEnum),
                 GradeBookResource.GradeBook_Page_First_TextBox_Option), textBoxOption1);
             //Enter value in Second text box
-            gbInstructorUXPage.EnterTheValueInTotalWeightTextbox((
+            gbInstructorUxPage.EnterTheValueInTotalWeightTextbox((
                 GBInstructorUXPage.TextTypeEnum)Enum.
                Parse(typeof(GBInstructorUXPage.TextTypeEnum),
                GradeBookResource.GradeBook_Page_Second_TextBox_Option), textBoxOption2);
@@ -1015,7 +1014,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                () => Assert.AreEqual(totalWeightScore,
                    new GBInstructorUXPage().GetRestulInTotalWeightTextBox().
                    Substring(Convert.ToInt32(GradeBookResource.
-                   GradeBook_Substring_Start_Index_Value_0),Convert.ToInt16(
+                   GradeBook_Substring_Start_Index_Value_0), Convert.ToInt16(
                    GradeBookResource.GradeBook_Substring_End_Index_Value_2))));
             Logger.LogMethodExit("GradeBook", "VerifyTheResultInTotalWeight",
                base.IsTakeScreenShotDuringEntryExit);
@@ -1133,24 +1132,6 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                  (submissionScore, new ViewSubmissionPage().GetSubmissionScoreByStudent(user.LastName, user.FirstName)));
             Logger.LogMethodExit("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// This method is called before execution of test.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-
-        }
-
-        /// <summary>
-        /// This function is called after the execution of test.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
-        {
-
         }
 
         /// <summary>
@@ -1274,7 +1255,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             string studentName = user.LastName + ", " + user.FirstName;
             // Search the particular student and perform click for that
             new ViewSubmissionPage().ClickStudentByLastAndFirstName(studentName);
-            Logger.LogMethodExit("Gradebook", 
+            Logger.LogMethodExit("Gradebook",
                 "SelectTheStudentFromStudentFrameInViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1310,11 +1291,11 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             string feedbackText)
         {
             //Instructor giving Feedback for the activity submitted by student
-            Logger.LogMethodEntry("Gradebook", 
+            Logger.LogMethodEntry("Gradebook",
                 "ProvideFeedbackForTheActivitySubmittedByStudent",
                base.IsTakeScreenShotDuringEntryExit);
             new ViewSubmissionPage().InstructorFeedbackToStudent(feedbackText);
-            Logger.LogMethodExit("Gradebook", 
+            Logger.LogMethodExit("Gradebook",
                 "ProvideFeedbackForTheActivitySubmittedByStudent",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1325,10 +1306,10 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="chapterName">This is the chapter name.</param>
         /// <param name="windowName">This is the window name.</param>
         [When(@"I search for ""(.*)"" in ""(.*)"" window")]
-        public void SearchSAMChapterName(string chapterName, string windowName)
+        public void SearchSamChapterName(string chapterName, string windowName)
         {
             //Search the SAM activity chapter name in Gradebook window
-            Logger.LogMethodEntry("GradeBook", "SearchSAMChapterName",
+            Logger.LogMethodEntry("GradeBook", "SearchSamChapterName",
                   IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Frame
@@ -1336,7 +1317,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Search the Chapter name
             new CalendarHedDefaultUxPage().SearchActivityInGradebook(
                 chapterName, windowName);
-            Logger.LogMethodExit("GradeBook", "SearchSAMChapterName",
+            Logger.LogMethodExit("GradeBook", "SearchSamChapterName",
                  IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1351,7 +1332,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodEntry("Gradebook", "ProvideEssayActivityScore",
                 base.IsTakeScreenShotDuringEntryExit);
             new ViewSubmissionPage().
-                InstructorgradingStudentforWLEssayActivity(score);
+                InstructorgradingStudentforWorldLanguageEssayActivity(score);
             Logger.LogMethodExit("Gradebook", "ProvideEssayActivityScore",
             base.IsTakeScreenShotDuringEntryExit);
         }

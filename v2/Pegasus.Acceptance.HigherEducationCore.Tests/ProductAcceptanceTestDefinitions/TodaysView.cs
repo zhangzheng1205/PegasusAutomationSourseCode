@@ -402,7 +402,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
-        /// Activity Displayed In The Instructor Grading Channel
+        /// Activity Displayed In The Instructor Grading Channel.
         /// </summary>
         /// <param name="activityName">This is the activity name.</param>
         [Then(@"I should see the activity ""(.*)"" in the Instructor grading channel")]
@@ -411,8 +411,6 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Verify Correct Contents inside the Getting Started
             Logger.LogMethodEntry("TodaysView", "GettingStartedContent",
                 base.IsTakeScreenShotDuringEntryExit);
-            // Object Declaration
-            TodaysViewUxPage ChannelContents = new TodaysViewUxPage();
             //Assert we have correct Contents of Getting Started
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
                   ScenarioInfo.Title, () => Assert.AreEqual
@@ -423,9 +421,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
-        /// 
+        /// Verify Activity In The Instructor Grading Channel.
         /// </summary>
-        /// <param name="activityName"></param>
+        /// <param name="activityName">This is name of activity.</param>
         [Then(@"I should see the ""(.*)"" activity in the Instructor grading channel")]
         public void VerifyActivityInTheInstructorGradingChannel(string activityName)
         {
@@ -471,6 +469,6 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             new TodaysViewUxPage().OpenActivityDetails(activityButton);
             Logger.LogMethodExit("TodaysView", "MarkAsReadForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
     }
 }

@@ -169,8 +169,8 @@ Scenario: Student submits Learsonsity activity  from Course Calendar tab
 When I navigate to "Assignments" tab and selected "Course Calendar" subtab
 Then I should be on the "Course Materials" page
 When I select "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
-Then I submit the learnocity activity
-And I should see "Not passed" status for the activity "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
+And I submit the learnocity activity
+Then I should see "Not passed" status for the activity "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
 
 
 

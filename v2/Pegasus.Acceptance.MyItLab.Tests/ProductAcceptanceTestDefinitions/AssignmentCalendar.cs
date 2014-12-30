@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyDayWeekMonth",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                 Assert.AreEqual(dayWeekMonthOption,
-                new CalendarHedDefaultUxPage().getDayWeekMonthText()));
+                new CalendarHedDefaultUxPage().GetDayWeekMonthText()));
             //Verify AddNote Text
             Logger.LogAssertion("VerifyAddNote", ScenarioContext.Current.ScenarioInfo.Title, () =>
                 Assert.AreEqual(addNoteoption, new CalendarHedDefaultUxPage().GetAddNoteText()));
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyAssignCountMessage",
                ScenarioContext.Current.ScenarioInfo.Title, () =>
                Assert.AreEqual(assignCountMessage,
-               new CalendarHedDefaultUxPage().getAssignedCountwithText()));
+               new CalendarHedDefaultUxPage().GetAssignedCountWithText()));
             //Verify Assign Text Message
             Logger.LogAssertion("VerifyAssignTextMessage",
                ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -219,7 +219,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyAssignCountMessage",
                ScenarioContext.Current.ScenarioInfo.Title, () =>
                Assert.AreEqual(assignedContentCountMessage,
-               new CalendarHedDefaultUxPage().getAssignedCountwithText()));
+               new CalendarHedDefaultUxPage().GetAssignedCountWithText()));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAssignedContentCount",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -537,11 +537,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 Activity.Get(a => a.IsAssigned == true);
             List<Activity> unAssignedActivityList =
                 Activity.Get(a => a.IsAssigned == false);
-            CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
+            CalendarHedDefaultUxPage calendarHedDefaultUxPage =
                 new CalendarHedDefaultUxPage();
             foreach (Activity unAssignedActivity in unAssignedActivityList)
             {
-                Assert.IsTrue(calendarHEDDefaultUXPage
+                Assert.IsTrue(calendarHedDefaultUxPage
                     .IsAssetAssigned(unAssignedActivity.ActivityId));
                 unAssignedActivity.IsAssigned = true;                
                 unAssignedActivity.UpdateActivityInMemory(unAssignedActivity);

@@ -145,7 +145,7 @@
     <value>//table[@id='tblMenuBar']/tbody/tr/td</value>
   </data>
   <data name="CommonSteps_MainTab_SelectedTab_Value" xml:space="preserve">
-    <value>ancCourseNavSelectedMenuImgCls</value>
+    <value>currentmenuBackcolor</value>
   </data>
   <data name="CommonSteps_ManageProductsTab_Value" xml:space="preserve">
     <value>_ctl9_td_3</value>

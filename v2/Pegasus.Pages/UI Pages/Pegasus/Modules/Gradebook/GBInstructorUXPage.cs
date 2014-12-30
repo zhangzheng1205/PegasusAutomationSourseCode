@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
@@ -10,13 +6,9 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
-using Pegasus.Pages.UI_Pages;
-using System.Windows.Forms;
 using System.Diagnostics;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
-using System.Configuration;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -43,31 +35,31 @@ namespace Pegasus.Pages.UI_Pages
             /// <summary>
             /// Asset cmenu option for Remove from Custom View
             /// </summary>
-            RemovefromCustomView=2,
+            RemovefromCustomView = 2,
             /// <summary>
             /// Asset cmenu option for Apply Grade Schema
             /// </summary>
-            ApplyGradeSchema=3,
+            ApplyGradeSchema = 3,
             /// <summary>
             /// Asset cmenu option for View All Submissions
             /// </summary>
-            ViewAllSubmissions=4,
+            ViewAllSubmissions = 4,
             /// <summary>
             /// Asset cmenu option for Modify Grade Schema
             /// </summary>
-            ModifyGradeSchema=5,
+            ModifyGradeSchema = 5,
             /// <summary>
             /// Asset cmenu option for Remove Grade Schema
             /// </summary>
-            RemoveGradeSchema=6,
+            RemoveGradeSchema = 6,
             /// <summary>
             /// Asset cmenu option for Edit Grades
             /// </summary>
-            EditGrades=7,
+            EditGrades = 7,
             /// <summary>
             /// Asset cmenu option for Hide student
             /// </summary>
-            HideforStudent=8,
+            HideforStudent = 8,
             /// <summary>
             /// Asset cmenu option for Sychronize with LMS
             /// </summary>
@@ -102,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
             /// <summary>
             /// Asset cmenu option for View Grade History
             /// </summary>
-            ViewGradeHistory=3
+            ViewGradeHistory = 3
         }
 
         /// <summary>
@@ -139,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Student Gradebook Frame
-                this.SelectStudentGradebookFrame();                
+                this.SelectStudentGradebookFrame();
                 base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentCount_Xpath_Locator));
                 //Total Number Of Activities In The Folder
@@ -166,8 +158,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectStudentGradebookFrame()
         {
-           // Select Student Gradebook Frame
-           //Check If Grade Is Present In The Grade Cell And Return The Grade
+            // Select Student Gradebook Frame
+            //Check If Grade Is Present In The Grade Cell And Return The Grade
             logger.LogMethodEntry("GBInstructorUXPage", "SelectStudentGradebookFrame",
                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(GBInstructorUXPageResource.
@@ -186,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Column Inside The Folder</param>
         /// <param name="activityName">This is Activity Name.</param>
         /// <returns>This returns the grade in the cell</returns>
-        private String GetTheCellValue(int columnCount,string activityName)
+        private String GetTheCellValue(int columnCount, string activityName)
         {
             //Get The Grade Displayed For The Activity
             logger.LogMethodEntry("GBInstructorUXPage", "GetTheCellValue",
@@ -257,6 +249,7 @@ namespace Pegasus.Pages.UI_Pages
         private string GetAssignmentTitleInFireFox(
             string assignmentTitle, int columnNo)
         {
+            if (assignmentTitle == null) throw new ArgumentNullException("assignmentTitle");
             //Get assignment title from Internet explorer
             logger.LogMethodEntry("GBInstructorUXPage", "AssignmentTitleFF",
                                   base.IsTakeScreenShotDuringEntryExit);
@@ -276,6 +269,7 @@ namespace Pegasus.Pages.UI_Pages
         private string GetAssignmentTitleInInternetExplorer(
             string assignmentTitle, int columnNo)
         {
+            if (assignmentTitle == null) throw new ArgumentNullException("assignmentTitle");
             //Get assignment title from Firefox
             logger.LogMethodEntry("GBInstructorUXPage", "GetAssignmentTitleInInternetExplorer",
                                   base.IsTakeScreenShotDuringEntryExit);
@@ -315,7 +309,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBInstructorUXPage", "ClickOnActivityViewGradesButton",
                                   base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Get Activity Name.
         /// </summary>
@@ -365,7 +359,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The View Grade Button
             logger.LogMethodEntry("GBInstructorUXPage", "ClickTheViewGradeButton",
-                 base.IsTakeScreenShotDuringEntryExit); 
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
                 GBInstructorUX_Page_GB_GradeCell_Xpath_Locator, activityColumnNo)));
@@ -446,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
                 "GetGradeDisplayedInTheGradeCellofSubmittedActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             return getGradeOfSubmittedActivity;
-        }        
+        }
 
         /// <summary>
         /// Get Searched Activity Grade Displayed In The GradeCell.
@@ -472,19 +466,21 @@ namespace Pegasus.Pages.UI_Pages
                 //Total Number Of Activities
                 int getActivityCount = base.GetElementCountByXPath(
                     (GBInstructorUXPageResource.
-                    GBInstructorUX_Page_AssignmentCount_Xpath_Locator)); 
+                    GBInstructorUX_Page_AssignmentCount_Xpath_Locator));
                 for (int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Initial_Value); activityColumnNumber <= getActivityCount;
                     activityColumnNumber++)
                 {
-                    getAssignmentTitle= this.GetSearchedAssetName(activityColumnNumber);                   
+                    getAssignmentTitle = this.GetSearchedAssetName(activityColumnNumber);
                     if (getAssignmentTitle.Contains(activityName))
                     {
                         //Check For The Assignment In GradeBook                   
                         getGradeOfSubmittedActivity = this.GetGradeBasedOnUserName(
                             user.Name, activityColumnNumber);
                         break;
-                    }  }  }
+                    }
+                }
+            }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -505,21 +501,19 @@ namespace Pegasus.Pages.UI_Pages
             //Get Searched Asset Name
             logger.LogMethodEntry("GBInstructorUXPage", "GetSearchedAssetName",
                base.IsTakeScreenShotDuringEntryExit);
-            //Initialized Variable
-            string getAssignmentTitle = string.Empty;
             //Wait for the element
             base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Searched_Activity_Name_Xpath_Locator,
                 activityColumnNumber)));
-            getAssignmentTitle = base.GetTitleAttributeValueByXPath(string.Format(
+            string getAssignmentTitle = base.GetTitleAttributeValueByXPath(string.Format(
                 GBInstructorUXPageResource.
-                GBInstructorUX_Page_Searched_Activity_Name_Xpath_Locator,
+                    GBInstructorUX_Page_Searched_Activity_Name_Xpath_Locator,
                 activityColumnNumber));
-            logger.LogMethodExit("GBInstructorUXPage",  "GetSearchedAssetName",
+            logger.LogMethodExit("GBInstructorUXPage", "GetSearchedAssetName",
                   base.IsTakeScreenShotDuringEntryExit);
             return getAssignmentTitle;
         }
-        
+
         /// <summary>
         /// To Get the Grade Displayed for the Activity
         /// </summary>
@@ -527,13 +521,13 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="activityName">This is Activity Name</param>
         /// <param name="userName">This is User Name</param>
         /// <returns>This returns the grade in the cell</returns>
-        private String GetGradeFromCell(int activityCount,string activityName,string userName)
+        private String GetGradeFromCell(int activityCount, string activityName, string userName)
         {
             //Get the Grade Displayed for the Activity
             logger.LogMethodEntry("GBInstructorUXPage", "GetGradeFromCell",
                                    base.IsTakeScreenShotDuringEntryExit);
             //Get the Activity Title
-            string getAssignmentTitle = string.Empty;            
+            string getAssignmentTitle = string.Empty;
             //Setting Column Number
             int activityColumnNumber;
             for (activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
@@ -546,7 +540,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     break;
                 }
-            }                                    
+            }
             logger.LogMethodExit("GBInstructorUXPage", "GetGradeFromCell",
                 base.IsTakeScreenShotDuringEntryExit);
             return this.GetGradeBasedOnUserName(userName, activityColumnNumber);
@@ -564,7 +558,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBInstructorUXPage", "GetGradeBasedOnUserName",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variables
-            string getGrade = string.Empty;            
+            string getGrade = string.Empty;
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_UserCount_Xpath_Locator));
             //Get total user count
@@ -603,7 +597,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Manually Grade the Activity
         /// </summary>
         /// <param name="activityName">This is Activity Name</param>
-        public void OpenActivityForGradingInHED(
+        public void OpenActivityForGradingInHed(
             string activityName)
         {
             //Manually Grade the Activity
@@ -688,7 +682,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Window
                 base.WaitUntilWindowLoads(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_Window_Title);               
+                    GBInstructorUX_Page_Window_Title);
                 base.SelectWindow(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Window_Title);
                 //Wait for Element         
@@ -700,7 +694,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBInstructorUXPage", "SelectGradebookFrame",
               base.IsTakeScreenShotDuringEntryExit);
@@ -738,7 +732,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click On The First Column Cmenu Icon for HED Core
         /// </summary>
-        public void ClickOnTheFirstColumnCmenuIconHEDCore()
+        public void ClickOnTheFirstColumnCmenuIconHedCore()
         {
             //Click On The Course Column Cmenu Icon
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnTheFirstColumnCmenuIconHEDCore",
@@ -757,13 +751,13 @@ namespace Pegasus.Pages.UI_Pages
                     GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getCmenuIconProperty);
                 bool bhj = base.IsElementPresent(By.XPath(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator),10);
+                    GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator), 10);
                 //Click on the Context Menu Icon For First Column
                 IWebElement getStudentName = base.GetWebElementPropertiesByXPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getStudentName);
                 //base.ClickImageByXPath(GBInstructorUXPageResource.
-                  //  GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
+                //  GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
             }
             catch (Exception e)
             {
@@ -863,10 +857,10 @@ namespace Pegasus.Pages.UI_Pages
                 string getExcelFilePathSaved = (AutomationConfigurationManager.TestDataPath +
                     GBInstructorUXPageResource.GBInstructorUX_Page_AutoIT_ExeFilepath).
                     Replace("file:\\", "");
-                string[] PathName = getExcelFilePathSaved.Split(Convert.ToChar
+                string[] pathName = getExcelFilePathSaved.Split(Convert.ToChar
                     (GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_Data_colan));
                 //Array of string
-                string getExcelFileDriveSaved = PathName[0];
+                string getExcelFileDriveSaved = pathName[0];
                 getExcelFileDriveSaved = getExcelFileDriveSaved + GBInstructorUXPageResource.
                     GBInstructorUX_Page_DownLoad_DownloadedFilepath_Locator;
                 //Run AutoIT.exe file               
@@ -1018,7 +1012,7 @@ namespace Pegasus.Pages.UI_Pages
                 getExcelFileDriveSaved = getExcelFileDriveSaved + GBInstructorUXPageResource.
                     GBInstructorUX_Page_DownLoad_DownloadedFilepath_Locator;
                 //fetch the csv string in the excel sheet to a variable
-                string excelColumnListString = this.ReadDownloadedGBFileData(getExcelFileDriveSaved,
+                string excelColumnListString = this.ReadDownloadedGbFileData(getExcelFileDriveSaved,
                        Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_PageNum),
                        Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_RowNum),
                        Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_ColNum));
@@ -1047,7 +1041,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="rowNumber">Row number in the excel sheet</param>
         /// <param name="colNumber">Column number in the excel sheet</param>
         /// <returns>Data string in CSV format</returns>
-        public string ReadDownloadedGBFileData(string filePath,
+        public string ReadDownloadedGbFileData(string filePath,
             int sheetNumber, int rowNumber, int colNumber)
         {
 
@@ -1077,7 +1071,7 @@ namespace Pegasus.Pages.UI_Pages
                     //Get the Excel data
                     data = (string)(excelWorkSheet.Cells[rowNumber, colNumber] as Excel.Range).Value2;
                     //Kill the process
-                    killprocess(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_Name);
+                    KillProcess(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_Name);
                     // return data;
                 }
                 catch (Exception)
@@ -1085,7 +1079,7 @@ namespace Pegasus.Pages.UI_Pages
                     //Get the Excel Data
                     data = (string)(excelWorkSheet.Cells[rowNumber, colNumber] as Excel.Range).Value2;
                     //Kill the process
-                    killprocess(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_Name);
+                    KillProcess(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_Name);
                     //return data.ToString();
                 }
             }
@@ -1102,10 +1096,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Kill Excel Process
         /// </summary>
         /// <param name="pathName">path name of the process</param>
-        public void killprocess(string pathName)
+        public void KillProcess(string pathName)
         {
             //Kill Excel Process
-            logger.LogMethodEntry("GBInstructorUXPage", "killprocess", base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("GBInstructorUXPage", "KillProcess", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 foreach (Process clsProcess in Process.GetProcesses())
@@ -1120,7 +1114,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("GBInstructorUXPage", "killprocess",
+            logger.LogMethodExit("GBInstructorUXPage", "KillProcess",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1177,14 +1171,14 @@ namespace Pegasus.Pages.UI_Pages
                     GBInstructorUXPageResource.GBInstructorUX_Page_AutoIT_ExeFilepath).
                     Replace("file:\\", "");
                 //Array of string
-                string[] PathName = getExcelFilePathSaved.Split(Convert.ToChar
+                string[] pathName = getExcelFilePathSaved.Split(Convert.ToChar
                        (GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_Data_colan));
                 //Get Excelsheet File Path 
-                string getExcelFileDriveSaved = PathName[0];
+                string getExcelFileDriveSaved = pathName[0];
                 getExcelFileDriveSaved = getExcelFileDriveSaved + GBInstructorUXPageResource.
                     GBInstructorUX_Page_DownLoad_DownloadedFilepath_Locator;
                 //fetch the csv string in the excel sheet to a variable
-                string excelColumnListString = this.ReadDownloadedGBFileData(getExcelFileDriveSaved,
+                string excelColumnListString = this.ReadDownloadedGbFileData(getExcelFileDriveSaved,
                        Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_PageNum),
                        Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_RowNum),
                        Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_ExcelSheet_ColNum));
@@ -1385,7 +1379,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_CreateColumnDropDown_ID_Locator));
-                IWebElement getColumnDropDown=base.GetWebElementPropertiesById
+                IWebElement getColumnDropDown = base.GetWebElementPropertiesById
                     (GBInstructorUXPageResource.
                     GBInstructorUX_Page_CreateColumnDropDown_ID_Locator);
                 //click on drop down
@@ -1394,7 +1388,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickLinkById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_TotalColumnDropDown_ID_Locator);
                 //Select Total Column Window
-                this.SelectTotalColumnWindow();                 
+                this.SelectTotalColumnWindow();
             }
             catch (Exception e)
             {
@@ -1635,7 +1629,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Total Column Window
-                this.SelectTotalColumnWindow();   
+                this.SelectTotalColumnWindow();
                 //switch to Iframe
                 this.SelectTotalColumnFramework();
                 //Wait for element
@@ -1646,7 +1640,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.FocusOnElementByXPath(GBInstructorUXPageResource.
                                  GBInstructorUX_Page_First_Text_Weight_Xpath_Locator);
                 //Select Total Column Window
-                this.SelectTotalColumnWindow();   
+                this.SelectTotalColumnWindow();
                 base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_TotalWeight_Text_XPath_Locator),
                        Convert.ToInt32(GBInstructorUXPageResource.
@@ -1668,7 +1662,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enable Synchronize With LMS cmenu preference of activity.
         /// </summary>
-        public void EnableLMSSynchronizeOption()
+        public void EnableLmsSynchronizeOption()
         {
             //Enable LMS Synchronize Option of activity is enable in Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "EnableLMSSynchronizeOption",
@@ -1687,7 +1681,7 @@ namespace Pegasus.Pages.UI_Pages
                     (GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentCount_Xpath_Locator));
                 //Get The Row number of activity and enable preference
-                this.OpenCMenuOptionForActivityInHED(getColumnCount);
+                this.OpenCMenuOptionForActivityInHed(getColumnCount);
             }
             catch (Exception e)
             {
@@ -1702,7 +1696,7 @@ namespace Pegasus.Pages.UI_Pages
         /// enable Enable LMS SynchronizeOption preference. 
         /// </summary>
         /// <param name="columnCount">This number of activity column.</param>
-        public void OpenCMenuOptionForActivityInHED(int columnCount)
+        public void OpenCMenuOptionForActivityInHed(int columnCount)
         {
             //Validate the activity name
             logger.LogMethodEntry("GBInstructorUXPage",
@@ -1722,7 +1716,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 }
             }
-            this.ClickOnSynchronizeWithLMSActivityCmenu(setColumnNo);
+            this.ClickOnSynchronizeWithLmsActivityCmenu(setColumnNo);
             logger.LogMethodExit("GBInstructorUXPage", "OpenCMenuOptionForActivityInHED",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1732,7 +1726,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Synchronize with LMS. 
         /// </summary>
         /// <param name="activityColumnNo">This number of activity column.</param>
-        private void ClickOnSynchronizeWithLMSActivityCmenu(
+        private void ClickOnSynchronizeWithLmsActivityCmenu(
             int activityColumnNo)
         {
             //Click On Activity Cmenu Option
@@ -1745,7 +1739,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_SynchronizeWithLMS_Cmenu_Xpath_Locator));
             //Get text of Synchornize with LMS cmenu option
-            String getTextOfLMSCmenu = base.GetInnerTextAttributeValueByXPath(
+            String getTextOfLmsCmenu = base.GetInnerTextAttributeValueByXPath(
                 GBInstructorUXPageResource.
                 GBInstructorUX_Page_SynchronizeWithLMS_Cmenu_Xpath_Locator);
             // Get property of Synchronize With LMS c-menu option
@@ -1920,7 +1914,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBInstructorUXPage", "NavigateToGradesSubTabinGradeBook",
              base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Get the Activity Status.
         /// </summary>
@@ -1948,7 +1942,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Activity Status
                 getActivityStatusGrade = base.GetElementTextByXPath(string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_ActivityStatus_Xpath_Locator,
-                    getUserRowCount, getActivityColumnCount)).Trim();              
+                    getUserRowCount, getActivityColumnCount)).Trim();
             }
             catch (Exception e)
             {
@@ -1957,7 +1951,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBInstructorUXPage", "GetActivityStatus",
             base.IsTakeScreenShotDuringEntryExit);
             return getActivityStatusGrade.Trim();
-        }        
+        }
 
         /// <summary>
         /// Get Activity Column Count.
@@ -1970,8 +1964,6 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCount",
            base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
-            string getActivityName = string.Empty;
-            //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
@@ -1982,14 +1974,14 @@ namespace Pegasus.Pages.UI_Pages
             for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
                 columnCount++)
-            {                 
+            {
                 //Wait for Element
                 base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTitle_Xpath_Locator, columnCount)));
                 base.FocusOnElementByXPath(string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTitle_Xpath_Locator, columnCount));
                 //Getting the Activity name
-                getActivityName = base.GetTitleAttributeValueByXPath
+                string getActivityName = base.GetTitleAttributeValueByXPath
                     (string.Format(GBInstructorUXPageResource.
                         GBInstructorUX_Page_AssignmentTitle_Xpath_Locator, columnCount));
                 if (getActivityName.Contains(activityName))
@@ -2008,20 +2000,14 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
         /// <returns>This is Activity Column Number.</returns>
-        private int GetActivityColumnCountHED(string activityName)
+        private int GetActivityColumnCountHed(string activityName)
         {
             //Get Activity Column Count
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCountHED",
            base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
-            string getActivityName = string.Empty;
-            //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
-            bool sdfn = base.IsElementPresent(By.XPath(GBInstructorUXPageResource.
-                GBInstructorUX_Page_AcitivityNames_Xpath_Locator), 10);
-             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
-                GBInstructorUX_Page_AcitivityNames_Xpath_Locator));
             //Getting the counts of Activity  `
             int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_AcitivityNames_Xpath_Locator);
@@ -2029,13 +2015,10 @@ namespace Pegasus.Pages.UI_Pages
                 GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
                 columnCount++)
             {
-                //Wait for Element
-                base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_AssignmentTitleFF_Xpath_Locator, columnCount)));
                 //Getting the Activity name
-                getActivityName = base.GetTitleAttributeValueByXPath
+                string getActivityName = base.GetTitleAttributeValueByXPath
                     (string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_AssignmentTitleFF_Xpath_Locator, columnCount));
+                        GBInstructorUX_Page_AssignmentTitleFF_Xpath_Locator, columnCount));
                 if (getActivityName.Contains(activityName))
                 {
                     activityColumnNumber = columnCount;
@@ -2057,8 +2040,6 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBInstructorUXPage", "GetNormalActivityColumnCount",
            base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
-            string getActivityName = string.Empty;
-            //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
             //Getting the counts of Activity                    
@@ -2068,15 +2049,10 @@ namespace Pegasus.Pages.UI_Pages
                 GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
                 columnCount++)
             {
-                //Wait for Element
-                base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_AssignmentTitle_TA_Xpath_Locator, columnCount)));
-                base.FocusOnElementByXPath(string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_AssignmentTitle_TA_Xpath_Locator, columnCount));
                 //Getting the Activity name
-                getActivityName = base.GetTitleAttributeValueByXPath
+                string getActivityName = base.GetTitleAttributeValueByXPath
                     (string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_AssignmentTitle_TA_Xpath_Locator, columnCount));
+                        GBInstructorUX_Page_AssignmentTitle_TA_Xpath_Locator, columnCount));
                 if (getActivityName.Contains(activityName))
                 {
                     activityColumnNumber = columnCount;
@@ -2116,7 +2092,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get user Name
                 string getUserName = base.GetTitleAttributeValueByXPath(
                     string.Format(GBInstructorUXPageResource.
-                        GBInstructorUX_Page_User_Title_Xpath_Locator,userRowCount));
+                        GBInstructorUX_Page_User_Title_Xpath_Locator, userRowCount));
                 if (getUserName.Contains(userLastName + GBInstructorUXPageResource.
                     GBInstructorUX_Page_Space_value + userFirstName))
                 {
@@ -2151,7 +2127,7 @@ namespace Pegasus.Pages.UI_Pages
                 for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
                     columnCount++)
-                {                    
+                {
                     //Wait for Element
                     base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
                         GBInstructorUX_Page_AssetName_TA_Xpath_Locator, columnCount)));
@@ -2207,7 +2183,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
         /// <param name="assetName">This is Asset name.</param>
-        public void SelectTheCmenuOptionOfAssetHED(
+        public void SelectTheCmenuOptionOfAssetHed(
             AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName)
         {
             //Select The Cmenu Option Of Asset
@@ -2216,9 +2192,9 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get Activity Column Count and Click Cmenu Icon
-                int getActivityColumnCount = GetActivityColumnCountandClickCmenuIconHED(assetName);
+                int getActivityColumnCount = GetActivityColumnCountandClickCmenuIconHed(assetName);
                 //Click On Cmenu Of Asset In Gradebook
-                this.ClickOnCmenuOfAssetInGradebookHED(
+                this.ClickOnCmenuOfAssetInGradebookHed(
                     getActivityColumnCount, assetCmenuOptionEnum);
             }
             catch (Exception e)
@@ -2244,7 +2220,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get Activity Column Count and Click Cmenu Icon
                 int getActivityColumnCount = GetActivityColumnCountandClickCmenuIcon(assetName);
                 //click Cmenu of Asset In Gradebook
-                this.clickCmenuofAssetInGradebook(assetCmenuOptionEnum);
+                this.ClickCmenuofAssetInGradebook(assetCmenuOptionEnum);
             }
             catch (Exception e)
             {
@@ -2288,7 +2264,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="assetName">This is Asset Name.</param>
         /// <returns>Activity Column Count.</returns>
-        public int GetActivityColumnCountandClickCmenuIconHED(string assetName)
+        public int GetActivityColumnCountandClickCmenuIconHed(string assetName)
         {
             //Get Activity Column Count and Click Cmenu Icon
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCountandClickCmenuIconHED",
@@ -2299,7 +2275,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get Activity Column Count
-                getActivityColumnCount = this.GetActivityColumnCountHED(assetName);
+                getActivityColumnCount = this.GetActivityColumnCountHed(assetName);
                 //Click The Cmenu Icon In Gradebook
                 this.ClickTheCmenuIconInGradebook(getActivityColumnCount);
             }
@@ -2381,7 +2357,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebook",
           base.IsTakeScreenShotDuringEntryExit);
             //click Cmenu of Asset In Gradebook
-            this.clickCmenuofAssetInGradebook(assetCmenuOptionEnum);
+            this.ClickCmenuofAssetInGradebook(assetCmenuOptionEnum);
             switch (assetCmenuOptionEnum)
             {
                 // Click 'Synchronize with LMS'
@@ -2401,17 +2377,17 @@ namespace Pegasus.Pages.UI_Pages
 
         // <summary>
         /// Click On Cmenu Of Asset In Gradebook.
-        /// </summary>
+        /// <summary>
         /// <param name="getActivityColumnCount">This is asset count.</param>
         /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option Enum.</param>
-        private void ClickOnCmenuOfAssetInGradebookHED(
+        private void ClickOnCmenuOfAssetInGradebookHed(
             int getActivityColumnCount, AssetCmenuOptionEnum assetCmenuOptionEnum)
         {
             //Click On Cmenu Of Asset In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebookHED",
           base.IsTakeScreenShotDuringEntryExit);
             //click Cmenu of Asset In Gradebook
-            this.clickCmenuofAssetInGradebook(assetCmenuOptionEnum);
+            this.ClickCmenuofAssetInGradebook(assetCmenuOptionEnum);
             logger.LogMethodExit("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebookHED",
          base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2419,7 +2395,7 @@ namespace Pegasus.Pages.UI_Pages
         /// click Cmenu of Asset In Gradebook.
         /// </summary>        
         /// <param name="assetCmenuOptionEnum">This is asset cmenu option Enum.</param>
-        public void clickCmenuofAssetInGradebook(AssetCmenuOptionEnum assetCmenuOptionEnum)
+        public void ClickCmenuofAssetInGradebook(AssetCmenuOptionEnum assetCmenuOptionEnum)
         {
             //Click On Cmenu Of Asset In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "clickCmenuofAssetInGradebook",
@@ -2505,7 +2481,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Element
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBInstructorUX_Page_GradeColumn_EditGrade_ID_Locator));
-            IWebElement getSelectRemoveGradeSchemaCmenuOption = 
+            IWebElement getSelectRemoveGradeSchemaCmenuOption =
                 base.GetWebElementPropertiesById(GBInstructorUXPageResource.
                 GBInstructorUX_Page_GradeColumn_EditGrade_ID_Locator);
             //Click the 'Remove Grade Schema' Cmenu Option
@@ -2523,10 +2499,6 @@ namespace Pegasus.Pages.UI_Pages
             // Click The Cmenu Icon In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickTheCmenuIconInGradebook",
                          base.IsTakeScreenShotDuringEntryExit);
-            base.FocusOnElementByXPath(String.Format(GBInstructorUXPageResource.
-                GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount));
-            base.WaitForElement(By.XPath(String.Format(GBInstructorUXPageResource.
-                GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount)));            
             //Get Element Property
             IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath
                 (String.Format(GBInstructorUXPageResource.
@@ -2554,7 +2526,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Element Property
             IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath
                 (String.Format(GBInstructorUXPageResource.
-                GBInstructorUXPage_Gradebook_CmenuIcon_Xpath_Locator, getActivityColumnCount));            
+                GBInstructorUXPage_Gradebook_CmenuIcon_Xpath_Locator, getActivityColumnCount));
             //Perform Mouse Click Action
             base.PerformMouseClickAction(getCmenuIconProperty);
             Thread.Sleep(Convert.ToInt32(GBInstructorUXPageResource.
@@ -2589,7 +2561,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Modify Grades Schema Cmenu Option
             logger.LogMethodEntry("GBInstructorUXPage", "SelectRemoveGradeSchemaCmenuOption",
-                                  base.IsTakeScreenShotDuringEntryExit);      
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBInstructorUX_Page_RemoveGradeSchema_Cmenu_Id_Locator));
@@ -2599,7 +2571,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSelectRemoveGradeSchemaCmenuOption);
             logger.LogMethodExit("GBInstructorUXPage", "SelectRemoveGradeSchemaCmenuOption",
                                  base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Select Save to Custom View Cmenu Option
@@ -2612,7 +2584,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                         GBInstructorUX_Page_SavetoCustomView_Cmenu_Id_Locator));
-            IWebElement getSavetoCustomViewcmenuOption=base.GetWebElementPropertiesById
+            IWebElement getSavetoCustomViewcmenuOption = base.GetWebElementPropertiesById
                 (GBInstructorUXPageResource.
                         GBInstructorUX_Page_SavetoCustomView_Cmenu_Id_Locator);
             //Click the 'Save to Custom View' cmenu option
@@ -2632,7 +2604,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the cmenu            
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                         GBInstructorUX_Page_RemovefromCustomView_Cmenu_Id_Locator));
-            IWebElement getRemovefromCustomViewCmenuoption=base.GetWebElementPropertiesById
+            IWebElement getRemovefromCustomViewCmenuoption = base.GetWebElementPropertiesById
                 (GBInstructorUXPageResource.
                         GBInstructorUX_Page_RemovefromCustomView_Cmenu_Id_Locator);
             //Click the 'Remove from Custom View ' cmenu
@@ -2646,12 +2618,12 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectApplyGradeSchemaCmenuOption()
         {
-           //Select Apply Grade Schema Cmenu Option
+            //Select Apply Grade Schema Cmenu Option
             logger.LogMethodEntry("GBInstructorUXPage", "SelectApplyGradeSchemaCmenuOption",
                                    base.IsTakeScreenShotDuringEntryExit);
             //Wait for the cmenu
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
-                         GBInstructorUX_Page_ApplyGradeSchema_Cmenu_Id_Locator));   
+                         GBInstructorUX_Page_ApplyGradeSchema_Cmenu_Id_Locator));
             IWebElement getApplyGradeSchemaCmenu = base.GetWebElementPropertiesById
                 (GBInstructorUXPageResource.
                          GBInstructorUX_Page_ApplyGradeSchema_Cmenu_Id_Locator);
@@ -2744,11 +2716,11 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Variable
             string getCmenuOption = string.Empty;
             try
-            {                
+            {
                 //Get Activity Column Count
                 int getActivityColumnCount = this.GetActivityColumnCount(assetName);
                 //Click the Cmenu Icon In Gradebook
-                this.ClickTheCmenuIconInGradebook(getActivityColumnCount);                
+                this.ClickTheCmenuIconInGradebook(getActivityColumnCount);
                 //Get Cmenu Option
                 getCmenuOption = this.GetContextMenuOptionDisplayed(cmenuOption);
             }
@@ -2767,7 +2739,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assetCmenuOptionEnum">This is Asset cmenu option</param>
         /// <param name="assetName">This is Asset name</param>
         public void SelectTheCmenuOptionOfAssetinTA(AssetCmenuOptionEnum
-            assetCmenuOptionEnum,string assetName)
+            assetCmenuOptionEnum, string assetName)
         {
             //Select The Cmenu Option Of Asset in TA
             logger.LogMethodEntry("GBInstructorUXPage", "SelectTheCmenuOptionOfAssetinTA",
@@ -2777,7 +2749,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get Activity Column Count
                 int getActivityColumnCount = this.GetActivityColumnCountforTA(assetName);
                 //Click The Cmenu Icon In Gradebook
-                this.ClickTheCmenuIconInGradebook(getActivityColumnCount);   
+                this.ClickTheCmenuIconInGradebook(getActivityColumnCount);
                 //Click On Cmenu Of Asset In Gradebook
                 this.ClickOnCmenuOfAssetInGradebook(getActivityColumnCount,
                     assetCmenuOptionEnum, Activity.ActivityTypeEnum.Null);
@@ -2838,7 +2810,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="cmenuOption">This is Cmenu Option</param>
         /// <param name="assetName">This is Asset Name</param>
         /// <returns>Cmenu Option</returns>
-        public string GetCmenuOptionofAssetinTA(string cmenuOption,string assetName)
+        public string GetCmenuOptionofAssetinTA(string cmenuOption, string assetName)
         {
             //Get Cmenu Option of Asset in TA
             logger.LogMethodEntry("GBInstructorUXPage", "GetCmenuOptionofAssetinTA",
@@ -2882,7 +2854,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBInstructorUXPage", "ClickTheActivityUnderGradeCellCmenu",
                      base.IsTakeScreenShotDuringEntryExit);
@@ -3015,7 +2987,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBInstructorUX_Page_ViewGradeSubmission_Cmenu_Id_Locator));
             //Get View Grade/Submission Cmenu Option Property
-            IWebElement getViewGradeSubmissionCmenuOptionProperty = 
+            IWebElement getViewGradeSubmissionCmenuOptionProperty =
                 base.GetWebElementPropertiesById(GBInstructorUXPageResource.
                 GBInstructorUX_Page_ViewGradeSubmission_Cmenu_Id_Locator);
             //Click On View Grade/Submission Cmenu Option
@@ -3046,7 +3018,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);               
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBInstructorUXPage", "UpdateTheGradeForSubmittedActivity",
            base.IsTakeScreenShotDuringEntryExit);
@@ -3119,7 +3091,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="userLastName">This is UserLast Name</param>
         /// <param name="userFirstName">This is UserFirst Name</param>
         /// <returns>True if the Grade Icon is Present, false otherwise.</returns>
-        public Boolean IsGradeCellIconPresent(string activityName, 
+        public Boolean IsGradeCellIconPresent(string activityName,
             string userLastName, string userFirstName)
         {
             //Verify Is Grade Cell Icon Present
@@ -3141,9 +3113,9 @@ namespace Pegasus.Pages.UI_Pages
                     (getUserRowCount + Convert.ToInt32(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Initial_Value)), getActivityColumnCount)));
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);                   
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBInstructorUXPage", "IsGradeCellIconPresent",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3173,7 +3145,7 @@ namespace Pegasus.Pages.UI_Pages
                 bool isGradeHistoryDisplayed = base.IsElementPresent(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_UnderGradecel_ViewHistory_Cmenu_Id_Locator));
                 isDefaultCmenuOptionsDisplayed = isEditGradeDisplayed &&
-                    isViewSubmissionDisplayed && isGradeHistoryDisplayed;                
+                    isViewSubmissionDisplayed && isGradeHistoryDisplayed;
             }
             catch (Exception e)
             {
@@ -3217,7 +3189,7 @@ namespace Pegasus.Pages.UI_Pages
                     if (getAssignmentTitle.Contains(activityName))
                     {
                         //Get Activity Schema Value
-                        getActivityGrade=this.GetActivitySchemaValue(setColumnNo);
+                        getActivityGrade = this.GetActivitySchemaValue(setColumnNo);
                         break;
                     }
                 }
@@ -3466,7 +3438,7 @@ namespace Pegasus.Pages.UI_Pages
                                   base.IsTakeScreenShotDuringEntryExit);
             return isAssignmentTypesFilterApply;
         }
-        
+
         /// <summary>
         /// Click The WritingSpace Activity Cmenu Option.
         /// </summary>
@@ -3494,7 +3466,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            } 
+            }
             logger.LogMethodExit("GBInstructorUXPage",
                           "ClickTheWritingSpaceActivityCmenuOption",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -3545,7 +3517,7 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Activity Cmenuoptions Variable
             string getDisplayOfActivityCmenuOptions = string.Empty;
             try
-            {                
+            {
                 //Wait for the element
                 base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Gradebook_Cmenuoptions));
@@ -3580,7 +3552,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity Grade Cell Cmenu
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus",
-            base.IsTakeScreenShotDuringEntryExit);           
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Activity Column Count
@@ -3590,12 +3562,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.FocusOnElementByXPath(string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_ActivityStatus_Xpath_Locator,
                     getUserRowCount + Convert.ToInt32(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_Increment_Value), getActivityColumnCount));  
+                    GBInstructorUX_Page_Increment_Value), getActivityColumnCount));
                 IWebElement getGradeCmenu = base.GetWebElementPropertiesByXPath(
                     string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_ActivityStatus_Xpath_Locator,
                     getUserRowCount + Convert.ToInt32(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_Increment_Value), getActivityColumnCount));    
+                    GBInstructorUX_Page_Increment_Value), getActivityColumnCount));
                 //Perform Mouse Hover on Grade
                 base.PerformMouseHoverAction(getGradeCmenu);
                 IWebElement getGradeCellCmenu = base.GetWebElementPropertiesByXPath
@@ -3613,7 +3585,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBInstructorUXPage", "GetActivityStatus",
-            base.IsTakeScreenShotDuringEntryExit);            
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -3692,7 +3664,7 @@ namespace Pegasus.Pages.UI_Pages
             string activityName, string userFirstName, string userLastName)
         {
             //Click On Activity Grade Cell Cmenu In Gradebook
-            logger.LogMethodEntry("GBInstructorUXPage", 
+            logger.LogMethodEntry("GBInstructorUXPage",
                 "ClickTheActivityGradeCellCmenuInGradebook",
             base.IsTakeScreenShotDuringEntryExit);
             try
@@ -3725,7 +3697,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBInstructorUXPage",
                 "ClickTheActivityGradeCellCmenuInGradebook",
-            base.IsTakeScreenShotDuringEntryExit);    
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -3764,7 +3736,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="getActivityColumnCount">This is Column count.</param>
         private void ClickTheCmenuIconInNovaNetGradebook(int getActivityColumnCount)
-         {
+        {
             // Click The Cmenu Icon In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickTheCmenuIconInNovaNetGradebook",
                          base.IsTakeScreenShotDuringEntryExit);
@@ -3805,7 +3777,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getColumnDropDown);
 
                 this.SelectCustomColumn(customColumnType);
-                
+
             }
             catch (Exception e)
             {
@@ -3823,13 +3795,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on create column drop down
             logger.LogMethodEntry("GBInstructorUXPage", "SelectCustomColumn",
-                base.IsTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);
             String getCustomcolumnName = String.Empty;
             try
             {
-                switch(customColumnType)
+                switch (customColumnType)
                 {
-                    case CustomColumnTypeEnum.Calculated :
+                    case CustomColumnTypeEnum.Calculated:
                         {
                             getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_Calculated_ID_Locator;
                             break;
@@ -3981,7 +3953,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Click the Save button
         /// </summary>
         public void ClickOnsaveButton()
-        {           
+        {
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnsaveButton",
                 base.IsTakeScreenShotDuringEntryExit);
             this.SelectCalculatedColumnWindow();
@@ -4105,14 +4077,14 @@ namespace Pegasus.Pages.UI_Pages
             {
                 switch (userTypeEnum)
                 {
-                    case User.UserTypeEnum.CsSmsStudent:                        
+                    case User.UserTypeEnum.CsSmsStudent:
                         //Select Window
                         base.WaitUntilWindowLoads(GBInstructorUXPageResource.
                             GBInstructorUX_Page_Window_Title);
                         base.SelectWindow(GBInstructorUXPageResource.
                             GBInstructorUX_Page_Window_Title);
                         //Click on Back Arrow to Navigate to Root Folder
-                        IWebElement getBackIconProperty = 
+                        IWebElement getBackIconProperty =
                             base.GetWebElementPropertiesById(GBInstructorUXPageResource.
                             GBInstructorUXPage_Back_Arrow_Link_Id_Locator);
                         base.ClickByJavaScriptExecutor(getBackIconProperty);
@@ -4161,7 +4133,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("LoginContentPage", "FetchTheUserDetails",
              base.IsTakeScreenShotDuringEntryExit);
             return user;
-        }        
+        }
     }
 }
 

@@ -54,7 +54,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Naviagte Inside the Folder
             new GBFoldersPage().NavigateInsideParentActivityFolder();
             //Open the Activity For Grading
-            new GBInstructorUXPage().OpenActivityForGradingInHED(
+            new GBInstructorUXPage().OpenActivityForGradingInHed(
                 GradeBookResource.GradeBook_ManuallyGrade_Activity_Name);
             //Grade the Activity
             new GBGradeBatchUpdationPage().GradetheActivityInHED();
@@ -109,7 +109,7 @@ namespace Pegasus.Integration.MLP.Tests.
             Logger.LogMethodEntry("GradeBook", "EnableSynchronizeWithLMSPreference",
                   base.IsTakeScreenShotDuringEntryExit);
             //Insatance of GBFolder Page
-            new GBInstructorUXPage().EnableLMSSynchronizeOption();
+            new GBInstructorUXPage().EnableLmsSynchronizeOption();
             Logger.LogMethodExit("GradeBook", "EnableSynchronizeWithLMSPreference",
                  base.IsTakeScreenShotDuringEntryExit);
         }

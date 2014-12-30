@@ -1705,6 +1705,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         protected void CloseBrowserWindow()
         {
+            Thread.Sleep(1000);
             WebDriver.Close();
             Thread.Sleep(1000);
         }

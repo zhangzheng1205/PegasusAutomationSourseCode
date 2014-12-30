@@ -7,7 +7,6 @@ using Pegasus.Automation.DataTransferObjects;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
-using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.CommonPageObjects;
 using Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTestDefinitions;
@@ -461,16 +460,16 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
          /// Get Subtab Value.
         /// </summary>
-        /// <param name="SubtabName">Get the SubTab.</param>
+        /// <param name="subTabName">Get the SubTab.</param>
         /// <returns>Return selector tab Id.</returns>
-        private String GetSubtabValue(string SubtabName)
+        private String GetSubtabValue(string subTabName)
         {
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("CommonSteps", "GetSubtabValue",
                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             String getSubTabId = String.Empty;
-            switch(SubtabName)
+            switch(subTabName)
             {
                 case "Manage Programs":
                     getSubTabId = CommonStepsResource.
@@ -583,12 +582,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select MainTab
             Logger.LogMethodEntry("CommonSteps", "SelectCourseSpaceUserMainTab",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Wait for the MainTab
-            base.WaitForElement(By.PartialLinkText(mainTabName));
-            //Get Tab Property
+            base.SelectDefaultWindow();
+           //Get Tab Property
             string getTabClassAttribute =
                 base.GetClassAttributeValueByPartialLinkText(mainTabName);
-            if (getTabClassAttribute == 
+            if (getTabClassAttribute ==
                 CommonStepsResource.CommonSteps_MainTab_SelectedTab_Value)
             {
                 //Select Window
@@ -607,7 +605,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Navigate To Tab As Program Administrator.
         /// This is For Program Course Tab Navigation
         /// </summary>
-        /// <param name="mainTab">This is Tab Name.</param>
+        /// <param name="mainTabName">This is Tab Name.</param>
         [When(@"I navigate to ""(.*)"" tab as Program Administrator")]
         public void NavigateToTabAsProgramAdministrator(string mainTabName)
         {
@@ -649,8 +647,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// Navigate To Tab Of The Particular Page.
         /// </summary>
-        /// <param name="tabName">This is Tab Name.</param>
-        /// <param name="pageName">This is Page Name.</param>
+        /// <param name="subNavigationTabName">This is Tab Name.</param>
+        /// <param name="subNavigationTabParentWindowName">This is Page Name.</param>
         [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as PAdmin")]
         public void NavigateToTabInProgramAdminPage(
             string subNavigationTabName, string subNavigationTabParentWindowName)
@@ -666,16 +664,16 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// Navigating to the folder where given asset exists.
         /// </summary>
-        /// <param name="Assetname">Asset Name</param>
+        /// <param name="assetname">Asset Name</param>
         /// <param name="tabName">Tab</param>
         /// <param name="userTypeEnum">User type</param>
         [When(@"I navigate to ""(.*)"" asset in ""(.*)"" tab as ""(.*)""")]
-        public void NavigateToFolder(string Assetname, string tabName, User.UserTypeEnum userTypeEnum)
+        public void NavigateToFolder(string assetname, string tabName, User.UserTypeEnum userTypeEnum)
         {
             //Navigating to the folder where given asset exists
             Logger.LogMethodEntry("CourseContent", "NavigateToFolder",
                 base.IsTakeScreenShotDuringEntryExit);
-            new CommonPage().ManageTheActivityFolderLevelNavigation(Assetname, tabName, userTypeEnum);
+            new CommonPage().ManageTheActivityFolderLevelNavigation(assetname, tabName, userTypeEnum);
             Logger.LogMethodExit("CourseContent", "NavigateToFolder",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -721,14 +719,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="windowTitle">This is the Window name.</param>
         /// <param name="studentName">This is the User type enum.</param>
         [When(@"I select ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void SelectingTheGivenWLActivity(string activityName, 
+        public void SelectingTheGivenWlActivity(string activityName, 
             string windowTitle, User.UserTypeEnum studentName)
         {
             //Launch the activity fron 'Course Material' tab
             Logger.LogMethodEntry("CommonSteps",
              "SelectingTheGivenWLActivity",
              base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().SelectActivityByStudentInWL(activityName);
+            new CoursePreviewUXPage().SelectActivityByStudentInWorldLanguage(activityName);
             Logger.LogMethodExit("CommonSteps",
                "SelectingTheGivenWLActivity",
                base.IsTakeScreenShotDuringEntryExit);          
@@ -738,7 +736,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Submitting The WL Essay Activity
         /// </summary>
         [When(@"I submit the essay activity")]
-        public void SubmittingTheWLEssayActivity()
+        public void SubmittingTheWlEssayActivity()
         {
             //Submit the activity in WL
             Logger.LogMethodEntry("CommonSteps",
@@ -758,7 +756,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="windowTitle">This is the window name.</param>
         /// <param name="studentName">This is the user type enum.</param>
         [Then(@"I should see ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void VerifyingWLActivityStatusAfterSubmission(
+        public void VerifyingWlActivityStatusAfterSubmission(
             string activityStatus, string activityName,
             string windowTitle, string studentName)
         {
@@ -816,10 +814,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               "DragAndDropFolderToCurrentDate",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
-        /// 
+        /// Submit The Learnocity Activity.
         /// </summary>
-        [Then(@"I submit the learnocity activity")]
+        [When (@"I submit the learnocity activity")]
         public void SubmitTheLearnocityActivity()
         {
             Logger.LogMethodEntry("CommonSteps",
@@ -837,7 +836,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         [BeforeTestRun]
         public static void Setup()
         {
-            new CommonSteps().ResetWebdriver();
+            // no need To Reset Webdriver Before Test Run
         }
 
         /// <summary>

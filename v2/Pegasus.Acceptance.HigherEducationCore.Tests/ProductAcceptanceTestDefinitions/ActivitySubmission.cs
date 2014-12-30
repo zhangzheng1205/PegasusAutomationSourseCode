@@ -541,15 +541,15 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Submit the WL SAM activity to score 0.
         /// </summary>
         [When(@"I submit SAM Activity to score '0'")]
-        public void WhenISubmitSAMActivity()
+        public void WhenISubmitSamActivity()
         {
             //Submit the WL SAM activity to score 0
             Logger.LogMethodEntry("ActivitySubmission",
-                "SubmitTheSAMActivity",
+                "WhenISubmitSamActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            new CourseContentUXPage().SubmitSAMActivityToScore0();
+            new CourseContentUXPage().SubmitSamActivityToScore0();
             Logger.LogMethodExit("ActivitySubmission",
-               "SubmitTheSAMActivity",
+               "WhenISubmitSamActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
