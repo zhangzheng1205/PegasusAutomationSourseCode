@@ -4,6 +4,6 @@
 					so that I would validate all the coursespace student scenarios are working fine.
 
 #Purpose: To Enroll student to Section
-Scenario: Enroll student to Section by SMS Student
+Scenario: Enroll student to Section by SMS Student to WL Course
 When I enroll SMS Student in "MySpanishLabProgram"
-Then I should see enrolled "MySpanishLabProgram" Section course in Global Home Page 
+Then I should see enrolled "MySpanishLabProgram" Section in Global Home Page 

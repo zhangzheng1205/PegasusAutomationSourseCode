@@ -603,6 +603,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.WL.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.UserEnrollmentBVT.WL.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature.cs</LastGenOutput>
