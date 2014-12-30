@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent Enrollement", "                As a CS Student \r\n\t\t\tI want to manage all the coursespace student" +
-                    " related usecases \r\n\t\t\tso that I would validate all the coursespace student scen" +
-                    "arios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent Enrollement", "                As a CS Student \n\t\t\tI want to manage all the coursespace student " +
+                    "related usecases \n\t\t\tso that I would validate all the coursespace student scenar" +
+                    "ios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,17 +71,17 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Enroll student to Section by SMS Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Enroll student to Section by SMS Student to WL Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Enrollement")]
-        public virtual void EnrollStudentToSectionBySMSStudent()
+        public virtual void EnrollStudentToSectionBySMSStudentToWLCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll student to Section by SMS Student", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll student to Section by SMS Student to WL Course", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
 testRunner.When("I enroll SMS Student in \"MySpanishLabProgram\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-testRunner.Then("I should see enrolled \"MySpanishLabProgram\" Section course in Global Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see enrolled \"MySpanishLabProgram\" Section in Global Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
