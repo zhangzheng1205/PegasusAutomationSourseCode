@@ -711,7 +711,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CommonSteps",
              "SelectingTheGivenWordLanguageActivity",
              base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().SelectActivityByStudentInWordLanguage(activityName);
+            new CoursePreviewUXPage().SelectActivityByStudentInWorldLanguage(activityName);
             Logger.LogMethodExit("CommonSteps",
                "SelectingTheGivenWordLanguageActivity",
                base.IsTakeScreenShotDuringEntryExit);          
