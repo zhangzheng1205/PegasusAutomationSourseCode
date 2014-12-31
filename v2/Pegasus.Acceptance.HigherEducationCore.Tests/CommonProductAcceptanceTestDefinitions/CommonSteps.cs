@@ -704,49 +704,49 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="windowTitle">This is the Window name.</param>
         /// <param name="studentName">This is the User type enum.</param>
         [When(@"I select ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void SelectingTheGivenWLActivity(string activityName, 
+        public void SelectingTheGivenWordLanguageActivity(string activityName, 
             string windowTitle, User.UserTypeEnum studentName)
         {
             //Launch the activity fron 'Course Material' tab
             Logger.LogMethodEntry("CommonSteps",
-             "SelectingTheGivenWLActivity",
+             "SelectingTheGivenWordLanguageActivity",
              base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().SelectActivityByStudentInWL(activityName);
+            new CoursePreviewUXPage().SelectActivityByStudentInWordLanguage(activityName);
             Logger.LogMethodExit("CommonSteps",
-               "SelectingTheGivenWLActivity",
+               "SelectingTheGivenWordLanguageActivity",
                base.IsTakeScreenShotDuringEntryExit);          
         }
 
         /// <summary>
-        /// Submitting The WL Essay Activity
+        /// Submitting The WordLanguage Essay Activity
         /// </summary>
         [When(@"I submit the essay activity")]
-        public void SubmittingTheWLEssayActivity()
+        public void SubmittingTheWordLanguageEssayActivity()
         {
-            //Submit the activity in WL
+            //Submit the activity in WordLanguage
             Logger.LogMethodEntry("CommonSteps",
-             "SubmittingTheWLEssayActivity",
+             "SubmittingTheWordLanguageEssayActivity",
              base.IsTakeScreenShotDuringEntryExit);
             new CourseContentUXPage().SubmitWordLanguageEssayActivity();
             Logger.LogMethodExit("CommonSteps",
-               "SubmittingTheWLEssayActivity",
+               "SubmittingTheWordLanguageEssayActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
-        /// Verifying WL Activity Status After Submission in Course Material tab.
+        /// Verifying WordLanguage Activity Status After Submission in Course Material tab.
         /// </summary>
         /// <param name="activityStatus">This is the activity status.</param>
         /// <param name="activityName">This is the activity name.</param>
         /// <param name="windowTitle">This is the window name.</param>
         /// <param name="studentName">This is the user type enum.</param>
         [Then(@"I should see ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void VerifyingWLActivityStatusAfterSubmission(
+        public void VerifyingWordLanguageActivityStatusAfterSubmission(
             string activityStatus, string activityName,
             string windowTitle, string studentName)
         {
             Logger.LogMethodEntry("CommonSteps",
-            "VerifyingWLActivityStatusAfterSubmission",
+            "VerifyingWordLanguageActivityStatusAfterSubmission",
             base.IsTakeScreenShotDuringEntryExit);
             //Verify the Activity status
             Logger.LogAssertion("VerifyOpenedPageTitle",
@@ -755,7 +755,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new CourseContentUXPage().
             GetTheActivityStatusofWordLanguageActivity(activityName)));
             Logger.LogMethodExit("CommonSteps",
-               "VerifyingWLActivityStatusAfterSubmission",
+               "VerifyingWordLanguageActivityStatusAfterSubmission",
                base.IsTakeScreenShotDuringEntryExit);
            
         }
