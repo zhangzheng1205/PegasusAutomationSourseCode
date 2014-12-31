@@ -136,6 +136,71 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Expand the folder in TOC view of Planner tab.
+        /// </summary>
+        /// <param name="folderName">Name of the folder to expand.</param>
+        [When(@"I expand the folder ""(.*)"" in Planner tab")]
+        public void ExpandFolderInPlannerTab(string folderName)
+        {
+            //Expand the folder in Planner tab
+            Logger.LogMethodEntry("AssignmentCalendar", "ExpandFolderInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Expand the folder
+            new CalendarDefaultGlobalUXPage().ExpandFolderInPlannerTab(folderName);
+            Logger.LogMethodExit("AssignmentCalendar", "ExpandFolderInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expand the sub folder in planner tab.
+        /// </summary>
+        /// <param name="subFolderName">Name of the sub folder to expand.</param>
+        [When(@"I expand the sub folder ""(.*)"" in Planner tab")]
+        public void ExpandSubFolderInPlannerTab(string subFolderName)
+        {
+            //Expand the Sub folder in Planner tab
+            Logger.LogMethodEntry("AssignmentCalendar", "ExpandSubFolderInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Expan sub folder
+            new CalendarDefaultGlobalUXPage().ExpandSubFolderInPlannerTab(subFolderName);
+            Logger.LogMethodExit("AssignmentCalendar", "ExpandSubFolderInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expand the leaf folder in planner tab.
+        /// </summary>
+        /// <param name="leafFolderName">Name of the lead folder to expand.</param>
+        [When(@"I expand the leaf folder ""(.*)"" in Planner tab")]
+        public void ExpandLeafFolderInPlannerTab(string leafFolderName)
+        {
+            //Expand the leaf folder in Planner tab
+            Logger.LogMethodEntry("AssignmentCalendar", "ExpandLeafFolderInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CalendarDefaultGlobalUXPage().LeafFolderExpansionInPlannerTab(leafFolderName);
+            Logger.LogMethodExit("AssignmentCalendar", "ExpandLeafFolderInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Cmenu icon of the activity in Planner tab.
+        /// </summary>
+        /// <param name="cmenuOption">Cmenu name</param>
+        /// <param name="activityName">Activity name</param>
+        [When(@"I select cmenu option ""(.*)"" of ""(.*)"" activity in Planner tab")]
+        public void SelectCmenuOptionOfLCCInPlannerTab(string cmenuOption, string activityName)
+        {
+            //Find activity and click on the cmenu option
+            Logger.LogMethodEntry("AssignmentCalendar", "SelectCmenuOptionOfLCCInPlannerTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Find activity in planner tab and click on the cmenu option
+            new CalendarDefaultGlobalUXPage().FindActivityAndClickOnCmenu(cmenuOption, activityName);
+            Logger.LogMethodExit("AssignmentCalendar", "SelectCmenuOptionOfLCCInPlannerTab",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

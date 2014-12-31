@@ -51,7 +51,7 @@
       <CourseType>MySpanishLabProgramMyTest</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>WL_PPESection</SectionName>
+      <SectionName>AssignSection</SectionName>
       <SectionId>CRSKL4M-4040751</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
@@ -140,7 +140,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>a960cd3a-65a6-4f5f-a490-b4f24d0777c7</Name>
+      <Name>MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
       <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>

@@ -75,6 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                     ShowMessage_Page_OkButton_Id_Locator);
                 //Click the alert 'OK' Button 
                 base.ClickByJavaScriptExecutor(alertOkButton);
+                base.SelectDefaultWindow();
             }
             catch (Exception e)
             {
@@ -273,6 +274,40 @@ namespace Pegasus.Pages.UI_Pages
               "ClickOkButton",
               base.IsTakeScreenShotDuringEntryExit);
 
+        }
+
+        /// <summary>
+        /// Click Ok button in Alert Pop up.
+        /// </summary>
+        public void ClickOkButtonInAlertPopUp()
+        {
+            //Click on the Pegasus 'OK' button
+            logger.LogMethodEntry("ShowMessagePage",
+                "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                
+                
+                //Select Pegasus Window
+                base.WaitUntilWindowLoads(ShowMessagePageResource.
+                       ShowMessage_Page_AlertWindow_Title_Name);
+                base.SelectWindow(ShowMessagePageResource.
+                       ShowMessage_Page_AlertWindow_Title_Name);
+                //Click On 'Ok' Button On Pegasus PopUp Window.
+                bool isElementPresent = base.IsElementPresent(By.Id(ShowMessagePageResource.
+                ShowMessage_Page_OkButton_Id_Locator),5);
+                base.ClickButtonById(ShowMessagePageResource.
+                ShowMessage_Page_OkButton_Id_Locator);
+                //Wait for 2 Secs
+                Thread.Sleep(Convert.ToInt32(ShowMessagePageResource.
+                    ShowMessage_Page_Sleep_Time));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ShowMessagePage",
+                "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
         }
         
     }

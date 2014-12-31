@@ -158,7 +158,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Search Activity
             new ContentLibraryPage().SearchActivity(activity.Name);
             //Select Asset Cmenu In Table of Content
-            new ContentLibraryPage().SelectAssetCmenuInTableofContent(activity.Name, assetCmenu);
+            new ContentLibraryPage().SelectAssetCmenuInTableOfContent(activity.Name, assetCmenu);
             Logger.LogMethodExit("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
                   base.IsTakeScreenShotDuringEntryExit);
         }
@@ -224,6 +224,159 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
            Logger.LogMethodExit("CustomizeContent",
                "VerifyTheDownloadOptionInPrintWindow",
                  base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Expand the folder in curriculum tab.
+       /// </summary>
+       [When(@"I expand the folder ""(.*)"" in Curriculum tab")]
+       public void ExpandTheFolder(string folderName)
+       {
+           //Expand the folder
+           Logger.LogMethodEntry("CustomizeContent",
+               "ExpandTheFolder",
+                 base.IsTakeScreenShotDuringEntryExit);
+           //Expand the folder in Curriculum tab
+          new ContentLibraryPage().ExpandTheFolderInCurriculumTab(folderName);
+           Logger.LogMethodExit("CustomizeContent",
+               "ExpandTheFolder",
+                 base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Click on cmenu option of Lesson in Curriculum tab.
+       /// </summary>
+       /// <param name="cmenuOption">Cmenu option.</param>
+       /// <param name="activityName">Activity name.</param>
+       [When(@"I select cmenu option ""(.*)"" of ""(.*)"" activity in Curriculum tab")]
+       public void SelectCmenuOptionOfLesson(string cmenuOption, string activityName)
+       {
+           //Select cmenu option of lesson
+           Logger.LogMethodEntry("CustomizeContent",
+               "SelectCmenuOptionOfLesson",
+                 base.IsTakeScreenShotDuringEntryExit);
+           new ContentLibraryPage().FindActivityAndClickOnCmenuOption(cmenuOption, activityName);
+           Logger.LogMethodExit("CustomizeContent",
+              "SelectCmenuOptionOfLesson",
+                base.IsTakeScreenShotDuringEntryExit);
+       }
+
+     
+       /// <summary>
+       /// Select class in assign window.
+       /// </summary>
+       /// <param name="className">Class name.</param>
+       [When(@"I select the class ""(.*)""")]
+       public void SelectClassInAssignWindow(string className)
+       {
+           //Select cmenu option of lesson
+           Logger.LogMethodEntry("CustomizeContent",
+               "SelectClassInAssignWindow",
+                 base.IsTakeScreenShotDuringEntryExit);
+           new AssignContentPage().SelectClassOnAssignWindow(className);
+           Logger.LogMethodExit("CustomizeContent",
+              "SelectClassInAssignWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Enter the system current date and time
+        /// </summary>
+       [When(@"I select the current date and due date")]
+       public void EnterCurrentDateAndTime()
+       {
+           //Enter current date and time
+           Logger.LogMethodEntry("CustomizeContent",
+              "EnterCurrentDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+           new AssignContentPage().EnterCurrentDateAndTime();
+           Logger.LogMethodExit("CustomizeContent",
+              "EnterCurrentDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Expand the sub folder in curriculum tab.
+        /// </summary>
+        /// <param name="subFolderName">Sub folder name.</param>
+       [When(@"I expand the sub folder ""(.*)"" in Curriculum tab")]
+       public void ExpandSubFolderInCurriculumTab(string subFolderName)
+       {
+           //Expand the sub folder
+           Logger.LogMethodEntry("CustomizeContent",
+               "ExpandSubFolderInCurriculumTab",
+                 base.IsTakeScreenShotDuringEntryExit);
+           //Expand sub folder in curriculum tab
+           new ContentLibraryPage().ExpandSubFolder(subFolderName);
+           Logger.LogMethodExit("CustomizeContent",
+              "ExpandSubFolderInCurriculumTab",
+                base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Click on Save and assign button in assign pop up.
+        /// </summary>
+       [When(@"I click on Save and Assign button")]
+       public void ClikcOnSaveAndAssignButtonInSaveAssignWindow()
+       {
+           //Click on Save and assign button
+           Logger.LogMethodEntry("CustomizeContent",
+               "ClikcOnSaveAndAssignButtonInSaveAssignWindow",
+                 base.IsTakeScreenShotDuringEntryExit);
+           new AssignContentPage().ClickOnSaveAndAssignButton();
+           Logger.LogMethodExit("CustomizeContent",
+             "ClikcOnSaveAndAssignButtonInSaveAssignWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Validate the closure of assign pop up.
+       /// </summary>
+       [Then(@"I should see Assign pop up closed")]
+       public void ValidateClosureOfAssignPopUp()
+       {
+           //Validate the closure of assign pop up
+           Logger.LogMethodEntry("CustomizeContent",
+               "ValidateClosureOfAssignPopUp",
+                 base.IsTakeScreenShotDuringEntryExit);
+           Logger.LogAssertion("CustomizeContent", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new AssignContentPage().IsAssignWindowClosed()));
+           Logger.LogMethodExit("CustomizeContent",
+             "ValidateClosureOfAssignPopUp",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Click on Ok button in Assign pop up.
+       /// </summary>
+       [When(@"I click on Ok button in Assign pop up")]
+       public void ClickOnOkButton()
+       {
+           //Click on ok button
+           Logger.LogMethodEntry("CustomizeContent",
+               "ClickOnOkButton",
+                 base.IsTakeScreenShotDuringEntryExit);
+           new AssignContentPage().ClickOkButtonInAssignWindow();
+           Logger.LogMethodExit("CustomizeContent",
+             "ClickOnOkButton",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Validate assigned content in calendar frame.
+        /// </summary>
+        /// <param name="assignedActivityTitle"></param>
+       [Then(@"I should see the assigned content ""(.*)"" in Calendar frame")]
+       public void ValidateAssignedContentInCalendarFrame(string assignedActivityTitle)
+       {
+           //Validate assigned content in calendar frame
+           Logger.LogMethodEntry("CustomizeContent",
+               "ClickOnOkButton",
+                 base.IsTakeScreenShotDuringEntryExit);
+           new CalendarDefaultGlobalUXPage().GetAssignedContentTitle(assignedActivityTitle);
+           Logger.LogMethodExit("CustomizeContent",
+            "ValidateAssignedContentInCalendarFrame",
+              base.IsTakeScreenShotDuringEntryExit);
        }
 
         

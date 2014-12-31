@@ -1186,6 +1186,252 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenTheActivityFromMyCourse",
                 base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
+
+
+        /// <summary>
+        /// Get activity name in Manage course materials tab of DP course.
+        /// </summary>
+        /// <param name="assetName">Activity name.</param>
+        /// <returns>LCC name.</returns>
+        public String GetActivityNameInTeachingPlanTab(string assetName)
+        {
+            // Get Activity Name In Course Materials Tab
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "GetActivityNameInTeachingPlanTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getActivityText variable
+            string getActivityName = string.Empty;
+            try
+            {
+                SwitchToManageCourseMaterialsFrame();
+                //Total Row count of the Assets
+                int getTotalRowCount = base.GetElementCountByXPath(
+                    CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int rowCount = 1; rowCount <= getTotalRowCount; rowCount++)
+                {
+                    //Getting the assets name               
+                    getActivityName = base.GetElementTextByXPath
+                     (string.Format(CoursePreviewMainUXPageResource.
+                     CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount));
+                    if (getActivityName == assetName)
+                    {
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "GetActivityNameInTeachingPlanTab",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
+
+        /// <summary>
+        /// Switch to manage course materials frames.
+        /// </summary>
+        private void SwitchToManageCourseMaterialsFrame()
+        {
+            //Switch to iframes in Manage course materials
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "SwitchToManageCourseMaterialsFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            //base.SwitchToDefaultPageContent();
+            base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
+                CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator);
+            base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
+               CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "SwitchToManageCourseMaterialsFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Get status of activity in manage course materials tab
+        /// of DP course.
+        /// </summary>
+        /// <param name="activityName">Name of the activity.</param>
+        /// <returns>Status of the activity.</returns>
+        public String GetStatusOfActivityInManageCourseMaterails(
+            string activityName)
+        {
+            //Fetch the Status
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "GetStatusOfActivity",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText
+            string getStatusText = string.Empty;
+            try
+            {
+               
+                //Total Row count of the Assets
+                int getTotalRowCount = base.GetElementCountByXPath(
+                    CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int rowCount = 1; rowCount <= getTotalRowCount;rowCount++ )
+                {
+                    //Get the Activity Name
+                    getStatusText = base.GetElementTextByXPath(string.
+                        Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount ));
+                    if (getStatusText.Contains(activityName))
+                    {
+                        //Get the status text
+                        getStatusText = base.GetElementTextByXPath(string.
+                            Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_LCC_Status_Xpath_Locator,rowCount));
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "GetStatusOfActivity",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getStatusText;
+        }
+
+        /// <summary>
+        /// Get due date of assigned LCC in manage course materials.
+        /// </summary>
+        /// <param name="activityName">LCC name.</param>
+        /// <returns>Due date.</returns>
+        public string GetDueDateOfAssignedContent(string activityName)
+        {
+            //Initialize the string
+            string getDueDate = string.Empty;
+            try
+            {
+                
+                
+                //Total Row count of the Assets
+                int getTotalRowCount = base.GetElementCountByXPath(
+                    CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int rowCount = 1; rowCount <= getTotalRowCount; rowCount++)
+                {
+                    //Get the Activity Name
+                    getDueDate = base.GetElementTextByXPath(string.
+                        Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount));
+                    if (getDueDate.Contains(activityName))
+                    {
+                        //Get the status text
+                        bool isElementExists = base.IsElementPresent(By.XPath(
+                            string.
+                            Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator, rowCount))
+                            );
+                        getDueDate = base.GetElementTextByXPath(string.
+                            Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator, rowCount));
+                        //base.SwitchToDefaultPageContent();
+                        getDueDate = getDueDate.Split(' ')[5];
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "GetDueDateOfAssignedContent",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getDueDate;
+
+        }
+
+        /// <summary>
+        /// Get the value displayed in Shown to Column for the assigned
+        /// LCC in manage course materials tab.
+        /// </summary>
+        /// <param name="activityName">LCC name.</param>
+        /// <returns>Shown to column value.</returns>
+        public string GetShownToColumnTextOfAssignedContent(string activityName)
+        {
+            string getShownToText = string.Empty;
+            try
+            {
+                
+                //Total Row count of the Assets
+                int getTotalRowCount = base.GetElementCountByXPath(
+                    CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int rowCount = 1; rowCount <= getTotalRowCount; rowCount++)
+                {
+                    //Get the Activity Name
+                    getShownToText = base.GetElementTextByXPath(string.
+                        Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount));
+                    if (getShownToText.Contains(activityName))
+                    {
+                        //Get the status text
+                        getShownToText = base.GetElementTextByXPath(string.
+                            Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_LCC_ShownStatusColumn_Xpath_Locator, rowCount));
+                        //base.SwitchToDefaultPageContent();
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "GetDueDateOfAssignedContent",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getShownToText;
+
+        }
+
+        /// <summary>
+        /// Validate display of assign icon.
+        /// </summary>
+        /// <param name="activityName">LCC name.</param>
+        /// <returns>True or False.</returns>
+        public Boolean IsAssignIconExists(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "CheckAssignedStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getAssignedDueDate = string.Empty;
+            Boolean isAssigned = false;
+            try
+            {
+               
+                //Initialize Variable
+                int getActivityCount;
+                //Initialize Variable
+                string getActivityname = string.Empty;
+                //Get Activity Count
+                getActivityCount = base.GetElementCountByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int initialCount = Convert.ToInt32(CoursePreviewMainUXPageResource.
+                       CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue);
+                       initialCount <= getActivityCount; initialCount++)
+                {
+                    //Get Activity Name
+                    getActivityname = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, initialCount));
+                    if (getActivityname == activityName)
+                    {
+                        //Check assigned icon
+                        isAssigned = base.IsElementPresent(By.XPath(string.Format(CoursePreviewMainUXPageResource.
+                             CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins, initialCount)));
+                        break;
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "CheckAssignedStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            return isAssigned ;
+        }
     }
 }

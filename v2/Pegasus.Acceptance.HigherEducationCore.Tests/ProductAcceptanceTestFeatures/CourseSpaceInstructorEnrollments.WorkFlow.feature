@@ -17,3 +17,8 @@ Then I should see the searched section in section frame
 When I entered into the searched section
 And I Enroll user to section using "Add as TA" option
 Then I should see the student promoted as Teaching Assistant in section
+
+#Purpose: To Enroll Instructor to Section
+Scenario: Enroll Instructor to Section by SMS Instructor
+When I enroll SMS Instructor in "MySpanishLabProgram"
+Then I should see enrolled "MySpanishLabProgram" Section in Global Home Page 

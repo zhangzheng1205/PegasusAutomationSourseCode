@@ -201,4 +201,43 @@
   <data name="ContnetLibrary_Page_Asset_Cmenu_Options_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='diMenuOptions']/table/tbody/tr/td/div[2]</value>
   </data>
+  <data name="ContnetLibrary_Page_LessonName_Id_Locator" xml:space="preserve">
+    <value>ucContentManager_tvContentt27</value>
+  </data>
+  <data name="ContnetLibrary_Page_Lesson_CmenuIcon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn21Nodes']/table[{0}]/tbody/tr/td[4]//td[3]//span/img</value>
+  </data>
+  <data name="ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='divmainCmenu']/table/tbody/tr/td/div[2]/a</value>
+  </data>
+  <data name="ContnetLibrary_Page_Lesson_CmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='divmainCmenu']/table/tbody/tr/td/div[2]/a[{0}]</value>
+  </data>
+  <data name="ContentLibrary_Page_Folder_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContent']/table</value>
+  </data>
+  <data name="ContentLibrary_Page_Lessson_CmenuIcon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn21Nodes']/table[{0}]/tbody/tr/td[4]//tr/td[2]/table/tbody/tr/td[2]//img</value>
+  </data>
+  <data name="ContentLibrary_Page_SubFolder_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn2Nodes']/table</value>
+  </data>
+  <data name="ContentLibrary_Page_SubFolder_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn2Nodes']/table[{0}]/tbody/tr/td[3]//td[2]//td[1]</value>
+  </data>
+  <data name="ContnetLibrary_Page_FolderExpandButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContent']/table[{0}]/tbody/tr/td[1]//img</value>
+  </data>
+  <data name="ContnetLibrary_Page_FolderName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContent']/table[{0}]/tbody/tr/td[2]</value>
+  </data>
+  <data name="ContnetLibrary_Page_LessonName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn21Nodes']/table[{0}]/tbody/tr/td[4]//td[2]//td[1]</value>
+  </data>
+  <data name="ContnetLibrary_Page_SubFolderContents_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn21Nodes']/table</value>
+  </data>
+  <data name="ContnetLibrary_Page_SubFolderExpandButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ucContentManager_tvContentn2Nodes']/table[{0}]/tbody/tr/td[2]//a/img</value>
+  </data>
 </root>

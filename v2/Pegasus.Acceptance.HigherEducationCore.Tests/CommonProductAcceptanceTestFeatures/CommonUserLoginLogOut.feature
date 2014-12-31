@@ -255,12 +255,31 @@ When I "Sign out" from the "WLCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Logout as Coursespace Admin
-Scenario: User Logout as Coursespace Admin
+Scenario: User Logout as WLCoursespace Admin
 When I "Sign out" from the "WLProgramAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
 
+#Purpose: Verify The User Login As CourseSpaceSMSInstructor and Enroll To MySpanishLabProgram Course
+Scenario: User Login As WLCsSMSInstructor and Enroll To MySpanishLabProgram Course
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
 
+#Purpose: Verify The User Login As CourseSpaceSMSStudent and Enroll To MySpanishLabProgram Course
+Scenario: User Login As WLCsSMSStudent and Enroll To MySpanishLabProgram Course
+Given I browsed the login url for "WLCsSmsStudent"
+When I logged into the Pegasus as "WLCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
+#Purpose: Login as Zero Score SMS Student and Enroll to MySpanishLabProgram Course
+Scenario: User Login as Zero Score WLCsSmsStudent and Enroll to MySpanishLabProgram Course
+Given I browsed the login url for "WLCsSmsStudent"
+When I login as "scoring 0" into the pegasus as "WLCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
 
 
 

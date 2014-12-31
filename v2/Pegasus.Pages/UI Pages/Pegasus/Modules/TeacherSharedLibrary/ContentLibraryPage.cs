@@ -554,8 +554,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is Activity Name</param>
         /// <param name="assetCmenu">This is Asset Cmenu.</param>
-        public void SelectAssetCmenuInTableofContent(string activityName,string assetCmenu)
-        {
+           public void SelectAssetCmenuInTableOfContent(string activityName, string assetCmenu)
+           {
             //Select Asset Cmenu In Table of Content
             logger.LogMethodEntry("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -575,11 +575,10 @@ namespace Pegasus.Pages.UI_Pages
                     ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
                 base.WaitForElement(By.XPath(ContentLibraryPageResource.
-                    ContnetLibrary_Page_Asset_Cmenu_Options_Xpath_Locator));
+                    ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator));
                 //Get Cmenu Options
-                string getCmenuOptions = 
-                    base.GetElementTextByXPath(ContentLibraryPageResource.
-                    ContnetLibrary_Page_Asset_Cmenu_Options_Xpath_Locator);
+                string getCmenuOptions = base.GetElementTextByXPath(ContentLibraryPageResource.
+                    ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator);
                 if (getCmenuOptions.Contains(assetCmenu))
                 {
                     base.WaitForElement(By.PartialLinkText(assetCmenu));
@@ -596,6 +595,8 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
                  base.IsTakeScreenShotDuringEntryExit);
         }
+
+       
 
          /// <summary>
         /// Select Asset Cmenu In Table of Content.
@@ -619,6 +620,172 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expand the folder in curriculum tab.
+        /// </summary>
+        /// <param name="folderName">Folder name.</param>
+        public void ExpandTheFolderInCurriculumTab(string folderName)
+        {
+            //Expand the folder in curriculum tab
+            logger.LogMethodEntry("ContentLibraryPage", "ExpandTheFolder",
+                  base.IsTakeScreenShotDuringEntryExit);
+            this.SelectWindowAndFrame();
+            //Get the folders count in Curriculum tab
+            int getFolderCount = base.GetElementCountByXPath(
+                ContentLibraryPageResource.ContentLibrary_Page_Folder_Count_Xpath_Locator);
+            for (int i=1; i<= getFolderCount; i++)
+            {
+                //Get the folder name
+                string getFolderName = base.GetElementTextByXPath(string.Format
+                    (ContentLibraryPageResource.ContnetLibrary_Page_FolderName_Xpath_Locator, i));
+                if(folderName.Equals(getFolderName))
+                {
+                    IWebElement expandButtonProperties = base.GetWebElementPropertiesByXPath(
+                        string.Format(ContentLibraryPageResource.
+                        ContnetLibrary_Page_FolderExpandButton_Xpath_Locator, i));
+                    base.ClickByJavaScriptExecutor(expandButtonProperties);
+                    break;
+                }
+                
+            }
+            logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                 base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Expand the sub folder in curriculum tab.
+        /// </summary>
+        /// <param name="subFolderName">Sub folder name.</param>
+        public void ExpandSubFolder(string subFolderName)
+        {
+            //Expand the sub folder
+            logger.LogMethodEntry("ContentLibraryPage", "ExpandSubFolder",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Get sub folders count
+            int getSubFolderCount = base.GetElementCountByXPath(
+                ContentLibraryPageResource.ContentLibrary_Page_SubFolder_Count_Xpath_Locator);
+            for (int j = 1; j <= getSubFolderCount; j++)
+            {
+                //Get sub folder name
+                string getSubFolderName = base.GetElementTextByXPath(string.
+                    Format(ContentLibraryPageResource.ContentLibrary_Page_SubFolder_Name_Xpath_Locator, j));
+                if (subFolderName.Equals(getSubFolderName))
+                {
+                    //Expand sub folder in curriculum tab
+                    IWebElement subFolderExpandButton = base.GetWebElementPropertiesByXPath(
+                        string.Format(ContentLibraryPageResource.ContnetLibrary_Page_SubFolderExpandButton_Xpath_Locator, j));
+                    base.ClickByJavaScriptExecutor(subFolderExpandButton);
+                    break;
+                }
+
+            }
+            logger.LogMethodExit("ContentLibraryPage", "ExpandSubFolder",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Find the activity and click on cmenu option.
+        /// </summary>
+        /// <param name="cmenuOption">Cmemu option to click.</param>
+        /// <param name="activityName">Activity to find.</param>
+        public void FindActivityAndClickOnCmenuOption(string cmenuOption, string activityName)
+        {
+            //Click on cmenu option of Lesson
+            logger.LogMethodEntry("ContentLibraryPage", "FindActivityAndClickOnCmenuOption",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Get sub folder contents count
+            int getSubFolderContentsCount = base.GetElementCountByXPath(
+                ContentLibraryPageResource.ContnetLibrary_Page_SubFolderContents_Count_Xpath_Locator);
+            for (int k = 1; k <= getSubFolderContentsCount; k++)
+            {
+                //Get Lesson name
+                string getLessonName = base.GetElementTextByXPath(string.Format(
+                    ContentLibraryPageResource.ContnetLibrary_Page_LessonName_Xpath_Locator, k));
+                if (activityName.Equals(getLessonName))
+                {
+
+                    try
+                    {
+                        //Selects Window and Switch to Frame
+                        this.SelectWindowAndFrame();
+                        //MouseHover On Activity
+                        this.MouseHoverOnActivityInTOC(ContentLibraryPageResource.
+                            ContnetLibrary_Page_LessonName_Id_Locator);
+                        //Click on Activity Cmenu Icon               
+                        base.WaitForElement(By.XPath
+                            (string.Format(ContentLibraryPageResource.
+                            ContentLibrary_Page_Lessson_CmenuIcon_Xpath_Locator, k)));
+                        //Get HTML peroperty of Cmenu icon
+                        IWebElement getPropertyOfCmenuIcon =
+                            base.GetWebElementPropertiesByXPath(
+                            string.Format(ContentLibraryPageResource.
+                            ContentLibrary_Page_Lessson_CmenuIcon_Xpath_Locator, k));
+                        base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
+                        //Wait for Cmenu option to display
+                        base.WaitForElement(By.XPath(ContentLibraryPageResource.
+                            ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator));
+                        //Get Cmenu Options
+                        this.ClickOnCmenuOptionInCurriculumTab(cmenuOption);
+                        base.SwitchToDefaultPageContent();
+                    }
+                    catch (Exception e)
+                    {
+                        ExceptionHandler.HandleException(e);
+                    }
+
+                    break;
+                }
+
+            }
+            logger.LogMethodExit("ContentLibraryPage", "FindActivityAndClickOnCmenuOption",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// MouseHover On Activity in Curriculum
+        /// </summary>
+        private void MouseHoverOnActivityInTOC(String AssetID)
+        {
+            //MouseHover On Activity
+            logger.LogMethodEntry("ContentLibraryPage",
+                "MouseHoverOnActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(AssetID));
+            //Mouse Hover On Searched Activity Name
+            IWebElement testName = base.GetWebElementPropertiesById(AssetID);
+            base.PerformMouseHoverByJavaScriptExecutor(testName);
+            logger.LogMethodExit("ContentLibraryPage",
+                "MouseHoverOnActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void ClickOnCmenuOptionInCurriculumTab(string cmenuOption)
+        {
+            logger.LogMethodEntry("ContentLibraryPage", "GetCmenuOptions",
+               base.IsTakeScreenShotDuringEntryExit);
+            int getCmenuOptionCount = base.GetElementCountByXPath(
+                ContentLibraryPageResource.ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator);
+            for (int i = 1; i <= getCmenuOptionCount; i++)
+            {
+                string getCmenuOption = base.GetElementTextByXPath(string.Format(
+                    ContentLibraryPageResource.ContnetLibrary_Page_Lesson_CmenuOption_Xpath_Locator, i));
+                if (cmenuOption.Equals(getCmenuOption))
+                {
+                    IWebElement getCmenuProperties = base.GetWebElementPropertiesByXPath(string.Format(
+                    ContentLibraryPageResource.ContnetLibrary_Page_Lesson_CmenuOption_Xpath_Locator, i));
+                    base.ClickByJavaScriptExecutor(getCmenuProperties);
+                    break;
+                }
+
+            }
+
         }
     }
 }

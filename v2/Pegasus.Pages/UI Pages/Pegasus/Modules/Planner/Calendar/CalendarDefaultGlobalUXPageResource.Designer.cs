@@ -188,6 +188,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;dvDueAssignmentsTodayCss&apos;]/div.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;dvDueAssignmentsTodayCss&apos;]/div[{0}]/div[2]/span/span[1].
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to calendarContainer_ucDayView_RptPeriods_ctl00_DVPeriodHeader.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id {
@@ -323,6 +341,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;cssinnerTree&apos;]/table.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;cssinnerTree&apos;]/table[{0}]//td[1]/img.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_FolderExpandButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_FolderExpandButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;cssinnerTree&apos;]/table[{0}]//td[3]//tr/td[1].
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_ForLoopInitialization_Value {
@@ -346,6 +391,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;DivLN_NEWPC_mainLinks&apos;]/a.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_LCC_CmenuCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_LCC_CmenuCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;{0}&apos;]/table[{1}]/tbody/tr/td[3]//td[2]//img.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;DivLN_NEWPC_mainLinks&apos;]/a[{0}].
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -454,6 +526,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;{0}&apos;]/table.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;{0}&apos;]/table[{1}]/tbody/tr/td[3]//td[1].
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;{0}&apos;]/table[{1}]/tbody/tr/td[1]/img.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator", resourceCulture);
             }
         }
         

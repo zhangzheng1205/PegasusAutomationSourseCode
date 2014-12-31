@@ -269,6 +269,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to frmCourseContainer.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2000.
         /// </summary>
         internal static string CoursePreviewMainUX_Page_ElementWait_Value {
@@ -310,6 +319,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_Iframe_Id_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_Iframe_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/div.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[3]/span.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_LCC_ShownStatusColumn_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_LCC_ShownStatusColumn_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/div/span.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_LCC_Status_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_LCC_Status_Xpath_Locator", resourceCulture);
             }
         }
         

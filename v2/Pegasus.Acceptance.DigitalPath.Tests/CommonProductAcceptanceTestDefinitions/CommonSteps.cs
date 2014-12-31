@@ -306,6 +306,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Enter into DP Class.
+        /// </summary>
+        /// <param name="className">Class name</param>
+        [When(@"I enter into the DP ""(.*)"" class")]
+        public void EnterDPClass(string className)
+        {
+            //Enter In Class
+            Logger.LogMethodEntry("CommonSteps", "EnterDPClass",
+                IsTakeScreenShotDuringEntryExit);
+            //Enter Dp class
+            new HomePage().EnterInClass(className);
+            Logger.LogMethodExit("CommonSteps", "EnterDPClass",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Closes the Window.
         /// </summary>
         /// <param name="windowName">This is Window Name.</param>
@@ -402,23 +419,55 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
-        /// Initialize Pegasus test before test execution starts
+        /// Validate the display of assign pop up.
+        /// </summary>
+        /// <param name="windowName"></param>
+        [Then(@"I should see ""(.*)"" pop up")]
+        public void ValidateDisplayOfAssignPopUp(string windowName)
+        {
+            //Validate the display of assign pop up.
+            Logger.LogMethodEntry("CommonSteps", "ValidateDisplayOfAssignPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("CustomizeContent", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(windowName, new AssignContentPage().GetAssignWindowPopUpTitle()));
+            Logger.LogMethodExit("CommonSteps", "ValidateDisplayOfAssignPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Ok button in Alert pop up while assigning hidden contents.
+        /// </summary>
+        [When(@"I click on Ok button in Alert pop up")]
+        public void ClickOkButtonInAlertPopUp()
+        {
+            //Click on Ok button in Alert pop up
+            Logger.LogMethodEntry("CommonSteps", "ClickOkButtonInAlertPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on Ok button in Alert pop up
+            new ShowMessagePage().ClickOkButtonInAlertPopUp();
+            Logger.LogMethodExit("CommonSteps", "ClickOkButtonInAlertPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]
         public static void Setup()
         {
-            //Reset Webdriver Instance
             new CommonSteps().ResetWebdriver();
         }
 
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test
-        /// and stops the webdriver.
+        /// and clean the WebDriver Instance.
         /// </summary>
         [AfterTestRun]
         public static void TearDown()
         {
             new CommonSteps().WebDriverCleanUp();
         }
+
+        
     }
 }

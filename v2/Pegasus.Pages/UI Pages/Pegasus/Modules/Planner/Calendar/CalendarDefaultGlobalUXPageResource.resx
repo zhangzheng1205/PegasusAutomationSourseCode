@@ -276,4 +276,37 @@
   <data name="CalendarDefaultGlobalUX_Page_TimeThread_Value" xml:space="preserve">
     <value>1000</value>
   </data>
+  <data name="CalendarDefaultGlobalUX_Page_FolderExpandButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='cssinnerTree']/table[{0}]//td[1]/img</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='cssinnerTree']/table[{0}]//td[3]//tr/td[1]</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='cssinnerTree']/table</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[3]//td[2]//img</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[1]/img</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[3]//td[1]</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='dvDueAssignmentsTodayCss']/div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='dvDueAssignmentsTodayCss']/div[{0}]/div[2]/span/span[1]</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LCC_CmenuCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='DivLN_NEWPC_mainLinks']/a</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='DivLN_NEWPC_mainLinks']/a[{0}]</value>
+  </data>
 </root>
