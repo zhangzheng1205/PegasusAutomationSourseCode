@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium.Interactions;
@@ -19,6 +20,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
     {
         #region WebDriver Utilities
 
+        private readonly int _waitTimeOut = Convert.ToInt32(
+           ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
         /// <summary>
         /// Get a string representing the current URL that the browser is looking at.
         /// </summary>
@@ -2428,8 +2431,24 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// can manipulate JavaScript alerts.</see>
         protected void AcceptAlert()
         {
-            IAlert alert = WebDriver.SwitchTo().Alert();
-            alert.Accept();
+            int timeOut = -1;
+            //Wait For Element
+            if (timeOut == -1)
+            {
+                timeOut = this._waitTimeOut;
+            }
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(timeOut));
+                IAlert alert = wait.Until(drv => drv.SwitchTo().Alert());
+                alert.Accept();
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         /// <summary>
@@ -2439,9 +2458,25 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// can manipulate JavaScript alerts.</see>
         protected void DismissAlert()
         {
-            IAlert alert = WebDriver.SwitchTo().Alert();
-            alert.Dismiss();
+            int timeOut = -1;
+            //Wait For Element
+            if (timeOut == -1)
+            {
+                timeOut = this._waitTimeOut;
+            }
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(timeOut));
+                IAlert alert = wait.Until(drv => drv.SwitchTo().Alert());
+                alert.Dismiss();
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
 
         #endregion WebDriver
 
