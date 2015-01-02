@@ -2088,14 +2088,27 @@ namespace Pegasus.Pages.UI_Pages
                 "AnswerSAMActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select Activity Window
+        /// </summary>
+        /// <param name="windowName">This is the Window Name</param>
         public void SelectActivityWindow(string windowName)
         {
             Logger.LogMethodEntry("CourseContentUXPage",
                 "SelectActivityWindow",
                   base.IsTakeScreenShotDuringEntryExit);
-            //Switch to Activity window
-            base.WaitUntilWindowLoads(windowName);
-            base.SelectWindow(windowName);
+            try
+            {
+                //Switch to Activity window
+                base.WaitUntilWindowLoads(windowName);
+                base.SelectWindow(windowName);
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("CourseContentUXPage",
                 "SelectActivityWindow",
                    base.IsTakeScreenShotDuringEntryExit);
@@ -2134,7 +2147,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Submitting the WL Essay Activity By Student.
+        /// Submitting the Word Language Essay Activity By Student.
         /// </summary>
         /// <param name="answerField">This is the answer field value.</param>
         public void SubmittingWorldLanguageEssayActivityByStudent(int answerField)
@@ -2166,7 +2179,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Submit the Essay activity in WL.
+        /// Submit the Essay activity in Word Language.
         /// </summary>
         public void SubmitWordLanguageEssayActivity()
         {
@@ -2198,7 +2211,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Submitt WL Activity.
+        /// Submitt Word Language Activity.
         /// </summary>
         public void SubmitActivity()
         {
@@ -2243,7 +2256,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CourseContentUXPage",
                 "GetTheActivityStatusofWordLanguageActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            string getWLactivityStatus = string.Empty;
+            string getactivityStatus = string.Empty;
             try
             {
                 //Selecting Window.
@@ -2260,7 +2273,7 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPageResource.
                     CourseContentUXPage_WLActivity_AppendSymbol + textactivityId;
                 base.WaitForElement(By.Id(activityStatusId));
-                getWLactivityStatus = base.GetElementTextById(activityStatusId);
+                getactivityStatus = base.GetElementTextById(activityStatusId);
             }
             catch (Exception e)
             {
@@ -2270,7 +2283,7 @@ namespace Pegasus.Pages.UI_Pages
            Logger.LogMethodEntry("CoursePreviewUXPage",
                 "GetTheActivityStatusofWordLanguageActivity",
                         base.IsTakeScreenShotDuringEntryExit);
-            return getWLactivityStatus;
+            return getactivityStatus;
         }
 
     }
