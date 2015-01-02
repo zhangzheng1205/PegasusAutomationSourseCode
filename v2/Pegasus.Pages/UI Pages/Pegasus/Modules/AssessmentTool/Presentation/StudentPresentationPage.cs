@@ -14,6 +14,13 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using Keys = OpenQA.Selenium.Keys;
+using Pegasus.Automation;
+using System.IO;
+using System.Globalization;
+using Pegasus.Pages.CommonPageObjects;
+using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -5959,7 +5966,10 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.SwitchToLastOpenedWindow();
                 //Close the Window
                 base.CloseBrowserWindow();
-                base.AcceptAlert();
+                if (ConfigurationManager.AppSettings[StudentPresentationPageResource.Browser_Key] != "Chrome")
+                {
+                    base.AcceptAlert();
+                }
                 //Switch to Default Window
                 base.SwitchToDefaultWindow();
             }

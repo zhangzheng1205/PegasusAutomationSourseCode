@@ -7,11 +7,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using System.Threading;
+using System.Configuration;
 
 namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTestDefinitions
 {
     [Binding]
-    public class AssignmentCalendar : PegasusBaseTestFixture
+    public class AssignmentCalendar : BasePage
     {
         /// <summary>
         /// The static instance of the logger for the class.
@@ -394,7 +396,19 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
             Logger.LogMethodEntry("AssignmentCalendar",
                "AssignTheAsset",
                base.IsTakeScreenShotDuringEntryExit);
-            base.SelectWindow("Assign");
+            ////base.SelectWindow("Assign");
+            if (ConfigurationManager.AppSettings[Browser] == "Internet Explorer")
+            {
+                Thread.Sleep(10000);
+                base.SwitchToLastOpenedWindow();
+                string pageTitle = base.GetPageTitle;
+                // Verifies the Correct Page Opened
+                base.SelectWindow(pageTitle);
+            }
+            else
+            {
+                base.SelectWindow("Assign");
+            }
             AssignContentPage assignContentPage = new AssignContentPage();
             //Select 'Assigned' radiobutton
             assignContentPage.SelectAssignRadiobuttonInAssignWindow();
@@ -410,7 +424,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
                 "AssignTheAsset",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
         
     }
 }

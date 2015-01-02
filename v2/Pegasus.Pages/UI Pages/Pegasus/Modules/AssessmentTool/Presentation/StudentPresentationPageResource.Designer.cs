@@ -62,6 +62,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Browser.
+        /// </summary>
+        internal static string Browser_Key {
+            get {
+                return ResourceManager.GetString("Browser_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[4].
         /// </summary>
         internal static string CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator {

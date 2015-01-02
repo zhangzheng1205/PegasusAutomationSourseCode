@@ -155,6 +155,14 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
+      <Name>VCD-MASTER, MyPsychLab for Ciccarelli, 3/e-Automation</Name>
+      <CourseType>HSSMyPsychLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
       <Name>VCD_ProgramAdminCourse</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
@@ -164,7 +172,16 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-
+    <Course>
+      <Name>VCD_HSS_ProgramAdminCourse</Name>
+      <CourseType>HSSMyPsychLabProgram</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <SectionName>3ba0ea02-829a-4f3f-a2c5-f1bd49d01e3e</SectionName>
+      <SectionId>CRSKLEF-12000713</SectionId>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
     <Course>
       <Name>fcaaa299-4069-432e-934e-b7228ef887ad</Name>
       <CourseType>MMNDSection</CourseType>
@@ -441,6 +458,17 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
+      <Name>09542903-b170-43c6-8a55-483cf672db10</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>d014</LastName>
+      <UserType>HSSProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
       <Name>a9b8f5dc-f882-4070-ae8e-47cf1402f8ad</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -450,6 +478,17 @@
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>a9b8f5dc-f882-4070-ae8e-47cf1402f8ad</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>54a1</LastName>
+      <UserType>HSSCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
       <Name>9a6a0f60-e553-4542-9776-8811ddb4ce6e</Name>
@@ -485,6 +524,43 @@
       <LastName>7dbe</LastName>
       <UserType>CsSmsStudent</UserType>
       <UserId>Hed_User_SMS_STU_UC2</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>9a6a0f60-e553-4542-9776-8811ddb4ce6e</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>6079</LastName>
+      <UserType>HSSCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Zero Score "HSSCsSMSStudent".-->
+    <User>
+      <Name>4f3f5be7-d5d3-42b2-a45b-a99fd0cc9d2c</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>1e6f</LastName>
+      <UserType>HSSCsSmsStudent</UserType>
+      <UserId>HSS_User_SMS_STU_UC3</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Set Idle "HSSCsSMSStudent".-->
+    <User>
+      <Name>4dcd7327-f98d-41f1-bf40-8c7036435f0d</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>7dbe</LastName>
+      <UserType>HSSCsSmsStudent</UserType>
+      <UserId>HSS_User_SMS_STU_UC4</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>

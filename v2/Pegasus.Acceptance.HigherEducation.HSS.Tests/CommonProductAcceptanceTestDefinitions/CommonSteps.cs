@@ -117,9 +117,20 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             // Verifies the Correct Page Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
             base.IsTakeScreenShotDuringEntryExit);
-            base.SwitchToLastOpenedWindow();
-            // Verifies the Correct Page Opened
-            this.ShowThePageInPegasus(expectedWindowTitle);
+            if (ConfigurationManager.AppSettings[Browser] == "Internet Explorer")
+            {
+                Thread.Sleep(10000);
+                base.SwitchToLastOpenedWindow();
+                string pageTitle = base.GetPageTitle;
+                // Verifies the Correct Page Opened
+                this.ShowThePageInPegasus(pageTitle);
+            }
+            else
+            {
+                base.SwitchToLastOpenedWindow();
+                // Verifies the Correct Page Opened
+                this.ShowThePageInPegasus(expectedWindowTitle);
+            }
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -328,9 +339,23 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             //Verify Correct Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
+            Boolean isPopUpExist = false;
             //Is Pop Up Present
-            base.WaitUntilWindowLoads(popUpName);
-            Boolean isPopUpExist = base.IsWindowsExists(popUpName);
+            if (ConfigurationManager.AppSettings[Browser] == "Internet Explorer")
+            {
+                Thread.Sleep(10000);
+                base.SwitchToLastOpenedWindow();
+                string pageTitle = base.GetPageTitle;
+                // Verifies the Correct Page Opened
+                this.ShowThePageInPegasus(pageTitle);
+                isPopUpExist = base.IsWindowsExists(pageTitle);
+
+            }
+            else
+            {
+                base.WaitUntilWindowLoads(popUpName);
+                isPopUpExist = base.IsWindowsExists(popUpName);
+            }
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -425,13 +450,13 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             //Click on Tab 
             base.ClickByJavaScriptExecutor(getTabNameProperty);
             //Wait Till Thinking Indicator Loads
-            bool isThinkingIndicatorLoading = base.IsThinkingIndicatorLoading();
-            //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
-            if (isThinkingIndicatorLoading)
-            {
-                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
-            }
+            //bool isThinkingIndicatorLoading = base.IsThinkingIndicatorLoading();
+            ////If Thinking Indicator In Process After Specified Time Interval then Fail This Step
+            //if (isThinkingIndicatorLoading)
+            //{
+            //    Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
+            //   () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
+            //}
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }

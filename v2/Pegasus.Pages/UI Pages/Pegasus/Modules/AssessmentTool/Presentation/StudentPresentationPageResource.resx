@@ -1353,4 +1353,7 @@
   <data name="StudentPrsentation_Page_OpenStudyPlan_ReturnToCourseButton_Id_Value" xml:space="preserve">
     <value>_ctl0:_ctl0:phBody:PageContent:lbtnBack</value>
   </data>
+  <data name="Browser_Key" xml:space="preserve">
+    <value>Browser</value>
+  </data>
 </root>
