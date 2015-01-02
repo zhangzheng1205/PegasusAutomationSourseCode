@@ -833,6 +833,37 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
+        /// Click my profile link.
+        /// </summary>
+        [Then(@"I click 'My Profile' link")]
+        [When(@"I click 'My Profile' link")]
+        public void ClickMyProfileLink()
+        {
+            // Click my profile link
+            Logger.LogMethodEntry("CommonSteps", "ClickMyProfileLink",
+                 base.IsTakeScreenShotDuringEntryExit);
+            new HEDGlobalHomePage().ClickOnMyProfileLink();
+            Logger.LogMethodExit("CommonSteps", "ClickMyProfileLink",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Store users profile time and date.
+        /// </summary>
+        [When(@"I store user current date and time of the instructor")]
+        public void StoreUserCurrentDateAndTime()
+        {
+            // Store users profile time and date
+            Logger.LogMethodEntry("CommonSteps", "StoreUserCurrentDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+            new HEDGlobalHomePage().setUserCurrentDate();
+            Logger.LogMethodExit("CommonSteps", "StoreUserCurrentDateAndTime",
+            base.IsTakeScreenShotDuringEntryExit);
+
+
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

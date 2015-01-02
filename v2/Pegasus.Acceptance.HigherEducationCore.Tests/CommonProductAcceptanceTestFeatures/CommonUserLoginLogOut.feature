@@ -281,5 +281,10 @@ When I login as "scoring 0" into the pegasus as "WLCsSmsStudent" in "CourseSpace
 Then I should logged in successfully
 Given I am on the "Global Home" page
 
+#Purpose:To get the date and time of the instructor
+Scenario: Set the date and time of SMS Instructor
+When I click 'My Profile' link
+And I store user current date and time of the instructor
+
 
 

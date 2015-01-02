@@ -866,6 +866,22 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Set the date and time of SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void SetTheDateAndTimeOfSMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set the date and time of SMS Instructor", ((string[])(null)));
+#line 285
+this.ScenarioSetup(scenarioInfo);
+#line 286
+testRunner.When("I click \'My Profile\' link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 287
+testRunner.And("I store user current date and time of the instructor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
