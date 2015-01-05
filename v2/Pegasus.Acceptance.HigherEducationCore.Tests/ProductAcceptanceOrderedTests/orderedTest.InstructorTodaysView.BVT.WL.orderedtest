@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedTest.InstructorTodaysView.BVT.WL" storage="d:\pegasus_automation_dec2\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\orderedtest.instructortodaysview.bvt.wl.orderedtest" id="2b703feb-8b0d-473a-9b97-66be2e0f5d66" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="d4a8fa7b-1dd7-cc59-73db-579b3f3984a1" name="UserLoginAsWLCsSMSInstructorAndNavigateToMySpanishLabProgramCourse" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b9bdfe84-770c-9b12-6b71-b19385c4b736" name="InstructorShouldBeNotifiedWithAlertCountInInstructorGradingChannelWhenStudentSubmitsManualGradableActivities" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="30be62fb-9d5f-ca4d-f37b-44173077a835" name="UserLogoutAsWLInstructor" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

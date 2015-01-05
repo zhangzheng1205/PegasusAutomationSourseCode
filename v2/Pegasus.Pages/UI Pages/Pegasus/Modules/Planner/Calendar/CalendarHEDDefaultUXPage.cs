@@ -2577,8 +2577,8 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitUntilWindowLoads(windowName);
-                base.SelectWindow(windowName);
+                new CourseContentUXPage().
+                    SelectActivityWindow(windowName);
                 // switch frame To load First
                 base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource
                     .CalendarHEDDefaultUXPageResource_GradeBook_Frame_Id_Locator);
@@ -2610,7 +2610,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
+         /// <summary>
         /// Click on View Filter In Grade Book.
         /// </summary>
         private void ClickViewFilterInGradeBook()
@@ -2618,18 +2618,15 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickViewFilterInGradeBook",
            base.IsTakeScreenShotDuringEntryExit);
             // in case hide filter is already opened
-            if (!base.IsElementPresent(By.CssSelector(CalendarHEDDefaultUXPageResource
-                .CalendarHEDDefaultUXPageResource_FilterHeader_View_CssSelector_Locator), 8))
-            {
-                base.FocusOnElementByCssSelector(CalendarHEDDefaultUXPageResource
-                .CalendarHEDDefaultUXPageResource_FilterHeader_View_CssSelector_Locator);
-                IWebElement getViewFilter = base.
-                    GetWebElementPropertiesByCssSelector(CalendarHEDDefaultUXPageResource
-                .CalendarHEDDefaultUXPageResource_FilterHeader_View_CssSelector_Locator);
-                base.ClickByJavaScriptExecutor(getViewFilter);
-            }
+            base.FocusOnElementByCssSelector(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+            IWebElement getViewFilter = base.
+              GetWebElementPropertiesByCssSelector(CalendarHEDDefaultUXPageResource.
+              CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
+            base.ClickByJavaScriptExecutor(getViewFilter);
             Logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickViewFilterInGradeBook",
            base.IsTakeScreenShotDuringEntryExit);
         }
+
     }
 }

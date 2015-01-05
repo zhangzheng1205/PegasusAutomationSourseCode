@@ -144,6 +144,16 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+    <Course>
+      <Name>VCD_WL_Program</Name>
+      <CourseType>MySpanishLabProgram</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SectionName>VCD_WLSection</SectionName>
+      <SectionId>CRSKLNA-12003257</SectionId>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
     
     <!--Hard coded Course data for "HEDMIL" Product.-->
     <Course>
@@ -191,6 +201,14 @@
       <SectionId>shetty69236</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>5.14.1 MySpanishLab for ¡Anda! Curso elemental, 2e, Summer 2013 Re-Release</Name>
+      <CourseType>MySpanishLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
     </Course>
     
     <!--Hard coded Course data for "NovaNET" Product.-->
@@ -574,7 +592,54 @@
       <UserType>HedWsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
-    </User>    
+    </User>
+    <!--Hard coded Users data for "Word Language" Product.-->
+    <User>
+      <Name>09542903-b170-43c6-8a55-483cf672db10</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>f4e4</LastName>
+      <UserType>WLProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>a9b8f5dc-f882-4070-ae8e-47cf1402f8ad</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>cf3d</LastName>
+      <UserType>WLCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>9a6a0f60-e553-4542-9776-8811ddb4ce6e</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>e77b</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Zero Score "WLCsSmsStudent".-->
+    <User>
+      <Name>4f3f5be7-d5d3-42b2-a45b-a99fd0cc9d2c</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>e77b</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <UserId>WL_User_SMS_STU_UC5</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
     <!--Hard coded Users data for "NovaNET" Product.-->
     <User>
       <Name>cif_automation</Name>
