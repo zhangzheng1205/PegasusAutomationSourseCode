@@ -1918,7 +1918,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCalendarWindow();
                 if (base.IsElementPresent(By.XPath((
                     string.Format(CalendarHEDDefaultUXPageResource
-                        .CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator, assetId))), 5))
+                        .CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator, assetId)))))
                 {
                     IWebElement assignStatusImage = base.GetWebElementPropertiesByXPath(
                         string.Format(CalendarHEDDefaultUXPageResource
@@ -2601,6 +2601,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Press 'ENTER' key             
                 base.PressEnterKeyById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ChapterName_ID_Locator);
+                base.WaitUntilWindowLoads(windowName);
+                // click on 'View Filters'
+                this.ClickViewFilterInGradeBook();
             }
             catch (Exception e)
             {
@@ -2617,7 +2620,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickViewFilterInGradeBook",
            base.IsTakeScreenShotDuringEntryExit);
-            // in case hide filter is already opened
+            //Click on 'View Filter
             base.FocusOnElementByCssSelector(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_ViewFilter_ID_Locator);
             IWebElement getViewFilter = base.
@@ -2627,6 +2630,5 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickViewFilterInGradeBook",
            base.IsTakeScreenShotDuringEntryExit);
         }
-
     }
 }

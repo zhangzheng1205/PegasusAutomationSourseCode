@@ -28,7 +28,7 @@ Then I should see the successfull message "Your message has been sent." in "Cour
 #PEGASUS-29247
 #MySpanishLabProgram
 Scenario: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
-Then I should see the "Unread Comments (1)" channels in 'Todays view' page
-And I should see the alert count updated as "1" in "Unread Comments (1)" channel
+Then I should see the "Instructor Grading (1)" channels in 'Todays view' page
+And I should see the alert count updated as "1" in "Instructor Grading (1)" channel
 
                                 

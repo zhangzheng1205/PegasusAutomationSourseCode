@@ -1571,7 +1571,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 // click folder level
                 this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
                 this.NavigateInsideActivityFolderUnderTabByInstructor(
-                    CommonPageResource.ComonPage_Capítulo02_FolderName,
+                    CommonPageResource.ComonPage_Capítulo02_WLFolderName,
                 webElementToWait);
                 this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
                 this.NavigateInsideActivitySubFolder();
@@ -2029,7 +2029,7 @@ namespace Pegasus.Pages.CommonPageObjects
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTabByInstructor(
                     CommonPageResource.
-                    ComonPage_Capítulo03_FolderName, webElementToWait);
+                    ComonPage_Capítulo03_WLFolderName, webElementToWait);
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivitySubFolder();            
             Logger.LogMethodExit("CommonPage", "NavigateToCapítulo03ActivitiesFolder",
@@ -2051,7 +2051,7 @@ namespace Pegasus.Pages.CommonPageObjects
            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
            this.NavigateInsideActivityFolderUnderTabByInstructor(
                    CommonPageResource.
-                   ComonPage_Capítulo06_FolderName, webElementToWait);
+                   ComonPage_Capítulo06_WLFolderName, webElementToWait);
           this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
           this.NavigateInsideActivitySubFolder();
         Logger.LogMethodExit("CommonPage", "NavigateToCapítulo06ActivitiesFolder",
@@ -2075,7 +2075,7 @@ namespace Pegasus.Pages.CommonPageObjects
                     activityUnderTabName);
           this.NavigateInsideActivityFolderUnderTabByInstructor(
                     CommonPageResource.
-                    ComonPage_Capítulo05_FolderName,
+                    ComonPage_Capítulo05_WLFolderName,
                     webElementToWait);
           this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, 
                     activityUnderTabName);

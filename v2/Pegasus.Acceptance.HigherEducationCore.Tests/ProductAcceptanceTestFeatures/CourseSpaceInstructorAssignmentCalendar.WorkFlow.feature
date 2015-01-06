@@ -18,10 +18,11 @@ Then I should see the order of assigned contents in calendar same as in course c
 Scenario: Instructor drag and drop a folder in assignment calendar by Instructor
 When I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-And I should see "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)" asset
+And I should see "Capítulo 01: ¿Quiénes somos?" asset
 And I should see the current date highlighted in the calendar frame
-When I drag and drop the "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)" folder to the current date
+When I drag and drop the "Capítulo 01: ¿Quiénes somos?" folder to the current date
 Then I should see due date icon displayed in current date
+And I refresh the page
 
 #Purpose : To validate Assign more than one content using Assign/Unassign link
 #Test Case Id :peg-21979 -Assign more than one content using Assign/Unassign link
@@ -35,6 +36,7 @@ And I select the check box of any 2 activities in "STUDENT ACTIVITIES MANUAL"
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+And I refresh the page
 
 #Purpose : To validate Assign one content using Assign/Unassign link
 #PEGASUS-28903
@@ -47,6 +49,8 @@ When I select "SAM 03-01 ¿Qué hacemos en casa? [Vocabulario 1. La casa]" in "C
 And I select the check box of any 1 activities in "STUDENT ACTIVITIES MANUAL"
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
+Then I should see the check mark in assigned status column next to the assets
+Then I refresh the page
 
 #Purpose: To drag and drop multiple assets in assignment calendar.
 #Test case ID : peg-21981.
@@ -60,6 +64,7 @@ When I select "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2
 And I select the check box of any 2 activities in "STUDENT ACTIVITIES MANUAL"
 And I should drag and drop multiple assets along with "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]" to the current date
 Then I should see due date icon displayed in current date
+And I refresh the page
 
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
@@ -68,10 +73,11 @@ Then I should see due date icon displayed in current date
 Scenario: To check the current date assigned content in the calendar by Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-And I should see "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)" asset
+And I should see "Capítulo 01: ¿Quiénes somos?" asset
 And I should see the current date highlighted in the calendar frame
 When I select the current date 
 Then I should see the assigned content "Readiness Check 01" in the day view
+And I refresh the page
 
 #Purpose: Assign a content to display start date icon
 #PEGASUS-29283
@@ -87,5 +93,4 @@ When I assign the asset for current date in the properties popup
 Then I should be on the "Calendar" page
 And I should see the current date highlighted in the calendar frame
 And I should see the startdate Icon in calendar frame
-When I navigate to "Gradebook" tab
-Then I should be on the "Gradebook" page
+And I refresh the page

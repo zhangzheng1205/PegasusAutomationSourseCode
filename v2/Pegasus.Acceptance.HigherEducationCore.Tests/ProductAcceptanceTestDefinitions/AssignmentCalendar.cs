@@ -14,7 +14,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
     /// This class handles Calendar related actions.
     /// </summary>
     [Binding]
-    public class AssignmentCalendar : PegasusBaseTestFixture
+    public class AssignmentCalendar : BasePage
     {
         /// <summary>
         /// The static instance of the logger for the class.
@@ -981,6 +981,20 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyTheStartdateIconInCalendarFrame",
                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Refresh the current page.
+        /// </summary>
+        [Then(@"I refresh the page")]
+        public void RefreshThePage()
+        {
+            // Refresh the current page
+            Logger.LogMethodEntry("CommonSteps", "RefreshThePage",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.RefreshTheCurrentPage();
+            Logger.LogMethodExit("CommonSteps", "RefreshThePage",
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

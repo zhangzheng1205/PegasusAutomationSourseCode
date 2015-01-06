@@ -37,12 +37,12 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>WL_PPE_Automation</Name>
+      <Name>PPEAutomation_WL</Name>
       <CourseType>MySpanishLabProgram</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>WL_PPESection</SectionName>
-      <SectionId>CRSKL4M-4040751</SectionId>
+      <SectionName>WLAutomation</SectionName>
+      <SectionId>CRSKL3V-6044068</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
@@ -140,7 +140,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
+      <Name>MySpanishLab for ¡Anda! Curso elemental, 2e, Summer 2013 Re-Release</Name>
       <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>

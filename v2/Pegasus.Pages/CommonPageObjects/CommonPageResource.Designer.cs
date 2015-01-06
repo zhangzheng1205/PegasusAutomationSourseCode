@@ -610,38 +610,38 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Capítulo 02: La vida universitaria (ORGANIZED BY CONTENT TYPE).
+        ///   Looks up a localized string similar to Capítulo 02: La vida universitaria.
         /// </summary>
-        internal static string ComonPage_Capítulo02_FolderName {
+        internal static string ComonPage_Capítulo02_WLFolderName {
             get {
-                return ResourceManager.GetString("ComonPage_Capítulo02_FolderName", resourceCulture);
+                return ResourceManager.GetString("ComonPage_Capítulo02_WLFolderName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Capítulo 03: Estamos en casa (ORGANIZED BY CONTENT TYPE).
+        ///   Looks up a localized string similar to Capítulo 03: Estamos en casa.
         /// </summary>
-        internal static string ComonPage_Capítulo03_FolderName {
+        internal static string ComonPage_Capítulo03_WLFolderName {
             get {
-                return ResourceManager.GetString("ComonPage_Capítulo03_FolderName", resourceCulture);
+                return ResourceManager.GetString("ComonPage_Capítulo03_WLFolderName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Capítulo 05: ¡A divertirse! La música y el cine (ORGANIZED BY CONTENT TYPE).
+        ///   Looks up a localized string similar to Capítulo 05: ¡A divertirse! La música y el cine.
         /// </summary>
-        internal static string ComonPage_Capítulo05_FolderName {
+        internal static string ComonPage_Capítulo05_WLFolderName {
             get {
-                return ResourceManager.GetString("ComonPage_Capítulo05_FolderName", resourceCulture);
+                return ResourceManager.GetString("ComonPage_Capítulo05_WLFolderName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Capítulo 06: ¡Sí, lo sé! (ORGANIZED BY CONTENT TYPE).
+        ///   Looks up a localized string similar to Capítulo 06: ¡Sí, lo sé!.
         /// </summary>
-        internal static string ComonPage_Capítulo06_FolderName {
+        internal static string ComonPage_Capítulo06_WLFolderName {
             get {
-                return ResourceManager.GetString("ComonPage_Capítulo06_FolderName", resourceCulture);
+                return ResourceManager.GetString("ComonPage_Capítulo06_WLFolderName", resourceCulture);
             }
         }
         

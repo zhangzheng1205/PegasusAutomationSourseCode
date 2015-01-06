@@ -339,19 +339,19 @@
   <data name="ComonPage_HSS_Chapter4_FolderName" xml:space="preserve">
     <value>Chapter 4: Consciousness:  Sleep, Dreams, Hypnosis, and Drugs</value>
   </data>
-  <data name="ComonPage_Capítulo02_FolderName" xml:space="preserve">
-    <value>Capítulo 02: La vida universitaria (ORGANIZED BY CONTENT TYPE)</value>
-  </data>
-  <data name="ComonPage_Capítulo03_FolderName" xml:space="preserve">
-    <value>Capítulo 03: Estamos en casa (ORGANIZED BY CONTENT TYPE)</value>
-  </data>
-  <data name="ComonPage_Capítulo05_FolderName" xml:space="preserve">
-    <value>Capítulo 05: ¡A divertirse! La música y el cine (ORGANIZED BY CONTENT TYPE)</value>
-  </data>
-  <data name="ComonPage_Capítulo06_FolderName" xml:space="preserve">
-    <value>Capítulo 06: ¡Sí, lo sé! (ORGANIZED BY CONTENT TYPE)</value>
-  </data>
   <data name="ComonPage_WL_SubFolder_Name" xml:space="preserve">
     <value>[title$='STUDENT ACTIVITIES MANUAL']</value>
+  </data>
+  <data name="ComonPage_Capítulo02_WLFolderName" xml:space="preserve">
+    <value>Capítulo 02: La vida universitaria</value>
+  </data>
+  <data name="ComonPage_Capítulo03_WLFolderName" xml:space="preserve">
+    <value>Capítulo 03: Estamos en casa</value>
+  </data>
+  <data name="ComonPage_Capítulo05_WLFolderName" xml:space="preserve">
+    <value>Capítulo 05: ¡A divertirse! La música y el cine</value>
+  </data>
+  <data name="ComonPage_Capítulo06_WLFolderName" xml:space="preserve">
+    <value>Capítulo 06: ¡Sí, lo sé!</value>
   </data>
 </root>
