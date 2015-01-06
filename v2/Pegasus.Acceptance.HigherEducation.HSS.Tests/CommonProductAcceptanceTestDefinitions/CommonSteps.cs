@@ -1278,5 +1278,20 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
 
 
         }
+
+        /// <summary>
+        /// Refresh the current page.
+        /// </summary>
+        [Then(@"I refresh the page")]
+        public void RefreshThePage()
+        {
+            // Refresh the current page
+            Logger.LogMethodEntry("CommonSteps", "RefreshThePage",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.RefreshTheCurrentPage();
+            Logger.LogMethodExit("CommonSteps", "RefreshThePage",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

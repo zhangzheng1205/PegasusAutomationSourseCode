@@ -71,11 +71,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chrome.
+        /// </summary>
+        internal static string Chrome_Browser_Value {
+            get {
+                return ResourceManager.GetString("Chrome_Browser_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[4].
         /// </summary>
         internal static string CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internet Explorer.
+        /// </summary>
+        internal static string IE_Browser_Value {
+            get {
+                return ResourceManager.GetString("IE_Browser_Value", resourceCulture);
             }
         }
         
@@ -283,6 +301,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPresentation_Page_BaseWindow_Title_Name {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_BaseWindow_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cont-button.
+        /// </summary>
+        internal static string StudentPresentation_Page_ClickHereToContinue_ClassLocator_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_ClickHereToContinue_ClassLocator_Value", resourceCulture);
             }
         }
         
@@ -1264,6 +1291,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPresentation_Page_SIM5_Format_Button_XPath_Locator {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_SIM5_Format_Button_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pearson SIMS - Office 2013.
+        /// </summary>
+        internal static string StudentPresentation_Page_Sim5_Title_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Sim5_Title_Value", resourceCulture);
             }
         }
         

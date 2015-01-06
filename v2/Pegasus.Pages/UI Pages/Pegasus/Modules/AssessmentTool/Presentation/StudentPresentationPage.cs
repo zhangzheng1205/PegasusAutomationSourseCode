@@ -5430,6 +5430,18 @@ namespace Pegasus.Pages.UI_Pages
                     //Wait for the SIM5 assignment launch window
                     user = User.Get(studentName);
                 }
+
+                if (ConfigurationManager.AppSettings[StudentPresentationPageResource.Browser_Key]
+                    == StudentPresentationPageResource.IE_Browser_Value)
+                {
+                    base.WaitUntilWindowLoads(StudentPresentationPageResource.
+                        StudentPresentation_Page_Sim5_Title_Value);
+                    base.SelectWindow(StudentPresentationPageResource.
+                        StudentPresentation_Page_Sim5_Title_Value);
+                    IWebElement clickHere = base.GetWebElementPropertiesByClassName(StudentPresentationPageResource.
+                        StudentPresentation_Page_ClickHereToContinue_ClassLocator_Value);
+                    base.ClickByJavaScriptExecutor(clickHere);
+                }
                 // Wait for window
                 base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
                 base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
@@ -5966,7 +5978,8 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.SwitchToLastOpenedWindow();
                 //Close the Window
                 base.CloseBrowserWindow();
-                if (ConfigurationManager.AppSettings[StudentPresentationPageResource.Browser_Key] != "Chrome")
+                if (ConfigurationManager.AppSettings[StudentPresentationPageResource.Browser_Key]
+                    != StudentPresentationPageResource.Chrome_Browser_Value)
                 {
                     base.AcceptAlert();
                 }

@@ -1356,4 +1356,16 @@
   <data name="Browser_Key" xml:space="preserve">
     <value>Browser</value>
   </data>
+  <data name="Chrome_Browser_Value" xml:space="preserve">
+    <value>Chrome</value>
+  </data>
+  <data name="IE_Browser_Value" xml:space="preserve">
+    <value>Internet Explorer</value>
+  </data>
+  <data name="StudentPresentation_Page_ClickHereToContinue_ClassLocator_Value" xml:space="preserve">
+    <value>cont-button</value>
+  </data>
+  <data name="StudentPresentation_Page_Sim5_Title_Value" xml:space="preserve">
+    <value>Pearson SIMS - Office 2013</value>
+  </data>
 </root>

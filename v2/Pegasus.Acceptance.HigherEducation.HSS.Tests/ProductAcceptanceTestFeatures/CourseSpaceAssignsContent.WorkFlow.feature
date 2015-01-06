@@ -14,6 +14,7 @@ And I should see "Chapter 1: The Science of Psychology" asset
 And I should see the current date highlighted in the calendar frame
 When I drag and drop the "Chapter 1: The Science of Psychology" folder to the current date
 Then I should see due date icon displayed in current date
+And I refresh the page
 
 
 #Purpose : To validate Assign more than one content using Assign/Unassign link
@@ -28,6 +29,7 @@ And I select the check box of any 2 activities in "Chapter 2: The Biological Per
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+And I refresh the page
 
 
 
@@ -44,6 +46,7 @@ And I select the check box of any 1 activities in "Chapter 3: Sensation and Perc
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+And I refresh the page
 
 
 #Purpose: To drag and drop multiple assets in assignment calendar.
@@ -58,6 +61,7 @@ When I select "Review the Chapter 5 Learning Objectives" in "Calendar" by "HSSCs
 And I select the check box of any 2 activities in "Chapter 5: Learning"
 And I should drag and drop multiple assets along with "Review the Chapter 5 Learning Objectives" to the current date
 Then I should see due date icon displayed in current date
+And I refresh the page
 
 
 
@@ -71,6 +75,7 @@ And I should see "Chapter 1: The Science of Psychology" asset
 And I should see the current date highlighted in the calendar frame
 When I select the current date 
 Then I should see the assigned content "Complete the Chapter 1 Study Plan" in the day view
+And I refresh the page
 
 
 #Purpose: Assign a content to display start date icon
@@ -86,6 +91,7 @@ When I assign the asset for current date in the properties popup
 Then I should be on the "Calendar" page
 And I should see the current date highlighted in the calendar frame
 And I should see the startdate Icon in calendar frame
+And I refresh the page
 
 
 #Purpose :Instructor assign the asset with duedate in Managecoursework
@@ -100,6 +106,7 @@ And I click on "Properties" option in c menu of "Review the Chapter 1 Learning O
 Then I should be on the "Properties" page
 When I assign asset with due date and save
 Then I should see the successfull message "Properties updated successfully."
+And I refresh the page
 
 
 
