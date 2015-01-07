@@ -135,7 +135,6 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-
     <Course>
       <Name>90e61aa9-1a51-4825-8f69-4aa8088fc57e</Name>
       <CourseType>MMNDCoOrdinate</CourseType>
@@ -144,7 +143,6 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-
     <!--Hard coded Course data for "HEDMIL" Product.-->
     <Course>
       <Name>CGIE-MyITLab for Office 2013: GO! Series + Technology in Action</Name>
@@ -157,6 +155,14 @@
     <Course>
       <Name>CGIE-MASTER, MyPsychLab for Ciccarelli-3/e-Automation</Name>
       <CourseType>HSSMyPsychLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>MySpanishLab for ¡Anda! Curso elemental, 2e, Summer 2014 Re-Release</Name>
+      <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
@@ -192,7 +198,6 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-
     <!--Hard coded Course data for "NovaNET" Product.-->
     <Course>
       <Name>US History A 2.0 (Sequential)</Name>
@@ -227,6 +232,16 @@
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>CGIE_WLAutomation</Name>
+      <CourseType>MySpanishLabProgram</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SectionName>CGIE_WLSection</SectionName>
+      <SectionId>CRSKL8I-12001015</SectionId>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
     </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
@@ -641,6 +656,53 @@
       <Password >pegasusadmin</Password>
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
+    </User>
+    <!--Hard coded Users data for "Word Language".-->
+    <User>
+      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>f4e4</LastName>
+      <UserType>WLProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>cf3d</LastName>
+      <UserType>WLCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>1dd99b5c-24b5-4ba8-92ce-c7a1e8f3bcc0</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>e77b</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Zero Score "WLCsSmsStudent".-->
+    <User>
+      <Name>65496e7b-28a0-4c3c-b666-d00c54a1aa08</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>e77b</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <UserId>WL_User_SMS_STU_UC5</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
     </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->

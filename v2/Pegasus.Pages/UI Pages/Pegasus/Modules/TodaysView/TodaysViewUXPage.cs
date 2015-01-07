@@ -3879,10 +3879,6 @@ namespace Pegasus.Pages.UI_Pages
                             TodaysViewUXPageResource.
                             TodayViewUXPageResource_ActivityCmenuFocus_Locator,
                             setActivityRowCount));
-                        base.WaitForElement(By.XPath(string.Format(
-                            TodaysViewUXPageResource.
-                            TodayViewUXPageResource_ActivityCmenu_Locator,
-                            setActivityRowCount)), 10);
                         //Click on activity cmenu
                         IWebElement getActivityCmenu = base.GetWebElementPropertiesByXPath(string.Format(
                            TodaysViewUXPageResource.
@@ -3904,8 +3900,6 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "ClickActivityCmenu",
             base.IsTakeScreenShotDuringEntryExit);
         }
-
-
 
         /// <summary>
         ///Click on the activity to display its details and click on 'Mark as read'. 
@@ -3952,7 +3946,15 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage",
                 "GetActivityNameOfInstrucorGradingChannel",
                 base.IsTakeScreenShotDuringEntryExit);
-            string getActivityName = base.GetElementTextByPartialLinkText(activityName);
+            string getActivityName = string.Empty;
+            try
+            {
+              getActivityName = base.GetElementTextByPartialLinkText(activityName);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("TodaysViewUXPage",
                 "GetActivityNameOfInstrucorGradingChannel",
                    base.IsTakeScreenShotDuringEntryExit);

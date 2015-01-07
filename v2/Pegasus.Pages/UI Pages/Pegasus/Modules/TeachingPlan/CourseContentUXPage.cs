@@ -2230,7 +2230,8 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPageResource.
                     CoursePreviewUX_Page_Finish_Button_Id_Locator);
                 base.ClickByJavaScriptExecutor(finishButton);
-                Thread.Sleep(2000);
+                Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource.
+                    CourseContentUXPage_ShowHide_Status_Time_Value));
                 //Click on 'Return to course'
                 IWebElement returnToCourse = base.GetWebElementPropertiesById(
                    CourseContentUXPageResource.
