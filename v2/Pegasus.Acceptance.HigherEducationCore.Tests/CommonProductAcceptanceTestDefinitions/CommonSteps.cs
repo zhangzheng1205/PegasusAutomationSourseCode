@@ -43,27 +43,24 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             /// </summary>
             Right = 2,
         }
+
         /// <summary>
         /// Verifies the Correct Page Opened.
         /// </summary>
         /// <param name="expectedPageTitle">This is Expected Page Title.</param>
         [Then("I should be on the \"(.*)\" page")]
+        [Then("I should be on the \"(.*)\" window")]
         [Given(@"I am on the ""(.*)"" page")]
         [When(@"I am on the ""(.*)"" page")]
         public void ShowThePageInPegasus(String expectedPageTitle)
         {
-            //Check If Expected Page Is Opened
+            //Verify Correct Page Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                IsTakeScreenShotDuringEntryExit);
-            //Wait Till Thinking Indicator Loads
-            bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
-            //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
-            if (isThinkingIndicatorLoading)
-            {
-                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
-            }
-            //Wait For Page Get Switched
+                base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Some Time to Get off from light box
+            Thread.Sleep(Convert.ToInt32
+                (CommonStepsResource.CommonSteps_SleepTime_Value));
+            //wait for the window
             base.WaitUntilWindowLoads(expectedPageTitle);
             //Get current opened page title
             string actualPageTitle =
@@ -73,11 +70,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                IsTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Verifies the Pop Up Opened
+        /// Verifies the Pop Up Opened.
         /// Verifies the Correct Pop Up Opened.
         /// </summary>
         /// <param name="popUpName">This is PopUp Name.</param>
@@ -87,9 +84,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Correct Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
-            bool gh = base.IsPopupPresent((popUpName),10);
-            //Is Pop Up Present
-            Boolean isPopUpExist = base.IsWindowsExists(popUpName);
+            Boolean isPopUpExist = false;
+           
+                base.WaitUntilWindowLoads(popUpName);
+                isPopUpExist = base.IsWindowsExists(popUpName);
+           
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -799,16 +798,17 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               "DragAndDropFolderToCurrentDate",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
-        /// 
+        /// Submit The Learnocity Activity.
         /// </summary>
-        [Then(@"I submit the learnocity activity")]
+        [When(@"I submit the learnocity activity")]     
         public void SubmitTheLearnocityActivity()
         {
             Logger.LogMethodEntry("CommonSteps",
               "SubmitTheLearnocityActivity",
               base.IsTakeScreenShotDuringEntryExit);
-            new CoursePreviewUXPage().SubmittingtheLearnocityActivityByStudent();
+            new CourseContentUXPage().SubmittingtheLearnocityActivityByStudent();
             Logger.LogMethodExit("CommonSteps",
                "SubmitTheLearnocityActivity",
                base.IsTakeScreenShotDuringEntryExit);

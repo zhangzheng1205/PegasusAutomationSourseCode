@@ -102,7 +102,7 @@ testRunner.Then("I should see the order of assigned contents in calendar same as
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
-testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
@@ -113,8 +113,6 @@ testRunner.And("I should see the current date highlighted in the calendar frame"
 testRunner.When("I drag and drop the \"Capítulo 01: ¿Quiénes somos?\" folder to the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
 testRunner.Then("I should see due date icon displayed in current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
-testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -128,7 +126,7 @@ testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table
 #line 31
 this.ScenarioSetup(scenarioInfo);
 #line 32
-testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 33
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 34
@@ -142,8 +140,6 @@ testRunner.Then("I should see Assign/Unassign link in active state on the conten
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 38
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
-testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -157,7 +153,7 @@ testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table
 #line 45
 this.ScenarioSetup(scenarioInfo);
 #line 46
-testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 47
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 48
@@ -171,8 +167,6 @@ testRunner.Then("I should see Assign/Unassign link in active state on the conten
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 52
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
-testRunner.Then("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -186,7 +180,7 @@ testRunner.Then("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Tabl
 #line 59
 this.ScenarioSetup(scenarioInfo);
 #line 60
-testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 62
@@ -201,8 +195,6 @@ testRunner.And("I should drag and drop multiple assets along with \"SAM 06-01 De
                     "ew: Capítulos Preliminar A,  1 y 2]\" to the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 66
 testRunner.Then("I should see due date icon displayed in current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
-testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -227,8 +219,6 @@ testRunner.And("I should see the current date highlighted in the calendar frame"
 testRunner.When("I select the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 79
 testRunner.Then("I should see the assigned content \"Readiness Check 01\" in the day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
-testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -242,7 +232,7 @@ testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table
 #line 86
 this.ScenarioSetup(scenarioInfo);
 #line 87
-testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 88
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 89
@@ -261,8 +251,6 @@ testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((Tech
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 95
 testRunner.And("I should see the startdate Icon in calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 96
-testRunner.And("I refresh the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

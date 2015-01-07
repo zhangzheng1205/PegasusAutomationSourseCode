@@ -410,36 +410,5 @@ namespace Pegasus.Pages.UI_Pages
                           base.IsTakeScreenShotDuringEntryExit);
 
          }  
-
-         /// <summary>
-         /// 
-         /// </summary>
-         /// <param name="recordButtonNumber"></param>
-         public void SubmittingtheLearnocityActivityByStudent()
-         {
-             try
-             {
-
-                 base.WaitUntilWindowLoads(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
-                 base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
-                 IList<IWebElement> recordButtonList = WebDriver.FindElements(By.CssSelector("[class$='lrn_btn lrn_start_recording']"));
-                 for (int i = 0; i < recordButtonList.Count; i++)
-                 {
-                     Thread.Sleep(3000);
-                     base.ClickByJavaScriptExecutor(recordButtonList[i]);
-                     Thread.Sleep(5000);
-                     base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
-                     base.ClickByJavaScriptExecutor(recordButtonList[i]);
-                 }
-                 // Submitt WL Activity
-                 new CourseContentUXPage().SubmitActivity();
-             }
-             catch (Exception e)
-             {
-
-                 ExceptionHandler.HandleException(e);
-             }
-         }
-
     }
 }
