@@ -37,10 +37,10 @@ namespace Pegasus.Pages.UI_Pages
              AppSettings["AssignedToCopyInterval"]);
 
         private static int pixelValueToSrollDown;
+
         private static string divFolderNodeID;
         private static string divSubFolderNodeID;
         private static string divLeafFolderNodeID;
-
 
         /// <summary>
         /// Search Asset in Planner Tab
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Advanced Search Link
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator));
-                IWebElement advancedSearchLink=base.GetWebElementPropertiesById(
+                IWebElement advancedSearchLink = base.GetWebElementPropertiesById(
                     CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator);
                 Thread.Sleep(3000);
@@ -751,6 +751,10 @@ namespace Pegasus.Pages.UI_Pages
             stopWatch.Start();
             while (stopWatch.Elapsed.Minutes < minutesToWait)
             {
+                Thread.Sleep(10000);
+                base.WaitForElement(By.ClassName(
+                    CalendarDefaultGlobalUXPageResource
+                     .CalendarDefaultGlobalUX_Page_DropFrame_ClassName));
                 // Get the calendar text from where activity is dropped
                 IWebElement getCalendarText = base.GetWebElementPropertiesByClassName
                     (CalendarDefaultGlobalUXPageResource
@@ -810,7 +814,7 @@ namespace Pegasus.Pages.UI_Pages
                       (CalendarDefaultGlobalUXPageResource
                       .CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id);
                 base.SwitchToDefaultPageContent();
-            }   
+            }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -827,7 +831,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="folderName">Name of the folder to expand.</param>
         public void ExpandFolderInPlannerTab(string folderName)
         {
-            
+
             //Expand the folder in Curriculum tab
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ExpandFolderInPlannerTab",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -851,7 +855,9 @@ namespace Pegasus.Pages.UI_Pages
                     base.ClickByJavaScriptExecutor(expandButtonProperties);
                     //Store the node ID of folder which needs to be used in order to find sub folder
                     divFolderNodeID = base.GetWebElementPropertiesByXPath(string.Format(CalendarDefaultGlobalUXPageResource.
-                        CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator, i)).GetAttribute("nodeid");
+                        CalendarDefaultGlobalUX_Page_FolderName_Xpath_Locator, i)).GetAttribute(
+                        CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_Folder_NodeID_Id_Locator);
                     break;
                 }
 
@@ -869,38 +875,66 @@ namespace Pegasus.Pages.UI_Pages
             //Expand the folder in Curriculum tab
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ExpandSubFolderInPlannerTab",
                   base.IsTakeScreenShotDuringEntryExit);
-            //Create the div ID of subfolder
-            string subfolderDivId = "ContainerID_" + divFolderNodeID;
-            //Get subfolder count
-            int getSubFolderCount = base.GetElementCountByXPath(
-                string.Format(CalendarDefaultGlobalUXPageResource.
-                CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator, subfolderDivId));
-            //Loop through sub folders to find the expected sub folder
-            for (int j = 1; j <= getSubFolderCount; j++)
-            
+            try
             {
-                //Get subfolder name
-                string getSubFolderName = base.GetElementTextByXPath(string.
-                    Format(CalendarDefaultGlobalUXPageResource.
-                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator,subfolderDivId, j));
-                //Check whether fetched sub folder name is same as expected sub folder name
-                if (subFolderName.Equals(getSubFolderName))
+                pixelValueToSrollDown = 320;
+                //Create the div ID of subfolder
+                string subfolderDivId = "ContainerID_" + divFolderNodeID;
+                //Get subfolder count
+                int getSubFolderCount = base.GetElementCountByXPath(
+                    string.Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator, subfolderDivId));
+                //Loop through sub folders to find the expected sub folder
+                for (int j = 1; j <= getSubFolderCount; j++)
                 {
-                    
-                    IWebElement subFolderExpandButton = base.GetWebElementPropertiesByXPath(
-                        string.Format(CalendarDefaultGlobalUXPageResource.
-                        CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator,subfolderDivId, j));
-                    //Expand the sub folder
-                    base.ClickByJavaScriptExecutor(subFolderExpandButton);
-                    //Store the node ID of sub folder which needs to be used in order to find leaf folder
-                    divSubFolderNodeID = base.GetWebElementPropertiesByXPath(string.
+                    bool isSubFolderExpandNameExists = base.IsElementPresent(By.XPath(string.
                         Format(CalendarDefaultGlobalUXPageResource.
-                        CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, subfolderDivId, j)).
-                        GetAttribute("nodeid");
-                    break;
-                }
+                        CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, subfolderDivId, j)), 1);
 
+                    while (!isSubFolderExpandNameExists)
+                    {
+
+                        IJavaScriptExecutor js = (IJavaScriptExecutor)WebDriver;
+                        js.ExecuteScript("arguments[0].scrollTop = arguments[1];", base.
+                            GetWebElementPropertiesById(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_ContentFrame_DivID_Id_Locator), pixelValueToSrollDown);
+                        //Scroll the frame
+                        isSubFolderExpandNameExists = base.IsElementPresent(By.XPath(string.
+                Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, subfolderDivId, j)), 1);
+
+                        pixelValueToSrollDown = pixelValueToSrollDown + 100;
+                    }
+
+                    //Get subfolder name
+                    string getSubFolderName = base.GetElementTextByXPath(string.
+                        Format(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, subfolderDivId, j));
+                    //Check whether fetched sub folder name is same as expected sub folder name
+                    if (subFolderName.Equals(getSubFolderName))
+                    {
+
+                        IWebElement subFolderExpandButton = base.GetWebElementPropertiesByXPath(
+                            string.Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator, subfolderDivId, j));
+                        //Expand the sub folder
+                        base.ClickByJavaScriptExecutor(subFolderExpandButton);
+                        //Store the node ID of sub folder which needs to be used in order to find leaf folder
+                        divSubFolderNodeID = base.GetWebElementPropertiesByXPath(string.
+                            Format(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, subfolderDivId, j)).
+                            GetAttribute(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_Folder_NodeID_Id_Locator);
+                        break;
+                    }
+
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ExpandSubFolderInPlannerTab",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -908,7 +942,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Expand the lead folder in planner tab.
         /// </summary>
-        /// <param name="leafFolderName">Name of leaf folder to expan</param>
+        /// <param name="leafFolderName">Name of leaf folder to expand.</param>
         public void LeafFolderExpansionInPlannerTab(string leafFolderName)
         {
             //Expand the folder in Curriculum tab
@@ -928,18 +962,21 @@ namespace Pegasus.Pages.UI_Pages
                     //Check whether Subfolder is visible
                     bool isLeafFolderExpandNameExists = base.IsElementPresent(By.XPath(string.
                     Format(CalendarDefaultGlobalUXPageResource.
-                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)), 5);
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)), 1);
                     //Scroll down the frame till subfolder is visible
-                    while (isLeafFolderExpandNameExists == false)
+                    while (!isLeafFolderExpandNameExists)
                     {
+
                         IJavaScriptExecutor js = (IJavaScriptExecutor)WebDriver;
                         js.ExecuteScript("arguments[0].scrollTop = arguments[1];", base.
-                            GetWebElementPropertiesById("TreeViewContainer"), 100);
-
-                        //base.PressKey(Keys.PageDown);
+                            GetWebElementPropertiesById(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_ContentFrame_DivID_Id_Locator), pixelValueToSrollDown);
+                        //Scroll the frame
                         isLeafFolderExpandNameExists = base.IsElementPresent(By.XPath(string.
                 Format(CalendarDefaultGlobalUXPageResource.
-                CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)), 5);
+                CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)), 1);
+
+                        pixelValueToSrollDown = pixelValueToSrollDown + 320;
                     }
 
                     //Get leaf folder name
@@ -952,7 +989,8 @@ namespace Pegasus.Pages.UI_Pages
                         //Store the node ID of leaf folder which needs to be used in order to find activity inside leaf folder
                         divLeafFolderNodeID = base.GetWebElementPropertiesByXPath(string.Format(CalendarDefaultGlobalUXPageResource.
                             CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, leafFolderDivId, j)).
-                            GetAttribute("nodeid");
+                            GetAttribute(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_Folder_NodeID_Id_Locator);
                         IWebElement subFolderExpandButton = base.GetWebElementPropertiesByXPath(
                             string.Format(CalendarDefaultGlobalUXPageResource.
                             CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator, leafFolderDivId, j));
@@ -1007,15 +1045,15 @@ namespace Pegasus.Pages.UI_Pages
                         //Get HTML peroperty of Cmenu icon
                         bool activityCmenu = base.IsElementPresent(By.XPath(string.Format(CalendarDefaultGlobalUXPageResource.
                             CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator, activityDivId, k)
-                            ),5);
+                            ), 5);
                         IWebElement getPropertyOfCmenuIcon =
                             base.GetWebElementPropertiesByXPath(
                             string.Format(CalendarDefaultGlobalUXPageResource.
                             CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator, activityDivId, k));
-                          base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
+                        base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
                         //Wait for Cmenu option to display
-                          this.ClickOnCmenuOptionInPlannerTab(cmenuOption);
-                          base.SwitchToDefaultPageContent();
+                        this.ClickOnCmenuOptionInPlannerTab(cmenuOption);
+                        base.SwitchToDefaultPageContent();
                     }
                     catch (Exception e)
                     {
@@ -1039,7 +1077,7 @@ namespace Pegasus.Pages.UI_Pages
                 "MouseHoverOnActivity",
                  base.IsTakeScreenShotDuringEntryExit);
             bool isActivityExists = base.IsElementPresent(By.XPath
-                (assetPath),5);
+                (assetPath), 5);
             base.WaitForElement(By.XPath(assetPath));
             //Mouse Hover On Searched Activity Name
             IWebElement testName = base.GetWebElementPropertiesByXPath(assetPath);
@@ -1077,31 +1115,54 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assignedActivityTitle">Activity name.</param>
         /// <returns>Assigned activity name.</returns>
         public string GetAssignedContentTitle(string assignedActivityTitle)
-         {
+        {
             //Get assigned activity title
-             logger.LogMethodEntry("ContentLibraryPage", "GetAssignedContentTitle",
-                base.IsTakeScreenShotDuringEntryExit);
-             string getAssignedContentTitle = null;
-            //Select planner tab.
-             this.SelectWindowAndSwitchToFrame();
+            logger.LogMethodEntry("ContentLibraryPage", "GetAssignedContentTitle",
+               base.IsTakeScreenShotDuringEntryExit);
+            string getAssignedContentTitle = null;
+            int getAssignedContentsCount = 1;
+            base.SwitchToDefaultPageContent();
+            this.SelectWindowAndSwitchToFrame();
             //Fetch the contents count in calendar frame
-             int getAssignedContentsCount = base.GetElementCountByXPath(
-                 CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator);
-            try{
-
-            for(int i=2; i<=getAssignedContentsCount; i++)
+            try
             {
-                //Fetch title
-                getAssignedContentTitle = base.GetElementTextByXPath(
-                   string.Format(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator,i));
-                if(assignedActivityTitle.Equals(getAssignedContentTitle))
+                base.IsThinkingIndicatorLoading();
+                base.WaitForElement(By.XPath(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator));
+                getAssignedContentsCount = base.GetElementCountByXPath(
+                        CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator);
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                while (stopWatch.Elapsed.Minutes < minutesToWait && getAssignedContentsCount == 1)
                 {
-                    break;
+                    base.SwitchToDefaultPageContent();
+                    base.RefreshIFrameByJavaScriptExecutor(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    base.WaitUntilWindowLoads(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
+                    // switch to planner frame
+                    this.SelectWindowAndSwitchToFrame();
+                    getAssignedContentsCount = base.GetElementCountByXPath(
+                        CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator);
                 }
-            }
 
+                for (int i = 2; i <= getAssignedContentsCount; i++)
+                {
+
+                    //Fetch title
+                    getAssignedContentTitle = base.GetElementTextByXPath(
+                       string.Format(CalendarDefaultGlobalUXPageResource.
+                       CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator, i));
+                    if (assignedActivityTitle.Equals(getAssignedContentTitle))
+                    {
+                        break;
+                    }
                 }
-            catch(Exception e)
+
+            }
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -1109,7 +1170,8 @@ namespace Pegasus.Pages.UI_Pages
                 "GetAssignedContentTitle",
                  base.IsTakeScreenShotDuringEntryExit);
             return getAssignedContentTitle;
-         }
+        }
+
 
         /// <summary>
         /// Drand and Drop 
@@ -1188,6 +1250,9 @@ namespace Pegasus.Pages.UI_Pages
 
             }
         }
-    
+
+
+
+
     }
 }

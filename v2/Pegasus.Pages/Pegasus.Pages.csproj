@@ -883,6 +883,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GBRoasterDefaultUXPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterEnrollFrmSchoolPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterEnrollFrmSchoolPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBRoasterEnrollFrmSchoolPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRosterGridUXPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRosterGridUXPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2408,6 +2414,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterDefaultUXPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GBRoasterDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterEnrollFrmSchoolPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBRoasterEnrollFrmSchoolPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBRosterGridUXPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

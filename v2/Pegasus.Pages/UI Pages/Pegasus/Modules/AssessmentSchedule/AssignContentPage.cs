@@ -1474,11 +1474,14 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try{
 
+                User user = User.Get(User.UserTypeEnum.DPCsTeacher);
+                DateTime dateTime = user.CurrentProfileDateTime.AddMinutes(460);
+                string currentDateTime = dateTime.ToString();
                 // Get the current date and time
-                string systemTime = DateTime.Now.ToShortTimeString();
-                string systemDate = DateTime.Now.Date.ToString("MM/dd/yyyy");
-                string hour = systemTime.Split(':')[0];
-                string min = (systemTime.Split(':')[1]).Split(' ')[0];
+                string systemTime = currentDateTime.Split(' ')[1];
+                string systemDate = currentDateTime.Split(' ')[0];
+                string hour = systemTime.Split(':')[1];
+                string min = (systemTime.Split(':')[2]).Split(' ')[0];
                 string dayTime = systemTime.Split(' ')[1];
                 
                
@@ -1504,10 +1507,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectDropDownValueThroughTextById("CMBAMPMDUEDT", dayTime);
 
                 //store date and time in memory
-                String instance = systemDate + " " + systemTime;
-                DateTime datetime = Convert.ToDateTime(instance);
+                string dateTimeInstance = systemDate + " " + systemTime;
+                DateTime datetime = Convert.ToDateTime(dateTimeInstance);
                 //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
-                User user = User.Get(User.UserTypeEnum.DPCsTeacher);
+                user = User.Get(User.UserTypeEnum.DPCsTeacher);
                 user.CurrentProfileDateTime = datetime;
 
                  } 
