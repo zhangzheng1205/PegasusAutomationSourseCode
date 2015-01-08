@@ -67,6 +67,8 @@ namespace Pegasus.Pages.UI_Pages
             //Switch to Frame
             base.SwitchToIFrame("__hifSmartNav");*/
             //3rd frame
+            bool jk = base.IsElementPresent(By.Id(ProgramAdminReportsSubTabPageResource.
+                ProgramAdmin_Page_Frame_Id_Locator),10);
             base.WaitForElement(By.Id(ProgramAdminReportsSubTabPageResource.
                 ProgramAdmin_Page_Frame_Id_Locator));
             //Switch to Frame
@@ -434,8 +436,7 @@ namespace Pegasus.Pages.UI_Pages
              try
              {
                  base.SwitchToLastOpenedWindow();
-                 bool msdhfg = base.IsElementPresent(By.Id("_ctl0_PageContent_ifrmMiddle"), 10);
-                 base.SwitchToIFrameById("_ctl0_PageContent_ifrmMiddle");
+                 this.SwitchToMainFrame();
                  bool msdhf = base.IsElementPresent(By.XPath(ProgramAdminReportsSubTabPageResource.
                      ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator), 10);
                  base.WaitForElement(By.XPath(
