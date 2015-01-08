@@ -205,6 +205,26 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Select Cmenu option of Class.
+        /// </summary>
+        /// <param name="className">Name of class whose cmenu option need to be selected.</param>
+        /// <param name="cmenuOption">Cmenu option to select.</param>
+        [When(@"I click on Cmenu option of Class ""(.*)"" and select ""(.*)"" option")]
+        public void SelectCmenuOptionOfClass(string className, string cmenuOption)
+        {
+            Logger.LogMethodEntry("GlobalHome",
+              "SelectCmenuOptionOfClass",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Click on cmenu icon of class and select the required option
+            new HomePage().ClickOnCmenuIconOfClassAndSelectOption(className, cmenuOption);
+            Logger.LogMethodExit("GlobalHome",
+                "SelectCmenuOptionOfClass",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
                 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

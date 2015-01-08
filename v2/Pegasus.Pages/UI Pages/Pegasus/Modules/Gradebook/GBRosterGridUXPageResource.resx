@@ -117,11 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GBRosterGridUX_Page_CloseButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_btnCancel</value>
+  </data>
+  <data name="GBRosterGridUX_Page_ContainerFrame_Id_Locator" xml:space="preserve">
+    <value>Containeriframe</value>
+  </data>
   <data name="GBRosterGridUX_Page_CreateNewButton_PartialLinkText" xml:space="preserve">
     <value>Create New</value>
   </data>
+  <data name="GBRosterGridUX_Page_CreateNew_DropDownOption_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='cmForCreateMenu']/table/tbody/tr</value>
+  </data>
+  <data name="GBRosterGridUX_Page_CreateNew_DropDownOption_Text_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='cmForCreateMenu']/table/tbody/tr[{0}]</value>
+  </data>
+  <data name="GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridRoster']/tbody/tr[{0}]/td[9]/span</value>
+  </data>
   <data name="GBRosterGridUX_Page_Frame_Id_Locator" xml:space="preserve">
     <value>frameRoster</value>
+  </data>
+  <data name="GBRosterGridUX_Page_GlobalHome_Window_Title" xml:space="preserve">
+    <value>Global Home</value>
+  </data>
+  <data name="GBRosterGridUX_Page_Home_Link_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink</value>
+  </data>
+  <data name="GBRosterGridUX_Page_Loop_Initializer_Value" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="GBRosterGridUX_Page_ManageRoster_Message_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblAlert']/tbody/tr/td/span</value>
@@ -131,6 +155,12 @@
   </data>
   <data name="GBRosterGridUX_Page_Student_Id_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_lblStudent1</value>
+  </data>
+  <data name="GBRosterGridUX_Page_TeachingAssistent_Password" xml:space="preserve">
+    <value>password1</value>
+  </data>
+  <data name="GBRosterGridUX_Page_UserListTable_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridRoster']/tbody/tr</value>
   </data>
   <data name="GBRosterGridUX_Page_Username_CmenuImg_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GridRoster']/tbody/tr[{0}]/td[3]/span/img</value>
@@ -144,28 +174,16 @@
   <data name="GBRosterGridUX_Page_Username_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GridRoster']/tbody/tr[{0}]/td[9]/span</value>
   </data>
+  <data name="GBRosterGridUX_Page_UserRole_Time_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="GBRosterGridUX_Page_UserRole_Title_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridRoster']/tbody/tr/td[7]</value>
+  </data>
   <data name="GBRosterGridUX_Page_User_Count_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GridRoster$contentCntr']/tbody/tr/td/table/tbody/tr</value>
   </data>
   <data name="GBRosterGridUX_Page_Window_Title" xml:space="preserve">
     <value>Roster</value>
-  </data>
-  <data name="GBRosterGridUX_Page_GlobalHome_Window_Title" xml:space="preserve">
-    <value>Global Home</value>
-  </data>
-  <data name="GBRosterGridUX_Page_Home_Link_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink</value>
-  </data>
-  <data name="GBRosterGridUX_Page_UserRole_Title_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GridRoster']/tbody/tr/td[7]</value>
-  </data>
-  <data name="GBRosterGridUX_Page_TeachingAssistent_Password" xml:space="preserve">
-    <value>password1</value>
-  </data>
-  <data name="GBRosterGridUX_Page_UserRole_Time_Value" xml:space="preserve">
-    <value>3000</value>
-  </data>
-  <data name="GBRosterGridUX_Page_Loop_Initializer_Value" xml:space="preserve">
-    <value>1</value>
   </data>
 </root>

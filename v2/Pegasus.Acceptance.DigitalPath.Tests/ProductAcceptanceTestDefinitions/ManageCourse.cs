@@ -105,6 +105,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// Verify display of assigned LCC name.
         /// </summary>
         /// <param name="lccName">LCC activity name</param>
+        [Then(@"I should see assigned study plan ""(.*)""")]
         [Then(@"I should see assigned LCC ""(.*)""")]
         public void ValidateLCCNameDisplayInManageCourseMaterial(string lccName)
         {
@@ -123,6 +124,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="status">Expected status.</param>
         /// <param name="activityName">LCC name.</param>
+        [Then(@"I should see status as ""(.*)"" for study plan ""(.*)""")]
         [Then(@"I should see status as ""(.*)"" for LCC ""(.*)""")]
         public void ValidateStatusOftheActivity(string status, string activityName)
         {
@@ -142,6 +144,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// manage course materials tab.
         /// </summary>
         /// <param name="lccName">LCC name</param>
+        [Then(@"I should see the due date for study plan ""(.*)""")]
         [Then(@"I should see the due date for LCC ""(.*)""")]
         public void ValidateDueDateOfLCC(string lccName)
         {

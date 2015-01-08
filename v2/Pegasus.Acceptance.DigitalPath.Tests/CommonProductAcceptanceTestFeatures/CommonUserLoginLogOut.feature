@@ -115,3 +115,8 @@ Then I should be logged in successfully
 Scenario: User LogOut As CourseSpaceTeacher
 When I "Sign out" from the "DPCsTeacher"
 Then I should see the "Signed Out" message
+
+#Purpose: To save the profile date and time
+Scenario: DP Teacher saving the profile date and time
+When I click 'My Profile' link as "DPCsTeacher"
+And I store user current date and time of the teacher

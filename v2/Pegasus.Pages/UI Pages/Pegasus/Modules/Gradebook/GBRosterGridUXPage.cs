@@ -272,5 +272,166 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBRosterGridUXPage", "StoreTheTADetailsInMemory",
                   base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Click on Create new button.
+        /// </summary>
+        public void ClickOnCreateNewButton()
+        {
+            //Click on create new button
+            logger.LogMethodEntry("GBRosterGridUXPage", "ClickOnCreateNewButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                this.SelectManageStudentsWindow();
+                base.WaitForElement(By.Id(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_Frame_Id_Locator));
+                //Switch to iframe
+                base.SwitchToIFrameById(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_Frame_Id_Locator);
+                base.WaitForElement(By.PartialLinkText(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_CreateNewButton_PartialLinkText));
+                //Get element property
+                IWebElement getCreateNewButton = base.GetWebElementPropertiesByPartialLinkText
+                    (GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_CreateNewButton_PartialLinkText);
+                //Click on Create New button
+                base.ClickByJavaScriptExecutor(getCreateNewButton);
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBRosterGridUXPage", "ClickOnCreateNewButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Enrollment Window.
+        /// </summary>
+        private void SelectManageStudentsWindow()
+        {
+            //Select Manage students Window
+            logger.LogMethodEntry("GBRosterGridUXPage", "SelectEnrollmentWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Wait for window to load
+            base.WaitUntilWindowLoads(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_ManageRoster_Window_Title);
+            //Select the window
+            base.SelectWindow(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_ManageRoster_Window_Title);
+            //Switch to parent iframe
+            base.SwitchToIFrameById(GBRosterGridUXPageResource.GBRosterGridUX_Page_ContainerFrame_Id_Locator);
+            logger.LogMethodExit("GBRosterGridUXPage", "SelectEnrollmentWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on create new drop down option in Manage students pop up.
+        /// </summary>
+        /// <param name="dropDownValue">Drop down option to click.</param>
+        public void SelectOptionsUnderCreateNewDropDown(string dropDownValue)
+        {
+            //Click on drop down option
+            logger.LogMethodEntry("GBRosterGridUXPage", "SelectOptionsUnderCreateNewDropDown",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get the drop down option counts
+                int getCreateNewDropDownValuesCount = base.GetElementCountByXPath(
+                GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_CreateNew_DropDownOption_Count_Xpath_Locator);
+                for (int i = 1; i <= getCreateNewDropDownValuesCount; i++)
+                {
+                    //Get drop down option text
+                    string getCreateNewDropValuesText = base.GetElementTextByXPath(
+                    string.Format(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_CreateNew_DropDownOption_Text_Xpath_Locator, i)).Trim();
+                    if (dropDownValue.Equals(getCreateNewDropValuesText))
+                    {
+                        //Click on drop down option
+                        IWebElement getCreateNewDropDownValueProperty = base.GetWebElementPropertiesByXPath
+                            (string.Format(GBRosterGridUXPageResource.
+                        GBRosterGridUX_Page_CreateNew_DropDownOption_Text_Xpath_Locator, i));
+                        base.ClickByJavaScriptExecutor(getCreateNewDropDownValueProperty);
+                        break;
+                    }
+                }
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBRosterGridUXPage", "SelectOptionsUnderCreateNewDropDown",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on close button in manage students pop up.
+        /// </summary>
+        public void ClickOnCloseButton()
+        {
+            //Click on close button
+            logger.LogMethodEntry("GBRosterGridUXPage", "ClickOnCloseButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on close button
+                base.ClickButtonById(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_CloseButton_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBRosterGridUXPage", "ClickOnCloseButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Check whether student displayed or not.
+        /// </summary>
+        /// <param name="username">User name to validate.</param>
+        /// <returns></returns>
+        public bool IsEnrolledStudentDisplayedUnderRoster(string username)
+        {
+
+            logger.LogMethodEntry("GBRosterGridUXPage", "IsEnrolledStudentDisplayedUnderRoster",
+                  base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(10000);
+            string getUsername;
+            bool isUserEnrolled = false;
+            //Select manage students window
+            this.SelectManageStudentsWindow();
+            base.WaitForElement(By.Id(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_Frame_Id_Locator));
+            //Switch to iframe
+            base.SwitchToIFrameById(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_Frame_Id_Locator);
+            //Get users count
+            int getEnrolledUsersCount = base.GetElementCountByXPath(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_UserListTable_Xpath_Locator);
+            for (int initialCount = 1; initialCount <= getEnrolledUsersCount;
+                initialCount++)
+            {
+                //Fetch enrolled user name
+                getUsername = base.GetElementTextByXPath(string.Format(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator, initialCount));
+                if (username.Equals(getUsername))
+                {
+                    //If user name found then set the variable to true
+                    isUserEnrolled = true;
+                    base.SwitchToDefaultPageContent();
+                    break;
+                }
+
+            }
+            logger.LogMethodExit("GBRosterGridUXPage", "IsEnrolledStudentDisplayedUnderRoster",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return isUserEnrolled;
+        }
     }
 }

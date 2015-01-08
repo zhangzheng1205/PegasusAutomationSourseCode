@@ -56,3 +56,32 @@ And I click on Save and Assign button
 And I click on Ok button in Assign pop up
 Then I should see Assign pop up closed
 And I should see the assigned content "1-1 Homework" in Calendar frame
+
+
+#Test case id: peg-16954
+#Purpose: To assign study plan via drag and drop
+Scenario: Teacher assigns study plan via drag and drop in planner tab
+When I navigate to the "Planner" tab
+And I expand the folder "Expressions and Equations" in Planner tab
+And I expand the sub folder "Variables and Expressions" in Planner tab
+And I expand the leaf folder "Topic 1 Test" in Planner tab
+And I Drag and drop the study plan "Topic 1 Test with Study Plan"
+And I refresh the frame till content is copied
+Then I should see the assigned Study plan "Topic 1 Test with Study Plan" in calendar frame
+
+#Test case id: peg-22528
+#Purpose: Teacher assigns Math XL from planner tab
+Scenario: Digital Path teacher assigns Math XL activity to current date
+When I navigate to the "Planner" tab
+And I expand the folder "Expressions and Equations" in Planner tab
+And I expand the sub folder "Variables and Expressions" in Planner tab
+And I expand the leaf folder "Topic 1 Test" in Planner tab
+And I select cmenu option "Assign" of "Topic 1 Test" activity in Planner tab
+And I click on Ok button in Alert pop up
+Then I should see "Assign" pop up
+When I select the class "Class Digits 6"
+And I select the current date and due date
+And I click on Save and Assign button
+And I click on Ok button in Assign pop up
+Then I should see Assign pop up closed
+And I should see the assigned content "Topic 1 Test" in Calendar frame

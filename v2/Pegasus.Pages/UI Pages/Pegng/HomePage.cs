@@ -738,5 +738,71 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("HomePage", "ClickWelcomeMessageBoxNavigationButton",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select required cmenu option of class.
+        /// </summary>
+        /// <param name="className">Name of the class for which cmenu option has to be selected.</param>
+        /// <param name="cmenuOption">Cmenu option required to be selected.</param>
+        public void ClickOnCmenuIconOfClassAndSelectOption(string className, string cmenuOption)
+        {
+            // Enter into the Class
+            logger.LogMethodEntry("HomePage", "ClickOnCmenuIconOfClassAndSelectOption",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window               
+                base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
+                //Get Class Count
+                int getClassCount = base.GetElementCountByXPath(HomePageResource.
+                   HomePage_ClassesDivCount_Xpath_Locator);
+                // Click on particular class
+                for (int initialCount = Convert.ToInt32(HomePageResource.
+            HomePage_ClassesDivInitialCount_Value); initialCount <= getClassCount; initialCount++)
+                {
+                    //Wait For Element
+                    base.WaitForElement(By.XPath(string.Format(HomePageResource.
+                       HomePage_ClassName_Link_Xpath_Locator, initialCount)));
+                    Thread.Sleep(Convert.ToInt32(HomePageResource.HomePage_TheardSleep_Value));
+                    //Get class name text                 
+                    string classNameText = base.GetElementTextByXPath(string.Format(
+                        HomePageResource.HomePage_ClassName_Link_Xpath_Locator, initialCount)).Trim();
+                    if (classNameText == className)
+                    {
+                        // Click on Class Cmenu icon
+                        IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath
+                            (string.Format(HomePageResource.
+                            HomePage_ClassCmenu_Link_Xpath_Locator, initialCount));
+                        base.ClickByJavaScriptExecutor(getCmenuIconProperty);
+                        int getCmenuOptionsCount = base.GetElementCountByXPath(
+                            string.Format(HomePageResource.
+                            HomePage_ClassCmenu_Options_Xpath_Locator, initialCount));
+                        for (int j = 1; j <= getCmenuOptionsCount; j++)
+                        {
+                            //Get cmenu option
+                            string getCmenuName = base.GetElementTextByXPath(string.Format(
+                                HomePageResource.HomePage_ClassCmenu_OptionsText_Xpath_Locator, initialCount, j));
+                            if (cmenuOption.Equals(getCmenuName))
+                            {
+                                //Click on cmenu option
+                                IWebElement getCmenuProperty = base.GetWebElementPropertiesByXPath
+                                    (string.Format(
+                                HomePageResource.HomePage_ClassCmenu_OptionsText_Xpath_Locator, initialCount, j));
+                                base.ClickByJavaScriptExecutor(getCmenuProperty);
+                                break;
+                            }
+
+                        }
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("HomePage", "ClickOnCmenuIconOfClassAndSelectOption",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

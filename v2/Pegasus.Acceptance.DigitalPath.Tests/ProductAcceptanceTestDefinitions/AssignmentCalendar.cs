@@ -201,6 +201,52 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
 
 
         /// <summary>
+        /// Drag and drop the activity. 
+        /// </summary>
+        /// <param name="activityName">Name of the content to drag and drop.</param>
+        [When(@"I Drag and drop the study plan ""(.*)""")]
+        public void DragAndDropContent(string activityName)
+        {
+            //Drag and drop the activity in planner
+            Logger.LogMethodEntry("AssignmentCalendar", "DragAndDropContent",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CalendarDefaultGlobalUXPage().DragAndDropActivityInPlannerTab(activityName);
+            Logger.LogMethodExit("AssignmentCalendar", "DragAndDropContent",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Refresh the planner tab.
+        /// </summary>
+        [When(@"I refresh the frame till content is copied")]
+        public void RefreshCalendarFrame()
+        {
+            //Validate assigned content in calendar
+            Logger.LogMethodEntry("AssignmentCalendar", "RefreshCalendarFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CalendarDefaultGlobalUXPage().VerifyAssignedTextOnCalendar();
+            Logger.LogMethodExit("AssignmentCalendar", "RefreshCalendarFrame",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify assigned content display in Calendar frame
+        /// </summary>
+        /// <param name="activityName">Content name to validate.</param>
+        [Then(@"I should see the assigned Study plan ""(.*)"" in calendar frame")]
+        public void ValidateAssignedContentDisplayInCalendar(string activityName)
+        {
+            //Validate assigned content in calendar
+            Logger.LogMethodEntry("AssignmentCalendar", "ValidateAssignedContentDisplayInCalendar",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate assigned content in calendar
+            Logger.LogAssertion("ValidateAssignedContentDisplayInCalendar", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName, new CalendarDefaultGlobalUXPage().GetAssignedContentTitle(activityName)));
+            Logger.LogMethodExit("AssignmentCalendar", "ValidateAssignedContentDisplayInCalendar",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

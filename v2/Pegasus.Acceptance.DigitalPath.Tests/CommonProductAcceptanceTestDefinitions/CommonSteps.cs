@@ -450,22 +450,32 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
-        /// Initialize Pegasus test before test execution starts.
+        /// Click on myprofile link in home page.
         /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
+        /// <param name="userType">User role.</param>
+        [When(@"I click 'My Profile' link as ""(.*)""")]
+        public void ClickOnMYProfileLink(User.UserTypeEnum userType)
         {
-            new CommonSteps().ResetWebdriver();
+            //Click on myprofile link
+            Logger.LogMethodEntry("CommonSteps", "ClickOnMYProfileLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            new HomePage().ClickMyProfileLink(userType);
+            Logger.LogMethodExit("CommonSteps", "ClickOnMYProfileLink",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
-        /// and clean the WebDriver Instance.
+        /// Save the current date and time from my profile.
         /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
+        [When(@"I store user current date and time of the teacher")]
+        public void SaveDateAndTime()
         {
-            new CommonSteps().WebDriverCleanUp();
+            //Save current date and time
+            Logger.LogMethodEntry("CommonSteps", "SaveDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+            new MyAccountSettingPage().SaveCurrentDateAndTime();
+            Logger.LogMethodExit("CommonSteps", "SaveDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         

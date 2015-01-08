@@ -36,9 +36,11 @@ namespace Pegasus.Pages.UI_Pages
         int minutesToWait = Int32.Parse(ConfigurationManager.
              AppSettings["AssignedToCopyInterval"]);
 
+        private static int pixelValueToSrollDown;
         private static string divFolderNodeID;
         private static string divSubFolderNodeID;
         private static string divLeafFolderNodeID;
+
 
         /// <summary>
         /// Search Asset in Planner Tab
@@ -739,7 +741,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Verify the "content is being" text on the calendar frame
         /// </summary>
-        private void VerifyAssignedTextOnCalendar()
+        public void VerifyAssignedTextOnCalendar()
         {
             // verify the activity processing text on calendar frame
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "VerifyAssignedTextOnCalendar",
@@ -1107,7 +1109,85 @@ namespace Pegasus.Pages.UI_Pages
                 "GetAssignedContentTitle",
                  base.IsTakeScreenShotDuringEntryExit);
             return getAssignedContentTitle;
-         }       
+         }
+
+        /// <summary>
+        /// Drand and Drop 
+        /// </summary>
+        /// <param name="activityName"></param>
+        public void DragAndDropActivityInPlannerTab(string activityName)
+        {
+
+            //Find activity in planner tab
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "FindActivityAndClickOnCmenu",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Create the div ID of activity
+            string activityDivId = "ContainerID_" + divLeafFolderNodeID;
+            int getSubFolderContentsCount = base.GetElementCountByXPath(
+                string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_SubFolder_Count_Xpath_Locator, activityDivId));
+            for (int k = 1; k <= getSubFolderContentsCount; k++)
+            {
+
+                bool isContentExists = base.IsElementPresent(By.XPath(string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k)), 1);
+                while (!isContentExists)
+                {
+
+                    IJavaScriptExecutor js = (IJavaScriptExecutor)WebDriver;
+                    js.ExecuteScript("arguments[0].scrollTop = arguments[1];", base.
+                        GetWebElementPropertiesById("TreeViewContainer"), pixelValueToSrollDown);
+                    //Scroll the frame
+                    isContentExists = base.IsElementPresent(By.XPath(string.
+            Format(CalendarDefaultGlobalUXPageResource.
+            CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k)), 1);
+
+                    pixelValueToSrollDown = pixelValueToSrollDown + 100;
+                }
+
+                string getLessonName = base.GetElementTextByXPath(string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k));
+                if (activityName.Equals(getLessonName))
+                {
+
+                    try
+                    {
+                        //Drag and drop the activity on calendar frame
+                        logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "DragAndDropTheActivity",
+                               base.IsTakeScreenShotDuringEntryExit);
+                        // Wait for the activity name 
+                        base.WaitForElement(By.XPath(string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k)));
+                        //Drag the activity
+                        IWebElement dragActivity = base.GetWebElementPropertiesByXPath
+                            (string.
+                    Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator, activityDivId, k));
+                        Thread.Sleep(Convert.ToInt32(CalendarDefaultGlobalUXPageResource.
+                            CalendarDefaultGlobalUX_Page_TimeThread_Value));
+                        // drop the activity to calendar
+                        IWebElement dropActivity = base.GetWebElementPropertiesByClassName
+                            (CalendarDefaultGlobalUXPageResource
+                            .CalendarDefaultGlobalUX_Page_DropFrame_ClassName);
+                        // Drag and drop operation
+                        new Actions(base.WebDriver).DragAndDrop(dragActivity, dropActivity).Build().Perform();
+                        //Drag and drop the activity on calendar frame
+                        logger.LogMethodExit("CalendarDefaultGlobalUXPage", "DragAndDropTheActivity",
+                               base.IsTakeScreenShotDuringEntryExit);
+                    }
+                    catch (Exception e)
+                    {
+                        ExceptionHandler.HandleException(e);
+                    }
+
+                    break;
+                }
+
+            }
+        }
     
     }
 }

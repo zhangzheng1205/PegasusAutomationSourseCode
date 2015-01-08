@@ -214,7 +214,38 @@ And I should see the due date for LCC "1-1 Homework"
 And I should see "All" text in Shown to column for LCC "1-1 Homework"
 And I should see Assigned icon for LCC "1-1 Homework"
 
+#Test case id: peg-12653
+#Purpose: Teacher enrolling students to Class
+#Product: Digital Path
+Scenario: Teacher validating the student enrollment to class
+When I navigate to the "Home" tab
+And I click on Cmenu option of Class "Class digits 6" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Enroll from School" drop down option
+Then I should see the "Enroll from School" popup
+When I click on Search button
+And I enter student username "dpstud152015" to search
+Then I should see searched username "dpstud152015" in search list
+When I select the student and click on Add button
+Then I should see the success message "Users enrolled successfully."
+When I close Enroll from school pop up
+Then I should see "Enroll from School" pop up closed
+And I should see the student "dpstud152015" displayed in manage student pop up
+When I close Manage student pop up
 
+#Test case id: peg-22538
+#Purpose: To validate display of assigned study plan in class course
+Scenario: Teacher validating display of assigned study plan under manage coursework on current date
+When I navigate to the "Home" tab
+And I enter into the DP "Class Digits 6" class
+Then I should be on the "Classes" page
+When I navigate to the "Manage Coursework" tab
+Then I should see assigned study plan "Topic 1 Test with Study Plan"
+And I should see status as "Begin" for study plan "Topic 1 Test with Study Plan"
+And I should see the due date for study plan "Topic 1 Test with Study Plan"
+And I should see "All" text in Shown to column for study plan "Topic 1 Test with Study Plan"
+And I should see Assigned icon for study plan "Topic 1 Test with Study Plan"
 
 
 

@@ -625,6 +625,82 @@ testRunner.And("I should see Assigned icon for LCC \"1-1 Homework\"", ((string)(
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher validating the student enrollment to class")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void TeacherValidatingTheStudentEnrollmentToClass()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating the student enrollment to class", ((string[])(null)));
+#line 220
+this.ScenarioSetup(scenarioInfo);
+#line 221
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 222
+testRunner.And("I click on Cmenu option of Class \"Class digits 6\" and select \"Enrollments\" option" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 223
+testRunner.Then("I should see the \"Manage Students\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 224
+testRunner.When("I Click on Create New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 225
+testRunner.And("I select \"Enroll from School\" drop down option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 226
+testRunner.Then("I should see the \"Enroll from School\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 227
+testRunner.When("I click on Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 228
+testRunner.And("I enter student username \"dpstud152015\" to search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 229
+testRunner.Then("I should see searched username \"dpstud152015\" in search list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 230
+testRunner.When("I select the student and click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 231
+testRunner.Then("I should see the success message \"Users enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 232
+testRunner.When("I close Enroll from school pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 233
+testRunner.Then("I should see \"Enroll from School\" pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 234
+testRunner.And("I should see the student \"dpstud152015\" displayed in manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 235
+testRunner.When("I close Manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher validating display of assigned study plan under manage coursework on curr" +
+            "ent date")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void TeacherValidatingDisplayOfAssignedStudyPlanUnderManageCourseworkOnCurrentDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned study plan under manage coursework on curr" +
+                    "ent date", ((string[])(null)));
+#line 239
+this.ScenarioSetup(scenarioInfo);
+#line 240
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 241
+testRunner.And("I enter into the DP \"Class Digits 6\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 242
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 243
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 244
+testRunner.Then("I should see assigned study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 245
+testRunner.And("I should see status as \"Begin\" for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 246
+testRunner.And("I should see the due date for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 247
+testRunner.And("I should see \"All\" text in Shown to column for study plan \"Topic 1 Test with Stud" +
+                    "y Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 248
+testRunner.And("I should see Assigned icon for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

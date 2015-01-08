@@ -259,6 +259,33 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;cc&apos;]/div[{0}]/div/div/span[2].
+        /// </summary>
+        internal static string HomePage_ClassCmenu_Link_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_ClassCmenu_Link_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;cc&apos;]/div[{0}]/div/div/ul/li.
+        /// </summary>
+        internal static string HomePage_ClassCmenu_Options_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_ClassCmenu_Options_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;cc&apos;]/div[{0}]/div/div/ul/li[{1}].
+        /// </summary>
+        internal static string HomePage_ClassCmenu_OptionsText_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_ClassCmenu_OptionsText_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;cc&apos;]/div.
         /// </summary>
         internal static string HomePage_ClassesDivCount_Xpath_Locator {

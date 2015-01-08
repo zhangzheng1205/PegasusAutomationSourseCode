@@ -117,82 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MyAccountSetting_DpPage_MyProfile_Frame_Id_Locator" xml:space="preserve">
-    <value>lightboxid</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_AddButton_Id_Locator" xml:space="preserve">
+    <value>imgbtnAddContent</value>
   </data>
-  <data name="MyAccountSetting_DpPage_TimeZone_DropDown_Id_Locator" xml:space="preserve">
-    <value>selectcmbTimeZones</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_CloseButton_Id_Locator" xml:space="preserve">
+    <value>btnCancel</value>
   </data>
-  <data name="MyAccountSetting_Page_EditPearsonAccount_Id_Locator" xml:space="preserve">
-    <value>lblPPMManager</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_SearchBtn_Id_Locator" xml:space="preserve">
+    <value>btnSearch</value>
   </data>
-  <data name="MyAccountSetting_Page_HelpLanguage_Id_Locator" xml:space="preserve">
-    <value>cmbOnlineHelpLanguage</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_SearchTextBox_Id_Locator" xml:space="preserve">
+    <value>txtSectionDetail</value>
   </data>
-  <data name="MyAccountSetting_Page_LocaleDateDisplay_Id_Locator" xml:space="preserve">
-    <value>cmbDateFormat2</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_SearchUsersButton_Id_Locator" xml:space="preserve">
+    <value>SearchSections</value>
   </data>
-  <data name="MyAccountSetting_Page_LocaleLongDate_Id_Locator" xml:space="preserve">
-    <value>cmbLongDateFormat2</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_SelectedUsersFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmGBRoasterEFSselectedUsers</value>
   </data>
-  <data name="MyAccountSetting_Page_LocaleOption_EnglishUnitedKingdom_Value" xml:space="preserve">
-    <value>English (United Kingdom)</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator" xml:space="preserve">
+    <value>div_msg</value>
   </data>
-  <data name="MyAccountSetting_Page_LocalePreferences_Id_Locator" xml:space="preserve">
-    <value>cmbTimeFormats</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_UserListFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmGBRoasterEFSListUsers</value>
   </data>
-  <data name="MyAccountSetting_Page_LocalePrefernceNumber_Id_Locator" xml:space="preserve">
-    <value>cmbNumberFormat2</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_UserNameColumn_EnrolledUsersList_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='SelectedUsersGrid']/tbody/tr/td[4]/span</value>
   </data>
-  <data name="MyAccountSetting_Page_LocalePrefernces_DropDownValue" xml:space="preserve">
-    <value>3</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_UserNameColumn_SearchedList_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='StudentsGrid']/tbody/tr/td[4]/span</value>
   </data>
-  <data name="MyAccountSetting_Page_LocaleTimeDisplay_Id_Locator" xml:space="preserve">
-    <value>cmbTimeFormat2</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_UserSelectionCheckBox_Id_Locator" xml:space="preserve">
+    <value>StudentsGrid$_ctrl1</value>
   </data>
-  <data name="MyAccountSetting_Page_Localization_Id_Locator" xml:space="preserve">
-    <value>lblTimDtFormat</value>
-  </data>
-  <data name="MyAccountSetting_Page_LogIntoyourPearsonAccountProfile_Window_Name" xml:space="preserve">
-    <value>Log In to your Pearson Account Profile</value>
-  </data>
-  <data name="MyAccountSetting_Page_ManageAnnouncement_MyProfile_IndianTimeZone_Value" xml:space="preserve">
-    <value>(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</value>
-  </data>
-  <data name="MyAccountSetting_Page_MyPearsonAccount_Id_Locator" xml:space="preserve">
-    <value>lblPersonalProfile</value>
-  </data>
-  <data name="MyAccountSetting_Page_MyProfile_CanceBtn_Id_Locator" xml:space="preserve">
-    <value>imgbtnCancel</value>
-  </data>
-  <data name="MyAccountSetting_Page_MyProfile_Date_Dropdown_Xpath_Locator" xml:space="preserve">
-    <value>//select[@id='cmbDateFormat2']/option[@value='1~']</value>
-  </data>
-  <data name="MyAccountSetting_Page_MyProfile_Frame_Xpath_Locator" xml:space="preserve">
-    <value>//iframe[contains(@src,'Modules/MyPrefernce/frmMyAccountSetting.aspx?')]</value>
-  </data>
-  <data name="MyAccountSetting_Page_MyProfile_Id_Locator" xml:space="preserve">
-    <value>lblMyAccount</value>
-  </data>
-  <data name="MyAccountSetting_Page_MyProfile_Time_Dropdown_Xpath_Locator" xml:space="preserve">
-    <value>//select[@id='cmbTimeFormat2']/option[@value='3~h:mm tt']</value>
-  </data>
-  <data name="MyAccountSetting_Page_OnScreenLanguageOption_Japanese_Value" xml:space="preserve">
-    <value>Japanese</value>
-  </data>
-  <data name="MyAccountSetting_Page_Save_Button_Id_Locator" xml:space="preserve">
-    <value>imgbtnSave</value>
-  </data>
-  <data name="MyAccountSetting_Page_ScreenLanguage_Id_Locator" xml:space="preserve">
-    <value>cmbOnScreenLanguage</value>
-  </data>
-  <data name="MyAccountSetting_Page_TimeZone_DropDown_Id_Locator" xml:space="preserve">
-    <value>cmbTimeZones</value>
-  </data>
-  <data name="MyAccountSetting_Page_TimeZone_Id_Locator" xml:space="preserve">
-    <value>lblTimeZone</value>
-  </data>
-  <data name="MyAccountSetting_Page_WaitTime" xml:space="preserve">
-    <value>2000</value>
+  <data name="GBRoasterEnrollFrmSchoolPage_WindowTitle_Locator" xml:space="preserve">
+    <value>Enroll from School</value>
   </data>
 </root>

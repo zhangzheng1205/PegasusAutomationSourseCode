@@ -305,6 +305,175 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("UserEnrollment", "ClickOnTheUnenrollSelectedUserButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on Create new button in Manage students pop up.
+        /// </summary>
+        [When(@"I Click on Create New button")]
+        public void ClickOnCreateNewButton()
+        {
+            //Click on create new button
+            Logger.LogMethodEntry("UserEnrollment", "ClickOnCreateNewButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRosterGridUXPage().ClickOnCreateNewButton();
+            Logger.LogMethodExit("UserEnrollment", "ClickOnCreateNewButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Select option from Create new drop down.
+        /// </summary>
+        /// <param name="dropDownOption">Drop option to be selected.</param>
+        [When(@"I select ""(.*)"" drop down option")]
+        public void SelectDropDownOption(string dropDownOption)
+        {
+            //Click on create new button
+            Logger.LogMethodEntry("UserEnrollment", "SelectDropDownOption",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRosterGridUXPage().SelectOptionsUnderCreateNewDropDown(dropDownOption);
+            Logger.LogMethodExit("UserEnrollment", "SelectDropDownOption",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on search button in Enroll from School pop up.
+        /// </summary>
+        [When(@"I click on Search button")]
+        public void ClickOnSearchButton()
+        {
+            //Click on search button
+            Logger.LogMethodEntry("UserEnrollment", "ClickOnSearchButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRoasterEnrollFrmSchoolPage().ClickOnSearchButton();
+            Logger.LogMethodExit("UserEnrollment", "ClickOnSearchButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search users in Enroll from school pop up.
+        /// </summary>
+        /// <param name="userName">Name of the user to search.</param>
+        [When(@"I enter student username ""(.*)"" to search")]
+        public void SearchUsers(string userName)
+        {
+            //Search users
+            Logger.LogMethodEntry("UserEnrollment", "SearchUsers",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRoasterEnrollFrmSchoolPage().SearchForUsers(userName);
+            Logger.LogMethodExit("UserEnrollment", "SearchUsers",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the searched user name.
+        /// </summary>
+        /// <param name="userName">Username to validate.</param>
+        [Then(@"I should see searched username ""(.*)"" in search list")]
+        public void ValidateSearchedUserName(string userName)
+        {
+            //Validate searched user name
+            Logger.LogMethodEntry("UserEnrollment", "ValidateSearchedUserName",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(userName, new GBRoasterEnrollFrmSchoolPage().GetUserNameFromSearchResult()));
+            Logger.LogMethodExit("UserEnrollment", "ValidateSearchedUserName",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enroll student to class
+        /// </summary>
+        [When(@"I select the student and click on Add button")]
+        public void EnrollStudent()
+        {
+            //Enroll student to class
+            Logger.LogMethodEntry("UserEnrollment", "EnrollStudent",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRoasterEnrollFrmSchoolPage().EnrollUser();
+            Logger.LogMethodExit("UserEnrollment", "EnrollStudent",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the success message in enroll from school pop up.
+        /// </summary>
+        /// <param name="sucessMessage">Success message to validate.</param>
+        [Then(@"I should see the success message ""(.*)""")]
+        public void ValidateSuccessMessage(string sucessMessage)
+        {
+            //Validate success message
+            Logger.LogMethodEntry("UserEnrollment", "ValidateSuccessMessage",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(sucessMessage, new GBRoasterEnrollFrmSchoolPage().GetSuccessMessage()));
+            Logger.LogMethodExit("UserEnrollment", "ValidateSuccessMessage",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Close the enroll from school popup.
+        /// </summary>
+        [When(@"I close Enroll from school pop up")]
+        public void CloseEnrollFromSchoolPopup()
+        {
+            //Close the enroll from school popup
+            Logger.LogMethodEntry("UserEnrollment", "CloseEnrollFromSchoolPopup",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRoasterEnrollFrmSchoolPage().ClickOnCloseButton();
+            Logger.LogMethodExit("UserEnrollment", "CloseEnrollFromSchoolPopup",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Close manage student pop up.
+        /// </summary>
+        [When(@"I close Manage student pop up")]
+        public void ClickOnCloseButtonInManageStudentsPopUp()
+        {
+            //Click on close button
+            Logger.LogMethodEntry("UserEnrollment", "ClickOnCloseButtonInManageStudentsPopUp",
+               base.IsTakeScreenShotDuringEntryExit);
+            new GBRosterGridUXPage().ClickOnCloseButton();
+            Logger.LogMethodExit("UserEnrollment", "ClickOnCloseButtonInManageStudentsPopUp",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Validate the presence of Enroll from school pop up.
+        /// </summary>
+        /// <param name="popUpName">Pop up name to validate.</param>
+        [Then(@"I should see ""(.*)"" pop up closed")]
+        public void ValidateClosureOfPopUp(string popUpName)
+        {
+            //Validate the presence of Enroll from school pop up.
+            Logger.LogMethodEntry("UserEnrollment", "ValidateClosureOfPopUp",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsFalse(new GBRoasterEnrollFrmSchoolPage().IsEnrollFromSchoolPopupClosed(popUpName)));
+            Logger.LogMethodExit("UserEnrollment", "ValidateClosureOfPopUp",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the enrolled student display in Manage students
+        /// pop up.
+        /// </summary>
+        /// <param name="studentName">Name of the student to validate.</param>
+        [Then(@"I should see the student ""(.*)"" displayed in manage student pop up")]
+        public void ValidateEnrolledStudentDisplay(string studentName)
+        {
+            //Validate display of enrolled user
+            Logger.LogMethodEntry("UserEnrollment", "ValidateEnrolledStudentDisplay",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new GBRosterGridUXPage().IsEnrolledStudentDisplayedUnderRoster(studentName)));
+            Logger.LogMethodExit("UserEnrollment", "ValidateEnrolledStudentDisplay",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

@@ -196,6 +196,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.MyPrefernce {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to imgbtnCancel.
+        /// </summary>
+        internal static string MyAccountSetting_Page_MyProfile_CanceBtn_Id_Locator {
+            get {
+                return ResourceManager.GetString("MyAccountSetting_Page_MyProfile_CanceBtn_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //select[@id=&apos;cmbDateFormat2&apos;]/option[@value=&apos;1~&apos;].
+        /// </summary>
+        internal static string MyAccountSetting_Page_MyProfile_Date_Dropdown_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("MyAccountSetting_Page_MyProfile_Date_Dropdown_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //iframe[contains(@src,&apos;Modules/MyPrefernce/frmMyAccountSetting.aspx?&apos;)].
         /// </summary>
         internal static string MyAccountSetting_Page_MyProfile_Frame_Xpath_Locator {
@@ -210,6 +228,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.MyPrefernce {
         internal static string MyAccountSetting_Page_MyProfile_Id_Locator {
             get {
                 return ResourceManager.GetString("MyAccountSetting_Page_MyProfile_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //select[@id=&apos;cmbTimeFormat2&apos;]/option[@value=&apos;3~h:mm tt&apos;].
+        /// </summary>
+        internal static string MyAccountSetting_Page_MyProfile_Time_Dropdown_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("MyAccountSetting_Page_MyProfile_Time_Dropdown_Xpath_Locator", resourceCulture);
             }
         }
         

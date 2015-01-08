@@ -61,11 +61,56 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_btnCancel.
+        /// </summary>
+        internal static string GBRosterGridUX_Page_CloseButton_Id_Locator {
+            get {
+                return ResourceManager.GetString("GBRosterGridUX_Page_CloseButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Containeriframe.
+        /// </summary>
+        internal static string GBRosterGridUX_Page_ContainerFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("GBRosterGridUX_Page_ContainerFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;cmForCreateMenu&apos;]/table/tbody/tr.
+        /// </summary>
+        internal static string GBRosterGridUX_Page_CreateNew_DropDownOption_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRosterGridUX_Page_CreateNew_DropDownOption_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;cmForCreateMenu&apos;]/table/tbody/tr[{0}].
+        /// </summary>
+        internal static string GBRosterGridUX_Page_CreateNew_DropDownOption_Text_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRosterGridUX_Page_CreateNew_DropDownOption_Text_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create New.
         /// </summary>
         internal static string GBRosterGridUX_Page_CreateNewButton_PartialLinkText {
             get {
                 return ResourceManager.GetString("GBRosterGridUX_Page_CreateNewButton_PartialLinkText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridRoster&apos;]/tbody/tr[{0}]/td[9]/span.
+        /// </summary>
+        internal static string GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -147,6 +192,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBRosterGridUX_Page_User_Count_Xpath_Locator {
             get {
                 return ResourceManager.GetString("GBRosterGridUX_Page_User_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridRoster&apos;]/tbody/tr.
+        /// </summary>
+        internal static string GBRosterGridUX_Page_UserListTable_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRosterGridUX_Page_UserListTable_Xpath_Locator", resourceCulture);
             }
         }
         
