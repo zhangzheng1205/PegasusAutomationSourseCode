@@ -117,62 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator" xml:space="preserve">
-    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_lnkAdvSearch</value>
+  <data name="CalendarDefaultGlobalUX_Activity_AssignToCopy_Message" xml:space="preserve">
+    <value>Content is being prepared and will be available soon.</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator" xml:space="preserve">
-    <value>ucLeftNavigationContainer_ucContentTab_ucMessageBoard_lnkClear</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_CustomTimeToWait_Value" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator" xml:space="preserve">
-    <value>frmPlanner</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_SearchButton_Id_Locator" xml:space="preserve">
-    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_uxcmdSearchGo</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_SearchedAssetName_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='grdSearch_Container']/div/div/table/tbody/tr/td[3]/div</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator" xml:space="preserve">
-    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_txtSearch</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_Window_TitleName" xml:space="preserve">
-    <value>Planner</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_BlockOut_StartDate_Id" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtFrom_txtDate</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator" xml:space="preserve">
-    <value>drpClassAssociation</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_drpCourseAssociation</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_DateFormat" xml:space="preserve">
-    <value>MM/dd/yyyy</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_DisplayNameText_Value" xml:space="preserve">
-    <value>AutomationCalendar</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_txtPeriodName</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator" xml:space="preserve">
-    <value>btnImportantDates</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_LightBoxFrame_Id_Locator" xml:space="preserve">
-    <value>lightboxid</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ScheduleClassButton_CSS_Locator" xml:space="preserve">
-    <value>span &gt; span</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_BlockOut_EndDate_Id" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtTo_txtDate</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_LightBoxInsideFrame_Id_Locator" xml:space="preserve">
-    <value>iframeSetUpWizard</value>
+  <data name="CalendarDefaultGlobalUX_Page_ActivityName_Td_Drag" xml:space="preserve">
+    <value>//td[@class='ES_delayClass ']/div</value>
   </data>
   <data name="CalendarDefaultGlobalUX_Page_ActivityName_TriangleImage" xml:space="preserve">
     <value>//img[@src='/Pegasus/images/general_sprite.png']</value>
@@ -183,59 +132,8 @@
   <data name="CalendarDefaultGlobalUX_Page_Activity_ClassName_td" xml:space="preserve">
     <value>ES_delayClass</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_AssignPartialText" xml:space="preserve">
-    <value>Assign</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_BlockOutday_Description" xml:space="preserve">
-    <value>BlockOutDay</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtBlockDesc</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ClassesAffected_OkButton_Id" xml:space="preserve">
-    <value>btnAddPeriods</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ClassesAffected_TriangleButton" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_btnImgdrd</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_Order_DropDown_Id" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_drpOrder</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_Order_DropDown_Value" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_SaveCalendar_Button_Id" xml:space="preserve">
-    <value>btnSaveCalendar</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Id" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_cmbTimeZones</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Value" xml:space="preserve">
-    <value>(GMT-05:00) Eastern Time (US and Canada)</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_CheckboxAll_ID" xml:space="preserve">
-    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_chkAll</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ExitButton_Id" xml:space="preserve">
-    <value>btnExit</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_MondayLabel_Id" xml:space="preserve">
-    <value>lblMon</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_ThursdayLabel_Id" xml:space="preserve">
-    <value>lblThu</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_TuesdayLabel_Id" xml:space="preserve">
-    <value>lblTue</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_WednesdayLabel_Id" xml:space="preserve">
-    <value>lblWed</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Activity_AssignToCopy_Message" xml:space="preserve">
-    <value>Content is being prepared and will be available soon.</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_Div_Id_Locator" xml:space="preserve">
-    <value>TreeViewContainer</value>
+  <data name="CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_lnkAdvSearch</value>
   </data>
   <data name="CalendarDefaultGlobalUX_Page_AssetCopyMessage_XpathLocator" xml:space="preserve">
     <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table[1]/tbody/tr/td/div</value>
@@ -246,11 +144,65 @@
   <data name="CalendarDefaultGlobalUX_Page_Assets_Xpath_Locator" xml:space="preserve">
     <value>//div[id='TreeViewContainer']/table</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_ForLoopInitialization_Value" xml:space="preserve">
-    <value>1</value>
+  <data name="CalendarDefaultGlobalUX_Page_AssignPartialText" xml:space="preserve">
+    <value>Assign</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_ActivityName_Td_Drag" xml:space="preserve">
-    <value>//td[@class='ES_delayClass ']/div</value>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOutday_Description" xml:space="preserve">
+    <value>BlockOutDay</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtBlockDesc</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOut_EndDate_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtTo_txtDate</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOut_StartDate_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtFrom_txtDate</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='dvDueAssignmentsTodayCss']/div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='dvDueAssignmentsTodayCss']/div[{0}]/div[2]/span/span[1]</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id" xml:space="preserve">
+    <value>calendarContainer_ucDayView_RptPeriods_ctl00_DVPeriodHeader</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CheckboxAll_ID" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_chkAll</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator" xml:space="preserve">
+    <value>drpClassAssociation</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassesAffected_OkButton_Id" xml:space="preserve">
+    <value>btnAddPeriods</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassesAffected_TriangleButton" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_btnImgdrd</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentTab_ucMessageBoard_lnkClear</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ContentFrame_DivID_Id_Locator" xml:space="preserve">
+    <value>TreeViewContainer</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_drpCourseAssociation</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CustomTimeToWait_Value" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DateFormat" xml:space="preserve">
+    <value>MM/dd/yyyy</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DisplayNameText_Value" xml:space="preserve">
+    <value>AutomationCalendar</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_txtPeriodName</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Div_Id_Locator" xml:space="preserve">
+    <value>TreeViewContainer</value>
   </data>
   <data name="CalendarDefaultGlobalUX_Page_DropActivityFrame_Text" xml:space="preserve">
     <value>content is being</value>
@@ -258,23 +210,8 @@
   <data name="CalendarDefaultGlobalUX_Page_DropFrame_ClassName" xml:space="preserve">
     <value>dvDueAssignmentsTodayCss</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_TwentySecsThread_Value" xml:space="preserve">
-    <value>20000</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id" xml:space="preserve">
-    <value>calendarContainer_ucDayView_RptPeriods_ctl00_DVPeriodHeader</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_FridayLabel_Id" xml:space="preserve">
-    <value>lblFri</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_SaturdayLabel_Id" xml:space="preserve">
-    <value>lblSat</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_SundayLabel_Id" xml:space="preserve">
-    <value>lblSun</value>
-  </data>
-  <data name="CalendarDefaultGlobalUX_Page_TimeThread_Value" xml:space="preserve">
-    <value>1000</value>
+  <data name="CalendarDefaultGlobalUX_Page_ExitButton_Id" xml:space="preserve">
+    <value>btnExit</value>
   </data>
   <data name="CalendarDefaultGlobalUX_Page_FolderExpandButton_Xpath_Locator" xml:space="preserve">
     <value>//div[@class='cssinnerTree']/table[{0}]//td[1]/img</value>
@@ -285,8 +222,62 @@
   <data name="CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator" xml:space="preserve">
     <value>//div[@class='cssinnerTree']/table</value>
   </data>
+  <data name="CalendarDefaultGlobalUX_Page_Folder_NodeID_Id_Locator" xml:space="preserve">
+    <value>nodeid</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ForLoopInitialization_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_FridayLabel_Id" xml:space="preserve">
+    <value>lblFri</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator" xml:space="preserve">
+    <value>btnImportantDates</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LCC_CmenuCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='DivLN_NEWPC_mainLinks']/a</value>
+  </data>
   <data name="CalendarDefaultGlobalUX_Page_LCC_CmenuIcon_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[3]//td[2]//img</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='DivLN_NEWPC_mainLinks']/a[{0}]</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LightBoxFrame_Id_Locator" xml:space="preserve">
+    <value>lightboxid</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LightBoxInsideFrame_Id_Locator" xml:space="preserve">
+    <value>iframeSetUpWizard</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_MondayLabel_Id" xml:space="preserve">
+    <value>lblMon</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Order_DropDown_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_drpOrder</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Order_DropDown_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator" xml:space="preserve">
+    <value>frmPlanner</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SaturdayLabel_Id" xml:space="preserve">
+    <value>lblSat</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SaveCalendar_Button_Id" xml:space="preserve">
+    <value>btnSaveCalendar</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ScheduleClassButton_CSS_Locator" xml:space="preserve">
+    <value>span &gt; span</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SearchButton_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_uxcmdSearchGo</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SearchedAssetName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div/div/table/tbody/tr/td[3]/div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_txtSearch</value>
   </data>
   <data name="CalendarDefaultGlobalUX_Page_SubFolderExpandButton_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[1]/img</value>
@@ -297,16 +288,31 @@
   <data name="CalendarDefaultGlobalUX_Page_SubFolder_Name_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[3]//td[1]</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator" xml:space="preserve">
-    <value>//div[@class='dvDueAssignmentsTodayCss']/div</value>
+  <data name="CalendarDefaultGlobalUX_Page_SundayLabel_Id" xml:space="preserve">
+    <value>lblSun</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator" xml:space="preserve">
-    <value>//div[@class='dvDueAssignmentsTodayCss']/div[{0}]/div[2]/span/span[1]</value>
+  <data name="CalendarDefaultGlobalUX_Page_ThursdayLabel_Id" xml:space="preserve">
+    <value>lblThu</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_LCC_CmenuCount_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='DivLN_NEWPC_mainLinks']/a</value>
+  <data name="CalendarDefaultGlobalUX_Page_TimeThread_Value" xml:space="preserve">
+    <value>1000</value>
   </data>
-  <data name="CalendarDefaultGlobalUX_Page_Lesson_CmenuOption_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='DivLN_NEWPC_mainLinks']/a[{0}]</value>
+  <data name="CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_cmbTimeZones</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Value" xml:space="preserve">
+    <value>(GMT-05:00) Eastern Time (US and Canada)</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TuesdayLabel_Id" xml:space="preserve">
+    <value>lblTue</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TwentySecsThread_Value" xml:space="preserve">
+    <value>20000</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_WednesdayLabel_Id" xml:space="preserve">
+    <value>lblWed</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Window_TitleName" xml:space="preserve">
+    <value>Planner</value>
   </data>
 </root>

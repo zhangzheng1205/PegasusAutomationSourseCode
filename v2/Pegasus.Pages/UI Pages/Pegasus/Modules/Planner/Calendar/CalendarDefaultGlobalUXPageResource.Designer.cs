@@ -260,6 +260,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TreeViewContainer.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_ContentFrame_DivID_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_ContentFrame_DivID_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_rptView__ctl0_drpCourseAssociation.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator {
@@ -346,6 +355,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Folder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to nodeid.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_Folder_NodeID_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Folder_NodeID_Id_Locator", resourceCulture);
             }
         }
         
