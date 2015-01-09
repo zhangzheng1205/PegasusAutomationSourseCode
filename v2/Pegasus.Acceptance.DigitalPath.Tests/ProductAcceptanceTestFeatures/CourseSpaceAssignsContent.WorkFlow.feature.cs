@@ -180,7 +180,7 @@ testRunner.And("I click on Ok button in Alert pop up", ((string)(null)), ((TechT
 #line 52
 testRunner.Then("I should see \"Assign\" pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 53
-testRunner.When("I select the class \"Class digits 6\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select the class \"Class Digits 6\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 54
 testRunner.And("I select the current date and due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 55

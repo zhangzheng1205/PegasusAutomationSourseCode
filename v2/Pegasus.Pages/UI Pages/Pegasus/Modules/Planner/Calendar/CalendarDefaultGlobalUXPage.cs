@@ -1157,6 +1157,7 @@ namespace Pegasus.Pages.UI_Pages
                        CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedTitle_Xpath_Locator, i));
                     if (assignedActivityTitle.Equals(getAssignedContentTitle))
                     {
+                        base.SwitchToDefaultPageContent();
                         break;
                     }
                 }

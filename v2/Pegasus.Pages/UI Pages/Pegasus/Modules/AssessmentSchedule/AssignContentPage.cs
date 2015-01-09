@@ -1475,14 +1475,14 @@ namespace Pegasus.Pages.UI_Pages
             try{
 
                 User user = User.Get(User.UserTypeEnum.DPCsTeacher);
-                DateTime dateTime = user.CurrentProfileDateTime.AddMinutes(460);
+                DateTime dateTime = user.CurrentProfileDateTime.AddMinutes(120);
                 string currentDateTime = dateTime.ToString();
                 // Get the current date and time
-                string systemTime = currentDateTime.Split(' ')[1];
+                string currentTime = currentDateTime.Split(' ')[1];
                 string systemDate = currentDateTime.Split(' ')[0];
-                string hour = systemTime.Split(':')[1];
-                string min = (systemTime.Split(':')[2]).Split(' ')[0];
-                string dayTime = systemTime.Split(' ')[1];
+                string hour = currentTime.Split(':')[0];
+                string min = (currentTime.Split(':')[2]).Split(' ')[0];
+                string dayTime = currentDateTime.Split(' ')[2];
                 
                
                 // Enter the due date in due date text box
@@ -1507,7 +1507,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectDropDownValueThroughTextById("CMBAMPMDUEDT", dayTime);
 
                 //store date and time in memory
-                string dateTimeInstance = systemDate + " " + systemTime;
+                string dateTimeInstance = currentDateTime;
                 DateTime datetime = Convert.ToDateTime(dateTimeInstance);
                 //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
                 user = User.Get(User.UserTypeEnum.DPCsTeacher);

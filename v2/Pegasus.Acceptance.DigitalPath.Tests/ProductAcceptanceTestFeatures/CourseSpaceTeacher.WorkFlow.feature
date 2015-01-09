@@ -247,5 +247,17 @@ And I should see the due date for study plan "Topic 1 Test with Study Plan"
 And I should see "All" text in Shown to column for study plan "Topic 1 Test with Study Plan"
 And I should see Assigned icon for study plan "Topic 1 Test with Study Plan"
 
+#Test case id: peg-22537
+#Purpose: To validate display of assigned Math XL activity in class course
+Scenario: Teacher validating display of assigned Math XL activity under manage coursework on current date
+When I navigate to the "Home" tab
+And I enter into the DP "Class Digits 6" class
+Then I should be on the "Classes" page
+When I navigate to the "Manage Coursework" tab
+Then I should see assigned MathXL activity "Topic 1 Test"
+And I should see status as "Not started" for MathXL activity "Topic 1 Test"
+And I should see the due date for MathXL activity "Topic 1 Test"
+And I should see "All" text in Shown to column for MathXL activity "Topic 1 Test"
+And I should see Assigned icon for MathXL activity "Topic 1 Test"
 
 

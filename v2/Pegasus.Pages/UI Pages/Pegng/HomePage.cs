@@ -173,8 +173,6 @@ namespace Pegasus.Pages.UI_Pages
                         //Click on User Profile imagelink
                         base.WaitForElement(By.Id(HomePageResource.
                             HomePage_UserProfile_Image_Id_Locator));
-                        base.FocusOnElementById(HomePageResource.
-                            HomePage_UserProfile_Image_Id_Locator);
                         //Get Button Property
                         IWebElement getUserProfileButtonProperty = base.GetWebElementPropertiesById(HomePageResource.
                             HomePage_UserProfile_Image_Id_Locator);

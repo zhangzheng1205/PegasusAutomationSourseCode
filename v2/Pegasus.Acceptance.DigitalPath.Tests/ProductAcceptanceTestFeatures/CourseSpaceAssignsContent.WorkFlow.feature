@@ -50,7 +50,7 @@ And I expand the leaf folder "1-1 Homework" in Planner tab
 And I select cmenu option "Assign" of "1-1 Homework" activity in Planner tab
 And I click on Ok button in Alert pop up
 Then I should see "Assign" pop up
-When I select the class "Class digits 6"
+When I select the class "Class Digits 6"
 And I select the current date and due date
 And I click on Save and Assign button
 And I click on Ok button in Assign pop up
