@@ -1350,6 +1350,35 @@ namespace Pegasus.Pages.CommonPageObjects
         }
 
         /// <summary>
+        ///Verify a text in the launched  page .
+        /// </summary>
+        /// <param name="expectedText">This is the text value to be searched.</param>
+        /// <returns></returns>
+        public Boolean IsTextPresentInPageSource(string expectedText)
+        {
+            //Verify a text in the launched  page 
+             Logger.LogMethodEntry("CommonPage",
+                "IsTextPresentInPageSource",
+               base.IsTakeScreenShotDuringEntryExit);
+            bool isTextPresent=false;
+            try
+            {
+                //Verify a text in the launched page 
+                isTextPresent = WebDriver.PageSource.Contains(expectedText);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            Logger.LogMethodExit("CommonPage",
+               "IsTextPresentInPageSource",
+             base.IsTakeScreenShotDuringEntryExit);
+            return isTextPresent;
+
+    }
+
+        /// <summary>
         /// Gets the text displayed in the window.
         /// </summary>
         /// <param name="Text">The text displayed in window.</param>

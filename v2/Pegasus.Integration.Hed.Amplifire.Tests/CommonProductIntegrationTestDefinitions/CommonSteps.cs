@@ -348,13 +348,12 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             //Verify the title displayed in book
             Logger.LogMethodEntry("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
-            string actualBookTilte = new CommonPage().GetTextByXpath();
-            //Verify the title displayed in book          
-            Logger.LogAssertion("VerifyOpenedPageTitle",
+            //Verify book title in the launched  page
+            Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(expectedBookTilte, actualBookTilte));
-            //Close the amplifier popup
-            base.CloseBrowserWindow();
+                () => Assert.IsTrue(new CommonPage().
+                    IsTextPresentInPageSource(expectedBookTilte)));
+                       base.CloseBrowserWindow();
             Logger.LogMethodExit("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
         }
