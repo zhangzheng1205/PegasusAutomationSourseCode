@@ -7,6 +7,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Automation.DataTransferObjects;
 
 #endregion
 
@@ -236,7 +237,167 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 SearchClassForAssignedToCopyState(orgClass.Name);
             Logger.LogMethodExit("CreateClass", "WaitForClassToCopy",
           base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
+
+        /// <summary>
+        /// Click on create button in Classes channel.
+        /// </summary>
+        [When(@"I click on Create button")]
+        public void ClickOnCreateButtonInClassesChannel()
+        {
+            //Click on create button
+            Logger.LogMethodEntry("CreateClass", "ClickOnCreateButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            new HomePage().ClickOnCreateButton();
+            Logger.LogMethodExit("CreateClass", "ClickOnCreateButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter the class name.
+        /// </summary>
+        /// <param name="classType">Type of class.</param>
+        [When(@"I enter class name of ""(.*)""")]
+        public void EnterClassNameInClassCreationWizard(Class.ClassTypeEnum classType)
+        {
+            //Enter class name
+            Logger.LogMethodEntry("CreateClass", "EnterClassNameInClassCreationWizard",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Enter the class name in class creation wizard
+            new frmSetupWizardPage().EnterClassName(classType);
+            Logger.LogMethodExit("CreateClass", "EnterClassNameInClassCreationWizard",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on select product button
+        /// </summary>
+        [When(@"I click on Select product button")]
+        public void ClickOnSelectProductButton()
+        {
+            //Click on select product button in class creation wizard
+            Logger.LogMethodEntry("CreateClass", "ClickOnSelectProductButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            new frmSetupWizardPage().ClickSelectProductButton();
+            Logger.LogMethodExit("CreateClass", "ClickOnSelectProductButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the setup wizard display.
+        /// </summary>
+        /// <param name="pageTitle">Page title to validate.</param>
+        [Then(@"I should see ""(.*)"" light box")]
+        public void ValidatedisplayOfSetupWizardLightBox(string pageTitle)
+        {
+            /// Validate the setup wizard display
+            Logger.LogMethodEntry("CreateClass", "ValidatedisplayOfSetupWizard",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidatedisplayOfSetupWizard", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(pageTitle, new frmSetupWizardPage().GetSetupWizardPopUpTitle()));
+            Logger.LogMethodExit("CreateClass", "ValidatedisplayOfSetupWizard",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+       /// <summary>
+        /// Validate page title in class creation wizard.
+       /// </summary>
+       /// <param name="pageTitle">Page title.</param>
+        [Then(@"I should see ""(.*)"" page")]
+        public void ValidateSelectProductPageDisplay(string pageTitle)
+        {
+            //Validate page title
+            Logger.LogMethodEntry("CreateClass", "ValidateSelectProductPageDisplay",
+              base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateSelectProductPageDisplay", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(pageTitle, new frmSetupWizardPage().GetPageTitleFromSetupWizard(pageTitle)));
+            Logger.LogMethodExit("CreateClass", "ValidateSelectProductPageDisplay",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Choose the master library from select product page.
+        /// </summary>
+        [When(@"I select product and Click on Manage enrollments button")]
+        public void SelectMasterLibraryAndClickManageEnrollmentsButton()
+        {
+            //Select master library
+            Logger.LogMethodEntry("CreateClass", "SelectMasterLibraryAndClickManageEnrollmentsButton",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Select master library
+            new frmSetupWizardPage().SelectMasterLibrary();
+            Logger.LogMethodExit("CreateClass", "SelectMasterLibraryAndClickManageEnrollmentsButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on save and exit button.
+        /// </summary>
+        [When(@"I click No,Save and Exit button")]
+        public void ClickOnSaveAndExitButton()
+        {
+            //Click on save and exit button
+            Logger.LogMethodEntry("CreateClass", "ClickOnSaveAndExitButton",
+             base.IsTakeScreenShotDuringEntryExit);
+            new frmSetupWizardPage().ClickOnSaveAndExitButton();
+            Logger.LogMethodExit("CreateClass", "ClickOnSaveAndExitButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+       
+        /// <summary>
+        /// Validate class display in classse channel.
+        /// </summary>
+        /// <param name="classTypeEnum">Class type enum</param>
+        [Then(@"I should see ""(.*)"" class displayed in classes channel")]
+        public void ValidateClassDisplayInClassesChannel(Class.ClassTypeEnum classTypeEnum)
+        {
+            //Validate class name
+            Logger.LogMethodEntry("CreateClass", "ValidateClassDisplayInClassesChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get class name from memory
+            Class Class = Class.Get(classTypeEnum);
+            string className = Class.Name.ToString();
+            Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(className, new HomePage().GetDisplayClassName(className)));
+            Logger.LogMethodExit("CreateClass", "ClickOnSaveAndExitButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+      
+        /// <summary>
+        /// Save the class.
+        /// </summary>
+        [When(@"I click on Save Class button")]
+        public void ClickOnSaveClassButton()
+        {
+            //Save the class
+            Logger.LogMethodEntry("CreateClass", "ClickOnSaveClassButton",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Click on save class button
+            new frmSetupWizardPage().ClickOnSaveClass();
+            Logger.LogMethodExit("CreateClass", "ClickOnSaveClassButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate success message in class creatin wizard.
+        /// </summary>
+        /// <param name="successMessage">Success message to validate.</param>
+        [Then(@"I should see the successfull message ""(.*)"" in setup wizard")]
+        public void ValidateSuccessMessageInClassCreationWizard(string successMessage)
+        {
+            //Validate class creation success message
+            Logger.LogMethodEntry("CreateClass", "ValidateSuccessMessageInClassCreationWizard",
+             base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateSuccessMessageInClassCreationWizard", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(successMessage, new frmSetupWizardPage().GetClassCreationSuccessMessageInSetupWizard()));
+            Logger.LogMethodExit("CreateClass", "ValidateSuccessMessageInClassCreationWizard",
+          base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

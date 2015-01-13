@@ -16,7 +16,19 @@
     </Organization>
   </ArrayOfOrganization>
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
-  <ArrayOfCourse>
+  <ArrayOfClass>
+    <Class>
+      <Name>64075951-6ab6-414f-ab19-835736d44f33</Name>
+      <ClassType>DigitalPathMasterLibrary</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>4ea7c842-911b-49bb-ab1b-440ab1a3a950</Name>
+      <ClassType>NovaNETTemplate</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+  </ArrayOfClass>
+    <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
       <Name>Digits-GradeCourse</Name>
@@ -337,7 +349,7 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>24c81742-0ab8-47d1-a80a-78df7b52bc40</Name>
+      <Name>dpteach1122015</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>0bb12871-aa8d-4cb4-baae-86c6bbd0ad3f</FirstName>

@@ -166,22 +166,22 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
 
 
         /// <summary>
-        /// Validate the shown column text
+        /// Validate the shown column text in manage course materials.
         /// </summary>
         /// <param name="shownColumnText">Text to validate.</param>
         /// <param name="activityName">Name of the activity.</param>
         [Then(@"I should see ""(.*)"" text in Shown to column for MathXL activity ""(.*)""")]
         [Then(@"I should see ""(.*)"" text in Shown to column for study plan ""(.*)""")]
         [Then(@"I should see ""(.*)"" text in Shown to column for LCC ""(.*)""")]
-        public void ValidateShownColumnText(string shownColumnText, string activityName)
+        public void ValidateShownColumnTextInMangeCourseMaterials(string shownColumnText, string activityName)
         {
             //Validate the text in shown to column in Manage course materials
-            Logger.LogMethodEntry("ManageCourse", "ValidateShownColumnText",
+            Logger.LogMethodEntry("ManageCourse", "ValidateShownColumnTextInMangeCourseMaterials",
                base.IsTakeScreenShotDuringEntryExit);
             //Validate the text in shown to column in Manage course materials
             Logger.LogAssertion("ManageCourse", ScenarioContext.Current.ScenarioInfo.Title,
             () => Assert.AreEqual(shownColumnText, new CoursePreviewMainUXPage().GetShownToColumnTextOfAssignedContent(activityName)));
-            Logger.LogMethodExit("ManageCourse", "ValidateStatusOftheActivity",
+            Logger.LogMethodExit("ManageCourse", "ValidateShownColumnTextInMangeCourseMaterials",
              base.IsTakeScreenShotDuringEntryExit);
         }
 

@@ -117,145 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="HomePage_Announcement_ViewAll_Link_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='dvAnnouncemnt']/div/a[@class='viewAll']</value>
+  <data name="frmSetupWizardPageResource_ClassName_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_txtNewClassName</value>
   </data>
-  <data name="HomePage_ClassCmenu_Link_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='cc']/div[{0}]/div/div/span[2]</value>
+  <data name="frmSetupWizardPageResource_CourseListTable_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourseList']/tbody/tr/td[1]/input</value>
   </data>
-  <data name="HomePage_ClassCmenu_OptionsText_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='cc']/div[{0}]/div/div/ul/li[{1}]</value>
+  <data name="frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_spManageE</value>
   </data>
-  <data name="HomePage_ClassCmenu_Options_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='cc']/div[{0}]/div/div/ul/li</value>
-  </data>
-  <data name="HomePage_ClassesDivCount_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='cc']/div</value>
-  </data>
-  <data name="HomePage_ClassesDivInitialCount_Value" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="HomePage_ClassName_Link_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='cc']/div[{0}]/div/div/span</value>
-  </data>
-  <data name="HomePage_DownArrowLink_Id_locator" xml:space="preserve">
-    <value>UXProfileMenu</value>
-  </data>
-  <data name="HomePage_GoToMail_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='dvMsgs']/div/a</value>
-  </data>
-  <data name="HomePage_MailLightBox_Id_Locator" xml:space="preserve">
-    <value>lightboxid</value>
-  </data>
-  <data name="HomePage_ManageAll_Button_Id_Locator" xml:space="preserve">
-    <value>_ctl5__ctl3__ctl0__ctl1__ctl0_btnViewAll</value>
-  </data>
-  <data name="HomePage_Message_ViewAll_Link_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='dvMails']/div/table/a[@class='viewAll']</value>
-  </data>
-  <data name="HomePage_Messeges_Link_Id_Locator" xml:space="preserve">
-    <value>imgMsg</value>
-  </data>
-  <data name="HomePage_MyProfile_Link_Id_Locator" xml:space="preserve">
-    <value>dvMyProfile</value>
-  </data>
-  <data name="HomePage_SignOut_Link_Id_Locator" xml:space="preserve">
-    <value>dvSignOut</value>
-  </data>
-  <data name="HomePage_SignOut_Link_PartialLinkText_Locator" xml:space="preserve">
-    <value>Sign Out</value>
-  </data>
-  <data name="HomePage_SignOut_Window_Title" xml:space="preserve">
-    <value>Pearson Sign In</value>
-  </data>
-  <data name="HomePage_Student_GoToMail_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='dvMails']/a</value>
-  </data>
-  <data name="HomePage_TheardSleep_Value" xml:space="preserve">
-    <value>1000</value>
-  </data>
-  <data name="HomePage_TimeToWait_Value" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="HomePage_UserProfile_Image_Id_Locator" xml:space="preserve">
-    <value>imgUserProfile</value>
-  </data>
-  <data name="HomePage_ViewAll_Link_PartialLink" xml:space="preserve">
-    <value>View All</value>
-  </data>
-  <data name="HomePage_WelcomeBanner_Img_Id_Locator" xml:space="preserve">
-    <value>dlwm_loginMessageBanner</value>
-  </data>
-  <data name="HomePage_WelcomeMessage_Button_Id_Locator" xml:space="preserve">
-    <value>btn_text</value>
-  </data>
-  <data name="HomePage_WelcomeMessage_Div_Id_Locator" xml:space="preserve">
-    <value>dlwm_loginMessage</value>
-  </data>
-  <data name="Home_Page_AccessClass_SetUpWizardFrame_Id_Locator" xml:space="preserve">
-    <value>iframeSetUpWizard</value>
-  </data>
-  <data name="Home_Page_AddProduct_Title_ClassName_Locator" xml:space="preserve">
+  <data name="frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator" xml:space="preserve">
     <value>PopupHeadTxt2</value>
   </data>
-  <data name="Home_Page_Cancel_Button_Id_Locator" xml:space="preserve">
-    <value>btnCancel</value>
+  <data name="frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator" xml:space="preserve">
+    <value>divSaveandExit</value>
   </data>
-  <data name="Home_Page_Classes_Link_Locator" xml:space="preserve">
-    <value>Classes</value>
+  <data name="frmSetupWizardPageResource_SaveClass_Btn_Id_Locator" xml:space="preserve">
+    <value>btnManageEnrollment</value>
   </data>
-  <data name="Home_Page_Classes_Window_Title" xml:space="preserve">
-    <value>Classes</value>
+  <data name="frmSetupWizardPageResource_SelectProductButton_Id_Locator" xml:space="preserve">
+    <value>btnCreateClass</value>
   </data>
-  <data name="Home_Page_Classname_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='selectedCourseTitle']</value>
+  <data name="frmSetupWizardPageResource_SelectProductPageTitle_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_lblSPH</value>
   </data>
-  <data name="Home_Page_Curriculum_Link_Locator" xml:space="preserve">
-    <value>Curriculum</value>
+  <data name="frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator" xml:space="preserve">
+    <value>lightboxid</value>
   </data>
-  <data name="Home_Page_Curriculum_Window_Title" xml:space="preserve">
-    <value>Curriculum</value>
+  <data name="frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator" xml:space="preserve">
+    <value>iframeSetUpWizard</value>
   </data>
-  <data name="Home_Page_GlobalHome_Window_Title" xml:space="preserve">
-    <value>Global Home</value>
+  <data name="frmSetupWizardPageResource_SetupWizard_PopupHeader_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='PopupHeader']//span[@id='SpanHeader']</value>
   </data>
-  <data name="Home_Page_Home_Link_Locator" xml:space="preserve">
-    <value>Home</value>
+  <data name="frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_divSucessMsg</value>
   </data>
-  <data name="Home_Page_Home_Window_Title" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="Home_Page_MyProfile_link" xml:space="preserve">
-    <value>My Profile</value>
-  </data>
-  <data name="Home_Page_NumberofProduct_Title_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='divMainRepeater']/table</value>
-  </data>
-  <data name="Home_Page_Overview_Window_Title" xml:space="preserve">
-    <value>Overview</value>
-  </data>
-  <data name="Home_Page_Planner_Link_Locator" xml:space="preserve">
-    <value>Planner</value>
-  </data>
-  <data name="Home_Page_Planner_Window_Title" xml:space="preserve">
-    <value>Planner</value>
-  </data>
-  <data name="Home_Page_ProductName_Title_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='divMainRepeater']/table["+u+"]/tbody/tr/td[3]/div[@class='AddProdScrRoTxt1']</value>
-  </data>
-  <data name="Home_Page_Product_AddButton_Id_Locator" xml:space="preserve">
-    <value>btnAddProduct</value>
-  </data>
-  <data name="Home_Page_Product_BrandingImage_Class_Locator" xml:space="preserve">
-    <value>curriculum_icon_placeholder</value>
-  </data>
-  <data name="Home_Page_Product_BrandingImage_ProductAttribute_Value" xml:space="preserve">
-    <value>productid</value>
-  </data>
-  <data name="Home_Page_YesCancel_Button_Id_Locator" xml:space="preserve">
-    <value>yesCancel</value>
-  </data>
-  <data name="HomePage_CreateClassButton_Id_Locator" xml:space="preserve">
-    <value>btnCreate</value>
+  <data name="frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator" xml:space="preserve">
+    <value>btnUseP</value>
   </data>
 </root>

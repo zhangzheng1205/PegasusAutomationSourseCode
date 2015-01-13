@@ -802,5 +802,31 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("HomePage", "ClickOnCmenuIconOfClassAndSelectOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on create button.
+        /// </summary>
+        public void ClickOnCreateButton()
+        {
+            //Click on create button in classes channel
+            logger.LogMethodEntry("HomePage", "ClickOnCreateButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for create button
+                base.WaitForElement(By.Id(HomePageResource.
+                    HomePage_CreateClassButton_Id_Locator));
+                //Click on create button
+                base.ClickButtonById(HomePageResource.
+                    HomePage_CreateClassButton_Id_Locator);
+            }
+
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("HomePage", "ClickOnCreateButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

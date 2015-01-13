@@ -212,11 +212,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// <param name="className">Name of class whose cmenu option need to be selected.</param>
         /// <param name="cmenuOption">Cmenu option to select.</param>
         [When(@"I click on Cmenu option of Class ""(.*)"" and select ""(.*)"" option")]
-        public void SelectCmenuOptionOfClass(string className, string cmenuOption)
+        public void SelectCmenuOptionOfClass(Class.ClassTypeEnum classTypeEnum, string cmenuOption)
         {
             Logger.LogMethodEntry("GlobalHome",
               "SelectCmenuOptionOfClass",
             base.IsTakeScreenShotDuringEntryExit);
+            //Get class name from memory
+            Class Class = Class.Get(classTypeEnum);
+            string className = Class.Name.ToString();
             //Click on cmenu icon of class and select the required option
             new HomePage().ClickOnCmenuIconOfClassAndSelectOption(className, cmenuOption);
             Logger.LogMethodExit("GlobalHome",

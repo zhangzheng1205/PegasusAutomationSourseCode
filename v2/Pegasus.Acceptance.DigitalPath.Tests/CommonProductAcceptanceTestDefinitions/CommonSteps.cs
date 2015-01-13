@@ -234,6 +234,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  IsTakeScreenShotDuringEntryExit);
         }
 
+
+
         /// <summary>
         /// Enter Into Course.
         /// </summary>
@@ -310,11 +312,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="className">Class name</param>
         [When(@"I enter into the DP ""(.*)"" class")]
-        public void EnterDPClass(string className)
+        public void EnterDPClass(Class.ClassTypeEnum classTypeEnum)
         {
-            //Enter In Class
+            //Enter Inside Class
             Logger.LogMethodEntry("CommonSteps", "EnterDPClass",
                 IsTakeScreenShotDuringEntryExit);
+            //Get class name from memory
+            Class Class = Class.Get(classTypeEnum);
+            string className = Class.Name.ToString();
             //Enter Dp class
             new HomePage().EnterInClass(className);
             Logger.LogMethodExit("CommonSteps", "EnterDPClass",

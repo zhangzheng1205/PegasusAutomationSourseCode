@@ -219,7 +219,7 @@ And I should see Assigned icon for LCC "1-1 Homework"
 #Product: Digital Path
 Scenario: Teacher validating the student enrollment to class
 When I navigate to the "Home" tab
-And I click on Cmenu option of Class "Class digits 6" and select "Enrollments" option
+And I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
 Then I should see the "Manage Students" popup
 When I Click on Create New button
 And I select "Enroll from School" drop down option
@@ -238,7 +238,7 @@ When I close Manage student pop up
 #Purpose: To validate display of assigned study plan in class course
 Scenario: Teacher validating display of assigned study plan under manage coursework on current date
 When I navigate to the "Home" tab
-And I enter into the DP "Class Digits 6" class
+And I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
 When I navigate to the "Manage Coursework" tab
 Then I should see assigned study plan "Topic 1 Test with Study Plan"
@@ -251,7 +251,7 @@ And I should see Assigned icon for study plan "Topic 1 Test with Study Plan"
 #Purpose: To validate display of assigned Math XL activity in class course
 Scenario: Teacher validating display of assigned Math XL activity under manage coursework on current date
 When I navigate to the "Home" tab
-And I enter into the DP "Class Digits 6" class
+And I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
 When I navigate to the "Manage Coursework" tab
 Then I should see assigned MathXL activity "Topic 1 Test"
@@ -259,5 +259,22 @@ And I should see status as "Not started" for MathXL activity "Topic 1 Test"
 And I should see the due date for MathXL activity "Topic 1 Test"
 And I should see "All" text in Shown to column for MathXL activity "Topic 1 Test"
 And I should see Assigned icon for MathXL activity "Topic 1 Test"
+
+
+#Test case id: peg-1456
+#Purpose: To create DP class by teacher
+Scenario: Class creation from classes channel
+When I navigate to the "Home" tab
+And I click on Create button
+Then I should see "Setup Wizard" light box
+When I enter class name of "DigitalPathMasterLibrary"
+And I click on Select product button
+Then I should see "Select Product" page
+When I select product and Click on Manage enrollments button
+Then I should see "Manage Enrollments" page
+When I click on Save Class button
+Then I should see the successfull message "Your class has been successfully created and saved." in setup wizard
+When I click No,Save and Exit button
+Then I should see "DigitalPathMasterLibrary" class displayed in classes channel
 
 

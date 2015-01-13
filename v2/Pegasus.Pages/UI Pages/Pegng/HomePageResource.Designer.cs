@@ -313,6 +313,15 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btnCreate.
+        /// </summary>
+        internal static string HomePage_CreateClassButton_Id_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_CreateClassButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UXProfileMenu.
         /// </summary>
         internal static string HomePage_DownArrowLink_Id_locator {

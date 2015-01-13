@@ -637,8 +637,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 221
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 222
-testRunner.And("I click on Cmenu option of Class \"Class digits 6\" and select \"Enrollments\" option" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on Cmenu option of Class \"DigitalPathMasterLibrary\" and select \"Enrollmen" +
+                    "ts\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 223
 testRunner.Then("I should see the \"Manage Students\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 224
@@ -682,7 +682,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 240
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 241
-testRunner.And("I enter into the DP \"Class Digits 6\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 242
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 243
@@ -715,7 +715,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 253
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 254
-testRunner.And("I enter into the DP \"Class Digits 6\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 255
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 256
@@ -730,6 +730,43 @@ testRunner.And("I should see the due date for MathXL activity \"Topic 1 Test\"",
 testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 261
 testRunner.And("I should see Assigned icon for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Class creation from classes channel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void ClassCreationFromClassesChannel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Class creation from classes channel", ((string[])(null)));
+#line 266
+this.ScenarioSetup(scenarioInfo);
+#line 267
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 268
+testRunner.And("I click on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 269
+testRunner.Then("I should see \"Setup Wizard\" light box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 270
+testRunner.When("I enter class name of \"DigitalPathMasterLibrary\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 271
+testRunner.And("I click on Select product button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 272
+testRunner.Then("I should see \"Select Product\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 273
+testRunner.When("I select product and Click on Manage enrollments button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 274
+testRunner.Then("I should see \"Manage Enrollments\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 275
+testRunner.When("I click on Save Class button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 276
+testRunner.Then("I should see the successfull message \"Your class has been successfully created an" +
+                    "d saved.\" in setup wizard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 277
+testRunner.When("I click No,Save and Exit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 278
+testRunner.Then("I should see \"DigitalPathMasterLibrary\" class displayed in classes channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

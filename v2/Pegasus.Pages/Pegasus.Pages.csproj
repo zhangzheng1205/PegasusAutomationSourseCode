@@ -325,6 +325,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ViewPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Common\SetupWizard\frmSetupWizardPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Common\SetupWizard\frmSetupWizardPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmSetupWizardPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Common\ShowMessagePage.cs" />
     <Compile Include="UI Pages\Pegasus\Common\ShowMessagePageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1979,6 +1985,10 @@
     <EmbeddedResource Include="UI Pages\MMND\VizedHtmlContent\Main\CourseMode\VizedHtmlView\ViewPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Common\SetupWizard\frmSetupWizardPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmSetupWizardPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Common\ShowMessagePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

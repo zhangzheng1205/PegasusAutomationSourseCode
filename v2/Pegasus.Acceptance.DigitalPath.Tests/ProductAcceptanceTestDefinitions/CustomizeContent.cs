@@ -267,12 +267,15 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
        /// </summary>
        /// <param name="className">Class name.</param>
        [When(@"I select the class ""(.*)""")]
-       public void SelectClassInAssignWindow(string className)
+       public void SelectClassInAssignWindow(Class.ClassTypeEnum classTypeEnum)
        {
            //Select cmenu option of lesson
            Logger.LogMethodEntry("CustomizeContent",
                "SelectClassInAssignWindow",
                  base.IsTakeScreenShotDuringEntryExit);
+           //Get class name from memory
+           Class Class = Class.Get(classTypeEnum);
+           string className = Class.Name.ToString();
            new AssignContentPage().SelectClassOnAssignWindow(className);
            Logger.LogMethodExit("CustomizeContent",
               "SelectClassInAssignWindow",

@@ -34,7 +34,7 @@ And I expand the folder "Expressions and Equations" in Curriculum tab
 And I expand the sub folder "Variables and Expressions" in Curriculum tab
 And I select cmenu option "Assign" of "Lesson 1-1: Numerical Expressions" activity in Curriculum tab
 Then I should see "Assign" pop up
-When I select the class "Class digits 6"
+When I select the class "DigitalPathMasterLibrary"
 And I select the current date and due date
 And I click on Save and Assign button
 And I click on Ok button in Assign pop up
@@ -50,7 +50,7 @@ And I expand the leaf folder "1-1 Homework" in Planner tab
 And I select cmenu option "Assign" of "1-1 Homework" activity in Planner tab
 And I click on Ok button in Alert pop up
 Then I should see "Assign" pop up
-When I select the class "Class Digits 6"
+When I select the class "DigitalPathMasterLibrary"
 And I select the current date and due date
 And I click on Save and Assign button
 And I click on Ok button in Assign pop up
@@ -79,7 +79,7 @@ And I expand the leaf folder "Topic 1 Test" in Planner tab
 And I select cmenu option "Assign" of "Topic 1 Test" activity in Planner tab
 And I click on Ok button in Alert pop up
 Then I should see "Assign" pop up
-When I select the class "Class Digits 6"
+When I select the class "DigitalPathMasterLibrary"
 And I select the current date and due date
 And I click on Save and Assign button
 And I click on Ok button in Assign pop up

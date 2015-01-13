@@ -30,7 +30,6 @@ namespace Pegasus.Automation.DataTransferObjects
         /// </summary>
         public ClassTypeEnum ClassType { get; set; }
 
-
         /// <summary>
         /// This is the Rumba Section ID
         /// </summary>

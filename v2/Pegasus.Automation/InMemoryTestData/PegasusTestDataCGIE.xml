@@ -16,11 +16,23 @@
     </Organization>
   </ArrayOfOrganization>
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <ArrayOfClass>
+    <Class>
+      <Name>digits - grade6</Name>
+      <ClassType>DigitalPathMasterLibrary</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>4ea7c842-911b-49bb-ab1b-440ab1a3a950</Name>
+      <ClassType>NovaNETTemplate</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+  </ArrayOfClass>
   <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
       <Name>Digits-GradeCourse</Name>
-      <CourseType>DigitsAuthoredCourse</CourseType>
+      <CourseType>DigitalPathMasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
