@@ -443,7 +443,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Application environment.</returns>
         public static string GetApplicationTestEnvironment()
         {
-            return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.TestEnvironment_Key)
+            return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key];
         }
 
