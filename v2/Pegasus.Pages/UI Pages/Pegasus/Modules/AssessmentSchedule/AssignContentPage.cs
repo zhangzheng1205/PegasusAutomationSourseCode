@@ -942,8 +942,8 @@ namespace Pegasus.Pages.UI_Pages
                 DateTime instance = user.CurrentProfileDateTime.AddMinutes(460);
                 String currentTime = instance.ToString();
 
-                string systemDate = DateTime.Now.Date.ToString("dd/MM/yyyy");
-                //string date = currentTime.Split(' ')[0];
+                //string systemDate = DateTime.Now.Date.ToString("dd/MM/yyyy");
+                string date = currentTime.Split(' ')[0];
                 string hour = (currentTime.Split(' ')[1]).Split(':')[0];
                 string minutes = (currentTime.Split(' ')[1]).Split(':')[1];
                 string dayTime = currentTime.Split(' ')[2];
@@ -955,7 +955,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClearTextById(AssignContentPageResource
                .AssignContent_Page_DueDate_TextBox_Id_Locator);
                 base.FillTextBoxById(AssignContentPageResource
-                .AssignContent_Page_DueDate_TextBox_Id_Locator, systemDate);
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, date);
                 //clear current hours
                 base.ClearTextById(AssignContentPageResource
                     .AssignContent_Page_Hours_TextBox_Id_Locator);
