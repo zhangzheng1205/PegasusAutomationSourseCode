@@ -112,11 +112,29 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
+      <Name>CGIE_Amplifier_Section</Name>
+      <CourseType>AmpInstructorCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
       <Name>MyPsychLab for Ciccarelli</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <SectionName>peg-18255 section 1</SectionName>
+      <SectionId>CRSKL39-12001405</SectionId>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>CGIE_WLAutomation</Name>
+      <CourseType>AmpProgramCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <SectionName>CGIE_Amplifier_Section</SectionName>
       <SectionId>CRSKL39-12001405</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
@@ -496,6 +514,17 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Ramesh</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Nag</LastName>
+      <UserType>AmpProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -514,6 +543,29 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>ae6d</LastName>
       <UserType>HSSCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Deepa</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Anand</LastName>
+      <UserType>AmpCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+     <!--"Amplifier Student"-->
+    <User>
+      <Name>65496e7b-28a0-4c3c-b666-d00c54a1aa08</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>AmpCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
