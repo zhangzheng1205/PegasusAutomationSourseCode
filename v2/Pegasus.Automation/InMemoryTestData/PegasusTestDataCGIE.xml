@@ -32,7 +32,7 @@
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
       <Name>Digits-GradeCourse</Name>
-      <CourseType>DigitalPathMasterLibrary</CourseType>
+      <CourseType>DigitsAuthoredCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
