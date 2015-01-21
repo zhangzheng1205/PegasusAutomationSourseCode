@@ -3169,12 +3169,20 @@ namespace Pegasus.Pages.UI_Pages
             //Select Classes Window
             base.SelectWindow(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Classes_Window_Name);
+            //Wait for container frame
+            base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_CourseContainer_Frame_Id_Locator));
+            //Wait for more link drop down
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_MoreLink_Id_Locator));
-            //Click on More Link
-            IWebElement moreLink = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+            //Focus on more link drop down icon
+            base.PerformFocusOnElementActionById(TodaysViewUXPageResource.
                 TodayViewUXPageResource_MoreLink_Id_Locator);
-            base.ClickByJavaScriptExecutor(moreLink);
+            //Click on More Link
+            IWebElement moreLink = base.GetWebElementPropertiesById(
+               TodaysViewUXPageResource.TodayViewUXPageResource_MoreLink_Id_Locator);
+            base.PerformClickAction(moreLink);
+           //base.ClickByJavaScriptExecutor(moreLink);
             Logger.LogMethodExit("GBInstructorUXPage", "ClickonMoreLink",
                           base.IsTakeScreenShotDuringEntryExit);
         }

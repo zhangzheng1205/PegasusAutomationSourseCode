@@ -10,6 +10,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
+using System.Globalization;
 
 #endregion
 
@@ -480,6 +481,32 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             new MyAccountSettingPage().SaveCurrentDateAndTime();
             Logger.LogMethodExit("CommonSteps", "SaveDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Switch to pop up.
+        /// </summary>
+        /// <param name="expectedPageTitle">Expected pop up title</param>
+        [Then(@"I should be on the ""(.*)"" popup")]
+        public void WaitAndSwitchToPopUp(string expectedPageTitle)
+        {
+            //Verify Correct Page Opened
+            Logger.LogMethodEntry("CommonSteps", "WaitAndSwitchToPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Some Time to Get off from light box
+            Thread.Sleep(Convert.ToInt32
+                (CommonStepsResource.CommonSteps_SleepTime_Value));
+            //wait for the window
+            base.WaitUntilWindowLoads(expectedPageTitle);
+            //Get current opened page title
+            string actualPageTitle =
+                WebDriver.Title.ToString(CultureInfo.InvariantCulture);
+            //Assert we have correct page opened
+            Logger.LogAssertion("VerifyOpenedPageTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
+            Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 

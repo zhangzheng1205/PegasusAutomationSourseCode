@@ -61,6 +61,9 @@ And I should see the assigned content "1-1 Homework" in Calendar frame
 #Test case id: peg-16954
 #Purpose: To assign study plan via drag and drop
 Scenario: Teacher assigns study plan via drag and drop in planner tab
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
 When I navigate to the "Planner" tab
 And I expand the folder "Expressions and Equations" in Planner tab
 And I expand the sub folder "Variables and Expressions" in Planner tab

@@ -200,11 +200,11 @@ namespace Pegasus.Pages.UI_Pages
                 this.ClickOnFolderInFilterTestBank(PaperTestUXPageResource.
                     PaperTestUX_Page_First_Level_Folder_Name);
                 //Click on the Second Level Folder
-                this.ClickOnFolderInFilterTestBank(PaperTestUXPageResource.
-                PaperTestUX_Page_Second_Level_Folder_Name);
+                //this.ClickOnFolderInFilterTestBank(PaperTestUXPageResource.
+               // PaperTestUX_Page_Second_Level_Folder_Name);
                 //Click on the Third Level Folder
-                this.ClickOnFolderInFilterTestBank(PaperTestUXPageResource.
-                PaperTestUX_Page_Third_Level_Folder_Name);
+               // this.ClickOnFolderInFilterTestBank(PaperTestUXPageResource.
+                //PaperTestUX_Page_Third_Level_Folder_Name);
                 //Click on checkbox against question 
                 this.ClickOnCheckBoxOfQuestion();
                 //Enter Random Question number

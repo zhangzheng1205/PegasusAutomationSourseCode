@@ -822,7 +822,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Verify student score value
             Logger.LogAssertion("VerifyStudentPresent",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
-             Assert.IsTrue(new RptAllAssessmentAllStudentPage().
+            Assert.IsTrue(new RptAllAssessmentAllStudentPage().
              IsStudentScorePercentagePresent(
                  scorePercentage, studentName)));
             Logger.LogMethodExit("Reports",
@@ -860,7 +860,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyStudentPresent",
            ScenarioContext.Current.ScenarioInfo.Title, () =>
             Assert.IsTrue(new RptAllAssessmentAllStudentPage().
-            IsStudentScorePercentagePresent(
+            IsStudentScorePercentagePresentProgramAdmin(
                 scorePercentage, studentName)));
             Logger.LogMethodExit("Reports",
            "VerifyZeroScoringStudentActivityReportDataInMultipleStudentAndActivities",

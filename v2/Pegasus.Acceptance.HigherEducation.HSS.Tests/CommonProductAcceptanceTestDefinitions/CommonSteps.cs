@@ -1243,7 +1243,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodEntry("CommonSteps", "ClickOnReportLink",
             base.IsTakeScreenShotDuringEntryExit);
             // Click on the report link
-            new RptMainUXPage().ClickReportLinkInHSS(reportName, userTypeEnum);
+            new RptMainUXPage().ClickReportLinkInReportsTab(reportName, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", "ClickOnReportLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }

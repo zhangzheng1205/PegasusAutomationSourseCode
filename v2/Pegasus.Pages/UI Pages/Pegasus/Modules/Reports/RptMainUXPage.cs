@@ -1483,12 +1483,33 @@ namespace Pegasus.Pages.UI_Pages
                         new ProgramAdminReportsSubTabPage().MyReportsActions
                             (reportActionOption, reportTypeEnum);
                         break;
-                    //Switch to this case when user is 'SMS Instructor' os 'Section Instructor'
+                    //Switch to this case when user is 'SMS Instructor' or 'Section Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                         this.SwitchToReportsWindow();
                         //Switch to 'Reports' page 'Mainframe' iframe
                         this.SwitchToMainFrame();
+                        switch (reportActionOption)
+                        {
+                            //Perform 'Run Report' on selected report
+                            case "Run Report": this.ClickReportCMenu(reportTypeEnum);
+                                this.SelectTheReportCmenuOptions(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator);
+                                break;
+                            //Perform 'Edit Settings' on selected report
+                            case "Edit Settings": this.ClickReportCMenu(reportTypeEnum);
+                                this.SelectTheReportCmenuOptions(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuEditSettings_Id_Locator);
+                                break;
+                            //Perform 'Delete' on selected report
+                            case "Delete": this.ClickReportCMenu(reportTypeEnum);
+                                this.SelectTheReportCmenuOptions(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuDelete_Id_Locator);
+                                break;
+                        }
+                        break;
+
+                    case User.UserTypeEnum.DPCsTeacher:
                         switch (reportActionOption)
                         {
                             //Perform 'Run Report' on selected report
@@ -1564,7 +1585,7 @@ namespace Pegasus.Pages.UI_Pages
 
                 if (reportTypeEnum == Report.ReportTypeEnum.HSSStudentResultsbyActivity ||
                    reportTypeEnum == Report.ReportTypeEnum.HSSActivityResultsByStudent ||
-                   reportTypeEnum == Report.ReportTypeEnum.HSSStudytPlanResults)
+                   reportTypeEnum == Report.ReportTypeEnum.HSSStudytPlanResults || reportTypeEnum == Report.ReportTypeEnum.DPActivityResultsByStudent)
                 {
                     cmenu = RptMainUXPageResource.RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2;
                     reportName = RptMainUXPageResource.RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2;
@@ -1607,6 +1628,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click 'Select Students' button and check 'Select All' at Students Option
             Logger.LogMethodEntry("RptMainUXPage", "SelectAllStudent",
               base.IsTakeScreenShotDuringEntryExit);
+            IWebElement selectStudent;
             try
             {
                 switch (userTypeEnum)
@@ -1625,7 +1647,21 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitForElement(By.XPath(RptMainUXPageResource.
                             RptMainUX_Page_SelectStudentds_Button_Xpath_Locator));
                         //Click 'Select Students' button
-                        IWebElement selectStudent = base.GetWebElementPropertiesByXPath(
+                         selectStudent = base.GetWebElementPropertiesByXPath(
+                            RptMainUXPageResource.
+                            RptMainUX_Page_SelectStudentds_Button_Xpath_Locator);
+                        base.ClickByJavaScriptExecutor(selectStudent);
+                        //check 'Select All' at Students Option
+                        new RptSelectStudentsPage().CheckSelectAll();
+                        break;
+                    case User.UserTypeEnum.DPCsTeacher:
+                        //Switch to 'Reports' page 'Mainframe' iframe
+                        base.SwitchToIFrameById("frmCourseContainer");
+                        this.SwitchToMainFrame();
+                        base.WaitForElement(By.XPath(RptMainUXPageResource.
+                            RptMainUX_Page_SelectStudentds_Button_Xpath_Locator),5);
+                        //Click 'Select Students' button
+                         selectStudent = base.GetWebElementPropertiesByXPath(
                             RptMainUXPageResource.
                             RptMainUX_Page_SelectStudentds_Button_Xpath_Locator);
                         base.ClickByJavaScriptExecutor(selectStudent);
@@ -1639,6 +1675,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+            base.SwitchToDefaultWindow();
             Logger.LogMethodExit("RptMainUXPage", "SelectAllStudent",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1666,7 +1703,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptMainUXPageResource.
                RptMain_Page_MainFrame_Id_Locator));
             //Switch to Frame
-            base.SwitchToIFrame(RptMainUXPageResource.
+            base.SwitchToIFrameById(RptMainUXPageResource.
                 RptMain_Page_MainFrame_Id_Locator);
             Logger.LogMethodExit("RptMainUXPage", "SwitchToMainFrame",
                base.IsTakeScreenShotDuringEntryExit);
@@ -1698,6 +1735,15 @@ namespace Pegasus.Pages.UI_Pages
                         //Check the checkbox
                         this.SelectCheckBoxSaveSettingsToMyReport();
                         break;
+                    //Switch to this case when user is 'DP teacher'
+                    case User.UserTypeEnum.DPCsTeacher:
+                        //Switch to 'Reports' page iframe
+                        base.SwitchToIFrameById(RptMainUXPageResource.
+                            RptMainUXPage_ContainerFrame_Id_Locator);
+                        this.SwitchToMainFrame();
+                        //Check the checkbox
+                        this.SelectCheckBoxSaveSettingsToMyReport();
+                        break;
                 }
             }
             catch (Exception e)
@@ -1717,7 +1763,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("RptMainUXPage", "SelectCheckBoxSaveSettingsToMyReport",
             base.IsTakeScreenShotDuringEntryExit);
             base.FocusOnElementById(RptMainUXPageResource.
-              RptMainUX_Page_SaveSettingsToMyReport_Checkbox_Id_Locator);
+                RptMainUX_Page_SaveSettingsToMyReport_Checkbox_Id_Locator);
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMainUX_Page_SaveSettingsToMyReport_Checkbox_Id_Locator));
             //Checks the checkbox
@@ -1756,6 +1802,17 @@ namespace Pegasus.Pages.UI_Pages
                         //Click on the expected button In Reports
                         this.ClickButtonInReport(buttonName);
                         break;
+                    //Switch to this case when user is 'DP teacher'
+                    case User.UserTypeEnum.DPCsTeacher:
+                        //Clear all iframes selected
+                        base.SwitchToDefaultPageContent();
+                        //Switch to iframes in reports page
+                        base.SwitchToIFrameById(RptMainUXPageResource.
+                            RptMainUXPage_ContainerFrame_Id_Locator);
+                        this.SwitchToMainFrame();
+                        //Click on the expected button In Reports
+                        this.ClickButtonInReport(buttonName);
+                        break;
                 }
             }
             catch (Exception e)
@@ -1781,11 +1838,8 @@ namespace Pegasus.Pages.UI_Pages
                 // Focus on Element
                 base.FocusOnElementByPartialLinkText((button));
                 //Click On Button
-                IWebElement getButton =
-                    base.GetWebElementPropertiesByPartialLinkText(button);
+                IWebElement getButton = base.GetWebElementPropertiesByPartialLinkText(button);
                 base.ClickByJavaScriptExecutor(getButton);
-                Thread.Sleep(Convert.ToInt32(RptSaveReportPageResource
-                .RptSaveReport_Page_ThreadTime_Value));
             }
             catch (Exception e)
             {
@@ -1823,6 +1877,43 @@ namespace Pegasus.Pages.UI_Pages
                         this.SwitchToReportsWindow();
                         //Switch to 'Mainframe' iframe in 'Reports' page
                         this.SwitchToMainFrame();
+                        switch (assessmentType)
+                        {
+                            case "Select Activities":
+                                this.OpenAssessmentWindow(assessmentType, "Select Activities");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Exams":
+                                this.OpenAssessmentWindow(assessmentType, "Select Exam");
+                                //Selects the expected exam and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Trainings":
+                                this.OpenAssessmentWindow(assessmentType, "Select Training");
+                                //Selects the expected training and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Activity":
+                                this.OpenAssessmentWindow(assessmentType, "Select Activities");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Study Plans":
+                                this.OpenAssessmentWindow(assessmentType, "Select Study Plan");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Student":
+                                this.OpenAssessmentWindow(assessmentType, "Select Student");
+                                //Selects the expected activity and click 'Add'
+                                this.AddHSSCsSmsStudent((User.UserTypeEnum)
+                                     Enum.Parse(typeof(User.UserTypeEnum), assessmentName));
+                                break;
+                        }
+                        break;
+
+                    case User.UserTypeEnum.DPCsTeacher:
                         switch (assessmentType)
                         {
                             case "Select Activities":
@@ -2020,8 +2111,6 @@ namespace Pegasus.Pages.UI_Pages
                   base.IsTakeScreenShotDuringEntryExit);
             string getSearchedAssesmentName = string.Empty;
             base.SwitchToLastOpenedWindow();
-            bool jdvh = base.IsElementPresent(By.XPath(RptMainUXPageResource.
-                RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator),10);
             base.WaitForElement(By.XPath(RptMainUXPageResource.
                 RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator));
             //Get count of the reports listed under 'My Reports'
@@ -2051,6 +2140,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             this.ClickAddButton();
+            base.SwitchToDefaultWindow();
             Logger.LogMethodExit("RptMainUXPage", "AddAssesment",
                      base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2071,6 +2161,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement clickOnAdd = base.GetWebElementPropertiesByXPath(RptMainUXPageResource.
                 RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator);
             base.ClickByJavaScriptExecutor(clickOnAdd);
+            base.SwitchToDefaultWindow();
             Logger.LogMethodExit("RptMainUXPageResource", "ClickAddButton",
                      base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2234,62 +2325,85 @@ namespace Pegasus.Pages.UI_Pages
             return reportFrameHeader;
         }
 
-        public void ClickReportLinkInHSS(string reportName, User.UserTypeEnum userTypeEnum)
+        /// <summary>
+        /// Click on a report link under reports tab.
+        /// </summary>
+        /// <param name="reportName">Report link name.</param>
+        /// <param name="userTypeEnum">Type of user accessing report link.</param>
+        public void ClickReportLinkInReportsTab(string reportName, User.UserTypeEnum userTypeEnum)
         {
+            //Access report link
+            Logger.LogMethodEntry("RptMainUXPage", "ClickReportLinkInReportsTab",
+             base.IsTakeScreenShotDuringEntryExit);
+            int getreportLinkCount;
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.HSSCsSmsInstructor:
                     base.SwitchToLastOpenedWindow();
                     base.SwitchToIFrame(RptMainPageResource.
                       RptMain_Page_MainFrame_Id_Locator);
-                    int getreportLinkCount = base.GetElementCountByXPath(
+                    //Get count of total number of reports listed under reports tab
+                     getreportLinkCount = base.GetElementCountByXPath(
                         RptMainUXPageResource.
                         RptMainUXPage_HSSReport_Link_XPath_Locator);
+                    //Search for expected report link
                     for (int i = 3; i <= getreportLinkCount; i++)
                     {
+                        //Get report link name
                         string getreportLinkName = base.GetElementTextByXPath(
                             string.Format(
                             RptMainUXPageResource.
                             RptMainUXPage_HSSReportOption_Link_XPath_Locator, i));
+                        //If expected report link found click on it
                         if (getreportLinkName == reportName)
                         {
                             IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(
                                 string.Format(
                                 RptMainUXPageResource.
                             RptMainUXPage_HSSReportOption_Link_XPath_Locator, i));
+                            //Click on report link
                             base.ClickByJavaScriptExecutor(reportLinkName);
                             break;
                         }
                     }
                     break;
 
-                //case User.UserTypeEnum.HSSProgramAdmin:
-                //    base.SwitchToLastOpenedWindow();
-                //    bool you = base.IsElementPresent(By.Id("_ctl0_PageContent_ifrmMiddle"), 10);
-                //    base.SwitchToIFrame("_ctl0_PageContent_ifrmMiddle");
-                //    bool ygou = base.IsElementPresent(By.Id(RptMainPageResource.
-                //      RptMain_Page_MainFrame_Id_Locator), 10);
-                //    bool hdfg = base.IsElementPresent(By.Id("Div2"), 10);
-                //    int getReportLinkCount = base.GetElementCountByXPath("//div[@id='Div2']/table/tbody/tr[2]/td/div/table/tbody/tr");
-
-                //    for (int i = 1; i <= getReportLinkCount; i++)
-                //    {
-                //        string getreportLinkName = base.GetElementTextByXPath(
-                //            string.Format(
-                //            "//div[@id='Div2']/table/tbody/tr[2]/td/div/table/tbody/tr{0}/td/span/span", i));
-                //        if (getreportLinkName == reportName)
-                //        {
-                //            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(
-                //                string.Format(
-                //                "//div[@id='Div2']/table/tbody/tr[2]/td/div/table/tbody/tr{0}/td/span/span", i));
-                //            base.ClickByJavaScriptExecutor(reportLinkName);
-                //            break;
-                //            i++;
-                //        }
-                //    }
-                //    break;
+                case User.UserTypeEnum.DPCsTeacher:
+                    base.SwitchToIFrameById(RptMainUXPageResource.
+                        RptMainUXPage_ContainerFrame_Id_Locator);
+                    base.SwitchToIFrameById(RptMainPageResource.
+                      RptMain_Page_MainFrame_Id_Locator);
+                    base.WaitForElement(By.XPath(RptMainUXPageResource.
+                        RptMainUXPage_HSSReport_Link_XPath_Locator));
+                    //Get count of total number of reports listed under reports tab
+                     getreportLinkCount = base.GetElementCountByXPath(
+                        RptMainUXPageResource.
+                        RptMainUXPage_HSSReport_Link_XPath_Locator);
+                     //Search for expected report link
+                    for (int i = 3; i <= getreportLinkCount; i++)
+                    {
+                        //Get report link name
+                        string getreportLinkName = base.GetElementTextByXPath(
+                            string.Format(
+                            RptMainUXPageResource.
+                            RptMainUXPage_HSSReportOption_Link_XPath_Locator, i));
+                        //If expected report link found click on it
+                        if (getreportLinkName == reportName)
+                        {
+                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(
+                                string.Format(
+                                RptMainUXPageResource.
+                            RptMainUXPage_HSSReportOption_Link_XPath_Locator, i));
+                            //Click on report link
+                            base.ClickByJavaScriptExecutor(reportLinkName);
+                            break;
+                        }
+                    }
+                    break;
             }
         }
+
+        public string RptMainPageResourceRptMainUXPage_ContainerFrame_Id_Locator { get; set; }
     }
 }
 

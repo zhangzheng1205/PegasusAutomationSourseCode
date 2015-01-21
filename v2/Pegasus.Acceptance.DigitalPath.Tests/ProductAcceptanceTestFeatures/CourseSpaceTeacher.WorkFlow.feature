@@ -277,4 +277,56 @@ Then I should see the successfull message "Your class has been successfully crea
 When I click No,Save and Exit button
 Then I should see "DigitalPathMasterLibrary" class displayed in classes channel
 
+Scenario: Generate and save the "Activity Results by Student" as a teacher
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Reports" tab in DP class
+And I click on "Activity Results by Student" report link as "DPCsTeacher"
+And I select "Topic 1 Test" asset in "Select Activity" by "DPCsTeacher"
+And I 'Select All' in 'Student Options' by "DPCsTeacher"
+And I select 'save settings to My Reports' option by "DPCsTeacher"
+And I click on the "Run Report" button in reports by "DPCsTeacher"
+Then I should see "Save settings to My Reports" popup
+When I select "Createnewreport" radiobutton
+And  I enter the "DPActivityResultsByStudent" report name
+And  I click on "SaveandRun" button
+Then I should be on the "Report: Activity Results by Student" popup
+And I should see the "Topic 1 Test" with course name "MasterLibrary" with average score "2.9%" 
+And I should see the "MathXL Test" as Activity type
+And I should see the Attempt number as "1" for "DPCsStudent"
+And I should see the "2.9%" in Percent column for "DPCsStudent"
+When I close the "Report: Activity Results by Student" window
+And I click on the "Cancel" button in reports by "DPCsTeacher"
+And I select "Run Report" for "DPActivityResultsByStudent" report in 'My Reports' grid by "DPCsTeacher"
+Then I should be on the "Report: Activity Results by Student" popup
+When I close the "Report: Activity Results by Student" window
 
+Scenario: Generate and save the "Student Results by Activity" as a teacher
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Reports" tab in DP class
+And I click on "Student Results by Activity" report link as "DPCsTeacher"
+And I select "DPCsStudent" student in "Select Student" by "DPCsTeacher"
+And I select "Topic 1 Test" asset in "Select Activities" by "DPCsTeacher"
+And I select 'save settings to My Reports' option by "DPCsTeacher"
+And I click on the "Run Report" button in reports by "DPCsTeacher"
+Then I should see "Save settings to My Reports" popup
+When I select "Createnewreport" radiobutton
+And  I enter the "DPActivityResultsByStudent" report name
+And  I click on "SaveandRun" button
+Then I should be on the "Report: Student Results by Activity" popup
+And I should see the "Topic 1 Test" with course name "MasterLibrary" with average score "2.9%" 
+And I should see the "MathXL Test" as Activity type
+And I should see the Attempt number as "1" for "DPCsStudent"
+And I should see the "2.9%" in Percent column for "DPCsStudent"
+When I close the "Report: Activity Results by Student" window
+And I click on the "Cancel" button in reports by "DPCsTeacher"
+And I select "Run Report" for "DPActivityResultsByStudent" report in 'My Reports' grid by "DPCsTeacher"
+Then I should be on the "Report: Student Results by Activity" popup
+When I close the "Report: Student Results by Activity" window

@@ -378,4 +378,7 @@
   <data name="RptMainUXPage_SelectStudent_XPath_Locator" xml:space="preserve">
     <value>//*[@id='GridStudent']/tbody/tr</value>
   </data>
+  <data name="RptMainUXPage_ContainerFrame_Id_Locator" xml:space="preserve">
+    <value>frmCourseContainer</value>
+  </data>
 </root>

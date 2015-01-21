@@ -120,6 +120,21 @@
   <data name="RptAllAssessmentAllStudent_Page_ActivityHeading_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl3_AssessmentplaceHolder']/table/tbody/tr/td/span</value>
   </data>
+  <data name="RptAllAssessmentAllStudent_Page_ActivityType_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl3_AveragePlaceHolder']/table/tbody/tr[2]/td[2]/span</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_ARBS_StudentAttemptValue_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[2]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[1]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_ARBS_StudentPercent_Score_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[2]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[4]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_ARBS_StudentsCount_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_ARBS_StudentsName_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[1]/span</value>
+  </data>
   <data name="RptAllAssessmentAllStudent_Page_AverageScoreValue_Xpath_Locator" xml:space="preserve">
     <value>//span[@id='lblContainer']/div/div/div/table[1]/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[1]/td/span</value>
   </data>
