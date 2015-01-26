@@ -168,4 +168,22 @@
   <data name="RptAllAssessmentAllStudent_Page_Window_Title_Locator" xml:space="preserve">
     <value>Activity Results (Multiple students and activities)</value>
   </data>
+  <data name="RptAllAssessmentAllStudent_Page_ActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[1]/span[1]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_SRBA_StudentAttemptValue_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/table/tbody/tr[{0}]/td[3]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[1]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_SRBA_ActivitiesCount_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/table/tbody/tr</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_SRBA_ActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/table/tbody/tr[{0}]/td[1]/span[1]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_SRBA_AssessmentName_String" xml:space="preserve">
+    <value>Topic 1 Test</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_SRBA_StudentPercentage_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/table/tbody/tr[{0}]/td[3]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[4]</value>
+  </data>
 </root>

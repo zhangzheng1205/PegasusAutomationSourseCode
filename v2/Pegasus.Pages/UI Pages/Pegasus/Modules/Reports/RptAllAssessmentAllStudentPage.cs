@@ -539,19 +539,24 @@ namespace Pegasus.Pages
         /// </summary>
         /// <param name="studentName">Student name.</param>
         /// <returns>Attempt number.</returns>
-        public string GetAttemptFromReportsWindow(string studentName)
+        public string GetAttemptFromReportsWindow(string studentName, string reportName)
         {
             //Gets the number of attemps taken by student 
             logger.LogMethodEntry("RptAllAssessmentAllStudentPage", "GetStudentAttempt",
                 base.IsTakeScreenShotDuringEntryExit);
             string getStudentName = string.Empty;
             string getStudentAttempts = string.Empty;
+            string getActivityName = string.Empty;
+            int getElementCount;
             try
             {
+                switch(reportName)
+                {
+                    case "ARBS": 
                 //Get the count of students
                 base.WaitForElement(By.XPath(RptAllAssessmentAllStudentPageResource.
                      RptAllAssessmentAllStudent_Page_ARBS_StudentsCount_Xpath_Locator));
-                int getElementCount = base.GetElementCountByXPath(RptAllAssessmentAllStudentPageResource.
+                 getElementCount = base.GetElementCountByXPath(RptAllAssessmentAllStudentPageResource.
                      RptAllAssessmentAllStudent_Page_ARBS_StudentsCount_Xpath_Locator);
                 for (int studentSearch = 1; studentSearch <= getElementCount; studentSearch++)
                 {
@@ -574,6 +579,37 @@ namespace Pegasus.Pages
                     }
                     studentSearch++;
                 }
+                        break;
+                    case "SRBA":
+                        //Get the count of activities
+                base.WaitForElement(By.XPath(RptAllAssessmentAllStudentPageResource.
+                     RptAllAssessmentAllStudent_Page_SRBA_ActivitiesCount_Xpath_Locator));
+                 getElementCount = base.GetElementCountByXPath(RptAllAssessmentAllStudentPageResource.
+                     RptAllAssessmentAllStudent_Page_SRBA_ActivitiesCount_Xpath_Locator);
+                for (int activtyNameSearch = 1; activtyNameSearch <= getElementCount; activtyNameSearch++)
+                {
+
+                    base.WaitForElement(By.XPath(string.Format(RptAllAssessmentAllStudentPageResource.
+                    RptAllAssessmentAllStudent_Page_SRBA_ActivityName_Xpath_Locator, activtyNameSearch)));
+                    getActivityName = base.GetElementTextByXPath(string.
+                    Format(RptAllAssessmentAllStudentPageResource.
+                    RptAllAssessmentAllStudent_Page_SRBA_ActivityName_Xpath_Locator, activtyNameSearch));
+                    //If student name found the get the attempt number
+                    if (getActivityName == RptAllAssessmentAllStudentPageResource.
+                        RptAllAssessmentAllStudent_Page_SRBA_AssessmentName_String)
+                    {
+                        //Get the attempt number
+                        base.WaitForElement(By.XPath(string.Format(RptAllAssessmentAllStudentPageResource.
+                        RptAllAssessmentAllStudent_Page_SRBA_StudentAttemptValue_XPath_Locator, activtyNameSearch)));
+                        getStudentAttempts = base.GetElementTextByXPath(string.
+                       Format(RptAllAssessmentAllStudentPageResource.
+                       RptAllAssessmentAllStudent_Page_SRBA_StudentAttemptValue_XPath_Locator, activtyNameSearch));
+                        break;
+                    }
+                 
+                }
+                break;
+            }
             }
             catch (Exception e)
             {
@@ -583,21 +619,26 @@ namespace Pegasus.Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return getStudentAttempts;
         }
+        
 
         /// <summary>
         /// Get student percentage from generated report.
         /// </summary>
         /// <param name="studentName">Student name.</param>
         /// <returns>Percentage.</returns>
-        public string GetstudentPercentFromReportsWindow(string studentName)
+        public string GetstudentPercentFromReportsWindow(string studentName, string reportName)
         {
             //Get percentage from generated report
             logger.LogMethodEntry("RptAllAssessmentAllStudentPage", "GetstudentPercentFromReportsWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             string getStudentName = string.Empty;
             string getStudentPercentScore = string.Empty;
+            string getActivityName = string.Empty;
             try
             {
+                switch(reportName)
+                {
+                    case "ARBS":
                 //Get total number of students count
                 base.WaitForElement(By.XPath(RptAllAssessmentAllStudentPageResource.
                      RptAllAssessmentAllStudent_Page_ARBS_StudentsCount_Xpath_Locator));
@@ -625,6 +666,38 @@ namespace Pegasus.Pages
                         break;
                     }
                 }
+                    break;
+                    case "SRBA":
+                        //Get the count of activities
+               base.WaitForElement(By.XPath(RptAllAssessmentAllStudentPageResource.
+                     RptAllAssessmentAllStudent_Page_SRBA_ActivitiesCount_Xpath_Locator));
+                 getElementCount = base.GetElementCountByXPath(RptAllAssessmentAllStudentPageResource.
+                     RptAllAssessmentAllStudent_Page_SRBA_ActivitiesCount_Xpath_Locator);
+                    for (int activtyNameSearch = 1; activtyNameSearch <= getElementCount; activtyNameSearch++)
+                {
+
+                    base.WaitForElement(By.XPath(string.Format(RptAllAssessmentAllStudentPageResource.
+                    RptAllAssessmentAllStudent_Page_SRBA_ActivityName_Xpath_Locator, activtyNameSearch)));
+                    getActivityName = base.GetElementTextByXPath(string.
+                    Format(RptAllAssessmentAllStudentPageResource.
+                    RptAllAssessmentAllStudent_Page_SRBA_ActivityName_Xpath_Locator, activtyNameSearch));
+                    //If student name found the get the attempt number
+                    if (getActivityName == RptAllAssessmentAllStudentPageResource.
+                        RptAllAssessmentAllStudent_Page_SRBA_AssessmentName_String)
+                    {
+                         //Get percentage
+                        base.WaitForElement(By.XPath(string.Format(RptAllAssessmentAllStudentPageResource.
+                        RptAllAssessmentAllStudent_Page_SRBA_StudentPercentage_XPath_Locator, activtyNameSearch)));
+                        getStudentPercentScore = base.GetElementTextByXPath(string.
+                       Format(RptAllAssessmentAllStudentPageResource.
+                       RptAllAssessmentAllStudent_Page_SRBA_StudentPercentage_XPath_Locator, activtyNameSearch)).
+                       Split(' ')[0];
+                        break;
+                    }
+                 
+                }
+                break;
+              }
             }
             catch (Exception e)
             {

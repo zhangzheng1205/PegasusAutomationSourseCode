@@ -1914,6 +1914,10 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
                     case User.UserTypeEnum.DPCsTeacher:
+                        base.SwitchToDefaultPageContent();
+                        base.SwitchToIFrameById(RptMainUXPageResource.
+                        RptMainUXPage_ContainerFrame_Id_Locator);
+                        this.SwitchToMainFrame();
                         switch (assessmentType)
                         {
                             case "Select Activities":

@@ -296,8 +296,8 @@ And  I click on "SaveandRun" button
 Then I should be on the "Report: Activity Results by Student" popup
 And I should see the "Topic 1 Test" with course name "MasterLibrary" with average score "2.9%" 
 And I should see the "MathXL Test" as Activity type
-And I should see the Attempt number as "1" for "DPCsStudent"
-And I should see the "2.9%" in Percent column for "DPCsStudent"
+And I should see the Attempt number as "1" for "DPCsStudent" in "ARBS" report
+And I should see the "2.9%" in Percent column for "DPCsStudent" in "ARBS" report
 When I close the "Report: Activity Results by Student" window
 And I click on the "Cancel" button in reports by "DPCsTeacher"
 And I select "Run Report" for "DPActivityResultsByStudent" report in 'My Reports' grid by "DPCsTeacher"
@@ -318,15 +318,15 @@ And I select 'save settings to My Reports' option by "DPCsTeacher"
 And I click on the "Run Report" button in reports by "DPCsTeacher"
 Then I should see "Save settings to My Reports" popup
 When I select "Createnewreport" radiobutton
-And  I enter the "DPActivityResultsByStudent" report name
+And  I enter the "DPStudentResultByActivity" report name
 And  I click on "SaveandRun" button
 Then I should be on the "Report: Student Results by Activity" popup
-And I should see the "Topic 1 Test" with course name "MasterLibrary" with average score "2.9%" 
-And I should see the "MathXL Test" as Activity type
-And I should see the Attempt number as "1" for "DPCsStudent"
-And I should see the "2.9%" in Percent column for "DPCsStudent"
+Then I should see the course name "MasterLibrary" for "DPCsStudent" with average score "2.9%" 
+And I should see "Topic 1 Test" "MathXL Test" details in the report
+And I should see the Attempt number as "1" for "DPCsStudent" in "SRBA" report 
+And I should see the "2.9%" in Percent column for "DPCsStudent" in "SRBA" report
 When I close the "Report: Activity Results by Student" window
 And I click on the "Cancel" button in reports by "DPCsTeacher"
-And I select "Run Report" for "DPActivityResultsByStudent" report in 'My Reports' grid by "DPCsTeacher"
+And I select "Run Report" for "DPStudentResultByActivity" report in 'My Reports' grid by "DPCsTeacher"
 Then I should be on the "Report: Student Results by Activity" popup
 When I close the "Report: Student Results by Activity" window

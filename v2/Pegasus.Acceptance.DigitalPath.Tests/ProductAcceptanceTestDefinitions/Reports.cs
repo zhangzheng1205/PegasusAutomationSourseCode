@@ -266,8 +266,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="attemptNumber">Expected attempt number.</param>
         /// <param name="userType">Type of user generating report.</param>
-        [Then(@"I should see the Attempt number as ""(.*)"" for ""(.*)""")]
-        public void ValidateAttemptNumber(string attemptNumber, User.UserTypeEnum userType)
+        [Then(@"I should see the Attempt number as ""(.*)"" for ""(.*)"" in ""(.*)"" report")]
+        public void ValidateAttemptNumber(string attemptNumber, User.UserTypeEnum userType, string reportName)
         {
             //Validat attempt number
             Logger.LogMethodEntry("Reports",
@@ -278,7 +278,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("ValidateAttemptNumber",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
               Assert.AreEqual(attemptNumber, new RptAllAssessmentAllStudentPage().
-              GetAttemptFromReportsWindow(user.Name)));
+              GetAttemptFromReportsWindow(user.Name, reportName)));
             Logger.LogMethodExit("Reports", "ValidateAttemptNumber",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -288,8 +288,9 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="percentage">Expected percentage.</param>
         /// <param name="userTypeEnum">Type of user.</param>
-        [Then(@"I should see the ""(.*)"" in Percent column for ""(.*)""")]
-        public void ValidatePercentageDisplay(string percentage, User.UserTypeEnum userTypeEnum)
+        [Then(@"I should see the ""(.*)"" in Percent column for ""(.*)"" in ""(.*)"" report")]
+        public void ValidatePercentageDisplay(string percentage, User.UserTypeEnum userTypeEnum, 
+            string reportName)
         {
             Logger.LogMethodEntry("Reports","ValidatePercentageDisplay",
            base.IsTakeScreenShotDuringEntryExit);
@@ -297,7 +298,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             //Validate expected and actual percentage are matching
             Logger.LogAssertion("ValidatePercentageDisplay",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
-              Assert.AreEqual(percentage, new RptAllAssessmentAllStudentPage().GetstudentPercentFromReportsWindow(user.Name)));
+              Assert.AreEqual(percentage, new RptAllAssessmentAllStudentPage().
+              GetstudentPercentFromReportsWindow(user.Name, reportName)));
             Logger.LogMethodExit("Reports", "ValidatePercentageDisplay",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -319,6 +321,71 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
                 (reportActionOption, reportTypeEnum, userTypeEnum);
             Logger.LogMethodExit("Reports", "MyReportActionsThroughCmenu",
               base.IsTakeScreenShotDuringEntryExit);   
+        }
+
+        /// <summary>
+        /// Verify the details of "Student report by activity" report generated.
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        /// <param name="userTypeEnum"></param>
+        /// <param name="averageScore">This is the Average score.</param>      
+        [Then(@"I should see the course name ""(.*)"" for ""(.*)"" with average score ""(.*)""")]
+        public void VerifySectionNameAndAverageScoreInStudentReportByActivity(
+            Course.CourseTypeEnum courseTypeEnum, User.UserTypeEnum userTypeEnum, string averageScore)
+        {
+            //Verify the details of "Student report by activity" report generated
+            Logger.LogMethodEntry("Reports",
+                "VerifySectionNameAndAverageScoreInStudentReportByActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            string studentName = new RptStudentReportByActivityPage().
+                GetStudentUsername(userTypeEnum);
+            User user = User.Get(userTypeEnum);
+            //Verify student name
+            Logger.LogAssertion("VerifyStudentName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(studentName, new RptStudentReportByActivityPage().
+              GetStudentAndSectionNameInReport(1)));
+            //Verify section name
+            Logger.LogAssertion("VerifysectionName",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(course.Name, new RptStudentReportByActivityPage().
+            GetStudentAndSectionNameInReport(2)));
+            //Verify Average score
+            Logger.LogAssertion("VerifyStudentAveragescore",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(averageScore, new RptStudentReportByActivityPage().
+              GetAverageScoreInReport()));
+            Logger.LogMethodExit("Reports",
+                "VerifySectionNameAndAverageScoreInStudentReportByActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify the details of the Student report by activity Report.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="activityType">This is the activity type.</param>
+        [Then(@"I should see ""(.*)"" ""(.*)"" details in the report")]
+        public void VerifyTheReportDetailsInStudentRepoprtByActivity(
+            string activityName, string activityType)
+        {
+            // Verify the details of the Student report by activity Report
+            Logger.LogMethodEntry("Reports",
+                "VerifyTheReportDetailsInStudentRepoprtByActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Verify activity name
+            Logger.LogAssertion("VerifyActivityName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(activityName, new RptStudentReportByActivityPage().
+              GetReportDetails(1)));
+            //Verify Activity type
+            Logger.LogAssertion("VerifyActivityType",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(activityType, new RptStudentReportByActivityPage().
+              GetReportDetails(2)));
+            Logger.LogMethodExit("Reports",
+                "VerifyTheReportDetailsInStudentRepoprtByActivity",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
