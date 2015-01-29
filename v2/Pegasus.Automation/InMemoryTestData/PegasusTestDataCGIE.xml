@@ -95,15 +95,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-    <Course>
-      <Name>a960cd3a-65a6-4f5f-a490-b4f24d0777c7</Name>
-      <CourseType>MySpanishLabMaster</CourseType>
-      <IsCreated>true</IsCreated>
-      <IsPreferenceStatus>false</IsPreferenceStatus>
-      <IsPublished>false</IsPublished>
-      <IsApproved>false</IsApproved>
-    </Course>
-    <Course>
+       <Course>
       <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
       <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -119,7 +111,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-    <Course>
+      <Course>
       <Name>MyPsychLab for Ciccarelli</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -503,7 +495,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>09542903-b170-43c6-8a55-483cf672db10</Name>
+      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -550,22 +542,10 @@
       <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Deepa</FirstName>
+      <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Anand</LastName>
+      <LastName>ae6d</LastName>
       <UserType>AmpCsSmsInstructor</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-     <!--"Amplifier Student"-->
-    <User>
-      <Name>65496e7b-28a0-4c3c-b666-d00c54a1aa08</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Rashmi</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
-      <UserType>AmpCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
@@ -605,6 +585,18 @@
       <UserId>Hed_User_SMS_STU_UC2</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--"Amplifier Student"-->
+    <User>
+      <Name>65496e7b-28a0-4c3c-b666-d00c54a1aa08</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>AmpCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
       <Name>1dd99b5c-24b5-4ba8-92ce-c7a1e8f3bcc0</Name>
@@ -750,7 +742,7 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e77b</LastName>
+      <LastName>00b6</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
@@ -762,7 +754,7 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e77b</LastName>
+      <LastName>8673</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>

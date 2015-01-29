@@ -28,7 +28,7 @@
       <IsCreated>true</IsCreated>
     </Class>
   </ArrayOfClass>
-    <ArrayOfCourse>
+  <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
       <Name>Digits-GradeCourse</Name>
@@ -96,16 +96,16 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>a960cd3a-65a6-4f5f-a490-b4f24d0777c7</Name>
-      <CourseType>MySpanishLabMaster</CourseType>
+      <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
+      <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
-      <CourseType>InstructorCourse</CourseType>
+      <Name>VCD_Amplifier_Section</Name>
+      <CourseType>AmpInstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
@@ -117,6 +117,16 @@
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <SectionName>peg-18255 section 1</SectionName>
+      <SectionId>CRSKL39-12001405</SectionId>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>WL_VCD_Program</Name>
+      <CourseType>AmpProgramCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <SectionName>VCD_Amplifier_Section</SectionName>
       <SectionId>CRSKL39-12001405</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
@@ -166,7 +176,7 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-    
+
     <!--Hard coded Course data for "HEDMIL" Product.-->
     <Course>
       <Name>VCD_Automation_MyITLab for Office 2013: GO! Series + Technology in Action</Name>
@@ -189,8 +199,8 @@
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>Automation Section</SectionName>
-      <SectionId>CRSKLRU-14001445</SectionId>
+      <SectionName>Trial1</SectionName>
+      <SectionId>CRSKLNU-14003411</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
@@ -207,7 +217,7 @@
     <Course>
       <Name>fcaaa299-4069-432e-934e-b7228ef887ad</Name>
       <CourseType>MMNDSection</CourseType>
-        <IsCreated>true</IsCreated>
+      <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <SectionName>shetty69236</SectionName>
       <SectionId>shetty69236</SectionId>
@@ -222,7 +232,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-    
+
     <!--Hard coded Course data for "NovaNET" Product.-->
     <Course>
       <Name>US History A 2.0 (Sequential)</Name>
@@ -257,7 +267,7 @@
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
-    </Course>    
+    </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
@@ -349,7 +359,7 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>dpteach1122015</Name>
+      <Name>24c81742-0ab8-47d1-a80a-78df7b52bc40</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>0bb12871-aa8d-4cb4-baae-86c6bbd0ad3f</FirstName>
@@ -499,6 +509,17 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>09542903-b170-43c6-8a55-483cf672db10</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>d014</LastName>
+      <UserType>AmpProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>a9b8f5dc-f882-4070-ae8e-47cf1402f8ad</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -515,8 +536,19 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>54a1</LastName>
+      <LastName>cf3d</LastName>
       <UserType>HSSCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>a9b8f5dc-f882-4070-ae8e-47cf1402f8ad</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>54a1</LastName>
+      <UserType>AmpCsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
@@ -543,6 +575,18 @@
       <UserId>Hed_User_SMS_STU_UC1</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--"Amplifier Student"-->
+    <User>
+      <Name>9a6a0f60-e553-4542-9776-8811ddb4ce6e</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>1e6f</LastName>
+      <UserType>AmpCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
     </User>
     <!--Hard coded Users data for Set Idle "CsSMSStudent".-->
     <User>
@@ -634,7 +678,7 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e77b</LastName>
+      <LastName>6079</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
@@ -646,7 +690,7 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e77b</LastName>
+      <LastName>1e6f</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
@@ -718,7 +762,7 @@
       <Password >pegasusadmin</Password>
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
-    </User> 
+    </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProgram>
