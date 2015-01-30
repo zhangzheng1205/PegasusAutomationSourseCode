@@ -863,14 +863,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
 
         }
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-            new CommonSteps().ResetWebdriver();
-        }
+        ///// <summary>
+        ///// Initialize Pegasus test before test execution starts.
+        ///// </summary>
+        //[BeforeTestRun]
+        //public static void Setup()
+        //{
+        //    new CommonSteps().ResetWebdriver();
+        //}
 
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test

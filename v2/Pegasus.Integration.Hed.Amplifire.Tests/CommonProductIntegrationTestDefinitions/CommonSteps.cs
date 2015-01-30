@@ -50,18 +50,12 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         public void ShowThePageInPegasus(
             String expectedPageTitle)
         {
-            //Check If Expected Page Is Opened
+            //Verify Correct Page Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                IsTakeScreenShotDuringEntryExit);
-            //Wait Till Thinking Indicator Loads
-            bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
-            //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
-            if (isThinkingIndicatorLoading)
-            {
-                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
-            }
-            //Wait For Page Get Switched
+                base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Some Time to Get off from light box
+            Thread.Sleep(3000);
+            //wait for the window
             base.WaitUntilWindowLoads(expectedPageTitle);
             //Get current opened page title
             string actualPageTitle =
@@ -71,7 +65,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                IsTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -645,15 +639,16 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         }
 
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-            //Reset Webdriver Instance
-            new CommonSteps().ResetWebdriver();
-        }
+        ///// <summary>
+        ///// Initialize Pegasus test before test execution starts.
+        ///// </summary>
+        //[BeforeTestRun]
+        //public static void Setup()
+        //{
+        //    //Reset Webdriver Instance
+        //    new CommonSteps().WebDriverCleanUp();
+
+        //}
 
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test.

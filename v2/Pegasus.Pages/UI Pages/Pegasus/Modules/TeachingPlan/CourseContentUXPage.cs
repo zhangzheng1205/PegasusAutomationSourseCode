@@ -2155,6 +2155,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CourseContentUXPage",
                 "SubmittingWorldLanguageEssayActivityByStudent",
                          base.IsTakeScreenShotDuringEntryExit);
+            int pixelValueToSrollDown = 320;
             try
             {
                 this.SelectActivityWindow(CourseContentUXPageResource.
@@ -2166,6 +2167,15 @@ namespace Pegasus.Pages.UI_Pages
                 CourseContentUXPage_WL_SAMActivity_Attribute);
                 string activityId = getActivityId.Split('_')[1];
                 Guid guidAnswerText = Guid.NewGuid();
+                bool textAreaPresent = base.IsElementPresent(By.Id(activityId), 5);
+                while (!textAreaPresent)
+                {
+                    IJavaScriptExecutor js = (IJavaScriptExecutor)WebDriver;
+                    js.ExecuteScript("arguments[0].scrollTop = arguments[1];", base.
+                        GetWebElementPropertiesById("divBottom"), pixelValueToSrollDown);
+                    textAreaPresent = base.IsElementPresent(By.Id(activityId));
+                    pixelValueToSrollDown = pixelValueToSrollDown + 100;
+                }
                 base.FillTextBoxById(activityId, guidAnswerText.ToString());
             }
             catch (Exception e)
