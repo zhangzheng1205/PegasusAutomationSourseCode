@@ -854,13 +854,15 @@ namespace Pegasus.Pages.UI_Pages
                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the Global Home window
-                base.SelectWindow(HEDGlobalHomePageResource.HEDGlobalHome_Page_Window_Title_Name);
-                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                    HEDGlobalHome_Page_MyProfile_Id_Locator));
-                //Click on the Link
-                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById(
-                    HEDGlobalHomePageResource.HEDGlobalHome_Page_MyProfile_Id_Locator));
+                //Select the window
+                base.SwitchToLastOpenedWindow();
+                //Wait For Element
+                base.WaitForElement(By.LinkText("My Profile"));
+                //Get Element Property
+                IWebElement getLinkProperty = base.
+                    GetWebElementPropertiesByLinkText("My Profile");
+                //Click My Profile Link
+                base.ClickByJavaScriptExecutor(getLinkProperty);
             }
             catch (Exception e)
             {
@@ -1349,12 +1351,7 @@ namespace Pegasus.Pages.UI_Pages
             // Store user profile date and time in memory
             Logger.LogMethodEntry("HEDGlobalHomePage", "setUserCurrentDate",
                base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                    HEDGlobalHome_Page_MyProfile_Id_Locator));
-            //Click on the Link
-            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById(
-                HEDGlobalHomePageResource.HEDGlobalHome_Page_MyProfile_Id_Locator));
-            //Select MyProfile frame
+             //Select MyProfile frame
             this.SelectMyProfileIframe();
             //get the date value from dropdown
             base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
@@ -1369,11 +1366,15 @@ namespace Pegasus.Pages.UI_Pages
             //store date and time in memory
             String instance = currentDate + " " + currentTime;
             DateTime datetime = Convert.ToDateTime(instance);
-            //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             user.CurrentProfileDateTime = datetime;
+            bool cancelPresent = base.IsElementPresent(By.Id("imgbtnCancel"));
+            IWebElement cancelButton = base.GetWebElementPropertiesById("imgbtnCancel");
+            base.ClickByJavaScriptExecutor(cancelButton);
+            base.SwitchToDefaultWindow();
             Logger.LogMethodExit("HEDGlobalHomePage", "setUserCurrentDate",
                  base.IsTakeScreenShotDuringEntryExit);
+
 
         }
 

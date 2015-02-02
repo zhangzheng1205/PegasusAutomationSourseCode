@@ -331,9 +331,15 @@ namespace Pegasus.Pages.UI_Pages
             string sectionName = string.Empty;
             // generate new guid section name
             Guid sectionGuid = Guid.NewGuid();
+            // Get the Current date
+            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+            DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+            String currentTime = instance.ToString();
+
 
             try
-            {               
+            {
+                              
                 // selecting the create new section window
                 this.SelectAddNewSectionWindow();
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
@@ -358,8 +364,8 @@ namespace Pegasus.Pages.UI_Pages
                     AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
                 {
                     // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(DateTime.UtcNow.ToString(AddNewSectionPageResource.
-                        AddNewSection_Page_Date_Format_DDMMYYYY), DateTime.UtcNow.AddDays(90).
+                    this.AddSectionStartAndEndDate(instance.ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_DDMMYYYY), instance.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
                 }
                 if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
@@ -368,8 +374,8 @@ namespace Pegasus.Pages.UI_Pages
                    AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
                 {
                     // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(DateTime.UtcNow.ToString(AddNewSectionPageResource.
-                        AddNewSection_Page_Date_Format_MMDDYYYY), DateTime.UtcNow.AddDays(90).
+                    this.AddSectionStartAndEndDate(instance.ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_MMDDYYYY), instance.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
                 }
                 // check copy content check box
