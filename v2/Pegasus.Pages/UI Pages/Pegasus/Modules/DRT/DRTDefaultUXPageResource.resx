@@ -123,7 +123,7 @@
   <data name="DRTDefaultUX_Page_BeginButton_Id_Locator" xml:space="preserve">
     <value>_ctl0:_ctl0:phBody:PageContent:FrmDRTTestsPanel1:btnimg</value>
   </data>
-  <data name="DRTDefaultUX_page_Content_WindowName" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_Content_WindowName" xml:space="preserve">
     <value>Content</value>
   </data>
   <data name="DRTDefaultUX_Page_CreateSkillStudyPlan_Window_Name" xml:space="preserve">
@@ -132,7 +132,7 @@
   <data name="DRTDefaultUX_Page_CustomTimeForCreateSSPWindow_Value" xml:space="preserve">
     <value>180000</value>
   </data>
-  <data name="DRTDefaultUX_page_Edit_WindowName" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_Edit_WindowName" xml:space="preserve">
     <value>Edit Skill Study Plan</value>
   </data>
   <data name="DRTDefaultUX_Page_PreTestCreated_SuccessMessage" xml:space="preserve">
@@ -162,13 +162,13 @@
   <data name="DRTDefaultUX_Page_Studyplan_WindowName" xml:space="preserve">
     <value>Open Study Plan</value>
   </data>
-  <data name="DRTDefaultUX_page_WaitForElement_Time_Value" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_WaitForElement_Time_Value" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="DRTDefaultUX_Page_PostTest_BeginButton_Id_Locator" xml:space="preserve">
     <value>_ctl0:_ctl0:phBody:PageContent:FrmDRTTestsPanel1:postimg</value>
   </data>
-  <data name="DRTDefaultUX_page_WaitElement_Thread_Time" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_WaitElement_Thread_Time" xml:space="preserve">
     <value>4000</value>
   </data>
   <data name="DRTDefaultUX_Page_AddandClose_Button_Id_Locator" xml:space="preserve">
@@ -183,13 +183,22 @@
   <data name="DRTDefaultUX_Page_SelectQuestions_Window_Name" xml:space="preserve">
     <value>Select Questions</value>
   </data>
-  <data name="DRTDefaultUX_page_Search_PretestActivity" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_Search_PretestActivity" xml:space="preserve">
     <value>Topic 10 Test</value>
   </data>
-  <data name="DRTDefaultUX_page_content_SaveButton_Id_Locator" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_content_SaveButton_Id_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent_lbtnSave</value>
   </data>
-  <data name="DRTDefaultUX_page_StudyPlan_Window_Name" xml:space="preserve">
+  <data name="DRTDefaultUX_Page_StudyPlan_Window_Name" xml:space="preserve">
     <value>Create Study Plan</value>
+  </data>
+  <data name="DRTDefaultUX_Page_PageContent_BeginButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phBody:PageContent:FrmDRTTestsPanel1:btnimg</value>
+  </data>
+  <data name="DRTDefaultUX_Page_PageContent_ReturnToCourseButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phBody:PageContent:lbtnBack</value>
+  </data>
+  <data name="DRTDefaultUX_Page_PageContent_Score_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_FrmDRTTestsPanel1_DTScore</value>
   </data>
 </root>

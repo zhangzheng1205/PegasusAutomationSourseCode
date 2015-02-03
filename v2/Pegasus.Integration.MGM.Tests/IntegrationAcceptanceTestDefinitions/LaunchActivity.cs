@@ -18,7 +18,7 @@ namespace Pegasus.Integration.MGM.Tests.
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static readonly Logger Logger = 
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(LaunchActivity));
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Assert for Launch of Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.
                 Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new PlayerTestPage().IsMGMTestActivityLauched()));
+                () => Assert.IsTrue(new PlayerTestPage().IsMgmTestActivityLauched()));
             Logger.LogMethodExit("LaunchActivity", "LaunchTheTestActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -93,35 +93,18 @@ namespace Pegasus.Integration.MGM.Tests.
         /// Launch The MGM Test activity by Student.
         /// </summary>
         [Then(@"I should see the Test activity successfully launched by Student")]
-        public void LaunchMGMTestActivityByStudent()
+        public void LaunchMgmTestActivityByStudent()
         {
             // Open The Activity 
-            Logger.LogMethodEntry("LaunchActivity", "LaunchMGMTestActivityByStudent",
+            Logger.LogMethodEntry("LaunchActivity", "LaunchMgmTestActivityByStudent",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new PlayerTestPage().
-                    IsMGMTestActivityLauchedByStudent()));
-            Logger.LogMethodExit("LaunchActivity", "LaunchMGMTestActivityByStudent",
+                    IsMgmTestActivityLauchedByStudent()));
+            Logger.LogMethodExit("LaunchActivity", "LaunchMgmTestActivityByStudent",
                 base.IsTakeScreenShotDuringEntryExit);
-        }
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-
-        }
-
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
-        {
-
         }
     }
 }

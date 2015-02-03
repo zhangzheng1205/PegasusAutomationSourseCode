@@ -27,3 +27,24 @@ When I navigate to the "Grades" tab
 And I check the "Test" in Grades Tab
 Then I should see the "Test" for 'Grade' in GradeBook tab
 
+
+#Purpose : Math XL study plan submission and student scoring 0% in pre test.
+#Test case ID : peg-22597
+#Products : MGM
+#Pre condition : Math XL study plan should be assigned by teacher in the course.
+#Dependency : Following script can ne execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
+Scenario: Math XL study plan submission and student scoring 0% in pre test
+When I navigate to the "To Do" tab
+Then I should see "Topic 1 Test with Study Plan" displayed under "To Do" tab
+When I click on "Start" button next to the asset "Topic 1 Test with Study Plan"
+Then I should see study plan page "Open Study Plan" will be opened with "Topic 1 Test" pre test /Study Material frame
+When I click on "Begin" button under pre test frame
+Then I should see alert message "You can only try this activity once. After you complete the activity, your score is recorded and sent to your teacher." with "Continue" and "Cancel" button
+When I click on "Continue" button in activity alert pop up 
+Then I should see pre test presentation page "Take a Test - Student Stu" should be displayed
+When I answer all the questions incorrectly for activity "Topic 1 Test with Study Plan" to score "0%"
+Then I should see "Test Summary" page should be displayed with score and for each question along with button "Close"
+When I click on "Close" button in "Test Summary" page
+Then I should see control navigate to study plan page and pre test score should be displayed as “0%” under pre test frame
+When I click on "Return to Course" button in study plan page
+

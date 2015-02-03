@@ -341,7 +341,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
             // Click on begin button
-            new DRTDefaultUXPage().ClickBeginButton();
+            new DrtDefaultUxPage().ClickBeginButton();
             // Click continue button on activity alert pop up
             new ShowMessagePage().ClickContinueInActivityAlert();
             //Select Pretest Window
@@ -368,7 +368,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
             // Click on begin button
-            new DRTDefaultUXPage().ClickPostTestBeginButton();
+            new DrtDefaultUxPage().ClickPostTestBeginButton();
             //Select Posttest Window
             studentpresentationpage.SelectPosttestWindow();
             //Attempt The Activity
@@ -376,7 +376,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Finish and return to course selection
             studentpresentationpage.ClickOnFinishAndReturnToCourse();
             // Click on return to course button
-            new DRTDefaultUXPage().ClickReturnToCourseButton();
+            new DrtDefaultUxPage().ClickReturnToCourseButton();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitThepostActivity",
             base.IsTakeScreenShotDuringEntryExit);
         }

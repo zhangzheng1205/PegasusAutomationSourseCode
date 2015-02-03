@@ -1266,7 +1266,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             return GetStyleAttributeValue(By.CssSelector(cssSelectorValue));
         }
-        
+
         /// <summary>
         /// Get the value of a the given PartialLinkText of the element by locating style attribute value.
         /// </summary>
@@ -1277,7 +1277,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             return GetStyleAttributeValue(By.PartialLinkText(partialLinkTextValue));
         }
-        
+
         /// <summary>
         /// Get the value of a the given Name of the element by locating style attribute value.
         /// </summary>
@@ -2365,12 +2365,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void PressCtrlBKey(IWebElement iWebElement)
         {
             // ASCII code 1 for Ctrl-B
-            Actions builder = new Actions(WebDriver);           
+            Actions builder = new Actions(WebDriver);
             const char character = '\u0062';
             iWebElement.SendKeys(Convert.ToString(character));
             builder.KeyDown(Keys.Control).SendKeys(Convert.ToString(character)).Perform();
         }
-        
+
 
         /// <summary>
         /// Perform key down and then press alternate key. 
@@ -2525,6 +2525,32 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void SetImplicitWaitTime(int timeInSeconds)
         {
             WebDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(timeInSeconds));
+        }
+
+        /// <summary>
+        /// Set the size of the current window. This will change the outer window dimension, 
+        /// not just the view port, synonymous to window.resizeTo() in JS.
+        /// </summary>
+        /// <param name="width">The target width size.</param>
+        /// <param name="height">The target height size.</param>
+        /// <see cref="https://msdn.microsoft.com/en-us/library/system.drawing.size(v=vs.110).aspx"></see>
+        /// <remarks>Stores an ordered pair of integers, which specify a Height and Width.</remarks>
+        protected void SetWindowSize(int width, int height)
+        {
+            WebDriver.Manage().Window.Size = new Size(width, height);
+        }
+
+        /// <summary>
+        /// Set the position of the current window. This is relative to the upper 
+        /// left corner of the screen, synonymous to window.moveTo() in JS.
+        /// </summary>
+        /// <param name="coordinateX">The target x coordinate position of the window.</param>
+        /// <param name="coordinateY">The target y coordinate position of the window.</param>
+        /// <see cref="https://msdn.microsoft.com/en-us/library/system.drawing.point%28v=vs.110%29.aspx"></see>
+        /// <remarks>Represents an ordered pair of integer x- and y-coordinates that defines a point in a two-dimensional plane.</remarks>
+        protected void SetWindowPosition(int coordinateX, int coordinateY)
+        {
+            WebDriver.Manage().Window.Position = new Point(coordinateX, coordinateY);
         }
 
         #endregion

@@ -18,12 +18,12 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger = Logger.GetInstance(typeof(PlayerTestPage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(PlayerTestPage));
 
         /// <summary>
         /// Get Wait Time From App Config File.
         /// </summary>
-        static readonly double getSecondsToWait = Convert.ToDouble
+        static readonly double GetSecondsToWait = Convert.ToDouble
         (ConfigurationManager.AppSettings[PlayerTestPageResource.
         PlayerTestPage_TimeOut_Config_Key]);
 
@@ -31,10 +31,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Launch The Activity
         /// </summary>
         /// <returns>Overview Button Present Result</returns>
-        public Boolean IsMGMTestActivityLauched()
+        public Boolean IsMgmTestActivityLauched()
         {
             //Launching The Activity
-            Logger.LogMethodEntry("PlayerTestPage", "IsMGMTestActivityLauched",
+            Logger.LogMethodEntry("PlayerTestPage", "IsMgmTestActivityLauched",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isPlayerTestPresent = false;
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("PlayerTestPage", "IsMGMTestActivityLauched",
+            Logger.LogMethodExit("PlayerTestPage", "IsMgmTestActivityLauched",
               base.IsTakeScreenShotDuringEntryExit);
             return isPlayerTestPresent;
         }
@@ -72,10 +72,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Validat MGM Test launched by student.
         /// </summary>
         /// <returns></returns>
-        public Boolean IsMGMTestActivityLauchedByStudent()
+        public Boolean IsMgmTestActivityLauchedByStudent()
         {
             //Launching The Activity
-            Logger.LogMethodEntry("PlayerTestPage", "IsMGMTestActivityLauched",
+            Logger.LogMethodEntry("PlayerTestPage", "IsMgmTestActivityLauchedByStudent",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isProductHeaderPresent = false;
@@ -106,11 +106,12 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("PlayerTestPage", "IsMGMTestActivityLauched",
+            Logger.LogMethodExit("PlayerTestPage", "IsMgmTestActivityLauchedByStudent",
               base.IsTakeScreenShotDuringEntryExit);
             return isProductHeaderPresent;
 
         }
+
         /// <summary>
         /// This function checks whether PreTest has been launched successfully
         /// </summary>
@@ -179,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
                 catch { }
 
             } while (getwindowName == getbaseWindowName
-                && stopWatch.Elapsed.TotalSeconds < getSecondsToWait && getwindowName != null);
+                && stopWatch.Elapsed.TotalSeconds < GetSecondsToWait && getwindowName != null);
             //Select Window
             base.SelectWindow(getwindowName);
             Logger.LogMethodExit("PlayerTestPage", "SelectPresentationWindow",

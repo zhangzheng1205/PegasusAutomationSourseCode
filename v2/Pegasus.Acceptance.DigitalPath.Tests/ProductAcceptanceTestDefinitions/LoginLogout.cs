@@ -97,7 +97,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                             break;
                         case BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace:
                             //Login as the given user with password in course space
-                            loginPage.Authenticate(user.Name, user.Password,
+                            loginPage.Authenticate("autostu", "password1",
                                 BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace, userTypeEnum);
                             break;
                     }

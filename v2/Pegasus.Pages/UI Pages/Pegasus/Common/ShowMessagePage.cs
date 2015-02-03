@@ -18,7 +18,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(ShowMessagePage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(ShowMessagePage));
 
         /// <summary>
         /// Click Continue In Activity Alert
@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickContinueInActivityAlert()
         {
             //Click Continue In Activity Alert
-            logger.LogMethodEntry("ShowMessagePage", "ClickContinueInActivityAlert",
+            Logger.LogMethodEntry("ShowMessagePage", "ClickContinueInActivityAlert",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ShowMessagePage", "ClickContinueInActivityAlert",
+            Logger.LogMethodExit("ShowMessagePage", "ClickContinueInActivityAlert",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickTheAlertOkButton()
         {
             //Click on the alert 'OK' button
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                 "ClickTheAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
                 "ClickTheAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnPegasusAlertOkButton()
         {
             //Click on the Pegasus 'OK' button
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                 "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
                 "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
         public void HandleDuplicateTestQuestionsPopupWindow()
         {
             //logger Enrty
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                 "HandleDuplicateTestQuestionsPopupWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             //Logger Exit
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
                 "HandleDuplicateTestQuestionsPopupWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnOkButtonOnPegasusPopUpWindow()
         {
             //logger Enrty
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                 "ClickOnOkButtonOnPegasusPopUpWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the Pegasus 'OK' Button 
             base.ClickByJavaScriptExecutor(getPropertyOfPegasusOkButton);
             //Logger Exit
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
                 "ClickOnOkButtonOnPegasusPopUpWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetTheValidationMessageOfAddingRandonQuestionToMyTest()
         {
             //Logger Entry
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                "GetTheValidationMessageOfAddingRandonQuestionToMyTest",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             //Logger Exit
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
               "GetTheValidationMessageOfAddingRandonQuestionToMyTest",
               base.IsTakeScreenShotDuringEntryExit);
             //Return the text of validation message 
@@ -219,8 +219,8 @@ namespace Pegasus.Pages.UI_Pages
         public string GetOkButtonText()
         {
             string buttonText = string.Empty;
-            logger.LogMethodEntry("ShowMessagePage",
-               "GetOkButtonText", 
+            Logger.LogMethodEntry("ShowMessagePage",
+               "GetOkButtonText",
                base.IsTakeScreenShotDuringEntryExit);
             base.SelectWindow(ShowMessagePageResource.
                       ShowMessage_Page_AlertWindow_Title_Value);
@@ -228,8 +228,8 @@ namespace Pegasus.Pages.UI_Pages
                 .ShowMessage_Page_OkButton_Id_Locator));
             buttonText = base.GetElementTextById(ShowMessagePageResource
                 .ShowMessage_Page_OkButton_Id_Locator);
-            logger.LogMethodExit("ShowMessagePage",
-               "GetOkButtonText", 
+            Logger.LogMethodExit("ShowMessagePage",
+               "GetOkButtonText",
                base.IsTakeScreenShotDuringEntryExit);
             return buttonText;
         }
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetCancelButtonText()
         {
             string buttonText = string.Empty;
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                "GetOkButtonText",
                base.IsTakeScreenShotDuringEntryExit);
             base.SelectWindow(ShowMessagePageResource.
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
                 .ShowMessage_Page_CancelButton_Id_Locator));
             buttonText = base.GetElementTextById(ShowMessagePageResource
                 .ShowMessage_Page_CancelButton_Id_Locator);
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
                "GetOkButtonText",
                base.IsTakeScreenShotDuringEntryExit);
             return buttonText;
@@ -261,7 +261,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void ClickOkButton()
         {
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
               "ClickOkButton",
               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ShowMessagePageResource.
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                 (ShowMessagePageResource.
                 ShowMessage_Page_OkButton_Id_Locator);
             base.ClickByJavaScriptExecutor(alertOkButton);
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
               "ClickOkButton",
               base.IsTakeScreenShotDuringEntryExit);
 
@@ -282,20 +282,18 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOkButtonInAlertPopUp()
         {
             //Click on the Pegasus 'OK' button
-            logger.LogMethodEntry("ShowMessagePage",
+            Logger.LogMethodEntry("ShowMessagePage",
                 "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                
-                
                 //Select Pegasus Window
                 base.WaitUntilWindowLoads(ShowMessagePageResource.
                        ShowMessage_Page_AlertWindow_Title_Name);
                 base.SelectWindow(ShowMessagePageResource.
                        ShowMessage_Page_AlertWindow_Title_Name);
                 //Click On 'Ok' Button On Pegasus PopUp Window.
-                bool isElementPresent = base.IsElementPresent(By.Id(ShowMessagePageResource.
-                ShowMessage_Page_OkButton_Id_Locator),5);
+                base.IsElementPresent(By.Id(ShowMessagePageResource.
+                    ShowMessage_Page_OkButton_Id_Locator), 5);
                 base.ClickButtonById(ShowMessagePageResource.
                 ShowMessage_Page_OkButton_Id_Locator);
                 //Wait for 2 Secs
@@ -306,9 +304,93 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ShowMessagePage",
+            Logger.LogMethodExit("ShowMessagePage",
                 "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
+        private void SelectActivityAlertWindow()
+        {
+            Logger.LogMethodEntry("ShowMessagePage",
+             "SelectActivityAlertWindow", base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(ShowMessagePageResource
+                .ShowMessage_Page_ActivityAlert_Window_Title_Name);
+            base.SelectWindow(ShowMessagePageResource
+                .ShowMessage_Page_ActivityAlert_Window_Title_Name);
+            Logger.LogMethodExit("ShowMessagePage",
+             "SelectActivityAlertWindow", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public string GetActivityAlertMessage()
+        {
+            Logger.LogMethodEntry("ShowMessagePage",
+             "GetActivityAlertMessage", base.IsTakeScreenShotDuringEntryExit);
+            IWebElement webElementActivityAlertMessage = null;
+            try
+            {
+                this.SelectActivityAlertWindow();
+                webElementActivityAlertMessage = base.GetWebElementPropertiesById("lblPageHead");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ShowMessagePage",
+             "GetActivityAlertMessage", base.IsTakeScreenShotDuringEntryExit);
+            return webElementActivityAlertMessage.Text;
+        }
+
+        public bool IsContinueButtonPresentInAlertWindow()
+        {
+            Logger.LogMethodEntry("ShowMessagePage",
+             "IsContinueButtonPresentInAlertWindow", base.IsTakeScreenShotDuringEntryExit);
+            bool isContinueButtonPresent = false;
+            try
+            {
+                isContinueButtonPresent = base.IsElementPresent(By.Id("imgOk"));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ShowMessagePage",
+             "IsContinueButtonPresentInAlertWindow", base.IsTakeScreenShotDuringEntryExit);
+            return isContinueButtonPresent;
+        }
+
+        public bool IsCancelButtonPresentInAlertWindow()
+        {
+            Logger.LogMethodEntry("ShowMessagePage",
+             "IsContinueButtonPresentInAlertWindow", base.IsTakeScreenShotDuringEntryExit);
+            bool isCancelButtonPresent = false;
+            try
+            {
+                isCancelButtonPresent = base.IsElementPresent(By.Id("imgCancel"));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ShowMessagePage",
+             "IsContinueButtonPresentInAlertWindow", base.IsTakeScreenShotDuringEntryExit);
+            return isCancelButtonPresent;
+        }
+
+        public void ClickContinueButtonInActivityAlertPopUp()
+        {
+            // click continue button in activity alert pop up
+            Logger.LogMethodEntry("ShowMessagePage","ClickContinueButtonInActivityAlertPopUp"
+                , base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.ClickButtonById(ShowMessagePageResource.
+                ShowMessage_Page_OkButton_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ShowMessagePage","ClickContinueButtonInActivityAlertPopUp"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

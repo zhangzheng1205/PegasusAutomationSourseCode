@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("CreateActivity", "CreateSkillStudyPlanActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Creating Object for Page Class
-            DRTDefaultUXPage drtDefaultUXPage = new DRTDefaultUXPage();
+            DrtDefaultUxPage drtDefaultUXPage = new DrtDefaultUxPage();
             //Select Window
             drtDefaultUXPage.SelectCreateSkillStudyplanWindow();
             //Creating Skill Study Plan
@@ -288,7 +288,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("ActivitySubmission", "CreateStudyplan",
               base.IsTakeScreenShotDuringEntryExit);
             //Create Study Plan.
-            new DRTDefaultUXPage().CreateStudyPlan(activityTypeEnum);
+            new DrtDefaultUxPage().CreateStudyPlan(activityTypeEnum);
             Logger.LogMethodExit("ActivitySubmission", "CreateStudyplan",
               base.IsTakeScreenShotDuringEntryExit);
         }

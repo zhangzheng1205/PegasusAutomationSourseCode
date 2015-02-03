@@ -159,6 +159,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserConsentPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\Mathxl\MathxlPlayerTestPage.cs" />
+    <Compile Include="UI Pages\Integration\Mathxl\MathxlPlayerTestPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MathxlPlayerTestPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Mathxl\OverviewTestPage.cs" />
+    <Compile Include="UI Pages\Integration\Mathxl\OverviewTestPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverviewTestPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\Rumba\CreateUserPage.cs" />
     <Compile Include="UI Pages\Integration\Rumba\CreateUserPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -535,6 +547,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UploadCompletedFilesResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\LTIToolLaunchPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1856,6 +1869,14 @@
     <EmbeddedResource Include="UI Pages\Integration\eText\UserConsentPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UserConsentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Mathxl\MathxlPlayerTestPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MathxlPlayerTestPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Mathxl\OverviewTestPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OverviewTestPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\Rumba\CreateUserPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

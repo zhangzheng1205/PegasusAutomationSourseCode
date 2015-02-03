@@ -130,6 +130,20 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return webDriver;
         }
 
+        private static DesiredCapabilities InternetExplorer()
+        {
+            
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+
+            capabilities.SetCapability("IgnoreZoomLevel", true);
+
+
+            return capabilities;
+
+
+        }
+
+
         /// <summary>
         /// Returns an instance of IE based driver.
         /// </summary>
@@ -208,10 +222,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.download.defaultFolder", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
             profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip, application/x-zip, application/x-zip-compressed, application/download, application/octet-stream");
             profile.EnableNativeEvents = true;
-            profile.SetPreference("browser.cache.disk.enable", false);
-            profile.SetPreference("browser.cache.memory.enable", false);
-            profile.SetPreference("browser.cache.offline.enable", false);
-            profile.SetPreference("network.http.use-cache", false);
             IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
             // set page load duration
             webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
@@ -239,8 +249,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // chrome options
             var chromeOptions = new ChromeOptions();
-            chromeOptions.AddArguments("disable-application-cache");
-            chromeOptions.AddArguments("disk-cache-size=0");
             chromeOptions.AddUserProfilePreference("intl.accept_languages", "nl");
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
             chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
@@ -251,7 +259,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", "");
 
             // create chrome browser instance
-            IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(3));
+            IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(5));
             return webDriver;
         }
 

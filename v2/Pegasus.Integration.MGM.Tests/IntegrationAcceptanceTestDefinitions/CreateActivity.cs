@@ -1,9 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
-using Pegasus.Integration.MGM.Tests.CommonIntegrationAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using Pegasus.Integration.DigitalPath.Rumba.Tests.CommonIntegrationAcceptanceTestDefinitions;
@@ -49,7 +47,7 @@ namespace Pegasus.Integration.MGM.Tests.
             Logger.LogMethodEntry("CreateActivity", "CreateSkillStudyPlanActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Creating Object for Page Class
-            DRTDefaultUXPage drtDefaultUXPage = new DRTDefaultUXPage();
+            DrtDefaultUxPage drtDefaultUXPage = new DrtDefaultUxPage();
             //Creating Skill Study Plan
             drtDefaultUXPage.AddPreTestToSkillStudyPlan();
             //create PreTest
@@ -188,7 +186,7 @@ namespace Pegasus.Integration.MGM.Tests.
             Logger.LogMethodEntry("CreateActivity", "CustomizeTheContent",
                 base.IsTakeScreenShotDuringEntryExit);
             //Customize the Content
-            new DRTDefaultUXPage().CustomizeTheContent();
+            new DrtDefaultUxPage().CustomizeTheContent();
             Logger.LogMethodExit("CreateActivity", "CustomizeTheContent",
                base.IsTakeScreenShotDuringEntryExit);
         }

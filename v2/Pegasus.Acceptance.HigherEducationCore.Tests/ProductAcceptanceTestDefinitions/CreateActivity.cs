@@ -99,7 +99,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CreateActivity", "CreateSkillStudyPlanActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Creating Object for Page Class
-            DRTDefaultUXPage drtDefaultUXPage = new DRTDefaultUXPage();
+            DrtDefaultUxPage drtDefaultUXPage = new DrtDefaultUxPage();
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             //Creating Skill Study Plan
             drtDefaultUXPage.CreateSkillStudyPlan(activityTypeEnum);

@@ -84,7 +84,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new PlayerTestPage().IsMGMTestActivityLauched()));
+                () => Assert.IsTrue(new PlayerTestPage().IsMgmTestActivityLauched()));
             Logger.LogMethodExit("LaunchActivity", "LaunchTheTestActivity",
                 base.IsTakeScreenShotDuringEntryExit);
 

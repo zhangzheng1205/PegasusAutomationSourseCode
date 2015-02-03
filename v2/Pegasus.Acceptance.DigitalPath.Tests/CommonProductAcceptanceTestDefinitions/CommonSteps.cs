@@ -77,6 +77,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify the Success Message Display on the Page.
         /// </summary>
@@ -235,8 +236,6 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  IsTakeScreenShotDuringEntryExit);
         }
 
-
-
         /// <summary>
         /// Enter Into Course.
         /// </summary>
@@ -311,22 +310,21 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// <summary>
         /// Enter into DP Class.
         /// </summary>
-        /// <param name="className">Class name</param>
+        /// <param name="classTypeEnum">This is class Type Enum.</param>
         [When(@"I enter into the DP ""(.*)"" class")]
-        public void EnterDPClass(Class.ClassTypeEnum classTypeEnum)
+        public void EnterDpClass(Class.ClassTypeEnum classTypeEnum)
         {
             //Enter Inside Class
-            Logger.LogMethodEntry("CommonSteps", "EnterDPClass",
+            Logger.LogMethodEntry("CommonSteps", "EnterDpClass",
                 IsTakeScreenShotDuringEntryExit);
             //Get class name from memory
             Class Class = Class.Get(classTypeEnum);
             string className = Class.Name.ToString();
             //Enter Dp class
             new HomePage().EnterInClass(className);
-            Logger.LogMethodExit("CommonSteps", "EnterDPClass",
+            Logger.LogMethodExit("CommonSteps", "EnterDpClass",
                 IsTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         /// Closes the Window.
@@ -460,7 +458,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="userType">User role.</param>
         [When(@"I click 'My Profile' link as ""(.*)""")]
-        public void ClickOnMYProfileLink(User.UserTypeEnum userType)
+        public void ClickOnMyProfileLink(User.UserTypeEnum userType)
         {
             //Click on myprofile link
             Logger.LogMethodEntry("CommonSteps", "ClickOnMYProfileLink",
@@ -509,7 +507,5 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-        
     }
 }

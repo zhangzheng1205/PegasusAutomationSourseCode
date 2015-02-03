@@ -7,6 +7,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.DRT;
 using TechTalk.SpecFlow;
 
 #endregion
@@ -20,7 +21,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
     [Binding]
     public class ActivitySubmission : PegasusBaseTestFixture
     {
-                /// <summary>
+        /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
         private static readonly Logger Logger =
@@ -68,7 +69,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new InstructionsPage().ClickTestCloseButton();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
           base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Start pre test from study plan window.
@@ -80,13 +81,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("ActivitySubmission", "StartPreTest",
               base.IsTakeScreenShotDuringEntryExit);
             // Click on begin button
-            new DRTDefaultUXPage().ClickBeginButton();
+            new DrtDefaultUxPage().ClickBeginButton();
             // Click continue button on activity alert pop up
             new ShowMessagePage().ClickContinueInActivityAlert();
             Logger.LogMethodExit("ActivitySubmission", "StartPreTest",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Click return to course button on study plan window.
         /// </summary>
@@ -97,7 +98,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("ActivitySubmission", "ClickReturnToCourseButton",
               base.IsTakeScreenShotDuringEntryExit);
             // Click on return to course button
-            new DRTDefaultUXPage().ClickReturnToCourseButton();
+            new DrtDefaultUxPage().ClickReturnToCourseButton();
             Logger.LogMethodExit("ActivitySubmission", "ClickReturnToCourseButton",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -125,8 +126,6 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             "StatusOfAssetsInViewAllContent", base.IsTakeScreenShotDuringEntryExit);
         }
 
-
-
         /// <summary>
         /// Submit The Study Plan Activity.
         /// </summary>
@@ -139,27 +138,227 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select Window
             new StudentPresentationPage().SelectLastOpenedWindow();
             //Attempt The Activity            
-           new StudentPresentationPage().SubmitActivity(); 
+            new StudentPresentationPage().SubmitActivity();
             Logger.LogMethodExit("ActivitySubmission", "SubmitTheStudyPlanActivity",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Initialize Pegasus test before test execution starts.
+        /// See The Asset Displayed Under Tab.
         /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="underTabName">This is Tab name.</param>
+        [Then(@"I should see ""(.*)"" displayed under ""(.*)"" tab")]
+        public void SeeTheAssetDisplayedUnderTab(string assetName, string underTabName)
         {
-
+            // see asset displayed under Tab
+            Logger.LogMethodEntry("ActivitySubmission", "SeeTheAssetDisplayedUnderTab",
+             base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("SeeTheAssetDisplayedUnderTab",
+           ScenarioContext.Current.ScenarioInfo.Title,
+           () => Assert.IsTrue(new CoursePreviewUXPage()
+                .GetAssetNameDisplayedUnderTab(underTabName).Contains(assetName)));
+            Logger.LogMethodExit("ActivitySubmission", "SeeTheAssetDisplayedUnderTab",
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Deinitialize Pegasus test after the execution of test.
+        /// Click On The Button Next To The Study Plan.
         /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
+        /// <param name="buttonName">This is button name.</param>
+        /// <param name="assetName">This is asset name.</param>
+        [When(@"I click on ""(.*)"" button next to the asset ""(.*)""")]
+        public void ClickOnButtonNextToTheStudyPlan(string buttonName, string assetName)
         {
-
+            // click on button next study plan
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnButtonNextToTheStudyPlan",
+            base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().
+                ClickOnButtonNextToTheAsset(buttonName, assetName);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnButtonNextToTheStudyPlan",
+                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// See The Study Plan Page Will Be Opened With PreTest Study Material Frame.
+        /// </summary>
+        /// <param name="pageName">This is page name.</param>
+        /// <param name="assetName">This is asset name.</param>
+        [Then(@"I should see study plan page ""(.*)"" will be opened with ""(.*)"" pre test /Study Material frame")]
+        public void SeeTheStudyPlanPageWillBeOpenedWithPreTestStudyMaterialFrame(string pageName, string assetName)
+        {
+            // see study plan page
+            Logger.LogMethodEntry("ActivitySubmission", "SeeTheStudyPlanPageWillBeOpenedWithPreTestStudyMaterialFrame",
+            base.IsTakeScreenShotDuringEntryExit);
+            DrtDefaultUxPage drtDefaultUxPage = new DrtDefaultUxPage();
+            Logger.LogAssertion("VerifyPreTestStudyMaterialName",
+                 ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(assetName, drtDefaultUxPage.GetStudyPlanAssetName(assetName)));
+            Logger.LogAssertion("VerifyStudyPlanPageName",
+                 ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(pageName, drtDefaultUxPage.GetStudyPlanWindowTitle()));
+            Logger.LogMethodExit("ActivitySubmission", "SeeTheStudyPlanPageWillBeOpenedWithPreTestStudyMaterialFrame",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Button Under PreTest Frame.
+        /// </summary>
+        /// <param name="buttonName">This is button name.</param>
+        [When(@"I click on ""(.*)"" button under pre test frame")]
+        public void ClickOnButtonUnderPreTestFrame(string buttonName)
+        {
+            // click on button under pre test frame
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnButtonUnderPreTestFrame",
+          base.IsTakeScreenShotDuringEntryExit);
+            new DrtDefaultUxPage().ClickOnButtonObject(buttonName);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnButtonUnderPreTestFrame",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// See The Alert Message With Button.
+        /// </summary>
+        /// <param name="messageText">This is message.</param>
+        /// <param name="buttonNameFirst">This is 1 button name.</param>
+        /// <param name="buttonNameSecond">This is 2 button name.</param>
+        [Then(@"I should see alert message ""(.*)"" with ""(.*)"" and ""(.*)"" button")]
+        public void SeeTheAlertMessageWithButton(string messageText, string buttonNameFirst, string buttonNameSecond)
+        {
+            // see alert message with button
+            Logger.LogMethodEntry("ActivitySubmission", "SeeTheAlertMessageWithButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            ShowMessagePage showMessagePage = new ShowMessagePage();
+            Logger.LogAssertion("VerifyActivityAlertMessage",
+                   ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual
+                       (messageText, showMessagePage.GetActivityAlertMessage()));
+            Logger.LogAssertion("VerifyContinueButtonPresentInAlertWindow",
+                   ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue
+                       (showMessagePage.IsContinueButtonPresentInAlertWindow()));
+            Logger.LogAssertion("VerifyCancelButtonPresentInAlertWindow",
+                   ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue
+                       (showMessagePage.IsCancelButtonPresentInAlertWindow()));
+            Logger.LogMethodExit("ActivitySubmission", "SeeTheAlertMessageWithButton",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Button In Activity Alert PopUp.
+        /// </summary>
+        /// <param name="alertButtonName">This is button name.</param>
+        [When(@"I click on ""(.*)"" button in activity alert pop up")]
+        public void ClickOnButtonInActivityAlertPopUp(string alertButtonName)
+        {
+            // click on button in activity alert pop up
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnButtonInActivityAlertPopUp",
+            base.IsTakeScreenShotDuringEntryExit);
+            new ShowMessagePage().ClickContinueButtonInActivityAlertPopUp();
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnButtonInActivityAlertPopUp",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// See The PreTest Presentation Page Displayed.
+        /// </summary>
+        /// <param name="presentationPageTitle">This is page title.</param>
+        [Then(@"I should see pre test presentation page ""(.*)"" should be displayed")]
+        public void SeeThePreTestPresentationPageDisplayed(string presentationPageTitle)
+        {
+            // see pre test presentation page displayed
+            Logger.LogMethodEntry("ActivitySubmission", "SeeThePreTestPresentationPageDisplayed",
+            base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyPresentationPageWindowTitle",
+               ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue
+            (new LTIToolLaunchPage().GetPresentationPageWindowTitle(presentationPageTitle).Contains(presentationPageTitle)));
+            Logger.LogMethodExit("ActivitySubmission", "SeeThePreTestPresentationPageDisplayed",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+        /// <summary>
+        /// Answer The Questions For Activity To Score.
+        /// </summary>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="scoreAchieve">This is score to schieve.</param>
+        [When(@"I answer all the questions incorrectly for activity ""(.*)"" to score ""(.*)""")]
+        public void AnswerTheQuestionsForActivityToScore(string assetName, string scoreAchieve)
+        {
+            // answer questions for activity to score
+            Logger.LogMethodEntry("ActivitySubmission", "AnswerTheQuestionsForActivityToScore",
+            base.IsTakeScreenShotDuringEntryExit);
+            new MathxlPlayerTestPage().AttemptMgmActivity(assetName, scoreAchieve);
+            Logger.LogMethodExit("ActivitySubmission", "AnswerTheQuestionsForActivityToScore",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// See The Page Displayed With Score And For Each Question.
+        /// </summary>
+        /// <param name="pageName">This is page name.</param>
+        /// <param name="buttonName">This is button name.</param>
+        [Then(@"I should see ""(.*)"" page should be displayed with score and for each question along with button ""(.*)""")]
+        public void SeeThePageDisplayedWithScoreAndForEachQuestionAlongWithButton(string pageName, string buttonName)
+        {
+            // see page displayed with score and for each question
+            Logger.LogMethodEntry("ActivitySubmission", "SeeThePageDisplayedWithScoreAndForEachQuestionAlongWithButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            OverviewTestPage overviewTestPage = new OverviewTestPage();
+            Logger.LogAssertion("VerifyPageDisplayed",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(pageName, overviewTestPage.GetPageName(pageName)));
+            Logger.LogAssertion("VerifyButtonPresent",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(buttonName, overviewTestPage.GetButtonName()));
+            Logger.LogMethodExit("ActivitySubmission", "SeeThePageDisplayedWithScoreAndForEachQuestionAlongWithButton",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Button In Page.
+        /// </summary>
+        /// <param name="clickToButtonName">This is button name.</param>
+        /// <param name="pageName">This is page name.</param>
+        [When(@"I click on ""(.*)"" button in ""(.*)"" page")]
+        public void ClickOnButtonInPage(string clickToButtonName, string pageName)
+        {
+            // click on button in page
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnButtonInPage",
+          base.IsTakeScreenShotDuringEntryExit);
+            new OverviewTestPage().ClickOnButtonInPage(clickToButtonName, pageName);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnButtonInPage",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// See The Control Navigate To Study Plan Page.
+        /// </summary>
+        /// <param name="achivedScore">This is achieved score.</param>
+        [Then(@"I should see control navigate to study plan page and pre test score should be displayed as “(.*)%” under pre test frame")]
+        public void SeeControlNavigateToStudyPlanPageAndPreTestAndScoreShouldBeDisplayedAsUnderPreTestFrame(int achivedScore)
+        {
+            // see control navigate study plan page
+            Logger.LogMethodEntry("ActivitySubmission", "SeeControlNavigateToStudyPlanPageAndPreTestAndScoreShouldBeDisplayedAsUnderPreTestFrame",
+            base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyPageDisplayed",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(achivedScore, new DrtDefaultUxPage().GetScoreInStudyPlanTestFrame()));
+            Logger.LogMethodExit("ActivitySubmission", "SeeControlNavigateToStudyPlanPageAndPreTestAndScoreShouldBeDisplayedAsUnderPreTestFrame",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Button In Study Plan Page.
+        /// </summary>
+        /// <param name="buttonName">This is button name.</param>
+        [When(@"I click on ""(.*)"" button in study plan page")]
+        public void ClickOnButtonInStudyPlanPage(string buttonName)
+        {
+            // click on button in study plan page
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnButtonInStudyPlanPage",
+            base.IsTakeScreenShotDuringEntryExit);
+            new DrtDefaultUxPage().ClickOnButtonObject(buttonName);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnButtonInStudyPlanPage",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

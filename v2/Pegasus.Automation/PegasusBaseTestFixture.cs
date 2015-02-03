@@ -30,7 +30,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public const string InternetExplorer = "Internet Explorer";
         public const string Safari = "Safari";
         public const string FireFox = "FireFox";
-        
+
         /// <summary>
         /// This is the Broswer variable called from AppSettings.
         /// </summary>
@@ -77,6 +77,45 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        /// <summary>
+        /// Is this element displayed or not? This method avoids the problem of having to parse an element's "style" attribute.
+        /// </summary>
+        /// <param name="by">This is HTML element locating mechanism to use.</param>
+        /// <param name="holdTime">This is the time to wait for HTML element to display on the page.</param>
+        /// <returns>Whether or not the element is displayed.</returns>
+        protected void WaitForElementDisplayedInUi(By by, int holdTime = -1)
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (holdTime == -1)
+            {
+                holdTime = this._waitTimeOut;
+            }
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < holdTime)
+                {
+
+                    try
+                    {
+                        bool isObjectDisplayed = WebDriver.FindElement(by).Displayed;
+                        if (isObjectDisplayed.Equals(true))
+                        {
+                            break;
+                        }
+                    }
+                    catch (WebDriverException)
+                    {
+                        // not thorwing exception due to repeat the loop until element displayed in Ui.
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                throw exception;
             }
         }
 
@@ -375,7 +414,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 throw ex;
             }
             stopWatch.Stop();
-           }
+        }
 
         /// <summary>
         /// Wait for pop up window till it gets load on the page.
