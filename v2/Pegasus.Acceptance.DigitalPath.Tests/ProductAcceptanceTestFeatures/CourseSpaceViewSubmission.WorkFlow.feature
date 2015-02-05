@@ -68,7 +68,7 @@ Then I should see submitted activity "1-1 Homework" should be displayed in "Assi
 #Products : MGM
 #Pre condition : Math XL Practice set activity should be assigned by teacher in the course.
 #Dependency : Following script can ne execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
-Scenario: Math XL LLC activity and student scoring 0%
+Scenario: Math XL Practice set activity and student scoring 0%
 When I navigate to the "To Do" tab
 Then I should see "i1-1 Practice" displayed under "To Do" tab
 When I click on "Start" button next to the asset "i1-1 Practice"
