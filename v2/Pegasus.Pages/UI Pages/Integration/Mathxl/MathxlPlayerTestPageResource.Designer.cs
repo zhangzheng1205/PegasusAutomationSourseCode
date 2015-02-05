@@ -61,6 +61,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.Mathxl {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to \\TestData\\1-1Homework0%.exe.
+        /// </summary>
+        internal static string MathxlPlayerTest_Page_11Homework0Percent_File_Path {
+            get {
+                return ResourceManager.GetString("MathxlPlayerTest_Page_11Homework0Percent_File_Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to \\TestData\\Topic1TestWithStudyPlan0%.exe.
         /// </summary>
         internal static string MathxlPlayerTest_Page_Topic1TestWithStudyPlan0Percent_File_Path {

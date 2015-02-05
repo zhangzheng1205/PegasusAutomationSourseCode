@@ -1007,7 +1007,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "CloseETextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             // Close the 'Etext' window
-            new CoursePreviewUXPage().CloseEtextWindow();
+            new CoursePreviewUXPage().CloseETextWindow();
             Logger.LogMethodExit("CommonSteps",
                 "CloseETextWindow",
                 base.IsTakeScreenShotDuringEntryExit);

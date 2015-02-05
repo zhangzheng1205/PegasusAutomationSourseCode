@@ -32,25 +32,33 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                const int screenWidth = 800;
+                const int screenHeight = 800;
+                // setting the screen size and position
+                base.SetWindowSize(screenWidth, screenHeight);
+                base.SetWindowPosition(Screen.PrimaryScreen.WorkingArea.Width - screenWidth
+                    , Screen.PrimaryScreen.WorkingArea.Height - screenHeight);
                 switch (assetName)
                 {
                     case "Topic 1 Test with Study Plan":
                         switch (scoreToAchieve)
                         {
                             case "0%":
-                                const int screenWidth = 800;
-                                const int screenHeight = 800;
-                                // setting the screen size and position
-                                base.SetWindowSize(screenWidth, screenHeight);
-                                base.SetWindowPosition(Screen.PrimaryScreen.WorkingArea.Width - screenWidth
-                                    , Screen.PrimaryScreen.WorkingArea.Height - screenHeight);
                                 Process.Start((AutomationConfigurationManager.TestDataPath
                                     + MathxlPlayerTestPageResource.MathxlPlayerTest_Page_Topic1TestWithStudyPlan0Percent_File_Path).Replace("file:\\", ""));
                                 break;
                         }
                         break;
+                    case "1-1 Homework":
+                        switch (scoreToAchieve)
+                        {
+                            case "0%":
+                                Process.Start((AutomationConfigurationManager.TestDataPath
+                                  + MathxlPlayerTestPageResource.MathxlPlayerTest_Page_11Homework0Percent_File_Path).Replace("file:\\", ""));
+                                break;
+                        }
+                        break;
                 }
-
             }
             catch (Exception e)
             {

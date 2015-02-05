@@ -205,6 +205,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .coloumn_2.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Coloumn2_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Coloumn2_CssSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrmCoursePreview.
         /// </summary>
         internal static string CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator {
@@ -228,6 +237,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewUX_Page_IFrame_Id_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewUX_Page_IFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .btn_Done_m.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_ImDone_Button_Class_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_ImDone_Button_Class_Locator", resourceCulture);
             }
         }
         
@@ -277,11 +295,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to a[id=&apos;btnStart&apos;].
+        /// </summary>
+        internal static string CoursePreviewUX_Page_StartButton_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_StartButton_CssSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TodoList.
         /// </summary>
         internal static string CoursePreviewUX_Page_ToDoList_Div_Id_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewUX_Page_ToDoList_Div_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .btn_TryAgain.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_TryAgain_Button_Class_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_TryAgain_Button_Class_Locator", resourceCulture);
             }
         }
         

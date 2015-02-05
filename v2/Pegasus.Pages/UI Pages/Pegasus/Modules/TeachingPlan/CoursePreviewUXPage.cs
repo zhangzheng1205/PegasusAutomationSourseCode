@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
 using OpenQA.Selenium;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
@@ -183,10 +185,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// close the 'Etext' window.
         /// </summary>
-        public void CloseEtextWindow()
+        public void CloseETextWindow()
         {
             // close the 'Etext' window
-            Logger.LogMethodEntry("CoursePreviewUXPage", "CloseEtextWindow",
+            Logger.LogMethodEntry("CoursePreviewUXPage", "CloseETextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -198,7 +200,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("CoursePreviewUXPage", "CloseEtextWindow",
+            Logger.LogMethodExit("CoursePreviewUXPage", "CloseETextWindow",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -481,21 +483,19 @@ namespace Pegasus.Pages.UI_Pages
                 switch (buttonName)
                 {
                     case "Start":
-                        base.WaitForElementDisplayedInUi(By.XPath(CoursePreviewUXPageResource
-                            .CouresPreviewUX_Page_TodoList_XPath_Locator));
-                        int divTodoListNodes = base.GetElementCountByXPath(CoursePreviewUXPageResource
-                            .CouresPreviewUX_Page_TodoList_XPath_Locator);
-                        for (int countDivTodoList = 1; countDivTodoList <= divTodoListNodes; countDivTodoList++)
+                        ICollection<IWebElement> coloumn2Collections = base.GetWebElementsCollectionByCssSelector
+                            (CoursePreviewUXPageResource.CoursePreviewUX_Page_Coloumn2_CssSelector_Locator);
+                        int counter = 0;
+                        foreach (IWebElement coloumn2 in coloumn2Collections)
                         {
-                            IWebElement webElementToDoList = base.GetWebElementPropertiesByXPath
-                                (string.Format(CoursePreviewUXPageResource
-                                .CouresPreviewUX_Page_DivTodoListNodes_XPath_Locator, divTodoListNodes));
-                            if (webElementToDoList.Text.Replace("\r\n", " ").Contains(assetName))
+                            if (coloumn2.Text.Replace("\r\n", " ").Contains(assetName))
                             {
-                                base.ClickButtonByXPath(string.Format
-                                    (CoursePreviewUXPageResource.CouresPreviewUX_Page_TodoListNodes_XPath_Locator, divTodoListNodes));
+                                ICollection<IWebElement> startButtonCollections = base.GetWebElementsCollectionByCssSelector
+                                    (CoursePreviewUXPageResource.CoursePreviewUX_Page_StartButton_CssSelector_Locator);
+                                startButtonCollections.ElementAt(counter).Click();
                                 break;
                             }
+                            counter++;
                         }
                         break;
                 }
@@ -506,6 +506,100 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CoursePreviewUXPage", "ClickOnButtonNextToTheAsset",
                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Asset Score.
+        /// </summary>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="underTabName">The Tab Name.</param>
+        /// <returns>Asset Score.</returns>
+        public string GetAssetScore(string assetName, string underTabName)
+        {
+            Logger.LogMethodExit("CoursePreviewUXPage", "GetAssetScore",
+                         base.IsTakeScreenShotDuringEntryExit);
+            string currentScore = string.Empty;
+            try
+            {
+                switch (underTabName)
+                {
+                    case "To Do":
+                        this.SelectAssignmentsToDoWindow();
+                        switch (assetName)
+                        {
+                            case "1-1 Homework":
+                                ICollection<IWebElement> coloumn2Collections = base.GetWebElementsCollectionByCssSelector(".coloumn_2");
+                                int counter = 0;
+                                foreach (IWebElement coloumn2 in coloumn2Collections)
+                                {
+                                    if (coloumn2.Text.Replace("\r\n", " ").Contains(assetName))
+                                    {
+                                        ICollection<IWebElement> scoreObjectCollections = base.GetWebElementsCollectionByCssSelector(".txtMinorcss");
+                                        currentScore = scoreObjectCollections.ElementAt(counter).Text;
+                                        break;
+                                    }
+                                    counter++;
+                                }
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage", "GetAssetScore",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return currentScore;
+        }
+
+        /// <summary>
+        /// Get Try Again Button Text.
+        /// </summary>
+        /// <returns>Object Text.</returns>
+        public string GetTryAgainButtonText()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetTryAgainButtonText",
+                      base.IsTakeScreenShotDuringEntryExit);
+            string objectText = string.Empty;
+            try
+            {
+                ICollection<IWebElement> objectTryAgainButtonCollections = base.GetWebElementsCollectionByCssSelector
+                    (CoursePreviewUXPageResource.CoursePreviewUX_Page_TryAgain_Button_Class_Locator);
+                objectText = objectTryAgainButtonCollections.ElementAt(0).Text;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage", "GetTryAgainButtonText",
+                      base.IsTakeScreenShotDuringEntryExit);
+            return objectText;
+        }
+
+        /// <summary>
+        /// Get Im Done Button Text.
+        /// </summary>
+        /// <returns>Object Text.</returns>
+        public string GetImDoneButtonText()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage", "GetImDoneButtonText",
+                      base.IsTakeScreenShotDuringEntryExit);
+            string objectText = string.Empty;
+            try
+            {
+                ICollection<IWebElement> objectImDoneButtonCollections = base.GetWebElementsCollectionByCssSelector(
+                    CoursePreviewUXPageResource.CoursePreviewUX_Page_ImDone_Button_Class_Locator);
+                objectText = objectImDoneButtonCollections.ElementAt(0).Text;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage", "GetImDoneButtonText",
+                      base.IsTakeScreenShotDuringEntryExit);
+            return objectText;
         }
     }
 }

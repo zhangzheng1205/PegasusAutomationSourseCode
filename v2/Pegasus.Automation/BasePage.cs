@@ -2814,7 +2814,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>The number of webelements that match the specified CssSelector.</returns>
         /// <see cref="FindElements">Finds all IWebElements within the current context using the given mechanism.</see>
         /// <see cref="by">This is HTML element locating mechanism to use.</see>
-        protected ICollection<IWebElement> GetWebElementsCollectionByPartialCssSelector(String cssSelectorAttributeValue)
+        protected ICollection<IWebElement> GetWebElementsCollectionByCssSelector(String cssSelectorAttributeValue)
         {
             return GetWebElementsCollection(By.CssSelector(cssSelectorAttributeValue));
         }

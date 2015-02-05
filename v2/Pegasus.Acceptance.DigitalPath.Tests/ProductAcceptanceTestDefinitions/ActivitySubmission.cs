@@ -273,7 +273,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("ActivitySubmission", "SeeThePreTestPresentationPageDisplayed",
             base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Answer The Questions For Activity To Score.
         /// </summary>
@@ -360,5 +360,29 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// See The Submitted Activity Should Be Displayed In Tab.
+        /// </summary>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="underTabName">This is Tab name.</param>
+        /// <param name="achievedScore">This is score value.</param>
+        /// <param name="assetStatusButton">This is asset status button name.</param>
+        /// <param name="buttonName">This is button name.</param>
+        [Then(@"I should see submitted activity ""(.*)"" should be displayed in ""(.*)"" Tab as “(.*)%” score and status ""(.*)"" with ""(.*)"" button")]
+        public void SeeSubmittedActivityShouldBeDisplayedInTabAsScoreAndStatusWithButton(string assetName, string underTabName, Decimal achievedScore, string assetStatusButton, string buttonName)
+        {
+            // see submitted activity in page
+            Logger.LogMethodEntry("ActivitySubmission", "SeeSubmittedActivityShouldBeDisplayedInTabAsScoreAndStatusWithButton",
+           base.IsTakeScreenShotDuringEntryExit);
+            CoursePreviewUXPage coursePreviewUxPage = new CoursePreviewUXPage();
+            Logger.LogAssertion("VerifySubmissionScore", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(achievedScore, coursePreviewUxPage.GetAssetScore(assetName, underTabName)));
+            Logger.LogAssertion("VerifyTryAgainButtonPresent", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(buttonName, coursePreviewUxPage.GetTryAgainButtonText()));
+            Logger.LogAssertion("VerifyImDoneButtonPresent", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(assetStatusButton, coursePreviewUxPage.GetImDoneButtonText()));
+            Logger.LogMethodEntry("ActivitySubmission", "SeeSubmittedActivityShouldBeDisplayedInTabAsScoreAndStatusWithButton",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

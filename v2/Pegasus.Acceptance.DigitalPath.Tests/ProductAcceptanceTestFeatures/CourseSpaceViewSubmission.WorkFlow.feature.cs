@@ -186,6 +186,32 @@ testRunner.When("I click on \"Return to Course\" button in study plan page", ((s
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Math XL LLC activity and student scoring 0%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceViewSubmission")]
+        public virtual void MathXLLLCActivityAndStudentScoring0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Math XL LLC activity and student scoring 0%", ((string[])(null)));
+#line 57
+this.ScenarioSetup(scenarioInfo);
+#line 58
+testRunner.When("I navigate to the \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 59
+testRunner.Then("I should see \"1-1 Homework\" displayed under \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 60
+testRunner.When("I click on \"Start\" button next to the asset \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
+testRunner.Then("I should see pre test presentation page \"Do Homework - Student Stu\" should be dis" +
+                    "played", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
+testRunner.When("I answer all the questions incorrectly for activity \"1-1 Homework\" to score \"0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+testRunner.Then("I should see submitted activity \"1-1 Homework\" should be displayed in \"Assignment" +
+                    "s - To Do\" Tab as “0.00%” score and status \"I\'m Done\" with \"Try Again\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

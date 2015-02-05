@@ -1795,7 +1795,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Gets the collection of all Help Link assets
-                ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByPartialCssSelector(
+                ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByCssSelector(
                     ContentLibraryUXPageResource.CourseContentUXPage_AssetPartial_Id_Locator);
 
                 IWebElement getLastAsset = getAllAssetsInContentLibrary.Last();

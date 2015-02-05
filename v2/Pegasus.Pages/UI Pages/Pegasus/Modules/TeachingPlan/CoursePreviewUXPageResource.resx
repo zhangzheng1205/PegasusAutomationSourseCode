@@ -195,4 +195,16 @@
   <data name="CouresPreviewUX_Page_TodoList_XPath_Locator" xml:space="preserve">
     <value>//div[@id='TodoList']/div</value>
   </data>
+  <data name="CoursePreviewUX_Page_Coloumn2_CssSelector_Locator" xml:space="preserve">
+    <value>.coloumn_2</value>
+  </data>
+  <data name="CoursePreviewUX_Page_ImDone_Button_Class_Locator" xml:space="preserve">
+    <value>.btn_Done_m</value>
+  </data>
+  <data name="CoursePreviewUX_Page_StartButton_CssSelector_Locator" xml:space="preserve">
+    <value>a[id='btnStart']</value>
+  </data>
+  <data name="CoursePreviewUX_Page_TryAgain_Button_Class_Locator" xml:space="preserve">
+    <value>.btn_TryAgain</value>
+  </data>
 </root>

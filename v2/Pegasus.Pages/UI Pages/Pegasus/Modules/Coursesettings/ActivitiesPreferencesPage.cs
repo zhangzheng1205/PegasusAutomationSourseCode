@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
             ICollection<IWebElement> activityTypeEditCollection = base.GetWebElementsCollectionById(
                     ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EditButton_Id_Locator);
             // Activity Type Name corresponding Edit Preferences Link Collection 
-            ICollection<IWebElement> activityTypesCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> activityTypesCollection = base.GetWebElementsCollectionByCssSelector(
                     ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector);
             
             int i = 0;
@@ -436,7 +436,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("ActivitiesPreferencesPage",
                "EnterNewActivityTypeName", base.IsTakeScreenShotDuringEntryExit);
 
-            ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByCssSelector(
                     ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector);
 
             IWebElement getLastActivityTypeName = getAllAssetsInContentLibrary.Last();

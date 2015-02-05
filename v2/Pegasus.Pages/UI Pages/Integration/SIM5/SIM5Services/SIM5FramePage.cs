@@ -1078,7 +1078,7 @@ namespace Pegasus.Pages.UI_Pages
 
             int count = 0;
             // get the collection of menu tools by CssSelector using class names
-            ICollection<IWebElement> getCellsToolsCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getCellsToolsCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_MenuToolsObject_Collection_CssSelector);
             foreach (IWebElement cellToolOption in getCellsToolsCollection)
             {
@@ -1093,7 +1093,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             count = 0;
             // get the collection of objects of various tools available in Format dropdown by CssSelector using class names
-            ICollection<IWebElement> getFormatToolCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getFormatToolCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_FormatToolsObject_Collection_CssSelector);
             foreach (IWebElement formatTool in getFormatToolCollection)
             {
@@ -1158,7 +1158,7 @@ namespace Pegasus.Pages.UI_Pages
 
             int count = 0;
             // get the collection of Alignment tool options by CssSelector using class names
-            ICollection<IWebElement> getAlighmentOptionsCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getAlighmentOptionsCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_AlignmentObjects_Collection_CssSelector);
             foreach (IWebElement AlignmentOption in getAlighmentOptionsCollection)
             {
@@ -1658,7 +1658,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));
             int count = 0;
-            ICollection<IWebElement> getStyleCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getStyleCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Comma_CSS_Selector_Class_Collection_Locator);
             foreach (IWebElement style in getStyleCollection)
             {
@@ -1743,7 +1743,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Themes_Dropdown_CSSSelector);
             base.ClickByJavaScriptExecutor(getThemesIcon);
             // Get the Themes Objects collection
-            ICollection<IWebElement> themesCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> themesCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ThemeObjects_Collection_CSSSelector);
             foreach (IWebElement theme in themesCollection)
             {
@@ -1776,7 +1776,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
 
             // Get the menu tool objects collection
-            ICollection<IWebElement> getExcelStylesCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getExcelStylesCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Styles_Collection_CSSSelector_Locator);
             int count = 0;
             foreach (IWebElement ExcelStyleObject in getExcelStylesCollection)
@@ -1807,7 +1807,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
 
             // Get the style objects collection from the Cell Styles dropdown
-            ICollection<IWebElement> getCellStylesCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> getCellStylesCollection = base.GetWebElementsCollectionByCssSelector(
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Cell_Styles_Collection_CSSSelector_Locator);
             int count = 0;
             foreach (IWebElement CellStyle in getCellStylesCollection)
