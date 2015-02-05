@@ -207,4 +207,7 @@
   <data name="CoursePreviewUX_Page_TryAgain_Button_Class_Locator" xml:space="preserve">
     <value>.btn_TryAgain</value>
   </data>
+  <data name="CoursePreviewUX_Page_ScoreValue_CssSelector_Locator" xml:space="preserve">
+    <value>.txtMinorcss</value>
+  </data>
 </root>

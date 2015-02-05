@@ -528,13 +528,16 @@ namespace Pegasus.Pages.UI_Pages
                         switch (assetName)
                         {
                             case "1-1 Homework":
-                                ICollection<IWebElement> coloumn2Collections = base.GetWebElementsCollectionByCssSelector(".coloumn_2");
+                            case "i1-1 Practice":
+                                ICollection<IWebElement> coloumn2Collections = base.GetWebElementsCollectionByCssSelector
+                                    (CoursePreviewUXPageResource.CoursePreviewUX_Page_Coloumn2_CssSelector_Locator);
                                 int counter = 0;
                                 foreach (IWebElement coloumn2 in coloumn2Collections)
                                 {
                                     if (coloumn2.Text.Replace("\r\n", " ").Contains(assetName))
                                     {
-                                        ICollection<IWebElement> scoreObjectCollections = base.GetWebElementsCollectionByCssSelector(".txtMinorcss");
+                                        ICollection<IWebElement> scoreObjectCollections = base.GetWebElementsCollectionByCssSelector
+                                            (CoursePreviewUXPageResource.CoursePreviewUX_Page_ScoreValue_CssSelector_Locator);
                                         currentScore = scoreObjectCollections.ElementAt(counter).Text;
                                         break;
                                     }

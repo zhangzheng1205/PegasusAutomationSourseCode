@@ -286,6 +286,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .txtMinorcss.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_ScoreValue_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_ScoreValue_CssSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 5000.
         /// </summary>
         internal static string CoursePreviewUX_Page_Sleep_Time {

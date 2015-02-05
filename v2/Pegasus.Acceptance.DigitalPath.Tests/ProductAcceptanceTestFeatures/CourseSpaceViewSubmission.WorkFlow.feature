@@ -61,3 +61,17 @@ When I click on "Start" button next to the asset "1-1 Homework"
 Then I should see pre test presentation page "Do Homework - Student Stu" should be displayed
 When I answer all the questions incorrectly for activity "1-1 Homework" to score "0%"
 Then I should see submitted activity "1-1 Homework" should be displayed in "Assignments - To Do" Tab as “0.00%” score and status "I'm Done" with "Try Again" button
+
+
+#Purpose : Math XL Practice set activity and student scoring 0%.
+#Test case ID : peg-22559
+#Products : MGM
+#Pre condition : Math XL Practice set activity should be assigned by teacher in the course.
+#Dependency : Following script can ne execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
+Scenario: Math XL LLC activity and student scoring 0%
+When I navigate to the "To Do" tab
+Then I should see "i1-1 Practice" displayed under "To Do" tab
+When I click on "Start" button next to the asset "i1-1 Practice"
+Then I should see pre test presentation page "Do Practice Set" should be displayed
+When I answer all the questions incorrectly for activity "i1-1 Practice" to score "0%"
+Then I should see submitted activity "i1-1 Practice" should be displayed in "Assignments - To Do" Tab as “0.00%” score and status "I'm Done" with "Try Again" button

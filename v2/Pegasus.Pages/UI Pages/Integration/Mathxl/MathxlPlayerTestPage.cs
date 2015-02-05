@@ -50,6 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     case "1-1 Homework":
+                    case "i1-1 Practice":
                         switch (scoreToAchieve)
                         {
                             case "0%":
