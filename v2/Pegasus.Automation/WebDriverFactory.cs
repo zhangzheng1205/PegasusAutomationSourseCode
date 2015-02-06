@@ -32,10 +32,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private const string APP_SETTINGS_REMOTE = "isRemote";
         private const string APP_SETTINGS_REMOTE_HUB_URL = "remoteHubUrl";
 
-        private static bool _isChromeExecuted;
-        private const bool IsInternetExplorerExecuted = false;
-        private static int _counter = 1;
-
         /// <summary>
         /// This is defined static variables.
         /// </summary>

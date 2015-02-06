@@ -17,9 +17,9 @@ namespace Pegasus.Pages.UI_Pages
     public class InstructorPresentationPage : BasePage
     {
         /// <summary>
-        /// This is the logger
+        /// This is the logger.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(InstructorPresentationPage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(InstructorPresentationPage));
 
         /// <summary>
         /// Opens Amplifier Presentation Window.
@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsAmplifierPresentationPageOpened()
         {
             //Opens Activity Presentation Window
-            logger.LogMethodEntry("InstructorPresentationPage",
+            Logger.LogMethodEntry("InstructorPresentationPage",
                 "IsAmplifierPresentationPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean isAmplifirePresentationPageDisplayed = false;
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("InstructorPresentationPage",
+            Logger.LogMethodExit("InstructorPresentationPage",
                 "IsAmplifierPresentationPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
 
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         public bool IsPostTestActivityLaunched()
         {
             //Verify Activity Launched
-            logger.LogMethodEntry("InstructorPresentationPage", "IsPostTestActivityLaunched",
+            Logger.LogMethodEntry("InstructorPresentationPage", "IsPostTestActivityLaunched",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Bool Variable
             bool isActivityFinishButtonPresent = false;
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("InstructorPresentationPage", "IsPostTestActivityLaunched",
+            Logger.LogMethodExit("InstructorPresentationPage", "IsPostTestActivityLaunched",
           base.IsTakeScreenShotDuringEntryExit);
             return isActivityFinishButtonPresent;
         }
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsActivityPresentationPageOpened()
         {
             //Opens Activity Presentation Window
-            logger.LogMethodEntry("StudentPresentationPage",
+            Logger.LogMethodEntry("StudentPresentationPage",
                 "IsActivityPresentationPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean isActivityPresentationPageDisplayed = false;
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("StudentPresentationPage",
+            Logger.LogMethodExit("StudentPresentationPage",
                 "IsActivityPresentationPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             return isActivityPresentationPageDisplayed;
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void CloseActivityPresentationWindow()
         {
-            logger.LogMethodEntry("InstructorPresentationPage", "CloseActivityPresentationWindow",
+            Logger.LogMethodEntry("InstructorPresentationPage", "CloseActivityPresentationWindow",
            base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("InstructorPresentationPage", "CloseActivityPresentationWindow",
+            Logger.LogMethodExit("InstructorPresentationPage", "CloseActivityPresentationWindow",
          base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -179,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages
         public bool IsPostTestActivityLaunchedInContentPage()
         {
             //Is PostTest Activity Launched In Content Page
-            logger.LogMethodEntry("InstructorPresentationPage", "IsPostTestActivityLaunchedInContentPage",
+            Logger.LogMethodEntry("InstructorPresentationPage", "IsPostTestActivityLaunchedInContentPage",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Bool Variable
             bool isActivityCloseButtonPresent = false;
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("InstructorPresentationPage", "IsPostTestActivityLaunchedInContentPage",
+            Logger.LogMethodExit("InstructorPresentationPage", "IsPostTestActivityLaunchedInContentPage",
           base.IsTakeScreenShotDuringEntryExit);
             return isActivityCloseButtonPresent;
         }
