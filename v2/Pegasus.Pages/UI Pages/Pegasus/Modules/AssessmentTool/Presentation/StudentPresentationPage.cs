@@ -3476,15 +3476,16 @@ namespace Pegasus.Pages.UI_Pages
                 switch (score)
                 {
                     case "100%": ServetyPercentScoringQuestions(activityName);
-                                 // ThirtyPercentScoringQuestions();
-                                 break;
-                        
+                        // ThirtyPercentScoringQuestions();
+                        break;
 
-                    case "70%": ServetyPercentScoringQuestions(activityName);           
-                                break;
+
+                    case "70%": ServetyPercentScoringQuestions(activityName);
+                        break;
                 }
                 //Click On SIM5 Activity Submit Button
                 this.ClickOnSim5ActivitySubmitButton();
+                base.SwitchToDefaultWindow();
             }
             catch (Exception e)
             {
@@ -3498,7 +3499,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Second Question Submission
             AttemptSecondQuestion();
-  
+
             //Seventh Question Submission
             AttemptSeventhQuestion();
 
@@ -3531,15 +3532,14 @@ namespace Pegasus.Pages.UI_Pages
                 AttemptFirstQuestion(activityName);
 
                 //Third Question Submission
-                getQuestionNumber(3);
-                AttemptThirdQuestion();
+                getQuestionNumber(4);
+                // AttemptThirdQuestion();
                 //Fourth Question Submission
                 AttemptFourthQuestion();
-                //Fifth Question Submission
-                AttemptFifthQuestion();
                 //Sixth Question Submission
+                getQuestionNumber(6);
                 AttemptSixthQuestion();
-
+                //Sixth Question Submission
                 //Eight Question Submission
                 getQuestionNumber(8);
                 AttemptEightQuestion();
@@ -3553,13 +3553,17 @@ namespace Pegasus.Pages.UI_Pages
                 //Thirteenth Question submission
                 getQuestionNumber(13);
                 AttemptThirteenthQuestion();
-                //Fourteenth Question submission
-                AttemptFourteenthQuestion();
+                getQuestionNumber(15);
                 //Fifteenth Question submission
                 AttemptFifteenthQuestioin();
+                getQuestionNumber(14);
+                //Fourteenth Question submission
+                AttemptFourteenthQuestion();
+                getQuestionNumber(16);
                 //Sixteenth Question submission
                 AttemptSixteenthQuestion();
                 //Seventeenth Question submission
+                getQuestionNumber(17);
                 AttemptSeventeenthQuestioin();
                 //Eighteenth Question submission
                 AttemptEighteenthQuestioin();
@@ -3579,7 +3583,6 @@ namespace Pegasus.Pages.UI_Pages
                 AttemptTwentySeventhQuestioin();
                 //Twentyeightth Question submission
                 AttemptTwentyeightthQuestioin();
-
                 //ThirtyFirst Question submission
                 getQuestionNumber(31);
                 AttemptThirtyFirstQuestioin();
@@ -3587,6 +3590,9 @@ namespace Pegasus.Pages.UI_Pages
                 AttemptThirtySecondQuestioin();
                 //ThirtyThird Question submission
                 AttemptThirtyThirdQuestioin();
+                //Fifth Question Submission
+                getQuestionNumber(5);
+                AttemptFifthQuestion();
             }
             catch (Exception e)
             {
@@ -3602,27 +3608,32 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                base.SetImplicitWaitTime(15);
+                this.IsPageLoading();
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_ViewAll_ID_Locator));
-                base.ClickButtonById(StudentPresentationPageResource.
+                IWebElement getClickButtonProperty = base.GetWebElementPropertiesById(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_ViewAll_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.ClickByJavaScriptExecutor(getClickButtonProperty);
+                //base.ClickButtonById(StudentPresentationPageResource.
+                //StudentPrsentation_Page_PPT_ViewAll_ID_Locator);
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_PPT_ViewAll_Page_Xpath_Locator));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_ViewAll_Page_Xpath_Locator));
+                //Get the question number
                 IWebElement questLink = base.GetWebElementPropertiesByXPath(string.Format(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator, questNo));
                 base.ScrollElementByJavaScriptExecutor(questLink);
-                base.PerformMouseClickAction(questLink);
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_Launch_Xpath_Locator));
-                IWebElement Launch = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_Launch_Xpath_Locator);
-                base.PerformMouseClickAction(Launch);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.PerformFocusOnElementActionByXPath(string.Format(StudentPresentationPageResource.
+                StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator, questNo));
+                this.IsElementDisplayedInUI(By.XPath(string.Format(StudentPresentationPageResource.
+                StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator, questNo)));
+                //Click on the question
+                base.PerformDoubleClickAction(questLink);
+                this.IsViewAllQuestionsPopUpClosed();
+                this.IsPageLoading();
+                base.SetImplicitWaitTime(15);
             }
             catch (Exception e)
             {
@@ -3632,6 +3643,171 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        private bool IsPageLoading(int timeOut = -1)
+        {
+
+            //If element not present then webdriver throw the exception, 
+            //catch this exception so that outer code does not worry 
+            //about this exception and existing logic which relies on TRUE/FALSE can work as it is except TimeoutException.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (timeOut == -1)
+            {
+                timeOut = this.waitTimeOut;
+            }
+            bool isThinkingIndicatorProcessing = true;
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    if (!WebDriver.FindElement(By.Id("LoadingImage")).Displayed)
+                    {
+                        break;
+                    }
+                }
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return isThinkingIndicatorProcessing;
+        }
+
+        private bool IsQuestionLoaded(string questionNumber, int timeOut = -1)
+        {
+
+            //If element not present then webdriver throw the exception, 
+            //catch this exception so that outer code does not worry 
+            //about this exception and existing logic which relies on TRUE/FALSE can work as it is except TimeoutException.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (timeOut == -1)
+            {
+                timeOut = this.waitTimeOut;
+            }
+            bool isThinkingIndicatorProcessing = true;
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    string getQuestionID = base.GetElementTextByXPath("//div[@id='quetionattempt']/span");
+                    if (getQuestionID.Equals(questionNumber))
+                    {
+                        break;
+                    }
+                }
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return isThinkingIndicatorProcessing;
+        }
+
+        private bool IsViewAllQuestionsPopUpClosed(int timeOut = -1)
+        {
+
+            //If element not present then webdriver throw the exception, 
+            //catch this exception so that outer code does not worry 
+            //about this exception and existing logic which relies on TRUE/FALSE can work as it is except TimeoutException.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (timeOut == -1)
+            {
+                timeOut = this.waitTimeOut;
+            }
+            bool isThinkingIndicatorProcessing = true;
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    if (!WebDriver.FindElement(By.Id("ViewAllFrame")).Displayed)
+                    {
+                        break;
+                    }
+                }
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return isThinkingIndicatorProcessing;
+        }
+
+        private bool IsElementDisplayedInUI(By by, int timeOut = -1)
+        {
+
+            //If element not present then webdriver throw the exception, 
+            //catch this exception so that outer code does not worry 
+            //about this exception and existing logic which relies on TRUE/FALSE can work as it is except TimeoutException.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (timeOut == -1)
+            {
+                timeOut = this.waitTimeOut;
+            }
+            bool isThinkingIndicatorProcessing = true;
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    if (WebDriver.FindElement(by).Displayed)
+                    {
+                        break;
+                    }
+                }
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return isThinkingIndicatorProcessing;
+        }
+
+        private bool IsProcessingCurtainLoading(int timeOut = -1)
+        {
+
+            //If element not present then webdriver throw the exception, 
+            //catch this exception so that outer code does not worry 
+            //about this exception and existing logic which relies on TRUE/FALSE can work as it is except TimeoutException.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (timeOut == -1)
+            {
+                timeOut = this.waitTimeOut;
+            }
+            bool isThinkingIndicatorProcessing = true;
+            try
+            {
+                while (isThinkingIndicatorProcessing && stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    isThinkingIndicatorProcessing = WebDriver.FindElement(By.Id
+                        (StudentPresentationPageResource.
+                        StudentPrsentation_Page_SIM5_LoadingCurtain_Id_Locator)).Displayed;
+                }
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return isThinkingIndicatorProcessing;
+        }
+
         public void AttemptTwentyFirstQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyFirstQuestioin",
@@ -3639,40 +3815,30 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("21");
+                this.IsPageLoading();
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //click on Home Tab  and click on Replace button
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_HomeTab_CSSLocator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_21_ReplaceButton_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // type Pike Market in Find what textbox
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_21_SearchText_Xpath_Locator));
                 base.FillTextBoxByXPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_21_SearchText_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_21_SearchText_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //type Pike Place Market in Relplace with Text box
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_21_ReplaceText_Xpath_Locator));
                 base.FillTextBoxByXPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_21_ReplaceText_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_21_ReplaceText_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on "Replace All"
                 base.ClickButtonById(StudentPresentationPageResource.StudentPrsentation_Page_PPT_21_ReplaceAll_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on OK on message box and click on close
                 base.ClickButtonById(StudentPresentationPageResource.StudentPrsentation_Page_PPT_OkButton_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.ClickButtonById(StudentPresentationPageResource.StudentPrsentation_Page_PPT_21_CloseButton_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -3690,59 +3856,40 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("18");
                 //click slide 1 and click on on Home tab.        
                 //base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath("//*[@id='1']/div/ul/li[6]"));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_HomeTab_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on new slide arrow in slides gropup and then click on Reuse slides
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_NewSlideArrow_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_ReusedSlides_Xpath_Locator);
                 //click on browse in reuse pane an then click on browse file
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_BrowseFile_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.ClickButtonById(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_BrowseFileOption_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //select or click on 1B_slides.pptx in browse dialogue box
                 base.ClickImageByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_Image_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on open
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_OpenButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // under reused pane click on slide 1
                 IWebElement slide1 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_ReusedSlide1_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(slide1);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //in slide pane click on slide 7
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPresentation_Page_PPT_Slide7_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // under reused pane click on slide 4
                 IWebElement slide4 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_18_ReusedSlide4_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(slide4);
                 // click on close on reused pane
                 base.ClickImageByXPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_18_CloseButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -3793,20 +3940,16 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("27");
+                this.IsPageLoading();
                 // click on Layout under home tab with slide 1
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_HomeTab_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_27_Layout_Xpath_Locator));
                 // Click on section header
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_27_SectionHeader_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                     StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -3824,8 +3967,11 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("25");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                //Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                // StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on th paragraph present in left side of slide 5
                 IWebElement Subtitle = base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator);
@@ -3833,40 +3979,25 @@ namespace Pegasus.Pages.UI_Pages
                 // on home page tab under paragrapth click on center button
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_HomeTab_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                // Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                //StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_CenterAllign_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on slide 4
                 this.ClickOnElementByXpath(StudentPresentationPageResource.StudentPresentation_Page_PPT_Slide4_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on slide title and press cntrl+E
-                IWebElement title = base.GetWebElementPropertiesByCssSelector(
-                StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph1_CSSLocator);
+                IWebElement title = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_TwentyFifthQuestion_TitleBox_Xpath_Locator);
                 base.PerformMoveToElementClickAction(title);
-                base.PerformMouseRightClickAction(title);
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator));
-                IWebElement CenterRight = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator);
-                base.PerformMouseClickAction(CenterRight);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-               StudentPrsentation_Page_SIM5_Sleep_Time));
+                Actions builder = new Actions(WebDriver);
+                builder.SendKeys("\u0005").Perform();
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 // click on sub title and press cntrl+E
                 IWebElement Subtitlea = base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator);
                 base.PerformMoveToElementClickAction(Subtitlea);
-                base.PerformMouseRightClickAction(Subtitlea);
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator));
-                IWebElement CenterRight1 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator);
-                base.PerformMouseClickAction(CenterRight1);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys("\u0005").Perform();
             }
             catch (Exception e)
             {
@@ -3884,43 +4015,41 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("22");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                this.IsPageLoading();
                 //click on design tab with slide 1
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                  StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator));
+                IWebElement getDesignTabProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator);
+                base.PerformFocusOnElementActionByXPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getDesignTabProperty);
                 // under variants group right click on third theme
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_PPT_22_Frame3_Xpath_Locator));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_22_Frame3_Xpath_Locator));
                 IWebElement Thirdelement = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_22_Frame3_Xpath_Locator);
                 base.PerformMouseRightClickAction(Thirdelement);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on "Apply to selected slides"
                 IWebElement ApplyToselectedElement = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_22_ApplyToSelectedlSlidesButton_Xpath_Locator);
                 base.PerformMoveToElementClickAction(ApplyToselectedElement);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // under variants group right click on first theme 
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_22_Frame1_Xpath_Locator));
                 IWebElement Firstelement = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_22_Frame1_Xpath_Locator);
                 base.PerformMouseRightClickAction(Firstelement);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on "Apply to selected slides"
                 bool stss = base.IsElementPresent(By.XPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_22_ApplyToAllSlidesButton_Xpath_Locator));
                 IWebElement ApplyToAllElement = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_22_ApplyToAllSlidesButton_Xpath_Locator);
                 base.PerformMoveToElementClickAction(ApplyToAllElement);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -3931,6 +4060,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         public void AttemptTwentysixthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentysixthQuestioin",
@@ -3938,8 +4068,7 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("26");
                 // click on paragraph on slide 5  
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPresentation_Page_PPT_Slide5_Value));
@@ -3954,13 +4083,9 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_HomeTab_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_26_LineSpacing_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on 2.0
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_26_LineSpacingOption_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                   StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -3978,17 +4103,16 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("28");
+                this.IsPageLoading();
+                Actions builder = new Actions(WebDriver);
                 // click on SLide sorter Icon in status bar
                 base.ClickButtonByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_27_SlideSorter_Xpath_Locator);
                 //Press delete on Slide 1 
                 base.ClickButtonByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_27_Slide1_Xpath_Locator);
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_DeleteKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys(Keys.Delete).Perform();
             }
             catch (Exception e)
             {
@@ -4006,24 +4130,17 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                   StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("32");
+                Actions builder = new Actions(WebDriver);
                 // on transation tab click on duration up arrow under timing group twice till duration = 1.75
-                // base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath("//*[@id='1']/div/ul/li[10]"));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_TransactionTab_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
-                bool s = base.IsElementPresent(By.Id(
-                StudentPresentationPageResource.StudentPrsentation_Page_PPT_32_Upbutton_ID_Locator));
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_SlideToWait_Xpath_Locator));
+                this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.StudentPrsentation_Page_PPT_32_Upbutton_ID_Locator));
                 IWebElement Applybutton = base.GetWebElementPropertiesById(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_32_Upbutton_ID_Locator);
                 base.PerformMouseClickAction(Applybutton);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.PerformMouseClickAction(Applybutton);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on apply to all under timing group
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_ApplyToAllOptions_Xpath_Locator));
@@ -4031,27 +4148,25 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on slide show tool bar and click on Start from begining
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_SlideShowTab_Xpath_Locator));
+                base.SetImplicitWaitTime(15);
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_SlideShowTab_Xpath_Locator));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                bool td = base.IsElementPresent(By.XPath(
-                StudentPresentationPageResource.StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator));
+                  StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // press space bar to proceed to slide 2
                 for (int i = 0; i < 7; i++)
                 {
-                    base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+
+                    builder.SendKeys(Keys.Enter).Perform();
                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                      StudentPrsentation_Page_SIM5_Sleep_Time));
                 }
                 // Press Esc to return Normal view
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EscapeKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys(Keys.Escape).Perform();
             }
             catch (Exception e)
             {
@@ -4067,28 +4182,22 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("31");
+                this.IsPageLoading();
                 //click on Transaction Tab and click on downward arrow under transaction this slide section
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_TransactionTab_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_DownarrowButton_Xpath_Locator));
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_31_DownarrowButton_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_DownarrowButton_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on "fade" under subtitle
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_FadeButton_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_FadeButton_Xpath_Locator));
-                // click on Effect options on transaction tab and select smoothly effect    -->//div[text()='Effect Options']
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_EffectOptions_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_EffectOptions_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on apply to all under timing group
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_31_SmoothlyOptions_Xpath_Locator));
@@ -4097,8 +4206,6 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_ApplyToAllOptions_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_31_ApplyToAllOptions_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4114,33 +4221,30 @@ namespace Pegasus.Pages.UI_Pages
            base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                // on status bar click on reading view icon   
+                this.IsQuestionLoaded("33");
+                this.IsPageLoading();
+                Actions builder = new Actions(WebDriver);
+                // on status bar click on reading view icon
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_PPT_33_ReadingViewIcon_XPath_Locator));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_33_ReadingViewIcon_XPath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_33_ReadingViewIcon_XPath_Locator);
+                this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ThirtyThirdQuestion_ReadViewSlide_Id_Locator));
                 // press space bar to proceed to slide 2
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys(Keys.Space).Perform();
+                Thread.Sleep(1000);
                 // press space bar to proceed to slide 3
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                // on status bar click on Menu Icon  
-                base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPrsentation_Page_PPT_33_MenuIcon_ID_Locator));
-                base.ClickButtonById(StudentPresentationPageResource.StudentPrsentation_Page_PPT_33_MenuIcon_ID_Locator);
-                // click on End show option
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_33_EndShowIcon_XPath_Locator));
-                base.PerformClickAction(base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_33_EndShowIcon_XPath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys(Keys.Space).Perform();
+                Thread.Sleep(1000);
+                //Click on Normal view icon
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_Question33_NormalViewIcon_Xpath_Locator));
+                IWebElement getNormalViewIconProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_Question33_NormalViewIcon_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getNormalViewIconProperty);
             }
             catch (Exception e)
             {
@@ -4157,19 +4261,21 @@ namespace Pegasus.Pages.UI_Pages
           base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("17");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                this.IsPageLoading();
                 //click on design Tab and click on slide size in Cusomize group
-                this.ClickOnElementByXpath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator));
+                IWebElement getDesignTabProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator);
+                base.PerformFocusOnElementActionByXPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getDesignTabProperty);
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_SlideToWait_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_17_SlideSizeButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // select widescreen
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_17_SlidetypeButton_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_17_SlidetypeButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4187,34 +4293,29 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("16");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 NavigateToFileTabAndSelectParticularScreen();
                 // click on Notes pages
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_16_NotesButton_Xpath_Locator));
                 IWebElement Xelement = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_16_NotesButton_Xpath_Locator);
                 base.PerformMouseClickAction(Xelement);
+                // click on slides text box and type 3
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
-                // click on slides text box and type 3 
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_16_NotesInputButton_Xpath_Locator));
-                IWebElement TextB = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_16_NotesInputButton_Xpath_Locator);
-                base.PerformMouseClickAction(TextB);
-                base.FillTextBoxByXPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_16_NotesInputButton_Xpath_Locator,
+                base.FillTextBoxByXPath("//div[@class='editPagesToPrintWrap general-textbox accessible filemenu-manipulator']/input",
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_16_NotesInputButton_value);
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on Notes pages button
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator));
-                IWebElement NotesEle = base.GetWebElementPropertiesByXPath(
-                StudentPresentationPageResource.StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator);
-                base.PerformMouseClickAction(NotesEle);
+                this.IsElementDisplayedInUI(By.XPath("//div[@class='print-page-container relative-pos']/span/div/div/div/div/div/span/img"));
+                IWebElement element = base.GetWebElementPropertiesByXPath("//div[@class='print-page-container relative-pos']/span/div/div/div/div/div/span/img");
+                base.PerformMouseClickAction(element);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // in lower section select Frame slides
@@ -4222,15 +4323,17 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_PPT_16_FrameSLidesButton_Xpath_Locator));
                 IWebElement FrameEle = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_16_FrameSLidesButton_Xpath_Locator);
-                base.PerformMouseClickAction(FrameEle);
+                base.ClickByJavaScriptExecutor(FrameEle);
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
+                bool checkElement = base.IsElementPresent(By.XPath("//div[@id='4']/div[2]/div[3]/div[6]/div[3]/div/div"));
+                this.IsElementDisplayedInUI(By.XPath("//div[@id='4']/div[2]/div[3]/div[6]/div[3]/div/div"));
                 //click on print
-                IWebElement PrintButton = base.GetWebElementPropertiesById(StudentPresentationPageResource.StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator);
+                IWebElement PrintButton = base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator);
                 base.ClickByJavaScriptExecutor(PrintButton);
-                // base.ClickButtonById("4-PrintButton");
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4243,28 +4346,31 @@ namespace Pegasus.Pages.UI_Pages
 
         public void NavigateToFileTabAndSelectParticularScreen()
         {
+
             //click on File Tab
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
             StudentPrsentation_Page_PPT_FileTab_Xpath_Locator));
+            this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+            StudentPrsentation_Page_PPT_FileTab_Xpath_Locator));
             this.ClickOnElementByXpath(StudentPresentationPageResource.
             StudentPrsentation_Page_PPT_FileTab_Xpath_Locator);
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-             StudentPrsentation_Page_SIM5_Sleep_Time));
+            base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
             // click on print
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
             StudentPrsentation_Page_PPT_15_PrintOption_Xpath_Locator));
+            this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+            StudentPrsentation_Page_PPT_15_PrintOption_Xpath_Locator));
             this.ClickOnElementByXpath(StudentPresentationPageResource.
             StudentPrsentation_Page_PPT_15_PrintOption_Xpath_Locator);
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                      StudentPrsentation_Page_SIM5_Sleep_Time));
+            base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
             // click ok 6 sides horizontal screen or click Full Page slides
-            base.WaitForElement(By.XPath(StudentPresentationPageResource.
-            StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator));
+            this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator));
             IWebElement element = base.GetWebElementPropertiesByXPath(
             StudentPresentationPageResource.StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator);
             base.PerformMouseClickAction(element);
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-            StudentPrsentation_Page_SIM5_Sleep_Time));
         }
 
         public void AttemptFifteenthQuestioin()
@@ -4274,8 +4380,8 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("15");
+                this.IsPageLoading();
                 NavigateToFileTabAndSelectParticularScreen();
                 //click on 6 slides horizontal button
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
@@ -4287,8 +4393,6 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement PrintButton = base.GetWebElementPropertiesById(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator);
                 base.ClickByJavaScriptExecutor(PrintButton);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-              StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4306,16 +4410,21 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("14");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator));
                 //click on Insert Tab
-                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
-                StudentPresentationPageResource.StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator));
+                IWebElement getInsertTabProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator);
+                base.PerformMouseHoverAction(getInsertTabProperty);
+                base.PerformClickAction(getInsertTabProperty);
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 // click on Header and footer under Text group      
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_13_HeaderButton_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // In slide tab click on slide Number checkbox          
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_14_SlideTab_Xpath_Locator);
@@ -4324,12 +4433,12 @@ namespace Pegasus.Pages.UI_Pages
                 //click on "dont show on title slide" check box          
                 base.SelectCheckBoxById(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_14_TitleCheckBox_ID_Locator);
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 // click Apply to All
                 IWebElement Applybutton = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_13_AppyToAll_Xpath_Locator);
                 base.PerformMouseClickAction(Applybutton);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4347,16 +4456,15 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("13");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //click on Insert Tab
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator));
                 // click on Header and footer under Text group
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_13_HeaderButton_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // navigate to Notes and handouts
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_13_NotesTab_Xpath_Locator);
@@ -4372,12 +4480,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.FillTextBoxByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_13_FooterTextBox_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_13_FooterTextBox_Value);
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 // click Apply to All
                 IWebElement Applybutton = base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_13_AppyToAll_Xpath_Locator);
                 base.PerformMouseClickAction(Applybutton);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.SwitchToLastOpenedWindow();
             }
             catch (Exception e)
             {
@@ -4411,7 +4520,7 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // Press Alt+F5
-               base.PerformKeyDownThenPressKeyToElement(Keys.Alt, Keys.F5, 1);
+                base.PerformKeyDownThenPressKeyToElement(Keys.Alt, Keys.F5, 1);
 
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                  StudentPrsentation_Page_SIM5_Sleep_Time));
@@ -4469,8 +4578,8 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("11");
+                Actions builder = new Actions(WebDriver);
                 //click on slide show tool bar and click on Start from begining
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_SlideShowTab_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
@@ -4479,19 +4588,16 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator));
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // press space bar to proceed to slide 2-6
                 for (int i = 0; i < 5; i++)
+
                 {
-                    base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+                    builder.SendKeys(Keys.Enter).Perform();
                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                     StudentPrsentation_Page_SIM5_Sleep_Time));
+                          StudentPrsentation_Page_SIM5_Sleep_Time));
                 }
                 // Press Esc to return Normal view
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EscapeKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys(Keys.Escape).Perform();
 
             }
             catch (Exception e)
@@ -4509,62 +4615,38 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("10");
+                this.IsPageLoading();
                 //click on slide 4 
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPresentation_Page_PPT_Slide4_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on the picture 
-                // this.ClickOnElementByXpath("//*[@id='4']/div[@class='contentWrapper']/div/div[1]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on format tab
-                // this.ClickOnElementByXpath("//*[@id='1']/div/ul/li[18]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_FormatTab_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on Artistic Effect and select glow diffused
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator));
                 base.ClickButtonByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_GlowDiffusedButton_Xpath_Locator));
                 base.ClickButtonByXPath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_10_GlowDiffusedButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //Remove the artistic effect from the SLide 4 by selecting None on Artistic effect
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
-                // this.ClickOnElementByXpath("//*[@id='4']/div[@class='contentWrapper']/div/div[1]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                //this.ClickOnElementByXpath("//*[@id='1']/div/ul/li[18]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_FormatTab_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator));
                 base.ClickButtonByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_NoneButton_Xpath_Locator));
                 base.ClickButtonByXPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_10_NoneButton_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4581,37 +4663,30 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                      StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("9");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //click on slide 4
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPresentation_Page_PPT_Slide4_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //click on pitcure
-                //this.ClickOnElementByXpath("//div[@id='3']/div[3]/div/div[1]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //click on format tab
-                //  this.ClickOnElementByXpath("//div[@id='1']/div/ul/li[18]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_FormatTab_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_9_DownArrow_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.StudentPrsentation_Page_PPT_9_DownArrow_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // select simple black pitcure style
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_9_PitctureStyle_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_9_PitctureStyle_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4628,19 +4703,20 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("8");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                StudentPresentation_Page_PPT_Slide2_Value));
                 //click on slide 2
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPresentation_Page_PPT_Slide2_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // this.ClickOnElementByXpath("//div[@id='5']/div[3]/div[1]/div");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                  StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.SwitchToLastOpenedWindow();
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_8_ImageIcon1_ID_Locator));
                 //  click on image "1A_Glacier.jpg"
@@ -4650,26 +4726,20 @@ namespace Pegasus.Pages.UI_Pages
                 // this.ClickOnElementByXpath("//div[@id='6-ButtonInsert']/div[1]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_8_InsertButton_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
-                StudentPresentation_Page_PPT_Slide4_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                StudentPresentation_Page_PPT_Slide4_Value));
+                base.ClickButtonByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_EightQuestion_Slide4_Xpath_Locator);
                 // this.ClickOnElementByXpath("//div[@id='3']/div[5]/div[2]/ul/li[1]");
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_8_ContentTitleButton_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
                 //  click on image 
-                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.
                 StudentPrsentation_Page_PPT_8_ImageIcon2_ID_Locator));
                 base.ClickImageById(StudentPresentationPageResource.StudentPrsentation_Page_PPT_8_ImageIcon2_ID_Locator);
                 //click on Insert button
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_8_InsertButton_CSSLocator));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
             {
@@ -4736,13 +4806,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("6");
+                base.SetImplicitWaitTime(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //Click on Notes
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Notes_Button_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
+                IJavaScriptExecutor js = (IJavaScriptExecutor)WebDriver;
+                js.ExecuteScript(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_Notes_JS_Locator);
                 IWebElement notesClick = base.GetWebElementPropertiesById(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_6_NotesIcon_ID_Locator);
                 base.PerformMouseClickAction(notesClick);
@@ -4750,10 +4820,9 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_6_NotesIcon_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_6_Notes_Value);
                 //Click and place cursor Location
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EndKey_Value);
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_DeleteKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
+                Actions builder = new Actions(WebDriver);
+                builder.SendKeys(Keys.End).Perform();
+                builder.SendKeys(Keys.Delete).Perform();
             }
             catch (Exception e)
             {
@@ -4773,8 +4842,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                 StudentPrsentation_Page_SIM5_Sleep_Time));
+                this.IsQuestionLoaded("5");
+                base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                this.IsPageLoading();
                 //Enter Text In First Bulleted Point
                 this.EnterTextInFirstBulletedPoint();
                 //Enter Text In Second Bulleted Point
@@ -4800,37 +4871,28 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                Actions builder = new Actions(WebDriver);
                 //Click and Place Cursor Location
                 IWebElement getCursorLocation = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getCursorLocation);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.PlaceCursorPosition(getCursorLocation, Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_Cursor_Xaxis_Value), Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_Cursor_Yaxis_Value));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_Down_Key_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                     StudentPrsentation_Page_Time_to_Wait));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait));
+                builder.SendKeys(Keys.Down).Perform();
+                builder.SendKeys(Keys.Enter).Perform();
+                // builder.SendKeys(Keys.Enter).Perform();
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_Down_Key_Value);
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
                 //Click on 'Increase List Level' Option
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_IncreaseList_Level_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait));
                 //Enter Text in bulleted Point
-                base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
-                    StudentPresentationPageResource.StudentPrsentation_Page_Third_Bulleted_Point_Text_Xpath_Locator,
+                base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor("//div[@id='ContentDiv_TP_4']/ul/li[4]/span",
                     StudentPresentationPageResource.StudentPrsentation_Page_Third_Bulleted_Point_Text_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                     StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EndKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+                builder.SendKeys(Keys.End).Perform();
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EndKey_Value);
+                this.SwitchToLastOpenedWindow();
             }
             catch (Exception e)
             {
@@ -4850,35 +4912,31 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.SetImplicitWaitTime(5);
+                Actions builder = new Actions(WebDriver);
                 //Click and Place Cursor Location
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator));
                 IWebElement getCursorLocation = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getCursorLocation);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.SetImplicitWaitTime(5);
                 base.PlaceCursorPosition(getCursorLocation, Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_Cursor_Xaxis_Value), Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_Cursor_Yaxis_Value));
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EndKey_Value);
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_Down_Key_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait));
+                builder.SendKeys(Keys.End + Keys.Enter).Perform();
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EndKey_Value);
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_Down_Key_Value);
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
                 //Click on 'Decrease List Level' Option
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_DecreaseList_Level_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                     StudentPrsentation_Page_SIM5_Sleep_Time));
                 //Enter Text in bulleted Point
-                base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
-                    StudentPresentationPageResource.StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator,
-                    StudentPresentationPageResource.StudentPrsentation_Page_Second_Bulleted_Point_Text_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait));
+                // base.FillTextBoxByCssSelector("li.GreenDisc1A05A1Level1",
+                //  StudentPresentationPageResource.StudentPrsentation_Page_Second_Bulleted_Point_Text_Value);
+                base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor("//div[@id='ContentDiv_TP_4']/ul/li[3]/span",
+                   StudentPresentationPageResource.StudentPrsentation_Page_Second_Bulleted_Point_Text_Value);
+                builder.SendKeys(Keys.End).Perform();
                 // base.PressKey("{END}");
             }
             catch (Exception e)
@@ -4901,27 +4959,28 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
+
                 //Click and Place Cursor Location
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_First_Bulleted_Point_Xpath_Locator));
                 IWebElement getCursorLocation = base.GetWebElementPropertiesByXPath(
                     StudentPresentationPageResource.StudentPrsentation_Page_First_Bulleted_Point_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getCursorLocation);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.PlaceCursorPosition(getCursorLocation, 50, 50);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait)); ;
-                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_Tab_Key_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.SetImplicitWaitTime(5);
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+                Actions builder = new Actions(WebDriver);
+                builder.SendKeys(Keys.Enter + Keys.Tab).Perform();
+                //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_Tab_Key_Value);
+                // builder.SendKeys(Keys.Tab).Perform();
                 //Enter Text in bulleted Point
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator));
                 base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
                     StudentPresentationPageResource.StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator,
                     StudentPresentationPageResource.StudentPrsentation_Page_First_Bulleted_Point_Text_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Time_to_Wait));
+                base.SetImplicitWaitTime(5);
+                builder.SendKeys(Keys.End).Perform();
             }
             catch (Exception e)
             {
@@ -4943,42 +5002,63 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-            StudentPrsentation_Page_SIM5_Sleep_Time));
+                Actions builder = new Actions(WebDriver);
+                this.IsQuestionLoaded("4");
+                base.SetImplicitWaitTime(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                this.IsPageLoading();
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_SlideToWait_Xpath_Locator));
                 //Select Panoromic Slide and Enter Title
                 this.SelectPanoromicSlideandEnterTitle();
+                base.SetImplicitWaitTime(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 //Create New Slide
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_NewSlide_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_NewSlide_Xpath_Locator);
                 //Create Title and Content Slide
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Title_Content_Slide));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Title_Content_Slide);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
-                //Click on Title Content
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
+                Thread.Sleep(1000);
+                ////Click on Title Content
+                IWebElement getTitleBoxProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Title_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
+                base.ClickByJavaScriptExecutor(getTitleBoxProperty);
+                IWebElement getTitleProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Title_Xpath_Locator);
+                base.PlaceCursorPosition(getTitleProperty, Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Cursor_Xaxis_Value), Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Cursor_Yaxis_Value));
                 base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                     StudentPrsentation_Page_Title_Xpath_Locator,
                     StudentPresentationPageResource.StudentPrsentation_Page_Title_Content_Slide_Title_Value);
                 IWebElement Perfclick = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                  StudentPrsentation_Page_Title_Xpath_Locator);
                 base.PerformMouseClickAction(Perfclick);
-                base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                     StudentPrsentation_Page_SIM5_Sleep_Time));
+                //base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
+                builder.SendKeys(Keys.End + Keys.Tab).Perform();
+                base.SetImplicitWaitTime(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
+                // builder.SendKeys(Keys.Tab).Perform();
                 //Click on Content
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                   StudentPrsentation_Page_Content_Text));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Content_Text);
+                base.SetImplicitWaitTime(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                     StudentPrsentation_Page_Content_Text, StudentPresentationPageResource.
                     StudentPrsentation_Page_Content_FirstBullet_Text);
-                IWebElement Perfbullet = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-             StudentPrsentation_Page_Content_Text);
-                base.PerformMouseClickAction(Perfbullet);
-                base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
+                //Click on tab key
+                builder.SendKeys(Keys.Tab).Perform();
+                //this.IsProcessingCurtainLoading();
+                base.SetImplicitWaitTime(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
             }
             catch (Exception e)
             {
@@ -4999,30 +5079,53 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-
                 //Select Home Tab
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
+                //this.ClickOnElementByXpath(StudentPresentationPageResource.
+                //  StudentPrsentation_Page_Home_Tab_Xpath_Locator);
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Home_Tab_Xpath_Locator));
+                IWebElement getHomeTabProperties = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Home_Tab_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getHomeTabProperties);
+                //IWebElement getNewSlideButtonProperty = base.GetWebElementPropertiesByCssSelector
+                //    ("img[src='app/Comps/Common/Ribbon/img/Ppt/Home/Slides/Slides_New Slide.png']");
+                //base.PerformMouseClickAction(getNewSlideButtonProperty);
                 //Create New Slide
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_NewSlide_Xpath_Locator);
+                //base.WaitForElement(By.ClassName("SIMSGenericContextUsed"));
+                //IWebElement getNewSlideProperties = base.GetWebElementPropertiesByCssSelector
+                //  ("img[src='app/Comps/Common/Ribbon/img/Ppt/Home/Slides/Slides_New Slide.png']");
+                //base.ClickByJavaScriptExecutor(getNewSlideProperties);
+                IWebElement getNewSlideProperties = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                 StudentPrsentation_Page_NewSlide_Xpath_Locator);
+                base.PerformMouseHoverAction(getNewSlideProperties);
+                base.PerformMouseClickAction(getNewSlideProperties);
+                //this.ClickOnElementByXpath(StudentPresentationPageResource.
+                //     StudentPrsentation_Page_NewSlide_Xpath_Locator);
+                //base.MouseOverByJavaScriptExecutor(getNewSlideProperties);
+                //base.PerformClickAction(getNewSlideProperties);
+                //this.ClickOnElementByXpath(StudentPresentationPageResource.
+                // StudentPrsentation_Page_NewSlide_Xpath_Locator);
                 //Select Panoromic Slide
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator);
                 //Enter Title
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Title_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Title_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
                 base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                     StudentPrsentation_Page_Title_Xpath_Locator, StudentPresentationPageResource.
                     StudentPrsentation_Page_Fourth_Question_Title_Value);
-                IWebElement Perfclick = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Title_Xpath_Locator);
-                base.PerformMouseClickAction(Perfclick);
-                base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                   StudentPrsentation_Page_SIM5_Sleep_Time));
+                Actions builder = new Actions(WebDriver);
+                builder.SendKeys(Keys.End + Keys.Tab).Perform();
+                //IWebElement Perfclick = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                //    StudentPrsentation_Page_Title_Xpath_Locator);
+                //base.PerformMouseClickAction(Perfclick);
+                //base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
+                // this.IsProcessingCurtainLoading();
+
             }
             catch (Exception e)
             {
@@ -5044,25 +5147,22 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-            StudentPrsentation_Page_SIM5_Sleep_Time));
+                //this.IsProcessingCurtainLoading();
                 //Navigate to Design Tab
-                bool t = base.IsElementPresent(By.XPath(StudentPresentationPageResource.
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Design_Tab_Xpath_Locator));
-                this.ClickOnElementByXpath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Design_Tab_Xpath_Locator);
+                IWebElement getPageDesignTabProperty = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                 StudentPrsentation_Page_Design_Tab_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getPageDesignTabProperty);
+                //this.ClickOnElementByXpath(StudentPresentationPageResource.
+                //  StudentPrsentation_Page_Design_Tab_Xpath_Locator);
                 //Click on Design Theme More Button
-                bool td = base.IsElementPresent(By.XPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Design_Theme_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Design_Theme_Xpath_Locator);
                 //Select Organic Theme
-                bool tdo = base.IsElementPresent(By.XPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_Organic_Theme_Xpath_Locator));
                 this.ClickOnElementByXpath(StudentPresentationPageResource.
                     StudentPrsentation_Page_Organic_Theme_Xpath_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Sleep_Time));
+
             }
             catch (Exception e)
             {
@@ -5346,10 +5446,12 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Presentation Player Window
                 this.SelectPresentationPlayerWindow(activityName);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.FocusOnElementById(StudentPresentationPageResource.
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                StudentPrsentation_Page_PowerPoint_Option_Id_Locator));
+                base.PerformFocusOnElementActionById(StudentPresentationPageResource.
                 StudentPrsentation_Page_PowerPoint_Option_Id_Locator);
+                //base.FocusOnElementById(StudentPresentationPageResource.
+                //StudentPrsentation_Page_PowerPoint_Option_Id_Locator);
                 //Select Power Point Option            
                 IWebElement getPowerPointOptionProperty =
                     base.GetWebElementPropertiesById(StudentPresentationPageResource.
@@ -5363,6 +5465,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.GetWebElementPropertiesById(StudentPresentationPageResource.
                     StudentPrsentation_Page_Create_Option_Id_Locator);
                 base.ClickByJavaScriptExecutor(getCreateOptionProperty);
+                this.IsProcessingCurtainLoading();
             }
             catch (Exception e)
             {
@@ -5497,11 +5600,11 @@ namespace Pegasus.Pages.UI_Pages
         /// 
         /// </summary>
         /// <param name="?"></param>
-         public void AttemptSim5WordActivityQuestions(string attemptPercentage, string activityName)
-         {
-             logger.LogMethodEntry("StudentPresentationPage", "SelectSimActivityNormalStudentWindowName",
-               base.IsTakeScreenShotDuringEntryExit);
-           try
+        public void AttemptSim5WordActivityQuestions(string attemptPercentage, string activityName)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "SelectSimActivityNormalStudentWindowName",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
             {
                 if (attemptPercentage.Equals("100%"))
                 {
@@ -5523,113 +5626,113 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-         /// <summary>
-         /// Attempt Sim5 Word Questions for 100 percent.
-         /// </summary>
-         /// <param name="activityName">This is Activity Name.</param>
-         public void AttemptSim5WordactivityQuestionsToScore100Percent(string activityName)
-         {
-             //Attempt Sim5 Power Point Questions
-             logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore100Percent",
-                 base.IsTakeScreenShotDuringEntryExit);
-             try
-             {
-                 //First Question Submission
-                 AttemptingFirstWordQuestion(activityName);
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 ClickOnSim5NextQuestionButton();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 //Third Question Submission
-                 AttemptingThirdWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 ClickOnSim5NextQuestionButton();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 //Fifth Question Submission
-                 AttemptingFifthWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 ClickOnSim5NextQuestionButton();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 // Seventh Question Submission
-                 AttemptingSeventhWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
+        /// <summary>
+        /// Attempt Sim5 Word Questions for 100 percent.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        public void AttemptSim5WordactivityQuestionsToScore100Percent(string activityName)
+        {
+            //Attempt Sim5 Power Point Questions
+            logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore100Percent",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //First Question Submission
+                AttemptingFirstWordQuestion(activityName);
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                ClickOnSim5NextQuestionButton();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                //Third Question Submission
+                AttemptingThirdWordQuestion();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                ClickOnSim5NextQuestionButton();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                //Fifth Question Submission
+                AttemptingFifthWordQuestion();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                ClickOnSim5NextQuestionButton();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                // Seventh Question Submission
+                AttemptingSeventhWordQuestion();
+                Thread.Sleep(Convert.ToInt32
 
- (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 // Eighth Question Submission
-                 AttemptingEighthWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
+(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                // Eighth Question Submission
+                AttemptingEighthWordQuestion();
+                Thread.Sleep(Convert.ToInt32
 
- (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 // Ninth Question Submission
-                 AttemptingNinthWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
+(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                // Ninth Question Submission
+                AttemptingNinthWordQuestion();
+                Thread.Sleep(Convert.ToInt32
 
- (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 // Tenth Question Submission
-                 AttemptingTenthWordQuestion();
-             }
-             catch (Exception e)
-             {
-                 ExceptionHandler.HandleException(e);
-             }
-             logger.LogMethodExit("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
-                 base.IsTakeScreenShotDuringEntryExit);
-         }
+(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                // Tenth Question Submission
+                AttemptingTenthWordQuestion();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Attempt Sim5 Word Questions for 70 percent.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-         public void AttemptSim5WordactivityQuestionsToScore70Percent(string activityName)
-         {
-             //Attempt Sim5 Power Point Questions
-             logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore70Percent",
-                 base.IsTakeScreenShotDuringEntryExit);
-             try
-             {
-                 //First Question Submission
-                 AttemptingFirstWordQuestion(activityName);
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 ClickOnSim5NextQuestionButton();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 //Third Question Submission
-                 AttemptingThirdWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 ClickOnSim5NextQuestionButton();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 //Fifth Question Submission
-                 AttemptingFifthWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 ClickOnSim5NextQuestionButton();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                 // Seventh Question Submission
-                 AttemptingSeventhWordQuestion();
-                 Thread.Sleep(Convert.ToInt32
-                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-             }
-             catch (Exception e)
-             {
-                 ExceptionHandler.HandleException(e);
-                 logger.LogMethodExit("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore70Percent",
-                    base.IsTakeScreenShotDuringEntryExit);
-             }
-         }
-        
+        public void AttemptSim5WordactivityQuestionsToScore70Percent(string activityName)
+        {
+            //Attempt Sim5 Power Point Questions
+            logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore70Percent",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //First Question Submission
+                AttemptingFirstWordQuestion(activityName);
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                ClickOnSim5NextQuestionButton();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                //Third Question Submission
+                AttemptingThirdWordQuestion();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                ClickOnSim5NextQuestionButton();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                //Fifth Question Submission
+                AttemptingFifthWordQuestion();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                ClickOnSim5NextQuestionButton();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                // Seventh Question Submission
+                AttemptingSeventhWordQuestion();
+                Thread.Sleep(Convert.ToInt32
+                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+                logger.LogMethodExit("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore70Percent",
+                   base.IsTakeScreenShotDuringEntryExit);
+            }
+        }
+
         /// <summary>
         /// Attempt First Word Question.
         /// </summary>
@@ -6003,7 +6106,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <param name="optionType">This is the Type of answer that has to be updated.</param>
         public void AnswerActivityQuestions(ActivityQuestionsList.ActivityNameEnum activityName,
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
-            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType,String TestType="Default Type")
+            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType, String TestType = "Default Type")
         {
             // Answer the Questions of activity
             logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
@@ -6039,7 +6142,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                             StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue;
                         break;
                     }
-                    
+
                     IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_Question_Value));
@@ -6049,7 +6152,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                         else
                         {
                             ActualQuestion = element.Text;
-                            String Option = base.GetQuestionOptionName(activityType, 
+                            String Option = base.GetQuestionOptionName(activityType,
                                 activityBehaviourType, activityName, ActualQuestion, OptionType);
                             if (Option.Contains("|"))
                             {
@@ -6101,7 +6204,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                                            StudentPresentation_Page_LaunchWindow_TimeValue));
                                     base.ClickByJavaScriptExecutor(SelectOption);
-                                   
+
                                 }
                             }
                             base.WaitForElement(By.Id(StudentPresentationPageResource.
@@ -6141,7 +6244,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                         StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator);
                 base.ClickByJavaScriptExecutor(SubmitButton);
                 //Click on Finish button
-                base.WaitForElement(By.Id( StudentPresentationPageResource.
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
                     StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator));
                 IWebElement FinishButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator);
@@ -6199,9 +6302,9 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 IWebElement getReturnToCourseButton = base.GetWebElementPropertiesById(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator);
-               
+
                 base.ClickByJavaScriptExecutor(getReturnToCourseButton);
-             
+
             }
             catch (Exception e)
             {
@@ -6223,7 +6326,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 //Select Window And Frame
                 this.SelectWindowAndFrame();
-               //Click on view submission button
+                //Click on view submission button
                 base.WaitForElement(By.ClassName(StudentPresentationPageResource.
                     StudentPrsentation_Page_Activity_ViewSubmission_ClassName_Locator));
                 IWebElement getViewSubmissionButton = base.
@@ -6251,7 +6354,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             try
             {
                 base.SwitchToLastOpenedWindow();
-               
+
                 base.WaitForElement(By.XPath(
                     StudentPresentationPageResource.
                     StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator));
@@ -6495,7 +6598,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <param name="assetName">This is asset name.</param>
         /// <param name="windowName">This is window name.</param>
         /// <returns>The status value of asset.</returns>
-        public string GetStatusOfSubmittedActivityInAssignmentsPage(string assetName,string windowName)
+        public string GetStatusOfSubmittedActivityInAssignmentsPage(string assetName, string windowName)
         {
             //Get Status Of Submitted Activity In CourseMaterial
             logger.LogMethodEntry("StudentPresentationPage",
@@ -6506,36 +6609,36 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             try
             {
                 this.SwitchToWindow(windowName);
-                    //Switch To Frame
-                    base.SwitchToIFrameById(StudentPresentationPageResource.
-                        StudentPresentation_Page_Content_Frame_Id_Locator);
-                    base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                        StudentPresentation_CompletedActivity_Records_Xpath_Value));
-                    int Test = base.GetElementCountByXPath(StudentPresentationPageResource.
-                               StudentPresentation_CompletedActivity_Records_Xpath_Value);
-             for (int i = 2; i <= Test; i++)
+                //Switch To Frame
+                base.SwitchToIFrameById(StudentPresentationPageResource.
+                    StudentPresentation_Page_Content_Frame_Id_Locator);
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                    StudentPresentation_CompletedActivity_Records_Xpath_Value));
+                int Test = base.GetElementCountByXPath(StudentPresentationPageResource.
+                           StudentPresentation_CompletedActivity_Records_Xpath_Value);
+                for (int i = 2; i <= Test; i++)
                 {
-                 //Find the expected asset
+                    //Find the expected asset
                     base.WaitForElement(By.XPath(string.Format(StudentPresentationPageResource.
                         StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
-                IWebElement Text= base.GetWebElementPropertiesByXPath((string.Format(StudentPresentationPageResource.
-                        StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
-                String ativityName = Text.Text;
+                    IWebElement Text = base.GetWebElementPropertiesByXPath((string.Format(StudentPresentationPageResource.
+                            StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
+                    String ativityName = Text.Text;
 
-                if (ativityName.Equals(assetName))
-                {
-                    base.WaitForElement(By.XPath(String.Format(StudentPresentationPageResource.
-                        StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value,i)));
-                    IWebElement cmenuOption = base.GetWebElementPropertiesByXPath((String.
-                        Format(StudentPresentationPageResource.
-                        StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value, i)));
-                    //Get the status value of the asset
-                    getActivitySubmittedStatus = cmenuOption.Text;
-                     break;
+                    if (ativityName.Equals(assetName))
+                    {
+                        base.WaitForElement(By.XPath(String.Format(StudentPresentationPageResource.
+                            StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value, i)));
+                        IWebElement cmenuOption = base.GetWebElementPropertiesByXPath((String.
+                            Format(StudentPresentationPageResource.
+                            StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value, i)));
+                        //Get the status value of the asset
+                        getActivitySubmittedStatus = cmenuOption.Text;
+                        break;
+                    }
                 }
+                base.SelectWindow(windowName);
             }
-             base.SelectWindow(windowName);
-          }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
