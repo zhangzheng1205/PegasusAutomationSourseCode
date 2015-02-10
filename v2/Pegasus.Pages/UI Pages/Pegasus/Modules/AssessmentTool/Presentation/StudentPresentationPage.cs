@@ -1766,6 +1766,71 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Get Status Of Submitted Grader IT Activity In CourseMaterial.
+        /// </summary>
+        /// <param name="assetName">This is Activity Name.</param>
+        /// <returns>Activity Status.</returns>
+        public string GetStatusOfSubmittedGraderItActivityInCourseMaterial(string assetName, string activityStatus
+            , string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Get Status Of Submitted Activity In CourseMaterial
+            logger.LogMethodEntry("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText variable
+            string getActivitySubmittedStatus = string.Empty;
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                //Get The Activity Name In CourseMaterial
+                int activityColumnCount =
+                    this.GetTheActivityNameInCourseMaterial(assetName);
+                //Get the status text
+                getActivitySubmittedStatus = base.GetElementTextByXPath(string.
+                Format(StudentPresentationPageResource.
+                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                //Start Stop Watch 
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                //Clicks Till Course Gets Out of Inactive State
+                //If still time is pending to verify assigned to copy state
+                while (getActivitySubmittedStatus != activityStatus)
+                {
+
+                    if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
+
+                    {
+                        base.RefreshTheCurrentPage();
+                        new CommonPage().ManageTheActivityFolderLevelNavigation(
+                        assetName, activityUnderTabName, userTypeEnum);
+                        //Select Window And Frame
+                        this.SelectWindowAndFrame();
+                        //Get The Activity Name In CourseMaterial
+                        activityColumnCount =
+                           this.GetTheActivityNameInCourseMaterial(assetName);
+                        //Get the status text
+                        getActivitySubmittedStatus = base.GetElementTextByXPath(string.
+                        Format(StudentPresentationPageResource.
+                        StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                        if (getActivitySubmittedStatus == activityStatus)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivitySubmittedStatus;
+        }
+
+        /// <summary>
         /// Get Status Of Submitted Activity In CourseMaterial.
         /// </summary>
         /// <param name="assetName">This is Activity Name.</param>

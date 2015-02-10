@@ -131,8 +131,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             base.RefreshIFrameByJavaScriptExecutor(GraderFeedbackResource.
                 GraderFeedbackResource_CourseMaterials_frame_Id_locator);
-            Thread.Sleep(Convert.ToInt32(GraderFeedbackResource.
-                GraderFeedbackResource_Element_Waittime));
+            //Thread.Sleep(Convert.ToInt32(GraderFeedbackResource.
+            //    GraderFeedbackResource_Element_Waittime));
             Logger.LogMethodExit("GraderFeedbackPage", "ClickReturnToCourseButton",
                       base.IsTakeScreenShotDuringEntryExit);
 

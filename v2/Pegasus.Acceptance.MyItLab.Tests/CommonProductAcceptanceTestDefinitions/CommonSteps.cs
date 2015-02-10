@@ -123,6 +123,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         }
 
 
+        [Then(@"I should see a ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" by ""(.*)""")]
+        public void ValidateActivityStatusForTheGraderItActivity(string activityStatus,
+            string activityName, string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatusForTheGraderItActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedGraderItActivityInCourseMaterial(activityName, activityStatus, activityUnderTabName, userTypeEnum)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatusForTheGraderItActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+
+
         /// <summary>
         /// Validate score of the submitted activity.
         /// </summary>
@@ -744,14 +764,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         }
 
 
-        ///// <summary>
-        ///// Initialize Pegasus test before test execution starts.
-        ///// </summary>
-        //[BeforeTestRun]
-        //public static void Setup()
-        //{
-        //    new CommonSteps().ResetWebdriver();
-        //}
+        /// <summary>
+        /// Initialize Pegasus test before test execution starts.
+        /// </summary>
+        [BeforeTestRun]
+        public static void Setup()
+        {
+            //    new CommonSteps().ResetWebdriver();
+        }
 
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test
@@ -760,7 +780,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         [AfterTestRun]
         public static void TearDown()
         {
-            new CommonSteps().WebDriverCleanUp();
+            //new CommonSteps().WebDriverCleanUp();
         }
 
         /// <summary>
@@ -880,8 +900,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
-             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
+               base.IsTakeScreenShotDuringEntryExit);
             string studentName = new RptAllAssessmentAllStudentPage().
                 GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
             string successMessage = "The submission by " + studentName + " has been declined.  This submission will receive a zero in the Gradebook.";
@@ -893,7 +913,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-      
+
         /// <summary>
         /// Wait for past due date icon to be displayed.
         /// </summary>

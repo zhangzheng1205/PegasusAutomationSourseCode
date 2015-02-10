@@ -143,7 +143,7 @@ Then I should see message "Your file, go_p01_grader_h3.pptx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+Then I should see a "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -172,7 +172,7 @@ Then I should see message "Your file, go_p01_grader_h3.pptx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+Then I should see a "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -201,7 +201,7 @@ Then I should see message "Your file, go_p01_grader_h3.pptx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+Then I should see a "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -230,7 +230,7 @@ Then I should see message "Your file, go_w01_grader_a3.docx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "74.50%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -259,7 +259,7 @@ Then I should see message "Your file, go_w01_grader_a3.docx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "0.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -288,7 +288,7 @@ Then I should see message "Your file, go_w01_grader_a3.docx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "100.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -317,7 +317,7 @@ Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+Then I should see a "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -346,7 +346,7 @@ Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+Then I should see a "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 And I navigate to "Course Materials" tab
@@ -376,7 +376,7 @@ Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+Then I should see a "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -403,7 +403,7 @@ Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has be
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "0.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -432,7 +432,7 @@ Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has be
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "76.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -461,13 +461,12 @@ Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has be
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see the "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
 And I should see "100.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
-
 #Purpose : Submitting training material in SIM5 Study Plan 
 #Test Case ID : peg-22011.
 #Product : MyItLab.
