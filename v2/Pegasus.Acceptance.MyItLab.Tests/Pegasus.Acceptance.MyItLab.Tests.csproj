@@ -415,30 +415,6 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.InstructorAssignment.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.InstructorGradebook.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.InstructorTodaysView.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.StudentTodaysView.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.StudentViewGradebook.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.InstructorReports.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.ProgramadminReport.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceIndependentOrderedTests\OrderedTest.BVT.ProgramadminWorkflow.Independent.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.GraderITExcelStudentSubmission.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
