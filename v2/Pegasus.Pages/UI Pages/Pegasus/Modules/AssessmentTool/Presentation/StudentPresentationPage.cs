@@ -1916,9 +1916,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 this.SelectSimActivityZeroScoreStudentWindowName(activityName);
                 //Answer incorrectly
-                this.SIM5QuestionIncorrectAnswer(activityMode, applicationType);
+                this.SIM5QuestionIncorrectAnswer(activityMode, applicationType,activityName);
                 //Click on SIM5 activity Submit button
                 this.ClickOnSim5ActivitySubmitButton();
+                base.SwitchToDefaultWindow();
             }
             catch (Exception e)
             {
@@ -1935,7 +1936,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityMode">Mode of the activity(Training or Exam).</param>
         /// <param name="applicationType">Application type of SIM5 activity.</param>
-        private void SIM5QuestionIncorrectAnswer(string activityMode, string applicationType)
+        private void SIM5QuestionIncorrectAnswer(string activityMode, string applicationType, string activityName)
         {
             //Initialize variables
             string attemptRemaining = string.Empty;
@@ -1951,17 +1952,29 @@ namespace Pegasus.Pages.UI_Pages
                         case "Excel":
                         case "PowerPoint":
                             //Get the attempt count
-                            attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
+                            //Select Presentation Player Window
+                            this.WaitForSim5PageLoad();
+                            //this.SelectSimActivityNormalStudentWindowName(activityName);
+                              attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
                                 StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator);
+                              base.WaitForElement(By.Id(StudentPresentationPageResource.
+                                 StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator));
+                           
+                            IWebElement getPowerPointOptionProperty =
+                           base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
                             attemptCount = Int32.Parse(attemptRemaining);
                             //Start counter to based on the attempt count
                             for (int i = 1; i <= attemptCount; i++)
                             {
                                 //Click on the Desktop icon in the SIM5 activity
-                                base.ClickLinkById(StudentPresentationPageResource.
-                                    StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
+                                base.PerformMouseHoverByJavaScriptExecutor(getPowerPointOptionProperty);
+                                base.ClickByJavaScriptExecutor(getPowerPointOptionProperty);
+                                Thread.Sleep(3000);
                             }
                             //Click on Ok button in the warning pop up
+                            base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath));
                             base.ClickButtonByXPath(StudentPresentationPageResource.
                                 StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath);
                             break;
@@ -1975,15 +1988,24 @@ namespace Pegasus.Pages.UI_Pages
                         case "Excel":
                         case "PowerPoint":
                             //Get the attempt count
-                            attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
+                            
+                           this.WaitForSim5PageLoad();
+                            //this.SelectSimActivityNormalStudentWindowName(activityName);
+                              attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
                                 StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator);
+                              base.WaitForElement(By.Id(StudentPresentationPageResource.
+                                 StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator));
+                            base.PerformFocusOnElementActionById(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
+                            IWebElement getPowerPointOptionProperty =
+                           base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
                             attemptCount = Int32.Parse(attemptRemaining);
                             //Start counter to based on the attempt count
                             for (int i = 1; i <= attemptCount; i++)
                             {
                                 //Click on the Desktop icon in the SIM5 activity
-                                base.ClickLinkById(StudentPresentationPageResource.
-                                    StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
+                                base.ClickByJavaScriptExecutor(getPowerPointOptionProperty);
                             }
 
                             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -2006,6 +2028,15 @@ namespace Pegasus.Pages.UI_Pages
                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                       StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
                     break;
+            }
+        }
+
+        public void WaitForSim5PageLoad()
+        {
+            bool isLoadImagePresent = base.IsElementPresent(By.CssSelector("#myItLabLogo"), 3);
+            while (isLoadImagePresent == true)
+            {
+                isLoadImagePresent = base.IsElementPresent(By.CssSelector("#myItLabLogo"), 3);
             }
         }
 
