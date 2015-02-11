@@ -272,7 +272,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-   
+
 
         /// <summary>
         /// Click on the activity.
@@ -283,7 +283,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         {
             // Open The Activity 
             Logger.LogMethodEntry("CommonSteps", "OpenTheActivityFromMyCourse",
-                base.IsTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenTheActivityFromMyCourse(ActivityName);
             Logger.LogMethodExit("CommonSteps", "OpenTheActivityFromMyCourse",
@@ -303,7 +303,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 , base.IsTakeScreenShotDuringEntryExit);
             //Verify the warning message
             Logger.LogAssertion("VerifyTheMessage",
-                ScenarioContext.Current.ScenarioInfo.Title,() => Assert.AreEqual
+                ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (warningMessage, new TodaysViewUxPage().GetDisplayedMessage()));
             //Close the amplifier popup
             base.CloseBrowserWindow();
@@ -347,7 +347,8 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new CommonPage().
                     IsTextPresentInPageSource(expectedBookTilte)));
-                       base.CloseBrowserWindow();
+            base.CloseBrowserWindow();
+            base.SelectDefaultWindow();
             Logger.LogMethodExit("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -453,7 +454,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// <param name="FolderName">This is the folder name.</param>
         /// <param name="UserType">This is the user type enum.</param>
         [When(@"I click on ""(.*)"" folder as ""(.*)""")]
-        public void ClickOnFolderBasedOnUserType(string FolderName,User.UserTypeEnum UserType)
+        public void ClickOnFolderBasedOnUserType(string FolderName, User.UserTypeEnum UserType)
         {
             // Click on folder based on user type
             Logger.LogMethodEntry("CommonSteps", "ClickOnFolderBasedOnUserType",
@@ -473,7 +474,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ValidateFolderNavigation",
-                IsTakeScreenShotDuringEntryExit);          
+                IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Switched
             WaitUntilPageGetSwitchedSuccessfully("Course Materials");
             //Get current opened page title
@@ -639,16 +640,16 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         }
 
 
-        ///// <summary>
-        ///// Initialize Pegasus test before test execution starts.
-        ///// </summary>
-        //[BeforeTestRun]
-        //public static void Setup()
-        //{
-        //    //Reset Webdriver Instance
-        //    new CommonSteps().WebDriverCleanUp();
+        /// <summary>
+        /// Initialize Pegasus test before test execution starts.
+        /// </summary>
+        [BeforeTestRun]
+        public static void Setup()
+        {
+            //Reset Webdriver Instance
+            //new CommonSteps().WebDriverCleanUp();
 
-        //}
+        }
 
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test.
@@ -658,7 +659,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         public static void TearDown()
         {
             // clean processess
-            new CommonSteps().WebDriverCleanUp();
+            //new CommonSteps().WebDriverCleanUp();
         }
     }
 }
