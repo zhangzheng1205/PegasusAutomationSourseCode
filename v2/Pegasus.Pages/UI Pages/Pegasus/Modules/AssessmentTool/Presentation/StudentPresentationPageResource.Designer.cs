@@ -3626,6 +3626,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LoadingImage.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_ProcessingCurtain_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_ProcessingCurtain_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-ButtonSave.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_Save_button_Id_Locator {
@@ -3892,6 +3901,116 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Worddocument__Id_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;QuestionListContainer&apos;]/div[2]/table/tbody/tr.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__ViewAllQuestions_QuestionsList_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__ViewAllQuestions_QuestionsList_Xpath_Locato" +
+                        "r", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;QuestionListContainer&apos;]/div[2]/table/tbody/tr[{0}]/td[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__ViewAllQuestionsPopUp_QuestionPath_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__ViewAllQuestionsPopUp_QuestionPath_Xpath_Lo" +
+                        "cator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to item-0-contextmenu.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DocumentToInsert_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DocumentToInsert_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;dialog-background-image insert-text-from-file-dlg&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_InsertDocumentPopUp_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_InsertDocumentPopUp_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Insert&apos;]/li[8]/span/span/span/span[3]/span[3]/div/div/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_InsertIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_InsertIcon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class=&apos;ribbon-tabs-wrapper&apos;]/li[6].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_InsertTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_InsertTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Insert&apos;]/li[8]/span/span/span/span[3]/span[3]/div/div[2]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_InsertText_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_InsertText_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@class=&apos;office-control ctrl-dropdownbuttonhorizontal picture_adjust_artistic accessible&apos;]/div/div[2]/div/div/div[20]/div/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_NingthQuestion_Effect_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_NingthQuestion_Effect_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;quetionattempt&apos;]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_QuestionNumber_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_QuestionNumber_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to task2selStart.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_SecondQuestion_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_SecondQuestion_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TaskCompleteText.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_TaskCompletedLightBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_TaskCompletedLightBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ViewAllFrame.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_ViewAllQuestionsPopUp_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_ViewAllQuestionsPopUp_Id_Locator", resourceCulture);
             }
         }
     }

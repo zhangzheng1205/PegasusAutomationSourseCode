@@ -1470,7 +1470,7 @@ testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario
 testRunner.And("I open the activity named as \"Word Chapter 1 Project 1A Skill-Based Exam (Scenari" +
                     "o 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 641
-testRunner.And("I attempt questions for \"70%\" in activity \"Word Chapter 1 Project 1A Skill-Based " +
+testRunner.And("I attempt questions for \"56%\" in activity \"Word Chapter 1 Project 1A Skill-Based " +
                     "Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

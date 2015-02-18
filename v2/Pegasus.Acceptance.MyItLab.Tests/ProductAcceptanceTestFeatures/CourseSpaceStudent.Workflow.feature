@@ -638,7 +638,7 @@ And I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I open the activity named as "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-And I attempt questions for "70%" in activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I attempt questions for "56%" in activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 
 #Products : MyItLab.
 #Pre condition : This test case depends on Word SIM5 activity should be created by instructor/Author in the following course and 

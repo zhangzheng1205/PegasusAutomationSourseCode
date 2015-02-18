@@ -1302,6 +1302,9 @@
   <data name="StudentPrsentation_Page_SIM5_PPT_TwentyFifthQuestion_TitleBox_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ContentDiv_TP_6']/ul</value>
   </data>
+  <data name="StudentPrsentation_Page_SIM5_ProcessingCurtain_Id_Locator" xml:space="preserve">
+    <value>LoadingImage</value>
+  </data>
   <data name="StudentPrsentation_Page_SIM5_Save_button_Id_Locator" xml:space="preserve">
     <value>4-ButtonSave</value>
   </data>
@@ -1383,6 +1386,36 @@
   <data name="StudentPrsentation_Page_Title_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ContentDiv_TP_3']/ul/li</value>
   </data>
+  <data name="StudentPrsentation_Page_Worddocument_DocumentToInsert_Xpath_Locator" xml:space="preserve">
+    <value>item-0-contextmenu</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_InsertDocumentPopUp_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='dialog-background-image insert-text-from-file-dlg']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_InsertIcon_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Insert']/li[8]/span/span/span/span[3]/span[3]/div/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_InsertTab_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='ribbon-tabs-wrapper']/li[6]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_InsertText_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Insert']/li[8]/span/span/span/span[3]/span[3]/div/div[2]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_NingthQuestion_Effect_Xpath_Locator" xml:space="preserve">
+    <value>//span[@class='office-control ctrl-dropdownbuttonhorizontal picture_adjust_artistic accessible']/div/div[2]/div/div/div[20]/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_QuestionNumber_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='quetionattempt']/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_SecondQuestion_TextBox_Id_Locator" xml:space="preserve">
+    <value>task2selStart</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_TaskCompletedLightBox_Id_Locator" xml:space="preserve">
+    <value>TaskCompleteText</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_ViewAllQuestionsPopUp_Id_Locator" xml:space="preserve">
+    <value>ViewAllFrame</value>
+  </data>
   <data name="StudentPrsentation_Page_Worddocument__End_Key" xml:space="preserve">
     <value>{END}</value>
   </data>
@@ -1391,6 +1424,12 @@
   </data>
   <data name="StudentPrsentation_Page_Worddocument__Id_Locator" xml:space="preserve">
     <value>wrd</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__ViewAllQuestionsPopUp_QuestionPath_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='QuestionListContainer']/div[2]/table/tbody/tr[{0}]/td[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__ViewAllQuestions_QuestionsList_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='QuestionListContainer']/div[2]/table/tbody/tr</value>
   </data>
   <data name="StudentPrsentation_Page__Textfill_Id_Locator" xml:space="preserve">
     <value>task01selstart</value>
