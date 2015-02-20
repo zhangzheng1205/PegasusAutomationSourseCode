@@ -45,8 +45,9 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the "MyITLabTrainingFrequencyAnalysis" report name
 And I click on "SaveandRun" button
-Then I should see the "Excel Chapter 1 Skill-Based Training" along with average score "50%"
-Then I should see the question details "XL Activity 1.01: Starting Excel, Navigating Excel, and Naming and Saving a Workbook" "MyITLabOffice2013Program" "Excel 2013" "50.00%"
+Then I should be on the "Training Frequency Analysis" page
+And I should see the "Excel Chapter 1 Skill-Based Training" along with average score "50%"
+And I should see the question details "XL Activity 1.01: Starting Excel, Navigating Excel, and Naming and Saving a Workbook" "MyITLabOffice2013Program" "Excel 2013" "50.00%"
 And I should see the question details "XL Activity 1.02: Entering Text, Using AutoComplete, and Using the Name Box to Select a Cell" "MyITLabOffice2013Program" "Excel 2013" "50.00%"
 When I close the "Activity Results (Multiple students and activities)" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"
@@ -70,8 +71,9 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the " MyITLabExamFrequencyAnalysis" report name
 And I click on "SaveandRun" button
-Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" along with average score "50%"
-Then I should see details of the question "WD Activity 1.01: Starting a New Word Document" "MyITLabOffice2013Program" "SIM5 Question" "Word 2013" "50.00%"
+Then I should be on the "Exam Frequency Analysis" page
+And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" along with average score "50%"
+And I should see details of the question "WD Activity 1.01: Starting a New Word Document" "MyITLabOffice2013Program" "SIM5 Question" "Word 2013" "50.00%"
 And I should see details of the question "WD Activity 1.02: Inserting Text from Another Document" "MyITLabOffice2013Program" "SIM5 Question" "Word 2013" "50.00%"
 When I close the "Exam Frequency Analysis" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"

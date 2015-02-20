@@ -784,21 +784,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             // Updates the section name and id at in-memory during runtime
             Logger.LogMethodEntry("CommonSteps", "UpdateSectionNameAndCourseId",
                  base.IsTakeScreenShotDuringEntryExit);
-            switch (ConfigurationManager.AppSettings[CommonStepsResource.TestEnvironment_Key])
+            switch (Environment.GetEnvironmentVariable(CommonStepsResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[CommonStepsResource.TestEnvironment_Key].ToUpper())
             {
-                //Updates the section name and id at in-memory during runtime when environment is ST
-                case "ST":
-                    Course courseST = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
-                    courseST.SectionName = CommonStepsResource.CommonSteps_ST_SectionName_Value;
-                    courseST.SectionId = CommonStepsResource.CommonSteps_ST_CourseId_Value;
-                    courseST.UpdateCourseInMemory(courseST);
-                    break;
-                //Updates the section name and id at in-memory during runtime when environment is VM
-                case "VM":
-                    Course courseVM = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
-                    courseVM.SectionName = CommonStepsResource.CommonSteps_VM_SectionName_Value;
-                    courseVM.SectionId = CommonStepsResource.CommonSteps_VM_CourseId_Value;
-                    courseVM.UpdateCourseInMemory(courseVM);
+
+                //Updates the section name and id at in-memory during runtime when environment is CGIE
+                case "CGIE":
+                    Course courseCGIE = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                    courseCGIE.SectionName = CommonStepsResource.CommonSteps_CGIE_SectionName_Value;
+                    courseCGIE.SectionId = CommonStepsResource.CommonSteps_CGIE_CourseId_Value;
+                    courseCGIE.UpdateCourseInMemory(courseCGIE);
                     break;
                 //Updates the section name and id at in-memory during runtime when environment is PPE
                 case "PPE":

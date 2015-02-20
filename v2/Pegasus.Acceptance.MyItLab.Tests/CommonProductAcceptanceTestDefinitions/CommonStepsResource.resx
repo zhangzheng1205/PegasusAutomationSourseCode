@@ -207,13 +207,16 @@
   <data name="CommonSteps_VCD_SectionName_Value" xml:space="preserve">
     <value>Notready</value>
   </data>
-  <data name="CommonSteps_VM_CourseId_Value" xml:space="preserve">
-    <value>CRSKLI5-12001621</value>
-  </data>
-  <data name="CommonSteps_VM_SectionName_Value" xml:space="preserve">
-    <value>VM_ReportSection</value>
-  </data>
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
+  </data>
+  <data name="CommonSteps_CGIE_CourseId_Value" xml:space="preserve">
+    <value>CRSKLTL-12001065</value>
+  </data>
+  <data name="CommonSteps_CGIE_SectionName_Value" xml:space="preserve">
+    <value>Dependent_MIL_CGIE</value>
+  </data>
+  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
   </data>
 </root>
