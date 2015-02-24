@@ -127,7 +127,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             }
             else
             {
-                base.SwitchToLastOpenedWindow();
+                base.WaitUntilWindowLoads(expectedWindowTitle);
+                base.SelectWindow(expectedWindowTitle);
                 // Verifies the Correct Page Opened
                 this.ShowThePageInPegasus(expectedWindowTitle);
             }
@@ -339,23 +340,10 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             //Verify Correct Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
-            Boolean isPopUpExist = false;
             //Is Pop Up Present
-            if (ConfigurationManager.AppSettings[Browser] == "Internet Explorer")
-            {
-                Thread.Sleep(10000);
-                base.SwitchToLastOpenedWindow();
-                string pageTitle = base.GetPageTitle;
-                // Verifies the Correct Page Opened
-                this.ShowThePageInPegasus(pageTitle);
-                isPopUpExist = base.IsWindowsExists(pageTitle);
-
-            }
-            else
-            {
-                base.WaitUntilWindowLoads(popUpName);
-                isPopUpExist = base.IsWindowsExists(popUpName);
-            }
+            base.SwitchToLastOpenedWindow();
+            bool present = base.IsWindowsExists(popUpName, 20);
+            Boolean isPopUpExist = base.IsWindowsExists(popUpName);
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,

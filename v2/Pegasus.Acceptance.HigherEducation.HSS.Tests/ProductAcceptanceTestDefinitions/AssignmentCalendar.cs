@@ -20,6 +20,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
         /// </summary>
         private static readonly Logger Logger =
             Logger.GetInstance(typeof(AssignmentCalendar));
+        private const string ENV_PEG_AUTOMATION_BROWSER = "PEG_AUTOMATION_BROWSER";
+        private const string APP_SETTINGS_BROWSER = "Browser";
         [Then(@"I should see the current date highlighted in the calendar frame")]
         public void VerifyCurrentDateInCalendar()
         {
@@ -397,17 +399,22 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
                "AssignTheAsset",
                base.IsTakeScreenShotDuringEntryExit);
             ////base.SelectWindow("Assign");
-            if (ConfigurationManager.AppSettings[Browser] == "Internet Explorer")
+            string browserName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_BROWSER);
+            if (string.IsNullOrEmpty(browserName))
             {
-                Thread.Sleep(10000);
-                base.SwitchToLastOpenedWindow();
-                string pageTitle = base.GetPageTitle;
-                // Verifies the Correct Page Opened
-                base.SelectWindow(pageTitle);
-            }
-            else
-            {
-                base.SelectWindow("Assign");
+                browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
+                if (browserName == "Internet Explorer")
+                {
+                    Thread.Sleep(10000);
+                    base.SwitchToLastOpenedWindow();
+                    string pageTitle = base.GetPageTitle;
+                    // Verifies the Correct Page Opened
+                    base.SelectWindow(pageTitle);
+                }
+                else
+                {
+                    base.SelectWindow("Assign");
+                }
             }
             AssignContentPage assignContentPage = new AssignContentPage();
             //Select 'Assigned' radiobutton
@@ -424,7 +431,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
                 "AssignTheAsset",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
     }
 }
 
