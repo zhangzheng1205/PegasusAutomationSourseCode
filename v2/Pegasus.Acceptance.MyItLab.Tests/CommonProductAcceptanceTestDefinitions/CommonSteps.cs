@@ -713,6 +713,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
+            if (activityUnderTabName.Equals("Gradebook"))
+            {
+                // select grade book right iframe here
+                new GBInstructorUXPage().SelectGradebookFrame();
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        base.WaitForElement(By.Id("AssignmentStatusCriteria"));
+                        break;
+                    case User.UserTypeEnum.CsSmsStudent:
+                        base.WaitForElement(By.Id("_ctl0_InnerPageContent_AssignedItems"));
+                        break;
+                }
+
+
+            }
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigation(
                activityName, activityUnderTabName, userTypeEnum);
