@@ -184,10 +184,10 @@
     <value />
   </data>
   <data name="CommonSteps_PPE_CourseId_Value" xml:space="preserve">
-    <value>CRSKLKR-2041974</value>
+    <value>CRSKLSG-2044799</value>
   </data>
   <data name="CommonSteps_PPE_SectionName_Value" xml:space="preserve">
-    <value>PPE_ReportSection</value>
+    <value>Dependent_MIL_PPE</value>
   </data>
   <data name="CommonSteps_PROD_CourseId_Value" xml:space="preserve">
     <value>CRSKLJV-10015919</value>
@@ -202,10 +202,10 @@
     <value>ST_ReportSection</value>
   </data>
   <data name="CommonSteps_VCD_CourseId_Value" xml:space="preserve">
-    <value>NotReady</value>
+    <value>CRSKL7I-14003613</value>
   </data>
   <data name="CommonSteps_VCD_SectionName_Value" xml:space="preserve">
-    <value>Notready</value>
+    <value>Dependent_MIL_VCD</value>
   </data>
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
