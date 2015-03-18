@@ -212,4 +212,8 @@ Scenario: Set the date and time of SMS Instructor
 When I click 'My Profile' link
 And I store user current date and time of the instructor
 
+#Purpose: Update the section name value in run time at in memory
+Scenario: Update the section name for job dependent
+When I update section name for job dependent
+
 

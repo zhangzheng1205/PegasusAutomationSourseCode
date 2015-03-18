@@ -296,7 +296,7 @@ testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechT
 #line 116
 testRunner.Then("I should see the \"Notifications\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 117
-testRunner.And("I should see the alert count updated as \"3\" in \"Past Due: Submitted\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the alert count updated as \"4\" in \"Past Due: Submitted\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 118
 testRunner.When("I click on the \"Past Due: Submitted\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 119
@@ -307,12 +307,8 @@ testRunner.When("I click on the expand icon of student", ((string)(null)), ((Tec
 testRunner.Then("I should see the activity name \"Exam [Skill-Based]: Access Chapter 1 Project 1A S" +
                     "kill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 122
-testRunner.And("I should see \"Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (S" +
-                    "cenario 1)\" activity name and due date and time and submitted date and time whic" +
-                    "h is submitted post due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 123
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 124
+#line 123
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -326,31 +322,32 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor accepts past due submission from past due submitted channel of activit" +
                     "y", ((string[])(null)));
-#line 131
+#line 130
 this.ScenarioSetup(scenarioInfo);
-#line 132
+#line 131
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 133
+#line 132
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 134
+#line 133
 testRunner.When("I click on the \"Past Due: Submitted\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 135
+#line 134
 testRunner.Then("I should see the First, Last name in Past Due: Submitted channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 136
+#line 135
 testRunner.When("I click on the expand icon of student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 137
+#line 136
 testRunner.Then("I should see \"Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (S" +
                     "cenario 1)\" activity name and due date and time and submitted date and time whic" +
                     "h is submitted post due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 137
+testRunner.When("I selected the check box of the \"Exam [Skill-Based]: Access Chapter 1 Project 1A " +
+                    "Skill-Based Exam (Scenario 1)\" past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 138
-testRunner.When("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 139
 testRunner.And("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 140
+#line 139
 testRunner.Then("I should see the \'Accept\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 141
+#line 140
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 142
+#line 141
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -364,27 +361,28 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor decline past due submission from past due submitted channel of activit" +
                     "y", ((string[])(null)));
-#line 148
+#line 147
 this.ScenarioSetup(scenarioInfo);
-#line 149
+#line 148
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
+#line 149
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 151
+#line 150
 testRunner.When("I click on the \"Past Due: Submitted\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 152
+#line 151
 testRunner.Then("I should see the First, Last name in Past Due: Submitted channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 153
+#line 152
 testRunner.When("I click on the expand icon of student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 154
+#line 153
 testRunner.Then("I should see \"Training [Skill-Based]: PowerPoint Chapter 1 Skill-Based Training\" " +
                     "activity name and due date and time and submitted date and time which is submitt" +
                     "ed post due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 154
+testRunner.When("I selected the check box of the \"Training [Skill-Based]: PowerPoint Chapter 1 Ski" +
+                    "ll-Based Training\" past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 155
-testRunner.When("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 156
 testRunner.When("I click on \"Decline\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 157
+#line 156
 testRunner.Then("I should see the \'Decline\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -396,21 +394,21 @@ testRunner.Then("I should see the \'Decline\' success message", ((string)(null))
         public virtual void DisplayOfActivitiesAndUpdateOfGradesInCoursePerformanceChannel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of activities and update of Grades in Course Performance channel", ((string[])(null)));
-#line 163
+#line 162
 this.ScenarioSetup(scenarioInfo);
-#line 164
+#line 163
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
+#line 164
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 166
+#line 165
 testRunner.When("I click on the \"Course Performance\" link in notifications channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
+#line 166
 testRunner.And("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"TodaysView" +
                     "\" by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 168
+#line 167
 testRunner.Then("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" having" +
                     " \"Grade\" as \"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 169
+#line 168
 testRunner.And("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" having" +
                     " \"Content Completed\" as \"66.67%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

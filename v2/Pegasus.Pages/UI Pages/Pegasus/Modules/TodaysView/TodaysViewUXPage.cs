@@ -2814,6 +2814,44 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Verify expected 'Past Due Activity' in today's view.
+        /// </summary>
+        /// <param name="activityName">This is the expected activity name.</param>
+        /// <returns></returns>
+       public bool IsPastDueActivityPresent(string activityName)
+        {
+            // Verify expected 'Past Due Activity' in today's view
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsPastDueActivityPresent",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize bool variable which holds the activity status
+           bool isActivityPresent = false;
+           // Get the total number of activities listed
+           base.WaitForElementDisplayedInUi(By.CssSelector(TodaysViewUXPageResource.
+               TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator));
+           int activityCount = GetElementCountByCssSelector(TodaysViewUXPageResource.
+               TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator);
+           // Search for the expected activity name
+           for(int i=1;i<=activityCount;i++)
+           {
+              string activityId = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont" + i;
+              base.WaitForElementDisplayedInUi(By.CssSelector(String.Format("#{0}", activityId)));      
+              string actualPastDueActivities = base.
+              GetElementInnerTextByCssSelector(String.Format("#{0}", activityId)).Trim(); 
+              //Update bool variable when expected activity found
+                   if (actualPastDueActivities.Contains(activityName))
+                   {
+                       isActivityPresent = true;
+                       break;
+                   }
+               }
+           
+           Logger.LogMethodExit("TodaysViewUXPage", "IsPastDueActivityPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+           //Return bool value 
+           return isActivityPresent;
+        }
+
+        /// <summary>
         /// Get Past due submitted activity name.
         /// </summary>
         /// <returns>Activity name.</returns>
@@ -3588,13 +3626,26 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select submitted activity checkbox.
         /// </summary>
-        public void SelectSubmittedActivityCheckBox()
+        public void SelectSubmittedActivityCheckBox(string activityName)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
-            // select activity checkbox
-            base.SelectCheckBoxByXPath(TodaysViewUXPageResource.
-                TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator);
+         
+          base.WaitForElementDisplayedInUi(By.CssSelector("a[class*='_tvPastDueSubmission_0']"));
+           int activityCount = GetElementCountByCssSelector("a[class*='_tvPastDueSubmission_0']");
+           for (int i = 1; i <= activityCount; i++)
+           {
+               string id1 = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont" + i;
+               base.WaitForElementDisplayedInUi(By.CssSelector(String.Format("#{0}", id1)));
+               string actualPastDueActivities = base.
+                      GetElementInnerTextByCssSelector(String.Format("#{0}", id1)).Trim(); ;
+               if (actualPastDueActivities.Contains(activityName))
+               {
+                   string checkBoxId = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn" + i + "Checkbox";
+                   base.SelectCheckBoxById(checkBoxId);
+                   break;
+               }
+           }
             Logger.LogMethodExit("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
         }

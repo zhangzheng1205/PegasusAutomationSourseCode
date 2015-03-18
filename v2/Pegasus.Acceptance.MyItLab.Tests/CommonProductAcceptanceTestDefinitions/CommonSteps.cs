@@ -840,6 +840,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Updates the section name at in-memory during runtime for job dependent functionalities.
+        /// </summary>
+        [When(@"I update section name for job dependent")]
+        public void WhenIUpdateSectionNameForJobDependent()
+        {
+            // Updates the section name at in-memory during runtime
+            Logger.LogMethodEntry("CommonSteps", "WhenIUpdateSectionNameForJobDependent",
+                 base.IsTakeScreenShotDuringEntryExit);
+            // Updates the section name at in-memory during runtime
+            Course courseMIL = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+            courseMIL.SectionName = courseMIL.SectionNameForJobDependent;
+            courseMIL.UpdateCourseInMemory(courseMIL);
+            Logger.LogMethodExit("CommonSteps", "WhenIUpdateSectionNameForJobDependent",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Click my profile link.
         /// </summary>

@@ -103,6 +103,11 @@ namespace Pegasus.Automation.DataTransferObjects
         public String SectionName { get; set; }
 
         /// <summary>
+        /// This gives the course section name.
+        /// </summary>
+        public String SectionNameForJobDependent { get; set; }
+
+        /// <summary>
         /// This gives the course template name.
         /// </summary>
         public String TemplateName { get; set; }

@@ -193,9 +193,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert the activity name displayed in the Past due submitted channel
-            Logger.LogAssertion("ValidateActivityNameInPastDueSubmittedChannel",
-                ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreEqual(activityName, new TodaysViewUxPage().GetActivityNameInPastDueSubmittedChannel()));
+            Logger.LogAssertion("VerifyStudentPresent",
+         ScenarioContext.Current.ScenarioInfo.Title, () =>
+          Assert.IsTrue(new TodaysViewUxPage().IsPastDueActivityPresent(activityName)));
             Logger.LogMethodExit("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -571,13 +571,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Select check box for activity.
         /// </summary>
-        [When(@"I selected the check box of the past due activity submitted")]
-        public void SelectedTheCheckBoxOfThePastDueActivitySubmitted()
+        [When(@"I selected the check box of the ""(.*)"" past due activity submitted")]
+        public void SelectedTheCheckBoxOfThePastDueActivitySubmitted(string activityName)
         {
             Logger.LogMethodEntry("TodaysView", "SelectedTheCheckBoxOfThePastDueActivitySubmitted",
                 base.IsTakeScreenShotDuringEntryExit);
             // select activity check box
-            new TodaysViewUxPage().SelectSubmittedActivityCheckBox();
+            new TodaysViewUxPage().SelectSubmittedActivityCheckBox(activityName);
             Logger.LogMethodExit("TodaysView", "SelectedTheCheckBoxOfThePastDueActivitySubmitted",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -591,27 +591,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("TodaysView", "ValidateDetailsForSubmittedPostDueDateActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            // user details
-            //User user = User.Get(userTypeEnum);
-            //// verify user details present
-            //Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
-            //    () => Assert.AreEqual(user.LastName + ',' +
-            //        " " + user.FirstName, new TodaysViewUxPage()
-            //.GetUserNameWhoHasSubmittedTheActivity()));
-            // replace not required characters from activity name 
-            int activityLength = activityName.Length;
-            string replaceNewLineFromActivityName = new TodaysViewUxPage().
-                GetActivityNameForSubmittedPastDueActivity().Replace(Environment.NewLine, "");
-            string activityNameSubString = replaceNewLineFromActivityName.Substring(0, activityLength);
-            // verify activity details present
-            Logger.LogAssertion("VerifyActivityDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(activityName, activityNameSubString));
-            // verify activity past due data and time present
-            Logger.LogAssertion("VerifyActivityDueDateAndTimePresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsNotNull(new TodaysViewUxPage().GetActivityPastDueDateAndTime()));
-            // verify activity submitted date and time present 
-            Logger.LogAssertion("VerifyActivitySubmittedDateAndTimePresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsNotNull(new TodaysViewUxPage().GetActivitySubmittedDateAndTime()));
+            Logger.LogAssertion("VerifyStudentPresent",
+           ScenarioContext.Current.ScenarioInfo.Title, () =>
+           Assert.IsTrue(new TodaysViewUxPage().IsPastDueActivityPresent(activityName)));
+            //// verify activity past due data and time present
+            //Logger.LogAssertion("VerifyActivityDueDateAndTimePresent", ScenarioContext.Current.ScenarioInfo.Title,
+            //    () => Assert.IsNotNull(new TodaysViewUxPage().GetActivityPastDueDateAndTime()));
+            //// verify activity submitted date and time present 
+            //Logger.LogAssertion("VerifyActivitySubmittedDateAndTimePresent", ScenarioContext.Current.ScenarioInfo.Title,
+            //    () => Assert.IsNotNull(new TodaysViewUxPage().GetActivitySubmittedDateAndTime()));
             Logger.LogMethodExit("TodaysView", "ValidateDetailsForSubmittedPostDueDateActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }

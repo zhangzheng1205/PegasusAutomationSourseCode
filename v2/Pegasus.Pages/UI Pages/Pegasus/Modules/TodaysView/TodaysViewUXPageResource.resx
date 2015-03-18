@@ -693,4 +693,7 @@
   <data name="TodayViewUXPageResource_MainTab_SelectedTab_BackColor_Class_Value" xml:space="preserve">
     <value>currentmenuBackcolor</value>
   </data>
+  <data name="TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator" xml:space="preserve">
+    <value>a[class*='_tvPastDueSubmission_0']</value>
+  </data>
 </root>
