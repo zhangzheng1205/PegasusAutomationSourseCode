@@ -845,7 +845,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         /// Updates the section name at in-memory during runtime for job dependent functionalities.
         /// </summary>
         [When(@"I update section name for job dependent")]
-        public void WhenIUpdateSectionNameForJobDependent()
+        public void UpdateSectionNameForJobDependent()
         {
             // Updates the section name at in-memory during runtime
             Logger.LogMethodEntry("CommonSteps", "WhenIUpdateSectionNameForJobDependent",

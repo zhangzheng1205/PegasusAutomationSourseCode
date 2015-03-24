@@ -458,6 +458,30 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// To Save SectionNameForJobDependent in memory
+        /// </summary>
+        /// <param name="sectionName">This is the section name for job dependent scenarios.</param>
+        /// <param name="courseTypeEnum">This is the couser type enum.</param>
+        public void StoreSectionNameForJobDependentInMemory(String sectionName, Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Save Section Name in Memory
+            Logger.LogMethodEntry("ManageTemplatePage", "StoreSectionNameForJobDependentInMemory",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                Course course = Course.Get(courseTypeEnum);
+                //Store Section Details
+                course.SectionNameForJobDependent = sectionName;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ManageTemplatePage", "StoreSectionNameForJobDependentInMemory",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click On Cmenu of Section or Template.
         /// </summary>
         /// <param name="cMenuOption">This is cmenu option.</param>

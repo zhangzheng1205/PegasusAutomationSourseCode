@@ -62,6 +62,8 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.MyITLabForOffice2013Master:
                         new ManageTemplatePage().StoreSectionID(sectionName,
                             Course.CourseTypeEnum.MyITLabOffice2013Program);
+                        new ManageTemplatePage().StoreSectionNameForJobDependentInMemory(sectionName,
+                            Course.CourseTypeEnum.MyITLabOffice2013Program);
                         break;  
                 }
             }
