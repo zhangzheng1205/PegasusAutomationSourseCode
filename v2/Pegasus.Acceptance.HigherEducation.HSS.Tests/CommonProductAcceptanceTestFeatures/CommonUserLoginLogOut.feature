@@ -9,6 +9,8 @@ Given I browsed the login url for "HSSProgramAdmin"
 When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
 
 #Purpose: Verify The User Login As CourseSpaceSMSInstructor To HedMyPsychLabProgram Course
@@ -17,6 +19,8 @@ Given I browsed the login url for "HSSCsSmsInstructor"
 When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 
 #Purpose: Verify The User Login As CourseSpaceSMSStudent

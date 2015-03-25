@@ -108,6 +108,8 @@ Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 
 #User enter into the program course
@@ -117,6 +119,8 @@ Given I browsed the login url for "HedProgramAdmin"
 When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "HedProgramAdmin"
 
 #User enter into the program course and enter into section
@@ -203,7 +207,7 @@ Given I am on the "Global Home" page
 When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsInstructor"
 
 #Purpose: Update the section name value in run time at in memory
-Scenario: : Update the section name and section id
+Scenario: Update the section name and section id
 When I update section name and course id
 
 

@@ -218,6 +218,8 @@ Given I browsed the login url for "WLProgramAdmin"
 When I logged into the Pegasus as "WLProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
 When I enter in the "MySpanishLabProgram" from the Global Home page as "WLProgramAdmin"
 
 #Purpose: Verify The User Login As CourseSpaceSMSInstructor To MySpanishLabProgram Course
@@ -226,6 +228,8 @@ Given I browsed the login url for "WLCsSmsInstructor"
 When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
 When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
 
 #Purpose: Verify The User Login As CourseSpaceSMSStudent To MySpanishLabProgram Course
