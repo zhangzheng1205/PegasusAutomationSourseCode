@@ -30,6 +30,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public const string InternetExplorer = "Internet Explorer";
         public const string Safari = "Safari";
         public const string FireFox = "FireFox";
+        Stopwatch stopWatch = new Stopwatch();
 
         /// <summary>
         /// This is the Broswer variable called from AppSettings.
@@ -63,21 +64,28 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>True if the element is visible otherwise throws the exception.</returns>
         protected void WaitForElement(By by, int timeOut = -1)
         {
-            //Wait For Element
+            bool flag1 = false;
             if (timeOut == -1)
             {
                 timeOut = this._waitTimeOut;
             }
+
             try
             {
+
                 WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(timeOut));
-                wait.Until(ExpectedConditions.ElementIsVisible(@by));
+                wait.PollingInterval = TimeSpan.FromMilliseconds(100);
+                wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+                wait.Until(ExpectedConditions.ElementExists(@by));
+                this.isElementDisplayedInPage(by, flag1);
             }
-            //Exception Handling
-            catch (Exception)
+
+             //Exception Handling
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
+
         }
 
         /// <summary>
@@ -541,6 +549,51 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             }
             stopWatch.Stop();
             return false;
+        }
+
+        /// <summary>
+        /// Check whether element is displayed in web page or not.
+        /// </summary>
+        /// <param name="by">Element name.</param>
+        /// <param name="timeOut">Time out value.</param>
+        /// <returns>Status of the element display.</returns>
+        public bool isElementDisplayedInPage(By by, bool flag, int timeOut = -1)
+        {
+            bool isElementDisplayedInPage = false;
+
+            if (timeOut == -1)
+            {
+                timeOut = this._waitTimeOut;
+            }
+            if (!flag)
+            {
+
+                stopWatch.Start();
+            }
+
+            try
+            {
+
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+
+                    isElementDisplayedInPage = WebDriver.FindElement(by).Displayed;
+                    if (isElementDisplayedInPage)
+                    {
+                        isElementDisplayedInPage = true;
+                        break;
+                    }
+                }
+            }
+            //Exception Handling
+            catch (NoSuchElementException)
+            {
+                bool flag2 = true;
+                this.isElementDisplayedInPage(by, flag2);
+
+            }
+            stopWatch.Stop();
+            return isElementDisplayedInPage;
         }
 
         /// <summary>
