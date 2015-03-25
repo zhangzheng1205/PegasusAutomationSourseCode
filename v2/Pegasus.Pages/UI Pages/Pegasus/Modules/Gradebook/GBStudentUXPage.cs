@@ -1236,55 +1236,58 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>   
         /// <param name="assetCmenu">This is Activity Cmenu.</param>
         /// <param name="assetName">This is Activity assetName.</param>
-        private void GotoViewSubmissionPage(string assetName,string assetCmenu)
+        private void GotoViewSubmissionPage(string assetName, string assetCmenu)
         {
             logger.LogMethodEntry("GBStudentUXPage", "GotoViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath(GBStudentUXPageResource.
-                GBStudentUXPage_GradeBook_assetCount_xpath_Locator));
-            int assetCount = base.GetElementCountByXPath(GBStudentUXPageResource.
-                GBStudentUXPage_GradeBook_assetCount_xpath_Locator);
+            base.WaitForElement(By.CssSelector(GBStudentUXPageResource.
+                GBStudentUXPage_GradeBook_assetCount_CssSelector_Locator));
+            int assetCount = base.GetElementCountByCssSelector(GBStudentUXPageResource.
+                GBStudentUXPage_GradeBook_assetCount_CssSelector_Locator);
             try
             {
                 for (int i = 1; i <= assetCount; i++)
                 {
-                    base.WaitForElement(By.XPath( string.Format(GBStudentUXPageResource.
-                        GBStudentUXPage_GradeBook_assetElement_xpath_Locator, i)));
-                    IWebElement assetElement = base.GetWebElementPropertiesByXPath(
+                    base.WaitForElement(By.CssSelector(string.Format(GBStudentUXPageResource.
+                        GBStudentUXPage_GradeBook_assetElement_CssSelector_Locator, i)));
+                    IWebElement assetElement = base.GetWebElementPropertiesByCssSelector(
                         string.Format(GBStudentUXPageResource.
-                        GBStudentUXPage_GradeBook_assetElement_xpath_Locator, i));
+                        GBStudentUXPage_GradeBook_assetElement_CssSelector_Locator, i));
                     String elementText = assetElement.Text;
                     if (elementText.Equals(assetName))
                     {
                         base.PerformMouseHoverByJavaScriptExecutor(assetElement);
-                        base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
-                            GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator, i)));
-                        IWebElement cmenuOption = base.GetWebElementPropertiesByXPath(
+                        base.WaitForElement(By.CssSelector(string.Format(GBStudentUXPageResource.
+                        GBStudentUXPage_GradeBook_assetElement_Cmenu_CssSelector_Locator, i)));
+                        IWebElement cmenuOption = base.GetWebElementPropertiesByCssSelector(
                             string.Format(GBStudentUXPageResource.
-                            GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator, i));
-                        
+                        GBStudentUXPage_GradeBook_assetElement_Cmenu_CssSelector_Locator, i));
+                        Thread.Sleep(3000);
                         base.ClickByJavaScriptExecutor(cmenuOption);
-                        base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
-                            GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator, i)));
-                        IWebElement TempReference = base.GetWebElementPropertiesByXPath(
-                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator, i));
+                        base.WaitForElement(By.CssSelector(string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_Temp_Cmenu_CssSelector_Locator, i)));
+                        IWebElement TempReference = base.GetWebElementPropertiesByCssSelector(
+                            string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_Temp_Cmenu_CssSelector_Locator, i));
                         string referenceId = TempReference.GetAttribute(
                             string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_Reference_ID_Locator));
-                        base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
-                            GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator, referenceId)));
-                        int count = base.GetElementCountByXPath(
+                        base.WaitForElement(By.CssSelector(string.Format(GBStudentUXPageResource.
+                           GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_CssSelector_Locator, referenceId)));
+                        int count = base.GetElementCountByCssSelector(
                             string.Format(GBStudentUXPageResource.
-                            GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator, referenceId));
+                            GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_CssSelector_Locator, referenceId));
                         for (int j = 1; j <= count; j++)
                         {
-                            base.WaitForElement(By.XPath( string.Format(GBStudentUXPageResource.
-                                GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator, referenceId, i)));
-                            IWebElement viewSubmissionOption = base.GetWebElementPropertiesByXPath(
-                                string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator, referenceId, i));
-                           
+                            base.WaitForElement(By.CssSelector(string.Format(GBStudentUXPageResource.
+                                GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_CssSelector_Locator, referenceId, j)));
+                            IWebElement viewSubmissionOption = base.GetWebElementPropertiesByCssSelector(
+                                string.Format(GBStudentUXPageResource.
+                                GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_CssSelector_Locator, referenceId, j));
+                            Thread.Sleep(2000);
+
                             if (viewSubmissionOption.Text.Contains(assetCmenu))
                             {
-                                
+                                base.PerformMouseHoverByJavaScriptExecutor(viewSubmissionOption);
                                 base.ClickByJavaScriptExecutor(viewSubmissionOption);
                                 break;
                             }
@@ -1297,8 +1300,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("GBStudentUXPage","GotoViewSubmissionPage",
+            logger.LogMethodExit("GBStudentUXPage", "GotoViewSubmissionPage",
                           base.IsTakeScreenShotDuringEntryExit);
-         }
+        }
     }
 }

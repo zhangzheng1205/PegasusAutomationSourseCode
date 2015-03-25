@@ -276,4 +276,22 @@
   <data name="GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator" xml:space="preserve">
     <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span</value>
   </data>
+  <data name="GBStudentUXPage_GradeBook_assetCount_CssSelector_Locator" xml:space="preserve">
+    <value>#GridStudent &gt; tbody &gt; tr</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_assetElement_Cmenu_CssSelector_Locator" xml:space="preserve">
+    <value>#GridStudent tbody tr:nth-child({0}) td:nth-child(2) span input</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_assetElement_CssSelector_Locator" xml:space="preserve">
+    <value>#GridStudent tbody tr:nth-child({0}) td:nth-child(2) span span</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_CssSelector_Locator" xml:space="preserve">
+    <value>div#{0} table tbody tr td div:nth-child(2) a</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_CssSelector_Locator" xml:space="preserve">
+    <value>div#{0} table tbody tr td div:nth-child(2) a:nth-child({1})</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Temp_Cmenu_CssSelector_Locator" xml:space="preserve">
+    <value>#GridStudent tbody tr:nth-child({0}) td:nth-child(2) span</value>
+  </data>
 </root>
