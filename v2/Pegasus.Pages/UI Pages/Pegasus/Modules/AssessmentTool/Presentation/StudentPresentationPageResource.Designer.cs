@@ -107,6 +107,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(2) div.
+        /// </summary>
+        internal static string StudentPresentation_CompletedActivity_AssetName_CssSelector_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_CompletedActivity_AssetName_CssSelector_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //*[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div.
         /// </summary>
         internal static string StudentPresentation_CompletedActivity_AssetName_Xpath_Value {
@@ -116,11 +125,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(3) div div:nth-child(2) div:nth-child(2).
+        /// </summary>
+        internal static string StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //*[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2].
         /// </summary>
         internal static string StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value {
             get {
                 return ResourceManager.GetString("StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #TodoList &gt; div &gt; div.
+        /// </summary>
+        internal static string StudentPresentation_CompletedActivity_Records_CssSelector_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_CompletedActivity_Records_CssSelector_Value", resourceCulture);
             }
         }
         

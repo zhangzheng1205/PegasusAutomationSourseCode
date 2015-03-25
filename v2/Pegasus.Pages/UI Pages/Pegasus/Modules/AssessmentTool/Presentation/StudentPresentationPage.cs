@@ -6819,26 +6819,32 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch To Frame
                 base.SwitchToIFrameById(StudentPresentationPageResource.
                     StudentPresentation_Page_Content_Frame_Id_Locator);
-                base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                    StudentPresentation_CompletedActivity_Records_Xpath_Value));
-                int Test = base.GetElementCountByXPath(StudentPresentationPageResource.
-                           StudentPresentation_CompletedActivity_Records_Xpath_Value);
+                base.WaitForElement(By.CssSelector(StudentPresentationPageResource.
+                    StudentPresentation_CompletedActivity_Records_CssSelector_Value));
+                int Test = base.GetElementCountByCssSelector(StudentPresentationPageResource.
+                    StudentPresentation_CompletedActivity_Records_CssSelector_Value);
                 for (int i = 2; i <= Test; i++)
                 {
                     //Find the expected asset
-                    base.WaitForElement(By.XPath(string.Format(StudentPresentationPageResource.
-                        StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
-                    IWebElement Text = base.GetWebElementPropertiesByXPath((string.Format(StudentPresentationPageResource.
-                            StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
+
+                    base.WaitForElement(By.CssSelector(string.
+                        Format(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_AssetName_CssSelector_Value, i)));
+                    IWebElement Text = base.GetWebElementPropertiesByCssSelector
+                        ((string.Format(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_AssetName_CssSelector_Value, i)));
+                    Thread.Sleep(3000);
                     String ativityName = Text.Text;
 
                     if (ativityName.Equals(assetName))
                     {
-                        base.WaitForElement(By.XPath(String.Format(StudentPresentationPageResource.
-                            StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value, i)));
-                        IWebElement cmenuOption = base.GetWebElementPropertiesByXPath((String.
+
+                        base.WaitForElement(By.CssSelector(String.Format(StudentPresentationPageResource.
+                            StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value, i)));
+                        IWebElement cmenuOption = base.GetWebElementPropertiesByCssSelector((String.
                             Format(StudentPresentationPageResource.
-                            StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value, i)));
+                            StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value, i)));
+                        Thread.Sleep(3000);
                         //Get the status value of the asset
                         getActivitySubmittedStatus = cmenuOption.Text;
                         break;

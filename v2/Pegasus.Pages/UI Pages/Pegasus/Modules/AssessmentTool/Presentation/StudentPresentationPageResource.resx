@@ -1434,4 +1434,13 @@
   <data name="StudentPrsentation_Page__Textfill_Id_Locator" xml:space="preserve">
     <value>task01selstart</value>
   </data>
+  <data name="StudentPresentation_CompletedActivity_AssetName_CssSelector_Value" xml:space="preserve">
+    <value>#TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(2) div</value>
+  </data>
+  <data name="StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value" xml:space="preserve">
+    <value>#TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(3) div div:nth-child(2) div:nth-child(2)</value>
+  </data>
+  <data name="StudentPresentation_CompletedActivity_Records_CssSelector_Value" xml:space="preserve">
+    <value>#TodoList &gt; div &gt; div</value>
+  </data>
 </root>
