@@ -69,7 +69,7 @@ When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Idle Students" channel
 When I click on the "Idle Students" option
-Then I should see "1" Idle Student "7dbe , BDD" in "Idle Students" channel
+Then I should see "1" Idle Student "CsSmsStudent" of type "IdleScore" in "Idle Students" channel
 
 #Purpose : To validate display of alert counts and contents in Not Passed alert channel
 #Test case ID : peg-16736

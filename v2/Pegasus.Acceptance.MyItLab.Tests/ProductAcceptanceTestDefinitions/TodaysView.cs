@@ -295,14 +295,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Validate the idle student name.
         /// </summary>
         /// <param name="Count">Number of idle students.</param>
-        /// <param name="StudentName">Idle student first, last name.</param>
-        /// <param name="channelName"></param>
-        [Then(@"I should see ""(.*)"" Idle Student ""(.*)"" in ""(.*)"" channel")]
-        public void ValidateIdleStudentName(int Count, string StudentName, string channelName)
+        /// <param name="StudentName">This is User type enum.</param>
+        /// <param name="scenarioName">This s type of student.</param>
+        /// <param name="channelName">This is channel name</param>
+        [Then(@"I should see ""(.*)"" Idle Student ""(.*)"" of type ""(.*)"" in ""(.*)"" channel")]
+        public void ValidateIdleStudentName(int Count, User.UserTypeEnum userTypeEnum,
+            string scenarioName, string channelName)
         {
             //Verify Alert count in Idle Students Notification channel
             Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
                 base.IsTakeScreenShotDuringEntryExit);
+            User user = new GBInstructorUXPage().FetchTheUserDetails(scenarioName, userTypeEnum);
+            String StudentName = user.LastName + " , " + user.FirstName;
             //Assert the alert count displayed in Idle Students channel
             Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
                 ScenarioInfo.Title,

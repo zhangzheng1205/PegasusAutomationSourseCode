@@ -212,7 +212,8 @@ testRunner.And("I should see the alert count updated as \"1\" in \"Idle Students
 #line 71
 testRunner.When("I click on the \"Idle Students\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 72
-testRunner.Then("I should see \"1\" Idle Student \"7dbe , BDD\" in \"Idle Students\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"1\" Idle Student \"CsSmsStudent\" of type \"IdleScore\" in \"Idle Student" +
+                    "s\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
