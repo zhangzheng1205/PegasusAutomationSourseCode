@@ -1611,48 +1611,49 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Verify the 'Zero Scoring Student'details in Integrity violation report.
+        /// Verify the details in Integrity violation report.
         /// </summary>
         /// <param name="rowNumber">This is row number.</param>
-        /// <param name="scenerioName">This is the type of student.</param>
-        /// <param name="userTypeEnum">This is Expected student name.</param>
+        /// <param name="userTypeEnum">This is expected student name enum.</param>
         /// <param name="activityName">This is activity name.</param>
-        /// <param name="integrityLevel">This is integrity level.</param>
         /// <param name="integrityViolation">This is integrity violation.</param>
-        [Then(@"I should see row ""(.*)"" in the report ""(.*)"" for ""(.*)"" ""(.*)"" with ""(.*)"" ""(.*)"" column details")]
-        public void VerifyIntegrityViolationReportDetailsForZeroScoreSudent
-            (int rowNumber, string scenerioName, User.UserTypeEnum userTypeEnum,
-            string activityName, string integrityLevel, string integrityViolation)
+        /// <param name="integrityLevel">This is integrity level.</param>
+        [Then(@"I should see in row ""(.*)"" for ""(.*)"" Expected Student for the Activity ""(.*)"" Integrity Violation is ""(.*)"" for ""(.*)"" Integrity")]
+        public void VerifyIntegrityViolationReportData(int rowNumber,
+            User.UserTypeEnum userTypeEnum, string activityName,
+            string integrityViolation, string integrityLevel)
         {
-            //Verify the 'Zero Scoring Student'details in Integrity violation report.
+            //Verify the details in Integrity violation report
             Logger.LogMethodEntry("Reports",
-                "VerifyIntegrityViolationReportDetailsForZeroScoreSudent",
+                "VerifyIntegrityViolationReportData",
                   base.IsTakeScreenShotDuringEntryExit);
-            //Fetch the data from memory
-            User user = new GBInstructorUXPage().FetchTheUserDetails(scenerioName, userTypeEnum);
+            base.SelectDefaultWindow();
+            //Get user details
+            User user = User.Get(userTypeEnum);
             //Verify Expected student name
-            Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
+            Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.
+                Current.ScenarioInfo.Title,
                () => Assert.AreEqual(user.FirstName + " " + user.LastName,
                    new RptStudentIntegrityViolationPage().
-            GetIntegrityViolationReportDetails(rowNumber, 1)));
+            GetIntegrityViolationReportDetails(rowNumber, 2)));
             //Verify Activity name
             Logger.LogAssertion("VerifyActivityName",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(activityName, new RptStudentIntegrityViolationPage().
-            GetIntegrityViolationReportDetails(rowNumber, 5)));
-            //Verify Integrity level
-            Logger.LogAssertion("VerifyIntegrityLevel",
-            ScenarioContext.Current.ScenarioInfo.Title, () =>
-            Assert.AreEqual(integrityLevel, new RptStudentIntegrityViolationPage().
-           GetIntegrityViolationReportDetails(rowNumber, 7)));
+            GetIntegrityViolationReportDetails(rowNumber, 6)));
             //Verify integrity violated or not
             Logger.LogAssertion("VerifyIntegrityViolation",
            ScenarioContext.Current.ScenarioInfo.Title, () =>
            Assert.AreEqual(integrityViolation, new RptStudentIntegrityViolationPage().
-          IsIntegrityViolated(rowNumber)));
+            IsIntegrityViolated(rowNumber)));
+            //Verify Integrity level
+            Logger.LogAssertion("VerifyIntegrityLevel",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(integrityLevel, new RptStudentIntegrityViolationPage().
+           GetIntegrityViolationReportDetails(rowNumber, 8)));
             Logger.LogMethodExit("Reports",
-                "VerifyIntegrityViolationReportDetailsForZeroScoreSudent",
-                base.IsTakeScreenShotDuringEntryExit);
+               "VerifyIntegrityViolationReportData",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

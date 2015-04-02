@@ -329,17 +329,21 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
 #line 115
 testRunner.When("I click on \"Integrity Violation\" report link as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 116
-testRunner.Then("I should be on \"Student Integrity Violation\" page as HedProgramAdmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should open \"Options for Integrity Violation\" criteria page as \"HedProgramAdmin" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 117
-testRunner.When("I select section ID from the dropdown in \"MyITLabOffice2013Program\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"MyITLabOffice2013Program\" section under \"MyITLabForOffice2013Master\" te" +
+                    "mplate in \'Section Options\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 118
-testRunner.And("I click  \"Generate Report\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on the \"Run Report\" button in reports by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 119
-testRunner.Then("I should see row \"1\" in the report \"ZeroScore\" for \"CsSmsStudent\" \"Word Chapter 1" +
-                    " Grader Project [Assessment 3]\" with \"Document Level\" \"Yes\" column details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see in row \"7\" for \"CsSmsStudent\" Expected Student for the Activity \"Exc" +
+                    "el Chapter 1 Grader Project [Homework 3]\" Integrity Violation is \"Yes\" for \"Docu" +
+                    "ment Level\" Integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 120
-testRunner.And("I should see row \"3\" in the report \"CsSmsStudent\" \"Word Chapter 1 Grader Project " +
-                    "[Assessment 3]\" \"Document Level\" \"Yes\" column details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see in row \"8\" for \"CsSmsStudent\" Expected Student for the Activity \"Exc" +
+                    "el Chapter 1 Grader Project [Homework 3]\" Integrity Violation is \"Yes\" for \"Cont" +
+                    "ent Level\" Integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 121
 testRunner.And("I close the \"Student Integrity Violation\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

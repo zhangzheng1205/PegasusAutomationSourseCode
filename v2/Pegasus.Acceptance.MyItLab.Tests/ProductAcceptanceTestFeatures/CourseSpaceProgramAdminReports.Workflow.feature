@@ -113,11 +113,11 @@ Scenario: To generate and save the "Integrity Violation" Report by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I click on "Integrity Violation" report link as "HedProgramAdmin"
-Then I should be on "Student Integrity Violation" page as HedProgramAdmin
-When I select section ID from the dropdown in "MyITLabOffice2013Program" course
-And I click  "Generate Report" button
-Then I should see row "1" in the report "ZeroScore" for "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" with "Document Level" "Yes" column details
-And I should see row "3" in the report "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" "Document Level" "Yes" column details
+Then I should open "Options for Integrity Violation" criteria page as "HedProgramAdmin"
+When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
+And I click on the "Run Report" button in reports by "HedProgramAdmin"
+Then I should see in row "7" for "CsSmsStudent" Expected Student for the Activity "Excel Chapter 1 Grader Project [Homework 3]" Integrity Violation is "Yes" for "Document Level" Integrity 
+And I should see in row "8" for "CsSmsStudent" Expected Student for the Activity "Excel Chapter 1 Grader Project [Homework 3]" Integrity Violation is "Yes" for "Content Level" Integrity 
 And I close the "Student Integrity Violation" window
 
 #Purpose: To view Availability of 'Certificate of Completion (Custom) Report Link Under Report Tab
