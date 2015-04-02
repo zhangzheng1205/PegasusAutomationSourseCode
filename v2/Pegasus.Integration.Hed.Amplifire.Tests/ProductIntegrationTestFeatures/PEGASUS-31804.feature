@@ -17,4 +17,4 @@ When I click on "¡Comprueba lo que sabes!" folder as "AmpCsSmsStudent"
 Then I should be inside the folder "¡Comprueba lo que sabes!"
 When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
 Then I should see the "amplifire" activity successfully launched
-And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"
+And I should see the expected book content

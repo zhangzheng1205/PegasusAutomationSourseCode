@@ -17,7 +17,7 @@ When I navigate to "¡Comprueba lo que sabes!" asset in "Course Materials" tab a
 Then I should be inside the selected folder "¡Comprueba lo que sabes!"
 When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
 Then I should see the "amplifire" activity successfully launched
-And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"
+And I should see the expected book content
 
 
 

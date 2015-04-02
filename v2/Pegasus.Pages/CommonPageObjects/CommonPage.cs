@@ -8,6 +8,7 @@ using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
+using System.Configuration;
 
 namespace Pegasus.Pages.CommonPageObjects
 {
@@ -1349,12 +1350,12 @@ namespace Pegasus.Pages.CommonPageObjects
             return getCurrentURL;
         }
 
-        /// <summary>
+       /// <summary>
         ///Verify a text in the launched  page .
         /// </summary>
         /// <param name="expectedText">This is the text value to be searched.</param>
         /// <returns></returns>
-        public Boolean IsTextPresentInPageSource(string expectedText)
+        public Boolean IsTextPresentInPageSource()
         {
             //Verify a text in the launched  page 
              Logger.LogMethodEntry("CommonPage",
@@ -1362,9 +1363,22 @@ namespace Pegasus.Pages.CommonPageObjects
                base.IsTakeScreenShotDuringEntryExit);
             bool isTextPresent=false;
             try
-            {
+            { 
+              switch (Environment.GetEnvironmentVariable(CommonPageResource.
+                  PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[CommonPageResource.
+                TestEnvironment_Key].ToUpper())
+                {
+                    case "PROD": isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
+                        CommonPage_Amplifire_Production_Book_Content);
+                        break;
+
+                    default: isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
+                        CommonPage_Amplifire_General_Book_Content);
+                        break;
+                }
                 //Verify a text in the launched page 
-                isTextPresent = WebDriver.PageSource.Contains(expectedText);
+               
             }
             catch (Exception)
             {
@@ -1377,6 +1391,8 @@ namespace Pegasus.Pages.CommonPageObjects
             return isTextPresent;
 
     }
+
+
 
         /// <summary>
         /// Gets the text displayed in the window.

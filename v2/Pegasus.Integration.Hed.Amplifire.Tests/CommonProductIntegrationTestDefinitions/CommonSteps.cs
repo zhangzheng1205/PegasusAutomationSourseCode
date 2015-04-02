@@ -336,8 +336,8 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// Verify the title displayed in book.
         /// </summary>
         /// <param name="expectedBookTilte">This is the title.</param>
-        [Then(@"I should see the BookTilte as ""(.*)""")]
-        public void VerifyBookTitle(string expectedBookTilte)
+        [Then(@"I should see the expected book content")]
+        public void VerifyBookTitle()
         {
             //Verify the title displayed in book
             Logger.LogMethodEntry("CommonSteps", "VerifyBookTitle",
@@ -346,13 +346,12 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new CommonPage().
-                    IsTextPresentInPageSource(expectedBookTilte)));
+                    IsTextPresentInPageSource()));
             base.CloseBrowserWindow();
             base.SelectDefaultWindow();
             Logger.LogMethodExit("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify the launch of amplifier pop up.
         /// </summary>

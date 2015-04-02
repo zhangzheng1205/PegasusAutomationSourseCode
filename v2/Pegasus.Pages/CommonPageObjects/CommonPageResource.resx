@@ -354,4 +354,16 @@
   <data name="ComonPage_Capítulo06_WLFolderName" xml:space="preserve">
     <value>Capítulo 06: ¡Sí, lo sé!</value>
   </data>
+  <data name="CommonPage_Amplifire_General_Book_Content" xml:space="preserve">
+    <value>Chapter 16: Innate Immunity: Nonspecific Defenses of the Host</value>
+  </data>
+  <data name="CommonPage_Amplifire_Production_Book_Content" xml:space="preserve">
+    <value>Unidos: An Interactive Approach, 1e Dynamic Study Modules</value>
+  </data>
+  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
+  </data>
+  <data name="TestEnvironment_Key" xml:space="preserve">
+    <value>TestEnvironment</value>
+  </data>
 </root>
