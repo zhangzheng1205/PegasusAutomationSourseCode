@@ -52,7 +52,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         /// <param name="userTypeEnum">Type of user selecting activities.</param>
         [When(@"I select ""(.*)"" student in ""(.*)"" by ""(.*)""")]
         [When(@"I select ""(.*)"" asset in ""(.*)"" by ""(.*)""")]
-        public void SelectActivityInReportsCriteriaPage(string assessmentName, string assessmentType, 
+        public void SelectActivityInReportsCriteriaPage(string assessmentName, string assessmentType,
             User.UserTypeEnum userTypeEnum)
         {
             //Select activity for which report needs to be run
@@ -63,6 +63,57 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
                 (assessmentName, assessmentType, userTypeEnum);
             Logger.LogMethodExit("Reports", "SelectActivityInReportsCriteriaPage",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+       /// <summary>
+       /// Select student in Individual student mastery cretiria page to generate the report
+       /// </summary>
+       /// <param name="assessmentName"></param>
+       /// <param name="assessmentType"></param>
+       /// <param name="userTypeEnum"></param>
+       /// <param name="windowName"></param>
+        [When(@"I select ""(.*)"" in ""(.*)"" by ""(.*)"" in ""(.*)""")]
+        public void SelectActivityInReportsCriteriaPage(string assessmentName, string assessmentType,
+            User.UserTypeEnum userTypeEnum, string windowName)
+        {
+            //Select activity for which report needs to be run
+            Logger.LogMethodEntry("Reports", "SelectActivityInReportsCriteriaPage",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Select activity for which report needs to be run
+            new RptMainUXPage().SelectSingleAssessment
+                (assessmentName, assessmentType, userTypeEnum, windowName);
+            Logger.LogMethodExit("Reports", "SelectActivityInReportsCriteriaPage",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see the added Student ""(.*)"" in Report criteria page")]
+        public void ValidateStudentDisplayInStudentResultCriteriaPage(string studentName)
+        {
+            //Validate the added student display in criteria 
+            Logger.LogMethodEntry("Reports", "ValidateStudentDisplayInStudentResultCriteriaPage",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateStudentDisplayInStudentResultCriteriaPage",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual("Annaihstu1, Raghavendrastu1", new RptMainUXPage().
+                    getAddedStudentNameFromStudenActivityCriteriaPage()));
+            Logger.LogMethodExit("Reports", "ValidateStudentDisplayInStudentResultCriteriaPage",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select Mastery reports link
+        /// </summary>
+        [When(@"I generate the ""(.*)"" for ""(.*)"" skill")]
+        public void SelectMasteryReportsLink(string instructorReportType, string skillName)
+        {
+            //Select Class Mastery Report link
+            Logger.LogMethodEntry("ViewReports", "SelectInstructorReportsLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            new RptMainUXPage().ClickTheMasteryReportsLink
+            ((RptMainUXPage.PegasusInstructorReportEnum)Enum.Parse
+            (typeof(RptMainUXPage.PegasusInstructorReportEnum), instructorReportType));
+            Logger.LogMethodExit("ViewReports", "SelectInstructorReportsLink",
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,6 +199,110 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Reports", "EnterReportNameToSave",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select the Skills radio button.
+        /// </summary>
+        /// <param name="radioButtonName">Radio button name.</param>
+        [When(@"I select the ""(.*)"" radio button")]
+        public void SelectRadioButtion(string radioButtonName)
+        {
+            //Select skill radio button for generating report
+            Logger.LogMethodEntry("Reports", "SelectRadioButtion",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Select skill radio button
+            new RptCommonCriteriaPage().SelectSkillStdOption();
+            Logger.LogMethodExit("Reports", "SelectRadioButtion",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on select skills/standards button.
+        /// </summary>
+        [When(@"I click on Select Standards button")]
+        public void ClickOnSelectStandardsButton()
+        {
+            //Click on select skills/standards button for selecting skills/standards
+            Logger.LogMethodEntry("Reports", "ClickOnSelectStandardsButton",
+              base.IsTakeScreenShotDuringEntryExit);
+            new RptCommonCriteriaPage().ClickSelectSkillButton();
+            Logger.LogMethodExit("Reports", "ClickOnSelectStandardsButton",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select skills/Standards from the drop down.
+        /// </summary>
+        /// <param name="skillName">Skill name to be selected.</param>
+        [When(@"I select ""(.*)"" skills from the drop down")]
+        public void SelectSkillsFromTheDropDown(string skillName)
+        {
+            //Select skills from the drop down to add to reports
+            Logger.LogMethodEntry("Reports", "SelectSkillsFromTheDropDown",
+             base.IsTakeScreenShotDuringEntryExit);
+            new RptCommonCriteriaPage().SelectTheSkillsFromLightBox(skillName);
+            Logger.LogMethodExit("Reports", "SelectSkillsFromTheDropDown",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate data in generated report.
+        /// </summary>
+        /// <param name="columnName">Column name in generated report.</param>
+        [Then(@"I should see ""(.*)"" data")]
+        public void ValidateReportData(string columnName)
+        {
+            Logger.LogMethodEntry("Reports", "ValidateReportData",
+             base.IsTakeScreenShotDuringEntryExit);
+            new RptStudentActivityPage().GetStudentDataFromStudentActivityReport(columnName);
+            Logger.LogMethodExit("Reports", "ValidateReportData",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch detailed report.
+        /// </summary>
+        [When(@"I Click on Detailed Report button")]
+        public void ClickOnDetailedReportButton()
+        {
+            //Generate detailed report
+            Logger.LogMethodEntry("Reports", "ClickOnDetailedReportButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            new RptStudentActivityPage().SelectDetailedReport();
+            Logger.LogMethodExit("Reports", "ClickOnDetailedReportButton",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the data in generated detailed student activity report.
+        /// </summary>
+        /// <param name="columnData">Column name to validate the data.</param>
+        [Then(@"I should see ""(.*)"" data in detailed student activity pop up")]
+        public void ValidateDataInGeneratedDetailedReport(string columnData)
+        {
+            //Validate the data in generated detailed student activity report.
+            Logger.LogMethodEntry("Reports", "ValidateDataInGeneratedDetailedReport",
+              base.IsTakeScreenShotDuringEntryExit);
+            new RptDetailedStudentActivityPage().
+                GetStudentDataFromDetailedStudentActivityReport(columnData);
+            Logger.LogMethodExit("Reports", "ValidateDataInGeneratedDetailedReport",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expand the row to view detailed report.
+        /// </summary>
+        [When(@"I expand the date in detailed student activity report pop up")]
+        public void ExpandtheRowInDetailedActivityreportPopUp()
+        {
+            //Expand the row to view detailed report.
+            Logger.LogMethodEntry("Reports", "ExpandtheRowInDetailedActivityreportPopUp",
+              base.IsTakeScreenShotDuringEntryExit);
+            new RptDetailedStudentActivityPage().ClickTheExpandLink(0);
+            Logger.LogMethodExit("Reports", "ExpandtheRowInDetailedActivityreportPopUp",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
         
         /// <summary>
         /// Click on button in save settings pop up.

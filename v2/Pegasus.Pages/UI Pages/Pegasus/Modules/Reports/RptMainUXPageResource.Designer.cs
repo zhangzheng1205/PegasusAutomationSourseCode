@@ -782,6 +782,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]//tr//td//span[contains(text(),&apos;{0}&apos;)].
+        /// </summary>
+        internal static string RptMainUXPage_DP_ReportsLinks_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_DP_ReportsLinks_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]/tbody/tr[{0}]/td.
+        /// </summary>
+        internal static string RptMainUXPage_DPReportOption_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_DPReportOption_Link_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]/tbody/tr.
         /// </summary>
         internal static string RptMainUXPage_HSSReport_Link_XPath_Locator {
@@ -796,6 +814,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptMainUXPage_HSSReportOption_Link_XPath_Locator {
             get {
                 return ResourceManager.GetString("RptMainUXPage_HSSReportOption_Link_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to idFrameIndividualStudentByGroup.
+        /// </summary>
+        internal static string RptMainUXPage_IndividualStudentMasterReport_SelectStudentsPage_Iframe_Id_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_IndividualStudentMasterReport_SelectStudentsPage_Iframe_Id_Locator", resourceCulture);
             }
         }
         
@@ -850,6 +877,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptMainUXPage_SelectStudent_XPath_Locator {
             get {
                 return ResourceManager.GetString("RptMainUXPage_SelectStudent_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //img[@title=&apos;Expand&apos;].
+        /// </summary>
+        internal static string RptMainUXPage_StudentActivityReport_SelectStudent_ExpandButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_StudentActivityReport_SelectStudent_ExpandButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to idFrameSelectStudentByGroup.
+        /// </summary>
+        internal static string RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;radSelectStudents__ctl1__ctl6_Detail10&apos;]/tbody/tr[{0}]/td[2].
+        /// </summary>
+        internal static string RptMainUXPage_StudentActivityReport_StudentName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_StudentActivityReport_StudentName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;radSelectStudents__ctl1__ctl6_Detail10&apos;]/tbody/tr[{0}]/td[1]/input.
+        /// </summary>
+        internal static string RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;radSelectStudents__ctl1__ctl6_Detail10&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptMainUXPage_StudentActivityReport_TotalStudentCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_StudentActivityReport_TotalStudentCount_Xpath_Locator", resourceCulture);
             }
         }
     }

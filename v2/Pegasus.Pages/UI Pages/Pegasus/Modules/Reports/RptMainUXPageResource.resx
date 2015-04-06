@@ -381,4 +381,28 @@
   <data name="RptMainUXPage_ContainerFrame_Id_Locator" xml:space="preserve">
     <value>frmCourseContainer</value>
   </data>
+  <data name="RptMainUXPage_DPReportOption_Link_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblrptgrid']/tbody/tr[{0}]/td</value>
+  </data>
+  <data name="RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator" xml:space="preserve">
+    <value>idFrameSelectStudentByGroup</value>
+  </data>
+  <data name="RptMainUXPage_StudentActivityReport_SelectStudent_ExpandButton_Xpath_Locator" xml:space="preserve">
+    <value>//img[@title='Expand']</value>
+  </data>
+  <data name="RptMainUXPage_StudentActivityReport_StudentName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='radSelectStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[2]</value>
+  </data>
+  <data name="RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='radSelectStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[1]/input</value>
+  </data>
+  <data name="RptMainUXPage_StudentActivityReport_TotalStudentCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='radSelectStudents__ctl1__ctl6_Detail10']/tbody/tr</value>
+  </data>
+  <data name="RptMainUXPage_IndividualStudentMasterReport_SelectStudentsPage_Iframe_Id_Locator" xml:space="preserve">
+    <value>idFrameIndividualStudentByGroup</value>
+  </data>
+  <data name="RptMainUXPage_DP_ReportsLinks_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblrptgrid']//tr//td//span[contains(text(),'{0}')]</value>
+  </data>
 </root>

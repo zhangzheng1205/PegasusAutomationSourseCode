@@ -161,5 +161,124 @@ namespace Pegasus.Pages.UI_Pages
                "CloseStudentAvtivityReportButtonInOrganizationAdmin",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Get data from student activity report columns.
+        /// </summary>
+        /// <param name="columnName">Column name to fetch data.</param>
+        /// <returns>True if data found in column or else returns false.</returns>
+        public bool GetStudentDataFromStudentActivityReport(string columnName)
+        {
+            logger.LogMethodEntry("RptStudentActivityPage",
+             "GetStudentDataFromStudentActivityReport",
+             base.IsTakeScreenShotDuringEntryExit);
+            bool isDataExists = false;
+            string getColumnData = null;
+            try
+            {
+            base.WaitForElement(By.XPath(RptStudentActivityPageResource.
+                RptStudentActivity_Page_StuActivityRpt_StudentData_Xpath_Locator));
+            switch(columnName)
+            {
+                case "Student":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_StudentColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+                case "Class":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_ClassColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+                case "Course":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_CourseColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+                case "Start Date":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_StartDateColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+                case "Last Attempt":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_LastAttemptColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+                case "Days Online":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_DaysOnlineColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+                case "Time on Task":
+                    getColumnData = base.GetElementTextByXPath(RptStudentActivityPageResource.
+                        RptStudentActivity_Page_StuActivityRpt_TimeOnTaskColumnData_Xpath_Locator);
+                    if (getColumnData.Equals("--"))
+                    {
+                        isDataExists = false;
+                    }
+                    else
+                    {
+                        isDataExists = true;
+                    }
+                    break;
+
+                default:
+                    throw new Exception("Column does not exists");
+            }
+                 }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptStudentActivityPage",
+               "GetStudentDataFromStudentActivityReport",
+            base.IsTakeScreenShotDuringEntryExit);
+             return isDataExists;
+        }
+
+
     }
 }

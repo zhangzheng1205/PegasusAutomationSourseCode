@@ -117,46 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RptStudentActivity_Page_SelectActivityReport_CloseButton_ClassName" xml:space="preserve">
-    <value>btn_syn_s</value>
-  </data>
-  <data name="RptStudentActivity_Page_SelectActivityReport_Window_Name" xml:space="preserve">
-    <value>Student Activity Report</value>
-  </data>
-  <data name="RptStudentActivity_Page_SelectActivity_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='tblrptgrid']/tbody/tr[9]/td/span</value>
-  </data>
-  <data name="RptStudentActivity_Page_SelectDetail_link_ClassName" xml:space="preserve">
-    <value>cssDetailed</value>
-  </data>
-  <data name="RptStudentActivity_Page_SelectDetail_link_TimeValue" xml:space="preserve">
-    <value>3000</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_ClassColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[2]</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_CloseBtn_ClassName" xml:space="preserve">
-    <value>btn_s</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_CourseColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[3]</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_DaysOnlineColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[6]</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_LastAttemptColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[5]</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_StartDateColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[4]</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_StudentColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[1]</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_StudentData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody</value>
-  </data>
-  <data name="RptStudentActivity_Page_StuActivityRpt_TimeOnTaskColumnData_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='cssTblStuActivity']/tbody/tr/td[7]</value>
+  <data name="RptSkillStandardsPage_SkillStandardsPage_Iframe_Id_Locator" xml:space="preserve">
+    <value>idFrameSkillandStandard</value>
   </data>
 </root>

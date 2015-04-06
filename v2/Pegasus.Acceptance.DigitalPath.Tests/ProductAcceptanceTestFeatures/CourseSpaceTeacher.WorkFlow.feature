@@ -277,6 +277,7 @@ Then I should see the successfull message "Your class has been successfully crea
 When I click No,Save and Exit button
 Then I should see "DigitalPathMasterLibrary" class displayed in classes channel
 
+#Purpose: To validate the Activity result by student report generation from teacher user.
 Scenario: Generate and save the "Activity Results by Student" as a teacher
 Given I browsed the login url for "DPCsTeacher"
 When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
@@ -304,6 +305,7 @@ And I select "Run Report" for "DPActivityResultsByStudent" report in 'My Reports
 Then I should be on the "Report: Activity Results by Student" popup
 When I close the "Report: Activity Results by Student" window
 
+#Purpose: To validate the Student result by activity report generation from teacher user.
 Scenario: Generate and save the "Student Results by Activity" as a teacher
 Given I browsed the login url for "DPCsTeacher"
 When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
@@ -330,3 +332,60 @@ And I click on the "Cancel" button in reports by "DPCsTeacher"
 And I select "Run Report" for "DPStudentResultByActivity" report in 'My Reports' grid by "DPCsTeacher"
 Then I should be on the "Report: Student Results by Activity" popup
 When I close the "Report: Student Results by Activity" window
+
+Scenario: Generate and save the "Student Activity" report as a teacher
+When I navigate to the "Reports" tab in DP class
+And I click on "Student Activity" report link as "DPCsTeacher"
+And I select "DPCsStudent" student in "Select Students" by "DPCsTeacher"
+Then I should see the added Student "DPCsStudent" in Report criteria page
+When I select 'save settings to My Reports' option by "DPCsTeacher"
+And I click on the "Run Report" button in reports by "DPCsTeacher"
+Then I should see "Save settings to My Reports" popup
+When I select "Createnewreport" radiobutton
+And  I enter the "DPStudentActivity" report name
+And  I click on "SaveandRun" button
+Then I should be on the "Student Activity Report" popup
+And I should see "Student" data
+And I should see "Class" data
+And I should see "Course" data
+And I should see "Start Date" data
+And I should see "Last Attempt" data
+And I should see "Days Online" data
+And I should see "Time on Task" data
+When I Click on Detailed Report button
+Then I should see "Detailed Student Activity Report" popup
+And I should see "Date" data in detailed student activity pop up
+And I should see "Sign On" data in detailed student activity pop up
+And I should see "Sign Off" data in detailed student activity pop up
+And I should see "Session Duration" data in detailed student activity pop up
+When I expand the date in detailed student activity report pop up
+Then I should see "Activity" data in detailed student activity pop up
+And I should see "Time" data in detailed student activity pop up
+And I should see "Start Time" data in detailed student activity pop up
+And I should see "End Time" data in detailed student activity pop up
+And I should see "Activity Status" data in detailed student activity pop up
+And I should see "Score" data in detailed student activity pop up
+When I close the "Detailed Student Activity Report" window
+Then I should be on the "Student Activity Report" popup
+When I close the "Student Activity Report" window
+And I click on the "Cancel" button in reports by "DPCsTeacher"
+Then I should be on the "Classes" page
+When I select "Run Report" for "DPStudentActivity" report in 'My Reports' grid by "DPCsTeacher"
+Then I should be on the "Student Activity Report" popup
+When I close the "Student Activity Report" window
+
+Scenario: Generate and save the "Individual Student Mastery" as a teacher
+When I navigate to the "Reports" tab in DP class
+And I click on "Individual Student Mastery" report link as "DPCsTeacher"
+And I select "DPCsStudent" in "Select Students" by "DPCsTeacher" in "IndividualStudentByGroup"
+Then I should see the added Student "DPCsStudent" in Report criteria page
+When I select the "Skill" radio button
+And I click on Select Standards button
+And I select "digits - grade 6 skills" skills from the drop down
+When I generate the "IndividualStudentMasteryReport" for "digits - grade 6 skills" skill
+When I select 'save settings to My Reports' option by "DPCsTeacher"
+And I click on the "Run Report" button in reports by "DPCsTeacher"
+Then I should see "Save settings to My Reports" popup
+When I select "Createnewreport" radiobutton
+And  I enter the "DPStudentActivity" report name
+And  I click on "SaveandRun" button

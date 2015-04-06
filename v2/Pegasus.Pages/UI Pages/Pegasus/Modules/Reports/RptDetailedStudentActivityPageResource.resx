@@ -117,11 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RptDetailedStudentActivity_Page_ActivityColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptSessionDetailsContainer__ctl0_InnerDiv']/table[2]/tbody/tr/td[1]</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_ActivityStatusColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptSessionDetailsContainer__ctl0_InnerDiv']/table[2]/tbody/tr/td[5]</value>
+  </data>
   <data name="RptDetailedStudentActivity_Page_CloseButton_ClassName" xml:space="preserve">
     <value>btn_syn_s</value>
   </data>
   <data name="RptDetailedStudentActivity_Page_CloseButton_Report_ClassName" xml:space="preserve">
     <value>btn_s</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_DateColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='cssRptwidh4']/tbody/tr[2]/td[1]</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_EndTimeColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptSessionDetailsContainer__ctl0_InnerDiv']/table[2]/tbody/tr/td[4]</value>
   </data>
   <data name="RptDetailedStudentActivity_Page_ExpandColaps_Id_Locator" xml:space="preserve">
     <value>rptSessionDetailsContainer__ctl{0}_btnExpandcolapse</value>
@@ -129,14 +141,35 @@
   <data name="RptDetailedStudentActivity_Page_ExpandColaps_Name_Locator" xml:space="preserve">
     <value>rptSessionDetailsContainer:_ctl1:btnExpandcolapse</value>
   </data>
+  <data name="RptDetailedStudentActivity_Page_ReportTable_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='cssRptwidh4']/tbody</value>
+  </data>
   <data name="RptDetailedStudentActivity_Page_Report_Score_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='rptSessionDetailsContainer__ctl{0}_InnerDiv']/table[3]/tbody/tr/td[6]</value>
   </data>
   <data name="RptDetailedStudentActivity_Page_Report_Table_Score_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='rptSessionDetailsContainer__ctl{0}_InnerDiv']/table[3]</value>
   </data>
+  <data name="RptDetailedStudentActivity_Page_ScoreColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptSessionDetailsContainer__ctl0_InnerDiv']/table[2]/tbody/tr/td[6]</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_SessionDurationColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='cssRptwidh4']/tbody/tr[2]/td[4]</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_SignOffColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='cssRptwidh4']/tbody/tr[2]/td[3]</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_SignOnColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='cssRptwidh4']/tbody/tr[2]/td[2]</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_StartTimeColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptSessionDetailsContainer__ctl0_InnerDiv']/table[2]/tbody/tr/td[3]</value>
+  </data>
   <data name="RptDetailedStudentActivity_Page_Studyplan_Score_Symbol" xml:space="preserve">
     <value>%</value>
+  </data>
+  <data name="RptDetailedStudentActivity_Page_TimeColumnData_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptSessionDetailsContainer__ctl0_InnerDiv']/table[2]/tbody/tr/td[2]</value>
   </data>
   <data name="RptDetailedStudentActivity_Page_TotalDivCount_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='dvSession']/table</value>

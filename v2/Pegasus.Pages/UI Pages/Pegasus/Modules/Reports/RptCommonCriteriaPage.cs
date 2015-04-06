@@ -209,7 +209,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
               base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                this.SelectTheReportFrame();
+                base.SwitchToLastOpenedWindow();
+                base.SwitchToDefaultPageContent();
+                base.SwitchToIFrameById(RptMainUXPageResource.RptMainUXPage_ContainerFrame_Id_Locator);
+                base.SwitchToIFrame(RptMainPageResource.
+                  RptMain_Page_MainFrame_Id_Locator);
                 //Select "Skill" or "Standard" radio button
                 base.SelectRadioButtonById(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectSkillStd_RadioButton_Id_Locator);
@@ -226,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         /// <summary>
         /// Click on Select Skills button
         /// </summary>
-        private void ClickSelectSkillButton()
+        public void ClickSelectSkillButton()
         {
             //Click the "Select Skills" button
             logger.LogMethodEntry("RptCommonCriteriaPage", "ClickSelectSkillButton",
@@ -252,8 +256,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.SwitchToLastOpenedWindow();
+                base.SwitchToDefaultPageContent();
+                base.SwitchToIFrameById(RptMainUXPageResource.RptMainUXPage_ContainerFrame_Id_Locator);
+                base.SwitchToIFrameById("idFrameSkillandStandard");
                 //Select Report LightBox Frame
-                this.SelectTheReportFrameForSkills();
                 //Wait for the selct option dropdown for class
                 base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectSkills_Dropdown_Id_Locator));
@@ -269,10 +276,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 Thread.Sleep(Convert.ToInt32(RptCommonCriteriaPageResource.
                      RptCommonCriteria_Page_RunReport_Button_TimeValue));
                 //Select The Report frame
-                this.SelectTheReportFrame();
+                //this.SelectTheReportFrame();
                 //Wait for the element
-                base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
-                     RptCommonCriteria_Page_SelectSkills_TextBox_Id_Locator));
+                //base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
+                    // RptCommonCriteria_Page_SelectSkills_TextBox_Id_Locator));
             }
             catch (Exception e)
             {
@@ -434,9 +441,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the Report Window
-                base.SelectWindow(RptCommonCriteriaPageResource.
-                    RptCommonCriteria_Page_Report_Window_Name);
+             
                 base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_Report_Iframe_Id_Locator));
                 //Select the Frame

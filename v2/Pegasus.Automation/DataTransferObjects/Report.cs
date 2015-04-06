@@ -31,8 +31,8 @@ namespace Pegasus.Automation.DataTransferObjects
             HSSStudytPlanResults = 12,
             HSSStudentResultsbyActivity = 13,
             DPActivityResultsByStudent =14,
-            DPStudentResultByActivity = 15
-
+            DPStudentResultByActivity = 15,
+            DPStudentActivity = 16
         }
 
         /// <summary>
