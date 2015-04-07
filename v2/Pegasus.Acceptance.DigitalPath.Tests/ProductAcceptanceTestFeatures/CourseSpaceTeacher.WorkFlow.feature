@@ -389,3 +389,15 @@ Then I should see "Save settings to My Reports" popup
 When I select "Createnewreport" radiobutton
 And  I enter the "DPStudentActivity" report name
 And  I click on "SaveandRun" button
+
+Scenario: Add Product In Home Page
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I Click on Add button 
+And  I select "DigitalPath" Product
+When I Click on the Save button 
+Then I should see the successfull message "Your products have been successfully added." on setup wizard
+When I Click On the Save and Exit button

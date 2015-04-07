@@ -186,6 +186,7 @@
     <Compile Include="ProductAcceptanceTestDefinitions\RegisterDemoAccount.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\Reports.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\RumbaUserCreation.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\SetUpWizard.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ViewTabsResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

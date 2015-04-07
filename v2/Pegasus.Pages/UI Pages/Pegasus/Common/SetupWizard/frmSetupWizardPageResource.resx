@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="frmSetupWizardPageResource_AddProduct_Checkbox_Locator" xml:space="preserve">
+    <value>//div[@id='divMainRepeater']/table[{0}]/tbody/tr/td/input</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_InitalCount" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_ProductName_Locator" xml:space="preserve">
+    <value>//div[@id='divMainRepeater']/table[{0}]/tbody/tr/td[3]/div</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_TableXPath_Locator" xml:space="preserve">
+    <value>//div[@id='divMainRepeater']/table</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_Window_Save" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_Window_Title" xml:space="preserve">
+    <value>Setup Wizard</value>
+  </data>
+  <data name="frmSetupWizardPageResource_Add_Product_SaveAndExit_button" xml:space="preserve">
+    <value>btnSaveandExit</value>
+  </data>
   <data name="frmSetupWizardPageResource_ClassName_TextBox_Id_Locator" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_txtNewClassName</value>
   </data>

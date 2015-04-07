@@ -294,6 +294,91 @@ namespace Pegasus.Pages.UI_Pages
            }
        }
 
+       public void ClickOnAddPorudct()
+       {
+           logger.LogMethodEntry("frmSetupWizardPage",
+             "ClickOnAddPorudct",
+              base.IsTakeScreenShotDuringEntryExit);
+           IWebElement Addbutton = base.GetWebElementPropertiesById("btnAddProduct");
+           base.ClickByJavaScriptExecutor(Addbutton);
+           logger.LogMethodEntry("frmSetupWizardPage",
+            "ClickOnAddPorudct",
+             base.IsTakeScreenShotDuringEntryExit);
+       }
 
+       public void SelectProduct(string prodName)
+       {
+           logger.LogMethodEntry("frmSetupWizardPage",
+            "SelectProduct",
+             base.IsTakeScreenShotDuringEntryExit);
+           try
+           {
+               base.WaitUntilWindowLoads("Home");
+               base.SwitchToDefaultPageContent();
+               base.WaitForElement(By.Id("lightboxid"));
+               base.SwitchToIFrameById("lightboxid");
+               base.WaitForElement(By.Id("iframeSetUpWizard"));
+               base.SwitchToIFrameById("iframeSetUpWizard");
+               int getproductcount = base.GetElementCountByXPath
+                   (frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_TableXPath_Locator);
+               for (int initialcount = Convert.ToInt32(frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_InitalCount);
+                   initialcount <= getproductcount; initialcount++)
+               {
+                   base.WaitForElement(By.XPath(string.Format(frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_ProductName_Locator, initialcount)));
+                   String ProductNameText = base.GetElementTextByXPath(string.Format(frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_ProductName_Locator, initialcount));
+                   if (ProductNameText.Equals(prodName))
+                   {
+                       IWebElement getProductCheckbox = base.GetWebElementPropertiesByXPath(String.Format(frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_Checkbox_Locator, initialcount));
+                       base.ClickByJavaScriptExecutor(getProductCheckbox);
+                       break;
+                   }
+
+               }
+
+           }
+           catch (Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+           }
+           logger.LogMethodEntry("frmSetupWizardPage", "SelectProduct",
+         base.IsTakeScreenShotDuringEntryExit);
+       }
+       public void ClickOnSave()
+       {
+           logger.LogMethodEntry("frmSetupWizardPage", "ClickOnSave",
+        base.IsTakeScreenShotDuringEntryExit);
+           base.WaitForElement(By.Id(frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_Window_Save));
+           base.ClickButtonById(frmSetupWizardPageResource.frmSetupWizardPageResource_AddProduct_Window_Save);
+           logger.LogMethodEntry("frmSetupWizardPage", "ClickOnSave",
+        base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       public void ClickonSaveandExit()
+       {
+           logger.LogMethodEntry("frmSetupWizardPage", "ClickonSaveandExit",
+        base.IsTakeScreenShotDuringEntryExit);
+           base.WaitForElement(By.Id(frmSetupWizardPageResource.frmSetupWizardPageResource_Add_Product_SaveAndExit_button));
+           base.ClickButtonById(frmSetupWizardPageResource.frmSetupWizardPageResource_Add_Product_SaveAndExit_button);
+           logger.LogMethodEntry("frmSetupWizardPage", "ClickonSaveandExit",
+        base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       public string GetAddProductSuccessMessageInSetupWizard()
+       {
+
+           string getSuccessMsg = null;
+           try
+           {
+               //Wait for the message
+               base.WaitForElement(By.Id(frmSetupWizardPageResource.frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator));
+               //Get success message
+               getSuccessMsg = base.GetElementTextById(frmSetupWizardPageResource.frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator);
+           }
+           catch (Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+           }
+           return getSuccessMsg;
+       }
     }
 }
