@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RptStudentIntegrityViolationPageResource_PageName_Id_Locator1" xml:space="preserve">
+  <data name="RptStudentIntegrityViolationPageResource_PageName_Id_Locator" xml:space="preserve">
     <value>StuIntegrityRptHeader_lblReportSub</value>
   </data>
-  <data name="RptStudentIntegrityViolationPageResource_Section_Id_Locator1" xml:space="preserve">
+  <data name="RptStudentIntegrityViolationPageResource_Section_Id_Locator" xml:space="preserve">
     <value>DrdSection</value>
   </data>
   <data name="RptStudentIntegrityViolationPageResource__integrityViolatedColumnDetails_XPath_Locator" xml:space="preserve">
     <value>//table[@class='cssTblIvActivity']/tbody/tr/td[10]/span</value>
   </data>
-  <data name="RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator1" xml:space="preserve">
+  <data name="RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator" xml:space="preserve">
     <value>//table[@class='cssTblIvActivity']/tbody/tr[{0}]/td[{1}]</value>
   </data>
 </root>

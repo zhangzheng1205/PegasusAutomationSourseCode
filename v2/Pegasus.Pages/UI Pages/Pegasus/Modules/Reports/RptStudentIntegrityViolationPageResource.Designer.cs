@@ -74,27 +74,27 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         /// <summary>
         ///   Looks up a localized string similar to //table[@class=&apos;cssTblIvActivity&apos;]/tbody/tr[{0}]/td[{1}].
         /// </summary>
-        internal static string RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator1 {
+        internal static string RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator {
             get {
-                return ResourceManager.GetString("RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator1", resourceCulture);
+                return ResourceManager.GetString("RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to StuIntegrityRptHeader_lblReportSub.
         /// </summary>
-        internal static string RptStudentIntegrityViolationPageResource_PageName_Id_Locator1 {
+        internal static string RptStudentIntegrityViolationPageResource_PageName_Id_Locator {
             get {
-                return ResourceManager.GetString("RptStudentIntegrityViolationPageResource_PageName_Id_Locator1", resourceCulture);
+                return ResourceManager.GetString("RptStudentIntegrityViolationPageResource_PageName_Id_Locator", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to DrdSection.
         /// </summary>
-        internal static string RptStudentIntegrityViolationPageResource_Section_Id_Locator1 {
+        internal static string RptStudentIntegrityViolationPageResource_Section_Id_Locator {
             get {
-                return ResourceManager.GetString("RptStudentIntegrityViolationPageResource_Section_Id_Locator1", resourceCulture);
+                return ResourceManager.GetString("RptStudentIntegrityViolationPageResource_Section_Id_Locator", resourceCulture);
             }
         }
     }
