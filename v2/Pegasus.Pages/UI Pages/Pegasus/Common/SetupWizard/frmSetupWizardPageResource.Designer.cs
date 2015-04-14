@@ -239,23 +239,5 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
                 return ResourceManager.GetString("frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div.
-        /// </summary>
-        internal static string frmSetupWizardPageResource_Verify_Product_InitialCount_Locator {
-            get {
-                return ResourceManager.GetString("frmSetupWizardPageResource_Verify_Product_InitialCount_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div[{0}]/div[2]/div/span.
-        /// </summary>
-        internal static string frmSetupWizardPageResource_Verify_Product_Span_Id_Locator {
-            get {
-                return ResourceManager.GetString("frmSetupWizardPageResource_Verify_Product_Span_Id_Locator", resourceCulture);
-            }
-        }
     }
 }
