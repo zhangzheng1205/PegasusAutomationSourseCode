@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using System;
 
 #endregion
 
@@ -125,6 +126,62 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("ActivityGrades", 
                 "OpenTheStudyPalnActivityInGradesTab",
                 IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Cmenu Of Asset In Gradebook.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
+        /// <param name="assetName">This is Asset name</param>
+        [When(@"I click on cmenu option ""(.*)"" of asset ""(.*)""")]
+        public void ClickOnCmenuOfAssetInGradebookHed(string assetCmenuOption,
+            string assetName)
+        {
+            //Click On Cmenu Of Asset In Gradebook
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
+                  IsTakeScreenShotDuringEntryExit);
+            GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
+            //Select The Cmenu Option Of Asset
+            gbDefaultUXPage.SelectTheCmenuOptionOfAssetK12(assetCmenuOption, assetName);
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
+                 IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on View Grades button of the asset in the gradebook
+        /// </summary>
+        /// <param name="assetName">This is Asset name</param>
+        [When(@"I click on View Grades button of asset ""(.*)""")]
+        public void ClickViewGradesButtonOfAsset(string assetName)
+        {
+            // click on View Grades button
+            Logger.LogMethodEntry("ActivityGrades", "ClickViewGradesButtonOfAsset",
+                  IsTakeScreenShotDuringEntryExit);
+            GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
+            gbDefaultUXPage.ClickViewGradesButton(assetName);
+            Logger.LogMethodExit("ActivityGrades", "ClickViewGradesButtonOfAsset",
+                  IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        /// <summary>
+        /// Verify Student Submission Score In ViewSubmission Page.
+        /// </summary>
+        /// <param name="submissionScore">This is Submission Score.</param>
+        [Then(@"I should see ""(.*)"" score in view submission page")]
+        public void VerifyStudentSubmissionScoreInViewSubmissionPage(string submissionScore)
+        {
+            // Verify Student Submission Score In ViewSubmission Page
+            Logger.LogMethodEntry("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (submissionScore, new ViewSubmissionPage().GetSubmissionScoreInViewSubmissionPage()));
+            Logger.LogMethodExit("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
