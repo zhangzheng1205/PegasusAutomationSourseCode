@@ -390,6 +390,8 @@ When I select "Createnewreport" radiobutton
 And  I enter the "DPStudentActivity" report name
 And  I click on "SaveandRun" button
 
+#Test case id: peg-12670
+#Purpose: To Add the Product in Curriculumn Channel.
 Scenario: Add Product In Home Page
 Given I browsed the login url for "DPCsTeacher"
 When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
@@ -401,3 +403,5 @@ And  I select "DigitalPath" Product
 When I Click on the Save button 
 Then I should see the successfull message "Your products have been successfully added." on setup wizard
 When I Click On the Save and Exit button
+Then I should see the product "DigitalPath" in the Curriculum channel
+
