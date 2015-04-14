@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductacceptanceTestDefinitions
             Logger.LogMethodEntry("setupwizard", "WhenIClickOnAddButton",
                IsTakeScreenShotDuringEntryExit);
             //Click On Add Product link
-            new frmSetupWizardPage().ClickOnAddPorudct();
+            new frmSetupWizardPage().ClickOnAddProduct();
             Logger.LogMethodEntry("setupwizard", "WhenIClickOnAddButton",
               IsTakeScreenShotDuringEntryExit);
         }
@@ -47,9 +47,10 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductacceptanceTestDefinitions
             //Method to select the Product using checkbox
             Logger.LogMethodEntry("setupwizard", "WhenISelectProduct",
               IsTakeScreenShotDuringEntryExit);
-            //Click on Check Box
+            //Get the Product Name from Test Data
             Product Product = Product.Get(productName);
             string prodName = Product.Name.ToString();
+            // Select the Checkbox of Product
             new frmSetupWizardPage().SelectProduct(prodName);
             Logger.LogMethodEntry("setupwizard", "WhenISelectProduct",
              IsTakeScreenShotDuringEntryExit);
@@ -92,6 +93,31 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductacceptanceTestDefinitions
             new frmSetupWizardPage().ClickonSaveandExit();
             Logger.LogMethodEntry("setupwizard", "WhenIClickOnTheSaveButton",
            IsTakeScreenShotDuringEntryExit);
+        }
+
+        //[Then(@"I should see the added ""(.*)"" Product in the Curriculum Channel")]
+        //public void VerifyProductInCurriculumChannel(Product.ProductTypeEnum productName)
+        //{
+        //    Product Product = Product.Get(productName);
+        //    string prodName = Product.Name.ToString();
+        //    // Select the Checkbox of Product
+        //    new frmSetupWizardPage().VerifyProductName(prodName);
+        //    Logger.LogMethodEntry("setupwizard", "WhenISelectProduct",
+        //     IsTakeScreenShotDuringEntryExit);
+        //}
+
+        [Then(@"I should see the product ""(.*)"" in the Curriculum channel")]
+        public void VrifyProductInTheCurriculumChannel(Product.ProductTypeEnum productName)
+        {
+            Product Product = Product.Get(productName);
+            string prodName = Product.Name.ToString();
+            //Validate class creation success message
+            Logger.LogMethodEntry("SetUpWizard", "VrifyProductInTheCurriculumChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VrifyProductInTheCurriculumChannel", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(prodName, new frmSetupWizardPage().VerifyProductName(prodName)));
+            Logger.LogMethodExit("SetUpWizard", "VrifyProductInTheCurriculumChannel",
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

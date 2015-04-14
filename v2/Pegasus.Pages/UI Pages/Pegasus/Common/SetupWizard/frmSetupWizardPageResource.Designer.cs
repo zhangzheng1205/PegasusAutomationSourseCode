@@ -70,11 +70,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btnSaveandExit.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_Add_Product_SaveAndExit_button1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_Add_Product_SaveAndExit_button1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;divMainRepeater&apos;]/table[{0}]/tbody/tr/td/input.
         /// </summary>
         internal static string frmSetupWizardPageResource_AddProduct_Checkbox_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_Checkbox_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;divMainRepeater&apos;]/table[{0}]/tbody/tr/td/input.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_AddProduct_Checkbox_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_Checkbox_Locator1", resourceCulture);
             }
         }
         
@@ -88,11 +106,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_AddProduct_InitalCount1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_InitalCount1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;divMainRepeater&apos;]/table[{0}]/tbody/tr/td[3]/div.
         /// </summary>
         internal static string frmSetupWizardPageResource_AddProduct_ProductName_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_ProductName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;divMainRepeater&apos;]/table[{0}]/tbody/tr/td[3]/div.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_AddProduct_ProductName_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_ProductName_Locator1", resourceCulture);
             }
         }
         
@@ -106,11 +142,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;divMainRepeater&apos;]/table.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_AddProduct_TableXPath_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_TableXPath_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnSave.
         /// </summary>
         internal static string frmSetupWizardPageResource_AddProduct_Window_Save {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_Window_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnSave.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_AddProduct_Window_Save1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_Window_Save1", resourceCulture);
             }
         }
         
@@ -124,11 +178,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Setup Wizard.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_AddProduct_Window_Title1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_AddProduct_Window_Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_txtNewClassName.
         /// </summary>
         internal static string frmSetupWizardPageResource_ClassName_TextBox_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_ClassName_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_txtNewClassName.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_ClassName_TextBox_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_ClassName_TextBox_Id_Locator1", resourceCulture);
             }
         }
         
@@ -142,11 +214,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCourseList&apos;]/tbody/tr/td[1]/input.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_CourseListTable_Xpath_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_CourseListTable_Xpath_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_spManageE.
         /// </summary>
         internal static string frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_spManageE.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator1", resourceCulture);
             }
         }
         
@@ -160,11 +250,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PopupHeadTxt2.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to divSaveandExit.
         /// </summary>
         internal static string frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to divSaveandExit.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator1", resourceCulture);
             }
         }
         
@@ -178,11 +286,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btnManageEnrollment.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SaveClass_Btn_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SaveClass_Btn_Id_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnCreateClass.
         /// </summary>
         internal static string frmSetupWizardPageResource_SelectProductButton_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_SelectProductButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnCreateClass.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SelectProductButton_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SelectProductButton_Id_Locator1", resourceCulture);
             }
         }
         
@@ -196,11 +322,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_lblSPH.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SelectProductPageTitle_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SelectProductPageTitle_Id_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to iframeSetUpWizard.
         /// </summary>
         internal static string frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to iframeSetUpWizard.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator1", resourceCulture);
             }
         }
         
@@ -214,11 +358,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;PopupHeader&apos;]//span[@id=&apos;SpanHeader&apos;].
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SetupWizard_PopupHeader_Title_Xpath_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SetupWizard_PopupHeader_Title_Xpath_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to lightboxid.
         /// </summary>
         internal static string frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lightboxid.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator1", resourceCulture);
             }
         }
         
@@ -232,11 +394,47 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentPlaceHolder1_divSucessMsg.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnUseP.
         /// </summary>
         internal static string frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnUseP.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator1 {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_Verify_Product_InitialCount_Locator {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_Verify_Product_InitialCount_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div[{0}]/div[2]/div/span.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_Verify_Product_Span_Id_Locator {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_Verify_Product_Span_Id_Locator", resourceCulture);
             }
         }
     }

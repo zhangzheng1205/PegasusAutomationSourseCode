@@ -120,61 +120,127 @@
   <data name="frmSetupWizardPageResource_AddProduct_Checkbox_Locator" xml:space="preserve">
     <value>//div[@id='divMainRepeater']/table[{0}]/tbody/tr/td/input</value>
   </data>
+  <data name="frmSetupWizardPageResource_AddProduct_Checkbox_Locator1" xml:space="preserve">
+    <value>//div[@id='divMainRepeater']/table[{0}]/tbody/tr/td/input</value>
+  </data>
   <data name="frmSetupWizardPageResource_AddProduct_InitalCount" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_InitalCount1" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="frmSetupWizardPageResource_AddProduct_ProductName_Locator" xml:space="preserve">
     <value>//div[@id='divMainRepeater']/table[{0}]/tbody/tr/td[3]/div</value>
   </data>
+  <data name="frmSetupWizardPageResource_AddProduct_ProductName_Locator1" xml:space="preserve">
+    <value>//div[@id='divMainRepeater']/table[{0}]/tbody/tr/td[3]/div</value>
+  </data>
   <data name="frmSetupWizardPageResource_AddProduct_TableXPath_Locator" xml:space="preserve">
+    <value>//div[@id='divMainRepeater']/table</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_TableXPath_Locator1" xml:space="preserve">
     <value>//div[@id='divMainRepeater']/table</value>
   </data>
   <data name="frmSetupWizardPageResource_AddProduct_Window_Save" xml:space="preserve">
     <value>btnSave</value>
   </data>
+  <data name="frmSetupWizardPageResource_AddProduct_Window_Save1" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
   <data name="frmSetupWizardPageResource_AddProduct_Window_Title" xml:space="preserve">
+    <value>Setup Wizard</value>
+  </data>
+  <data name="frmSetupWizardPageResource_AddProduct_Window_Title1" xml:space="preserve">
     <value>Setup Wizard</value>
   </data>
   <data name="frmSetupWizardPageResource_Add_Product_SaveAndExit_button" xml:space="preserve">
     <value>btnSaveandExit</value>
   </data>
+  <data name="frmSetupWizardPageResource_Add_Product_SaveAndExit_button1" xml:space="preserve">
+    <value>btnSaveandExit</value>
+  </data>
   <data name="frmSetupWizardPageResource_ClassName_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_txtNewClassName</value>
+  </data>
+  <data name="frmSetupWizardPageResource_ClassName_TextBox_Id_Locator1" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_txtNewClassName</value>
   </data>
   <data name="frmSetupWizardPageResource_CourseListTable_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblCourseList']/tbody/tr/td[1]/input</value>
   </data>
+  <data name="frmSetupWizardPageResource_CourseListTable_Xpath_Locator1" xml:space="preserve">
+    <value>//table[@id='tblCourseList']/tbody/tr/td[1]/input</value>
+  </data>
   <data name="frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_spManageE</value>
+  </data>
+  <data name="frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator1" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_spManageE</value>
   </data>
   <data name="frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator" xml:space="preserve">
     <value>PopupHeadTxt2</value>
   </data>
+  <data name="frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator1" xml:space="preserve">
+    <value>PopupHeadTxt2</value>
+  </data>
   <data name="frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator" xml:space="preserve">
+    <value>divSaveandExit</value>
+  </data>
+  <data name="frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator1" xml:space="preserve">
     <value>divSaveandExit</value>
   </data>
   <data name="frmSetupWizardPageResource_SaveClass_Btn_Id_Locator" xml:space="preserve">
     <value>btnManageEnrollment</value>
   </data>
+  <data name="frmSetupWizardPageResource_SaveClass_Btn_Id_Locator1" xml:space="preserve">
+    <value>btnManageEnrollment</value>
+  </data>
   <data name="frmSetupWizardPageResource_SelectProductButton_Id_Locator" xml:space="preserve">
+    <value>btnCreateClass</value>
+  </data>
+  <data name="frmSetupWizardPageResource_SelectProductButton_Id_Locator1" xml:space="preserve">
     <value>btnCreateClass</value>
   </data>
   <data name="frmSetupWizardPageResource_SelectProductPageTitle_Id_Locator" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_lblSPH</value>
   </data>
+  <data name="frmSetupWizardPageResource_SelectProductPageTitle_Id_Locator1" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_lblSPH</value>
+  </data>
   <data name="frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator" xml:space="preserve">
+    <value>lightboxid</value>
+  </data>
+  <data name="frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator1" xml:space="preserve">
     <value>lightboxid</value>
   </data>
   <data name="frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator" xml:space="preserve">
     <value>iframeSetUpWizard</value>
   </data>
+  <data name="frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator1" xml:space="preserve">
+    <value>iframeSetUpWizard</value>
+  </data>
   <data name="frmSetupWizardPageResource_SetupWizard_PopupHeader_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='PopupHeader']//span[@id='SpanHeader']</value>
+  </data>
+  <data name="frmSetupWizardPageResource_SetupWizard_PopupHeader_Title_Xpath_Locator1" xml:space="preserve">
     <value>//div[@class='PopupHeader']//span[@id='SpanHeader']</value>
   </data>
   <data name="frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_divSucessMsg</value>
   </data>
+  <data name="frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator1" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_divSucessMsg</value>
+  </data>
   <data name="frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator" xml:space="preserve">
     <value>btnUseP</value>
+  </data>
+  <data name="frmSetupWizardPageResource_UserThisProduct_Button_Span_Id_Locator1" xml:space="preserve">
+    <value>btnUseP</value>
+  </data>
+  <data name="frmSetupWizardPageResource_Verify_Product_InitialCount_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div</value>
+  </data>
+  <data name="frmSetupWizardPageResource_Verify_Product_Span_Id_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div[{0}]/div[2]/div/span</value>
   </data>
 </root>

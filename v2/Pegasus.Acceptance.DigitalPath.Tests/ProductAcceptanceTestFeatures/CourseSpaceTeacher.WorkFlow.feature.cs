@@ -1038,29 +1038,31 @@ testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.
         public virtual void AddProductInHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Product In Home Page", ((string[])(null)));
-#line 393
-this.ScenarioSetup(scenarioInfo);
-#line 394
-testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 395
-testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 396
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 397
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 398
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 399
-testRunner.When("I Click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 400
-testRunner.And("I select \"DigitalPath\" Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 401
-testRunner.When("I Click on the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I Click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 402
+testRunner.And("I select \"DigitalPath\" Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 403
+testRunner.When("I Click on the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 404
 testRunner.Then("I should see the successfull message \"Your products have been successfully added." +
                     "\" on setup wizard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 403
+#line 405
 testRunner.When("I Click On the Save and Exit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 406
+testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
