@@ -245,7 +245,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // chrome options
             var chromeOptions = new ChromeOptions();
-            chromeOptions.AddUserProfilePreference("intl.accept_languages", "nl");
+            chromeOptions.AddUserProfilePreference("intl.accept_languages", "en");
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
             chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
 
