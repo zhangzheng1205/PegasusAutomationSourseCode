@@ -214,25 +214,6 @@ And I should see the due date for LCC "1-1 Homework"
 And I should see "All" text in Shown to column for LCC "1-1 Homework"
 And I should see Assigned icon for LCC "1-1 Homework"
 
-#Test case id: peg-12653
-#Purpose: Teacher enrolling students to Class
-#Product: Digital Path
-Scenario: Teacher validating the student enrollment to class
-When I navigate to the "Home" tab
-And I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
-Then I should see the "Manage Students" popup
-When I Click on Create New button
-And I select "Enroll from School" drop down option
-Then I should see the "Enroll from School" popup
-When I click on Search button
-And I enter student username "dpstud152015" to search
-Then I should see searched username "dpstud152015" in search list
-When I select the student and click on Add button
-Then I should see the success message "Users enrolled successfully."
-When I close Enroll from school pop up
-Then I should see "Enroll from School" pop up closed
-And I should see the student "dpstud152015" displayed in manage student pop up
-When I close Manage student pop up
 
 #Test case id: peg-22538
 #Purpose: To validate display of assigned study plan in class course
@@ -261,21 +242,7 @@ And I should see "All" text in Shown to column for MathXL activity "Topic 1 Test
 And I should see Assigned icon for MathXL activity "Topic 1 Test"
 
 
-#Test case id: peg-1456
-#Purpose: To create DP class by teacher
-Scenario: Class creation from classes channel
-When I navigate to the "Home" tab
-And I click on Create button
-Then I should see "Setup Wizard" light box
-When I enter class name of "DigitalPathMasterLibrary"
-And I click on Select product button
-Then I should see "Select Product" page
-When I select product and Click on Manage enrollments button
-Then I should see "Manage Enrollments" page
-When I click on Save Class button
-Then I should see the successfull message "Your class has been successfully created and saved." in setup wizard
-When I click No,Save and Exit button
-Then I should see "DigitalPathMasterLibrary" class displayed in classes channel
+
 
 #Purpose: To validate the Activity result by student report generation from teacher user.
 Scenario: Generate and save the "Activity Results by Student" as a teacher
@@ -390,8 +357,29 @@ When I select "Createnewreport" radiobutton
 And  I enter the "DPStudentActivity" report name
 And  I click on "SaveandRun" button
 
+#Test case id: peg-1456
+#PEGASUS-27282
+#Purpose: To create DP class by teacher
+#Product: Digital Path
+Scenario: Class creation from classes channel
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Create button
+Then I should see "Setup Wizard" light box
+When I enter class name of "DigitalPathMasterLibrary"
+And I click on Select product button
+Then I should see "Select Product" page
+When I select product and Click on Manage enrollments button
+Then I should see "Manage Enrollments" page
+When I click on Save Class button
+Then I should see the successfull message "Your class has been successfully created and saved." in setup wizard
+When I click No,Save and Exit button
+Then I should see "DigitalPathMasterLibrary" class displayed in classes channel
+
 #Test case id: peg-12670
+#PEGASUS-35401
 #Purpose: To Add the Product in Curriculumn Channel.
+#Product: Digital Path
 Scenario: Add Product In Home Page
 Given I browsed the login url for "DPCsTeacher"
 When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
@@ -404,3 +392,25 @@ When I Click on the Save button
 Then I should see the successfull message "Your products have been successfully added." on setup wizard
 When I Click On the Save and Exit button
 Then I should see the product "DigitalPath" in the Curriculum channel
+
+#Test case id: peg-12653
+#PEGASUS-31824
+#Purpose: Teacher enrolling students to Class
+#Product: Digital Path
+Scenario: Teacher validating the student enrollment to class
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Enroll from School" drop down option
+Then I should see the "Enroll from School" popup
+When I click on Search button
+And I enter student username "DPCsStudent" to search
+Then I should see searched username "DPCsStudent" in search list
+When I select the student and click on Add button
+Then I should see the success message "Users enrolled successfully."
+When I close Enroll from school pop up
+Then I should see "Enroll from School" pop up closed
+And I should see the student "DPCsStudent" displayed in manage student pop up
+When I close Manage student pop up

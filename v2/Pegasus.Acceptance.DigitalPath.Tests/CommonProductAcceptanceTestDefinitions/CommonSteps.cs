@@ -58,14 +58,6 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
                 IsTakeScreenShotDuringEntryExit);
-            //Wait Till Thinking Indicator Loads
-            bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
-            //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
-            if (isThinkingIndicatorLoading)
-            {
-                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
-            }
             //Wait For Page Get Switched
             WaitUntilPageGetSwitchedSuccessfully(expectedPageTitle);
             //Get current opened page title

@@ -106,17 +106,21 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductacceptanceTestDefinitions
         //     IsTakeScreenShotDuringEntryExit);
         //}
 
+       /// <summary>
+       /// Verify added product in Curriculum Channel.
+       /// </summary>
+       /// <param name="productName">This is the product name.</param>
         [Then(@"I should see the product ""(.*)"" in the Curriculum channel")]
-        public void VrifyProductInTheCurriculumChannel(Product.ProductTypeEnum productName)
+        public void VerifyProductInTheCurriculumChannel(Product.ProductTypeEnum productName)
         {
             Product Product = Product.Get(productName);
             string prodName = Product.Name.ToString();
             //Validate class creation success message
-            Logger.LogMethodEntry("SetUpWizard", "VrifyProductInTheCurriculumChannel",
+            Logger.LogMethodEntry("SetUpWizard", "VerifyProductInTheCurriculumChannel",
              base.IsTakeScreenShotDuringEntryExit);
-            Logger.LogAssertion("VrifyProductInTheCurriculumChannel", ScenarioContext.Current.ScenarioInfo.Title,
+            Logger.LogAssertion("VerifyProductInTheCurriculumChannel", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(prodName, new frmSetupWizardPage().VerifyProductName(prodName)));
-            Logger.LogMethodExit("SetUpWizard", "VrifyProductInTheCurriculumChannel",
+            Logger.LogMethodExit("SetUpWizard", "VerifyProductInTheCurriculumChannel",
           base.IsTakeScreenShotDuringEntryExit);
         }
 
