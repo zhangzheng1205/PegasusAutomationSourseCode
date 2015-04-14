@@ -101,3 +101,43 @@ When I navigate to the "View All Content" tab
 Then I should be on the "Content" page
 And I should see the status of "StudyPlan" assets as "Completed"
 
+#Purpose : As a Student, I should be able to view and validate the grades(70%) in Gradebook for submitted MathXL Homework activity.
+#Test case ID : peg-12986.
+#Products : MGM Grade 6.
+#Pre condition : Student should have submitted the activity with 70% score.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Student validating score in grade book for Math XL Homework activities
+Given I browsed the login url for "DPCsStudent"
+When I login to Pegasus as "DPCsStudent" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Overview" tab
+Then I should be on the "Overview" page
+Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
+When I navigate to the "Grades" tab
+Then I should be on the "Gradebook" page
+When I click on cmenu option "View Submissions" of asset "1-2 Mixed Review"
+Then I should see the "View Submission" popup
+And I should see "70" score in view submission page
+When I close the "View Submission" window
+Then I should be on the "Gradebook" page
+
+#Purpose : As a Student, I should be able to view and validate the grades(70%) in Gradebook for submitted MathXL study plan.
+#Test case ID : peg-22612.
+#Products : MGM Grade 6.
+#Pre condition : Student should have submitted the activity with 70% score.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Student validating score in grade book for Math XL study plan
+Given I browsed the login url for "DPCsStudent"
+When I login to Pegasus as "DPCsStudent" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Overview" tab
+Then I should be on the "Overview" page
+Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
+When I navigate to the "Grades" tab
+Then I should be on the "Gradebook" page
+When I click on View Grades button of asset "Topic 1 Test with Study Plan"
+And I click on cmenu option "View Submissions" of asset "Topic 1 Test - Pre-Test"
+Then I should see the "View Submission" popup
+And I should see "43" score in view submission page
+When I close the "View Submission" window
+Then I should be on the "Gradebook" page
