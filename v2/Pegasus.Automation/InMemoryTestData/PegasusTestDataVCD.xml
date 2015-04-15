@@ -855,6 +855,11 @@
       <ProductType>MyITLabForOffice2013Program</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
+    <Product>
+      <Name>Digit Grade6</Name>
+      <ProductType>DigitalPath</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
   </ArrayOfProduct>
   <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivityQuestionsList>

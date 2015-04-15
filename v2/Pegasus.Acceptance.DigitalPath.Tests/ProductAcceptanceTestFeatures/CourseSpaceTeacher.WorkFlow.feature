@@ -381,9 +381,6 @@ Then I should see "DigitalPathMasterLibrary" class displayed in classes channel
 #Purpose: To Add the Product in Curriculumn Channel.
 #Product: Digital Path
 Scenario: Add Product In Home Page
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I Click on Add button 
@@ -414,3 +411,6 @@ When I close Enroll from school pop up
 Then I should see "Enroll from School" pop up closed
 And I should see the student "DPCsStudent" displayed in manage student pop up
 When I close Manage student pop up
+
+
+ 
