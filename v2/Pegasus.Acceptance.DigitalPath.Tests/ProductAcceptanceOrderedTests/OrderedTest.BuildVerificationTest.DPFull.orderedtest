@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.BuildVerificationTest.DPFull" storage="d:\pegasus_automation_14jan_master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.buildverificationtest.dpfull.orderedtest" id="1e03058f-4ae0-4a04-830f-8f98be94874a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="d2bc1c97-8f82-4c53-a1bb-877b057efcb3" name="OrderedTest.CourseSpaceTeacherFunctionalities.BVT.DP" storage="orderedtest.coursespaceteacherfunctionalities.bvt.dp.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
