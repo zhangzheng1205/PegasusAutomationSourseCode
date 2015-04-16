@@ -206,7 +206,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.CommonProductAcceptanceTestDefinition
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CRSKLSG-2044799.
+        ///   Looks up a localized string similar to CRSKL78-4041322.
         /// </summary>
         internal static string CommonSteps_PPE_CourseId_Value {
             get {

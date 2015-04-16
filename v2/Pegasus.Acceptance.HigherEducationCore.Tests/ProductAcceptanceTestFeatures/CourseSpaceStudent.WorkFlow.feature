@@ -131,7 +131,7 @@ When I navigate to "Assignments" tab
 Then I should be on the "Course Materials" page
 When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
 And I submit the essay activity
-Then I should see "Not passed" status for the activity "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
+Then I should see "Submitted" status for the activity "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "WlCsSmsStudent"
 
 #Purpose: Student submits sam activity from Course Calendar tab and score 100
 #Test Case Id:peg-22418

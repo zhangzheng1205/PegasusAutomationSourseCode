@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
 using Pegasus.Pages.Exceptions;
 using System.Diagnostics;
+using System.Configuration;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -131,8 +132,8 @@ namespace Pegasus.Pages.UI_Pages
                         _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
-                                 .Login_Page_Hed_CourseSpaceURL_Append_Parameters); 
-                                 break;
+                                 .Login_Page_Hed_CourseSpaceURL_Append_Parameters);
+                        break;
                     //Get url of Synapse workspace admin
                     case User.UserTypeEnum.WsAdmin:
                         _baseLoginUrl = string.Format(
@@ -683,9 +684,8 @@ namespace Pegasus.Pages.UI_Pages
             //Enter User Name
             Logger.LogMethodEntry("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
-          // Insert User Name in Username TextBox
-            base.FillTextBoxById(LoginPageResource.
-                Login_Page_LoginName_TextBox_Id_Locator, userName);
+            // Insert User Name in Username TextBox
+            base.FillTextBoxByCssSelector("#loginname", userName);
             Logger.LogMethodExit("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -841,11 +841,12 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("LoginPage", "IsSmsUserLoggedIn",
                 base.IsTakeScreenShotDuringEntryExit);
             if (base.IsElementLoadedInWindow(LoginPageResource.
-                Login_Page_PageTitle_Locator_GlobalHome,
-                    By.XPath(LoginPageResource.Login_Page_LogOut_Locator)))
+            Login_Page_PageTitle_Locator_GlobalHome,
+                By.CssSelector("a[id$='_testLogOut']"), 600))
             {
                 isLoginSuccessful = true;
             }
+
             Logger.LogMethodExit("LoginPage", "IsSmsUserLoggedIn",
                 base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
