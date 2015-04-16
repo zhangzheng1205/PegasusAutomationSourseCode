@@ -165,6 +165,9 @@
   <data name="PCTInstructorResourceToolsST_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLST</value>
   </data>
+  <data name="PEG_AUTOMATION_BROWSER_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_BROWSER</value>
+  </data>
   <data name="PEG_AUTOMATION_CGIE_CSURL_Key" xml:space="preserve">
     <value>CourseSpaceURLRootCGIE</value>
   </data>
@@ -189,7 +192,7 @@
   <data name="PEG_AUTOMATION_ST_WSURL_Key" xml:space="preserve">
     <value>WorkSpaceURLRootST</value>
   </data>
-  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_Key" xml:space="preserve">
+  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
     <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
   </data>
   <data name="PEG_AUTOMATION_VCD_CSURL_Key" xml:space="preserve">

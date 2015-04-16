@@ -34,6 +34,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private static Logger logger =
             Logger.GetInstance(typeof(StudentPresentationPage));
+        private const string ENV_PEG_AUTOMATION_BROWSER = "PEG_AUTOMATION_BROWSER";
+        private const string APP_SETTINGS_BROWSER = "Browser";
 
         private int waitTimeOut = Convert.ToInt32(
             ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
@@ -6288,13 +6290,34 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToLastOpenedWindow();
                 //Close the Window
                 base.CloseBrowserWindow();
-                if (ConfigurationManager.AppSettings[StudentPresentationPageResource.Browser_Key]
-                    != StudentPresentationPageResource.Chrome_Browser_Value)
+                string browserName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_BROWSER);
+                if (string.IsNullOrEmpty(browserName))
                 {
-                    base.AcceptAlert();
+                    browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
+                    if (browserName == StudentPresentationPageResource.Chrome_Browser_Value)
+                    {
+                        base.SwitchToDefaultWindow();
+                        base.RefreshTheCurrentPage();
+                        base.WaitUntilWindowLoads("Course Materials");
+                        base.SelectWindow("Course Materials");
+                        base.SwitchToIFrame("ifrmCoursePreview");
+                        base.WaitForElement(By.LinkText("Chapter 1: The Science of Psychology"));
+                        IWebElement getFolderLink = base.GetWebElementPropertiesByLinkText
+                            ("Chapter 1: The Science of Psychology");
+                        Thread.Sleep(Convert.ToInt32(CommonPageResource.
+                       CommonPage_FolderNavigation_Sleep_Time));
+                        base.ClickByJavaScriptExecutor(getFolderLink);
+                        base.SwitchToDefaultWindow();
+
+                    }
+                    else
+                    {
+                        base.AcceptAlert();
+                        base.SwitchToDefaultWindow();
+                    }
+                    //Switch to Default Window
+
                 }
-                //Switch to Default Window
-                base.SwitchToDefaultWindow();
             }
             catch (Exception e)
             {
