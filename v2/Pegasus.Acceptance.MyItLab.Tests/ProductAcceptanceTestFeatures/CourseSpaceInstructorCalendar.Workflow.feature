@@ -107,8 +107,11 @@ Then I should see the check mark in assigned status column next to the assets
 Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-And I should see "GO! with Microsoft Office 2013, Volume 1" asset
-And I should see the current date highlighted in the calendar frame
+When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Calendar" by "CsSmsInstructor"
+And I select cmenu "Assignment Properties" of activity "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" 
+Then I should see the "Assign" popup
+When I assign the asset for current date in the properties popup
+Then I should be on the "Calendar" page
 And I should see the startdate Icon in calendar frame
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page

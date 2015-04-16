@@ -960,6 +960,7 @@ namespace Pegasus.Pages.CommonPageObjects
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
         /// Activity Folder Navigation Under Tab.
         /// </summary>
@@ -974,12 +975,11 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
-            bool pres = base.IsElementPresent(By.LinkText(activityFolderName), 10);
             base.WaitForElement(By.LinkText(activityFolderName));
             IWebElement getFolderLink = base.GetWebElementPropertiesByLinkText
                 (activityFolderName);
             //Click the link
-            base.ClickByJavaScriptExecutor(getFolderLink);
+            base.PerformMouseClickAction(getFolderLink);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.
                 CommonPage_FolderNavigation_Sleep_Time));
             Logger.LogMethodExit("CommonPage",
@@ -1195,7 +1195,7 @@ namespace Pegasus.Pages.CommonPageObjects
             string getFolderText = string.Empty;
             //Get Folder Count 
             base.WaitForElement(By.XPath(CommonPageResource.
-                ComonPage_Folder_Count_Xpath_Locator));
+               ComonPage_Folder_Count_Xpath_Locator));
             getFolderCount = base.GetElementCountByXPath(CommonPageResource.
                 ComonPage_Folder_Count_Xpath_Locator);
             for (int i = Convert.ToInt32(CommonPageResource.
@@ -1350,7 +1350,7 @@ namespace Pegasus.Pages.CommonPageObjects
             return getCurrentURL;
         }
 
-       /// <summary>
+        /// <summary>
         ///Verify a text in the launched  page .
         /// </summary>
         /// <param name="expectedText">This is the text value to be searched.</param>
@@ -1358,31 +1358,33 @@ namespace Pegasus.Pages.CommonPageObjects
         public Boolean IsTextPresentInPageSource()
         {
             //Verify a text in the launched  page 
-             Logger.LogMethodEntry("CommonPage",
-                "IsTextPresentInPageSource",
-               base.IsTakeScreenShotDuringEntryExit);
-            bool isTextPresent=false;
+            Logger.LogMethodEntry("CommonPage",
+               "IsTextPresentInPageSource",
+              base.IsTakeScreenShotDuringEntryExit);
+            bool isTextPresent = false;
             try
-            { 
-              switch (Environment.GetEnvironmentVariable(CommonPageResource.
-                  PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
-                ?? ConfigurationManager.AppSettings[CommonPageResource.
-                TestEnvironment_Key].ToUpper())
+            {
+                switch (Environment.GetEnvironmentVariable(CommonPageResource.
+                    PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                  ?? ConfigurationManager.AppSettings[CommonPageResource.
+                  TestEnvironment_Key].ToUpper())
                 {
                     case "PROD": isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
                         CommonPage_Amplifire_Production_Book_Content);
                         break;
 
-                    default: isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
+                    case "VCD":
+                    case "CGIE":
+                        isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
                         CommonPage_Amplifire_General_Book_Content);
                         break;
                 }
                 //Verify a text in the launched page 
-               
+
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
             Logger.LogMethodExit("CommonPage",
@@ -1390,9 +1392,7 @@ namespace Pegasus.Pages.CommonPageObjects
              base.IsTakeScreenShotDuringEntryExit);
             return isTextPresent;
 
-    }
-
-
+        }
 
         /// <summary>
         /// Gets the text displayed in the window.
@@ -1410,7 +1410,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 base.SwitchToLastOpenedWindow();
                 base.WaitForElement(By.XPath(CommonPageResource.
-                    ComonPage_BookTitle_For_Amplifire), 10);
+                    ComonPage_BookTitle_For_Amplifire));
                 getActualContent = base.GetElementInnerTextByXPath(CommonPageResource.
                     ComonPage_BookTitle_For_Amplifire).Trim();
             }
@@ -1469,7 +1469,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
 
-                                    case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]": 
+                                    case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]":
                                     case "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.":
                                         this.NavigateToActivityFolderInInstructorGradebook(
                                             "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)",
@@ -1539,9 +1539,9 @@ namespace Pegasus.Pages.CommonPageObjects
                                                     userTypeEnum, activityUnderTabName);
                                         break;
                                     case "SAM 05-01 Artistas famosos. [Vocabulario 1. El mundo de la música]":
-                                         this.NavigateToCapítulo05ActivitiesFolder(CommonPageResource.
-                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
-                                                    userTypeEnum, activityUnderTabName);
+                                        this.NavigateToCapítulo05ActivitiesFolder(CommonPageResource.
+                                           CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                   userTypeEnum, activityUnderTabName);
                                         break;
                                     case "SAM 06-01 Descripciones. [Review: Capítulos Preliminar A,  1 y 2]":
                                         this.NavigateToCapítulo06ActivitiesFolder(CommonPageResource.
@@ -1640,7 +1640,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             bool dfjgh = base.IsElementPresent(By.CssSelector(CommonPageResource.
-                ComonPage_WL_SubFolder_Name), 10);
+                ComonPage_WL_SubFolder_Name));
             IWebElement getFolderLink = base.GetWebElementPropertiesByCssSelector(
                 CommonPageResource.
                 ComonPage_WL_SubFolder_Name);
@@ -2069,14 +2069,14 @@ namespace Pegasus.Pages.CommonPageObjects
            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
         {
             Logger.LogMethodEntry("CommonPage", "NavigateToCapítulo03ActivitiesFolder",
-           base.IsTakeScreenShotDuringEntryExit);           
+           base.IsTakeScreenShotDuringEntryExit);
             // click folder level
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTabByInstructor(
                     CommonPageResource.
                     ComonPage_Capítulo03_WLFolderName, webElementToWait);
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateInsideActivitySubFolder();            
+            this.NavigateInsideActivitySubFolder();
             Logger.LogMethodExit("CommonPage", "NavigateToCapítulo03ActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2092,15 +2092,15 @@ namespace Pegasus.Pages.CommonPageObjects
         {
             Logger.LogMethodEntry("CommonPage", "NavigateToCapítulo06ActivitiesFolder",
            base.IsTakeScreenShotDuringEntryExit);
-           // click folder level
-           this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-           this.NavigateInsideActivityFolderUnderTabByInstructor(
-                   CommonPageResource.
-                   ComonPage_Capítulo06_WLFolderName, webElementToWait);
-          this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-          this.NavigateInsideActivitySubFolder();
-        Logger.LogMethodExit("CommonPage", "NavigateToCapítulo06ActivitiesFolder",
-            base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTabByInstructor(
+                    CommonPageResource.
+                    ComonPage_Capítulo06_WLFolderName, webElementToWait);
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivitySubFolder();
+            Logger.LogMethodExit("CommonPage", "NavigateToCapítulo06ActivitiesFolder",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -2115,22 +2115,22 @@ namespace Pegasus.Pages.CommonPageObjects
         {
             Logger.LogMethodEntry("CommonPage", "NavigateToCapítulo05ActivitiesFolder",
            base.IsTakeScreenShotDuringEntryExit);
-          // click folder level
-          this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, 
-                    activityUnderTabName);
-          this.NavigateInsideActivityFolderUnderTabByInstructor(
-                    CommonPageResource.
-                    ComonPage_Capítulo05_WLFolderName,
-                    webElementToWait);
-          this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, 
-                    activityUnderTabName);
-         this.NavigateInsideActivitySubFolder();
-         Logger.LogMethodExit("CommonPage", "NavigateToCapítulo05ActivitiesFolder",
-            base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum,
+                      activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTabByInstructor(
+                      CommonPageResource.
+                      ComonPage_Capítulo05_WLFolderName,
+                      webElementToWait);
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum,
+                      activityUnderTabName);
+            this.NavigateInsideActivitySubFolder();
+            Logger.LogMethodExit("CommonPage", "NavigateToCapítulo05ActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
-        
+
     }
 }
 

@@ -11,8 +11,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="remoteAdress">Gets the remote address to which the request channel sends messages.</param>
         /// <param name="capabilities">Object containing the desired capabilities of the browser.</param>
-        public ScreenShotRemoteWebDriver(Uri remoteAdress, ICapabilities capabilities)
-            : base(remoteAdress, capabilities)
+        public ScreenShotRemoteWebDriver(Uri remoteAdress, ICapabilities capabilities, TimeSpan commandTimeout)
+            : base(remoteAdress, capabilities, commandTimeout)
         {
         }
 

@@ -15,6 +15,7 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
 
+
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>
@@ -31,6 +32,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private const string APP_SETTINGS_TEST_ENVIRONMENT = "TestEnvironment";
         private const string APP_SETTINGS_REMOTE = "isRemote";
         private const string APP_SETTINGS_REMOTE_HUB_URL = "remoteHubUrl";
+
+        private static bool _isChromeExecuted;
+        private const bool IsInternetExplorerExecuted = false;
+        private static int _counter = 1;
 
         /// <summary>
         /// This is defined static variables.
@@ -107,7 +112,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
                 // object representing the image of the page on the screen
-                webDriver = new RemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability,
+                webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability,
                     commandTimeout: TimeSpan.FromSeconds(TimeOut));
                 webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             }
@@ -126,19 +131,47 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return webDriver;
         }
 
-        private static DesiredCapabilities InternetExplorer()
-        {
-            
-            DesiredCapabilities capabilities = new DesiredCapabilities();
 
-            capabilities.SetCapability("IgnoreZoomLevel", true);
+        ///// <summary>
+        ///// Returns an instance of Firefox based driver.
+        ///// </summary>
+        ///// <returns>FireFox based driver</returns>
+        //private static IWebDriver Firefox()
+        //{
+        //    // create profile object
+        //    FirefoxProfile profile = new FirefoxProfile();
+        //    //set desired capabilities
+        //    DesiredCapabilities capabilities = DesiredCapabilities.Firefox();
 
+        //    // get Log Execution Path
+        //    String getExecutingPath = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
+        //    profile.SetPreference("FireFox" + DateTime.Now.Ticks + ".log", getExecutingPath);
+        //    profile.SetPreference("browser.helperApps.alwaysAsk.force", false);
+        //    profile.SetPreference("browser.download.folderList", 2);
+        //    profile.SetPreference("browser.download.dir", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
+        //    profile.SetPreference("services.sync.prefs.sync.browser.download.manager.showWhenStarting", false);
+        //    profile.SetPreference("browser.download.useDownloadDir", true);
+        //    profile.SetPreference("browser.download.downloadDir", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
+        //    profile.SetPreference("browser.download.defaultFolder", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
+        //    profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip, application/x-zip, application/x-zip-compressed, application/download, application/octet-stream");
+        //    profile.EnableNativeEvents = true;
+        //    profile.SetPreference("browser.cache.disk.enable", false);
+        //    profile.SetPreference("browser.cache.memory.enable", false);
+        //    profile.SetPreference("browser.cache.offline.enable", false);
+        //    profile.SetPreference("network.http.use-cache", false);
+        //    //Use custom FireFox profile  with desired capabilities
+        //    capabilities.SetCapability(FirefoxDriver.ProfileCapabilityName, profile);
+        //    capabilities.SetCapability("takesScreenshot", true);
+        //    // initilize webdriver  with desired capabilities & profile set
+        //    IWebDriver webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), capabilities,
+        //    commandTimeout: TimeSpan.FromSeconds(TimeOut));
+        //    // set page load duration
+        //    webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
+        //    // set cursor position center of the screen
+        //    Cursor.Position = new Point(Screen.PrimaryScreen.Bounds.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2);
+        //    return webDriver;
 
-            return capabilities;
-
-
-        }
-
+        //}
 
         /// <summary>
         /// Returns an instance of IE based driver.
@@ -180,14 +213,14 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 ieservice.LogFile = Path.Combine(getExecutingPath, "Log", "IEDriver" + DateTime.Now.Ticks + ".log");
             // set internet explorer options
             var options = new InternetExplorerOptions
-                                                  {
-                                                      IntroduceInstabilityByIgnoringProtectedModeSettings = true,
-                                                      UnexpectedAlertBehavior = InternetExplorerUnexpectedAlertBehavior.Ignore,
-                                                      IgnoreZoomLevel = true,
-                                                      EnableNativeEvents = true,
-                                                      BrowserAttachTimeout = TimeSpan.FromMinutes(20),
-                                                      EnablePersistentHover = false
-                                                  };
+            {
+                IntroduceInstabilityByIgnoringProtectedModeSettings = true,
+                UnexpectedAlertBehavior = InternetExplorerUnexpectedAlertBehavior.Ignore,
+                IgnoreZoomLevel = true,
+                EnableNativeEvents = true,
+                BrowserAttachTimeout = TimeSpan.FromMinutes(20),
+                EnablePersistentHover = false
+            };
             // create internet explorer driver object
             IWebDriver webDriver = new InternetExplorerDriver(ieservice, options, TimeSpan.FromMinutes(20));
             // set webDriver page load duration
@@ -218,6 +251,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.download.defaultFolder", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
             profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip, application/x-zip, application/x-zip-compressed, application/download, application/octet-stream");
             profile.EnableNativeEvents = true;
+            profile.SetPreference("browser.cache.disk.enable", false);
+            profile.SetPreference("browser.cache.memory.enable", false);
+            profile.SetPreference("browser.cache.offline.enable", false);
+            profile.SetPreference("network.http.use-cache", false);
             IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
             // set page load duration
             webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
@@ -245,6 +282,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // chrome options
             var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments("disable-application-cache");
+            chromeOptions.AddArguments("disk-cache-size=0");
             chromeOptions.AddUserProfilePreference("intl.accept_languages", "en");
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
             chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
@@ -255,7 +294,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", "");
 
             // create chrome browser instance
-            IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(5));
+            IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(3));
             return webDriver;
         }
 

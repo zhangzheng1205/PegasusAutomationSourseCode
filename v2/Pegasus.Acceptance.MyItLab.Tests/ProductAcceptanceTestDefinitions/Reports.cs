@@ -1489,6 +1489,62 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// To Verify the Learning Aid Frequency Report Data.
+        /// </summary>
+        /// <param name="questionName">This is the question name.</param>
+        /// <param name="questionType">This is the type of question.</param>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        /// <param name="applicationName">This is application type.</param>
+        /// <param name="practiceScore">This is score for practice.</param>
+        /// <param name="videoScore">This is score for video.</param>
+        /// <param name="eTextScore">This is score for eText.</param>
+        [Then(@"I should see for Question ""(.*)"" of Type ""(.*)"" under section ""(.*)"" for Application ""(.*)"" PracticeScore ""(.*)"" and VideoScore ""(.*)"" and eTextScore ""(.*)""")]
+        public void VerifyLearningAidFrequencyReportData(string questionName, string questionType,
+           Course.CourseTypeEnum courseTypeEnum, string applicationName,
+            string practiceScore, string videoScore, string eTextScore)
+        {
+            Logger.LogMethodEntry("Reports",
+                 "VerifyLearningAidUsageReportDetailsByProgramAdmin",
+                 base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            //Verify question name
+            Logger.LogAssertion("VerifyQuestionNameDisplayed",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.IsTrue(new RptLearningAidFrequencyPage().
+             IsQuestionPresentInLearningAidUsageReport(questionName)));
+            //verify question details
+            Logger.LogAssertion("VerifyquestionType",
+               ScenarioContext.Current.ScenarioInfo.Title, () =>
+               Assert.AreEqual(questionType, new RptLearningAidFrequencyPage().
+              GetLearningAidUsageQuestionDetails(questionName, 2)));
+            //Assert the question type name
+            Logger.LogAssertion("VerifysectionName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(course.SectionName, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 3)));
+            //Assert the application name
+            Logger.LogAssertion("VerifyApplicationName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(applicationName, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 4)));
+            Logger.LogAssertion("VerifyPractiseScore",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(practiceScore, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 6)));
+            Logger.LogAssertion("VerifyVideoScore",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(videoScore, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 7)));
+            Logger.LogAssertion("VerifyVideoScore",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(eTextScore, new RptLearningAidFrequencyPage().
+            GetLearningAidUsageQuestionDetails(questionName, 8)));
+            Logger.LogMethodExit("Reports",
+                "VerifyLearningAidUsageReportDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// Verify the average score and activity name in Learning Aid Usage Report.
         /// </summary>
         /// <param name="chapterName">This is a Chapter name.</param>

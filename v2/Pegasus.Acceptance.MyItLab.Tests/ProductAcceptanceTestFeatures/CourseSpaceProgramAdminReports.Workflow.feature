@@ -90,16 +90,15 @@ Then I should be on the "Program Administration" page
 When I click on "Learning Aid Usage" report link as "HedProgramAdmin"
 Then I should open "Options for Learning Aid Usage" criteria page as "HedProgramAdmin"
 When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
-And I select the "Word Chapter 1 Skill-Based Training" asset in'Select Activity'
+And I select the "PowerPoint Chapter 1 Skill-Based Training" asset in'Select Activity'
 And I select 'save settings to My Reports' option by "HedProgramAdmin"
 And I click on the "Run Report" button in reports by "HedProgramAdmin"
 Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the " MyITLabExamFrequencyAnalysis" report name
 And I click on "SaveandRun" button
-Then I should see  "Word Chapter 1 Skill-Based Training" along with average score "100.00%"
-Then I should see the details for the question "WD Activity 1.01: Starting a New Word Document" "SIM5" "MyITLabOffice2013Program" "Word 2013" "100.00" "--"
-And I should see the details for the question "WD Activity 1.02: Inserting Text from Another Document" "SIM5" "MyITLabOffice2013Program" "Word 2013" "--" "100.00"
+Then I should see  "PowerPoint Chapter 1 Skill-Based Training" along with average score "0.00%"
+And I should see for Question "PP Activity 1.01: Creating a New Presentation and Identifying Parts of the PowerPoint Window" of Type "SIM5" under section "MyITLabOffice2013Program" for Application "PPT 2013" PracticeScore "0.00" and VideoScore "0.00" and eTextScore "0.00"
 When I close the "Learning Aid Usage" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"
 And I select "Run Report" for " MyITLabExamFrequencyAnalysis" report in 'My Reports' grid by "HedProgramAdmin"

@@ -52,6 +52,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 timeout = this._waitTimeOut;
             }
             return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(timeout));
+
         }
 
         /// <summary>
@@ -76,8 +77,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(timeOut));
                 wait.PollingInterval = TimeSpan.FromMilliseconds(100);
                 wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-                wait.Until(ExpectedConditions.ElementExists(@by));
-                this.isElementDisplayedInPage(by, flag1);
+                wait.Until<IWebElement>((d) =>
+                {
+                    IWebElement element = WebDriver.FindElement(by);
+                    if (element.Displayed && element.Enabled)
+                    {
+                        return element;
+                    }
+                    return null;
+                }
+                    );
+                this.IsElementDisplayedInPage(by, flag1);
             }
 
              //Exception Handling
@@ -86,45 +96,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 throw ex;
             }
 
-        }
-
-        /// <summary>
-        /// Is this element displayed or not? This method avoids the problem of having to parse an element's "style" attribute.
-        /// </summary>
-        /// <param name="by">This is HTML element locating mechanism to use.</param>
-        /// <param name="holdTime">This is the time to wait for HTML element to display on the page.</param>
-        /// <returns>Whether or not the element is displayed.</returns>
-        protected void WaitForElementDisplayedInUi(By by, int holdTime = -1)
-        {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            if (holdTime == -1)
-            {
-                holdTime = this._waitTimeOut;
-            }
-            try
-            {
-                while (stopWatch.Elapsed.TotalSeconds < holdTime)
-                {
-
-                    try
-                    {
-                        bool isObjectDisplayed = WebDriver.FindElement(by).Displayed;
-                        if (isObjectDisplayed.Equals(true))
-                        {
-                            break;
-                        }
-                    }
-                    catch (WebDriverException)
-                    {
-                        // not thorwing exception due to repeat the loop until element displayed in Ui.
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                throw exception;
-            }
         }
 
         /// <summary>
@@ -217,6 +188,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             WebDriverWait webDriverWait = CreateWebDriverWait(timeout);
             try
             {
+
                 webDriverWait.Until(ExpectedConditions.ElementIsVisible(
                     By.ClassName(elementClassName)));
                 string getSuccessMessage = null;
@@ -551,13 +523,57 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return false;
         }
 
+             
+
+        /// <summary>
+        /// Is this element displayed or not? This method avoids the problem of having to parse an element's "style" attribute.
+        /// </summary>
+        /// <param name="by">This is HTML element locating mechanism to use.</param>
+        /// <param name="holdTime">This is the time to wait for HTML element to display on the page.</param>
+        /// <returns>Whether or not the element is displayed.</returns>
+        protected void WaitForElementDisplayedInUi(By by, int holdTime = -1)
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (holdTime == -1)
+            {
+                holdTime = this._waitTimeOut;
+            }
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < holdTime)
+                {
+
+                    try
+                    {
+                        bool isObjectDisplayed = WebDriver.FindElement(by).Displayed;
+                        if (isObjectDisplayed.Equals(true))
+                        {
+                            break;
+                        }
+                    }
+                    catch (WebDriverException)
+                    {
+                        // not thorwing exception due to repeat the loop until element displayed in Ui.
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+
+        
+
         /// <summary>
         /// Check whether element is displayed in web page or not.
         /// </summary>
         /// <param name="by">Element name.</param>
         /// <param name="timeOut">Time out value.</param>
         /// <returns>Status of the element display.</returns>
-        public bool isElementDisplayedInPage(By by, bool flag, int timeOut = -1)
+        public bool IsElementDisplayedInPage(By by, bool flag, int timeOut = -1)
         {
             bool isElementDisplayedInPage = false;
 
@@ -589,12 +605,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             catch (NoSuchElementException)
             {
                 bool flag2 = true;
-                this.isElementDisplayedInPage(by, flag2);
+                this.IsElementDisplayedInPage(by, flag2);
 
             }
             stopWatch.Stop();
             return isElementDisplayedInPage;
         }
+
 
         /// <summary>
         /// Selects the parent window or the first window opened.

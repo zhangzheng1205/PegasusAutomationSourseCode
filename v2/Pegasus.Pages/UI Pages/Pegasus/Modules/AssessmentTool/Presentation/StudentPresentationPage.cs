@@ -1748,8 +1748,11 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectWindowAndFrame();
                 //Get The Activity Name In CourseMaterial
                 int activityColumnCount =
-                    this.GetTheActivityNameInCourseMaterial(assetName);
+                    GetTheActivityNameInCourseMaterial(assetName);
                 //Get the status text
+                base.WaitForElement(By.XPath(string.
+                Format(StudentPresentationPageResource.
+                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount)));
                 getActivitySubmittedStatus = base.GetElementTextByXPath(string.
                 Format(StudentPresentationPageResource.
                 StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
@@ -2015,6 +2018,8 @@ namespace Pegasus.Pages.UI_Pages
                             break;
                         case "Access":
                             //Get the attempt count
+                            base.WaitForElement(By.Id(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator));
                             attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
                                 StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator);
                             attemptCount = Int32.Parse(attemptRemaining);
@@ -3541,7 +3546,9 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSim5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
-
+            this.IsPageLoading();
+            base.WaitForElement(By.Id(StudentPresentationPageResource.
+            StudentPresentation_Page_Submit_Button_Id_Locator));
             //Click on Ok button
             IWebElement getSubmitButton = base.GetWebElementPropertiesById
             (StudentPresentationPageResource.
@@ -3741,7 +3748,8 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private bool IsPageLoading(int timeOut = -1)
+        //This method validates for page loading curtain display in SIM5 presentation page.
+        public bool IsPageLoading(int timeOut = -1)
         {
 
             //If element not present then webdriver throw the exception, 
@@ -3756,9 +3764,11 @@ namespace Pegasus.Pages.UI_Pages
             bool isThinkingIndicatorProcessing = true;
             try
             {
-                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                while (stopWatch.Elapsed.TotalSeconds < timeOut && isThinkingIndicatorProcessing)
                 {
-                    if (!WebDriver.FindElement(By.Id("LoadingImage")).Displayed)
+                    isThinkingIndicatorProcessing = WebDriver.FindElement(By.Id(StudentPresentationPageResource.
+                        StudentPrsentation_Page_SIM5_LoadingCurtain_Id_Locator)).Displayed;
+                    if (isThinkingIndicatorProcessing == false)
                     {
                         break;
                     }

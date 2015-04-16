@@ -1302,7 +1302,6 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement getStudentProperty = this.SearchStudentByLastAndFirstName(lastname, firstname);
                 // Click on student index
                 this.ClickStudent(getStudentProperty);
-
                 //Select View Submission Window
                 this.SelectViewSubmissionWindow();
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -1343,7 +1342,8 @@ namespace Pegasus.Pages.UI_Pages
             string getScore = string.Empty;
             //Select View Submission Window
             this.SelectViewSubmissionWindow();
-            base.WaitForElement(By.XPath(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Xpath_Locator), 10);
+            base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+               ViewSubmission_Page_ViewSubmission_Xpath_Locator));
             int studentCount = base.GetElementCountByXPath(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Xpath_Locator);
             for (int studentIndex = Convert.ToInt16(ViewSubmissionPageResource.ViewSubmission_Page_Index_Value_One);
                 studentIndex <= studentCount; studentIndex++)
