@@ -404,3 +404,18 @@ When I Click on the Save button
 Then I should see the successfull message "Your products have been successfully added." on setup wizard
 When I Click On the Save and Exit button
 Then I should see the product "DigitalPath" in the Curriculum channel
+
+#Test case id: peg-22525
+#Purpose: Setup Calendar in Planner tab.
+Scenario:Setup Calendar In Planner tab
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I navigate to the "Planner" tab
+Then I should be on the "Planner" page
+When I click on the Calendar set up button
+Then I should see the calendar configured successfully
+
+

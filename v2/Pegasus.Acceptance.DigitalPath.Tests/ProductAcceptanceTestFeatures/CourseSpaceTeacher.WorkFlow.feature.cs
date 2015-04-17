@@ -1066,6 +1066,36 @@ testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum chan
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Setup Calendar In Planner tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void SetupCalendarInPlannerTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Setup Calendar In Planner tab", ((string[])(null)));
+#line 410
+this.ScenarioSetup(scenarioInfo);
+#line 411
+testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 412
+testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 413
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 414
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 415
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 416
+testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 417
+testRunner.Then("I should be on the \"Planner\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 418
+testRunner.When("I click on the Calendar set up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 419
+testRunner.Then("I should see the calendar configured successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
