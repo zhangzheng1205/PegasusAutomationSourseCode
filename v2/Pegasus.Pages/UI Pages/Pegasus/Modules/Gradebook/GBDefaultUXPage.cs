@@ -10,6 +10,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
 using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -23,62 +24,6 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private static readonly Logger logger =
             Logger.GetInstance(typeof(GBDefaultUXPage));
-
-
-        /// <summary>
-        /// This the enum available for Asset cmenu in gradebook
-        /// </summary>
-        public enum AssetCmenuOptionEnum
-        {
-            /// <summary>
-            /// Asset cmenu option for Save To Custom View
-            /// </summary>
-            SavetoCustomView = 1,
-            /// <summary>
-            /// Asset cmenu option for Remove from Custom View
-            /// </summary>
-            RemovefromCustomView = 2,
-            /// <summary>
-            /// Asset cmenu option for Apply Grade Schema
-            /// </summary>
-            ApplyGradeSchema = 3,
-            /// <summary>
-            /// Asset cmenu option for View All Submissions
-            /// </summary>
-            ViewAllSubmissions = 4,
-            /// <summary>
-            /// Asset cmenu option for Modify Grade Schema
-            /// </summary>
-            ModifyGradeSchema = 5,
-            /// <summary>
-            /// Asset cmenu option for Remove Grade Schema
-            /// </summary>
-            RemoveGradeSchema = 6,
-            /// <summary>
-            /// Asset cmenu option for Edit Grades
-            /// </summary>
-            EditGrades = 7,
-            /// <summary>
-            /// Asset cmenu option for Hide student
-            /// </summary>
-            HideforStudent = 8,
-            /// <summary>
-            /// Asset cmenu option for Sychronize with LMS
-            /// </summary>
-            SynchronizewithLMS = 9,
-            /// <summary>
-            /// Asset cmenu option for Stop LMS Synchronization
-            /// </summary>
-            StopLMSSynchronization = 10,
-            /// <summary>
-            /// Asset cmenu option for Show for student
-            /// </summary>
-            ShowforStudent = 11,
-            /// <summary>
-            /// Asset cmenu option for View Submissions
-            /// </summary>
-            ViewSubmissions = 12
-        }
 
         /// <summary>
         ///Get writing Space Activity Name In Gradebook.
@@ -288,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
                 (String.Format(GBDefaultUXPageResource.
                 GBDefaultUXPage_Gradebook_GetActivityName_Xpath_Locator, activityColumnCount));
             //Perform Mouse Click Action
-            base.PerformClickAndHoldAction(getCmenuIconProperty);
+            base.PerformMouseClickAction(getCmenuIconProperty);
             // Click the Cmenu icon
             IWebElement CmenuIconProperty = base.GetWebElementPropertiesByXPath
                     (String.Format(GBDefaultUXPageResource.
@@ -360,6 +305,234 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
         }
+
+
+        /// <summary>
+        ///Click View All Submissions option in teacher gradebook.
+        /// </summary>
+        /// <param name="cmenuName">This is Cmenu option Name.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <returns>Activity Name.</returns>
+        public void ClickViewAllSubmissionsInGradebookK12(string cmenuName, string activityName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickViewAllSubmissionsInGradebookK12",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Initialized Variable
+            string getActivityName = string.Empty;
+            try
+            {
+                this.SwitchToTeacherGradebookIframe();
+                // Getting the counts of Activity                    
+                int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
+                for (int activityColumnNo = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Value); activityColumnNo <= getActivityCount;
+                activityColumnNo++)
+                {
+                    // Getting the Activity name
+                    getActivityName = base.GetTitleAttributeValueByXPath
+                        (string.Format(GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_ActivityName_Xpath_Locator,
+                        activityColumnNo));
+                    if (getActivityName.Trim() == activityName.Trim())
+                    {
+                        // Click view submission option in the activity cmenu
+                        this.ClickViewSubmissionOption(activityColumnNo, activityName);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBDefaultUXPage", "ClickViewAllSubmissionsInGradebookK12",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Switch to Iframe in Instructor gradebook.
+        /// </summary>
+        private void SwitchToTeacherGradebookIframe()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Switch to iFrame
+            base.SwitchToIFrameById(GBDefaultUXPageResource.
+                GBDefaultUXPage_Page_CourseContent_Iframe_ID);
+            base.SwitchToIFrameById(GBDefaultUXPageResource.
+                GBDefaultUXPage_Gradebook_Frame);
+            logger.LogMethodExit("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        ///Click View Submission option for StudyPlan in Gradbook.
+        /// </summary>
+        /// <param name="cmenuName">This is Cmenu option Name.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <returns>Activity Name.</returns>
+        public void ClickViewAllSubmissionsForStudyPlan(string cmenuName, string activityName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickViewAllSubmissionsForStudyPlan",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Initialized Variable
+            string getActivityName = string.Empty;
+         
+            try
+            {
+                // Getting the counts of Activity                    
+                int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
+                for (int activityColumnNo = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Value); activityColumnNo <= getActivityCount;
+                activityColumnNo++)
+                {
+                    // Getting the Activity name
+                    getActivityName = base.GetTitleAttributeValueByXPath
+                        (string.Format(GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_ActivityName_Xpath_Locator,
+                        activityColumnNo));
+                    if (getActivityName.Trim() == activityName.Trim())
+                    {
+                        // Click View Submission option of asset in the Gradebook
+                        this.ClickViewSubmissionOption(activityColumnNo, activityName);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBDefaultUXPage", "ClickViewAllSubmissionsForStudyPlan",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click View submission option
+        /// </summary>
+        /// <param name="activityColumnNo">This is the Activity column count.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        public void ClickViewSubmissionOption(int activityColumnNo,string activityName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickViewSubmissionOption",
+                          base.IsTakeScreenShotDuringEntryExit);
+            // Click the Cmenu icon of the asset in Gradebook
+            base.ClickImageByXPath(String.Format(GBDefaultUXPageResource.
+                GBDefaultUXPage_Gradebook_DPGetActivityCount_Xpath_Locator, activityColumnNo));
+            // Click "View All Submissions" option of the asset in Gradebook
+            IWebElement getViewsubmissonProperty = base.GetWebElementPropertiesById(
+                GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_DPViewSubmissionLink_ID);
+            // Check the condition if the activity is a homework and then click on the Level
+            if (activityName == GBDefaultUXPageResource.GBDefaultUXPage_Page_HomeWorkActivityName)
+            {
+                base.PerformMouseClickAction(getViewsubmissonProperty);
+                IWebElement getLevelProperty = base.GetWebElementPropertiesByCssSelector(
+                    GBDefaultUXPageResource.GBDefaultUXPage_Page_HomeWork_LevelG_CSS_Locator);
+                base.ClickByJavaScriptExecutor(getLevelProperty);
+            }
+            else
+            {
+                base.ClickByJavaScriptExecutor(getViewsubmissonProperty);
+            }
+
+            logger.LogMethodExit("GBDefaultUXPage", "ClickViewSubmissionOption",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Get Studyplan Name In Gradebook and click on View Grade option.
+        /// </summary>
+        /// <param name="activityName">This is Studyplan Name.</param>
+        /// <returns>Activity Name.</returns>
+        public void ClickViewGradeOptionforStudyPlan(String StudyPlanName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickViewGradeOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialized Variable
+            string getActivityName = string.Empty;
+            try
+            {
+                // Switch to iFrame
+                this.SwitchToTeacherGradebookIframe();
+                // Getting the counts of Activity                    
+                int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
+                for (int activityColumnNo = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Value); activityColumnNo <= getActivityCount;
+                activityColumnNo++)
+                {
+                    // Getting the Activity name
+                    getActivityName = base.GetTitleAttributeValueByXPath
+                        (string.Format(GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_ActivityName_Xpath_Locator,
+                        activityColumnNo));
+                    if (getActivityName.Trim() == StudyPlanName.Trim())
+                    {
+                        //Click The View Grade Button.
+                        this.ClickViewGradeButton(activityColumnNo);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBDefaultUXPage", "ClickViewGradeOption",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        ///Click The View Grade Button.
+        /// </summary>
+        /// <param name="activityColumnNo">This is Column count.</param>
+        private void ClickViewGradeButton(int activityColumnNo)
+        {
+            //Click The View Grade Button
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickViewGradeButton",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Element
+            base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
+                GBInstructorUX_Page_GB_GradeCell_Xpath_Locator, activityColumnNo)));
+            //Get Element Property
+            IWebElement getGradeCell = base.GetWebElementPropertiesByXPath(string.Format
+             (GBInstructorUXPageResource.GBInstructorUX_Page_GB_GradeCell_Xpath_Locator,
+                activityColumnNo));
+            //Mouse Hover on Element
+            base.PerformMouseHoverByJavaScriptExecutor(getGradeCell);
+            //Click on View Grades Button
+            this.ClickonViewGradesButton();
+            logger.LogMethodExit("GBInstructorUXPage", "ClickViewGradeButton",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on View Grades Button.
+        /// </summary>
+        private void ClickonViewGradesButton()
+        {
+            //Click on View Grades Button
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickonViewGradesButton",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Element
+            base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                GBINstructorUX_Page_ViewGradesButton_Id_Locator));
+            base.FocusOnElementById(GBInstructorUXPageResource.
+                GBINstructorUX_Page_ViewGradesButton_Id_Locator);
+            //Get Element Property
+            IWebElement getViewGrades = base.GetWebElementPropertiesById
+                (GBInstructorUXPageResource.
+                GBINstructorUX_Page_ViewGradesButton_Id_Locator);
+            //Click on View Grades Button
+            base.ClickByJavaScriptExecutor(getViewGrades);
+            Thread.Sleep(Convert.ToInt32(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_WaitWindowTime_Value));
+            logger.LogMethodExit("GBInstructorUXPage", "ClickonViewGradesButton",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
 

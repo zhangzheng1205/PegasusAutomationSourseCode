@@ -82,19 +82,18 @@ Then I should see submitted activity "i1-1 Practice" should be displayed in "Ass
 #Pre condition : Student should have submitted the activity with 70% score.
 #Dependency : One time dependent(This scenario can be run against existing data).
 Scenario: Student validating score in grade book for Math XL Homework activities
-Given I browsed the login url for "DPCsStudent"
-When I login to Pegasus as "DPCsStudent" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Overview" tab
 Then I should be on the "Overview" page
+When I select "DigitalPathMasterLibrary" from the class selector dropdown
 Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
 When I navigate to the "Grades" tab
 Then I should be on the "Gradebook" page
-When I click on cmenu option "View Submissions" of asset "1-2 Mixed Review"
+When I click on cmenu option "View Submissions" of asset "1-2 Homework"
 Then I should see the "View Submission" popup
 And I should see "70" score in view submission page
 When I close the "View Submission" window
 Then I should be on the "Gradebook" page
+
 
 #Purpose : As a Student, I should be able to view and validate the grades(70%) in Gradebook for submitted MathXL study plan.
 #Test case ID : peg-22612.
@@ -102,17 +101,80 @@ Then I should be on the "Gradebook" page
 #Pre condition : Student should have submitted the activity with 70% score.
 #Dependency : One time dependent(This scenario can be run against existing data).
 Scenario: Student validating score in grade book for Math XL study plan
-Given I browsed the login url for "DPCsStudent"
-When I login to Pegasus as "DPCsStudent" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Overview" tab
 Then I should be on the "Overview" page
+When I select "DigitalPathMasterLibrary" from the class selector dropdown
 Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
 When I navigate to the "Grades" tab
 Then I should be on the "Gradebook" page
-When I click on View Grades button of asset "Topic 1 Test with Study Plan"
-And I click on cmenu option "View Submissions" of asset "Topic 1 Test - Pre-Test"
+When I click on View Grades button of asset "Topic 2 Test with Study Plan"
+And I click on cmenu option "View Submissions" of asset "Topic 2 Test - Pre-Test"
 Then I should see the "View Submission" popup
-And I should see "43" score in view submission page
+And I should see "0" score in view submission page
 When I close the "View Submission" window
 Then I should be on the "Gradebook" page
+
+#Purpose : Validate the student submission 70% grade for MathXL Homework in view submission.
+#Test case ID : peg-22611
+#Products : MGM
+#Pre condition : Math XL Homework set activity should be assigned by teacher in the course and Student should have submitted the activity
+#Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
+Scenario:Teacher validating score in grade book for MathXL Homework
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Grades" tab
+And I click on cmenu option "View All Submissions" of the asset "1-2 Homework"
+Then I should see the "View Submission" popup
+And I should see "70" score in the view submission page for a student "DPCsStudent"
+
+#Purpose : Validate the student submission 70% grade for MathXL Test in view submission.
+#Test case ID : peg-22611
+#Products : MGM
+#Pre condition : Math XL Test set activity should be assigned by teacher in the course and Student should have submitted the activity
+#Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
+Scenario:Teacher validating score in grade book for MathXL Test
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Grades" tab
+And I click on cmenu option "View All Submissions" of the asset "Topic 2 Test"
+Then I should see the "View Submission" popup
+And I should see "70" score in the view submission page for a student "DPCsStudent"
+
+#Purpose : Validate the student submission 70% grade for MathXL Practice in view submission.
+#Test case ID : peg-22611
+#Products : MGM
+#Pre condition : Math XL Practice set activity should be assigned by teacher in the course and Student should have submitted the activity
+#Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
+Scenario:Teacher validating score in grade book for MathXL Practice
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Grades" tab
+And I click on cmenu option "View All Submissions" of the asset "i1-2 Practice"
+Then I should see the "View Submission" popup
+And I should see "70" score in the view submission page for a student "DPCsStudent"
+
+#Purpose : Validate the student submission 70% grade for MathXL Studyplan in view submission.
+#Test case ID : peg-22614
+#Products : MGM
+#Pre condition : Math XL Practice set activity should be assigned by teacher in the course and Student should have submitted the activity
+#Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
+Scenario:Teacher validating score in grade book for MathXL Studyplan
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Grades" tab
+And I click on view grade option of "Topic 2 Test with Study Plan" in Gradebook
+And I click on cmenu option "View All Submissions" of Studyplan asset "Topic 2 Test-Pre-Test"
+Then I should see the "View Submission" popup
+And I should see "70" score in the view submission page for a student "DPCsStudent"

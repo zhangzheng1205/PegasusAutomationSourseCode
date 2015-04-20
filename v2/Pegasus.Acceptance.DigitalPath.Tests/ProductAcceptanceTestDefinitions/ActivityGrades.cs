@@ -185,6 +185,84 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Click on View Submission Cmenu option of the Asset
+        /// </summary>
+        /// <param name="cmenuName">This is Cmenu option name.</param>
+        /// <param name="activityName">This is activity name.</param>
+        [When(@"I click on cmenu option ""(.*)"" of the asset ""(.*)""")]
+        public void ClickViewSubmissionCmenuOptionOfAsset(string cmenuName, string activityName)
+        {
+            Logger.LogMethodEntry("Gradebook", "ClickViewSubmissionCmenuOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Click "View All Submissions" for the specified activity in gradebookK12
+            GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
+            gbDefaultUXPage.ClickViewAllSubmissionsInGradebookK12(cmenuName, activityName);
+            Logger.LogMethodEntry("Gradebook", "ClickViewSubmissionCmenuOptionOfAsset",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click view submission cmenu option for Studyplan
+        /// </summary>
+        /// <param name="cmenuName">This is the Cmenu option name.</param>
+        /// <param name="activityName">This is Activity name.</param>
+        [When(@"I click on cmenu option ""(.*)"" of Studyplan asset ""(.*)""")]
+        public void ClickViewSubmissionCmenuOptionOfStudyplanAsset(string cmenuName, string activityName)
+        {
+            Logger.LogMethodEntry("Gradebook", "ClickViewSubmissionCmenuOptionOfStudyplanAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Click "View All Submissions" for the specified activity in gradebookK12
+            GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
+            gbDefaultUXPage.ClickViewAllSubmissionsForStudyPlan(cmenuName, activityName);
+            Logger.LogMethodEntry("Gradebook", "ClickViewSubmissionCmenuOptionOfStudyplanAsset",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Verify Edited Submission Score In ViewSubmission Page.
+        /// </summary>
+        /// <param name="submissionScore">This is Submission Score.</param>
+        [Then(@"I should see ""(.*)"" score in the view submission page for a student ""(.*)""")]
+        public void VerifyEditedScoreInViewSubmissionPage
+            (string submissionScore, User.UserTypeEnum userTypeEnum)
+        {
+            // Verify Student Submission Score In ViewSubmission Page
+            Logger.LogMethodEntry("ActivityGrades",
+                "VerifyEditedScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (submissionScore, new ViewSubmissionPage().
+                 GetEditedSubmissionScore(user.LastName, user.FirstName)));
+            Logger.LogMethodExit("ActivityGrades",
+                "VerifyEditedScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click View grade option of Studyplan in Gradebook.
+        /// </summary>
+        /// <param name="studyPlanName">This is studyplan name.</param>
+        [When(@"I click on view grade option of ""(.*)"" in Gradebook")]
+        public void ClickViewGradeOptionInGradebook(string studyPlanName)
+        {
+            // Click view grade button of Study plan in the Gradebook
+            Logger.LogMethodEntry("ActivityGrades",
+               "ClickViewGradeOptionInGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
+            gbDefaultUXPage.ClickViewGradeOptionforStudyPlan(studyPlanName);
+            Logger.LogMethodEntry("ActivityGrades",
+               "ClickViewGradeOptionInGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]
