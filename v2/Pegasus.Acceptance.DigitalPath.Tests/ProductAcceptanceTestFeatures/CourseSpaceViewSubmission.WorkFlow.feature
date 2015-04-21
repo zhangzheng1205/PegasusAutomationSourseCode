@@ -120,9 +120,6 @@ Then I should be on the "Gradebook" page
 #Pre condition : Math XL Homework set activity should be assigned by teacher in the course and Student should have submitted the activity
 #Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
 Scenario:Teacher validating score in grade book for MathXL Homework
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
 When I navigate to the "Grades" tab
@@ -136,9 +133,6 @@ And I should see "70" score in the view submission page for a student "DPCsStude
 #Pre condition : Math XL Test set activity should be assigned by teacher in the course and Student should have submitted the activity
 #Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
 Scenario:Teacher validating score in grade book for MathXL Test
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
 When I navigate to the "Grades" tab
@@ -152,9 +146,6 @@ And I should see "70" score in the view submission page for a student "DPCsStude
 #Pre condition : Math XL Practice set activity should be assigned by teacher in the course and Student should have submitted the activity
 #Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
 Scenario:Teacher validating score in grade book for MathXL Practice
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
 When I navigate to the "Grades" tab
@@ -168,9 +159,6 @@ And I should see "70" score in the view submission page for a student "DPCsStude
 #Pre condition : Math XL Practice set activity should be assigned by teacher in the course and Student should have submitted the activity
 #Dependency : Following script can be execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
 Scenario:Teacher validating score in grade book for MathXL Studyplan
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
 When I navigate to the "Grades" tab
