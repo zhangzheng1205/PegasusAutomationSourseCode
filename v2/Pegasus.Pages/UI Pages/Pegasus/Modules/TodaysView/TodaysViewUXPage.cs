@@ -10,6 +10,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.TemplateClassManagement.Classes;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Text.RegularExpressions;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -4018,6 +4019,73 @@ namespace Pegasus.Pages.UI_Pages
                 "GetActivityNameOfInstrucorGradingChannel",
                    base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
+        }
+
+
+        /// <summary>
+        /// Validate the  class name if not selected select from the dropdown.
+        /// </summary>
+        /// <param name="className">This is class name.</param>
+        public void StudentSelectClass(String className)
+        {
+            //Get Class Name
+            Logger.LogMethodEntry("TodaysViewUXPage", "StudentSelectClass",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            //Initialization getClassName Variable
+            string getClassName = string.Empty;
+            try
+            {
+                //Wait for Overview Window
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                                              TodaysViewUXPageResource_Overview_TabName_Text);
+                //Select the Overview Window
+                base.SelectWindow(TodaysViewUXPageResource.
+                                      TodaysViewUXPageResource_Overview_TabName_Text);
+                //Wait For Element
+                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                              TodaysViewUX_Page_CourseTitle_Id_Locator));
+                //Get Class Name
+                getClassName = base.GetTitleAttributeValueById(TodaysViewUXPageResource.
+                                      TodaysViewUX_Page_CourseTitle_Id_Locator).Trim();
+
+                // Compare the class name storied in momery and the class name retrived from the application UI
+                if (getClassName.Trim() != className.Trim())
+
+                {
+                    // Click on class selector dropdown
+                    IWebElement getDropdown = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Dropdown_Icon_ID);
+                    base.ClickByJavaScriptExecutor(getDropdown);
+
+                    // Get class count from the class selector dropdown
+                    int getClassCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Dropdown_GetClassCount_Xpath_Locator);
+                    for (int classColumnNo = Convert.ToInt32(1); classColumnNo <= getClassCount;
+                    classColumnNo++)
+                    {
+                        // Getting the Class name
+                        getClassName = base.GetTitleAttributeValueByXPath
+                            (string.Format(TodaysViewUXPageResource.
+                                TodayViewUXPageResource_Dropdown_ClassName_Xpath_Locator, classColumnNo));
+                        // Select the class based on the match criteria
+                        if (getClassName.Trim() == className.Trim())
+                        {
+                            // Click class name
+                            IWebElement getClassNameElement = base.GetWebElementPropertiesByXPath
+                                (String.Format(TodaysViewUXPageResource.
+                                TodayViewUXPageResource_Dropdown_ClassName_Xpath_Locator, classColumnNo));
+                            base.ClickByJavaScriptExecutor(getClassNameElement);
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "StudentSelectClass",
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

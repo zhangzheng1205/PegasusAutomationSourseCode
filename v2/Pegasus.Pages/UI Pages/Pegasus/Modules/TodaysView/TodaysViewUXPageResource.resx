@@ -696,4 +696,13 @@
   <data name="TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator" xml:space="preserve">
     <value>a[class*='_tvPastDueSubmission_0']</value>
   </data>
+  <data name="TodayViewUXPageResource_Dropdown_ClassName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvClassCourse']/div/span[{0}]</value>
+  </data>
+  <data name="TodayViewUXPageResource_Dropdown_GetClassCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvClassCourse']/div/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Dropdown_Icon_ID" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0__ctl0_imgDrdClassCourses</value>
+  </data>
 </root>

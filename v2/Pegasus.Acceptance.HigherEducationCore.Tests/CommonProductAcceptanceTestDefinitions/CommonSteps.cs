@@ -85,10 +85,10 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean isPopUpExist = false;
-           
-                base.WaitUntilWindowLoads(popUpName);
-                isPopUpExist = base.IsWindowsExists(popUpName);
-           
+
+            base.WaitUntilWindowLoads(popUpName);
+            isPopUpExist = base.IsWindowsExists(popUpName);
+
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -142,7 +142,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     SwitchToIFrame(CommonStepsResource.
                         CommonSteps_IFrame + "left" + string.Empty);
                     break;
-            }             
+            }
             //Wait For Partial Link Text 
             base.WaitForElement(By.PartialLinkText(linkName));
             //Get link Property
@@ -397,19 +397,19 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("CommonSteps", "NavigateToTabOfThePerticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
-                //Is The Page Open Already
+            //Is The Page Open Already
             Boolean isPageAlreadyExists = base.IsPopupPresent(pageName, (Convert.ToInt32(
                 CommonStepsResource.CommonSteps_ElementWait_Time_Value)));
-                if (isPageAlreadyExists )
-                {
-                    //Selecting the Page If Opened
-                    base.SelectWindow(pageName);
-                }
-                else
-                {
-                    //Select The Perticular Tab
-                    this.NavigateToTheTab(tabName);                    
-                }
+            if (isPageAlreadyExists)
+            {
+                //Selecting the Page If Opened
+                base.SelectWindow(pageName);
+            }
+            else
+            {
+                //Select The Perticular Tab
+                this.NavigateToTheTab(tabName);
+            }
             Logger.LogMethodExit("CommonSteps", "NavigateToTabOfThePerticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -419,7 +419,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// </summary>
         /// <param name="subtabName">This is SubTab Name.</param>
         /// <param name="mainTabName">This is MainTab Name.</param>
-         [When(@"I navigate to ""(.*)"" subtab from ""(.*)"" maintab")]
+        [When(@"I navigate to ""(.*)"" subtab from ""(.*)"" maintab")]
         public void NavigateToPublishingTab(string subtabName, string mainTabName)
         {
             //Navigate to perticular Page
@@ -428,17 +428,17 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             string pageTitle = base.GetPageTitle;
             if (pageTitle != CommonStepsResource.CommonSteps_Publishing_ManagePrograms_Tab
                 && pageTitle != CommonStepsResource.CommonSteps_Publishing_ManageProducts_Tab)
-            {                
+            {
                 base.SelectWindow(pageTitle);
                 //Select The Perticular Tab
-                this.NavigateToTheTab(mainTabName); 
+                this.NavigateToTheTab(mainTabName);
                 Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                     CommonSteps_ElementWaitTimeOut_Value));
             }
-             //Select the window
+            //Select the window
             base.WaitUntilWindowLoads(base.GetPageTitle);
             base.SelectWindow(base.GetPageTitle);
-             //Get Seleted Tab Name
+            //Get Seleted Tab Name
             string getSelectorTab = this.GetSubtabValue(subtabName);
             IWebElement selectedTabElement = base.GetWebElementPropertiesById(getSelectorTab);
             //Get Seleted Tab Class value
@@ -451,14 +451,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             else
             {
                 //Select The Perticular Tab
-                this.NavigateToTheTab(subtabName); 
+                this.NavigateToTheTab(subtabName);
             }
             Logger.LogMethodExit("CommonSteps", "NavigateToPublishingTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-         /// Get Subtab Value.
+        /// Get Subtab Value.
         /// </summary>
         /// <param name="SubtabName">Get the SubTab.</param>
         /// <returns>Return selector tab Id.</returns>
@@ -469,7 +469,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             String getSubTabId = String.Empty;
-            switch(SubtabName)
+            switch (SubtabName)
             {
                 case "Manage Programs":
                     getSubTabId = CommonStepsResource.
@@ -490,7 +490,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// </summary>
         /// <param name="parentTabName">This is Parent Tab Name.</param>
         /// <param name="childTabName">This is Child Tab Name.</param>      
-        [When(@"I navigate to ""(.*)"" tab and selected ""(.*)"" subtab")]          
+        [When(@"I navigate to ""(.*)"" tab and selected ""(.*)"" subtab")]
         public void NavigateToCourseSpaceUserTabs(
             string parentTabName, string childTabName)
         {
@@ -571,14 +571,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps", "SelectTab",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Select MainTab.
         /// </summary>
         /// <param name="mainTabName">This is Main Tab Name.</param>
         private void SelectCourseSpaceUserMainTab(string mainTabName)
         {
-            
+
             //Select MainTab
             Logger.LogMethodEntry("CommonSteps", "SelectCourseSpaceUserMainTab",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -587,7 +587,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Get Tab Property
             string getTabClassAttribute =
                 base.GetClassAttributeValueByPartialLinkText(mainTabName);
-            if (getTabClassAttribute == 
+            if (getTabClassAttribute ==
                 CommonStepsResource.CommonSteps_MainTab_SelectedTab_Value)
             {
                 //Select Window
@@ -617,7 +617,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             int getSubTabCount = WebDriver.FindElements(By.XPath
                 (CommonStepsResource.CommonSteps_Subtab_Count_Xpath_Locator)).Count;
             for (int csTabCountNo = Convert.ToInt32(
-                    CommonStepsResource.CommonSteps_Loop_Initializer_Value); 
+                    CommonStepsResource.CommonSteps_Loop_Initializer_Value);
                     csTabCountNo <= getSubTabCount; csTabCountNo++)
             {
                 IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath
@@ -644,7 +644,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTabAsProgramAdministrator",
                base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Navigating to the folder where given asset exists.
         /// </summary>
@@ -661,7 +661,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CourseContent", "NavigateToFolder",
              base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
 
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
@@ -690,7 +690,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Thread.Sleep(15000);
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
-               activityName, activityUnderTabName, userTypeEnum);            
+               activityName, activityUnderTabName, userTypeEnum);
             Logger.LogMethodExit("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -703,7 +703,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="windowTitle">This is the Window name.</param>
         /// <param name="studentName">This is the User type enum.</param>
         [When(@"I select ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void SelectingTheGivenWordLanguageActivity(string activityName, 
+        public void SelectingTheGivenWordLanguageActivity(string activityName,
             string windowTitle, User.UserTypeEnum studentName)
         {
             //Launch the activity fron 'Course Material' tab
@@ -713,7 +713,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new CoursePreviewUXPage().SelectActivityByStudentInWorldLanguage(activityName);
             Logger.LogMethodExit("CommonSteps",
                "SelectingTheGivenWordLanguageActivity",
-               base.IsTakeScreenShotDuringEntryExit);          
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -731,7 +731,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                "SubmittingTheWordLanguageEssayActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Verifying WordLanguage Activity Status After Submission in Course Material tab.
         /// </summary>
@@ -753,10 +753,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 () => Assert.AreEqual(activityStatus,
             new CourseContentUXPage().
             GetTheActivityStatusofWordLanguageActivity(activityName)));
+            base.SwitchToDefaultWindow();
             Logger.LogMethodExit("CommonSteps",
                "VerifyingWordLanguageActivityStatusAfterSubmission",
                base.IsTakeScreenShotDuringEntryExit);
-           
+
         }
 
         /// <summary>
@@ -802,7 +803,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// Submit The Learnocity Activity.
         /// </summary>
-        [When(@"I submit the learnocity activity")]     
+        [When(@"I submit the learnocity activity")]
         public void SubmitTheLearnocityActivity()
         {
             Logger.LogMethodEntry("CommonSteps",
@@ -863,14 +864,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
 
         }
 
-        ///// <summary>
-        ///// Initialize Pegasus test before test execution starts.
-        ///// </summary>
-        //[BeforeTestRun]
-        //public static void Setup()
-        //{
-        //    new CommonSteps().ResetWebdriver();
-        //}
+        /// <summary>
+        /// Initialize Pegasus test before test execution starts.
+        /// </summary>
+        [BeforeTestRun]
+        public static void Setup()
+        {
+            //    new CommonSteps().ResetWebdriver();
+        }
 
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test

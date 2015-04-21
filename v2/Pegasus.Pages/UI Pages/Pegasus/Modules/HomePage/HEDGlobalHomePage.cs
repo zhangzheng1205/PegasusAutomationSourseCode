@@ -854,13 +854,16 @@ namespace Pegasus.Pages.UI_Pages
                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the window
-                base.SwitchToLastOpenedWindow();
+
+                base.WaitUntilWindowLoads("Global Home");
+                base.SelectWindow("Global Home");
                 //Wait For Element
-                base.WaitForElement(By.LinkText("My Profile"));
+                //base.isElementDisplayedInPage(By.XPath("//a[contains(@id, 'ancMyAccount')]"));
+                //base.isElementDisplayedInPage(By.CssSelector("a[id*='_ancMyAccount']"));
+                base.WaitForElement(By.CssSelector("a[id*='_ancMyAccount']"));
                 //Get Element Property
                 IWebElement getLinkProperty = base.
-                    GetWebElementPropertiesByLinkText("My Profile");
+                    GetWebElementPropertiesByCssSelector("a[id*='_ancMyAccount']");
                 //Click My Profile Link
                 base.ClickByJavaScriptExecutor(getLinkProperty);
             }
@@ -1351,27 +1354,34 @@ namespace Pegasus.Pages.UI_Pages
             // Store user profile date and time in memory
             Logger.LogMethodEntry("HEDGlobalHomePage", "setUserCurrentDate",
                base.IsTakeScreenShotDuringEntryExit);
-             //Select MyProfile frame
-            this.SelectMyProfileIframe();
-            //get the date value from dropdown
-            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator));
-            String currentDate = base.GetElementTextByXPath(HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator);
-            //get the time value from dropdown
-            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator));
-            String currentTime = base.GetElementTextByXPath(HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator);
-            //store date and time in memory
-            String instance = currentDate + " " + currentTime;
-            DateTime datetime = Convert.ToDateTime(instance);
-            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
-            user.CurrentProfileDateTime = datetime;
-            bool cancelPresent = base.IsElementPresent(By.Id("imgbtnCancel"));
-            IWebElement cancelButton = base.GetWebElementPropertiesById("imgbtnCancel");
-            base.ClickByJavaScriptExecutor(cancelButton);
-            base.SwitchToDefaultWindow();
+            //Select MyProfile frame
+            try
+            {
+                this.SelectMyProfileIframe();
+                //get the date value from dropdown
+                base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator));
+                String currentDate = base.GetElementTextByXPath(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator);
+                //get the time value from dropdown
+                base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
+                   HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator));
+                String currentTime = base.GetElementTextByXPath(HEDGlobalHomePageResource.
+                   HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator);
+                //store date and time in memory
+                String instance = currentDate + " " + currentTime;
+                DateTime datetime = Convert.ToDateTime(instance);
+                User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+                user.CurrentProfileDateTime = datetime;
+                base.WaitForElement(By.Id("imgbtnCancel"));
+                IWebElement cancelButton = base.GetWebElementPropertiesById("imgbtnCancel");
+                base.ClickByJavaScriptExecutor(cancelButton);
+                base.SwitchToDefaultWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("HEDGlobalHomePage", "setUserCurrentDate",
                  base.IsTakeScreenShotDuringEntryExit);
 

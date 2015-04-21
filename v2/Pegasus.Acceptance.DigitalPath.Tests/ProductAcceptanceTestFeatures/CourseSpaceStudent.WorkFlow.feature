@@ -101,3 +101,7 @@ When I navigate to the "View All Content" tab
 Then I should be on the "Content" page
 And I should see the status of "StudyPlan" assets as "Completed"
 
+#Purpose: Select class from the class selector dropdown
+Scenario: Student select the class from the class selector dropdown
+When I select "DigitalPathMasterLibrary" from the class selector dropdown
+Then I should see the "DigitalPathMasterLibrary" class present in the overview tab

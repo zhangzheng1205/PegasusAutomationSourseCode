@@ -355,12 +355,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="userName">Name of the user to search.</param>
         [When(@"I enter student username ""(.*)"" to search")]
-        public void SearchUsers(string userName)
+        public void SearchUsers(User.UserTypeEnum userTypeEnum)
         {
             //Search users
             Logger.LogMethodEntry("UserEnrollment", "SearchUsers",
                base.IsTakeScreenShotDuringEntryExit);
-            new GBRoasterEnrollFrmSchoolPage().SearchForUsers(userName);
+            User user = User.Get(userTypeEnum);
+            string studentname = user.Name.ToString();
+            new GBRoasterEnrollFrmSchoolPage().SearchForUsers(studentname);
             Logger.LogMethodExit("UserEnrollment", "SearchUsers",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -370,13 +372,15 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="userName">Username to validate.</param>
         [Then(@"I should see searched username ""(.*)"" in search list")]
-        public void ValidateSearchedUserName(string userName)
+        public void ValidateSearchedUserName(User.UserTypeEnum userTypeEnum)
         {
             //Validate searched user name
             Logger.LogMethodEntry("UserEnrollment", "ValidateSearchedUserName",
                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string studentname = user.Name.ToString();
             Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(userName, new GBRoasterEnrollFrmSchoolPage().GetUserNameFromSearchResult()));
+                () => Assert.AreEqual(studentname, new GBRoasterEnrollFrmSchoolPage().GetUserNameFromSearchResult()));
             Logger.LogMethodExit("UserEnrollment", "ValidateSearchedUserName",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -462,13 +466,16 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="studentName">Name of the student to validate.</param>
         [Then(@"I should see the student ""(.*)"" displayed in manage student pop up")]
-        public void ValidateEnrolledStudentDisplay(string studentName)
+        public void ValidateEnrolledStudentDisplay(User.UserTypeEnum userTypeEnum)
         {
             //Validate display of enrolled user
             Logger.LogMethodEntry("UserEnrollment", "ValidateEnrolledStudentDisplay",
                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string studentName = user.Name.ToString();
             Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.IsTrue(new GBRosterGridUXPage().IsEnrolledStudentDisplayedUnderRoster(studentName)));
+               () => Assert.IsTrue(new GBRosterGridUXPage().
+                   IsEnrolledStudentDisplayedUnderRoster(studentName)));
             Logger.LogMethodExit("UserEnrollment", "ValidateEnrolledStudentDisplay",
              base.IsTakeScreenShotDuringEntryExit);
         }

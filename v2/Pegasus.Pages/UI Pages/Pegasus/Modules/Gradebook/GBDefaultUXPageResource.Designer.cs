@@ -70,6 +70,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[2]/span/input.
+        /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_ActivityCmenu_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_ActivityCmenu_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;GBGridHeaderTable&apos;]/tbody/tr/td[{0}]/span/a.
         /// </summary>
         internal static string GBDefaultUXPage_Gradebook_ActivityName_Xpath_Locator {
@@ -97,6 +106,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GBGridHeaderTable&apos;]/tbody/tr/td[{0}]/div.
+        /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_DPGetActivityCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_DPGetActivityCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblviewallsubmissions.
+        /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_DPViewSubmissionLink_ID {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_DPViewSubmissionLink_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to srcGBFrame.
         /// </summary>
         internal static string GBDefaultUXPage_Gradebook_Frame {
@@ -108,9 +135,81 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;GBGridHeaderTable&apos;]/tbody/tr/td[{0}]/span/span.
         /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_GetActivityCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_GetActivityCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[2]/span/span.
+        /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_GetActivityName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_GetActivityName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr.
+        /// </summary>
         internal static string GBDefaultUXPage_Gradebook_NormalActivityName_Xpath_Locator {
             get {
                 return ResourceManager.GetString("GBDefaultUXPage_Gradebook_NormalActivityName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gradebook.
+        /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_Page_Name {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_Page_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[3]/span/span[2]/span.
+        /// </summary>
+        internal static string GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to frmCourseContainer.
+        /// </summary>
+        internal static string GBDefaultUXPage_Page_CourseContent_Iframe_ID {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Page_CourseContent_Iframe_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#lccCmenu &gt; div:nth-of-type(1).
+        /// </summary>
+        internal static string GBDefaultUXPage_Page_HomeWork_LevelG_CSS_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Page_HomeWork_LevelG_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1-2 Homework.
+        /// </summary>
+        internal static string GBDefaultUXPage_Page_HomeWorkActivityName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Page_HomeWorkActivityName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string GBDefaultUXPage_Page_Initial_Count_Value {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Page_Initial_Count_Value", resourceCulture);
             }
         }
     }

@@ -16,7 +16,7 @@
     </Organization>
   </ArrayOfOrganization>
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
- <ArrayOfCourse>
+  <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
       <Name>Digits-GradeCourse</Name>
@@ -27,11 +27,11 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>PPE_Automation</Name>
+      <Name>PPE_Dependant_Automation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>Gokul_Automation</SectionName>
+      <SectionName>GraderitTrial1</SectionName>
       <SectionId>CRSKLRM-2041991</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
@@ -41,7 +41,7 @@
       <CourseType>MySpanishLabProgram</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>WLAutomation</SectionName>
+      <SectionName>047ed9d4-d550-4a1a-b0d0-ed5c6f92b0fd</SectionName>
       <SectionId>CRSKL3V-6044068</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
@@ -77,8 +77,8 @@
       <CourseType>HSSMyPsychLabProgram</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>3ba0ea02-829a-4f3f-a2c5-f1bd49d01e3e</SectionName>
-      <SectionId>CRSKLEF-12000713</SectionId>
+      <SectionName>PreTestData-HSS-PPE</SectionName>
+      <SectionId>CRSKLTM-2044513</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
@@ -555,7 +555,7 @@
       <UserType>HSSCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
-    </User>    
+    </User>
     <!--Hard coded Users data for Zero Score "HSSCsSMSStudent".-->
     <User>
       <Name>3e56555c-e8d4-44d0-a724-0cc565a6f598</Name>
@@ -600,7 +600,7 @@
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e77b</LastName>
+      <LastName>e5c6</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
@@ -848,6 +848,11 @@
   <ArrayOfProduct>
     <Product>
       <Name>308f0b9b-3415-44b1-8eb1-41ef51a7492e</Name>
+      <ProductType>DigitalPath</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Digit Grade6</Name>
       <ProductType>DigitalPath</ProductType>
       <IsCreated>true</IsCreated>
     </Product>

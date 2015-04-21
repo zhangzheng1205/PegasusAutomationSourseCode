@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Store Enrollment Date
                 course.EnrollmentDate = DateTime.Now;
                 Thread.Sleep(5000);
-            }                
+            }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             // Wait For Element
             base.WaitForElement(By.CssSelector(SelfEnrollmentPageResource.
-                SelfEnrollment_Page_CourseID_Span_CssSelector_Locator),10);
+                SelfEnrollment_Page_CourseID_Span_CssSelector_Locator));
             // Click Course ID Button
             IWebElement getConfirmButton = base.GetWebElementPropertiesByCssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Span_CssSelector_Locator);
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Confirm Button
             base.WaitForElement(
                 By.CssSelector(SelfEnrollmentPageResource.
-                    SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator),10);
+                    SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator));
             IWebElement getConfirmbutton = base.GetWebElementPropertiesByCssSelector
                 (SelfEnrollmentPageResource.
                     SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator);

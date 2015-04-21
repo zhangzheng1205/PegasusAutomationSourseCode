@@ -459,6 +459,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     }
                 }
+                base.SwitchToDefaultWindow();
             }
             catch (Exception e)
             {

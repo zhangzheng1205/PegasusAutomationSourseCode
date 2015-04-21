@@ -102,5 +102,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
           base.IsTakeScreenShotDuringEntryExit);
             
         }
+
+        /// <summary>
+        /// Select class from class selector dropdown.
+        /// </summary>
+        /// <param name="classTypeEnum">This is class type.</param>
+        [When(@"I select ""(.*)"" from the class selector dropdown")]
+        public void StudentSelectClassFromTheClassSelectorDropdown(Class.ClassTypeEnum classTypeEnum)
+        {
+            Logger.LogMethodEntry("Overview", "StudentSelectClassFromTheClassSelectorDropdown", base.IsTakeScreenShotDuringEntryExit);
+            //Get The Class Name Stored In Memory
+            Class orgClass = Class.Get(classTypeEnum);
+            string className = orgClass.Name.ToString();
+            TodaysViewUxPage todaysViewUxPage = new TodaysViewUxPage();
+            // Select class
+            todaysViewUxPage.StudentSelectClass(className);
+            Logger.LogMethodExit("Overview", "StudentSelectClassFromTheClassSelectorDropdown", base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

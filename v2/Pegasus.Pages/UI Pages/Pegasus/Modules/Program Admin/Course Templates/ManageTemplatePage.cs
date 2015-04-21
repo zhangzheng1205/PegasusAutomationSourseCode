@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window And Frame
                 this.SelectMiddleFrame();
                 base.WaitForElement(By.PartialLinkText(ManageTemplatePageResource.
-                    ManageTemplate_Page_Search_Link_Locator));
+                  ManageTemplate_Page_Search_Link_Locator));
                 //Get Element Property
                 IWebElement getLinkProperty = base.GetWebElementPropertiesByLinkText
                     (ManageTemplatePageResource.
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on The Search Link
                 base.ClickByJavaScriptExecutor(getLinkProperty);
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
-                 ManageTemplate_Page_SearchCondition_DropDown_Id_Locator));
+                ManageTemplate_Page_SearchCondition_DropDown_Id_Locator));
                 //Selecting the Entity by entity details
                 SelectTemplate(entityName);
             }
@@ -256,6 +256,8 @@ namespace Pegasus.Pages.UI_Pages
                 SearchEntityInProgramAdministration(entityName);
                 Thread.Sleep(Convert.ToInt32(ManageTemplatePageResource.
                     ManageTemplate_Page_Thread_Sleep_Time));
+                base.WaitForElement(By.XPath(ManageTemplatePageResource.
+                        ManageTemplate_Page_TemplateSection_Grid_Xpath_Locator));
                 getAssignedToCopyText =
                         base.GetWebElementPropertiesByXPath(ManageTemplatePageResource.
                         ManageTemplate_Page_TemplateSection_Grid_Xpath_Locator).Text;
@@ -395,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
                              ManageTemplate_Page_Search_Link_Locator));
             IWebElement getSearchLink = base.GetWebElementPropertiesByPartialLinkText
                 (ManageTemplatePageResource.
-                             ManageTemplate_Page_Search_Link_Locator);        
+                             ManageTemplate_Page_Search_Link_Locator);
             base.ClickByJavaScriptExecutor(getSearchLink);
             Logger.LogMethodExit("ManageTemplatePage", "ClickSearchLinkForSectionSearch",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -414,10 +416,10 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 // search section 
-              SearchSection(sectionName);              
-               base.WaitForElement(By.Id(ManageTemplatePageResource.
-                   ManageTemplate_Page_TemplateSection_Grid_Id_Locator));
-                 this.SelectMiddleFrame();
+                SearchSection(sectionName);
+                base.WaitForElement(By.Id(ManageTemplatePageResource.
+                    ManageTemplate_Page_TemplateSection_Grid_Id_Locator));
+                this.SelectMiddleFrame();
                 // get section id to store
                 String getSectionID = base.GetElementTextByXPath(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSectionGrid_XPath_Locator);
@@ -436,6 +438,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ManageTemplatePage", "StoreSectionID",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
 
         /// <summary>
         /// To Save Section ID in memory
@@ -480,6 +485,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ManageTemplatePage", "StoreSectionNameForJobDependentInMemory",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
 
         /// <summary>
         /// Click On Cmenu of Section or Template.

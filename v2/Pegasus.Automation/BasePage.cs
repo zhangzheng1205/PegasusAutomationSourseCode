@@ -1744,6 +1744,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>The number of nodes that match the specified xpath.</returns>
         protected int GetElementCountByXPath(String xPathValue)
         {
+            base.WaitForElement(By.XPath(xPathValue));
             return GetElementCount(By.XPath(xPathValue));
         }
 

@@ -279,7 +279,8 @@ testRunner.Then("I should open \"Options for Learning Aid Usage\" criteria page 
 testRunner.When("I select \"MyITLabOffice2013Program\" section under \"MyITLabForOffice2013Master\" te" +
                     "mplate in \'Section Options\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 93
-testRunner.And("I select the \"Word Chapter 1 Skill-Based Training\" asset in\'Select Activity\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the \"PowerPoint Chapter 1 Skill-Based Training\" asset in\'Select Activity" +
+                    "\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 94
 testRunner.And("I select \'save settings to My Reports\' option by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 95
@@ -293,22 +294,18 @@ testRunner.And("I enter the \" MyITLabExamFrequencyAnalysis\" report name", ((st
 #line 99
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 100
-testRunner.Then("I should see  \"Word Chapter 1 Skill-Based Training\" along with average score \"100" +
-                    ".00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see  \"PowerPoint Chapter 1 Skill-Based Training\" along with average scor" +
+                    "e \"0.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 101
-testRunner.Then("I should see the details for the question \"WD Activity 1.01: Starting a New Word " +
-                    "Document\" \"SIM5\" \"MyITLabOffice2013Program\" \"Word 2013\" \"100.00\" \"--\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And(@"I should see for Question ""PP Activity 1.01: Creating a New Presentation and Identifying Parts of the PowerPoint Window"" of Type ""SIM5"" under section ""MyITLabOffice2013Program"" for Application ""PPT 2013"" PracticeScore ""0.00"" and VideoScore ""0.00"" and eTextScore ""0.00""", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 102
-testRunner.And("I should see the details for the question \"WD Activity 1.02: Inserting Text from " +
-                    "Another Document\" \"SIM5\" \"MyITLabOffice2013Program\" \"Word 2013\" \"--\" \"100.00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 103
 testRunner.When("I close the \"Learning Aid Usage\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 104
+#line 103
 testRunner.And("I click on the \"Cancel\" button in reports by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 104
 testRunner.And("I select \"Run Report\" for \" MyITLabExamFrequencyAnalysis\" report in \'My Reports\' " +
                     "grid by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 106
+#line 105
 testRunner.And("I click  \"Close\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -320,31 +317,31 @@ testRunner.And("I click  \"Close\" button", ((string)(null)), ((TechTalk.SpecFlo
         public virtual void ToGenerateAndSaveTheIntegrityViolationReportByProgramAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To generate and save the \"Integrity Violation\" Report by Program Admin", ((string[])(null)));
-#line 112
+#line 111
 this.ScenarioSetup(scenarioInfo);
-#line 113
+#line 112
 testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 114
+#line 113
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 115
+#line 114
 testRunner.When("I click on \"Integrity Violation\" report link as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 116
+#line 115
 testRunner.Then("I should open \"Options for Integrity Violation\" criteria page as \"HedProgramAdmin" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 117
+#line 116
 testRunner.When("I select \"MyITLabOffice2013Program\" section under \"MyITLabForOffice2013Master\" te" +
                     "mplate in \'Section Options\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 118
+#line 117
 testRunner.And("I click on the \"Run Report\" button in reports by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 118
 testRunner.Then("I should see in row \"7\" for \"CsSmsStudent\" Expected Student for the Activity \"Exc" +
                     "el Chapter 1 Grader Project [Homework 3]\" Integrity Violation is \"Yes\" for \"Docu" +
                     "ment Level\" Integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 120
+#line 119
 testRunner.And("I should see in row \"8\" for \"CsSmsStudent\" Expected Student for the Activity \"Exc" +
                     "el Chapter 1 Grader Project [Homework 3]\" Integrity Violation is \"Yes\" for \"Cont" +
                     "ent Level\" Integrity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 121
+#line 120
 testRunner.And("I close the \"Student Integrity Violation\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -358,17 +355,17 @@ testRunner.And("I close the \"Student Integrity Violation\" window", ((string)(n
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To View Availability of \'Certificate of Completion (Custom) Report Link Under Rep" +
                     "ort Tab", ((string[])(null)));
-#line 126
+#line 125
 this.ScenarioSetup(scenarioInfo);
-#line 127
+#line 126
 testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 128
+#line 127
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 129
+#line 128
 testRunner.And("I should see \"Certificate of Completion (Custom)\" report under report page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
+#line 129
 testRunner.When("I click on \"Certificate of Completion (Custom)\" report link as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 130
 testRunner.Then("I should see \"Options for Certificate of Completion (Custom)\" header present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

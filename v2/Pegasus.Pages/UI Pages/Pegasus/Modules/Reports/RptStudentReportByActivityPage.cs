@@ -14,7 +14,7 @@ using System;
 
 namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
 {
-        /// <summary>
+    /// <summary>
     /// This class handles Student Report by Activity report Page Actions.  
     /// </summary>
     public class RptStudentReportByActivityPage : BasePage
@@ -74,19 +74,19 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         /// <returns></returns>
         public string GetStudentAndSectionNameInReport(int reportDetails)
         {
-            logger.LogMethodEntry("RptStudentReportByActivityPage", 
+            logger.LogMethodEntry("RptStudentReportByActivityPage",
                 "GetStudentAndSectionNameInReport",
                 base.IsTakeScreenShotDuringEntryExit);
             string getStudentReportName = String.Empty;
             base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.XPath(String.Format(
                 RptStudentReportByActivityPageResource.
-                RptStudentReportPage_StudentDetails_XPath_Locator,reportDetails)));
+                RptStudentReportPage_StudentDetails_XPath_Locator, reportDetails)));
             getStudentReportName = base.GetElementTextByXPath(String.Format(
                 RptStudentReportByActivityPageResource.
                 RptStudentReportPage_StudentDetails_XPath_Locator,
                 reportDetails));
-            logger.LogMethodExit("RptStudentReportByActivityPage", 
+            logger.LogMethodExit("RptStudentReportByActivityPage",
                 "GetStudentAndSectionNameInReport",
                  base.IsTakeScreenShotDuringEntryExit);
             return getStudentReportName;
@@ -150,13 +150,13 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         /// </summary>
         /// <param name="reportColumn"></param>
         /// <returns></returns>
-       public string GetReportDetails(int reportColumn)
+        public string GetReportDetails(int reportColumn)
         {
             logger.LogMethodEntry("RptStudentReportByActivityPage", "GetReportDetails",
                 base.IsTakeScreenShotDuringEntryExit);
             string getReportDetails = String.Empty;
             //this.SelectWindow();
-            base.SwitchToLastOpenedWindow();          
+            base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.XPath(String.Format(
                 RptStudentReportByActivityPageResource.
                 RptStudentReportPage_ReportDetails_XPath_Locator,
@@ -195,7 +195,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         /// Select Single Student
         /// </summary>
         /// <param name="userTypeEnum"></param>
-       public void SelectSingleStudent(User.UserTypeEnum userTypeEnum)
+        public void SelectSingleStudent(User.UserTypeEnum userTypeEnum)
         {
             logger.LogMethodEntry("RptStudentReportByActivityPage",
                 "SelectSingleStudent",
@@ -216,12 +216,13 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                     base.SwitchToLastOpenedWindow();
                     IWebElement getStudent = base.GetWebElementPropertiesByXPath(
                         String.Format(RptStudentReportByActivityPageResource.
-                        RptStudentReportPage_StudentNameSelect_XPath_Locator, i));               
-                    base.PerformMouseClickAction(getStudent);
+                        RptStudentReportPage_StudentNameSelect_XPath_Locator, i));
+                    Thread.Sleep(3000);
+                    base.ClickByJavaScriptExecutor(getStudent);
                     IWebElement addButton = base.GetWebElementPropertiesById(
                         RptStudentReportByActivityPageResource.
                         RptStudentReportPage_AddStudent_ID_Locator);
-                    base.PerformClickAction(addButton);
+                    base.ClickByJavaScriptExecutor(addButton);
                     break;
                 }
             }
@@ -231,33 +232,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         }
 
         /// <summary>
-       /// Get Section Name In Admin Report.
+        /// Get Section Name In Admin Report.
         /// </summary>
         /// <returns>Section name.</returns>
         public string GetSectionNameInAdminReport()
-       {
-           logger.LogMethodEntry("RptStudentReportByActivityPage",
-                          "GetSectionNameInAdminReport",
-                         base.IsTakeScreenShotDuringEntryExit);
-           string getSection = string.Empty;
-           string studentSection = string.Empty;
-           try
-           {
-               base.WaitForElement(By.XPath(RptStudentReportByActivityPageResource.
-                    RptStudentReportSetcion_Name_Xpath_Locator));
-               getSection = base.GetElementTextByXPath(
-                   RptStudentReportByActivityPageResource.
-                   RptStudentReportSetcion_Name_Xpath_Locator);
+        {
+            logger.LogMethodEntry("RptStudentReportByActivityPage",
+                           "GetSectionNameInAdminReport",
+                          base.IsTakeScreenShotDuringEntryExit);
+            string getSection = string.Empty;
+            string studentSection = string.Empty;
+            try
+            {
+                base.WaitForElement(By.XPath(RptStudentReportByActivityPageResource.
+                     RptStudentReportSetcion_Name_Xpath_Locator));
+                getSection = base.GetElementTextByXPath(
+                    RptStudentReportByActivityPageResource.
+                    RptStudentReportSetcion_Name_Xpath_Locator);
                 studentSection = getSection.Split('|')[0].Trim();
-           }
-           catch (Exception e)
-           {
-               ExceptionHandler.HandleException(e);
-           }      
-           logger.LogMethodExit("RptStudentReportByActivityPage",
-               "GetSectionNameInAdminReport",
-               base.IsTakeScreenShotDuringEntryExit);
-           return studentSection;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptStudentReportByActivityPage",
+                "GetSectionNameInAdminReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            return studentSection;
         }
     }
 }

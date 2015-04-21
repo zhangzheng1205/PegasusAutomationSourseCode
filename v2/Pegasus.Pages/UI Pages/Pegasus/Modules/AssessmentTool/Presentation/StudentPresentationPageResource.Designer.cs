@@ -3545,7 +3545,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to LoadingCurtain.
+        ///   Looks up a localized string similar to LoadingImage.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_LoadingCurtain_Id_Locator {
             get {

@@ -330,4 +330,7 @@
   <data name="ViewSubmission_Page_Feedback_Save_Button_CssSelector_Locator" xml:space="preserve">
     <value>a#btnSave span span</value>
   </data>
+  <data name="ViewSubmission_Page_ViewSubmission_GetScore_CSS_Locator" xml:space="preserve">
+    <value>div#_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&gt;span&gt;div:nth-of-type(3)&gt;span</value>
+  </data>
 </root>

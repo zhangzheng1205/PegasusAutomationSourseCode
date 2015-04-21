@@ -120,6 +120,9 @@
   <data name="GBDefaultUXPage_CourseHome_Frame" xml:space="preserve">
     <value>centerIFrame</value>
   </data>
+  <data name="GBDefaultUXPage_Gradebook_ActivityCmenu_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/input</value>
+  </data>
   <data name="GBDefaultUXPage_Gradebook_ActivityName_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
   </data>
@@ -129,10 +132,40 @@
   <data name="GBDefaultUXPage_Gradebook_CourseHome_Window" xml:space="preserve">
     <value>Course Home</value>
   </data>
+  <data name="GBDefaultUXPage_Gradebook_DPGetActivityCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/div</value>
+  </data>
+  <data name="GBDefaultUXPage_Gradebook_DPViewSubmissionLink_ID" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblviewallsubmissions</value>
+  </data>
   <data name="GBDefaultUXPage_Gradebook_Frame" xml:space="preserve">
     <value>srcGBFrame</value>
   </data>
-  <data name="GBDefaultUXPage_Gradebook_NormalActivityName_Xpath_Locator" xml:space="preserve">
+  <data name="GBDefaultUXPage_Gradebook_GetActivityCount_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span</value>
+  </data>
+  <data name="GBDefaultUXPage_Gradebook_GetActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span</value>
+  </data>
+  <data name="GBDefaultUXPage_Gradebook_NormalActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr</value>
+  </data>
+  <data name="GBDefaultUXPage_Gradebook_Page_Name" xml:space="preserve">
+    <value>Gradebook</value>
+  </data>
+  <data name="GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span[2]/span</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_CourseContent_Iframe_ID" xml:space="preserve">
+    <value>frmCourseContainer</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_HomeWorkActivityName" xml:space="preserve">
+    <value>1-2 Homework</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_HomeWork_LevelG_CSS_Locator" xml:space="preserve">
+    <value>div#lccCmenu &gt; div:nth-of-type(1)</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_Initial_Count_Value" xml:space="preserve">
+    <value>1</value>
   </data>
 </root>

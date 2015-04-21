@@ -133,12 +133,18 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the searched student check box
-                base.ClickLinkById(GBRoasterEnrollFrmSchoolPageResource.
+                base.SwitchToDefaultPageContent();
+                
+                base.SwitchToIFrame("ifrmGBRoasterEFSListUsers");
+                IWebElement studentCheckBox = base.GetWebElementPropertiesById(GBRoasterEnrollFrmSchoolPageResource.
                 GBRoasterEnrollFrmSchoolPage_UserSelectionCheckBox_Id_Locator);
+                base.ClickByJavaScriptExecutor(studentCheckBox);
                 base.SwitchToDefaultPageContent();
                 //Click on Add button
-                base.ClickButtonById(GBRoasterEnrollFrmSchoolPageResource.
+                IWebElement addButton = base.GetWebElementPropertiesById(GBRoasterEnrollFrmSchoolPageResource.
                     GBRoasterEnrollFrmSchoolPage_AddButton_Id_Locator);
+                base.PerformMouseClickAction(addButton);
+               
             }
 
             catch (Exception e)

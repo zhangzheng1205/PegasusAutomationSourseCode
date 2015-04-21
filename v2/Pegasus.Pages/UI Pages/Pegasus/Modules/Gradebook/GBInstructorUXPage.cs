@@ -2008,7 +2008,9 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
-            //Getting the counts of Activity  `
+            //Getting the counts of Activity
+            base.WaitForElement(By.XPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator));
             int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_AcitivityNames_Xpath_Locator);
             for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
@@ -2644,10 +2646,11 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the cmenu
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBInstructorUX_Page_ViewAllSubmission_Cmenu_Id_Locator));
+            base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                GBInstructorUX_Page_ViewAllSubmission_Cmenu_Id_Locator));
             IWebElement getViewAllSubmissionCmenu = base.GetWebElementPropertiesById
                 (GBInstructorUXPageResource.
                 GBInstructorUX_Page_ViewAllSubmission_Cmenu_Id_Locator);
-            Thread.Sleep(3000);
             base.ClickByJavaScriptExecutor(getViewAllSubmissionCmenu);
             logger.LogMethodExit("GBInstructorUXPage", "SelectViewAllSubmissionCmenuOption",
                                    base.IsTakeScreenShotDuringEntryExit);

@@ -1267,7 +1267,7 @@
     <value>10000</value>
   </data>
   <data name="StudentPrsentation_Page_SIM5_LoadingCurtain_Id_Locator" xml:space="preserve">
-    <value>LoadingCurtain</value>
+    <value>LoadingImage</value>
   </data>
   <data name="StudentPrsentation_Page_SIM5_New_Folder_Class_Name" xml:space="preserve">
     <value>editable-text-area</value>

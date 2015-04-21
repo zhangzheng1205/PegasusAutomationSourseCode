@@ -1302,7 +1302,6 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement getStudentProperty = this.SearchStudentByLastAndFirstName(lastname, firstname);
                 // Click on student index
                 this.ClickStudent(getStudentProperty);
-
                 //Select View Submission Window
                 this.SelectViewSubmissionWindow();
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
@@ -1343,7 +1342,8 @@ namespace Pegasus.Pages.UI_Pages
             string getScore = string.Empty;
             //Select View Submission Window
             this.SelectViewSubmissionWindow();
-            base.WaitForElement(By.XPath(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Xpath_Locator), 10);
+            base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+               ViewSubmission_Page_ViewSubmission_Xpath_Locator));
             int studentCount = base.GetElementCountByXPath(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Xpath_Locator);
             for (int studentIndex = Convert.ToInt16(ViewSubmissionPageResource.ViewSubmission_Page_Index_Value_One);
                 studentIndex <= studentCount; studentIndex++)
@@ -1718,6 +1718,50 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodEntry("ViewSubmissionPage", "InstructorgradingStudentforWorldLanguageEssayActivity",
                         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Submission Score In View Submission for a student
+        /// </summary>
+        /// <param name="lastname">This is the Student Lastname of the user.</param>
+        /// <param name="firstname">This is the Student Firstname of the user.</param>
+        /// <returns>This is Submission Score.</returns>
+        public string GetEditedSubmissionScore(string lastname, string firstname)
+        {
+            //Get Submitted Grade In ViewSubmission Page
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                "GetSubmissionScoreByStudent",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Intialize the variable
+            string getScore = string.Empty;
+            try
+            {
+                // Get student property by searching sent student
+                IWebElement getStudentProperty = this.SearchStudentByLastAndFirstName(lastname, firstname);
+                // Click on student index
+                this.ClickStudent(getStudentProperty);
+
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+               
+                //Get Score
+                getScore = base.GetElementTextByCssSelector(
+                    ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_GetScore_CSS_Locator);
+
+                // Eliminate % delimeter from getScore
+                getScore = getScore.Replace("%", string.Empty).Trim();
+                //close the view submission window
+                base.CloseBrowserWindow();
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                "GetSubmissionScoreInViewSubmissionPageHEDCore",
+                           base.IsTakeScreenShotDuringEntryExit);
+            return getScore;
         }
     }
 }

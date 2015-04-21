@@ -2261,14 +2261,13 @@ namespace Pegasus.Pages.UI_Pages
                "div[class='Classcmenu_main'][style~='absolute;']"));
             IWebElement getCmenuOption = base.GetWebElementPropertiesByCssSelector(
                  "div[class='Classcmenu_main'][style~='absolute;']");
-            Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                CalendarHEDDefaultUXPage_Element_Time));
             string idValue = getCmenuOption.GetAttribute(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_Properties_Attribute);
             //Click on activity cmenu option
+
             base.WaitForElement(By.CssSelector(string.Format(
-              "div[id='{0}'] div[id='cmenuCont'] div[title='{1}']",
-               idValue, cmenuOption)));
+               "div[id='{0}'] div[id='cmenuCont'] div[title='{1}']",
+                idValue, cmenuOption)));
             IWebElement cMenuOption = base.GetWebElementPropertiesByCssSelector(String.
                 Format(("div[id='{0}'] div[id='cmenuCont'] div[title='{1}']"),
                 idValue, cmenuOption));
@@ -2291,6 +2290,8 @@ namespace Pegasus.Pages.UI_Pages
             // Returns the cmenu id of the asset
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetCMenuId",
                 base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(string.Format(CalendarHEDDefaultUXPageResource
+             .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, assetName)));
             IWebElement getAsset = base.GetWebElementPropertiesByXPath(
            string.Format(CalendarHEDDefaultUXPageResource
              .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, assetName));
@@ -2302,15 +2303,14 @@ namespace Pegasus.Pages.UI_Pages
                CalendarHEDDefaultUXPage_Element_Time));
             //Click on cmenu of the asset
             IWebElement Parent = base.GetWebElementPropertiesByXPath(String
-                .Format(CalendarHEDDefaultUXPageResource.
-                CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator, assetName));
+     .Format(CalendarHEDDefaultUXPageResource.
+     CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator, assetName));
             string nodeId = Parent.GetAttribute("nodeid");
             string cMenuId = "cmenuLN_gtRow_" + nodeId;
             Logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetCMenuId",
                base.IsTakeScreenShotDuringEntryExit);
             return cMenuId;
         }
-
 
         /// <summary>
         /// Verify the Due Date Icon Dispaly.
