@@ -139,6 +139,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerification.Dependant.HSSFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProdBuildVerificationTest.HSSFull.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.HSSFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
