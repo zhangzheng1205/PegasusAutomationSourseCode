@@ -396,26 +396,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
         public void AssignTheAssetforStartDateIcon()
         {
             Logger.LogMethodEntry("AssignmentCalendar",
-               "AssignTheAsset",
-               base.IsTakeScreenShotDuringEntryExit);
-            ////base.SelectWindow("Assign");
-            string browserName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_BROWSER);
-            if (string.IsNullOrEmpty(browserName))
-            {
-                browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
-                if (browserName == "Internet Explorer")
-                {
-                    Thread.Sleep(10000);
-                    base.SwitchToLastOpenedWindow();
-                    string pageTitle = base.GetPageTitle;
-                    // Verifies the Correct Page Opened
-                    base.SelectWindow(pageTitle);
-                }
-                else
-                {
-                    base.SelectWindow("Assign");
-                }
-            }
+              "AssignTheAssetforStartDateIcon",
+              base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow("Assign");
             AssignContentPage assignContentPage = new AssignContentPage();
             //Select 'Assigned' radiobutton
             assignContentPage.SelectAssignRadiobuttonInAssignWindow();
@@ -428,7 +411,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
             //Save the properties
             assignContentPage.SaveProperties();
             Logger.LogMethodExit("AssignmentCalendar",
-                "AssignTheAsset",
+                "AssignTheAssetforStartDateIcon",
               base.IsTakeScreenShotDuringEntryExit);
         }
 

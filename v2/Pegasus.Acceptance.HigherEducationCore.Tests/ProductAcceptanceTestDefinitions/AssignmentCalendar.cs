@@ -944,7 +944,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         public void AssignTheAssetforStartDateIcon()
         {
             Logger.LogMethodEntry("AssignmentCalendar",
-               "AssignTheAsset",
+               "AssignTheAssetforStartDateIcon",
                base.IsTakeScreenShotDuringEntryExit);
             base.SelectWindow("Assign");
             AssignContentPage assignContentPage = new AssignContentPage();
@@ -959,7 +959,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Save the properties
             assignContentPage.SaveProperties();
             Logger.LogMethodExit("AssignmentCalendar",
-                "AssignTheAsset",
+                "AssignTheAssetforStartDateIcon",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
