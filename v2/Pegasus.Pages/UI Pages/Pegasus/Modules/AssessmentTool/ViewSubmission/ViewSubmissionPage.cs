@@ -1751,7 +1751,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Eliminate % delimeter from getScore
                 getScore = getScore.Replace("%", string.Empty).Trim();
                 //close the view submission window
-                base.CloseBrowserWindow();
+              
 
             }
             catch (Exception e)

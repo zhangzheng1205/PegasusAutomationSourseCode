@@ -128,13 +128,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 IsTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
         /// Click On Cmenu Of Asset In Gradebook.
         /// </summary>
         /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
         /// <param name="assetName">This is Asset name</param>
         [When(@"I click on cmenu option ""(.*)"" of asset ""(.*)""")]
-        public void ClickOnCmenuOfAssetInGradebookHed(string assetCmenuOption,
+        public void ClickOnCmenuOfAssetInGradebookDP(string assetCmenuOption,
             string assetName)
         {
             //Click On Cmenu Of Asset In Gradebook
@@ -142,7 +143,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                   IsTakeScreenShotDuringEntryExit);
             GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
             //Select The Cmenu Option Of Asset
-            gbDefaultUXPage.SelectTheCmenuOptionOfAssetK12(assetCmenuOption, assetName);
+            new GBStudentUXPage().SelectCmenuOptionOnactivity(assetCmenuOption, assetName);
+            //gbDefaultUXPage.SelectTheCmenuOptionOfAssetK12(assetCmenuOption, assetName);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
                  IsTakeScreenShotDuringEntryExit);
         }
@@ -260,6 +262,27 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                "ClickViewGradeOptionInGradebook",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Search an asset at Gradebook in DP.
+        /// </summary>
+        /// <param name="assetName">This is the Asset name.</param>
+        [When(@"I search ""(.*)"" in Gradebook")]
+        public void WhenISearchInGradebook(string assetName)
+        {
+            //Search an asset at Gradebook in DP
+            Logger.LogMethodEntry("ActivityGrades",
+             "WhenISearchInGradebook",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Search an asset at Gradebook in DP
+            GBDefaultUXPage gbDefaultUXPage = new GBDefaultUXPage();
+            gbDefaultUXPage.SearchAssetInDPInstructorGradebook(assetName);
+            Logger.LogMethodEntry("ActivityGrades",
+              "WhenISearchInGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
 
 
         /// <summary>

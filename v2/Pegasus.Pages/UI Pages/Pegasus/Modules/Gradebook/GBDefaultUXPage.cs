@@ -423,12 +423,14 @@ namespace Pegasus.Pages.UI_Pages
             // Click "View All Submissions" option of the asset in Gradebook
             IWebElement getViewsubmissonProperty = base.GetWebElementPropertiesById(
                 GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_DPViewSubmissionLink_ID);
+            Thread.Sleep(2000);
             // Check the condition if the activity is a homework and then click on the Level
             if (activityName == GBDefaultUXPageResource.GBDefaultUXPage_Page_HomeWorkActivityName)
             {
-                base.PerformMouseClickAction(getViewsubmissonProperty);
+                base.PerformMouseHoverByJavaScriptExecutor(getViewsubmissonProperty);
                 IWebElement getLevelProperty = base.GetWebElementPropertiesByCssSelector(
                     GBDefaultUXPageResource.GBDefaultUXPage_Page_HomeWork_LevelG_CSS_Locator);
+                Thread.Sleep(2000);
                 base.ClickByJavaScriptExecutor(getLevelProperty);
             }
             else
@@ -531,6 +533,49 @@ namespace Pegasus.Pages.UI_Pages
                     GBInstructorUX_Page_WaitWindowTime_Value));
             logger.LogMethodExit("GBInstructorUXPage", "ClickonViewGradesButton",
                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search an asset at Gradebook in DP.
+        /// </summary>
+        /// <param name="assetName">This is the Asset name.</param>
+        public void SearchAssetInDPInstructorGradebook(string assetName)
+        {
+
+            // Search an asset at Gradebook in DP
+            logger.LogMethodEntry("GBInstructorUXPage",
+                "SearchAssetInDPInstructorGradebook",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Switch to Iframe
+                base.SwitchToIFrameById(GBDefaultUXPageResource.
+                    GBDefaultUXPage_Page_CourseContent_Iframe_ID);
+                //Wait for and click the Button for searching the asset
+                base.WaitForElement(By.Id(GBDefaultUXPageResource.
+                  GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value));
+                base.ClickButtonById(GBDefaultUXPageResource.
+                  GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value);
+                //Enter the asset to be searched
+                base.WaitForElement(By.Id(GBDefaultUXPageResource.
+                  GBDefaultUXPage_Page_Gradebook_TitleSearchTextBox_Id_Value));
+                base.FillTextBoxById(GBDefaultUXPageResource.
+                  GBDefaultUXPage_Page_Gradebook_TitleSearchTextBox_Id_Value, assetName);
+                //Press Enter to perform the search
+                WebDriver.FindElement(By.Id(GBDefaultUXPageResource.
+                    GBDefaultUXPage_Page_Gradebook_TitleSearchTextBox_Id_Value))
+                    .SendKeys(Keys.Enter);
+                base.SwitchToDefaultPageContent();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage",
+                "SearchAssetInDPInstructorGradebook",
+                base.IsTakeScreenShotDuringEntryExit);
+            
+
         }
 
     }

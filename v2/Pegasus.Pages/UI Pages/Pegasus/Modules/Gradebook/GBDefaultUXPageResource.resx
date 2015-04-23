@@ -159,6 +159,12 @@
   <data name="GBDefaultUXPage_Page_CourseContent_Iframe_ID" xml:space="preserve">
     <value>frmCourseContainer</value>
   </data>
+  <data name="GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value" xml:space="preserve">
+    <value>titleSearch</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_Gradebook_TitleSearchTextBox_Id_Value" xml:space="preserve">
+    <value>txtSearch</value>
+  </data>
   <data name="GBDefaultUXPage_Page_HomeWorkActivityName" xml:space="preserve">
     <value>1-2 Homework</value>
   </data>

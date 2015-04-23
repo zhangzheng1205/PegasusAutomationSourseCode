@@ -59,7 +59,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
                 IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Switched
-            WaitUntilPageGetSwitchedSuccessfully(expectedPageTitle);
+           base.WaitUntilWindowLoads(expectedPageTitle);
+           base.SelectWindow(expectedPageTitle);
             //Get current opened page title
             string getActualPageTitle = GetPageTitle;
             //Assert we have correct page opened
