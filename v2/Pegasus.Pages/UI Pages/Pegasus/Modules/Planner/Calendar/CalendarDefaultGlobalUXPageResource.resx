@@ -315,4 +315,73 @@
   <data name="CalendarDefaultGlobalUX_Page_Window_TitleName" xml:space="preserve">
     <value>Planner</value>
   </data>
+  <data name="CalendarDefaultGlobalUX_Page_AddClasses_Link_ClassName" xml:space="preserve">
+    <value>dvAddClass</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ExitButton_CSS_Locator" xml:space="preserve">
+    <value>div.BtnCrvArea &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div &gt; span &gt; span</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_FridaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(5) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_MondaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(1) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SatardaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(6) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SundaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ThursdaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_TuesdaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(2) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalanderSetupWizard_WednasdaySelector_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(3) &gt; label</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassName_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(3) &gt; select</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CourseName_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; select</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CreatePeriod_Id" xml:space="preserve">
+    <value>idCreatePeriod</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetClassName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='mainDiv']/table[{0}]/tbody/tr/td[3]/select/option</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetCourseAssociation_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='mainDiv']/table[{0}]/tbody/tr/td[4]/select/option</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetFirstPeriodName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='mainDiv']/table[1]/tbody/tr/td[2]/input</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetPeriodCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='mainDiv']/table</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetPeriodTitle_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='mainDiv']/table[{0}]/tbody/tr/td[2]/input</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetProductCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvCurriculums']/ul/li</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_GetProductName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvCurriculums']/ul/li[{0}]</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_OrderNumber_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(5) &gt; select</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator" xml:space="preserve">
+    <value>div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(2) &gt; input</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ProductSelect_CmenuIcon_ID" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucProductNavigation_imgDrdProducts</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TableCountForLoopInitialization_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
 </root>

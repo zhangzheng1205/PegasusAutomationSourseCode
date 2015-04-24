@@ -1388,6 +1388,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Select all options that display text matching the argument by HTML element CssSelector attribute.
+        /// </summary>
+        /// <param name="CssSelector">This is HTML attribute CssSelector value.</param>
+        /// <param name="selectTextValue">The visible text to match against by id attribute of the HTML element.</param>
+        protected void SelectDropDownValueThroughTextByCssSelector(String CssSelector, String selectTextValue)
+        {
+            SelectDropDownValueByText(By.CssSelector(CssSelector), selectTextValue);
+        }
+
+
+        /// <summary>
         ///  Select all options that display text matching the argument by HTML element name attribute.
         /// </summary>
         /// <param name="nameAttributeValue">This is HTML attribute name value.</param>
@@ -1417,6 +1428,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void SelectDropDownValueThroughIndexById(String idAttributeValue, int indexValue)
         {
             SelectDropDownValueByIndex(By.Id(idAttributeValue), indexValue);
+        }
+
+        /// <summary>
+        ///  Select the option at the given index by HTML element Id attribute.
+        /// </summary>
+        /// <param name="idAttributeValue">The option at this index will be selected by id attribute of the HTML element.</param>
+        /// <param name="indexValue">The option at this index will be selected.</param>
+        protected void SelectDropDownValueThroughIndexByCssSelector(String idAttributeValue, int indexValue)
+        {
+            SelectDropDownValueByIndex(By.CssSelector(idAttributeValue), indexValue);
         }
 
         /// <summary>

@@ -247,6 +247,25 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Select product from the Curriculum dropdown.
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I select ""(.*)"" Product from the Curriculum dropdown")]
+        public void SelectProductFromCurriculumDropdown(Product.ProductTypeEnum productName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "SelectProductFromCurriculumDropdown",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get the Product Name from Test Data
+            Product Product = Product.Get(productName);
+            string digitalPathProductName = Product.Name.ToString();
+            CalendarDefaultGlobalUXPage calendarDefaultGlobalUXPage = new CalendarDefaultGlobalUXPage();
+            calendarDefaultGlobalUXPage.SelectProductInCurriculumDropdown(digitalPathProductName);
+            Logger.LogMethodExit("AssignmentCalendar", "SelectProductFromCurriculumDropdown",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

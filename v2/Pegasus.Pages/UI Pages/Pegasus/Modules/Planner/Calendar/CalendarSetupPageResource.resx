@@ -129,4 +129,7 @@
   <data name="CalendarSetupPage_Period_Iframe_Id_Locator" xml:space="preserve">
     <value>FrmPeriod</value>
   </data>
+  <data name="CalendarSetupPage_Wizard_frame_Id_Locator" xml:space="preserve">
+    <value>form1</value>
+  </data>
 </root>

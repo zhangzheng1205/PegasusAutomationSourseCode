@@ -107,6 +107,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to dvAddClass.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_AddClasses_Link_ClassName {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_AddClasses_Link_ClassName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_lnkAdvSearch.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator {
@@ -188,6 +197,78 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to div.BtnCrvArea &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div &gt; span &gt; span.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ExitButton_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ExitButton_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(5) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_FridaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_FridaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(1) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_MondaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_MondaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(6) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SatardaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SatardaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SundaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SundaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ThursdaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ThursdaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(2) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_TuesdaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_TuesdaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(7) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(3) &gt; label.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CalanderSetupWizard_WednasdaySelector_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CalanderSetupWizard_WednasdaySelector_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@class=&apos;dvDueAssignmentsTodayCss&apos;]/div.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_CalendarFrame_AssignedContentCount_Xpath_Locator {
@@ -251,6 +332,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(3) &gt; select.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_ClassName_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_ClassName_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ucLeftNavigationContainer_ucContentTab_ucMessageBoard_lnkClear.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator {
@@ -274,6 +364,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; select.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CourseName_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CourseName_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to idCreatePeriod.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_CreatePeriod_Id {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_CreatePeriod_Id", resourceCulture);
             }
         }
         
@@ -404,6 +512,69 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainDiv&apos;]/table[{0}]/tbody/tr/td[3]/select/option.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetClassName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetClassName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainDiv&apos;]/table[{0}]/tbody/tr/td[4]/select/option.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetCourseAssociation_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetCourseAssociation_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainDiv&apos;]/table[1]/tbody/tr/td[2]/input.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetFirstPeriodName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetFirstPeriodName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainDiv&apos;]/table.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetPeriodCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetPeriodCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainDiv&apos;]/table[{0}]/tbody/tr/td[2]/input.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetPeriodTitle_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetPeriodTitle_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;dvCurriculums&apos;]/ul/li.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetProductCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetProductCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;dvCurriculums&apos;]/ul/li[{0}].
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_GetProductName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_GetProductName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnImportantDates.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator {
@@ -485,11 +656,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(5) &gt; select.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_OrderNumber_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_OrderNumber_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#mainDiv &gt; table:nth-of-type({0}) &gt; tbody &gt; tr &gt; td:nth-of-type(2) &gt; input.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to frmPlanner.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ucLeftNavigationContainer_ucProductNavigation_imgDrdProducts.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_ProductSelect_CmenuIcon_ID {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_ProductSelect_CmenuIcon_ID", resourceCulture);
             }
         }
         
@@ -580,6 +778,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarDefaultGlobalUX_Page_SundayLabel_Id {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_SundayLabel_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_TableCountForLoopInitialization_Value {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_TableCountForLoopInitialization_Value", resourceCulture);
             }
         }
         

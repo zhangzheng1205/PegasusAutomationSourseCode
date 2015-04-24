@@ -138,6 +138,9 @@
   <data name="EmptyCalendarPage_RightCalendarFrame_Id_Locator" xml:space="preserve">
     <value>FrmEmptyCal</value>
   </data>
+  <data name="EmptyCalendarPage_SetupLink_ClassName" xml:space="preserve">
+    <value>setupLink</value>
+  </data>
   <data name="EmptyCalendarPage_WindowName_FinishBtn_Time" xml:space="preserve">
     <value>5000</value>
   </data>

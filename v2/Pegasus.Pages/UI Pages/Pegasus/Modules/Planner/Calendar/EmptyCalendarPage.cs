@@ -44,6 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Wait for Iframe and switch to frame
                 base.WaitForElement(By.Id(EmptyCalendarPageResource
                     .EmptyCalendarPage_MainFrame_Id_Locator));
+                Thread.Sleep(2000);
                 base.SwitchToIFrame(EmptyCalendarPageResource
                     .EmptyCalendarPage_MainFrame_Id_Locator);
                 base.SwitchToIFrame(EmptyCalendarPageResource
@@ -58,13 +59,35 @@ namespace Pegasus.Pages.UI_Pages
                         (EmptyCalendarPageResource
                         .EmptyCalendarPage_CalendarSetupButton_CSS_Locator);
                     base.ClickByJavaScriptExecutor(getCalendarButton);
-                    // fetch class name 
+                    // Fetch class name 
                     Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
                     // Fetch course name 
                     Course course = Course.Get(Course.CourseTypeEnum.MasterLibrary);
                     // New instance of Emptycalendarpage to select calendar set up button
                     new CalendarDefaultGlobalUXPage().
                         ConfigureCalendarSetUp(orgClass.Name, course.Name);
+                }
+                else
+                {
+                    // Select "Planner" window
+                    base.SelectWindow(EmptyCalendarPageResource.EmptyCalendarPage_WindowName_Title);
+                    // Click on Setup link in the top rite navigation
+                    IWebElement getSetupLink = base.GetWebElementPropertiesByClassName(
+                        EmptyCalendarPageResource.EmptyCalendarPage_SetupLink_ClassName);
+                    base.ClickByJavaScriptExecutor(getSetupLink);
+                    // Wait for Iframe and switch to frame
+                    base.SwitchToIFrameById(CalendarSetupPageResource.CalendarSetupPage_Main_Iframe_Id_Locator);
+                    base.WaitForElement(By.Id(CalendarSetupPageResource.CalendarSetupPage_Wizard_frame_Id_Locator));
+                    base.WaitForElement(By.Id("iframeSetUpWizard"),10);
+                    base.SwitchToIFrameById("iframeSetUpWizard");
+                    IWebElement getSetupCalenderLink = base.GetWebElementPropertiesByClassName("Image_Icon1Cale");
+                    base.ClickByJavaScriptExecutor(getSetupCalenderLink);
+
+                    Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+                    // Fetch course name 
+                    Course course = Course.Get(Course.CourseTypeEnum.MasterLibrary);
+                    new CalendarDefaultGlobalUXPage().
+                    ConfigureCalendarSetUp(orgClass.Name, course.Name);
                 }
                 
             }

@@ -269,10 +269,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Configure general preference on calendar lightbox
                 ConfigureGeneralPreferences();
-                // Configure schedule class on calendar lightbox
+                // Configure schedule class and period setup on calendar lightbox
                 ConfigureScheduleClasses(orgClassName, courseName);
-                // Configure classes periods
-                ConfigureClassesPeriods();
                 // configure block out description
                 ConfigureBlockOutDescription();
                 // Configure block out date
@@ -286,7 +284,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureCalendarSetUp",
                  base.IsTakeScreenShotDuringEntryExit);
-
         }
 
         /// <summary>
@@ -299,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             // Enter description
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
-             .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox));
+             .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox),10);
             base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox
              , CalendarDefaultGlobalUXPageResource
@@ -366,6 +363,77 @@ namespace Pegasus.Pages.UI_Pages
             // Configure schedule class set up on the calendar light box
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ConfigureScheduleClasses",
                  base.IsTakeScreenShotDuringEntryExit);
+            // Get the first period name
+            String Value = base.GetWebElementPropertiesByXPath
+                    (CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_GetFirstPeriodName_Xpath_Locator).GetAttribute("Value");
+            // Check if the period name is empty
+            if (Value!= null)
+            {
+                // Click on the Add Classes link
+                base.ClickLinkById(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_AddClasses_Link_ClassName);
+                // Initialize the period Title variables 
+                string periodTitle = string.Empty;
+                // Initialize the Class Association variables 
+                string classAssociation = string.Empty;
+                // Initialize the Course Association variables 
+                string courseAssociation = string.Empty;
+                // Scan the Schedule Classes lightbox and get the period count
+                int getPeriodCount = base.GetElementCountByXPath(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_GetPeriodCount_Xpath_Locator);
+                for (int periodListCount = Convert.ToInt32(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_ForLoopInitialization_Value); periodListCount <= getPeriodCount;
+                periodListCount++)
+                {
+                    // Get the Value of Period title from the "Period" textbox
+                    periodTitle = base.GetWebElementPropertiesByXPath
+                    (string.Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_GetPeriodTitle_Xpath_Locator,
+                    periodListCount)).GetAttribute("Value");
+                    // Get the selected option of class Association from the "Class Association" textbox
+                    classAssociation = base.GetWebElementPropertiesByXPath
+                    (string.Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_GetClassName_Xpath_Locator,
+                    periodListCount)).GetAttribute("Title");
+                    // Get the selected option of class Association from the "Course Association" textbox
+                    courseAssociation = base.GetWebElementPropertiesByXPath
+                     (string.Format(CalendarDefaultGlobalUXPageResource.
+                     CalendarDefaultGlobalUX_Page_GetCourseAssociation_Xpath_Locator,
+                     periodListCount)).GetAttribute("Title");
+
+                    if (periodTitle == "" || classAssociation == "Select Class")
+                    {
+                        // This methord will check the period existance and setup a new caleneder with period of order 1
+                        SetupScheduleClassesInCalenderSetup(orgClassName, courseName, periodListCount);
+                        // Configure classes periods
+                        ConfigureClassesPeriods(periodListCount);
+                        // Click create period button
+                        base.ClickButtonById(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CreatePeriod_Id);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                // This methord will setup new calender with a new period
+                int periodListCount = Convert.ToInt32(1);
+                //SetupNewScheduledClassesInCalenderSetup(orgClassName, courseName);
+                SetupNewScheduledClassesInCalenderSetup(orgClassName, courseName);
+                ConfigureClassesPeriods(periodListCount);
+            }
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureScheduleClasses",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Setup new Scheduled Classes in calender setup wizard.
+        /// </summary>
+        /// <param name="orgClassName">This is the class name.</param>
+        /// <param name="courseName">This is the course name.</param>
+        private void SetupNewScheduledClassesInCalenderSetup(string orgClassName, string courseName)
+        {
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "SetupNewScheduledClassesInCalenderSetup",
+            base.IsTakeScreenShotDuringEntryExit);
             // Wait for the class name dropdown
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                    .CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator));
@@ -392,8 +460,38 @@ namespace Pegasus.Pages.UI_Pages
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Id, Convert.ToInt32
             (CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Value));
-            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureScheduleClasses",
-                 base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SetupNewScheduledClassesInCalenderSetup",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="orgClassName"></param>
+        /// <param name="courseName"></param>
+        /// <param name="productListCount"></param>
+        private void SetupScheduleClassesInCalenderSetup(string orgClassName, string courseName, int productListCount)
+        {
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SetupScheduleClassesInCalenderSetup",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Enter the display name
+            base.ClearTextByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator,productListCount));
+            base.FillTextBoxByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator, productListCount,
+            productListCount), CalendarDefaultGlobalUXPageResource
+            .CalendarDefaultGlobalUX_Page_DisplayNameText_Value);
+            // Select class name in drop down
+            base.SelectDropDownValueThroughTextByCssSelector(string.Format(
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_ClassName_CSS_Locator, productListCount), 
+                orgClassName);
+            // Select Course name in drop down
+            base.SelectDropDownValueThroughTextByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CourseName_CSS_Locator, productListCount), courseName);
+            // Select Order
+            base.SelectDropDownValueThroughIndexByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_OrderNumber_CSS_Locator, productListCount),
+            Convert.ToInt32(0));
         }
 
         /// <summary>
@@ -449,10 +547,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickButtonById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_SaveCalendar_Button_Id);
                 // Click on exit button
-                base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
-                .CalendarDefaultGlobalUX_Page_ExitButton_Id));
-                base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-                .CalendarDefaultGlobalUX_Page_ExitButton_Id);
+                base.WaitForElement(By.CssSelector(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ExitButton_CSS_Locator));
+                base.ClickButtonByCssSelector(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ExitButton_CSS_Locator);
             }
             catch (Exception e)
             {
@@ -534,35 +632,36 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Configure classes periods on calendar frame
         /// </summary>
-        private void ConfigureClassesPeriods()
+        /// <param name="periodListCount">This is a Period list count, base on which the day selection will be decided.</param>
+        private void ConfigureClassesPeriods(int productListCount)
         {
             // configure the classes periods
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ConfigureClassesPeriods",
                  base.IsTakeScreenShotDuringEntryExit);
             // Wait for monday label
-            base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
-                .CalendarDefaultGlobalUX_Page_MondayLabel_Id));
+            base.WaitForElement(By.CssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_MondaySelector_CSS_Locator, productListCount)));
             // Click on monday 
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-                .CalendarDefaultGlobalUX_Page_MondayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_MondaySelector_CSS_Locator, productListCount));
             // Click on Tuesday 
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-              .CalendarDefaultGlobalUX_Page_TuesdayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_TuesdaySelector_CSS_Locator, productListCount));
             // Click on wednesday
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-              .CalendarDefaultGlobalUX_Page_WednesdayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_WednasdaySelector_CSS_Locator, productListCount));
             // Click on thursday
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-              .CalendarDefaultGlobalUX_Page_ThursdayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_ThursdaySelector_CSS_Locator, productListCount));
             // Click on Friday
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-              .CalendarDefaultGlobalUX_Page_FridayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_FridaySelector_CSS_Locator, productListCount));
             // Click on Saturday
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-              .CalendarDefaultGlobalUX_Page_SaturdayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SatardaySelector_CSS_Locator, productListCount));
             // Click on Sunday
-            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
-              .CalendarDefaultGlobalUX_Page_SundayLabel_Id);
+            base.ClickButtonByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_CalanderSetupWizard_SundaySelector_CSS_Locator, productListCount));
             // Wait and click on the important dates button
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator));
@@ -1252,8 +1351,50 @@ namespace Pegasus.Pages.UI_Pages
             }
         }
 
-
-
-
+        
+        /// <summary>
+        /// Select the product from the Curriculum dropdown in planner tab.
+        /// </summary>
+        /// <param name="productName">This is the name of the Product.</param>
+        public void SelectProductInCurriculumDropdown(String productName)
+        {
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "SelectProductInCurriculumDropdown", 
+                base.IsTakeScreenShotDuringEntryExit);
+            this.SelectWindowAndSwitchToFrame();
+            // Wait for Select product dropdown of Curriculum dropdown
+            base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
+            CalendarDefaultGlobalUX_Page_ProductSelect_CmenuIcon_ID), 10);
+            // Click image icon
+            IWebElement getSelectProduct = base.GetWebElementPropertiesById(CalendarDefaultGlobalUXPageResource.
+              CalendarDefaultGlobalUX_Page_ProductSelect_CmenuIcon_ID);
+            Thread.Sleep(2000);
+            base.PerformMouseHoverByJavaScriptExecutor(getSelectProduct);
+            base.ClickByJavaScriptExecutor(getSelectProduct);
+            // Initialize the product name variable to empty
+            string getProductName = string.Empty;
+            int getProductCount = base.GetElementCountByXPath(
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_GetProductCount_Xpath_Locator);
+            for (int productListCount = Convert.ToInt32(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_ForLoopInitialization_Value); productListCount <= getProductCount;
+            productListCount++)
+            {
+                // Getting the Product name
+                getProductName = base.GetTitleAttributeValueByXPath
+                    (string.Format(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_GetProductName_Xpath_Locator,
+                    productListCount));
+                if (getProductName.Trim() == productName.Trim())
+                {
+                    //Select the product by click on the product name.
+                    IWebElement getProductValue = base.GetWebElementPropertiesByXPath(string.Format(
+                        CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_GetProductName_Xpath_Locator,
+                    productListCount));
+                    base.PerformClickAction(getProductValue);
+                    break;
+                }
+           }
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SelectProductInCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -1071,24 +1071,22 @@ testRunner.When("I close Manage student pop up", ((string)(null)), ((TechTalk.Sp
         public virtual void SetupCalendarInPlannerTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Setup Calendar In Planner tab", ((string[])(null)));
-#line 417
-this.ScenarioSetup(scenarioInfo);
 #line 418
-testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 419
-testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 420
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 421
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 422
+#line 420
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 423
+#line 421
 testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 424
+#line 422
 testRunner.Then("I should be on the \"Planner\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 423
+testRunner.When("I select \"DigitalPath\" Product from the Curriculum dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 424
+testRunner.And("I click on the Calendar set up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 425
-testRunner.When("I click on the Calendar set up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I select \"DigitalPath\" Product from the Curriculum dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 426
 testRunner.Then("I should see the calendar configured successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
