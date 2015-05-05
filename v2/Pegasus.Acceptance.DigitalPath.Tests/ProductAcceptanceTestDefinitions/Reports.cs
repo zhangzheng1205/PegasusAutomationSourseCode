@@ -65,15 +65,15 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-       /// <summary>
-       /// Select student in Individual student mastery cretiria page to generate the report
-       /// </summary>
-       /// <param name="assessmentName"></param>
-       /// <param name="assessmentType"></param>
-       /// <param name="userTypeEnum"></param>
-       /// <param name="windowName"></param>
+        /// <summary>
+        /// Select student in Individual student mastery cretiria page to generate the report
+        /// </summary>
+        /// <param name="assessmentName">This is the name of the Asset.</param>
+        /// <param name="assessmentType">This is the asset type.</param>
+        /// <param name="userTypeEnum">This is the usertype enum.</param>
+        /// <param name="windowName">This is the window name</param>
         [When(@"I select ""(.*)"" in ""(.*)"" by ""(.*)"" in ""(.*)""")]
-        public void SelectActivityInReportsCriteriaPage(string assessmentName, string assessmentType,
+        public void SelectStudentInReportsCriteriaPage(string assessmentName, string assessmentType,
             User.UserTypeEnum userTypeEnum, string windowName)
         {
             //Select activity for which report needs to be run
@@ -86,15 +86,38 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Select Student from the Select student popup
+        /// </summary>
+        /// <param name="studentUser">This is to get the Student user.</param>
+        /// <param name="buttonName">This is to get the button name.</param>
+        [When(@"I select a ""(.*)"" in ""(.*)""")]
+        public void TeacherSelectStudentClassMastery(User.UserTypeEnum studentUser, string buttonName)
+        {
+            // Select Student from the add student popup
+            Logger.LogMethodEntry("Reports", "TeacherSelectStudentClassMastery", base.IsTakeScreenShotDuringEntryExit);
+            new RptMainUXPage().SelectStudentClassMasteryReport(studentUser, buttonName);
+            Logger.LogMethodExit("Reports", "TeacherSelectStudentClassMastery", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate Student Display In Student Result Criteria Page
+        /// </summary>
+        /// <param name="userName">This is the username.</param>
         [Then(@"I should see the added Student ""(.*)"" in Report criteria page")]
-        public void ValidateStudentDisplayInStudentResultCriteriaPage(string studentName)
+        public void ValidateStudentDisplayInStudentResultCriteriaPage(User.UserTypeEnum userName)
         {
             //Validate the added student display in criteria 
             Logger.LogMethodEntry("Reports", "ValidateStudentDisplayInStudentResultCriteriaPage",
                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userName);
+            String userLastName = user.LastName.ToString();
+            String userFirstName = user.FirstName.ToString();
+            String userLastFirstName = (userLastName + ", " + userFirstName).Trim();
+            String userDetails = userLastFirstName.Replace(", ", string.Empty).Trim();
             Logger.LogAssertion("ValidateStudentDisplayInStudentResultCriteriaPage",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual("Annaihstu1, Raghavendrastu1", new RptMainUXPage().
+                () => Assert.AreEqual(userDetails, new RptMainUXPage().
                     getAddedStudentNameFromStudenActivityCriteriaPage()));
             Logger.LogMethodExit("Reports", "ValidateStudentDisplayInStudentResultCriteriaPage",
               base.IsTakeScreenShotDuringEntryExit);
@@ -396,6 +419,49 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see the ""(.*)"" class with course name ""(.*)""")]
+        public void ValidateMasteryReportData(Class.ClassTypeEnum classTypeEnum, Course.CourseTypeEnum courseTypeEnum)
+        {
+            // Verify The Activity Details In Activity Result By Student Report
+            Logger.LogMethodEntry("Reports",
+                "ValidateMasteryReportData",
+            base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            Class className = Class.Get(classTypeEnum);
+            //Verify Class name
+            Logger.LogAssertion("VerifyStudentName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(className.Name, new RptActivityResultByStudentPage().GetClassNameInMasteryReport()));
+            //Verify Course name
+            Logger.LogAssertion("VerifysectionName",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(course.Name, new RptActivityResultByStudentPage().GetCourseNameInMasteryReport()));
+            //////Verify Graphexistance
+            //Logger.LogAssertion("VerifyActivityAverageScore",
+            // ScenarioContext.Current.ScenarioInfo.Title, () =>
+            //  Assert.AreEqual(true, new RptActivityResultByStudentPage().
+            //  GetGraphExistanceStatus()));
+            Logger.LogMethodExit("Reports",
+                "ValidateMasteryReportData",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of score in the Reports page.
+        /// </summary>
+        /// <param name="p0"></param>
+        [Then(@"I see ""(.*)"" score in the reports page")]
+        public void ValidateScoreInReports(String score)
+        {
+            Logger.LogMethodEntry("Reports","ValidateScoreInReports",base.IsTakeScreenShotDuringEntryExit);
+
+            RptActivityResultByStudentPage rptActivityResultByStudentPage = new RptActivityResultByStudentPage();
+            rptActivityResultByStudentPage.getScoreClassMastaryReport();
+            Logger.LogAssertion("VerifyActivityAverageScore", ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(score,rptActivityResultByStudentPage.getScoreClassMastaryReport()));
+            Logger.LogMethodExit("Reports", "ValidateScoreInReports", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Validate the activity type displayed in generated report.
         /// </summary>
@@ -454,7 +520,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("ValidatePercentageDisplay",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
               Assert.AreEqual(percentage, new RptAllAssessmentAllStudentPage().
-              GetstudentPercentFromReportsWindow(user.Name, reportName)));
+              GetstudentPercentFromReportsWindow(user.LastName, reportName)));
             Logger.LogMethodExit("Reports", "ValidatePercentageDisplay",
             base.IsTakeScreenShotDuringEntryExit);
         }

@@ -120,3 +120,8 @@ Then I should see the "Signed Out" message
 Scenario: DP Teacher saving the profile date and time
 When I click 'My Profile' link as "DPCsTeacher"
 And I store user current date and time of the teacher
+
+#Purpose: Coursespace Teacher enter into digital path class
+Scenario: Teacher enter into DigitalPath Class
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page

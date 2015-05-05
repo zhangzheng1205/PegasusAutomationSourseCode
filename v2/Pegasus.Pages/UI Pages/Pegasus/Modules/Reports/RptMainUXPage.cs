@@ -152,6 +152,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Individual Student Mastery Report
                     case RptMainUXPage.PegasusInstructorReportEnum.IndividualStudentMasteryReport:
+
                         new RptMasteryPage().ClickTheStudentMasteryLink();
                         break;
                 }
@@ -1572,10 +1573,13 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 base.SwitchToDefaultPageContent();
+                base.SelectWindow("Classes");
+
                 //Switch to iframes in reports page
                 base.SwitchToIFrameById(RptMainUXPageResource.
                     RptMainUXPage_ContainerFrame_Id_Locator);
-                this.SwitchToMainFrame();
+                base.SwitchToIFrameById(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator);
+                //this.SwitchToMainFrame();
                 string getSearchedReportName = string.Empty;
                 base.WaitForElement(By.XPath(RptMainUXPageResource.
                     RptMainUX_Page_MyReportsCount_Xpath_Locator));
@@ -1603,15 +1607,15 @@ namespace Pegasus.Pages.UI_Pages
                 for (int initialCount = initialCountResource;
                     initialCount <= getActivityCount; initialCount++)
                 {
-                    base.WaitForElement(By.XPath(string.Format(reportName, initialCount)));
-                    getSearchedReportName = base.GetElementTextByXPath(string.Format(reportName, initialCount));
+                    base.WaitForElement(By.XPath(string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td/span", initialCount)));
+                    getSearchedReportName = base.GetElementTextByXPath(string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td/span", initialCount));
 
 
                     //Click on 'C menu' of expected report
                     if (getSearchedReportName == actualMyReportName)
                     {
-                        base.WaitForElement(By.XPath(string.Format(cmenu, initialCount)));
-                        IWebElement getCmenu = base.GetWebElementPropertiesByXPath((string.Format(cmenu, initialCount)));
+                        base.WaitForElement(By.XPath(string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td[2]/img", initialCount)));
+                        IWebElement getCmenu = base.GetWebElementPropertiesByXPath((string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td[2]/img", initialCount)));
                         //Click on cmenu of the asset
                         base.ClickByJavaScriptExecutor(getCmenu);
                         Thread.Sleep(1000);
@@ -1745,10 +1749,8 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Switch to this case when user is 'DP teacher'
                     case User.UserTypeEnum.DPCsTeacher:
-                        //Switch to 'Reports' page iframe
-                        base.SwitchToIFrameById(RptMainUXPageResource.
-                            RptMainUXPage_ContainerFrame_Id_Locator);
-                        this.SwitchToMainFrame();
+                    //Switch to 'Reports' page iframe
+                        new RptCommonCriteriaPage().SelectTheReportFrame();   
                         //Check the checkbox
                         this.SelectCheckBoxSaveSettingsToMyReport();
                         break;
@@ -1858,6 +1860,81 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Student from the student selector lightbox.
+        /// </summary>
+        /// <param name="studentUser">This is the Student Name.</param>
+        /// <param name="buttonName">This is the button Name.</param>
+        public void SelectStudentClassMasteryReport(User.UserTypeEnum studentUser, string buttonName)
+        {   
+            // Select Student
+            Logger.LogMethodEntry("RptMainUXPage", "SelectStudentClassMasteryReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(studentUser);
+            // Get and Store the student name
+            string userFirstName = user.FirstName.ToString();
+            string userLastName = user.LastName.ToString();
+            string userName = user.Name.ToString();
+            // Formate the username to compare with the students listed in the student selector lightbox
+            String studentName = userLastName + ", " + userFirstName;
+            string getSearchedStudentName = string.Empty;
+            try
+            {
+                base.SwitchToDefaultPageContent();
+                // Switch to iFrame
+                base.SwitchToIFrameById(RptMainUXPageResource.
+                    RptMainUXPage_ContainerFrame_Id_Locator);
+                base.SwitchToIFrameById(RptMainUXPageResource.
+                    RptMainUXPage_LearningAidUsage_frame_Value);
+                // Click Add button based on the input button name
+                base.WaitForElement(By.PartialLinkText(buttonName));
+                base.ClickButtonByPartialLinkText(buttonName);
+                // Switch to default page
+                base.SwitchToDefaultPageContent();
+                base.SwitchToLastOpenedWindow();
+                // switch to iframe
+                base.SwitchToIFrameById(RptMainUXPageResource.
+                RptMainUXPage_ContainerFrame_Id_Locator);
+                base.SwitchToIFrameById(RptMainUXPageResource.
+                    RptMainUXPage_IndividualStudentMasterReport_SelectStudentsPage_Iframe_Id_Locator);
+                //Get count of the student listed 
+                int getStudentCount = base.GetElementCountByXPath(
+                    RptMainUXPageResource.
+                    RptMainUXPage_SelectStudent_XPath_Locator);
+                int initialCountStudent = 2;
+                //Search for expected student
+                for (int initialCount = initialCountStudent;
+                    initialCount <= getStudentCount; initialCount++)
+                {
+                    base.WaitForElement(By.XPath(string.
+                        Format(RptMainUXPageResource.
+                        RptMainUXPage_SelectSingleStudent_XPath_Locator, initialCount)));
+                    getSearchedStudentName = base.GetElementTextByXPath(string.
+                    Format(RptMainUXPageResource.
+                        RptMainUXPage_SelectSingleStudent_XPath_Locator, initialCount));
+                    //Click on 'Checkbox' of the student
+                    if (getSearchedStudentName == studentName)
+                    {
+                        base.WaitForElement(By.XPath(string.Format(RptMainUXPageResource.
+                        RptMainUXPage_ClickSingleStudent_XPath_Locator, initialCount)));
+                        IWebElement selectStudent = base.GetWebElementPropertiesByXPath(
+                            string.Format(RptMainUXPageResource.
+                        RptMainUXPage_ClickSingleStudent_XPath_Locator, initialCount));
+                        base.ClickByJavaScriptExecutor(selectStudent);
+                        break;
+                    }
+                }
+                // Click Add and Close button
+                this.ClickAddAndCloseButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "SelectStudentClassMasteryReport",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// This selects the expected 'Activity' or 'Exam' or 'Training' based on user.
         /// </summary>
         /// <param name="assessmentName">This is the asset name.</param>
@@ -1869,6 +1946,11 @@ namespace Pegasus.Pages.UI_Pages
             // This selects the expected 'Activity' or 'Exam' or 'Training' based on user
             Logger.LogMethodEntry("RptMainUXPage", "SelectSingleAssesment",
                 base.IsTakeScreenShotDuringEntryExit);
+
+            User user = User.Get(userTypeEnum);
+            string userFirstName = user.FirstName.ToString();
+            string userLastName = user.LastName.ToString();
+            string userName = user.Name.ToString();
             try
             {
                 switch (userTypeEnum)
@@ -1923,9 +2005,11 @@ namespace Pegasus.Pages.UI_Pages
 
                     case User.UserTypeEnum.DPCsTeacher:
                         base.SwitchToDefaultPageContent();
+                        base.SelectWindow("Classes");
                         base.SwitchToIFrameById(RptMainUXPageResource.
                         RptMainUXPage_ContainerFrame_Id_Locator);
-                        this.SwitchToMainFrame();
+                        base.SwitchToIFrameById(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator);
+                       // this.SwitchToMainFrame();
                         switch (assessmentType)
                         {
                             case "Select Activities":
@@ -1962,9 +2046,7 @@ namespace Pegasus.Pages.UI_Pages
                             case "Select Students":
                                 this.OpenAssessmentWindow(assessmentType, windownName);
                                 //Selects the expected activity and click 'Add'
-                                //this.AddHSSCsSmsStudent((User.UserTypeEnum)
-                                //     Enum.Parse(typeof(User.UserTypeEnum), assessmentName));
-                                this.AddDPStudent(windownName);
+                                this.AddDPStudent(windownName,userLastName);
                                 break;
                         }
                         break;
@@ -2033,75 +2115,84 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Add the DP student to Student activity report.
         /// </summary>
-        private void AddDPStudent(string windownName)
-        {
+        private void AddDPStudent(string windownName, String userLastName)
+        {   
+            // Select and add student
+            Logger.LogMethodEntry("RptMainUXPage", "AddDPStudent", base.IsTakeScreenShotDuringEntryExit);
             string getStudentName;
             switch(windownName)
             {
                 case "SelectStudentByGroup":
-                     base.SwitchToDefaultPageContent();
-            base.SwitchToIFrameById(RptMainUXPageResource.
-                RptMainUXPage_ContainerFrame_Id_Locator);
-            base.SwitchToIFrameById(RptMainUXPageResource.
-                RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator);
-            IWebElement getCourseExpandButtonProperty = base.GetWebElementPropertiesByXPath(RptMainUXPageResource.
-                RptMainUXPage_StudentActivityReport_SelectStudent_ExpandButton_Xpath_Locator);
-            base.PerformClickAction(getCourseExpandButtonProperty);
-            int studentsCount = base.GetElementCountByXPath(RptMainUXPageResource.
-                RptMainUXPage_StudentActivityReport_TotalStudentCount_Xpath_Locator);
-            for(int i = 1; i <= studentsCount; i++)
-            {
-                 getStudentName = base.GetElementTextByXPath(string.
-                    Format(RptMainUXPageResource.
-                    RptMainUXPage_StudentActivityReport_StudentName_Xpath_Locator, i));
-                if (getStudentName.Equals("Annaihstu1, Raghavendrastu1"))
-                {
-                    IWebElement getStudentCheckBoxProperty = base.
-                        GetWebElementPropertiesByXPath(string.
-                        Format(RptMainUXPageResource.
-                        RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator, i));
-                    base.PerformClickAction(getStudentCheckBoxProperty);
-                    break;
-                }
-            }
-            break;
-                case "IndividualStudentByGroup":
-           
-                int getStudentsCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
-                for (int i = 2; i <= getStudentsCount; i++)
-                {
-                    getStudentName = base.GetElementTextByXPath(string.Format(
-                        "//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
-                    if (getStudentName.Equals("Annaihstu1, Raghavendrastu1"))
-                    {
-                        IWebElement getCheckBoxProperty = base.GetWebElementPropertiesByXPath(string.Format(
-                            "//table[@id='GridStudent']/tbody/tr[{0}]/td[1]/input",i));
-                        base.PerformClickAction(getCheckBoxProperty);
+                        base.SwitchToDefaultPageContent();
+                        base.SwitchToIFrameById(RptMainUXPageResource.
+                            RptMainUXPage_ContainerFrame_Id_Locator);
+                        base.SwitchToIFrameById(RptMainUXPageResource.
+                            RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator);
+                        IWebElement getCourseExpandButtonProperty = base.GetWebElementPropertiesByXPath
+                            (RptMainUXPageResource.
+                            RptMainUXPage_StudentActivityReport_SelectStudent_ExpandButton_Xpath_Locator);
+                        base.PerformClickAction(getCourseExpandButtonProperty);
+                        int studentsCount = base.GetElementCountByXPath(RptMainUXPageResource.
+                            RptMainUXPage_StudentActivityReport_TotalStudentCount_Xpath_Locator);
+                        for(int i = 1; i <= studentsCount; i++)
+                        {
+                             getStudentName = base.GetElementTextByXPath(string.
+                                Format(RptMainUXPageResource.
+                                RptMainUXPage_StudentActivityReport_StudentName_Xpath_Locator, i));
+                             if (getStudentName.Contains(userLastName))
+                            {
+                                IWebElement getStudentCheckBoxProperty = base.
+                                    GetWebElementPropertiesByXPath(string.
+                                    Format(RptMainUXPageResource.
+                                    RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator, i));
+                                base.PerformClickAction(getStudentCheckBoxProperty);
+                                break;
+                            }
+                        }
                         break;
+                case "IndividualStudentByGroup":
+                        int getStudentsCount = base.GetElementCountByXPath(RptMainUXPageResource.
+                        RptMainUXPage_SelectStudent_InduvidualStudentByGroup_XPath_Locator);
+                    for (int i = 2; i <= getStudentsCount; i++)
+                    {   
+                        // Select Student based on the selection criteria met
+                        getStudentName = base.GetElementTextByXPath(string.Format(
+                            RptMainUXPageResource.RptMainUXPage_InduvidualStudentByGroup_GetStudentName_XPath_Locator, i));
+                        if (getStudentName.Contains(userLastName))
+                        {
+                            IWebElement getCheckBoxProperty = base.GetWebElementPropertiesByXPath(string.Format(
+                                RptMainUXPageResource.RptMainUXPage_InduvidualStudentByGroup_GetCheckBoxProperty_XPath_Locator, i));
+                            base.PerformClickAction(getCheckBoxProperty);
+                            break;
+                        }
                     }
-                }
-                break;
-          
+                    break;
             }
-           
+           // Click Add and Close button in Select Student popup
             ClickOnAddAndCloseButtonInSelectStudentPopUp();
         }
 
-
+        /// <summary>
+        /// Add induvidual Student
+        /// </summary>
         public void AddIndividualStudentByGroup()
-        {
+        { // select Student
+            Logger.LogMethodEntry("RptMainUXPage", "AddIndividualStudentByGroup", base.IsTakeScreenShotDuringEntryExit);
             string getStudentName;
             try
-            {
-                int getStudentsCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
+            {   // Get the student count
+                int getStudentsCount = base.GetElementCountByXPath(RptMainUXPageResource.
+                    RptMainUXPage_SelectStudent_InduvidualStudentByGroup_XPath_Locator);
                 for (int i = 2; i <= getStudentsCount; i++)
                 {
                     getStudentName = base.GetElementTextByXPath(string.Format(
-                        "//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
+                       RptMainUXPageResource.
+                       RptMainUXPage_InduvidualStudentByGroup_GetStudentName_XPath_Locator, i));
                     if (getStudentName.Equals("Annaihstu1, Raghavendrastu1"))
                     {
                         IWebElement getCheckBoxProperty = base.GetWebElementPropertiesByXPath(string.Format(
-                            "//table[@id='GridStudent']/tbody/tr[{0}]/td[1]/input"));
+                            RptMainUXPageResource.
+                            RptMainUXPage_InduvidualStudentByGroup_GetCheckBoxProperty_XPath_Locator));
                         base.PerformClickAction(getCheckBoxProperty);
                     }
                 }
@@ -2111,6 +2202,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+            Logger.LogMethodExit("RptMainUXPage", "AddIndividualStudentByGroup",base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -2122,6 +2214,7 @@ namespace Pegasus.Pages.UI_Pages
 
         public string getAddedStudentNameFromStudenActivityCriteriaPage(int timeOut = -1)
         {
+            String StudentName;
             base.SwitchToLastOpenedWindow();
             base.SwitchToDefaultPageContent();
             base.SwitchToIFrameById(RptMainUXPageResource.RptMainUXPage_ContainerFrame_Id_Locator);
@@ -2147,7 +2240,8 @@ namespace Pegasus.Pages.UI_Pages
                 stopWatch.Stop();
                 }
             base.SwitchToDefaultPageContent();
-            return getStudentName;
+            StudentName = getStudentName.Replace(", ", string.Empty).Trim();
+            return StudentName;
         }
 
         /// <summary>
@@ -2314,6 +2408,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click on add button
             Logger.LogMethodEntry("RptMainUXPageResource", "ClickAddButton",
                   base.IsTakeScreenShotDuringEntryExit);
+
             base.WaitForElement(By.XPath(RptMainUXPageResource.
                 RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator));
             bool addButton = base.IsElementPresent(By.XPath(RptMainUXPageResource.
@@ -2324,6 +2419,21 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(clickOnAdd);
             base.SwitchToDefaultWindow();
             Logger.LogMethodExit("RptMainUXPageResource", "ClickAddButton",
+                     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on add and close button.
+        /// </summary>
+        private void ClickAddAndCloseButton()
+        {
+            // Click on add and close button
+            Logger.LogMethodEntry("RptMainUXPageResource", "ClickAddAndCloseButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+            base.ClickButtonById(RptMainUXPageResource.
+            RptMainUXPage_ClassMasteryReport_AddAndCloseButton_Id_Locator);
+            base.SwitchToDefaultWindow();
+            Logger.LogMethodExit("RptMainUXPageResource", "ClickAddAndCloseButton",
                      base.IsTakeScreenShotDuringEntryExit);
         }
 

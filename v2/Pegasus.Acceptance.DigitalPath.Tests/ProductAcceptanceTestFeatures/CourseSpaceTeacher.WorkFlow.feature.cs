@@ -265,30 +265,34 @@ testRunner.Then("I should be on the \"Planner\" page", ((string)(null)), ((TechT
 #line 75
 this.ScenarioSetup(scenarioInfo);
 #line 76
-testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 77
-testRunner.And("I search the asset type \"Test\" by \"TableofContents\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 78
-testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 79
-testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I search the asset type \"Test\" by \"TableofContents\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 80
-testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 81
-testRunner.When("I search the asset type \"Test\" by \"Skill\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 82
-testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
-testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
 testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 85
-testRunner.When("I search the asset type \"Test\" by \"ContentType\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
+#line 83
+testRunner.When("I search the asset type \"Test\" by \"Skill\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 84
 testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
+#line 85
 testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 86
+testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 87
+testRunner.When("I search the asset type \"Test\" by \"ContentType\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 88
+testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 89
+testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 90
 testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -300,17 +304,17 @@ testRunner.Then("I should not see the searched result", ((string)(null)), ((Tech
         public virtual void AdvancedSearchInCurriculumTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Advanced Search in Curriculum Tab by CS Teacher", ((string[])(null)));
-#line 91
-this.ScenarioSetup(scenarioInfo);
-#line 92
-testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 93
-testRunner.And("I search the asset type \"Test\" in \"Curriculum\" tab using Advanced Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 94
-testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 95
-testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I search the asset type \"Test\" in \"Curriculum\" tab using Advanced Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 96
+testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 97
+testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 98
 testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -322,17 +326,17 @@ testRunner.Then("I should not see the searched result", ((string)(null)), ((Tech
         public virtual void BasicSearchInPlannerTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic Search in Planner Tab by CS Teacher", ((string[])(null)));
-#line 99
-this.ScenarioSetup(scenarioInfo);
-#line 100
-testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 101
-testRunner.And("I search the asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 102
-testRunner.Then("I should see the searched asset \"Test\" successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 103
-testRunner.When("I clear the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I search the asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 104
+testRunner.Then("I should see the searched asset \"Test\" successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 105
+testRunner.When("I clear the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 106
 testRunner.Then("I should not see the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -344,17 +348,17 @@ testRunner.Then("I should not see the searched result in planner tab", ((string)
         public virtual void AdvancedSearchInPlannerTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Advanced Search in Planner Tab by CS Teacher", ((string[])(null)));
-#line 107
-this.ScenarioSetup(scenarioInfo);
-#line 108
-testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 109
-testRunner.And("I search the asset type \"Test\" in \"Planner\" tab using Advanced Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 110
-testRunner.Then("I should see the searched asset \"Test\" in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 111
-testRunner.When("I clear the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I search the asset type \"Test\" in \"Planner\" tab using Advanced Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 112
+testRunner.Then("I should see the searched asset \"Test\" in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 113
+testRunner.When("I clear the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 114
 testRunner.Then("I should not see the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -366,26 +370,26 @@ testRunner.Then("I should not see the searched result in planner tab", ((string)
         public virtual void CustomizeContentInCurriculumTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Customize Content In Curriculum Tab by CS Teacher", ((string[])(null)));
-#line 115
-this.ScenarioSetup(scenarioInfo);
-#line 116
-testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 117
-testRunner.And("I customize the content \"Test\" in curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 118
+testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 119
+testRunner.And("I customize the content \"Test\" in curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 120
 testRunner.Then("I should see the successfull message \"You have successfully added custom content." +
                     "\" in Curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 119
-testRunner.When("I click on the custom content link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 120
-testRunner.Then("I should see the ML in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 121
-testRunner.When("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on the custom content link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 122
-testRunner.Then("I should see the customized \"Test\" content of the ML in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the ML in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 123
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 124
+testRunner.Then("I should see the customized \"Test\" content of the ML in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 125
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 126
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -397,22 +401,22 @@ testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk
         public virtual void CreateLicencedAssetsInGlobalByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Licenced Assets in Global by CS Teacher", ((string[])(null)));
-#line 127
-this.ScenarioSetup(scenarioInfo);
-#line 128
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 129
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 130
-testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 131
-testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 132
-testRunner.When("I mouseover on the Licensed content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 133
+testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 134
+testRunner.When("I mouseover on the Licensed content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
 testRunner.And("I create the global \"Licensed\" content \"Test\" activity and \'TrueFalse\' question i" +
                     "n global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 134
+#line 136
 testRunner.Then("I should see the successfull message \"Activity added successfully.\" in Curriculum" +
                     " tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -425,27 +429,27 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
         public virtual void CreateNonLicencedTestAssetsInGlobalByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create NonLicenced TestAssets in Global by CS Teacher", ((string[])(null)));
-#line 137
-this.ScenarioSetup(scenarioInfo);
-#line 138
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 139
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 140
-testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 141
-testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 142
-testRunner.When("I Create the custom content \"Folder\" activity global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 143
+testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 144
+testRunner.When("I Create the custom content \"Folder\" activity global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 145
 testRunner.Then("I should see the successfull message \"Folder saved successfully.\" in Curriculum t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 144
+#line 146
 testRunner.When("I mouseOver on the NonLicensed Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 145
+#line 147
 testRunner.And("I create the global \"NonLicensed\" content \"Test\" activity and \'TrueFalse\' questio" +
                     "n in global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 146
+#line 148
 testRunner.Then("I should see the successfull message \"Activity added successfully.\" in Curriculum" +
                     " tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -458,19 +462,19 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
         public virtual void CreateNonLicencedLinkAssetsInGlobalByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create NonLicenced LinkAssets in Global by CS Teacher", ((string[])(null)));
-#line 149
-this.ScenarioSetup(scenarioInfo);
-#line 150
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 151
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 152
-testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 153
-testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 154
-testRunner.When("I create the nonGgadable \"Link\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 155
+testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 156
+testRunner.When("I create the nonGgadable \"Link\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 157
 testRunner.Then("I should see the successfull message \"Link saved successfully.\" in Curriculum tab" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -483,39 +487,39 @@ testRunner.Then("I should see the successfull message \"Link saved successfully.
         public virtual void CopyPasteOfLicensedAssetsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy paste of Licensed Assets by CS Teacher", ((string[])(null)));
-#line 158
-this.ScenarioSetup(scenarioInfo);
-#line 159
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 160
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 161
-testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 162
-testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 163
-testRunner.When("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 164
-testRunner.And("I should able to see the \"Licensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 165
-testRunner.And("I select the \"Licensed\" CopyPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 166
+testRunner.And("I should able to see the \"Licensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 167
+testRunner.And("I select the \"Licensed\" CopyPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 168
 testRunner.Then("I should see the successfull message \"Items copied successfully.\" in Curriculum t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
-testRunner.When("I Clear the Clipboard link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
-testRunner.And("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 169
-testRunner.And("I remove the \"Licensed\" copied content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I Clear the Clipboard link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 170
+testRunner.And("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 171
+testRunner.And("I remove the \"Licensed\" copied content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 172
 testRunner.Then("I should see the successfull message \"Items deleted successfully.\" in Curriculum " +
                     "tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 171
-testRunner.When("I should able to see the \"Licensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
-testRunner.And("I select the \"Licensed\" CutPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 173
+testRunner.When("I should able to see the \"Licensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 174
+testRunner.And("I select the \"Licensed\" CutPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 175
 testRunner.Then("I should see the successfull message \"Selected items moved successfully.\" in Curr" +
                     "iculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -528,39 +532,39 @@ testRunner.Then("I should see the successfull message \"Selected items moved suc
         public virtual void CopyPasteOfNonLicensedAssetsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy paste of NonLicensed Assets by CS Teacher", ((string[])(null)));
-#line 176
-this.ScenarioSetup(scenarioInfo);
-#line 177
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 178
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 179
-testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 180
-testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 181
-testRunner.When("I click on the expand button of Non licensed Folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 182
-testRunner.And("I should able to see the \"NonLicensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 183
-testRunner.And("I select the \"NonLicensed\" CopyPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on the expand button of Non licensed Folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 184
+testRunner.And("I should able to see the \"NonLicensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 185
+testRunner.And("I select the \"NonLicensed\" CopyPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 186
 testRunner.Then("I should see the successfull message \"Items copied successfully.\" in Curriculum t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 185
-testRunner.When("I Clear the Clipboard link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 186
-testRunner.And("I click on the expand button of Non licensed Folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 187
-testRunner.And("I remove the \"NonLicensed\" copied content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I Clear the Clipboard link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 188
+testRunner.And("I click on the expand button of Non licensed Folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 189
+testRunner.And("I remove the \"NonLicensed\" copied content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 190
 testRunner.Then("I should see the successfull message \"Items deleted successfully.\" in Curriculum " +
                     "tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 189
-testRunner.When("I should able to see the \"NonLicensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 190
-testRunner.And("I select the \"NonLicensed\" CutPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 191
+testRunner.When("I should able to see the \"NonLicensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 192
+testRunner.And("I select the \"NonLicensed\" CutPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 193
 testRunner.Then("I should see the successfull message \"Selected items moved successfully.\" in Curr" +
                     "iculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -573,22 +577,22 @@ testRunner.Then("I should see the successfull message \"Selected items moved suc
         public virtual void SendingMailMessageByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending Mail Message by CS Teacher", ((string[])(null)));
-#line 194
-this.ScenarioSetup(scenarioInfo);
-#line 195
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 196
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 197
-testRunner.When("I create mail by \"DPCsTeacher\" in CourseSpace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 198
-testRunner.And("I send created mail to CourseSpace users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 199
+testRunner.When("I create mail by \"DPCsTeacher\" in CourseSpace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 200
+testRunner.And("I send created mail to CourseSpace users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 201
 testRunner.Then("I should see the successfull message \"Your message has been sent.\" in the send ma" +
                     "il popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 200
+#line 202
 testRunner.When("I close the mail popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 201
+#line 203
 testRunner.Then("I should see the mail popup closed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -600,27 +604,27 @@ testRunner.Then("I should see the mail popup closed successfully", ((string)(nul
         public virtual void TeacherValidatesTheDisplayOfAssignedLCCInManageCourseWork()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validates the display of assigned LCC in Manage course work", ((string[])(null)));
-#line 205
-this.ScenarioSetup(scenarioInfo);
-#line 206
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 207
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 208
-testRunner.When("I enter into the DP \"Class digits 6\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 209
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 210
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter into the DP \"Class digits 6\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 211
-testRunner.Then("I should see assigned LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 212
-testRunner.And("I should see status as \"Not started\" for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 213
-testRunner.And("I should see the due date for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 214
-testRunner.And("I should see \"All\" text in Shown to column for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see status as \"Not started\" for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 215
+testRunner.And("I should see the due date for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 216
+testRunner.And("I should see \"All\" text in Shown to column for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 217
 testRunner.And("I should see Assigned icon for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -634,26 +638,26 @@ testRunner.And("I should see Assigned icon for LCC \"1-1 Homework\"", ((string)(
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned study plan under manage coursework on curr" +
                     "ent date", ((string[])(null)));
-#line 220
-this.ScenarioSetup(scenarioInfo);
-#line 221
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 222
-testRunner.And("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 223
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 224
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 225
-testRunner.Then("I should see assigned study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 226
-testRunner.And("I should see status as \"Begin\" for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 227
-testRunner.And("I should see the due date for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 228
+testRunner.And("I should see status as \"Begin\" for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 229
+testRunner.And("I should see the due date for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 230
 testRunner.And("I should see \"All\" text in Shown to column for study plan \"Topic 1 Test with Stud" +
                     "y Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 229
+#line 231
 testRunner.And("I should see Assigned icon for study plan \"Topic 1 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -667,25 +671,25 @@ testRunner.And("I should see Assigned icon for study plan \"Topic 1 Test with St
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned Math XL activity under manage coursework o" +
                     "n current date", ((string[])(null)));
-#line 233
-this.ScenarioSetup(scenarioInfo);
-#line 234
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 235
-testRunner.And("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 236
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 237
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 238
-testRunner.Then("I should see assigned MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 239
-testRunner.And("I should see status as \"Not started\" for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 240
-testRunner.And("I should see the due date for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 241
-testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see status as \"Not started\" for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 242
+testRunner.And("I should see the due date for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 243
+testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 244
 testRunner.And("I should see Assigned icon for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -697,59 +701,47 @@ testRunner.And("I should see Assigned icon for MathXL activity \"Topic 1 Test\""
         public virtual void GenerateAndSaveTheActivityResultsByStudentAsATeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Activity Results by Student\" as a teacher", ((string[])(null)));
-#line 248
+#line 247
 this.ScenarioSetup(scenarioInfo);
-#line 249
-testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 250
-testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 251
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 252
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 253
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 254
+#line 248
 testRunner.When("I navigate to the \"Reports\" tab in DP class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 255
+#line 249
 testRunner.And("I click on \"Activity Results by Student\" report link as \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 256
-testRunner.And("I select \"Topic 1 Test\" asset in \"Select Activity\" by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 257
+#line 250
+testRunner.And("I select \"Topic 2 Test\" asset in \"Select Activity\" by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 251
 testRunner.And("I \'Select All\' in \'Student Options\' by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 258
+#line 252
 testRunner.And("I select \'save settings to My Reports\' option by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 259
+#line 253
 testRunner.And("I click on the \"Run Report\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 260
+#line 254
 testRunner.Then("I should see \"Save settings to My Reports\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 261
+#line 255
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 262
+#line 256
 testRunner.And("I enter the \"DPActivityResultsByStudent\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 263
+#line 257
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 264
+#line 258
 testRunner.Then("I should be on the \"Report: Activity Results by Student\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 265
-testRunner.And("I should see the \"Topic 1 Test\" with course name \"MasterLibrary\" with average sco" +
-                    "re \"2.9%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 266
+#line 259
+testRunner.And("I should see the \"Topic 2 Test\" with course name \"MasterLibrary\" with average sco" +
+                    "re \"70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 260
 testRunner.And("I should see the \"MathXL Test\" as Activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 267
-testRunner.And("I should see the Attempt number as \"1\" for \"DPCsStudent\" in \"ARBS\" report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 268
-testRunner.And("I should see the \"2.9%\" in Percent column for \"DPCsStudent\" in \"ARBS\" report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 269
+#line 261
+testRunner.And("I should see the \"70%\" in Percent column for \"DPCsStudent\" in \"ARBS\" report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 262
 testRunner.When("I close the \"Report: Activity Results by Student\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 270
+#line 263
 testRunner.And("I click on the \"Cancel\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 271
+#line 264
 testRunner.And("I select \"Run Report\" for \"DPActivityResultsByStudent\" report in \'My Reports\' gri" +
                     "d by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 272
+#line 265
 testRunner.Then("I should be on the \"Report: Activity Results by Student\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 273
+#line 266
 testRunner.When("I close the \"Report: Activity Results by Student\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -761,59 +753,47 @@ testRunner.When("I close the \"Report: Activity Results by Student\" window", ((
         public virtual void GenerateAndSaveTheStudentResultsByActivityAsATeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Student Results by Activity\" as a teacher", ((string[])(null)));
-#line 276
+#line 269
 this.ScenarioSetup(scenarioInfo);
-#line 277
-testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 278
-testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 279
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 280
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 281
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 282
+#line 270
 testRunner.When("I navigate to the \"Reports\" tab in DP class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 283
+#line 271
 testRunner.And("I click on \"Student Results by Activity\" report link as \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 284
+#line 272
 testRunner.And("I select \"DPCsStudent\" student in \"Select Student\" by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 285
-testRunner.And("I select \"Topic 1 Test\" asset in \"Select Activities\" by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 286
+#line 273
+testRunner.And("I select \"Topic 2 Test\" asset in \"Select Activities\" by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 274
 testRunner.And("I select \'save settings to My Reports\' option by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 287
+#line 275
 testRunner.And("I click on the \"Run Report\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 288
+#line 276
 testRunner.Then("I should see \"Save settings to My Reports\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 289
+#line 277
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 290
+#line 278
 testRunner.And("I enter the \"DPStudentResultByActivity\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 291
+#line 279
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 292
+#line 280
 testRunner.Then("I should be on the \"Report: Student Results by Activity\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 293
+#line 281
 testRunner.Then("I should see the course name \"MasterLibrary\" for \"DPCsStudent\" with average score" +
-                    " \"2.9%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 294
-testRunner.And("I should see \"Topic 1 Test\" \"MathXL Test\" details in the report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 295
-testRunner.And("I should see the Attempt number as \"1\" for \"DPCsStudent\" in \"SRBA\" report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 296
-testRunner.And("I should see the \"2.9%\" in Percent column for \"DPCsStudent\" in \"SRBA\" report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 297
+                    " \"70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 282
+testRunner.And("I should see \"Topic 2 Test\" \"MathXL Test\" details in the report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 283
+testRunner.And("I should see the \"70%\" in Percent column for \"DPCsStudent\" in \"SRBA\" report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 284
 testRunner.When("I close the \"Report: Activity Results by Student\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 298
+#line 285
 testRunner.And("I click on the \"Cancel\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 299
+#line 286
 testRunner.And("I select \"Run Report\" for \"DPStudentResultByActivity\" report in \'My Reports\' grid" +
                     " by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 300
+#line 287
 testRunner.Then("I should be on the \"Report: Student Results by Activity\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 301
+#line 288
 testRunner.When("I close the \"Report: Student Results by Activity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -825,86 +805,86 @@ testRunner.When("I close the \"Report: Student Results by Activity\" window", ((
         public virtual void GenerateAndSaveTheStudentActivityReportAsATeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Student Activity\" report as a teacher", ((string[])(null)));
-#line 303
+#line 291
 this.ScenarioSetup(scenarioInfo);
-#line 304
+#line 292
 testRunner.When("I navigate to the \"Reports\" tab in DP class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 305
+#line 293
 testRunner.And("I click on \"Student Activity\" report link as \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 306
+#line 294
 testRunner.And("I select \"DPCsStudent\" student in \"Select Students\" by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 307
+#line 295
 testRunner.Then("I should see the added Student \"DPCsStudent\" in Report criteria page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 308
+#line 296
 testRunner.When("I select \'save settings to My Reports\' option by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 309
+#line 297
 testRunner.And("I click on the \"Run Report\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 310
+#line 298
 testRunner.Then("I should see \"Save settings to My Reports\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 311
+#line 299
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 312
+#line 300
 testRunner.And("I enter the \"DPStudentActivity\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 313
+#line 301
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 314
+#line 302
 testRunner.Then("I should be on the \"Student Activity Report\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 315
+#line 303
 testRunner.And("I should see \"Student\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 316
+#line 304
 testRunner.And("I should see \"Class\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 317
+#line 305
 testRunner.And("I should see \"Course\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 318
+#line 306
 testRunner.And("I should see \"Start Date\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 319
+#line 307
 testRunner.And("I should see \"Last Attempt\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 320
+#line 308
 testRunner.And("I should see \"Days Online\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 321
+#line 309
 testRunner.And("I should see \"Time on Task\" data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 322
+#line 310
 testRunner.When("I Click on Detailed Report button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 323
+#line 311
 testRunner.Then("I should see \"Detailed Student Activity Report\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 324
+#line 312
 testRunner.And("I should see \"Date\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 325
+#line 313
 testRunner.And("I should see \"Sign On\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 326
+#line 314
 testRunner.And("I should see \"Sign Off\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 327
+#line 315
 testRunner.And("I should see \"Session Duration\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 328
+#line 316
 testRunner.When("I expand the date in detailed student activity report pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 329
+#line 317
 testRunner.Then("I should see \"Activity\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 330
+#line 318
 testRunner.And("I should see \"Time\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 331
+#line 319
 testRunner.And("I should see \"Start Time\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 332
+#line 320
 testRunner.And("I should see \"End Time\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 333
+#line 321
 testRunner.And("I should see \"Activity Status\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 334
+#line 322
 testRunner.And("I should see \"Score\" data in detailed student activity pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 335
+#line 323
 testRunner.When("I close the \"Detailed Student Activity Report\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 336
+#line 324
 testRunner.Then("I should be on the \"Student Activity Report\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 337
+#line 325
 testRunner.When("I close the \"Student Activity Report\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 338
+#line 326
 testRunner.And("I click on the \"Cancel\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 339
+#line 327
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 340
+#line 328
 testRunner.When("I select \"Run Report\" for \"DPStudentActivity\" report in \'My Reports\' grid by \"DPC" +
                     "sTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 341
+#line 329
 testRunner.Then("I should be on the \"Student Activity Report\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 342
+#line 330
 testRunner.When("I close the \"Student Activity Report\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -916,38 +896,89 @@ testRunner.When("I close the \"Student Activity Report\" window", ((string)(null
         public virtual void GenerateAndSaveTheIndividualStudentMasteryAsATeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Individual Student Mastery\" as a teacher", ((string[])(null)));
-#line 344
+#line 333
 this.ScenarioSetup(scenarioInfo);
-#line 345
+#line 334
 testRunner.When("I navigate to the \"Reports\" tab in DP class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 346
+#line 335
 testRunner.And("I click on \"Individual Student Mastery\" report link as \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 347
+#line 336
 testRunner.And("I select \"DPCsStudent\" in \"Select Students\" by \"DPCsTeacher\" in \"IndividualStuden" +
                     "tByGroup\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 348
+#line 337
 testRunner.Then("I should see the added Student \"DPCsStudent\" in Report criteria page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 349
+#line 338
 testRunner.When("I select the \"Skill\" radio button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 350
+#line 339
 testRunner.And("I click on Select Standards button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 351
+#line 340
 testRunner.And("I select \"digits - grade 6 skills\" skills from the drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 352
-testRunner.When("I generate the \"IndividualStudentMasteryReport\" for \"digits - grade 6 skills\" ski" +
-                    "ll", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 353
+#line 341
 testRunner.When("I select \'save settings to My Reports\' option by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 354
+#line 342
 testRunner.And("I click on the \"Run Report\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 355
+#line 343
 testRunner.Then("I should see \"Save settings to My Reports\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 356
+#line 344
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 357
-testRunner.And("I enter the \"DPStudentActivity\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 358
+#line 345
+testRunner.And("I enter the \"IndividualStudentMasteryReport\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 346
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 347
+testRunner.Then("I should be on the \"Mastery Report\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 348
+testRunner.And("I should see the \"DigitalPathMasterLibrary\" class with course name \"MasterLibrary" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 349
+testRunner.When("I close the \"Mastery Report\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 350
+testRunner.And("I click on the \"Cancel\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Generate and save the \"Class Mastery\" as a teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void GenerateAndSaveTheClassMasteryAsATeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Class Mastery\" as a teacher", ((string[])(null)));
+#line 353
+this.ScenarioSetup(scenarioInfo);
+#line 354
+testRunner.When("I navigate to the \"Reports\" tab in DP class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 355
+testRunner.And("I click on \"Class Mastery\" report link as \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 356
+testRunner.When("I select the \"Skill\" radio button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 357
+testRunner.And("I click on Select Standards button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 358
+testRunner.And("I select \"digits - grade 6 skills\" skills from the drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 359
+testRunner.And("I select a \"DPCsStudent\" in \"Select Students\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 360
+testRunner.And("I select \'save settings to My Reports\' option by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 361
+testRunner.And("I click on the \"Run Report\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 362
+testRunner.Then("I should see \"Save settings to My Reports\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 363
+testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 364
+testRunner.And("I enter the \"ClassMasteryReport\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 365
+testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 366
+testRunner.Then("I should be on the \"Mastery Report\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 367
+testRunner.And("I should see the \"DigitalPathMasterLibrary\" class with course name \"MasterLibrary" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 368
+testRunner.When("I close the \"Mastery Report\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 369
+testRunner.And("I click on the \"Cancel\" button in reports by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -958,34 +989,34 @@ testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.
         public virtual void ClassCreationFromClassesChannel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Class creation from classes channel", ((string[])(null)));
-#line 364
-this.ScenarioSetup(scenarioInfo);
-#line 365
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 366
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 367
-testRunner.When("I click on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 368
-testRunner.Then("I should see \"Setup Wizard\" light box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 369
-testRunner.When("I enter class name of \"DigitalPathMasterLibrary\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 370
-testRunner.And("I click on Select product button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 371
-testRunner.Then("I should see \"Select Product\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 372
-testRunner.When("I select product and Click on Manage enrollments button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 373
-testRunner.Then("I should see \"Manage Enrollments\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 374
-testRunner.When("I click on Save Class button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 375
+this.ScenarioSetup(scenarioInfo);
+#line 376
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 377
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 378
+testRunner.When("I click on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 379
+testRunner.Then("I should see \"Setup Wizard\" light box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 380
+testRunner.When("I enter class name of \"DigitalPathMasterLibrary\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 381
+testRunner.And("I click on Select product button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 382
+testRunner.Then("I should see \"Select Product\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 383
+testRunner.When("I select product and Click on Manage enrollments button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 384
+testRunner.Then("I should see \"Manage Enrollments\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 385
+testRunner.When("I click on Save Class button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 386
 testRunner.Then("I should see the successfull message \"Your class has been successfully created an" +
                     "d saved.\" in setup wizard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 376
+#line 387
 testRunner.When("I click No,Save and Exit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 377
+#line 388
 testRunner.Then("I should see \"DigitalPathMasterLibrary\" class displayed in classes channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -997,24 +1028,24 @@ testRunner.Then("I should see \"DigitalPathMasterLibrary\" class displayed in cl
         public virtual void AddProductInHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Product In Home Page", ((string[])(null)));
-#line 383
+#line 394
 this.ScenarioSetup(scenarioInfo);
-#line 384
+#line 395
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 385
+#line 396
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 386
+#line 397
 testRunner.When("I Click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 387
+#line 398
 testRunner.And("I select \"DigitalPath\" Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 388
+#line 399
 testRunner.When("I Click on the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 389
+#line 400
 testRunner.Then("I should see the successfull message \"Your products have been successfully added." +
                     "\" on setup wizard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 390
+#line 401
 testRunner.When("I Click On the Save and Exit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 391
+#line 402
 testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1026,40 +1057,40 @@ testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum chan
         public virtual void TeacherValidatingTheStudentEnrollmentToClass()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating the student enrollment to class", ((string[])(null)));
-#line 397
+#line 408
 this.ScenarioSetup(scenarioInfo);
-#line 398
+#line 409
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 399
+#line 410
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 400
+#line 411
 testRunner.When("I click on Cmenu option of Class \"DigitalPathMasterLibrary\" and select \"Enrollmen" +
                     "ts\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 401
-testRunner.Then("I should see the \"Manage Students\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 402
-testRunner.When("I Click on Create New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 403
-testRunner.And("I select \"Enroll from School\" drop down option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 404
-testRunner.Then("I should see the \"Enroll from School\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 405
-testRunner.When("I click on Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 406
-testRunner.And("I enter student username \"DPCsStudent\" to search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 407
-testRunner.Then("I should see searched username \"DPCsStudent\" in search list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 408
-testRunner.When("I select the student and click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 409
-testRunner.Then("I should see the success message \"Users enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 410
-testRunner.When("I close Enroll from school pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 411
-testRunner.Then("I should see \"Enroll from School\" pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 412
-testRunner.And("I should see the student \"DPCsStudent\" displayed in manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the \"Manage Students\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 413
+testRunner.When("I Click on Create New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 414
+testRunner.And("I select \"Enroll from School\" drop down option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 415
+testRunner.Then("I should see the \"Enroll from School\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 416
+testRunner.When("I click on Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 417
+testRunner.And("I enter student username \"DPCsStudent\" to search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 418
+testRunner.Then("I should see searched username \"DPCsStudent\" in search list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 419
+testRunner.When("I select the student and click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 420
+testRunner.Then("I should see the success message \"Users enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 421
+testRunner.When("I close Enroll from school pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 422
+testRunner.Then("I should see \"Enroll from School\" pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 423
+testRunner.And("I should see the student \"DPCsStudent\" displayed in manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 424
 testRunner.When("I close Manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -1071,23 +1102,23 @@ testRunner.When("I close Manage student pop up", ((string)(null)), ((TechTalk.Sp
         public virtual void SetupCalendarInPlannerTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Setup Calendar In Planner tab", ((string[])(null)));
-#line 418
+#line 429
 this.ScenarioSetup(scenarioInfo);
-#line 419
+#line 430
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 420
+#line 431
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 421
+#line 432
 testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 422
+#line 433
 testRunner.Then("I should be on the \"Planner\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 423
+#line 434
 testRunner.When("I select \"DigitalPath\" Product from the Curriculum dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 424
+#line 435
 testRunner.And("I click on the Calendar set up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 425
+#line 436
 testRunner.And("I select \"DigitalPath\" Product from the Curriculum dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 426
+#line 437
 testRunner.Then("I should see the calendar configured successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -299,8 +299,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window               
                 base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
                 //Get Class Count
-                int getClassCount = base.GetElementCountByXPath(HomePageResource.
-                   HomePage_ClassesDivCount_Xpath_Locator);
+                int getClassCount = base.GetElementCountByCssSelector(HomePageResource.HomePage_ClassesDivCount_Xpath_Locator);
                 // Click on particular class
                 for (int initialCount = Convert.ToInt32(HomePageResource.
                    HomePage_ClassesDivInitialCount_Value); initialCount <= getClassCount; initialCount++)

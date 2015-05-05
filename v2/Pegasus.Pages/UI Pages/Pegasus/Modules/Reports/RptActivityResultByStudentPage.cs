@@ -247,5 +247,94 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 base.IsTakeScreenShotDuringEntryExit);
             return getSection;
         }
+
+        /// <summary>
+        /// Get Class Name In Instructor Report.
+        /// </summary>
+        /// <returns>Section name.</returns>
+        public string GetClassNameInMasteryReport()
+        {
+            logger.LogMethodEntry("RptActivityResultByStudentPage",
+                           "GetClassNameInMasteryReport",
+                          base.IsTakeScreenShotDuringEntryExit);
+            string getClassName = string.Empty;
+            try
+            {
+                getClassName = base.GetElementTextById("MastryHeaderControl_Listdetails__ctl0_lblNameValue");
+            }
+            catch (System.Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptActivityResultByStudentPage",
+                "GetSectionNameInInstructorReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getClassName;
+        }
+
+
+        /// <summary>
+        /// Get Course Name In Instructor Report.
+        /// </summary>
+        /// <returns>Section name.</returns>
+        public string GetCourseNameInMasteryReport()
+        {
+            logger.LogMethodEntry("RptActivityResultByStudentPage",
+                           "GetCourseNameInMasteryReport",
+                          base.IsTakeScreenShotDuringEntryExit);
+            string getCourseName = string.Empty;
+            try
+            {
+                getCourseName = base.GetElementTextById("MastryHeaderControl_Listdetails__ctl1_lblNameValue");
+            }
+            catch (System.Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptActivityResultByStudentPage",
+                "GetCourseNameInMasteryReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getCourseName;
+        }
+
+        /// <summary>
+        /// Get Image existance status.
+        /// </summary>
+        /// <returns>True or False</returns>
+        public bool GetGraphExistanceStatus()
+        {
+            bool getGraphStatus = false;
+            logger.LogMethodEntry("RptActivityResultByStudentPage",
+                           "GetGraphExistanceStatus",
+                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                getGraphStatus = base.IsElementPresent(By.Id("IndividualMastery_GraphView_GraphButonId"));
+
+            }
+            catch (System.Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptActivityResultByStudentPage",
+                "GetCourseNameInMasteryReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getGraphStatus;
+        }
+
+        public string getScoreClassMastaryReport()
+        {
+            
+            logger.LogMethodEntry("RptActivityResultByStudentPage", "getScoreClassMastaryReport",base.IsTakeScreenShotDuringEntryExit);
+            string score = string.Empty;
+            base.SelectWindow("Mastery Report");
+            
+            //score = base.GetValueAttributeById("AssignmentOption").Trim();
+           string hhj = base.GetTitleAttributeValueById("AssignmentOption");
+           score = base.GetValueAttributeById("AssignmentOption");
+           string getScore = score.ToString();
+            logger.LogMethodExit("RptActivityResultByStudentPage", "getScoreClassMastaryReport", base.IsTakeScreenShotDuringEntryExit);
+            return score;
+        }
     }
 }

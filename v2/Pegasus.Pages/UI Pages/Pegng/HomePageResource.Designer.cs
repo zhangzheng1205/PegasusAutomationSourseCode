@@ -286,7 +286,7 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;cc&apos;]/div.
+        ///   Looks up a localized string similar to div#cc &gt; div.
         /// </summary>
         internal static string HomePage_ClassesDivCount_Xpath_Locator {
             get {

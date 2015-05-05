@@ -3160,6 +3160,8 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Variable
             try
             {
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_Classes_Window_Title);
                 //Click on More Link
                 this.ClickonMoreLink();
                 //Wait for More link
@@ -3178,6 +3180,8 @@ namespace Pegasus.Pages.UI_Pages
                     //Check if the tab name found is matching with expected tab name
                     if (tabName.Contains(linkName))
                     {
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_Classes_Window_Title);
                         //Click on the tab name
                         IWebElement tabClick = base.GetWebElementPropertiesByXPath(
                             string.Format(TodaysViewUXPageResource.

@@ -275,11 +275,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
 
                 Thread.Sleep(Convert.ToInt32(RptCommonCriteriaPageResource.
                      RptCommonCriteria_Page_RunReport_Button_TimeValue));
-                //Select The Report frame
-                //this.SelectTheReportFrame();
-                //Wait for the element
-                //base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
-                    // RptCommonCriteria_Page_SelectSkills_TextBox_Id_Locator));
             }
             catch (Exception e)
             {
@@ -323,8 +318,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             (RptCommonCriteriaPageResource.
             RptCommonCriteria_Page_SelectSkills_AddImage_Id_Locator);
             base.ClickByJavaScriptExecutor(addSkillsButtonProperties);
-            base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
-                    RptCommonCriteria_Page_CheckSkills_Checkbox_Id_Locator));
             logger.LogMethodExit("RptCommonCriteriaPage", "AddSkillsFromLeftToRight",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -336,13 +329,13 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             logger.LogMethodEntry("RptCommonCriteriaPage", "ClickUseSelectedSkills",
                 base.IsTakeScreenShotDuringEntryExit);
+            bool ffg = base.IsElementPresent(By.Id(RptCommonCriteriaPageResource.
+               RptCommonCriteria_Page_SelectSkills_UseSelectedSkills_Id_Locator),10);
             //Click on "UseSelectedSkills" button
             base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                RptCommonCriteria_Page_SelectSkills_UseSelectedSkills_Id_Locator));
-            IWebElement getSelectedSkillsProperties = base.GetWebElementPropertiesById
-                (RptCommonCriteriaPageResource.
+            base.ClickButtonById(RptCommonCriteriaPageResource.
                RptCommonCriteria_Page_SelectSkills_UseSelectedSkills_Id_Locator);
-            base.ClickByJavaScriptExecutor(getSelectedSkillsProperties);
             logger.LogMethodExit("RptCommonCriteriaPage", "ClickUseSelectedSkills",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -441,7 +434,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-             
+                base.WaitUntilWindowLoads("Classes");   
+                base.SwitchToIFrameById("frmCourseContainer");
                 base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_Report_Iframe_Id_Locator));
                 //Select the Frame

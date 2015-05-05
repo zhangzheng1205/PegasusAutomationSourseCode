@@ -73,6 +73,8 @@ Then I should be on the "Planner" page
 
 #Purpose : Basic Search in Curriculum tab
 Scenario: Basic Search in Curriculum Tab by CS Teacher
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
 When I navigate to the "Curriculum" tab
 And I search the asset type "Test" by "TableofContents" criteria
 Then I should see the searched asset "Test"
@@ -241,19 +243,11 @@ And I should see the due date for MathXL activity "Topic 1 Test"
 And I should see "All" text in Shown to column for MathXL activity "Topic 1 Test"
 And I should see Assigned icon for MathXL activity "Topic 1 Test"
 
-
-
-
 #Purpose: To validate the Activity result by student report generation from teacher user.
 Scenario: Generate and save the "Activity Results by Student" as a teacher
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
-When I enter into the DP "DigitalPathMasterLibrary" class
-Then I should be on the "Classes" page
 When I navigate to the "Reports" tab in DP class
 And I click on "Activity Results by Student" report link as "DPCsTeacher"
-And I select "Topic 1 Test" asset in "Select Activity" by "DPCsTeacher"
+And I select "Topic 2 Test" asset in "Select Activity" by "DPCsTeacher"
 And I 'Select All' in 'Student Options' by "DPCsTeacher"
 And I select 'save settings to My Reports' option by "DPCsTeacher"
 And I click on the "Run Report" button in reports by "DPCsTeacher"
@@ -262,10 +256,9 @@ When I select "Createnewreport" radiobutton
 And  I enter the "DPActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
 Then I should be on the "Report: Activity Results by Student" popup
-And I should see the "Topic 1 Test" with course name "MasterLibrary" with average score "2.9%" 
+And I should see the "Topic 2 Test" with course name "MasterLibrary" with average score "70%" 
 And I should see the "MathXL Test" as Activity type
-And I should see the Attempt number as "1" for "DPCsStudent" in "ARBS" report
-And I should see the "2.9%" in Percent column for "DPCsStudent" in "ARBS" report
+And I should see the "70%" in Percent column for "DPCsStudent" in "ARBS" report
 When I close the "Report: Activity Results by Student" window
 And I click on the "Cancel" button in reports by "DPCsTeacher"
 And I select "Run Report" for "DPActivityResultsByStudent" report in 'My Reports' grid by "DPCsTeacher"
@@ -274,15 +267,10 @@ When I close the "Report: Activity Results by Student" window
 
 #Purpose: To validate the Student result by activity report generation from teacher user.
 Scenario: Generate and save the "Student Results by Activity" as a teacher
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
-When I enter into the DP "DigitalPathMasterLibrary" class
-Then I should be on the "Classes" page
 When I navigate to the "Reports" tab in DP class
 And I click on "Student Results by Activity" report link as "DPCsTeacher"
 And I select "DPCsStudent" student in "Select Student" by "DPCsTeacher"
-And I select "Topic 1 Test" asset in "Select Activities" by "DPCsTeacher"
+And I select "Topic 2 Test" asset in "Select Activities" by "DPCsTeacher"
 And I select 'save settings to My Reports' option by "DPCsTeacher"
 And I click on the "Run Report" button in reports by "DPCsTeacher"
 Then I should see "Save settings to My Reports" popup
@@ -290,16 +278,16 @@ When I select "Createnewreport" radiobutton
 And  I enter the "DPStudentResultByActivity" report name
 And  I click on "SaveandRun" button
 Then I should be on the "Report: Student Results by Activity" popup
-Then I should see the course name "MasterLibrary" for "DPCsStudent" with average score "2.9%" 
-And I should see "Topic 1 Test" "MathXL Test" details in the report
-And I should see the Attempt number as "1" for "DPCsStudent" in "SRBA" report 
-And I should see the "2.9%" in Percent column for "DPCsStudent" in "SRBA" report
+Then I should see the course name "MasterLibrary" for "DPCsStudent" with average score "70%" 
+And I should see "Topic 2 Test" "MathXL Test" details in the report
+And I should see the "70%" in Percent column for "DPCsStudent" in "SRBA" report
 When I close the "Report: Activity Results by Student" window
 And I click on the "Cancel" button in reports by "DPCsTeacher"
 And I select "Run Report" for "DPStudentResultByActivity" report in 'My Reports' grid by "DPCsTeacher"
 Then I should be on the "Report: Student Results by Activity" popup
 When I close the "Report: Student Results by Activity" window
 
+#Purpose: To validate the Student Activity report generation from teacher user.
 Scenario: Generate and save the "Student Activity" report as a teacher
 When I navigate to the "Reports" tab in DP class
 And I click on "Student Activity" report link as "DPCsTeacher"
@@ -341,6 +329,7 @@ When I select "Run Report" for "DPStudentActivity" report in 'My Reports' grid b
 Then I should be on the "Student Activity Report" popup
 When I close the "Student Activity Report" window
 
+#Purpose: To validate the "Individual Student Mastery" report generation from teacher user.
 Scenario: Generate and save the "Individual Student Mastery" as a teacher
 When I navigate to the "Reports" tab in DP class
 And I click on "Individual Student Mastery" report link as "DPCsTeacher"
@@ -349,13 +338,35 @@ Then I should see the added Student "DPCsStudent" in Report criteria page
 When I select the "Skill" radio button
 And I click on Select Standards button
 And I select "digits - grade 6 skills" skills from the drop down
-When I generate the "IndividualStudentMasteryReport" for "digits - grade 6 skills" skill
 When I select 'save settings to My Reports' option by "DPCsTeacher"
 And I click on the "Run Report" button in reports by "DPCsTeacher"
 Then I should see "Save settings to My Reports" popup
 When I select "Createnewreport" radiobutton
-And  I enter the "DPStudentActivity" report name
+And  I enter the "IndividualStudentMasteryReport" report name
 And  I click on "SaveandRun" button
+Then I should be on the "Mastery Report" popup
+And I should see the "DigitalPathMasterLibrary" class with course name "MasterLibrary"
+When I close the "Mastery Report" window
+And I click on the "Cancel" button in reports by "DPCsTeacher"
+
+#Purpose: To validate the "Class Mastery" report generation from teacher user.
+Scenario: Generate and save the "Class Mastery" as a teacher
+When I navigate to the "Reports" tab in DP class
+And I click on "Class Mastery" report link as "DPCsTeacher"
+When I select the "Skill" radio button
+And I click on Select Standards button
+And I select "digits - grade 6 skills" skills from the drop down
+And I select a "DPCsStudent" in "Select Students"
+And I select 'save settings to My Reports' option by "DPCsTeacher"
+And I click on the "Run Report" button in reports by "DPCsTeacher"
+Then I should see "Save settings to My Reports" popup
+When I select "Createnewreport" radiobutton
+And  I enter the "ClassMasteryReport" report name
+And  I click on "SaveandRun" button
+Then I should be on the "Mastery Report" popup
+And I should see the "DigitalPathMasterLibrary" class with course name "MasterLibrary"
+When I close the "Mastery Report" window
+And I click on the "Cancel" button in reports by "DPCsTeacher"
 
 #Test case id: peg-1456
 #PEGASUS-27282

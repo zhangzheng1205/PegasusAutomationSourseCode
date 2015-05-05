@@ -32,7 +32,9 @@ namespace Pegasus.Automation.DataTransferObjects
             HSSStudentResultsbyActivity = 13,
             DPActivityResultsByStudent =14,
             DPStudentResultByActivity = 15,
-            DPStudentActivity = 16
+            DPStudentActivity = 16,
+            IndividualStudentMasteryReport=17,
+            ClassMasteryReport = 18
         }
 
         /// <summary>

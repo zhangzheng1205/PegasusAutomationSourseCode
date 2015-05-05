@@ -405,4 +405,19 @@
   <data name="RptMainUXPage_DP_ReportsLinks_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblrptgrid']//tr//td//span[contains(text(),'{0}')]</value>
   </data>
+  <data name="RptMainUXPage_ClassMasteryReport_AddAndCloseButton_Id_Locator" xml:space="preserve">
+    <value>imgAddSections</value>
+  </data>
+  <data name="RptMainUXPage_InduvidualStudentByGroup_GetCheckBoxProperty_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[1]/input</value>
+  </data>
+  <data name="RptMainUXPage_InduvidualStudentByGroup_GetStudentName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span</value>
+  </data>
+  <data name="RptMainUXPage_SelectStudent_InduvidualStudentByGroup_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
 </root>
