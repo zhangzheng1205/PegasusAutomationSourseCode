@@ -115,10 +115,13 @@ Then I should not see the searched result in planner tab
 
 #Purpose : Customize Content
 Scenario: Customize Content In Curriculum Tab by CS Teacher
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
 When I navigate to the "Curriculum" tab
 And I customize the content "Test" in curriculum tab
 Then I should see the successfull message "You have successfully added custom content." in Curriculum tab
-When I click on the custom content link
+When I select "Custom Content" Product in the Curriculum dropdown
 Then I should see the ML in the custom content view
 When I click on the expand button of MasterLibrary in the custom content view
 Then I should see the customized "Test" content of the ML in the custom content view
@@ -435,3 +438,13 @@ When I select "DigitalPath" Product from the Curriculum dropdown
 And I click on the Calendar set up button
 And I select "DigitalPath" Product from the Curriculum dropdown
 Then I should see the calendar configured successfully
+
+#Purpose: DigitalPath teacher select product from the curriculum channel.
+Scenario:Select product from Curriculum dropdown
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Curriculum" tab
+Then I should be on the "Curriculum" page
+When I select "DigitalPath" Product in the Curriculum dropdown
+Then I should see the "DigitalPath" Product in the Curriculum Channel

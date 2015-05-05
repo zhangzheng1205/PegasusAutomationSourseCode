@@ -240,4 +240,10 @@
   <data name="ContnetLibrary_Page_SubFolderExpandButton_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ucContentManager_tvContentn2Nodes']/table[{0}]/tbody/tr/td[2]//a/img</value>
   </data>
+  <data name="ContnetLibrary_Page_GetProductName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvCurriculums']/ul/li[{0}]</value>
+  </data>
+  <data name="ContnetLibrary_Page_ProductCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvCurriculums']/ul/li</value>
+  </data>
 </root>

@@ -296,6 +296,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;dvCurriculums&apos;]/ul/li[{0}].
+        /// </summary>
+        internal static string ContnetLibrary_Page_GetProductName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_GetProductName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@class=&apos;divmainCmenu&apos;]/table/tbody/tr/td/div[2]/a.
         /// </summary>
         internal static string ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator {
@@ -346,6 +355,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         internal static string ContnetLibrary_Page_Product_CmenuIcon_Id_Locator {
             get {
                 return ResourceManager.GetString("ContnetLibrary_Page_Product_CmenuIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;dvCurriculums&apos;]/ul/li.
+        /// </summary>
+        internal static string ContnetLibrary_Page_ProductCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_ProductCount_Xpath_Locator", resourceCulture);
             }
         }
         

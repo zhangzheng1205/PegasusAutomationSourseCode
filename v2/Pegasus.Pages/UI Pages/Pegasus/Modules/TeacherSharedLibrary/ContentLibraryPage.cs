@@ -787,5 +787,37 @@ namespace Pegasus.Pages.UI_Pages
             }
 
         }
+
+        /// <summary>
+        /// Select Digital Path product from Curriculum dropdown
+        /// </summary>
+        /// <param name="productName">This is the product name.</param>
+        public void SelectProductFromCurriculumDropdown(String productName)
+        {
+            // Select Digital Path product
+            logger.LogMethodEntry("ContentLibraryPage", "SelectProductFromCurriculumDropdown",base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow(ContentLibraryPageResource.ContnetLibrary_Page_Window_TitleName);
+            // Switch to iframe
+            base.SwitchToIFrameById(ContentLibraryPageResource.ContentLibrary_Page_Frame_Id_Locator);
+            // Wait for Curriculum dropdown icon to load
+            base.WaitForElement(By.Id(ContentLibraryPageResource.ContnetLibrary_Page_Product_CmenuIcon_Id_Locator));
+            base.ClickImageById(ContentLibraryPageResource.ContnetLibrary_Page_Product_CmenuIcon_Id_Locator);
+            // Get product count from the curriculum dropdown
+            int getProductCount = base.GetElementCountByXPath(ContentLibraryPageResource.ContnetLibrary_Page_ProductCount_Xpath_Locator);
+            // Check for the searched product existance
+            for (int i = 1; i <= getProductCount; i++)
+            {
+                string getProductName = base.GetElementTextByXPath(string.Format(ContentLibraryPageResource.
+                    ContnetLibrary_Page_GetProductName_Xpath_Locator, i));
+                if(productName.Equals(getProductName))
+                {
+                    base.ClickLinkByXPath(string.Format(ContentLibraryPageResource.
+                    ContnetLibrary_Page_GetProductName_Xpath_Locator, i));
+                    break;
+                }
+            }
+
+            logger.LogMethodExit("ContentLibraryPage", "SelectProductFromCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

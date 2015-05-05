@@ -227,6 +227,19 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Select Digital Path product from the curriculum dropdown
+        /// </summary>
+        /// <param name="productName">This is for the Product Name.</param>
+        [When(@"I select ""(.*)"" Product in the Curriculum dropdown")]
+        public void SelectProductInTheCurriculumDropdown(Product.ProductTypeEnum productName)
+        {
+            Logger.LogMethodEntry("GlobalHome", "SelectProductInTheCurriculumDropdown",base.IsTakeScreenShotDuringEntryExit);
+            Product product = Product.Get(productName);
+            string productTitle = product.Name.ToString();
+            new ContentLibraryPage().SelectProductFromCurriculumDropdown(productTitle);
+            Logger.LogMethodExit("GlobalHome", "SelectProductInTheCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
+        }
 
                 
         /// <summary>
