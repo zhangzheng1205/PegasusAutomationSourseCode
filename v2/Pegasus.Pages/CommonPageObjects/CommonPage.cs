@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
+using System.Globalization;
 using Pegasus.Pages.UI_Pages;
+using System.Diagnostics;
 using System.Configuration;
 
 namespace Pegasus.Pages.CommonPageObjects
@@ -1308,16 +1310,31 @@ namespace Pegasus.Pages.CommonPageObjects
                 "IsPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean IsPageOpened = false;
-            Thread.Sleep(Convert.ToInt32(CommonPageResource.
-                         ComonPage_Amplifier_Launch_Wait_Time));
-            //Switch to window
-            base.SwitchToLastOpenedWindow();
-            string getTheUrl = base.GetCurrentUrl;
-            // Returns boolean value for window launch
-            if ((getTheUrl.Contains(amplifierUrlText)))
+            try
             {
-                IsPageOpened = true;
 
+                Thread.Sleep(Convert.ToInt32(CommonPageResource.
+                             ComonPage_Amplifier_Launch_Wait_Time));
+                //Switch to window
+                base.SwitchToLastOpenedWindow();
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                string getTheUrl = base.GetCurrentUrl;
+                while (!IsPageOpened)
+                {
+
+                    if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+
+                    {
+                        IsPageOpened = getTheUrl.Contains(amplifierUrlText);
+
+                    }
+                }
+                stopWatch.Stop();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CommonPage",
                 "IsPageOpened",
@@ -1362,6 +1379,9 @@ namespace Pegasus.Pages.CommonPageObjects
                "IsTextPresentInPageSource",
               base.IsTakeScreenShotDuringEntryExit);
             bool isTextPresent = false;
+            //Start Stop Watch 
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             try
             {
                 switch (Environment.GetEnvironmentVariable(CommonPageResource.
@@ -1369,16 +1389,29 @@ namespace Pegasus.Pages.CommonPageObjects
                   ?? ConfigurationManager.AppSettings[CommonPageResource.
                   TestEnvironment_Key].ToUpper())
                 {
-                    case "PROD": isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
-                        CommonPage_Amplifire_Production_Book_Content);
+                    case "PROD":
+                        while (!isTextPresent)
+                        {
+
+                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+
+                            isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
+                            CommonPage_Amplifire_Production_Book_Content);
+                        }
                         break;
 
                     case "VCD":
                     case "CGIE":
-                        isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
-                        CommonPage_Amplifire_General_Book_Content);
+                        while (!isTextPresent)
+                        {
+
+                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+                            isTextPresent = WebDriver.PageSource.Contains(CommonPageResource.
+                            CommonPage_Amplifire_General_Book_Content);
+                        }
                         break;
                 }
+                stopWatch.Stop();
                 //Verify a text in the launched page 
 
             }
