@@ -45,6 +45,10 @@ namespace Pegasus.Pages.UI_Pages
             {                
                 //Generate GUID for customize Activity Name
                 Guid customizeActivityName = Guid.NewGuid();
+                Thread.Sleep(Convert.ToInt32(MathXLAssessmentPageResource.
+                MathXLAssessment_Page_Sleep_Time));
+                base.WaitUntilWindowLoads(MathXLAssessmentPageResource.
+                    MathXLAssessment_Page_Window_TitleName);
                 //Select Window and Switch To Frame
                 this.SelectWindowAndSwitchToFrame();
                 //Wait for element 

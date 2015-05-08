@@ -31,7 +31,8 @@ namespace Pegasus.Automation.DataTransferObjects
             PromotedAdminDigitalPath = 7,
             DigitalPathDemo = 8,
             MyITLabForOffice2013Program = 9,
-            MyITLabForOffice2013General = 10
+            MyITLabForOffice2013General = 10,
+            DigitalPathCustomContent = 11
         }
 
         /// <summary>

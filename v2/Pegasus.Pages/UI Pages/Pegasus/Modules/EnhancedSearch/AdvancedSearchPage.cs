@@ -70,12 +70,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.FillTextBoxById(AdvancedSearchPageResource.
                     AdvancedSearch_Page_TextBox_Id_Locator, activityName);
                 //Click on Search Button
-                base.WaitForElement(By.PartialLinkText(AdvancedSearchPageResource.
-                    AdvancedSearch_Page_SearchButton_PartialLinkText_Value));
-                IWebElement getSearchButton=base.GetWebElementPropertiesByPartialLinkText
-                    (AdvancedSearchPageResource.
-                    AdvancedSearch_Page_SearchButton_PartialLinkText_Value);
-                base.ClickByJavaScriptExecutor(getSearchButton);
+                base.ClickButtonById(AdvancedSearchPageResource.
+                    AdvancedSearch_Page_Search_Button_Id_Locator);
+                base.WaitUntilWindowLoads(AdvancedSearchPageResource.AdvancedSearch_Page_Window_TitleName);
+                base.SelectWindow(AdvancedSearchPageResource.AdvancedSearch_Page_Window_TitleName);
             }
             catch (Exception e)
             {

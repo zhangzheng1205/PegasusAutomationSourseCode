@@ -141,6 +141,22 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                   base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I click on the expand button of ""(.*)"" in the custom content view")]
+        public void ClickExpandButtonInCustomContentView(Course.CourseTypeEnum courseName)
+        {
+            Logger.LogMethodEntry("GlobalHome", "ClickExpandButtonInCustomContentView", base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseName);
+            String courseTitle = course.Name.ToString();
+            new CustomContentPage().ClickExpandIcon(courseTitle);
+            Logger.LogMethodExit("GlobalHome", "ClickExpandButtonInCustomContentView", base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
         /// <summary>
         /// Select Cmenu Of Asset In Table Of Contents.
         /// </summary>
@@ -164,6 +180,26 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Select Cmenu Of Asset In Table Of Contents of Curriculum.
+        /// </summary>
+        /// <param name="assetCmenu">This is the Asset cmenu option.</param>
+        /// <param name="activityName">This is the Activity Name.</param>
+        [When(@"I select ""(.*)"" cmenu of ""(.*)"" in table of content")]
+        public void SelectCmenuOfInTableOfContent(string assetCmenu, string activityName)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Search Activity
+            new ContentLibraryPage().SearchActivity(activityName);
+            //Select Asset Cmenu In Table of Content
+            new ContentLibraryPage().SelectAssetCmenuInTableOfContent(activityName, assetCmenu);
+            Logger.LogMethodExit("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Set The Due Date For The Activity In Curriculum.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
@@ -185,6 +221,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 "SetTheDueDateForTheActivityInCurriculum",
                   base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I set the due date for ""(.*)"" activity in curriculum")]
+        public void SetDueDateForInduvidualActivityInCurriculum(string activityName)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("CustomizeContent",
+                "SetTheDueDateForTheActivityInCurriculum",
+                  base.IsTakeScreenShotDuringEntryExit);
+            // fetch class name 
+            Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+            //Set Due Date For Activity In Curriculum
+            new ContentLibraryPage().SetDueDateForActivityInCurriculum(orgClass.Name);
+            Logger.LogMethodExit("CustomizeContent",
+                "SetTheDueDateForTheActivityInCurriculum",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Verify The Download Option In Print Window.

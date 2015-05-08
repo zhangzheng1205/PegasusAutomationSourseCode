@@ -73,8 +73,6 @@ Then I should be on the "Planner" page
 
 #Purpose : Basic Search in Curriculum tab
 Scenario: Basic Search in Curriculum Tab by CS Teacher
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
 When I navigate to the "Curriculum" tab
 And I search the asset type "Test" by "TableofContents" criteria
 Then I should see the searched asset "Test"
@@ -115,18 +113,27 @@ Then I should not see the searched result in planner tab
 
 #Purpose : Customize Content
 Scenario: Customize Content In Curriculum Tab by CS Teacher
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Curriculum" tab
 And I customize the content "Test" in curriculum tab
 Then I should see the successfull message "You have successfully added custom content." in Curriculum tab
-When I select "Custom Content" Product in the Curriculum dropdown
+When I select "DigitalPathCustomContent" Product in the Curriculum dropdown
 Then I should see the ML in the custom content view
-When I click on the expand button of MasterLibrary in the custom content view
+When I click on the expand button of "MasterLibrary" in the custom content view
 Then I should see the customized "Test" content of the ML in the custom content view
-When I navigate to the "Home" tab
-Then I should be on the "Home" page
+
+#Purpose: Teacher assign customized content and validate print tool
+Scenario: Teacher customize the content and assign customized content
+When I navigate to the "Curriculum" tab
+And I customize the content "Test" in curriculum tab
+Then I should see the successfull message "You have successfully added custom content." in Curriculum tab
+When I select "DigitalPathCustomContent" Product in the Curriculum dropdown
+Then I should see the ML in the custom content view
+When I click on the expand button of "MasterLibrary" in the custom content view
+When I select "Assign" cmenu option of "Test" in table of contents 
+And I set the due date for the "Test" activity in curriculum
+When I select "Print" cmenu option of "Test" in table of contents 
+Then I should see the "Download" option in print window
+And I close the "Print tool" window
 
 #Purpose: Creation Licenced Assets in Global by CS Teacher 
 Scenario: Create Licenced Assets in Global by CS Teacher
@@ -426,7 +433,6 @@ Then I should see "Enroll from School" pop up closed
 And I should see the student "DPCsStudent" displayed in manage student pop up
 When I close Manage student pop up
 
-
 #Test case id: peg-22525
 #Purpose: Setup Calendar in Planner tab.
 Scenario:Setup Calendar In Planner tab
@@ -441,10 +447,14 @@ Then I should see the calendar configured successfully
 
 #Purpose: DigitalPath teacher select product from the curriculum channel.
 Scenario:Select product from Curriculum dropdown
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Curriculum" tab
 Then I should be on the "Curriculum" page
 When I select "DigitalPath" Product in the Curriculum dropdown
 Then I should see the "DigitalPath" Product in the Curriculum Channel
+
+#Purpose: DigitalPath teacher assign Practice test from curriculum channel.
+Scenario:Assign Practice test from curriculum channel
+When I navigate to the "Curriculum" tab
+Then I should be on the "Curriculum" page
+When I select "Assign" cmenu of "i1-2 Practice" in table of content
+And I set the due date for the "Test" activity in curriculum

@@ -213,6 +213,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "CheckClearResultLinkPresent",
                    base.IsTakeScreenShotDuringEntryExit);
+            base.RefreshTheCurrentPage();
             return isSearchedElementPresent;
         }
 

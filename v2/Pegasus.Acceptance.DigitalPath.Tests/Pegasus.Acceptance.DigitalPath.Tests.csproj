@@ -370,7 +370,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherReports.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest1.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherCurriculum.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.WorkFlow.feature">

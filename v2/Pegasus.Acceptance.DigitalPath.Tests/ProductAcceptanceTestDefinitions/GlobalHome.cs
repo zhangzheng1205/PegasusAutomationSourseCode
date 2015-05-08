@@ -240,8 +240,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new ContentLibraryPage().SelectProductFromCurriculumDropdown(productTitle);
             Logger.LogMethodExit("GlobalHome", "SelectProductInTheCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
         }
-
-                
+   
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

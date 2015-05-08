@@ -1362,5 +1362,19 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             return getUpdatedActivityName;
         }
+
+        /// <summary>
+        /// Digital Path teacher click on expand icon for customized Course
+        /// </summary>
+        /// <param name="courseTitle">This is the course title.</param>
+        public void ClickExpandIcon(String courseTitle)
+        {
+
+            logger.LogMethodEntry("CustomContentPage","ClickExpandIcon",base.IsTakeScreenShotDuringEntryExit);
+            //Select the Frame
+            this.SelectCurriculumFrame();
+            base.ClickLinkByPartialLinkText(courseTitle);
+            logger.LogMethodExit("CustomContentPage", "ClickExpandIcon", base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

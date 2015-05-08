@@ -37,6 +37,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 Thread.Sleep(Convert.ToInt32(CustomizeNotificationPageResource.
                     CustomizeNotification_Page_Sleep));
+                base.WaitUntilPopUpLoads(CustomizeNotificationPageResource.
+                            CustomizeNotification_Page_Window_TitleName);
                 if (IsPopupPresent(CustomizeNotificationPageResource.
                         CustomizeNotification_Page_Window_TitleName, 10))
                 {                    

@@ -313,8 +313,11 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                        ContnetLibrary_Page_ClearResultLink_Id_Locator));
                 //Click on Clear Results
-                ClickLinkById(ContentLibraryPageResource.
-                    ContnetLibrary_Page_ClearResultLink_Id_Locator);
+                //ClickLinkById(ContentLibraryPageResource.
+                //    ContnetLibrary_Page_ClearResultLink_Id_Locator);
+                IWebElement clickClearTextLink = base.GetWebElementPropertiesById(ContentLibraryPageResource.
+                  ContnetLibrary_Page_ClearResultLink_Id_Locator);
+                base.ClickByJavaScriptExecutor(clickClearTextLink);
             }
             catch (Exception e)
             {
@@ -352,6 +355,9 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ContentLibraryPage", "CheckSearchedResultPresent",
                    base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(ContentLibraryPageResource.ContnetLibrary_Page_Window_TitleName);
+            base.RefreshTheCurrentPage();
+            base.WaitUntilWindowLoads(ContentLibraryPageResource.ContnetLibrary_Page_Window_TitleName);
             return isSearchedElementPresent;
         }
 
@@ -429,6 +435,8 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
         /// <summary>
         /// Click On Customize Content Cmenu Option
         /// </summary>
@@ -439,18 +447,21 @@ namespace Pegasus.Pages.UI_Pages
                 "ClickOnCustomizeContentCmenuOption",
                   base.IsTakeScreenShotDuringEntryExit);
             //Click on Activity Cmenu Icon               
-            base.WaitForElement(By.XPath(ContentLibraryPageResource.
-                ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator));
+            base.WaitForElement(By.CssSelector(ContentLibraryPageResource.
+                ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator));
             //Get HTML peroperty of Cmenu icon
-            IWebElement getPropertyOfCmenuIcon = base.GetWebElementPropertiesByXPath(
-                ContentLibraryPageResource.
-                ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator);
+            IWebElement getPropertyOfCmenuIcon = base.GetWebElementPropertiesByCssSelector(ContentLibraryPageResource.
+                ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator);
             base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);           
             //Click on Customize Content Cmenu Option
+            Thread.Sleep(2000);
+            base.WaitForElement(By.ClassName(ContentLibraryPageResource.
+                ContnetLibrary_Page_ContentFrame_Asset_CmenuOption_Class_Locator));
             base.WaitForElement(By.PartialLinkText(ContentLibraryPageResource.
                 ContnetLibrary_Page_ActivityCMenuOptionName));
-            base.ClickLinkByPartialLinkText(ContentLibraryPageResource.
+            IWebElement clickCmenuOption = base.GetWebElementPropertiesByPartialLinkText(ContentLibraryPageResource.
                 ContnetLibrary_Page_ActivityCMenuOptionName);
+            base.ClickByJavaScriptExecutor(clickCmenuOption);
             logger.LogMethodExit("ContentLibraryPage", 
                 "ClickOnCustomizeContentCmenuOption",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -473,7 +484,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectWindowAndFrame();
                 //Get Success Message From Application
                 getSuccessMessage = base.GetElementTextByXPath(ContentLibraryPageResource.
-                    ContnetLibrary_Page_SuccessMessage_Xpath_Locator);                
+                    ContnetLibrary_Page_SuccessMessage_Xpath_Locator);
             }
             catch (Exception e)
             {
@@ -562,31 +573,34 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Selects Window and Switch to Frame
+                base.WaitUntilWindowLoads(ContentLibraryPageResource.
+                    ContnetLibrary_Page_Window_TitleName);
                 this.SelectWindowAndFrame();
                 //MouseHover On Activity
-                this.MouseHoverOnActivity();                
+                this.MouseHoverOnActivity();
                 //Click on Activity Cmenu Icon               
-                base.WaitForElement(By.XPath(ContentLibraryPageResource.
-                    ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator));
+                base.WaitForElement(By.CssSelector(ContentLibraryPageResource.
+                    ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator));
                 //Get HTML peroperty of Cmenu icon
-                IWebElement getPropertyOfCmenuIcon = 
-                    base.GetWebElementPropertiesByXPath(
-                    ContentLibraryPageResource.
-                    ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator);
+                IWebElement getPropertyOfCmenuIcon = base.GetWebElementPropertiesByCssSelector(ContentLibraryPageResource.
+                    ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator);
                 base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
-                base.WaitForElement(By.XPath(ContentLibraryPageResource.
-                    ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator));
-                //Get Cmenu Options
-                string getCmenuOptions = base.GetElementTextByXPath(ContentLibraryPageResource.
-                    ContnetLibrary_Page_Lesson_CmenuCount_Xpath_Locator);
-                if (getCmenuOptions.Contains(assetCmenu))
+                //Click on Cmenu Option
+                Thread.Sleep(Convert.ToInt32(ContentLibraryPageResource.
+                ContnetLibrary_Page_Window_TimeValue));
+                base.WaitForElement(By.ClassName(ContentLibraryPageResource.
+                    ContnetLibrary_Page_ContentFrame_Asset_CmenuOption_Class_Locator));
+                base.WaitForElement(By.PartialLinkText(assetCmenu));
+                IWebElement clickCmenuOption = base.GetWebElementPropertiesByPartialLinkText(assetCmenu);
+                base.ClickByJavaScriptExecutor(clickCmenuOption);
+                base.SwitchToLastOpenedWindow();
+                String getPopupName = base.GetWindowTitleByJavaScriptExecutor();
+                if (getPopupName.Equals("Alert"))
                 {
-                    base.WaitForElement(By.PartialLinkText(assetCmenu));
-                    IWebElement getCmenuProperty =
-                        base.GetWebElementPropertiesByPartialLinkText(assetCmenu);
-                    //Click on Cmenu Option
-                    base.ClickByJavaScriptExecutor(getCmenuProperty);
-                }                
+                    base.WaitUntilPopUpLoads("Alert");
+                    base.SwitchToActivePageElement();
+                    base.ClickButtonById("imgOk");
+                }
             }
             catch (Exception e)
             {
@@ -596,8 +610,7 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
-       
-
+      
          /// <summary>
         /// Select Asset Cmenu In Table of Content.
         /// </summary>
@@ -811,8 +824,9 @@ namespace Pegasus.Pages.UI_Pages
                     ContnetLibrary_Page_GetProductName_Xpath_Locator, i));
                 if(productName.Equals(getProductName))
                 {
-                    base.ClickLinkByXPath(string.Format(ContentLibraryPageResource.
+                    IWebElement getProductNameValue = base.GetWebElementPropertiesByXPath(string.Format(ContentLibraryPageResource.
                     ContnetLibrary_Page_GetProductName_Xpath_Locator, i));
+                    base.ClickByJavaScriptExecutor(getProductNameValue);
                     break;
                 }
             }

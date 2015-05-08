@@ -246,4 +246,16 @@
   <data name="ContnetLibrary_Page_ProductCount_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='dvCurriculums']/ul/li</value>
   </data>
+  <data name="ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator" xml:space="preserve">
+    <value>div.VTOC_col1 &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; img</value>
+  </data>
+  <data name="ContnetLibrary_Page_ContentFrame_Asset_CmenuOption_Class_Locator" xml:space="preserve">
+    <value>dd_options</value>
+  </data>
+  <data name="ContnetLibrary_Page_Activity_CmenuIcon_CSS_Locator" xml:space="preserve">
+    <value>div.VTOC_col1 &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; img</value>
+  </data>
+  <data name="ContnetLibrary_Page_Window_TimeValue" xml:space="preserve">
+    <value>5000</value>
+  </data>
 </root>

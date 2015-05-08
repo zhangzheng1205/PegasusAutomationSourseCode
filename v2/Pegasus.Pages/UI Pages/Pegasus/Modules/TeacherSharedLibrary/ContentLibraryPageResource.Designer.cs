@@ -161,6 +161,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to div.VTOC_col1 &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; img.
+        /// </summary>
+        internal static string ContnetLibrary_Page_Activity_CmenuIcon_CSS_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_Activity_CmenuIcon_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@class=&apos;VTOC_col1&apos;]/table/tbody/tr/td[4]/img.
         /// </summary>
         internal static string ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator {
@@ -229,6 +238,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         internal static string ContnetLibrary_Page_ClearResultLink_Id_Locator {
             get {
                 return ResourceManager.GetString("ContnetLibrary_Page_ClearResultLink_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div.VTOC_col1 &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(4) &gt; img.
+        /// </summary>
+        internal static string ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dd_options.
+        /// </summary>
+        internal static string ContnetLibrary_Page_ContentFrame_Asset_CmenuOption_Class_Locator {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_ContentFrame_Asset_CmenuOption_Class_Locator", resourceCulture);
             }
         }
         
@@ -436,6 +463,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeacherSharedLibrary {
         internal static string ContnetLibrary_Page_SuccessMessage_Xpath_Locator {
             get {
                 return ResourceManager.GetString("ContnetLibrary_Page_SuccessMessage_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5000.
+        /// </summary>
+        internal static string ContnetLibrary_Page_Window_TimeValue {
+            get {
+                return ResourceManager.GetString("ContnetLibrary_Page_Window_TimeValue", resourceCulture);
             }
         }
         

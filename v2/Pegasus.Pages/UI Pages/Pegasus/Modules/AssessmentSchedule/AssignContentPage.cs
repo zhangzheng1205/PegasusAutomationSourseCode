@@ -155,6 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Assign Window
             logger.LogMethodEntry("AssignContentPage", "SelectAssignWindow",
                 base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToLastOpenedWindow();
             //Wait for Assign Window
             base.WaitUntilWindowLoads(AssignContentPageResource.
                 AssignContent_Page_WindowTitle_Name);
