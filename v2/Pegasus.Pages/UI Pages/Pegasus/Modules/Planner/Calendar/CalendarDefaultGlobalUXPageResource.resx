@@ -387,4 +387,40 @@
   <data name="CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value" xml:space="preserve">
     <value>div[class='dvPeriodHeaderCss']</value>
   </data>
+  <data name="CalendarDefaultGlobalUX_Page_DueAssignmentsCount_FirstPeriod_CSSSector_Locator" xml:space="preserve">
+    <value>div#calendarContainer_ucDayView_RptPeriods_ctl00_dvPeriodBody &gt; div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DueAssignments_FirstPeriod_CSSSector_Locator" xml:space="preserve">
+    <value>div#calendarContainer_ucDayView_RptPeriods_ctl00_RptDueAssignmentsToday_ctl00_dvDueAssignment &gt; div:nth-of-type(2) &gt; span &gt; span:nth-of-type(1)</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DueAssignments_String1_GreaterThan10_Value" xml:space="preserve">
+    <value>_RptDueAssignmentsToday_ctl</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DueAssignments_String1_LessThan10_Value" xml:space="preserve">
+    <value>_RptDueAssignmentsToday_ctl0</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DueAssignments_String2" xml:space="preserve">
+    <value>_dvDueAssignment</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_PeriodBodyID_String2" xml:space="preserve">
+    <value>_dvPeriodBody</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value" xml:space="preserve">
+    <value>calendarContainer_ucDayView_RptPeriods_ctl</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value" xml:space="preserve">
+    <value>calendarContainer_ucDayView_RptPeriods_ctl0</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_PeriodID_String2" xml:space="preserve">
+    <value>_DVPeriodHeader</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator" xml:space="preserve">
+    <value>div#{0} &gt; div &gt; span</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator" xml:space="preserve">
+    <value>div#{0} &gt; div:nth-of-type(2) &gt; span &gt; span:nth-of-type(1)</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator" xml:space="preserve">
+    <value>div#{0} &gt; div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div</value>
+  </data>
 </root>

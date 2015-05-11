@@ -458,6 +458,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to div#calendarContainer_ucDayView_RptPeriods_ctl00_RptDueAssignmentsToday_ctl00_dvDueAssignment &gt; div:nth-of-type(2) &gt; span &gt; span:nth-of-type(1).
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_DueAssignments_FirstPeriod_CSSSector_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_DueAssignments_FirstPeriod_CSSSector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _RptDueAssignmentsToday_ctl.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_DueAssignments_String1_GreaterThan10_Value {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_DueAssignments_String1_GreaterThan10_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _RptDueAssignmentsToday_ctl0.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_DueAssignments_String1_LessThan10_Value {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_DueAssignments_String1_LessThan10_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _dvDueAssignment.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_DueAssignments_String2 {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_DueAssignments_String2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#calendarContainer_ucDayView_RptPeriods_ctl00_dvPeriodBody &gt; div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_DueAssignmentsCount_FirstPeriod_CSSSector_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_DueAssignmentsCount_FirstPeriod_CSSSector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnExit.
         /// </summary>
         internal static string CalendarDefaultGlobalUX_Page_ExitButton_Id {
@@ -670,6 +715,69 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarDefaultGlobalUX_Page_OrderNumber_CSS_Locator {
             get {
                 return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_OrderNumber_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#{0} &gt; div:nth-of-type(2) &gt; span &gt; span:nth-of-type(1).
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#{0} &gt; div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _dvPeriodBody.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_PeriodBodyID_String2 {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_PeriodBodyID_String2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to calendarContainer_ucDayView_RptPeriods_ctl.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to calendarContainer_ucDayView_RptPeriods_ctl0.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _DVPeriodHeader.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_PeriodID_String2 {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_PeriodID_String2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#{0} &gt; div &gt; span.
+        /// </summary>
+        internal static string CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator {
+            get {
+                return ResourceManager.GetString("CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator", resourceCulture);
             }
         }
         
