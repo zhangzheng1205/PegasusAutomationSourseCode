@@ -1262,8 +1262,7 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize getStatusText
             string getStatusText = string.Empty;
             try
-            {
-               
+            {  
                 //Total Row count of the Assets
                 int getTotalRowCount = base.GetElementCountByXPath(
                     CoursePreviewMainUXPageResource.
@@ -1274,7 +1273,7 @@ namespace Pegasus.Pages.UI_Pages
                     getStatusText = base.GetElementTextByXPath(string.
                         Format(CoursePreviewMainUXPageResource.
                         CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount ));
-                    if (getStatusText.Contains(activityName))
+                    if (getStatusText.Trim() == activityName.Trim())
                     {
                         //Get the status text
                         getStatusText = base.GetElementTextByXPath(string.
@@ -1316,7 +1315,7 @@ namespace Pegasus.Pages.UI_Pages
                     getDueDate = base.GetElementTextByXPath(string.
                         Format(CoursePreviewMainUXPageResource.
                         CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount));
-                    if (getDueDate.Contains(activityName))
+                    if (getDueDate.Trim() == activityName.Trim())
                     {
                         //Get the status text
                         bool isElementExists = base.IsElementPresent(By.XPath(
@@ -1324,12 +1323,25 @@ namespace Pegasus.Pages.UI_Pages
                             Format(CoursePreviewMainUXPageResource.
                             CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator, rowCount))
                             );
-                        getDueDate = base.GetElementTextByXPath(string.
+                        //Get the status text
+                       String getStatusText = base.GetElementTextByXPath(string.
                             Format(CoursePreviewMainUXPageResource.
-                            CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator, rowCount));
-                        //base.SwitchToDefaultPageContent();
-                        getDueDate = getDueDate.Split(' ')[5];
-                        break;
+                            CoursePreviewMainUX_Page_LCC_Status_Xpath_Locator,rowCount));
+                       getDueDate = base.GetElementTextByXPath(string.
+                       Format(CoursePreviewMainUXPageResource.
+                       CoursePreviewMainUX_Page_LCC_DueDate_Xpath_Locator, rowCount));
+                       if (getStatusText.Trim() == "Begin")
+                       {
+                           //base.SwitchToDefaultPageContent();
+                           getDueDate = getDueDate.Split(' ')[4];
+                           break;
+                       }
+                       else
+                       {
+                           //base.SwitchToDefaultPageContent();
+                           getDueDate = getDueDate.Split(' ')[5];
+                           break;
+                       }
                     }
                 }
             }
@@ -1399,7 +1411,6 @@ namespace Pegasus.Pages.UI_Pages
             Boolean isAssigned = false;
             try
             {
-               
                 //Initialize Variable
                 int getActivityCount;
                 //Initialize Variable
@@ -1431,6 +1442,9 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CoursePreviewMainUXPage", "CheckAssignedStatus",
             base.IsTakeScreenShotDuringEntryExit);
+            base.RefreshTheCurrentPage();
+            base.WaitUntilWindowLoads("Classes");
+            base.SelectWindow("Classes");
             return isAssigned ;
         }
     }

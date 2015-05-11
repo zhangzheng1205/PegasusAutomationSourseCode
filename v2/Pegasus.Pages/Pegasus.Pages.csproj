@@ -1754,7 +1754,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SettingsPageResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI Pages\Pegasus\Modules\TodaysView\TodaysViewUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TodaysView\TodaysViewUxPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\TodaysView\TodaysViewUXPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
