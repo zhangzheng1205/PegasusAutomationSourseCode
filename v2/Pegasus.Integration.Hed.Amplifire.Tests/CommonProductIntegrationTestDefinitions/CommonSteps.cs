@@ -657,6 +657,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         [AfterTestRun]
         public static void TearDown()
         {
+            //Commented to support parallel execution at Jenkins
             // clean processess
             //new CommonSteps().WebDriverCleanUp();
         }

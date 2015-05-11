@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         [AfterTestRun]
         public static void TearDown()
         {
-            new CommonSteps().WebDriverCleanUp();
+            //new CommonSteps().WebDriverCleanUp();
         }
 
         /// <summary>

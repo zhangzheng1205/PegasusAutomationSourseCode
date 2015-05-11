@@ -28,13 +28,15 @@ namespace Pegasus.Pages.Exceptions
             {
                 ExceptionLogger.LogMessage("ExceptionHandler", "HandleException", ex.Message, true);
                 // close webdriver and browser instances
-                WebDriverSingleton.GetInstance().Dispose();
+                //Commented to support parallel execution at Jenkins
+                //WebDriverSingleton.GetInstance().Dispose();
                 throw ex;
             }
             var genericPageException = new GenericPageException(ex.ToString(), ex);
             ExceptionLogger.LogException("ExceptionHandler", "HandleException", ex, ex.Message, true);
             // close webdriver and browser instances
-            WebDriverSingleton.GetInstance().Dispose();
+            //Commented to support parallel execution at Jenkins
+            //WebDriverSingleton.GetInstance().Dispose();
             throw genericPageException;
         }
     }

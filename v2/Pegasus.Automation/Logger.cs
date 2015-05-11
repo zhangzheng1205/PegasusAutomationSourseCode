@@ -176,7 +176,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 TakeScreenShot(screenShotFileName);
                 Log(message);
                 // Close webdriver and browser instances if Assert Fails
-                WebDriverSingleton.GetInstance().Dispose();
+                //Commented to support parallel execution at Jenkins
+                //WebDriverSingleton.GetInstance().Dispose();
                 throw;
             }
         }

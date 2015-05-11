@@ -880,7 +880,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         [AfterTestRun]
         public static void TearDown()
         {
-            new CommonSteps().WebDriverCleanUp();
+            //Commented to support parallel execution at Jenkins
+            //new CommonSteps().WebDriverCleanUp();
         }
     }
 }

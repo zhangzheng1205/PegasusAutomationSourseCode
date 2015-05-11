@@ -788,6 +788,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         [AfterTestRun]
         public static void TearDown()
         {
+            //Commented to support parallel execution at Jenkins
             //new CommonSteps().WebDriverCleanUp();
         }
 
