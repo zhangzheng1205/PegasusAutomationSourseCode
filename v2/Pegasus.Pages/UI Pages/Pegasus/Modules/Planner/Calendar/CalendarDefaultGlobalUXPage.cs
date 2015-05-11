@@ -11,6 +11,7 @@ using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentSchedule;
+using Pegasus.Automation.DataTransferObjects;
 using System.Configuration;
 using System.Diagnostics;
 using OpenQA.Selenium.Interactions;
@@ -297,7 +298,9 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             // Enter description
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
-             .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox),10);
+            .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox));
+            base.ClearTextById(CalendarDefaultGlobalUXPageResource
+             .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox);
             base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox
              , CalendarDefaultGlobalUXPageResource
@@ -402,6 +405,7 @@ namespace Pegasus.Pages.UI_Pages
                      CalendarDefaultGlobalUX_Page_GetCourseAssociation_Xpath_Locator,
                      periodListCount)).GetAttribute("Title");
 
+
                     if (periodTitle == "" || classAssociation == "Select Class")
                     {
                         // This methord will check the period existance and setup a new caleneder with period of order 1
@@ -409,7 +413,11 @@ namespace Pegasus.Pages.UI_Pages
                         // Configure classes periods
                         ConfigureClassesPeriods(periodListCount);
                         // Click create period button
-                        base.ClickButtonById(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CreatePeriod_Id);
+                        bool isButtonPresent = base.IsElementPresent(By.Id(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CreatePeriod_Id), 10);
+                        if (isButtonPresent)
+                        {
+                            base.ClickButtonById(CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_CreatePeriod_Id);
+                        }
                         break;
                     }
                 }
@@ -435,6 +443,8 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "SetupNewScheduledClassesInCalenderSetup",
             base.IsTakeScreenShotDuringEntryExit);
+            Guid randomName = Guid.NewGuid();
+            string periodName = randomName.ToString().Split('-')[0];
             // Wait for the class name dropdown
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                    .CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator));
@@ -452,8 +462,11 @@ namespace Pegasus.Pages.UI_Pages
             base.ClearTextById(CalendarDefaultGlobalUXPageResource
            .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator);
             base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
-           .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator, CalendarDefaultGlobalUXPageResource
-            .CalendarDefaultGlobalUX_Page_DisplayNameText_Value);
+           .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator, periodName.ToString());
+            //Store the class in memory
+            Product product = Product.Get(Product.ProductTypeEnum.DigitalPath);
+            product.PeriodName = periodName.ToString();
+            product.UpdateProductInMemory(product);
             // Select order in order drop down
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Id));
@@ -476,15 +489,21 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SetupScheduleClassesInCalenderSetup",
             base.IsTakeScreenShotDuringEntryExit);
             // Enter the display name
+
+            Guid randomName = Guid.NewGuid();
+            string periodName = randomName.ToString().Split('-')[0];
             base.ClearTextByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
-                CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator,productListCount));
+            CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator, productListCount));
             base.FillTextBoxByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
                 CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator, productListCount,
-            productListCount), CalendarDefaultGlobalUXPageResource
-            .CalendarDefaultGlobalUX_Page_DisplayNameText_Value);
+            productListCount), periodName.ToString());
+            //Store the class in memory
+            Product product = Product.Get(Product.ProductTypeEnum.DigitalPath);
+            product.PeriodName = periodName.ToString();
+            product.UpdateProductInMemory(product);
             // Select class name in drop down
             base.SelectDropDownValueThroughTextByCssSelector(string.Format(
-                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_ClassName_CSS_Locator, productListCount), 
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_ClassName_CSS_Locator, productListCount),
                 orgClassName);
             // Select Course name in drop down
             base.SelectDropDownValueThroughTextByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
@@ -978,6 +997,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 pixelValueToSrollDown = 320;
+                this.SelectWindowAndSwitchToFrame();
                 //Create the div ID of subfolder
                 string subfolderDivId = "ContainerID_" + divFolderNodeID;
                 //Get subfolder count
@@ -1048,6 +1068,7 @@ namespace Pegasus.Pages.UI_Pages
             //Expand the folder in Curriculum tab
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "LeafFolderExpansionInPlannerTab",
                   base.IsTakeScreenShotDuringEntryExit);
+            this.SelectWindowAndSwitchToFrame();
             //Create the div ID of leaf folder
             string leafFolderDivId = "ContainerID_" + divSubFolderNodeID;
             //Get leaf folders count
@@ -1397,5 +1418,314 @@ namespace Pegasus.Pages.UI_Pages
            }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SelectProductInCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// To return boolean the Assigned Content Under a period in calendar frame in Day View.
+        /// </summary>
+        /// <param name="expectedAssetName">This is the Asset name.</param>
+        /// <param name="expectedPeriodName">This is the period name.</param>
+        public bool IsAssetPresentUnderPeriodInCalendarDayView
+            (string expectedAssetName, string expectedPeriodName)
+        {
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "IsAssetPresentUnderPeriodInCalendarDayView",
+                               base.IsTakeScreenShotDuringEntryExit);
+            Boolean isAssetPresent = false;
+            string periodHeaderIdValue = string.Empty;
+            string actualPeriodName = string.Empty;
+            string periodBodyIdValue = string.Empty;
+            string assetIdValue = string.Empty;
+            string actualAssetName = string.Empty;
+            string abcd = string.Empty;
+            int periodCount = 0;
+            int assetCount = 0;
+            SelectWindowAndSwitchToFrame();
+            //Get the count of periods present in calendar
+            periodCount = base.GetElementCountByCssSelector("div[class='dvPeriodHeaderCss']");
+            //Search for expected perion in calendar frame
+            for (int i = 1; i <= periodCount; i++)
+            {
+                //get period header webelement id value
+                periodHeaderIdValue = this.GetPeriodHeaderIdValue(i);
+                //get the period name in calendar
+                actualPeriodName = this.GetPeriodNameInCalendar(periodHeaderIdValue);
+                if (actualPeriodName == expectedPeriodName)
+                {
+                    //get period body webelement id value
+                    periodBodyIdValue = this.GetPeriodBodyIdValue(i);
+                    //get count of assigned activity in calendar
+                    assetCount = base.GetElementCountByCssSelector(string.
+                     Format("div#{0} > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div", periodBodyIdValue));
+
+                    for (int j = 1; j <= assetCount; j++)
+                    {
+                        assetIdValue = this.GetAssetIdValue(i, j);
+                        //Get aseet name
+                        actualAssetName = base.GetElementInnerTextByCssSelector(string.
+                         Format("div#{0} > div:nth-of-type(2) > span > span:nth-of-type(1)", assetIdValue)).Trim();
+                        Thread.Sleep(2000);
+                        if (actualAssetName.Contains(expectedAssetName))
+                        {
+                            isAssetPresent = true;
+                            break;
+                        }
+                    }
+                }
+                if (isAssetPresent) break;
+            }
+            base.SwitchToDefaultPageContent();
+
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "IsAssetPresentUnderPeriodInCalendarDayView",
+                               base.IsTakeScreenShotDuringEntryExit);
+            return isAssetPresent;
+        }
+
+
+        /// <summary>
+        /// Create period header webelement id value.
+        /// </summary>
+        /// <param name="periodCount">This is the total number of periods.</param>
+        /// <returns>The period header id string value.</returns>
+        private string GetPeriodHeaderIdValue(int periodCount)
+        {
+            // Create period header webelement id value
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetPeriodHeaderIdValue",
+                               base.IsTakeScreenShotDuringEntryExit);
+            string periodHeaderId = string.Empty;
+            int idPeriodCount = periodCount - 1;
+            string periodCountInId = idPeriodCount.ToString();
+
+            //Create period header webelement id
+            if (idPeriodCount <= 9)
+            {
+                //Id when number of periods is equal or less than ten
+                periodHeaderId = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId + "_DVPeriodHeader";
+            }
+            else
+            {
+                //Id when number of periods is greater than ten
+                periodHeaderId = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId + "_DVPeriodHeader";
+            }
+
+
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetPeriodHeaderIdValue",
+                          base.IsTakeScreenShotDuringEntryExit);
+            //The period header id string value
+            return periodHeaderId;
+        }
+
+        /// <summary>
+        /// Return the period name.
+        /// </summary>
+        /// <param name="periodIdValue">This the period header element value.</param>
+        /// <returns>The period name string.</returns>
+        private string GetPeriodNameInCalendar(string periodIdValue)
+        {
+            // Return the period name
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetPeriodNameInCalendar",
+                               base.IsTakeScreenShotDuringEntryExit);
+            bool Pres2 = base.IsElementPresent(By.CssSelector(string.
+         Format("div#{0} > div > span", periodIdValue)), 10);
+            // get the period name
+            string actualPeriodName = base.GetElementInnerTextByCssSelector(string.
+                Format("div#{0} > div > span", periodIdValue)).Trim();
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetPeriodNameInCalendar",
+                             base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(2000);
+            // Return the period name
+            return actualPeriodName;
+        }
+
+        /// <summary>
+        /// Create period header webelement id value.
+        /// </summary>
+        /// <param name="periodCount">This is the total number of periods.</param>
+        /// <returns>The period header id string value.</returns>
+        private string GetPeriodBodyIdValue(int periodCount)
+        {
+            // Create period header webelement id value
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetPeriodHeaderIdValue",
+                               base.IsTakeScreenShotDuringEntryExit);
+            string periodBodyId = string.Empty;
+            int idPeriodCount = periodCount - 1;
+            string periodCountInId = idPeriodCount.ToString();
+
+            //Create period header webelement id
+            if (idPeriodCount <= 9)
+            {
+                //Id when number of periods is equal or less than ten
+                periodBodyId = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId + "_dvPeriodBody";
+            }
+            else
+            {
+                //Id when number of periods is greater than ten
+                periodBodyId = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId + "_dvPeriodBody";
+            }
+
+
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetPeriodHeaderIdValue",
+                          base.IsTakeScreenShotDuringEntryExit);
+            //The period header id string value
+            return periodBodyId;
+        }
+
+        /// <summary>
+        /// Create period header webelement id value.
+        /// </summary>
+        /// <param name="periodCount">This is the total number of periods.</param>
+        /// <returns>The period header id string value.</returns>
+        private string GetAssetIdValue(int periodCount, int assetCount)
+        {
+            // Create period header webelement id value
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetAssetIdValue",
+                               base.IsTakeScreenShotDuringEntryExit);
+            string assetIdValue = string.Empty;
+            int idPeriodCount = periodCount - 1;
+            string periodCountInId = idPeriodCount.ToString();
+            int idAssetCount = assetCount - 1;
+            string assetCountInId = idAssetCount.ToString();
+
+            //Create period header webelement id
+            if (idPeriodCount <= 9 & idAssetCount <= 9)
+            {
+                //Id when number of periods and assets are less than or equal to ten
+                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId +
+                  "_RptDueAssignmentsToday_ctl0" + assetCountInId + "_dvDueAssignment";
+            }
+            else if (idPeriodCount <= 9 & idAssetCount > 9)
+            {
+                //Id when number of periods are less than or equal to ten assets are  greater than ten 
+                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId +
+                "_RptDueAssignmentsToday_ctl" + assetCountInId + "_dvDueAssignment";
+            }
+            else if (idPeriodCount > 9 & idAssetCount <= 9)
+            {
+                //Id when number of assets are less than or equal to ten periods are  greater than ten 
+                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId +
+                    "_RptDueAssignmentsToday_ctl0" + assetCountInId + "_dvDueAssignment";
+            }
+            else
+            {
+                //Id when number of periods and assets are greater than ten
+                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId +
+                    "_RptDueAssignmentsToday_ctl" + assetCountInId + "_dvDueAssignment";
+            }
+
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetAssetIdValue",
+                          base.IsTakeScreenShotDuringEntryExit);
+            //The period header id string value
+            return assetIdValue;
+        }
+
+
+        public bool IsDragDropActivityPresentInCalendar(string activityName)
+        {
+            // verify the activity processing text on calendar frame
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "VerifyAssignedTextOnCalendar",
+                  base.IsTakeScreenShotDuringEntryExit);
+            // initiate the stop watch
+            bool isAnyActivityPresent = false;
+            bool isExpectedActivityPresent = false;
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            while (!isAnyActivityPresent)
+            {
+
+                // Get the calendar text from where activity is dropped
+                if (stopWatch.Elapsed.TotalMinutes < 5 == false) break;
+                {
+                    // refresh the frame and switch to window
+                    base.SwitchToDefaultPageContent();
+                    base.RefreshIFrameByJavaScriptExecutor(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    base.WaitUntilWindowLoads(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
+                    base.SelectWindow(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
+                    // switch to planner frame
+                    base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
+                        .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    isAnyActivityPresent = base.IsElementPresent(By.CssSelector("div#calendarContainer_ucDayView_RptPeriods_ctl00_RptDueAssignmentsToday_ctl00_dvDueAssignment > div:nth-of-type(2) > span > span:nth-of-type(1)"), 5);
+                }
+            }
+            if (isAnyActivityPresent)
+            {
+                int assetCount = base.GetElementCountByCssSelector(string.
+                        Format("div#calendarContainer_ucDayView_RptPeriods_ctl00_dvPeriodBody > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div"));
+
+                for (int j = 1; j <= assetCount; j++)
+                {
+
+                    string assetIdValue = this.GetAssetIdValue(1, j);
+                    //Get aseet name
+
+                    bool Pres4 = base.IsElementPresent(By.CssSelector(string.Format("div#{0} > div:nth-of-type(2) > span > span:nth-of-type(1)", assetIdValue)), 10);
+                    if (Pres4)
+                    {
+                        string actualAssetName = base.GetElementInnerTextByCssSelector(string.
+                         Format("div#{0} > div:nth-of-type(2) > span > span:nth-of-type(1)", assetIdValue)).Trim();
+                        Thread.Sleep(2000);
+                        if (actualAssetName.Contains(activityName))
+                        {
+                            isExpectedActivityPresent = true;
+                            break;
+                        }
+                    }
+
+                }
+            }
+            stopWatch.Stop();
+            base.SwitchToDefaultPageContent();
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "VerifyAssignedTextOnCalendar",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return isExpectedActivityPresent;
+        }
+
+        /// <summary>
+        /// This function verifies the calendar title on the calendar frame
+        /// </summary>
+        /// <returns>Calendar header text</returns>
+        public bool IsPeriodPresent(string expectedPeriodName)
+        {
+            // verify the calendar header text
+            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetCalendarTitle",
+                  base.IsTakeScreenShotDuringEntryExit);
+            Boolean isPeriodPresent = false;
+            string periodHeaderIdValue = string.Empty;
+            string actualPeriodName = string.Empty;
+            int periodCount = 0;
+            try
+            {   // Switch to planner frame
+                this.SelectWindowAndSwitchToFrame();
+                //Get total number of periods
+                periodCount = base.GetElementCountByCssSelector
+                    (CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value);
+                //Search for expected perion in calendar frame
+                for (int i = 1; i <= periodCount; i++)
+                {
+                    //get period header webelement id value
+                    periodHeaderIdValue = this.GetPeriodHeaderIdValue(i);
+                    //get the period name in calendar
+                    actualPeriodName = this.GetPeriodNameInCalendar(periodHeaderIdValue);
+                    if (expectedPeriodName.Contains(actualPeriodName))
+                    {
+                        isPeriodPresent = true;
+                        break;
+                    }
+                }
+                base.SwitchToDefaultPageContent();
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            base.SwitchToDefaultPageContent();
+            // verify the calendar header text
+            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetCalendarTitle",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return isPeriodPresent;
+        }
+
     }
 }

@@ -384,4 +384,7 @@
   <data name="CalendarDefaultGlobalUX_Page_TableCountForLoopInitialization_Value" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value" xml:space="preserve">
+    <value>div[class='dvPeriodHeaderCss']</value>
+  </data>
 </root>

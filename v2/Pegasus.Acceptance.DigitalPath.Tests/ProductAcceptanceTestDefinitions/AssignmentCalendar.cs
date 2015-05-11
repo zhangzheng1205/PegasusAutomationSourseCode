@@ -115,25 +115,30 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+               
         /// <summary>
         /// Verify the calendar being set up on the right frame.
         /// </summary>
-        [Then("I should see the calendar configured successfully")]
-        public void VerifyTheCalendarSetUp()
+        /// <param name="expectedPeriod">This is the period name.</param>
+        [Then(@"I should see the ""(.*)"" period configured in calendar successfully")]
+        public void VerifyTheCalendarSetUp(string expectedPeriod)
         {
             //Verify the calendar title
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyTheCalendarSetUp",
                 base.IsTakeScreenShotDuringEntryExit);
+            //Get the period to be referred
+            Product product = Product.Get(Product.ProductTypeEnum.DigitalPath);
+            expectedPeriod = product.PeriodName;
             //Assert calendar title on the calendar frame
-            Logger.LogAssertion("VerifyPrsentationLaunch", 
-                ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
-                    GetCalendarTitle().Contains
-                    (AssignmentCalendarResource.
-                    AssignmentCalendar_CalendarTitle_Value)));
+            Logger.LogAssertion("VerifyPrsentationLaunch",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
+                  IsPeriodPresent(expectedPeriod)));
+           
             Logger.LogMethodExit("AssignmentCalendar", "VerifyTheCalendarSetUp",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Expand the folder in TOC view of Planner tab.
@@ -210,7 +215,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Drag and drop the activity in planner
             Logger.LogMethodEntry("AssignmentCalendar", "DragAndDropContent",
                 base.IsTakeScreenShotDuringEntryExit);
-            new CalendarDefaultGlobalUXPage().DragAndDropActivityInPlannerTab(activityName);
+             new CalendarDefaultGlobalUXPage().DragAndDropActivityInPlannerTab(activityName);
             Logger.LogMethodExit("AssignmentCalendar", "DragAndDropContent",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -263,6 +268,53 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("AssignmentCalendar", "SelectProductFromCurriculumDropdown",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// To verify the Assigned Content Under a period in calendar frame in Day View.
+        /// </summary>
+        /// <param name="assetName">This is the Asset name.</param>
+        /// <param name="periodName">This is the period name.</param>
+        [Then(@"I should see the assigned asset ""(.*)"" under the period ""(.*)"" in calendar frame")]
+        public void VerifyAssignedAssetUnderPeriodInCalendarDayView(string assetName, 
+            Product.ProductTypeEnum productTypeEnum)
+        {
+            // To verify the Assigned Content Under a period in calendar frame in Day View
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyAssignedAssetUnderPeriodInCalendarDayView",
+               base.IsTakeScreenShotDuringEntryExit);
+            Product product = Product.Get(productTypeEnum);
+            string periodName = product.PeriodName.ToString();
+            //Assert assigned asset Under a period in calendar frame in Day View
+            Logger.LogAssertion("VerifyAssignedAssetUnderPeriodInCalendarDayView",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
+                      IsAssetPresentUnderPeriodInCalendarDayView(assetName, periodName)));
+            base.SelectDefaultWindow();
+            Logger.LogMethodExit("AssignmentCalendar",
+            "VerifyAssignedAssetUnderPeriodInCalendarDayView",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the expected activity Dragged and Drooped to the calendar.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        [When(@"I refresh the frame till ""(.*)"" is displayed in calendar frame")]
+        public void VerifyDisplayOfDragAndDropActivity(string activityName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyDisplayOfDragAndDropActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+            
+            Logger.LogAssertion("VerifyAssignedAssetUnderPeriodInCalendarDayView",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().IsDragDropActivityPresentInCalendar(activityName)));
+            base.SelectDefaultWindow();
+            Logger.LogMethodExit("AssignmentCalendar",
+            "VerifyDisplayOfDragAndDropActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
 
         /// <summary>

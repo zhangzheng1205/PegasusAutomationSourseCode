@@ -76,11 +76,16 @@ namespace Pegasus.Pages.UI_Pages
                         EmptyCalendarPageResource.EmptyCalendarPage_SetupLink_ClassName);
                     base.ClickByJavaScriptExecutor(getSetupLink);
                     // Wait for Iframe and switch to frame
-                    base.SwitchToIFrameById(CalendarSetupPageResource.CalendarSetupPage_Main_Iframe_Id_Locator);
-                    base.WaitForElement(By.Id(CalendarSetupPageResource.CalendarSetupPage_Wizard_frame_Id_Locator));
-                    base.WaitForElement(By.Id("iframeSetUpWizard"),10);
-                    base.SwitchToIFrameById("iframeSetUpWizard");
-                    IWebElement getSetupCalenderLink = base.GetWebElementPropertiesByClassName("Image_Icon1Cale");
+                    base.SwitchToIFrameById(CalendarSetupPageResource.
+                        CalendarSetupPage_Main_Iframe_Id_Locator);
+                    base.WaitForElement(By.Id(CalendarSetupPageResource.
+                        CalendarSetupPage_Wizard_frame_Id_Locator));
+                    base.WaitForElement(By.Id(CalendarSetupPageResource.
+                        CalendarSetupPage_Wizard_Iframe2_Id_Locator));
+                    base.SwitchToIFrameById(CalendarSetupPageResource.
+                        CalendarSetupPage_Wizard_Iframe2_Id_Locator);
+                    IWebElement getSetupCalenderLink = base.GetWebElementPropertiesByClassName
+                        (CalendarSetupPageResource. CalendarSetupPage_Button_Class_Locator);
                     base.ClickByJavaScriptExecutor(getSetupCalenderLink);
 
                     Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);

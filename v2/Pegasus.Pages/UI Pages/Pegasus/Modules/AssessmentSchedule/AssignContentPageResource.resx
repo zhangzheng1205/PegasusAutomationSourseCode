@@ -291,4 +291,7 @@
   <data name="AssignContent_Page_Calendar_RowCount_Xpath_Locator" xml:space="preserve">
     <value>//table[@class='ui-datepicker-calendar']/tbody/tr</value>
   </data>
+  <data name="AssignContent_Page_PeriodName_RadioButton_CssSelector_Value" xml:space="preserve">
+    <value>//label[text()='{0}']/preceding-sibling::input</value>
+  </data>
 </root>
