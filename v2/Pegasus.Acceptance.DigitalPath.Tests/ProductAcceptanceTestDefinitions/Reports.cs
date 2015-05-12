@@ -80,8 +80,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("Reports", "SelectActivityInReportsCriteriaPage",
                base.IsTakeScreenShotDuringEntryExit);
             //Select activity for which report needs to be run
-            new RptMainUXPage().SelectSingleAssessment
-                (assessmentName, assessmentType, userTypeEnum, windowName);
+            //new RptMainUXPage().SelectSingleAssessment
+            //    (assessmentName, assessmentType, userTypeEnum, windowName);
             Logger.LogMethodExit("Reports", "SelectActivityInReportsCriteriaPage",
               base.IsTakeScreenShotDuringEntryExit);
         }
