@@ -465,5 +465,64 @@ namespace Pegasus.Pages.UI_Pages
                 StudToDoDone_Page_Ok_Button_Xpath_Locator);
             base.ClickByJavaScriptExecutor(getOkButtonProperty);
         }
+
+        /// <summary>
+        /// Get Assigned Content In To Do Tab.
+        /// </summary>
+        /// <returns>Activity Name.</returns>
+        public void StudentSubmitAssignedActivityK12(String cmenuOption,String activityName)
+        {
+            //Get Assigned Content In To Do Tab
+            logger.LogMethodEntry("StudTodoDonePage", "StudentSubmitAssignedActivityK12",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getActivityName = string.Empty;
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                base.WaitForElement(By.XPath(StudTodoDonePageResource.
+                    StudToDoDone_Page_Activity_Count_XPath));
+                //Get Activity Count
+                int getActivityCount = base.GetElementCountByXPath(StudTodoDonePageResource.
+                    StudToDoDone_Page_Activity_Count_XPath);
+                for (int setRowCount = Convert.ToInt32(StudTodoDonePageResource.
+                    StudToDoDone_Page_Initial_Loop_Count_Value);
+                    setRowCount <= getActivityCount; setRowCount++)
+                {
+                    //Wait for Activity Xpath                    
+                    base.WaitForElement(By.XPath(string.Format(StudTodoDonePageResource.
+                        StudToDoDone_Page_ActivityName_Xpath_Locator, setRowCount)));
+                    //Get Activity Name
+                    getActivityName = base.GetElementTextByXPath
+                        (string.Format(StudTodoDonePageResource.
+                        StudToDoDone_Page_ActivityName_Xpath_Locator, setRowCount));
+                    if (getActivityName == activityName)
+                    {
+                        // Click cmenu icon of the Activity
+                        bool hhjkks = base.IsElementPresent(By.XPath(string.Format("//div[@id='TodoList']/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div/img", setRowCount)),10);
+                        base.WaitForElement(By.XPath(string.Format("//div[@id='TodoList']/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div/img", setRowCount)));
+                        base.ClickImageByXPath(string.Format("//div[@id='TodoList']/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div/img", setRowCount));
+
+                        // Click cmenu option
+                        int getCmenuOptionCount = base.GetElementCountByXPath("//div[@id='cmenuOption']/div[2]/div");
+                        for (int i = 1; i <= getCmenuOptionCount;i++ )
+                        {
+                            String getCmenuOptionName = base.GetElementTextByXPath(string.Format("//div[@id='cmenuOption']/div[2]/div[{0}]/span", i));
+
+                        }
+
+                            base.WaitForElement(By.PartialLinkText(cmenuOption));
+                        base.ClickLinkByPartialLinkText(cmenuOption);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudTodoDonePage", "StudentSubmitAssignedActivityK12",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

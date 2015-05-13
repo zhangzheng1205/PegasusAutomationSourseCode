@@ -9,6 +9,9 @@ using Pegasus.Pages;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
+using System.Threading;
+using OpenQA.Selenium;
+using Pegasus.Pages.Exceptions;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -111,6 +114,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
         /// Verify Alerts in Notification Channel.
         /// </summary>
@@ -124,7 +128,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the alert count displayed in Unread Messages channel
             Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(alertCount, new TodaysViewUxPage().GetAlertCount(channelName)));
+                () => Assert.AreEqual(alertCount, new TodaysViewUxPage().GetAlertCountK12(channelName)));
             Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -160,7 +164,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Performance channel Option
-            new TodaysViewUxPage().ClickNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickNotificationChannelOptionK12(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
