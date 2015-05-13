@@ -156,6 +156,9 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestDefiniti
                 case User.UserTypeEnum.HedTeacherAssistant:
                 case User.UserTypeEnum.HedProgramAdmin:
                 case User.UserTypeEnum.HedWsInstructor:
+                case User.UserTypeEnum.AmpCsSmsInstructor:
+                case User.UserTypeEnum.AmpCsSmsStudent:
+                case User.UserTypeEnum.AmpProgramAdmin:
                 # endregion User Type Enum
                     // Click Sign out link 
                     new AdminToolPage().SignOutByHigherEdUsers(linkSignOut);

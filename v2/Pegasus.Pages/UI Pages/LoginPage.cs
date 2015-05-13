@@ -6,7 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
 using Pegasus.Pages.Exceptions;
 using System.Diagnostics;
-using System.Configuration;
+
 
 namespace Pegasus.Pages.UI_Pages
 {
