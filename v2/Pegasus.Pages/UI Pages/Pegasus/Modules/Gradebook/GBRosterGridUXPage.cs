@@ -418,8 +418,8 @@ namespace Pegasus.Pages.UI_Pages
                 initialCount++)
             {
                 //Fetch enrolled user name
-                getUsername = base.GetElementTextByXPath(string.Format(GBRosterGridUXPageResource.
-                    GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator, initialCount));
+                getUsername = base.GetWebElementPropertiesByXPath(string.Format(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator, initialCount)).GetAttribute("title");
                 if (username.Equals(getUsername))
                 {
                     //If user name found then set the variable to true

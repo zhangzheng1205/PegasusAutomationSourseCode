@@ -74,6 +74,7 @@ namespace Pegasus.Pages.UI_Pages
                 getProductName = base.GetElementTextByXPath(ContentLibraryPageResource.
                     ContnetLibrary_Page_Productname_Name_Xpath_Locator);
                 base.SelectWindow(HomePageResource.Home_Page_Curriculum_Window_Title);
+                base.SwitchToDefaultPageContent();
             }
             catch (Exception e)
             {

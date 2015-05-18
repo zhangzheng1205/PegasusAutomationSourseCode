@@ -255,7 +255,7 @@
   <data name="HomePage_CreateClassButton_Id_Locator" xml:space="preserve">
     <value>btnCreate</value>
   </data>
-  <data name="HomePage_ClassesDivCount_Xpath_Locator" xml:space="preserve">
+  <data name="HomePage_ClassesDivCount_CssSelector_Locator" xml:space="preserve">
     <value>div#cc &gt; div</value>
   </data>
 </root>

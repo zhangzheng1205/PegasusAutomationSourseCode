@@ -427,7 +427,8 @@ namespace Pegasus.Pages.UI_Pages
                 // This methord will setup new calender with a new period
                 int periodListCount = Convert.ToInt32(1);
                 //SetupNewScheduledClassesInCalenderSetup(orgClassName, courseName);
-                SetupNewScheduledClassesInCalenderSetup(orgClassName, courseName);
+                SetupNewScheduledClassesInCalenderSetup(orgClassName, courseName, periodListCount);
+                
                 ConfigureClassesPeriods(periodListCount);
             }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureScheduleClasses",
@@ -439,18 +440,29 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="orgClassName">This is the class name.</param>
         /// <param name="courseName">This is the course name.</param>
-        private void SetupNewScheduledClassesInCalenderSetup(string orgClassName, string courseName)
+        private void SetupNewScheduledClassesInCalenderSetup(string orgClassName, string courseName, int productListCount)
         {
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "SetupNewScheduledClassesInCalenderSetup",
             base.IsTakeScreenShotDuringEntryExit);
             Guid randomName = Guid.NewGuid();
             string periodName = randomName.ToString().Split('-')[0];
+            base.ClearTextByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+            CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator, productListCount));
+            base.FillTextBoxByCssSelector(string.Format(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_PeriodTitle_CSS_Locator, productListCount,
+            productListCount), periodName.ToString());
+            //Store the class in memory
+            Product product = Product.Get(Product.ProductTypeEnum.DigitalPath);
+            product.PeriodName = periodName.ToString();
+            product.UpdateProductInMemory(product);
             // Wait for the class name dropdown
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                    .CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator));
             // Select class name in drop down
             base.SelectDropDownValueThroughTextById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator, orgClassName);
+            bool pres1 = base.IsElementPresent(By.Id(CalendarDefaultGlobalUXPageResource
+                .CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator),10);
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator));
             // Select course name in drop down
@@ -463,10 +475,6 @@ namespace Pegasus.Pages.UI_Pages
            .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator);
             base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
            .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator, periodName.ToString());
-            //Store the class in memory
-            Product product = Product.Get(Product.ProductTypeEnum.DigitalPath);
-            product.PeriodName = periodName.ToString();
-            product.UpdateProductInMemory(product);
             // Select order in order drop down
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Id));
@@ -1456,6 +1464,9 @@ namespace Pegasus.Pages.UI_Pages
                     //get period body webelement id value
                     periodBodyIdValue = this.GetPeriodBodyIdValue(i);
                     //get count of assigned activity in calendar
+                    base.WaitForElement(By.CssSelector(string.
+                     Format(CalendarDefaultGlobalUXPageResource.
+                     CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue)));
                     assetCount = base.GetElementCountByCssSelector(string.
                      Format(CalendarDefaultGlobalUXPageResource.
                      CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue));
@@ -1463,7 +1474,11 @@ namespace Pegasus.Pages.UI_Pages
                     for (int j = 1; j <= assetCount; j++)
                     {
                         assetIdValue = this.GetAssetIdValue(i, j);
-                        //Get aseet name
+                        //Get asset name
+                        base.WaitForElement(By.CssSelector(string.
+                     Format(CalendarDefaultGlobalUXPageResource.
+                                CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                assetIdValue)));
                         actualAssetName = base.GetElementInnerTextByCssSelector(string.
                          Format(CalendarDefaultGlobalUXPageResource.
                                 CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
@@ -1534,9 +1549,12 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetPeriodNameInCalendar",
                                base.IsTakeScreenShotDuringEntryExit);
             // get the period name
+            base.WaitForElement(By.CssSelector(string.
+                Format(CalendarDefaultGlobalUXPageResource.
+            CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator, periodIdValue)));
             string actualPeriodName = base.GetElementInnerTextByCssSelector(string.
                 Format(CalendarDefaultGlobalUXPageResource.
-         CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator, periodIdValue)).Trim();
+            CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator, periodIdValue)).Trim();
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetPeriodNameInCalendar",
                              base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(2000);
