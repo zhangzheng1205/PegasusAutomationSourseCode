@@ -107,3 +107,23 @@ And I refresh the frame till content is copied
 And I refresh the frame till "Topic 1 Test with Study Plan" is displayed in calendar frame
 
 
+
+#Purpose: To assign study plan via assign window
+Scenario: Teacher assigns study plan via assign window in planner tab
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I navigate to the "Planner" tab
+Then I should be on the "Planner" page
+When I expand the folder "Expressions and Equations" in Planner tab
+And I expand the sub folder "Equivalent Expressions" in Planner tab
+And I expand the leaf folder "Topic 2 Test" in Planner tab
+And I select cmenu option "Assign" of "Topic 2 Test with Study Plan" activity in Planner tab
+And I click on Ok button in Alert pop up
+Then I should see "Assign" pop up
+When I select the class "DigitalPathMasterLibrary"
+And I select the "DigitalPath" period
+And I select the current date and due date
+And I click on Save and Assign button
+And I click on Ok button in Assign pop up
+Then I should be on the "Planner" page
+And I should see the assigned asset "Topic 2 Test with Study Plan" under the period "DigitalPath" in calendar frame

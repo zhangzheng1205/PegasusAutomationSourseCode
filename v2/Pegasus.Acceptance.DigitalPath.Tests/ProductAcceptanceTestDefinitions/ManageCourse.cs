@@ -184,6 +184,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Validate the text in shown to column in Manage course materials
             Logger.LogAssertion("ManageCourse", ScenarioContext.Current.ScenarioInfo.Title,
             () => Assert.AreEqual(shownColumnText, new CoursePreviewMainUXPage().GetShownToColumnTextOfAssignedContent(activityName)));
+            
             Logger.LogMethodExit("ManageCourse", "ValidateShownColumnTextInMangeCourseMaterials",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -203,6 +204,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Validate the display of assign icon for LCC in Manage course materials
             Logger.LogAssertion("ManageCourse", ScenarioContext.Current.ScenarioInfo.Title,
             () => Assert.IsTrue(new CoursePreviewMainUXPage().IsAssignIconExists(activityName)));
+            base.SwitchToDefaultPageContent();
+            base.SwitchToDefaultWindow();
             Logger.LogMethodExit("ManageCourse", "ValidateDisplayOfAssignIcon",
              base.IsTakeScreenShotDuringEntryExit);
         }
