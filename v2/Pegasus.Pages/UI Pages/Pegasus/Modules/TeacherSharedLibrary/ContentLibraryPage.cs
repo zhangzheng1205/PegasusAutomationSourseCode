@@ -594,14 +594,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.PartialLinkText(assetCmenu));
                 IWebElement clickCmenuOption = base.GetWebElementPropertiesByPartialLinkText(assetCmenu);
                 base.ClickByJavaScriptExecutor(clickCmenuOption);
-                base.SwitchToLastOpenedWindow();
-                String getPopupName = base.GetWindowTitleByJavaScriptExecutor();
-                if (getPopupName.Equals("Alert"))
-                {
-                    base.WaitUntilPopUpLoads("Alert");
-                    base.SwitchToActivePageElement();
-                    base.ClickButtonById("imgOk");
-                }
+                base.SwitchToDefaultPageContent();
+                //base.SwitchToLastOpenedWindow();
+                //String getPopupName = base.GetWindowTitleByJavaScriptExecutor();
+                //if (getPopupName.Equals("Alert"))
+                //{
+                //    base.WaitUntilPopUpLoads("Alert");
+                //    base.SwitchToActivePageElement();
+                //    base.ClickButtonById("imgOk");
+                //}
             }
             catch (Exception e)
             {

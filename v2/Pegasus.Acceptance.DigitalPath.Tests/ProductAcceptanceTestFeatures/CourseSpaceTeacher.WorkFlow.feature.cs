@@ -413,7 +413,7 @@ testRunner.When("I select \"Assign\" cmenu option of \"Test\" in table of conten
 #line 133
 testRunner.And("I set the due date for the \"Test\" activity in curriculum", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 134
-testRunner.When("I select \"Print\" cmenu option of \"Test\" in table of contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I select \"Print\" cmenu option of \"Test\" in table of contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 135
 testRunner.Then("I should see the \"Download\" option in print window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 136
@@ -1061,7 +1061,11 @@ testRunner.Then("I should be on the \"Curriculum\" page", ((string)(null)), ((Te
 #line 413
 testRunner.When("I select \"Assign\" cmenu of \"i1-2 Practice\" in table of content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 414
-testRunner.And("I set the due date for the \"Test\" activity in curriculum", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on Ok button in Alert pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 415
+testRunner.Then("I should see \"Assign\" pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 416
+testRunner.When("I set the due date for the \"Test\" activity in curriculum", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1072,16 +1076,16 @@ testRunner.And("I set the due date for the \"Test\" activity in curriculum", ((s
         public virtual void SelectDigitalPathClassFromClassSelectorDropdownByTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select DigitalPath class from Class selector dropdown by Teacher", ((string[])(null)));
-#line 417
-this.ScenarioSetup(scenarioInfo);
-#line 418
-testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 419
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 420
+testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 421
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 422
 testRunner.When("I select DigitalPath class \"DigitalPathMasterLibrary\" from Class selector dropdow" +
                     "n", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 421
+#line 423
 testRunner.Then("I should able to see the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1093,29 +1097,29 @@ testRunner.Then("I should able to see the \"DigitalPathMasterLibrary\" class", (
         public virtual void TeacherValidatesTheDisplayOfAssignedLCCInManageCourseWork()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validates the display of assigned LCC in Manage course work", ((string[])(null)));
-#line 426
-this.ScenarioSetup(scenarioInfo);
-#line 427
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 428
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 429
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 430
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 431
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 432
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 433
-testRunner.Then("I should see assigned LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 434
-testRunner.And("I should see status as \"Not started\" for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 435
-testRunner.And("I should see the due date for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 436
-testRunner.And("I should see \"All\" text in Shown to column for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see status as \"Not started\" for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 437
+testRunner.And("I should see the due date for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 438
+testRunner.And("I should see \"All\" text in Shown to column for LCC \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 439
 testRunner.And("I should see Assigned icon for study plan \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1129,29 +1133,29 @@ testRunner.And("I should see Assigned icon for study plan \"1-1 Homework\"", ((s
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned Math XL activity under manage coursework o" +
                     "n current date", ((string[])(null)));
-#line 441
-this.ScenarioSetup(scenarioInfo);
-#line 442
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 443
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 444
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 445
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 446
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 447
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 448
-testRunner.Then("I should see assigned MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 449
-testRunner.And("I should see status as \"Not started\" for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 450
-testRunner.And("I should see the due date for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 451
-testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see status as \"Not started\" for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 452
+testRunner.And("I should see the due date for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 453
+testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 454
 testRunner.And("I should see Assigned icon for MathXL activity \"Topic 1 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1165,20 +1169,20 @@ testRunner.And("I should see Assigned icon for MathXL activity \"Topic 1 Test\""
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned study plan under manage coursework on curr" +
                     "ent date", ((string[])(null)));
-#line 456
-this.ScenarioSetup(scenarioInfo);
-#line 457
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 458
-testRunner.Then("I should see assigned study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 459
-testRunner.And("I should see status as \"Begin\" for study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 460
-testRunner.And("I should see the due date for study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 461
+testRunner.And("I should see status as \"Begin\" for study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 462
+testRunner.And("I should see the due date for study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 463
 testRunner.And("I should see \"All\" text in Shown to column for study plan \"Topic 2 Test with Stud" +
                     "y Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 462
+#line 464
 testRunner.And("I should see Assigned icon for study plan \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1192,27 +1196,27 @@ testRunner.And("I should see Assigned icon for study plan \"Topic 2 Test with St
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned Practice test at curriculum channel in Man" +
                     "age Coursework", ((string[])(null)));
-#line 465
-this.ScenarioSetup(scenarioInfo);
-#line 466
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 467
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 468
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 469
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 470
-testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 471
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 472
-testRunner.Then("I should see assigned MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 473
-testRunner.And("I should see status as \"Not started\" for MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 474
-testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see assigned MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 475
+testRunner.And("I should see status as \"Not started\" for MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 476
+testRunner.And("I should see \"All\" text in Shown to column for MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 477
 testRunner.And("I should see Assigned icon for MathXL activity \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
