@@ -1473,7 +1473,8 @@ namespace Pegasus.Pages.UI_Pages
             //Click on save and assign button
             logger.LogMethodEntry("AssignContentPage", "EnterCurrentDateAndTime",
                base.IsTakeScreenShotDuringEntryExit);
-            try{
+            try
+            {
 
                 User user = User.Get(User.UserTypeEnum.DPCsTeacher);
                 DateTime dateTime = user.CurrentProfileDateTime.AddMinutes(120);
@@ -1481,11 +1482,13 @@ namespace Pegasus.Pages.UI_Pages
                 // Get the current date and time
                 string currentTime = currentDateTime.Split(' ')[1];
                 string systemDate = currentDateTime.Split(' ')[0];
-                string hour = currentTime.Split(':')[0];
-                string min = (currentTime.Split(':')[2]).Split(' ')[0];
-                string dayTime = currentDateTime.Split(' ')[2];
-                
-               
+                //string hour = currentTime.Split(':')[0];
+                //string min = (currentTime.Split(':')[2]).Split(' ')[0];
+                //string dayTime = currentDateTime.Split(' ')[2];
+                string hour = "11";
+                string min = "59";
+                string dayTime = "PM";
+
                 // Enter the due date in due date text box
                 base.WaitForElement(By.Id(AssignContentPageResource
                .AssignContent_Page_DueDate_TextBox_Id_Locator));
@@ -1514,8 +1517,8 @@ namespace Pegasus.Pages.UI_Pages
                 user = User.Get(User.UserTypeEnum.DPCsTeacher);
                 user.CurrentProfileDateTime = datetime;
 
-                 } 
-            
+            }
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -1534,6 +1537,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                this.SelectAssignWindow();
                 base.WaitForElement(By.XPath(AssignContentPageResource
                 .AssignContent_Page_OkButton_Xpath));
                 //Get Element Property
@@ -1542,14 +1546,35 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on OK button
                 base.ClickByJavaScriptExecutor(getOkButton);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "ClickOkButtonInAssignWindow",
                base.IsTakeScreenShotDuringEntryExit);
         }
-    }
 
+
+         /// <summary>
+        /// Select the expected period.
+        /// </summary>
+        /// <param name="periodName">This is the period name.</param>
+        public void SelectPeriod(string periodName)
+        {
+            logger.LogMethodEntry("AssignContentPage", "SelectPeriod",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(string.
+                Format(AssignContentPageResource.
+                AssignContent_Page_PeriodName_RadioButton_CssSelector_Value, periodName)));
+            IWebElement periodRadioButton = base.GetWebElementPropertiesByXPath
+                (string.Format(AssignContentPageResource.
+                AssignContent_Page_PeriodName_RadioButton_CssSelector_Value, periodName));
+            base.ClickByJavaScriptExecutor(periodRadioButton);
+
+        }
+
+
+}
+  
 }
 

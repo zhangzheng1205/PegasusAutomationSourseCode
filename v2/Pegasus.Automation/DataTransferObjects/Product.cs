@@ -76,8 +76,22 @@ namespace Pegasus.Automation.DataTransferObjects
         public String WelcomeBannerBlobId { get; set; }
 
         /// <summary>
+        /// This is the period name
+        /// </summary>
+        public String PeriodName { get; set; }
+
+        /// <summary>
         /// This method is used to create a product.
         /// </summary>
+
+        /// <summary>
+        /// This method is used to create a product.
+        /// </summary>
+        public void UpdateProductInMemory(Product product)
+        {
+            InMemoryDatabaseSingleton.DatabaseInstance.Update(product);
+        }
+
         public void StoreProductInMemory()
         {
             InMemoryDatabaseSingleton.DatabaseInstance.Insert(this);

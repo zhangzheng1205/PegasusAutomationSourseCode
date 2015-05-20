@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CalendarSetupPage_Button_Class_Locator" xml:space="preserve">
+    <value>Image_Icon1Cale</value>
+  </data>
   <data name="CalendarSetupPage_Button_Finish_Id_Locator" xml:space="preserve">
     <value>btn_Finish</value>
   </data>
@@ -131,5 +134,8 @@
   </data>
   <data name="CalendarSetupPage_Wizard_frame_Id_Locator" xml:space="preserve">
     <value>form1</value>
+  </data>
+  <data name="CalendarSetupPage_Wizard_Iframe2_Id_Locator" xml:space="preserve">
+    <value>iframeSetUpWizard</value>
   </data>
 </root>

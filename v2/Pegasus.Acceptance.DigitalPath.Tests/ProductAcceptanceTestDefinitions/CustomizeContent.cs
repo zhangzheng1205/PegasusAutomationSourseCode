@@ -435,6 +435,27 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
               base.IsTakeScreenShotDuringEntryExit);
        }
 
+       /// <summary>
+       /// Select the period at Assign window .
+       /// </summary>
+       /// <param name="productTypeEnum">This is product type enum.</param>
+       [When(@"I select the ""(.*)"" period")]
+       public void SelectThePeriod(Product.ProductTypeEnum productTypeEnum)
+       {
+           Logger.LogMethodEntry("CustomizeContent",
+             "ClickOnOkButton",
+               base.IsTakeScreenShotDuringEntryExit);
+           //Get the expected period name
+           Product product = Product.Get(productTypeEnum);
+           string periodName = product.PeriodName.ToString();
+           // Select the period at Assign window
+           new AssignContentPage().SelectPeriod(periodName);
+           Logger.LogMethodExit("CustomizeContent",
+       "ValidateAssignedContentInCalendarFrame",
+         base.IsTakeScreenShotDuringEntryExit);
+
+       }
+
         
     }
 }
