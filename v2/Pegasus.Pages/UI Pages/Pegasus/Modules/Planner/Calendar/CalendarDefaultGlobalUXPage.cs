@@ -1429,6 +1429,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "IsAssetPresentUnderPeriodInCalendarDayView",
                                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize variables
             Boolean isAssetPresent = false;
             string periodHeaderIdValue = string.Empty;
             string actualPeriodName = string.Empty;
@@ -1438,9 +1439,11 @@ namespace Pegasus.Pages.UI_Pages
             string abcd = string.Empty;
             int periodCount = 0;
             int assetCount = 0;
+            //Switch to window and iframe
             SelectWindowAndSwitchToFrame();
             //Get the count of periods present in calendar
-            periodCount = base.GetElementCountByCssSelector("div[class='dvPeriodHeaderCss']");
+            periodCount = base.GetElementCountByCssSelector(CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value);
             //Search for expected perion in calendar frame
             for (int i = 1; i <= periodCount; i++)
             {
@@ -1454,14 +1457,17 @@ namespace Pegasus.Pages.UI_Pages
                     periodBodyIdValue = this.GetPeriodBodyIdValue(i);
                     //get count of assigned activity in calendar
                     assetCount = base.GetElementCountByCssSelector(string.
-                     Format("div#{0} > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div", periodBodyIdValue));
+                     Format(CalendarDefaultGlobalUXPageResource.
+                     CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue));
 
                     for (int j = 1; j <= assetCount; j++)
                     {
                         assetIdValue = this.GetAssetIdValue(i, j);
                         //Get aseet name
                         actualAssetName = base.GetElementInnerTextByCssSelector(string.
-                         Format("div#{0} > div:nth-of-type(2) > span > span:nth-of-type(1)", assetIdValue)).Trim();
+                         Format(CalendarDefaultGlobalUXPageResource.
+                                CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                assetIdValue)).Trim();
                         Thread.Sleep(2000);
                         if (actualAssetName.Contains(expectedAssetName))
                         {
@@ -1498,12 +1504,16 @@ namespace Pegasus.Pages.UI_Pages
             if (idPeriodCount <= 9)
             {
                 //Id when number of periods is equal or less than ten
-                periodHeaderId = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId + "_DVPeriodHeader";
+                periodHeaderId = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value + periodCountInId +
+                    CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_PeriodID_String2;
             }
             else
             {
                 //Id when number of periods is greater than ten
-                periodHeaderId = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId + "_DVPeriodHeader";
+                periodHeaderId = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value + periodCountInId +
+                     CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_PeriodID_String2;
             }
 
 
@@ -1523,11 +1533,10 @@ namespace Pegasus.Pages.UI_Pages
             // Return the period name
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "GetPeriodNameInCalendar",
                                base.IsTakeScreenShotDuringEntryExit);
-            bool Pres2 = base.IsElementPresent(By.CssSelector(string.
-         Format("div#{0} > div > span", periodIdValue)), 10);
             // get the period name
             string actualPeriodName = base.GetElementInnerTextByCssSelector(string.
-                Format("div#{0} > div > span", periodIdValue)).Trim();
+                Format(CalendarDefaultGlobalUXPageResource.
+         CalendarDefaultGlobalUX_Page_PeriodName_CSSSelector_Locator, periodIdValue)).Trim();
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetPeriodNameInCalendar",
                              base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(2000);
@@ -1553,12 +1562,16 @@ namespace Pegasus.Pages.UI_Pages
             if (idPeriodCount <= 9)
             {
                 //Id when number of periods is equal or less than ten
-                periodBodyId = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId + "_dvPeriodBody";
+                periodBodyId = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value + periodCountInId +
+                    CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_PeriodBodyID_String2;
             }
             else
             {
                 //Id when number of periods is greater than ten
-                periodBodyId = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId + "_dvPeriodBody";
+                periodBodyId = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value + periodCountInId +
+                    CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_PeriodBodyID_String2;
             }
 
 
@@ -1588,26 +1601,38 @@ namespace Pegasus.Pages.UI_Pages
             if (idPeriodCount <= 9 & idAssetCount <= 9)
             {
                 //Id when number of periods and assets are less than or equal to ten
-                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId +
-                  "_RptDueAssignmentsToday_ctl0" + assetCountInId + "_dvDueAssignment";
+                assetIdValue = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value + periodCountInId +
+                  CalendarDefaultGlobalUXPageResource.
+                  CalendarDefaultGlobalUX_Page_DueAssignments_String1_LessThan10_Value + assetCountInId +
+                  CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_DueAssignments_String2;
             }
             else if (idPeriodCount <= 9 & idAssetCount > 9)
             {
                 //Id when number of periods are less than or equal to ten assets are  greater than ten 
-                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl0" + periodCountInId +
-                "_RptDueAssignmentsToday_ctl" + assetCountInId + "_dvDueAssignment";
+                assetIdValue = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_LessThan10_Value + periodCountInId +
+                CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_DueAssignments_String1_GreaterThan10_Value + assetCountInId +
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_DueAssignments_String2;
             }
             else if (idPeriodCount > 9 & idAssetCount <= 9)
             {
                 //Id when number of assets are less than or equal to ten periods are  greater than ten 
-                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId +
-                    "_RptDueAssignmentsToday_ctl0" + assetCountInId + "_dvDueAssignment";
+                assetIdValue = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value + periodCountInId +
+                    CalendarDefaultGlobalUXPageResource.
+                  CalendarDefaultGlobalUX_Page_DueAssignments_String1_LessThan10_Value + assetCountInId +
+                 CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_DueAssignments_String2;
             }
             else
             {
                 //Id when number of periods and assets are greater than ten
-                assetIdValue = "calendarContainer_ucDayView_RptPeriods_ctl" + periodCountInId +
-                    "_RptDueAssignmentsToday_ctl" + assetCountInId + "_dvDueAssignment";
+                assetIdValue = CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_PeriodID_String1_GreaterThan10_Value + periodCountInId +
+                     CalendarDefaultGlobalUXPageResource.
+                CalendarDefaultGlobalUX_Page_DueAssignments_String1_GreaterThan10_Value + assetCountInId +
+                CalendarDefaultGlobalUXPageResource.CalendarDefaultGlobalUX_Page_DueAssignments_String2;
             }
 
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "GetAssetIdValue",
@@ -1644,34 +1669,46 @@ namespace Pegasus.Pages.UI_Pages
                     // switch to planner frame
                     base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
                         .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
-                    isAnyActivityPresent = base.IsElementPresent(By.CssSelector("div#calendarContainer_ucDayView_RptPeriods_ctl00_RptDueAssignmentsToday_ctl00_dvDueAssignment > div:nth-of-type(2) > span > span:nth-of-type(1)"), 5);
-                }
-            }
-            if (isAnyActivityPresent)
-            {
-                int assetCount = base.GetElementCountByCssSelector(string.
-                        Format("div#calendarContainer_ucDayView_RptPeriods_ctl00_dvPeriodBody > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) > div"));
-
-                for (int j = 1; j <= assetCount; j++)
-                {
-
-                    string assetIdValue = this.GetAssetIdValue(1, j);
-                    //Get aseet name
-
-                    bool Pres4 = base.IsElementPresent(By.CssSelector(string.Format("div#{0} > div:nth-of-type(2) > span > span:nth-of-type(1)", assetIdValue)), 10);
-                    if (Pres4)
+                    isAnyActivityPresent = base.IsElementPresent(By.
+                        CssSelector(CalendarDefaultGlobalUXPageResource.
+                        CalendarDefaultGlobalUX_Page_DueAssignments_FirstPeriod_CSSSector_Locator), 5);
+                    if (isAnyActivityPresent)
                     {
-                        string actualAssetName = base.GetElementInnerTextByCssSelector(string.
-                         Format("div#{0} > div:nth-of-type(2) > span > span:nth-of-type(1)", assetIdValue)).Trim();
-                        Thread.Sleep(2000);
-                        if (actualAssetName.Contains(activityName))
-                        {
-                            isExpectedActivityPresent = true;
-                            break;
-                        }
-                    }
+                        int assetCount = base.GetElementCountByCssSelector(string.
+                                Format(CalendarDefaultGlobalUXPageResource.
+                                CalendarDefaultGlobalUX_Page_DueAssignmentsCount_FirstPeriod_CSSSector_Locator));
 
-                }
+                        for (int j = 1; j <= assetCount; j++)
+                        {
+
+                            string assetIdValue = this.GetAssetIdValue(1, j);
+                            //Get aset name
+                            bool Pres4 = base.IsElementPresent(By.CssSelector(string.
+                                Format(CalendarDefaultGlobalUXPageResource.
+                                CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                assetIdValue)), 10);
+                            if (Pres4)
+                            {
+                                string actualAssetName = base.GetElementInnerTextByCssSelector(string.
+                                 Format(CalendarDefaultGlobalUXPageResource.
+                                CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                assetIdValue)).Trim();
+                                Thread.Sleep(2000);
+                                if (actualAssetName.Contains(activityName))
+                                {
+                                    isExpectedActivityPresent = true;
+                                    break;
+                                }
+                               
+                            }
+
+                         }
+                        if (!isExpectedActivityPresent)
+                        isAnyActivityPresent = false;
+           
+                     }
+
+                  }
             }
             stopWatch.Stop();
             base.SwitchToDefaultPageContent();
