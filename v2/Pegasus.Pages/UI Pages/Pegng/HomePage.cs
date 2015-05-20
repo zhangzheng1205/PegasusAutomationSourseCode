@@ -9,6 +9,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegng;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView;
 
 namespace Pegasus.Pages.UI_Pages
 {

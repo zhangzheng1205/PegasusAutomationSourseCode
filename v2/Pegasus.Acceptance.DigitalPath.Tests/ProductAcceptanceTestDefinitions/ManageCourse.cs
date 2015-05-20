@@ -156,8 +156,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                base.IsTakeScreenShotDuringEntryExit);
             User user = User.Get(User.UserTypeEnum.DPCsTeacher);
             DateTime instance = user.CurrentProfileDateTime;
-            string currentDateTime = instance.ToString();
-            string currentDate = currentDateTime.Split(' ')[0];
+            String CurrentMonth = DateTime.Now.Month.ToString();
+            String CurrentDay = DateTime.Now.Day.ToString();
+            String CurrentYear = DateTime.Now.Year.ToString();
+            String currentDate = CurrentMonth +"/" +CurrentDay + "/" + CurrentYear;
+
             Logger.LogAssertion("ManageCourse", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(currentDate, new CoursePreviewMainUXPage().GetDueDateOfAssignedContent(lccName)));
             Logger.LogMethodExit("ManageCourse", "ValidateDueDateOfLCC",

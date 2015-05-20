@@ -251,6 +251,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Digital Path teacher select class from the class selector dropdown
+        /// </summary>
+        /// <param name="className">This is a class type Enum.</param>
+        [When(@"I select DigitalPath class ""(.*)"" from Class selector dropdown")]
+        public void SelectDigitalPathClassFromClassSelectorDropdown(Class.ClassTypeEnum className)
+        {
+            // Select class from the dropdown
+            Logger.LogMethodEntry("CreateClass", "SelectDigitalPathClassFromClassSelectorDropdown",base.IsTakeScreenShotDuringEntryExit);
+            // Get the Class name from in memory
+            Class classTitle = Class.Get(className);
+            String classText = classTitle.Name.ToString();
+            new TodaysViewUxPage().SelectClassFromClassSelectorDropdown(classText);
+            Logger.LogMethodExit("CreateClass", "SelectDigitalPathClassFromClassSelectorDropdown", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Enter the class name.
         /// </summary>
         /// <param name="classType">Type of class.</param>

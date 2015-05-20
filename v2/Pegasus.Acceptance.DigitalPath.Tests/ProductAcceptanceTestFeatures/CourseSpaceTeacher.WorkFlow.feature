@@ -215,24 +215,18 @@ Then I should see the mail popup closed successfully
 #Test case id: peg-22536
 #Purpose: Validate assigned LCC display in Manage courework  tab
 Scenario: Teacher validates the display of assigned LCC in Manage course work
-When I navigate to the "Home" tab
-Then I should be on the "Home" page
-When I enter into the DP "Class digits 6" class
+When I navigate to the "Classes" tab
 Then I should be on the "Classes" page
-When I navigate to the "Manage Coursework" tab
+When I select DigitalPath class "DigitalPathMasterLibrary" from Class selector dropdown
+And I navigate to the "Manage Coursework" tab
 Then I should see assigned LCC "1-1 Homework"
 And I should see status as "Not started" for LCC "1-1 Homework"
 And I should see the due date for LCC "1-1 Homework"
-And I should see "All" text in Shown to column for LCC "1-1 Homework"
-And I should see Assigned icon for LCC "1-1 Homework"
-
+And I should see "All" text in Shown to column for LCC "
 
 #Test case id: peg-22538
 #Purpose: To validate display of assigned study plan in class course
 Scenario: Teacher validating display of assigned study plan under manage coursework on current date
-When I navigate to the "Home" tab
-And I enter into the DP "DigitalPathMasterLibrary" class
-Then I should be on the "Classes" page
 When I navigate to the "Manage Coursework" tab
 Then I should see assigned study plan "Topic 1 Test with Study Plan"
 And I should see status as "Begin" for study plan "Topic 1 Test with Study Plan"
@@ -243,9 +237,6 @@ And I should see Assigned icon for study plan "Topic 1 Test with Study Plan"
 #Test case id: peg-22537
 #Purpose: To validate display of assigned Math XL activity in class course
 Scenario: Teacher validating display of assigned Math XL activity under manage coursework on current date
-When I navigate to the "Home" tab
-And I enter into the DP "DigitalPathMasterLibrary" class
-Then I should be on the "Classes" page
 When I navigate to the "Manage Coursework" tab
 Then I should see assigned MathXL activity "Topic 1 Test"
 And I should see status as "Not started" for MathXL activity "Topic 1 Test"
@@ -447,3 +438,12 @@ When I navigate to the "Curriculum" tab
 Then I should be on the "Curriculum" page
 When I select "Assign" cmenu of "i1-2 Practice" in table of content
 And I set the due date for the "Test" activity in curriculum
+
+#Purpose: DigitalPath Teacher select class from Class selector dropdown.
+Scenario: Select DigitalPath class from Class selector dropdown by Teacher
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Classes" tab
+And I select DigitalPath class "DigitalPathMasterLibrary" from Class selector dropdown
+Then I should able to see the "DigitalPathMasterLibrary" class

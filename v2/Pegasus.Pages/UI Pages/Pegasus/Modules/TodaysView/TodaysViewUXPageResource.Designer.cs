@@ -1790,6 +1790,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to div#ddcourses &gt; ul &gt; li.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Teacher_ClassSelector_ClassCount_CSS_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Teacher_ClassSelector_ClassCount_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dvCropArrow.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Teacher_ClassSelector_Cmenu_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Teacher_ClassSelector_Cmenu_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div#ddcourses &gt; ul &gt; li:nth-of-type({0}) &gt; div &gt; div:nth-of-type(2).
+        /// </summary>
+        internal static string TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0:_ctl0:phHeader:_ctl0:ucs_Toolbar:ucs_RT:tools.
         /// </summary>
         internal static string TodayViewUXPageResource_Tools_Dropdown_Id_Locator {

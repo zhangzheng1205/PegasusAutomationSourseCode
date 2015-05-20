@@ -4091,5 +4091,44 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "StudentSelectClass",
                                  base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select Class name from class selector dropdown
+        /// </summary>
+        /// <param name="className">This is the Class name.</param>
+        public void SelectClassFromClassSelectorDropdown(String className)
+        {
+            base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_Classes_Window_Title);
+            base.SelectWindow(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_Classes_Window_Title);
+            // Click dropdown menu icon
+            base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                TodayViewUXPageResource_Teacher_ClassSelector_Cmenu_Id_Locator));
+            IWebElement getDropdownIcon = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                TodayViewUXPageResource_Teacher_ClassSelector_Cmenu_Id_Locator);
+            base.ClickByJavaScriptExecutor(getDropdownIcon);
+            // Get class count
+            int getClassCount = base.GetElementCountByCssSelector(TodaysViewUXPageResource.
+                TodayViewUXPageResource_Teacher_ClassSelector_ClassCount_CSS_Locator);
+            // Check for the searched product existance
+            for (int i = 1; i <= getClassCount; i++)
+            {
+                // Get the class name from the Class selector dropdown
+                string getClassName = base.GetElementTextByCssSelector(string.Format(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator, i));
+                // Compare the Class name
+                if (getClassName.Trim() == className.Trim())
+                {
+                    base.WaitForElement(By.CssSelector(string.Format(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator, i)));
+                    IWebElement getProductNameValue = base.GetWebElementPropertiesByCssSelector(string.Format(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator, i));
+                    base.ClickByJavaScriptExecutor(getProductNameValue);
+                   break;
+                }
+            }
+        }
+
     }
 }

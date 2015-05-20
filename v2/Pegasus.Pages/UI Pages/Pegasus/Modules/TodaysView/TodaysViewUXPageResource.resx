@@ -705,4 +705,13 @@
   <data name="TodayViewUXPageResource_Dropdown_Icon_ID" xml:space="preserve">
     <value>_ctl0__ctl0_phHeader__ctl0__ctl0_imgDrdClassCourses</value>
   </data>
+  <data name="TodayViewUXPageResource_Teacher_ClassSelector_ClassCount_CSS_Locator" xml:space="preserve">
+    <value>div#ddcourses &gt; ul &gt; li</value>
+  </data>
+  <data name="TodayViewUXPageResource_Teacher_ClassSelector_Cmenu_Id_Locator" xml:space="preserve">
+    <value>dvCropArrow</value>
+  </data>
+  <data name="TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator" xml:space="preserve">
+    <value>div#ddcourses &gt; ul &gt; li:nth-of-type({0}) &gt; div &gt; div:nth-of-type(2)</value>
+  </data>
 </root>
