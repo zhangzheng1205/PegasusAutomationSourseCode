@@ -1695,8 +1695,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Retrieves Html inner text to find in the specified string.</returns>
         protected String GetElementInnerTextById(String idAttributeValue)
         {
-            Thread.Sleep(3000);
-            base.WaitForElement(By.Id(idAttributeValue));
+            Thread.Sleep(5000);
             return GetElementInnerText(By.Id(idAttributeValue));
         }
 
@@ -1708,8 +1707,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Retrieves Html inner text to find in the specified string.</returns>
         protected String GetElementInnerTextByXPath(String xPathValue)
         {
-            Thread.Sleep(3000);
-            base.WaitForElement(By.XPath(xPathValue));
+            Thread.Sleep(5000);
             return GetElementInnerText(By.XPath(xPathValue));
         }
 
@@ -1721,8 +1719,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Retrieves Html inner text to find in the specified string.</returns>
         protected String GetElementInnerTextByCssSelector(String cssSelectorValue)
         {
-            Thread.Sleep(3000);
-            base.WaitForElement(By.CssSelector(cssSelectorValue));
+
+            Thread.Sleep(5000);
             return GetElementInnerText(By.CssSelector(cssSelectorValue));
         }
 

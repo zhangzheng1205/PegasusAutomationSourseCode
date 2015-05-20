@@ -300,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window               
                 base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
                 //Get Class Count
-                int getClassCount = base.GetElementCountByCssSelector(HomePageResource.HomePage_ClassesDivCount_Xpath_Locator);
+                int getClassCount = base.GetElementCountByCssSelector(HomePageResource.HomePage_ClassesDivCount_CssSelector_Locator);
                 // Click on particular class
                 for (int initialCount = Convert.ToInt32(HomePageResource.
                    HomePage_ClassesDivInitialCount_Value); initialCount <= getClassCount; initialCount++)
@@ -498,11 +498,13 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window name
+                base.WaitUntilWindowLoads(HomePageResource.
+                        Home_Page_Home_Window_Title);
                 base.SelectWindow(HomePageResource.
                         Home_Page_Home_Window_Title);
                 //Get the number of class count
-                int getClassCount = base.GetElementCountByXPath(HomePageResource.
-                    HomePage_ClassesDivCount_Xpath_Locator);
+                int getClassCount = base.GetElementCountByCssSelector(HomePageResource.
+                    HomePage_ClassesDivCount_CssSelector_Locator);
                 for (int rowCount = 2; rowCount <= getClassCount; rowCount++)
                 {
                     //Get Class Name
@@ -513,7 +515,10 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     }
                 }
+                base.SwitchToDefaultPageContent();
+                base.SwitchToDefaultWindow();
             }
+                
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -752,8 +757,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window               
                 base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
                 //Get Class Count
-                int getClassCount = base.GetElementCountByXPath(HomePageResource.
-                   HomePage_ClassesDivCount_Xpath_Locator);
+                int getClassCount = base.GetElementCountByCssSelector(HomePageResource.
+                   HomePage_ClassesDivCount_CssSelector_Locator);
                 // Click on particular class
                 for (int initialCount = Convert.ToInt32(HomePageResource.
             HomePage_ClassesDivInitialCount_Value); initialCount <= getClassCount; initialCount++)
