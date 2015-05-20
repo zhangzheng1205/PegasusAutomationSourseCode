@@ -340,9 +340,6 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\GenericTest1.GenericTest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MGM2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
