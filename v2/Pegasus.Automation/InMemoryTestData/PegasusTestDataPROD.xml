@@ -357,12 +357,12 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>qaautomationteacher</Name>
+      <Name>rashprodteacher04</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>QA</FirstName>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Automation</LastName>
+      <LastName>Shetty</LastName>
       <UserType>DPCsTeacher</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -379,12 +379,12 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>qaautomationstudent</Name>
+      <Name>nitprodautostud</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>QA</FirstName>
+      <FirstName>Nithya</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Automation</LastName>
+      <LastName>Nanda</LastName>
       <UserType>DPCsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -878,7 +878,7 @@
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>digits - grade6</Name>
+      <Name>ac7b1809-8de0-402d-8395-45fda0b4931c</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -891,8 +891,14 @@
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
     <Product>
-      <Name>Prentice Hall Writing Coach, NA QA</Name>
+      <Name>digits - grade 6</Name>
       <ProductType>DigitalPath</ProductType>
+      <PeriodName>4681a6a0</PeriodName>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Custom Content</Name>
+      <ProductType>DigitalPathCustomContent</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>

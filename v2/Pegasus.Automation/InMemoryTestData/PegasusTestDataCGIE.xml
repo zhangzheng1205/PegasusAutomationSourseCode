@@ -18,7 +18,7 @@
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>digits - grade6</Name>
+      <Name>8daa88c0-1d63-413e-997f-6eb8f18c8de3</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -47,7 +47,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>0d06a6e8-166b-442c-ac3e-1316dfa8144d</Name>
+      <Name>digits - grade 6</Name>
       <CourseType>MasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -95,7 +95,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-       <Course>
+    <Course>
       <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
       <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -111,7 +111,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-      <Course>
+    <Course>
       <Name>MyPsychLab for Ciccarelli</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -190,7 +190,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-       <Course>
+    <Course>
       <Name>CGIE_Automation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
@@ -356,12 +356,12 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>24c81742-0ab8-47d1-a80a-78df7b52bc40</Name>
-      <Password>password2</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>0bb12871-aa8d-4cb4-baae-86c6bbd0ad3f</FirstName>
+      <Name>rashcgieteacher01</Name>
+      <Password>password1</Password>
+      <Email>rashmi.shetty@excelindia.com</Email>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>0bb12871-aa8d-4cb4-baae-86c6bbd0ad3f</LastName>
+      <LastName>Shetty</LastName>
       <UserType>DPCsTeacher</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -378,12 +378,12 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>f874f95a-8d5a-4558-9a62-4b5969483434</Name>
-      <Password>password1</Password>
+      <Name>rashcgiestudent01</Name>
+      <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>e4f08448-827b-4ee4-935d-8249d184dc4a</FirstName>
+      <FirstName>Rekha</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e4f08448-827b-4ee4-935d-8249d184dc4a</LastName>
+      <LastName>Anantha</LastName>
       <UserType>DPCsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -792,21 +792,9 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>7bb15133-f77e-4f9a-a72d-7d14e8405a94</Name>
+      <Name>Benchmark Test 1</Name>
       <ActivityType>Test</ActivityType>
-      <ActivityID>DigitalPath_Activity_Test_UC1</ActivityID>
-      <IsCreated>true</IsCreated>
-    </Activity>
-    <Activity>
-      <Name>576611fc-347b-4af5-a032-ffd5fef04376'>''a'</Name>
-      <ActivityTypeEnum>Test</ActivityTypeEnum>
-      <ActivityBehavioralModesEnum>BasicRandom</ActivityBehavioralModesEnum>
-      <IsCreated>true</IsCreated>
-    </Activity>
-    <Activity>
-      <Name>d4367330-f9da-4420-a303-eadda1a''>a'</Name>
-      <ActivityTypeEnum>Test</ActivityTypeEnum>
-      <ActivityBehavioralModesEnum>Assignment</ActivityBehavioralModesEnum>
+      <ActivityId>DigitalPath_Activity_Test_UC1</ActivityId>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
@@ -848,13 +836,14 @@
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
     <Product>
-      <Name>MyITLab for Office 2013</Name>
-      <ProductType>MyITLabForOffice2013Program</ProductType>
+      <Name>Digit Grade6</Name>
+      <ProductType>DigitalPath</ProductType>
+      <PeriodName>4681a6a0</PeriodName>
       <IsCreated>true</IsCreated>
     </Product>
     <Product>
-      <Name>Digit Grade6</Name>
-      <ProductType>DigitalPath</ProductType>
+      <Name>Custom Content</Name>
+      <ProductType>DigitalPathCustomContent</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
