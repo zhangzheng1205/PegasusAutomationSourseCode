@@ -364,13 +364,16 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.DPFull.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherAndCSStudentGradebook.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherAndCSStudentGradebook.BVT.DP.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherReports.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherReports.BVT.DP.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherCurriculum.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CSTeacherCurriculum.BVT.DP.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.PlannerAssignment.BVT.DP.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.WorkFlow.feature">
