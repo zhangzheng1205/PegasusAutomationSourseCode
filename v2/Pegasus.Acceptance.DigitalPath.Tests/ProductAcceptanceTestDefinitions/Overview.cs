@@ -120,5 +120,92 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("Overview", "StudentSelectClassFromTheClassSelectorDropdown", base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify Channels in Overview Page
+        /// </summary>
+        /// <param name="channels">Channels</param>
+        [Then(@"I should see the ""(.*)"" channels in Overview page")]
+        public void VerifyChanneslInOverviewPage(string channels)
+        {
+            //Verify Channels in Today's View Page
+            Logger.LogMethodEntry("TodaysView", "VerifyChanneslInOverviewPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Verify Channels in Today's View Page
+            Logger.LogAssertion("VerifyChannels",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(channels, new TodaysViewUxPage().GetNotificationsChannelTitleK12()));
+            Logger.LogMethodEntry("TodaysView", "VerifyChanneslInOverviewPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see the alert count updated as ""(.*)"" in ""(.*)"" channel")]
+        public void ValidateUnreadMessageAlertCountK12(int alertCount, string channelName)
+        {
+            //Verify Alert count in Unread Messages Notification channel
+            Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCountK12",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the alert count displayed in Unread Messages channel
+            Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(alertCount, new TodaysViewUxPage().GetAlertCountK12(channelName)));
+            Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCountK12",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [When(@"I click on the ""(.*)"" option")]
+        public void ClickOnAlertChannelOptionK12(string channelOption)
+        {
+            //Click On Notification Channel Option
+            Logger.LogMethodEntry("TodaysView", "ClickOnAlertChannelOptionK12",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the Performance channel Option
+            new TodaysViewUxPage().ClickNotificationChannelOptionK12(channelOption);
+            Logger.LogMethodExit("TodaysView", "ClickOnAlertChannelOptionK12",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [Then(@"I should see ""(.*)"" activity in the ""(.*)"" channel")]
+        public void ValidateActivityCountInNotPassedChannelK12(int activityCount, string channelName)
+        {
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityCountInNotPassedChannelK12",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the activity count displayed in Not passed channel
+            Logger.LogAssertion("ValidateActivityCountInNotPassedChannel", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
+                    new TodaysViewUxPage().GetCountFromAlertChannelsK12(channelName)));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityCountInNotPassedChannelK12",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Validate the idle student name.
+        /// </summary>
+        /// <param name="Count">Number of idle students.</param>
+        /// <param name="StudentName">This is User type enum.</param>
+        /// <param name="scenarioName">This s type of student.</param>
+        /// <param name="channelName">This is channel name</param>
+        [Then(@"I should see ""(.*)"" Idle Student ""(.*)"" of type ""(.*)"" in ""(.*)"" channel")]
+        public void ValidateIdleStudentNameK12(int Count, User.UserTypeEnum userTypeEnum,
+            string scenarioName, string channelName)
+        {
+            //Verify Alert count in Idle Students Notification channel
+            Logger.LogMethodEntry("TodaysView", "ValidateIdleStudentNameK12",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            String StudentName = user.LastName + " , " + user.FirstName;
+            //Assert the alert count displayed in Idle Students channel
+            Logger.LogAssertion("ValidateIdleStudentNameK12", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(Count, new TodaysViewUxPage().GetCountFromAlertChannelsK12(channelName)));
+            //Assert the idle student name
+            Logger.LogAssertion("ValidateIdleStudentNameK12", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(StudentName, new TodaysViewUxPage().GetStudentNameFromIdleStudentsK12()));
+            Logger.LogMethodEntry("TodaysView", "ValidateIdleStudentNameK12",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

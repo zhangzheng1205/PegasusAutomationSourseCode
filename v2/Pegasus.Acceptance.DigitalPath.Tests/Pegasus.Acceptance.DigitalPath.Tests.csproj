@@ -235,6 +235,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceGradeBook.WorkFlow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorTodaysView.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructorTodaysView.Workflow.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceOrganizationAdmin.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -394,6 +399,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceGradeBook.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceGradeBook.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorTodaysView.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructorTodaysView.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceOrganizationAdmin.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

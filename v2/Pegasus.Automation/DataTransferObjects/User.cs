@@ -136,7 +136,8 @@ namespace Pearson.Pegasus.TestAutomation.
             AmpWSInstructor = 65,
             AmpCsSmsInstructor = 66,
             AmpCsSmsStudent = 67,
-            AmpProgramAdmin = 68
+            AmpProgramAdmin = 68,
+            DPCsIdleStudent
             #endregion
         }
 
