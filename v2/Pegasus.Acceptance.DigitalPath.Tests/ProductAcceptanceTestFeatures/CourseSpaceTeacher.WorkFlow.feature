@@ -131,7 +131,7 @@ Then I should see the ML in the custom content view
 When I click on the expand button of "MasterLibrary" in the custom content view
 When I select "Assign" cmenu option of "Test" in table of contents 
 And I set the due date for the "Test" activity in curriculum
-When I select "Print" cmenu option of "Test" in table of contents 
+And I select "Print" cmenu option of "Test" in table of contents 
 Then I should see the "Download" option in print window
 And I close the "Print tool" window
 
@@ -411,7 +411,9 @@ Scenario:Assign Practice test from curriculum channel
 When I navigate to the "Curriculum" tab
 Then I should be on the "Curriculum" page
 When I select "Assign" cmenu of "i1-2 Practice" in table of content
-And I set the due date for the "Test" activity in curriculum
+And I click on Ok button in Alert pop up
+Then I should see "Assign" pop up
+When I set the due date for the "Test" activity in curriculum
 
 #Purpose: DigitalPath Teacher select class from Class selector dropdown.
 Scenario: Select DigitalPath class from Class selector dropdown by Teacher
