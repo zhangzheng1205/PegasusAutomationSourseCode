@@ -980,6 +980,9 @@ namespace Pegasus.Pages.CommonPageObjects
             base.WaitForElement(By.LinkText(activityFolderName));
             IWebElement getFolderLink = base.GetWebElementPropertiesByLinkText
                 (activityFolderName);
+            //Added to fix navigation into folder issues on .This will be removed if issue 
+            //continues.Sleep is added for the creation of webelement.
+            Thread.Sleep(2000);
             //Click the link
             base.PerformMouseClickAction(getFolderLink);
             base.PerformReleaseAction();
