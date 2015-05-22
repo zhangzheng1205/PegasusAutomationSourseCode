@@ -982,6 +982,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 (activityFolderName);
             //Click the link
             base.PerformMouseClickAction(getFolderLink);
+            base.PerformReleaseAction();
             Thread.Sleep(Convert.ToInt32(CommonPageResource.
                 CommonPage_FolderNavigation_Sleep_Time));
             Logger.LogMethodExit("CommonPage",
