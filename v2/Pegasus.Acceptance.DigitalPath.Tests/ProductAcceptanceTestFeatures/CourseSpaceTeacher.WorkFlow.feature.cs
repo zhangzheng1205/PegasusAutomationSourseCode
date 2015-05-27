@@ -1221,6 +1221,51 @@ testRunner.And("I should see Assigned icon for MathXL activity \"i1-2 Practice\"
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher validating the idle student enrollment to class")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void TeacherValidatingTheIdleStudentEnrollmentToClass()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating the idle student enrollment to class", ((string[])(null)));
+#line 482
+this.ScenarioSetup(scenarioInfo);
+#line 483
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 484
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 485
+testRunner.When("I click on Cmenu option of Class \"DigitalPathMasterLibrary\" and select \"Enrollmen" +
+                    "ts\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 486
+testRunner.Then("I should see the \"Manage Students\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 487
+testRunner.When("I Click on Create New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 488
+testRunner.And("I select \"Enroll from School\" drop down option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 489
+testRunner.Then("I should see the \"Enroll from School\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 490
+testRunner.When("I click on Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 491
+testRunner.And("I enter student username \"DPCsIdleStudent\" to search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 492
+testRunner.Then("I should see searched username \"DPCsIdleStudent\" in search list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 493
+testRunner.When("I select the student and click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 494
+testRunner.Then("I should see the success message \"Users enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 495
+testRunner.When("I close Enroll from school pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 496
+testRunner.Then("I should see \"Enroll from School\" pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 497
+testRunner.And("I should see the student \"DPCsIdleStudent\" displayed in manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 498
+testRunner.When("I close Manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

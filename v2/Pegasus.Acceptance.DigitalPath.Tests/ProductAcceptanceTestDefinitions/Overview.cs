@@ -175,6 +175,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogAssertion("ValidateActivityCountInNotPassedChannel", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
                     new TodaysViewUxPage().GetCountFromAlertChannelsK12(channelName)));
+            base.SelectDefaultWindow();
             Logger.LogMethodExit("TodaysView", "ValidateActivityCountInNotPassedChannelK12",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -204,6 +205,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogAssertion("ValidateIdleStudentNameK12", ScenarioContext.Current.
                 ScenarioInfo.Title,
                 () => Assert.AreEqual(StudentName, new TodaysViewUxPage().GetStudentNameFromIdleStudentsK12()));
+            base.SelectDefaultWindow();
             Logger.LogMethodEntry("TodaysView", "ValidateIdleStudentNameK12",
               base.IsTakeScreenShotDuringEntryExit);
         }

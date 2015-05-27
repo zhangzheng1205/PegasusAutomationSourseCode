@@ -390,6 +390,15 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
+      <Name>prodidlestudent</Name>
+      <Password>password1</Password>
+      <FirstName>Chethan</FirstName>
+      <LastName>Gangoor</LastName>
+      <UserType>DPCsIdleStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>5.15.2smsins1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -878,7 +887,7 @@
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>ac7b1809-8de0-402d-8395-45fda0b4931c</Name>
+      <Name>5d017226-8873-4c06-8682-13b54e20be49</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
