@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Configuration;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -11,7 +12,6 @@ using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
 using System.Globalization;
-
 #endregion
 
 namespace Pegasus.Acceptance.DigitalPath.Tests.
@@ -500,5 +500,61 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Given(@"I update enum values for gradebook")]
+        public void UpdateEnumValuesForGradebook()
+        {
+            // Updates the teacher,student and class enum values at in-memory during runtime
+            Logger.LogMethodEntry("CommonSteps", "UpdateSectionNameAndCourseId",
+                 base.IsTakeScreenShotDuringEntryExit);
+            switch (Environment.GetEnvironmentVariable(CommonStepsResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[CommonStepsResource.TestEnvironment_Key].ToUpper())
+            {
+
+                // Updates the teacher,student and class enum values at in-memory during runtime when environment is CGIE
+                case "CGIE":
+                    //Update Teacher Username
+                    User CGIETeacher = User.Get(User.UserTypeEnum.DPCsTeacher);
+                    CGIETeacher.Name = CommonStepsResource.CommonSteps_CGIE_DPTeacherUsername_Value;
+                    CGIETeacher.UpdateUserInMemory(CGIETeacher);
+                    //Update Student Username,FirstName and LastName
+                    User CGIEStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+                    CGIEStudent.Name = CommonStepsResource.CommonSteps_CGIE_DPStudentUsername_Value;
+                    CGIEStudent.FirstName = CommonStepsResource.CommonSteps_CGIE_DPStudentFirstName_Value;
+                    CGIEStudent.LastName = CommonStepsResource.CommonSteps_CGIE_DPStudentLastName_Value;
+                    CGIEStudent.UpdateUserInMemory(CGIEStudent);
+                    //Update Class Name
+                    Class CGIEClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+                    CGIEClass.Name = CommonStepsResource.CommonSteps_CGIE_DPClassName_Value;
+                    CGIEClass.UpdateClassInMemory(CGIEClass);
+                    break;
+                // Updates the teacher,student and class enum values at in-memory during runtime when environment is CGIE
+                case "PROD":
+                    //Update Teacher Username
+                    User PRODTeacher = User.Get(User.UserTypeEnum.DPCsTeacher);
+                    PRODTeacher.Name = CommonStepsResource.CommonSteps_PROD_DPTeacherUsername_Value;
+                    PRODTeacher.UpdateUserInMemory(PRODTeacher);
+                    //Update Student Username,FirstName and LastName
+                    User PRODStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+                    PRODStudent.Name = CommonStepsResource.CommonSteps_PROD_DPStudentUsername_Value;
+                    PRODStudent.FirstName = CommonStepsResource.CommonSteps_PROD_DPStudentFirstName_Value;
+                    PRODStudent.LastName = CommonStepsResource.CommonSteps_PROD_DPStudentLastName_Value;
+                    PRODStudent.UpdateUserInMemory(PRODStudent);
+                    //Update Class Name
+                    Class PRODClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+                    PRODClass.Name = CommonStepsResource.CommonSteps_PROD_DPClassName_Value;
+                    PRODClass.UpdateClassInMemory(PRODClass);
+                    break;
+                    default: throw new ArgumentException("The suggested application environment was not found");
+
+            }
+            Logger.LogMethodExit("CommonSteps", "UpdateSectionNameAndCourseId",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
+
 }

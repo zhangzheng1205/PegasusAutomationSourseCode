@@ -125,3 +125,7 @@ And I store user current date and time of the teacher
 Scenario: Teacher enter into DigitalPath Class
 When I enter into the DP "DigitalPathMasterLibrary" class
 Then I should be on the "Classes" page
+
+#Purpose:Update enum values for GradeBook Verification
+Scenario:Update Enum values for gradebook verification
+Given I update enum values for gradebook

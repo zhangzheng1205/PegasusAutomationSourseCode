@@ -168,8 +168,7 @@ testRunner.Then("I should see alert message \"You can only try this activity onc
 #line 43
 testRunner.When("I click on \"Continue\" button in activity alert pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
-testRunner.Then("I should see pre test presentation page \"Take a Test - Student Stu\" should be dis" +
-                    "played", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see pre test presentation page \"Take a Test - \" should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 45
 testRunner.When("I answer all the questions incorrectly for activity \"Topic 1 Test with Study Plan" +
                     "\" to score \"0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -196,19 +195,27 @@ testRunner.When("I click on \"Return to Course\" button in study plan page", ((s
 #line 57
 this.ScenarioSetup(scenarioInfo);
 #line 58
-testRunner.When("I navigate to the \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 59
-testRunner.Then("I should see \"1-1 Homework\" displayed under \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 60
-testRunner.When("I click on \"Start\" button next to the asset \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"DigitalPathMasterLibrary\" from the class selector dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
-testRunner.Then("I should see pre test presentation page \"Do Homework - Student Stu\" should be dis" +
-                    "played", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"DigitalPathMasterLibrary\" class present in the overview tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 62
-testRunner.When("I answer all the questions incorrectly for activity \"1-1 Homework\" to score \"0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 63
+testRunner.Then("I should see \"1-1 Homework\" displayed under \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 64
+testRunner.When("I click on \"Start\" button next to the asset \"1-1 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 65
+testRunner.Then("I should see pre test presentation page \"Do Homework - \" should be displayed for " +
+                    "\"DPCsStudent\" student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 66
+testRunner.When("I answer all the questions incorrectly for activity \"1-1 Homework\" to score \"0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
 testRunner.Then("I should see submitted activity \"1-1 Homework\" should be displayed in \"Assignment" +
-                    "s - To Do\" Tab as “0.00%” score and status \"I\'m Done\" with \"Try Again\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "s - To Do\" Tab as “0.00%” score with \"Try Again\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -219,20 +226,20 @@ testRunner.Then("I should see submitted activity \"1-1 Homework\" should be disp
         public virtual void MathXLPracticeSetActivityAndStudentScoring0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Math XL Practice set activity and student scoring 0%", ((string[])(null)));
-#line 71
-this.ScenarioSetup(scenarioInfo);
-#line 72
-testRunner.When("I navigate to the \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 73
-testRunner.Then("I should see \"i1-1 Practice\" displayed under \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 74
-testRunner.When("I click on \"Start\" button next to the asset \"i1-1 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
-testRunner.Then("I should see pre test presentation page \"Do Practice Set\" should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 76
+this.ScenarioSetup(scenarioInfo);
+#line 77
+testRunner.When("I navigate to the \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 78
+testRunner.Then("I should see \"i1-1 Practice\" displayed under \"To Do\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 79
+testRunner.When("I click on \"Start\" button next to the asset \"i1-1 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 80
+testRunner.Then("I should see pre test presentation page \"Do Practice Set\" should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 81
 testRunner.When("I answer all the questions incorrectly for activity \"i1-1 Practice\" to score \"0%\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
+#line 82
 testRunner.Then("I should see submitted activity \"i1-1 Practice\" should be displayed in \"Assignmen" +
                     "ts - To Do\" Tab as “0.00%” score and status \"I\'m Done\" with \"Try Again\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -245,29 +252,29 @@ testRunner.Then("I should see submitted activity \"i1-1 Practice\" should be dis
         public virtual void StudentValidatingScoreInGradeBookForMathXLHomeworkActivities()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in grade book for Math XL Homework activities", ((string[])(null)));
-#line 84
-this.ScenarioSetup(scenarioInfo);
-#line 85
-testRunner.When("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
-testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
-testRunner.When("I select \"DigitalPathMasterLibrary\" from the class selector dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 88
-testRunner.Then("I should see the \"DigitalPathMasterLibrary\" class present in the overview tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 89
-testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 90
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 91
-testRunner.When("I click on cmenu option \"View Submissions\" of asset \"1-2 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 92
-testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I select \"DigitalPathMasterLibrary\" from the class selector dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 93
-testRunner.And("I should see \"70\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the \"DigitalPathMasterLibrary\" class present in the overview tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 94
-testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 95
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 96
+testRunner.When("I click on cmenu option \"View Submissions\" of asset \"1-2 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 97
+testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 98
+testRunner.And("I should see \"70\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 99
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 100
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -279,31 +286,31 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         public virtual void StudentValidatingScoreInGradeBookForMathXLStudyPlan()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in grade book for Math XL study plan", ((string[])(null)));
-#line 103
-this.ScenarioSetup(scenarioInfo);
-#line 104
-testRunner.When("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 105
-testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 106
-testRunner.When("I select \"DigitalPathMasterLibrary\" from the class selector dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 107
-testRunner.Then("I should see the \"DigitalPathMasterLibrary\" class present in the overview tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 108
-testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 109
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 110
-testRunner.When("I click on View Grades button of asset \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 111
-testRunner.And("I click on cmenu option \"View Submissions\" of asset \"Topic 2 Test - Pre-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I select \"DigitalPathMasterLibrary\" from the class selector dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 112
-testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"DigitalPathMasterLibrary\" class present in the overview tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 113
-testRunner.And("I should see \"70\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 114
-testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 115
+testRunner.When("I click on View Grades button of asset \"Topic 2 Test with Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 116
+testRunner.And("I click on cmenu option \"View Submissions\" of asset \"Topic 2 Test - Pre-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 117
+testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 118
+testRunner.And("I should see \"70\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 119
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 120
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -315,31 +322,31 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         public virtual void TeacherValidatingScoreInGradeBookForMathXLHomework()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating score in grade book for MathXL Homework", ((string[])(null)));
-#line 123
-this.ScenarioSetup(scenarioInfo);
-#line 124
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 125
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 126
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 127
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 128
-testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 129
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 130
-testRunner.When("I search \"1-2 Homework\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 131
-testRunner.And("I click on cmenu option \"View All Submissions\" of the asset \"1-2 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 132
-testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 133
-testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 134
-testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 135
+testRunner.When("I search \"1-2 Homework\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 136
+testRunner.And("I click on cmenu option \"View All Submissions\" of the asset \"1-2 Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 137
+testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 138
+testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 139
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 140
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -351,31 +358,31 @@ testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechT
         public virtual void TeacherValidatingScoreInGradeBookForMathXLTest()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating score in grade book for MathXL Test", ((string[])(null)));
-#line 142
-this.ScenarioSetup(scenarioInfo);
-#line 143
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 144
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 145
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 146
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 147
-testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 148
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 149
-testRunner.When("I search \"Topic 2 Test\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 150
-testRunner.When("I click on cmenu option \"View All Submissions\" of the asset \"Topic 2 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 151
-testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 152
-testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 153
-testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 154
+testRunner.When("I search \"Topic 2 Test\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 155
+testRunner.When("I click on cmenu option \"View All Submissions\" of the asset \"Topic 2 Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 156
+testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 157
+testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 158
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 159
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -387,31 +394,31 @@ testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechT
         public virtual void TeacherValidatingScoreInGradeBookForMathXLPractice()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating score in grade book for MathXL Practice", ((string[])(null)));
-#line 161
-this.ScenarioSetup(scenarioInfo);
-#line 162
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 163
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 164
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 166
-testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 167
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 168
-testRunner.When("I search \"i1-2 Practice\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 169
-testRunner.When("I click on cmenu option \"View All Submissions\" of the asset \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 170
-testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 171
-testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 172
-testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 173
+testRunner.When("I search \"i1-2 Practice\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 174
+testRunner.When("I click on cmenu option \"View All Submissions\" of the asset \"i1-2 Practice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 175
+testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 176
+testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 177
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 178
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -423,34 +430,34 @@ testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechT
         public virtual void TeacherValidatingScoreInGradeBookForMathXLStudyplan()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating score in grade book for MathXL Studyplan", ((string[])(null)));
-#line 180
-this.ScenarioSetup(scenarioInfo);
-#line 181
-testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 182
-testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 183
-testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 184
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 185
-testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 186
-testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 187
-testRunner.When("I search \"Topic 2 Test with Study Plan\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 188
-testRunner.And("I click on view grade option of \"Topic 2 Test with Study Plan\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 189
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 190
+testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 191
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 192
+testRunner.When("I search \"Topic 2 Test with Study Plan\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 193
+testRunner.And("I click on view grade option of \"Topic 2 Test with Study Plan\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 194
 testRunner.And("I click on cmenu option \"View All Submissions\" of Studyplan asset \"Topic 2 Test-P" +
                     "re-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 190
+#line 195
 testRunner.Then("I should see the \"View Submission\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 191
+#line 196
 testRunner.And("I should see \"70\" score in the view submission page for a student \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 192
+#line 197
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 193
+#line 198
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

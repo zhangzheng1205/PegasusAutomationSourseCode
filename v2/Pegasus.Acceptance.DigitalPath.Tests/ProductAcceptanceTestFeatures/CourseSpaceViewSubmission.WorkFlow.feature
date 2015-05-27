@@ -41,7 +41,7 @@ Then I should see study plan page "Open Study Plan" will be opened with "Topic 1
 When I click on "Begin" button under pre test frame
 Then I should see alert message "You can only try this activity once. After you complete the activity, your score is recorded and sent to your teacher." with "Continue" and "Cancel" button
 When I click on "Continue" button in activity alert pop up 
-Then I should see pre test presentation page "Take a Test - Student Stu" should be displayed
+Then I should see pre test presentation page "Take a Test - " should be displayed
 When I answer all the questions incorrectly for activity "Topic 1 Test with Study Plan" to score "0%"
 Then I should see "Test Summary" page should be displayed with score and for each question along with button "Close"
 When I click on "Close" button in "Test Summary" page
@@ -55,12 +55,17 @@ When I click on "Return to Course" button in study plan page
 #Pre condition : Math XL LLC should be assigned by teacher in the course.
 #Dependency : Following script can ne execute only in MGM/Digits product with Master course Id : WS601249 and course name: Digits - Grade 6
 Scenario: Math XL LLC activity and student scoring 0%
+When I navigate to the "Overview" tab
+Then I should be on the "Overview" page
+When I select "DigitalPathMasterLibrary" from the class selector dropdown
+Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
 When I navigate to the "To Do" tab
 Then I should see "1-1 Homework" displayed under "To Do" tab
 When I click on "Start" button next to the asset "1-1 Homework"
-Then I should see pre test presentation page "Do Homework - Student Stu" should be displayed
+Then I should see pre test presentation page "Do Homework - " should be displayed for "DPCsStudent" student
 When I answer all the questions incorrectly for activity "1-1 Homework" to score "0%"
-Then I should see submitted activity "1-1 Homework" should be displayed in "Assignments - To Do" Tab as “0.00%” score and status "I'm Done" with "Try Again" button
+Then I should see submitted activity "1-1 Homework" should be displayed in "Assignments - To Do" Tab as “0.00%” score with "Try Again" button
+
 
 
 #Purpose : Math XL Practice set activity and student scoring 0%.

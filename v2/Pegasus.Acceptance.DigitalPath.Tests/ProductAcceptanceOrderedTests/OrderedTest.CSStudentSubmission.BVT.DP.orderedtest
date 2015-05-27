@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.CSStudentSubmission.BVT.DP" storage="d:\pegasus_automation_14jan_master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.csstudentsubmission.bvt.dp.orderedtest" id="911f8c6d-8835-40b1-b359-cb136890566f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="032fb1dd-f183-8fbe-f55a-1b662f93187e" name="UserLoginAsCourseSpaceStudent" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="9e260cf9-c5e0-e0f0-29db-dd0b99bebbf9" name="MathXLLLCActivityAndStudentScoring0" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="74ec77fd-fa76-e190-9e30-33603d7fad83" name="UserLogOutAsCourseSpaceStudent" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

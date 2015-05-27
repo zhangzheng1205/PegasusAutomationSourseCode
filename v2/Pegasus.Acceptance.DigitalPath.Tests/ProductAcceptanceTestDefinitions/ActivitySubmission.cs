@@ -9,6 +9,7 @@ using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.DRT;
 using TechTalk.SpecFlow;
+using System.Threading;
 
 #endregion
 
@@ -261,15 +262,19 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// See The PreTest Presentation Page Displayed.
         /// </summary>
         /// <param name="presentationPageTitle">This is page title.</param>
-        [Then(@"I should see pre test presentation page ""(.*)"" should be displayed")]
-        public void SeeThePreTestPresentationPageDisplayed(string presentationPageTitle)
+        [Then(@"I should see pre test presentation page ""(.*)"" should be displayed for ""(.*)"" student")]
+        public void SeeThePreTestPresentationPageDisplayed(string presentationPageTitle, 
+            User.UserTypeEnum userTypeEnum)
         {
-            // see pre test presentation page displayed
+            string windowTitle = string.Empty;
+            User user = User.Get(userTypeEnum);
+            windowTitle = presentationPageTitle + user.FirstName + " " + user.LastName;
+             // see pre test presentation page displayed
             Logger.LogMethodEntry("ActivitySubmission", "SeeThePreTestPresentationPageDisplayed",
             base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyPresentationPageWindowTitle",
                ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue
-            (new LTIToolLaunchPage().GetPresentationPageWindowTitle(presentationPageTitle).Contains(presentationPageTitle)));
+            (new LTIToolLaunchPage().GetPresentationPageWindowTitle(windowTitle).Contains(windowTitle)));
             Logger.LogMethodExit("ActivitySubmission", "SeeThePreTestPresentationPageDisplayed",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -286,6 +291,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("ActivitySubmission", "AnswerTheQuestionsForActivityToScore",
             base.IsTakeScreenShotDuringEntryExit);
             new MathxlPlayerTestPage().AttemptMgmActivity(assetName, scoreAchieve);
+            Thread.Sleep(12000);
             Logger.LogMethodExit("ActivitySubmission", "AnswerTheQuestionsForActivityToScore",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -384,5 +390,28 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("ActivitySubmission", "SeeSubmittedActivityShouldBeDisplayedInTabAsScoreAndStatusWithButton",
            base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="underTabName">This is Tab name.</param>
+        /// <param name="achievedScore">This is score value.</param>
+        /// <param name="buttonName">This is button name.</param>
+        [Then(@"I should see submitted activity ""(.*)"" should be displayed in ""(.*)"" Tab as “(.*)” score with ""(.*)"" button")]
+        public void VerifySubmittedActivityScoreAndStatus(string assetName, string underTabName, string achievedScore, string buttonName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "VerifySubmittedActivityScoreAndStatus",
+         base.IsTakeScreenShotDuringEntryExit);
+            CoursePreviewUXPage coursePreviewUxPage = new CoursePreviewUXPage();
+            Logger.LogAssertion("VerifySubmissionScore", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(achievedScore, coursePreviewUxPage.GetAssetScore(assetName, underTabName)));
+            Logger.LogAssertion("VerifyTryAgainButtonPresent", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(buttonName, coursePreviewUxPage.GetTryAgainButtonText()));
+            base.SelectDefaultWindow();
+            Logger.LogMethodEntry("ActivitySubmission", "VerifySubmittedActivityScoreAndStatus",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

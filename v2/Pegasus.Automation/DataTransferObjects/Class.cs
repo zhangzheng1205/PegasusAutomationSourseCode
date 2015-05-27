@@ -76,6 +76,14 @@ namespace Pegasus.Automation.DataTransferObjects
         }
 
         /// <summary>
+        /// This method is used to update the user.
+        /// </summary>
+        public void UpdateClassInMemory(Class classUpdate)
+        {
+            InMemoryDatabaseSingleton.DatabaseInstance.Update(classUpdate);
+        }
+
+        /// <summary>
         /// This method returns all created class of the given type.
         /// </summary>
         /// <param name="classType">This is the type of the class.</param>

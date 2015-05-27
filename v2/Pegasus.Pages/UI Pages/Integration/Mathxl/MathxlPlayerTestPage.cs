@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Integration.Mathxl;
+using System.Threading;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -35,6 +36,7 @@ namespace Pegasus.Pages.UI_Pages
                 const int screenWidth = 800;
                 const int screenHeight = 800;
                 // setting the screen size and position
+                Thread.Sleep(60000);
                 base.SetWindowSize(screenWidth, screenHeight);
                 base.SetWindowPosition(Screen.PrimaryScreen.WorkingArea.Width - screenWidth
                     , Screen.PrimaryScreen.WorkingArea.Height - screenHeight);
@@ -44,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                         switch (scoreToAchieve)
                         {
                             case "0%":
-                                Process.Start((AutomationConfigurationManager.TestDataPath
+                                     Process.Start((AutomationConfigurationManager.TestDataPath
                                     + MathxlPlayerTestPageResource.MathxlPlayerTest_Page_Topic1TestWithStudyPlan0Percent_File_Path).Replace("file:\\", ""));
                                 break;
                         }
@@ -56,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                             case "0%":
                                 Process.Start((AutomationConfigurationManager.TestDataPath
                                   + MathxlPlayerTestPageResource.MathxlPlayerTest_Page_11Homework0Percent_File_Path).Replace("file:\\", ""));
-                                break;
+                                    break;
                         }
                         break;
                 }
