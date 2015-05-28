@@ -2077,27 +2077,45 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void DragAndDropFolderAsset(string activityName)
         {
-            // Drag and drop 'Word Chapter 1: Simulation Activities' folder to current date
-            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropWordFolderAsset",
+            //Wait for element added to fix drag and drop failure in WL and HSS
+            // Drag and drop an asset
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropFolderAsset",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
                 this.SelectCalendarWindow();
-                // drag and drop the element
-                base.DragAndDropWebElement(base.GetWebElementPropertiesByXPath((String.Format(
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                   CalendarHEDDefaultUXPage_SleepTime));
+                //Wait for the element
+                base.WaitForElement(By.XPath(String.Format(
                      CalendarHEDDefaultUXPageResource.
-                     CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator,
-                     activityName))), base.GetWebElementPropertiesByCssSelector
-                     ("div[eventstartdatetime= '" + DateTime.Now.ToString("MM/dd/yyyy") + " 00:00:00']"));
-                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPage_SleepTime));
+                     CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator, activityName)));
+                IWebElement element = WebDriver.FindElement(By.XPath(String.Format(
+                     CalendarHEDDefaultUXPageResource.
+                     CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator, activityName)));
+                //Wait for the target
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                           CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                IWebElement target = WebDriver.FindElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                // drag and drop the element
+                base.DragAndDropWebElement(element, target);
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
+                //base.DragAndDropWebElement(base.GetWebElementPropertiesByXPath((String.Format(
+                //     CalendarHEDDefaultUXPageResource.
+                //     CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator,
+                //     activityName))), base.GetWebElementPropertiesByCssSelector
+                //     ("div[eventstartdatetime= '" + DateTime.Now.ToString("MM/dd/yyyy") + " 00:00:00']"));
+                //Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPage_SleepTime));
 
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropWordFolderAsset",
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropFolderAsset",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2145,18 +2163,25 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                //Wait for element added to fix drag and drop failure in WL and HSS
                 //Select Calendar Window
                 this.SelectCalendarWindow();
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_SleepTime));
+                   CalendarHEDDefaultUXPage_SleepTime));
+                //Wait for the element
+                base.WaitForElement(By.XPath(String.Format(
+                     CalendarHEDDefaultUXPageResource.
+                      CalendarHEDDefaultUXPageResource_MultipleAsset_Xpath_Locator, activityName)));
                 IWebElement element = WebDriver.FindElement(By.XPath(String.Format(CalendarHEDDefaultUXPageResource.
                       CalendarHEDDefaultUXPageResource_MultipleAsset_Xpath_Locator, activityName)));
-                IWebElement target = base.GetWebElementPropertiesByCssSelector
-                      ("div[eventstartdatetime= '" + DateTime.Now.ToString("MM/dd/yyyy") + " 00:00:00']");
-                //Drag and drop the element
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                           CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                IWebElement target = WebDriver.FindElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                // drag and drop the element
                 base.DragAndDropWebElement(element, target);
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_SleepTime));
+                 CalendarHEDDefaultUXPage_SleepTime));
 
             }
             catch (Exception e)
