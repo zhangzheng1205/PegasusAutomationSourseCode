@@ -2046,7 +2046,7 @@ namespace Pegasus.Pages.UI_Pages
                             case "Select Students":
                                 this.OpenAssessmentWindow(assessmentType, windownName);
                                 //Selects the expected activity and click 'Add'
-                                this.AddDPStudent(windownName,userLastName);
+                                this.AddDPStudent(assessmentName, windownName);
                                 break;
                         }
                         break;
@@ -2115,17 +2115,23 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Add the DP student to Student activity report.
         /// </summary>
-        private void AddDPStudent(string windownName, String userLastName)
+        private void AddDPStudent( string studentType,string windownName)
         {   
             // Select and add student
             Logger.LogMethodEntry("RptMainUXPage", "AddDPStudent", base.IsTakeScreenShotDuringEntryExit);
+            User CGIEStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+            string userLastName = CGIEStudent.LastName;
             string getStudentName;
             switch(windownName)
             {
                 case "SelectStudentByGroup":
                         base.SwitchToDefaultPageContent();
+                        base.WaitForElement(By.Id(RptMainUXPageResource.
+                            RptMainUXPage_ContainerFrame_Id_Locator));
                         base.SwitchToIFrameById(RptMainUXPageResource.
                             RptMainUXPage_ContainerFrame_Id_Locator);
+                        base.WaitForElement(By.Id(RptMainUXPageResource.
+                            RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator));
                         base.SwitchToIFrameById(RptMainUXPageResource.
                             RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator);
                         IWebElement getCourseExpandButtonProperty = base.GetWebElementPropertiesByXPath
@@ -2145,7 +2151,8 @@ namespace Pegasus.Pages.UI_Pages
                                     GetWebElementPropertiesByXPath(string.
                                     Format(RptMainUXPageResource.
                                     RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator, i));
-                                base.PerformClickAction(getStudentCheckBoxProperty);
+                                Thread.Sleep(3000);
+                                base.ClickByJavaScriptExecutor(getStudentCheckBoxProperty);
                                 break;
                             }
                         }
