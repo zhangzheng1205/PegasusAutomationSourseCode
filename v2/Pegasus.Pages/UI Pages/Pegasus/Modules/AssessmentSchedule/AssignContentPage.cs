@@ -1399,10 +1399,9 @@ namespace Pegasus.Pages.UI_Pages
                     base.SelectRadioButtonById(AssignContentPageResource.
                     AssignContent_Page_NotAssigned_Radiobutton_Id_Locator);
                 }
-                // click on save button
-                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
-                    (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
-                Thread.Sleep(7000);
+                // click on save button-code updated to fix failure after unassign of the 
+                //activity
+                this.SaveProperties();
             }
             catch (Exception e)
             {
