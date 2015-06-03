@@ -984,8 +984,11 @@ namespace Pegasus.Pages.CommonPageObjects
             //continues.Sleep is added for the creation of webelement.
             Thread.Sleep(2000);
             //Click the link
-            base.PerformMouseClickAction(getFolderLink);
-            base.PerformReleaseAction();
+            //base.PerformMouseClickAction(getFolderLink);
+            //base.PerformReleaseAction();
+            //Replacing Mouse click action with Javascript to 
+            //prevent failure at excel activity folder navigation
+            base.ClickByJavaScriptExecutor(getFolderLink);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.
                 CommonPage_FolderNavigation_Sleep_Time));
             Logger.LogMethodExit("CommonPage",
