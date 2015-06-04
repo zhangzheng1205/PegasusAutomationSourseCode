@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CommonSteps_CGIE_DPClassName_Value" xml:space="preserve">
-    <value>Dummy</value>
+    <value>Dependent_K12_CGIE</value>
   </data>
   <data name="CommonSteps_CGIE_DPStudentFirstName_Value" xml:space="preserve">
-    <value>Dummy</value>
+    <value>Rashmi</value>
   </data>
   <data name="CommonSteps_CGIE_DPStudentLastName_Value" xml:space="preserve">
-    <value>Dummy</value>
+    <value>Shetty</value>
   </data>
   <data name="CommonSteps_CGIE_DPStudentUsername_Value" xml:space="preserve">
-    <value>Dummy</value>
+    <value>dependent_stud_CGIE</value>
   </data>
   <data name="CommonSteps_CGIE_DPTeacherUsername_Value" xml:space="preserve">
-    <value>Dummy</value>
+    <value>dependent_CGIE_teac</value>
   </data>
   <data name="CommonSteps_CreateNewCoursesWindow_Name_Locator" xml:space="preserve">
     <value>Create New Courses</value>
