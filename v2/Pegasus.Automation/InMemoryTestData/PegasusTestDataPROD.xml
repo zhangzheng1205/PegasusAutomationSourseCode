@@ -357,7 +357,7 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>rashprodteacher05</Name>
+      <Name>rashprodteacher06</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>Rashmi</FirstName>
@@ -887,7 +887,7 @@
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>5d017226-8873-4c06-8682-13b54e20be49</Name>
+      <Name>01902e83-6c23-4db3-8a6f-87f232f2d0c3</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
