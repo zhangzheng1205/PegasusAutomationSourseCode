@@ -1516,17 +1516,17 @@ namespace Pegasus.Pages.UI_Pages
 
                             //Perform 'Run Report' on selected report
                             case "Run Report": 
-                                this.ClickReportCMenu(reportTypeEnum);
+                                this.ClickReportCMenuK12(reportTypeEnum);
                                 this.SelectTheReportCmenuOptions(RptMainUXPageResource.
                                     RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator);
                                 break;
                             //Perform 'Edit Settings' on selected report
-                            case "Edit Settings": this.ClickReportCMenu(reportTypeEnum);
+                            case "Edit Settings": this.ClickReportCMenuK12(reportTypeEnum);
                                 this.SelectTheReportCmenuOptions(RptMainUXPageResource.
                                     RptmainUX_Page_MyReports_ReportCmenuEditSettings_Id_Locator);
                                 break;
                             //Perform 'Delete' on selected report
-                            case "Delete": this.ClickReportCMenu(reportTypeEnum);
+                            case "Delete": this.ClickReportCMenuK12(reportTypeEnum);
                                 this.SelectTheReportCmenuOptions(RptMainUXPageResource.
                                     RptmainUX_Page_MyReports_ReportCmenuDelete_Id_Locator);
                                 break;
@@ -1569,6 +1569,67 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click on 'C menu' of a selected report in 'My Reports'
             Logger.LogMethodEntry("RptMainUXPage", "ClickReportCMenu",
+             base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string getSearchedReportName = string.Empty;
+                base.WaitForElement(By.XPath(RptMainUXPageResource.
+                    RptMainUX_Page_MyReportsCount_Xpath_Locator));
+                //Get count of the reports listed under 'My Reports'
+                int getActivityCount = base.GetElementCountByXPath(RptMainUXPageResource.
+                    RptMainUX_Page_MyReportsCount_Xpath_Locator);
+                int initialCountResource = 1;
+                string actualMyReportName = string.Empty,
+                cmenu = RptMainUXPageResource.RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator,
+                reportName = RptMainUXPageResource.RptMainUX_Page_MyReports_ActualReport_Xpath_Locator;
+
+                Report report = Report.Get(reportTypeEnum);
+                actualMyReportName = report.Name;
+
+                if (reportTypeEnum == Report.ReportTypeEnum.HSSStudentResultsbyActivity ||
+                   reportTypeEnum == Report.ReportTypeEnum.HSSActivityResultsByStudent ||
+                   reportTypeEnum == Report.ReportTypeEnum.HSSStudytPlanResults)
+                {
+                    cmenu = RptMainUXPageResource.RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2;
+                    reportName = RptMainUXPageResource.RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2;
+                }
+
+                //Search for expected report 
+                for (int initialCount = initialCountResource;
+                    initialCount <= getActivityCount; initialCount++)
+                {
+                    base.WaitForElement(By.XPath(string.Format(reportName, initialCount)));
+                    getSearchedReportName = base.GetElementTextByXPath(string.Format(reportName, initialCount));
+
+
+                    //Click on 'C menu' of expected report
+                    if (getSearchedReportName == actualMyReportName)
+                    {
+                        base.WaitForElement(By.XPath(string.Format(cmenu, initialCount)));
+                        IWebElement getCmenu = base.GetWebElementPropertiesByXPath((string.Format(cmenu, initialCount)));
+                        //Click on cmenu of the asset
+                        base.ClickByJavaScriptExecutor(getCmenu);
+                        Thread.Sleep(1000);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "ClickReportCMenu",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on 'C menu' of a selected report in 'My Reports'.
+        /// </summary>
+        /// <param name="reportTypeEnum">This is report type enum.</param>
+        public void ClickReportCMenuK12(Report.ReportTypeEnum reportTypeEnum)
+        {
+            // Click on 'C menu' of a selected report in 'My Reports'
+            Logger.LogMethodEntry("RptMainUXPage", "ClickReportCMenuK12",
              base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1627,7 +1688,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("RptMainUXPage", "ClickReportCMenu",
+            Logger.LogMethodExit("RptMainUXPage", "ClickReportCMenuK12",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
