@@ -1454,7 +1454,7 @@ namespace Pegasus.Pages.UI_Pages
             while (!isAssetPresent)
             {
                 //Wait for 10 mins for response from MathXL
-                if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
+                if (stopWatch.Elapsed.TotalMinutes < 20 == false) break;
                 {
                     base.SwitchToDefaultPageContent();
                     base.RefreshIFrameByJavaScriptExecutor(CalendarDefaultGlobalUXPageResource
@@ -1706,7 +1706,7 @@ namespace Pegasus.Pages.UI_Pages
             {
 
                 // Get the calendar text from where activity is dropped
-                if (stopWatch.Elapsed.TotalMinutes < 5 == false) break;
+                if (stopWatch.Elapsed.TotalMinutes < 20 == false) break;
                 {
                     // refresh the frame and switch to window
                     base.SwitchToDefaultPageContent();
