@@ -378,8 +378,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_AdvancedSearchLink_Id_Locator));
                 //Click link
-                base.ClickLinkById(ContentLibraryPageResource.
+                IWebElement advancedSearch = base.GetWebElementPropertiesById(ContentLibraryPageResource.
                     ContnetLibrary_Page_AdvancedSearchLink_Id_Locator);
+                Thread.Sleep(2000);
+                base.PerformMouseClickAction(advancedSearch);
             }
             catch (Exception e)
             {
