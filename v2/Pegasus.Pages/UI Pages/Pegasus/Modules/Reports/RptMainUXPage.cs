@@ -1572,6 +1572,14 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.SwitchToDefaultPageContent();
+                base.SelectWindow("Classes");
+
+                //Switch to iframes in reports page
+                base.SwitchToIFrameById(RptMainUXPageResource.
+                    RptMainUXPage_ContainerFrame_Id_Locator);
+                base.SwitchToIFrameById(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator);
+                //this.SwitchToMainFrame();
                 string getSearchedReportName = string.Empty;
                 base.WaitForElement(By.XPath(RptMainUXPageResource.
                     RptMainUX_Page_MyReportsCount_Xpath_Locator));
@@ -1588,7 +1596,8 @@ namespace Pegasus.Pages.UI_Pages
 
                 if (reportTypeEnum == Report.ReportTypeEnum.HSSStudentResultsbyActivity ||
                    reportTypeEnum == Report.ReportTypeEnum.HSSActivityResultsByStudent ||
-                   reportTypeEnum == Report.ReportTypeEnum.HSSStudytPlanResults)
+                   reportTypeEnum == Report.ReportTypeEnum.HSSStudytPlanResults || reportTypeEnum == Report.ReportTypeEnum.DPActivityResultsByStudent
+                    || reportTypeEnum == Report.ReportTypeEnum.DPStudentActivity)
                 {
                     cmenu = RptMainUXPageResource.RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2;
                     reportName = RptMainUXPageResource.RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2;
@@ -1598,15 +1607,15 @@ namespace Pegasus.Pages.UI_Pages
                 for (int initialCount = initialCountResource;
                     initialCount <= getActivityCount; initialCount++)
                 {
-                    base.WaitForElement(By.XPath(string.Format(reportName, initialCount)));
-                    getSearchedReportName = base.GetElementTextByXPath(string.Format(reportName, initialCount));
+                    base.WaitForElement(By.XPath(string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td/span", initialCount)));
+                    getSearchedReportName = base.GetElementTextByXPath(string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td/span", initialCount));
 
 
                     //Click on 'C menu' of expected report
                     if (getSearchedReportName == actualMyReportName)
                     {
-                        base.WaitForElement(By.XPath(string.Format(cmenu, initialCount)));
-                        IWebElement getCmenu = base.GetWebElementPropertiesByXPath((string.Format(cmenu, initialCount)));
+                        base.WaitForElement(By.XPath(string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td[2]/img", initialCount)));
+                        IWebElement getCmenu = base.GetWebElementPropertiesByXPath((string.Format("//div[@id='Main']/table/tbody/tr[{0}]/td[2]/img", initialCount)));
                         //Click on cmenu of the asset
                         base.ClickByJavaScriptExecutor(getCmenu);
                         Thread.Sleep(1000);
@@ -1932,11 +1941,16 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assessmentType">This is the asset type.</param>
         /// <param name="userTypeEnum">This is the user type enum.</param>
         public void SelectSingleAssessment(string assessmentName,
-            string assessmentType, User.UserTypeEnum userTypeEnum)
+            string assessmentType, User.UserTypeEnum userTypeEnum, string windownName = "SelectStudentByGroup")
         {
             // This selects the expected 'Activity' or 'Exam' or 'Training' based on user
             Logger.LogMethodEntry("RptMainUXPage", "SelectSingleAssesment",
                 base.IsTakeScreenShotDuringEntryExit);
+
+            User user = User.Get(userTypeEnum);
+            string userFirstName = user.FirstName.ToString();
+            string userLastName = user.LastName.ToString();
+            string userName = user.Name.ToString();
             try
             {
                 switch (userTypeEnum)
@@ -1985,6 +1999,54 @@ namespace Pegasus.Pages.UI_Pages
                                 //Selects the expected activity and click 'Add'
                                 this.AddHSSCsSmsStudent((User.UserTypeEnum)
                                      Enum.Parse(typeof(User.UserTypeEnum), assessmentName));
+                                break;
+                        }
+                        break;
+
+                    case User.UserTypeEnum.DPCsTeacher:
+                        base.SwitchToDefaultPageContent();
+                        base.SelectWindow("Classes");
+                        base.SwitchToIFrameById(RptMainUXPageResource.
+                        RptMainUXPage_ContainerFrame_Id_Locator);
+                        base.SwitchToIFrameById(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator);
+                       // this.SwitchToMainFrame();
+                        switch (assessmentType)
+                        {
+                            case "Select Activities":
+                                this.OpenAssessmentWindow(assessmentType, "Select Activities");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Exams":
+                                this.OpenAssessmentWindow(assessmentType, "Select Exam");
+                                //Selects the expected exam and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Trainings":
+                                this.OpenAssessmentWindow(assessmentType, "Select Training");
+                                //Selects the expected training and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Activity":
+                                this.OpenAssessmentWindow(assessmentType, "Select Activities");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Study Plans":
+                                this.OpenAssessmentWindow(assessmentType, "Select Study Plan");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Student":
+                                this.OpenAssessmentWindow(assessmentType, "Select Student");
+                                //Selects the expected activity and click 'Add'
+                                this.AddHSSCsSmsStudent((User.UserTypeEnum)
+                                     Enum.Parse(typeof(User.UserTypeEnum), assessmentName));
+                                break;
+                            case "Select Students":
+                                this.OpenAssessmentWindow(assessmentType, windownName);
+                                //Selects the expected activity and click 'Add'
+                                this.AddDPStudent(assessmentName, windownName);
                                 break;
                         }
                         break;
@@ -2053,17 +2115,23 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Add the DP student to Student activity report.
         /// </summary>
-        private void AddDPStudent(string windownName, String userLastName)
+        private void AddDPStudent( string studentType,string windownName)
         {   
             // Select and add student
             Logger.LogMethodEntry("RptMainUXPage", "AddDPStudent", base.IsTakeScreenShotDuringEntryExit);
+            User CGIEStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+            string userLastName = CGIEStudent.LastName;
             string getStudentName;
             switch(windownName)
             {
                 case "SelectStudentByGroup":
                         base.SwitchToDefaultPageContent();
+                        base.WaitForElement(By.Id(RptMainUXPageResource.
+                            RptMainUXPage_ContainerFrame_Id_Locator));
                         base.SwitchToIFrameById(RptMainUXPageResource.
                             RptMainUXPage_ContainerFrame_Id_Locator);
+                        base.WaitForElement(By.Id(RptMainUXPageResource.
+                            RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator));
                         base.SwitchToIFrameById(RptMainUXPageResource.
                             RptMainUXPage_StudentActivityReport_SelectStudentFrame_Id_Locator);
                         IWebElement getCourseExpandButtonProperty = base.GetWebElementPropertiesByXPath
@@ -2083,7 +2151,8 @@ namespace Pegasus.Pages.UI_Pages
                                     GetWebElementPropertiesByXPath(string.
                                     Format(RptMainUXPageResource.
                                     RptMainUXPage_StudentActivityReport_StudentSelectionBox_Xpath_Locator, i));
-                                base.PerformClickAction(getStudentCheckBoxProperty);
+                                Thread.Sleep(3000);
+                                base.ClickByJavaScriptExecutor(getStudentCheckBoxProperty);
                                 break;
                             }
                         }
