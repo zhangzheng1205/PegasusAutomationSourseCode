@@ -18,7 +18,7 @@
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>8daa88c0-1d63-413e-997f-6eb8f18c8de3</Name>
+      <Name>b942c296-72b9-4e89-ae30-690ed4643c4e</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -95,7 +95,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-    <Course>
+       <Course>
       <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
       <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -111,7 +111,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-    <Course>
+      <Course>
       <Name>MyPsychLab for Ciccarelli</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -190,7 +190,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-    <Course>
+       <Course>
       <Name>CGIE_Automation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
@@ -797,7 +797,7 @@
       <ActivityId>DigitalPath_Activity_Test_UC1</ActivityId>
       <IsCreated>true</IsCreated>
     </Activity>
-    <Activity>
+       <Activity>
       <Name>5c380911-7c31-4352-82df-5b002be77ebd</Name>
       <ActivityType>MyTest</ActivityType>
       <IsCreated>true</IsCreated>
@@ -835,12 +835,12 @@
   </ArrayOfActivity>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
-    <Product>
+     <Product>
       <Name>Digit Grade6</Name>
-      <ProductType>DigitalPath</ProductType>
-      <PeriodName>4681a6a0</PeriodName>
-      <IsCreated>true</IsCreated>
-    </Product>
+       <ProductType>DigitalPath</ProductType>
+       <PeriodName>05162abf</PeriodName>
+       <IsCreated>true</IsCreated>
+     </Product>
     <Product>
       <Name>Custom Content</Name>
       <ProductType>DigitalPathCustomContent</ProductType>

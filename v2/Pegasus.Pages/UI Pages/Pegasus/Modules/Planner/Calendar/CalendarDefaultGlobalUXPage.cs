@@ -1439,6 +1439,7 @@ namespace Pegasus.Pages.UI_Pages
                                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variables
             Boolean isAssetPresent = false;
+            Boolean pres1=true;
             string periodHeaderIdValue = string.Empty;
             string actualPeriodName = string.Empty;
             string periodBodyIdValue = string.Empty;
@@ -1447,52 +1448,83 @@ namespace Pegasus.Pages.UI_Pages
             string abcd = string.Empty;
             int periodCount = 0;
             int assetCount = 0;
-            //Switch to window and iframe
-            SelectWindowAndSwitchToFrame();
-            //Get the count of periods present in calendar
-            periodCount = base.GetElementCountByCssSelector(CalendarDefaultGlobalUXPageResource.
-                CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value);
-            //Search for expected perion in calendar frame
-            for (int i = 1; i <= periodCount; i++)
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            //Until Asset is found keep looping
+            while (!isAssetPresent)
             {
-                //get period header webelement id value
-                periodHeaderIdValue = this.GetPeriodHeaderIdValue(i);
-                //get the period name in calendar
-                actualPeriodName = this.GetPeriodNameInCalendar(periodHeaderIdValue);
-                if (actualPeriodName == expectedPeriodName)
+                //Wait for 10 mins for response from MathXL
+                if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
                 {
-                    //get period body webelement id value
-                    periodBodyIdValue = this.GetPeriodBodyIdValue(i);
-                    //get count of assigned activity in calendar
-                    base.WaitForElement(By.CssSelector(string.
-                     Format(CalendarDefaultGlobalUXPageResource.
-                     CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue)));
-                    assetCount = base.GetElementCountByCssSelector(string.
-                     Format(CalendarDefaultGlobalUXPageResource.
-                     CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue));
-
-                    for (int j = 1; j <= assetCount; j++)
+                    base.SwitchToDefaultPageContent();
+                    base.RefreshIFrameByJavaScriptExecutor(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    base.WaitUntilWindowLoads(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
+                    base.SelectWindow(CalendarDefaultGlobalUXPageResource
+                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
+                    // switch to planner frame
+                    base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
+                        .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    //Get the count of periods present in calendar
+                    periodCount = base.GetElementCountByCssSelector(CalendarDefaultGlobalUXPageResource.
+                      CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value);
+                    //Search for expected perion in calendar frame
+                    for (int i = 1; i <= periodCount; i++)
                     {
-                        assetIdValue = this.GetAssetIdValue(i, j);
-                        //Get asset name
-                        base.WaitForElement(By.CssSelector(string.
-                     Format(CalendarDefaultGlobalUXPageResource.
-                                CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
-                                assetIdValue)));
-                        actualAssetName = base.GetElementInnerTextByCssSelector(string.
-                         Format(CalendarDefaultGlobalUXPageResource.
-                                CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
-                                assetIdValue)).Trim();
-                        Thread.Sleep(2000);
-                        if (actualAssetName.Contains(expectedAssetName))
+                        //get period header webelement id value
+                        periodHeaderIdValue = this.GetPeriodHeaderIdValue(i);
+                        //get the period name in calendar
+                        actualPeriodName = this.GetPeriodNameInCalendar(periodHeaderIdValue);
+                        if (actualPeriodName == expectedPeriodName)
                         {
-                            isAssetPresent = true;
-                            break;
+                            //get period body webelement id value
+                            periodBodyIdValue = this.GetPeriodBodyIdValue(i);
+                            //get count of assigned activity in calendar
+                            base.WaitForElement(By.CssSelector(string.
+                            Format(CalendarDefaultGlobalUXPageResource.
+                         CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue)));
+                            assetCount = base.GetElementCountByCssSelector(string.
+                         Format(CalendarDefaultGlobalUXPageResource.
+                         CalendarDefaultGlobalUX_Page_Period_DueAssignmentsCount_CSSSector_Locator, periodBodyIdValue));
+                            //Scan each element under the period one by one
+                            for (int j = 1; j <= assetCount; j++)
+                            {
+                                assetIdValue = this.GetAssetIdValue(i, j);
+                                //If Asset is listed in calendar frame proceed fetching the text otherwise
+                                //refresh
+                                pres1 = base.IsElementPresent(By.CssSelector(string.
+                                Format(CalendarDefaultGlobalUXPageResource.
+                                  CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                  assetIdValue)), 5);
+                                if (!pres1) break;
+                                {
+                                    base.WaitForElement(By.CssSelector(string.
+                                    Format(CalendarDefaultGlobalUXPageResource.
+                                    CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                    assetIdValue)));
+                                    actualAssetName = base.GetElementInnerTextByCssSelector(string.
+                                    Format(CalendarDefaultGlobalUXPageResource.
+                                    CalendarDefaultGlobalUX_Page_Period_DueAssignmentName_CSSSector_Locator,
+                                    assetIdValue)).Trim();
+                                    Thread.Sleep(2000);
+                                    if (actualAssetName.Contains(expectedAssetName))
+                                    {
+                                        isAssetPresent = true;
+                                        break;
+                                    }
+
+                                }
+                              
+                            }
+                            if (isAssetPresent) break;
                         }
+                        if (!pres1) break;
                     }
                 }
-                if (isAssetPresent) break;
             }
+
+
             base.SwitchToDefaultPageContent();
 
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "IsAssetPresentUnderPeriodInCalendarDayView",

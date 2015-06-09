@@ -523,12 +523,13 @@ namespace Pegasus.Pages.UI_Pages
             {
                 switch (underTabName)
                 {
-                    case "To Do":
+                    case "Assignments - To Do":
                         this.SelectAssignmentsToDoWindow();
                         switch (assetName)
                         {
                             case "1-1 Homework":
                             case "i1-1 Practice":
+                                base.SwitchToIFrameById("ifrmCoursePreview");
                                 ICollection<IWebElement> coloumn2Collections = base.GetWebElementsCollectionByCssSelector
                                     (CoursePreviewUXPageResource.CoursePreviewUX_Page_Coloumn2_CssSelector_Locator);
                                 int counter = 0;

@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CommonSteps_CGIE_DPClassName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIE_DPStudentFirstName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIE_DPStudentLastName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIE_DPStudentUsername_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIE_DPTeacherUsername_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
   <data name="CommonSteps_CreateNewCoursesWindow_Name_Locator" xml:space="preserve">
     <value>Create New Courses</value>
   </data>
@@ -132,6 +147,21 @@
   <data name="CommonSteps_PageNotOpened_Message" xml:space="preserve">
     <value>Page not opened in the specified amount of time.</value>
   </data>
+  <data name="CommonSteps_PROD_DPClassName_Value" xml:space="preserve">
+    <value>Dependent_PROD_K12</value>
+  </data>
+  <data name="CommonSteps_PROD_DPStudentFirstName_Value" xml:space="preserve">
+    <value>Rashmi</value>
+  </data>
+  <data name="CommonSteps_PROD_DPStudentLastName_Value" xml:space="preserve">
+    <value>Shetty</value>
+  </data>
+  <data name="CommonSteps_PROD_DPStudentUsername_Value" xml:space="preserve">
+    <value>dependent_PROD_stud</value>
+  </data>
+  <data name="CommonSteps_PROD_DPTeacherUsername_Value" xml:space="preserve">
+    <value>dependent_PROD_teac</value>
+  </data>
   <data name="CommonSteps_SleepTime_Value" xml:space="preserve">
     <value>3000</value>
   </data>
@@ -143,5 +173,11 @@
   </data>
   <data name="CommonSteps_WaitTimeOut_Value" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
+  </data>
+  <data name="TestEnvironment_Key" xml:space="preserve">
+    <value>TestEnvironment</value>
   </data>
 </root>
