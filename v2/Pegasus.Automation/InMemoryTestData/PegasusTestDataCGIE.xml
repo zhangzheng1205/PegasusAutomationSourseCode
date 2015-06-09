@@ -47,7 +47,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>digits - grade 6</Name>
+      <Name>digits - grade 6-Fresh</Name>
       <CourseType>MasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -388,6 +388,16 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+    <User>
+      <Name>cgieidlestudent</Name>
+      <Password>password1</Password>
+      <FirstName>Chethan</FirstName>
+      <LastName>Gangoor</LastName>
+      <UserType>DPCsIdleStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+
 
     <!--Hard coded Users data for "HED" Product.-->
     <User>
