@@ -476,3 +476,23 @@ And I should see status as "Not started" for MathXL activity "i1-2 Practice"
 And I should see "All" text in Shown to column for MathXL activity "i1-2 Practice"
 And I should see Assigned icon for MathXL activity "i1-2 Practice"
 
+
+#Purpose: Teacher enrolling an idle student to Class
+#Product: Digital Path
+Scenario: Teacher validating the idle student enrollment to class
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Enroll from School" drop down option
+Then I should see the "Enroll from School" popup
+When I click on Search button
+And I enter student username "DPCsIdleStudent" to search
+Then I should see searched username "DPCsIdleStudent" in search list
+When I select the student and click on Add button
+Then I should see the success message "Users enrolled successfully."
+When I close Enroll from school pop up
+Then I should see "Enroll from School" pop up closed
+And I should see the student "DPCsIdleStudent" displayed in manage student pop up
+When I close Manage student pop up

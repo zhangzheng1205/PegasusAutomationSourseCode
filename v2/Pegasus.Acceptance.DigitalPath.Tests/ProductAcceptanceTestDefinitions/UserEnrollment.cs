@@ -439,6 +439,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("UserEnrollment", "ClickOnCloseButtonInManageStudentsPopUp",
                base.IsTakeScreenShotDuringEntryExit);
             new GBRosterGridUXPage().ClickOnCloseButton();
+            base.SelectDefaultWindow();
             Logger.LogMethodExit("UserEnrollment", "ClickOnCloseButtonInManageStudentsPopUp",
               base.IsTakeScreenShotDuringEntryExit);
         }

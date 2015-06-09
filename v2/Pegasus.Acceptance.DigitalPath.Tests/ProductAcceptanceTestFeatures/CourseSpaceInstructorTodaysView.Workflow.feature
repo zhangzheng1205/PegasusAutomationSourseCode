@@ -21,9 +21,12 @@ Then I should see "1" activity in the "Not Passed" channel
 #Products : MGM Grade 6
 #Pre condition : Student should have submitted the activity
 Scenario: Teacher views Activity Alerts in New Grades channel
-When I navigate to the "Classes" tab
-And I select DigitalPath class "DigitalPathMasterLibrary" from Class selector dropdown
-And I navigate to the "Overview" tab
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Overview" tab
+Then I should be on the "Classes" page
 Then I should see the alert count updated as "1" in "New Grades" channel
 When I click on the "New Grades" option
 Then I should see "1" activity in the "New Grades" channel
@@ -32,9 +35,12 @@ Then I should see "1" activity in the "New Grades" channel
 #Products : MGM Grade 6
 #Pre condition : Student should be enrolled to the class and should be idle in the class
 Scenario: Teacher views Idle Students in New Grades channel
-When I navigate to the "Classes" tab
-And I select DigitalPath class "DigitalPathMasterLibrary" from Class selector dropdown
-And I navigate to the "Overview" tab
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Overview" tab
+Then I should be on the "Classes" page
 When I click on the "Idle Students" option
 Then I should see "1" Idle Student "DPCsIdleStudent" of type "IdleScore" in "Idle Students" channel
 
