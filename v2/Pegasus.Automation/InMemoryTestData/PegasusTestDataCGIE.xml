@@ -356,7 +356,7 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>rashcgieteacher01</Name>
+      <Name>rashcgieteacher02</Name>
       <Password>password1</Password>
       <Email>rashmi.shetty@excelindia.com</Email>
       <FirstName>Rashmi</FirstName>
@@ -378,8 +378,8 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>rashcgiestudent01</Name>
-      <Password>password2</Password>
+      <Name>rashcgiestudent02</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>Rekha</FirstName>
       <MiddleName>Pegasus</MiddleName>

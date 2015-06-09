@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.CommonProductAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dummy.
+        ///   Looks up a localized string similar to Dependent_K12_CGIE.
         /// </summary>
         internal static string CommonSteps_CGIE_DPClassName_Value {
             get {
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.CommonProductAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dummy.
+        ///   Looks up a localized string similar to Rashmi.
         /// </summary>
         internal static string CommonSteps_CGIE_DPStudentFirstName_Value {
             get {
@@ -80,7 +80,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.CommonProductAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dummy.
+        ///   Looks up a localized string similar to Shetty.
         /// </summary>
         internal static string CommonSteps_CGIE_DPStudentLastName_Value {
             get {
@@ -89,7 +89,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.CommonProductAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dummy.
+        ///   Looks up a localized string similar to dependent_stud_CGIE.
         /// </summary>
         internal static string CommonSteps_CGIE_DPStudentUsername_Value {
             get {
@@ -98,7 +98,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.CommonProductAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dummy.
+        ///   Looks up a localized string similar to dependent_CGIE_teac.
         /// </summary>
         internal static string CommonSteps_CGIE_DPTeacherUsername_Value {
             get {
