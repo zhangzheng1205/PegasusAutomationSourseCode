@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestFeat
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent Submission", "                As a CS Student \r\n\t\t\tI want to manage all the coursespace student" +
-                    " Submission related usecases \r\n\t\t\tso that I would validate all the coursespace s" +
-                    "tudent Submission scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent Submission", "                As a CS Student \n\t\t\tI want to manage all the coursespace student " +
+                    "Submission related usecases \n\t\t\tso that I would validate all the coursespace stu" +
+                    "dent Submission scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -186,7 +186,7 @@ testRunner.When("I click on View Submission", ((string)(null)), ((TechTalk.SpecF
 testRunner.Then("I should see the \"100 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 59
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
-                    "book Grade : 100.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "book Grade : 100%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 60
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 61
@@ -228,7 +228,7 @@ testRunner.When("I click on View Submission", ((string)(null)), ((TechTalk.SpecF
 testRunner.Then("I should see the \"0 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 78
 testRunner.And("I should see Student \"scoring 0\" as \"HSSCsSmsStudent\" and displayed like \"Gradebo" +
-                    "ok Grade : 0.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "ok Grade : 0%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 79
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 80
@@ -461,7 +461,7 @@ testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)),
 testRunner.And("I should see the \"100 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 185
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
-                    "book Grade : 100.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "book Grade : 100%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 186
 testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 187
@@ -495,7 +495,7 @@ testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)),
 testRunner.And("I should see the \"72 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 201
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
-                    "book Grade : 72.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "book Grade : 72%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 202
 testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 203
@@ -507,7 +507,7 @@ testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)),
 testRunner.And("I should see the \"72 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 206
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
-                    "book Grade : 72.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "book Grade : 72%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 207
 testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 208

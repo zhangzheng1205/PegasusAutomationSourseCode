@@ -671,7 +671,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ValidateStudentNameInPastDueSubmitted",
                 base.IsTakeScreenShotDuringEntryExit);
             string studentName = new RptAllAssessmentAllStudentPage().
-                GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
+                Get100ScoreUsername(User.UserTypeEnum.CsSmsStudent);
             //Validate student first, last name in past due submitted channel
             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
                 .ScenarioInfo.Title, () => Assert.AreEqual(studentName, new

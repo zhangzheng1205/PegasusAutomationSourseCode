@@ -707,5 +707,39 @@ namespace Pegasus.Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return getStudentPercentScore;
         }
+
+        /// <summary>
+        /// Get ZeroScore User name.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <returns>Student first and last name.</returns>
+        public string Get100ScoreUsername(User.UserTypeEnum userTypeEnum)
+        {
+            //Get ZeroScore User name.
+            logger.LogMethodEntry("RptAllAssessmentAllStudentPage", "GetZeroScoreUsername",
+                base.IsTakeScreenShotDuringEntryExit);
+            string zeroScoreStudentName = string.Empty;
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsStudent:
+                        {
+                            User user = User.Get(userTypeEnum);
+                            zeroScoreStudentName = user.LastName + ", " + user.FirstName;
+                            break;
+                        }
+                 
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptAllAssessmentAllStudentPage", "GetZeroScoreUsername",
+                 base.IsTakeScreenShotDuringEntryExit);
+            return zeroScoreStudentName;
+
+        }
     }
 }

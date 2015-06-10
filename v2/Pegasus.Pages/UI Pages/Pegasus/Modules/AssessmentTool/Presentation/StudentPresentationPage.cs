@@ -1911,7 +1911,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">Name of the activity.</param>
         public void SubmitSIMActivityWithoutAnswering(string applicationType,
-            string activityMode, string activityName)
+            string activityMode, string activityName , string studentType)
         {
             //Submit SIM5 activity
             logger.LogMethodEntry("StudentPresentationPage",
@@ -1919,7 +1919,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                this.SelectSimActivityZeroScoreStudentWindowName(activityName);
+                this.SelectSimActivityZeroScoreStudentWindowName(activityName, studentType);
                 //Answer incorrectly
                 this.SIM5QuestionIncorrectAnswer(activityMode, applicationType,activityName);
                 //Click on SIM5 activity Submit button
@@ -5634,6 +5634,9 @@ namespace Pegasus.Pages.UI_Pages
                             user = User.Get(CommonResource.CommonResource
                                       .SMS_STU_UC2);
                             break;
+                        case "100Score":
+                             user = User.Get(User.UserTypeEnum.CsSmsStudent);
+                             break;
                     }
                 }
                 else
@@ -5669,17 +5672,26 @@ namespace Pegasus.Pages.UI_Pages
         /// Select SIMActivity ZeroScore Student WindowName.
         /// </summary>
         /// <param name="activityName"></param>
-        public void SelectSimActivityZeroScoreStudentWindowName(string activityName)
+        public void SelectSimActivityZeroScoreStudentWindowName(string activityName ,string studentType)
         {
             //Select Presentation Player Window
             logger.LogMethodEntry("StudentPresentationPage",
                 "SelectSimActivityZeroScoreStudentWindowName",
                 base.IsTakeScreenShotDuringEntryExit);
-            User user = user = User.Get(CommonResource.CommonResource
-                                     .SMS_STU_UC1);
-            // Wait for window
-            base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
-            base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
+            switch(studentType)
+            {
+                case "ZeroScore": User user1 = User.Get(CommonResource.CommonResource
+                                      .SMS_STU_UC1);
+                    // Wait for window
+                    base.WaitUntilWindowLoads(activityName + " - " + user1.FirstName + " " + user1.LastName);
+                    base.SelectWindow(activityName + " - " + user1.FirstName + " " + user1.LastName);
+                    break;
+                case "100Score": User user2 = User.Get(User.UserTypeEnum.CsSmsStudent);
+                    base.WaitUntilWindowLoads(activityName + " - " + user2.FirstName + " " + user2.LastName);
+                    base.SelectWindow(activityName + " - " + user2.FirstName + " " + user2.LastName);
+                    break;
+            }
+            
             logger.LogMethodExit("StudentPresentationPage",
                 "SelectSimActivityZeroScoreStudentWindowName",
                base.IsTakeScreenShotDuringEntryExit);

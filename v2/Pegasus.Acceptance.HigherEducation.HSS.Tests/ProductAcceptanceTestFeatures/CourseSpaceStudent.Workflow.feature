@@ -56,7 +56,7 @@ Then I should be on the "Course Materials" page
 And I should see the "Passed" status for the activity "Take the Chapter 1 Exam"
 When I click on View Submission 
 Then I should see the "100 %" score in the left frame
-And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100.00%" in the right frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100%" in the right frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
@@ -75,7 +75,7 @@ Then I should be on the "Course Materials" page
 And I should see the "Not passed" status for the activity "Take the Chapter 1 Exam"
 When I click on View Submission 
 Then I should see the "0 %" score in the left frame
-And I should see Student "scoring 0" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 0.00%" in the right frame
+And I should see Student "scoring 0" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 0%" in the right frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
@@ -182,7 +182,7 @@ When I select "Take the Chapter 1 Exam" in "Gradebook" by "HSSCsSmsStudent"
 And I click on cmenu option "View Submissions" of asset "Take the Chapter 1 Exam" in grades tab
 Then I should be on the "View Submission" page
 And I should see the "100 %" score in the left frame
-And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100.00%" in the right frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100%" in the right frame
 And I should be on the "Gradebook" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
@@ -198,12 +198,12 @@ When I select "Complete the Chapter 1 Study Plan" in "Gradebook" by "HSSCsSmsStu
 And I click on cmenu option " View Submissions" of asset "Chapter 1 PreTest - PreTest" in grades tab
 Then I should be on the "View Submission" page
 And I should see the "72 %" score in the left frame
-And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 72.00%" in the right frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 72%" in the right frame
 And I should be on the "Gradebook" page
 When I click on cmenu option " View Submissions" of asset "Chapter 1 PostTest - PostTest" in grades tab
 Then I should be on the "View Submission" page
 And I should see the "72 %" score in the left frame
-And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 72.00%" in the right frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 72%" in the right frame
 And I should be on the "Gradebook" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
