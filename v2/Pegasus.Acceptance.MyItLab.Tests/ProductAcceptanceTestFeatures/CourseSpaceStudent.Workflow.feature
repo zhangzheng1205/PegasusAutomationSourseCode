@@ -74,10 +74,10 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the "Excel Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training"
+And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training" by "ZeroScore" student
 Then I should be on the "Course Materials" page
 And I should see the "Not passed" status for the activity "Excel Chapter 1 Skill-Based Training"
-And I should see "0.00%" score for the activity "Excel Chapter 1 Skill-Based Training" in course material page
+And I should see "0%" score for the activity "Excel Chapter 1 Skill-Based Training" in course material page
 
 #Purpose : Submitting Sim 5 Word activity and Student scoring a Zero.
 #Test case ID : peg-21989.
@@ -87,10 +87,10 @@ And I should see "0.00%" score for the activity "Excel Chapter 1 Skill-Based Tra
 Scenario: Student scoring 0 in SIM5 Word activity
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Word" type "Exam" mode activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I click on submit button answering incorrectly of "Word" type "Exam" mode activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" by "ZeroScore" student
 Then I should be on the "Course Materials" page
 And I should see the "Not passed" status for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-And I should see "0.00%" score for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
+And I should see "0%" score for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
 
 
 #Purpose : Submitting Sim 5 Powerpoint activity and Student scoring a Zero.
@@ -101,10 +101,10 @@ And I should see "0.00%" score for the activity "Word Chapter 1 Project 1A Skill
 Scenario: Student scoring 0 in SIM5 PowerPoint activity
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training"
+And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training" by "ZeroScore" student
 Then I should be on the "Course Materials" page
 And I should see the "Not passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
-And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
+And I should see "0%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
 
 
 #Purpose : Submitting Sim 5 Access activity and Student scoring a Zero
@@ -115,10 +115,10 @@ And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Base
 Scenario: Student scoring 0 in SIM5 Access activity
 When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" by "ZeroScore" student
 Then I should be on the "Course Materials" page
 And I should see the "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-And I should see "0.00%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
+And I should see "0%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
 And I click on 'Back' link in View all course materials
 
 #Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 100%.
@@ -144,7 +144,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "100%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -173,7 +173,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "0%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -202,7 +202,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "74%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -231,7 +231,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "74.50%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+And I should see "74.5%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -260,7 +260,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "0.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+And I should see "0%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -289,7 +289,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "100.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+And I should see "100%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -318,7 +318,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "100%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -347,7 +347,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "0%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 And I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
@@ -377,7 +377,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "71.3%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 
@@ -404,7 +404,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "0.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+And I should see "0%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -433,7 +433,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "76.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+And I should see "76%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -462,7 +462,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "100.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+And I should see "100%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -489,8 +489,8 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I see past duedate icon for "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in "Course Materials" by "CsSmsStudent"
-And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "100Score"
+And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" by "100Score" student
 Then I should be on the "Course Materials" page
 
 #Purpose : Submitting Sim 5 Word activity and Student scoring a Zero.
@@ -499,8 +499,8 @@ Then I should be on the "Course Materials" page
 #Dependency : Always dependent.
 Scenario: Sim5 Word submission for past due date activity
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
-And I launch the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Word" type "Exam" mode activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I launch the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "100Score"
+And I click on submit button answering incorrectly of "Word" type "Exam" mode activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" by "100Score" student
 Then I should be on the "Course Materials" page
 
 #Purpose : Submitting Sim 5 Powerpoint activity and Student scoring a Zero.
@@ -509,8 +509,8 @@ Then I should be on the "Course Materials" page
 #Dependency : Always dependent.
 Scenario: Sim5 PowerPoint submission for past due date activity
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
-And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training"
+And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "100Score"
+And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training" by "100Score" student
 Then I should be on the "Course Materials" page
 
 
@@ -521,8 +521,8 @@ Then I should be on the "Course Materials" page
 #Dependency : Always dependent.
 Scenario: Sim5 Excel submission for past Due Activity
 When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
-And I launch the "Excel Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training"
+And I launch the "Excel Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "100Score"
+And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training" by "100Score" student
 Then I should be on the "Course Materials" page
 
 #Purpose: Student Launches and submit Posttest with score Zero
@@ -531,7 +531,7 @@ Then I should be on the "Course Materials" page
 Scenario: Student Launches and submit Posttest with score Zero
 When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent"
 And I launch the "Excel Chapter 1 Study Plan [Skill-Based]: Training" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Study Plan [Skill-Based]: Training"
+And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Study Plan [Skill-Based]: Training" by "100Score" student
 Then I should be on the "Course Materials" page
 
 #Purpose : Submitting Sim 5 Powerpoint activity and Student scoring 70

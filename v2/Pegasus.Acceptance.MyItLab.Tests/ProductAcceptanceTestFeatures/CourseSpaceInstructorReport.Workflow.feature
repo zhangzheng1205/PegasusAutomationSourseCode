@@ -135,8 +135,8 @@ When I select "Createnewreport" radiobutton
 And I enter the "MyItLabActivityResultsMultipleStudentsAdActivities" report name
 And I click on "SaveandRun" button
 Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with section "MyITLabOffice2013Program" average score "50%"
-And I should see 'Zero' "CsSmsStudent" along with attempt as "1" score as "0.0%"
-And I should see the "CsSmsStudent" along with attempt as "2" score as "100.0%"
+And I should see 'Zero' "CsSmsStudent" along with attempt as "1" score as "0%"
+And I should see the "CsSmsStudent" along with attempt as "2" score as "100%"
 When I close the "Activity Results (Multiple students and activities) " window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for "MyItLabActivityResultsMultipleStudentsAdActivities" report in 'My Reports' grid by "CsSmsInstructor"

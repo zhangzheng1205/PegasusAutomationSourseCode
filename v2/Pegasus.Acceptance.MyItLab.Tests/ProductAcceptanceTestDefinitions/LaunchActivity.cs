@@ -139,16 +139,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityMode">This is activity mode name.</param>
         /// <param name="activityName">This of the activity name.</param>
         /// <param name="applicationType">This is activity type name.</param>
-        [When(@"I click on submit button answering incorrectly of ""(.*)"" type ""(.*)"" mode activity ""(.*)""")]
+        [When(@"I click on submit button answering incorrectly of ""(.*)"" type ""(.*)"" mode activity ""(.*)"" by ""(.*) student")]
         public void ClickonSubmitButtonAfterAnsweringIncorrectly(string applicationType,
-            string activityMode, string activityName)
+            string activityMode, string activityName, string studentType)
         {
             //Submit SIM5 Excel type activity
             Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on submit button
             new StudentPresentationPage().SubmitSIMActivityWithoutAnswering
-                (applicationType, activityMode, activityName);
+                (applicationType, activityMode, activityName, studentType);
             Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
                base.IsTakeScreenShotDuringEntryExit);
         }

@@ -900,7 +900,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
             string studentName = new RptAllAssessmentAllStudentPage().
-                GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
+                Get100ScoreUsername(User.UserTypeEnum.CsSmsStudent);
             string successMessage = "The submission by " + studentName + " has been accepted. The grade for this submission will now appear in the Gradebook.";
             //Verify Correct Message Present on the Page
             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
@@ -925,7 +925,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                base.IsTakeScreenShotDuringEntryExit);
             string studentName = new RptAllAssessmentAllStudentPage().
-                GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
+               Get100ScoreUsername(User.UserTypeEnum.CsSmsStudent);
             string successMessage = "The submission by " + studentName + " has been declined.  This submission will receive a zero in the Gradebook.";
             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
                 CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
