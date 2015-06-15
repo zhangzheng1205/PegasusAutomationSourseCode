@@ -1439,7 +1439,7 @@ namespace Pegasus.Pages.UI_Pages
                                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variables
             Boolean isAssetPresent = false;
-            Boolean pres1=true;
+            Boolean pres1 = true;
             string periodHeaderIdValue = string.Empty;
             string actualPeriodName = string.Empty;
             string periodBodyIdValue = string.Empty;
@@ -1515,13 +1515,19 @@ namespace Pegasus.Pages.UI_Pages
                                     }
 
                                 }
-                              
-                            }
+
+                            }//come out of the current loop if Asset found
                             if (isAssetPresent) break;
                         }
-                        if (!pres1) break;
+                        //come out of the current loop if Asset found
+                        if (isAssetPresent) break;
+
                     }
+                    //come out of the current loop if Asset found
+                    if (isAssetPresent) break;
                 }
+                //come out of the current loop if Asset found
+                if (isAssetPresent) break;
             }
 
 
