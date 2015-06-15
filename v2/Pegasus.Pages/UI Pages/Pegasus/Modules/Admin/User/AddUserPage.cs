@@ -84,15 +84,19 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="userTypeEnum">This is User by Type.</param>
         /// <param name="userInformation">This is User Information Guid.</param>        
-        private void StoreUserDetails(User.UserTypeEnum userTypeEnum, Guid userInformation)
+        public void StoreUserDetails(User.UserTypeEnum userTypeEnum, Guid userInformation)
         {
             //Stores User Details in Memory
+            
             logger.LogMethodEntry("AddUserPage", "StoreUserDetails"
                 , base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.DPCsTeacher:
                 case User.UserTypeEnum.DPCsStudent:
+                case User.UserTypeEnum.DPCsNewStudent:
+                case User.UserTypeEnum.DPCsNewTeacher:
+                case User.UserTypeEnum.DPCsNewAide:
                 case User.UserTypeEnum.DPCsAide:
                 case User.UserTypeEnum.DPCsOrganizationAdmin:
                 case User.UserTypeEnum.NovaNETCsTeacher:
@@ -271,6 +275,9 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.NovaNETCsClassStudent:
                 case User.UserTypeEnum.DPCsAide:
                 case User.UserTypeEnum.DPCsTeacher:
+                case User.UserTypeEnum.DPCsNewStudent:
+                case User.UserTypeEnum.DPCsNewTeacher:
+                case User.UserTypeEnum.DPCsNewAide:
                 case User.UserTypeEnum.DPCsStudent:
                     {
                         //Save Student Details

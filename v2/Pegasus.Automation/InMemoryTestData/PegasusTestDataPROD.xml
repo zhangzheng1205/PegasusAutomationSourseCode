@@ -357,13 +357,24 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>rashprodteacher06</Name>
+      <Name>nitprodtch5154</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>Rashmi</FirstName>
+      <FirstName>Nithya</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
+      <LastName>Nanda</LastName>
       <UserType>DPCsTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>nitprodstud5154</Name>
+      <Password>password1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>Nithya</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Nanda</LastName>
+      <UserType>DPCsNewStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -386,6 +397,17 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>Anand</LastName>
       <UserType>DPCsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+        <User>
+      <Name>nitprodstud5154</Name>
+      <Password>password1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>Nithya</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Nanda</LastName>
+      <UserType>DPCsStudentForUnenroll</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -887,7 +909,7 @@
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>01902e83-6c23-4db3-8a6f-87f232f2d0c3</Name>
+      <Name>MGM G7 Class</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>

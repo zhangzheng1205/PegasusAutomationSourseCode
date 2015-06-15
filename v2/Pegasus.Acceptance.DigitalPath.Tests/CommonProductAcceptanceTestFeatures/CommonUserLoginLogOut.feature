@@ -100,6 +100,39 @@ Given I browsed the login url for "DPCsStudent"
 When I login to Pegasus as "DPCsStudent" in "CourseSpace"
 Then I should be logged in successfully
 
+#Purpose:Verify The User Login As new CourseSpaceStudent
+Scenario: User Login As new CourseSpaceStudent
+Given I browsed the login url for "DPCsNewStudent"
+When I login to Pegasus as "DPCsNewStudent" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As new CourseSpaceStudent
+Scenario: User LogOut As new CourseSpaceStudent
+When I "Sign Out" from the "DPCsNewStudent"
+Then I should see the "Signed Out" message
+
+#Purpose:Verify The User Login As new CourseSpaceTeacher
+Scenario: User Login As new CourseSpaceTeacher
+Given I browsed the login url for "DPCsNewTeacher"
+When I login to Pegasus as "DPCsNewTeacher" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As new CourseSpaceAide
+Scenario: User LogOut As new CourseSpaceAide
+When I "Sign Out" from the "DPCsNewAide"
+Then I should see the "Signed Out" message
+
+#Purpose:Verify The User Login As new CourseSpaceAide
+Scenario: User Login As new CourseSpaceAide
+Given I browsed the login url for "DPCsNewAide"
+When I login to Pegasus as "DPCsNewAide" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As new CourseSpaceTeacher
+Scenario: User LogOut As new CourseSpaceTeacher
+When I "Sign Out" from the "DPCsNewTeacher"
+Then I should see the "Signed Out" message
+
 #Purpose:Verify The User LogOut As CourseSpaceStudent
 Scenario: User LogOut As CourseSpaceStudent
 When I "Sign Out" from the "DPCsStudent"

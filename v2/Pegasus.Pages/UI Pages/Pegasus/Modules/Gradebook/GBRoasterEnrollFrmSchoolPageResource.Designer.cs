@@ -80,6 +80,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;SelectedUsersGrid&apos;]/tbody/tr.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_GetUserCount_UnEnrolledUsersList_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_GetUserCount_UnEnrolledUsersList_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Removes.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_RemoveLink_Id_Locator {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_RemoveLink_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_OkButton_Text {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_OkButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Pegasus.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_Title {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnSearch.
         /// </summary>
         internal static string GBRoasterEnrollFrmSchoolPage_SearchBtn_Id_Locator {
@@ -116,11 +152,30 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;SelectedUsersGrid&apos;]/tbody/tr[{0}]/td[1]/input.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_SelectUsername_Checkbox_UnEnrolledUsersList_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_SelectUsername_Checkbox_UnEnrolledUsersList_Xpath_Lo" +
+                        "cator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to div_msg.
         /// </summary>
         internal static string GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator {
             get {
                 return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmGBRoasterEFSselectedUsers.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_UnenrollUserListFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_UnenrollUserListFrame_Id_Locator", resourceCulture);
             }
         }
         
@@ -148,6 +203,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBRoasterEnrollFrmSchoolPage_UserNameColumn_SearchedList_Xpath_Locator {
             get {
                 return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_UserNameColumn_SearchedList_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;SelectedUsersGrid&apos;]/tbody/tr[{0}]/td[4]/span.
+        /// </summary>
+        internal static string GBRoasterEnrollFrmSchoolPage_UserNameColumn_UnEnrolledUsersList_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBRoasterEnrollFrmSchoolPage_UserNameColumn_UnEnrolledUsersList_Xpath_Locator", resourceCulture);
             }
         }
         

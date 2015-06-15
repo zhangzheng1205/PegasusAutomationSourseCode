@@ -481,6 +481,58 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Update user profile details in class roaster
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option name.</param>
+        /// <param name="userData">This is the user name.</param>
+        [When(@"I click on ""(.*)"" cmenu option of the student ""(.*)""")]
+        public void ClickCmenuOfUserInManageRoaster(string cmenuOption, User.UserTypeEnum userData)
+        {
+            Logger.LogMethodEntry("ManageStudentsDefaultPage", "ClickCmenuOfUserInManageRoaster",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ManageStudentsDefaultPage().ClickUserCmenuInManageRoaster(cmenuOption, userData);
+            Logger.LogMethodExit("ManageStudentsDefaultPage", "ClickCmenuOfUserInManageRoaster",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Student from the Class Roster frame
+        /// </summary>
+        /// <param name="userName">This is the usertype enum.</param>
+        [When(@"I unenroll student ""(.*)"" from Class Roster frame")]
+        public void SelectStudentFromClassRosterFrame(User.UserTypeEnum userName)
+        {
+            Logger.LogMethodEntry("UserEnrollment", "SelectStudentFromClassRosterFrame",
+                  base.IsTakeScreenShotDuringEntryExit);
+            User userNameText = User.Get(userName);
+            string userNameTitle = userNameText.Name.ToString();
+            new GBRoasterEnrollFrmSchoolPage().UnenrollUserEnrollFromSchoolPopup(userNameTitle);
+            Logger.LogMethodExit("UserEnrollment", "SelectStudentFromClassRosterFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Validate the non availablity of Unenrolled student in Manage students
+        /// pop up.
+        /// </summary>
+        /// <param name="studentName">Name of the student to validate.</param>
+        [Then(@"I should see the student ""(.*)"" not displayed in manage student pop up")]
+        public void ValidateNonAvailablityOfUnEnrolledStudent(User.UserTypeEnum userTypeEnum)
+        {
+            //Validate display of enrolled user
+            Logger.LogMethodEntry("UserEnrollment", "ValidateNonAvailablityOfUnEnrolledStudent",
+               base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string studentName = user.Name.ToString();
+            Logger.LogAssertion("UserEnrollment", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsFalse(new GBRosterGridUXPage().
+                   IsEnrolledStudentDisplayedUnderRoster(studentName)));
+            Logger.LogMethodExit("UserEnrollment", "ValidateNonAvailablityOfUnEnrolledStudent",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

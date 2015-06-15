@@ -496,3 +496,76 @@ When I close Enroll from school pop up
 Then I should see "Enroll from School" pop up closed
 And I should see the student "DPCsIdleStudent" displayed in manage student pop up
 When I close Manage student pop up
+
+#Purpose: Teacher update student profile in class roaster
+#Product: Digital Path
+Scenario: Teacher update Student profile
+When I click on "Edit" cmenu option of the student "DPCsNewStudent"
+Then I should see the "Update user" popup
+When I update details of "DPCsNewStudent" user
+Then I should see the student "DPCsNewStudent" displayed in manage student pop up
+
+
+#Purpose: Teacher create new Student user in class roaster
+#Product: Digital Path
+Scenario: Teacher Create Student user in Class roaster
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Student" drop down option
+Then I should see the "Add User" popup
+When I create a new "DPCsNewStudent" user in Coursespace
+Then I should see the student "DPCsNewStudent" displayed in manage student pop up
+
+#Purpose: Teacher create new Teacher user in class roaster
+#Product: Digital Path
+Scenario: Teacher Create new Teacher user in Class roaster
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Teacher" drop down option
+Then I should see the "Add User" popup
+When I create a new "DPCsNewTeacher" user in Coursespace
+Then I should see the student "DPCsNewTeacher" displayed in manage student pop up
+
+#Purpose: Teacher create new Aide user in class roaster
+#Product: Digital Path
+Scenario: Teacher Create Aide user in Class roaster
+Given I browsed the login url for "DPCsTeacher"
+When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Aide" drop down option
+Then I should see the "Add User" popup
+When I create a new "DPCsNewAide" user in Coursespace
+Then I should see the student "DPCsNewAide" displayed in manage student pop up
+
+#Purpose: Teacher unenrolling students to Class
+#Product: Digital Path
+Scenario: Teacher validating the student unenrollment to class
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
+When I Click on Create New button
+And I select "Enroll from School" drop down option
+Then I should see the "Enroll from School" popup
+When I unenroll student "DPCsNewStudent" from Class Roster frame
+Then I should see the success message "Users unenrolled successfully."
+When I close Enroll from school pop up
+Then I should see "Enroll from School" pop up closed
+And I should see the student "DPCsNewStudent" not displayed in manage student pop up

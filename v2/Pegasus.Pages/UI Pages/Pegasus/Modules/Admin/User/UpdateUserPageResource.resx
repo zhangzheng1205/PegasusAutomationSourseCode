@@ -117,61 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GBRoasterEnrollFrmSchoolPage_AddButton_Id_Locator" xml:space="preserve">
-    <value>imgbtnAddContent</value>
+  <data name="UpdateUser_Page_EmailTextBox_Id_Locator" xml:space="preserve">
+    <value>txtEmail</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_CloseButton_Id_Locator" xml:space="preserve">
-    <value>btnCancel</value>
+  <data name="UpdateUser_Page_EmailTextbox_Value" xml:space="preserve">
+    <value>nithyananda.p@excelindia.com</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_GetUserCount_UnEnrolledUsersList_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='SelectedUsersGrid']/tbody/tr</value>
+  <data name="UpdateUser_Page_PasswordTextBox_Id_Locator" xml:space="preserve">
+    <value>txtPassword</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_RemoveLink_Id_Locator" xml:space="preserve">
-    <value>Removes</value>
+  <data name="UpdateUser_Page_PasswordTextbox_Value" xml:space="preserve">
+    <value>password1</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_OkButton_Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="UpdateUser_Page_PopUpName" xml:space="preserve">
+    <value>Update user</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_Title" xml:space="preserve">
-    <value> Pegasus</value>
+  <data name="UpdateUser_Page_ResetPassword_SaveButton_Id_Locator" xml:space="preserve">
+    <value>ImagSave_Close</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_SearchBtn_Id_Locator" xml:space="preserve">
-    <value>btnSearch</value>
+  <data name="UpdateUser_Page_ReTypePasswordTextBox_Id_Locator" xml:space="preserve">
+    <value>TxtReTypePassword</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_SearchTextBox_Id_Locator" xml:space="preserve">
-    <value>txtSectionDetail</value>
+  <data name="UpdateUser_ResetPassword_ID" xml:space="preserve">
+    <value>resetlinkbtn</value>
   </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_SearchUsersButton_Id_Locator" xml:space="preserve">
-    <value>SearchSections</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_SelectedUsersFrame_Id_Locator" xml:space="preserve">
-    <value>ifrmGBRoasterEFSselectedUsers</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_SelectUsername_Checkbox_UnEnrolledUsersList_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='SelectedUsersGrid']/tbody/tr[{0}]/td[1]/input</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator" xml:space="preserve">
-    <value>div_msg</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_UnenrollUserListFrame_Id_Locator" xml:space="preserve">
-    <value>ifrmGBRoasterEFSselectedUsers</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_UserListFrame_Id_Locator" xml:space="preserve">
-    <value>ifrmGBRoasterEFSListUsers</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_UserNameColumn_EnrolledUsersList_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='SelectedUsersGrid']/tbody/tr/td[4]/span</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_UserNameColumn_SearchedList_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='StudentsGrid']/tbody/tr/td[4]/span</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_UserNameColumn_UnEnrolledUsersList_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='SelectedUsersGrid']/tbody/tr[{0}]/td[4]/span</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_UserSelectionCheckBox_Id_Locator" xml:space="preserve">
-    <value>StudentsGrid$_ctrl1</value>
-  </data>
-  <data name="GBRoasterEnrollFrmSchoolPage_WindowTitle_Locator" xml:space="preserve">
-    <value>Enroll from School</value>
+  <data name="UpdateUser_ResetPassword_PopUpName" xml:space="preserve">
+    <value>Reset Password</value>
   </data>
 </root>
