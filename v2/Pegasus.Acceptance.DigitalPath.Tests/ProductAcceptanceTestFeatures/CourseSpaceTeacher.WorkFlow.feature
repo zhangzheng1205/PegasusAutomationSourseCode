@@ -509,9 +509,6 @@ Then I should see the student "DPCsNewStudent" displayed in manage student pop u
 #Purpose: Teacher create new Student user in class roaster
 #Product: Digital Path
 Scenario: Teacher Create Student user in Class roaster
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
@@ -525,9 +522,6 @@ Then I should see the student "DPCsNewStudent" displayed in manage student pop u
 #Purpose: Teacher create new Teacher user in class roaster
 #Product: Digital Path
 Scenario: Teacher Create new Teacher user in Class roaster
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
@@ -541,9 +535,6 @@ Then I should see the student "DPCsNewTeacher" displayed in manage student pop u
 #Purpose: Teacher create new Aide user in class roaster
 #Product: Digital Path
 Scenario: Teacher Create Aide user in Class roaster
-Given I browsed the login url for "DPCsTeacher"
-When I login to Pegasus as "DPCsTeacher" in "CourseSpace"
-Then I should be logged in successfully
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
@@ -569,3 +560,13 @@ Then I should see the success message "Users unenrolled successfully."
 When I close Enroll from school pop up
 Then I should see "Enroll from School" pop up closed
 And I should see the student "DPCsNewStudent" not displayed in manage student pop up
+
+
+#Purpose: To Remove the Product in Curriculumn Channel.
+#Product: Digital Path
+Scenario: Remove Product from Home Page
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+Then I should see the product "DigitalPath" in the Curriculum channel
+When I click on "Remove Curriculum" option of product "DigitalPath" in the Curriculum channel
+Then I should see the successfull message "Product removed successfully." in Home tab

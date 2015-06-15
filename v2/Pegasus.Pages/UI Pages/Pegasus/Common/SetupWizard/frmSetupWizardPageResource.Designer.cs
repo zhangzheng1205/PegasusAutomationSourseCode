@@ -205,6 +205,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div[{0}]/div[2]/div/span[2].
+        /// </summary>
+        internal static string frmSetupWizardPageResource_Cmenu_Product_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_Cmenu_Product_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblCourseList&apos;]/tbody/tr/td[1]/input.
         /// </summary>
         internal static string frmSetupWizardPageResource_CourseListTable_Xpath_Locator {
@@ -219,6 +228,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         internal static string frmSetupWizardPageResource_CourseListTable_Xpath_Locator1 {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_CourseListTable_Xpath_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div[{0}]/div[2]/div/ul/li.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_GetCmenuOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_GetCmenuOptions_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -255,6 +273,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard {
         internal static string frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator1 {
             get {
                 return ResourceManager.GetString("frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_OkButton_Id {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_OkButton_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pegasus.
+        /// </summary>
+        internal static string frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_Title {
+            get {
+                return ResourceManager.GetString("frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_Title", resourceCulture);
             }
         }
         

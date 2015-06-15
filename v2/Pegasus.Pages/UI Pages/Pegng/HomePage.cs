@@ -833,5 +833,32 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("HomePage", "ClickOnCreateButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Get Success Message from Home page
+        /// </summary>
+        /// <returns>This is Success Message</returns>
+        public string GetSuccessMessageHomePage()
+        {
+            //Get Success Message
+            logger.LogMethodEntry("HomePage", "GetSuccessMessageHomePage",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getSuccessMessage = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads("Home");
+                //Get Success Message From Application
+                getSuccessMessage = base.GetElementTextById(HomePageResource.
+                    HomePage_SuccessMessage_HomePage_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("HomePage", "GetSuccessMessageHomePage",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return getSuccessMessage;
+        }
     }
 }

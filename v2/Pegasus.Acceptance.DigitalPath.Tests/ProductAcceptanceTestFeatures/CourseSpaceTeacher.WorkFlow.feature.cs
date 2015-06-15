@@ -1416,6 +1416,29 @@ testRunner.And("I should see the student \"DPCsNewStudent\" not displayed in man
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Remove Product from Home Page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void RemoveProductFromHomePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove Product from Home Page", ((string[])(null)));
+#line 567
+this.ScenarioSetup(scenarioInfo);
+#line 568
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 569
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 570
+testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 571
+testRunner.When("I click on \"Remove Curriculum\" option of product \"DigitalPath\" in the Curriculum " +
+                    "channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 572
+testRunner.Then("I should see the successfull message \"Product removed successfully.\" in Home tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

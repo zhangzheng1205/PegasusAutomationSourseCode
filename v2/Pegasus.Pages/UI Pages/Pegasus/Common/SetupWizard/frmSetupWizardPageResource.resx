@@ -165,11 +165,17 @@
   <data name="frmSetupWizardPageResource_ClassName_TextBox_Id_Locator1" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_txtNewClassName</value>
   </data>
+  <data name="frmSetupWizardPageResource_Cmenu_Product_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div[{0}]/div[2]/div/span[2]</value>
+  </data>
   <data name="frmSetupWizardPageResource_CourseListTable_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblCourseList']/tbody/tr/td[1]/input</value>
   </data>
   <data name="frmSetupWizardPageResource_CourseListTable_Xpath_Locator1" xml:space="preserve">
     <value>//table[@id='tblCourseList']/tbody/tr/td[1]/input</value>
+  </data>
+  <data name="frmSetupWizardPageResource_GetCmenuOptions_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div[{0}]/div[2]/div/ul/li</value>
   </data>
   <data name="frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator" xml:space="preserve">
     <value>_ctl0_ContentPlaceHolder1_spManageE</value>
@@ -182,6 +188,12 @@
   </data>
   <data name="frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator1" xml:space="preserve">
     <value>PopupHeadTxt2</value>
+  </data>
+  <data name="frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_OkButton_Id" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_Title" xml:space="preserve">
+    <value>Pegasus</value>
   </data>
   <data name="frmSetupWizardPageResource_SaveAndExitButton_Button_Id_Locator" xml:space="preserve">
     <value>divSaveandExit</value>
