@@ -2985,6 +2985,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestData\BulkUpload\BulkUser_Template.xls" />
     <None Include="TestData\Excel\ExcelFileFor0Percent\go_e01_grader_h3.xlsx" />
     <None Include="TestData\Excel\ExcelFileFor100Percent\go_e01_grader_h3.xlsx" />
     <None Include="TestData\Excel\ExcelFileFor70Percent\go_e01_grader_h3.xlsx" />
