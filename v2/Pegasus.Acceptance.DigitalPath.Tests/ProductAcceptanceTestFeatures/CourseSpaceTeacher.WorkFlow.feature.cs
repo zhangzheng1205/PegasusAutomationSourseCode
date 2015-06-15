@@ -1423,19 +1423,57 @@ testRunner.And("I should see the student \"DPCsNewStudent\" not displayed in man
         public virtual void RemoveProductFromHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove Product from Home Page", ((string[])(null)));
-#line 567
+#line 566
 this.ScenarioSetup(scenarioInfo);
-#line 568
+#line 567
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 569
+#line 568
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 570
+#line 569
 testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 571
+#line 570
 testRunner.When("I click on \"Remove Curriculum\" option of product \"DigitalPath\" in the Curriculum " +
                     "channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 572
+#line 571
 testRunner.Then("I should see the successfull message \"Product removed successfully.\" in Home tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher validating bulk upload student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void TeacherValidatingBulkUploadStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating bulk upload student", ((string[])(null)));
+#line 575
+this.ScenarioSetup(scenarioInfo);
+#line 576
+testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 577
+testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 578
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 579
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 580
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 581
+testRunner.When("I click on Cmenu option of Class \"DigitalPathMasterLibrary\" and select \"Enrollmen" +
+                    "ts\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 582
+testRunner.Then("I should see the \"Manage Students\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 583
+testRunner.When("I Click on Create New button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 584
+testRunner.And("I select \"Import Students\" drop down option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 585
+testRunner.And("I upload the file BulkUser_Template", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 586
+testRunner.Then("I should see the successfull message \"Bulk Registration- 0 of 1 Files in progress" +
+                    "\" in \'Manage Students\' window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 587
+testRunner.When("I close the \"Manage Students\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
