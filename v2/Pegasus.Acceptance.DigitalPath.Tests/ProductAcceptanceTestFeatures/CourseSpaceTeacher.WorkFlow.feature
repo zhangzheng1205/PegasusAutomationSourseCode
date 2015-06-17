@@ -212,12 +212,6 @@ Then I should see the successfull message "Your message has been sent." in the s
 When I close the mail popup
 Then I should see the mail popup closed successfully
 
-
-
-
-
-
-
 #Purpose: To validate the Activity result by student report generation from teacher user.
 Scenario: Generate and save the "Activity Results by Student" as a teacher
 When I navigate to the "Reports" tab in DP class
@@ -476,7 +470,6 @@ And I should see status as "Not started" for MathXL activity "i1-2 Practice"
 And I should see "All" text in Shown to column for MathXL activity "i1-2 Practice"
 And I should see Assigned icon for MathXL activity "i1-2 Practice"
 
-
 #Purpose: Teacher enrolling an idle student to Class
 #Product: Digital Path
 Scenario: Teacher validating the idle student enrollment to class
@@ -505,7 +498,6 @@ Then I should see the "Update user" popup
 When I update details of "DPCsNewStudent" user
 Then I should see the student "DPCsNewStudent" displayed in manage student pop up
 
-
 #Purpose: Teacher create new Student user in class roaster
 #Product: Digital Path
 Scenario: Teacher Create Student user in Class roaster
@@ -518,6 +510,7 @@ And I select "Student" drop down option
 Then I should see the "Add User" popup
 When I create a new "DPCsNewStudent" user in Coursespace
 Then I should see the student "DPCsNewStudent" displayed in manage student pop up
+When I close Manage student pop up
 
 #Purpose: Teacher create new Teacher user in class roaster
 #Product: Digital Path
@@ -531,6 +524,7 @@ And I select "Teacher" drop down option
 Then I should see the "Add User" popup
 When I create a new "DPCsNewTeacher" user in Coursespace
 Then I should see the student "DPCsNewTeacher" displayed in manage student pop up
+When I close Manage student pop up
 
 #Purpose: Teacher create new Aide user in class roaster
 #Product: Digital Path
@@ -585,3 +579,9 @@ And I select "Import Students" drop down option
 And I upload the file BulkUser_Template
 Then I should see the successfull message "Bulk Registration- 0 of 1 Files in progress" in 'Manage Students' window
 When I close the "Manage Students" window
+
+#Purpose: Teacher verify the class display in classes channel of Home tab
+Scenario: Teacher validate class display in home tab
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+And I should able to see the "DigitalPathMasterLibrary" class

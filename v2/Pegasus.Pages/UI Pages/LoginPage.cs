@@ -162,6 +162,9 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Get Url of Synapse CourseSpace User
                     case User.UserTypeEnum.DPCsTeacher:
+                    case User.UserTypeEnum.DPCsNewStudent:
+                    case User.UserTypeEnum.DPCsNewTeacher:
+                    case User.UserTypeEnum.DPCsNewAide:
                     case User.UserTypeEnum.DPDemoUser:
                     case User.UserTypeEnum.DPCsStudent:
                     case User.UserTypeEnum.RumbaTeacher:
@@ -395,6 +398,7 @@ namespace Pegasus.Pages.UI_Pages
                 switch (userType)
                 {
                     case User.UserTypeEnum.RumbaTeacher:
+                    case User.UserTypeEnum.DPCsNewAide:
                     case User.UserTypeEnum.RumbaStudent:
                     case User.UserTypeEnum.DPDemoUser:
                         //Handling User Consent Page in CS
@@ -628,6 +632,9 @@ namespace Pegasus.Pages.UI_Pages
             if (User.UserTypeEnum.DPCsTeacher == userTypeEnum
                 || User.UserTypeEnum.DPDemoUser == userTypeEnum
                 || User.UserTypeEnum.DPCsStudent == userTypeEnum
+                || User.UserTypeEnum.DPCsNewStudent == userTypeEnum
+                || User.UserTypeEnum.DPCsNewTeacher == userTypeEnum
+                || User.UserTypeEnum.DPCsNewAide == userTypeEnum
                 || User.UserTypeEnum.RumbaTeacher == userTypeEnum
                 || User.UserTypeEnum.RumbaStudent == userTypeEnum
                 || User.UserTypeEnum.DPCsOrganizationAdmin == userTypeEnum
@@ -801,6 +808,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Logged in by DP Cs User
                 case User.UserTypeEnum.DPCsTeacher:
                 case User.UserTypeEnum.DPCsStudent:
+                case User.UserTypeEnum.DPCsNewTeacher:
+                case User.UserTypeEnum.DPCsNewStudent:
+                case User.UserTypeEnum.DPCsNewAide:
                 case User.UserTypeEnum.DPCsOrganizationAdmin:
                     isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(false);
                     break;
