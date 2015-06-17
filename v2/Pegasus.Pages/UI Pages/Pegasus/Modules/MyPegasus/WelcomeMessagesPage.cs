@@ -101,6 +101,50 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Close Welcome Message Popup
+        /// </summary>
+        public void AideCloseWelcomeMessageLightBox()
+        {
+            // Close Welcome Message Popup
+            logger.LogMethodEntry("WelcomeMessagesPage", "AideCloseWelcomeMessageLightBox",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait For The "Do not show this again" CheckBox
+                if (base.IsElementPresent(
+                    By.Id(WelcomeMessagesPageResource.
+                    WelcomeMessages_Page_Aide_DontShowThisMessage_CheckBox_Id_Locator)
+                    , Convert.ToInt32(WelcomeMessagesPageResource
+                    .WelcomeMessages_Page_TimeToWait_Value)))
+                {
+                    //Wait For Element
+                    base.WaitForElement(By.Id(WelcomeMessagesPageResource.
+                        WelcomeMessages_Page_Aide_DontShowThisMessage_CheckBox_Id_Locator));
+                    //Get Checkbox Element Property
+                    IWebElement getCheckBoxProperty = base.GetWebElementPropertiesById(
+                        WelcomeMessagesPageResource.
+                        WelcomeMessages_Page_Aide_DontShowThisMessage_CheckBox_Id_Locator);
+                    //Click On The "Do not show this again" CheckBox
+                    base.ClickByJavaScriptExecutor(getCheckBoxProperty);
+                    //Wait For Enter Button
+                    base.WaitForElement(By.Id(WelcomeMessagesPageResource.
+                        WelcomeMessages_Page_CloseWelcomeMessagePopupButton_Id_Locator));
+                    //Get Enter Button Element Property                 
+                    IWebElement getEnterButtonProperty = base.GetWebElementPropertiesById(WelcomeMessagesPageResource.
+                        WelcomeMessages_Page_CloseWelcomeMessagePopupButton_Id_Locator);
+                    //Click On Enter Button
+                    base.ClickByJavaScriptExecutor(getEnterButtonProperty);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("WelcomeMessagesPage", "CloseWelcomeMessageLightBox",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Check If The Welcome Message LightBox is Present
         /// </summary>
         /// <returns>Welcome Message Light Box Present Result</returns>

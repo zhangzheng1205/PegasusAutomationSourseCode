@@ -340,6 +340,15 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl6_pegHello_testLogOut.
+        /// </summary>
+        internal static string HomePage_LogoutLink_Aide_Id_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_LogoutLink_Aide_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to lightboxid.
         /// </summary>
         internal static string HomePage_MailLightBox_Id_Locator {

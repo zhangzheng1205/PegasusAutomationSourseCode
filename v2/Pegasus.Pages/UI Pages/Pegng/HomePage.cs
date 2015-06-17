@@ -560,6 +560,36 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Signout from application by DP CS Teacher.
+        /// </summary>
+        public void SignoutByDigitalPathCSAide()
+        {
+            //Signout from application by DP CS Teacher
+            logger.LogMethodEntry("HomePage", "SignoutByDigitalPathCSAide",
+                     base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Default Window
+                base.WaitUntilWindowLoads(HomePageResource.
+                    Home_Page_GlobalHome_Window_Title);
+                base.SelectDefaultWindow();
+                base.WaitForElement(By.Id(HomePageResource.
+                    HomePage_LogoutLink_Aide_Id_Locator));
+                //Click on Sign Out Link
+                IWebElement signOutLink = base.GetWebElementPropertiesById(HomePageResource.
+                    HomePage_LogoutLink_Aide_Id_Locator);
+                base.ClickByJavaScriptExecutor(signOutLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodEntry("HomePage", "SignoutByDigitalPathCSAide",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Signout from application by DP CS Student.
         /// </summary>
         /// <param name="linkSignOut">This is Sign Out Link text</param>

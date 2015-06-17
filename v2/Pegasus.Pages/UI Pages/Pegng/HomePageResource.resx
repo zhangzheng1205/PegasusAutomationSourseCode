@@ -261,4 +261,7 @@
   <data name="HomePage_SuccessMessage_HomePage_Id_Locator" xml:space="preserve">
     <value>lblMessage</value>
   </data>
+  <data name="HomePage_LogoutLink_Aide_Id_Locator" xml:space="preserve">
+    <value>_ctl6_pegHello_testLogOut</value>
+  </data>
 </root>
