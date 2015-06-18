@@ -222,7 +222,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             IWebElement getTabProperty = GetWebElementPropertiesByPartialLinkText(tabName);
             //Click on Tab   
             ClickByJavaScriptExecutor(getTabProperty);
-            //Wait For Page Load 
+            //Wait For Page Load
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                  CommonSteps_SleepTime_Value));
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",

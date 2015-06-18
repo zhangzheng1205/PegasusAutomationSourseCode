@@ -1258,6 +1258,49 @@ testRunner.Then("I should see the successfull message \"You have been signed out
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Update Organization Admin profile in Users Tab by CS Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
+        public virtual void UpdateOrganizationAdminProfileInUsersTabByCSAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Organization Admin profile in Users Tab by CS Admin", ((string[])(null)));
+#line 474
+this.ScenarioSetup(scenarioInfo);
+#line 475
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 476
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 477
+testRunner.When("I navigate to the \"Organization Admin\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 478
+testRunner.And("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 479
+testRunner.And("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 480
+testRunner.And("I select the \"DPCsOrganizationAdmin\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 481
+testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 482
+testRunner.When("I create a new \"DPCsOrganizationAdmin\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 483
+testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
+                    "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 484
+testRunner.When("I search the created \"DPCsOrganizationAdmin\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 485
+testRunner.Then("I should see the \"DPCsOrganizationAdmin\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 486
+testRunner.When("I click on \"Edit\" cmenu option of \"DPCsOrganizationAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 487
+testRunner.Then("I should see the \"Update user\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 488
+testRunner.When("I search the created \"DPCsOrganizationAdmin\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 489
+testRunner.Then("I should see the \"DPCsOrganizationAdmin\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

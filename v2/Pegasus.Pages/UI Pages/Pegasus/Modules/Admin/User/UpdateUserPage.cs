@@ -59,6 +59,27 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectUpdateUserWindow();
             // Generate User Login Details Guid
             Guid userInformation = Guid.NewGuid();
+            switch(userTypeEnum)
+            {
+                case User.UserTypeEnum.DPCsNewStudent:
+                    UpdateCSStudentProfile(userInformation);
+                    break;
+                case User.UserTypeEnum.DPCsOrganizationAdmin:
+                    UpdateDPCSOrgAdminProfile(userInformation);
+                    break;
+            }
+
+            logger.LogMethodExit("UpdateUserPage", "CreateCsUser",
+                base.IsTakeScreenShotDuringEntryExit);
+            return userInformation;
+        }
+
+        /// <summary>
+        /// Update DP CS Student profile
+        /// </summary>
+        /// <param name="userInformation"></param>
+        private void UpdateCSStudentProfile(Guid userInformation)
+        {
             // Enter First name and last name 
             EnterCsUserDetails(userInformation.ToString(), userInformation.ToString());
             //Fill Username
@@ -77,9 +98,6 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToLastOpenedWindow();
             this.SelectUpdateUserWindow();
             this.ClickOnSaveAndFinishButtonInAddUserPage();
-            logger.LogMethodExit("UpdateUserPage", "CreateCsUser",
-                base.IsTakeScreenShotDuringEntryExit);
-            return userInformation;
         }
 
         /// <summary>
@@ -97,6 +115,34 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        private void UpdateDPCSOrgAdminProfile(Guid userInformation)
+        {
+            // CreateNewUser for CS user creation
+            logger.LogMethodEntry("UpdateUserPage", "UpdateDPCSOrgAdminProfile"
+                , base.IsTakeScreenShotDuringEntryExit);
+            ////Select Add User Window
+            //this.SelectUpdateUserWindow();
+            //// Generate User Login Details Guid
+            //Guid userInformation = Guid.NewGuid();
+            // Enter First name and last name 
+            EnterCsUserDetails(userInformation.ToString(), userInformation.ToString());
+            //Fill Username
+            base.ClearTextById(AddUserPageResource.AddUser_Page_LoginNameTextBox_Id_Locator);
+            base.FillEmptyTextById(AddUserPageResource.AddUser_Page_LoginNameTextBox_Id_Locator);
+            base.FillTextBoxById(AddUserPageResource
+                .AddUser_Page_LoginNameTextBox_Id_Locator, userInformation.ToString());
+            //Fill Password  
+            base.ClickLinkById(UpdateUserPageResource.UpdateUser_ResetPassword_ID);
+            this.SelectResetPasswordPopup();
+            base.ClearTextById(AddUserPageResource
+                .AddUser_Page_PasswordTextBox_Id_Locator);
+            base.FillTextBoxById(AddUserPageResource
+                .AddUser_Page_PasswordTextBox_Id_Locator, AddUserPageResource.
+                AddUser_Page_PasswordTextbox_Value);
+            this.ClickOnSaveAndFinishButtonInAddUserPage();
+            logger.LogMethodExit("AddUserPage", "CreateCsUser",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Select Reset Password popup.
