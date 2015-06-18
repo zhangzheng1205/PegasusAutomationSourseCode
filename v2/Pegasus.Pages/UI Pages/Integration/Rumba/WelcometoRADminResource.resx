@@ -120,8 +120,8 @@
   <data name="WelcomeRADmin_Page_CreateProduct_Text_Name" xml:space="preserve">
     <value>Create a Product</value>
   </data>
-  <data name="WelcomeRADmin_Page_CreateResources_Xpath_Locator" xml:space="preserve">
-    <value>//*[@id='nav']/li[2]/a/span</value>
+  <data name="WelcomeRADmin_Page_CreateProductandResources_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div[2]/div[3]/ul/li[2]/a/span</value>
   </data>
   <data name="WelcomeRADmin_Page_CreateResource_Text_Name" xml:space="preserve">
     <value>Create a Resource</value>
@@ -137,5 +137,20 @@
   </data>
   <data name="WelcomeRADmin_Page_CreateProduct_Link_Name" xml:space="preserve">
     <value>Products &amp; Resources</value>
+  </data>
+  <data name="WelcomeRADmin_Page_CreateProductandResources_CSSSelector" xml:space="preserve">
+    <value>ul#nav li.top a.top_link span</value>
+  </data>
+  <data name="WelcomeRADmin_Page_CreateProducts_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div[2]/div[3]/ul/li[2]/ul/li[2]/a</value>
+  </data>
+  <data name="WelcomeRADmin_Page_CreateResources_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div[2]/div[3]/ul/li[2]/ul/li[3]/a</value>
+  </data>
+  <data name="WelcomeRADmin_Page_Licenses_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div[2]/div[3]/ul/li[3]/a/span</value>
+  </data>
+  <data name="WelcomeRADmin_Page_PlaceAnOrder_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div[2]/div[3]/ul/li[3]/ul/li[3]/a</value>
   </data>
 </root>

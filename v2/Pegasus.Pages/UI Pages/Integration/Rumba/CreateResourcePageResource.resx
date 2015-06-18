@@ -166,7 +166,7 @@
     <value> </value>
   </data>
   <data name="CreateResource_Page_ThreadTime_Value" xml:space="preserve">
-    <value>3000</value>
+    <value>5000</value>
   </data>
   <data name="CreateResource_Page_Window_PartialTitle_Name" xml:space="preserve">
     <value>Manage </value>

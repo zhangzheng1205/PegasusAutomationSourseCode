@@ -166,7 +166,7 @@
     <value>Create a Product</value>
   </data>
   <data name="CreateProduct_Page_ThreadSleepTime" xml:space="preserve">
-    <value>3000</value>
+    <value>5000</value>
   </data>
   <data name="CreateProduct_Page_ProductId_DefaultValue" xml:space="preserve">
     <value>0</value>
@@ -212,5 +212,8 @@
   </data>
   <data name="CreateProduct_Page_ShortDescriptionName_id_Locator" xml:space="preserve">
     <value>id_DisplayInfoMaster-0-ShortDescription</value>
+  </data>
+  <data name="CreateProduct_Page_Split_Space_Value" xml:space="preserve">
+    <value />
   </data>
 </root>

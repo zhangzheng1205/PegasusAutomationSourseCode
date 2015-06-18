@@ -315,8 +315,6 @@ Then I should be on the "Course Enrollment" page
 
 #Purpose: Edit The School Level Organization for Pearson Admin 
 Scenario: Enhance organization management by CS Admin
-When I navigate to the "Course Enrollment" tab
-Then I should be on the "Course Enrollment" page
 When I am on the 'Organization Management' page
 And I search the "School" level Organization in "DigitalPath"
 Then I should see the "School" level organization name in "DigitalPath"

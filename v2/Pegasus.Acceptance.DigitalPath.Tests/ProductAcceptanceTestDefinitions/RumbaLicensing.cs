@@ -97,15 +97,15 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [Then(@"I should see the product successfully created with valid product id")]
         public void ProductSuccessfullyCreated()
         {
-            //Verify the product created successfully or not
+            //Verify the product created successfuly or not
             Logger.LogMethodEntry("RumbaLicensing", "ProductSuccessfullyCreated",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Gets the product id from memory
-            License license = License.Get(License.LicenseTypeEnum.Rumba);
-            //Assert the product creation
+            //Gets the product id from the memory
+            License licenses = License.Get(License.LicenseTypeEnum.Rumba);
+            //Asserts product creation        
             Logger.LogAssertion("VerifyProductSuccessfullyCreated", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual
-                    (license.ProductID, new CreateProductPage().GetRumbaProductID()));
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(licenses.ProductID,
+                    new CreateProductPage().GetRumbaProductID()));
             Logger.LogMethodExit("RumbaLicensing", "ProductSuccessfullyCreated",
                 base.IsTakeScreenShotDuringEntryExit);
 

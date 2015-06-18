@@ -554,7 +554,6 @@ namespace Pegasus.Pages.UI_Pages
                 CreateOrganization_Page_Save_Button_Id_Locator);
             //Click on the Save the button
             base.ClickByJavaScriptExecutor(getOrganizationName);
-            base.ClickByJavaScriptExecutor(getOrganizationName);
             Thread.Sleep(Convert.ToInt32(CreateOrganizationPageResource.
                 CreateOrganization_Page_WaitElement_Time));
             //Log Method Exit

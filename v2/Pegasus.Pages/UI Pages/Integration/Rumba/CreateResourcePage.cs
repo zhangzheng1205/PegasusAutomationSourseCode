@@ -46,12 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(CreateResourcePageResource.
                     CreateResource_Page_Window_PartialTitle_Name + resourcename);
                 //Gets the Resource Id
-                string getResourceID = base.GetElementTextByXPath(CreateResourcePageResource.
-                    CreateResource_Page_GetResourceId_Xpath);
-                //Remove White Space
-                string[] splitResourceID = getResourceID.Split(Convert.ToChar
-                    (CreateResourcePageResource.CreateResource_Page_Split_Space_Value));
-                int resourceID = Convert.ToInt32(splitResourceID[2]);
+                int resourceID = GetRumbaResourceId();
                 //Save the Resource Id in Memory
                 StoreRumbaResourceIdInMemory(resourceID);
             }
