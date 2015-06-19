@@ -493,6 +493,10 @@ When I close Manage student pop up
 #Purpose: Teacher update student profile in class roaster
 #Product: Digital Path
 Scenario: Teacher update Student profile
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Enrollments" option
+Then I should see the "Manage Students" popup
 When I click on "Edit" cmenu option of the student "DPCsNewStudent"
 Then I should see the "Update user" popup
 When I update details of "DPCsNewStudent" user
@@ -550,7 +554,7 @@ Then I should see the "Manage Students" popup
 When I Click on Create New button
 And I select "Enroll from School" drop down option
 Then I should see the "Enroll from School" popup
-When I unenroll student "DPCsStudentForUnenroll" from Class Roster frame
+When I unenroll student "DPCsStudent" from Class Roster frame
 Then I should see the success message "Users unenrolled successfully."
 When I close Enroll from school pop up
 Then I should see "Enroll from School" pop up closed
@@ -561,8 +565,8 @@ When I close the "Manage Students" window
 Scenario: Remove Product from Home Page
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
-Then I should see the product "DigitalPath" in the Curriculum channel
-When I click on "Remove Curriculum" option of product "DigitalPath" in the Curriculum channel
+Then I should see the product "DigitalPathDemo" in the Curriculum channel
+When I click on "Remove Curriculum" option of product "DigitalPathDemo" in the Curriculum channel
 Then I should see the successfull message "Product removed successfully." in Home tab
 
 #Purpose: Teacher bulk upload student in class roaster
@@ -591,3 +595,14 @@ And I should able to see the "DigitalPathMasterLibrary" class
 Scenario: View Login Welcome Message by CS Aide
 When I close the welcome message lightbox
 Then I should see the welcome message popup closed successfully for "DPCsStudent"
+
+#Purpose: To add a product which is not used for class creation
+Scenario: Add Product In Home Page for demo
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I Click on Add button 
+And  I select "DigitalPathDemo" Product
+When I Click on the Save button 
+Then I should see the successfull message "Your products have been successfully added." on setup wizard
+When I Click On the Save and Exit button
+Then I should see the product "DigitalPathDemo" in the Curriculum channel

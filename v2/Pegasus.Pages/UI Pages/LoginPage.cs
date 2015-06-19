@@ -165,6 +165,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.DPCsNewStudent:
                     case User.UserTypeEnum.DPCsNewTeacher:
                     case User.UserTypeEnum.DPCsNewAide:
+                    case User.UserTypeEnum.DPCsAide:
                     case User.UserTypeEnum.DPDemoUser:
                     case User.UserTypeEnum.DPCsStudent:
                     case User.UserTypeEnum.RumbaTeacher:
@@ -635,6 +636,7 @@ namespace Pegasus.Pages.UI_Pages
                 || User.UserTypeEnum.DPCsNewStudent == userTypeEnum
                 || User.UserTypeEnum.DPCsNewTeacher == userTypeEnum
                 || User.UserTypeEnum.DPCsNewAide == userTypeEnum
+                || User.UserTypeEnum.DPCsAide==userTypeEnum
                 || User.UserTypeEnum.RumbaTeacher == userTypeEnum
                 || User.UserTypeEnum.RumbaStudent == userTypeEnum
                 || User.UserTypeEnum.DPCsOrganizationAdmin == userTypeEnum
@@ -811,6 +813,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.DPCsNewTeacher:
                 case User.UserTypeEnum.DPCsNewStudent:
                 case User.UserTypeEnum.DPCsNewAide:
+                case User.UserTypeEnum.DPCsAide:
                 case User.UserTypeEnum.DPCsOrganizationAdmin:
                     isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(false);
                     break;

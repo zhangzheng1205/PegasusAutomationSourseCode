@@ -135,8 +135,8 @@ Then I should be logged in successfully
 
 #Purpose:Verify The User Login As CourseSpaceAide
 Scenario: User Login As CourseSpaceAide
-Given I browsed the login url for "DPNewAide"
-When I login to Pegasus as "DPNewAide" in "CourseSpace"
+Given I browsed the login url for "DPCsAide"
+When I login to Pegasus as "DPCsAide" in "CourseSpace"
 Then I should be logged in successfully
 
 #Purpose:Verify The User LogOut As new CourseSpaceTeacher

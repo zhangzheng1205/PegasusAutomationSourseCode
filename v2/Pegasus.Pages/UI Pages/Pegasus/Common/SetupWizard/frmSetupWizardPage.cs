@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
                         frmSetupWizardPageResource_CourseListTable_Xpath_Locator);
                     this.ClickManageEnrollmentsButton();
                 }
-
+                base.SwitchToDefaultPageContent();
             }
             catch (Exception e)
             {
@@ -225,6 +225,12 @@ namespace Pegasus.Pages.UI_Pages
 
                     case "Manage Enrollments":
                         //Wait for page title
+                        base.SwitchToIFrameById(frmSetupWizardPageResource.
+                         frmSetupWizardPageResource_SetupWizardParent_Iframe_Id_Locator);
+                 
+                //Switch to setup wizard inner iframe
+                base.SwitchToIFrameById(frmSetupWizardPageResource.
+                  frmSetupWizardPageResource_SetupWizard_Iframe_Id_Locator);
                         base.WaitForElement(By.ClassName(frmSetupWizardPageResource.
                             frmSetupWizardPageResource_ManageEnrollmentsPageTitle_ClassName_Locator));
                         //Get page title

@@ -18,7 +18,7 @@
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>b942c296-72b9-4e89-ae30-690ed4643c4e</Name>
+      <Name>74549619-e104-4950-bff9-ca3cbf0a78d7</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -363,6 +363,17 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>Shetty</LastName>
       <UserType>DPCsTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>rashcgieaide01</Name>
+      <Password>password2</Password>
+      <Email>rashmi.shetty@excelindia.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>DPCsAide</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -854,6 +865,11 @@
     <Product>
       <Name>Custom Content</Name>
       <ProductType>DigitalPathCustomContent</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Demo_CGIE_Product</Name>
+      <ProductType>DigitalPathDemo</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
