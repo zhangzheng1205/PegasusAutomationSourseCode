@@ -10,6 +10,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
 using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -194,6 +195,9 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Fetch success message from application UI
+                base.SelectWindow("Enroll from School");
+                bool kkla = base.IsElementPresent(By.Id(GBRoasterEnrollFrmSchoolPageResource.
+                GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator),10);
                 base.WaitForElement(By.Id(GBRoasterEnrollFrmSchoolPageResource.
                 GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator));
                 getSuccessMessage = base.GetElementTextById(GBRoasterEnrollFrmSchoolPageResource.
@@ -275,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
                 int getUserCount = base.GetElementCountByXPath(GBRoasterEnrollFrmSchoolPageResource.
                     GBRoasterEnrollFrmSchoolPage_GetUserCount_UnEnrolledUsersList_Xpath_Locator);
                 // Select user from the unenroll frame and unenroll user
-                for (int initialcount = Convert.ToInt32(2);
+                for (int initialcount = Convert.ToInt32(1);
                     initialcount <= getUserCount; initialcount++)
                 {
                     //Get the Student name from Class Roster
@@ -287,15 +291,18 @@ namespace Pegasus.Pages.UI_Pages
                     {
                         base.SelectCheckBoxByXPath(string.Format(
                             GBRoasterEnrollFrmSchoolPageResource.
-                            GBRoasterEnrollFrmSchoolPage_SelectUsername_Checkbox_UnEnrolledUsersList_Xpath_Locator, 
+                            GBRoasterEnrollFrmSchoolPage_SelectUsername_Checkbox_UnEnrolledUsersList_Xpath_Locator,
                             initialcount));
                         base.ClickLinkById(GBRoasterEnrollFrmSchoolPageResource.
                             GBRoasterEnrollFrmSchoolPage_RemoveLink_Id_Locator);
+                        // Select popup window
+                        Thread.Sleep(20000);
+                        // Select popup window
                         base.SwitchToActivePageElement();
-                        base.WaitUntilPopUpLoads(GBRoasterEnrollFrmSchoolPageResource.
-                            GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_Title);
-                        base.ClickButtonByPartialLinkText(GBRoasterEnrollFrmSchoolPageResource.
-                            GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_OkButton_Text);
+                        base.WaitUntilPopUpLoads(frmSetupWizardPageResource.
+                            frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_Title);
+                        base.ClickButtonByPartialLinkText(frmSetupWizardPageResource.
+                            frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_OkButton_Id);
                         break;
                     }
                 }

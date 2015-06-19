@@ -550,11 +550,11 @@ Then I should see the "Manage Students" popup
 When I Click on Create New button
 And I select "Enroll from School" drop down option
 Then I should see the "Enroll from School" popup
-When I unenroll student "DPCsNewStudent" from Class Roster frame
+When I unenroll student "DPCsStudentForUnenroll" from Class Roster frame
 Then I should see the success message "Users unenrolled successfully."
 When I close Enroll from school pop up
 Then I should see "Enroll from School" pop up closed
-And I should see the student "DPCsNewStudent" not displayed in manage student pop up
+When I close the "Manage Students" window
 
 #Purpose: To Remove the Product in Curriculumn Channel.
 #Product: Digital Path
