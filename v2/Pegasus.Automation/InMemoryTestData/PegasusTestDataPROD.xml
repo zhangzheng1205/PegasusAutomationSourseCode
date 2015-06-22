@@ -357,13 +357,24 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>nitprodtch5154</Name>
+      <Name>rashprodteacher06</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>Nithya</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>Nanda</LastName>
       <UserType>DPCsTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>rashprodaide01</Name>
+      <Password>password1</Password>
+      <Email>rashmi.shetty@excelindia.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>DPCsAide</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -909,7 +920,7 @@
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>MGM G7 Class</Name>
+      <Name>3c0e3766-3f0c-4467-a242-44318009f3e8</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -930,6 +941,11 @@
     <Product>
       <Name>Custom Content</Name>
       <ProductType>DigitalPathCustomContent</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Abriendo paso: Gramática</Name>
+      <ProductType>DigitalPathDemo</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
