@@ -477,6 +477,26 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Admin click refresh student link
+        /// </summary>
+        public void ClickRefreshStudentsLink()
+        {
+            logger.LogMethodEntry("ManageStudentsDefaultPage", "ClickRefreshStudentsLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select the Manage Organization window
+            new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
+            //Switch to the Frame
+            base.SwitchToIFrame(ManageUserPageResource.ManageUser_Page_Iframe_Id_Locator);
+            base.WaitForElement(By.PartialLinkText(ManageUserPageResource.
+                ManageUser_Page_RefreshStudentLink_Text));
+            // Click refresh student link in Manage organization popup
+            IWebElement refreshStudentsLink = base.GetWebElementPropertiesByPartialLinkText(
+                ManageUserPageResource.ManageUser_Page_RefreshStudentLink_Text);
+            base.ClickByJavaScriptExecutor(refreshStudentsLink);
+            logger.LogMethodExit("ManageStudentsDefaultPage", "ClickRefreshStudentsLink",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Select Enrollment Window.

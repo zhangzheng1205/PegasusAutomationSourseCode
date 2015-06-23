@@ -501,6 +501,23 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click tab in Radmin page to create user
+        /// </summary>
+        /// <param name="tabName">This is the tab name.</param>
+        /// <param name="optionName">This is the option name.</param>
+        public void RadminClickTab(String tabName, String optionName)
+        {
+            // Select the tab in Radmin page
+            base.WaitUntilWindowLoads("Welcome to RADmin");
+            IWebElement getTabName = base.GetWebElementPropertiesByPartialLinkText(tabName);
+            base.PerformMouseHoverAction(getTabName);
+            base.WaitForElement(By.PartialLinkText(optionName));
+            IWebElement getOptionName = base.GetWebElementPropertiesByPartialLinkText(optionName);
+            base.ClickByJavaScriptExecutor(getOptionName);
+
+        }
+
+        /// <summary>
         /// Save the User Details.
         /// </summary>
         /// <param name="userName">This is User Name Guid.</param>

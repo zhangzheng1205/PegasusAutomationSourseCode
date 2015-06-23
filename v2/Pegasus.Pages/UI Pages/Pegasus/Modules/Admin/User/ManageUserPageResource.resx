@@ -186,6 +186,9 @@
   <data name="ManageUser_Page_Maximum_Time_For_BulkUpload" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="ManageUser_Page_RefreshStudentLink_Text" xml:space="preserve">
+    <value>Refresh Students</value>
+  </data>
   <data name="ManageUser_Page_Searched_Table_Id_Locator" xml:space="preserve">
     <value>grdSCLCourse</value>
   </data>

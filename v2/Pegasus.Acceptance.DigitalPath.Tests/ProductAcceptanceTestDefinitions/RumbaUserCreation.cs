@@ -124,5 +124,20 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Click the tab in RAdmin tool and select appropriate option
+        /// </summary>
+        /// <param name="tabName">This is the tab</param>
+        /// <param name="optionName"></param>
+        [When(@"I click on ""(.*)"" tab and Select ""(.*)"" option")]
+        public void ClickPeopleTabAndSelectOption(string tabName, string optionName)
+        {
+            Logger.LogMethodEntry("RumbaUserCreation", "ClickTabRadmin",
+             base.IsTakeScreenShotDuringEntryExit);
+            new CreateUserPage().RadminClickTab(tabName, optionName);
+            Logger.LogMethodExit("RumbaUserCreation", "ClickTabRadmin",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
