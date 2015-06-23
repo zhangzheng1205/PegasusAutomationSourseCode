@@ -555,6 +555,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Given(@"I launch ""(.*)"" browser")]
+        public void LaunchBrowser(string browser)
+        {
+            new CommonSteps().ResetDesiredBrowser(browser);
+        }
+
+
     }
 
 }

@@ -173,3 +173,15 @@ Then I should be on the "Classes" page
 #Purpose:Update enum values for GradeBook Verification
 Scenario:Update Enum values for gradebook verification
 Given I update enum values for gradebook
+
+#Purpose:Get IE browser instance
+Scenario:Launch IE browser
+Given I launch "Internet Explorer" browser
+
+#Purpose:Get FireFox browser instance
+Scenario:Launch FireFox browser
+Given I launch "FireFox" browser
+
+#Purpose:Get Chrome browser instance
+Scenario:Launch Chrome browser
+Given I launch "Chrome" browser

@@ -58,6 +58,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             WebDriverSingleton.GetInstance().ResetSingleton();
         }
 
+        public void ResetDesiredBrowser(string browser)
+        {
+            WebDriverSingleton.GetInstance().ResetNewBrowserSingleton(browser);
+        }
+
         /// <summary>
         /// Clean the WebDriver.
         /// </summary>
@@ -65,6 +70,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             WebDriverSingleton.GetInstance().Cleanup();
         }
+
 
         /// <summary>
         /// This is the name of the user who is logged in.
