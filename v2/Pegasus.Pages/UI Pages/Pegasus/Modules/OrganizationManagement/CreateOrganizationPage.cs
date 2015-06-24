@@ -401,6 +401,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Create New Organization Level(s)
                 this.FillDetailsForNewOrganizationLevels(
                     organizationNameGuid, organizationLevelEnum);
+                
+
                 //Wait Pop Up Get Close
                 if (base.IsPopUpClosed(2))
                 {
@@ -556,6 +558,12 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getOrganizationName);
             Thread.Sleep(Convert.ToInt32(CreateOrganizationPageResource.
                 CreateOrganization_Page_WaitElement_Time));
+            //If window has not closed click on save again
+            bool savePresent=base.IsElementPresent(By.Id(CreateOrganizationPageResource.
+                CreateOrganization_Page_Save_Button_Id_Locator),10);
+            if (savePresent)
+                base.ClickByJavaScriptExecutor(getOrganizationName);
+
             //Log Method Exit
             Logger.LogMethodExit("CreateOrganizationPage",
                "ClickOnButtonToSaveOrganization", base.IsTakeScreenShotDuringEntryExit);
