@@ -30,6 +30,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Enter Product Name and Click on Search Button
+                Thread.Sleep(10000);
                 this.EnterProductNameandClickonSearchButton(productName);          
                 //Search Product in Product Frame
                 new ManageProductsPage().SelectProductInProductFrame(productName);
@@ -57,6 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch To Active Element 
                 base.SwitchToActivePageElement();
                 //Wait For Element
+                Thread.Sleep(5000);
                 base.WaitForElement(By.Id(ProductSearchPageResource.
                     ProductSearch_Page_ProgramName_TextBox_Id_Locator));
                 //Insert Product Name in Text Box

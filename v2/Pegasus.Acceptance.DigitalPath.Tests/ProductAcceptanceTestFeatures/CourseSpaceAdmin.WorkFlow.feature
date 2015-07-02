@@ -15,7 +15,7 @@ When I click on "Approve" cmenu option of course in coursespace
 Then I should see the successfull message "Published course marked as Approved."
 
 #Purpose: UseCase To create Program in course space
-Scenario: Create Program by CS Admin
+Scenario: Create Digital Path Program by CS Admin
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Programs' Page
@@ -104,8 +104,8 @@ Then I should see the successfull message "The course has been added successfull
 
 #Purpose: To create Teacher from Users subtab
 Scenario: Create Teacher in Users Tab by CS Admin 
-When I navigate to the "Course Enrollment" tab
-Then I should be on the "Course Enrollment" page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsTeacher" option from "Users" subtab
@@ -118,11 +118,10 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Student from Users subtab
 Scenario: Create Student in Users Tab by CS Admin
-When I navigate to the "Course Enrollment" tab
-Then I should be on the "Course Enrollment" page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-Then I should be on the "Manage Organization" page
-When I click on the "Users" tab in Manage Organization page
+And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsStudent" option from "Users" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsStudent" user in Coursespace
@@ -147,8 +146,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Users subtab
 Scenario: Create Organization Admin in Users Tab by CS Admin
-When I navigate to the "Course Enrollment" tab
-Then I should be on the "Course Enrollment" page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsOrganizationAdmin" option from "Users" subtab
@@ -488,18 +487,23 @@ Then I should see the "Update user" popup
 When I search the created "DPCsOrganizationAdmin" in "Users" subtab
 Then I should see the "DPCsOrganizationAdmin" in "Users" subtab
 
-
 #Purpose: CSAdmin import student by click on refresh student link
 Scenario: CSAdmin click refresh student link
-Given I browsed the login url for "CsAdmin"
-When I login to Pegasus as "CsAdmin" in "CourseSpace"
-Then I should be logged in successfully
-When I navigate to the "Course Enrollment" tab
-Then I should be on the "Course Enrollment" page
-When I navigate to the "Organization Admin" tab
-And I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 When I click on Refresh Students link
 Then I should see successfull message "Refresh completed!"
 When I search the created "RumbaStudent" in "Users" subtab
 Then I should see the "RumbaStudent" in "Users" subtab
+When I close the "Manage Organization" window
+
+#Purpose: CSAdmin create new school level organization
+Scenario: Create a District Level Organization by CS Admin
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
+When I click on the Create New Organization link 
+Then I should see the "Create Organization" popup
+When I create "District" level organization "Hierarchical" in "DigitalPath"
+Then I should see the successfull message "Organization created successfully."

@@ -69,6 +69,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(AddUserPageResource
                 .AddUser_Page_LoginNameTextBox_Id_Locator, userInformation.ToString());
             this.AssociateProgram(userTypeEnum);
+            Thread.Sleep(10000);
             //Fill Password            
             base.FillTextBoxById(AddUserPageResource
                 .AddUser_Page_PasswordTextBox_Id_Locator, AddUserPageResource.

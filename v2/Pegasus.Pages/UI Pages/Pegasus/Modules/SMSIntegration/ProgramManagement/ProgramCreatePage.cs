@@ -157,30 +157,30 @@ namespace Pegasus.Pages.UI_Pages
                 (ProgramCreatePageResource.ProgramCreation_Page_EnablePrgAssociationToAdmin_CheckBox_Id_Locator);
             //Click Checkbox For Associating Program To Admin
             base.ClickByJavaScriptExecutor(getEnablePrgAssociationToAdminCheckBoxProperty);
-            //Get Checkbox Property
-            IWebElement getEnablePrgAssociationToTechCheckBoxProperty = base.GetWebElementPropertiesById
-                (ProgramCreatePageResource.ProgramCreation_Page_EnablePrgAssociationToTech_CheckBox_Id_Locator);
-            //Click Checkbox For Associating Program To Teacher
-            base.ClickByJavaScriptExecutor(getEnablePrgAssociationToTechCheckBoxProperty);
-            //Wait For Element
-            base.WaitForElement(By.Id(ProgramCreatePageResource.
-                ProgramCreation_Page_EnableTeachBadgeView_CheckBox_Id_Locator));
-            //Get Checkbox Property
-            IWebElement getEnableTeachBadgeViewCheckBoxProperty = base.GetWebElementPropertiesById
-                (ProgramCreatePageResource.ProgramCreation_Page_EnableTeachBadgeView_CheckBox_Id_Locator);
-            //Click Checkbox To Enable Teacher Badge View
-            base.ClickByJavaScriptExecutor(getEnableTeachBadgeViewCheckBoxProperty);
-            if (!base.IsElementSelectedById(ProgramCreatePageResource.
-                ProgramCreation_Page_EnableTeachBadgeView_CheckBox_Id_Locator))
-            {
-                //Click Checkbox To Enable Teacher Badge View
-                base.ClickByJavaScriptExecutor(getEnableTeachBadgeViewCheckBoxProperty);
-            }
-            //Get Checkbox Property
-            IWebElement getEnableStdManagementCheckBoxProperty = base.GetWebElementPropertiesById
-                (ProgramCreatePageResource.ProgramCreation_Page_EnableStdManagement_CheckBox_Id_Locator);
-            //Click Checkbox To Enable Student Management
-            base.ClickByJavaScriptExecutor(getEnableStdManagementCheckBoxProperty);
+            ////Get Checkbox Property
+            //IWebElement getEnablePrgAssociationToTechCheckBoxProperty = base.GetWebElementPropertiesById
+            //    (ProgramCreatePageResource.ProgramCreation_Page_EnablePrgAssociationToTech_CheckBox_Id_Locator);
+            ////Click Checkbox For Associating Program To Teacher
+            //base.ClickByJavaScriptExecutor(getEnablePrgAssociationToTechCheckBoxProperty);
+            ////Wait For Element
+            //base.WaitForElement(By.Id(ProgramCreatePageResource.
+            //    ProgramCreation_Page_EnableTeachBadgeView_CheckBox_Id_Locator));
+            ////Get Checkbox Property
+            //IWebElement getEnableTeachBadgeViewCheckBoxProperty = base.GetWebElementPropertiesById
+            //    (ProgramCreatePageResource.ProgramCreation_Page_EnableTeachBadgeView_CheckBox_Id_Locator);
+            ////Click Checkbox To Enable Teacher Badge View
+            //base.ClickByJavaScriptExecutor(getEnableTeachBadgeViewCheckBoxProperty);
+            //if (!base.IsElementSelectedById(ProgramCreatePageResource.
+            //    ProgramCreation_Page_EnableTeachBadgeView_CheckBox_Id_Locator))
+            //{
+            //    //Click Checkbox To Enable Teacher Badge View
+            //    base.ClickByJavaScriptExecutor(getEnableTeachBadgeViewCheckBoxProperty);
+            //}
+            ////Get Checkbox Property
+            //IWebElement getEnableStdManagementCheckBoxProperty = base.GetWebElementPropertiesById
+            //    (ProgramCreatePageResource.ProgramCreation_Page_EnableStdManagement_CheckBox_Id_Locator);
+            ////Click Checkbox To Enable Student Management
+            //base.ClickByJavaScriptExecutor(getEnableStdManagementCheckBoxProperty);
             logger.LogMethodExit("ProgramCreatePage", "SelectOptionsForProgramAssociation",
                 base.IsTakeScreenShotDuringEntryExit);
         }

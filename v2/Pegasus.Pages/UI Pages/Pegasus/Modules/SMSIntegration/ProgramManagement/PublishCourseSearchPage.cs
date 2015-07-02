@@ -40,6 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.IsTakeScreenShotDuringEntryExit);
                 //Select Default Window
                 base.SelectDefaultWindow();
+                Thread.Sleep(20000);
                 //Wait For Element
                 base.WaitForElement(By.Id(PublishCourseSearchPageResource.
                     PublishCourseSearch_Page_Workspace_IFrame_Id_Locator));
@@ -107,6 +108,7 @@ namespace Pegasus.Pages.UI_Pages
                 Stopwatch stopWatch = new Stopwatch();
                 stopWatch.Start();
                 //Wait Till Assigned To Copy State Completes
+                Thread.Sleep(20000);
                 while (stopWatch.Elapsed.TotalMinutes < MinutesToWait)
                 {
                     //If Assigned To Copy Text Present 

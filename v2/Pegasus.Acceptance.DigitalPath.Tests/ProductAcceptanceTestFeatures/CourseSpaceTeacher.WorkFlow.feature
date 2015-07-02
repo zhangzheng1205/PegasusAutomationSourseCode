@@ -607,3 +607,12 @@ When I Click on the Save button
 Then I should see the successfull message "Your products have been successfully added." on setup wizard
 When I Click On the Save and Exit button
 Then I should see the product "DigitalPathDemo" in the Curriculum channel
+
+#Purpose: To Remove DP Product in Curriculumn Channel.
+#Product: Digital Path
+Scenario: Remove DP Product from Home Page
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+Then I should see the product "DigitalPath" in the Curriculum channel
+When I click on "Remove Curriculum" option of product "DigitalPath" in the Curriculum channel
+Then I should see the successfull message "Product removed successfully." in Home tab

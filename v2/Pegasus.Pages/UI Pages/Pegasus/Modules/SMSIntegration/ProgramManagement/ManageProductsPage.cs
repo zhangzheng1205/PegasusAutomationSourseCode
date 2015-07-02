@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.SMSIntegration.ProgramManagement;
 using Pegasus.Pages.Exceptions;
+using System.Threading;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -35,6 +36,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Right Frame
                 this.SelectRightIFrame();
                 //Click on Button
+                Thread.Sleep(20000);
                 base.WaitForElement(By.PartialLinkText(ManageProductsPageResource.
                     ManageProducts_Page_CreateNewProduct_PartialLinkText_Locator));
                 base.ClickByJavaScriptExecutor(

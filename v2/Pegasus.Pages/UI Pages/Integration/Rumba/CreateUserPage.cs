@@ -54,8 +54,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Select organization
                 this.SelectOrganizationName();
                 //Get Organization Id
-                this.GetAndStoreOrganizationID(organizationLevelEnum, 
-                    organizationTypeEnum);
+                //this.GetAndStoreOrganizationID(organizationLevelEnum, 
+                //    organizationTypeEnum);
                 //Select the Role and Create User
                 this.SelectRoleAndCreateUser(userTypeEnum, userLoginInformation);
             }

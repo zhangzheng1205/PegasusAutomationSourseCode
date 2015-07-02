@@ -9,6 +9,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.SMSIntegration.ProgramManagement;
 using Pegasus.Pages.Exceptions;
 using System.IO;
 using OpenQA.Selenium.Interactions;
+using System.Threading;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -43,6 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Product Name
                 String productName = this.EnterProductName(productTypeEnum);
                 //Click On Search Program Link
+                Thread.Sleep(5000);
                 ClickSearchProgramsLink();
                 //Enter Program Name To Search
                 EnterProgramNameToSearch(programTypeEnum);

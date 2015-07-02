@@ -443,6 +443,80 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// To create And Edit The different Levels of Organization.
+        /// </summary>
+        /// <param name="organizationLevelEnum">This is the organization level enum.</param>
+        /// <param name="organizationTypeEnum">This is organization type enum.</param>
+        public void CreateNewDistrictOrganizationForDifferentLevels
+            (Organization.OrganizationLevelEnum organizationLevelEnum,
+            Organization.OrganizationTypeEnum organizationTypeEnum)
+        {
+            //Create And edit the organization details
+            Logger.LogMethodEntry("CreateOrganizationPage",
+                "CreateNewOrganizationForDifferentLevels",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Guid for Organization Name
+            Guid organizationNameGuid = Guid.NewGuid();
+            try
+            {
+
+                //Select Country
+                this.SelectCountryOptionForStateLevelOrganization();
+
+                //Create New Organization Level(s)
+                this.FillDetailsOfOrganizationLevels(
+                organizationNameGuid, organizationLevelEnum);
+
+                // Remove State and Region level organization
+
+                //Wait Pop Up Get Close
+                if (base.IsPopUpClosed(2))
+                {
+                    //Store the organization details
+                    this.StoreTheOrganizationDetails(organizationNameGuid,
+                        organizationLevelEnum, organizationTypeEnum);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CreateOrganizationPage",
+                "CreateNewOrganizationForDifferentLevels",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fill Details For New Organization Levels.
+        /// </summary>
+        /// <param name="organization">This is organization name guid.</param>
+        /// <param name="organizationLevelEnum">This is organization level enum.</param>
+        private void FillDetailsOfOrganizationLevels(
+            Guid organization, Organization.
+            OrganizationLevelEnum organizationLevelEnum)
+        {
+            //Fill Details For New Organization
+            Logger.LogMethodEntry("CreateOrganizationPage", "FillDetailsForNewOrganizationLevels",
+                 base.IsTakeScreenShotDuringEntryExit);
+            // Fill Internal Organization Name
+            this.FillInternalOrganizationName(organization);
+            //Fill Organization Display Name
+            FillOrganizationDisplayName();
+            //Fill Organization Contact Details
+            this.FillOrganizationContactDetails(organization);
+            //Select Organization Type Based on Level
+            this.SelectOrganizationTypeCheckBox(organizationLevelEnum);
+            base.SelectCheckBoxByXPath("//table[@id='tblOrganisationLevel']/tbody/tr[1]/td/input");
+            base.SelectCheckBoxByXPath("//table[@id='tblOrganisationLevel']/tbody/tr[2]/td/input");
+            base.ClickLinkById("tdRemove");
+            //Click on Button To Save Organization
+            this.ClickOnButtonToSaveOrganization();
+            Logger.LogMethodExit("CreateOrganizationPage", "FillDetailsForNewOrganizationLevels",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        
         /// <summary>
         /// Fill Details For New Organization Levels.
         /// </summary>
@@ -713,6 +787,47 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CreateOrganizationPage",
                "CreateMultipleLevelOrganization",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        
+    /// <summary>
+    /// Create District level organization
+    /// </summary>
+    /// <param name="organizationLevelEnum">This is organization level name enum.</param>
+        /// <param name="organizationTypeEnum">This is organization level type enum.</param>
+    /// <param name="organizationCreationCondition">This is organization level creation condition.</param>
+    public void CreateDistrictOrganizationInProductBasedOnLevel(
+    Organization.OrganizationLevelEnum
+    organizationLevelEnum,
+    Organization.OrganizationTypeEnum organizationTypeEnum,
+    string organizationCreationCondition)
+        {
+            //Create Organization Based On Level of Organization
+            Logger.LogMethodEntry("CreateOrganizationPage",
+                "CreateDistrictOrganizationInProductBasedOnLevel",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Guid for Organization Name
+            Guid organizationNameGuid = Guid.NewGuid();
+            try
+            {
+
+                //Created OrganizationPage Object
+                CreateOrganizationPage createOrganizationPage
+                    = new CreateOrganizationPage();
+                //Select Organization Window
+                createOrganizationPage.SelectCreateOrganizationWindow();
+                //Create New Organization
+                createOrganizationPage.CreateNewDistrictOrganizationForDifferentLevels
+                    (organizationLevelEnum, organizationTypeEnum);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CreateOrganizationPage",
+                "CreateDistrictOrganizationInProductBasedOnLevel",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
