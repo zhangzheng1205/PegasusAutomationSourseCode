@@ -805,7 +805,7 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>7bb15133-f77e-4f9a-a72d-7d14e8405a94</Name>
+      <Name>Benchmark Test 1</Name>
       <ActivityType>Test</ActivityType>
       <ActivityID>DigitalPath_Activity_Test_UC1</ActivityID>
       <IsCreated>true</IsCreated>
