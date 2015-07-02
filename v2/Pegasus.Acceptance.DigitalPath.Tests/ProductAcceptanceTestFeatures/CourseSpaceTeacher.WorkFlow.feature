@@ -384,7 +384,6 @@ And I select "Enroll from School" drop down option
 Then I should see the "Enroll from School" popup
 When I click on Search button
 And I enter student username "DPCsStudent" to search
-Then I should see searched username "DPCsStudent" in search list
 When I select the student and click on Add button
 Then I should see the success message "Users enrolled successfully."
 When I close Enroll from school pop up

@@ -103,6 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get user name.
             logger.LogMethodEntry("GBRoasterEnrollFrmSchoolPage", "ValidateSearchedUserName",
                  base.IsTakeScreenShotDuringEntryExit);
+            string getUserDetails = null;
             string getUserName = null;
             try
             {
@@ -110,8 +111,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrameById(GBRoasterEnrollFrmSchoolPageResource.
                GBRoasterEnrollFrmSchoolPage_UserListFrame_Id_Locator);
                 Thread.Sleep(10000);
-                getUserName = base.GetElementTextByXPath(GBRoasterEnrollFrmSchoolPageResource.
+                getUserDetails = base.GetElementTextByXPath(GBRoasterEnrollFrmSchoolPageResource.
                     GBRoasterEnrollFrmSchoolPage_UserNameColumn_SearchedList_Xpath_Locator);
+               getUserName = getUserDetails.Trim();
 
             }
 
