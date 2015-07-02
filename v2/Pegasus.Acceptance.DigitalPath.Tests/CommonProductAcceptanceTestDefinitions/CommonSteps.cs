@@ -530,6 +530,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     CGIEClass.Name = CommonStepsResource.CommonSteps_CGIE_DPClassName_Value;
                     CGIEClass.UpdateClassInMemory(CGIEClass);
                     break;
+                // Updates the teacher,student and class enum values at in-memory during runtime when environment is VCD
+                case "VCD":
+                    //Update Teacher Username
+                    User VCDTeacher = User.Get(User.UserTypeEnum.DPCsTeacher);
+                    VCDTeacher.Name = CommonStepsResource.CommonSteps_VCD_DPTeacherUsername_Value;
+                    VCDTeacher.UpdateUserInMemory(VCDTeacher);
+                    //Update Student Username,FirstName and LastName
+                    User VCDStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+                    VCDStudent.Name = CommonStepsResource.CommonSteps_VCD_DPStudentUsername_Value;
+                    VCDStudent.FirstName = CommonStepsResource.CommonSteps_VCD_DPStudentFirstName_Value;
+                    VCDStudent.LastName = CommonStepsResource.CommonSteps_VCD_DPStudentLastName_Value;
+                    VCDStudent.UpdateUserInMemory(VCDStudent);
+                    //Update Class Name
+                    Class VCDClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+                    VCDClass.Name = CommonStepsResource.CommonSteps_VCD_DPClassName_Value;
+                    VCDClass.UpdateClassInMemory(VCDClass);
+                    break;
                 // Updates the teacher,student and class enum values at in-memory during runtime when environment is CGIE
                 case "PROD":
                     //Update Teacher Username

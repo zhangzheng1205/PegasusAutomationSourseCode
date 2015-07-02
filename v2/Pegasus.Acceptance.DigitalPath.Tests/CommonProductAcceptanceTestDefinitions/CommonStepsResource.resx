@@ -180,4 +180,19 @@
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
   </data>
+  <data name="CommonSteps_VCD_DPClassName_Value" xml:space="preserve">
+    <value>Dependent_K12_VCD</value>
+  </data>
+  <data name="CommonSteps_VCD_DPStudentFirstName_Value" xml:space="preserve">
+    <value>Chethan</value>
+  </data>
+  <data name="CommonSteps_VCD_DPStudentLastName_Value" xml:space="preserve">
+    <value>Gangoor</value>
+  </data>
+  <data name="CommonSteps_VCD_DPStudentUsername_Value" xml:space="preserve">
+    <value>dependent_VCD_stud</value>
+  </data>
+  <data name="CommonSteps_VCD_DPTeacherUsername_Value" xml:space="preserve">
+    <value>dependent_VCD_teac</value>
+  </data>
 </root>

@@ -47,7 +47,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>0d06a6e8-166b-442c-ac3e-1316dfa8144d</Name>
+      <Name>K12-DigitGrade6</Name>
       <CourseType>MasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -359,12 +359,12 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>24c81742-0ab8-47d1-a80a-78df7b52bc40</Name>
-      <Password>password2</Password>
+      <Name>K12vcdteacher01</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>0bb12871-aa8d-4cb4-baae-86c6bbd0ad3f</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>0bb12871-aa8d-4cb4-baae-86c6bbd0ad3f</LastName>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>abcd</MiddleName>
+      <LastName>Shetty</LastName>
       <UserType>DPCsTeacher</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -381,16 +381,26 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>nitprodautostud</Name>
+      <Name>rashvcdstudent02</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>e4f08448-827b-4ee4-935d-8249d184dc4a</FirstName>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>e4f08448-827b-4ee4-935d-8249d184dc4a</LastName>
+      <LastName>Shetty</LastName>
       <UserType>DPCsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+    <User>
+      <Name>vcdidlestudent</Name>
+      <Password>password1</Password>
+      <FirstName>Tom</FirstName>
+      <LastName>Cruise</LastName>
+      <UserType>DPCsIdleStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+
 
     <!--Hard coded Users data for "HED" Product.-->
     <User>
@@ -801,18 +811,6 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>576611fc-347b-4af5-a032-ffd5fef04376'>''a'</Name>
-      <ActivityTypeEnum>Test</ActivityTypeEnum>
-      <ActivityBehavioralModesEnum>BasicRandom</ActivityBehavioralModesEnum>
-      <IsCreated>true</IsCreated>
-    </Activity>
-    <Activity>
-      <Name>d4367330-f9da-4420-a303-eadda1a''>a'</Name>
-      <ActivityTypeEnum>Test</ActivityTypeEnum>
-      <ActivityBehavioralModesEnum>Assignment</ActivityBehavioralModesEnum>
-      <IsCreated>true</IsCreated>
-    </Activity>
-    <Activity>
       <Name>5c380911-7c31-4352-82df-5b002be77ebd</Name>
       <ActivityType>MyTest</ActivityType>
       <IsCreated>true</IsCreated>
@@ -856,10 +854,17 @@
       <IsCreated>true</IsCreated>
     </Product>
     <Product>
-      <Name>Digit Grade6</Name>
+      <Name>VCD_Digit6</Name>
       <ProductType>DigitalPath</ProductType>
+      <PeriodName>Trial01</PeriodName>
       <IsCreated>true</IsCreated>
     </Product>
+    <Product>
+      <Name>Custom Content</Name>
+      <ProductType>DigitalPathCustomContent</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+
   </ArrayOfProduct>
   <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivityQuestionsList>

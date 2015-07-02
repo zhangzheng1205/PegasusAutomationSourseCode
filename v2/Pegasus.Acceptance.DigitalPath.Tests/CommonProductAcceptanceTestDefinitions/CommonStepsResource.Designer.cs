@@ -224,6 +224,51 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.CommonProductAcceptanceTestDefini
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dependent_K12_VCD.
+        /// </summary>
+        internal static string CommonSteps_VCD_DPClassName_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_VCD_DPClassName_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chethan.
+        /// </summary>
+        internal static string CommonSteps_VCD_DPStudentFirstName_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_VCD_DPStudentFirstName_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gangoor.
+        /// </summary>
+        internal static string CommonSteps_VCD_DPStudentLastName_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_VCD_DPStudentLastName_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dependent_VCD_stud.
+        /// </summary>
+        internal static string CommonSteps_VCD_DPStudentUsername_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_VCD_DPStudentUsername_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dependent_VCD_teac.
+        /// </summary>
+        internal static string CommonSteps_VCD_DPTeacherUsername_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_VCD_DPTeacherUsername_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string CommonSteps_WaitTimeOut_Value {
