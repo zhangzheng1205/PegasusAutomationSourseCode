@@ -1301,6 +1301,42 @@ testRunner.Then("I should see the \"DPCsOrganizationAdmin\" in \"Users\" subtab"
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CSAdmin click refresh student link")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
+        public virtual void CSAdminClickRefreshStudentLink()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CSAdmin click refresh student link", ((string[])(null)));
+#line 493
+this.ScenarioSetup(scenarioInfo);
+#line 494
+testRunner.Given("I browsed the login url for \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 495
+testRunner.When("I login to Pegasus as \"CsAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 496
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 497
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 498
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 499
+testRunner.When("I navigate to the \"Organization Admin\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 500
+testRunner.And("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 501
+testRunner.And("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 502
+testRunner.When("I click on Refresh Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 503
+testRunner.Then("I should see successfull message \"Refresh completed!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 504
+testRunner.When("I search the created \"RumbaStudent\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 505
+testRunner.Then("I should see the \"RumbaStudent\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

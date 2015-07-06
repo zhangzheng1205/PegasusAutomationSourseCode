@@ -487,3 +487,19 @@ When I click on "Edit" cmenu option of "DPCsOrganizationAdmin"
 Then I should see the "Update user" popup
 When I search the created "DPCsOrganizationAdmin" in "Users" subtab
 Then I should see the "DPCsOrganizationAdmin" in "Users" subtab
+
+
+#Purpose: CSAdmin import student by click on refresh student link
+Scenario: CSAdmin click refresh student link
+Given I browsed the login url for "CsAdmin"
+When I login to Pegasus as "CsAdmin" in "CourseSpace"
+Then I should be logged in successfully
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I navigate to the "Organization Admin" tab
+And I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Users" tab in Manage Organization page
+When I click on Refresh Students link
+Then I should see successfull message "Refresh completed!"
+When I search the created "RumbaStudent" in "Users" subtab
+Then I should see the "RumbaStudent" in "Users" subtab

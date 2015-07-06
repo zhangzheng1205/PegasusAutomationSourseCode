@@ -100,6 +100,38 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Click Refresh Student link
+        /// </summary>
+        [When(@"I click on Refresh Students link")]
+        public void ClickRefreshStudentsLink()
+        {
+            Logger.LogMethodEntry("CreateUser",
+                "ClickRefreshStudentsLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ManageStudentsDefaultPage().ClickRefreshStudentsLink();
+            Logger.LogMethodExit("CreateUser",
+                "ClickRefreshStudentsLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+        /// <summary>
+        /// Verify the success message on ManageOrganization popup.
+        /// </summary>
+        /// <param name="successMessage">This is the Success Message.</param>
+        [Then(@"I should see successfull message ""(.*)""")]
+        public void VerifyTheSuccessfullMessage(string successMessage)
+        {
+            // Method To Verify the Success Message 
+            Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
+                IsTakeScreenShotDuringEntryExit);
+            //Assert for Successfull Message Displayed
+            Logger.LogAssertion("VerifyTheSuccessfullMessage", ScenarioContext.
+                   Current.ScenarioInfo.Title, () => Assert.AreEqual(successMessage,
+                   new ManageOrganisationToolBarPage().GetSuccessfullMessageFromManageOrganizationPopup()));
+            Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
+                IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
         /// Selects the User Option.
         /// </summary>
         /// <param name="userTypeEnum">This is User Type Enum.</param>

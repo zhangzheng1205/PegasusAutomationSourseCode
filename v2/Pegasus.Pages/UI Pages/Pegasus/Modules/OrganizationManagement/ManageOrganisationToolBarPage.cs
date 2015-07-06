@@ -10,6 +10,7 @@ using System.Configuration;
 using System.Threading;
 using System.IO;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseAnnouncement;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -166,6 +167,37 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Get user status success message from ManageOrganization popup.
+        /// </summary>
+        /// <returns>This is for Success Message.</returns>
+        public string GetSuccessfullMessageFromManageOrganizationPopup()
+        {
+            //Get success full message text
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage",
+                "GetSuccessfullMessageFromManageOrganizationPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialization of string getSuccessMsg
+            string getSuccessMessage = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(ManageOrganisationToolBarPageResource.
+                   ManageOrganisationToolBar_Page_SuccessMessage_Id_Locator));
+                // To get text of successfull message
+                getSuccessMessage = base.GetElementTextById(ManageOrganisationToolBarPageResource.
+                   ManageOrganisationToolBar_Page_SuccessMessage_Id_Locator);
+                Thread.Sleep(Convert.ToInt32(AnnouncementDefaultUXPageResource.
+                    AnnouncementDefaultUX_Page_ThreadSleep_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ManageOrganisationToolBarPage",
+                "GetSuccessfullMessageFromManageOrganizationPopup",
+               base.IsTakeScreenShotDuringEntryExit);
+            return getSuccessMessage;
+        }
         /// <summary>
         ///Navigate To Properties Sub Tab In Management Organization
         /// </summary>

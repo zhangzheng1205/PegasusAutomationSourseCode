@@ -40,7 +40,7 @@ Then I should see the "Signed Out" message
 #Purpose: Create Student By Radmin
 Scenario: Create Student by Radmin
 Given I am on the "Welcome to RADmin" page
-When I select the "Create a User Account" tab
+When I click on "People" tab and Select "Create a User Account" option
 Then I should be on the "Create a User Account" page
 When I create a "RumbaStudent" user as radmin in "School" level organization in the "DigitalPath"
 Then I should see the created "RumbaStudent" in manage frame
