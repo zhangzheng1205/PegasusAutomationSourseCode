@@ -109,8 +109,8 @@ testRunner.When("I add the created resource to the product", ((string)(null)), (
 #line 21
 testRunner.Then("I should see the resource successfully added in the created product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 22
-testRunner.When("I place a new order for a license to use a \"State\" level product in \"DigitalPath\"" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I place a new order for a license to use a \"School\" level product in \"DigitalPath" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
 testRunner.Then("I should see product order placed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
@@ -134,7 +134,7 @@ this.FeatureBackground();
 #line 29
 testRunner.Given("I am on the \"Welcome to RADmin\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
-testRunner.When("I select the \"Create a User Account\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"People\" tab and Select \"Create a User Account\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
 testRunner.Then("I should be on the \"Create a User Account\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 32
@@ -143,14 +143,8 @@ testRunner.When("I create a \"RumbaTeacher\" user as radmin in \"School\" level 
 #line 33
 testRunner.Then("I should see the created \"RumbaTeacher\" in manage frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 34
-testRunner.When("I select the \"Search\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
-testRunner.And("I search the \"RumbaTeacher\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
-testRunner.Then("I should see the created \"RumbaTeacher\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 37
 testRunner.When("I \"Sign Out\" from Rumba", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 35
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -162,30 +156,24 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void CreateStudentByRadmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by Radmin", ((string[])(null)));
-#line 41
+#line 38
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 42
+#line 39
 testRunner.Given("I am on the \"Welcome to RADmin\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 43
+#line 40
 testRunner.When("I click on \"People\" tab and Select \"Create a User Account\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 41
 testRunner.Then("I should be on the \"Create a User Account\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 45
+#line 42
 testRunner.When("I create a \"RumbaStudent\" user as radmin in \"School\" level organization in the \"D" +
                     "igitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
+#line 43
 testRunner.Then("I should see the created \"RumbaStudent\" in manage frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 47
-testRunner.When("I select the \"Search\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
-testRunner.And("I search the \"RumbaStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
-testRunner.Then("I should see the created \"RumbaStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 44
 testRunner.When("I \"Sign Out\" from Rumba", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 45
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

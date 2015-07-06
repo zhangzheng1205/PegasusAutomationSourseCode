@@ -7,6 +7,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.SMSIntegration.ProgramManagement;
 using OpenQA.Selenium.Interactions;
 using Pegasus.Pages.Exceptions;
+using System.Threading;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -72,8 +73,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Product WorkSpace IFrame
                 this.SelectWorkSpaceIFrame();
                 //Wait For Element
+                Thread.Sleep(5000);
                 base.WaitForElement(By.Id(ProductManagementContainerPageResource.
-                    ProductManagementContainer_Page_SearchProduct_Link_Locator));
+                    ProductManagementContainer_Page_SearchProduct_Link_Locator),10);
                 //Get Link Property
                 IWebElement getLinkProperty = base.GetWebElementPropertiesById
                     (ProductManagementContainerPageResource.

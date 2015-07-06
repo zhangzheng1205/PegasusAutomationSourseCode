@@ -878,6 +878,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 base.WaitUntilWindowLoads("Home");
+                Thread.Sleep(10000);
                 //Get Success Message From Application
                 getSuccessMessage = base.GetElementTextById(HomePageResource.
                     HomePage_SuccessMessage_HomePage_Id_Locator);

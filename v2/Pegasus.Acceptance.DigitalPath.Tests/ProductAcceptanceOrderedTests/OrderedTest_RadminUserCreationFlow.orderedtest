@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest_radminusercreationflow" storage="d:\automation code for integration rumba\pegasus_automation_14jan_master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest_radminusercreationflow.orderedtest" id="c311173b-f627-4afd-9581-8c6e7da0a261" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="5c18f99e-699a-ede8-1ed3-f9b8efd01930" name="CreateStudentByRadmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="46933a3f-8105-b98a-0062-9d213ecb54a0" name="CreateTeacherByRadmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

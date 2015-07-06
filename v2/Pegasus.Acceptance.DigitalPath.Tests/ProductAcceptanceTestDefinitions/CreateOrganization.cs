@@ -277,6 +277,29 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Create District level organization only
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        [When(@"I create ""(.*)"" level organization ""(.*)"" in ""(.*)""")]
+        public void CreateTheDistrictOrganizationLevels
+            (Organization.OrganizationLevelEnum organizationLevelEnum,
+           string organizationCreationCondition,
+           Organization.OrganizationTypeEnum organizationTypeEnum)
+        {
+            //Create organization
+            Logger.LogMethodEntry("CreateOrganization", "CreateTheDistrictOrganizationLevels",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create organization based on level
+            new CreateOrganizationPage().CreateDistrictOrganizationInProductBasedOnLevel
+                (organizationLevelEnum, organizationTypeEnum, organizationCreationCondition);
+            Logger.LogMethodExit("CreateOrganization", "CreateTheDistrictOrganizationLevels",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

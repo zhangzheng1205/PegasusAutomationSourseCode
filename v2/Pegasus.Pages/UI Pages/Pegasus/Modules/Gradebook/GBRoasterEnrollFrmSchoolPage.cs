@@ -109,6 +109,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get user name from search results.
                 base.SwitchToIFrameById(GBRoasterEnrollFrmSchoolPageResource.
                GBRoasterEnrollFrmSchoolPage_UserListFrame_Id_Locator);
+                Thread.Sleep(10000);
                 getUserName = base.GetElementTextByXPath(GBRoasterEnrollFrmSchoolPageResource.
                     GBRoasterEnrollFrmSchoolPage_UserNameColumn_SearchedList_Xpath_Locator);
 
@@ -144,8 +145,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Add button
                 IWebElement addButton = base.GetWebElementPropertiesById(GBRoasterEnrollFrmSchoolPageResource.
                     GBRoasterEnrollFrmSchoolPage_AddButton_Id_Locator);
-                base.PerformMouseClickAction(addButton);
-               
+                base.ClickByJavaScriptExecutor(addButton);
             }
 
             catch (Exception e)
@@ -196,8 +196,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Fetch success message from application UI
                 base.SelectWindow("Enroll from School");
-                bool kkla = base.IsElementPresent(By.Id(GBRoasterEnrollFrmSchoolPageResource.
-                GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator),10);
+                Thread.Sleep(5000);
                 base.WaitForElement(By.Id(GBRoasterEnrollFrmSchoolPageResource.
                 GBRoasterEnrollFrmSchoolPage_SucessMessage_Div_Id_Locator));
                 getSuccessMessage = base.GetElementTextById(GBRoasterEnrollFrmSchoolPageResource.

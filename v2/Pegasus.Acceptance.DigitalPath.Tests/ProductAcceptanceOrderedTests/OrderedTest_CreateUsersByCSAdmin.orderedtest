@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest_createusersbycsadmin" storage="d:\automation code for integration rumba\pegasus_automation_14jan_master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest_createusersbycsadmin.orderedtest" id="40d12abe-0e36-4eea-bed8-68fc8132b926" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="e73609b2-78ec-f45b-0042-e78afd55d74e" name="UserLoginAsCourseSpaceAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="34a256de-c416-ea6e-b5b5-16d2d43cb574" name="CreateOrganizationAdminInUsersTabByCSAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="78ae7f45-04d1-8e8b-7cd5-192c52f3a6cc" name="CreateTeacherInUsersTabByCSAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="165ebcf9-ac31-99ab-831f-8110e6f690e2" name="CreateStudentInUsersTabByCSAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

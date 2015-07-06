@@ -73,6 +73,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             //Get Rumba License Information
             License license = License.Get(License.LicenseTypeEnum.Rumba);
+            //Enter Product External Id
+            this.EnterProductExternalID();
             //Enter License Order ID
             base.FillTextBoxById(PlaceOrderPageResource.
                PlaceOrder_Page_OrderId_Id_Locator, license.OrderId);
@@ -85,8 +87,6 @@ namespace Pegasus.Pages.UI_Pages
             this.EnterLineItemIDAndLicenseType();
             //Enter License Start Date And End Date and Quantity
             this.EnterlLicenseStartEndDateAndQuantity();
-            //Enter Product External Id
-            this.EnterProductExternalID();
             //Click On Submit
             this.ClickOnSubmitButton();
             Logger.LogMethodExit("PlaceOrderPage", "EnterRumbaLicenseDetail",

@@ -416,6 +416,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Wait for the message
+                Thread.Sleep(5000);
                 base.WaitForElement(By.Id(frmSetupWizardPageResource.
                     frmSetupWizardPageResource_SuccessMessageDiv_Id_Locator));
                 //Get success message
