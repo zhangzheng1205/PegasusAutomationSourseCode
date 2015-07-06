@@ -380,8 +380,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Click on close button
+                base.SelectWindow("Manage Students");
                 base.ClickButtonById(GBRosterGridUXPageResource.
                 GBRosterGridUX_Page_CloseButton_Id_Locator);
+                //base.CloseBrowserPopUpByJavaScriptExecutor();
+                //base.ClickButtonByPartialLinkText("Close");
             }
             catch (Exception e)
             {

@@ -569,7 +569,21 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Update user details
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I update details of ""(.*)"" user")]
+        public void UpdateDetailsOfUser(User.UserTypeEnum userTypeEnum)
+        {
+            //Create User in Coursespace
+            Logger.LogMethodEntry("CreateUser", "UpdateDetailsOfUser",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create Cs User
+            new UpdateUserPage().UpdateUser(userTypeEnum);
+            Logger.LogMethodExit("CreateUser", "UpdateDetailsOfUser",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

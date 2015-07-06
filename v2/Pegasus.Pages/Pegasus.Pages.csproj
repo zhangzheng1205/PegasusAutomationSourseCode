@@ -469,6 +469,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManageUserPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\UpdateUserPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\UpdateUserPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateUserPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Admin\User\UserInformationPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Admin\User\UserInformationPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2133,6 +2139,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\SearchUsersPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SearchUsersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\UpdateUserPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateUserPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\UserInformationPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

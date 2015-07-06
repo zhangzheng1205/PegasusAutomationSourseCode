@@ -385,5 +385,76 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return getUnenrolledText.Trim();
         }
+
+        /// <summary>
+        /// Click Cmenu of the user listed in Class roaster frame
+        /// </summary>
+        /// <param name="cmenuOption">This is the Cmenu option name.</param>
+        /// <param name="userData">This is the user type.</param>
+        public void ClickUserCmenuInManageRoaster(string cmenuOption, User.UserTypeEnum userData)
+        {
+            logger.LogMethodEntry("ManageStudentsDefaultPage", "ClickUserCmenuInManageRoaster",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the user details from the user type enum
+            User userDetails = User.Get(userData);
+            string userName = userDetails.Name.ToString();
+            string firstName = userDetails.FirstName.ToString();
+            string lastName = userDetails.LastName.ToString();
+            string getUsername;
+            this.SelectManageStudentsWindow();
+            base.WaitForElement(By.Id(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_Frame_Id_Locator));
+            //Switch to iframe
+            base.SwitchToIFrameById(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_Frame_Id_Locator);
+            //Get users count
+            int getEnrolledUsersCount = base.GetElementCountByXPath(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_UserListTable_Xpath_Locator);
+            for (int initialCount = 1; initialCount <= getEnrolledUsersCount;
+                initialCount++)
+            {
+                //Fetch enrolled user name
+                getUsername = base.GetWebElementPropertiesByXPath(string.Format(GBRosterGridUXPageResource.
+                    GBRosterGridUX_Page_EnrolledUserName_Xpath_Locator, initialCount)).GetAttribute("title");
+                if (userName.Equals(getUsername))
+                {
+                    // Click user cmenu option
+                    IWebElement userNameProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(GBRosterGridUXPageResource.GBRosterGridUX_Page_Username_Mouseover_Xpath_Locator, 
+                        initialCount));
+                    base.PerformMouseHoverByJavaScriptExecutor(userNameProperty);
+                    IWebElement cmenuIconProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(GBRosterGridUXPageResource.GBRosterGridUX_Page_Username_CmenuImg_Xpath_Locator, initialCount));
+                    base.ClickByJavaScriptExecutor(cmenuIconProperty);
+                    base.ClickLinkByPartialLinkText(cmenuOption);
+                    break;
+                }
+            }
+            logger.LogMethodExit("ManageStudentsDefaultPage", "ClickUserCmenuInManageRoaster",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Select Enrollment Window.
+        /// </summary>
+        private void SelectManageStudentsWindow()
+        {
+            //Select Manage students Window
+            logger.LogMethodEntry("ManageStudentsDefaultPage", "SelectEnrollmentWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Wait for window to load
+            base.WaitUntilWindowLoads(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_ManageRoster_Window_Title);
+            base.WaitForElement(By.Id("ManageRosterTab"));
+            Thread.Sleep(2000);
+            //Select the window
+            base.SelectWindow(GBRosterGridUXPageResource.
+                GBRosterGridUX_Page_ManageRoster_Window_Title);
+            //Switch to parent iframe
+            base.SwitchToIFrameById(GBRosterGridUXPageResource.GBRosterGridUX_Page_ContainerFrame_Id_Locator);
+            logger.LogMethodExit("ManageStudentsDefaultPage", "SelectEnrollmentWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

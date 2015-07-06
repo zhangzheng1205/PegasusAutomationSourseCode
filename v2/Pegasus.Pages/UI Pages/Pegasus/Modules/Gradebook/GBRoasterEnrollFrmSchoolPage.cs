@@ -255,5 +255,60 @@ namespace Pegasus.Pages.UI_Pages
                        base.IsTakeScreenShotDuringEntryExit);
             return isPopUpClosed;
         }
+
+        /// <summary>
+        /// Unenroll user from the Class roaster
+        /// </summary>
+        /// <param name="userName">This is the user type enum.</param>
+        public void UnenrollUserEnrollFromSchoolPopup(string userName)
+        {
+            //Validate whether pop up closed or not.
+            logger.LogMethodEntry("GBRoasterEnrollFrmSchoolPage", "UnenrollUserEnrollFromSchoolPopup",
+               base.IsTakeScreenShotDuringEntryExit);
+            string UserNameText = null;
+            try
+            {
+                //Select the searched student check box
+                base.SwitchToDefaultPageContent();
+                base.SwitchToIFrame(GBRoasterEnrollFrmSchoolPageResource.
+                    GBRoasterEnrollFrmSchoolPage_UnenrollUserListFrame_Id_Locator);
+                int getUserCount = base.GetElementCountByXPath(GBRoasterEnrollFrmSchoolPageResource.
+                    GBRoasterEnrollFrmSchoolPage_GetUserCount_UnEnrolledUsersList_Xpath_Locator);
+                // Select user from the unenroll frame and unenroll user
+                for (int initialcount = Convert.ToInt32(2);
+                    initialcount <= getUserCount; initialcount++)
+                {
+                    //Get the Student name from Class Roster
+                    UserNameText = base.GetElementTextByXPath(string.Format
+                        (GBRoasterEnrollFrmSchoolPageResource.
+                        GBRoasterEnrollFrmSchoolPage_UserNameColumn_UnEnrolledUsersList_Xpath_Locator, initialcount));
+                    //Compare Username
+                    if (UserNameText.Equals(userName))
+                    {
+                        base.SelectCheckBoxByXPath(string.Format(
+                            GBRoasterEnrollFrmSchoolPageResource.
+                            GBRoasterEnrollFrmSchoolPage_SelectUsername_Checkbox_UnEnrolledUsersList_Xpath_Locator, 
+                            initialcount));
+                        base.ClickLinkById(GBRoasterEnrollFrmSchoolPageResource.
+                            GBRoasterEnrollFrmSchoolPage_RemoveLink_Id_Locator);
+                        base.SwitchToActivePageElement();
+                        base.WaitUntilPopUpLoads(GBRoasterEnrollFrmSchoolPageResource.
+                            GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_Title);
+                        base.ClickButtonByPartialLinkText(GBRoasterEnrollFrmSchoolPageResource.
+                            GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_OkButton_Text);
+                        break;
+                    }
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("GBRoasterEnrollFrmSchoolPage", "UnenrollUserEnrollFromSchoolPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
