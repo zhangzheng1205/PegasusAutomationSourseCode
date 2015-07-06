@@ -105,3 +105,9 @@ And I should see the status of "StudyPlan" assets as "Completed"
 Scenario: Student select the class from the class selector dropdown
 When I select "DigitalPathMasterLibrary" from the class selector dropdown
 Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
+
+#Purpose: Student validate the class display upon login
+Scenario: To Verify The Class Name By CS Student
+When I navigate to the "Overview" tab
+Then I should be on the "Overview" page
+Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
