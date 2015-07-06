@@ -470,3 +470,20 @@ When I close the "Manage Organization" window
 And I "Sign out" from the "CsAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Purpose: CSAdmin update Organization admin profile details
+Scenario: Update Organization Admin profile in Users Tab by CS Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I navigate to the "Organization Admin" tab
+And I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Users" tab in Manage Organization page
+And I select the "DPCsOrganizationAdmin" option from "Users" subtab
+Then I should see the "Add User" popup
+When I create a new "DPCsOrganizationAdmin" user in Coursespace
+Then I should see the successfull message "New users added successfully." in "Manage Organization" window
+When I search the created "DPCsOrganizationAdmin" in "Users" subtab
+Then I should see the "DPCsOrganizationAdmin" in "Users" subtab
+When I click on "Edit" cmenu option of "DPCsOrganizationAdmin"
+Then I should see the "Update user" popup
+When I search the created "DPCsOrganizationAdmin" in "Users" subtab
+Then I should see the "DPCsOrganizationAdmin" in "Users" subtab

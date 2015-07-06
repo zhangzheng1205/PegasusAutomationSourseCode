@@ -437,6 +437,48 @@ namespace Pegasus.Pages.UI_Pages
 
 
         /// <summary>
+        /// Click Cmenu of the user listed in ManageOrganization popup
+        /// </summary>
+        /// <param name="cmenuOption">This is the Cmenu option name.</param>
+        /// <param name="userData">This is the user type.</param>
+        public void ClickUserCmenuInManageOrganizationPopup(string cmenuOption, User.UserTypeEnum userData)
+        {
+            logger.LogMethodEntry("ManageStudentsDefaultPage", "ClickUserCmenuInManageOrganizationPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the user details from the user type enum
+            User userDetails = User.Get(userData);
+            string userName = userDetails.Name.ToString();
+            string firstName = userDetails.FirstName.ToString();
+            string lastName = userDetails.LastName.ToString();
+            //Select the Manage Organization window
+            new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
+            //Switch to the Frame
+            base.SwitchToIFrame(ManageUserPageResource.ManageUser_Page_Iframe_Id_Locator);
+            //Wait for the Searched table
+            base.WaitForElement(By.Id(ManageUserPageResource.
+                ManageUser_Page_Searched_Table_Id_Locator));
+            //Get the Username
+            string getUserName = base.GetTitleAttributeValueByXPath(ManageUserPageResource.
+                ManageUser_Page_Searched_Username_Xpath_Locator);
+
+            if (userName.Equals(getUserName))
+                {
+                    bool jas1 = base.IsElementPresent(By.XPath("//table[@id='grdSCLCourse']/tbody/tr/td[2]/table/tbody/tr/td"), 10);
+                    IWebElement hoverOnUserName = base.GetWebElementPropertiesByXPath("//table[@id='grdSCLCourse']/tbody/tr/td[2]/table/tbody/tr/td");
+                    base.MouseOverByJavaScriptExecutor(hoverOnUserName);
+                    bool jha = base.IsElementPresent(By.XPath("//table[@id='grdSCLCourse']/tbody/tr/td[2]/table/tbody/tr/td[2]/center/img"), 10);
+                    IWebElement hoverOnUserNameCmenu = base.GetWebElementPropertiesByXPath("//table[@id='grdSCLCourse']/tbody/tr/td[2]/table/tbody/tr/td[2]/center/img");
+                    base.ClickByJavaScriptExecutor(hoverOnUserNameCmenu);
+                    bool jjkas = base.IsElementPresent(By.PartialLinkText("Manage User Information"),10);
+                    IWebElement selectCmenuOption = base.GetWebElementPropertiesByPartialLinkText("Manage User Information");
+                    base.ClickByJavaScriptExecutor(selectCmenuOption);
+                }
+            logger.LogMethodExit("ManageStudentsDefaultPage", "ClickUserCmenuInManageOrganizationPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Select Enrollment Window.
         /// </summary>
         private void SelectManageStudentsWindow()

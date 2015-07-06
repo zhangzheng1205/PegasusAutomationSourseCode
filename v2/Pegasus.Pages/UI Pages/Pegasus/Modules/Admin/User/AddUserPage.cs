@@ -176,6 +176,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on the Save button
                 base.ClickButtonById(AddUserPageResource.
                     AddUser_Page_Button_Save_Program_Id_Locator);
+                Thread.Sleep(2000);
                 //Select Add User Window
                 this.SelectAddUserWindow();
             }

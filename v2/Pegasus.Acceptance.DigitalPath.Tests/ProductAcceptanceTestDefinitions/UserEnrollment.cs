@@ -497,6 +497,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Update user profile details in Manageorganization popup.
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I click on ""(.*)"" cmenu option of ""(.*)""")]
+        public void ClickCmenuOfUserInManageOrganizationPopup(string cmenu, User.UserTypeEnum user)
+        {
+            Logger.LogMethodEntry("ManageStudentsDefaultPage", "ClickCmenuOfUserInManageOrganizationPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ManageStudentsDefaultPage().ClickUserCmenuInManageOrganizationPopup(cmenu, user);
+            Logger.LogMethodExit("ManageStudentsDefaultPage", "ClickCmenuOfUserInManageOrganizationPopup",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        /// <summary>
         /// Select Student from the Class Roster frame
         /// </summary>
         /// <param name="userName">This is the usertype enum.</param>
