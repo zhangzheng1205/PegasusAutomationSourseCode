@@ -170,6 +170,9 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     //Click on Sign Out Link
                     homePage.SignoutByDigitalPathCSTeacher(linkSignOut);
                     break;
+                case User.UserTypeEnum.DPCsNewAide:
+                    homePage.SignoutByDigitalPathCSAide();
+                    break;
                 case User.UserTypeEnum.DPCsStudent:
                 case User.UserTypeEnum.DPCsNewStudent:
                     // Click on sign out link

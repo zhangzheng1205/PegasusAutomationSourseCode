@@ -58,6 +58,22 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Aide Close The Welcome Message Popup.
+        /// </summary>
+        [When(@"I close the welcome message lightbox")]
+        public void AideCloseTheWelcomeMessagePopup()
+        {
+            // Close The Welcome Message Popup
+            Logger.LogMethodEntry("WelcomeMessage", "AideCloseTheWelcomeMessagePopup",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Close The Welcome Message LightBox
+            new WelcomeMessagesPage().AideCloseWelcomeMessageLightBox();
+            Logger.LogMethodExit("WelcomeMessage", "AideCloseTheWelcomeMessagePopup",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// The Welcome Message Popup Should Be Closed.
         /// </summary>
         /// <param name="userTypeEnum">This is user type enum.</param>

@@ -117,6 +117,11 @@ Given I browsed the login url for "DPCsNewTeacher"
 When I login to Pegasus as "DPCsNewTeacher" in "CourseSpace"
 Then I should be logged in successfully
 
+#Purpose:Verify The User LogOut As CourseSpaceAide
+Scenario: User LogOut As CourseSpaceAide
+When I "Sign Out" from the "DPCsAide"
+Then I should see the "Signed Out" message
+
 #Purpose:Verify The User LogOut As new CourseSpaceAide
 Scenario: User LogOut As new CourseSpaceAide
 When I "Sign Out" from the "DPCsNewAide"
@@ -126,6 +131,12 @@ Then I should see the "Signed Out" message
 Scenario: User Login As new CourseSpaceAide
 Given I browsed the login url for "DPCsNewAide"
 When I login to Pegasus as "DPCsNewAide" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User Login As CourseSpaceAide
+Scenario: User Login As CourseSpaceAide
+Given I browsed the login url for "DPNewAide"
+When I login to Pegasus as "DPNewAide" in "CourseSpace"
 Then I should be logged in successfully
 
 #Purpose:Verify The User LogOut As new CourseSpaceTeacher

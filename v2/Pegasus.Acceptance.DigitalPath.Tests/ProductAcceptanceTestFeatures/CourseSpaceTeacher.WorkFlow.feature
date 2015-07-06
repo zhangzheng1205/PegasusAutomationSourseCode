@@ -538,6 +538,7 @@ And I select "Aide" drop down option
 Then I should see the "Add User" popup
 When I create a new "DPCsNewAide" user in Coursespace
 Then I should see the student "DPCsNewAide" displayed in manage student pop up
+When I close the "Manage Students" window
 
 #Purpose: Teacher unenrolling students to Class
 #Product: Digital Path
@@ -585,3 +586,8 @@ Scenario: Teacher validate class display in home tab
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
 And I should able to see the "DigitalPathMasterLibrary" class
+
+#Purpose - View welcome message by the Aide
+Scenario: View Login Welcome Message by CS Aide
+When I close the welcome message lightbox
+Then I should see the welcome message popup closed successfully for "DPCsStudent"
