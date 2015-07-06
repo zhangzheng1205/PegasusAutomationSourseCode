@@ -467,6 +467,61 @@ namespace Pegasus.Pages.UI_Pages
             }
             return ProductName;
         }
+
+        /// <summary>
+        /// Remove product from curriculum
+        /// </summary>
+        /// <param name="prodName">This is the Product name.</param>
+        public void RemoveProductFromCurriculum(string cmenuOption, string productName)
+        {
+            //Remove product from curriculum
+            logger.LogMethodEntry("frmSetupWizardPage", "RemoveProductFromCurriculum",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Delecare object to compare with return value
+            string ProductNameText = null;
+            try
+            {
+                //Switch to Main widow, Home Page
+                base.SwitchToDefaultWindow();
+                //Focus on Main window
+                base.SelectDefaultWindow();
+                //Get the total number of products in curriculum channel
+                int getproductcount = base.GetElementCountByXPath(frmSetupWizardPageResource.
+                    frmSetupWizardPageResource_Verify_Product_InitialCount_Locator);
+                //Locate the desired Product in curriculumn channel
+                for (int initialcount = Convert.ToInt32(2);
+                    initialcount <= getproductcount; initialcount++)
+                {
+                    //Get the Product Name from object repository 
+                    ProductNameText = base.GetElementTextByXPath(string.Format(frmSetupWizardPageResource.
+                        frmSetupWizardPageResource_Verify_Product_Span_Id_Locator, initialcount));
+                    //Compare Product name
+                    if (ProductNameText.Equals(productName))
+                    {
+                        IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath(string.Format(frmSetupWizardPageResource.
+                            frmSetupWizardPageResource_Cmenu_Product_Xpath_Locator, initialcount));
+                        base.PerformClickAndHoldAction(getCmenuIcon);
+                        base.ClickByJavaScriptExecutor(getCmenuIcon);
+                        IWebElement getCmenuOption = base.GetWebElementPropertiesByXPath(string.Format(frmSetupWizardPageResource.
+                            frmSetupWizardPageResource_GetCmenuOptions_Xpath_Locator, initialcount));
+                        base.ClickByJavaScriptExecutor(getCmenuOption);
+
+                        // Select popup window
+                        base.SwitchToActivePageElement();
+                        base.WaitUntilPopUpLoads(frmSetupWizardPageResource.
+                            frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_Title);
+                        base.ClickButtonByPartialLinkText(frmSetupWizardPageResource.
+                            frmSetupWizardPageResource_RemoveProduct_ConfirmationPopup_OkButton_Id);
+                        break;
+                    }
+                }
+                base.SwitchToDefaultWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
     }
 }
 

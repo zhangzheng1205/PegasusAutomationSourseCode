@@ -124,6 +124,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductacceptanceTestDefinitions
           base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Remove subscribed product from curriculum channel
+        /// </summary>
+        /// <param name="cmenuOption"></param>
+        /// <param name="productName"></param>
+        [When(@"I click on ""(.*)"" option of product ""(.*)"" in the Curriculum channel")]
+        public void ClickRemoveCurriculumOptionOfProductInTheCurriculumChannel(string cmenuOption, Product.ProductTypeEnum productName)
+        {
+            // Remove product from curriculum
+            Product Product = Product.Get(productName);
+            string prodName = Product.Name.ToString();
+            Logger.LogMethodEntry("SetUpWizard", "ClickRemoveCurriculumOptionOfProductInTheCurriculumChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            new frmSetupWizardPage().RemoveProductFromCurriculum(cmenuOption, prodName);
+            Logger.LogMethodExit("SetUpWizard", "ClickRemoveCurriculumOptionOfProductInTheCurriculumChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
 

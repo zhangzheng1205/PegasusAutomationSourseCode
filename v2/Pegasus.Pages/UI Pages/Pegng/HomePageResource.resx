@@ -258,4 +258,7 @@
   <data name="HomePage_ClassesDivCount_CssSelector_Locator" xml:space="preserve">
     <value>div#cc &gt; div</value>
   </data>
+  <data name="HomePage_SuccessMessage_HomePage_Id_Locator" xml:space="preserve">
+    <value>lblMessage</value>
+  </data>
 </root>

@@ -240,7 +240,24 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new ContentLibraryPage().SelectProductFromCurriculumDropdown(productTitle);
             Logger.LogMethodExit("GlobalHome", "SelectProductInTheCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
         }
-   
+
+        /// <summary>
+        ///  Validate success message in Home page
+        /// </summary>
+        /// <param name="successMessage">This is the success message.</param>
+        [Then(@"I should see the successfull message ""(.*)"" in Home tab")]
+        public void VaidateSuccessfullMessageInHomeTab(string successMessage)
+        {
+            //Verify Successfull Message In Home Tab
+            Logger.LogMethodEntry("GlobalHome", "VaidateSuccessfullMessageInHomeTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert Display of Success Message
+            Logger.LogAssertion("VerifySuccessfullMessage",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(successMessage, new HomePage().GetSuccessMessageHomePage()));
+            Logger.LogMethodExit("GlobalHome", "VaidateSuccessfullMessageInHomeTabv",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
