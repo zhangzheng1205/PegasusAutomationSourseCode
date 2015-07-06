@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Pegasus.
+        ///   Looks up a localized string similar to Pegasus.
         /// </summary>
         internal static string GBRoasterEnrollFrmSchoolPage_RemoveUser_Popup_Title {
             get {

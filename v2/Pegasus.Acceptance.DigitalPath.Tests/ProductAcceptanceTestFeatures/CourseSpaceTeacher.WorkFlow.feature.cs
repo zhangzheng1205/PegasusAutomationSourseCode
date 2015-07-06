@@ -1410,7 +1410,7 @@ testRunner.And("I select \"Enroll from School\" drop down option", ((string)(nul
 #line 552
 testRunner.Then("I should see the \"Enroll from School\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 553
-testRunner.When("I unenroll student \"DPCsNewStudent\" from Class Roster frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I unenroll student \"DPCsStudentForUnenroll\" from Class Roster frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 554
 testRunner.Then("I should see the success message \"Users unenrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 555
@@ -1418,7 +1418,7 @@ testRunner.When("I close Enroll from school pop up", ((string)(null)), ((TechTal
 #line 556
 testRunner.Then("I should see \"Enroll from School\" pop up closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 557
-testRunner.And("I should see the student \"DPCsNewStudent\" not displayed in manage student pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I close the \"Manage Students\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
