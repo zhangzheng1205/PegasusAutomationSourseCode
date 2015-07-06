@@ -501,6 +501,7 @@ When I click on "Edit" cmenu option of the student "DPCsNewStudent"
 Then I should see the "Update user" popup
 When I update details of "DPCsNewStudent" user
 Then I should see the student "DPCsNewStudent" displayed in manage student pop up
+When I close Manage student pop up
 
 #Purpose: Teacher create new Student user in class roaster
 #Product: Digital Path
