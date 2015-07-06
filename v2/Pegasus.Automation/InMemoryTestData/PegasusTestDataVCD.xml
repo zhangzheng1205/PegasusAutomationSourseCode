@@ -18,7 +18,7 @@
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>64075951-6ab6-414f-ab19-835736d44f33</Name>
+      <Name>1fdcb490-ba9b-4842-94f0-a346c90a54ad</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -391,7 +391,7 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-    <User>
+      <User>
       <Name>vcdidlestudent</Name>
       <Password>password1</Password>
       <FirstName>Tom</FirstName>
@@ -805,12 +805,12 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>7bb15133-f77e-4f9a-a72d-7d14e8405a94</Name>
+      <Name>Benchmark Test 1</Name>
       <ActivityType>Test</ActivityType>
-      <ActivityID>DigitalPath_Activity_Test_UC1</ActivityID>
+      <ActivityId>DigitalPath_Activity_Test_UC1</ActivityId>
       <IsCreated>true</IsCreated>
     </Activity>
-    <Activity>
+       <Activity>
       <Name>5c380911-7c31-4352-82df-5b002be77ebd</Name>
       <ActivityType>MyTest</ActivityType>
       <IsCreated>true</IsCreated>
@@ -858,8 +858,8 @@
       <ProductType>DigitalPath</ProductType>
       <PeriodName>Trial01</PeriodName>
       <IsCreated>true</IsCreated>
-    </Product>
-    <Product>
+   </Product>
+   <Product>
       <Name>Custom Content</Name>
       <ProductType>DigitalPathCustomContent</ProductType>
       <IsCreated>true</IsCreated>
