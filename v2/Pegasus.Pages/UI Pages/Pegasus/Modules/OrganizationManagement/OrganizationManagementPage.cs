@@ -70,8 +70,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Refresh The Page
                 base.RefreshTheCurrentPage();
                 //Time Sleep To Page Get Refreshed
-                Thread.Sleep(Convert.ToInt32(OrganizationManagementPageResource.
-                    OrganizationManagement_Page_ThreadTime_Value));
+                base.WaitUntilWindowLoads(OrganizationManagementPageResource.
+                     OrganizationManagement_Page_OrganizationAdminWindow_Name);
                 //Wait for the window open
                 base.SelectWindow(OrganizationManagementPageResource.
                     OrganizationManagement_Page_OrganizationAdminWindow_Name);

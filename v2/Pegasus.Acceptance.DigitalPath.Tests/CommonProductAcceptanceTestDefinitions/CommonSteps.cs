@@ -82,8 +82,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
-            Thread.Sleep(Convert.ToInt32(CommonStepsResource.
-                CommonSteps_SleepTime_Value));
+            Thread.Sleep(10000);
             //Verify Correct Message Present on the Page
             IsMessageExists(successMessage,
                                  CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
