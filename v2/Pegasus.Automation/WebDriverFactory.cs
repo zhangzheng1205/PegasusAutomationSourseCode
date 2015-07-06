@@ -347,5 +347,45 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             return _browserName;
         }
+
+        /// <summary>
+        /// Returns an instance of the web driver based on test browser.
+        /// </summary>
+        /// <returns>The browser driver.</returns>
+        public static IWebDriver GetBrowserInstance(string browser)
+        {
+            IWebDriver webDriver = null;
+
+            if (_isRemote)
+            {
+                DesiredCapabilities remoteCapability;
+                switch (browser)
+                {
+                    // get browser driver based on browserName
+                    case PegasusBaseTestFixture.InternetExplorer: remoteCapability = DesiredCapabilities.InternetExplorer(); break;
+                    case PegasusBaseTestFixture.FireFox: remoteCapability = DesiredCapabilities.Firefox(); break;
+                    case PegasusBaseTestFixture.Safari: remoteCapability = DesiredCapabilities.Safari(); break;
+                    case PegasusBaseTestFixture.Chrome: remoteCapability = DesiredCapabilities.Chrome(); break;
+                    default: throw new ArgumentException("The suggested browser was not found");
+                }
+                // object representing the image of the page on the screen
+                webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability,
+                    commandTimeout: TimeSpan.FromSeconds(TimeOut));
+                webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
+            }
+            else
+            {
+                switch (browser)
+                {
+                    // get browser driver based on browserName
+                    case PegasusBaseTestFixture.InternetExplorer: webDriver = IeWebDriver(); break;
+                    case PegasusBaseTestFixture.FireFox: webDriver = FireFoxWebDriver(); break;
+                    case PegasusBaseTestFixture.Safari: webDriver = SafariWebDriver(); break;
+                    case PegasusBaseTestFixture.Chrome: webDriver = ChromeWebDriver(); break;
+                    default: throw new ArgumentException("The suggested browser was not found");
+                }
+            }
+            return webDriver;
+        }
     }
 }

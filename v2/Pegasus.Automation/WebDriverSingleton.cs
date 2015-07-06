@@ -77,6 +77,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             _webDriverSingleton = new WebDriverSingleton();
         }
 
+        public void ResetNewBrowserSingleton(string browser)
+        {
+            _webDriverSingleton = new WebDriverSingleton(browser);
+        }
+
         /// <summary>
         /// Creates an instance of the web driver
         /// </summary>
@@ -90,6 +95,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             _webDriver.Manage().Cookies.DeleteAllCookies();
             _webDriver.Manage().Window.Maximize();
         }
+
+        protected WebDriverSingleton(string browser)
+        {
+            WebDriverFactory.Init();
+            _webDriver = WebDriverFactory.GetBrowserInstance(browser);
+            _webDriver.Manage().Window.Maximize();
+
+        }
+
 
         /// <summary>
         /// Cleans up the web driver and related processess.
@@ -126,5 +140,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             Cleanup();
         }
+
+     
     }
 }
