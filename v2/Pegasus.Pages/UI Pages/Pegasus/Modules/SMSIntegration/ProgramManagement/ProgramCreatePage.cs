@@ -118,6 +118,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     }                
                 case Program.ProgramTypeEnum.PromotedAdminDigitalPathProgram:
+                case Program.ProgramTypeEnum.DigitalPath:
                     {
                         //Select Empty Class
                         base.SelectDropDownValueThroughTextById(ProgramCreatePageResource.
@@ -126,8 +127,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     }
                 case Program.ProgramTypeEnum.NovaNET:
-                case Program.ProgramTypeEnum.DigitalPath:
-                    {
+                   {
                         //Get the Empty Class from Memory
                         Course getEmptyClass = Course.Get(Course.CourseTypeEnum.EmptyClass);
                         //Select Empty Class

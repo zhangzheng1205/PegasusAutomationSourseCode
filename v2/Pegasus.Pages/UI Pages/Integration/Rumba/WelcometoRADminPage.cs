@@ -23,6 +23,38 @@ namespace Pegasus.Pages.UI_Pages
             GetInstance(typeof(WelcometoRADminPage));
 
         /// <summary>
+        /// Mouse over Products and Resources menu
+        /// </summary>
+        public void selectProductandResources()
+        {
+            //Hover on Products and Resources
+            logger.LogMethodEntry("WelcometoRADminPage", "selectProductandResources",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait For Element
+                String CurrentPage = base.GetPageTitle;
+                base.SelectWindow(CurrentPage);
+                base.WaitForElement(By.CssSelector(WelcometoRADminResource.
+                WelcomeRADmin_Page_CreateProductandResources_CSSSelector));
+                IWebElement getProRes = base.GetWebElementPropertiesByXPath(WelcometoRADminResource.
+                WelcomeRADmin_Page_CreateProductandResources_Xpath_Locator);
+                Thread.Sleep(2000);
+                //Focus on Products and Resources
+                base.PerformMouseHoverAction(getProRes);
+                base.PerformFocusOnElementAction(getProRes);
+                
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("WelcometoRADminPage", "selectProductandResources",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Click on Create product
         /// </summary>
         public void ClickonCreateProductLink()
@@ -32,17 +64,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Wait For Element
-                base.WaitForElement(By.PartialLinkText(WelcometoRADminResource.
-                    WelcomeRADmin_Page_CreateProduct_Link_Name));
-                //Mouse Hover On Products and Resources
-                IWebElement getProductLink = base.GetWebElementPropertiesByPartialLinkText
-                    (WelcometoRADminResource.
-                    WelcomeRADmin_Page_CreateProduct_Link_Name);
-                //mouse over on the product link
-                base.MouseOverByJavaScriptExecutor(getProductLink);        
-                IWebElement getCreateProductLink = base.GetWebElementPropertiesByPartialLinkText
-                    (WelcometoRADminResource.WelcomeRADmin_Page_CreateProduct_Text_Name);
+                selectProductandResources();
+                base.WaitForElement(By.XPath(WelcometoRADminResource.
+                WelcomeRADmin_Page_CreateProducts_Xpath_Locator));
+                base.IsElementPresent(By.LinkText(WelcometoRADminResource.WelcomeRADmin_Page_CreateProduct_Text_Name), 20);
+                IWebElement getCreateProductLink = base.GetWebElementPropertiesByXPath
+                    (WelcometoRADminResource.WelcomeRADmin_Page_CreateProducts_Xpath_Locator);
                 //Click on Element
                 base.ClickByJavaScriptExecutor(getCreateProductLink);
             }
@@ -63,25 +90,15 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("WelcometoRADminPage", "ClickCreateResourceLink",
                 base.IsTakeScreenShotDuringEntryExit);
             try
-            {                
-                String CurrentPage = base.GetPageTitle;
-                base.SelectWindow(CurrentPage);
-                //Wait For Element
-                base.WaitForElement(By.XPath(WelcometoRADminResource.
-                   WelcomeRADmin_Page_CreateResources_Xpath_Locator));               
-                IWebElement getProRes = base.GetWebElementPropertiesByXPath
-                    (WelcometoRADminResource.
-                    WelcomeRADmin_Page_CreateResources_Xpath_Locator);
-                //Mouseover on resource link
-                base.MouseOverByJavaScriptExecutor(getProRes);         
-                //Get Resource Property
-                IWebElement getCreatedResource = base.GetWebElementPropertiesByPartialLinkText
+            {
+                selectProductandResources();         
+                base.IsElementPresent(By.LinkText(WelcometoRADminResource.WelcomeRADmin_Page_CreateResource_Text_Name), 20);
+                IWebElement getCreateResourceLink = base.GetWebElementPropertiesByPartialLinkText
                     (WelcometoRADminResource.WelcomeRADmin_Page_CreateResource_Text_Name);
-                //Focus on Element
-                base.FocusOnElementByPartialLinkText(WelcometoRADminResource.
-                    WelcomeRADmin_Page_CreateResource_Text_Name);
-                //Click On Create Resource
-                base.ClickByJavaScriptExecutor(getCreatedResource);
+                base.PerformMouseHoverAction(getCreateResourceLink);
+                base.PerformFocusOnElementAction(getCreateResourceLink);
+                //Click on Element
+                base.ClickByJavaScriptExecutor(getCreateResourceLink);
             }
             catch (Exception e)
             {
@@ -100,18 +117,20 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("WelcometoRADminPage", "ClickOnPlaceAnOrderLink",
                   base.IsTakeScreenShotDuringEntryExit);
             try
-            {                
+            {
                 //Wait For Element
-                base.WaitForElement(By.PartialLinkText(WelcometoRADminResource.
-                    WelcomeRADmin_Page_Licenses_Text_Name));
-                //Mouse Hover On Licenses Property
-                IWebElement getLicensesLink = base.GetWebElementPropertiesByPartialLinkText
-                    (WelcometoRADminResource.WelcomeRADmin_Page_Licenses_Text_Name);
-                //Perform Focus on Element
-                base.MouseOverByJavaScriptExecutor(getLicensesLink);               
-                //Click On Place An Order
-                IWebElement getPlaceOrderLink = base.GetWebElementPropertiesByPartialLinkText
-                    (WelcometoRADminResource.WelcomeRADmin_Page_PlaceAnOrder_Text_Name);
+                String CurrentPage = base.GetPageTitle;
+                base.SelectWindow(CurrentPage);
+                base.WaitForElement(By.CssSelector(WelcometoRADminResource.
+                WelcomeRADmin_Page_CreateProductandResources_CSSSelector));
+                IWebElement licenses = base.GetWebElementPropertiesByXPath(WelcometoRADminResource.
+                    WelcomeRADmin_Page_Licenses_Xpath_Locator);
+                Thread.Sleep(2000);
+                //Mouse hover on Licenses
+                base.PerformMouseHoverAction(licenses);
+                //Focus on Place an Order link
+                IWebElement getPlaceOrderLink = base.GetWebElementPropertiesByXPath
+                    (WelcometoRADminResource.WelcomeRADmin_Page_PlaceAnOrder_Xpath_Locator);
                 //Click on Link
                 base.ClickByJavaScriptExecutor(getPlaceOrderLink);
             }

@@ -121,7 +121,7 @@
     <value>2</value>
   </data>
   <data name="ProgramCreation_Page_DPEmptyClass_Value" xml:space="preserve">
-    <value>Automation_EmptyClass</value>
+    <value>5.1 Empty Class for DP - 6/30/10</value>
   </data>
   <data name="ProgramCreation_Page_EmptyClass_DropDown_Id_Locator" xml:space="preserve">
     <value>drpEmptyClass</value>

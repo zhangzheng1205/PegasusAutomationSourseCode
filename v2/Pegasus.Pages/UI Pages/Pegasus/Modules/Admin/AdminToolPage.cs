@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Navigate to Manage Program Page
                     NavigateToSubTabOfPublishingTab(AdminToolPageResource.
-                        AdminTool_Page_ManagePrograms_Tab_Text_Locator,
+                        AdminTool_Page_ManagePrograms_Tab_CSSSelector,
                         AdminToolPageResource.
                         AdminTool_Page_ManagePrograms_Page_Title_Name);
                 }
@@ -318,7 +318,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Navigate to Manage Products Page If not Opened
                     NavigateToSubTabOfPublishingTab(AdminToolPageResource.
-                        AdminTool_Page_ManageProducts_Tab_Text_Locator, AdminToolPageResource.
+                        AdminTool_Page_ManageProducts_Tab_CSSSelector, AdminToolPageResource.
                         AdminTool_Page_ManageProducts_Page_Title_Name);
                 }
             }
@@ -355,8 +355,8 @@ namespace Pegasus.Pages.UI_Pages
                 AdminTool_Page_Publishing_Tab_Text_Locator);
             base.ClickByJavaScriptExecutor(getPublishingTab);
             //Click on sub tab 
-            base.WaitForElement(By.PartialLinkText(subTab));
-            IWebElement getManageProductTab = base.GetWebElementPropertiesByPartialLinkText
+            base.WaitForElement(By.CssSelector(subTab));
+            IWebElement getManageProductTab = base.GetWebElementPropertiesByCssSelector
                 (subTab);
             base.ClickByJavaScriptExecutor(getManageProductTab);
             //Selecting The Window

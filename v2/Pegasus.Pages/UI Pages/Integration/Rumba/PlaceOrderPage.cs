@@ -8,6 +8,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Integration.Rumba;
+using System.Collections.Generic;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -63,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Enter Rumba License Details.
         /// </summary>
         /// <param name="organizationLevelEnum">This is organization level enum.</param>
-        /// <param name="organizationTypeEnum">This is organization type wnum.</param>
+        /// <param name="organizationTypeEnum">This is organization type enum.</param>
         private void EnterRumbaLicenseDetail(Organization.OrganizationLevelEnum
             organizationLevelEnum, Organization.OrganizationTypeEnum organizationTypeEnum)
         {
@@ -214,6 +215,8 @@ namespace Pegasus.Pages.UI_Pages
             //Focus on Element
             base.PerformMoveToElementAction(getAutocompleteElement);
             getAutocompleteElement.SendKeys(organizationName);
+            Thread.Sleep(Convert.ToInt32(PlaceOrderPageResource.
+               PlaceOrder_Page_ThreadSleepTime));
             //Wait For Element
             base.WaitForElement(By.CssSelector(PlaceOrderPageResource.
                 PlaceOrder_Page_Organization_Css_Locator));

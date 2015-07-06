@@ -295,11 +295,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Manage Products.
+        ///   Looks up a localized string similar to td#_ctl9_td_3.SubNavigationTab a#_ctl9_anc_3.SubNavigationText.
         /// </summary>
-        internal static string AdminTool_Page_ManageProducts_Tab_Text_Locator {
+        internal static string AdminTool_Page_ManageProducts_Tab_CSSSelector {
             get {
-                return ResourceManager.GetString("AdminTool_Page_ManageProducts_Tab_Text_Locator", resourceCulture);
+                return ResourceManager.GetString("AdminTool_Page_ManageProducts_Tab_CSSSelector", resourceCulture);
             }
         }
         
@@ -313,11 +313,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Manage Programs.
+        ///   Looks up a localized string similar to td#_ctl9_td_2.SubNavigationTabSelected a#_ctl9_anc_2.SubNavigationText.
         /// </summary>
-        internal static string AdminTool_Page_ManagePrograms_Tab_Text_Locator {
+        internal static string AdminTool_Page_ManagePrograms_Tab_CSSSelector {
             get {
-                return ResourceManager.GetString("AdminTool_Page_ManagePrograms_Tab_Text_Locator", resourceCulture);
+                return ResourceManager.GetString("AdminTool_Page_ManagePrograms_Tab_CSSSelector", resourceCulture);
             }
         }
         

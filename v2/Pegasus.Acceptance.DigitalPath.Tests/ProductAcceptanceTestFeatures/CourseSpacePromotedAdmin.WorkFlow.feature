@@ -4,7 +4,7 @@
 					so that I would validate all the promoted admin scenarios are working fine.
 
 #Purpose: UseCase To create Basal Program in course space  
-Scenario: Create Basal Program by CS PromotedAdmin
+Scenario: Create Basal Program by CS Admin
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Programs' Page
@@ -12,11 +12,11 @@ And I create the "PromotedAdminDigitalPathProgram" Program in coursespace
 Then I should see the successfull message "Program created successfully."
 
 #Purpose: UseCase To create Basal Product in course space  
-Scenario: Create Basal Product by CS PromotedAdmin
+Scenario: Create Basal Product by CS Admin
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Products' Page
-When I create the "PromotedAdminDigitalPath" Product in coursespace using "PromotedAdminDigitalPathProgram" Program
+And I create the "PromotedAdminDigitalPath" Product in coursespace using "PromotedAdminDigitalPathProgram" Program
 Then I should see the successfull message "New product created successfully."
 
 #Purpose: Edit The School Level Organization for Promoted Admin
@@ -32,7 +32,7 @@ And I edit the "School" level Organization in "DigitalPath"
 Then I should see the successfull message "Organization updated successfully."
 
 #Purpose: To create Teacher from Users subtab for Promoted Admin
-Scenario: Creating Teacher in Users Tab by CS PromotedAdmin 
+Scenario: Creating Teacher in Users Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -46,7 +46,7 @@ Then I should see the "DPCsTeacher" in "Users" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Student from Users subtab for Promoted Admin
-Scenario: Creating Student in Users Tab by CS PromotedAdmin 
+Scenario: Creating Student in Users Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -60,7 +60,7 @@ Then I should see the "DPCsStudent" in "Users" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Aide from Users subtab for Promoted Admin
-Scenario: Creating Aide in Users Tab by CS PromotedAdmin 
+Scenario: Creating Aide in Users Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -74,7 +74,7 @@ Then I should see the "DPCsAide" in "Users" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Users subtab for Promoted Admin
-Scenario: Creating Organization Admin in Users Tab by CS PromotedAdmin 
+Scenario: Creating Organization Admin in Users Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -88,7 +88,7 @@ Then I should see the "DPCsOrganizationAdmin" in "Users" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Teacher from Enrollment subtab for Promoted Admin
-Scenario: Creating Teacher in Enrollment Tab by CS PromotedAdmin 
+Scenario: Creating Teacher in Enrollment Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -102,7 +102,7 @@ Then I should see the "DPCsTeacher" in "Enrollment" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Student from Enrollment subtab for Promoted Admin
-Scenario: Creating Student in Enrollment Tab by CS PromotedAdmin 
+Scenario: Creating Student in Enrollment Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -116,7 +116,7 @@ Then I should see the "DPCsStudent" in "Enrollment" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Aide from Enrollment subtab for Promoted Admin
-Scenario: Creating Aide in Enrollment Tab by CS PromotedAdmin 
+Scenario: Creating Aide in Enrollment Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -130,7 +130,7 @@ Then I should see the "DPCsAide" in "Enrollment" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Enrollment subtab for Promoted Admin
-Scenario: Creating Organization Admin in Enrollment Tab by CS PromotedAdmin 
+Scenario: Creating Organization Admin in Enrollment Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -144,7 +144,7 @@ Then I should see the "DPCsOrganizationAdmin" in "Enrollment" subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Teacher from Classes subtab for Promoted Admin
-Scenario: Creating Teacher in Classes Tab by CS PromotedAdmin 
+Scenario: Creating Teacher in Classes Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -158,7 +158,7 @@ When I close the "Manage Students" window
 And I close the "Manage Organization" window
 
 #Purpose: To create Student from Classes subtab for Promoted Admin
-Scenario: Creating Student in Classes Tab by CS PromotedAdmin 
+Scenario: Creating Student in Classes Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
@@ -172,7 +172,7 @@ When I close the "Manage Students" window
 And I close the "Manage Organization" window
 
 #Purpose: To create Aide from Classes subtab for Promoted Admin
-Scenario: Creating Aide in Classes Tab by CS PromotedAdmin 
+Scenario: Creating Aide in Classes Tab by CS Admin 
 When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"

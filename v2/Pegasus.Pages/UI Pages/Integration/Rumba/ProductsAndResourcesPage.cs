@@ -41,11 +41,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Wait For Element
-                base.WaitForElement(By.PartialLinkText(ProductsAndResourcesPageResource.
-                    ProductsAndResources_Page_ProductAndResourcesTab_Text_Locator));
-                IWebElement getProductResourceLink=base.GetWebElementPropertiesByPartialLinkText
+                base.WaitForElement(By.CssSelector(ProductsAndResourcesPageResource.
+                    ProductsAndResources_Page_ProductAndResourcesTab_CSSSelector));
+                IWebElement getProductResourceLink = base.GetWebElementPropertiesByXPath
                     (ProductsAndResourcesPageResource.
-                    ProductsAndResources_Page_ProductAndResourcesTab_Text_Locator);
+                    ProductsAndResources_Page_CreateProductandResources_Xpath_Locator);
                 //Click ProductsAndResources Tab Link
                 base.ClickByJavaScriptExecutor(getProductResourceLink);
             }

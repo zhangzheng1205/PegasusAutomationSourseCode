@@ -123,8 +123,8 @@
   <data name="ProductsAndResources_Page_AddResourcesPopup_Ok_Button_Id_Locator" xml:space="preserve">
     <value>backfillSubscriptionsSubmit</value>
   </data>
-  <data name="ProductsAndResources_Page_ProductAndResourcesTab_Text_Locator" xml:space="preserve">
-    <value>Products &amp; Resources</value>
+  <data name="ProductsAndResources_Page_ProductAndResourcesTab_CSSSelector" xml:space="preserve">
+    <value>ul#nav li.top.top_selected a.top_link span</value>
   </data>
   <data name="ProductsAndResources_Page_Product_Search_Button_Id_Locator" xml:space="preserve">
     <value>searchProductAndResources</value>
@@ -164,5 +164,8 @@
   </data>
   <data name="ProductsAndResources_Page_TimeOut_Config_Key" xml:space="preserve">
     <value>ElementFindTimeOutInSeconds</value>
+  </data>
+  <data name="ProductsAndResources_Page_CreateProductandResources_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div[2]/div[3]/ul/li[2]/a/span</value>
   </data>
 </root>

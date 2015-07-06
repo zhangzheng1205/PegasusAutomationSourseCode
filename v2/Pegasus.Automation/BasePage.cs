@@ -492,7 +492,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="iWebElement">Defines the interface through which the user controls elements on the page.</param>
         /// <remarks>This is working with google chome and other browsers.</remarks>
-        private void PerformFocusOnElementAction(IWebElement iWebElement)
+        protected void PerformFocusOnElementAction(IWebElement iWebElement)
         {
             PerformMoveToElementAction(iWebElement);
         }
@@ -2396,7 +2396,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             iWebElement.SendKeys(Convert.ToString(character));
             builder.KeyDown(Keys.Control).SendKeys(Convert.ToString(character)).Perform();
         }
-
 
         /// <summary>
         /// Perform key down and then press alternate key. 

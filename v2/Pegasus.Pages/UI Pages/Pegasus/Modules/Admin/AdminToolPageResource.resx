@@ -180,14 +180,14 @@
   <data name="AdminTool_Page_ManageProducts_Page_Title_Name" xml:space="preserve">
     <value>Manage Products</value>
   </data>
-  <data name="AdminTool_Page_ManageProducts_Tab_Text_Locator" xml:space="preserve">
-    <value>Manage Products</value>
+  <data name="AdminTool_Page_ManageProducts_Tab_CSSSelector" xml:space="preserve">
+    <value>td#_ctl9_td_3.SubNavigationTab a#_ctl9_anc_3.SubNavigationText</value>
   </data>
   <data name="AdminTool_Page_ManagePrograms_Page_Title_Name" xml:space="preserve">
     <value>Manage Programs</value>
   </data>
-  <data name="AdminTool_Page_ManagePrograms_Tab_Text_Locator" xml:space="preserve">
-    <value>Manage Programs</value>
+  <data name="AdminTool_Page_ManagePrograms_Tab_CSSSelector" xml:space="preserve">
+    <value>td#_ctl9_td_2.SubNavigationTabSelected a#_ctl9_anc_2.SubNavigationText</value>
   </data>
   <data name="AdminTool_Page_Publishing_Tab_Text_Locator" xml:space="preserve">
     <value>Publishing</value>

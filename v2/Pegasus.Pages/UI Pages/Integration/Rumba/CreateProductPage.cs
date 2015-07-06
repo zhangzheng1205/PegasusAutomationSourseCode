@@ -51,13 +51,13 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Submit button
                 base.ClickByJavaScriptExecutor(getCreateProductButton);
                 //Select Window
+                base.WaitUntilWindowLoads(CreateProductPageResource.
+                    CreateProduct_Page_PageTitle + productname);
                 base.SelectWindow(CreateProductPageResource.
                     CreateProduct_Page_PageTitle + productname);
-                //Get the product id
-                string getProductID = base.GetElementTextByXPath(CreateProductPageResource.
-                    CreateProduct_Page_Productid_Display_Xpath);
-                //Save the product id in memory
-                SaveProductIdInMemory(Convert.ToInt32(getProductID));
+                //Gets the Product Id
+                int productID = GetRumbaProductID();
+                SaveProductIdInMemory(productID);
             }
             catch (Exception e)
             {
@@ -321,34 +321,6 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Get The Rumba Product ID.
-        /// </summary>
-        /// <returns>Product id.</returns>
-        public int GetRumbaProductID()
-        {
-            //Gets the product id
-            logger.LogMethodEntry("CreateProductPage",
-                "GetRumbaProductID", base.IsTakeScreenShotDuringEntryExit);
-            //Initialize Variable
-            int getProductId = Convert.ToInt32(CreateProductPageResource.
-                CreateProduct_Page_ProductId_DefaultValue);
-            try
-            {
-                //Get Product Id 
-                getProductId = Convert.ToInt32(base.GetElementTextByXPath
-                        (CreateProductPageResource.
-                        CreateProduct_Page_Productid_Display_Xpath));
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            logger.LogMethodExit("CreateProductPage",
-            "GetRumbaProductID", base.IsTakeScreenShotDuringEntryExit);
-            return getProductId;
-        }
-
-        /// <summary>
         /// Generate The 13 Digit Random Number For Order ID.
         /// </summary>
         /// <returns>13 Digit Order ID.</returns>
@@ -365,6 +337,34 @@ namespace Pegasus.Pages.UI_Pages
                  "GetRandomOrderID", base.IsTakeScreenShotDuringEntryExit);
             //Return Order ID
             return getOrderId;
+        }
+        /// <summary>
+        /// Get The Rumba Product ID.
+        /// </summary>
+        /// <returns>Product id.</returns>
+        public int GetRumbaProductID()
+        {
+            //Gets the product id
+            logger.LogMethodEntry("CreateProductPage",
+                "GetRumbaProductID", base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getProductId = Convert.ToInt32(CreateProductPageResource.
+                CreateProduct_Page_ProductId_DefaultValue);
+            try
+            {
+                //Get Product Id 
+                string getproductId = base.GetElementTextByXPath(CreateProductPageResource.
+                        CreateProduct_Page_Productid_Display_Xpath);
+                // Convert And Get Product ID
+                getProductId = Convert.ToInt32(getproductId);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CreateProductPage",
+            "GetRumbaProductID", base.IsTakeScreenShotDuringEntryExit);
+            return getProductId;
         }
     }
 }
