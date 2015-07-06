@@ -123,6 +123,9 @@
   <data name="ImportUsers_Page_BulkUser_File_Path" xml:space="preserve">
     <value>\TestData\BulkUser_Template.xls</value>
   </data>
+  <data name="ImportUsers_Page_BulkUser_File_Path1" xml:space="preserve">
+    <value>\TestData\BulkUpload\BulkUser_Template.xls</value>
+  </data>
   <data name="ImportUsers_Page_Button_SaveAndReturn_Id_Locator" xml:space="preserve">
     <value>imgSaveClose</value>
   </data>

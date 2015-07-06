@@ -584,6 +584,25 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("CreateUser", "UpdateDetailsOfUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Teacher upload the student bulk upload file
+        /// </summary>
+        /// <param name="fileName">This is the file name.</param>
+        [When(@"I upload the file BulkUser_Template")]
+        public void UploadBulkStudentFile()
+        {
+            // Bulk Upload document
+            Logger.LogMethodEntry("CreateUser",
+                "UploadBulkStudentFile",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ManageStudentsDefaultPage().ImportUsers();
+            Logger.LogMethodExit("CreateUser", "UploadBulkStudentFile",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
