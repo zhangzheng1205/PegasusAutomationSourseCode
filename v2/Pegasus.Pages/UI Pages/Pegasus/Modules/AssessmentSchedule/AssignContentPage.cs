@@ -1477,7 +1477,7 @@ namespace Pegasus.Pages.UI_Pages
             {
 
                 User user = User.Get(User.UserTypeEnum.DPCsTeacher);
-                DateTime dateTime = user.CurrentProfileDateTime.AddMinutes(120);
+                DateTime dateTime = user.CurrentProfileDateTime;
                 string currentDateTime = dateTime.ToString();
                 // Get the current date and time
                 string currentTime = currentDateTime.Split(' ')[1];
