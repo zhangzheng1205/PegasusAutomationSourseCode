@@ -807,6 +807,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
 
                 //Updates the section name and id at in-memory during runtime when environment is CGIE
                 case "CGIE":
+                case "CGIEAKAMAI":
                     Course courseCGIE = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
                     courseCGIE.SectionName = CommonStepsResource.CommonSteps_CGIE_SectionName_Value;
                     courseCGIE.SectionId = CommonStepsResource.CommonSteps_CGIE_CourseId_Value;
@@ -814,6 +815,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                     break;
                 //Updates the section name and id at in-memory during runtime when environment is PPE
                 case "PPE":
+                case "PPEAKAMAI":
                     Course coursePPE = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
                     coursePPE.SectionName = CommonStepsResource.CommonSteps_PPE_SectionName_Value;
                     coursePPE.SectionId = CommonStepsResource.CommonSteps_PPE_CourseId_Value;
@@ -821,6 +823,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                     break;
                 //Updates the section name and id at in-memory during runtime when environment is PROD
                 case "PROD":
+                case "PRODAKAMAI":
                     Course coursePROD = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
                     coursePROD.SectionName = CommonStepsResource.CommonSteps_PROD_SectionName_Value;
                     coursePROD.SectionId = CommonStepsResource.CommonSteps_PROD_CourseId_Value;
@@ -828,6 +831,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                     break;
                 //Updates the section name and id at in-memory during runtime when environment is VCD
                 case "VCD":
+                case "VCDAKAMAI":
                     Course courseVCD = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
                     courseVCD.SectionName = CommonStepsResource.CommonSteps_VCD_SectionName_Value;
                     courseVCD.SectionId = CommonStepsResource.CommonSteps_VCD_CourseId_Value;

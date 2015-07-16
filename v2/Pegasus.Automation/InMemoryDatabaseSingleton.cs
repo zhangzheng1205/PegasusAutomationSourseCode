@@ -37,8 +37,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             // based on environment deserialize xml data in memory
             switch (AutomationConfigurationManager.ApplicationTestEnvironment.ToUpper())
             {
-                case "ST": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
-                    (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 case "CGIE": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 case "PPE": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
@@ -47,6 +45,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 case "VCD": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
+                case "VCDAKAMAI": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                    ("VCD")); break;
+                case "CGIEAKAMAI": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                   ("CGIE")); break;
+                case "PPEAKAMAI": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                   ("PPE")); break;
+                case "PRODAKAMAI": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                   ("PROD")); break;
+
                 default: throw new ArgumentException("The suggested environment was not found");
             }
         }

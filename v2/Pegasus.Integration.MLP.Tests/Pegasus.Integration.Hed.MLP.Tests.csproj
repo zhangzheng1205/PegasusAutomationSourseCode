@@ -189,6 +189,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PEGASUS-9358.Integration.feature</DependentUpon>
     </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\SMS.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMS.Integration.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="IntegrationAcceptanceOrderedTests\OrderedTest.Integration.SMS.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-8159.Integration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PEGASUS-8159.Integration.feature.cs</LastGenOutput>
@@ -300,6 +308,10 @@
     </None>
     <None Include="IntegrationAcceptanceOrderedTests\OrderedTest.Integration.MLP.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\SMS.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SMS.Integration.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
