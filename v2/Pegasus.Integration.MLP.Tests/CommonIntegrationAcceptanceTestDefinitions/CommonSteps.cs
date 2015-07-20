@@ -44,7 +44,14 @@ namespace Pegasus.Integration.MLP.Tests.
         /// Check If The Expected Page Is Opened.
         /// </summary>
         /// <param name="expectedPageTitle">This is Expected Page Title.</param>
-        [Then("I should be on the \"(.*)\" page")]
+
+        [Then(@"I am on the ""(.*)"" page")]
+        //public void ThenIAmOnThePage(string p0)
+        //{
+        //    ScenarioContext.Current.Pending();
+        //}
+
+      //  [Then("I should be on the \"(.*)\" page")]
         [Given(@"I am on the ""(.*)"" page")]
         public void ShowTheExpectedPage(String expectedPageTitle)
         {
@@ -380,23 +387,23 @@ namespace Pegasus.Integration.MLP.Tests.
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
-        [BeforeScenario]
-        public static void Setup()
-        {
-            //Reset The WebDriver Instance
-            new CommonSteps().ResetWebdriver();
-        }
+        //[BeforeScenario]
+        //public static void Setup()
+        //{
+        //    //Reset The WebDriver Instance
+        //    new CommonSteps().ResetWebdriver();
+        //}
 
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
-        /// and stops the webdriver.
-        /// </summary>
-        [AfterScenario]
-        public static void TearDown()
-        {
-            // clean processess
-            new CommonSteps().WebDriverCleanUp();
-        }
+        ///// <summary>
+        ///// Deinitialize Pegasus test after the execution of test
+        ///// and stops the webdriver.
+        ///// </summary>
+        //[AfterScenario]
+        //public static void TearDown()
+        //{
+        //    // clean processess
+        //    new CommonSteps().WebDriverCleanUp();
+        //}
 
     }
 }

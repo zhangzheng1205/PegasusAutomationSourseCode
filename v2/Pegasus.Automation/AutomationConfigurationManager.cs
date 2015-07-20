@@ -28,9 +28,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
                 ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
-                case "ST":
-                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootST_Key];
-                    break;
                 case "PPE":
                     applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPPE_Key];
                     break;
@@ -42,6 +39,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     break;
                 case "VCD":
                     applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootVCD_Key];
+                    break;
+                case "VCDAKAMAI":
+                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootVCDAkamai_Key];
+                    break;
+                case "CGIEAKAMAI":
+                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootCGIEAkamai_Key];
+                    break;
+                case "PPEAKAMAI":
+                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPPEAkamai_Key];
+                    break;
+                case "PRODAKAMAI":
+                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPRODAkamai_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
@@ -113,6 +122,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     break;
                 case "VCD":
                     applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootVCD_Key];
+                    break;
+                case "VCDAKAMAI":
+                    applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootVCDAkamai_Key];
+                    break;
+                case "CGIEAKAMAI":
+                    applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootCGIEAkamai_Key];
+                    break;
+                case "PPEAKAMAI":
+                    applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPPEAkamai_Key];
+                    break;
+                case "PRODAKAMAI":
+                    applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPRODAkamai_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }

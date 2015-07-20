@@ -120,17 +120,29 @@
   <data name="BrowserName_Key" xml:space="preserve">
     <value>Browser</value>
   </data>
+  <data name="CourseSpaceURLRootCGIEAkamai_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootCGIEAkamai</value>
+  </data>
   <data name="CourseSpaceURLRootCGIE_Key" xml:space="preserve">
     <value>CourseSpaceURLRootCGIE</value>
   </data>
+  <data name="CourseSpaceURLRootPPEAkamai_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootPPEAkamai</value>
+  </data>
   <data name="CourseSpaceURLRootPPE_Key" xml:space="preserve">
     <value>CourseSpaceURLRootPPE</value>
+  </data>
+  <data name="CourseSpaceURLRootPRODAkamai_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootPRODAkamai</value>
   </data>
   <data name="CourseSpaceURLRootPROD_Key" xml:space="preserve">
     <value>CourseSpaceURLRootPROD</value>
   </data>
   <data name="CourseSpaceURLRootST_Key" xml:space="preserve">
     <value>CourseSpaceURLRootST</value>
+  </data>
+  <data name="CourseSpaceURLRootVCDAkamai_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootVCDAkamai</value>
   </data>
   <data name="CourseSpaceURLRootVCD_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVCD</value>
