@@ -832,43 +832,43 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Verify the processing text from the calendar frame
-        /// </summary>
-        /// <returns>Content Copy text</returns>
-        public Boolean IsAssignedTextPresent()
-        {
-            //Drag and drop the activity on calendar frame
-            logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "IsAssignedTextPresent",
-                   base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                // Select default window
-                base.SwitchToDefaultPageContent();
-                base.SelectWindow(CalendarDefaultGlobalUXPageResource
-                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
-                // switch to planner frame
-                base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
-                    .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
-                base.WaitForElement(By.ClassName(CalendarDefaultGlobalUXPageResource
-                    .CalendarDefaultGlobalUX_Page_DropFrame_ClassName));
-                // Verify the content is being prepared text on the calendar
-                VerifyAssignedTextOnCalendar();
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            //Drag and drop the activity on calendar frame
-            logger.LogMethodExit("CalendarDefaultGlobalUXPage", "IsAssignedTextPresent",
-                   base.IsTakeScreenShotDuringEntryExit);
-            return true;
-        }
+        ///// <summary>
+        ///// Verify the processing text from the calendar frame
+        ///// </summary>
+        ///// <returns>Content Copy text</returns>
+        //public Boolean IsAssignedTextPresent()
+        //{
+        //    //Drag and drop the activity on calendar frame
+        //    logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "IsAssignedTextPresent",
+        //           base.IsTakeScreenShotDuringEntryExit);
+        //    try
+        //    {
+        //        // Select default window
+        //        base.SwitchToDefaultPageContent();
+        //        base.SelectWindow(CalendarDefaultGlobalUXPageResource
+        //            .CalendarDefaultGlobalUX_Page_Window_TitleName);
+        //        // switch to planner frame
+        //        base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
+        //            .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+        //        base.WaitForElement(By.ClassName(CalendarDefaultGlobalUXPageResource
+        //            .CalendarDefaultGlobalUX_Page_DropFrame_ClassName));
+        //        // Verify the content is being prepared text on the calendar
+        //        VerifyAssignedTextOnCalendar();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        ExceptionHandler.HandleException(e);
+        //    }
+        //    //Drag and drop the activity on calendar frame
+        //    logger.LogMethodExit("CalendarDefaultGlobalUXPage", "IsAssignedTextPresent",
+        //           base.IsTakeScreenShotDuringEntryExit);
+        //    return true;
+        //}
 
         /// <summary>
         /// Verify the "content is being" text on the calendar frame
         /// </summary>
-        public void VerifyAssignedTextOnCalendar()
+        public void VerifyAssignedTextOnCalendar(string productName)
         {
             // verify the activity processing text on calendar frame
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "VerifyAssignedTextOnCalendar",
@@ -889,19 +889,11 @@ namespace Pegasus.Pages.UI_Pages
                 if (getCalendarText.Text.Contains(CalendarDefaultGlobalUXPageResource
                .CalendarDefaultGlobalUX_Page_DropActivityFrame_Text))
                 {
-                    Thread.Sleep(Convert.ToInt32(CalendarDefaultGlobalUXPageResource
-                        .CalendarDefaultGlobalUX_Page_TwentySecsThread_Value));
-                    // refresh the frame and switch to window
                     base.SwitchToDefaultPageContent();
                     base.RefreshIFrameByJavaScriptExecutor(CalendarDefaultGlobalUXPageResource
                     .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
-                    base.WaitUntilWindowLoads(CalendarDefaultGlobalUXPageResource
-                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
-                    base.SelectWindow(CalendarDefaultGlobalUXPageResource
-                    .CalendarDefaultGlobalUX_Page_Window_TitleName);
-                    // switch to planner frame
-                    base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
-                        .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                  
+                    this.SelectProductInCurriculumDropdown(productName);
                 }
                 else
                 { break; }
@@ -1397,9 +1389,10 @@ namespace Pegasus.Pages.UI_Pages
             // Click image icon
             IWebElement getSelectProduct = base.GetWebElementPropertiesById(CalendarDefaultGlobalUXPageResource.
               CalendarDefaultGlobalUX_Page_ProductSelect_CmenuIcon_ID);
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
             base.PerformMouseHoverByJavaScriptExecutor(getSelectProduct);
             base.ClickByJavaScriptExecutor(getSelectProduct);
+            Thread.Sleep(4000);
             // Initialize the product name variable to empty
             string getProductName = string.Empty;
             int getProductCount = base.GetElementCountByXPath(
@@ -1433,7 +1426,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="expectedAssetName">This is the Asset name.</param>
         /// <param name="expectedPeriodName">This is the period name.</param>
         public bool IsAssetPresentUnderPeriodInCalendarDayView
-            (string expectedAssetName, string expectedPeriodName)
+            (string expectedAssetName, string expectedPeriodName, string expectedProductName)
         {
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "IsAssetPresentUnderPeriodInCalendarDayView",
                                base.IsTakeScreenShotDuringEntryExit);
@@ -1466,6 +1459,7 @@ namespace Pegasus.Pages.UI_Pages
                     // switch to planner frame
                     base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
                         .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    this.SelectProductInCurriculumDropdown(expectedProductName);
                     //Get the count of periods present in calendar
                     periodCount = base.GetElementCountByCssSelector(CalendarDefaultGlobalUXPageResource.
                       CalendarDefaultGlobalUX_Page__Planner_PeriodNames_Class_Value);
@@ -1698,7 +1692,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
 
-        public bool IsDragDropActivityPresentInCalendar(string activityName)
+        public bool IsDragDropActivityPresentInCalendar(string activityName,string productName)
         {
             // verify the activity processing text on calendar frame
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "VerifyAssignedTextOnCalendar",
@@ -1725,6 +1719,7 @@ namespace Pegasus.Pages.UI_Pages
                     // switch to planner frame
                     base.SwitchToIFrame(CalendarDefaultGlobalUXPageResource
                         .CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
+                    this.SelectProductInCurriculumDropdown(productName);
                     isAnyActivityPresent = base.IsElementPresent(By.
                         CssSelector(CalendarDefaultGlobalUXPageResource.
                         CalendarDefaultGlobalUX_Page_DueAssignments_FirstPeriod_CSSSector_Locator), 5);

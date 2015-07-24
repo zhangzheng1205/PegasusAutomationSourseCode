@@ -107,10 +107,10 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyAssignedActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert assigned activity on the calendar frame
-            Logger.LogAssertion("VerifyPrsentationLaunch", 
-                ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
-                    IsAssignedTextPresent()));
+            //Logger.LogAssertion("VerifyPrsentationLaunch", 
+            //    ScenarioContext.Current.ScenarioInfo.Title,
+            //    () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
+            //        IsAssignedTextPresent()));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAssignedActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -223,13 +223,15 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// <summary>
         /// Refresh the planner tab.
         /// </summary>
-        [When(@"I refresh the frame till content is copied")]
-        public void RefreshCalendarFrame()
+        [When(@"I refresh the frame till content is copied for ""(.*)"" product")]
+        public void RefreshCalendarFrame(Product.ProductTypeEnum productName)
         {
             //Validate assigned content in calendar
             Logger.LogMethodEntry("AssignmentCalendar", "RefreshCalendarFrame",
                 base.IsTakeScreenShotDuringEntryExit);
-            new CalendarDefaultGlobalUXPage().VerifyAssignedTextOnCalendar();
+            Product Product = Product.Get(productName);
+            string digitalPathProductName = Product.Name.ToString();
+            new CalendarDefaultGlobalUXPage().VerifyAssignedTextOnCalendar(digitalPathProductName);
             Logger.LogMethodExit("AssignmentCalendar", "RefreshCalendarFrame",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -284,11 +286,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                base.IsTakeScreenShotDuringEntryExit);
             Product product = Product.Get(productTypeEnum);
             string periodName = product.PeriodName.ToString();
+            string productName = product.Name.ToString();
             //Assert assigned asset Under a period in calendar frame in Day View
             Logger.LogAssertion("VerifyAssignedAssetUnderPeriodInCalendarDayView",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
-                      IsAssetPresentUnderPeriodInCalendarDayView(assetName, periodName)));
+                      IsAssetPresentUnderPeriodInCalendarDayView(assetName, periodName,productName)));
             base.SelectDefaultWindow();
             Logger.LogMethodExit("AssignmentCalendar",
             "VerifyAssignedAssetUnderPeriodInCalendarDayView",
@@ -299,16 +302,18 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// Verify the expected activity Dragged and Drooped to the calendar.
         /// </summary>
         /// <param name="activityName">This is the activity name.</param>
-        [When(@"I refresh the frame till ""(.*)"" is displayed in calendar frame")]
-        public void VerifyDisplayOfDragAndDropActivity(string activityName)
+        [When(@"I refresh the frame till ""(.*)"" is displayed in calendar frame under ""(.*)"" product")]
+        public void VerifyDisplayOfDragAndDropActivity(string activityName, Product.ProductTypeEnum productName)
         {
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyDisplayOfDragAndDropActivity",
                base.IsTakeScreenShotDuringEntryExit);
-            
+            //Get the Product Name from Test Data
+            Product Product = Product.Get(productName);
+            string digitalPathProductName = Product.Name.ToString();
             Logger.LogAssertion("VerifyAssignedAssetUnderPeriodInCalendarDayView",
                ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().IsDragDropActivityPresentInCalendar(activityName)));
+               () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().IsDragDropActivityPresentInCalendar(activityName, digitalPathProductName)));
             base.SelectDefaultWindow();
             Logger.LogMethodExit("AssignmentCalendar",
             "VerifyDisplayOfDragAndDropActivity",
