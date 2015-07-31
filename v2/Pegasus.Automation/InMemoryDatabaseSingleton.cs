@@ -53,6 +53,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                    ("PPE")); break;
                 case "PRODAKAMAI": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                    ("PROD")); break;
+                case "VCDNP": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                ("VCDNP")); break;
+                case "CGIENP": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                   ("CGIENP")); break;
 
                 default: throw new ArgumentException("The suggested environment was not found");
             }

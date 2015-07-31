@@ -123,6 +123,9 @@
   <data name="CourseSpaceURLRootCGIEAkamai_Key" xml:space="preserve">
     <value>CourseSpaceURLRootCGIEAkamai</value>
   </data>
+  <data name="CourseSpaceURLRootCGIENP_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootCGIENP</value>
+  </data>
   <data name="CourseSpaceURLRootCGIE_Key" xml:space="preserve">
     <value>CourseSpaceURLRootCGIE</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="CourseSpaceURLRootVCD_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVCD</value>
+  </data>
+  <data name="CourseSpaceURLVCDNP_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootVCDNP</value>
   </data>
   <data name="MMNDCertAdminURLRoot_Key" xml:space="preserve">
     <value>MMNDCertAdminURLRoot</value>
@@ -231,6 +237,9 @@
   <data name="RumbaURLRootST_Key" xml:space="preserve">
     <value>RUMBAAdminURLRootST</value>
   </data>
+  <data name="RumbaURLRootVCD_Key" xml:space="preserve">
+    <value>RUMBAAdminURLRootVCD</value>
+  </data>
   <data name="SMSAdminStudentURLRootCGIE_Key" xml:space="preserve">
     <value>SMSAdminStudentURLRootCGIE</value>
   </data>
@@ -306,6 +315,9 @@
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
   </data>
+  <data name="WorkSpaceURLRootCGIENP_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootCGIENP</value>
+  </data>
   <data name="WorkSpaceURLRootCGIE_Key" xml:space="preserve">
     <value>WorkSpaceURLRootCGIE</value>
   </data>
@@ -317,6 +329,9 @@
   </data>
   <data name="WorkSpaceURLRootST_Key" xml:space="preserve">
     <value>WorkSpaceURLRootST</value>
+  </data>
+  <data name="WorkSpaceURLRootVCDNP_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootVCDNP</value>
   </data>
   <data name="WorkSpaceURLRootVCD_Key" xml:space="preserve">
     <value>WorkSpaceURLRootVCD</value>

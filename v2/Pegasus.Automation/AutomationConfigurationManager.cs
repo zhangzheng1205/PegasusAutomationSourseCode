@@ -52,6 +52,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 case "PRODAKAMAI":
                     applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPRODAkamai_Key];
                     break;
+                case "VCDNP":
+                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLVCDNP_Key];
+                    break;
+                case "CGIENP":
+                    applicationCsUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootCGIENP_Key];
+                    break;
+
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationCsUrl;
@@ -135,6 +142,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 case "PRODAKAMAI":
                     applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPRODAkamai_Key];
                     break;
+                case "VCDNP":
+                    applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootVCDNP_Key];
+                    break;
+                case "CGIENP":
+                    applicationWsurl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootCGIENP_Key];
+                    break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationWsurl;
@@ -201,6 +214,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootST_Key];
                     break;
                 case "CGIE":
+                case "CGIENP":
                     url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootCGIE_Key];
                     break;
                 case "PPE":
@@ -210,6 +224,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootPROD_Key];
                     break;
                 case "VCD":
+                case "VCDNP":
                     url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootVCD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
@@ -307,6 +322,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodeST_Key];
                     break;
                 case "CGIE":
+                case "CGIENP":
                     smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodeCGIE_Key];
                     break;
@@ -319,6 +335,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodePROD_Key];
                     break;
                 case "VCD":
+                case "VCDNP":
                     smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodeVCD_Key];
                     break;
@@ -349,6 +366,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeST_Key];
                     break;
                 case "CGIE":
+                case "CGIENP":
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeCGIE_Key];
                     break;
                 case "PPE":
@@ -358,6 +376,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePROD_Key];
                     break;
                 case "VCD":
+                case "VCDNP":
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeVCD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
@@ -387,6 +406,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDST_Key];
                     break;
                 case "CGIE":
+                case "CGIENP":
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDCGIE_key];
                     break;
                 case "PPE":
@@ -396,6 +416,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDPROD_key];
                     break;
                 case "VCD":
+                case "VCDNP":
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDVCD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
@@ -420,10 +441,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             string applicationRumbaUrl;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
-                case "ST":
-                    applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootST_Key];
+                case "VCD":
+                case "VCDNP":
+                    applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootVCD_Key];
                     break;
                 case "CGIE":
+                case "CGIENP":
                     applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootCGIE_Key];
                     break;
                 case "PROD":

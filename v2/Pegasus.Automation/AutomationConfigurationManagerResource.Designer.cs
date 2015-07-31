@@ -88,6 +88,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootCGIENP.
+        /// </summary>
+        internal static string CourseSpaceURLRootCGIENP_Key {
+            get {
+                return ResourceManager.GetString("CourseSpaceURLRootCGIENP_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CourseSpaceURLRootPPE.
         /// </summary>
         internal static string CourseSpaceURLRootPPE_Key {
@@ -147,6 +156,15 @@ namespace Pegasus.Automation {
         internal static string CourseSpaceURLRootVCDAkamai_Key {
             get {
                 return ResourceManager.GetString("CourseSpaceURLRootVCDAkamai_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootVCDNP.
+        /// </summary>
+        internal static string CourseSpaceURLVCDNP_Key {
+            get {
+                return ResourceManager.GetString("CourseSpaceURLVCDNP_Key", resourceCulture);
             }
         }
         
@@ -403,6 +421,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RUMBAAdminURLRootVCD.
+        /// </summary>
+        internal static string RumbaURLRootVCD_Key {
+            get {
+                return ResourceManager.GetString("RumbaURLRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SMSAdminStudentURLRootCGIE.
         /// </summary>
         internal static string SMSAdminStudentURLRootCGIE_Key {
@@ -637,6 +664,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootCGIENP.
+        /// </summary>
+        internal static string WorkSpaceURLRootCGIENP_Key {
+            get {
+                return ResourceManager.GetString("WorkSpaceURLRootCGIENP_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to WorkSpaceURLRootPPE.
         /// </summary>
         internal static string WorkSpaceURLRootPPE_Key {
@@ -669,6 +705,15 @@ namespace Pegasus.Automation {
         internal static string WorkSpaceURLRootVCD_Key {
             get {
                 return ResourceManager.GetString("WorkSpaceURLRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootVCDNP.
+        /// </summary>
+        internal static string WorkSpaceURLRootVCDNP_Key {
+            get {
+                return ResourceManager.GetString("WorkSpaceURLRootVCDNP_Key", resourceCulture);
             }
         }
     }

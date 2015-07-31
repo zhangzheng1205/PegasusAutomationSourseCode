@@ -195,4 +195,34 @@
   <data name="CommonSteps_VCD_DPTeacherUsername_Value" xml:space="preserve">
     <value>dependent_VCD_teac</value>
   </data>
+  <data name="CommonSteps_CGIENP_DPClassName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIENP_DPStudentFirstName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIENP_DPStudentLastName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIENP_DPStudentUsername_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIENP_DPTeacherUsername_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_VCDNP_DPClassName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_VCDNP_DPStudentFirstName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_VCDNP_DPStudentLastName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_VCDNP_DPStudentUsername_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_VCDNP_DPTeacherUsername_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
 </root>

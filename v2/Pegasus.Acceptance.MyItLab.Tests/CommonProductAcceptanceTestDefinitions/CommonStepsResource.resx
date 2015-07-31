@@ -219,4 +219,16 @@
   <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
     <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
   </data>
+  <data name="CommonSteps_CGIENP_CourseId_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_CGIENP_SectionName_Value" xml:space="preserve">
+    <value>Dummy</value>
+  </data>
+  <data name="CommonSteps_VCDNP_CourseId_Value" xml:space="preserve">
+    <value>CRSKL2B-16005422</value>
+  </data>
+  <data name="CommonSteps_VCDNP_SectionName_Value" xml:space="preserve">
+    <value>VCDNP-DependentMIL-Section</value>
+  </data>
 </root>

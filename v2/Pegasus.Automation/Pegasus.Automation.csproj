@@ -114,6 +114,7 @@
     <None Include="TestData\metadataExport_Gold-1.zip" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="InMemoryTestData\PegasusTestDataCGIENP.xml" />
     <Content Include="InMemoryTestData\PegasusTestDataPROD.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -127,6 +128,7 @@
     <Content Include="InMemoryTestData\PegasusTestDataCGIE.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="InMemoryTestData\PegasusTestDataVCDNP.xml" />
     <Content Include="TestData\1-1Homework0%25.exe" />
     <Content Include="TestData\Branding_Image.png" />
     <Content Include="TestData\CourseIconImage.png" />

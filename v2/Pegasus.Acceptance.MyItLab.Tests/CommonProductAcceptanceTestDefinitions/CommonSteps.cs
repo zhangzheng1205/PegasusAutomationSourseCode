@@ -835,8 +835,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                     courseVCD.SectionName = CommonStepsResource.CommonSteps_VCD_SectionName_Value;
                     courseVCD.SectionId = CommonStepsResource.CommonSteps_VCD_CourseId_Value;
                     courseVCD.UpdateCourseInMemory(courseVCD);
-
                     break;
+                //Updates the section name and id at in-memory during runtime when environment is CGIENP
+                case "CGIENP":
+                    Course courseCGIENP = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                    courseCGIENP.SectionName = CommonStepsResource.CommonSteps_CGIENP_SectionName_Value;
+                    courseCGIENP.SectionId = CommonStepsResource.CommonSteps_CGIENP_CourseId_Value;
+                    courseCGIENP.UpdateCourseInMemory(courseCGIENP);
+                    break;
+                //Updates the section name and id at in-memory during runtime when environment is VCDNP
+                case "VCDNP":              
+                    Course courseVCDNP = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                    courseVCDNP.SectionName = CommonStepsResource.CommonSteps_VCDNP_SectionName_Value;
+                    courseVCDNP.SectionId = CommonStepsResource.CommonSteps_VCDNP_CourseId_Value;
+                    courseVCDNP.UpdateCourseInMemory(courseVCDNP);
+                    break;
+                //Updates the secti
                 default: throw new ArgumentException("The suggested application environment was not found");
 
             }

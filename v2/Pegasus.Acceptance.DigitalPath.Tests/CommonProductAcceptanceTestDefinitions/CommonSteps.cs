@@ -564,6 +564,40 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     PRODClass.Name = CommonStepsResource.CommonSteps_PROD_DPClassName_Value;
                     PRODClass.UpdateClassInMemory(PRODClass);
                     break;
+                // Updates the teacher,student and class enum values at in-memory during runtime when environment is CGIENP
+                case "CGIENP":
+                    //Update Teacher Username
+                    User CGIENPTeacher = User.Get(User.UserTypeEnum.DPCsTeacher);
+                    CGIENPTeacher.Name = CommonStepsResource.CommonSteps_CGIENP_DPTeacherUsername_Value;
+                    CGIENPTeacher.UpdateUserInMemory(CGIENPTeacher);
+                    //Update Student Username,FirstName and LastName
+                    User CGIENPStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+                    CGIENPStudent.Name = CommonStepsResource.CommonSteps_CGIENP_DPStudentUsername_Value;
+                    CGIENPStudent.FirstName = CommonStepsResource.CommonSteps_CGIENP_DPStudentFirstName_Value;
+                    CGIENPStudent.LastName = CommonStepsResource.CommonSteps_CGIENP_DPStudentLastName_Value;
+                    CGIENPStudent.UpdateUserInMemory(CGIENPStudent);
+                    //Update Class Name
+                    Class CGIENPClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+                    CGIENPClass.Name = CommonStepsResource.CommonSteps_CGIENP_DPClassName_Value;
+                    CGIENPClass.UpdateClassInMemory(CGIENPClass);
+                    break;
+                // Updates the teacher,student and class enum values at in-memory during runtime when environment is VCDNP
+                case "VCDNP":
+                    //Update Teacher Username
+                    User VCDNPTeacher = User.Get(User.UserTypeEnum.DPCsTeacher);
+                    VCDNPTeacher.Name = CommonStepsResource.CommonSteps_VCDNP_DPTeacherUsername_Value;
+                    VCDNPTeacher.UpdateUserInMemory(VCDNPTeacher);
+                    //Update Student Username,FirstName and LastName
+                    User VCDNPStudent = User.Get(User.UserTypeEnum.DPCsStudent);
+                    VCDNPStudent.Name = CommonStepsResource.CommonSteps_VCDNP_DPStudentUsername_Value;
+                    VCDNPStudent.FirstName = CommonStepsResource.CommonSteps_VCDNP_DPStudentFirstName_Value;
+                    VCDNPStudent.LastName = CommonStepsResource.CommonSteps_VCDNP_DPStudentLastName_Value;
+                    VCDNPStudent.UpdateUserInMemory(VCDNPStudent);
+                    //Update Class Name
+                    Class VCDNPClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+                    VCDNPClass.Name = CommonStepsResource.CommonSteps_VCDNP_DPClassName_Value;
+                    VCDNPClass.UpdateClassInMemory(VCDNPClass);
+                    break;
                     default: throw new ArgumentException("The suggested application environment was not found");
 
             }
