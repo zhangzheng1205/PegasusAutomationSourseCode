@@ -297,4 +297,22 @@
   <data name="AdminTool_Page_Custom_Wait_Time_Value" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="AdminTool_Page_LTITools_Tab_Text_Locator" xml:space="preserve">
+    <value>LTI Tools</value>
+  </data>
+  <data name="AdminTool_Page_Services_Page_Title_Name" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="AdminTool_Page_Services_Tab_CSSSelector" xml:space="preserve">
+    <value>td#_ctl9_td_3.SubNavigationTab a#_ctl9_anc_3.SubNavigationText</value>
+  </data>
+  <data name="ManageMessageSubscription_Page_IFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmWorkspace</value>
+  </data>
+  <data name="ManageMessageSubscription_Page_Window_Title_Name" xml:space="preserve">
+    <value>Course Enrollment</value>
+  </data>
+  <data name="ManageMessageSubscription_PartialLinkText_Locator" xml:space="preserve">
+    <value>Trigger RLCN Failure</value>
+  </data>
 </root>

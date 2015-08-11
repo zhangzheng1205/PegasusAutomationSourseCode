@@ -507,3 +507,14 @@ When I click on the Create New Organization link
 Then I should see the "Create Organization" popup
 When I create "District" level organization "Hierarchical" in "DigitalPath"
 Then I should see the successfull message "Organization created successfully."
+
+#Purpose: To save the profile date and time
+Scenario: CsAdmin saving the profile date and time
+When I click 'My Profile' link as "CsAdmin"
+And I store user current date and time of the CsAdmin
+
+#Purpose: CSAdmin triggers failed RLCN requests
+Scenario: Open RLCN Utility for triggering failed requests
+When I go to 'LTI Tools' and click 'Services' subtab
+And I click on 'Trigger RLCN Failure' link
+Then I should be on the RLCN Utility Page

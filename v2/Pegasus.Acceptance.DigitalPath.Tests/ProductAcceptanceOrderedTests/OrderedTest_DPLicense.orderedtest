@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest_dplicense" storage="e:\pegasus_automation_master_12may\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest_dplicense.orderedtest" id="ee7ed9da-72a8-4fb3-a431-57de81f07f24" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="2fca0418-5b05-4855-9293-dfbe944cb8b0" name="OrderedTest_OrganizationSetupFlow" storage="orderedtest_organizationsetupflow.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="cedf5a05-059e-4e1b-8d91-285866c4b090" name="OrderedTest_LicensingAndProductSetupFlow" storage="orderedtest_licensingandproductsetupflow.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="40d12abe-0e36-4eea-bed8-68fc8132b926" name="OrderedTest_CreateUsersByCSAdmin" storage="orderedtest_createusersbycsadmin.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="428ba289-483f-1225-229b-c2a8c70da27f" name="UserLogOutAsCourseSpaceAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

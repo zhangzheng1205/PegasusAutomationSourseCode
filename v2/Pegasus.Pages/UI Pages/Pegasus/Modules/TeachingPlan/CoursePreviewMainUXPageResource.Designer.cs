@@ -62,6 +62,60 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Browser.
+        /// </summary>
+        internal static string Browser_Key {
+            get {
+                return ResourceManager.GetString("Browser_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /html/body/embed.
+        /// </summary>
+        internal static string CoursePreviewMain_UX_Page_MediaServerLink_Chrome_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMain_UX_Page_MediaServerLink_Chrome_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}.pdf.
+        /// </summary>
+        internal static string CoursePreviewMain_UX_Page_MediaServerLink_FireFox_WindowName_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMain_UX_Page_MediaServerLink_FireFox_WindowName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dev.curriculum.media.pearsoncmg.com.
+        /// </summary>
+        internal static string CoursePreviewMain_UX_Page_MediaServerLink_General_Window_Title_Name {
+            get {
+                return ResourceManager.GetString("CoursePreviewMain_UX_Page_MediaServerLink_General_Window_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to curriculum.media.pearsoncmg.com.
+        /// </summary>
+        internal static string CoursePreviewMain_UX_Page_MediaServerLink_Production_Window_Title_Name {
+            get {
+                return ResourceManager.GetString("CoursePreviewMain_UX_Page_MediaServerLink_Production_Window_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string CoursePreviewMainUX_MediaServer_Launch_Wait_Time {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_MediaServer_Launch_Wait_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones.
         /// </summary>
         internal static string CoursePreviewMainUX_Page_Activity_Name {
@@ -440,6 +494,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //a[@title=&apos;{0}&apos;]/td/img.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_Searched_Activity_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_Searched_Activity_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@title=&apos;Set Scheduling Options&apos;].
         /// </summary>
         internal static string CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator {
@@ -553,6 +616,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_Window_Title_Name_HED {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_Window_Title_Name_HED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PEG_AUTOMATION_BROWSER.
+        /// </summary>
+        internal static string PEG_AUTOMATION_BROWSER_KEY {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_BROWSER_KEY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PEG_AUTOMATION_TEST_ENVIRONMENT.
+        /// </summary>
+        internal static string PEG_AUTOMATION_TEST_ENVIRONMENT_KEY {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_TEST_ENVIRONMENT_KEY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TestEnvironment.
+        /// </summary>
+        internal static string TestEnvironment_Key {
+            get {
+                return ResourceManager.GetString("TestEnvironment_Key", resourceCulture);
             }
         }
     }

@@ -615,3 +615,23 @@ Then I should be on the "Home" page
 Then I should see the product "DigitalPath" in the Curriculum channel
 When I click on "Remove Curriculum" option of product "DigitalPath" in the Curriculum channel
 Then I should see the successfull message "Product removed successfully." in Home tab
+
+#Purpose: To launch S7 eText from Curriculum Channel
+Scenario: Launch S7 eText from Curriculum Channel as CS Teacher
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+Then I should see the product "DigitalPath" in the Curriculum channel
+When I click on the "S7TeachereText" link in the "DigitalPath" product
+Then I should see 'S7TeachereText' launch successfully
+
+#Purpose: To launch Media Server content from Manage Coursework as CS Teacher
+Scenario: Launch Media Server content from Class as CS Teacher
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "DigitalPathMasterLibrary" class
+Then I should be on the "Classes" page
+When I navigate to the "Manage Coursework" tab
+Then I should see assigned Media Server Link "Word List"
+When I click on 'MediaServerLink' in the Manage Coursework
+Then I should see the 'MediaServerLink' launched successfully
+And I should see the expected Media Server Content

@@ -368,6 +368,143 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Handling Navigation to Services Page
+        /// </summary>
+        public void NavigateToServicesPage()
+        {
+            //Handling Navigation to Services Page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateServicesPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait For Window
+                base.WaitUntilWindowLoads(AdminToolPageResource.
+                    AdminTool_Page_CourseEnrollment_Window_Title_Name);
+                //Select Default Window
+                base.SelectWindow(AdminToolPageResource.
+                    AdminTool_Page_CourseEnrollment_Window_Title_Name);
+                //Is Services Page Open Already
+                Boolean isServicesPageExists = base.IsPopupPresent(AdminToolPageResource.
+                    AdminTool_Page_ManageProducts_Page_Title_Name, Convert.ToInt32(
+                    AdminToolPageResource.AdminTool_Page_Custom_Wait_Time_Value));
+                if (isServicesPageExists)
+                {
+                    //Selecting the Services Page If Opened
+                    base.SelectWindow(AdminToolPageResource.
+                        AdminTool_Page_ManageProducts_Page_Title_Name);
+                }
+                else
+                {
+                    //Navigate to Services Page If not Opened
+                    NavigateToSubTabOfLTIToolsTab(AdminToolPageResource.
+                        AdminTool_Page_Services_Tab_CSSSelector, AdminToolPageResource.
+                        AdminTool_Page_Services_Page_Title_Name);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AdminToolPage", "NavigateServicesPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        ///Navigate to Sub Tab of LTI Tools Tab 
+        /// </summary>
+        /// <param name="subTab">This Is Subtab Name</param>
+        /// <param name="pageName">This Is The PageName</param>
+        private void NavigateToSubTabOfLTIToolsTab(
+            String subTab, String pageName)
+        {
+            //Navigate To Sub Tab
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToSubTabOfLTIToolsTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Wait For Window
+            base.WaitUntilWindowLoads(AdminToolPageResource.
+                AdminTool_Page_CourseEnrollment_Window_Title_Name);
+            //Select Default Window
+            base.SelectWindow(AdminToolPageResource.
+                AdminTool_Page_CourseEnrollment_Window_Title_Name);
+            // Navigating To Sub Tab Of LTI Tools Page
+            base.WaitForElement(By.PartialLinkText(AdminToolPageResource.
+                AdminTool_Page_LTITools_Tab_Text_Locator));
+            IWebElement getLTIToolsTab = base.GetWebElementPropertiesByPartialLinkText
+                (AdminToolPageResource.
+                AdminTool_Page_LTITools_Tab_Text_Locator);
+            base.ClickByJavaScriptExecutor(getLTIToolsTab);
+            //Click on sub tab 
+            base.WaitForElement(By.CssSelector(AdminToolPageResource.
+                        AdminTool_Page_Services_Tab_CSSSelector));
+            IWebElement getServicesTab = base.GetWebElementPropertiesByCssSelector
+                (AdminToolPageResource.
+                        AdminTool_Page_Services_Tab_CSSSelector);
+            base.ClickByJavaScriptExecutor(getServicesTab);
+            //Selecting The Window
+            base.WaitUntilWindowLoads(AdminToolPageResource.
+                AdminTool_Page_CourseEnrollment_Window_Title_Name);
+            //Select Window
+            base.SelectWindow(AdminToolPageResource.
+                AdminTool_Page_CourseEnrollment_Window_Title_Name);
+            Logger.LogMethodExit("AdminToolPage", "NavigateToSubTabOfPublishingTab",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Click on Trigger RLCN Failure Link.
+        /// </summary>
+        public void ClickOnRLCNUtilityLink()
+        {
+            //Click on Trigger RLCN Failure Link.
+            Logger.LogMethodEntry("AdminToolPage", "ClickOnRLCNUtilityLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.SelectWindow(AdminToolPageResource.
+                    ManageMessageSubscription_Page_Window_Title_Name);
+                //Select IFrame
+                this.ManageMessageSubscriptionIFrame();
+                //Click on link
+                Thread.Sleep(10000);
+                base.WaitForElement(By.PartialLinkText(AdminToolPageResource.
+                    ManageMessageSubscription_PartialLinkText_Locator));
+                IWebElement getRLCNlink = base.GetWebElementPropertiesByPartialLinkText(AdminToolPageResource.
+                    ManageMessageSubscription_PartialLinkText_Locator);
+                base.ClickByJavaScriptExecutor(getRLCNlink);
+                //Switch To Default Window
+                base.SwitchToDefaultWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AdminToolPage", "ClickOnRLCNUtilityLink",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Select Manage Message Subscription IFrame.
+        /// </summary>
+        private void ManageMessageSubscriptionIFrame()
+        {
+            //Select Frame
+            Logger.LogMethodEntry("AdminToolPage", "ManageMessageSubscriptionIFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Wait For Element
+            base.WaitForElement(By.Id(AdminToolPageResource.
+                ManageMessageSubscription_Page_IFrame_Id_Locator));
+            //Switch To IFrame
+            base.SwitchToIFrame(AdminToolPageResource.
+                ManageMessageSubscription_Page_IFrame_Id_Locator);
+            Logger.LogMethodExit("AdminToolPage", "ManageMessageSubscriptionIFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click on My Profile Link.
         /// </summary>
         public void ClickMyProfileLinkByWSAdmin()

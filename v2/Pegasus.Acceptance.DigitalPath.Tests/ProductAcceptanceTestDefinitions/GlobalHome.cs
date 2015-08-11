@@ -258,6 +258,33 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("GlobalHome", "VaidateSuccessfullMessageInHomeTabv",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click eText in Curriculum Channel
+        /// </summary>
+        [When(@"I click on the ""(.*)"" link in the ""(.*)"" product")]
+        public void clickEtextLink(Activity.ActivityTypeEnum etextName, string productName)
+        {
+            // Click eText in Curriculum Channel
+            Logger.LogMethodEntry("GlobalHome", "clickEtextLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            new HomePage().ClickEtext(etextName, productName);
+            Logger.LogMethodExit("GlobalHome", "clickEtextLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see 'S7TeachereText' launch successfully")]
+        [Then(@"I should see 'S7StudenteText' launch successfully")]
+        public void verifyEtextLaunch()
+        {
+            //Verify the eText launch
+            Logger.LogMethodEntry("GlobalHome","verifyEtextLaunch",
+                base.IsTakeScreenShotDuringEntryExit);
+            new HomePage().LaunchandVerifyEtext();
+            Logger.LogMethodExit("GlobalHome", "verifyEtextLaunch",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

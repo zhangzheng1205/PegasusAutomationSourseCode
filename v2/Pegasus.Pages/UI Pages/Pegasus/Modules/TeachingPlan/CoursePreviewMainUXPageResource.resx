@@ -282,4 +282,34 @@
   <data name="CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator" xml:space="preserve">
     <value>frmCourseContainer</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_Searched_Activity_Name_Xpath_Locator" xml:space="preserve">
+    <value>//a[@title='{0}']/td/img</value>
+  </data>
+  <data name="CoursePreviewMain_UX_Page_MediaServerLink_General_Window_Title_Name" xml:space="preserve">
+    <value>dev.curriculum.media.pearsoncmg.com</value>
+  </data>
+  <data name="CoursePreviewMainUX_MediaServer_Launch_Wait_Time" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="CoursePreviewMain_UX_Page_MediaServerLink_Chrome_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/embed</value>
+  </data>
+  <data name="CoursePreviewMain_UX_Page_MediaServerLink_Production_Window_Title_Name" xml:space="preserve">
+    <value>curriculum.media.pearsoncmg.com</value>
+  </data>
+  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
+  </data>
+  <data name="TestEnvironment_Key" xml:space="preserve">
+    <value>TestEnvironment</value>
+  </data>
+  <data name="Browser_Key" xml:space="preserve">
+    <value>Browser</value>
+  </data>
+  <data name="CoursePreviewMain_UX_Page_MediaServerLink_FireFox_WindowName_Locator" xml:space="preserve">
+    <value>{0}.pdf</value>
+  </data>
+  <data name="PEG_AUTOMATION_BROWSER_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_BROWSER</value>
+  </data>
 </root>

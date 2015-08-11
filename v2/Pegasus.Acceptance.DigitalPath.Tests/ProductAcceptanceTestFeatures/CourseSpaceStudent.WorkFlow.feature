@@ -111,3 +111,18 @@ Scenario: To Verify The Class Name By CS Student
 When I navigate to the "Overview" tab
 Then I should be on the "Overview" page
 Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
+
+#Purpose: To launch S7 eText from Course Tool Bar
+Scenario: Launch S7 eText from Course Tool Bar
+When I navigate to the "Overview" tab
+Then I should be on the "Overview" page
+When I click on 'S7StudenteText' dropdown
+Then I should see 'S7StudenteText' launch successfully
+
+#Purpose: To launch Media Server content from Manage Coursework as CS Student
+Scenario: Launch Media Server content from Class as CS Student
+When I navigate to the "Calendar" tab
+Then I should be on the "Content" page
+When I open the activity named as "MediaServerLink"
+Then I should see the 'MediaServerLink' launched successfully
+And I should see the expected Media Server Content

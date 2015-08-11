@@ -10,6 +10,8 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegng;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin;
+using Pegasus.Pages.UI_Pages.Pegasus.Common.SetupWizard;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -167,6 +169,24 @@ namespace Pegasus.Pages.UI_Pages
             {
                 switch (userType)
                 {
+                    // Click my profile  by Cs Admin
+                    case User.UserTypeEnum.CsAdmin:
+                        //Select the default window
+                        base.SelectWindow(AdminToolPageResource.AdminTool_Page_CourseEnrollment_Window_Title_Name);
+                        //Click on User Profile imagelink
+                        base.WaitForElement(By.Id(AdminToolPageResource.
+                            AdminTool_Page_MyProfile_Link_Id_Locator));
+                        //Get Button Property
+                        IWebElement getUserProfileLinkProperty = base.GetWebElementPropertiesById(AdminToolPageResource.
+                            AdminTool_Page_MyProfile_Link_Id_Locator);
+                        base.ClickByJavaScriptExecutor(getUserProfileLinkProperty);
+                        //Click on My Profile link
+                        base.WaitForElement(By.Id(AdminToolPageResource.
+                            AdminTool_Page_MyProfile_Link_Id_Locator));
+                        //Click on Link
+                        base.ClickLinkById(AdminToolPageResource.
+                            AdminTool_Page_MyProfile_Link_Id_Locator);
+                        break;
                     // Click my profile  by Cs Teacher
                     case User.UserTypeEnum.DPCsTeacher:
                         //Select the default window
@@ -296,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                
+
                 //Select Window               
                 base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
                 //Get Class Count
@@ -313,7 +333,7 @@ namespace Pegasus.Pages.UI_Pages
                     string classNameText = base.GetElementTextByXPath(string.Format(
                         HomePageResource.HomePage_ClassName_Link_Xpath_Locator, initialCount)).Trim();
                     if (classNameText == className)
-                    {  
+                    {
                         // Click on Class Link
                         IWebElement classNameProperties = base.GetWebElementPropertiesByXPath(
                             string.Format(HomePageResource.
@@ -518,7 +538,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToDefaultPageContent();
                 base.SwitchToDefaultWindow();
             }
-                
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -666,7 +686,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickTheManageAllButtonInGlobalHome",
                base.IsTakeScreenShotDuringEntryExit);
@@ -745,13 +765,14 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToDefaultWindow();
             ICollection<IWebElement> productBrandingImageList = base.GetWebElementsCollectionByClassName(
                 HomePageResource.Home_Page_Product_BrandingImage_Class_Locator);
-            if (productBrandingImageList == null) {
+            if (productBrandingImageList == null)
+            {
                 return null;
             }
             return (from brandingImage in productBrandingImageList
                     select brandingImage.GetAttribute(HomePageResource
                     .Home_Page_Product_BrandingImage_ProductAttribute_Value))
-                    .ToList();            
+                    .ToList();
         }
 
         /// <summary>
@@ -856,7 +877,7 @@ namespace Pegasus.Pages.UI_Pages
                     HomePage_CreateClassButton_Id_Locator);
             }
 
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -891,5 +912,119 @@ namespace Pegasus.Pages.UI_Pages
                   base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
+
+        /// <summary>
+        /// Click eText in Curriculum Channel in Home Page
+        /// </summary>
+        /// <param name="etextName">S7 eText Name</param>
+        /// <param name="prodName">Product Name in which eText is present</param>
+        public void ClickEtext(Activity.ActivityTypeEnum etextName, string prodName)
+        {
+            //Click eText Link in Curriculum Channel.
+            logger.LogMethodEntry("HomePage", "ClickEtext",
+            base.IsTakeScreenShotDuringEntryExit);
+            string ProductNameText = null;
+            try
+            {
+                //Switch to Main widow, Home Page
+                base.SwitchToDefaultWindow();
+                //Focus on Main window
+                base.SelectDefaultWindow();
+                //Get the Product From Memory
+                Product productDP = Product.Get(Product.ProductTypeEnum.DigitalPath);
+                string productName = productDP.Name.ToString();
+                //Get the total number of products in curriculum channel
+                int getproductcount = base.GetElementCountByXPath(frmSetupWizardPageResource.
+                                    frmSetupWizardPageResource_Verify_Product_InitialCount_Locator);
+
+                //Locate the desired Product in curriculumn channel
+                for (int initialcount = Convert.ToInt32(2);
+                    initialcount <= getproductcount; initialcount++)
+                {
+                    //Get the Product Name from object repository 
+                    ProductNameText = base.GetElementTextByXPath(string.Format(frmSetupWizardPageResource.
+                        frmSetupWizardPageResource_Verify_Product_Span_Id_Locator, initialcount));
+                    //Compare Product name
+                    if (ProductNameText.Equals(productName))
+                    {
+                        //Get product id of product from Curriculum Channel
+                        String productID = base.GetWebElementPropertiesByXPath(String.Format(
+                            HomePageResource.HomePage_Verify_Product_Title_Xpath_Locator, initialcount)).GetAttribute("productid");
+                        //Verify if eText dropdown cmenu is present
+                        bool isEtextCmenuExist = base.IsElementPresent(By.XPath(String.
+                            Format(HomePageResource.HomePage_eText_DropDown_Xpath_Locator, initialcount)), 10);
+                        if (isEtextCmenuExist == true)
+                        {
+                            //Get the eText dropdown cmenu element
+                            IWebElement getEtextLinkProperty = base.GetWebElementPropertiesByXPath(String.
+                                Format(HomePageResource.HomePage_eText_DropDown_Xpath_Locator, initialcount));
+                            //Hover over eText dropdown cmenu icon
+                            base.MouseOverByJavaScriptExecutor(getEtextLinkProperty);
+                            //Click on the cmenu icon
+                            base.ClickByJavaScriptExecutor(getEtextLinkProperty);
+                            //Get the name of eText from Memory
+                            Activity S7eText = Activity.Get(Activity.ActivityTypeEnum.S7TeachereText);
+                            string eTextName = S7eText.Name.ToString();
+                            //Get the total number of eText links in selected product
+                            int geteTextCount = base.GetElementCountByXPath(string.
+                                Format(HomePageResource.HomePage_eText_Count_Xpath_Locator, productID));
+                            //Iterate to get desired eText from dropdown list
+                            for (int eTextcount = 1; eTextcount <= geteTextCount; eTextcount++)
+                            {
+                                //Get name of eText from the dropdown list
+                                String getEtextName = base.GetElementTextByXPath(String.
+                                    Format(HomePageResource.HomePage_eText_Name_XPath_Locator, productID, eTextcount));
+                                //Verify if the eText name from application matches that in the memory
+                                if (getEtextName.Equals(eTextName))
+                                {
+                                    //Get eText element
+                                    IWebElement eTextlink = base.GetWebElementPropertiesByXPath(String.
+                                        Format(HomePageResource.HomePage_eText_Name_XPath_Locator, productID, eTextcount));
+                                    //Click the eText
+                                    base.PerformMouseClickAction(eTextlink);
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //Get eText when no dropdown is present
+                            IWebElement getSingleEtext = base.GetWebElementPropertiesByXPath(string.
+                                Format(HomePageResource.HomePage_eText_Link_Xpath_Locator, initialcount));
+                            //Click on eText link
+                            base.PerformMouseClickAction(getSingleEtext);
+                        }
+                        break;
+                    }
+                }
+                logger.LogMethodExit("HomePage", "ClickEtext",
+                base.IsTakeScreenShotDuringEntryExit);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
+
+        /// <summary>
+        /// Launch and verify eText.
+        /// </summary>
+        public void LaunchandVerifyEtext()
+        {
+            //Switch to eText Window and get the URL of the eText
+            new LauncheTextPage().GetLaunchedeTextURL();
+            //Confirm flash element is present in the eText Window
+            new LauncheTextPage().IsETextFlashElementPresent();
+            Thread.Sleep(3000);
+        }
     }
 }
+
+
+
+
+
+
+
+         
+

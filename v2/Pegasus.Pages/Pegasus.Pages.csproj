@@ -980,6 +980,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MacAddressDetailsPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\LtiIntegeration\RLCNUtility\RLCNUtilityPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\LtiIntegeration\RLCNUtility\RLCNUtilityPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RLCNUtilityPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\MediaLibrary\StuSearchMediaLinkUXPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\MediaLibrary\StuSearchMedialinkUXPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2511,6 +2517,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Location\MacAddressDetailsPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MacAddressDetailsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\LtiIntegeration\RLCNUtility\RLCNUtilityPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RLCNUtilityPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\MediaLibrary\StuSearchMedialinkUXPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

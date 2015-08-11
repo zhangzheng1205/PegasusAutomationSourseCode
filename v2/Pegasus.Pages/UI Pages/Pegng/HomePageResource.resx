@@ -264,4 +264,31 @@
   <data name="HomePage_LogoutLink_Aide_Id_Locator" xml:space="preserve">
     <value>_ctl6_pegHello_testLogOut</value>
   </data>
+  <data name="HomePage_Verify_eText_InitialCount_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div</value>
+  </data>
+  <data name="HomePage_eText_DropDown_Class_Locator" xml:space="preserve">
+    <value>dd_iconEtext blue_down_arrow</value>
+  </data>
+  <data name="HomePage_eText_Link_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div[{0}]/div[2]/div[4]/span</value>
+  </data>
+  <data name="HomePage_eText_DropDown_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='crch']/div[{0}]/div[2]/div[4]/span/span</value>
+  </data>
+  <data name="HomePage_eText_Link_Class_Locator" xml:space="preserve">
+    <value>crch_curriculum_link dd_container</value>
+  </data>
+  <data name="HomePage_Products_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class="crch_curriculum"]</value>
+  </data>
+  <data name="HomePage_Verify_Product_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id="crch"]/div[{0}]/div[2]/div/span[1]</value>
+  </data>
+  <data name="HomePage_eText_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='eText_dd_container_{0}']/ul/li</value>
+  </data>
+  <data name="HomePage_eText_Name_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='eText_dd_container_{0}']/ul/li[{1}]</value>
+  </data>
 </root>

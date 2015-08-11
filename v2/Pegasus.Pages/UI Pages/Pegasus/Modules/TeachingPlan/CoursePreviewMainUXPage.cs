@@ -8,6 +8,8 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Threading;
 using System.Text.RegularExpressions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
+using System.Diagnostics;
+using System.Configuration;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -1446,6 +1448,164 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitUntilWindowLoads("Classes");
             base.SelectWindow("Classes");
             return isAssigned ;
+        }
+
+        /// <summary>
+        /// Open Media Server link in Manage Coursework
+        /// </summary>
+        /// <param name="assetName">Activity name.</param>
+        public void ClickonMediaServerLink(Activity.ActivityTypeEnum assetName)
+        {
+            // Get Activity Name In Course Materials Tab
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickonMediaServerLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Medial Link from memory
+            Activity activityName = Activity.Get(assetName);
+            string mediaLinkName = activityName.Name.ToString();
+            try
+            {
+                //Total Row count of the Assets
+                int getTotalRowCount = base.GetElementCountByXPath(
+                    CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int rowCount = 1; rowCount <= getTotalRowCount; rowCount++)
+                {
+                    //Getting the assets name from application         
+                    string getActivityName = base.GetElementTextByXPath
+                     (string.Format(CoursePreviewMainUXPageResource.
+                     CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount));
+                    if (getActivityName == mediaLinkName)
+                    {
+                        IWebElement medialink = base.GetWebElementPropertiesByXPath(string.Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_LCC_Name_Xpath_Locator, rowCount));
+                        base.ClickByJavaScriptExecutor(medialink);
+                        Thread.Sleep(3000);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickonMediaServerLink",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify expected Media Server Link is opened
+        /// </summary>
+        /// <param name="activityName">Media Server Link Name</param>
+        /// <returns>True if Media Server is opened</returns>
+        public Boolean OpenMediaServerLink(string activityName)
+        {
+            //Verify expected Media Server Link is opened
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "OpenMediaServerLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean IsPageOpened = false;
+            try
+            {
+                // Returns boolean value for window launch
+                Thread.Sleep(Convert.ToInt32(CoursePreviewMainUXPageResource.
+                             CoursePreviewMainUX_MediaServer_Launch_Wait_Time));
+                //Switch to window
+                base.SwitchToLastOpenedWindow();
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                string getTheUrl = base.GetCurrentUrl;
+                switch (Environment.GetEnvironmentVariable(CoursePreviewMainUXPageResource.
+                    PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                  ?? ConfigurationManager.AppSettings[CoursePreviewMainUXPageResource.
+                  TestEnvironment_Key].ToUpper())
+                 {
+                    case "VCD":
+                    case "CGIE":
+                        while (!IsPageOpened)
+                        {
+                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+                                IsPageOpened = getTheUrl.Contains(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMain_UX_Page_MediaServerLink_General_Window_Title_Name);
+                        }
+                        break;
+
+                    case "PROD":
+                         while (!IsPageOpened)
+                         {
+                          if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+                          IsPageOpened = getTheUrl.Contains(CoursePreviewMainUXPageResource.
+                              CoursePreviewMain_UX_Page_MediaServerLink_Production_Window_Title_Name);
+                          }
+                          break;
+                 }
+                    stopWatch.Stop();
+                }
+                catch (Exception e)
+                {
+                 ExceptionHandler.HandleException(e);
+                }
+              Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenMediaServerLink",
+                  base.IsTakeScreenShotDuringEntryExit);
+              return IsPageOpened;
+        }
+
+        /// <summary>
+        /// Verify if embed tag is present when Media Server Content is launched
+        /// </summary>
+        /// <returns>True if embed tag is present</returns>
+        public Boolean IsMediaContentPresentInPageSource()
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "OpenMediaServerLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean IsMediaContentPresent = false;
+            //Start Stop Watch 
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            try
+            {
+                switch (Environment.GetEnvironmentVariable(CoursePreviewMainUXPageResource.
+                    PEG_AUTOMATION_BROWSER_KEY)
+                  ?? ConfigurationManager.AppSettings[CoursePreviewMainUXPageResource.
+                  Browser_Key])
+                    {
+                     case "Chrome":
+                     case "Internet Explorer":
+                        while (!IsMediaContentPresent)
+                        {
+                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+                            {
+                                IsMediaContentPresent = base.IsElementPresent(By.XPath(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMain_UX_Page_MediaServerLink_Chrome_Xpath_Locator), 10);
+                            }   
+                            break;
+                        }
+                        break;
+
+                    case "FireFox":
+                        while (!IsMediaContentPresent)
+                        {
+                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+                            {
+                                string getWindowTitle = base.GetWindowTitleByJavaScriptExecutor();
+                                string getTheURL = base.GetCurrentUrl;
+                                string filename = getTheURL.Substring(getTheURL.LastIndexOf("/")+1);
+                                if (filename == getWindowTitle)
+                                {
+                                    IsMediaContentPresent = true;
+                                }
+                             break;
+                            }
+                        }
+                        stopWatch.Stop();
+                        break;
+                    }
+               }
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenMediaServerLink",
+                     base.IsTakeScreenShotDuringEntryExit);
+            return IsMediaContentPresent;
         }
     }
 }

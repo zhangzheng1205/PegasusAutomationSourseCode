@@ -58,7 +58,10 @@ namespace Pegasus.Automation.DataTransferObjects
             QuestionFolder = 27,
             ObjectiveBasedQuestionOnly=28,
             SkillBased=29,
-            NNTest=30
+            NNTest=30,
+            S7TeachereText=31,
+            S7StudenteText=32,
+            MediaServerLink= 33
         }
 
         /// <summary>

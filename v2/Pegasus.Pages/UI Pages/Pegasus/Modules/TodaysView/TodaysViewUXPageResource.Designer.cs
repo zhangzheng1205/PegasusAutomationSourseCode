@@ -1475,6 +1475,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ulEtext&apos;]/li.
+        /// </summary>
+        internal static string TodayViewUXPageResource_EText_Count_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_EText_Count_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@id=&apos;ebookArrow&apos;].
+        /// </summary>
+        internal static string TodayViewUXPageResource_EText_Dropdown_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_EText_Dropdown_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ulEtext&apos;]/li[{0}]/div[{0}].
+        /// </summary>
+        internal static string TodayViewUXPageResource_EText_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_EText_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_FeedbackLink.
         /// </summary>
         internal static string TodayViewUXPageResource_Feedback_Id_Locator {

@@ -286,6 +286,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LTI Tools.
+        /// </summary>
+        internal static string AdminTool_Page_LTITools_Tab_Text_Locator {
+            get {
+                return ResourceManager.GetString("AdminTool_Page_LTITools_Tab_Text_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Manage Products.
         /// </summary>
         internal static string AdminTool_Page_ManageProducts_Page_Title_Name {
@@ -399,6 +408,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin {
         internal static string AdminTool_Page_SearchLink_Id_Locator {
             get {
                 return ResourceManager.GetString("AdminTool_Page_SearchLink_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services.
+        /// </summary>
+        internal static string AdminTool_Page_Services_Page_Title_Name {
+            get {
+                return ResourceManager.GetString("AdminTool_Page_Services_Page_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to td#_ctl9_td_3.SubNavigationTab a#_ctl9_anc_3.SubNavigationText.
+        /// </summary>
+        internal static string AdminTool_Page_Services_Tab_CSSSelector {
+            get {
+                return ResourceManager.GetString("AdminTool_Page_Services_Tab_CSSSelector", resourceCulture);
             }
         }
         
@@ -597,6 +624,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin {
         internal static string AdminTool_Page_Workspaces_TabNames_Id_Locator {
             get {
                 return ResourceManager.GetString("AdminTool_Page_Workspaces_TabNames_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmWorkspace.
+        /// </summary>
+        internal static string ManageMessageSubscription_Page_IFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("ManageMessageSubscription_Page_IFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Course Enrollment.
+        /// </summary>
+        internal static string ManageMessageSubscription_Page_Window_Title_Name {
+            get {
+                return ResourceManager.GetString("ManageMessageSubscription_Page_Window_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trigger RLCN Failure.
+        /// </summary>
+        internal static string ManageMessageSubscription_PartialLinkText_Locator {
+            get {
+                return ResourceManager.GetString("ManageMessageSubscription_PartialLinkText_Locator", resourceCulture);
             }
         }
     }

@@ -714,4 +714,13 @@
   <data name="TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator" xml:space="preserve">
     <value>div#ddcourses &gt; ul &gt; li:nth-of-type({0}) &gt; div &gt; div:nth-of-type(2)</value>
   </data>
+  <data name="TodayViewUXPageResource_EText_Dropdown_Id_Locator" xml:space="preserve">
+    <value>//span[@id='ebookArrow']</value>
+  </data>
+  <data name="TodayViewUXPageResource_EText_Count_XPath_Locator" xml:space="preserve">
+    <value>//ul[@id='ulEtext']/li</value>
+  </data>
+  <data name="TodayViewUXPageResource_EText_XPath_Locator" xml:space="preserve">
+    <value>//ul[@id='ulEtext']/li[{0}]/div[{0}]</value>
+  </data>
 </root>

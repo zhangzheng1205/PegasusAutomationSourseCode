@@ -464,6 +464,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// Save the current date and time from my profile.
         /// </summary>
         [When(@"I store user current date and time of the teacher")]
+        [When(@"I store user current date and time of the CsAdmin")]
         public void SaveDateAndTime()
         {
             //Save current date and time

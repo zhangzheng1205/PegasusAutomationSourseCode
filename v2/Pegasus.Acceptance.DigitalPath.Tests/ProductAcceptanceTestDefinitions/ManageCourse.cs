@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 
 #endregion
 
@@ -108,6 +109,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [Then(@"I should see assigned MathXL activity ""(.*)""")]
         [Then(@"I should see assigned study plan ""(.*)""")]
         [Then(@"I should see assigned LCC ""(.*)""")]
+        [Then(@"I should see assigned Media Server Link ""(.*)""")]
         public void ValidateLCCNameDisplayInManageCourseMaterial(string lccName)
         {
             //Validate the display of LCC name
@@ -208,6 +210,59 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             base.SwitchToDefaultWindow();
             Logger.LogMethodExit("ManageCourse", "ValidateDisplayOfAssignIcon",
              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="medialink"></param>
+        [When(@"I click on '(.*)' in the Manage Coursework")]
+        public void ClickMediaServerLink(Activity.ActivityTypeEnum medialink)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("ManageCourse", "ClickMediaServerLink",
+                  base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewMainUXPage().ClickonMediaServerLink(medialink);
+            Logger.LogMethodExit("ManageCourse", "ClickMediaServerLink",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Media Server Link is launched successfully.
+        /// </summary>
+        /// <param name="activity">This is media server link</param>
+        [Then(@"I should see the '(.*)' launched successfully")]
+        public void MediaSeverSuccessfullyLaunched(Activity.ActivityTypeEnum activity)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("ManageCourse", "MediaSeverSuccessfullyLaunched",
+                  base.IsTakeScreenShotDuringEntryExit);
+            Activity activityName = Activity.Get(Activity.ActivityTypeEnum.MediaServerLink);
+            string mediaServerLink = activityName.Name.ToString();
+            Logger.LogAssertion("MediaSeverSuccessfullyLaunched",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CoursePreviewMainUXPage().OpenMediaServerLink(mediaServerLink)));
+            Logger.LogMethodExit("ManageCourse", "MediaSeverSuccessfullyLaunched",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Media Server Content
+        /// </summary>
+        [Then(@"I should see the expected Media Server Content")]
+        public void VerifytheMediaServerContent()
+        {
+            Logger.LogMethodEntry("ManageCourse", "VerifytheMediaServerContent",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Verify embed tag in the launched  page
+            Logger.LogAssertion("VerifytheMediaServerContent",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CoursePreviewMainUXPage().
+                    IsMediaContentPresentInPageSource()));
+            base.CloseBrowserWindow();
+            base.SelectDefaultWindow();
+            Logger.LogMethodExit("ManageCourse", "VerifytheMediaServerContent",
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

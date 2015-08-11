@@ -2818,37 +2818,37 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is the expected activity name.</param>
         /// <returns></returns>
-       public bool IsPastDueActivityPresent(string activityName)
+        public bool IsPastDueActivityPresent(string activityName)
         {
             // Verify expected 'Past Due Activity' in today's view
             Logger.LogMethodEntry("TodaysViewUXPage", "IsPastDueActivityPresent",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize bool variable which holds the activity status
-           bool isActivityPresent = false;
-           // Get the total number of activities listed
-           base.WaitForElementDisplayedInUi(By.CssSelector(TodaysViewUXPageResource.
-               TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator));
-           int activityCount = GetElementCountByCssSelector(TodaysViewUXPageResource.
-               TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator);
-           // Search for the expected activity name
-           for(int i=1;i<=activityCount;i++)
-           {
-              string activityId = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont" + i;
-              base.WaitForElementDisplayedInUi(By.CssSelector(String.Format("#{0}", activityId)));      
-              string actualPastDueActivities = base.
-              GetElementInnerTextByCssSelector(String.Format("#{0}", activityId)).Trim(); 
-              //Update bool variable when expected activity found
-                   if (actualPastDueActivities.Contains(activityName))
-                   {
-                       isActivityPresent = true;
-                       break;
-                   }
-               }
-           
-           Logger.LogMethodExit("TodaysViewUXPage", "IsPastDueActivityPresent",
-              base.IsTakeScreenShotDuringEntryExit);
-           //Return bool value 
-           return isActivityPresent;
+            bool isActivityPresent = false;
+            // Get the total number of activities listed
+            base.WaitForElementDisplayedInUi(By.CssSelector(TodaysViewUXPageResource.
+                TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator));
+            int activityCount = GetElementCountByCssSelector(TodaysViewUXPageResource.
+                TodayViewUXPageResource_PastDueSubmitted_Activity_Count_CssSelector_Locator);
+            // Search for the expected activity name
+            for (int i = 1; i <= activityCount; i++)
+            {
+                string activityId = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont" + i;
+                base.WaitForElementDisplayedInUi(By.CssSelector(String.Format("#{0}", activityId)));
+                string actualPastDueActivities = base.
+                GetElementInnerTextByCssSelector(String.Format("#{0}", activityId)).Trim();
+                //Update bool variable when expected activity found
+                if (actualPastDueActivities.Contains(activityName))
+                {
+                    isActivityPresent = true;
+                    break;
+                }
+            }
+
+            Logger.LogMethodExit("TodaysViewUXPage", "IsPastDueActivityPresent",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Return bool value 
+            return isActivityPresent;
         }
 
         /// <summary>
@@ -3224,7 +3224,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement moreLink = base.GetWebElementPropertiesById(
                TodaysViewUXPageResource.TodayViewUXPageResource_MoreLink_Id_Locator);
             base.PerformClickAction(moreLink);
-           //base.ClickByJavaScriptExecutor(moreLink);
+            //base.ClickByJavaScriptExecutor(moreLink);
             Logger.LogMethodExit("GBInstructorUXPage", "ClickonMoreLink",
                           base.IsTakeScreenShotDuringEntryExit);
         }
@@ -3634,22 +3634,22 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
-         
-          base.WaitForElementDisplayedInUi(By.CssSelector("a[class*='_tvPastDueSubmission_0']"));
-           int activityCount = GetElementCountByCssSelector("a[class*='_tvPastDueSubmission_0']");
-           for (int i = 1; i <= activityCount; i++)
-           {
-               string id1 = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont" + i;
-               base.WaitForElementDisplayedInUi(By.CssSelector(String.Format("#{0}", id1)));
-               string actualPastDueActivities = base.
-                      GetElementInnerTextByCssSelector(String.Format("#{0}", id1)).Trim(); ;
-               if (actualPastDueActivities.Contains(activityName))
-               {
-                   string checkBoxId = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn" + i + "Checkbox";
-                   base.SelectCheckBoxById(checkBoxId);
-                   break;
-               }
-           }
+
+            base.WaitForElementDisplayedInUi(By.CssSelector("a[class*='_tvPastDueSubmission_0']"));
+            int activityCount = GetElementCountByCssSelector("a[class*='_tvPastDueSubmission_0']");
+            for (int i = 1; i <= activityCount; i++)
+            {
+                string id1 = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont" + i;
+                base.WaitForElementDisplayedInUi(By.CssSelector(String.Format("#{0}", id1)));
+                string actualPastDueActivities = base.
+                       GetElementInnerTextByCssSelector(String.Format("#{0}", id1)).Trim(); ;
+                if (actualPastDueActivities.Contains(activityName))
+                {
+                    string checkBoxId = "_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn" + i + "Checkbox";
+                    base.SelectCheckBoxById(checkBoxId);
+                    break;
+                }
+            }
             Logger.LogMethodExit("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -4012,11 +4012,11 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
-              getActivityName = base.GetElementTextByPartialLinkText(activityName);
+                getActivityName = base.GetElementTextByPartialLinkText(activityName);
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TodaysViewUXPage",
                 "GetActivityNameOfInstrucorGradingChannel",
@@ -4053,7 +4053,6 @@ namespace Pegasus.Pages.UI_Pages
 
                 // Compare the class name storied in momery and the class name retrived from the application UI
                 if (getClassName.Trim() != className.Trim())
-
                 {
                     // Click on class selector dropdown
                     IWebElement getDropdown = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
@@ -4124,7 +4123,7 @@ namespace Pegasus.Pages.UI_Pages
                     IWebElement getProductNameValue = base.GetWebElementPropertiesByCssSelector(string.Format(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Teacher_ClassSelector_GetClassName_CSS_Locator, i));
                     base.ClickByJavaScriptExecutor(getProductNameValue);
-                   break;
+                    break;
                 }
             }
         }
@@ -4291,5 +4290,70 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return studentName;
         }
+
+        /// <summary>
+        /// Click the eText dropdown icon
+        /// </summary>
+        /// <param name="eText">eText name</param>
+        public void ClickETextDropdownIcon(Activity.ActivityTypeEnum eText)
+        {
+            //Click the eText dropdown icon
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickETextDropdownIcon",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get the eText cmenu icon
+                IWebElement getEtextCmenu = base.GetWebElementPropertiesByXPath(String.
+                                Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_Dropdown_Id_Locator));
+                //Mouse over the eText cmenu icon
+                base.MouseOverByJavaScriptExecutor(getEtextCmenu);
+                //Click the eText cmenu icon
+                base.ClickByJavaScriptExecutor(getEtextCmenu);
+                //Click the eText from the dropdown menu
+                this.ClickEText(eText);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickETextDropdownIcon",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click the eText from the from the dropdown menu
+        /// </summary>
+        /// <param name="eText">eText Name</param>
+        private void ClickEText(Activity.ActivityTypeEnum eText)
+        {
+            // Click the eText from the from the dropdown menu
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickEText",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Get the name of eText from Memory
+            Activity S7eText = Activity.Get(Activity.ActivityTypeEnum.S7StudenteText);
+            string eTextName = S7eText.Name.ToString();
+            //Get the total number of eText links in selected product
+            int geteTextCount = base.GetElementCountByXPath(string.
+            Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_Count_XPath_Locator));
+            for (int eTextcount = 1; eTextcount <= geteTextCount; eTextcount++)
+            {
+                //Get eText name from application
+                String getEtextName = base.GetElementTextByXPath(String.
+                    Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_XPath_Locator, eTextcount));
+                //Verify eText in application is same as that in memory
+                if (getEtextName.Equals(eTextName))
+                    {
+                        //Get eText element
+                        IWebElement eTextlink = base.GetWebElementPropertiesByXPath(String.
+                            Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_XPath_Locator, eTextcount));
+                        //Click the eText link
+                        base.PerformMouseClickAction(eTextlink);
+                        break;
+                    }
+             }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickEText",
+               base.IsTakeScreenShotDuringEntryExit);
+          }
     }
 }

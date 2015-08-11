@@ -117,43 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RptStudentReportPage_AddStudent_ID_Locator" xml:space="preserve">
-    <value>imgAddSections</value>
+  <data name="RLCNUtility_Page_Calendar_ColumnCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ui-datepicker-calendar']/tbody/tr[{0}]/td</value>
   </data>
-  <data name="RptStudentReportPage_AddStudent_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1']/tbody/tr/td[1]/img</value>
+  <data name="RLCNUtility_Page_Calendar_DateValueInColumn_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ui-datepicker-calendar']/tbody/tr[{0}]/td[{1}]/a</value>
   </data>
-  <data name="RptStudentReportPage_ReportDetails_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='tblMainStyle']/tbody/tr/td[{0}]/span</value>
+  <data name="RLCNUtility_Page_Calendar_RowCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ui-datepicker-calendar']/tbody/tr</value>
   </data>
-  <data name="RptStudentReportPage_StudentButton_XPath_Locator" xml:space="preserve">
-    <value>//a/span/span[text()='{0}']</value>
+  <data name="RLCNUtility_Page_Calendar_Widget_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/div</value>
   </data>
-  <data name="RptStudentReportPage_StudentCount_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr</value>
+  <data name="RLCNUtility_Page_CourseTitle_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='rptFailedRLCNrequests__ctl0_coursetitle']</value>
   </data>
-  <data name="RptStudentReportPage_StudentDetails_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='_ctl4_allAssementDetail1']/table/tbody/tr[{0}]/td/div/table/tbody/tr/td/span</value>
+  <data name="RLCNUtility_Page_CurrentDate_ClassName_Locator" xml:space="preserve">
+    <value>ui-state-default ui-state-highlight ui-state-hover</value>
   </data>
-  <data name="RptStudentReportPage_StudentNameSelect_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[1]</value>
+  <data name="RLCNUtility_Page_DataBase_Name_DropDown_CSSSelector_Locator" xml:space="preserve">
+    <value>table tbody tr td select#databaseNames option</value>
   </data>
-  <data name="RptStudentReportPage_StudentName_Radio_Button_XPath_Locator" xml:space="preserve">
-    <value>/html/body/form/div[2]/table/tbody/tr/td/table[1]/tbody/tr[3]/td/div/table[2]/tbody/tr/td/div/div[3]/table/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[1]/input</value>
+  <data name="RLCNUtility_Page_DataBase_Name_DropDown_Id_Locator" xml:space="preserve">
+    <value>databaseNames</value>
   </data>
-  <data name="RptStudentReportPage_StudentName_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[2]</value>
+  <data name="RLCNUtility_Page_EndDatePicker_Image_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/form/div/div[2]/div[1]/table/tbody/tr/td[8]/div/table/tbody/tr[1]/td/img</value>
   </data>
-  <data name="RptStudentReportPage_StudentReport_Iframe_Id" xml:space="preserve">
-    <value>_ctl0_PageContent_ifrmMiddle</value>
+  <data name="RLCNUtility_Page_Fetch_Button_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='fetch']</value>
   </data>
-  <data name="RptStudentReportPage_StudentScore_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='_ctl4_AveragePlaceHolder']/table/tbody/tr/td[1]/span</value>
+  <data name="RLCNUtility_Page_Resolve_Link_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='rptFailedRLCNrequests__ctl0_lnkresolve']</value>
   </data>
-  <data name="RptStudentReportPage_WindowName" xml:space="preserve">
-    <value>Report: Student Results by Activity</value>
+  <data name="RLCNUtility_Page_RLCNFailedRequests_Window_Title_Locator" xml:space="preserve">
+    <value>RLCN Failed Requests</value>
   </data>
-  <data name="RptStudentReportSetcion_Name_Xpath_Locator" xml:space="preserve">
-    <value>.//*[@id='divSection']/table/tbody/tr/td/span</value>
+  <data name="RLCNUtility_Page_SleepTime_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="RLCNUtility_Page_StartDatePicker_Image_Xpath_Locator" xml:space="preserve">
+    <value>/html/body/form/div/div[2]/div[1]/table/tbody/tr/td[5]/div/table/tbody/tr[1]/td/img</value>
+  </data>
+  <data name="RLCNUtility_Page_EndDate_Text_ID_Locator" xml:space="preserve">
+    <value>txtEndDateTime</value>
+  </data>
+  <data name="RLCNUtility_Page_StartDate_Text_ID_Locator" xml:space="preserve">
+    <value>txtstartDateTime</value>
+  </data>
+  <data name="RLCNUtility_Page_CourseTitle_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='repeaterdiv']/div</value>
   </data>
 </root>

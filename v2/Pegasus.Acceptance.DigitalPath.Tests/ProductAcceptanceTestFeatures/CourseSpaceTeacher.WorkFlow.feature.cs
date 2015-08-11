@@ -1578,6 +1578,58 @@ testRunner.Then("I should see the successfull message \"Product removed successf
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Launch S7 eText from Curriculum Channel as CS Teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void LaunchS7ETextFromCurriculumChannelAsCSTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch S7 eText from Curriculum Channel as CS Teacher", ((string[])(null)));
+#line 620
+this.ScenarioSetup(scenarioInfo);
+#line 621
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 622
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 623
+testRunner.Then("I should see the product \"DigitalPath\" in the Curriculum channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 624
+testRunner.When("I click on the \"S7TeachereText\" link in the \"DigitalPath\" product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 625
+testRunner.Then("I should see \'S7TeachereText\' launch successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Launch Media Server content from Class as CS Teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void LaunchMediaServerContentFromClassAsCSTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Media Server content from Class as CS Teacher", ((string[])(null)));
+#line 628
+this.ScenarioSetup(scenarioInfo);
+#line 629
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 630
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 631
+testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 632
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 633
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 634
+testRunner.Then("I should see assigned Media Server Link \"Word List\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 635
+testRunner.When("I click on \'MediaServerLink\' in the Manage Coursework", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 636
+testRunner.Then("I should see the \'MediaServerLink\' launched successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 637
+testRunner.And("I should see the expected Media Server Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

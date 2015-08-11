@@ -209,5 +209,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("TodaysView", "ValidateIdleStudentNameK12",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click the eText dropdown in the Course Tool Bar
+        /// </summary>
+        /// <param name="eText">eText name</param>
+        [When(@"I click on '(.*)' dropdown")]
+        public void ClickETextDropdown(Activity.ActivityTypeEnum eText)
+        {
+            //Click the eText dropdown in the Course Tool Bar
+            Logger.LogMethodEntry("TodaysView", "ClickETextDropdown",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the eText dropdown icon
+            new TodaysViewUxPage().ClickETextDropdownIcon(eText);
+
+            Logger.LogMethodExit("TodaysView", "ClickETextDropdown",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

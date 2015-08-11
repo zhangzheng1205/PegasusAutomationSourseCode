@@ -1353,6 +1353,40 @@ testRunner.Then("I should see the successfull message \"Organization created suc
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CsAdmin saving the profile date and time")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
+        public virtual void CsAdminSavingTheProfileDateAndTime()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CsAdmin saving the profile date and time", ((string[])(null)));
+#line 512
+this.ScenarioSetup(scenarioInfo);
+#line 513
+testRunner.When("I click \'My Profile\' link as \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 514
+testRunner.And("I store user current date and time of the CsAdmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Open RLCN Utility for triggering failed requests")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
+        public virtual void OpenRLCNUtilityForTriggeringFailedRequests()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open RLCN Utility for triggering failed requests", ((string[])(null)));
+#line 517
+this.ScenarioSetup(scenarioInfo);
+#line 518
+testRunner.When("I go to \'LTI Tools\' and click \'Services\' subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 519
+testRunner.And("I click on \'Trigger RLCN Failure\' link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 520
+testRunner.Then("I should be on the RLCN Utility Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

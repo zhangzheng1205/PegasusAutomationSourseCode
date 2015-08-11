@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
               base.IsTakeScreenShotDuringEntryExit);
             //Fetctb Activity From Memory
-            Activity activity = Activity.Get(Activity.ActivityTypeEnum.StudyPlan);
+            Activity activity = Activity.Get(activityTypeEnum);
             //Select Content Window
             new CoursePreviewMainUXPage().SelectContentWindow();
             //Click To Open Activity

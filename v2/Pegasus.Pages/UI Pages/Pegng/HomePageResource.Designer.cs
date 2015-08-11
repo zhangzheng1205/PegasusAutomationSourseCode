@@ -331,6 +331,60 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;eText_dd_container_{0}&apos;]/ul/li.
+        /// </summary>
+        internal static string HomePage_eText_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_eText_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dd_iconEtext blue_down_arrow.
+        /// </summary>
+        internal static string HomePage_eText_DropDown_Class_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_eText_DropDown_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div[{0}]/div[2]/div[4]/span/span.
+        /// </summary>
+        internal static string HomePage_eText_DropDown_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_eText_DropDown_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to crch_curriculum_link dd_container.
+        /// </summary>
+        internal static string HomePage_eText_Link_Class_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_eText_Link_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div[{0}]/div[2]/div[4]/span.
+        /// </summary>
+        internal static string HomePage_eText_Link_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_eText_Link_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;eText_dd_container_{0}&apos;]/ul/li[{1}].
+        /// </summary>
+        internal static string HomePage_eText_Name_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_eText_Name_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;dvMsgs&apos;]/div/a.
         /// </summary>
         internal static string HomePage_GoToMail_Xpath_Locator {
@@ -390,6 +444,15 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         internal static string HomePage_MyProfile_Link_Id_Locator {
             get {
                 return ResourceManager.GetString("HomePage_MyProfile_Link_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&quot;crch_curriculum&quot;].
+        /// </summary>
+        internal static string HomePage_Products_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_Products_Count_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -462,6 +525,24 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         internal static string HomePage_UserProfile_Image_Id_Locator {
             get {
                 return ResourceManager.GetString("HomePage_UserProfile_Image_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;crch&apos;]/div.
+        /// </summary>
+        internal static string HomePage_Verify_eText_InitialCount_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_Verify_eText_InitialCount_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&quot;crch&quot;]/div[{0}]/div[2]/div/span[1].
+        /// </summary>
+        internal static string HomePage_Verify_Product_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_Verify_Product_Title_Xpath_Locator", resourceCulture);
             }
         }
         
