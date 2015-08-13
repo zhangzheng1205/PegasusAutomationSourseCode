@@ -98,6 +98,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             DesearlizeActivityTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeClassTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeProductTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeGradeTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeActivityQuestionsListTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
         }
 
@@ -159,6 +160,34 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             }
         }
 
+        /// <summary>
+        /// Desearlize Grade Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeGradeTestData(XmlDocument xmlDocument,
+            ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
+        {
+            // get xml node list for class
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfGrade");
+            // created object xml serializer
+            xmlSerializer = new XmlSerializer(typeof(List<Grade>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get grade list
+                var getGradeList = (List<Grade>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (Grade grades in getGradeList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(grades);
+                }
+            }
+        }
         /// <summary>
         /// Desearlize Activity Test Data In Memory.
         /// </summary>

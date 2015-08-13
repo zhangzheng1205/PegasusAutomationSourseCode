@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.HEDIntegration.PCTExcel.Cert" storage="d:\pctintegration\pegasus_automation_pct\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedintegration.pctexcel.cert.orderedtest" id="1382c7fc-16ab-4ad3-b9c6-e1f808a8cdae" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="bb3f0c0b-b87f-6c6f-0780-5ea9cc1e85b6" name="SMSInstructorLaunchPCTLink" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="3ffca163-ad03-0c0f-deb7-0df19a634c74" name="SMSInstructorSetupNewPCTExcelProject" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="f3d355aa-1964-2976-7ffe-bfbcbe53fa30" name="SMSInstructorCreateNewGraderExcelQuestion" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

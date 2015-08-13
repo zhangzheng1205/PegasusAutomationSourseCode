@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest.hedintegration.pctword.cert" storage="d:\pctintegration\pegasus_automation_pct\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedintegration.pctword.cert.orderedtest" id="e917ed52-aac6-400f-891d-de2c174b3915" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="bb3f0c0b-b87f-6c6f-0780-5ea9cc1e85b6" name="SMSInstructorLaunchPCTLink" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="52deaf5f-e5a9-10e4-fcb5-cc7d925cb499" name="SMSInstructorSetupNewPCTWordProject" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="92a1b2b1-ed6d-3f8b-5e4d-65836b4ab0d4" name="SMSInstructorCreateNewGraderWordQuestion" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

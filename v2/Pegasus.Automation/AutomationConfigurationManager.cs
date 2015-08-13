@@ -433,6 +433,40 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Property for Blackboard url.
+        /// </summary>
+        public static string BBInstructorUrlRoot
+        {
+            get { return GetBBInstructorUrlRoot(); }
+        }
+
+        /// <summary>
+        /// Find the rumba url based on application environment.
+        /// </summary> 
+        /// <returns>Rumba url.</returns>
+        private static string GetBBInstructorUrlRoot()
+        {
+            string applicationBBUrl;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+                case "VCD":
+                case "VCDNP":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
+                    break;
+                case "CGIE":
+                case "CGIENP":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
+                    break;
+                case "PROD":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationBBUrl;
+        }
+
+        /// <summary>
         /// Find the rumba url based on application environment.
         /// </summary> 
         /// <returns>Rumba url.</returns>

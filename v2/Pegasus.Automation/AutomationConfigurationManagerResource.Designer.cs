@@ -61,6 +61,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BBInstructorURLRootCGIE.
+        /// </summary>
+        internal static string BBInstructorURLRootCGIE_Key {
+            get {
+                return ResourceManager.GetString("BBInstructorURLRootCGIE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browser.
         /// </summary>
         internal static string BrowserName_Key {

@@ -266,6 +266,30 @@
       <IsApproved>true</IsApproved>
     </Course>
   </ArrayOfCourse>
+  
+  <!--Hard coded Users data for Grades.-->
+  <ArrayOfGrade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>BBNewGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>BBEditedGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>PegasusNewGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>PegasusEditedGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+  </ArrayOfGrade>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
     <!--Hard coded Users data for SMS-->
@@ -302,6 +326,28 @@
       <UserType>HedMiLWsAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>3pl_bb_instructor</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Vish</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>BBInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>3pl_bb_studentdirect</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>direct</LastName>
+      <UserType>BBStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
       <Name>ctgpublisheradmin</Name>
@@ -807,6 +853,11 @@
     <Activity>
       <Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
       <ActivityType>SkillStudyPlan</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>

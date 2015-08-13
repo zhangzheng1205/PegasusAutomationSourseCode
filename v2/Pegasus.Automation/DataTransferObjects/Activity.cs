@@ -61,7 +61,11 @@ namespace Pegasus.Automation.DataTransferObjects
             NNTest=30,
             S7TeachereText=31,
             S7StudenteText=32,
-            MediaServerLink= 33
+            MediaServerLink= 33,
+            PCTWordProject = 34,
+            PCTPPTProject = 35,
+            PCTExcelProject = 36,
+            BBEditActivity = 37,
         }
 
         /// <summary>

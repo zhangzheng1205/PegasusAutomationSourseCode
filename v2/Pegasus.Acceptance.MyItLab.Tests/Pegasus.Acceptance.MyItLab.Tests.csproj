@@ -75,6 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssignmentCalendarResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\Blackboard.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ContentLibrary.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContent.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContentResource.Designer.cs">
@@ -122,6 +123,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManageAnnouncementResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\PCTToolLaunch.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdmin.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdminResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -159,6 +161,11 @@
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\UserEnrollment.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\UserProfile.cs" />
+    <Compile Include="ProductAcceptanceTestFeatures\BlackboardCourseAction.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlackboardCourseAction.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -415,6 +422,14 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.Cert.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCT.CERT.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCT.Production.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCTExcel.Cert.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCTPPT.Cert.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCTWord.Cert.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProdBuildVerificationTest.MyItLabFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -523,6 +538,10 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\BlackboardCourseAction.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BlackboardCourseAction.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

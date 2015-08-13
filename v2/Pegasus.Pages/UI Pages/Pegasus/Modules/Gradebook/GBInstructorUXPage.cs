@@ -4111,6 +4111,106 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Get the Activity Status.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="userLastName">This is User Last name.</param>
+        /// <param name="userFirstName">This is User First Name.</param>
+        /// <returns>Activity Status.</returns>
+        public string EditActivityScoreInPegasusByBBIns(Grade.GradeTypeEnum gradeType, Activity.ActivityTypeEnum activityType, string userLastName,
+            string userFirstName)
+        {
+            //Get the Activity Status
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            string getEditedActivityStatusGrade = string.Empty;
+            try
+            {
+                //Get Activity Column Count
+                Activity activity = Activity.Get(activityType);
+                String activityName = activity.Name.ToString();
+                int getActivityColumnCount = this.GetActivityColumnCount(activityName);
+                //Get User Row Count
+                int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
+                IWebElement getGradeScore = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
+                getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverByJavaScriptExecutor(getGradeScore);
+                base.WaitForElement(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
+                    getUserRowCount, getActivityColumnCount)));
+                IWebElement getGrade = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
+                    getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverAction(getGrade);
+                IWebElement getCmenu = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span",
+                    getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverByJavaScriptExecutor(getCmenu);
+                bool sdwq = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]",
+                    getUserRowCount, getActivityColumnCount)), 10);
+                IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]",
+                    getUserRowCount, getActivityColumnCount));
+                base.PerformMouseClickAction(getCmenuIcon);
+                base.WaitForElement(By.Id("_ctl0_InnerPageContent_lbleditgrade1"));
+                base.ClickLinkById("_ctl0_InnerPageContent_lbleditgrade1");
+                // Enter the value in numerator text box
+                base.WaitForElement(By.Id("txtNewValue"));
+                base.ClearTextById("txtNewValue");
+                base.FillTextBoxById("txtNewValue", "70");
+                // Enter the value in denominator
+                base.WaitForElement(By.Id("txtNewMaxValue"));
+                base.ClearTextById("txtNewMaxValue");
+                base.FillTextBoxById("txtNewMaxValue", "100");
+                // Get the edited score
+                string actualEditedScore = base.GetElementTextById("idnewpercentage");
+                string scoreAfterEdit1 = actualEditedScore.Replace("[", "");
+                string scoreAfterEdit2 = scoreAfterEdit1.Replace("]", "");
+                getEditedActivityStatusGrade = scoreAfterEdit2.Replace("%", "");
+                // Click Update button in edit score lightbox
+                base.WaitForElement(By.PartialLinkText("Update"));
+                base.ClickButtonByPartialLinkText("Update");
+                // Store the edited score in grade enum
+                new ViewSubmissionPage().StoreGradeDetails(gradeType, getEditedActivityStatusGrade);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getEditedActivityStatusGrade.Trim();
+        }
+
+        /// <summary>
+        /// Validate the GradeSync icon in gradebook
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <returns>This will return the icon existance status.</returns>
+        public bool GetGBSyncIconStatus(string activityName)
+        {
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus", base.IsTakeScreenShotDuringEntryExit);
+            bool IconStatus = false;
+            //Initialize VariableVariable
+            string getActivityStatusGrade = string.Empty;
+            //Get Activity Column Count
+            int getActivityCount = base.GetElementCountByXPath("//table[@id='GBGridDataTable']/tbody/tr[2]/td");
+            for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
+                columnCount++)
+            {
+                string getActivityName = base.GetTitleAttributeValueByXPath
+                (string.Format(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_AssignmentTitle_Xpath_Locator, columnCount));
+                if (getActivityName.Equals(activityName))
+                {
+                    IconStatus = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridHeaderTable']/tbody/tr[2]/td[{0}]/div[2]/span", columnCount)), 10);
+                    break;
+                }
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCount",
+           base.IsTakeScreenShotDuringEntryExit);
+            return IconStatus;
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="scenerioName"></param>

@@ -1004,7 +1004,72 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Gradebook", "VerifyOptionsInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
+        /// <summary>
+        /// BlackBoard teacher edit the grades in Pegasus
+        /// </summary>
+        /// <param name="gradeTypeEnum">This is Grade by Type Enum.</param>
+        [When(@"I edit the grade ""(.*)"" in view submission page")]
+        public void WhenIEditTheGradeInViewSubmissionPage(Grade.GradeTypeEnum score)
+        {
+            //Edit The Manual Grade In ViewSubmission Page
+            Logger.LogMethodEntry("Gradebook",
+                "EditTheManualGradeInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Edit The Manual Grade In ViewSubmission page
+            new ViewSubmissionPage().EditTheGradeInViewSubmissionPageByBBIns(score);
+            Logger.LogMethodExit("Gradebook",
+                "EditTheManualGradeInViewSubmissionPage",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Edit Grade of activity in Gradebook
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I click on Edit Grade ""(.*)"" of ""(.*)"" activity for ""(.*)"" in Pegasus")]
+        public void EditGradeOfActivityInPegasusByBBIns(Grade.GradeTypeEnum gradeType, Activity.ActivityTypeEnum activityType, User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("Gradebook", "EditGradeOfActivityInPegasusByBBIns", base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userType);
+            string userFirstName = user.FirstName.ToString();
+            string userLastName = user.LastName.ToString();
+            new GBInstructorUXPage().EditActivityScoreInPegasusByBBIns(gradeType, activityType, userLastName, userFirstName);
+            Logger.LogMethodExit("Gradebook", "EditGradeOfActivityInPegasusByBBIns", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify The Score Of Activity.
+        /// </summary>
+        /// <param name="activityScore">This is Activity Score.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        [Then(@"I should see the score ""(.*)"" of ""(.*)"" activity for ""(.*)"" in Pegasus")]
+        public void VerifyTheScoreOfActivityInPegasus(
+            Grade.GradeTypeEnum score, string activityName, User.UserTypeEnum userTypeEnum)
+        {
+            //Verify The Score Of Activity
+            Logger.LogMethodEntry("Gradebook",
+                "VerifyTheScoreOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            // Fetch Grades from in memory
+            Grade grade = Grade.Get(score);
+            string activityScore = grade.Score.ToString();
+            //Select the window
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (activityScore, new GBInstructorUXPage().GetActivityStatus(
+                    activityName, user.LastName, user.FirstName)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifyTheScoreOfActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Select Button In View Submission Page.
         /// </summary>

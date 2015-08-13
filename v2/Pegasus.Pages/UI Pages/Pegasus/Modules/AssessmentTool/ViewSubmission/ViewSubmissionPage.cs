@@ -9,6 +9,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission;
 using Pegasus.Pages.Exceptions;
 using System.Text.RegularExpressions;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -1762,6 +1763,145 @@ namespace Pegasus.Pages.UI_Pages
                 "GetSubmissionScoreInViewSubmissionPageHEDCore",
                            base.IsTakeScreenShotDuringEntryExit);
             return getScore;
+        }
+        /// <summary>
+        /// Edit The Manual Grade In View Submission Page.
+        /// </summary>
+        public void EditTheGradeInViewSubmissionPageByBBIns(Grade.GradeTypeEnum gradeTypeEnum)
+        {
+            // Edit The Manual Grade In View Submission Page
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                "EditTheGradeInViewSubmissionPageByBBIns",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Edit Grade
+                string editGrade = ViewSubmissionPageResource.ViewSubmission_Page_GradeTextbox_Value;
+                this.EditGradeInViewSubmissionBBIns();
+                this.ClickOnSaveButton();
+                // Store edited grades
+                this.StoreGradeDetails(gradeTypeEnum, editGrade);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                "EditTheGradeInViewSubmissionPageByBBIns",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// BlackBoard instructor edit grades in View submission page.
+        /// </summary>
+        private void EditGradeInViewSubmissionBBIns()
+        {
+            // Edit The Manual Grade In View Submission Page
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                "EditGradeInViewSubmissionBBIns",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select View Submission Window
+            this.SelectViewSubmissionWindow();
+            //Expand TheS tudent In ViewSubmission
+            this.ExpandTheStudentInViewSubmission();
+            //Wait for the element
+            base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+                ViewSubmission_Page_ViewSubmission_Allsubmission_Xpath_Locator));
+            IWebElement getExpanStudentName = base.GetWebElementPropertiesByXPath
+                (ViewSubmissionPageResource.
+                ViewSubmission_Page_ViewSubmission_Allsubmission_Xpath_Locator);
+            //Click on Expand student link
+            base.ClickByJavaScriptExecutor(getExpanStudentName);
+            //Wait for the element
+            base.WaitForElement(By.ClassName(ViewSubmissionPageResource.
+                ViewSubmission_Page_GradeTextbox_ClassName_Locator));
+            base.ClearTextByClassName(ViewSubmissionPageResource.
+                ViewSubmission_Page_GradeTextbox_ClassName_Locator);
+            base.FillTextBoxByClassName(ViewSubmissionPageResource.
+             ViewSubmission_Page_GradeTextbox_ClassName_Locator,
+             ViewSubmissionPageResource.ViewSubmission_Page_GradeTextbox_Value);
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                "EditGradeInViewSubmissionBBIns",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Stores Grade Details in Memory.
+        /// </summary>
+        /// <param name="gradeTypeEnum">This is Grade by Type.</param>
+        /// <param name="editGrade">This is edited grade value.</param>        
+        public void StoreGradeDetails(Grade.GradeTypeEnum gradeTypeEnum, string editGrade)
+        {
+            //Stores User Details in Memory
+
+            Logger.LogMethodEntry("AddUserPage", "StoreGradeDetails"
+                , base.IsTakeScreenShotDuringEntryExit);
+            switch (gradeTypeEnum)
+            {
+                case Grade.GradeTypeEnum.BBEditedGrade:
+                case Grade.GradeTypeEnum.BBNewGrade:
+                case Grade.GradeTypeEnum.PegasusEditedGrade:
+                case Grade.GradeTypeEnum.PegasusNewGrade:
+                    //Wait to Pop Up Get Close Successfully
+                    if (base.IsPopUpClosed(3))
+                    {
+                        //Store User Details in Memory
+                        this.StoreGradeDetailsInMemory(gradeTypeEnum, editGrade);
+                    }
+                    break;
+            }
+            Logger.LogMethodExit("AddUserPage", "StoreUserDetails"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Saving the Grade Details in Memory
+        /// </summary>
+        /// <param name="gradeTypeEnum">This is Grade Type Enum</param>
+        /// <param name="editGrade">This is edited grade</param>
+        private void StoreGradeDetailsInMemory(Grade.GradeTypeEnum gradeTypeEnum, string editGrade)
+        {
+            //Save user in Memory
+            Logger.LogMethodEntry("AddUserPage", "StoreGradeDetailsInMemory",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Save User Properties in Memory
+            switch (gradeTypeEnum)
+            {
+                case Grade.GradeTypeEnum.BBEditedGrade:
+                case Grade.GradeTypeEnum.BBNewGrade:
+                case Grade.GradeTypeEnum.PegasusEditedGrade:
+                case Grade.GradeTypeEnum.PegasusNewGrade:
+                    {
+                        //Save Student Details
+                        this.SaveGradeInMemory(gradeTypeEnum, editGrade);
+                    }
+                    break;
+            }
+            Logger.LogMethodExit("AddUserPage", "StoreGradeDetailsInMemory",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Save Grade In Memory
+        /// </summary>
+        /// <param name="GradeTypeEnum">This is Grade Type Enum</param>
+        /// <param name="editGrade">This is editted grade</param>
+        private void SaveGradeInMemory(Grade.GradeTypeEnum gradeTypeEnum, string editGrade)
+        {
+            //Save The User In Memory
+            Logger.LogMethodEntry("AddUserPage", "SaveUserInMemory",
+              base.IsTakeScreenShotDuringEntryExit);
+            Grade grade = new Grade
+            {
+                Score = editGrade,
+                GradeType = gradeTypeEnum,
+                IsCreated = true,
+            };
+            //Save The User In Memory
+            grade.StoreGradeInMemory();
+            Logger.LogMethodExit("AddUserPage", "SaveUserInMemory",
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

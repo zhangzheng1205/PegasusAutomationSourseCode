@@ -10,6 +10,7 @@ using System.Linq;
 using OpenQA.Selenium.Interactions;
 using Keys = OpenQA.Selenium.Keys;
 using System.Collections.ObjectModel;
+using System.Collections;
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>

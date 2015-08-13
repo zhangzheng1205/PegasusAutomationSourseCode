@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.BB.GradeSync.Cert" storage="d:\pctintegration\pegasus_automation_pct\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.bb.gradesync.cert.orderedtest" id="f09a8098-76fc-4929-bd6c-ba6f0b307bce" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="d1e78d4b-7d39-42e4-90e8-ef82fdedb8f1" name="OrderedTest.BB.GradeSync.NewGrades" storage="orderedtest.bb.gradesync.newgrades.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="057433b7-b3c5-41a9-8041-7400f876f880" name="OrderedTest.BB.GradeSync.EditGrade" storage="orderedtest.bb.gradesync.editgrade.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

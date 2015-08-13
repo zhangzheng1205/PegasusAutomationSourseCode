@@ -6907,5 +6907,39 @@ namespace Pegasus.Pages.UI_Pages
             //Return the status value of the asset
             return getActivitySubmittedStatus;
         }
+
+        /// <summary>
+        /// Get score of the activity submitted.
+        /// </summary>
+        /// <returns>Score of the activity.</returns>
+        public string GetActivityScoreFromCourseMaterialsPageBB(Grade.GradeTypeEnum gradeType, string assetName)
+        {
+            //Get score Of Submitted Activity In CourseMaterial
+            logger.LogMethodEntry("StudentPresentationPage",
+                "GetActivityScoreFromCourseMaterialsPage",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText variable
+            string getActivitySubmittedScore = string.Empty;
+            try
+            {
+                //Get the activty column count
+                int activityColumnCount = this.GetTheActivityNameInCourseMaterial(assetName);
+                //Get the score of the activity
+                getActivitySubmittedScore = base.GetElementTextByXPath(
+              string.Format(StudentPresentationPageResource.
+              CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator, activityColumnCount));
+                getActivitySubmittedScore = getActivitySubmittedScore.Replace("%", "");
+                // Store the edited score in grade enum
+                new ViewSubmissionPage().StoreGradeDetails(gradeType, getActivitySubmittedScore);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+              "GetActivityScoreFromCourseMaterialsPage",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return getActivitySubmittedScore;
+        }
     }
 }

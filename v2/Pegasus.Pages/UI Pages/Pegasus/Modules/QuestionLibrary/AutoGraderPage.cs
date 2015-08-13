@@ -560,5 +560,42 @@ namespace Pegasus.Pages.UI_Pages
                 "CreateTheGraderITQuestionInCourseSpace",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Create The GraderIT Question In Coursespace.
+        /// </summary>
+        /// <param name="questionTypeEnum">This is Question Type Enum.</param>
+        /// <param name="projectName">This is Project Name.</param>
+        public void CSTeacherCreateGraderITQuestion(
+            Question.QuestionTypeEnum questionTypeEnum, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Create The GraderIT Question In CourseSpace
+            Logger.LogMethodEntry("AutoGraderPage",
+                "CreateTheGraderITQuestionInCourseSpace",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity project = Activity.Get(activityTypeEnum);
+            string projectName = project.Name.ToString();
+            try
+            {
+                //Enter The Grader Question Name
+                this.EnterTheGraderQuestionName(questionTypeEnum);
+                //Select Project Creation Tool Window
+                this.SelectProjectCreationToolWindow();
+                //Maxmize pop-up window
+                base.MaximizeWindow();
+                //Select The Project 
+                this.SearchTheProject(projectName);
+                base.SelectDefaultWindow();
+                //Click The Question SaveButton
+                this.ClickTheQuestionSaveButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AutoGraderPage",
+                "CreateTheGraderITQuestionInCourseSpace",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

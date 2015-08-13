@@ -14,6 +14,11 @@ namespace Pegasus.Automation.DataTransferObjects
         public String Name { get; set; }
 
         /// <summary>
+        /// This is the score.
+        /// </summary>
+        public String Score { get; set; }
+
+        /// <summary>
         /// This tells if the object is created.
         /// </summary>
         public bool IsCreated { get; set; }

@@ -83,8 +83,8 @@ namespace Pegasus.Automation.DataTransferObjects
             //Amplifier Course
             AmpWSCourse = 54,
             AmpProgramCourse = 55,
-            AmpInstructorCourse = 56
-
+            AmpInstructorCourse = 56,
+            BBCourse = 57
         }
 
         /// <summary>

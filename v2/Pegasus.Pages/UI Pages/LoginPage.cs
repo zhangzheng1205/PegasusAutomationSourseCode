@@ -6,7 +6,6 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
 using Pegasus.Pages.Exceptions;
 using System.Diagnostics;
-using System.Configuration;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -155,6 +154,12 @@ namespace Pegasus.Pages.UI_Pages
                             AutomationConfigurationManager.WorkSpaceUrlRoot
                                    + LoginPageResource.
                                    Login_Page_WorkspaceURL_Append_Parameters); break;
+                    //Get BlackBoard URL
+                    case User.UserTypeEnum.BBInstructor:
+                    case User.UserTypeEnum.BBStudent:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.BBInstructorUrlRoot);
+                        base.DeleteAllBrowserCookies();
+                        break;
                     //Get Url of Rumba Admin
                     case User.UserTypeEnum.RUMBAAdmin:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.RumbaUrlRoot);

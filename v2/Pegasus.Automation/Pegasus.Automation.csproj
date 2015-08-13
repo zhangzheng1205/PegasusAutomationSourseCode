@@ -85,6 +85,7 @@
     <Compile Include="DataTransferObjects\BaseEntityObject.cs" />
     <Compile Include="DataTransferObjects\Class.cs" />
     <Compile Include="DataTransferObjects\Course.cs" />
+    <Compile Include="DataTransferObjects\Grade.cs" />
     <Compile Include="DataTransferObjects\License.cs" />
     <Compile Include="DataTransferObjects\Mail.cs" />
     <Compile Include="DataTransferObjects\MMNDToolLinks.cs" />
@@ -132,6 +133,15 @@
     <Content Include="TestData\1-1Homework0%25.exe" />
     <Content Include="TestData\Branding_Image.png" />
     <Content Include="TestData\CourseIconImage.png" />
+    <Content Include="TestData\PCTExcelFinalDocument.exe" />
+    <Content Include="TestData\PCTExcelInstructionDocument.exe" />
+    <Content Include="TestData\PCTExcelStartDocument.exe" />
+    <Content Include="TestData\PCTPPTFinalDocument.exe" />
+    <Content Include="TestData\PCTPPTInstructionDocument.exe" />
+    <Content Include="TestData\PCTPPTStartDocument.exe" />
+    <Content Include="TestData\PCTWordFinallDocument.exe" />
+    <Content Include="TestData\PCTWordInitialDocument.exe" />
+    <Content Include="TestData\PCTWordInstructionDocument.exe" />
     <Content Include="TestData\Product_Banner.png" />
     <Content Include="TestData\Product_Icon.png" />
     <Content Include="TestData\Topic1TestWithStudyPlan0%25.exe" />

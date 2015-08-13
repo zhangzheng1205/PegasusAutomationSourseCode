@@ -142,6 +142,8 @@ namespace Pearson.Pegasus.TestAutomation.
             DPCsNewStudent=71,
             DPCsNewTeacher=72,
             DPCsNewAide=73,
+            BBInstructor = 74,
+            BBStudent = 75,
             #endregion
         }
 

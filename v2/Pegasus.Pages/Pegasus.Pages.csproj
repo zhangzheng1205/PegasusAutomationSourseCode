@@ -81,6 +81,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DemoAccountRegistrationPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\Blackboard\BlackboardCourseAction.cs" />
+    <Compile Include="UI Pages\Integration\Blackboard\BlackboardCourseActionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlackboardCourseActionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Blackboard\BlackboardLoginPage.cs" />
+    <Compile Include="UI Pages\Integration\Blackboard\BlackboardLoginPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlackboardLoginPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPage.cs" />
     <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -170,6 +182,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OverviewTestPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\PCT\PCTProjectListPage.cs" />
+    <Compile Include="UI Pages\Integration\PCT\PCTProjectListPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCTProjectListPageResource.resx</DependentUpon>
     </Compile>
     <Compile Include="UI Pages\Integration\Rumba\CreateUserPage.cs" />
     <Compile Include="UI Pages\Integration\Rumba\CreateUserPageResource.Designer.cs">
@@ -1830,6 +1848,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DemoAccountRegistrationPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Blackboard\BlackboardCourseActionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BlackboardCourseActionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Blackboard\BlackboardLoginPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BlackboardLoginPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CampusAdminNavPageResource.Designer.cs</LastGenOutput>
@@ -1889,6 +1915,10 @@
     <EmbeddedResource Include="UI Pages\Integration\Mathxl\OverviewTestPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OverviewTestPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\PCT\PCTProjectListPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PCTProjectListPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\Rumba\CreateUserPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -2998,6 +3028,15 @@
     <None Include="TestData\Excel\ExcelFileFor0Percent\go_e01_grader_h3.xlsx" />
     <None Include="TestData\Excel\ExcelFileFor100Percent\go_e01_grader_h3.xlsx" />
     <None Include="TestData\Excel\ExcelFileFor70Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\PCT\FinalDocuments\Excel\GO_e05_Grader_h3 %283%29.xlsx" />
+    <None Include="TestData\PCT\FinalDocuments\PPT\testcase.pptx" />
+    <None Include="TestData\PCT\FinalDocuments\Word\final.docx" />
+    <None Include="TestData\PCT\InstructionDocument\Excel\excel_cmp_Instructions.docx" />
+    <None Include="TestData\PCT\InstructionDocument\PPT\PPT_Instructions.docx" />
+    <None Include="TestData\PCT\InstructionDocument\Word\pctcheckword_Instructions.docx" />
+    <None Include="TestData\PCT\StartDocument\Excel\GO_e05_Grader_h3_solution %282%29.xlsx" />
+    <None Include="TestData\PCT\StartDocument\PPT\blank.pptx" />
+    <None Include="TestData\PCT\StartDocument\Word\initial.docx" />
     <None Include="TestData\PowerPoint\PowerPointFileFor0Percent\go_p01_grader_h3.pptx" />
     <None Include="TestData\PowerPoint\PowerPointFileFor100Percent\go_p01_grader_h3.pptx" />
     <None Include="TestData\PowerPoint\PowerPointFileFor70Percent\go_p01_grader_h3.pptx" />
