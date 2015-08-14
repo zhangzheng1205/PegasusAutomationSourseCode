@@ -240,4 +240,14 @@ When I login to Blackboard Cert as "BBStudent"
 Scenario: User logout as blackboard instructor
 When I login to Blackboard Cert as "BBInstructor"
 
+#Purpose: User login as MoodleKiosk instructor to D2L portal
+Scenario: User login as MoodleKiosk instructor
+Given I browsed the URL of "MoodleKioskTeacher"
+When I login to MoodleKiosk as "MoodleKioskTeacher"
+Then I should be logged in successfully as "MoodleKioskTeacher"
 
+#Purpose: User login as MoodleKiosk student to D2L portal
+Scenario: User login as MoodleKiosk student
+Given I browsed the URL of "MoodleKioskStduent"
+When I login to MoodleKiosk as "MoodleKioskStduent"
+Then I should be logged in successfully as "MoodleKioskStduent"

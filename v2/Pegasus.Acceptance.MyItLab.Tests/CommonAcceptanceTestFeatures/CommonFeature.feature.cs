@@ -765,6 +765,42 @@ testRunner.When("I login to Blackboard Cert as \"BBInstructor\"", ((string)(null
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User login as MoodleKiosk instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
+        public virtual void UserLoginAsMoodleKioskInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User login as MoodleKiosk instructor", ((string[])(null)));
+#line 244
+this.ScenarioSetup(scenarioInfo);
+#line 245
+testRunner.Given("I browsed the URL of \"MoodleKioskTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 246
+testRunner.When("I login to MoodleKiosk as \"MoodleKioskTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 247
+testRunner.Then("I should be logged in successfully as \"MoodleKioskTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User login as MoodleKiosk student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
+        public virtual void UserLoginAsMoodleKioskStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User login as MoodleKiosk student", ((string[])(null)));
+#line 250
+this.ScenarioSetup(scenarioInfo);
+#line 251
+testRunner.Given("I browsed the URL of \"MoodleKioskStduent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 252
+testRunner.When("I login to MoodleKiosk as \"MoodleKioskStduent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 253
+testRunner.Then("I should be logged in successfully as \"MoodleKioskStduent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
