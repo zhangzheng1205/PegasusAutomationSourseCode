@@ -57,6 +57,7 @@ Then I should see the "DigitalPath" period configured in calendar successfully
 Scenario: Digital Path teacher assigns Math XL activity to current date
 When I navigate to the "Planner" tab
 Then I should be on the "Planner" page
+When I select "DigitalPath" Product from the Curriculum dropdown
 When I expand the folder "Expressions and Equations" in Planner tab
 And I expand the sub folder "Variables and Expressions" in Planner tab
 And I expand the leaf folder "Topic 1 Test" in Planner tab
@@ -78,6 +79,7 @@ When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I navigate to the "Planner" tab
 Then I should be on the "Planner" page
+When I select "DigitalPath" Product from the Curriculum dropdown
 When I expand the folder "Expressions and Equations" in Planner tab
 And I expand the sub folder "Variables and Expressions" in Planner tab
 And I expand the leaf folder "1-1 Homework" in Planner tab
@@ -99,12 +101,13 @@ When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I navigate to the "Planner" tab
 Then I should be on the "Planner" page
+When I select "DigitalPath" Product from the Curriculum dropdown
 When I expand the folder "Expressions and Equations" in Planner tab
 And I expand the sub folder "Variables and Expressions" in Planner tab
 And I expand the leaf folder "Topic 1 Test" in Planner tab
 And I Drag and drop the study plan "Topic 1 Test with Study Plan"
-And I refresh the frame till content is copied
-And I refresh the frame till "Topic 1 Test with Study Plan" is displayed in calendar frame
+And I refresh the frame till content is copied for "DigitalPath" product
+And I refresh the frame till "Topic 1 Test with Study Plan" is displayed in calendar frame under "DigitalPath" product
 
 
 
@@ -114,6 +117,7 @@ When I navigate to the "Home" tab
 Then I should be on the "Home" page
 When I navigate to the "Planner" tab
 Then I should be on the "Planner" page
+When I select "DigitalPath" Product from the Curriculum dropdown
 When I expand the folder "Expressions and Equations" in Planner tab
 And I expand the sub folder "Equivalent Expressions" in Planner tab
 And I expand the leaf folder "Topic 2 Test" in Planner tab
