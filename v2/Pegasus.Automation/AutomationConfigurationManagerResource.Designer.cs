@@ -79,6 +79,33 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CanvasKioskUrlRootCGIE.
+        /// </summary>
+        internal static string CanvasKioskUrlRootCGIE_Key {
+            get {
+                return ResourceManager.GetString("CanvasKioskUrlRootCGIE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CanvasKioskUrlRootPROD.
+        /// </summary>
+        internal static string CanvasKioskUrlRootPROD_Key {
+            get {
+                return ResourceManager.GetString("CanvasKioskUrlRootPROD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CanvasKioskUrlRootVCD.
+        /// </summary>
+        internal static string CanvasKioskUrlRootVCD_Key {
+            get {
+                return ResourceManager.GetString("CanvasKioskUrlRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CourseSpaceURLRootCGIE.
         /// </summary>
         internal static string CourseSpaceURLRootCGIE_Key {
@@ -178,6 +205,33 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to D2LKioskUrlRootCGIE.
+        /// </summary>
+        internal static string D2LKioskUrlRootCGIE_Key {
+            get {
+                return ResourceManager.GetString("D2LKioskUrlRootCGIE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D2LKioskUrlRootPROD.
+        /// </summary>
+        internal static string D2LKioskUrlRootPROD_Key {
+            get {
+                return ResourceManager.GetString("D2LKioskUrlRootPROD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D2LKioskUrlRootVCD.
+        /// </summary>
+        internal static string D2LKioskUrlRootVCD_Key {
+            get {
+                return ResourceManager.GetString("D2LKioskUrlRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MMNDCertAdminURLRoot.
         /// </summary>
         internal static string MMNDCertAdminURLRoot_Key {
@@ -228,6 +282,33 @@ namespace Pegasus.Automation {
         internal static string MMNDVCDPortalURLRoot_Key {
             get {
                 return ResourceManager.GetString("MMNDVCDPortalURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MoodleKioskUrlRootCGIE.
+        /// </summary>
+        internal static string MoodleKioskUrlRootCGIE_Key {
+            get {
+                return ResourceManager.GetString("MoodleKioskUrlRootCGIE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MoodleKioskUrlRootPROD.
+        /// </summary>
+        internal static string MoodleKioskUrlRootPROD_Key {
+            get {
+                return ResourceManager.GetString("MoodleKioskUrlRootPROD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MoodleKioskUrlRootVCD.
+        /// </summary>
+        internal static string MoodleKioskUrlRootVCD_Key {
+            get {
+                return ResourceManager.GetString("MoodleKioskUrlRootVCD_Key", resourceCulture);
             }
         }
         

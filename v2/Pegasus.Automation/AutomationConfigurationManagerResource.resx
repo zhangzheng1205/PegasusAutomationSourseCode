@@ -123,6 +123,15 @@
   <data name="BrowserName_Key" xml:space="preserve">
     <value>Browser</value>
   </data>
+  <data name="CanvasKioskUrlRootCGIE_Key" xml:space="preserve">
+    <value>CanvasKioskUrlRootCGIE</value>
+  </data>
+  <data name="CanvasKioskUrlRootPROD_Key" xml:space="preserve">
+    <value>CanvasKioskUrlRootPROD</value>
+  </data>
+  <data name="CanvasKioskUrlRootVCD_Key" xml:space="preserve">
+    <value>CanvasKioskUrlRootVCD</value>
+  </data>
   <data name="CourseSpaceURLRootCGIEAkamai_Key" xml:space="preserve">
     <value>CourseSpaceURLRootCGIEAkamai</value>
   </data>
@@ -156,6 +165,15 @@
   <data name="CourseSpaceURLVCDNP_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVCDNP</value>
   </data>
+  <data name="D2LKioskUrlRootCGIE_Key" xml:space="preserve">
+    <value>D2LKioskUrlRootCGIE</value>
+  </data>
+  <data name="D2LKioskUrlRootPROD_Key" xml:space="preserve">
+    <value>D2LKioskUrlRootPROD</value>
+  </data>
+  <data name="D2LKioskUrlRootVCD_Key" xml:space="preserve">
+    <value>D2LKioskUrlRootVCD</value>
+  </data>
   <data name="MMNDCertAdminURLRoot_Key" xml:space="preserve">
     <value>MMNDCertAdminURLRoot</value>
   </data>
@@ -173,6 +191,15 @@
   </data>
   <data name="MMNDVCDPortalURLRoot_Key" xml:space="preserve">
     <value>MMNDVCDPortalURLRoot</value>
+  </data>
+  <data name="MoodleKioskUrlRootCGIE_Key" xml:space="preserve">
+    <value>MoodleKioskUrlRootCGIE</value>
+  </data>
+  <data name="MoodleKioskUrlRootPROD_Key" xml:space="preserve">
+    <value>MoodleKioskUrlRootPROD</value>
+  </data>
+  <data name="MoodleKioskUrlRootVCD_Key" xml:space="preserve">
+    <value>MoodleKioskUrlRootVCD</value>
   </data>
   <data name="PCTInstructorResourceToolsCGIE_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLCGIE</value>

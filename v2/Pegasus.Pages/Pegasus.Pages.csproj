@@ -183,6 +183,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OverviewTestPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\Moodle\MoodleLoginPage.cs" />
+    <Compile Include="UI Pages\Integration\Moodle\MoodleLoginPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MoodleLoginPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\PCT\PCTProjectListPage.cs" />
     <Compile Include="UI Pages\Integration\PCT\PCTProjectListPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1915,6 +1921,10 @@
     <EmbeddedResource Include="UI Pages\Integration\Mathxl\OverviewTestPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OverviewTestPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Moodle\MoodleLoginPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MoodleLoginPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\PCT\PCTProjectListPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

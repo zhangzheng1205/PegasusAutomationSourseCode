@@ -1085,5 +1085,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Gradebook", "SelectButtonInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Validate the display of GradeSync Icon
+        /// </summary>
+        /// <param name="activityName">This is the activity name</param>
+        [Then(@"I should see GBSync icon for ""(.*)"" activity")]
+        public void VaidateGBSyncIconForActivity(string activityName)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                "VaidateGBSyncIconForActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Select the window
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (true, new GBInstructorUXPage().GetGBSyncIconStatus(activityName)));
+            Logger.LogMethodExit("Gradebook",
+                "VaidateGBSyncIconForActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

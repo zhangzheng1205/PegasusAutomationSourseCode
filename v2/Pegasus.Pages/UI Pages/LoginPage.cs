@@ -160,6 +160,24 @@ namespace Pegasus.Pages.UI_Pages
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.BBInstructorUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
+                    //Get D2L Kiosk URL
+                    case User.UserTypeEnum.D2LKioskStudent:
+                    case User.UserTypeEnum.D2LKioskTeacher:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.D2LKioskUrlRoot);
+                        base.DeleteAllBrowserCookies();
+                        break;
+                    //Get Canvas Kiosk URL
+                    case User.UserTypeEnum.CanvasKioskStudent:
+                    case User.UserTypeEnum.CanvasKioskTeacher:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.CanvasKioskUrlRoot);
+                        base.DeleteAllBrowserCookies();
+                        break;
+                    //Get Moodle Kiosk URL
+                    case User.UserTypeEnum.MoodleKioskStudent:
+                    case User.UserTypeEnum.MoodleKioskTeacher:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.CanvasKioskUrlRoot);
+                        base.DeleteAllBrowserCookies();
+                        break;
                     //Get Url of Rumba Admin
                     case User.UserTypeEnum.RUMBAAdmin:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.RumbaUrlRoot);
@@ -641,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
                 || User.UserTypeEnum.DPCsNewStudent == userTypeEnum
                 || User.UserTypeEnum.DPCsNewTeacher == userTypeEnum
                 || User.UserTypeEnum.DPCsNewAide == userTypeEnum
-                || User.UserTypeEnum.DPCsAide==userTypeEnum
+                || User.UserTypeEnum.DPCsAide == userTypeEnum
                 || User.UserTypeEnum.RumbaTeacher == userTypeEnum
                 || User.UserTypeEnum.RumbaStudent == userTypeEnum
                 || User.UserTypeEnum.DPCsOrganizationAdmin == userTypeEnum
@@ -1203,5 +1221,3 @@ namespace Pegasus.Pages.UI_Pages
         }
     }
 }
-
-

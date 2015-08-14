@@ -441,7 +441,31 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
-        /// Find the rumba url based on application environment.
+        /// Property for D2L Kiosk url.
+        /// </summary>
+        public static string D2LKioskUrlRoot
+        {
+            get { return GetD2LKioskUrlRoot(); }
+        }
+
+        /// <summary>
+        /// Property for Canvas Kiosk url.
+        /// </summary>
+        public static string CanvasKioskUrlRoot
+        {
+            get { return GetCanvasKioskUrlRoot(); }
+        }
+
+        /// <summary>
+        /// Property for Moodle Kiosk url.
+        /// </summary>
+        public static string MoodleKioskUrlRoot
+        {
+            get { return GetMoodleKioskUrlRoot(); }
+        }
+
+        /// <summary>
+        /// Find the blackboard url based on application environment.
         /// </summary> 
         /// <returns>Rumba url.</returns>
         private static string GetBBInstructorUrlRoot()
@@ -465,6 +489,85 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             }
             return applicationBBUrl;
         }
+
+        /// <summary>
+        /// Find the D2L Kiosk url based on application environment.
+        /// </summary> 
+        /// <returns>Rumba url.</returns>
+        private static string GetD2LKioskUrlRoot()
+        {
+            string applicationBBUrl;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+                case "VCD":
+                case "VCDNP":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootVCD_Key];
+                    break;
+                case "CGIE":
+                case "CGIENP":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootCGIE_Key];
+                    break;
+                case "PROD":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootPROD_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationBBUrl;
+        }
+
+        /// <summary>
+        /// Find the Canvas Kiosk url based on application environment.
+        /// </summary> 
+        /// <returns>Rumba url.</returns>
+        private static string GetCanvasKioskUrlRoot()
+        {
+            string applicationBBUrl;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+                case "VCD":
+                case "VCDNP":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CanvasKioskUrlRootVCD_Key];
+                    break;
+                case "CGIE":
+                case "CGIENP":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CanvasKioskUrlRootCGIE_Key];
+                    break;
+                case "PROD":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CanvasKioskUrlRootPROD_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationBBUrl;
+        }
+
+        /// <summary>
+        /// Find the Moodle Kiosk url based on application environment.
+        /// </summary> 
+        /// <returns>Moodle Kiosk Url.</returns>
+        private static string GetMoodleKioskUrlRoot()
+        {
+            string applicationMoodlerl;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+                case "VCD":
+                case "VCDNP":
+                    applicationMoodlerl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MoodleKioskUrlRootVCD_Key];
+                    break;
+                case "CGIE":
+                case "CGIENP":
+                    applicationMoodlerl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MoodleKioskUrlRootCGIE_Key];
+                    break;
+                case "PROD":
+                    applicationMoodlerl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MoodleKioskUrlRootPROD_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationMoodlerl;
+        }
+
 
         /// <summary>
         /// Find the rumba url based on application environment.

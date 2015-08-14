@@ -8,6 +8,7 @@ using TechTalk.SpecFlow;
 using Pegasus.Pages.UI_Pages.Integration.Blackboard;
 using System.Globalization;
 using Pegasus.Automation.DataTransferObjects;
+using Pegasus.Pages.UI_Pages.Integration.Moodle;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -316,7 +317,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Validate Blackboard user login.
+        /// </summary>
+        /// <param name="expectedPageTitle">This is expected page title.</param>
         [Then(@"I should be on ""(.*)"" page")]
         public void ShowThePageInBlackBoard(String expectedPageTitle)
         {
@@ -336,7 +340,28 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Moodle user login to Moodle portal
+        /// </summary>
+        /// <param name="userType">This is the user type enum.</param>
+        [When(@"I login to MoodleKiosk as ""(.*)""")]
+        public void UserLoginToMoodleKioskCertAs(User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("LoginLogout", "UserLoginToMoodleKioskCertAs", base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userType);
+            switch (userType)
+            {
+                case User.UserTypeEnum.MoodleKioskStudent:
+                case User.UserTypeEnum.MoodleKioskTeacher:
+                    new MoodleLoginPage().LoginToCanvas(user.Name, user.Password);
+                    break;
+            }
+            Logger.LogMethodExit("LoginLogout", "UserLoginToMoodleKioskCertAs", base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Blackboard user logout of Pegasus
+        /// </summary>
         [When(@"I logout of Pegasus")]
         public void LogoutOfPegasus()
         {
