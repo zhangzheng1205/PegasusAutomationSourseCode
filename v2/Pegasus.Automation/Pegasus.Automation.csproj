@@ -97,6 +97,7 @@
     <Compile Include="DataTransferObjects\Section.cs" />
     <Compile Include="DataTransferObjects\User.cs" />
     <Compile Include="DataTransferObjects\WorkSpace.cs" />
+    <Compile Include="GenericClick.cs" />
     <Compile Include="InMemoryDatabase.cs" />
     <Compile Include="InMemoryDatabaseSingleton.cs" />
     <Compile Include="DataEntityObjects\ActivityQuestionsList.cs" />

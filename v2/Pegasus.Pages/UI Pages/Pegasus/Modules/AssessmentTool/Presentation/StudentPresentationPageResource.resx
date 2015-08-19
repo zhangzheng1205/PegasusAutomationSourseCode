@@ -132,11 +132,20 @@
   <data name="StudentPresentation_Back_Icon_Id_Locator" xml:space="preserve">
     <value>imgBackArrow</value>
   </data>
+  <data name="StudentPresentation_CompletedActivity_AssetName_CssSelector_Value" xml:space="preserve">
+    <value>#TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(2) div</value>
+  </data>
   <data name="StudentPresentation_CompletedActivity_AssetName_Xpath_Value" xml:space="preserve">
     <value>//*[@id='TodoList']/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div</value>
   </data>
+  <data name="StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value" xml:space="preserve">
+    <value>#TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(3) div div:nth-child(2) div:nth-child(2)</value>
+  </data>
   <data name="StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value" xml:space="preserve">
     <value>//*[@id='TodoList']/div/div[{0}]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2]</value>
+  </data>
+  <data name="StudentPresentation_CompletedActivity_Records_CssSelector_Value" xml:space="preserve">
+    <value>#TodoList &gt; div &gt; div</value>
   </data>
   <data name="StudentPresentation_CompletedActivity_Records_Xpath_Value" xml:space="preserve">
     <value>//*[@id='TodoList']/div/div</value>
@@ -679,7 +688,7 @@
     <value>Over 20 years of experience in the travel industry</value>
   </data>
   <data name="StudentPrsentation_Page_Content_Text" xml:space="preserve">
-    <value>//div[@id='ContentDiv_TP_7']/ul/li</value>
+    <value>div#ContentDiv_TP_7 &gt; ul &gt; li</value>
   </data>
   <data name="StudentPrsentation_Page_Create_Option_Id_Locator" xml:space="preserve">
     <value>ThemePreview-Create-Button</value>
@@ -691,13 +700,13 @@
     <value>60</value>
   </data>
   <data name="StudentPrsentation_Page_DecreaseList_Level_Xpath_Locator" xml:space="preserve">
-    <value>//ul[@id='ribbon-tab-Home']/li[4]/span/span/span/span/span/span[4]/span/div/span</value>
+    <value>ul#ribbon-tab-Home &gt; li:nth-of-type(4) &gt; span &gt; span &gt; span &gt; span &gt; span &gt; span:nth-of-type(4) &gt; span &gt; div &gt; span</value>
   </data>
   <data name="StudentPrsentation_Page_Design_Tab_Xpath_Locator" xml:space="preserve">
-    <value>//ul[@class='ribbon-tabs-wrapper']/li[9]</value>
+    <value>ul.ribbon-tabs-wrapper &gt; li:nth-of-type(9)</value>
   </data>
   <data name="StudentPrsentation_Page_Design_Theme_Xpath_Locator" xml:space="preserve">
-    <value>//ul[@id='ribbon-tab-Design']/li/span/span/span/span/div/div[2]/div[3]</value>
+    <value>ul#ribbon-tab-Design &gt; li &gt; span &gt; span &gt; span &gt; span &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3)</value>
   </data>
   <data name="StudentPrsentation_Page_DesineTab_Xpath_Locator" xml:space="preserve">
     <value>html/body/div[1]/div[2]/div[1]/div/div/div/ul/li[7]</value>
@@ -724,7 +733,7 @@
     <value>e</value>
   </data>
   <data name="StudentPrsentation_Page_Facet_Template_Xpath_Locator" xml:space="preserve">
-    <value>//div[@class='newTemplateDivParent']/div/ul/li[3]/div/div</value>
+    <value>div.newTemplateDivParent &gt; div &gt; ul &gt; li:nth-of-type(3) &gt; div &gt; div</value>
   </data>
   <data name="StudentPrsentation_Page_FeedbackText_Id_Locator" xml:space="preserve">
     <value>_ctl0_APH_feedback</value>
@@ -742,10 +751,10 @@
     <value>Certified Travel Associates</value>
   </data>
   <data name="StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='ContentDiv_TP_4']/ul/li[2]</value>
+    <value>div#ContentDiv_TP_4 &gt; ul &gt; li:nth-of-type(2)</value>
   </data>
   <data name="StudentPrsentation_Page_First_Bulleted_Point_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='ContentDiv_TP_4']/ul/li/span</value>
+    <value>div#ContentDiv_TP_4 &gt; ul &gt; li &gt; span</value>
   </data>
   <data name="StudentPrsentation_Page_FolderName_Textbox_Xpath_Locator" xml:space="preserve">
     <value>//*[@id='item-9-contextmenu']/div[2]</value>
@@ -760,7 +769,7 @@
     <value>Your Dreams</value>
   </data>
   <data name="StudentPrsentation_Page_Home_Tab_Xpath_Locator" xml:space="preserve">
-    <value>//ul[@class='ribbon-tabs-wrapper']/li[6]</value>
+    <value>ul.ribbon-tabs-wrapper &gt; li:nth-of-type(6)</value>
   </data>
   <data name="StudentPrsentation_Page_Image_Id_Locator" xml:space="preserve">
     <value>GO_A1_Image1</value>
@@ -784,7 +793,7 @@
     <value>9-ButtonNewFolder</value>
   </data>
   <data name="StudentPrsentation_Page_NewSlide_Xpath_Locator" xml:space="preserve">
-    <value>//ul[@id='ribbon-tab-Home']/li[2]/span/span/span/span/div/div/span/div</value>
+    <value>ul#ribbon-tab-Home &gt; li:nth-of-type(2) &gt; span &gt; span &gt; span &gt; span &gt; div &gt; div &gt; span &gt; div</value>
   </data>
   <data name="StudentPrsentation_Page_New_Excel_Workbook_Xpath_Locator" xml:space="preserve">
     <value>//ul[@class='newTemplateList']/li[1]/div/div[1]</value>
@@ -808,7 +817,7 @@
     <value>9-ButtonOpen</value>
   </data>
   <data name="StudentPrsentation_Page_Organic_Theme_Xpath_Locator" xml:space="preserve">
-    <value>//div[@title='Organic']/div/span/img</value>
+    <value>div[title=Organic] &gt; div &gt; span &gt; img</value>
   </data>
   <data name="StudentPrsentation_Page_Pagealign_Okbutton_Xpath_Locator" xml:space="preserve">
     <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/button[1]</value>
@@ -823,7 +832,7 @@
     <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[3]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[1]</value>
   </data>
   <data name="StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator" xml:space="preserve">
-    <value>//div[@title='Panoramic Picture with Caption']/div/span</value>
+    <value>div[title="Panoramic Picture with Caption"] &gt; div &gt; span</value>
   </data>
   <data name="StudentPrsentation_Page_Persoectivelink_Xpath_locator" xml:space="preserve">
     <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[4]/div[5]/div/div[1]/div[8]/div[3]/div/span/img</value>
@@ -1057,7 +1066,7 @@
     <value>PPTMenu_SVM_07NotesArea5</value>
   </data>
   <data name="StudentPrsentation_Page_PPT_6_NotesIcon_Xpath_Locator" xml:space="preserve">
-    <value>//*[@id='PPTMenu_SVM_07NotesArea5']</value>
+    <value>#PPTMenu_SVM_07NotesArea5</value>
   </data>
   <data name="StudentPrsentation_Page_PPT_6_Notes_Value" xml:space="preserve">
     <value>Kodiak West Travel has locations in Juneau, Anchorage, and Victoria.</value>
@@ -1168,7 +1177,7 @@
     <value>Specializing in land and sea travel</value>
   </data>
   <data name="StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='ContentDiv_TP_4']/ul/li[3]</value>
+    <value>div#ContentDiv_TP_4 &gt; ul &gt; li:nth-of-type(3)</value>
   </data>
   <data name="StudentPrsentation_Page_Shadoweffect_Xpath_locator" xml:space="preserve">
     <value>//ul[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[1]/span</value>
@@ -1294,7 +1303,7 @@
     <value>//div[@class='bottomStatusBarBackground']/div[5]</value>
   </data>
   <data name="StudentPrsentation_Page_SIM5_PPT_SlideToWait_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='2_PPTSlideArea_SVM_01_']/div/div/div/div/img</value>
+    <value>div#2_PPTSlideArea_SVM_01_ &gt; div &gt; div &gt; div &gt; div &gt; img</value>
   </data>
   <data name="StudentPrsentation_Page_SIM5_PPT_ThirtyThirdQuestion_ReadViewSlide_Id_Locator" xml:space="preserve">
     <value>5_PPTReadingViewShowArea_AB_01_</value>
@@ -1372,7 +1381,7 @@
     <value>2000</value>
   </data>
   <data name="StudentPrsentation_Page_Title_Content_Slide" xml:space="preserve">
-    <value>//div[@title='Title and Content']/div/span</value>
+    <value>div[title="Title and Content"] &gt; div &gt; span</value>
   </data>
   <data name="StudentPrsentation_Page_Title_Content_Slide_Title_Value" xml:space="preserve">
     <value>Our Expertise</value>
@@ -1384,7 +1393,7 @@
     <value>Kodiak West</value>
   </data>
   <data name="StudentPrsentation_Page_Title_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='ContentDiv_TP_3']/ul/li</value>
+    <value>div#ContentDiv_TP_3 &gt; ul &gt; li</value>
   </data>
   <data name="StudentPrsentation_Page_Worddocument_DocumentToInsert_Xpath_Locator" xml:space="preserve">
     <value>item-0-contextmenu</value>
@@ -1426,21 +1435,12 @@
     <value>wrd</value>
   </data>
   <data name="StudentPrsentation_Page_Worddocument__ViewAllQuestionsPopUp_QuestionPath_Xpath_Locator" xml:space="preserve">
-    <value>//div[@class='QuestionListContainer']/div[2]/table/tbody/tr[{0}]/td[1]</value>
+    <value>div.QuestionListContainer &gt; div:nth-of-type(2) &gt; table &gt; tbody &gt; tr:nth-of-type({0}) &gt; td:nth-of-type(1)</value>
   </data>
   <data name="StudentPrsentation_Page_Worddocument__ViewAllQuestions_QuestionsList_Xpath_Locator" xml:space="preserve">
-    <value>//div[@class='QuestionListContainer']/div[2]/table/tbody/tr</value>
+    <value>div.QuestionListContainer &gt; div:nth-of-type(2) &gt; table &gt; tbody &gt; tr</value>
   </data>
   <data name="StudentPrsentation_Page__Textfill_Id_Locator" xml:space="preserve">
     <value>task01selstart</value>
-  </data>
-  <data name="StudentPresentation_CompletedActivity_AssetName_CssSelector_Value" xml:space="preserve">
-    <value>#TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(2) div</value>
-  </data>
-  <data name="StudentPresentation_CompletedActivity_AssetStatusText_CssSelector_Value" xml:space="preserve">
-    <value>#TodoList div div:nth-child({0}) div div:nth-child(2) table tbody tr td:nth-child(3) div div:nth-child(2) div:nth-child(2)</value>
-  </data>
-  <data name="StudentPresentation_CompletedActivity_Records_CssSelector_Value" xml:space="preserve">
-    <value>#TodoList &gt; div &gt; div</value>
   </data>
 </root>

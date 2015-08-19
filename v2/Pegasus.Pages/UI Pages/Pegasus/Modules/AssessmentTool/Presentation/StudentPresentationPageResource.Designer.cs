@@ -1781,7 +1781,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ContentDiv_TP_7&apos;]/ul/li.
+        ///   Looks up a localized string similar to div#ContentDiv_TP_7 &gt; ul &gt; li.
         /// </summary>
         internal static string StudentPrsentation_Page_Content_Text {
             get {
@@ -1817,7 +1817,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span/span/span/span/span[4]/span/div/span.
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home &gt; li:nth-of-type(4) &gt; span &gt; span &gt; span &gt; span &gt; span &gt; span:nth-of-type(4) &gt; span &gt; div &gt; span.
         /// </summary>
         internal static string StudentPrsentation_Page_DecreaseList_Level_Xpath_Locator {
             get {
@@ -1826,7 +1826,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //ul[@class=&apos;ribbon-tabs-wrapper&apos;]/li[9].
+        ///   Looks up a localized string similar to ul.ribbon-tabs-wrapper &gt; li:nth-of-type(9).
         /// </summary>
         internal static string StudentPrsentation_Page_Design_Tab_Xpath_Locator {
             get {
@@ -1835,7 +1835,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Design&apos;]/li/span/span/span/span/div/div[2]/div[3].
+        ///   Looks up a localized string similar to ul#ribbon-tab-Design &gt; li &gt; span &gt; span &gt; span &gt; span &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3).
         /// </summary>
         internal static string StudentPrsentation_Page_Design_Theme_Xpath_Locator {
             get {
@@ -1916,7 +1916,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@class=&apos;newTemplateDivParent&apos;]/div/ul/li[3]/div/div.
+        ///   Looks up a localized string similar to div.newTemplateDivParent &gt; div &gt; ul &gt; li:nth-of-type(3) &gt; div &gt; div.
         /// </summary>
         internal static string StudentPrsentation_Page_Facet_Template_Xpath_Locator {
             get {
@@ -1970,7 +1970,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ContentDiv_TP_4&apos;]/ul/li[2].
+        ///   Looks up a localized string similar to div#ContentDiv_TP_4 &gt; ul &gt; li:nth-of-type(2).
         /// </summary>
         internal static string StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator {
             get {
@@ -1979,7 +1979,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ContentDiv_TP_4&apos;]/ul/li/span.
+        ///   Looks up a localized string similar to div#ContentDiv_TP_4 &gt; ul &gt; li &gt; span.
         /// </summary>
         internal static string StudentPrsentation_Page_First_Bulleted_Point_Xpath_Locator {
             get {
@@ -2024,7 +2024,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //ul[@class=&apos;ribbon-tabs-wrapper&apos;]/li[6].
+        ///   Looks up a localized string similar to ul.ribbon-tabs-wrapper &gt; li:nth-of-type(6).
         /// </summary>
         internal static string StudentPrsentation_Page_Home_Tab_Xpath_Locator {
             get {
@@ -2105,7 +2105,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span/span/span/div/div/span/div.
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home &gt; li:nth-of-type(2) &gt; span &gt; span &gt; span &gt; span &gt; div &gt; div &gt; span &gt; div.
         /// </summary>
         internal static string StudentPrsentation_Page_NewSlide_Xpath_Locator {
             get {
@@ -2168,7 +2168,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@title=&apos;Organic&apos;]/div/span/img.
+        ///   Looks up a localized string similar to div[title=Organic] &gt; div &gt; span &gt; img.
         /// </summary>
         internal static string StudentPrsentation_Page_Organic_Theme_Xpath_Locator {
             get {
@@ -2213,7 +2213,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@title=&apos;Panoramic Picture with Caption&apos;]/div/span.
+        ///   Looks up a localized string similar to div[title=&quot;Panoramic Picture with Caption&quot;] &gt; div &gt; span.
         /// </summary>
         internal static string StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator {
             get {
@@ -2924,7 +2924,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //*[@id=&apos;PPTMenu_SVM_07NotesArea5&apos;].
+        ///   Looks up a localized string similar to #PPTMenu_SVM_07NotesArea5.
         /// </summary>
         internal static string StudentPrsentation_Page_PPT_6_NotesIcon_Xpath_Locator {
             get {
@@ -3248,7 +3248,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ContentDiv_TP_4&apos;]/ul/li[3].
+        ///   Looks up a localized string similar to div#ContentDiv_TP_4 &gt; ul &gt; li:nth-of-type(3).
         /// </summary>
         internal static string StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator {
             get {
@@ -3626,7 +3626,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;2_PPTSlideArea_SVM_01_&apos;]/div/div/div/div/img.
+        ///   Looks up a localized string similar to div#2_PPTSlideArea_SVM_01_ &gt; div &gt; div &gt; div &gt; div &gt; img.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_PPT_SlideToWait_Xpath_Locator {
             get {
@@ -3860,7 +3860,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@title=&apos;Title and Content&apos;]/div/span.
+        ///   Looks up a localized string similar to div[title=&quot;Title and Content&quot;] &gt; div &gt; span.
         /// </summary>
         internal static string StudentPrsentation_Page_Title_Content_Slide {
             get {
@@ -3896,7 +3896,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ContentDiv_TP_3&apos;]/ul/li.
+        ///   Looks up a localized string similar to div#ContentDiv_TP_3 &gt; ul &gt; li.
         /// </summary>
         internal static string StudentPrsentation_Page_Title_Xpath_Locator {
             get {
@@ -3932,7 +3932,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@class=&apos;QuestionListContainer&apos;]/div[2]/table/tbody/tr.
+        ///   Looks up a localized string similar to div.QuestionListContainer &gt; div:nth-of-type(2) &gt; table &gt; tbody &gt; tr.
         /// </summary>
         internal static string StudentPrsentation_Page_Worddocument__ViewAllQuestions_QuestionsList_Xpath_Locator {
             get {
@@ -3942,7 +3942,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@class=&apos;QuestionListContainer&apos;]/div[2]/table/tbody/tr[{0}]/td[1].
+        ///   Looks up a localized string similar to div.QuestionListContainer &gt; div:nth-of-type(2) &gt; table &gt; tbody &gt; tr:nth-of-type({0}) &gt; td:nth-of-type(1).
         /// </summary>
         internal static string StudentPrsentation_Page_Worddocument__ViewAllQuestionsPopUp_QuestionPath_Xpath_Locator {
             get {

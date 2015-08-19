@@ -865,7 +865,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
             //Attempt Sim5 Power Point Questions
-            new StudentPresentationPage().AttemptSim5PowerPointQuestions(activityName, score);
+            new PowerPointSim5Activity().AttemptSim5PowerPointQuestions(activityName, score);
+            //new StudentPresentationPage().AttemptSim5PowerPointQuestions(activityName, score);
             Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
         }

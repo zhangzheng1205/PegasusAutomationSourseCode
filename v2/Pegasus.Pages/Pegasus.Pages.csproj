@@ -553,6 +553,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DocBasedAssessmentResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PowerPointSim5Activity.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\DownLoadStartingFilesPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\DownLoadStartingFilesPageResource.Designer.cs">
       <AutoGen>True</AutoGen>

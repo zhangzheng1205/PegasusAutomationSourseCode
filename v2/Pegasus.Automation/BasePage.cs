@@ -2304,6 +2304,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             FillTexttoInnerHtmlByJavaScriptExecutor(By.XPath(xPathAttributeValue), textValue);
         }
 
+        /// <summary>
+        /// Use this Method to Fill text in Inner HTML Property of Text Area Using Xpath Attribute Value Through Javascript.
+        /// </summary>
+        /// <param name="xPathAttributeValue">This is Xpath Attribute Value.</param>
+        /// <param name="textValue">This is Text Value to Fill.</param>
+        protected void FillTextToInnerHtmlByCssFillTexttoInnerHtmlThroughJavaScriptExecutor
+            (String cssAttributeValue, String textValue)
+        {
+            FillTexttoInnerHtmlByJavaScriptExecutor(By.CssSelector(cssAttributeValue), textValue);
+        }
+
+
         #endregion
 
         #region WebDriver Keys
