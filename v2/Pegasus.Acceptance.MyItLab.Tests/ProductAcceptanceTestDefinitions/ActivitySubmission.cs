@@ -887,6 +887,21 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I attempt the questions for ""(.*)"" in activity ""(.*)""")]
+        public void AttemptAccessActivityFor70Score(string attemptPercentage, string activityName)
+        {
+            //Submit SIM5 Access type activity
+            Logger.LogMethodEntry("ActivitySubmission", "AttemptAccessActivityFor70Score",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            new Sim5FramePage().SubmitSim5AccessActivityQuestionsfor70Percentage(activityName);
+            Logger.LogMethodExit("ActivitySubmission", "AttemptAccessActivityFor70Score",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
+
+          
+
 
 }
