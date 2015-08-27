@@ -349,6 +349,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="textToFill">This is text to fill in the textbox.</param>
         protected void FillTextBoxByClassName(String classNameAttributeValue, String textToFill)
         {
+           
             FillTextBox(By.ClassName(classNameAttributeValue), textToFill);
         }
 
@@ -360,6 +361,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="textToFill">This is text to fill in the textbox.</param>
         protected void FillTextBoxByXPath(String xPathValue, String textToFill)
         {
+            Thread.Sleep(5000);
             FillTextBox(By.XPath(xPathValue), textToFill);
         }
 

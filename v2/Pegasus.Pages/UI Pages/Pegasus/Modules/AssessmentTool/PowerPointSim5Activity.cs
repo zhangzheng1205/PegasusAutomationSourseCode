@@ -451,6 +451,26 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click On Element By Id.
+        /// </summary>
+        /// <param name="elementAttribute">This is an Attribute.</param>
+        public void ClickOnElementById(string elementAttribute)
+        {
+            //Click On Element By Xpath
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnElementByXpath",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on Element
+
+            base.WaitForElement(By.Id(elementAttribute));
+            IWebElement getElementProperty = base.GetWebElementPropertiesById(elementAttribute);
+            Thread.Sleep(4000);
+            base.ClickByJavaScriptExecutor(getElementProperty);
+            Thread.Sleep(2000);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnElementByXpath",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// To verify View All Qusetion window closure.
         /// </summary>
         /// <param name="timeOut">time out.</param>

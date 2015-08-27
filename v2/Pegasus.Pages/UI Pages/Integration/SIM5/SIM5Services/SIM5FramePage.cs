@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                         switch (activityName)
                         {
                             case "Excel Chapter 1 Skill-Based Training":
-                                
+
                                 this.SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100(activityName);
                                 break;
                             case "Access Chapter 1 Skill-Based Exam (Scenario 1)":
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                                 this.SubmitSim5AccessActivityPostTestSeventyPercentScore(activityName);
                                 break;
                         }
-                        break; 
+                        break;
                 }
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-       
+
 
         /// <summary>
         /// Submit SIM5 Excel type activity to score 100%.
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer Twentythird Question
                 powerPoint.JumpToQuestion("23");
-                 this.EditingTheValuesInWorksheet();
+                this.EditingTheValuesInWorksheet();
                 //Answer Twentyfourth question
                 powerPoint.JumpToQuestion("24");
                 new StudentPresentationPage().getQuestionNumber(24);
@@ -274,7 +274,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
             //Fill vlaue in Formula Box 
             base.FillTextBoxById(SIM5FramePageResource.
-                SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator, 
+                SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A2_Cell_Text_Value);
             Thread.Sleep(2000);
             PressEnterKeyById(SIM5FramePageResource.
@@ -343,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PerformMouseRightClickAction(Test);
             Thread.Sleep(3000);
             base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_SIM5_Excel_InsertRowButton_Xpath_Locator),10);
+                SIM5Frame_Page_SIM5_Excel_InsertRowButton_Xpath_Locator), 10);
             IWebElement InsertCdolButton = base.GetWebElementPropertiesByXPath(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertRowButton_Xpath_Locator);
             Thread.Sleep(3000);
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(3000);
             base.PerformMoveToElementClickAction(OkButton);
             Thread.Sleep(3000);
-           
+
             //type As of September 30 press Enter
             IWebElement getA3Cell = base.GetWebElementPropertiesById(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator);
@@ -374,15 +374,15 @@ namespace Pegasus.Pages.UI_Pages
             //Under Home tab click Merge and center
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_MergeAndcenterLink_Xpath_Locator);
-            
+
             //click on cell styles
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_cellStyles_Xpath_Locator);
-            
+
             //select heading 2 inder titles 
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_cellStyles_Heading2_Xpath_Locator);
-           
+
             //rightclick on column B header and select Insert
             IWebElement getBCell = base.GetWebElementPropertiesById(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B_Column_Id_Locator);
@@ -429,9 +429,9 @@ namespace Pegasus.Pages.UI_Pages
 
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_ColumnWidthButton_Xpath_Locator);
-                       
+
             base.FillTextBoxById(SIM5FramePageResource.
-                SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Xpath_Locator, 
+                SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Xpath_Locator,
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Value);
 
             IWebElement clickOKButton = base.GetWebElementPropertiesById(
@@ -446,7 +446,7 @@ namespace Pegasus.Pages.UI_Pages
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ScrollButton_Xpath_Locator);
             Thread.Sleep(3000);
             for (int i = 0; i < 18; i++)
-            base.PerformMouseClickAction(scroll);
+                base.PerformMouseClickAction(scroll);
             //select from B4:F4
 
             base.WaitForElement(By.Id(SIM5FramePageResource.
@@ -456,7 +456,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(3000);
             base.PerformMouseClickAction(getB4Cell);
             Thread.Sleep(3000);
-                        
+
             this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator,
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F4_Cell_ID_Locator);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -464,23 +464,23 @@ namespace Pegasus.Pages.UI_Pages
             //click on wrap text under home tab 
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.
              SIM5Frame_Page_SIM5_Excel_wrapTextButton_Menu_CSSLocator);
-            
+
             //click on center under alignment group 
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.
               SIM5Frame_Page_SIM5_Excel_centerAlignButton_Menu_CSSLocator);
-           
+
             //click middle align
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_middleAlignButton_Menu_CSSLocator);
-           
+
             //click on cell styles
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_cellStyles_Xpath_Locator);
-          
+
             //select heading 4 inder titles 
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_cellStyles_Heading4_Xpath_Locator);
-           
+
             //click on A11
             IWebElement getA11Cell = base.GetWebElementPropertiesById(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A11_Cell_ID_Locator);
@@ -491,8 +491,8 @@ namespace Pegasus.Pages.UI_Pages
 
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
              SIM5Frame_Page_SIM5_Excel_cellStyles_ThemedStyleButton_Xpath_Locator);
-            
-           
+
+
             //Select B5:B10
             IWebElement getB5Cell = base.GetWebElementPropertiesById(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator);
@@ -521,16 +521,16 @@ namespace Pegasus.Pages.UI_Pages
             //click on Page Layout
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource
                 .SIM5Frame_Page_SIM5_Excel_Pagelayout_Menu_CSSLocator);
-           
+
             //click on colors under themes
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_ColorTheme_Xpath_Locator);
-           
+
             //click on 8th color-Green
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_Color_Xpath_Locator);
-           
-            Logger.LogMethodExit("SIM5FramePage", 
+
+            Logger.LogMethodExit("SIM5FramePage",
             "ChangingWorkSheetTheme", base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion
@@ -554,7 +554,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PerformKeyDownThenPressKeyToElement(Keys.Control, Keys.F2, 1);
             // Click on Print Active sheets and select Print Selection
             base.WaitForElement(By.CssSelector(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintStyle_CSSLocator));
-            IWebElement PrintOption= base.GetWebElementPropertiesByCssSelector(
+            IWebElement PrintOption = base.GetWebElementPropertiesByCssSelector(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintStyle_CSSLocator);
             Thread.Sleep(3000);
             base.PerformMouseClickAction(PrintOption);
@@ -616,7 +616,7 @@ namespace Pegasus.Pages.UI_Pages
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Page1Option_Xpath_Locator);
             base.PerformMouseClickAction(PageOption);
             Logger.LogMethodExit("SIM5FramePage",
-            "ChangingPageDetailsandFormulas",base.IsTakeScreenShotDuringEntryExit);
+            "ChangingPageDetailsandFormulas", base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion
 
@@ -627,7 +627,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnteringDataByRange()
         {
             Logger.LogMethodEntry("SIM5FramePage",
-            "EnteringDataByRange",base.IsTakeScreenShotDuringEntryExit);
+            "EnteringDataByRange", base.IsTakeScreenShotDuringEntryExit);
             //Select Range B4:D9
             this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D9_Cell_Id_Locator);
@@ -641,19 +641,19 @@ namespace Pegasus.Pages.UI_Pages
             this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B6_Cell_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B6_Cell_Value);
             //type 1105 in cell B7 and press Enter
-            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B7_Cell_Id_Locator, 
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B7_Cell_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B7_Cell_Value);
             //type 255 in cell B8 and press Enter
             this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B8_Cell_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B8_Cell_Value);
             //type 215 in cell B9 and press Enter
-            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B9_Cell_Id_Locator, 
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B9_Cell_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B9_Cell_Value);
             //type 15.50 in cell C4 and press Enter
             this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_C4_Cell_Id_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_C4_Cell_Value);
             Logger.LogMethodExit("SIM5FramePage",
-                "EnteringDataByRange",base.IsTakeScreenShotDuringEntryExit);
+                "EnteringDataByRange", base.IsTakeScreenShotDuringEntryExit);
         }
 
         private void EnterValuesToSelectedCell(string CellID, string CellValue)
@@ -690,7 +690,7 @@ namespace Pegasus.Pages.UI_Pages
             "ApplyNumberingtoCells",
             base.IsTakeScreenShotDuringEntryExit);
             //click on E4 and type "=b4*d4"
-            
+
             IWebElement getE4Cell = base.GetWebElementPropertiesById(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator);
             Thread.Sleep(3000);
@@ -705,7 +705,7 @@ namespace Pegasus.Pages.UI_Pages
             PressEnterKeyById(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
 
-          //click on E4 and drag down till E9         
+            //click on E4 and drag down till E9         
             IWebElement getE9Cell = base.GetWebElementPropertiesById(
            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator);
             Thread.Sleep(2000);
@@ -729,17 +729,17 @@ namespace Pegasus.Pages.UI_Pages
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_Home_Menu_CSSLocator);
 
-            
+
             // Under numbering group click on comma
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CommaOption_Xpath_Locator);
-           
+
             // click on decrease decimal icon twice
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_DecreaseDecimalOption_Xpath_Locator);
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
               SIM5Frame_Page_SIM5_Excel_DecreaseDecimalOption_Xpath_Locator);
-          
+
             Logger.LogMethodExit("SIM5FramePage",
             "ApplyNumberingtoCells",
             base.IsTakeScreenShotDuringEntryExit);
@@ -757,7 +757,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             //click on Review Tab
             bool pres = base.IsElementPresent(By.CssSelector(".tab-header.tab-header-review.accessible"), 10);
-            
+
             IWebElement getReviewMenuItem = base.GetWebElementPropertiesByCssSelector(
             ".tab-header.tab-header-review.accessible");
             Thread.Sleep(3000);
@@ -816,7 +816,7 @@ namespace Pegasus.Pages.UI_Pages
 
             bool pres6 = base.IsElementPresent(By.XPath(".//*[@id='41']/div/button[1]"), 10);
             powerPoint.ClickOnElementByXpath(".//*[@id='41']/div/button[1]");
-           
+
             //click on show All properties
             //IWebElement PropButton = base.GetWebElementPropertiesByXPath(
             //SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ShowAllProperties_Xpath_Locator);
@@ -858,19 +858,19 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void SetMarginsAndPageLayout()
         {
-            Logger.LogMethodEntry("SIM5FramePage","SetMarginsAndPageLayout",
+            Logger.LogMethodEntry("SIM5FramePage", "SetMarginsAndPageLayout",
             base.IsTakeScreenShotDuringEntryExit);
             //Click on PageLayout file menu item
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_PageLayout_Menu);
-           
+
             //click on margins arrow and select Custom margins
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_MarginsButton_Xpath_Locator);
 
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CustomMarginsButton_Xpath_Locator);
-           
+
             //select check box horizontal margins
             base.WaitForElement(By.Id(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_HorizontalMarginCheckBox_ID_Locator));
@@ -884,7 +884,7 @@ namespace Pegasus.Pages.UI_Pages
             SIM5Frame_Page_SIM5_Excel_HeaderTab_Xpath_Locator);
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CustomFooterButton_Xpath_Locator);
-           
+
             //click on insert file name button and click OK
             base.WaitForElement(By.Id(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_InsertFNIcon_ID_Locator));
@@ -903,7 +903,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on OK
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_AcceptOKButton_Xpath_Locator);
-           
+
             Logger.LogMethodExit("SIM5FramePage",
             "SetMarginsAndPageLayout",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1059,7 +1059,7 @@ namespace Pegasus.Pages.UI_Pages
                 "AnswersFirstExcelQuestion",
               base.IsTakeScreenShotDuringEntryExit);
         }
-         #endregion
+        #endregion
 
         /// <summary>
         /// Save office file in USB in SIM5.
@@ -1141,8 +1141,8 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(3000);
             //Click on open button
             base.ClickByJavaScriptExecutor(getOpenFileButton);
-             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-                SIM5Frame_Page_SIM5_Sleep_Time));
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+               SIM5Frame_Page_SIM5_Sleep_Time));
 
             //Select all in file name Text box
             base.ClearTextById(SIM5FramePageResource.
@@ -1167,7 +1167,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SaveFilesInUSB",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         #region SIM5 Excel Second Question
         /// <summary>
         /// Answers Entering Text Using AutoComplete And Using The NameBox To Select A Cell.
@@ -1260,12 +1260,12 @@ namespace Pegasus.Pages.UI_Pages
             "SettingCellWidthAndSelectingCellRangeToAlignData",
             base.IsTakeScreenShotDuringEntryExit);
             powerPoint.IsQuestionLoaded("4");
-                //Set Cell Width
-                this.SetCellWidth();
-                //Select Cell Range And Align Data
-                this.SelectCellRangeAndAlignData();
-          
-           
+            //Set Cell Width
+            this.SetCellWidth();
+            //Select Cell Range And Align Data
+            this.SelectCellRangeAndAlignData();
+
+
             Logger.LogMethodExit("SIM5FramePage",
             "SettingCellWidthAndSelectingCellRangeToAlignData",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1665,7 +1665,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectCellRange(SIM5FramePageResource.
            SIM5Frame_Page_SIM5_Excel_A1_Cell_ID_Locator, SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_F1_Cell_ID_Locator);
-            
+
             // Click Merge and Center to merge and center align the data in cells A1 to F1
             this.MergeAndCenter();
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));
@@ -1684,7 +1684,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectCellRange(SIM5FramePageResource.
            SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator, SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_F2_Cell_ID_Locator);
-           
+
             // Click Merge and Center to merge and center align the data in cells A2 to F2
             this.MergeAndCenter();
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));
@@ -1880,7 +1880,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(3000);
             IWebElement getMergeAndCenterObject = base.GetWebElementPropertiesByCssSelector(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_MergeAndCenter_CSS_Selector_Class_Locator);
-             Thread.Sleep(3000);
+            Thread.Sleep(3000);
             base.ClickByJavaScriptExecutor(getMergeAndCenterObject);
             Thread.Sleep(3000);
             Logger.LogMethodExit("SIM5FramePage",
@@ -2326,7 +2326,7 @@ namespace Pegasus.Pages.UI_Pages
             this.AccessPreTestThirdQuestion();
             this.AccessFourthQuestion(SIM5FramePageResource.
                 SIM5Frame_Page_AccessPage_PostTest_FirstField_InputValue);
-            this.AccessFifthQuestion();        
+            this.AccessFifthQuestion();
             this.ClickOnSim5ActivitySubmitButton();
             Logger.LogMethodExit("SIM5FramePage",
                         "SubmitSim5AccessActivityPostTestSeventyPercentScore",
@@ -2367,6 +2367,8 @@ namespace Pegasus.Pages.UI_Pages
                         "SubmitSim5AccessActivityQuestions",
                        base.IsTakeScreenShotDuringEntryExit);
             //Submit Access activty Pre-Test Sim5 Questions
+            new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                 (activityName);
             this.AccessFirstQuestion(Convert.ToInt32(SIM5FramePageResource.
                 SIM5Frame_Page_AccessPreTest_CommonField_Value));
             this.AccessSecondQuestion(SIM5FramePageResource.
@@ -2446,7 +2448,7 @@ namespace Pegasus.Pages.UI_Pages
                       base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.XPath(String.Format(SIM5FramePageResource.
-                SIM5Frame_Page_Access_CommonField_Locator,commonFieldNumber)));
+                SIM5Frame_Page_Access_CommonField_Locator, commonFieldNumber)));
             //Select the text
             IWebElement getColumnName = base.GetWebElementPropertiesByXPath(
                 String.Format(SIM5FramePageResource.
@@ -2477,49 +2479,36 @@ namespace Pegasus.Pages.UI_Pages
                     "AccessSecondQuestion",
                    base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToLastOpenedWindow();
-            bool hjg = base.IsElementPresent(By.Id("accss"), 10);
             //Click Access desktop icon button  
-            base.WaitForElement(By.Id("accss"), 10);
-            IWebElement getAccessIconButton = base.
-                GetWebElementPropertiesById(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Id_Locator);
-            base.ClickByJavaScriptExecutor(getAccessIconButton);
-            //Click Access blank workbook icon button  
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessBlankWOrkBookXPath_Locator), 10);
-            IWebElement getAccessBlankWorkbookIconButton = base.
-                GetWebElementPropertiesByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Id_Locator);
+
+            //Click Access blank workbook icon button 
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessBlankWOrkBookXPath_Locator);
-            base.ClickByJavaScriptExecutor(getAccessBlankWorkbookIconButton);            
+
             //Click on folder link         
-            bool hfgf = base.IsElementPresent(By.Id(SIM5FramePageResource.
-               SIM5Frame_Page_AccessFolderId_Locator), 10);
-            IWebElement getFolder = base.
-                GetWebElementPropertiesById(SIM5FramePageResource.
-               SIM5Frame_Page_AccessFolderId_Locator);
-            base.ClickByJavaScriptExecutor(getFolder);
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_AccessFolderId_Locator);
+
             //Enter file name  
-            bool hjsdf = base.IsElementPresent(By.Id(SIM5FramePageResource.
-                 SIM5Frame_Page_AccessFileName_Id_Locator), 10);
+
             base.WaitForElement(By.Id(SIM5FramePageResource.
                  SIM5Frame_Page_AccessFileName_Id_Locator));
+            base.ClearTextById(SIM5FramePageResource.
+                 SIM5Frame_Page_AccessFileName_Id_Locator);
             base.FillTextBoxById(SIM5FramePageResource.
                  SIM5Frame_Page_AccessFileName_Id_Locator, accessFileName);
             Thread.Sleep(2000);
             //Click Ok
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_TemplateOk_XPath_Locator));
-            IWebElement getFileNameOk = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_TemplateOk_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getFileNameOk);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_TemplateOk_XPath_Locator);
+
             //Click on create button
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_CreateButton_ID_Locator));
-            IWebElement getCreateBox = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_CreateButton_ID_Locator);
-            base.ClickByJavaScriptExecutor(getCreateBox);
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-               SIM5Frame_Page_Sleep_Time));
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_CreateButton_ID_Locator);
+
+
             Logger.LogMethodExit("SIM5FramePage",
                 "AccessSecondQuestion",
               base.IsTakeScreenShotDuringEntryExit);
@@ -2647,7 +2636,9 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getSecondField = base.GetWebElementPropertiesByXPath(
                 String.Format(SIM5FramePageResource.
                 SIM5Frame_Page_Field_XPath_Locator, fieldValue));
+            Thread.Sleep(3000);
             base.ClickByJavaScriptExecutor(getSecondField);
+            Thread.Sleep(3000);
             Logger.LogMethodExit("SIM5FramePage",
                   "ClickOnField",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -2702,6 +2693,7 @@ namespace Pegasus.Pages.UI_Pages
                 GetWebElementPropertiesByXPath(String.Format(
                 SIM5FramePageResource.SIM5Frame_Page_AccessSelectMenu_XPath_Locator,
                 menuValue));
+            Thread.Sleep(3000);
             Actions builder = new Actions(WebDriver);
             Actions hoverOverRegistrar = builder.MoveToElement(selectList);
             hoverOverRegistrar.Perform();
@@ -2721,12 +2713,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
                  "CloseNavigationPane",
                    base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_CloseNavigationPane_XPath_Locator));
-            IWebElement navigationPane = base.
-                GetWebElementPropertiesByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_CloseNavigationPane_XPath_Locator);
-            base.ClickByJavaScriptExecutor(navigationPane);
+
             Logger.LogMethodExit("SIM5FramePage",
                  "CloseNavigationPane",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -2741,13 +2730,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
                  "OpenNavigationPane",
              base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.
-           SIM5Frame_Page_OpenNavigationpane_XPath_Locator));
-            IWebElement openNavigationPane = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
            SIM5Frame_Page_OpenNavigationpane_XPath_Locator);
-            base.ClickByJavaScriptExecutor(openNavigationPane);
+
             Logger.LogMethodExit("SIM5FramePage",
                  "OpenNavigationPane",
              base.IsTakeScreenShotDuringEntryExit);
@@ -2764,34 +2749,27 @@ namespace Pegasus.Pages.UI_Pages
                    "AccessFourthQuestion",
                      base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToLastOpenedWindow();
-            //Move the scroll bar
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_Scroll_XPathLocator));
-            IWebElement scroll = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_Scroll_XPathLocator);
-            for (int i = 1; i <= 5; i++)
-            {
-                base.ClickByJavaScriptExecutor(scroll);
-            }
-            // Click 1st field
-            base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_XPathLocator), 10);
-            base.FocusOnElementByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_XPathLocator);
+            int fieldValue = 1;
+            base.WaitForElement(By.XPath(String.Format(SIM5FramePageResource.
+                SIM5Frame_Page_Field_XPath_Locator, fieldValue)));
             IWebElement getFirstField = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_XPathLocator);
-            base.DoubleClickByJavaScriptExecuter(getFirstField);
-            ////Enter 'Student ID' in Name field
-            base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_AccessPage_FirstField_Input_XPathLocator));
+                String.Format(SIM5FramePageResource.
+                SIM5Frame_Page_Field_XPath_Locator, fieldValue));
+            Thread.Sleep(3000);
+            base.PerformMouseClickAction(getFirstField);
+            Thread.Sleep(3000);
+            //Enter 'Student ID' in Name field
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_TableToolsField_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_FieldName_XPath_Locator);
+            base.ClearTextByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_FieldName_XPath_Locator);
             base.FillTextBoxByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_Input_XPathLocator,
-                firstFieldValue);
-            this.SetFieldDataType();
+                SIM5Frame_Page_FieldName_XPath_Locator, firstFieldValue);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_OK_XPath_Locator);
+             this.SetFieldDataType();
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                SIM5Frame_Page_Sleep_Time));
             Logger.LogMethodExit("SIM5FramePage",
@@ -2814,19 +2792,17 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getFirstField = base.GetWebElementPropertiesById(
                 SIM5FramePageResource.
                 SIM5Frame_Page_AccessPage_FirstField_DataType_Id_Locator);
+            Thread.Sleep(3000);
             base.DoubleClickByJavaScriptExecuter(getFirstField);
+            Thread.Sleep(3000);
             //Click on datatype option
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_DataTypeMenu_XPath_Locator));
-            IWebElement getDatatypeMenu = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessPage_FirstField_DataTypeMenu_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getDatatypeMenu);
+
             //Select Datatype
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_DataTypeSelect_XPath_Locator));
-            IWebElement getDatatype = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessPage_FirstField_DataTypeSelect_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getDatatype);
+
             Logger.LogMethodExit("SIM5FramePage",
                   "SetFieldDataType",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -2844,7 +2820,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.IsTakeScreenShotDuringEntryExit);
             //Enter student ID
             base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessStudentId_Xpath_Locator), 10);
+                SIM5Frame_Page_AccessStudentId_Xpath_Locator));
             base.FillTextBoxByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentId_Xpath_Locator, SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentId_Value);
@@ -2852,7 +2828,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_AccessStudentId_Xpath_Locator);
             //Enter Last Name
             base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessStudent_LastName_Xpath_Locator), 10);
+                SIM5Frame_Page_AccessStudent_LastName_Xpath_Locator));
             base.FillTextBoxByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudent_LastName_Xpath_Locator, SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentLastName_Value);
@@ -2860,12 +2836,12 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_AccessStudent_LastName_Xpath_Locator);
             //Enter the amount
             base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessStudent_Amount_Xpath_Locator), 10);
+                SIM5Frame_Page_AccessStudent_Amount_Xpath_Locator));
             base.FillTextBoxByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudent_Amount_Xpath_Locator, SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentAmount_Value);
             base.PressEnterKeyByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessStudent_Amount_Xpath_Locator);           
+                SIM5Frame_Page_AccessStudent_Amount_Xpath_Locator);
             this.SaveTable(SIM5FramePageResource.
                 SIM5Frame_Page_AccessPreTest_SaveTableName_Value);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -2951,12 +2927,13 @@ namespace Pegasus.Pages.UI_Pages
             //Click Second Row Id field
             base.WaitForElement(By.XPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentId_2_XPath_Locator));
-            base.FocusOnElementByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessStudentId_2_XPath_Locator);
+
             IWebElement clickSecondField = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentId_2_XPath_Locator);
+            Thread.Sleep(3000);
             base.DoubleClickByJavaScriptExecuter(clickSecondField);
+            Thread.Sleep(3000);
             base.FillTextBoxByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentId_2Input_XPath_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_AccessStudentId_2Input_Value);
@@ -2979,13 +2956,6 @@ namespace Pegasus.Pages.UI_Pages
             base.PressEnterKeyByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentAmount_2Input_XPath_Locator);
             //Click Third Row Id field           
-            IWebElement scroll = base.GetWebElementPropertiesByXPath(
-               SIM5FramePageResource.SIM5Frame_Page_AccessPage_Scroll_XPathLocator);
-            for (int i = 1; i <= 5; i++)
-            {
-                base.ClickByJavaScriptExecutor(scroll);
-            }
-            //Fill row 3
             base.WaitForElement(By.XPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudentId_3Input_XPath_Locator));
             base.FillTextBoxByXPath(SIM5FramePageResource.
@@ -3026,19 +2996,13 @@ namespace Pegasus.Pages.UI_Pages
                  "AccessSeventhQuestion",
                    base.IsTakeScreenShotDuringEntryExit);
             //Click on "cancel" table button
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_CancelButton_XPath_Locator));
-            IWebElement getCancel = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_CancelButton_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getCancel);
+
             //Select the Excel file from USB
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_ExternalDataButton_XPath_Locator));
-            IWebElement getExternaldataButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExternalDataButton_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getExternaldataButton);
+
             this.SelectExcelFileInUsb();
             //Append copy to sudents               
             this.AppendExcelFile();
@@ -3049,7 +3013,9 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement openExcelSheetTable = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.
                 SIM5Frame_Page_Access_OpenExcelTable_XPath_Locator);
+            Thread.Sleep(3000);
             base.PerformDoubleClickAction(openExcelSheetTable);
+            Thread.Sleep(3000);
             //CLose the navigation pane
             this.CloseNavigationPane();
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -3069,20 +3035,19 @@ namespace Pegasus.Pages.UI_Pages
                  "SelectAndAppendExcelFile",
                    base.IsTakeScreenShotDuringEntryExit);
             //Select 'Append to student' radio button 
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AppendradioButton_Id_Locator));
-            base.FocusOnElementByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AppendradioButton_Id_Locator);
-            bool jk = base.IsElementPresent(By.Id(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AppendradioButton_Id_Locator), 10);
-            base.SelectRadioButtonById(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AppendradioButton_Id_Locator);
-            //Click on ok
+
             base.WaitForElement(By.Id(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AppendOkButton_Id_Locator));
-            IWebElement clickOnOk = base.GetWebElementPropertiesById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_AppendradioButton_Id_Locator));
+            IWebElement getElementProperty = base.GetWebElementPropertiesById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_AppendradioButton_Id_Locator);
+            Thread.Sleep(4000);
+            base.PerformMouseClickAction(getElementProperty);
+            Thread.Sleep(2000);
+
+            //Click on ok
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
                 SIM5Frame_Page_Access_AppendOkButton_Id_Locator);
-            base.ClickByJavaScriptExecutor(clickOnOk);
+
             //Click on next
             this.ClickNextButton();
             this.ClickOnFinish();
@@ -3101,23 +3066,21 @@ namespace Pegasus.Pages.UI_Pages
                  "SelectAndAppendExcelFile",
                    base.IsTakeScreenShotDuringEntryExit);
             //Click on Excel link  
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_ExcelLink_XPath_Locator));
-            IWebElement clickExcel = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExcelLink_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickExcel);
+
             //Click on Browse
-            base.WaitForElement(By.Id(SIM5FramePageResource.
-                SIM5Frame_Page_Access_BrowseButton_Id_Locator));
-            base.ClickButtonById(SIM5FramePageResource.
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
                 SIM5Frame_Page_Access_BrowseButton_Id_Locator);
+
             //Select the excel file
             base.WaitForElement(By.Id(SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExcelItemInUsb_Id_Locator));
+
             IWebElement selectExcelFile = base.GetWebElementPropertiesById(
                SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExcelItemInUsb_Id_Locator);
+            Thread.Sleep(2000);
             base.DoubleClickByJavaScriptExecuter(selectExcelFile);
             Logger.LogMethodExit("SIM5FramePage",
                 "SelectAndAppendExcelFile",
@@ -3137,22 +3100,16 @@ namespace Pegasus.Pages.UI_Pages
             //Switch to design view   
             this.SwitchToDesignView();
             //Delete the Middle Initial column
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_Table_MiddleInitialRow_XPath_Locator));
-            IWebElement clickMiddleInitial = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_Table_MiddleInitialRow_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickMiddleInitial);
+
             //Click on Delete
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Delete_Xpath_Locator));
-            IWebElement clickDelete = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Delete_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickDelete);
-            IWebElement clickDeleteOk = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Delete_Xpath_Locator);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_Delete__Ok_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickDeleteOk);
+
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                SIM5Frame_Page_Sleep_Time));
             Logger.LogMethodExit("SIM5FramePage",
@@ -3296,25 +3253,17 @@ namespace Pegasus.Pages.UI_Pages
                   "SwitchToDesignView",
                     base.IsTakeScreenShotDuringEntryExit);
             //Click Home button
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_Home_Button_XPath_Locator));
-            IWebElement ClickHomeButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_Home_Button_XPath_Locator);
-            base.ClickByJavaScriptExecutor(ClickHomeButton);
+
             //Click 'View' button 
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_View_Link_XPath_Locator));
-            IWebElement clickViewButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_View_Link_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickViewButton);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_View_Link_XPath_Locator);
+
             //Select 'Design view'
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_DesignView_XPath_Locator));
-            IWebElement selectDesignView = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_DesignView_XPath_Locator);
-            base.ClickByJavaScriptExecutor(selectDesignView);
+
             Logger.LogMethodExit("SIM5FramePage",
                   "SwitchToDesignView",
                     base.IsTakeScreenShotDuringEntryExit);
@@ -3367,11 +3316,9 @@ namespace Pegasus.Pages.UI_Pages
                  "AccessActivityQuestionTen",
                    base.IsTakeScreenShotDuringEntryExit);
             this.CLickStudentIdField();
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_View_Button_XPath_Locator));
-            IWebElement clickViewButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_View_Button_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickViewButton);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_View_Button_XPath_Locator);
+
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                SIM5Frame_Page_Sleep_Time));
             Logger.LogMethodExit("SIM5FramePage",
@@ -3389,11 +3336,9 @@ namespace Pegasus.Pages.UI_Pages
                         "CLickStudentIdField",
                           base.IsTakeScreenShotDuringEntryExit);
             //Select Student id Field
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Student_IdField_XPath));
-            IWebElement clickStudentIdField = base.GetWebElementPropertiesByXPath(
-               SIM5FramePageResource.SIM5Frame_Page_Access_Student_IdField_XPath);
-            base.ClickByJavaScriptExecutor(clickStudentIdField);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Student_IdField_XPath);
+
             Logger.LogMethodExit("SIM5FramePage",
                         "CLickStudentIdField",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -3411,13 +3356,9 @@ namespace Pegasus.Pages.UI_Pages
                           "AccessActivityQuestionEleven",
                             base.IsTakeScreenShotDuringEntryExit);
             //Click External data button  
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_Access_ExternalLink_XPath_Locator), 10);
-            IWebElement getExternaldata = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExternalLink_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getExternaldata);
+            
             //Select Excel file from USB drive
             this.SelectExcelFileInUsb();
             base.WaitForElement(By.Id(SIM5FramePageResource.
@@ -3425,35 +3366,33 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getOk = base.GetWebElementPropertiesById(
                 SIM5FramePageResource.
                 SIM5Frame_Page_Access_AppendOkButton_Id_Locator);
+            Thread.Sleep(2000);
             base.PerformMouseClickAction(getOk);
+            Thread.Sleep(2000);
             this.ClickNextButton();
             //Select check box
-            base.WaitForElement(By.XPath(
-               SIM5FramePageResource.
-                SIM5Frame_Page_Access_CheckMark_XPath_Locator));
-            base.SelectCheckBoxByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_CheckMark_XPath_Locator);
-            //Click on next
+             //Click on next
             this.ClickNextButton();
             this.ClickNextButton();
             //Select 'Primary key' radio button
-            base.WaitForElement(By.XPath(
-           SIM5FramePageResource.
-            SIM5Frame_Page_Access_PrimaryKey_RadioButton_XPath_Locator));
-            base.SelectRadioButtonByXPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_Access_PrimaryKey_RadioButton_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+            SIM5Frame_Page_Access_PrimaryKey_RadioButton_XPath_Locator);
+
             this.ClickNextButton();
-            base.FocusOnElementByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_TableName_Field_XPath_Locator);
+
             Thread.Sleep(3000);
             base.WaitForElement(By.XPath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_TableName_Field_XPath_Locator));
             IWebElement getFilltextBox = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.
                 SIM5Frame_Page_Access_TableName_Field_XPath_Locator);
+            Thread.Sleep(3000);
             base.DoubleClickByJavaScriptExecuter(getFilltextBox);
+            Thread.Sleep(3000);
             getFilltextBox.SendKeys(Keys.Control + "a");
+            Thread.Sleep(3000);
             base.FillTextBoxByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_TableName_Field_XPath_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_Access_TableName_Field_Value);
@@ -3466,12 +3405,13 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement openExcelSheetTable = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExcelTable_XPath_Locator);
+            Thread.Sleep(3000);
             base.PerformDoubleClickAction(openExcelSheetTable);
+            Thread.Sleep(3000);
             //Close the navigation pane
             this.CloseNavigationPane();
             this.SetPostalCodeDataType();
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-               SIM5Frame_Page_Sleep_Time));
+
             Logger.LogMethodExit("SIM5FramePage",
                         "AccessActivityQuestionEleven",
                         base.IsTakeScreenShotDuringEntryExit);
@@ -3487,35 +3427,21 @@ namespace Pegasus.Pages.UI_Pages
                             "SetPostalCodeDataType",
                base.IsTakeScreenShotDuringEntryExit);
             //Click on Postal code column
-            base.WaitForElement(By.Id(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PostalCode_Id_Locator));
-            IWebElement getPostalCode = base.GetWebElementPropertiesById(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PostalCode_Id_Locator);
-            base.ClickByJavaScriptExecutor(getPostalCode);
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PostalCode_Id_Locator);
+
             //Click on 'Fields' tab
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_Access_Fields_Xpath_Locator));
-            IWebElement getFields = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_Fields_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(getFields);
+
             //Select the data type
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.
-                    SIM5Frame_Page_AccessPage_FirstField_DataTypeMenu_XPath_Locator));
-            IWebElement getDataTypeMenu = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_DataTypeMenu_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getDataTypeMenu);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                    SIM5Frame_Page_AccessPage_FirstField_DataTypeMenu_XPath_Locator);
+
             //Select datatype
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_FirstField_DataTypeSelect_XPath_Locator));
-            IWebElement getDataType = base.GetWebElementPropertiesByXPath(
-               SIM5FramePageResource.
-               SIM5Frame_Page_AccessPage_FirstField_DataTypeSelect_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getDataType);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_AccessPage_FirstField_DataTypeSelect_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                              "SetPostalCodeDataType",
                          base.IsTakeScreenShotDuringEntryExit);
@@ -3528,15 +3454,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click on next button
             Logger.LogMethodEntry("SIM5FramePage",
-                "AccessActivityQuestionEleven",
+                "ClickNextButton",
              base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Next_Button_XPath_Locator));
-            IWebElement clickOnNext = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Next_Button_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickOnNext);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Next_Button_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
-                "AccessActivityQuestionEleven",
+                "ClickNextButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -3549,18 +3473,13 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
                           "ClickOnFinish",
                         base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_Finish_Xpath_Locator), 10);
-            //Click 'Finish'
-            IWebElement clickFinish = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_Finish_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickFinish);
+
             //Click 'Close'
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AppendClose_XPath_Locator), 10);
-            base.ClickButtonByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_AppendClose_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                         "ClickOnFinish",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -3576,18 +3495,17 @@ namespace Pegasus.Pages.UI_Pages
                     "AccessActivityQuestionTwelve",
                    base.IsTakeScreenShotDuringEntryExit);
             //Adjust Address field Column width
+            //select sheet
+            powerPoint.ClickOnElementByXpath(".//*[@id='access-item-1']/div/div[1]/div[2]/label");
             this.SetAddressColumnWidth();
             //Set city field column width
             this.SetCityFieldColumnWidth();
             //Set the width of all the columns
             this.SetAllFielColumnWidth();
             //Select 'Best Fit' option
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                     SIM5Frame_Page_Access_GetBestFit_Xpath_Locator));
-            IWebElement getBestFitOption = base.GetWebElementPropertiesByXPath(
-                              SIM5FramePageResource.
-                              SIM5Frame_Page_Access_GetBestFit_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(getBestFitOption);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                     SIM5Frame_Page_Access_GetBestFit_Xpath_Locator);
+
             //Save the changes
             this.ClickOnSave();
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -3607,18 +3525,21 @@ namespace Pegasus.Pages.UI_Pages
                    "SetAddressColumnWidth",
                base.IsTakeScreenShotDuringEntryExit);
             //Select 1A Students table
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_AddressColumn_Xpath_Locator));
-            base.ClickButtonByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_AddressColumn_Xpath_Locator);
-            //Adjust the column size
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                    SIM5Frame_Page_Access_ColumnSize_Xpath_Locator));
-            IWebElement clickAddressField = base.GetWebElementPropertiesByXPath(
-                    SIM5FramePageResource.
-                    SIM5Frame_Page_Access_ColumnSize_Xpath_Locator);
-            base.DoubleClickByJavaScriptExecuter(clickAddressField);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_ColumnHeader_Xpath_Locator);
+           
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_SetFieldWidth_Ribbon_Icon_Xpath_Locator);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_FieldWidth_Xpath_Locator);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_BestFitOption_XPath_Locator);
+           
             Logger.LogMethodExit("SIM5FramePage",
                       "SetAddressColumnWidth",
                     base.IsTakeScreenShotDuringEntryExit);
@@ -3639,22 +3560,22 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement clickCityField = base.GetWebElementPropertiesById(
                     SIM5FramePageResource.
                     SIM5Frame_Page_Access_CityFieldColumnWidth_Id_Locator);
+            Thread.Sleep(3000);
             base.PerformMouseRightClickAction(clickCityField);
+            Thread.Sleep(3000);
             //Select field width option
-            base.ClickButtonByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_CityFieldWidth_Xpath_Locator);
+
             //Select 'Best Fit' option
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                         SIM5Frame_Page_Access_CityField_BestFit_Xpath_Locator));
-            IWebElement clickBestFitOption = base.GetWebElementPropertiesByXPath(
-                         SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                          SIM5Frame_Page_Access_CityField_BestFit_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickBestFitOption);
+
             Logger.LogMethodExit("SIM5FramePage",
                                     "SetCityFieldColumnWidth",
                                       base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Set the column width of all the rows.
         /// </summary>
@@ -3663,40 +3584,26 @@ namespace Pegasus.Pages.UI_Pages
             //Set the column width of all the rows
             Logger.LogMethodEntry("SIM5FramePage",
                   "SetAllFielColumnWidth",
-            base.IsTakeScreenShotDuringEntryExit);
-            //Select all the columns
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_SelectAllColumn_Xpath_Locator));
-            base.ClickButtonByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_SelectAllColumn_Xpath_Locator);
-            //Set field width option
+            base.IsTakeScreenShotDuringEntryExit);                
+                       
             //Click 'Home' button
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                 SIM5Frame_Page_Access_Home_Button_XPath_Locator));
-            IWebElement clickHome = base.GetWebElementPropertiesByXPath(
-                 SIM5FramePageResource.
-                 SIM5Frame_Page_Access_Home_Button_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickHome);
-            //Click 'More' button
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-            SIM5Frame_Page_Access_MoreButton_Xpath_Locator));
-            IWebElement clickMore = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
-            SIM5Frame_Page_Access_MoreButton_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickMore);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Home_Button_XPath_Locator);
+            //Select all the columns
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_SelectOption_Ribbon_Icon_Xpath_Locator);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_SelectOption_SelectAll_Ribbon_Icon_Xpath_Locator);
             //Click on 'Field width'
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_FieldWidth_Xpath_Locator));
-            IWebElement selectFieldWidth = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_SetFieldWidth_Ribbon_Icon_Xpath_Locator);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_FieldWidth_Xpath_Locator);
-            base.ClickButtonByXPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_Access_FieldWidth_Xpath_Locator);
-            ////Select 'Best Fit' option
-            //IWebElement clickBestFitOption = base.GetWebElementPropertiesByXPath(
-            //                  ".//*[@id='10']/div[2]/button[3]");
-            //base.ClickByJavaScriptExecutor(clickBestFitOption);
+            //Select 'Best Fit' option
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_BestFitOption_XPath_Locator);
             Logger.LogMethodExit("SIM5FramePage",
                         "SetAllFielColumnWidth",
              base.IsTakeScreenShotDuringEntryExit);
@@ -3713,12 +3620,9 @@ namespace Pegasus.Pages.UI_Pages
                   "ClickOnSave",
            base.IsTakeScreenShotDuringEntryExit);
             //Clisk save button
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_Save_Button_XPath_Locator));
-            IWebElement clickSaveButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_Save_Button_XPath_Locator);
-            base.ClickByJavaScriptExecutor(clickSaveButton);
+
             Logger.LogMethodExit("SIM5FramePage",
                         "ClickOnSave",
                     base.IsTakeScreenShotDuringEntryExit);
@@ -3736,41 +3640,26 @@ namespace Pegasus.Pages.UI_Pages
             //Open 'file' and click 'Print'
             this.OpenFileToPrinting();
             //Click on 'Print Preview
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PrintPreviewLink_Xpath_Locator));
-            IWebElement getClickOnPrintPreview = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PrintPreviewLink_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(getClickOnPrintPreview);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PrintPreviewLink_Xpath_Locator);
+
             //Select 'Landscape' option
-            base.WaitForElement(By.XPath(
-               SIM5FramePageResource.SIM5Frame_Page_Access_PrintLandscape_Xpath_Locator));
-            IWebElement selectLandscape = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PrintLandscape_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(selectLandscape);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PrintLandscape_Xpath_Locator);
+
             //Select 'Print'
-            base.WaitForElement(By.XPath(
-               SIM5FramePageResource.
-            SIM5Frame_Page_Access_PrintIcon_Xpath_Locator));
-            IWebElement selectPrint = base.GetWebElementPropertiesByXPath(
-            SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
             SIM5Frame_Page_Access_PrintIcon_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(selectPrint);
+
             //Click ok
-            base.WaitForElement(By.XPath(
-               SIM5FramePageResource.SIM5Frame_Page_Access_PrintOk_Xpath_Locator));
-            IWebElement selectOk = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PrintOk_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(selectOk);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PrintOk_Xpath_Locator);
+
             //Close 'Print Preview'
-            base.WaitForElement(By.XPath(
-               SIM5FramePageResource.
-            SIM5Frame_Page_Access_ClosePrintPreview_Xpath_Locator));
-            IWebElement closePreview = base.GetWebElementPropertiesByXPath(
-            SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
             SIM5Frame_Page_Access_ClosePrintPreview_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(closePreview);
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-               SIM5Frame_Page_Sleep_Time));
+
+
             Logger.LogMethodExit("SIM5FramePage",
                         "AccessActivityQuestionThirteen",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -3786,19 +3675,13 @@ namespace Pegasus.Pages.UI_Pages
                  "OpenFileForPrinting",
                base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_FileLink_Xpath_Locator), 10);
-            IWebElement getFile = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_FileLink_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(getFile);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_FileLink_Xpath_Locator);
+
             //Click on 'Print'
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.
-                SIM5Frame_Page_Access_PrintLink_Xpath_Locator), 10);
-            IWebElement clickOnPrint = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_PrintLink_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickOnPrint);
+
             Logger.LogMethodExit("SIM5FramePage",
                       "OpenFileForPrinting",
              base.IsTakeScreenShotDuringEntryExit);
@@ -3818,15 +3701,12 @@ namespace Pegasus.Pages.UI_Pages
             //Add specified fields to the query
             this.AddFieldsToQuery();
             //Click on next
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_NextLink_XPath_Locator));
-            IWebElement getNextButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_NextLink_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getNextButton);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_NextLink_XPath_Locator);
+
             //Rename the Query
             this.RenameQuery();
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-               SIM5Frame_Page_Sleep_Time));
+
             Logger.LogMethodExit("SIM5FramePage",
                        "AnswerAccessActivityQuestionFourteen",
                      base.IsTakeScreenShotDuringEntryExit);
@@ -3842,25 +3722,17 @@ namespace Pegasus.Pages.UI_Pages
                              "CreateQuery",
                        base.IsTakeScreenShotDuringEntryExit);
             //Click on 'Create' link  
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Create_Xpath_Locator));
-            IWebElement clickCreate = base.GetWebElementPropertiesByXPath(
-                     SIM5FramePageResource.SIM5Frame_Page_Access_Create_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickCreate);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Create_Xpath_Locator);
+
             //Click 'Query Wizard'
-            base.WaitForElement(By.XPath(
-                     SIM5FramePageResource.
-            SIM5Frame_Page_Access_QueryWizard_Xpath_Locator));
-            IWebElement clickQueryWizard = base.GetWebElementPropertiesByXPath(
-           SIM5FramePageResource.
-           SIM5Frame_Page_Access_QueryWizard_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickQueryWizard);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+            SIM5Frame_Page_Access_QueryWizard_Xpath_Locator);
+
             //Click Ok
-            base.WaitForElement(By.XPath(
-              SIM5FramePageResource.SIM5Frame_Page_Access_CreateOk_Xpath_Locator));
-            IWebElement clickOK = base.GetWebElementPropertiesByXPath(
-           SIM5FramePageResource.SIM5Frame_Page_Access_CreateOk_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(clickOK);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_CreateOk_Xpath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                              "CreateQuery",
                         base.IsTakeScreenShotDuringEntryExit);
@@ -3876,11 +3748,9 @@ namespace Pegasus.Pages.UI_Pages
                              "AddFieldsToQuery",
                        base.IsTakeScreenShotDuringEntryExit);
             //Click Dropdown icon 
-            base.WaitForElement(By.Id(
-             SIM5FramePageResource.SIM5Frame_Page_Access_DropdownIcon_Id_Locator));
-            IWebElement getDropdownIcon = base.GetWebElementPropertiesById(
-                SIM5FramePageResource.SIM5Frame_Page_Access_DropdownIcon_Id_Locator);
-            base.ClickByJavaScriptExecutor(getDropdownIcon);
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_DropdownIcon_Id_Locator);
+
             //Select '1A Students' from dropdown
             base.WaitForElement(By.XPath(
                     SIM5FramePageResource.
@@ -3888,7 +3758,9 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getTable = base.GetWebElementPropertiesByXPath(
                       SIM5FramePageResource.
                       SIM5Frame_Page_Access_TableName_XPath_Locator);
+            Thread.Sleep(3000);
             base.PerformDoubleClickAction(getTable);
+            Thread.Sleep(3000);
             //Add the LastName             
             this.AddIndividualFields(Convert.ToInt32(SIM5FramePageResource.
                  SIM5Frame_Page_Access_StudentLastName_IndexValue));
@@ -3919,20 +3791,18 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
                              "AddIndividualFields",
                        base.IsTakeScreenShotDuringEntryExit);
+
             base.WaitForElement(By.XPath(String.Format(
                SIM5FramePageResource.
                SIM5Frame_Page_Access_StudentDetails_XPath_Locator, fieldOption)));
             IWebElement getAddField = base.GetWebElementPropertiesByXPath(String.Format(
                 SIM5FramePageResource.
                 SIM5Frame_Page_Access_StudentDetails_XPath_Locator, fieldOption));
-            base.ClickByJavaScriptExecutor(getAddField);
+            Thread.Sleep(3000);
+            base.PerformDoubleClickAction(getAddField);
+            Thread.Sleep(3000);
             //Click add button
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-             SIM5Frame_Page_Access_AddButton_XPath_Locator));
-            IWebElement getAddButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
-            SIM5Frame_Page_Access_AddButton_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getAddButton);
+          
             Logger.LogMethodExit("SIM5FramePage",
                              "AddIndividualFields",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3951,20 +3821,16 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5FramePageResource.SIM5Frame_Page_Access_Query_Xpath_Locator));
             IWebElement getQueryFillText = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.SIM5Frame_Page_Access_Query_Xpath_Locator);
-            getQueryFillText.SendKeys(Keys.Control + "a");
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
+            base.ClearTextByXPath(SIM5FramePageResource.SIM5Frame_Page_Access_Query_Xpath_Locator);
+            Thread.Sleep(3000);
             //Enter the query name
             base.FillTextBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_Access_Query_Xpath_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_Access_Query_Rename_Value);
             //Click on 'Finish'
-            base.WaitForElement(By.XPath(
-               SIM5FramePageResource.
-               SIM5Frame_Page_Access_QueryFinish_Button_XPath_Locator));
-            IWebElement getFinishButton = base.GetWebElementPropertiesByXPath(
-              SIM5FramePageResource.
-              SIM5Frame_Page_Access_QueryFinish_Button_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getFinishButton);
-            Thread.Sleep(3000);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+               SIM5Frame_Page_Access_QueryFinish_Button_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                              "RenameQuery",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4336,7 +4202,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
                   "DeletePageNumberAndPrintReport",
                 base.IsTakeScreenShotDuringEntryExit);
-        }          
+        }
 
         /// <summary>
         /// Closing the database and exiting the access.
@@ -4351,41 +4217,36 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToLastOpenedWindow();
             //Close all the tables opened            
             base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_CloseTable_XPath_Locator), 10);
+                SIM5FramePageResource.SIM5Frame_Page_CloseTable_XPath_Locator));
             IWebElement getTableName = base.GetWebElementPropertiesByXPath(
                        SIM5FramePageResource.SIM5Frame_Page_CloseTable_XPath_Locator);
+            Thread.Sleep(3000);
             base.PerformMouseRightClickAction(getTableName);
+            Thread.Sleep(3000);
             //Click on 'Close all Tabs'
             base.WaitForElement(By.XPath(SIM5FramePageResource.
-                 SIM5Frame_Page_CloseButton_XPath_Locator), 10);
-            base.FocusOnElementByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_CloseButton_XPath_Locator);
+                 SIM5Frame_Page_CloseButton_XPath_Locator));
+
             IWebElement getCloseAll = base.GetWebElementPropertiesByXPath(
                        SIM5FramePageResource.
                 SIM5Frame_Page_CloseButton_XPath_Locator);
+            Thread.Sleep(3000);
             base.PerformClickAction(getCloseAll);
+            Thread.Sleep(3000);
             this.OpenNavigationPane();
             //Click on file
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                 SIM5Frame_Page_FileOption_XPath_Locator), 10);
-            IWebElement getFile = base.GetWebElementPropertiesByXPath(
-                               SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                  SIM5Frame_Page_FileOption_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getFile);
+
             //Click on 'Close'
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_FileClose_XPath_Locator), 10);
-            IWebElement getClose = base.GetWebElementPropertiesByXPath(
-              SIM5FramePageResource.SIM5Frame_Page_FileClose_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getClose);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_FileClose_XPath_Locator);
+
             //Close 'Access'
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessClose_XPath_Locator), 10);
-            IWebElement getAccessCloseButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_AccessClose_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getAccessCloseButton);
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-                SIM5Frame_Page_Sleep_Time));
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_AccessClose_XPath_Locator);
+
+
             Logger.LogMethodExit("SIM5FramePage",
                   "AccessActivityQuestionSeventeen",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -4405,14 +4266,9 @@ namespace Pegasus.Pages.UI_Pages
             this.EnterTextInSearchTextbox();
             this.CreateTemplate();
             //Click on 'Enable the content'
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_EnableContent_XPath_Locator));
-            IWebElement getEnableContent = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_EnableContent_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getEnableContent);
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-                SIM5Frame_Page_Sleep_Time));
+
             Logger.LogMethodExit("SIM5FramePage",
                      "AccessActivityQuestionEighteen",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4427,19 +4283,16 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
                           "EnterTextInSearchTextbox",
                    base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-                      SIM5Frame_Page_Access_EventSearchField_XPath_Locator));
-            IWebElement getSearchField = base.GetWebElementPropertiesByXPath(
-                      SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                       SIM5Frame_Page_Access_EventSearchField_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getSearchField);
+
             base.FillTextBoxByXPath(SIM5FramePageResource.
                       SIM5Frame_Page_Access_EventSearchField_XPath_Locator,
                       SIM5FramePageResource.
                       SIM5Frame_Page_Access_EventSearchField_Text_XPath_Locator);
-            base.PressKey(SIM5FramePageResource.
-                SIM5Frame_Page_Access_EnterKey);
-            Thread.Sleep(3000);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_EventSearchFieldLookUpIconButton_XPath_Locator);
+            Thread.Sleep(5000);
             Logger.LogMethodExit("SIM5FramePage",
                      "EnterTextInSearchTextbox",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4454,40 +4307,20 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
                           "EnterTextInSearchTextbox",
                    base.IsTakeScreenShotDuringEntryExit);
-            bool jdsk = base.IsElementPresent(By.XPath(SIM5FramePageResource.
-             SIM5Frame_Page_Access_CreateTemplate_XPath_Locator), 10);
-            //Click on 'Template'
-            IWebElement getTemplate = base.GetWebElementPropertiesByXPath(
-                       SIM5FramePageResource.
-              SIM5Frame_Page_Access_Template_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getTemplate);
-            //Click on browse
-            bool jd = base.IsElementPresent(By.Id(SIM5FramePageResource.
-                SIM5Frame_Page_Access_TemplateBrowse_Id_Locator), 10);
-            IWebElement getBrowseButton = base.GetWebElementPropertiesById(
-                SIM5FramePageResource.
-                SIM5Frame_Page_Access_TemplateBrowse_Id_Locator);
-            base.ClickByJavaScriptExecutor(getBrowseButton);
-            //Enter name for the template
-            bool jdedd = base.IsElementPresent(By.XPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_TemplateNameField_XPath_Locator), 10);
-            Thread.Sleep(3000);
-            IWebElement inputts = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_TemplateNameField_XPath_Locator);
-            inputts.SendKeys(Keys.Control + "a");
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+             SIM5Frame_Page_Access_CreateTemplate_XPath_Locator);
+            //Enter New Template name
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_NewTemplateName_Input_XPath_Locator);
+            base.ClearTextByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_NewTemplateName_Input_XPath_Locator);
             base.FillTextBoxByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_Access_TemplateNameField_XPath_Locator,
-                SIM5FramePageResource.SIM5Frame_Page_Access_TemplateName);
-            Thread.Sleep(Convert.ToInt32(
-                SIM5FramePageResource.SIM5Frame_Page_Sleep_Time));
-            //Click 'ok'
-            IWebElement getOkButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_TemplateOk_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getOkButton);
-            //Click on 'Create'
-            IWebElement getCreateBox = base.GetWebElementPropertiesByXPath(
-               SIM5FramePageResource.SIM5Frame_Page_Access_Template_Create_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getCreateBox);
+                SIM5Frame_Page_Access_NewTemplateName_Input_XPath_Locator, SIM5FramePageResource.
+                SIM5Frame_Page_Access_NewTemplateName_Qs18_String);                     
+           //Click on 'Create'
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Template_Create_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                      "EnterTextInSearchTextbox",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4647,31 +4480,36 @@ namespace Pegasus.Pages.UI_Pages
                            "AppendExcelFileFromUsb",
                     base.IsTakeScreenShotDuringEntryExit);
             //Select the Excel file and from Usb
-            IWebElement clickExternaldataButton = base.
-                GetWebElementPropertiesByXPath(SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_ExternalLink_XPath_Locator);
-            base.ClickByJavaScriptExecutor(
-                clickExternaldataButton);
+
             this.SelectExcelFileInUsb();
             //Select 'Append to student' radio button 
-            base.SelectRadioButtonById(SIM5FramePageResource.
+            base.WaitForElement(By.Id(SIM5FramePageResource.
+                SIM5Frame_Page_Access_AppendradioButton_Id_Locator));
+            IWebElement getElementProperty = base.GetWebElementPropertiesById(SIM5FramePageResource.
                 SIM5Frame_Page_Access_AppendradioButton_Id_Locator);
+            Thread.Sleep(4000);
+            base.PerformMouseClickAction(getElementProperty);
+            Thread.Sleep(2000);
+
+
             //Click on ok
-            IWebElement clickOnOk = base.GetWebElementPropertiesById(
-               SIM5FramePageResource.SIM5Frame_Page_Access_AppendOkButton_Id_Locator);
-            base.ClickByJavaScriptExecutor(clickOnOk);
+            powerPoint.ClickOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_AppendOkButton_Id_Locator);
+
             //Click on next
-            IWebElement getNext = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_Next_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getNext);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Next_XPath_Locator);
+
             //click 'Finish'
-            IWebElement getNexButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_AppendFinish_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getNexButton);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_AppendFinish_XPath_Locator);
+
             //CLick 'Close'
-            IWebElement getCLoseButton = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_AppendClose_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getCLoseButton);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+               SIM5Frame_Page_Access_AppendClose_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                      "AppendExcelFileFromUsb",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4690,7 +4528,9 @@ namespace Pegasus.Pages.UI_Pages
             this.OpenNavigationPane();
             IWebElement getEventList = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.SIM5Frame_Page_Access_OpenEvent_XPath_Locator);
+            Thread.Sleep(3000);
             base.PerformDoubleClickAction(getEventList);
+            Thread.Sleep(3000);
             //Close the navigation pane
             this.CloseNavigationPane();
             Logger.LogMethodExit("SIM5FramePage",
@@ -4714,7 +4554,9 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getColumnRightEnd = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.
                 SIM5Frame_Page_Access_ColumnRightEnd_XPath_Locator);
+            Thread.Sleep(3000);
             base.DoubleClickByJavaScriptExecuter(getColumnRightEnd);
+            Thread.Sleep(3000);
             //Click on save
             this.ClickOnSave();
             Logger.LogMethodExit("SIM5FramePage",
@@ -4732,12 +4574,14 @@ namespace Pegasus.Pages.UI_Pages
                        "AccessActivityQuestionTwentyone",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on navigation panel menu arrow
-            IWebElement getPanelArrow = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PanelRow_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getPanelArrow);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PanelRow_XPath_Locator);
+
             //Select grouping option fron list
             IWebElement getListOption = base.GetWebElementPropertiesById(
                 SIM5FramePageResource.SIM5Frame_Page_Access__GroupingElement_Id_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+             SIM5Frame_Page_Sleep_Time));
             base.PerformClickAction(getListOption);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                 SIM5Frame_Page_Sleep_Time));
@@ -4847,8 +4691,10 @@ namespace Pegasus.Pages.UI_Pages
                        "AccessActivityQuestionTwentyThree",
                 base.IsTakeScreenShotDuringEntryExit);
             //Enter Id value
+            powerPoint.IsQuestionLoaded("23");
             IWebElement getRoomIdField = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.SIM5Frame_Page_Access_IdField_XPath_Locator);
+            Thread.Sleep(5000);
             base.FillTextBoxByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_Access_IdField_XPath_Locator,
                 SIM5FramePageResource.SIM5Frame_Page_Access_IdField_Value);
@@ -4877,11 +4723,6 @@ namespace Pegasus.Pages.UI_Pages
             //Apply BestFit to the columns
             this.SetAllFielColumnWidth();
             //Select 'Best Fit' option
-            IWebElement getBestFitOption = base.GetWebElementPropertiesByXPath(
-                 SIM5FramePageResource.SIM5Frame_Page_Access_BestFitOption_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getBestFitOption);
-            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-              SIM5Frame_Page_Sleep_Time));
             Logger.LogMethodExit("SIM5FramePage",
                     "AccessActivityQuestionTwentyThree",
            base.IsTakeScreenShotDuringEntryExit);
@@ -4900,23 +4741,23 @@ namespace Pegasus.Pages.UI_Pages
             //Click on 'All event' in the navigation pane
             IWebElement getAllEvent = base.GetWebElementPropertiesByXPath(
             SIM5FramePageResource.SIM5Frame_Page_Access_AllEvent_XPath_Locator);
-            base.PerformDoubleClickAction(getAllEvent);
-            //Click on 'print preview'
-            IWebElement getPrintPreview = base.GetWebElementPropertiesByXPath(
-                        SIM5FramePageResource.
-                        SIM5Frame_Page_Access_AllEvent_PrintPreview_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getPrintPreview);
-            //Click on 'Print'
-            IWebElement getPrint = base.GetWebElementPropertiesByXPath(
-                       SIM5FramePageResource.SIM5Frame_Page_Access_PrintIcon_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(getPrint);
-            //Click on 'OK'
-            IWebElement getOk = base.GetWebElementPropertiesByXPath(
-                        SIM5FramePageResource.
-                        SIM5Frame_Page_PrintpageOk_XPath_Locator);
-            base.ClickByJavaScriptExecutor(getOk);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-               SIM5Frame_Page_Sleep_Time));
+             SIM5Frame_Page_Sleep_Time));
+            base.PerformDoubleClickAction(getAllEvent);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+             SIM5Frame_Page_Sleep_Time));
+            //Click on 'print preview'
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                        SIM5Frame_Page_Access_AllEvent_PrintPreview_XPath_Locator);
+
+            //Click on 'Print'
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                        SIM5Frame_Page_Access_PrintIcon_Xpath_Locator);
+
+            //Click on 'OK'
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_PrintpageOk_XPath_Locator);
+
             Logger.LogMethodExit("SIM5FramePage",
                      "AccessActivityQuestionTwentyFour",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4931,27 +4772,29 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getStudentTable = base.GetWebElementPropertiesByXPath(
             SIM5FramePageResource.
             SIM5Frame_Page_Access_StudentTableName_XPath_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+             SIM5Frame_Page_Sleep_Time));
             base.PerformDoubleClickAction(getStudentTable);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+             SIM5Frame_Page_Sleep_Time));
             //Click on file and Print
             this.OpenFileToPrinting();
             //Click on 'Print Preview
-            IWebElement getPrintPreview = base.GetWebElementPropertiesByXPath(
-                    SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                     SIM5Frame_Page_Access_PrintPreviewLink_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(getPrintPreview);
+
             //Select 'Landscape' option
-            IWebElement selectLandscape = base.GetWebElementPropertiesByXPath(
-                        SIM5FramePageResource.
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                         SIM5Frame_Page_Access_PrintLandscape_Xpath_Locator);
-            base.ClickByJavaScriptExecutor(selectLandscape);
+
             //Select 'Print'
-            IWebElement selectPrint = base.GetWebElementPropertiesByXPath(
-                        SIM5FramePageResource.SIM5Frame_Page_Printpage_XPath_Locator);
-            base.ClickByJavaScriptExecutor(selectPrint);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Printpage_XPath_Locator);
+
             //Click ok
-            IWebElement selectOk = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_Access_PrintColumnOkButton_XPath_Locator);
-            base.ClickByJavaScriptExecutor(selectOk);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PrintColumnOkButton_XPath_Locator);
+
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                SIM5Frame_Page_Sleep_Time));
             Logger.LogMethodExit("SIM5FramePage",
@@ -5067,11 +4910,11 @@ namespace Pegasus.Pages.UI_Pages
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.SIM5Frame_Page_Markers_CheckBox_Xpath_Locator);
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.SIM5Frame_Page_SparkStyle_CSS_Locator);
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.SIM5Frame_Page_SparkStyle_Type_Xpath_Locator);
-       
+
             Logger.LogMethodExit("SIM5FramePage",
                              "AttemptingthirteenthExcelQuestion",
                     base.IsTakeScreenShotDuringEntryExit);
-        }               
+        }
 
         /// <summary>
         /// Formatting cells with the percent style.
@@ -5079,27 +4922,27 @@ namespace Pegasus.Pages.UI_Pages
         private void FormatCellWithPercentStyle()
         {
             //Formatting cells with the percent style
-           Logger.LogMethodEntry("SIM5FramePage",
-                  "FormatCellWithPercentStyle",
-                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("SIM5FramePage",
+                   "FormatCellWithPercentStyle",
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select the cells
-           this.SelectCellRange(SIM5FramePageResource.
-               SIM5Frame_Page_Excel_E24_CellStart_Id_Locator,
-               SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellEnd_Id_Locator);
+            this.SelectCellRange(SIM5FramePageResource.
+                SIM5Frame_Page_Excel_E24_CellStart_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellEnd_Id_Locator);
             //Click on Percentile 
-           powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
-                SIM5Frame_Page_Excel_E24_Percentile_XPath_Locator);
-            
-            //Click on Increase decimal option
-           powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
-                  SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                 SIM5Frame_Page_Excel_E24_Percentile_XPath_Locator);
 
-           powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
-                  SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator);
+            //Click on Increase decimal option
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                   SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator);
+
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                   SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator);
             //Apply center align
-           powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
-                 SIM5Frame_Page_Excel_E24_CenterAlign_XPath_Locator);
-           
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                  SIM5Frame_Page_Excel_E24_CenterAlign_XPath_Locator);
+
         }
         /// <summary>
         /// Attempting Twenty First Question
@@ -5130,7 +4973,7 @@ namespace Pegasus.Pages.UI_Pages
 
             powerPoint.ClickOnElementByCssSelector(SIM5FramePageResource.
                 SIM5Frame_Page_QuickSumOption_CSS_Locator);
-           
+
 
             //Applying Comma Style
             IWebElement getC5Cell = base.GetWebElementPropertiesById(
@@ -5140,7 +4983,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator);
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_CommaImage_Xpath_Locator);
-           
+
 
             //Simultaneously Selecting Text Box     
             IWebElement getC4Cell = base.GetWebElementPropertiesById(
@@ -5152,23 +4995,23 @@ namespace Pegasus.Pages.UI_Pages
             //    (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_C4toE4_Selector_Border_Xpath_Locator);        
             //base.PerformMouseClickAction(Sheet1_C4_path);
             IWebElement blockE10 = base.GetWebElementPropertiesById
-                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator);         
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator);
             new Actions(WebDriver).KeyDown(Keys.Control).Click(blockE10).KeyUp(Keys.Control).Perform();
             powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[1]/span[1]/div[1]/div[1]/div/div[1]");
-            
-           
+
+
             //Selecting Totals Cell Styles
             base.PerformMouseClickAction(Sheet1_E9Properties);
             Thread.Sleep(3000);
             base.PerformMouseClickAction(blockE10);
-           
-           
+
+
             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
                 SIM5Frame_Page_CellStyles_Xpath_Locator);
-             powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
-                 SIM5Frame_Page_Total_CellStyles_Xpath_Locator);
-           
-        
+            powerPoint.ClickOnElementByXpath(SIM5FramePageResource.
+                SIM5Frame_Page_Total_CellStyles_Xpath_Locator);
+
+
             Logger.LogMethodExit("SIM5FramePage",
                             "AttemptingTwentyFirstQuestion",
                    base.IsTakeScreenShotDuringEntryExit);
@@ -5228,26 +5071,15 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator, "=E4/$E$10");
             PressEnterKeyById(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
-            //this.PutExcelValueInCellWithoutErasingText
-            //    (SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellStart_Id_Locator,
-            //    SIM5FramePageResource.SIM5Frame_Page_SIM5_BlockF4_Text_Fill);
+         
             IWebElement BlockE4 = base.GetWebElementPropertiesById
                 (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator);
-            //base.PerformMouseClickAction(BlockE4);
-            //Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
-            //       SIM5Frame_Page_SIM5_Buffer_Sleep_Time));
-            //base.FillTextBoxById
-            //    (SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator,
-            //    SIM5FramePageResource.SIM5Frame_Page_SIM5_BlockF4_Formulabox_Text_Fill);
+           
             IWebElement BlockE10 = base.GetWebElementPropertiesById
                 (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator);
             Thread.Sleep(3000);
             base.PerformMouseClickAction(BlockE10);
-            //base.ClearTextById(SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator);
-            //base.FillTextBoxById
-            //    (SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator,
-            //    SIM5FramePageResource.SIM5Frame_Page_SIM5_BlockF4_10_Formulabox_Text_Fill);
-            //base.PressKey(SIM5FramePageResource.SIM5Frame_Page_SIM5_EnterKey_Value);            
+                   
             base.PerformMouseClickAction(BlockF4);
             this.SelectCellRangeByXpath
                 (SIM5FramePageResource.SIM5Frame_Page_SIM5_Block_Dragger_Xpath_Locator,
@@ -5274,8 +5106,83 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectCellRange",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Submit Access activty Pre-Test Sim5 Questions.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        public void SubmitSim5AccessActivityQuestionsfor70Percentage(String activityName)
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                        "SubmitSim5AccessActivityQuestionsfor70Percentage",
+                       base.IsTakeScreenShotDuringEntryExit);
+            //Submit Access activty Pre-Test Sim5 Questions
+            new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                 (activityName);
+            //Access Second Question
+            powerPoint.JumpToQuestion("2");
+            this.AccessSecondQuestion(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PreTest_FileName);
+            //Access Third Question
+            powerPoint.JumpToQuestion("3");
+            this.AccessPreTestThirdQuestion();
+            //Access Fourth Question
+            powerPoint.JumpToQuestion("4");
+            this.AccessFourthQuestion(SIM5FramePageResource.
+                SIM5Frame_Page_AccessPage_FirstField_InputValue_XPathLocator);
+            //Access Fifth Question
+            powerPoint.JumpToQuestion("5");
+            this.AccessFifthQuestion();
+            //Access Sixth Question
+            powerPoint.JumpToQuestion("6");
+            this.AccessSixthQuestion();
+            //Access Seventh Question
+            powerPoint.JumpToQuestion("7");
+            this.AccessSeventhQuestion();
+            //Access Eight Question
+            powerPoint.JumpToQuestion("8");
+            this.AccessActivityQuestionEight();
+            //Access Activity Question Ten
+            powerPoint.JumpToQuestion("10");
+            this.AccessActivityQuestionTen();
+            //Access Activity Question Eleven
+            powerPoint.JumpToQuestion("11");
+            this.AccessActivityQuestionEleven();
+            //Access Activity Question Thirteen
+            powerPoint.JumpToQuestion("13");
+            this.AccessActivityQuestionThirteen();
+            //Access Activity Question Fourteen
+            powerPoint.JumpToQuestion("14");
+            this.AnswerAccessActivityQuestionFourteen();
+            //Access Activity Question Seventeen
+            powerPoint.JumpToQuestion("17");
+            this.AccessActivityQuestionSeventeen();
+            //Access Activity Question Eighteen
+            powerPoint.JumpToQuestion("18");
+            this.AccessActivityQuestionEighteen();
+            //Access Activity Question Twenty
+            powerPoint.JumpToQuestion("20");
+            this.AccessActivityQuestionTwenty();
+            //Access Activity Question Twentyone
+            powerPoint.JumpToQuestion("21");
+            this.AccessActivityQuestionTwentyone();
+            //Access Activity Question TwentyThree
+            powerPoint.JumpToQuestion("23");
+            this.AccessActivityQuestionTwentyThree();
+            //Access Activity Question TwentyFour
+            powerPoint.JumpToQuestion("24");
+            this.AccessActivityQuestionTwentyFour();
+            //Access Activity Question TwentyFive
+            powerPoint.JumpToQuestion("25");
+            this.AccessActivityQuestionFive();
+            //Click Submit Button
+            StudentPresentationPage studentPresentation = new StudentPresentationPage();
+            studentPresentation.ClickOnSim5ActivitySubmitButton();
+            Logger.LogMethodExit("SIM5FramePage",
+                        "SubmitSim5AccessActivityQuestionsfor70Percentage",
+                       base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
 
 
-        

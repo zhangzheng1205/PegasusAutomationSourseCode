@@ -90,7 +90,8 @@ namespace Pegasus.Pages.CommonPageObjects
                                             (CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
-                                        break;
+                                            break;
+                                    case "Access Chapter 1 Skill-Based Training":
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                     case "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                         this.NavigateToAccessChapter1SimulationActivitiesFolder

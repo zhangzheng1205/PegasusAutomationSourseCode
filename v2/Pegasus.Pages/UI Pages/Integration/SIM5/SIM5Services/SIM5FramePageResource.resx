@@ -1608,4 +1608,34 @@
   <data name="SIM5Frame_Page_SIM5_Buffer_Sleep_Time" xml:space="preserve">
     <value>2000</value>
   </data>
+  <data name="SIM5Frame_Page_FieldName_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='6']/input[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_OK_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='6']/button[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_TableToolsField_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Table Tools Fields']/li[3]/span/span[1]/span/span[1]/span[1]/span/span</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_ColumnHeader_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='slickgrid_colheader_Address']/span</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_EventSearchFieldLookUpIconButton_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='120']/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_NewTemplateName_Input_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='10']/div[2]/div/div[1]/input</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_NewTemplateName_Qs18_String" xml:space="preserve">
+    <value>1B_Student_Workshops</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_SelectOption_Ribbon_Icon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-HOME']/li[5]/span/span[1]/span/span[2]/span[3]/div[1]/div[1]/span</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_SelectOption_SelectAll_Ribbon_Icon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-HOME']/li[5]/span/span[1]/span/span[2]/span[3]/div[1]/div[2]/div/div[2]/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_SetFieldWidth_Ribbon_Icon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-HOME']/li[4]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/span</value>
+  </data>
 </root>

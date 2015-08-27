@@ -715,3 +715,18 @@ Then I should be on the "myitlab Study Plan" page
 When I launch the "Start Post-Test" button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of activity by "CsSmsStudent" 
 And I should answer activity "Access Chapter 1 Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "70%"
 Then I should see the "InProgress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
+
+#Purpose : Submitting Sim 5 Word activity and Student scoring 70
+#Test case ID : peg-21993.
+#Products : MyItLab.
+#Pre condition : This test case depends on Word SIM5 activity should be created by instructor/Author in the following course and 
+#“Trap ALT+TAB and Browser Lock-Down” option  should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 70 in SIM5 Access activity
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Access Chapter 1 Skill-Based Training"
+And I attempt the questions for "70%" in activity "Access Chapter 1 Skill-Based Training"
+Then I should see the "Passed" status for the activity "Access Chapter 1 Skill-Based Training"
+And I should see "72%" score for the activity "Access Chapter 1 Skill-Based Training" in course material page

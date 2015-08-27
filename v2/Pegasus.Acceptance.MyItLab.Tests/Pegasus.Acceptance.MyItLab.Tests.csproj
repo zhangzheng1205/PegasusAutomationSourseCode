@@ -425,6 +425,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.Cert.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCT.CERT.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCT.Production.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDIntegration.PCTExcel.Cert.orderedtest" />
@@ -535,9 +538,6 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Instructor.TodaysView.PastDueDate.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\BlackboardCourseAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

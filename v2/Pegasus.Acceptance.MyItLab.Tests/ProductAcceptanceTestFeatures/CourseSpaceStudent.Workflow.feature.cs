@@ -1665,6 +1665,36 @@ testRunner.Then("I should see the \"InProgress\" status for the activity \"Acces
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student scoring 70 in SIM5 Access activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentScoring70InSIM5AccessActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 70 in SIM5 Access activity", ((string[])(null)));
+#line 725
+this.ScenarioSetup(scenarioInfo);
+#line 726
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 727
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 728
+testRunner.When("I select \"Access Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsS" +
+                    "tudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 729
+testRunner.And("I open the activity named as \"Access Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 730
+testRunner.And("I attempt the questions for \"70%\" in activity \"Access Chapter 1 Skill-Based Train" +
+                    "ing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 731
+testRunner.Then("I should see the \"Passed\" status for the activity \"Access Chapter 1 Skill-Based T" +
+                    "raining\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 732
+testRunner.And("I should see \"72%\" score for the activity \"Access Chapter 1 Skill-Based Training\"" +
+                    " in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
