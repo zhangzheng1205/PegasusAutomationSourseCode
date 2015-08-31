@@ -5827,17 +5827,21 @@ namespace Pegasus.Pages.UI_Pages
             { //First Question Submission
                 new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
                   (activityName);
+                //Forteenth Question Submission
                 powerPoint.JumpToQuestion("14");
                 AttemptingForteenthWordQuestion();
+                //Twelfth Question Submission
                 powerPoint.JumpToQuestion("12");
                 AttemptingTwelfthWordQuestion();
+                //Fourth Question Submission
                 powerPoint.JumpToQuestion("4");
                 AttemptingFourthWordQuestion();
+                //Sixteenth Question Submission
                 powerPoint.JumpToQuestion("16");
                 AttemptingSixteenthWordQuestion();
+                //Fifteenth Question Submission
                 powerPoint.JumpToQuestion("15");
                 AttemptingFifteenthWordQuestion();
-
                 //First Question Submission
                 powerPoint.JumpToQuestion("1");
                 AttemptingFirstWordQuestion(activityName);
@@ -5847,8 +5851,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Fifth Question Submission
                 powerPoint.JumpToQuestion("5");
                 AttemptingFifthWordQuestion();
-                powerPoint.JumpToQuestion("7");
                 // Seventh Question Submission
+                powerPoint.JumpToQuestion("7");             
                 AttemptingSeventhWordQuestion();
                 //Eighth Question Submission
                 powerPoint.JumpToQuestion("8");
@@ -5876,12 +5880,13 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             this.SelectLastOpenedWindow();
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-           StudentPrsentation_Page_SIM5_Sleep_Time));
+            StudentPrsentation_Page_SIM5_Sleep_Time));
             this.IsPageLoading();
             this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.
             StudentPrsentation_Page_PPT_ViewAll_ID_Locator));
             //Click on View all button 
-            IWebElement getClickButtonProperty = base.GetWebElementPropertiesById(StudentPresentationPageResource.
+            IWebElement getClickButtonProperty = base.
+                GetWebElementPropertiesById(StudentPresentationPageResource.
              StudentPrsentation_Page_PPT_ViewAll_ID_Locator);
             base.ClickByJavaScriptExecutor(getClickButtonProperty);
             this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
@@ -5901,7 +5906,8 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                StudentPrsentation_Page_SIM5_Sleep_Time));
-                    IWebElement getQuestionRowProperty = base.GetWebElementPropertiesByXPath(string.
+                    IWebElement getQuestionRowProperty = base.
+                        GetWebElementPropertiesByXPath(string.
                     Format(StudentPresentationPageResource.
                     StudentPrsentation_Page_Worddocument__ViewAllQuestionsPopUp_QuestionPath_Xpath_Locator, i));
                     base.PerformDoubleClickAction(getQuestionRowProperty);
@@ -5914,6 +5920,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Attempting Second Word Question.
+        /// Inserting Text from Another Document .
+        /// </summary>
         private void AttemptingSecondWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingSecondWordQuestion",
@@ -6006,6 +6016,7 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Attempt First Word Question.
+        /// Starting a New Word Document .
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
         private void AttemptingFirstWordQuestion(string activityName)
@@ -6031,18 +6042,22 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_Blankdocument__Xpath_Locator);
             //Click on Create Option
             base.SwitchToActivePageElement();
-            this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.StudentPrsentation_Page_Textfill__Id_Locator));
+            this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.
+                StudentPrsentation_Page_Textfill__Id_Locator));
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                StudentPrsentation_Page_SIM5_Sleep_Time));
-            base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPrsentation_Page_Textfill__Id_Locator));
-            base.FillTextBoxById(StudentPresentationPageResource.StudentPrsentation_Page_Textfill__Id_Locator,
+            base.WaitForElement(By.Id(StudentPresentationPageResource.
+                StudentPrsentation_Page_Textfill__Id_Locator));
+            base.FillTextBoxById(StudentPresentationPageResource.
+                StudentPrsentation_Page_Textfill__Id_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-            //base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_Thread_sleep));
+           
             Actions builder = new Actions(WebDriver);
             builder.SendKeys(Keys.Enter).Build().Perform();
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-            // base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+           
             builder.SendKeys(Keys.Enter).Build().Perform();
 
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -6063,7 +6078,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Text.
             IWebElement element = base.GetWebElementPropertiesByXPath
 
-      (StudentPresentationPageResource.StudentPrsentation_Page_Textselect_Xpath_locator);
+         (StudentPresentationPageResource.StudentPrsentation_Page_Textselect_Xpath_locator);
             // assuming driver is a well behaving WebDriver
             Actions actions = new Actions(WebDriver);
             // and some variation of this:
@@ -6072,73 +6087,69 @@ namespace Pegasus.Pages.UI_Pages
                 .MoveByOffset(1, 11)
                 .Release()
                 .Perform();
-            Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-            base.ClickButtonByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Shadow_Dropdown_Xpath_locator);
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_Thread_sleep));
+            base.ClickButtonByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Shadow_Dropdown_Xpath_locator);
             //Select Blue Accent Effect.
-            base.ClickButtonByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Shadow_Xpath_locator);
+            base.ClickButtonByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Shadow_Xpath_locator);
             //Select Shadow Effect.
-            base.ClickButtonByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Shadoweffect_Xpath_locator);
+            base.ClickButtonByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Shadoweffect_Xpath_locator);
             IWebElement shadowLink = base.GetWebElementPropertiesByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Shadowlink_Xpath_locator);
+                (StudentPresentationPageResource.StudentPrsentation_Page_Shadowlink_Xpath_locator);
             base.PerformMouseHoverAction(shadowLink);
             //Select Color Drop Down.
             IWebElement perspectiveShadow = base.GetWebElementPropertiesByXPath
-                (StudentPresentationPageResource.StudentPrsentation_Page_Persoectivelink_Xpath_locator);
+                (StudentPresentationPageResource.
+                StudentPrsentation_Page_Persoectivelink_Xpath_locator);
             base.ScrollElementByJavaScriptExecutor(perspectiveShadow);
-            base.FocusOnElementByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Persoectivelink_Xpath_locator);
+            base.FocusOnElementByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Persoectivelink_Xpath_locator);
             base.PerformMoveToElementClickAction(perspectiveShadow);
             base.SwitchToLastOpenedWindow();
             //Slect Blue Color.
             IWebElement colorDropdown = base.GetWebElementPropertiesByXPath
-                (StudentPresentationPageResource.StudentPrsentation_Page_Colordropdown_Xpath_locator);
+                (StudentPresentationPageResource.
+                StudentPrsentation_Page_Colordropdown_Xpath_locator);
             base.ClickByJavaScriptExecutor(colorDropdown);
-            Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_Thread_sleep));
             IWebElement blueColor = base.GetWebElementPropertiesByXPath
-                (StudentPresentationPageResource.StudentPrsentation_Page_Color_Xpath_locator);
+                 (StudentPresentationPageResource.StudentPrsentation_Page_Color_Xpath_locator);
             base.ClickByJavaScriptExecutor(blueColor);
-            Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-            base.ClickImageByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Centertext_Xpath_locator);
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_Thread_sleep));
+            base.ClickImageByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Centertext_Xpath_locator);
             IWebElement fontSize = base.GetWebElementPropertiesByXPath
                 (StudentPresentationPageResource.StudentPrsentation_Page_Textsize_Xpath_locator);
             base.DoubleClickByJavaScriptExecuter(fontSize);
-            base.ClearTextByXPath
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Textsize_Xpath_locator);
+            base.ClearTextByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Textsize_Xpath_locator);
             base.FillTextBoxByXPath
                 (StudentPresentationPageResource.StudentPrsentation_Page_Textsize_Xpath_locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Textsize);
             base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
-            Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_Thread_sleep));
             logger.LogMethodExit("StudentPresentationPage", "AttemptingThirdWordQuestion",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Attempting Fourth Word Question.
+        /// Inserting Pictures .
+        /// </summary>
         public void AttemptingFourthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingFourthWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
             powerPoint.IsQuestionLoaded("4");
             Thread.Sleep(10000);
-
+            //Position the insertion point to the left of the paragraph that 
+            //begins STATEMENT: Some shark species
             Actions builder = new Actions(WebDriver);
             for (int i = 1; i <= 14; i++)
             {
@@ -6154,13 +6165,17 @@ namespace Pegasus.Pages.UI_Pages
 
             }
 
-            powerPoint.ClickOnElementByXpath(".//*[@id='1']/div/ul/li[6]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Insert']/li[3]/span/span[1]/span/span[1]/span[1]/span/span");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_Insert_Tab_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_Insert_Pictures_Icon_XPath_Locator);
 
 
             //Double click on the document required to insert
-            this.IsElementDisplayedInUI(By.Id("item-0-contextmenu"));
-            IWebElement getDocumentProperty = base.GetWebElementPropertiesById("item-0-contextmenu");
+            this.IsElementDisplayedInUI(By.Id(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Question4_Picture_Icon_Id_Locator));
+            IWebElement getDocumentProperty = base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Question4_Picture_Icon_Id_Locator);
             Thread.Sleep(2000);
             base.PerformDoubleClickAction(getDocumentProperty);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingFourthWordQuestion",
@@ -6169,14 +6184,19 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Attempting Fifth Word Question.
+        /// Wrapping Text Around a Picture Using Layout Options .
         /// </summary>
 
         private void AttemptingFifthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingFifthWordQuestion",
            base.IsTakeScreenShotDuringEntryExit);
+            //Change the wrapping style of the picture to Tight
             this.IsPageLoading();
             this.IsQuestionLoaded("5");
+            //With the picture selected, to the right of the picture, 
+            //click the Layout Options button.
+            //Under With Text Wrapping, click the first option—Tight.
             base.WaitForElement(By.Id(StudentPresentationPageResource.
                 StudentPrsentation_Page_Image_Id_Locator));
             IWebElement Thirdelement = base.GetWebElementPropertiesById
@@ -6202,11 +6222,13 @@ namespace Pegasus.Pages.UI_Pages
         }
         /// <summary>
         /// Attempting Seventh Word Question.
+        ///  Moving a Picture.
         /// </summary>
         private void AttemptingSeventhWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingSeventhWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
+            //Change the picture position so that it is right aligned horizontally relative to the margin.
             this.IsPageLoading();
             this.IsQuestionLoaded("7");
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
@@ -6251,11 +6273,14 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Attempting Eighth Word Question.
+        /// Applying Picture Styles.
         /// </summary>
         private void AttemptingEighthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingEighthWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
+            //Apply the Divot bevel picture effect—under Bevel,
+            //in the third row, the first effect—to the picture.
             this.IsPageLoading();
             this.IsQuestionLoaded("8");
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
@@ -6277,19 +6302,20 @@ namespace Pegasus.Pages.UI_Pages
             powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_BevelImage_Xpath_Locator);
 
-
-            //Thread.Sleep(Convert.ToInt32  (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
             logger.LogMethodExit("StudentPresentationPage", "AttemptingEighthWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Attempting Ninth Word Question.
+        /// Applying Artistic Effects .
         /// </summary>
         private void AttemptingNinthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingNinthWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
+            //Apply the Plastic Wrap artistic effect—fourth row, fifth effect—to the picture. 
+            //Close any open dialog boxes or task panes.
             this.IsPageLoading();
             this.IsQuestionLoaded("9");
             //Selecting picture effect
@@ -6317,11 +6343,14 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Attempting Tenth Word Question.
+        /// Adding a Page Border .
         /// </summary>
         private void AttemptingTenthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingTenthWordQuestion",
            base.IsTakeScreenShotDuringEntryExit);
+           //Add a Box setting page border to the document
+           //Use the first style, and the color Dark Blue, Text 2—in the fourth column, the first color
             this.IsPageLoading();
             this.IsQuestionLoaded("10");
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
@@ -6348,12 +6377,17 @@ namespace Pegasus.Pages.UI_Pages
           base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Attempting Twelfth Word Question.
+        /// Typing Text in a Shape and Formatting a Shape 
+        /// </summary>
         public void AttemptingTwelfthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingTwelfthWordQuestion",
          base.IsTakeScreenShotDuringEntryExit);
             //Part 1-Type Shark Conservation Week in the shape
-            powerPoint.ClickOnElementByXpath(".//*[@id='wave-image']");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_QsFourteen_TextBox_Xpath_Locator);
             Actions builder = new Actions(WebDriver);
             builder.SendKeys("Shark Conservation Week").Perform();
 
@@ -6361,58 +6395,86 @@ namespace Pegasus.Pages.UI_Pages
             //increase the font size to 22, 
             //and change the font color to Dark Blue, Text 2, Darker 50%—in the fourth column
 
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[1]/span[1]/span");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[1]/span");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[2]/div/div[10]/div[1]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[1]/span");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[2]/div/div[1]/div/ul/div[3]/div[4]/div[5]/div");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_Bold_Icon_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_FontSize_ListArrow_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_FontSize_22_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_FontColor_ListArrow_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu50_XPath_Locator);
 
             //Part 3-Change the Shape Fill to Dark Blue, Text 2, Lighter 80%—in the fourth column, the second color
             //Change the Shape Outline to Dark Blue, Text 2—in the fourth column, the first color
-            powerPoint.ClickOnElementByXpath(".//*[@id='1']/div/ul/li[15]");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Ribbon_Xpath_Locator);
 
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[1]/div[1]/div[1]/span");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[1]/div[1]/div[2]/div/div[1]/div/ul/div[3]/div[4]/div[1]/div");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_ShapeFill_ListArrow_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu80_XPath_Locator);
 
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[2]/div[1]/div[1]/span");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[2]/div[1]/div[2]/div/div[1]/div/ul/div[2]/div[4]/div");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_ShapeOutline_ListArrow_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlueText2_XPath_Locator);
 
             logger.LogMethodExit("StudentPresentationPage", "AttemptingTwelfthWordQuestion",
          base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Word Sim5 Forteenth Question Attempt.
+        /// Sizing, Positioning, and Formatting a Text Box .
+        /// </summary>
         public void AttemptingForteenthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingForteenthWordQuestion",
-          base.IsTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
+            //Change the text box Horizontal Alignment to Centered relative to the Page. 
+            //Change the Vertical Absolute position to 1.25 below the Margin. 
+            //Change the text box Height to 1.25.
             //Setting the text box
             Actions builder = new Actions(WebDriver);
-
             Thread.Sleep(2000);
-            IWebElement textBox = base.GetWebElementPropertiesByXPath(".//*[@id='wave-image']");
+            //Select Text Box
+            IWebElement textBox = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_QsFourteen_TextBox_Xpath_Locator);
             Thread.Sleep(2000);
             base.PerformMouseClickAction(textBox);
             Thread.Sleep(2000);
-            powerPoint.ClickOnElementByXpath(".//*[@id='1']/div/ul/li[15]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[5]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[2]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[5]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[6]/div[2]");
-            powerPoint.ClickOnElementByXpath("//label[@for='HorizontalGroup_HorizontalGroup_1']");
+            // Select DRAWING TOOLS FORMAT tab
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Ribbon_Xpath_Locator);
+            // Select position
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Position_Ribbon_Xpath_Locator);
+           // More Layout Options
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_Ribbon_Xpath_Locator);
+            //Change the text box Horizontal Alignment to Centered relative to the Page. 
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Radio_Xpath_Locator);
 
-            powerPoint.ClickOnElementByXpath("//div[@id='titletext' and contains(text(),'Left')]");
-            powerPoint.ClickOnElementByXpath("//pre[@class='itemTextPre' and contains(text(),'Centered')]");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_DefaultValue_Xpath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Value_Xpath_Locator);
 
-            powerPoint.ClickOnElementByXpath("//div[@id='titletext' and contains(text(),'Column')]");
-            powerPoint.ClickOnElementByXpath("//pre[@class='itemTextPre' and contains(text(),'Page')]");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_RelativeToDefaultValue_Xpath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_RelativeToValue_Xpath_Locator);
+            //Change the Vertical Absolute position to 1.25 below the Margin. 
 
-
-            IWebElement radioButton1 = base.GetWebElementPropertiesByXPath("//label[@for='verticalGroup_verticalGroup_2']");
+            IWebElement radioButton1 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Vertical_Radio_Xpath_Locator);
             Thread.Sleep(2000);
             base.PerformMouseClickAction(radioButton1);
             Thread.Sleep(2000);
-            //base.ClearTextByXPath("//input[@class='spinInput']");
-            //base.FillTextBoxByXPath("//input[@class='spinInput']", "7.35");
-            //builder.SendKeys("s").Perform();
-            //Thread.Sleep(2000);
+           
             builder.SendKeys(Keys.Tab).Perform();
             Thread.Sleep(2000);
             builder.SendKeys("7.35").Perform();
@@ -6428,10 +6490,12 @@ namespace Pegasus.Pages.UI_Pages
             builder.SendKeys(Keys.Tab).Perform();
             Thread.Sleep(2000);
 
+            //Change the text box Height to 1.25 and Width to 3.5
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_SizeTab_Xpath_Locator);
 
-            powerPoint.ClickOnElementByXpath(".//*[@id='10-LyDlg41']/ul[1]/li[3]/div/div");
-
-            IWebElement radioButton2 = base.GetWebElementPropertiesByXPath("//label[@for='widthGroup_widthGroup_1']");
+            IWebElement radioButton2 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Width_Radio_Xpath_Locator);
             Thread.Sleep(2000);
             base.PerformMouseClickAction(radioButton2);
             Thread.Sleep(2000);
@@ -6439,48 +6503,79 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(2000);
             builder.SendKeys("3.5").Perform();
             Thread.Sleep(2000);
-            powerPoint.ClickOnElementByXpath(".//*[@id='10']/button[1]");
-            //part 2
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div[3]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div[1]/div[37]/div");
-            //part3
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/span");
-            IWebElement textBox3 = base.GetWebElementPropertiesByXPath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[2]/div[3]");
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_OK_Button_Xpath_Locator);
+            //Apply a Shape Style to the text box—in the last row, the second style—Intense Effect - Blue, Accent 1.
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_ListIcon_Xpath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_Xpath_Locator);
+            //Apply a Shadow effect to the text box using the Outer, 
+            //Offset Diagonal Top Left shadow—in the third row, the third style. 
+            // Close any opened dialog boxes or panes.
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_ListIcon_Xpath_Locator);
+            IWebElement textBox3 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_List_Xpath_Locator);
             Thread.Sleep(2000);
             base.PerformMouseClickAction(textBox3);
             Thread.Sleep(2000);
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[2]/div[5]/div/div[4]/div[9]/div");
-
-
-
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_Xpath_Locator);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingForteenthWordQuestion",
           base.IsTakeScreenShotDuringEntryExit);
 
         }
 
-
+        /// <summary>
+        /// Attempting Fifteenth Word Question.
+        /// Adding a File Name to the Footer .
+        /// </summary>
         public void AttemptingFifteenthWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingFifteenthWordQuestion",
-          base.IsTakeScreenShotDuringEntryExit);
-            powerPoint.ClickOnElementByXpath(".//*[@id='1']/div/ul/li[6]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Insert']/li[7]/span/span[1]/span/span/span[2]/div[1]/div[1]/div/div[2]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Insert']/li[7]/span/span[1]/span/span/span[2]/div[1]/div[2]/div/div[4]/div[2]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Header & Footer Tools Design']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div/div[2]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Header & Footer Tools Design']/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div/div[2]/div[2]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='ribbon-tab-Header & Footer Tools Design']/li[6]/span/span[1]/span/span/span/span");
+            base.IsTakeScreenShotDuringEntryExit);
+            //Add the File Name to the footer of the document
+            //Close the footer
+
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_Insert_Tab_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_ArrowList_XPath_Locator);
+            //Add the File Name to the footer of the document
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_EditFooter_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_ArrowList_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_Filename_XPath_Locator);
+            //Close the footer
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_CloseHeaderFooter_Icon_XPath_Locator);
 
             logger.LogMethodExit("StudentPresentationPage", "AttemptingFifteenthWordQuestion",
           base.IsTakeScreenShotDuringEntryExit);
         }
-
+        
+        /// <summary>
+        /// Attempting Sixteenth Word Question.
+        /// Adding Document Properties and Previewing and Printing a Document .
+        /// </summary>
         public void AttemptingSixteenthWordQuestion()
         {
+            //In the Document Properties, change the Tags to sharks, conservation 
+            //and then change the Subject to Marine Biology, 201 (include the commas). 
+            //Press TAB. If necessary, close the Document Panel and open Backstage.
+            //Display the Print Preview of the document. Print the document.
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingSixteenthWordQuestion",
            base.IsTakeScreenShotDuringEntryExit);
-            powerPoint.ClickOnElementByXpath(".//*[@id='1']/div/ul/li[1]");
-            powerPoint.ClickOnElementByXpath("//div[contains(text(),'Show All Properties')]");
+            //Open Info page fro File menu
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument_Ribbon_File_Tab_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_ShowAllProperties_Link_XPath_Locator);
             Actions builder = new Actions(WebDriver);
+            //change the Tags to sharks, conservation using keyboard shortcut keys
             builder.SendKeys(Keys.F10).Perform();
             Thread.Sleep(2000);
             builder.SendKeys("I").Perform();
@@ -6489,22 +6584,32 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(2000);
             builder.SendKeys("2").Perform();
             Thread.Sleep(2000);
-            builder.SendKeys("sharks, conservation").Perform();
+            builder.SendKeys(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__Question16_Tag_Value).Perform();
             Thread.Sleep(2000);
             builder.SendKeys(Keys.F10).Perform();
             Thread.Sleep(2000);
 
+            //change the Subject to Marine Biology, 201
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_Properties_ArrowList_Link_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Link_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Tab_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Subject_TextInput_XPath_Locator);
+            base.FillTextBoxByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Subject_TextInput_XPath_Locator
+                , StudentPresentationPageResource.StudentPrsentation_Page_Worddocument__Question16_Subject_Value);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Ok_Button_XPath_Locator);
 
-            powerPoint.ClickOnElementByXpath(".//*[@id='29']/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[1]/div/div[1]/div");
-            powerPoint.ClickOnElementByXpath(".//*[@id='29']/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[2]/div/div/div[2]/div/span/img");
-            powerPoint.ClickOnElementByXpath(".//*[@id='tabControlId']/ul[1]/li[2]/div/div");
-            powerPoint.ClickOnElementByXpath(".//*[@id='tabControlId']/ul[2]/li[2]/input[2]");
-            base.FillTextBoxByXPath(".//*[@id='tabControlId']/ul[2]/li[2]/input[2]", "Marine Biology, 201");
-            powerPoint.ClickOnElementByXpath(".//*[@id='41']/div/button[1]");
-
-
-            powerPoint.ClickOnElementByXpath(".//*[@id='fileMenuId']/li[6]/div[2]");
-            powerPoint.ClickOnElementByXpath(".//*[@id='29-PrintButton']/div[1]");
+            //Display the Print Preview of the document. Print the document.
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Print_Link_XPath_Locator);
+            powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Worddocument__File_Print_Print_Button_XPath_Locator);
 
             logger.LogMethodExit("StudentPresentationPage", "AttemptingSixteenthWordQuestion",
           base.IsTakeScreenShotDuringEntryExit);

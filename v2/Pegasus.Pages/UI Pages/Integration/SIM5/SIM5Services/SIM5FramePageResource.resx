@@ -1638,4 +1638,25 @@
   <data name="SIM5Frame_Page_Access_SetFieldWidth_Ribbon_Icon_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-HOME']/li[4]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/span</value>
   </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Accounting_NumberFormat_Xpath_ocator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[1]/span[1]/div[1]/div[1]/div/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_File_Info_AdvancedPropertes_Summary_Keyword_TextInput_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='tabControlId']/ul[2]/li[2]/input[7]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_AdvancedProperties_Icon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='tabControlId']/ul[1]/li[2]/div/div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_Properties_ArrowList_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[2]/div/div/div[2]/div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[1]/div/div[1]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_QuickAnalysisButton_Xpath_ocator" xml:space="preserve">
+    <value>.//*[@id='excelQuickAnylsMainDiv']/div[2]/div[1]/ul/li[3]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Ribbon_Review_tab_CssSelector_Locator" xml:space="preserve">
+    <value>.tab-header.tab-header-review.accessible</value>
+  </data>
 </root>

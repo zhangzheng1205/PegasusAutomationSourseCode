@@ -590,8 +590,8 @@ And I should see the "Passed" status for the activity "Excel Chapter 1 Skill-Bas
 And I should see "70.4%" score for the activity "Excel Chapter 1 Skill-Based Training" in course material page
 
 #PEGASUS-29245
-#peg-21994:Sim 5 Excel activity and Student scoring a 100%
-#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
+#peg-21994:Sim 5 Excel activity and Student scoring a 70%
+#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 70%
 Scenario: Student launches a Sim 5 Excel activity and Student scoring a 70% compares the result and status
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page

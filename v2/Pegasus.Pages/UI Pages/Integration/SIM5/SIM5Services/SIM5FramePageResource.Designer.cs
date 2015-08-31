@@ -3193,6 +3193,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span/span[2]/span[1]/span[1]/div[1]/div[1]/div/div[1].
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Accounting_NumberFormat_Xpath_ocator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Accounting_NumberFormat_Xpath_ocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cardio sales.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Value {
@@ -3949,6 +3958,45 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;tabControlId&apos;]/ul[2]/li[2]/input[7].
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_File_Info_AdvancedPropertes_Summary_Keyword_TextInput_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_File_Info_AdvancedPropertes_Summary_Keyword_TextInput_X" +
+                        "path_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;tabControlId&apos;]/ul[1]/li[2]/div/div.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_AdvancedProperties_Icon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_AdvancedProperties_Icon_Xpa" +
+                        "th_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;44&apos;]/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[2]/div/div/div[2]/div.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_Properties_ArrowList_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_Properties_ArrowList_Xpath_" +
+                        "Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;44&apos;]/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[1]/div/div[1]/div/span/img.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_File_Info_ShowAllproperties_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to li.tab-header.tab-header-backstage.tab-header-file.accessible.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_File_Menu_CSSLocator {
@@ -4300,6 +4348,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;excelQuickAnylsMainDiv&apos;]/div[2]/div[1]/ul/li[3].
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_QuickAnalysisButton_Xpath_ocator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_QuickAnalysisButton_Xpath_ocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to refBox.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator {
@@ -4314,6 +4371,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_SIM5_Excel_Review_Menu_CSSLocator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Review_Menu_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .tab-header.tab-header-review.accessible.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Ribbon_Review_tab_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Ribbon_Review_tab_CssSelector_Locator", resourceCulture);
             }
         }
         

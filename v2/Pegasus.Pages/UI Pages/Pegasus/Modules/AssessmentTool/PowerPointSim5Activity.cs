@@ -23,9 +23,6 @@ using Pegasus.Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
 
 
-
-
-
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
@@ -33,8 +30,6 @@ namespace Pegasus.Pages.UI_Pages
     /// </summary>
     public class PowerPointSim5Activity : BasePage
     {
-
-
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
@@ -46,8 +41,6 @@ namespace Pegasus.Pages.UI_Pages
 
         private string locatorType = string.Empty;
         private string locator = string.Empty;
-
-
 
         /// <summary>
         /// Attempt Sim5 Power Point Questions.
@@ -62,17 +55,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 switch (score)
                 {
-                    case "100%":
-                        break;
-
-
-                    case "70%": const int screenWidth = 1267;
-                        const int screenHeight = 850;
-                        // setting the screen size and position
-                        //Thread.Sleep(1200000);
-
-                        PPTAttemptForSeventyPercent(activityName);
-                        break;
+                    case "70%": PPTAttemptForSeventyPercent(activityName);
+                    break;
                 }
                 //Click On SIM5 Activity Submit Button
                 this.ClickOnSim5ActivitySubmitButton();
@@ -98,70 +82,62 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             //Attempt the question no. 1
             this.AttemptPPTQuestion01(activityName);
-            //JumpToQuestion("18");
-            //this.AttemptPPTQuestion18();
+            //Attempt the question no. 16
             JumpToQuestion("16");
             this.AttemptPPTQuestion16();
+            //Attempt the question no. 22
             JumpToQuestion("22");
             this.AttemptPPTQuestion22();
-            //Open question no. 3
-            JumpToQuestion("3");
             //Attempt the question no. 3
-
+            JumpToQuestion("3");
             this.AttemptPPTQuestion03(activityName);
             //Attempt the question no. 4
-
             this.AttemptPPTQuestion04(activityName);
-            //Attempt the question no.5
-
-            //this.AttemptPPTQuestion05(activityName);
             //Attempt the question no. 6
             JumpToQuestion("6");
             this.AttemptPPTQuestion06(activityName);
+            //Attempt the question no. 8
             JumpToQuestion("8");
             this.AttemptPPTQuestion08(activityName);
-
+            //Attempt the question no. 9
             this.AttemptPPTQuestion09();
-
+            //Attempt the question no. 10
             this.AttemptPPTQuestion10();
-
+            //Attempt the question no. 11
             this.AttemptPPTQuestion11();
-
+            //Attempt the question no. 12
             this.AttemptPPTQuestion12();
-
+            //Attempt the question no. 13
             this.AttemptPPTQuestion13();
-
+            //Attempt the question no. 14
             this.AttemptPPTQuestion14();
-
+            //Attempt the question no. 15
             this.AttemptPPTQuestion15();
-
-
-
+            //Attempt the question no. 17
             this.AttemptPPTQuestion17();
-            //this.AttemptPPTQuestion18();
-
+            //Attempt the question no. 20
             JumpToQuestion("20");
             this.AttemptPPTQuestion20();
-
+            //Attempt the question no. 21
             this.AttemptPPTQuestion21();
-
-
-
+            //Attempt the question no. 25
             JumpToQuestion("25");
             this.AttemptPPTQuestion25();
-
+            //Attempt the question no. 26
             this.AttemptPPTQuestion26();
-
+            //Attempt the question no. 27
             this.AttemptPPTQuestion27();
-
+            //Attempt the question no. 28
             this.AttemptPPTQuestion28();
+            //Attempt the question no. 31
             JumpToQuestion("31");
             this.AttemptPPTQuestion31();
+            //Attempt the question no. 32
             JumpToQuestion("32");
             this.AttemptPPTQuestion32();
+            //Attempt the question no. 33
             JumpToQuestion("33");
             this.AttemptPPTQuestion33();
-
             logger.LogMethodExit("PowerPointSim5Activity", "PPTAttemptForSeventyPercent",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -548,6 +524,7 @@ namespace Pegasus.Pages.UI_Pages
             return isThinkingIndicatorProcessing;
         }
 
+
         /// <summary>
         /// To Navigate to expected question.
         /// </summary>
@@ -621,12 +598,13 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.01 attempt.
+        /// Creating a New Presentation and Identifying Parts of the PowerPoint Window .
         /// </summary>
         /// <param name="activityName">This is activity name</param>
         public void AttemptPPTQuestion01(string activityName)
         {
+           //Start a new presentation using the Facet theme
             // PPT question no.01 attempt
-
             logger.LogMethodEntry("PowerPointSim5Activity", "SelectPresentationPlayerWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select the activity window
@@ -668,11 +646,12 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.03 attempt.
+        ///  Applying a Presentation Theme .
         /// </summary>
         /// <param name="activityName">This is activity name</param>
         public void AttemptPPTQuestion03(string activityName)
         {
-            //Attempt Third Question
+            //Apply the Organic theme to the presentation
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptThirdQuestion",
                 base.IsTakeScreenShotDuringEntryExit);
 
@@ -718,6 +697,7 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.04 attempt.
+        /// Inserting a New Slide .
         /// </summary>
         /// <param name="activityName">This is activity name</param>
         public void AttemptPPTQuestion04(string activityName)
@@ -725,7 +705,11 @@ namespace Pegasus.Pages.UI_Pages
             //Attempt Fourth Question
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion04",
                base.IsTakeScreenShotDuringEntryExit);
-
+            //Insert a new Panoramic Picture with Caption slide after Slide 1. 
+            //In the title placeholder, type Your Dreams. 
+            //Insert a new Title and Content slide after Slide 2. 
+            //In the title placeholder, type Our Expertise. 
+            //In the content placeholder, type Over 20 years of experience in the travel industry. 
             try
             {
                 Actions builder = new Actions(WebDriver);
@@ -1024,13 +1008,16 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.06 attempt.
+        /// Adding Speaker’s Notes to a Presentation.
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion06(string activityName)
         {
-            //Attempt Sixth Question
+           
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion06",
                 base.IsTakeScreenShotDuringEntryExit);
+            //On Slide 3, in the Notes pane, type the text Kodiak West Travel has locations in Juneau, Anchorage, and Victoria.
+         
             try
             {
                 this.IsQuestionLoaded("6");
@@ -1068,12 +1055,15 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.08 attempt.
+        /// Inserting a Picture from a File .
         /// </summary>
         /// <param name="activityName">This is activity name</param>
         public void AttemptPPTQuestion08(string activityName)
         {
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion08",
                base.IsTakeScreenShotDuringEntryExit);
+            //On Slide 2, in the picture placeholder insert the picture file 1A_Glacier.jpg from the USB drive. 
+            //Display Slide 4. In the content placeholder, insert the picture file 1A_Bay.jpg from the USB drive. 
             try
             {
                 this.IsQuestionLoaded("8");
@@ -1122,12 +1112,14 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.09 attempt.
+        /// Applying a Style to a Picture .
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion09()
         {
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion09",
             base.IsTakeScreenShotDuringEntryExit);
+            //On Slide 4, select the picture and apply the Simple Frame, Black picture style—in the second row, the second style. 
             try
             {
                 this.IsQuestionLoaded("9");
@@ -1163,12 +1155,15 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.10 attempt.
+        /// Applying and Removing Picture Artistic Effects .
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion10()
         {
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion10",
             base.IsTakeScreenShotDuringEntryExit);
+            //On Slide 4, select the picture and apply the Glow Diffused artistic effect—in the second row, the fourth effect. 
+            //Remove the artistic effect from the picture on Slide 4.
             try
             {
                 this.IsQuestionLoaded("10");
@@ -1208,12 +1203,14 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.11 attempt.
+        /// Viewing a Slide Show .
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion11()
         {
             logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion11",
             base.IsTakeScreenShotDuringEntryExit);
+            //View the entire presentation in Slide Show view from the beginning and then return to Normal view. 
             try
             {
                 this.IsQuestionLoaded("11");
@@ -1249,6 +1246,7 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.12 attempt.
+        /// 
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion12()
@@ -1494,6 +1492,7 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.16 attempt.
+        /// Printing Speaker Notes .
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion16()
@@ -1503,6 +1502,9 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
+                logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion16",
+                base.IsTakeScreenShotDuringEntryExit);
+               // Print the Slide 3 Notes Pages including the Frame Slides option.
                 this.IsQuestionLoaded("16");
                 base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
@@ -1516,15 +1518,18 @@ namespace Pegasus.Pages.UI_Pages
                     StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
-                base.FillTextBoxByXPath("//div[@class='editPagesToPrintWrap general-textbox accessible filemenu-manipulator']/input",
+                base.FillTextBoxByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_File_Print_Settings_Slides_TextInput_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_16_NotesInputButton_value);
                 base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 //click on Notes pages button
-                this.IsElementDisplayedInUI(By.XPath("//div[@class='print-page-container relative-pos']/span/div/div/div/div/div/span/img"));
-                IWebElement element = base.GetWebElementPropertiesByXPath("//div[@class='print-page-container relative-pos']/span/div/div/div/div/div/span/img");
+                this.IsElementDisplayedInUI(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_File_Print_NotesPages_Button_Xpath_Locator));
+                IWebElement element = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_PPT_File_Print_NotesPages_Button_Xpath_Locator);
                 base.PerformMouseClickAction(element);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
@@ -1538,12 +1543,13 @@ namespace Pegasus.Pages.UI_Pages
                     StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
-                bool checkElement = base.IsElementPresent(By.XPath("//div[@id='4']/div[2]/div[3]/div[6]/div[3]/div/div"));
-                this.IsElementDisplayedInUI(By.XPath("//div[@id='4']/div[2]/div[3]/div[6]/div[3]/div/div"));
+            
                 //click on print
-                IWebElement PrintButton = base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                this.ClickOnElementById(StudentPresentationPageResource.
                     StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator);
-                base.ClickByJavaScriptExecutor(PrintButton);
+              
+                logger.LogMethodExit("PowerPointSim5Activity", "AttemptPPTQuestion16",
+                    base.IsTakeScreenShotDuringEntryExit);
             }
             catch (Exception e)
             {
@@ -1679,6 +1685,7 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// PPT question no.22 attempt.
+        /// Applying a Theme Variant .
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         public void AttemptPPTQuestion22()
@@ -1688,6 +1695,10 @@ namespace Pegasus.Pages.UI_Pages
 
             try
             {
+                logger.LogMethodEntry("PowerPointSim5Activity", "AttemptPPTQuestion22",
+                    base.IsTakeScreenShotDuringEntryExit);
+                //Change the theme variant for Slide 1 to the third variant. 
+                //Change the theme variant for the entire presentation to the blue variant. 
                 this.IsQuestionLoaded("22");
                 base.SetImplicitWaitTime(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue));

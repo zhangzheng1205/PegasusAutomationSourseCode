@@ -3599,6 +3599,25 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;print-page-container relative-pos&apos;]/span/div/div/div/div/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_PPT_File_Print_NotesPages_Button_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_PPT_File_Print_NotesPages_Button_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;editPagesToPrintWrap general-textbox accessible filemenu-manipulator&apos;]/input.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_PPT_File_Print_Settings_Slides_TextInput_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_PPT_File_Print_Settings_Slides_TextInput_Xpath_Locat" +
+                        "or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 20.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_PPT_ImplicitWait_TimeOutValue {
@@ -3914,6 +3933,84 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;29&apos;]/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[2]/div/div/div[2]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Lin" +
+                        "k_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;41&apos;]/div/button[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Ok_Button_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Ok_" +
+                        "Button_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;tabControlId&apos;]/ul[2]/li[2]/input[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Subject_TextInput_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Sum" +
+                        "mary_Subject_TextInput_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;tabControlId&apos;]/ul[1]/li[2]/div/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Tab_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Sum" +
+                        "mary_Tab_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;29&apos;]/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[1]/div/div[1]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Info_Properties_ArrowList_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Info_Properties_ArrowList_Link_XPath_L" +
+                        "ocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[contains(text(),&apos;Show All Properties&apos;)].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Info_ShowAllProperties_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Info_ShowAllProperties_Link_XPath_Loca" +
+                        "tor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;fileMenuId&apos;]/li[6]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Print_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Print_Link_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;29-PrintButton&apos;]/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__File_Print_Print_Button_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__File_Print_Print_Button_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to fwdtaskbtn.
         /// </summary>
         internal static string StudentPrsentation_Page_Worddocument__Forwardbutton_id_Locator {
@@ -3928,6 +4025,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Worddocument__Id_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marine Biology, 201.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__Question16_Subject_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__Question16_Subject_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sharks, conservation.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__Question16_Tag_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__Question16_Tag_Value", resourceCulture);
             }
         }
         
@@ -3957,6 +4072,175 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Worddocument_DocumentToInsert_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DocumentToInsert_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;titletext&apos; and contains(text(),&apos;Left&apos;)].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_DefaultValue_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_De" +
+                        "faultValue_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //label[@for=&apos;HorizontalGroup_HorizontalGroup_1&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Radio_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Ra" +
+                        "dio_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;titletext&apos; and contains(text(),&apos;Column&apos;)].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_RelativeToDefaultValue_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Re" +
+                        "lativeToDefaultValue_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //pre[@class=&apos;itemTextPre&apos; and contains(text(),&apos;Page&apos;)].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_RelativeToValue_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Re" +
+                        "lativeToValue_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //pre[@class=&apos;itemTextPre&apos; and contains(text(),&apos;Centered&apos;)].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Value_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Va" +
+                        "lue_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;10&apos;]/button[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_OK_Button_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_OK_But" +
+                        "ton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[5]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[6]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_Ribbon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_Ribbon" +
+                        "_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;10-LyDlg41&apos;]/ul[1]/li[3]/div/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_SizeTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_SizeTa" +
+                        "b_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[5]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Position_Ribbon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Position_Ribbon_Xpath_L" +
+                        "ocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;1&apos;]/div/ul/li[15].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Ribbon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Ribbon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_ListIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_ListIcon_Xp" +
+                        "ath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[2]/div[3].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_List_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_List" +
+                        "_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[2]/div[5]/div/div[4]/div[9]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_Xpat" +
+                        "h_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div[3].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_ListIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_ListIcon_Xpa" +
+                        "th_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div[1]/div[37]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_Xpath_Locato" +
+                        "r", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //label[@for=&apos;verticalGroup_verticalGroup_2&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Vertical_Radio_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Vertical_Radio_Xpath_Lo" +
+                        "cator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //label[@for=&apos;widthGroup_widthGroup_1&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Width_Radio_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Width_Radio_Xpath_Locat" +
+                        "or", resourceCulture);
             }
         }
         
@@ -4006,11 +4290,188 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;wave-image&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_QsFourteen_TextBox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_QsFourteen_TextBox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to item-0-contextmenu.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Question4_Picture_Icon_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Question4_Picture_Icon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;quetionattempt&apos;]/span.
         /// </summary>
         internal static string StudentPrsentation_Page_Worddocument_QuestionNumber_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_QuestionNumber_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[1]/span[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_Bold_Icon_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_Bold_Icon_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;1&apos;]/div/ul/li[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_File_Tab_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_File_Tab_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[2]/div/div[1]/div/ul/div[3]/div[4]/div[5]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu50_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu50_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[1]/div[1]/div[2]/div/div[1]/div/ul/div[3]/div[4]/div[1]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu80_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu80_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[2]/div[1]/div[2]/div/div[1]/div/ul/div[2]/div[4]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlueText2_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlueText2_XPath_Locator" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_FontColor_ListArrow_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_FontColor_ListArrow_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[2]/div/div[10]/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_FontSize_22_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_FontSize_22_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_FontSize_ListArrow_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_FontSize_ListArrow_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Header &amp; Footer Tools Design&apos;]/li[6]/span/span[1]/span/span/span/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_CloseHeaderFooter_Icon_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_CloseHeaderFooter_I" +
+                        "con_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Header &amp; Footer Tools Design&apos;]/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_ArrowList_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_ArrowL" +
+                        "ist_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Header &amp; Footer Tools Design&apos;]/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div/div[2]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_Filename_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_Filena" +
+                        "me_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Insert&apos;]/li[7]/span/span[1]/span/span/span[2]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_ArrowList_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_ArrowList_XPath_Locator" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Insert&apos;]/li[7]/span/span[1]/span/span/span[2]/div[1]/div[2]/div/div[4]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_EditFooter_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_EditFooter_XPath_Locato" +
+                        "r", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Insert&apos;]/li[3]/span/span[1]/span/span[1]/span[1]/span/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_Insert_Pictures_Icon_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_Insert_Pictures_Icon_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;1&apos;]/div/ul/li[6].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_Insert_Tab_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_Insert_Tab_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[1]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_ShapeFill_ListArrow_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_ShapeFill_ListArrow_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Drawing Tools Format&apos;]/li[2]/span/span[1]/span/span[3]/span[2]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument_Ribbon_ShapeOutline_ListArrow_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument_Ribbon_ShapeOutline_ListArrow_XPath_Locator", resourceCulture);
             }
         }
         

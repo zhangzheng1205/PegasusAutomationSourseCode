@@ -1443,4 +1443,148 @@
   <data name="StudentPrsentation_Page__Textfill_Id_Locator" xml:space="preserve">
     <value>task01selstart</value>
   </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_DefaultValue_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='titletext' and contains(text(),'Left')]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Radio_Xpath_Locator" xml:space="preserve">
+    <value>//label[@for='HorizontalGroup_HorizontalGroup_1']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_RelativeToDefaultValue_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='titletext' and contains(text(),'Column')]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_RelativeToValue_Xpath_Locator" xml:space="preserve">
+    <value>//pre[@class='itemTextPre' and contains(text(),'Page')]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_HorizontalAllignment_Value_Xpath_Locator" xml:space="preserve">
+    <value>//pre[@class='itemTextPre' and contains(text(),'Centered')]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_OK_Button_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='10']/button[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_Ribbon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[5]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[6]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_SizeTab_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='10-LyDlg41']/ul[1]/li[3]/div/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Position_Ribbon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[5]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Ribbon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='1']/div/ul/li[15]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_ListIcon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_List_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[2]/div[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeEffect_Shadow_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[2]/div[5]/div/div[4]/div[9]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_ListIcon_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_ShapeStlye_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div[1]/div[37]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Vertical_Radio_Xpath_Locator" xml:space="preserve">
+    <value>//label[@for='verticalGroup_verticalGroup_2']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Width_Radio_Xpath_Locator" xml:space="preserve">
+    <value>//label[@for='widthGroup_widthGroup_1']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_QsFourteen_TextBox_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='wave-image']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Question4_Picture_Icon_Id_Locator" xml:space="preserve">
+    <value>item-0-contextmenu</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_Bold_Icon_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[1]/span[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_File_Tab_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='1']/div/ul/li[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu50_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[2]/div/div[1]/div/ul/div[3]/div[4]/div[5]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlu80_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[1]/div[1]/div[2]/div/div[1]/div/ul/div[3]/div[4]/div[1]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_FontColor_DarkBlueText2_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[2]/div[1]/div[2]/div/div[1]/div/ul/div[2]/div[4]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_FontColor_ListArrow_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_FontSize_22_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[2]/div/div[10]/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_FontSize_ListArrow_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_CloseHeaderFooter_Icon_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Header &amp; Footer Tools Design']/li[6]/span/span[1]/span/span/span/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_ArrowList_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Header &amp; Footer Tools Design']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_HeaderFooterTools_DocumentInfo_Filename_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Header &amp; Footer Tools Design']/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div/div[2]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_ArrowList_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Insert']/li[7]/span/span[1]/span/span/span[2]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_Insert_Footer_EditFooter_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Insert']/li[7]/span/span[1]/span/span/span[2]/div[1]/div[2]/div/div[4]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_Insert_Pictures_Icon_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Insert']/li[3]/span/span[1]/span/span[1]/span[1]/span/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_Insert_Tab_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='1']/div/ul/li[6]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_ShapeFill_ListArrow_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[1]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument_Ribbon_ShapeOutline_ListArrow_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Drawing Tools Format']/li[2]/span/span[1]/span/span[3]/span[2]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Link_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='29']/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[2]/div/div/div[2]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Ok_Button_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='41']/div/button[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Subject_TextInput_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='tabControlId']/ul[2]/li[2]/input[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Info_Properties_AdvancedProperties_Summary_Tab_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='tabControlId']/ul[1]/li[2]/div/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Info_Properties_ArrowList_Link_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='29']/div[2]/div[3]/div[5]/div[2]/span/div[1]/div[1]/div/div[1]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Info_ShowAllProperties_Link_XPath_Locator" xml:space="preserve">
+    <value>//div[contains(text(),'Show All Properties')]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Print_Link_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='fileMenuId']/li[6]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__File_Print_Print_Button_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='29-PrintButton']/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__Question16_Subject_Value" xml:space="preserve">
+    <value>Marine Biology, 201</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__Question16_Tag_Value" xml:space="preserve">
+    <value>sharks, conservation</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_PPT_File_Print_NotesPages_Button_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='print-page-container relative-pos']/span/div/div/div/div/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_PPT_File_Print_Settings_Slides_TextInput_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='editPagesToPrintWrap general-textbox accessible filemenu-manipulator']/input</value>
+  </data>
 </root>
