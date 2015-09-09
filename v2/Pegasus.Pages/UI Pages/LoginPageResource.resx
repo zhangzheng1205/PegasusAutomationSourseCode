@@ -336,4 +336,13 @@
   <data name="Login_Page_SMSAdmin_Append_Parameter" xml:space="preserve">
     <value>register/reg1.jsp</value>
   </data>
+  <data name="Login_Page_ContineoStudent_Append_Parameters" xml:space="preserve">
+    <value>public/pw.html</value>
+  </data>
+  <data name="Login_Page_ContineoTeacher_Append_Parameters" xml:space="preserve">
+    <value>teachers/pw.html</value>
+  </data>
+  <data name="SSRSlogin_File_Path" xml:space="preserve">
+    <value>\\TestData\\SSRSLoginPROD.exe</value>
+  </data>
 </root>

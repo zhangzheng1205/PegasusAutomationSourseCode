@@ -44,10 +44,14 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
             //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
-            if (isThinkingIndicatorLoading)
+            if(!isThinkingIndicatorLoading)
             {
-                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
+                isThinkingIndicatorLoading = new HomePage().CloseLightBox(expectedPageTitle);
+                if(!isThinkingIndicatorLoading)
+                {
+                    Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
+                        () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
+                }
             }
             //Wait For Page Get Switched
             WaitUntilPageGetSwitchedSuccessfully(expectedPageTitle);
@@ -298,23 +302,23 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts
-        /// </summary>
-        [BeforeScenario]
-        public static void Setup()
-        {
-            new CommonSteps().ResetWebdriver();
-        }
+        ///// <summary>
+        ///// Initialize Pegasus test before test execution starts
+        ///// </summary>
+        //[BeforeScenario]
+        //public static void Setup()
+        //{
+        //    new CommonSteps().ResetWebdriver();
+        //}
 
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
-        /// and stops the webdriver.
-        /// </summary>
-        [AfterScenario]
-        public static void TearDown()
-        {
-            new CommonSteps().WebDriverCleanUp();
-        }
+        ///// <summary>
+        ///// Deinitialize Pegasus test after the execution of test
+        ///// and stops the webdriver.
+        ///// </summary>
+        //[AfterScenario]
+        //public static void TearDown()
+        //{
+        //    new CommonSteps().WebDriverCleanUp();
+        //}
     }
 }

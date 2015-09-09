@@ -232,6 +232,43 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return url;
         }
 
+        /// <summary>        /// Property SSRSadmin url root.
+        /// </summary> 
+        public static string SSRSAdminUrl
+        {
+            get { return GetSSRSAdminUrlRoot(); }
+        }
+
+        /// <summary>
+        /// Find sms admin url root based on application environment.
+        /// </summary> 
+        /// <returns>SSRS admin url.</returns>
+        private static string GetSSRSAdminUrlRoot()
+        {
+            string url;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+                case "CGIE":
+                case "CGIENP":
+                    url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SSRSURLRootCGIE_Key];
+                    break;
+                case "PPE":
+                    url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SSRSURLRootCGIE_Key];
+                    break;
+                case "PROD":
+                    url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SSRSURLRootPROD_Key];
+                    break;
+                case "VCD":
+                case "VCDNP":
+                    url = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SSRSURLRootCGIE_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return url;
+        }
+
+
         /// <summary>
         /// Get SMS registration URL for MMND student.
         /// </summary>
@@ -592,6 +629,38 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationRumbaUrl;
+        }
+
+        /// <summary>        /// Property for contineo url.
+        /// </summary>
+        public static string ContineoUrlRoot
+        {
+            get { return GetContineoUrlRoot(); }
+        }
+
+        /// <summary>
+        /// Find the Contineo url based on application environment.
+        /// </summary> 
+        /// <returns>Contineo url.</returns>
+        private static string GetContineoUrlRoot()
+        {
+            string applicationContineoUrl;
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+                case "VCD":
+                case "VCDNP":
+                    applicationContineoUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.ContineoURLRootVCD_Key];
+                    break;
+                case "CGIE":
+                case "CGIENP":
+                    applicationContineoUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.ContineoURLRootCGIE_Key];
+                    break;
+                case "PROD":
+                    applicationContineoUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.ContineoURLRootPROD_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationContineoUrl;
         }
 
         /// <summary>

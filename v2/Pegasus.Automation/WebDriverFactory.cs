@@ -238,6 +238,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // create profile object
             var profile = new FirefoxProfile();
+            profile.AssumeUntrustedCertificateIssuer = false;
             // get Log Execution Path
             String getExecutingPath = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
             // set profile preferences
@@ -287,12 +288,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             chromeOptions.AddUserProfilePreference("intl.accept_languages", "en");
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
             chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
-
             // chrome driver path
             string chromeDriverPath = (Path.GetDirectoryName
                 (Assembly.GetExecutingAssembly().GetName().CodeBase)
                 + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", "");
-
             // create chrome browser instance
             IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(3));
             return webDriver;

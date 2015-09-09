@@ -268,6 +268,22 @@ namespace Pegasus.Pages.UI_Pages
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.SmsMmndStudentRegistrationUrl)
                             + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
                         break;
+                        //Get Url of Contineo Teacher                    
+                    case User.UserTypeEnum.ContineoTeacher:
+                        _baseLoginUrl = string.Format(
+                            AutomationConfigurationManager.ContineoUrlRoot
+                            + LoginPageResource.
+                            Login_Page_ContineoTeacher_Append_Parameters); break;
+                    //Get Url of Contineo Student
+                    case User.UserTypeEnum.ContineoStudent:
+                        _baseLoginUrl = string.Format(
+                            AutomationConfigurationManager.ContineoUrlRoot
+                            + LoginPageResource.
+                            Login_Page_ContineoStudent_Append_Parameters); break;
+                    //Get Url of SSRS Admin
+                    case User.UserTypeEnum.SSRSReportAdmin: 
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.SSRSAdminUrl);
+                        break;
                 }
             }
             catch (Exception e)
@@ -291,6 +307,12 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Open Url in Browser
                     base.NavigateToBrowseUrl(this._baseLoginUrl);
+                    string title = base.GetPageTitle;
+                    if (title == "Certificate Error: Navigation Blocked")
+                    {
+                        base.NavigateToBrowseUrl("javascript:document.getElementById('overridelink').click()");
+
+                    }
                 }
                 else
                 {
@@ -304,6 +326,30 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("LoginPage", "GoToLoginUrl",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>        
+        /// Browse the SSRS URL and authenticate user
+        /// </summary>
+        public void GoToSSRSLoginUrl()
+        {
+            Logger.LogMethodEntry("LoginPage", "GoToLoginUrl",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Add username and passowrd to authentication window
+                Process.Start((AutomationConfigurationManager.TestDataPath
+                                + LoginPageResource.SSRSlogin_File_Path).Replace("file:\\", ""));
+                //Browse the URL
+                base.NavigateToBrowseUrl(this._baseLoginUrl);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("LoginPage", "GoToLoginUrl",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Login of User.

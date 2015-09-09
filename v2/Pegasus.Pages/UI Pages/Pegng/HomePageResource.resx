@@ -159,11 +159,11 @@
   <data name="HomePage_SignOut_Link_Id_Locator" xml:space="preserve">
     <value>dvSignOut</value>
   </data>
-  <data name="HomePage_SignOut_Link_PartialLinkText_Locator" xml:space="preserve">
+  <data name="HomePage_SignOut_Link_PartialLink_Locator" xml:space="preserve">
     <value>Sign Out</value>
   </data>
   <data name="HomePage_SignOut_Window_Title" xml:space="preserve">
-    <value>Pearson Sign In</value>
+    <value>Pearson Signed Out</value>
   </data>
   <data name="HomePage_Student_GoToMail_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='dvMails']/a</value>
@@ -290,5 +290,14 @@
   </data>
   <data name="HomePage_eText_Name_XPath_Locator" xml:space="preserve">
     <value>//div[@id='eText_dd_container_{0}']/ul/li[{1}]</value>
+  </data>
+  <data name="HomePage_SetupWizard_Lightbox_IFrame_Id_Locator" xml:space="preserve">
+    <value>lightboxid</value>
+  </data>
+  <data name="HomePage_SetupWizard_Lightbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='lightboxborderOpenLightBoxDiv']</value>
+  </data>
+  <data name="Home_Page_SetUpWizardFrame_YesCancel_Id_Locator" xml:space="preserve">
+    <value>idYesCancel</value>
   </data>
 </root>

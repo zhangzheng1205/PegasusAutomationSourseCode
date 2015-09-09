@@ -93,6 +93,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BlackboardLoginPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\Contineo\CentralAdminDashboardPage.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\CentralAdminDashboardPageResource.Designer.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\PowerSchoolHomePage.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\PowerSchoolHomePageResource.Designer.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\PowerTeacherHomePage.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\PowerTeacherHomePageResource.Designer.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\PowerTeacherSignInPage.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\PowerTeacherSignInPageResource.Designer.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\StudentAndParentSignInPage.cs" />
+    <Compile Include="UI Pages\Integration\Contineo\StudentAndParentSignInPageResource.Designer.cs" />
     <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPage.cs" />
     <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1835,6 +1845,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PostRestServiceResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\SSRSReports\FolderPage.cs" />
+    <Compile Include="UI Pages\SSRSReports\FolderPageResource.Designer.cs" />
     <Compile Include="UI Pages\Student\PlayerTestPage.cs" />
     <Compile Include="UI Pages\Student\PlayerTestPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1863,6 +1875,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BlackboardLoginPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Contineo\CentralAdminDashboardPageResource.resx" />
+    <EmbeddedResource Include="UI Pages\Integration\Contineo\PowerSchoolHomePageResource.resx" />
+    <EmbeddedResource Include="UI Pages\Integration\Contineo\PowerTeacherHomePageResource.resx" />
+    <EmbeddedResource Include="UI Pages\Integration\Contineo\PowerTeacherSignInPageResource.resx" />
+    <EmbeddedResource Include="UI Pages\Integration\Contineo\StudentAndParentSignInPageResource.resx" />
     <EmbeddedResource Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CampusAdminNavPageResource.Designer.cs</LastGenOutput>
@@ -3028,6 +3045,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PostRestServiceResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\SSRSReports\FolderPageResource.resx" />
     <EmbeddedResource Include="UI Pages\Student\PlayerTestPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PlayerTestPageResource.Designer.cs</LastGenOutput>

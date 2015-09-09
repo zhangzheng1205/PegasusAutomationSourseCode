@@ -265,6 +265,22 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+     <!--Hard coded Courses data for "SSRS" Reports.-->    <Course>
+      <Name>DEMO MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
+      <CourseType>HED5xPMC</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <PegasusCourseId>10018580</PegasusCourseId>
+      <Desciplines>Spanish</Desciplines>
+    </Course>
+    <Course>
+      <Name>Compro_GraderIT</Name>
+      <CourseType>WVUCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SMSCourseId>CRSKLC4-16004181</SMSCourseId>
+      <PegasusCourseId>16004181</PegasusCourseId>
+    </Course>
   </ArrayOfCourse>
   
   <!--Hard coded Users data for Grades.-->
@@ -838,6 +854,117 @@
       <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "SSRS Reports".-->    <User>
+      <Name>reporting</Name>
+      <Password>Peg@$u$</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>SSRSAdmin</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SSRSAdmin</LastName>
+      <UserType>SSRSReportAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>seanmcganncanada</Name>
+      <Password>123</Password>
+      <UserId>123</UserId>
+      <!--UserId>2148092608</UserId-->
+      <Email>sean.mcgann@pearson.com</Email>
+      <FirstName>Sean</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>McGann</LastName>
+      <UserType>MIL3xUser</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5152stu1</Name>
+      <Password>password1</Password>
+      <UserId>5000000000000006</UserId>
+      <Email>madhukumar.nm@excelindia.com</Email>
+      <SMSUserID>9747418</SMSUserID>
+      <FirstName>5153</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>madhstu1</LastName>
+      <UserType>HED5xPMCUser</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>vishwanathshetty</Name>
+      <Password>password1</Password>
+      <UserId>5000000000000162</UserId>
+      <Email>vishwanathshettyk@excelindia.com</Email>
+      <SMSUserID>9821817</SMSUserID>
+      <FirstName>Vishwanath</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>HED5xPMCUser</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5.15.2smsstudent2</Name>
+      <Password>password1</Password>
+      <UserId>5000000000002307</UserId>
+      <Email>vishwanathshettyk@excelindia.com</Email>
+      <SMSUserID>9857695</SMSUserID>
+      <FirstName>Vishwanath</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>sing</LastName>
+      <UserType>HED5xPMCUser</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5.15.2smsins1</Name>
+      <Password>password1</Password>
+      <UserId>2799927</UserId>
+      <Email>rameshanagendrappa@excelindia.com</Email>
+      <SMSUserID>64712287</SMSUserID>
+      <FirstName>Ramesh</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Nag</LastName>
+      <UserType>HED5xPMCUser</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5152stu1</Name>
+      <Password>password1</Password>
+      <Email>madhukumar@excelindia.com</Email>
+      <FirstName>5153</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>madhstu1</LastName>
+      <UserType>WVUUser</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+  
+  <!--Hard coded Users data for "Contineo".-->
+    <User>
+      <Name>5156cgieins2</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>5156Raghavendrains2</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>5156Annaiahins2</LastName>
+      <UserType>ContineoTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5156cgiestu2</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>5156Raghavendrastu2</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>5156Annaiahstu2</LastName>
+      <UserType>ContineoStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
     </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->

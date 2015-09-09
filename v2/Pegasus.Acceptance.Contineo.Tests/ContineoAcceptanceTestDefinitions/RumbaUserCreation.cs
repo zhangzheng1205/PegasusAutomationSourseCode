@@ -143,24 +143,24 @@ namespace Pegasus.Acceptance.Contineo.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
         
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts
-        /// </summary>
-        [BeforeScenario()]
-        public static void Setup()
-        {
-            new CommonSteps().ResetWebdriver();
-        }
+        ///// <summary>
+        ///// Initialize Pegasus test before test execution starts
+        ///// </summary>
+        //[BeforeScenario()]
+        //public static void Setup()
+        //{
+        //    new CommonSteps().ResetWebdriver();
+        //}
 
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
-        /// and clean the WebDriver Instance.
-        /// </summary>
-        [AfterScenario()]
-        public static void TearDown()
-        {
-            new CommonSteps().WebDriverCleanUp();
-        }
+        ///// <summary>
+        ///// Deinitialize Pegasus test after the execution of test
+        ///// and clean the WebDriver Instance.
+        ///// </summary>
+        //[AfterScenario()]
+        //public static void TearDown()
+        //{
+        //    new CommonSteps().WebDriverCleanUp();
+        //}
 
     }
 }

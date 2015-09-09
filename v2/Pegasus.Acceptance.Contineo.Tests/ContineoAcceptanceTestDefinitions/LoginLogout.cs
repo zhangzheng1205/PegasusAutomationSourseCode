@@ -10,6 +10,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Integration.Rumba;
 using TechTalk.SpecFlow;
+using Pegasus.Pages.UI_Pages.Integration.Contineo;
 
 #endregion
 
@@ -48,20 +49,21 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
+            // Pick Url based on user type enum
+            loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
+                Enum.Parse(typeof(User.UserTypeEnum), userType));
             //Login  the type of the user
-            Boolean isUserAlreadyLoggedIn = base.IsElementPresent(By.PartialLinkText
-                (LoginLogoutResource.LoginLogout_Signout_Link_Title_Locator),
-               Convert.ToInt32(LoginLogoutResource.
-               LoginLogout_Custom_TimeToWait_Element)) || base.IsElementPresent
-               (By.ClassName(LoginLogoutResource.LoginLogout_DPUser_LN_FN_Class_Locator),
-                Convert.ToInt32(LoginLogoutResource.LoginLogout_Custom_TimeToWait_Element));
-            //Check User Already Logged In
-            if (!isUserAlreadyLoggedIn)
+            Boolean isBasePegasusUrlBrowsedSuccessful =
+                loginPage.IsUrlBrowsedSuccessful();
+            //Check Is Url Browsed Successfully
+            if (isBasePegasusUrlBrowsedSuccessful)
             {
-                loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
-                    Enum.Parse(typeof(User.UserTypeEnum), userType));
                 //Open Url in Browser
                 loginPage.GoToLoginUrl();
+            }
+            else
+            {
+
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -158,6 +160,25 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I login to PowerSchool as ""(.*)""")]
+        public void LoginToPowerSchool(User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("LoginLogout", "LoginToPowerSchool",
+                base.IsTakeScreenShotDuringEntryExit);
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.ContineoTeacher:
+                    new PowerTeacherSignInPage().SignInAsPowerSchoolUser(userTypeEnum);
+                    break;
+                case User.UserTypeEnum.ContineoStudent:
+                    new StudentAndParentSignInPage().SignInAsPowerSchoolUser(userTypeEnum);
+                    break;
+            }
+                
+            Logger.LogMethodExit("LoginLogout", "LoginToPowerSchool",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// To Check If User Is Logged In Successfully.
         /// </summary>
@@ -200,17 +221,19 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 case User.UserTypeEnum.CsAdmin:
                 case User.UserTypeEnum.DPCTGPPublisherAdmin:
                 case User.UserTypeEnum.DPCsOrganizationAdmin:
-                case User.UserTypeEnum.DPCourseSpacePramotedAdmin:               
+                case User.UserTypeEnum.DPCourseSpacePramotedAdmin: 
                     // Click Sign out link 
                     new AdminToolPage().SignOutByPegasusUser(linkSignOut);
                     break;
                 case User.UserTypeEnum.DPCsTeacher:
                 case User.UserTypeEnum.RumbaTeacher:
+                case User.UserTypeEnum.ContineoTeacher:
                     //Click on Sign Out Link
                     homePage.SignoutByDigitalPathCSTeacher(linkSignOut);
                     break;
                 case User.UserTypeEnum.DPCsStudent:
                 case User.UserTypeEnum.RumbaStudent:
+                case User.UserTypeEnum.ContineoStudent:
                     // Click on sign out link
                     homePage.SignOutByDigitalPathCSStudent(linkSignOut);
                     break;
@@ -233,6 +256,20 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             Logger.LogMethodExit("LoginLogout", "SignoutFromThePegasusAsDpUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I 'Sign Out' from PSNPlus as '(.*)'")]
+        //[When(@"I 'Sign Out' from PSNPlus as ""(.*)""")]
+        public void SignoutFromThePegasusAsContineUser(User.UserTypeEnum userTypeEnum)
+        {
+            //Method to Clicks on SignOut link
+            Logger.LogMethodEntry("LoginLogout", "SignoutFromThePegasusAsContineUser",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Click Sign out link 
+            new HomePage().ContineoUserLogout(userTypeEnum);
+            Logger.LogMethodExit("LoginLogout", "SignoutFromThePegasusAsContineUser",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Method to verify Required Contineo parameters in RUL page URL.
         /// </summary>
@@ -277,6 +314,25 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             Logger.LogMethodExit("LoginLogout", "VerifyRequiredParametersInRULUrl",
                 IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify user has logged out from PSNPlus
+        /// </summary>
+        /// <param name="SignedOut">This is the window name after sign out</param>
+        [Then(@"I should see the ""(.*)"" page")]
+        public void ValidateContineoUserLogout(string SignedOut)
+        {
+            //Validate Logout From Rumba
+            Logger.LogMethodEntry("LoginLogout", "ValidateContineoUserLogout",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Assert Logout
+            Logger.LogAssertion("ValidateLogout",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(SignedOut, new HomePage().GetContineoSignOutConfirmation(SignedOut)));
+            Logger.LogMethodExit("LoginLogout", "ValidateContineoUserLogout",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

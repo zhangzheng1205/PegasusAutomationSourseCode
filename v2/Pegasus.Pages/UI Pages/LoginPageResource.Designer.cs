@@ -142,6 +142,24 @@ namespace Pegasus.Pages.UI_Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to public/pw.html.
+        /// </summary>
+        internal static string Login_Page_ContineoStudent_Append_Parameters {
+            get {
+                return ResourceManager.GetString("Login_Page_ContineoStudent_Append_Parameters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to teachers/pw.html.
+        /// </summary>
+        internal static string Login_Page_ContineoTeacher_Append_Parameters {
+            get {
+                return ResourceManager.GetString("Login_Page_ContineoTeacher_Append_Parameters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to frmlogin.aspx?mode=admin&amp;isnative=1.
         /// </summary>
         internal static string Login_Page_CourseSpaceAdminURL_Append_Parameters {
@@ -714,6 +732,15 @@ namespace Pegasus.Pages.UI_Pages {
         internal static string LoginPage_Support_Link_ClassName_Locator {
             get {
                 return ResourceManager.GetString("LoginPage_Support_Link_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \\TestData\\SSRSLoginPROD.exe.
+        /// </summary>
+        internal static string SSRSlogin_File_Path {
+            get {
+                return ResourceManager.GetString("SSRSlogin_File_Path", resourceCulture);
             }
         }
     }

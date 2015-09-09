@@ -150,6 +150,15 @@ namespace Pearson.Pegasus.TestAutomation.
             CanvasKioskStudent = 79,
             MoodleKioskStudent = 80,
             MoodleKioskTeacher = 81,
+            //Contineo User data
+            ContineoTeacher = 82, 
+            ContineoStudent = 83,
+            //SSRS User data
+            SSRSReportAdmin = 84,
+            MIL3xUser = 85,
+            HED5xPMCUser = 86,
+            WVUUser = 87
+
             #endregion
         }
 
@@ -180,6 +189,11 @@ namespace Pearson.Pegasus.TestAutomation.
         /// This is the type of the user.
         /// </summary>
         public UserTypeEnum UserType { get; set; }
+
+        /// <summary>        
+        /// This is the SMSUserID of the user.
+        /// </summary>
+        public String SMSUserID { get; set; }
 
         /// <summary>
         /// This is the user Id.

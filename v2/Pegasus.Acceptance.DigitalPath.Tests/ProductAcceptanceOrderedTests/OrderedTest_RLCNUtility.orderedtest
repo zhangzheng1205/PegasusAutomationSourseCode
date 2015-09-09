@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest_RLCNUtility" storage="e:\pegasus_automation_master_12may\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest_rlcnutility.orderedtest" id="84db8967-e6eb-4bdf-a728-dd1a66c15aa6" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="e73609b2-78ec-f45b-0042-e78afd55d74e" name="UserLoginAsCourseSpaceAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="42edab7e-2b08-a190-f672-c632c469d2c0" name="CsAdminSavingTheProfileDateAndTime" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="02aaef95-ead4-d946-66a9-1e4359485337" name="OpenRLCNUtilityForTriggeringFailedRequests" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="428ba289-483f-1225-229b-c2a8c70da27f" name="UserLogOutAsCourseSpaceAdmin" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

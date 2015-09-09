@@ -347,6 +347,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest_RLCNUtility.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest_MediaServer_Integration.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -355,9 +358,6 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest_DPLicense.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceOrderedTests\RLCNUtility.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MGM2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

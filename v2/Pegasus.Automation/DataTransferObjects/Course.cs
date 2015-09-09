@@ -84,7 +84,10 @@ namespace Pegasus.Automation.DataTransferObjects
             AmpWSCourse = 54,
             AmpProgramCourse = 55,
             AmpInstructorCourse = 56,
-            BBCourse = 57
+            BBCourse = 57,
+            //SSRS Course            
+            HED5xPMC = 58,
+            WVUCourse = 5
         }
 
         /// <summary>
@@ -146,6 +149,16 @@ namespace Pegasus.Automation.DataTransferObjects
         /// This is External Course id.
         /// </summary>
         public String ExternalCourseId { get; set; }
+
+        /// <summary>        
+        /// This is SMS Course id.
+        /// </summary>
+        public String SMSCourseId { get; set; }
+
+        /// <summary>        
+        /// This is Descipline.
+        /// </summary>
+        public String Desciplines { get; set; }
 
         /// <summary>
         /// This is eCollege course integration id.

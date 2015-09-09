@@ -132,6 +132,15 @@
   <data name="CanvasKioskUrlRootVCD_Key" xml:space="preserve">
     <value>CanvasKioskUrlRootVCD</value>
   </data>
+  <data name="ContineoURLRootCGIE_Key" xml:space="preserve">
+    <value>ContineoURLRootCGIE</value>
+  </data>
+  <data name="ContineoURLRootPROD_Key" xml:space="preserve">
+    <value>ContineoURLRootPROD</value>
+  </data>
+  <data name="ContineoURLRootVCD_Key" xml:space="preserve">
+    <value>ContineoURLRootVCD</value>
+  </data>
   <data name="CourseSpaceURLRootCGIEAkamai_Key" xml:space="preserve">
     <value>CourseSpaceURLRootCGIEAkamai</value>
   </data>
@@ -341,6 +350,12 @@
   </data>
   <data name="SMSStudentAccessCodeVCD_Key" xml:space="preserve">
     <value>SMSStudentAccessCodeVCD</value>
+  </data>
+  <data name="SSRSURLRootCGIE_Key" xml:space="preserve">
+    <value>SSRSURLRootCGIE</value>
+  </data>
+  <data name="SSRSURLRootPROD_Key" xml:space="preserve">
+    <value>SSRSURLRootPROD</value>
   </data>
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>

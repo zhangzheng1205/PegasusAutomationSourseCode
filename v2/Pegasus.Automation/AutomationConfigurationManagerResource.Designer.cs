@@ -106,6 +106,33 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ContineoURLRootCGIE.
+        /// </summary>
+        internal static string ContineoURLRootCGIE_Key {
+            get {
+                return ResourceManager.GetString("ContineoURLRootCGIE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ContineoURLRootPROD.
+        /// </summary>
+        internal static string ContineoURLRootPROD_Key {
+            get {
+                return ResourceManager.GetString("ContineoURLRootPROD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ContineoURLRootVCD.
+        /// </summary>
+        internal static string ContineoURLRootVCD_Key {
+            get {
+                return ResourceManager.GetString("ContineoURLRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CourseSpaceURLRootCGIE.
         /// </summary>
         internal static string CourseSpaceURLRootCGIE_Key {
@@ -732,6 +759,24 @@ namespace Pegasus.Automation {
         internal static string SMSStudentAccessCodeVCD_Key {
             get {
                 return ResourceManager.GetString("SMSStudentAccessCodeVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SSRSURLRootCGIE.
+        /// </summary>
+        internal static string SSRSURLRootCGIE_Key {
+            get {
+                return ResourceManager.GetString("SSRSURLRootCGIE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SSRSURLRootPROD.
+        /// </summary>
+        internal static string SSRSURLRootPROD_Key {
+            get {
+                return ResourceManager.GetString("SSRSURLRootPROD_Key", resourceCulture);
             }
         }
         

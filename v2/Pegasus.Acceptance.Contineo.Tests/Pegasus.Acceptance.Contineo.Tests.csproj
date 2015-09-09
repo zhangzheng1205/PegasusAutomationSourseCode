@@ -63,7 +63,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="CommonProductAcceptanceFeature\CommonContineoFeature.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonContineoFeature.feature</DependentUpon>
+    </Compile>
     <Compile Include="ContineoAcceptanceTestDefinitions\ApproveCourse.cs" />
+    <Compile Include="ContineoAcceptanceTestDefinitions\CentralAdminDashboard.cs" />
     <Compile Include="ContineoAcceptanceTestDefinitions\CourseAssociation.cs" />
     <Compile Include="ContineoAcceptanceTestDefinitions\CourseCopy.cs" />
     <Compile Include="ContineoAcceptanceTestDefinitions\CourseCopyResource.Designer.cs">
@@ -81,6 +87,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ContineoAcceptanceTestDefinitions\ManageClass.cs" />
+    <Compile Include="ContineoAcceptanceTestDefinitions\PowerSchoolHome.cs" />
+    <Compile Include="ContineoAcceptanceTestDefinitions\PowerTeacherHome.cs" />
     <Compile Include="ContineoAcceptanceTestDefinitions\PublishCourse.cs" />
     <Compile Include="ContineoAcceptanceTestDefinitions\PublishCourseResource.Designer.cs">
       <DependentUpon>PublishCourseResource.resx</DependentUpon>
@@ -110,6 +118,11 @@
       <DependentUpon>SearchUsersResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ContineoAcceptanceTestDefinitions\UnenrollEvent.cs" />
+    <Compile Include="ContineoAcceptanceTestFeatures\ContineoStudent.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContineoStudent.Workflow.feature</DependentUpon>
+    </Compile>
     <Compile Include="ContineoAcceptanceTestFeatures\PEGASUS-3784.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +188,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PEGASUS-8522.Workflow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ContineoAcceptanceTestFeatures\ContineoTeacher.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContineoTeacher.Workflow.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,7 +206,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CommonProductAcceptanceFeature\CommonContineoFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CommonContineoFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ContineoAcceptanceOrderedTests\OrderedTest.CreateClass.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ContineoAcceptanceOrderedTests\OrderedTest.ContineoTeacherWorkflow.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ContineoAcceptanceOrderedTests\OrderedTest.ContineoStudentWorkflow.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ContineoAcceptanceTestFeatures\ContineoStudent.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContineoStudent.Workflow.feature.cs</LastGenOutput>
+    </None>
     <None Include="ContineoAcceptanceTestFeatures\PEGASUS-3784.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PEGASUS-3784.Workflow.feature.cs</LastGenOutput>
@@ -242,6 +279,10 @@
       <LastGenOutput>PEGASUS-8522.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ContineoAcceptanceOrderedTests\OrderedTest.AcceptanceTest.Contineo.orderedtest" />
+    <None Include="ContineoAcceptanceTestFeatures\ContineoTeacher.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ContineoTeacher.Workflow.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

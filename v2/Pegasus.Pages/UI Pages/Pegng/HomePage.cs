@@ -384,6 +384,102 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Contineo User LogOut.
+        /// </summary>
+        public void ContineoUserLogout(User.UserTypeEnum userTypeEnum)
+        {
+            // Logout by DigitalPath Cs User
+            logger.LogMethodEntry("HomePage", "ContineoUserLogout",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                IWebElement getDropDownIcon = null;
+                switch(userTypeEnum)
+                {
+                    case User.UserTypeEnum.ContineoTeacher:
+                        base.WaitUntilWindowLoads(HomePageResource.
+                            Home_Page_Home_Window_Title);
+                        base.IsElementDisplayedInPage(By.Id(HomePageResource.
+                            HomePage_UserProfile_Image_Id_Locator), true, 5000);
+                        //Locate the dropdown icon
+                        getDropDownIcon = base.GetWebElementPropertiesById(
+                            HomePageResource.
+                            HomePage_UserProfile_Image_Id_Locator);
+                        //Click the cmenu icon
+                        base.PerformMouseClickAction(getDropDownIcon);
+                        //Thread.Sleep(2000);
+                        base.IsElementDisplayedInPage(By.Id(HomePageResource.
+                            HomePage_SignOut_Link_Id_Locator), true, 5000);
+                        IWebElement teacherSignOut = base.GetWebElementPropertiesById(
+                            HomePageResource.HomePage_SignOut_Link_Id_Locator);
+                        Thread.Sleep(2000);
+                        base.ClickByJavaScriptExecutor(teacherSignOut);
+                        break;
+
+                    case User.UserTypeEnum.ContineoStudent:
+                        base.WaitUntilWindowLoads(HomePageResource.
+                            Home_Page_Overview_Window_Title);
+                        base.WaitForElement(By.Id(HomePageResource.
+                            HomePage_DownArrowLink_Id_locator));
+                        //Locate the dropdown icon
+                        getDropDownIcon = base.GetWebElementPropertiesById(
+                            HomePageResource.
+                            HomePage_DownArrowLink_Id_locator);
+                        //Click the cmenu icon
+                        base.PerformMouseClickAction(getDropDownIcon);
+                        // Click on SignOut link
+                        base.IsElementDisplayedInPage(By.PartialLinkText(HomePageResource.
+                            HomePage_SignOut_Link_PartialLink_Locator), true, 5000);
+                        IWebElement studentSignOut = base.GetWebElementPropertiesByPartialLinkText(
+                            HomePageResource.HomePage_SignOut_Link_PartialLink_Locator);
+                        //base.WaitForElement(By.PartialLinkText(HomePageResource.
+                        //    HomePage_SignOut_Link_PartialLink_Locator), 10);
+                        Thread.Sleep(2000);
+                        base.ClickByJavaScriptExecutor(studentSignOut);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("HomePage", "DigitalPathCsUserLogout",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify is user has logged out successfully.
+        /// </summary>
+        /// <returns>Returs true if user has logged out successfully</returns>
+        public string GetContineoSignOutConfirmation(string windowTitle)
+        {
+            logger.LogMethodEntry("HomePage", "GetPSNPlusSignOutConfirmation",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getSignOutMessage = string.Empty;
+            try
+            {
+                //Wait for Signout window to load completely
+                base.WaitUntilWindowLoads(windowTitle);
+                //Get Window Title of SignOut page
+                getSignOutMessage = base.GetWindowTitleByJavaScriptExecutor();
+                //Close the browser after SignOut
+                base.CloseBrowserWindow();
+                if(getSignOutMessage == "Pearson Signed Out")
+                {
+                    base.SwitchToLastOpenedWindow();
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("HomePage", "GetPSNPlusSignOutConfirmation",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getSignOutMessage;
+        }            
+
+        /// <summary>
         /// Click the "Add" button
         /// </summary>
         public void ClickTheAddButton()
@@ -1016,6 +1112,40 @@ namespace Pegasus.Pages.UI_Pages
             //Confirm flash element is present in the eText Window
             new LauncheTextPage().IsETextFlashElementPresent();
             Thread.Sleep(3000);
+        }
+
+        /// <summary>
+        /// Verify if Setup Wizard is displayed
+        /// </summary>
+        /// <returns>This returns yes if Setup Wizard is found and cancelled</returns>
+        public Boolean CloseLightBox(string WindowName)
+        {
+            //Verify if Setup Wizard is displayed
+            logger.LogMethodEntry("HomePage", "CloseLightBox",
+                IsTakeScreenShotDuringEntryExit);
+            //bool isSetUpWizardCancelled = false;
+            try
+            {
+                if (WindowName == HomePageResource.Home_Page_Home_Window_Title)
+                {
+                    base.WaitUntilWindowLoads(HomePageResource.Home_Page_Home_Window_Title);
+                    base.RefreshTheCurrentPage();
+                    base.WaitUntilWindowLoads(HomePageResource.Home_Page_Home_Window_Title);
+                }
+                else if (WindowName == HomePageResource.Home_Page_Overview_Window_Title)
+                {
+                    base.WaitUntilWindowLoads(HomePageResource.Home_Page_Overview_Window_Title);
+                    base.RefreshTheCurrentPage();
+                    base.WaitUntilWindowLoads(HomePageResource.Home_Page_Overview_Window_Title);
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("HomePage", "CloseLightBox",
+                IsTakeScreenShotDuringEntryExit);
+            return true;
         }
     }
 }

@@ -719,6 +719,43 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return isThinkingIndicatorProcessing;
         }
 
+        /// <summary>        /// Wait until Thinking Indicator is loading on the page.
+        /// </summary>
+        /// <returns>True if the thinking indicator element is currently present 
+        /// after the specified time interval, false otherwise.</returns>
+        /// <exception cref="TimeoutException">if the window not loads in the specified interval of time.</exception>
+        /// <exception cref="NoSuchElementException">If the element not present on the page.</exception>
+        protected bool IsSSRSThinkingIndicatorLoading(int timeOut = -1)
+        {
+            //If element not present then webdriver throw the exception, 
+            //catch this exception so that outer code does not worry 
+            //about this exception and existing logic which relies on TRUE/FALSE can work as it is except TimeoutException.
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (timeOut == -1)
+            {
+                timeOut = this._waitTimeOut;
+            }
+            bool isThinkingIndicatorProcessing = false;
+            string thinkingIndicator = "//img[contains(@src,'/Reports/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=10.50.4266.0&Name=Microsoft.Reporting.WebForms.Icons.SpinningWheel.gif";
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    isThinkingIndicatorProcessing = WebDriver.FindElement(By.XPath(thinkingIndicator)).Enabled;
+                }
+            }
+            //Exception Handling
+            catch (Exception)
+            {
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return isThinkingIndicatorProcessing;
+        }
+
+
         /// <summary>
         /// Generates the alphanumeric random code.
         /// </summary>

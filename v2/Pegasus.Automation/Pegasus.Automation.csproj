@@ -145,6 +145,8 @@
     <Content Include="TestData\PCTWordInstructionDocument.exe" />
     <Content Include="TestData\Product_Banner.png" />
     <Content Include="TestData\Product_Icon.png" />
+    <Content Include="TestData\SSRSLoginCERT.exe" />
+    <Content Include="TestData\SSRSLoginPROD.exe" />
     <Content Include="TestData\Topic1TestWithStudyPlan0%25.exe" />
   </ItemGroup>
   <ItemGroup>

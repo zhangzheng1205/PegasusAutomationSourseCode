@@ -241,6 +241,15 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to idYesCancel.
+        /// </summary>
+        internal static string Home_Page_SetUpWizardFrame_YesCancel_Id_Locator {
+            get {
+                return ResourceManager.GetString("Home_Page_SetUpWizardFrame_YesCancel_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to yesCancel.
         /// </summary>
         internal static string Home_Page_YesCancel_Button_Id_Locator {
@@ -457,6 +466,24 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to lightboxid.
+        /// </summary>
+        internal static string HomePage_SetupWizard_Lightbox_IFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_SetupWizard_Lightbox_IFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;lightboxborderOpenLightBoxDiv&apos;].
+        /// </summary>
+        internal static string HomePage_SetupWizard_Lightbox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_SetupWizard_Lightbox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to dvSignOut.
         /// </summary>
         internal static string HomePage_SignOut_Link_Id_Locator {
@@ -468,14 +495,14 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         /// <summary>
         ///   Looks up a localized string similar to Sign Out.
         /// </summary>
-        internal static string HomePage_SignOut_Link_PartialLinkText_Locator {
+        internal static string HomePage_SignOut_Link_PartialLink_Locator {
             get {
-                return ResourceManager.GetString("HomePage_SignOut_Link_PartialLinkText_Locator", resourceCulture);
+                return ResourceManager.GetString("HomePage_SignOut_Link_PartialLink_Locator", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pearson Sign In.
+        ///   Looks up a localized string similar to Pearson Signed Out.
         /// </summary>
         internal static string HomePage_SignOut_Window_Title {
             get {
