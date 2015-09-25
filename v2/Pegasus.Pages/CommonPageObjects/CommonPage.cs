@@ -47,6 +47,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 switch (userTypeEnum)
                 {
                     case User.UserTypeEnum.CsSmsStudent:
+                        base.SwitchToIFrameById("ifrmCoursePreview");
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -222,7 +223,11 @@ namespace Pegasus.Pages.CommonPageObjects
                                 {
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                                        this.SelectWordActivityFolderNavigationInInstructorGradebook(CommonPageResource.
+                                           this.SelectWordActivityFolderNavigationInInstructorGradebook(CommonPageResource.
+                                            CommonPage_Gradebook_BackArrow_Id_Locator, userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Word Chapter 1 Grader Project [Assessment 3]":
+                                            this.SelectWordActivityGraderFolderNavigationInInstructorGradebook(CommonPageResource.
                                             CommonPage_Gradebook_BackArrow_Id_Locator, userTypeEnum, activityUnderTabName);
                                         break;
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
@@ -497,6 +502,9 @@ namespace Pegasus.Pages.CommonPageObjects
             // navigate inside word chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToWordChapter1GraderActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToIFrameById("ifrmCoursePreview");
             // click folder level
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
@@ -729,7 +737,6 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateToActivityFolderInInstructorCalendar",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         ///Select Window With Frame For Folder Navigation .
@@ -1069,6 +1076,43 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        ///Select Word Activity Folder Navigation In Instructor Gradebook.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void SelectWordActivityGraderFolderNavigationInInstructorGradebook(
+          string webElementToWait, User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            //Word Activity Folder Navigation In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "SelectWordActivityFolderNavigationInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_Word2013_FolderName, webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
+                webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_WordChapter1Activities_FolderName, webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            //bool dsf = base.IsElementPresent(By.PartialLinkText(CommonPageResource.
+            //    CommonPage_WordChapter1SimulationActivities_FolderName), 10);
+            this.NavigateToActivityFolderInInstructorGradebook("Word Chapter 1: Grader Activities", webElementToWait);
+            Logger.LogMethodExit("CommonPage",
+                "SelectWordActivityFolderNavigationInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         ///Select Access Activity Folder Navigation In Instructor Gradebook.
         /// </summary>

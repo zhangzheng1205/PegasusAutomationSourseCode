@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
         public void EnterProjectName(Activity.ActivityTypeEnum activityTypeEnum)
         {
             // Create New User
-            logger.LogMethodEntry("PCTProjectListPage", "EnterProjectName", 
+            logger.LogMethodEntry("PCTProjectListPage", "EnterProjectName",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -81,28 +81,28 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
         }
 
         /// <summary>
-      /// Store the asset
-      /// </summary>
-      /// <param name="newLinkAsset">This is Link Asset Guid</param>
-      /// <param name="activityTypeEnum">This is Activity Type enum.</param>
-      private void StoreTheGraderAsset(Guid newLinkAsset,
-          Activity.ActivityTypeEnum activityTypeEnum)
-      {
-          //Store the asset 
-          logger.LogMethodEntry("PCTProjectListPage", "StoreTheGraderAsset",
-              base.IsTakeScreenShotDuringEntryExit);
-           //Store the Link in memory
-         Activity newLink=new Activity
-         {
+        /// Store the asset
+        /// </summary>
+        /// <param name="newLinkAsset">This is Link Asset Guid</param>
+        /// <param name="activityTypeEnum">This is Activity Type enum.</param>
+        private void StoreTheGraderAsset(Guid newLinkAsset,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Store the asset 
+            logger.LogMethodEntry("PCTProjectListPage", "StoreTheGraderAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Store the Link in memory
+            Activity newLink = new Activity
+            {
 
-             Name=newLinkAsset.ToString(),
-             ActivityType = activityTypeEnum,
-             IsCreated=true,
-         };
-         newLink.StoreActivityInMemory();
-         logger.LogMethodExit("PCTProjectListPage", "StoreTheGraderAsset",
-             base.IsTakeScreenShotDuringEntryExit);
-      }
+                Name = newLinkAsset.ToString(),
+                ActivityType = activityTypeEnum,
+                IsCreated = true,
+            };
+            newLink.StoreActivityInMemory();
+            logger.LogMethodExit("PCTProjectListPage", "StoreTheGraderAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Create New PCT Project.
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
             logger.LogMethodEntry("PCTProjectListPage", "ClickUploadIconPCT",
             base.IsTakeScreenShotDuringEntryExit);
             SelectPCTProjectListPopup();
-            switch(fileUploadOptionName)
+            switch (fileUploadOptionName)
             {
                 case "Final Document":
                     Thread.Sleep(10000);
@@ -271,7 +271,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
                         Thread.Sleep(20000);
                         bool okButtonExistance = base.IsElementPresent(By.ClassName(PCTProjectListPageResource.
                                 PCTProjectList_Page_ProjectCreationTool_Alertbox_OKButton_ClassName_Locator), 10);
-                        if(okButtonExistance.Equals("True"))
+                        if (okButtonExistance.Equals("True"))
                         {
                             // Click ok button
                             base.ClickButtonByClassName(PCTProjectListPageResource.
@@ -342,11 +342,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
                     case "Start Document Word File":
                         base.ClickButtonById(PCTProjectListPageResource.
                            PCTProjectList_Page_PCT_Filupload_BrowseButton_Id_Locator);
-                         Thread.Sleep(10000);
-                         base.SwitchToLastOpenedWindow();
-                         Process.Start((AutomationConfigurationManager.TestDataPath
-                                    + PCTProjectListPageResource.PCTProjectList_Page_AutoIT_WordInitial_FilePath).Replace("file:\\", ""));
-                                                 Thread.Sleep(20000);
+                        Thread.Sleep(10000);
+                        base.SwitchToLastOpenedWindow();
+                        Process.Start((AutomationConfigurationManager.TestDataPath
+                                   + PCTProjectListPageResource.PCTProjectList_Page_AutoIT_WordInitial_FilePath).Replace("file:\\", ""));
+                        Thread.Sleep(20000);
                         bool okButtonExistanceStartDocument = base.IsElementPresent(By.ClassName(PCTProjectListPageResource.
                                 PCTProjectList_Page_ProjectCreationTool_Alertbox_OKButton_ClassName_Locator), 10);
                         if (okButtonExistanceStartDocument.Equals("True"))
@@ -421,11 +421,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
                     case "Instruction Document Word File":
                         base.ClickButtonById(PCTProjectListPageResource.
                            PCTProjectList_Page_PCT_Filupload_BrowseButton_Id_Locator);
-                         Thread.Sleep(10000);
-                         base.SwitchToLastOpenedWindow();
-                         Process.Start((AutomationConfigurationManager.TestDataPath
-                                    + PCTProjectListPageResource.PCTProjectList_Page_AutoIT_WordInstruction_FilePath).Replace("file:\\", ""));
-                                                                          Thread.Sleep(20000);
+                        Thread.Sleep(10000);
+                        base.SwitchToLastOpenedWindow();
+                        Process.Start((AutomationConfigurationManager.TestDataPath
+                                   + PCTProjectListPageResource.PCTProjectList_Page_AutoIT_WordInstruction_FilePath).Replace("file:\\", ""));
+                        Thread.Sleep(20000);
                         // Check if upload failed alert window is displayed 
                         // and click ok button
                         bool okButtonExistanceInstructionDocument = base.IsElementPresent(By.ClassName(PCTProjectListPageResource.
@@ -517,7 +517,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
         /// </summary>
         /// <param name="skillName">This is skill name.</param>
         /// <param name="folderName">This is the folder name were skills are placed.</param>
-        public void MapSkillToInstruction(string skillName,string folderName)
+        public void MapSkillToInstruction(string skillName, string folderName)
         {
             logger.LogMethodEntry("PCTProjectListPage", "MapSkillToInstruction",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -546,7 +546,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
         /// <param name="frameName">This is the frame name where the file are uploaded 
         /// and displayed.</param>
         /// <returns>Return uploaded file name.</returns>
-            public string GetUploadedFileName(string frameName)
+        public string GetUploadedFileName(string frameName)
         {
             //Get the successfully uploaded file name
             logger.LogMethodEntry("PCTProjectListPage",
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
                 //Select Window And Frame
                 SelectPCTProjectListPopup();
                 //Execute the code based on the uploaded frame name.
-                switch(frameName)
+                switch (frameName)
                 {
                     case "Final Document":
                         //Get The file Name In Final Document frame
@@ -595,27 +595,27 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
         /// Publish the newly created project in project creation tool page.
         /// </summary>
         public void PublishProjectInPCT()
-            {
-                //Publish newly created project
-                logger.LogMethodEntry("PCTProjectListPage","PublishProjectInPCT",
-                        base.IsTakeScreenShotDuringEntryExit);
-                //Select Project creation tool page
-                SelectPCTProjectListPopup();
-                // Click publish button
-                IWebElement getPublishButtonProperty = base.GetWebElementPropertiesById(PCTProjectListPageResource.
-                    PCTProjectList_Page_ProjectCreationTool_PublishHomeButton_Id_Locator);
-                base.PerformMouseClickAction(getPublishButtonProperty);
-                // Click publish button in PCT Project Publish page
-                IWebElement getPublishButtonPropertyProjectPublishpage = base.GetWebElementPropertiesById(
-                    PCTProjectListPageResource.PCTProjectList_Page_ProjectCreationTool_PublishButton_Id_Locator);
-                base.PerformMouseClickAction(getPublishButtonPropertyProjectPublishpage);
-                // Click Done button
-                IWebElement getPublishCompleteButtonProperty = base.GetWebElementPropertiesById(PCTProjectListPageResource.
-                    PCTProjectList_Page_ProjectCreationTool_PublishCompleteButton_Id_Locator);
-                base.PerformMouseClickAction(getPublishCompleteButtonProperty);
-                logger.LogMethodExit("PCTProjectListPage","PublishProjectInPCT",
-                        base.IsTakeScreenShotDuringEntryExit);
-            }
+        {
+            //Publish newly created project
+            logger.LogMethodEntry("PCTProjectListPage", "PublishProjectInPCT",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Select Project creation tool page
+            SelectPCTProjectListPopup();
+            // Click publish button
+            IWebElement getPublishButtonProperty = base.GetWebElementPropertiesById(PCTProjectListPageResource.
+                PCTProjectList_Page_ProjectCreationTool_PublishHomeButton_Id_Locator);
+            base.PerformMouseClickAction(getPublishButtonProperty);
+            // Click publish button in PCT Project Publish page
+            IWebElement getPublishButtonPropertyProjectPublishpage = base.GetWebElementPropertiesById(
+                PCTProjectListPageResource.PCTProjectList_Page_ProjectCreationTool_PublishButton_Id_Locator);
+            base.PerformMouseClickAction(getPublishButtonPropertyProjectPublishpage);
+            // Click Done button
+            IWebElement getPublishCompleteButtonProperty = base.GetWebElementPropertiesById(PCTProjectListPageResource.
+                PCTProjectList_Page_ProjectCreationTool_PublishCompleteButton_Id_Locator);
+            base.PerformMouseClickAction(getPublishCompleteButtonProperty);
+            logger.LogMethodExit("PCTProjectListPage", "PublishProjectInPCT",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Instructor select PCT project type in project creation tool.
@@ -625,7 +625,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
         {
             // Select project type
             logger.LogMethodEntry("PCTProjectListPage", "SelectPCTProjectType", IsTakeScreenShotDuringEntryExit);
-            switch(projectType)
+            switch (projectType)
             {
                 // Select Word type project
                 case "Word":
@@ -654,7 +654,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
                     base.PerformMouseClickAction(getPPTProjectTypeProperty);
                     break;
             }
-            logger.LogMethodExit("PCTProjectListPage", "SelectPCTProjectType",IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodExit("PCTProjectListPage", "SelectPCTProjectType", IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -667,6 +667,31 @@ namespace Pegasus.Pages.UI_Pages.Integration.PCT
             this.SelectPCTProjectListPopup();
             base.CloseBrowserWindow();
             logger.LogMethodExit("PCTProjectListPage", "closePCTToolPopup", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the page load status
+        /// </summary>
+        /// <returns>Return the page load status.</returns>
+        public bool ValidateContentLoadInPage()
+        {
+            logger.LogMethodEntry("PCTProjectListPage", "ValidateContentLoadInPage", base.IsTakeScreenShotDuringEntryExit);
+            bool status = false;
+            //Wait for Project creation tool windown to load and select the window
+            this.SelectPCTProjectListPopup();
+            bool myProjectIconstatus = base.IsElementPresent(By.ClassName("projectListTabIcon"), 5);
+            bool createProjectIconStatus = base.IsElementPresent(By.Id("CreateProj"), 5);
+            if ((myProjectIconstatus && createProjectIconStatus) == true)
+            {
+                status = true;
+            }
+            else
+            {
+                status = false;
+            }
+
+            logger.LogMethodExit("PCTProjectListPage", "ValidateContentLoadInPage", base.IsTakeScreenShotDuringEntryExit);
+            return status;
         }
 
     }

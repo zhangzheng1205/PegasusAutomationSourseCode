@@ -373,6 +373,8 @@ testRunner.When("I click on Tools DropDown", ((string)(null)), ((TechTalk.SpecFl
 testRunner.And("I click \"Project Creation Tool\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 131
 testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 132
+testRunner.And("I should see PCT page loaded sucessfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -383,44 +385,44 @@ testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(n
         public virtual void SMSInstructorSetupNewPCTWordProject()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor setup new PCT word project", ((string[])(null)));
-#line 134
-this.ScenarioSetup(scenarioInfo);
 #line 135
-testRunner.When("I click on Create link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 136
-testRunner.And("I select \"Word\" project type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on Create link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 137
-testRunner.And("I enter project name of \"PCTWordProject\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"Word\" project type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 138
-testRunner.And("I Click on Done button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter project name of \"PCTWordProject\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 139
-testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I Click on Done button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 140
-testRunner.When("I click on upload icon of \"Final Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 141
-testRunner.And("I upload the file \"Final Document Word File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Final Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 142
-testRunner.Then("I should see file \"final.docx\" uploaded sucessfully in \"Final Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I upload the file \"Final Document Word File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 143
-testRunner.When("I click on upload icon of \"Start Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see file \"final.docx\" uploaded sucessfully in \"Final Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 144
-testRunner.And("I upload the file \"Start Document Word File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Start Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 145
-testRunner.Then("I should see file \"initial.docx\" uploaded sucessfully in \"Start Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I upload the file \"Start Document Word File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 146
-testRunner.When("I click on upload icon of \"Instruction Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see file \"initial.docx\" uploaded sucessfully in \"Start Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 147
-testRunner.And("I upload the file \"Instruction Document Word File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Instruction Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 148
+testRunner.And("I upload the file \"Instruction Document Word File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 149
 testRunner.Then("I should see file \"Instruction.docx\" uploaded sucessfully in \"Instruction Documen" +
                     "t\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 149
-testRunner.When("I map skill \"Table Styles\" from \"TABLE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 150
-testRunner.And("I publish the project in project creation tool page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I map skill \"Table Styles\" from \"TABLE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 151
-testRunner.When("I close the \"Project Creation Tool\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I publish the project in project creation tool page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 152
+testRunner.When("I close the \"Project Creation Tool\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 153
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -432,46 +434,44 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void SMSInstructorSetupNewPCTExcelProject()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor setup new PCT Excel project", ((string[])(null)));
-#line 155
-this.ScenarioSetup(scenarioInfo);
 #line 156
-testRunner.When("I click on Create link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 157
-testRunner.And("I select \"Excel\" project type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on Create link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 158
-testRunner.And("I enter project name of \"PCTExcelProject\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"Excel\" project type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 159
-testRunner.And("I Click on Done button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter project name of \"PCTExcelProject\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 160
-testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I Click on Done button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 161
-testRunner.When("I click on upload icon of \"Final Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 162
-testRunner.And("I upload the file \"Final Document Excel File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Final Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 163
-testRunner.Then("I should see file \"GO_e05_Grader_h3 (3).xlsx\" uploaded sucessfully in \"Final Docu" +
-                    "ment\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I upload the file \"Final Document Excel File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 164
-testRunner.When("I click on upload icon of \"Start Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see file \"excel.xlsx\" uploaded sucessfully in \"Final Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 165
-testRunner.And("I upload the file \"Start Document Excel File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Start Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 166
-testRunner.Then("I should see file \"GO_e05_Grader_h3_solution (2).xlsx\" uploaded sucessfully in \"S" +
-                    "tart Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I upload the file \"Start Document Excel File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 167
-testRunner.When("I click on upload icon of \"Instruction Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see file \"excel.xlsx\" uploaded sucessfully in \"Start Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 168
-testRunner.And("I upload the file \"Instruction Document Excel File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Instruction Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 169
+testRunner.And("I upload the file \"Instruction Document Excel File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 170
 testRunner.Then("I should see file \"Instruction.docx\" uploaded sucessfully in \"Instruction Documen" +
                     "t\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 170
-testRunner.When("I map skill \"Excel Options - Advanced\" from \"FILE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 171
-testRunner.And("I publish the project in project creation tool page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I map skill \"Excel Options - Advanced\" from \"FILE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 172
-testRunner.When("I close the \"Project Creation Tool\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I publish the project in project creation tool page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 173
+testRunner.When("I close the \"Project Creation Tool\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 174
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -483,44 +483,44 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void SMSInstructorSetupNewPCTPPTProject()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor setup new PCT PPT project", ((string[])(null)));
-#line 176
-this.ScenarioSetup(scenarioInfo);
 #line 177
-testRunner.When("I click on Create link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 178
-testRunner.And("I select \"PPT\" project type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on Create link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 179
-testRunner.And("I enter project name of \"PCTPPTProject\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"PPT\" project type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 180
-testRunner.And("I Click on Done button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter project name of \"PCTPPTProject\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 181
-testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I Click on Done button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 182
-testRunner.When("I click on upload icon of \"Final Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Project Creation Tool\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 183
-testRunner.And("I upload the file \"Final Document PPT File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Final Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 184
-testRunner.Then("I should see file \"testcase.pptx\" uploaded sucessfully in \"Final Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I upload the file \"Final Document PPT File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 185
-testRunner.When("I click on upload icon of \"Start Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see file \"testcase.pptx\" uploaded sucessfully in \"Final Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 186
-testRunner.And("I upload the file \"Start Document PPT File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Start Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 187
-testRunner.Then("I should see file \"blank.pptx\" uploaded sucessfully in \"Start Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I upload the file \"Start Document PPT File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 188
-testRunner.When("I click on upload icon of \"Instruction Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see file \"blank.pptx\" uploaded sucessfully in \"Start Document\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 189
-testRunner.And("I upload the file \"Instruction Document PPT File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on upload icon of \"Instruction Document\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 190
+testRunner.And("I upload the file \"Instruction Document PPT File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 191
 testRunner.Then("I should see file \"Instruction.docx\" uploaded sucessfully in \"Instruction Documen" +
                     "t\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 191
-testRunner.When("I map skill \"Presentation Properties\" from \"FILE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 192
-testRunner.And("I publish the project in project creation tool page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I map skill \"Presentation Properties\" from \"FILE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 193
-testRunner.When("I close the \"Project Creation Tool\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I publish the project in project creation tool page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 194
+testRunner.When("I close the \"Project Creation Tool\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 195
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -532,23 +532,23 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void SMSInstructorCreateNewGraderWordQuestion()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor create new grader word question", ((string[])(null)));
-#line 197
-this.ScenarioSetup(scenarioInfo);
 #line 198
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 199
-testRunner.And("I select the \"Manage Question Bank\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 200
-testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I select the \"Manage Question Bank\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 201
-testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 202
-testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 203
-testRunner.And("I create \"SIMGraderQuestion\" question with \"PCTWordProject\" project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 204
-testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I create \"SIMGraderQuestion\" question with \"PCTWordProject\" project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 205
+testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 206
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -560,23 +560,23 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void SMSInstructorCreateNewGraderPPTQuestion()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor create new grader PPT question", ((string[])(null)));
-#line 208
-this.ScenarioSetup(scenarioInfo);
 #line 209
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 210
-testRunner.And("I select the \"Manage Question Bank\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 211
-testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I select the \"Manage Question Bank\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 212
-testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 213
-testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 214
-testRunner.And("I create \"SIMGraderQuestion\" question with \"PCTPPTProject\" project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 215
-testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I create \"SIMGraderQuestion\" question with \"PCTPPTProject\" project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 216
+testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 217
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -588,23 +588,23 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void SMSInstructorCreateNewGraderExcelQuestion()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor create new grader Excel question", ((string[])(null)));
-#line 219
-this.ScenarioSetup(scenarioInfo);
 #line 220
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 221
-testRunner.And("I select the \"Manage Question Bank\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 222
-testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I select the \"Manage Question Bank\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 223
-testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 224
-testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 225
-testRunner.And("I create \"SIMGraderQuestion\" question with \"PCTExcelProject\" project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 226
-testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I create \"SIMGraderQuestion\" question with \"PCTExcelProject\" project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 227
+testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 228
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -616,13 +616,13 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void SMSInstructorClosePCTPopup()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SMS Instructor close PCT popup", ((string[])(null)));
-#line 230
-this.ScenarioSetup(scenarioInfo);
 #line 231
-testRunner.Then("I should see the \"Project Creation Tool\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 232
-testRunner.When("I close Project creation tool popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see the \"Project Creation Tool\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 233
+testRunner.When("I close Project creation tool popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 234
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

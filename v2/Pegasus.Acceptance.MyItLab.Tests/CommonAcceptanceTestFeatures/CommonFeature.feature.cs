@@ -761,7 +761,7 @@ testRunner.When("I login to Blackboard Cert as \"BBStudent\"", ((string)(null)),
 #line 240
 this.ScenarioSetup(scenarioInfo);
 #line 241
-testRunner.When("I login to Blackboard Cert as \"BBInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I \"Logout\" of Blackboard as \"BBInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -87,7 +87,12 @@ namespace Pegasus.Automation.DataTransferObjects
             BBCourse = 57,
             //SSRS Course            
             HED5xPMC = 58,
-            WVUCourse = 5
+            WVUCourse = 59,
+            CanvasKioskCourse = 61,
+            D2LKioskCourse = 62,
+            MoodleKioskCourse = 63,
+            D2LDirectCourse = 64,
+            MoodleDirectCourse = 65,
         }
 
         /// <summary>

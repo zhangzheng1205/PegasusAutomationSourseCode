@@ -120,103 +120,205 @@
   <data name="PCTProjectList_Page_AutoIT_ExcelFinal_FilePath" xml:space="preserve">
     <value>\\TestData\\PCTExcelFinalDocument.exe</value>
   </data>
+  <data name="PCTProjectList_Page_AutoIT_ExcelFinal_FilePath1" xml:space="preserve">
+    <value>\\TestData\\PCTExcelFinalDocument.exe</value>
+  </data>
   <data name="PCTProjectList_Page_AutoIT_ExcelInitial_FilePath" xml:space="preserve">
+    <value>\\TestData\\PCTExcelStartDocument.exe</value>
+  </data>
+  <data name="PCTProjectList_Page_AutoIT_ExcelInitial_FilePath1" xml:space="preserve">
     <value>\\TestData\\PCTExcelStartDocument.exe</value>
   </data>
   <data name="PCTProjectList_Page_AutoIT_ExcelInstruction_FilePath" xml:space="preserve">
     <value>\\TestData\\PCTExcelInstructionDocument.exe</value>
   </data>
+  <data name="PCTProjectList_Page_AutoIT_ExcelInstruction_FilePath1" xml:space="preserve">
+    <value>\\TestData\\PCTExcelInstructionDocument.exe</value>
+  </data>
   <data name="PCTProjectList_Page_AutoIT_PPTFinal_FilePath" xml:space="preserve">
+    <value>\\TestData\\PCTPPTFinalDocument.exe</value>
+  </data>
+  <data name="PCTProjectList_Page_AutoIT_PPTFinal_FilePath1" xml:space="preserve">
     <value>\\TestData\\PCTPPTFinalDocument.exe</value>
   </data>
   <data name="PCTProjectList_Page_AutoIT_PPTInitial_FilePath" xml:space="preserve">
     <value>\\TestData\\PCTPPTStartDocument.exe</value>
   </data>
+  <data name="PCTProjectList_Page_AutoIT_PPTInitial_FilePath1" xml:space="preserve">
+    <value>\\TestData\\PCTPPTStartDocument.exe</value>
+  </data>
   <data name="PCTProjectList_Page_AutoIT_PPTInstruction_FilePath" xml:space="preserve">
+    <value>\\TestData\\PCTPPTInstructionDocument.exe</value>
+  </data>
+  <data name="PCTProjectList_Page_AutoIT_PPTInstruction_FilePath1" xml:space="preserve">
     <value>\\TestData\\PCTPPTInstructionDocument.exe</value>
   </data>
   <data name="PCTProjectList_Page_AutoIT_WordFinal_FilePath" xml:space="preserve">
     <value>\\TestData\\PCTWordFinallDocument.exe</value>
   </data>
+  <data name="PCTProjectList_Page_AutoIT_WordFinal_FilePath1" xml:space="preserve">
+    <value>\\TestData\\PCTWordFinallDocument.exe</value>
+  </data>
   <data name="PCTProjectList_Page_AutoIT_WordInitial_FilePath" xml:space="preserve">
+    <value>\\TestData\\PCTWordInitialDocument.exe</value>
+  </data>
+  <data name="PCTProjectList_Page_AutoIT_WordInitial_FilePath1" xml:space="preserve">
     <value>\\TestData\\PCTWordInitialDocument.exe</value>
   </data>
   <data name="PCTProjectList_Page_AutoIT_WordInstruction_FilePath" xml:space="preserve">
     <value>\\TestData\\PCTWordInstructionDocument.exe</value>
   </data>
+  <data name="PCTProjectList_Page_AutoIT_WordInstruction_FilePath1" xml:space="preserve">
+    <value>\\TestData\\PCTWordInstructionDocument.exe</value>
+  </data>
   <data name="PCTProjectList_Page_Button_Browse_Id_value" xml:space="preserve">
+    <value>_btn_Browse</value>
+  </data>
+  <data name="PCTProjectList_Page_Button_Browse_Id_value1" xml:space="preserve">
     <value>_btn_Browse</value>
   </data>
   <data name="PCTProjectList_Page_CreateProject_Link_ID_Locator" xml:space="preserve">
     <value>CreateProj</value>
   </data>
+  <data name="PCTProjectList_Page_CreateProject_Link_ID_Locator1" xml:space="preserve">
+    <value>CreateProj</value>
+  </data>
   <data name="PCTProjectList_Page_FinalDocument_Access_File" xml:space="preserve">
+    <value>\TestData\PCT\Final Document\Access\go_a01_grader_a3_Open_Houses.accdb</value>
+  </data>
+  <data name="PCTProjectList_Page_FinalDocument_Access_File1" xml:space="preserve">
     <value>\TestData\PCT\Final Document\Access\go_a01_grader_a3_Open_Houses.accdb</value>
   </data>
   <data name="PCTProjectList_Page_FinalDocument_Excel_File" xml:space="preserve">
     <value>\TestData\PCT\Final Document\Excel\go_e01_grader_h3.xlsx</value>
   </data>
+  <data name="PCTProjectList_Page_FinalDocument_Excel_File1" xml:space="preserve">
+    <value>\TestData\PCT\Final Document\Excel\go_e01_grader_h3.xlsx</value>
+  </data>
   <data name="PCTProjectList_Page_FinalDocument_PowerPoint_File" xml:space="preserve">
+    <value>\TestData\PCT\Final Document\PowerPoint\go_p01_grader_h3.pptx</value>
+  </data>
+  <data name="PCTProjectList_Page_FinalDocument_PowerPoint_File1" xml:space="preserve">
     <value>\TestData\PCT\Final Document\PowerPoint\go_p01_grader_h3.pptx</value>
   </data>
   <data name="PCTProjectList_Page_FinalDocument_Word_File" xml:space="preserve">
     <value>\TestData\PCT\Final Document\Word\go_w01_grader_a3.docx</value>
   </data>
+  <data name="PCTProjectList_Page_FinalDocument_Word_File1" xml:space="preserve">
+    <value>\TestData\PCT\Final Document\Word\go_w01_grader_a3.docx</value>
+  </data>
   <data name="PCTProjectList_Page_PCT_Filupload_BrowseButton_Id_Locator" xml:space="preserve">
+    <value>_btn_Browse</value>
+  </data>
+  <data name="PCTProjectList_Page_PCT_Filupload_BrowseButton_Id_Locator1" xml:space="preserve">
     <value>_btn_Browse</value>
   </data>
   <data name="PCTProjectList_Page_PCT_FinalDocument_UploadIcon_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='RecentDocsListContainer']/div/div</value>
   </data>
+  <data name="PCTProjectList_Page_PCT_FinalDocument_UploadIcon_Xpath_Locator1" xml:space="preserve">
+    <value>//div[@id='RecentDocsListContainer']/div/div</value>
+  </data>
   <data name="PCTProjectList_Page_PCT_GetFileName_FinalDocument_CSS_Locator" xml:space="preserve">
+    <value>div#RecentDocsListContainer&gt;div:nth-of-type(2)&gt;div&gt;div&gt;div:nth-of-type(2)&gt;p</value>
+  </data>
+  <data name="PCTProjectList_Page_PCT_GetFileName_FinalDocument_CSS_Locator1" xml:space="preserve">
     <value>div#RecentDocsListContainer&gt;div:nth-of-type(2)&gt;div&gt;div&gt;div:nth-of-type(2)&gt;p</value>
   </data>
   <data name="PCTProjectList_Page_PCT_GetFileName_InstructionDocument_CSS_Locator" xml:space="preserve">
     <value>div#RecentDocsListContainer&gt;div:nth-of-type(6)&gt;div&gt;div&gt;div:nth-of-type(2)&gt;p</value>
   </data>
+  <data name="PCTProjectList_Page_PCT_GetFileName_InstructionDocument_CSS_Locator1" xml:space="preserve">
+    <value>div#RecentDocsListContainer&gt;div:nth-of-type(6)&gt;div&gt;div&gt;div:nth-of-type(2)&gt;p</value>
+  </data>
   <data name="PCTProjectList_Page_PCT_GetFileName_StartDocument_CSS_Locator" xml:space="preserve">
+    <value>div#RecentDocsListContainer&gt;div:nth-of-type(4)&gt;div&gt;div&gt;div:nth-of-type(2)&gt;p</value>
+  </data>
+  <data name="PCTProjectList_Page_PCT_GetFileName_StartDocument_CSS_Locator1" xml:space="preserve">
     <value>div#RecentDocsListContainer&gt;div:nth-of-type(4)&gt;div&gt;div&gt;div:nth-of-type(2)&gt;p</value>
   </data>
   <data name="PCTProjectList_Page_PCT_InstructionDocument_UploadIcon_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='RecentDocsListContainer']/div[5]/div</value>
   </data>
+  <data name="PCTProjectList_Page_PCT_InstructionDocument_UploadIcon_Xpath_Locator1" xml:space="preserve">
+    <value>//div[@id='RecentDocsListContainer']/div[5]/div</value>
+  </data>
   <data name="PCTProjectList_Page_PCT_StartDocument_UploadIcon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='RecentDocsListContainer']/div[3]/div</value>
+  </data>
+  <data name="PCTProjectList_Page_PCT_StartDocument_UploadIcon_Xpath_Locator1" xml:space="preserve">
     <value>//div[@id='RecentDocsListContainer']/div[3]/div</value>
   </data>
   <data name="PCTProjectList_Page_PCT_StartDocument_Word_FilUpload_Icon_Xpath" xml:space="preserve">
     <value>html/body/div[18]/div[3]/div/button</value>
   </data>
+  <data name="PCTProjectList_Page_PCT_StartDocument_Word_FilUpload_Icon_Xpath1" xml:space="preserve">
+    <value>html/body/div[18]/div[3]/div/button</value>
+  </data>
   <data name="PCTProjectList_Page_PCT_StyleItem_Checkbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='skillUItable']/div[{0}]/div/input</value>
+  </data>
+  <data name="PCTProjectList_Page_PCT_StyleItem_Checkbox_Xpath_Locator1" xml:space="preserve">
     <value>//div[@class='skillUItable']/div[{0}]/div/input</value>
   </data>
   <data name="PCTProjectList_Page_PCT_StyleOptionItems_Count_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='2']/div[2]/div/div</value>
   </data>
+  <data name="PCTProjectList_Page_PCT_StyleOptionItems_Count_Xpath_Locator1" xml:space="preserve">
+    <value>//div[@id='2']/div[2]/div/div</value>
+  </data>
   <data name="PCTProjectList_Page_PCT_TargetLocation_ClassName_Value" xml:space="preserve">
+    <value>DropPara</value>
+  </data>
+  <data name="PCTProjectList_Page_PCT_TargetLocation_ClassName_Value1" xml:space="preserve">
     <value>DropPara</value>
   </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_Alertbox_OKButton_ClassName_Locator" xml:space="preserve">
     <value>pctCustomButton</value>
   </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_Alertbox_OKButton_ClassName_Locator1" xml:space="preserve">
+    <value>pctCustomButton</value>
+  </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_Page_Title_Value" xml:space="preserve">
+    <value>Project Creation Tool</value>
+  </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_Page_Title_Value1" xml:space="preserve">
     <value>Project Creation Tool</value>
   </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_ProjectType_Excel_Id_Locator" xml:space="preserve">
     <value>AppType_Excel</value>
   </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_ProjectType_Excel_Id_Locator1" xml:space="preserve">
+    <value>AppType_Excel</value>
+  </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_ProjectType_PPT_Id_Locator" xml:space="preserve">
+    <value>AppType_PPT</value>
+  </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_ProjectType_PPT_Id_Locator1" xml:space="preserve">
     <value>AppType_PPT</value>
   </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_ProjectType_Word_Id_Locator" xml:space="preserve">
     <value>AppType_Word</value>
   </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_ProjectType_Word_Id_Locator1" xml:space="preserve">
+    <value>AppType_Word</value>
+  </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_PublishButton_Id_Locator" xml:space="preserve">
+    <value>PublishButton</value>
+  </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_PublishButton_Id_Locator1" xml:space="preserve">
     <value>PublishButton</value>
   </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_PublishCompleteButton_Id_Locator" xml:space="preserve">
     <value>PublishCompletedButton</value>
   </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_PublishCompleteButton_Id_Locator1" xml:space="preserve">
+    <value>PublishCompletedButton</value>
+  </data>
   <data name="PCTProjectList_Page_ProjectCreationTool_PublishHomeButton_Id_Locator" xml:space="preserve">
+    <value>PublishProjectHomeButton</value>
+  </data>
+  <data name="PCTProjectList_Page_ProjectCreationTool_PublishHomeButton_Id_Locator1" xml:space="preserve">
     <value>PublishProjectHomeButton</value>
   </data>
 </root>

@@ -10,7 +10,6 @@ namespace Pegasus.Automation.DataTransferObjects
     /// </summary>
     public class Grade : BaseEntityObject
     {
-
         /// <summary>
         /// This is the type of the grade
         /// </summary>
@@ -19,7 +18,9 @@ namespace Pegasus.Automation.DataTransferObjects
             BBNewGrade = 1,
             BBEditedGrade = 2,
             PegasusNewGrade = 3,
-            PegasusEditedGrade = 4
+            PegasusEditedGrade = 4,
+            D2LDirectIntegrationEditedGrade = 5,
+            D2LDirectNewGrade = 6,
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace Pegasus.Automation.DataTransferObjects
         /// <summary>
         /// This is the Rumba Section ID
         /// </summary>
-        public String Score { get; set; }
+        public string Score { get; set; }
 
         /// <summary>
         /// Inserts the grade into the database

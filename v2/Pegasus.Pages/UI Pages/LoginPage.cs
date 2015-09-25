@@ -163,6 +163,8 @@ namespace Pegasus.Pages.UI_Pages
                     //Get D2L Kiosk URL
                     case User.UserTypeEnum.D2LKioskStudent:
                     case User.UserTypeEnum.D2LKioskTeacher:
+                    case User.UserTypeEnum.D2LDirectTeacher:
+                    case User.UserTypeEnum.D2LDirectStudent:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.D2LKioskUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
@@ -172,9 +174,17 @@ namespace Pegasus.Pages.UI_Pages
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.CanvasKioskUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
-                    //Get Moodle Kiosk URL
+                    //Get Moodle URL
                     case User.UserTypeEnum.MoodleKioskStudent:
                     case User.UserTypeEnum.MoodleKioskTeacher:
+                    case User.UserTypeEnum.MoodleDirectStudent:
+                    case User.UserTypeEnum.MoodleDirectTeacher:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.MoodleKioskUrlRoot);
+                        base.DeleteAllBrowserCookies();
+                        break;
+                    //Get Canvas Kiosk URL
+                    case User.UserTypeEnum.CanvasDirectStudent:
+                    case User.UserTypeEnum.CanvasDirectTeacher:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.CanvasKioskUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;

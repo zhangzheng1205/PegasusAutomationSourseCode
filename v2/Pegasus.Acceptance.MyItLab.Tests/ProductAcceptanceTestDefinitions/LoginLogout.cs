@@ -280,7 +280,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             User user = User.Get(userTypeEnum);
             switch (userTypeEnum)
             {
-                //Login as MMNDInstructor
+                //Login as BBInstructor
                 case User.UserTypeEnum.BBInstructor:
                 case User.UserTypeEnum.BBStudent:
                     //Login as BB Instructor/Student
@@ -289,6 +289,37 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             }
             Logger.LogMethodExit("LoginLogout", "LoginToBBCert",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Blackboard user logout
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I ""(.*)"" of Blackboard as ""(.*)""")]
+        public void LogoutOfBlackboardPortal(string linkName, User.UserTypeEnum userType)
+        {
+            //Login to Blackboard
+            Logger.LogMethodEntry("LoginLogout", "LogoutOfBlackboardPortal",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get User details from memory
+            User user = User.Get(userType);
+            switch (userType)
+            {
+                //Login as BBInstructor
+                case User.UserTypeEnum.BBInstructor:
+                case User.UserTypeEnum.BBStudent:
+                    //Login as BB Instructor/Student
+                    new BlackboardCourseAction().SignOutByHigherEdUsers(linkName);
+                    break;
+            }
+            Logger.LogMethodExit("LoginLogout", "LogoutOfBlackboardPortal",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        
+        public void WhenIOfBlackboardAs(string p0, string p1)
+        {
+            ScenarioContext.Current.Pending();
         }
 
 
@@ -307,6 +338,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     {
                         //Verify If MMNDInstructor Is Logged In Successfully
                         isUserLoggedIn = new BlackboardLoginPage().IsUserLoggedInSuccessFully();
+                    }
+                    break;
+                case User.UserTypeEnum.MoodleKioskStudent:
+                case User.UserTypeEnum.MoodleKioskTeacher:
+                    {
+                        //Verify If MMNDInstructor Is Logged In Successfully
+                        isUserLoggedIn = new MoodleLoginPage().IsUserLoggedInSuccessFullyMoodle();
                     }
                     break;
             }
@@ -344,7 +382,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Moodle user login to Moodle portal
         /// </summary>
         /// <param name="userType">This is the user type enum.</param>
-        [When(@"I login to MoodleKiosk as ""(.*)""")]
+        [When(@"I login to Moodle as ""(.*)""")]
         public void UserLoginToMoodleKioskCertAs(User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("LoginLogout", "UserLoginToMoodleKioskCertAs", base.IsTakeScreenShotDuringEntryExit);
@@ -353,6 +391,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             {
                 case User.UserTypeEnum.MoodleKioskStudent:
                 case User.UserTypeEnum.MoodleKioskTeacher:
+                case User.UserTypeEnum.MoodleDirectTeacher:
+                case User.UserTypeEnum.MoodleDirectStudent:
                     new MoodleLoginPage().LoginToCanvas(user.Name, user.Password);
                     break;
             }
@@ -371,7 +411,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("LoginLogout", "ShowThePageInPegass",
                 IsTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

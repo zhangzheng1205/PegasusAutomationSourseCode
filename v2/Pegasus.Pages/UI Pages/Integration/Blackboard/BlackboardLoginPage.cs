@@ -91,6 +91,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
             return isUserLoggedIn;
         }
 
+        /// <summary>
+        /// Blackboard user logout of Pegasus
+        /// </summary>
         public void logoutOfPegasus()
         {
             base.NavigateToBrowseUrl("https://pearsonintegrationqa1.blackboard.com");

@@ -220,5 +220,20 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new PCTProjectListPage().ClosePCTToolPopup();
             Logger.LogMethodExit("PCTToolLaunch", "CloseProjectCreationToolPopup", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Validate the content sucessfully loaded in Project creation tool page
+        /// </summary>
+        [Then(@"I should see PCT page loaded sucessfully")]
+        public void ValidatePCTPageLoadedSucessfully()
+        {
+            Logger.LogMethodEntry("PCTToolLaunch", "ValidatePCTPageLoadedSucessfully", base.IsTakeScreenShotDuringEntryExit);
+            //Assert the content exitance in the page
+            Logger.LogAssertion("VerifyOpenedPageTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(true, new PCTProjectListPage().ValidateContentLoadInPage()));
+            Logger.LogMethodExit("PCTToolLaunch", "ValidatePCTPageLoadedSucessfully", base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

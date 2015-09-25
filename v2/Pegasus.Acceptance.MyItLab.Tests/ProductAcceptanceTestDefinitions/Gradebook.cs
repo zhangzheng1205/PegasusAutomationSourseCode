@@ -839,7 +839,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="userTypeEnum">This is User Type Enum.</param>
         /// <param name="scenerioName">This is scenerio name of the student.</param>
         [Then(@"I should see score ""(.*)"" of ""(.*)"" activity for ""(.*)""  with ""(.*)""")]
-        public void VerifyTheScoreOfActivityBasedOnScenerio(string activityScore, 
+        public void VerifyTheScoreOfActivityBasedOnScenerio(string activityScore,
             string activityName,
             string scenerioName, User.UserTypeEnum userTypeEnum)
         {
@@ -848,7 +848,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyTheScoreOfActivityBasedOnScenerio",
                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
-            User user = new GBInstructorUXPage().FetchTheUserDetails(scenerioName, userTypeEnum);            
+            User user = new GBInstructorUXPage().FetchTheUserDetails(scenerioName, userTypeEnum);
             //Select the window
             new GBInstructorUXPage().SelectGradebookFrame();
             //Assert Grades of Submitted Activity
@@ -1038,6 +1038,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new GBInstructorUXPage().EditActivityScoreInPegasusByBBIns(gradeType, activityType, userLastName, userFirstName);
             Logger.LogMethodExit("Gradebook", "EditGradeOfActivityInPegasusByBBIns", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Edit Grade as Moodle instructor
+        /// </summary>
+        /// <param name="gradeType">This is the grade type.</param>
+        /// <param name="activityType">This is the activity name.</param>
+        /// <param name="userType">This is the user type.</param>
+        [When(@"I click Edit Grade ""(.*)"" of ""(.*)"" activity for ""(.*)"" in Pegasus")]
+        public void EditGradeOfActivityInPegasusByMoodleIns(Grade.GradeTypeEnum gradeType, Activity.ActivityTypeEnum activityType, User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("Gradebook", "EditGradeOfActivityInPegasusByBBIns", base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userType);
+            string userFirstName = user.FirstName.ToString();
+            string userLastName = user.LastName.ToString();
+            new GBInstructorUXPage().EditActivityScoreInPegasusByMoodleIns(gradeType, activityType, userLastName, userFirstName);
+            Logger.LogMethodExit("Gradebook", "EditGradeOfActivityInPegasusByBBIns", base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Verify The Score Of Activity.

@@ -688,9 +688,38 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for Element         
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator));
-                //Switch to Frame
+                //Switch to FrameIframe1
                 base.SwitchToIFrame(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectGradebookFrame",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Select the Left Frame.
+        /// </summary>
+        public void SelectGradebookLeftFrame()
+        {
+            //Select the Frame
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectGradebookFrame",
+                                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Window_Title);
+                base.SelectWindow(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Window_Title);
+                //Wait for Element         
+                base.WaitForElement(By.Id("Iframe1"));
+                //Switch to FrameIframe1
+                base.SwitchToIFrame("Iframe1");
             }
             catch (Exception e)
             {
@@ -1966,6 +1995,7 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
+            this.SelectGradebookFrame();
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_AcitivityNames_Xpath_Locator));
             //Getting the counts of Activity                    
@@ -2077,9 +2107,12 @@ namespace Pegasus.Pages.UI_Pages
             //Get User Row Count
             logger.LogMethodEntry("GBInstructorUXPage", "GetUserRowCount",
            base.IsTakeScreenShotDuringEntryExit);
+            this.SelectGradebookFrame();
             //Initialize VariableVariable
             int userRowNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
+            bool gggh12 = base.IsElementPresent(By.XPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_UserCount_Xpath_Locator),10);
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_UserCount_Xpath_Locator));
             //Get User Count
@@ -4133,6 +4166,80 @@ namespace Pegasus.Pages.UI_Pages
                 int getActivityColumnCount = this.GetActivityColumnCount(activityName);
                 //Get User Row Count
                 int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
+                this.SelectGradebookFrame();
+                IWebElement getGradeScore = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
+                getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverByJavaScriptExecutor(getGradeScore);
+                bool hhj12 = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
+                    getUserRowCount, getActivityColumnCount)), 10);
+                base.WaitForElement(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
+                    getUserRowCount, getActivityColumnCount)));
+                IWebElement getGrade = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
+                    getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverAction(getGrade);
+                IWebElement getCmenu = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span",
+                    getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverByJavaScriptExecutor(getCmenu);
+                bool sdwq = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img",
+                    getUserRowCount, getActivityColumnCount)), 10);
+                IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img",
+                    getUserRowCount, getActivityColumnCount));
+                base.ClickByJavaScriptExecutor(getCmenuIcon);
+                base.WaitForElement(By.Id("_ctl0_InnerPageContent_lbleditgrade1"));
+                base.ClickLinkById("_ctl0_InnerPageContent_lbleditgrade1");
+                // Enter the value in numerator text box
+                base.WaitForElement(By.Id("txtNewValue"));
+                base.ClearTextById("txtNewValue");
+                base.FillTextBoxById("txtNewValue", "70");
+                // Enter the value in denominator
+                base.WaitForElement(By.Id("txtNewMaxValue"));
+                base.ClearTextById("txtNewMaxValue");
+                base.FillTextBoxById("txtNewMaxValue", "100");
+                // Get the edited score
+                string actualEditedScore = base.GetElementTextById("idnewpercentage");
+                string scoreAfterEdit1 = actualEditedScore.Replace("[", "");
+                string scoreAfterEdit2 = scoreAfterEdit1.Replace("]", "");
+                getEditedActivityStatusGrade = scoreAfterEdit2.Replace("%", "");
+                // Click Update button in edit score lightbox
+                base.WaitForElement(By.PartialLinkText("Update"));
+                base.ClickButtonByPartialLinkText("Update");
+                // Store the edited score in grade enum
+                new ViewSubmissionPage().StoreGradeDetails(gradeType, getEditedActivityStatusGrade);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getEditedActivityStatusGrade.Trim();
+        }
+
+        /// <summary>
+        /// Get the Activity Status.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="userLastName">This is User Last name.</param>
+        /// <param name="userFirstName">This is User First Name.</param>
+        /// <returns>Activity Status.</returns>
+        public string EditActivityScoreInPegasusByMoodleIns(Grade.GradeTypeEnum gradeType, Activity.ActivityTypeEnum activityType, string userLastName,
+            string userFirstName)
+        {
+            //Get the Activity Status
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            string getEditedActivityStatusGrade = string.Empty;
+            try
+            {
+                //Get Activity Column Count
+                Activity activity = Activity.Get(activityType);
+                String activityName = activity.Name.ToString();
+                int getActivityColumnCount = this.GetActivityColumnCountPegasusMoodle(activityName);
+                //Get User Row Count
+                int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                base.SelectWindow(base.GetPageTitle);
                 IWebElement getGradeScore = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
                 getUserRowCount, getActivityColumnCount));
                 base.PerformMouseHoverByJavaScriptExecutor(getGradeScore);
@@ -4178,6 +4285,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             return getEditedActivityStatusGrade.Trim();
         }
+
 
         /// <summary>
         /// Validate the GradeSync icon in gradebook
@@ -4236,6 +4344,52 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("LoginContentPage", "FetchTheUserDetails",
              base.IsTakeScreenShotDuringEntryExit);
             return user;
+        }
+
+        /// <summary>
+        /// Get Activity Column Count.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <returns>This is Activity Column Number.</returns>
+        private int GetActivityColumnCountPegasusMoodle(string activityName)
+        {
+            //Get Activity Column Count
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCount",
+           base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Count_Value);
+            base.WaitUntilWindowLoads("Gradebook");
+            base.SelectWindow("Gradebook");
+
+            base.WaitForElement(By.Id("srcGBFrame"));
+            base.SwitchToIFrame("srcGBFrame");
+
+            base.WaitForElement(By.XPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator));
+            //Getting the counts of Activity                    
+            int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator);
+            for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
+                columnCount++)
+            {
+                bool sdeew = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span", 2)), 10);
+                //Wait for Element
+                base.WaitForElement(By.XPath(string.Format("//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span", columnCount)));
+                base.FocusOnElementByXPath(string.Format("//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span", columnCount));
+                //Getting the Activity name
+                string getActivityName = base.GetTitleAttributeValueByXPath
+                    (string.Format("//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span", columnCount));
+                if (getActivityName.Contains(activityName))
+                {
+                    activityColumnNumber = columnCount;
+                    break;
+                }
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCount",
+           base.IsTakeScreenShotDuringEntryExit);
+            return activityColumnNumber;
         }
     }
 }

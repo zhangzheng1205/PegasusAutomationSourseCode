@@ -3057,13 +3057,13 @@
     <None Include="TestData\Excel\ExcelFileFor0Percent\go_e01_grader_h3.xlsx" />
     <None Include="TestData\Excel\ExcelFileFor100Percent\go_e01_grader_h3.xlsx" />
     <None Include="TestData\Excel\ExcelFileFor70Percent\go_e01_grader_h3.xlsx" />
-    <None Include="TestData\PCT\FinalDocuments\Excel\GO_e05_Grader_h3 %283%29.xlsx" />
+    <None Include="TestData\PCT\FinalDocuments\Excel\excel.xlsx" />
     <None Include="TestData\PCT\FinalDocuments\PPT\testcase.pptx" />
     <None Include="TestData\PCT\FinalDocuments\Word\final.docx" />
-    <None Include="TestData\PCT\InstructionDocument\Excel\excel_cmp_Instructions.docx" />
+    <None Include="TestData\PCT\InstructionDocument\Excel\testcmp_Instructions.docx" />
     <None Include="TestData\PCT\InstructionDocument\PPT\PPT_Instructions.docx" />
     <None Include="TestData\PCT\InstructionDocument\Word\pctcheckword_Instructions.docx" />
-    <None Include="TestData\PCT\StartDocument\Excel\GO_e05_Grader_h3_solution %282%29.xlsx" />
+    <None Include="TestData\PCT\StartDocument\Excel\excel.xlsx" />
     <None Include="TestData\PCT\StartDocument\PPT\blank.pptx" />
     <None Include="TestData\PCT\StartDocument\Word\initial.docx" />
     <None Include="TestData\PowerPoint\PowerPointFileFor0Percent\go_p01_grader_h3.pptx" />

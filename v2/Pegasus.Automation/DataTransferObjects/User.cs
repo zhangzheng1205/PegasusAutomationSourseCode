@@ -157,7 +157,13 @@ namespace Pearson.Pegasus.TestAutomation.
             SSRSReportAdmin = 84,
             MIL3xUser = 85,
             HED5xPMCUser = 86,
-            WVUUser = 87
+            WVUUser = 87,
+            D2LDirectTeacher = 88,
+            D2LDirectStudent = 89,
+            CanvasDirectTeacher = 90,
+            CanvasDirectStudent = 91,
+            MoodleDirectTeacher = 92,
+            MoodleDirectStudent = 93,
 
             #endregion
         }

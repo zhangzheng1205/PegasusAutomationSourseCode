@@ -568,6 +568,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Select a frame by its name. Frames located by matching name attributes 
+        /// are always given precedence over those matched by ID.
+        /// </summary>
+        /// <param name="idAttributeValue">This is iFrame id atribute value.</param>
+        protected void SwitchToIFrameByName(String nameAttributeValue)
+        {
+            base.WaitForElement(By.Name(nameAttributeValue));
+            WebDriver.SwitchTo().Frame(nameAttributeValue);
+        }
+
+        /// <summary>
         ///  Select a frame by its (zero-based) index. That is, if a page has three frames,
         ///  the first frame would be at index "0", the second at index "1" and the third at index "2". 
         /// Once the frame has been selected, all subsequent calls on the WebDriver interface are made to that frame.

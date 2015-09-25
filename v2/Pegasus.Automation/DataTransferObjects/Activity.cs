@@ -66,6 +66,7 @@ namespace Pegasus.Automation.DataTransferObjects
             PCTPPTProject = 35,
             PCTExcelProject = 36,
             BBEditActivity = 37,
+            MoodleEditActivity = 38,
         }
 
         /// <summary>

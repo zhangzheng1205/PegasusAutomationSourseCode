@@ -190,6 +190,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
                 int getActivityColumnCount = this.GetActivityColumnCount(activityName);
                 getActivityColumnCount = getActivityColumnCount - 3;
                 //Get User Row Count
+                bool hhjd2 = base.IsElementPresent(By.XPath(string.Format(BlackboardCourseActionResource.
+                    BlackboardCourseActionPage_GetActivityStatus_Xpath_Locator,
+                    getUserRowCount, getActivityColumnCount)),10);
                 base.WaitForElement(By.XPath(string.Format(BlackboardCourseActionResource.
                     BlackboardCourseActionPage_GetActivityStatus_Xpath_Locator,
                     getUserRowCount, getActivityColumnCount)));
@@ -324,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
             try
             {
                 //Select Default Window           
-                base.SelectWindow("Gradebook");
+                base.SelectWindow(base.GetPageTitle);
                 //Wait For Element
                 base.WaitForElement((By.PartialLinkText(linkSignOut)));
                 //Get Element Property

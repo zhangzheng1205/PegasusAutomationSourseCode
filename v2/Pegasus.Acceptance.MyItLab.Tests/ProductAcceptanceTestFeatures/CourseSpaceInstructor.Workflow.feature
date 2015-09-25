@@ -129,6 +129,7 @@ Then I should be on the "Today's View" page
 When I click on Tools DropDown
 And I click "Project Creation Tool" link
 Then I should be on the "Project Creation Tool" page
+And I should see PCT page loaded sucessfully
 
 #Purpose: CSSMS Instructor setup new PCT word project
 Scenario:SMS Instructor setup new PCT word project
@@ -160,10 +161,10 @@ And I Click on Done button
 Then I should be on the "Project Creation Tool" page
 When I click on upload icon of "Final Document"
 And I upload the file "Final Document Excel File"
-Then I should see file "GO_e05_Grader_h3 (3).xlsx" uploaded sucessfully in "Final Document" frame
+Then I should see file "excel.xlsx" uploaded sucessfully in "Final Document" frame
 When I click on upload icon of "Start Document"
 And I upload the file "Start Document Excel File"
-Then I should see file "GO_e05_Grader_h3_solution (2).xlsx" uploaded sucessfully in "Start Document" frame
+Then I should see file "excel.xlsx" uploaded sucessfully in "Start Document" frame
 When I click on upload icon of "Instruction Document"
 And I upload the file "Instruction Document Excel File"
 Then I should see file "Instruction.docx" uploaded sucessfully in "Instruction Document" frame

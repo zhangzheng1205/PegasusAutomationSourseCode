@@ -713,6 +713,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            base.SelectWindow(base.GetPageTitle);
             if (activityUnderTabName.Equals("Gradebook"))
             {
                 // select grade book right iframe here
@@ -736,6 +738,31 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Manage The Activity Folder Level Navigation.
+        /// </summary>
+        /// <param name="activityName">This is activity type enum.</param>
+        /// <param name="activityUnderTabName">This is the tab name.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I select ""(.*)"" in the ""(.*)"" by ""(.*)""")]
+        public void ManageTheActivityFolderLevelNavigationInGradeBookTeacher(string activityName,
+            string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Manage The Activity Folder Level Navigation
+            Logger.LogMethodEntry("CommonSteps",
+                "ManageTheActivityFolderLevelNavigationInGradeBookTeacher",
+                base.IsTakeScreenShotDuringEntryExit);
+                // select grade book right iframe here
+                new GBInstructorUXPage().SelectGradebookLeftFrame();
+            //Manage The Folder Navigation
+            new CommonPage().ManageTheActivityFolderLevelNavigation(
+               activityName, activityUnderTabName, userTypeEnum);
+            Logger.LogMethodExit("CommonSteps",
+                "ManageTheActivityFolderLevelNavigationInGradeBookTeacher",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Click On Activity Type.

@@ -64,6 +64,30 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
+      <Name>GA_VCD Mooldle1 Kiosk</Name>
+      <CourseType>MoodleKioskCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>3PL Moodle Direct Integration Course -Pegasus5</Name>
+      <CourseType>MoodleDirectCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Pegasus MyITLab Test</Name>
+      <CourseType>D2LDirectCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
       <Name>SMS:MtoI071013_5000000000000184 CCNG Course</Name>
       <CourseType>HedCoreAcceptanceInstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -95,7 +119,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-       <Course>
+    <Course>
       <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
       <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -111,7 +135,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-      <Course>
+    <Course>
       <Name>MyPsychLab for Ciccarelli</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -190,7 +214,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-       <Course>
+    <Course>
       <Name>CGIE_Automation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
@@ -248,8 +272,16 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>not passed</Name>
+      <Name>SIM5 Grader IT Drop - Sec</Name>
       <CourseType>MyItLabInstructorCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Automation_Course_2015</Name>
+      <CourseType>BBCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
@@ -265,25 +297,9 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-     <!--Hard coded Courses data for "SSRS" Reports.-->    <Course>
-      <Name>DEMO MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
-      <CourseType>HED5xPMC</CourseType>
-      <IsCreated>true</IsCreated>
-      <IsPreferenceStatus>true</IsPreferenceStatus>
-      <PegasusCourseId>10018580</PegasusCourseId>
-      <Desciplines>Spanish</Desciplines>
-    </Course>
-    <Course>
-      <Name>Compro_GraderIT</Name>
-      <CourseType>WVUCourse</CourseType>
-      <IsCreated>true</IsCreated>
-      <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SMSCourseId>CRSKLC4-16004181</SMSCourseId>
-      <PegasusCourseId>16004181</PegasusCourseId>
-    </Course>
   </ArrayOfCourse>
-  
-  <!--Hard coded Users data for Grades.-->
+
+  <!--Hard coded Grades data.-->
   <ArrayOfGrade>
     <Grade>
       <Score>100</Score>
@@ -317,6 +333,97 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>HED</LastName>
       <UserType>HedTeacherAssistant</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "Moodle" .-->
+    <User>
+      <Name>gaurav.gupta@excelindia.com</Name>
+      <Password>password1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>CanvasDirectTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>deepaanand@excelindia.com</Name>
+      <Password>password1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>CanvasDirectStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "Moodle" .-->
+    <User>
+      <Name>gamoodleinst1</Name>
+      <Password>Password@1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>MoodleKioskTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Class Average</Name>
+      <Password>Password#1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>Class Average</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>MoodleKioskStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>3pldirectmoodle.ins1</Name>
+      <Password>Password#1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>MoodleDirectTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>3pldirectmoodle.stu1</Name>
+      <Password>Password#1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>MoodleDirectStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "D2L Direct" .-->
+    <User>
+      <Name>peginst2</Name>
+      <Password>peginst2</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>D2LDirectTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>pegstu1</Name>
+      <Password>pegstu1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>Pegasus</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Student</LastName>
+      <UserType>D2LDirectStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -612,37 +719,15 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
+      <Name>nithyapctteach</Name>
       <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>BDD</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>ae6d</LastName>
+      <Email>nithyananda.p@exelindia.com</Email>
+      <FirstName>Nithya</FirstName>
+      <MiddleName>Nanda</MiddleName>
+      <LastName>Nanda</LastName>
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
-    </User>
-    <User>
-      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>BDD</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>ae6d</LastName>
-      <UserType>HSSCsSmsInstructor</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>BDD</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>ae6d</LastName>
-      <UserType>AmpCsSmsInstructor</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
       <Name>1dd99b5c-24b5-4ba8-92ce-c7a1e8f3bcc0</Name>
@@ -855,117 +940,6 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-    <!--Hard coded Users data for "SSRS Reports".-->    <User>
-      <Name>reporting</Name>
-      <Password>Peg@$u$</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>SSRSAdmin</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>SSRSAdmin</LastName>
-      <UserType>SSRSReportAdmin</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>seanmcganncanada</Name>
-      <Password>123</Password>
-      <UserId>123</UserId>
-      <!--UserId>2148092608</UserId-->
-      <Email>sean.mcgann@pearson.com</Email>
-      <FirstName>Sean</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>McGann</LastName>
-      <UserType>MIL3xUser</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>5152stu1</Name>
-      <Password>password1</Password>
-      <UserId>5000000000000006</UserId>
-      <Email>madhukumar.nm@excelindia.com</Email>
-      <SMSUserID>9747418</SMSUserID>
-      <FirstName>5153</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>madhstu1</LastName>
-      <UserType>HED5xPMCUser</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>vishwanathshetty</Name>
-      <Password>password1</Password>
-      <UserId>5000000000000162</UserId>
-      <Email>vishwanathshettyk@excelindia.com</Email>
-      <SMSUserID>9821817</SMSUserID>
-      <FirstName>Vishwanath</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
-      <UserType>HED5xPMCUser</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>5.15.2smsstudent2</Name>
-      <Password>password1</Password>
-      <UserId>5000000000002307</UserId>
-      <Email>vishwanathshettyk@excelindia.com</Email>
-      <SMSUserID>9857695</SMSUserID>
-      <FirstName>Vishwanath</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>sing</LastName>
-      <UserType>HED5xPMCUser</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>5.15.2smsins1</Name>
-      <Password>password1</Password>
-      <UserId>2799927</UserId>
-      <Email>rameshanagendrappa@excelindia.com</Email>
-      <SMSUserID>64712287</SMSUserID>
-      <FirstName>Ramesh</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>Nag</LastName>
-      <UserType>HED5xPMCUser</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>5152stu1</Name>
-      <Password>password1</Password>
-      <Email>madhukumar@excelindia.com</Email>
-      <FirstName>5153</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>madhstu1</LastName>
-      <UserType>WVUUser</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-  
-  <!--Hard coded Users data for "Contineo".-->
-    <User>
-      <Name>5156cgieins2</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>5156Raghavendrains2</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>5156Annaiahins2</LastName>
-      <UserType>ContineoTeacher</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
-    <User>
-      <Name>5156cgiestu2</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>5156Raghavendrastu2</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>5156Annaiahstu2</LastName>
-      <UserType>ContineoStudent</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
-    </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProgram>
@@ -985,6 +959,11 @@
     <Activity>
       <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
       <ActivityType>BBEditActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Exam 1</Name>
+      <ActivityType>MoodleEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
@@ -1008,7 +987,7 @@
       <ActivityId>DigitalPath_Activity_Test_UC1</ActivityId>
       <IsCreated>true</IsCreated>
     </Activity>
-       <Activity>
+    <Activity>
       <Name>5c380911-7c31-4352-82df-5b002be77ebd</Name>
       <ActivityType>MyTest</ActivityType>
       <IsCreated>true</IsCreated>
@@ -1046,12 +1025,12 @@
   </ArrayOfActivity>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
-     <Product>
+    <Product>
       <Name>Digit Grade6</Name>
-       <ProductType>DigitalPath</ProductType>
-       <PeriodName>05162abf</PeriodName>
-       <IsCreated>true</IsCreated>
-     </Product>
+      <ProductType>DigitalPath</ProductType>
+      <PeriodName>05162abf</PeriodName>
+      <IsCreated>true</IsCreated>
+    </Product>
     <Product>
       <Name>Custom Content</Name>
       <ProductType>DigitalPathCustomContent</ProductType>

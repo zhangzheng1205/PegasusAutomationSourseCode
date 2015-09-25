@@ -61,11 +61,38 @@ namespace Pegasus.Pages.UI_Pages.Integration.Moodle {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string MoodleLoginPage_Custom_TimeToWait_Element {
+            get {
+                return ResourceManager.GetString("MoodleLoginPage_Custom_TimeToWait_Element", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to headermain.
+        /// </summary>
+        internal static string MoodleLoginPage_GetHeaderText_Class_Name {
+            get {
+                return ResourceManager.GetString("MoodleLoginPage_GetHeaderText_Class_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to loginbtn.
         /// </summary>
         internal static string MoodleLoginPage_LoginButton_Id_Value {
             get {
                 return ResourceManager.GetString("MoodleLoginPage_LoginButton_Id_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string MoodleLoginPage_LoginButton_Text_Value {
+            get {
+                return ResourceManager.GetString("MoodleLoginPage_LoginButton_Text_Value", resourceCulture);
             }
         }
         

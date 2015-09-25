@@ -238,7 +238,7 @@ When I login to Blackboard Cert as "BBStudent"
 
 #Purpose: User logout as Blackboard instructor to Blackboard portal
 Scenario: User logout as blackboard instructor
-When I login to Blackboard Cert as "BBInstructor"
+When I "Logout" of Blackboard as "BBInstructor"
 
 #Purpose: User login as MoodleKiosk instructor to D2L portal
 Scenario: User login as MoodleKiosk instructor

@@ -10,7 +10,7 @@ Then I should see the successfull message "LMS Synchronization is stopped" in "G
 When I select the cmenu "SynchronizewithLMS" of asset "GO! Excel Chapter 1 Skill-Based Exam (Scenario 1)"
 Then I should see the successfull message "LMS Synchronization is enabled" in "Gradebook" window
 
-#Purpose : Blackboard Instructor edit grade in View Submission in Pegasus
+#Purpose : Blackboard Instructor edit grade in gradebook in Pegasus
 #MyItLabInstructorCourse
 Scenario: Blackboard instructor Edit Grade in Pegasus
 When I enter into blackboard course "BBCourse"
@@ -29,6 +29,7 @@ And I click on the "Refresh Pearson Grades" link
 When I click on submit button
 And I click on the "Full Grade Center" link 
 Then I should see the score "PegasusEditedGrade" for "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in BlackBoard
+When I "Logout" of Blackboard as "BBInstructor"
 
 #Purpose : Blackbord student submit the activity
 Scenario: BBStudent submit activity
@@ -66,7 +67,7 @@ Then I should be displayed with "Home Page"
 When I click on the "Content" link
 And I click on the "Gradebook" link
 Then I should be on the "Gradebook" page
-When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Gradebook" by "CsSmsInstructor"
+When I select "Word Chapter 1 Grader Project [Assessment 3]" in the "Gradebook" by "CsSmsInstructor"
 Then I should see GBSync icon for "Word Chapter 1 Grader Project [Assessment 3]" activity
 And I should see the score "PegasusNewGrade" of "Word Chapter 1 Grader Project [Assessment 3]" activity for "BBStudent" in Pegasus
 When I "Close" from the "BBInstructor"
