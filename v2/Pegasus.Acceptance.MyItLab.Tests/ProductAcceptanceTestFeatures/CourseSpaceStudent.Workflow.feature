@@ -377,7 +377,7 @@ When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see a "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "71.3%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
+And I should see "73.4%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 
