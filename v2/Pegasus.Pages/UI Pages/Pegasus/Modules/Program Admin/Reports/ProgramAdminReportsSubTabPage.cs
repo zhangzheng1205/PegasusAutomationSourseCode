@@ -356,6 +356,27 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
 
         }
+//Chethan S G
+        public void SelectCheckBoxAllIntegrityVoilation()
+        {
+            //  Checks the 'Save Settings To My Reports' checkbox.
+            Logger.LogMethodEntry("ProgramAdminReportsSubTabPage",
+                "SelectCheckBoxAllIntegrityVoilation",
+            base.IsTakeScreenShotDuringEntryExit);
+            OpenSectionWindow();
+            base.FocusOnElementById(ProgramAdminReportsSubTabPageResource.
+              ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator);
+            base.WaitForElement(By.Id(ProgramAdminReportsSubTabPageResource.
+                ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator));
+            //Checks the checkbox
+            base.SelectCheckBoxById(ProgramAdminReportsSubTabPageResource.
+                ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator);
+            
+            Logger.LogMethodExit("ProgramAdminReportsSubTabPage",
+                "ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator",
+               base.IsTakeScreenShotDuringEntryExit);
+
+        }
 
         /// <summary>
         /// Select Section Based On Template.

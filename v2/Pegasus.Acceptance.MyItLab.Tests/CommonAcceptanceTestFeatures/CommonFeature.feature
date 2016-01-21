@@ -113,7 +113,7 @@ And I store user current date and time of the instructor
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 
 #User enter into the program course
-#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Program
+#Purpose: Login as Program Admin and Navigate to MyITLabOffice2013Program
 Scenario: User Login as Program Admin and Navigate MyITLabOffice2013Program Course
 Given I browsed the login url for "HedProgramAdmin"
 When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"

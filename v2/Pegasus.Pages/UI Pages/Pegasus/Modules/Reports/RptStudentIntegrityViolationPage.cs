@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             //Get the reports page name
             logger.LogMethodEntry("RptStudentIntegrityViolationPage", "GetPageName",
-              base.IsTakeScreenShotDuringEntryExit);           
+              base.IsTakeScreenShotDuringEntryExit);
             string getPageHeading = string.Empty;
             base.SwitchToLastOpenedWindow();
             try
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 getReportDetails = base.GetElementTextByXPath(String.Format(
                     RptStudentIntegrityViolationPageResource.
              RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator,
-                               rowNumber, reportColumn));                
+                               rowNumber, reportColumn));
             }
             catch (Exception e)
             {
@@ -174,6 +174,75 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             return isIntegrityViolated;
         }
 
+
+        /// <summary>
+        /// Helper method that identifies the row numbers matching user name in the report table and returns an array
+        /// </summary>
+        /// <param name="userName">First Name and Last name of student.</param>
+        /// <param name="reportColumn">Column number in report where the student name has to searched.</param>
+        /// <returns>If the student name found, return the array containing list of row numbers for the match found.</returns>
+                
+        public int[] GetIntegrityViolationReportDetailsByStudentName(string userName, int reportColumn)
+        {
+            //Get the Integrity Violated reports details
+            logger.LogMethodEntry("RptStudentIntegrityViolationPage",
+                "GetIntegrityViolationReportDetailsByStudentName",
+              base.IsTakeScreenShotDuringEntryExit);
+
+            
+            string getStudentname = string.Empty;
+            base.SwitchToLastOpenedWindow();
+            //check element present
+            bool abc = base.IsElementPresent(By.XPath(RptStudentIntegrityViolationPageResource.
+             RptStudentIntegrityViolationPageResource_Student_Count_XPath_Locator),10);
+            
+            //wait for element
+            base.WaitForElement(By.XPath(RptStudentIntegrityViolationPageResource.
+             RptStudentIntegrityViolationPageResource_Student_Count_XPath_Locator));
+
+            //Get the count of table rows in the report
+            int getCount =base.GetElementCountByXPath(RptStudentIntegrityViolationPageResource.
+             RptStudentIntegrityViolationPageResource_Student_Count_XPath_Locator);
+           
+            int[] rowNo = new int[getCount];
+
+            try
+            {
+                       
+           
+                for (int studentSearch = 1, position =0; studentSearch < getCount; studentSearch++)
+                {
+                    //Fetch the student name
+                   getStudentname = base.GetElementTextByXPath(
+                        String.Format(RptStudentIntegrityViolationPageResource.
+                       RptStudentIntegrityViolationPageResource_Student_Name_XPath_Locator,
+                       studentSearch));
+
+                    //if the student name found, return row number
+                    if (getStudentname == userName)
+                    {
+                        rowNo[position]= studentSearch;
+                        position++;
+
+                    }
+                  
+                 }
+            
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            
+            logger.LogMethodExit("RptStudentIntegrityViolationPage",
+                "GetIntegrityViolationReportDetailsByStudentName",
+              base.IsTakeScreenShotDuringEntryExit);
+           
+                    return rowNo;
+            
+                       
+        }
 
     }
 }

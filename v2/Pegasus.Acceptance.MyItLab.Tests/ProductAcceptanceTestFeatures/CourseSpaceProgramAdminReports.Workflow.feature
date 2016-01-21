@@ -119,6 +119,20 @@ Then I should see in row "7" for "CsSmsStudent" Expected Student for the Activit
 And I should see in row "8" for "CsSmsStudent" Expected Student for the Activity "Excel Chapter 1 Grader Project [Homework 3]" Integrity Violation is "Yes" for "Content Level" Integrity 
 And I close the "Student Integrity Violation" window
 
+#Purpose: To identify the "Integrity Violation" at Content and Document level by Program Admin
+#Test Case Id: peg-22921:Generate "integrity violation report" 
+#MyITLabOffice2013Program
+Scenario: To generate the "Integrity Violation" Report by Program Admin
+When I navigate to "Reports" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I click on "Integrity Violation" report link as "HedProgramAdmin"
+Then I should open "Options for Integrity Violation" criteria page as "HedProgramAdmin"
+When I Select All sections in Integrity Violation
+And I click on the "Run Report" button in reports by "HedProgramAdmin"
+Then I should see Integrity violation for "CsSmsStudent" at both levels
+#Then for "CsSmsStudent" check for "Content Level" Integrity 
+And I close the "Student Integrity Violation" window
+
 #Purpose: To view Availability of 'Certificate of Completion (Custom) Report Link Under Report Tab
 #Test Case Id: peg-2142
 #MyITLabOffice2013Program

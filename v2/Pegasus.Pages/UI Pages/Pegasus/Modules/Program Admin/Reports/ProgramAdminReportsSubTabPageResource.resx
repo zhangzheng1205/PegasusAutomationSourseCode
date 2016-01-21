@@ -147,6 +147,10 @@
   <data name="ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator" xml:space="preserve">
     <value>RPT_RUNRPT</value>
   </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator" xml:space="preserve">
+    <value>chkSelectAll</value>
+    <comment>for IVT report</comment>
+  </data>
   <data name="ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator" xml:space="preserve">
     <value>//a/span/span[text()='Select Sections']</value>
   </data>
@@ -185,6 +189,10 @@
   </data>
   <data name="ProgramAdmin_Page_Report_Window_Name" xml:space="preserve">
     <value>Program Administration</value>
+  </data>
+  <data name="ProgramAdmin_Page_Report_Window_Name_IVT" xml:space="preserve">
+    <value />
+    <comment>for IVT report</comment>
   </data>
   <data name="ProgramAdmin_Page_SaveSettingsToMyReport_Checkbox_Id_Locator" xml:space="preserve">
     <value>chkSaveReport</value>

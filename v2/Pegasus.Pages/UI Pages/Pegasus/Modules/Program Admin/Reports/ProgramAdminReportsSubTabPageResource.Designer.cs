@@ -80,6 +80,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string ProgramAdmin_Page_Report_Window_Name_IVT {
+            get {
+                return ResourceManager.GetString("ProgramAdmin_Page_Report_Window_Name_IVT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //span[@id=&apos;lblHeader&apos;].
         /// </summary>
         internal static string ProgramAdmin_Page_ReportCriteriaPage_Heading_Xpath_Locator {
@@ -203,6 +212,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports {
         internal static string ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator {
             get {
                 return ResourceManager.GetString("ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkSelectAll.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_All_Checkbox_locator", resourceCulture);
             }
         }
         

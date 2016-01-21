@@ -62,6 +62,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Program Administration.
+        /// </summary>
+        internal static string ProgramAdmin_Page_Report_Window_Name {
+            get {
+                return ResourceManager.GetString("ProgramAdmin_Page_Report_Window_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkSelectAll.
+        /// </summary>
+        internal static string Report_Resource_SelectAll_Value {
+            get {
+                return ResourceManager.GetString("Report_Resource_SelectAll_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  1.
         /// </summary>
         internal static string Report_Resource_Space_Value {

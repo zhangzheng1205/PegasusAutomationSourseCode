@@ -129,4 +129,10 @@
   <data name="RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator" xml:space="preserve">
     <value>//table[@class='cssTblIvActivity']/tbody/tr[{0}]/td[{1}]</value>
   </data>
+  <data name="RptStudentIntegrityViolationPageResource_Student_Count_XPath_Locator" xml:space="preserve">
+    <value>//table/tbody/tr/td[@class='cssExpStudentName']</value>
+  </data>
+  <data name="RptStudentIntegrityViolationPageResource_Student_Name_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='DivGrid']/table/tbody/tr[{0}]/td[2]</value>
+  </data>
 </root>

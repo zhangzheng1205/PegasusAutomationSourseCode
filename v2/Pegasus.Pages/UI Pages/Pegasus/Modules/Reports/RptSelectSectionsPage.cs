@@ -174,6 +174,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Check Select sections popup closed                
                 IsPopUpClosed(Convert.ToInt32(RptSelectSectionsPageResource.
                     RptSelectSections_Page_Window_Count));
+                
             }
             catch (Exception e)
             {

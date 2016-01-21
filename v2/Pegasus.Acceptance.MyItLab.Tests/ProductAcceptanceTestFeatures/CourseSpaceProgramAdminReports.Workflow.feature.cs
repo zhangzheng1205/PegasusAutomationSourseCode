@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceProgramAdminReport", "          As a Program Admin\n\t   I want to manage all the coursespace admin repor" +
-                    "t related usecases \n\t   so that I would validate all the coursespace admin repor" +
-                    "t related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceProgramAdminReport", "          As a Program Admin\r\n\t   I want to manage all the coursespace admin repo" +
+                    "rt related usecases \r\n\t   so that I would validate all the coursespace admin rep" +
+                    "ort related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -348,13 +348,11 @@ testRunner.And("I close the \"Student Integrity Violation\" window", ((string)(n
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To View Availability of \'Certificate of Completion (Custom) Report Link Under Rep" +
-            "ort Tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To generate the \"Integrity Violation\" Report by Program Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceProgramAdminReport")]
-        public virtual void ToViewAvailabilityOfCertificateOfCompletionCustomReportLinkUnderReportTab()
+        public virtual void ToGenerateTheIntegrityViolationReportByProgramAdmin()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To View Availability of \'Certificate of Completion (Custom) Report Link Under Rep" +
-                    "ort Tab", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To generate the \"Integrity Violation\" Report by Program Admin", ((string[])(null)));
 #line 125
 this.ScenarioSetup(scenarioInfo);
 #line 126
@@ -362,10 +360,41 @@ testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\"
 #line 127
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 128
-testRunner.And("I should see \"Certificate of Completion (Custom)\" report under report page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on \"Integrity Violation\" report link as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 129
-testRunner.When("I click on \"Certificate of Completion (Custom)\" report link as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should open \"Options for Integrity Violation\" criteria page as \"HedProgramAdmin" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 130
+testRunner.When("I Select All sections in Integrity Violation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 131
+testRunner.And("I click on the \"Run Report\" button in reports by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 132
+testRunner.Then("I should see Integrity violation for \"CsSmsStudent\" at both levels", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 134
+testRunner.And("I close the \"Student Integrity Violation\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To View Availability of \'Certificate of Completion (Custom) Report Link Under Rep" +
+            "ort Tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceProgramAdminReport")]
+        public virtual void ToViewAvailabilityOfCertificateOfCompletionCustomReportLinkUnderReportTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To View Availability of \'Certificate of Completion (Custom) Report Link Under Rep" +
+                    "ort Tab", ((string[])(null)));
+#line 139
+this.ScenarioSetup(scenarioInfo);
+#line 140
+testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 141
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 142
+testRunner.And("I should see \"Certificate of Completion (Custom)\" report under report page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 143
+testRunner.When("I click on \"Certificate of Completion (Custom)\" report link as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 144
 testRunner.Then("I should see \"Options for Certificate of Completion (Custom)\" header present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

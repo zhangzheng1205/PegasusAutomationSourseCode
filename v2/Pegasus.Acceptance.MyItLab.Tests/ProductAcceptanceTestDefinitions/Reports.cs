@@ -9,6 +9,7 @@ using Pegasus.Automation.DataTransferObjects;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.CommonResource;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports;
+using Pegasus.Pages.Exceptions;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -867,7 +868,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
          base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
+ // To be modified for all section selections in integrity violation report
+        [When(@"I Select All sections in Integrity Violation")]
+        public void WhenISelectAllSectionsInIntegrityViolation()
+        {
+            Logger.LogMethodEntry("Reports",
+                                  "WhenISelectAllSectionsInIntegrityViolation",
+          base.IsTakeScreenShotDuringEntryExit);
+                              
+            new ProgramAdminReportsSubTabPage().SelectCheckBoxAllIntegrityVoilation();
+           
+            new RptSelectSectionsPage().ClickAddandCloseButton();
+            base.WaitUntilWindowLoads(ReportsResource.
+                ProgramAdmin_Page_Report_Window_Name);
+                     
+            Logger.LogMethodExit("Reports",
+                "WhenISelectAllSectionsInIntegrityViolation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+              /// <summary>
         /// Selects a section under a template.
         /// </summary>
         /// <param name="sectionNameTypeEnum">This is section name enum.</param>
@@ -1798,9 +1818,108 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Reports",
                "VerifyLearningAidFrequencyReportBySectionInstructor",
                base.IsTakeScreenShotDuringEntryExit);
-        }      
+        }
+
+
+/// <summary>
+        /// This method verifies the integrity violation report details for Program admin. 
+        /// Accepts student login name as input, searches the student name in report page and 
+        /// Asserts violation at both Document and Content level
+/// </summary>
+        /// <param name="userName">Name of the student for whom violation is detected.</param>
+        /// <param name="integrityLevel">Check of integrity level- document or content level.</param>
+///Author: Chethan SG
+///Date: 12/01/2016
+
+        [Then(@"I should see Integrity violation for ""(.*)"" at both levels")]
+        public void IntegrityViolationAtBothLevels(User.UserTypeEnum userName)
+        {
+            
+            Logger.LogMethodEntry("Reports",
+                "IntegrityViolationCheck",
+                  base.IsTakeScreenShotDuringEntryExit);
+            base.SelectDefaultWindow();
+
+            int i, docFlag=0, docCont =0;
+            
+            //Get user login details
+            User user = User.Get(userName);
+          
+            //Concatinate first name and last name of user logged in to a string
+            string fullName =string.Format(user.FirstName + " " + user.LastName);
+
+            //Send the user name to a helper function that identifies the row numbers matching user name in 
+            //the report table and returns an array. The array contains list of row numbers for the match found
+            //2 represents the column number where user names are stored in the report table
+
+            var rowNumber = new RptStudentIntegrityViolationPage().GetIntegrityViolationReportDetailsByStudentName(fullName, 2);
+
+            //find the length of array to iterate through
+            var length = rowNumber.Length;
+           
+            //Verify Expected student name
+            Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.
+                Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(user.FirstName + " " + user.LastName,
+                   new RptStudentIntegrityViolationPage().
+            GetIntegrityViolationReportDetails(rowNumber[0], 2)));
+
+          
+                       
+        
+            //For each row number in array, match the integrity violation type
+            //8 represents the column name in the report which contents information on violation type
+            //This code block calls another helper function that accepts row number and column number and returns back
+            //the name present in that position, which is then used to match with the expected parameter
+try
+{
+           for (i = 0; i < length; i++)
+            {
+
+             if (new RptStudentIntegrityViolationPage().
+                            GetIntegrityViolationReportDetails(rowNumber[i], 8) == "Document Level" )
+                
+             {     //case "Document Level":
+                        Logger.LogAssertion("VerifyIntegrityLevel",
+                                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                        Assert.AreEqual("Document Level", new RptStudentIntegrityViolationPage().
+                                 GetIntegrityViolationReportDetails(rowNumber[i], 8)));
+                break;
+                    }
+           } //case "Content Level":
+
+            for (i = 0; i < length; i++)
+            {
+                 if (new RptStudentIntegrityViolationPage().
+                            GetIntegrityViolationReportDetails(rowNumber[i], 8) == "Content Level" )
+                 {  
+                     Logger.LogAssertion("VerifyIntegrityLevel",
+                                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                        Assert.AreEqual("Content Level", new RptStudentIntegrityViolationPage().
+                                 GetIntegrityViolationReportDetails(rowNumber[i], 8)));
+                   break ;
+                 }
+                }
+               
+              
+
+           }
+
+           
+
+          
+                catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+                Logger.LogMethodExit("Reports",
+                       "IntegrityViolationCheck",
+                       base.IsTakeScreenShotDuringEntryExit);
+                
+             }
+        }
 
     }
 
-}
+
 
