@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.MinimizedBuildVerificationTest.MIL.Sim5Submission" storage="d:\master_27_may\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.minimizedbuildverificationtest.mil.sim5submission.orderedtest" id="521e8aac-89b0-497d-8e79-995d5bd36f78" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Execution id="183f6f00-9d47-4491-9485-e6aa70280e18" />
+  <TestLinks>
+    <TestLink id="3a7c05b4-9a3d-79a9-5c7d-88a2e8f4e9c3" name="UserLoginAsSMSStudentAndNavigateToMyITLabOffice2013SectionCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="ffb4d275-cfe0-1399-82c7-27eab96a9c96" name="StudentScoring70InSIM5PowerpointActivity" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="69731675-54c3-148e-88a8-245ac3d6cd76" name="UserLogoutAsSMSStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

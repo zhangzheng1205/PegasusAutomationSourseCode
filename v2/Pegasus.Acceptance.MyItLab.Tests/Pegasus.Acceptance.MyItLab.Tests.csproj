@@ -425,8 +425,17 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.Cert.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.GraderITSubmission.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Assignment_CourseCreation.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.IntegrityViolationReport.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Sim5Submission.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

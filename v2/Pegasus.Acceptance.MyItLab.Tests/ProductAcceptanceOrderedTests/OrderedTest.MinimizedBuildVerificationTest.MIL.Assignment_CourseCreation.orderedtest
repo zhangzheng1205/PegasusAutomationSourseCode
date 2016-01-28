@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.MinimizedBuildVerificationTest.MIL.Assignment_CourseCreation" storage="d:\master_27_may\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.minimizedbuildverificationtest.mil.assignment_coursecreation.orderedtest" id="d881779c-f73c-45a9-9ae7-1cfe9df4db4a" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Execution id="84aadfeb-8e49-4338-abdc-717cc51638b8" />
+  <TestLinks>
+    <TestLink id="a2778d39-5cc1-43a2-b7c1-da26ad17ea9c" name="orderedtest.assignmentcalendar.bvt.myitlab" storage="orderedtest.assignmentcalendar.bvt.myitlab.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="8a976fd2-214e-4f4c-a081-4273f7209064" name="orderedtest.programadmin.bvt.myitlab" storage="orderedtest.programadmin.bvt.myitlab.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
