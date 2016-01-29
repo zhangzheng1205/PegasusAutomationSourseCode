@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.Minimized.BuildVerificationTest.DP" storage="d:\master_27_may\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.minimized.buildverificationtest.dp.orderedtest" id="68c47f17-d5a5-4eb7-8425-9402849d0ead" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="d22f458e-d1a1-4ba7-aaaf-df27274f7d42" name="OrderedTest.Minimized.PlannerAssignment.BVT.DP" storage="orderedtest.minimized.plannerassignment.bvt.dp.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="00b72e43-ed24-4ac9-bfa1-e343623b2fd0" name="OrderedTest.Minimized.CourseSpaceTeacherFunctionalities.BVT.DP" storage="orderedtest.minimized.coursespaceteacherfunctionalities.bvt.dp.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="2cfc6150-44dc-48c4-9139-fa07e4075ebd" name="OrderedTest.Minimized.CSStudentGradebook.BVT.DP" storage="orderedtest.minimized.csstudentgradebook.bvt.dp.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
