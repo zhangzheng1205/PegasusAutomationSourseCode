@@ -11,6 +11,7 @@ using System.Threading;
 using TechTalk.SpecFlow;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Globalization;
+using Microsoft.VisualStudio.QualityTools.UnitTestFramework;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
