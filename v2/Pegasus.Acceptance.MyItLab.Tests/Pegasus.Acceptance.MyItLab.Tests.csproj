@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\CreateProgram.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\D2LIntegration.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\eCollegeIntegration.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LaunchActivity.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ManageAnnouncement.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ApproveCourse.cs" />
@@ -286,6 +287,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>D2LIntegration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\eCollegeCourseAction.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eCollegeCourseAction.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -656,6 +662,10 @@
     <None Include="ProductAcceptanceTestFeatures\D2LIntegration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>D2LIntegration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\eCollegeCourseAction.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>eCollegeCourseAction.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

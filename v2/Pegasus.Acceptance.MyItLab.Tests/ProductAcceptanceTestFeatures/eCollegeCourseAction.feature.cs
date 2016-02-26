@@ -19,21 +19,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CourseSpaceInstructorEnrollementFeature
+    public partial class ECollegeCourseActionFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "CourseSpaceInstructorEnrollement.Workflow.feature"
+#line 1 "eCollegeCourseAction.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructor Enrollement", "                As a CS Instructor \r\n\t\t\tI want to manage all the coursespace Inst" +
-                    "ructor related usecases \r\n\t\t\tso that I would validate all the coursespace Instru" +
-                    "ctor scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "eCollegeCourseAction", "", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -48,9 +46,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CourseSpaceInstructor Enrollement")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "eCollegeCourseAction")))
             {
-                Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures.CourseSpaceInstructorEnrollementFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures.ECollegeCourseActionFeature.FeatureSetup(null);
             }
         }
         
@@ -71,17 +69,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Enroll Instructor to Section by SMS Instructor")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor Enrollement")]
-        public virtual void EnrollInstructorToSectionBySMSInstructor()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor selecting a Academics PSH link in home Page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorSelectingAAcademicsPSHLinkInHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Instructor to Section by SMS Instructor", ((string[])(null)));
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor selecting a Academics PSH link in home Page", ((string[])(null)));
+#line 5
 this.ScenarioSetup(scenarioInfo);
-#line 9
-testRunner.When("I enroll SMS Instructor in \"MyITLabOffice2013Program\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should see enrolled \"MyITLabOffice2013Program\" Section in Global Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 6
+testRunner.Given("I am on the home PSH of eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+testRunner.When("I select \"Academics PSH\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+testRunner.Then("I should see \"Academics PSH\" Page contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
