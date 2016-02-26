@@ -164,7 +164,8 @@ namespace Pearson.Pegasus.TestAutomation.
             CanvasDirectStudent = 91,
             MoodleDirectTeacher = 92,
             MoodleDirectStudent = 93,
-
+            D2LKioskTeacher1 = 94,
+            D2LKioskStudent1 = 95,
             #endregion
         }
 

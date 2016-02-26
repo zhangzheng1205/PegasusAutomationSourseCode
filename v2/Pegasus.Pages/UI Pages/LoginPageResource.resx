@@ -304,7 +304,7 @@
     <value>6000</value>
   </data>
   <data name="LoginPage_ECollegeAdmin_RootURL_Config_Value" xml:space="preserve">
-    <value>ECollegeAdminURL</value>
+    <value>eCollegeURLRootTestEnvironment</value>
   </data>
   <data name="LoginPage_SMSProjectWorkPlace_RootURL_Value" xml:space="preserve">
     <value>SMSProjectWorkplaceURL</value>

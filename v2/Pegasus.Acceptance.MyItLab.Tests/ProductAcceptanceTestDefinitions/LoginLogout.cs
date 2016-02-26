@@ -9,6 +9,8 @@ using Pegasus.Pages.UI_Pages.Integration.Blackboard;
 using System.Globalization;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Integration.Moodle;
+using Pegasus.Pages.UI_Pages.Integration.D2L;
+
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -17,7 +19,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
     /// and handles Pegasus LoginLogout Page Actions
     /// </summary>
     [Binding]
-    public class LoginLogout : PegasusBaseTestFixture
+    public class LoginLogout : BasePage
     {
         /// <summary>
         /// The instance for Login Page
@@ -412,22 +414,149 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
+       
+/// <summary>
+/// #Feature: Login to D2L as an instructor
+//      Scenario: User logging into D2L as a instructor
+//      Given Instructor has browsed the url of "D2LKioskTeacher1"
+//	    When "D2LKioskTeacher1" signs in using a valid Login credentials
+//      Then instructor should be sucessfully signed in
+/// </summary>
+/// <param name="userType"></param>
+
+        //Given Instructor has browsed the url of "D2LKioskTeacher1"
+       
+        [Given(@"Instructor has browsed the url of ""(.*)""")]
+        [Given(@"Student has browsed the url of ""(.*)""")]
+               public void BrowseD2L(string userType)
         {
+
+            Logger.LogMethodEntry("LoginLogout", "BrowseD2L",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Pick Url based on user type, convert userType to enum to obtain the browsing page
+           
+            loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
+                Enum.Parse(typeof(User.UserTypeEnum), userType));
+
+            //Flag successful browsing of page
+            Boolean isBasePegasusUrlBrowsedSuccessful =
+                loginPage.IsUrlBrowsedSuccessful();
+           
+            //Check Is Url Browsed Successfully
+            if (isBasePegasusUrlBrowsedSuccessful)
+            {
+                //Open Url in Browser
+                loginPage.GoToLoginUrl();
+            }
+            Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
+ //	    When "D2LKioskTeacher1" signs in using a valid Login credentials
+
+        [When(@"""(.*)"" signs in using a valid Login credentials")]
+        public void D2LInstructorLogin(User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("LoginLogout", "D2LInstructorLogin",
+                base.IsTakeScreenShotDuringEntryExit);
+            
+            User user = User.Get(userType);
+
+         new D2LLoginPage().LoginToD2L(user.Name, user.Password);
+
+
+          Logger.LogMethodEntry("LoginLogout", "D2LInstructorLogin",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+//      Then user should be sucessfully signed in
+
+        [Then(@"user should be sucessfully signed in")]
+        public void SucessfullySignedIn()
+        {
+           
+            Logger.LogMethodEntry("LoginLogout", "SucessfullySignedIn",
+                base.IsTakeScreenShotDuringEntryExit);
+
+              
+            Logger.LogAssertion("VerifyLoginSuccess",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                    Assert.AreNotEqual(false, new D2LLoginPage().IsUserLoggedInSuccessFully())); 
+
+            Logger.LogMethodExit("LoginLogout", "SucessfullySignedIn",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        //eCollege user login to eCollege
+        [Given(@"User has browsed the url of eCollege as ""(.*)""")]
+
+        public void BrowseeCollege(string userType)
         {
 
+            Logger.LogMethodEntry("LoginLogout", "BrowseeCollege",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Pick Url based on user type, convert userType to enum to obtain the browsing page
+
+            loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
+                Enum.Parse(typeof(User.UserTypeEnum), userType));
+
+            //Flag successful browsing of page
+            Boolean isBasePegasusUrlBrowsedSuccessful =
+                loginPage.IsUrlBrowsedSuccessful();
+
+            //Check Is Url Browsed Successfully
+            if (isBasePegasusUrlBrowsedSuccessful)
+            {
+                //Open Url in Browser
+                loginPage.GoToLoginUrl();
+            }
+            Logger.LogMethodExit("LoginLogout", "BrowseeCollege",
+                base.IsTakeScreenShotDuringEntryExit);
+
         }
+
+
+        // When "ECollegeTeacher" logs in using a valid Login credentials
+
+        [When(@"""(.*)"" logs in using a valid Login credentials")]
+       public void eCollegeUserLogin(User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("LoginLogout", "eCollegeUserLogin",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            //User user = User.Get(userType);
+
+            new ECollegeLoginPage().ECollegeUserLogin(userType);
+
+
+
+            Logger.LogMethodEntry("LoginLogout", "eCollegeUserLogin",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        //Then user should be sucessfully signed into eCollege
+
+        [Then(@"user should be sucessfully signed into eCollege")]
+        public void SucessfullySignedIntoECollege()
+        {
+            Logger.LogMethodExit("LoginLogout", "SucessfullySignedIntoECollege",
+                base.IsTakeScreenShotDuringEntryExit);
+            //IWebElement toolBar = base.GetWebElementPropertiesByCssSelector(".WelcomeMessageLink[title='Signoff']");
+
+            base.WaitForElementDisplayedInUi(By.CssSelector(".WelcomeMessageLink[title='Signoff']"));
+
+            bool signOff = base.IsElementPresent(By.CssSelector(".WelcomeMessageLink[title='Signoff']"));
+
+            Logger.LogAssertion("SucessfullySignedIntoECollege",
+              ScenarioContext.Current.ScenarioInfo.Title, () =>
+                  Assert.AreNotEqual(false, signOff));
+
+            Logger.LogMethodExit("LoginLogout", "SucessfullySignedIntoECollege",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+   
     }
 }

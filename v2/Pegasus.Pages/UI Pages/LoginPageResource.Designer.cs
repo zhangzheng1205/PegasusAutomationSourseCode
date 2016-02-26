@@ -628,7 +628,7 @@ namespace Pegasus.Pages.UI_Pages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ECollegeAdminURL.
+        ///   Looks up a localized string similar to eCollegeURLRootTestEnvironment.
         /// </summary>
         internal static string LoginPage_ECollegeAdmin_RootURL_Config_Value {
             get {

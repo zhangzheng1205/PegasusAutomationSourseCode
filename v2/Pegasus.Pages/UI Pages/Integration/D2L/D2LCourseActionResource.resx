@@ -117,43 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Course_Enrollment" xml:space="preserve">
-    <value>Course Enrollment</value>
+  <data name="D2L_CourseSelection_Dropdown_Course_Locator" xml:space="preserve">
+    <value>a[id^=d2l]</value>
   </data>
-  <data name="LoginLogout_Custom_TimeToWait_Element" xml:space="preserve">
-    <value>5</value>
+  <data name="D2L_CourseSelection_Dropdown_Id_Locator" xml:space="preserve">
+    <value>//*[@id='d2l_lp_minibar_courseselector']/a/span[3]</value>
   </data>
-  <data name="LoginLogout_Password_TextBox_Id_Locator" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="LoginLogout_Signout_Link_Title_Locator" xml:space="preserve">
-    <value>Sign out</value>
-  </data>
-  <data name="LoginLogout_SignOut_Url_frmLogOut_Keyword" xml:space="preserve">
-    <value>frmLogOut</value>
-  </data>
-  <data name="LoginLogout_SignOut_Url_Logout_Keyword" xml:space="preserve">
-    <value>logout</value>
-  </data>
-  <data name="LoginLogout_Success_Page_WSAdmin" xml:space="preserve">
-    <value>/Modules/Admin/frmAdminTool.aspx</value>
-  </data>
-  <data name="LoginLogout_UserName_TextBox" xml:space="preserve">
-    <value>username</value>
-  </data>
-  <data name="LoginLogout_Window_Name_Title" xml:space="preserve">
-    <value>Pegasus Login</value>
-  </data>
-  <data name="Login_Test_Case_Name" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="Login_URL_Prefix" xml:space="preserve">
-    <value>Login_URL_Hed_</value>
-  </data>
-  <data name="SignOut_Test_Case_Name" xml:space="preserve">
-    <value>SignOut</value>
-  </data>
-  <data name="D2LLoginPage_Window_Title" xml:space="preserve">
-    <value>Login - HE Brightspace</value>
+  <data name="D2L_Course_Action_Homepage_Title_Id_Locator" xml:space="preserve">
+    <value>Instructor Dashboard</value>
   </data>
 </root>

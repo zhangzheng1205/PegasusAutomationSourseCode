@@ -784,6 +784,28 @@
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
     </User>
+    <User>
+      <Name>Ecollege_automtion_instructor</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Chethan</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SG</LastName>
+      <UserType>ECollegeTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Ecollege_auto_student</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Chethan</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SG</LastName>
+      <UserType>ECollegeStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProgram>

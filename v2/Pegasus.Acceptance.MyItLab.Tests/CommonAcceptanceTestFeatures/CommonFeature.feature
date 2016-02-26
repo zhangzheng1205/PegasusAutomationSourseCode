@@ -251,3 +251,27 @@ Scenario: User login as MoodleKiosk student
 Given I browsed the URL of "MoodleKioskStduent"
 When I login to MoodleKiosk as "MoodleKioskStduent"
 Then I should be logged in successfully as "MoodleKioskStduent"
+
+#Feature: Login to D2L as an instructor
+Scenario: User logging into D2L as a instructor
+Given Instructor has browsed the url of "D2LKioskTeacher1"
+When "D2LKioskTeacher1" signs in using a valid Login credentials
+Then user should be sucessfully signed in
+
+#Feature: Login to D2L as a student
+Scenario: User logging into D2L as a student
+Given Student has browsed the url of "D2LKioskStudent1"
+When "D2LKioskStudent1" signs in using a valid Login credentials
+Then user should be sucessfully signed in
+
+#Feature: Login to eCollege as an instructor
+Scenario: eCollege User logging into eCollege as a instructor
+Given User has browsed the url of eCollege as "ECollegeTeacher"
+When "ECollegeTeacher" logs in using a valid Login credentials
+Then user should be sucessfully signed into eCollege
+
+#Feature: Login to eCollege as a student
+Scenario: eCollege User logging into eCollege as a student
+Given User has browsed the url of eCollege as "ECollegeStudent"
+When "ECollegeStudent" logs in using a valid Login credentials
+Then user should be sucessfully signed into eCollege

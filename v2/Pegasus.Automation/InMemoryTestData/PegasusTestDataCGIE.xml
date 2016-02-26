@@ -861,6 +861,19 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
 
+    <!--Hard coded Users data for "D2L Integration" Product.-->
+    <User>
+      <Name>d2lkiosk.ins</Name>
+      <Password>Password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Unknown</FirstName>
+      <MiddleName>Unknown</MiddleName>
+      <LastName>Unknown</LastName>
+      <UserType>D2LKioskTeacher1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+
     <!--Hard coded Users data for "Rumba".-->
     <User>
       <Name>radmin</Name>

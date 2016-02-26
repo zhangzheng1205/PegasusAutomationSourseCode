@@ -232,6 +232,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to D2LKioskUrlRoot1PPE.
+        /// </summary>
+        internal static string D2LKioskUrlRoot1PPE_Key {
+            get {
+                return ResourceManager.GetString("D2LKioskUrlRoot1PPE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to D2LKioskUrlRootCGIE.
         /// </summary>
         internal static string D2LKioskUrlRootCGIE_Key {
@@ -255,6 +264,15 @@ namespace Pegasus.Automation {
         internal static string D2LKioskUrlRootVCD_Key {
             get {
                 return ResourceManager.GetString("D2LKioskUrlRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to eCollegeURLRootTestEnvironment.
+        /// </summary>
+        internal static string eCollegeURLRootTE_key {
+            get {
+                return ResourceManager.GetString("eCollegeURLRootTE_key", resourceCulture);
             }
         }
         

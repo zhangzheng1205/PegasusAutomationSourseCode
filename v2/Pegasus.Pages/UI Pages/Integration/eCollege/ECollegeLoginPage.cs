@@ -34,6 +34,15 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Get User From Memory
                 User user = User.Get(userTypeEnum);
+                base.WaitForElementDisplayedInUi(By.CssSelector(".navOff>a"), 10);
+                string check = base.GetElementTextByCssSelector(".navOff>a");
+
+                IWebElement login = base.GetWebElementPropertiesByCssSelector(".navOff>a");
+
+                ClickByJavaScriptExecutor(login);
+
+                base.WaitForElementDisplayedInUi(By.Id("Username"));
+
                 //Select Login Window
                 this.SelectTPICertLoginWindow();
                 //Enter Username

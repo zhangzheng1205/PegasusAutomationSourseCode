@@ -71,6 +71,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login - HE Brightspace.
+        /// </summary>
+        internal static string D2LLoginPage_Window_Title {
+            get {
+                return ResourceManager.GetString("D2LLoginPage_Window_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string Login_Test_Case_Name {

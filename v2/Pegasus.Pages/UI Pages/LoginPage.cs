@@ -168,6 +168,14 @@ namespace Pegasus.Pages.UI_Pages
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.D2LKioskUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
+                    //D2L 10.5 URL
+                    case User.UserTypeEnum.D2LKioskStudent1:
+                    case User.UserTypeEnum.D2LKioskTeacher1:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.D2LKioskUrlRoot1);
+                        base.DeleteAllBrowserCookies();
+                        break;
+
+
                     //Get Canvas Kiosk URL
                     case User.UserTypeEnum.CanvasKioskStudent:
                     case User.UserTypeEnum.CanvasKioskTeacher:
@@ -1275,5 +1283,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
+
+       
     }
 }

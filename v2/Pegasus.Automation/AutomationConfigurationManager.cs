@@ -735,5 +735,65 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return pctInsUrl;
         }
 
+        // for D2L 10.5
+        public static string D2LKioskUrlRoot1
+        {
+            get { return GetD2LKioskUrlRoot1(); }
+        }
+
+        private static string GetD2LKioskUrlRoot1()
+        {
+            string applicationD2LUrl;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+               // case "VCD":
+              //  case "VCDNP":
+              //      applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootVCD_Key];
+               //     break;
+                //case "CGIE":
+                case "PPE":
+                    applicationD2LUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRoot1PPE_Key];
+                    break;
+               // case "PROD":
+                //    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootPROD_Key];
+              //      break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationD2LUrl;
+        }
+    
+
+
+    //for eCollege
+
+ 
+        public static string eCollegeURLRoot
+        {
+            get { return GeteCollegeURLRoot(); }
+        }
+
+        private static string GeteCollegeURLRoot()
+        {
+            string applicationeCollegeUrl;
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            {
+               case "VCD":
+              //  case "VCDNP":
+              //      applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootVCD_Key];
+               //     break;
+               case "CGIE":
+                   applicationeCollegeUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.eCollegeURLRootTE_key];
+                //case "PPE":
+                    //applicationeCollegeUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRoot1PPE_Key];
+                    break;
+               // case "PROD":
+                //    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootPROD_Key];
+              //      break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationeCollegeUrl;
+        }
     }
 }

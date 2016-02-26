@@ -89,6 +89,7 @@
       <DependentUpon>CreateActivityResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\CreateProgram.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\D2LIntegration.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LaunchActivity.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ManageAnnouncement.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ApproveCourse.cs" />
@@ -281,6 +282,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CTGPublisherAdminAdministrator.Workflow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\D2LIntegration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>D2LIntegration.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -425,17 +431,17 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.Cert.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.GraderITSubmission.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Assignment_CourseCreation.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.IntegrityViolationReport.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Sim5Submission.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="ProductAcceptanceOrderedTests\D2LKioskInstructor.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\D2LKioskStudent.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\eCollegeInstructorFlow.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -646,6 +652,10 @@
     <None Include="ProductAcceptanceTestFeatures\CTGPublisherAdminAdministrator.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CTGPublisherAdminAdministrator.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\D2LIntegration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>D2LIntegration.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
