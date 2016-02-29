@@ -85,6 +85,38 @@ testRunner.Then("I should see \"Academics PSH\" Page contents", ((string)(null))
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor selecting a Pegasus link in Academics PSH")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorSelectingAPegasusLinkInAcademicsPSH()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor selecting a Pegasus link in Academics PSH", ((string[])(null)));
+#line 10
+this.ScenarioSetup(scenarioInfo);
+#line 12
+testRunner.When("I select \"MIL_Course\" Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+testRunner.Then("I should see \"MIL_Course\" contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor selecting a Pegasus Grades")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorSelectingAPegasusGrades()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor selecting a Pegasus Grades", ((string[])(null)));
+#line 15
+this.ScenarioSetup(scenarioInfo);
+#line 16
+testRunner.When("I select \"Grades\" of Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+testRunner.Then("I should see Pegasus \"Gradebook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
