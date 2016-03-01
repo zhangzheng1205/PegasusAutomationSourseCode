@@ -117,6 +117,22 @@ testRunner.Then("I should see Pegasus \"Gradebook\"", ((string)(null)), ((TechTa
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor searching Pegasus activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorSearchingPegasusActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor searching Pegasus activity", ((string[])(null)));
+#line 19
+this.ScenarioSetup(scenarioInfo);
+#line 20
+testRunner.When("I search \"Access Chapter 1 Grader Project [Assessment 3]\" of Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+testRunner.Then("I should see \"Access Chapter 1 Grader Project [Assessment 3]\" in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -16,3 +16,6 @@ Scenario: eCollege Instructor selecting a Pegasus Grades
 When I select "Grades" of Pegasus course
 Then I should see Pegasus "Gradebook"
 
+Scenario: eCollege Instructor searching Pegasus activity
+When I search "Access Chapter 1 Grader Project [Assessment 3]" of Pegasus course
+Then I should see "Access Chapter 1 Grader Project [Assessment 3]" in Gradebook
