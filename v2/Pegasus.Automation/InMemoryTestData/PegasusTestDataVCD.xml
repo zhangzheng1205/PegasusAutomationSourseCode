@@ -799,9 +799,9 @@
       <Name>Ecollege_auto_student</Name>
       <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Chethan</FirstName>
+      <FirstName>Student</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>SG</LastName>
+      <LastName>Ecollege</LastName>
       <UserType>ECollegeStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>

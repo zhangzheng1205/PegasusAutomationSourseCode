@@ -133,6 +133,58 @@ testRunner.Then("I should see \"Access Chapter 1 Grader Project [Assessment 3]\"
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor editing score of Pegasus activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorEditingScoreOfPegasusActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor editing score of Pegasus activity", ((string[])(null)));
+#line 23
+this.ScenarioSetup(scenarioInfo);
+#line 24
+testRunner.When("instructor sets score for \"Access Chapter 1 Grader Project [Assessment 3]\" activi" +
+                    "ty for \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+testRunner.Then("I should see edited score for \"Access Chapter 1 Grader Project [Assessment 3]\" in" +
+                    " Gradebook for \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor closing Pegasus Page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorClosingPegasusPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor closing Pegasus Page", ((string[])(null)));
+#line 27
+this.ScenarioSetup(scenarioInfo);
+#line 28
+testRunner.When("instructor closes \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+testRunner.Then("I should not see \"Gradebook\" page opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Instructor validating GradeSynch in Academics PSH")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeInstructorValidatingGradeSynchInAcademicsPSH()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Instructor validating GradeSynch in Academics PSH", ((string[])(null)));
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 32
+testRunner.Given("I am on the \"DotNextLaunch\" page of eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+testRunner.When("I select \"Gradebook\" of eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
+testRunner.Then("I should see grade synch for student \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

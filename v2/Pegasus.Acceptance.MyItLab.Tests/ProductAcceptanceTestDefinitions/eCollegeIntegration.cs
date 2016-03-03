@@ -11,6 +11,8 @@ using Pegasus.Pages.Exceptions;
 using System.Configuration;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
 using Pegasus.Pages.UI_Pages;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using System.Collections.ObjectModel;
 
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
@@ -367,74 +369,20 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
     {
         logger.LogMethodEntry("eCollegeIntegration", "ActivityOnPegasusGradebookPage",
             base.IsTakeScreenShotDuringEntryExit);
-
+        string t = "";
         try
         {
-            //base.WaitForElementDisplayedInUi(By.Id("RightTD"));
-
+           
             base.SwitchToIFrameById("srcGBFrame");
-
-            //bool y = base.IsElementPresent(By.CssSelector("a.GbHeaderLink.TextInListViews[title='Chapter 1 Exam']"));
 
             base.WaitForElement(By.Id("GBGridHeaderTable"));
 
-            int nuOfRows = base.GetElementCountByCssSelector("td.GBcolumnCaptionrow2");
+            int nuOfRows = base.GetElementCountByCssSelector("#FirstTr>td");
 
-            IWebElement g = base.GetWebElementPropertiesByCssSelector("a.GbHeaderLink.TextInListViews");
-
-            bool v = base.IsElementPresent(By.CssSelector("td.GBcolumnCaptionrow2:nth-child(1)>div>span>a"),20);
-            string b0;
-            
+            IWebElement c,d,position,cmenu;
+           
             for (int i = 1; i < nuOfRows; i++)
 			{
-
-                g = base.GetWebElementPropertiesByCssSelector(string.Format("td.GBcolumnCaptionrow2:nth-child({0})>div>span>a",i));
-                b0=g.GetAttribute("title");
-
-                if (b0 == p0)
-                    break;
-
-			}
-            
-
-        }
-
-        catch (Exception e)
-        {
-            ExceptionHandler.HandleException(e);
-        }
-
-        /*logger.LogAssertion("verifyPegasusActivity",
-    ScenarioContext.Current.ScenarioInfo.
-         Title, () => Assert.AreEqual(p0, b0));*/
-
-        logger.LogMethodEntry("eCollegeIntegration", "ActivityOnPegasusGradebookPage",
-            base.IsTakeScreenShotDuringEntryExit);
-    }
-//--------------------------------------------------------
-    //When Instructor edits "Chapter 1 Exam" assessment to 70%
-    [When(@"Instructor edits ""(.*)"" assessment to (.*)%")]
-    public void EditsAssessmentScore(string p0, int p1)
-    {
-        logger.LogMethodEntry("D2LIntegration", "EditsAssessmentScore",
-             base.IsTakeScreenShotDuringEntryExit);
-
-        try
-        {
-
-            // IWebElement table = base.GetWebElementPropertiesByCssSelector("#FirstTr");
-
-
-
-            int columns = base.GetElementCountByCssSelector("#FirstTr>td");
-
-
-            IWebElement position, cmenu, c, d;
-
-
-
-            for (int i = 1; i <= columns; i++)
-            {
 
                 c = base.GetWebElementPropertiesByCssSelector
                     (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>span>a", i));
@@ -442,7 +390,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 d = base.GetWebElementPropertiesByCssSelector
                      (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>div", i));
 
-                string t = c.GetAttribute("title");
+                t = c.GetAttribute("title");
                 if (t == p0)
                 {
                     position = c;
@@ -451,13 +399,45 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     break;
                 }
 
+			}
+            
+            if(t!=p0)
+            {
+                throw new ArgumentException("Activity not found!");
             }
+        }
+
+        catch (Exception e)
+        {
+            ExceptionHandler.HandleException(e);
+        }
+
+        logger.LogAssertion("verifyPegasusActivity",
+    ScenarioContext.Current.ScenarioInfo.
+         Title, () => Assert.AreEqual(p0, t));
+
+        logger.LogMethodEntry("eCollegeIntegration", "ActivityOnPegasusGradebookPage",
+            base.IsTakeScreenShotDuringEntryExit);
+    }
+//--------------------------------------------------------
+    //When Instructor edits "Chapter 1 Exam" assessment to 70%
+   [When(@"instructor sets score for ""(.*)"" activity for ""(.*)""")]
+    public void EditsAssessmentScore(string p0, User.UserTypeEnum userName)
+
+    {
+        logger.LogMethodEntry("eCollegeIntegration", "EditsAssessmentScore",
+             base.IsTakeScreenShotDuringEntryExit);
+
+        bool editPopup = true;
+        try
+        {
+
+            User user = User.Get(userName);
+            string fullName = string.Format(user.FirstName + ","+" " + user.LastName);
 
             base.WaitForElementDisplayedInUi(By.Id("_ctl0_InnerPageContent_lbleditgrades2"));
 
             IWebElement editGrade = base.GetWebElementPropertiesById("_ctl0_InnerPageContent_lbleditgrades2");
-
-            //IWebElement s = editGrade.FindElement(By.TagName("input"));
 
             base.ClickByJavaScriptExecutor(editGrade);
 
@@ -472,7 +452,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             int columns1 = base.GetElementCountByCssSelector("#Grid1 >tbody >tr > td");
 
-            IWebElement studentName, studentScore, studentGrade;
+            IWebElement studentName, studentScore, studentGrade, studentMaxScore;
 
             bool rr = base.IsElementPresent(By.CssSelector("#Grid1 >tbody >tr:nth-child(1) >td"), 10);
 
@@ -484,25 +464,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
                 string myName = spantag.GetAttribute("title");
 
-                if (myName == "Kumar, Madhu")
+                if (myName == fullName)
                 {
                     studentScore = base.GetWebElementPropertiesByCssSelector(string.Format("#Grid1 >tbody >tr:nth-child({0})>td:nth-child({1})", ab, ab + 1));
 
-                    //studentGrade = studentName.FindElement(By.TagName("input"));
-
                     studentGrade = studentName.FindElement(By.Name("txtedit"));
+                    studentMaxScore= studentName.FindElement(By.Name("txteditMS"));
 
                     studentGrade.Clear();
                     studentGrade.SendKeys("8");
+
+                    studentMaxScore.Clear();
+                    studentMaxScore.SendKeys("10");
+                    
                     IWebElement save = base.GetWebElementPropertiesById("btnSave");
                     base.ClickByJavaScriptExecutor(save);
 
+                    base.WaitUntilWindowLoads("Gradebook");
+
+                    editPopup = base.IsWindowsExists("Edit Grades",60);
+                    
 
                     break;
                 }
             }
 
-            //  :nth-child({0})
+            
 
 
         }
@@ -512,30 +499,321 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             ExceptionHandler.HandleException(e);
         }
 
-        logger.LogMethodEntry("D2LIntegration", "EditsAssessmentScore",
+       finally
+        {
+            base.SwitchToDefaultPageContent();
+        }
+
+        logger.LogAssertion("verifyGradeEdit",
+     ScenarioContext.Current.ScenarioInfo.
+          Title, () => Assert.AreEqual(false, editPopup));
+       
+        logger.LogMethodEntry("eCollegeIntegration", "EditsAssessmentScore",
              base.IsTakeScreenShotDuringEntryExit);
     }
 
-    [Then(@"I should see (.*)% for ""(.*)"" on Pegasus Gradebook page")]
-    public void ThenIShouldSeeForOnPegasusGradebookPage(int p0, string p1)
-    {
-        try
-        {
-            base.WaitForElementDisplayedInUi(By.Id("RightTD"));
 
-            base.SwitchToIFrameById("srcGBFrame");
+   [Then(@"I should see edited score for ""(.*)"" in Gradebook for ""(.*)""")]
+   public void EditedScoreInGradebook(string p0, User.UserTypeEnum userName)
+   {
+       logger.LogMethodEntry("eCollegeIntegration", "EditedScoreInGradebook",
+             base.IsTakeScreenShotDuringEntryExit);
+
+       int checkGrade = 0;
+      
+       string fullName = null;
+      
+       bool found= false;
+
+       try
+       {
+           base.SwitchToIFrameById("srcGBFrame");
+
+           base.WaitForElement(By.Id("GBGridHeaderTable"));
+
+           int nuOfRows = base.GetElementCountByCssSelector("#FirstTr>td");
+
+           IWebElement c, d, gradeLocation; string t = "";
+           int columnPosition = 0;
+           User user = User.Get(userName);
+          fullName = string.Format(user.FirstName + "," + " " + user.LastName);
+           //find activity
+           for (int i = 1; i < nuOfRows; i++)
+           {
+
+               c = base.GetWebElementPropertiesByCssSelector
+                   (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>span>a", i));
+
+               
+               d = base.GetWebElementPropertiesByCssSelector
+                    (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>div", i));
+
+               t = c.GetAttribute("title");
+               if (t == p0)
+               {
+                   columnPosition = i;
+                   break;
+               }
+
+               
+
+           }
+
+           if(t!= p0)
+           {
+               columnPosition = 0;
+               throw new ArgumentException("Could not find the activity in the page");
+           }
 
 
+           int nuOfStudents = base.GetElementCountByCssSelector("#GBGridDataTable tr");
 
-        }
+           IWebElement trial = base.GetWebElementPropertiesByCssSelector("#GBGridDataTable");
 
-        catch (Exception e)
-        {
-            ExceptionHandler.HandleException(e);
-        }
+           
 
+           //match row with column
+
+          
+           for (int counter = 1; counter < nuOfStudents; counter++)
+           {
+               
+               if (counter % 2 == 0)
+               {
+                   c = trial.FindElement(By.CssSelector(string.Format("tr.odd:nth-child({0})", counter)));
+                  
+                }
+             
+
+               else
+               {
+                   c = trial.FindElement(By.CssSelector(string.Format("tr.odd:nth-child({0})", counter)));
+                  
+               }
+                   
+               d = c.FindElement(By.CssSelector(string.Format("td:nth-child({0})", columnPosition)));
+               gradeLocation = d.FindElement(By.TagName("div"));
+
+               checkGrade = int.Parse(gradeLocation.Text);
+
+               if (checkGrade == 80 )
+               {
+                  found= StudentExist(counter,fullName);
+
+                  if (found == true) ;
+                  break;
+                 
+               }
+           }
+
+       }
+
+          
+       catch (Exception e)
+       {
+           ExceptionHandler.HandleException(e);
+       }
+
+   
+       logger.LogAssertion("verifyGradeEdit",
+     ScenarioContext.Current.ScenarioInfo.
+          Title, () => Assert.AreEqual(true, found));
+
+        logger.LogMethodEntry("eCollegeIntegration", "EditedScoreInGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
     }
+   
+        //When instructor closes "Gradebook" page
+   [When(@"instructor closes ""(.*)"" page")]
+   public void ClosePegasusWindow(string p0)
+   {
+       logger.LogMethodEntry("eCollegeIntegration", "ClosePegasusWindow",
+              base.IsTakeScreenShotDuringEntryExit);
 
+       base.SwitchToDefaultPageContent();
+
+       bool checkWindow = base.IsWindowsExists(p0);
+
+       base.WaitForElementDisplayedInUi(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut"));
+
+       base.IsElementPresent(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut"));
+
+       IWebElement close = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut");
+
+       base.ClickByJavaScriptExecutor(close);
+       
+       
+       logger.LogMethodEntry("eCollegeIntegration", "ClosePegasusWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+   }
+
+       // Then I should not see "Gradebook" page opened
+
+   [Then(@"I should not see ""(.*)"" page opened")]
+   public void CheckWindowClosed(string p0)
+   {
+       logger.LogMethodEntry("eCollegeIntegration", "CheckWindowClosed",
+              base.IsTakeScreenShotDuringEntryExit);
+       bool checkWindow = base.IsWindowsExists(p0,20);
+
+       logger.LogAssertion("verifyGradebookClosed",
+     ScenarioContext.Current.ScenarioInfo.
+          Title, () => Assert.AreEqual(false, checkWindow));
+       
+       logger.LogMethodEntry("eCollegeIntegration", "CheckWindowClosed",
+              base.IsTakeScreenShotDuringEntryExit);
+   }
+
+ //Given I am on the dotNextLaunch page of eCollege
+   [Given(@"I am on the ""(.*)"" page of eCollege")]
+   public void DotNextLaunchPageOfECollege(string p0)
+   {
+       logger.LogMethodEntry("eCollegeIntegration", "DotNextLaunchPageOfECollege",
+               base.IsTakeScreenShotDuringEntryExit);
+
+      
+       base.SwitchToDefaultWindow();
+       base.SwitchToDefaultPageContent();
+       string currentURL = base.GetCurrentUrl;
+
+       bool correctPage = currentURL.Contains(p0);
+
+       logger.LogAssertion("verifyGradebookClosed",
+    ScenarioContext.Current.ScenarioInfo.
+         Title, () => Assert.AreEqual(true, correctPage));
+
+       logger.LogMethodEntry("eCollegeIntegration", "DotNextLaunchPageOfECollege",
+               base.IsTakeScreenShotDuringEntryExit);
+   }
+
+   //When I select "Gradebook" of eCollege
+
+   [When(@"I select ""(.*)"" of eCollege")]
+   public void eCollegeGradebook(string p0)
+   {
+       logger.LogMethodEntry("eCollegeIntegration", "eCollegeGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+       base.SwitchToDefaultPageContent();
+       base.IsElementDisplayedById("Main");
+
+       base.IsElementPresent(By.Id("Main"));
+
+       base.SwitchToIFrameById("Main");
+       base.IsElementDisplayedInPage(By.Id("Top"),true);
+       
+       base.SwitchToIFrameById("Top");
+
+       base.IsElementDisplayedById("GRADEBOOK");
+
+       IWebElement Gradebook = base.GetWebElementPropertiesById("GRADEBOOK");
+
+       base.ClickByJavaScriptExecutor(Gradebook);
+
+
+       logger.LogMethodEntry("eCollegeIntegration", "eCollegeGradebook",
+            base.IsTakeScreenShotDuringEntryExit);
+   }
+
+
+   //Then I should see grade synch for student "ECollegeStudent"
+   [Then(@"I should see grade synch for student ""(.*)""")]
+   public void GradeSynchForStudent(User.UserTypeEnum userName)
+   {
+       logger.LogMethodEntry("eCollegeIntegration", "GradeSynchForStudent",
+               base.IsTakeScreenShotDuringEntryExit);
+
+       base.SwitchToDefaultPageContent();
+
+       base.IsElementDisplayedById("Main");
+
+       base.IsElementPresent(By.Id("Main"));
+
+       base.SwitchToIFrameById("Main");
+
+       base.WaitForElementDisplayedInUi(By.Id("Content"));
+
+       base.IsElementDisplayedById("Content");
+
+       base.IsElementPresent(By.Id("Content"));
+
+       base.SwitchToIFrameById("Content");
+
+       //base.IsElementDisplayedById("Content");
+
+       //base.IsElementPresent(By.Id("Content"));
+
+       //base.SwitchToIFrameById("Content");
+
+       base.WaitForElementDisplayedInUi(By.Id("mainTable"));
+
+       base.IsElementDisplayedById("mainTable");
+
+       base.IsElementPresent(By.Id("mainTable"));
+
+
+       IWebElement mainTable = base.GetWebElementPropertiesById("mainTable");
+
+       IWebElement mainTableNav = mainTable.FindElement(By.CssSelector("tbody>tr>td>table"));
+
+       IWebElement actualEle = mainTableNav.FindElement(By.CssSelector("tbody>tr>td>a"));
+
+       string studentName = actualEle.Text;
+
+       User user = User.Get(userName);
+       string fullName = string.Format(user.FirstName + "," + user.LastName);
+
+       IWebElement Sco = mainTableNav.FindElement(By.CssSelector("tbody>tr>td:nth-child(2)>a"));
+
+       string actualScore = Sco.Text;
+       if(actualScore=="8/100")
+       logger.LogAssertion("verifyStudentExist",
+  ScenarioContext.Current.ScenarioInfo.
+       Title, () => Assert.AreEqual(fullName, studentName));
+
+       logger.LogMethodEntry("eCollegeIntegration", "GradeSynchForStudent",
+              base.IsTakeScreenShotDuringEntryExit);
+   }
+
+
+
+
+//resuable function to be moved to page object
+//finds the student name for the row given and returns status as true or false
+        public bool StudentExist(int rowNumber, string userName)
+        {
+
+            bool studentfound = false;
+            IWebElement c,d;
+            string studentIdentity="";
+           
+            base.SwitchToDefaultPageContent();
+
+            base.WaitForElement(By.Id("srcGBFrame"), 20);
+           base.SwitchToIFrameById("srcGBFrame");
+
+           base.WaitForElement(By.CssSelector("#GBGridLeftDataTableHolder"),20);
+          
+           IWebElement studentTable=base.GetWebElementPropertiesById("GBGridLeftTableHolder");
+
+            if (rowNumber % 2 == 0)
+               {
+                   c = studentTable.FindElement(By.CssSelector(string.Format("tr.odd:nth-child({0})", rowNumber)));
+                }
+             
+               else
+               {
+                   c = studentTable.FindElement(By.CssSelector(string.Format("tr.odd:nth-child({0})", rowNumber)));
+                   
+               }
+             
+               d = c.FindElement(By.Id("tdusername"));
+               studentIdentity = d.GetAttribute("title");
+
+            if (studentIdentity==userName)
+                studentfound=true;
+
+            return studentfound;
+        }
     }
 
 }
