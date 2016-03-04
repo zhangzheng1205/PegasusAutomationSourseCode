@@ -449,6 +449,9 @@
     <None Include="ProductAcceptanceOrderedTests\eCollegeInstructorFlow.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\eCollegeStudentWorkflow.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

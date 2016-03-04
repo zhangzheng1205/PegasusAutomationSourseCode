@@ -270,7 +270,7 @@ Given User has browsed the url of eCollege as "ECollegeTeacher"
 When "ECollegeTeacher" logs in using a valid Login credentials
 Then user should be sucessfully signed into eCollege
 
-#Feature: Login to eCollege as a student
+#Feature: eCollege Student login
 Scenario: eCollege User logging into eCollege as a student
 Given User has browsed the url of eCollege as "ECollegeStudent"
 When "ECollegeStudent" logs in using a valid Login credentials
