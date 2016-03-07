@@ -434,6 +434,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\eCollege.Direct.Classic.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.Cert.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />

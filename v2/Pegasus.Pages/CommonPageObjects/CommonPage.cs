@@ -47,6 +47,9 @@ namespace Pegasus.Pages.CommonPageObjects
                 switch (userTypeEnum)
                 {
                     case User.UserTypeEnum.CsSmsStudent:
+                    //same support for eCollege student
+                    case User.UserTypeEnum.ECollegeStudent:
+                        base.SwitchToLastOpenedWindow();
                         base.SwitchToIFrameById("ifrmCoursePreview");
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)

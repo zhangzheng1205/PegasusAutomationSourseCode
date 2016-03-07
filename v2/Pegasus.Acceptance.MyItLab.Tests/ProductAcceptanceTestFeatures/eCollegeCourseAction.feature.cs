@@ -185,6 +185,128 @@ testRunner.Then("I should see grade synch for student \"ECollegeStudent\"", ((st
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Student selecting a Pegasus link in Academics PSH")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeStudentSelectingAPegasusLinkInAcademicsPSH()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Student selecting a Pegasus link in Academics PSH", ((string[])(null)));
+#line 36
+this.ScenarioSetup(scenarioInfo);
+#line 38
+testRunner.When("I select \"MIL_Course\" Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
+testRunner.Then("I should see StudentGrades in \"MIL_Course\" contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege student selecting a Pegasus Grades")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeStudentSelectingAPegasusGrades()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege student selecting a Pegasus Grades", ((string[])(null)));
+#line 41
+this.ScenarioSetup(scenarioInfo);
+#line 42
+testRunner.When("student select \"StudentGrades\" of Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 43
+testRunner.Then("I should see Pegasus \"Gradebook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Student GraderIT Access Activity and student scoring 100%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeStudentGraderITAccessActivityAndStudentScoring100()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Student GraderIT Access Activity and student scoring 100%", ((string[])(null)));
+#line 50
+this.ScenarioSetup(scenarioInfo);
+#line 51
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 52
+testRunner.And("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
+                    "y \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 53
+testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 54
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
+testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+testRunner.And("I upload the downloaded file \"Grader Access file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 61
+testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
+                    "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
+testRunner.When("I submit \"Access Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+testRunner.Then("I should see message \"Your file, go_a01_grader_a3_Open_Houses.accdb, has been suc" +
+                    "cessfully received by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 64
+testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 65
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 66
+testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
+                    "y \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
+testRunner.Then("I should see a \"Passed\" status for the activity \"Access Chapter 1 Grader Project " +
+                    "[Assessment 3]\" in \"Course Materials\" by \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 68
+testRunner.And("I should see \"100%\" score for the activity \"Access Chapter 1 Grader Project [Asse" +
+                    "ssment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Student closing Pegasus Page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeStudentClosingPegasusPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Student closing Pegasus Page", ((string[])(null)));
+#line 70
+this.ScenarioSetup(scenarioInfo);
+#line 71
+testRunner.When("instructor closes \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
+testRunner.Then("I should not see \"Course Materials\" page opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("eCollege Student validating GradeSynch in Academics PSH")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "eCollegeCourseAction")]
+        public virtual void ECollegeStudentValidatingGradeSynchInAcademicsPSH()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eCollege Student validating GradeSynch in Academics PSH", ((string[])(null)));
+#line 74
+this.ScenarioSetup(scenarioInfo);
+#line 75
+testRunner.Given("I am on the \"DotNextLaunch\" page of eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 76
+testRunner.When("I select \"Gradebook\" of eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 77
+testRunner.Then("I should see 100 grades for student \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

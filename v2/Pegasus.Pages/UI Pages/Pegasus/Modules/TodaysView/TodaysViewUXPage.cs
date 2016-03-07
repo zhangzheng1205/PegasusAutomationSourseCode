@@ -3394,7 +3394,9 @@ namespace Pegasus.Pages.UI_Pages
             //Select MainTab
             Logger.LogMethodEntry("TodaysViewUXPage", "SelectCourseSpaceUserMainTab",
                 base.IsTakeScreenShotDuringEntryExit);
-            base.SelectDefaultWindow();
+            //below line of code changed from default to last open window to support ecollege launch, selecting default window would 
+            //make the code to switch to ecollege page
+            base.SwitchToLastOpenedWindow();
             //Wait for the MainTab
             base.WaitForElement(By.PartialLinkText(mainTabName));
             //Get Tab Property

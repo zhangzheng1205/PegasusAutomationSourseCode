@@ -209,7 +209,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
         finally
         {
-            SwitchToDefaultWindow();
+            //SwitchToDefaultWindow();
+            base.SwitchToDefaultPageContent();
         }
 
         logger.LogMethodEntry("eCollegeIntegration", "CourseLinks",
@@ -224,7 +225,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         logger.LogMethodEntry("eCollegeIntegration", "PegasusCourse",
                 base.IsTakeScreenShotDuringEntryExit);
 
-        try
+       try
         {
             
             base.WaitForElementDisplayedInUi(By.Id("Main"));
@@ -420,7 +421,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             base.IsTakeScreenShotDuringEntryExit);
     }
 //--------------------------------------------------------
-    //When Instructor edits "Chapter 1 Exam" assessment to 70%
+    //When Instructor edits "Access Chapter 1 Grader Project [Assessment 3]" assessment to 80%
    [When(@"instructor sets score for ""(.*)"" activity for ""(.*)""")]
     public void EditsAssessmentScore(string p0, User.UserTypeEnum userName)
 
@@ -693,7 +694,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
    {
        logger.LogMethodEntry("eCollegeIntegration", "eCollegeGradebook",
                base.IsTakeScreenShotDuringEntryExit);
+      
+       
        base.SwitchToDefaultPageContent();
+       base.WaitForElementDisplayedInUi(By.Id("Main"));
        base.IsElementDisplayedById("Main");
 
        base.IsElementPresent(By.Id("Main"));
@@ -814,6 +818,155 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             return studentfound;
         }
+
+// ----------------------------------------------------------------------------
+
+// Student workflow starts here
+
+        //Then I should see StudentGrades in "MIL_Course" contents
+
+        [Then(@"I should see StudentGrades in ""(.*)"" contents")]
+public void StudentGradeslink(string p0)
+{
+
+
+    logger.LogMethodEntry("eCollegeIntegration", "StudentGradeslink",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+                //string wTitle = GetWindowTitleByJavaScriptExecutor();
+
+                //base.WaitUntilWindowLoads(wTitle);
+
+                base.WaitForElementDisplayedInUi(By.Id("Main"));
+                base.IsElementPresent(By.Id("Main"));
+                base.SwitchToIFrameById("Main");
+
+                base.WaitForElementDisplayedInUi(By.Id("Content"));
+                base.IsElementPresent(By.Id("Content"));
+                base.SwitchToIFrameById("Content");
+
+                base.WaitForElementDisplayedInUi(By.CssSelector("#frmCourseHome"));
+
+                IWebElement root = base.GetWebElementPropertiesById("frmCourseHome");
+
+
+                IWebElement grades = root.FindElement(By.CssSelector("radeditor>p:nth-child(2)>a"));
+
+                string grade = grades.Text;
+
+
+                logger.LogAssertion("AcademicPageContents",
+                  ScenarioContext.Current.ScenarioInfo.Title, () =>
+                      Assert.AreEqual(grade, "StudentGrades"));
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            finally
+            {
+                SwitchToDefaultWindow();
+            }
+
+            logger.LogMethodEntry("eCollegeIntegration", "StudentGradeslink",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        //When student select "StudentGrades" of Pegasus course
+        [When(@"student select ""(.*)"" of Pegasus course")]
+        public void studentSelectPegasusCourse(string p0)
+        {
+            logger.LogMethodEntry("eCollegeIntegration", "studentSelectPegasusCourse",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+
+                base.WaitForElementDisplayedInUi(By.Id("Main"));
+                base.IsElementPresent(By.Id("Main"));
+                base.SwitchToIFrameById("Main");
+
+                base.WaitForElementDisplayedInUi(By.Id("Content"));
+                base.IsElementPresent(By.Id("Content"));
+                base.SwitchToIFrameById("Content");
+
+                IWebElement grades = base.GetWebElementPropertiesByLinkText("StudentGrades");
+                base.ClickByJavaScriptExecutor(grades);
+
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodEntry("eCollegeIntegration", "studentSelectPegasusCourse",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+   //Then I should see 100 grades for student "ECollegeStudent"
+
+        [Then(@"I should see (.*) grades for student ""(.*)""")]
+        public void GradesForStudent(int p0, User.UserTypeEnum userName)
+        {
+
+
+
+            logger.LogMethodEntry("eCollegeIntegration", "GradesForStudent",
+                   base.IsTakeScreenShotDuringEntryExit);
+
+            base.SwitchToDefaultPageContent();
+
+            base.IsElementDisplayedById("Main");
+
+            base.IsElementPresent(By.Id("Main"));
+
+            base.SwitchToIFrameById("Main");
+
+            base.WaitForElementDisplayedInUi(By.Id("Content"));
+
+            base.IsElementDisplayedById("Content");
+
+            base.IsElementPresent(By.Id("Content"));
+
+            base.SwitchToIFrameById("Content");
+
+            base.WaitForElementDisplayedInUi(By.Id("mainTable"));
+
+            base.IsElementDisplayedById("mainTable");
+
+            base.IsElementPresent(By.Id("mainTable"));
+
+
+            IWebElement mainTable = base.GetWebElementPropertiesById("mainTable");
+
+            IWebElement mainTableNav = mainTable.FindElement(By.CssSelector("tbody>tr:nth-child(2)>td>a"));
+
+            //IWebElement actualEle = mainTableNav.FindElement(By.CssSelector("tbody>tr>td>a"));
+
+            string studentName = mainTableNav.Text;
+
+            User user = User.Get(userName);
+            string fullName = string.Format(user.FirstName + "," + user.LastName);
+
+            //IWebElement Sco = mainTableNav.FindElement(By.CssSelector("tbody>tr>td:nth-child(2)>a"));
+
+            string actualScore = mainTableNav.Text;
+            if (actualScore == "100/100")
+                logger.LogAssertion("verifyStudentExist",
+           ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(p0, 100));
+
+            logger.LogMethodEntry("eCollegeIntegration", "GradesForStudent",
+                   base.IsTakeScreenShotDuringEntryExit);
+
+
+        }
+
     }
 
 }
