@@ -227,6 +227,25 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I click on Cmenu option of Class ""(.*)"" for ""(.*)"" to select ""(.*)"" option")]
+        public void ClickOnCmenuOptionOfClassofMLForToSelectOption(Class.ClassTypeEnum classTypeEnum,
+            Course.CourseTypeEnum courseTypeEnum, string cmenuOption)
+        {
+            Logger.LogMethodEntry("GlobalHome",
+               "ClickOnCmenuOptionOfClassofMLForToSelectOption",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get class and course name from memory
+            Class Class = Class.Get(classTypeEnum);
+            Course Course = Course.Get(courseTypeEnum);
+            string className = Class.Name + ": " + Course.Name;
+            //Click on cmenu icon of class and select the required option
+            new HomePage().ClickOnCmenuIconOfClassAndSelectOption(className, cmenuOption);
+            Logger.LogMethodExit("GlobalHome",
+                "ClickOnCmenuOptionOfClassofMLForToSelectOption",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Select Digital Path product from the curriculum dropdown
         /// </summary>

@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Data>
-  <!--This is already created organization present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created organization present on the UI to execute the scenarios. This would be change as per 
+
+data on the UI deleted or refreshed.-->
+  <ArrayOfLicense>
+    <License>
+      <ProductID>1301409</ProductID>
+      <ResourceID>883821</ResourceID>
+      <LicenseType>Rumba</LicenseType>
+      <IsCreated>true</IsCreated>
+    </License>
+  </ArrayOfLicense>
   <ArrayOfOrganization>
+    <Organization>
+      <Name>CGIE_NR_5_15_9__ORG_Automation</Name>
+      <OrganizationLevel>School</OrganizationLevel>
+      <OrganizationType>DigitalPathCC</OrganizationType>
+      <IsCreated>true</IsCreated>
+    </Organization>
     <Organization>
       <Name>4abf9206-3f7c-46e2-80bf-128e030e31f0</Name>
       <OrganizationLevel>School</OrganizationLevel>
@@ -15,10 +31,12 @@
       <IsCreated>true</IsCreated>
     </Organization>
   </ArrayOfOrganization>
-  <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on 
+
+the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>74549619-e104-4950-bff9-ca3cbf0a78d7</Name>
+      <Name>d4c0689d-e3a1-4386-8f6a-02dab502f8db</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
@@ -31,7 +49,43 @@
   <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
     <Course>
-      <Name>Digits-GradeCourse</Name>
+      <Name>
+        Copy of Unidos: An Interactive Approach, 1e ONLINE COMPONENT Powered by MySpanishLab Summer 2014 Re-
+
+        Release
+      </Name>
+      <CourseType>MyTestAuthoredCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Copy of MyITLab for Office 2013 - MASTER</Name>
+      <CourseType>MyItLabAuthoredCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Auto-(2016/01/14-12:53:48)-SIM5 Master Course</Name>
+      <CourseType>MyItLabSIM5MasterCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Existing-MyITLab for Office 2013</Name>
+      <CourseType>ExistingCourseForPublish</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Digits - grade 6-Master</Name>
       <CourseType>DigitsAuthoredCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -47,8 +101,24 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>digits - grade 6-Fresh</Name>
+      <Name>Auto-(2016/01/25 10-24-52)-Master Course</Name>
       <CourseType>MasterLibrary</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>digits - grade 6_Copy</Name>
+      <CourseType>MasterLibrarySameProduct</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>REALIDADES 2014 - Level 1</Name>
+      <CourseType>MasterLibraryDifferentProduct</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
@@ -192,6 +262,16 @@
     <!--Hard coded Course data for "HEDMIL" Product.-->
     <Course>
       <Name>CGIE-MyITLab for Office 2013: GO! Series + Technology in Action</Name>
+      <CourseType>MyITLabForOffice2013MasterCourseCreation</CourseType>
+      <SharedLibraryName>Dummy</SharedLibraryName>
+      <ExistingSharedLibraryName>Existing Sim5 Shared Library</ExistingSharedLibraryName>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>CGIE-MyITLab for Office 2013: GO! Series + Technology in Action</Name>
       <CourseType>MyITLabForOffice2013Master</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -213,6 +293,16 @@
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>CGIENR_5_159</Name>
+      <CourseType>MyITLabOffice2013ProgramCourseCreation</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SectionName>Automation Section</SectionName>
+      <SectionId>CRSKLRU-14001445</SectionId>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
     </Course>
     <Course>
       <Name>CGIE_Automation</Name>
@@ -298,7 +388,6 @@
       <IsApproved>true</IsApproved>
     </Course>
   </ArrayOfCourse>
-
   <!--Hard coded Grades data.-->
   <ArrayOfGrade>
     <Grade>
@@ -322,9 +411,34 @@
       <IsCreated>true</IsCreated>
     </Grade>
   </ArrayOfGrade>
-  <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on 
+
+the UI deleted or refreshed.-->
   <ArrayOfUser>
     <!--Hard coded Users data for SMS-->
+    <!--Hard coded Users data for "Contineo".-->
+    <User>
+      <Name>5156cgieins2</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>5156Raghavendrains2</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>5156Annaiahins2</LastName>
+      <UserType>ContineoTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5156cgiestu2</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>5156Raghavendrastu2</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>5156Annaiahstu2</LastName>
+      <UserType>ContineoStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
     <User>
       <Name>tashavincent</Name>
       <Password>password1</Password>
@@ -429,8 +543,8 @@
     </User>
     <!--Hard coded Users data for "Digital Path" Product.-->
     <User>
-      <Name>autoworkspaceadmin</Name>
-      <Password>password@1234</Password>
+      <Name>cgienrschooladmin</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>WsAdmin></FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -537,6 +651,17 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
+      <Name>auto_5_15_9_Teacher</Name>
+      <Password>password1</Password>
+      <Email>rashmi.shetty@excelindia.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>DPCsTeacherCC</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>rashcgieteacher02</Name>
       <Password>password1</Password>
       <Email>rashmi.shetty@excelindia.com</Email>
@@ -593,13 +718,26 @@
 
     <!--Hard coded Users data for "HED" Product.-->
     <User>
-      <Name>autohedwsadmin</Name>
-      <Password>password@1234</Password>
+      <Name>cgienradmin</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>WsAdmin</FirstName>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Hed</LastName>
+      <LastName>Shetty</LastName>
       <UserType>HedWsAdmin</UserType>
+      <WorkSpaceName>CGIENR5.159</WorkSpaceName>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>cgienradmin2</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <WorkSpaceName>CGIENR5.159.II</WorkSpaceName>
+      <UserType>HedWsAdmin2</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
@@ -861,19 +999,6 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
 
-    <!--Hard coded Users data for "D2L Integration" Product.-->
-    <User>
-      <Name>d2lkiosk.ins</Name>
-      <Password>Password1</Password>
-      <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Unknown</FirstName>
-      <MiddleName>Unknown</MiddleName>
-      <LastName>Unknown</LastName>
-      <UserType>D2LKioskTeacher1</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
-    </User>
-
     <!--Hard coded Users data for "Rumba".-->
     <User>
       <Name>radmin</Name>
@@ -905,28 +1030,6 @@
       <Password >pegasusadmin</Password>
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
-    </User>
-    <User>
-      <Name>Ecollege_automtion_instructor</Name>
-      <Password>password1</Password>
-      <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Chethan</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>SG</LastName>
-      <UserType>ECollegeTeacher</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
-    </User>
-    <User>
-      <Name>Ecollege_auto_student</Name>
-      <Password>password1</Password>
-      <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Student</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>Ecollege</LastName>
-      <UserType>ECollegeStudent</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
     </User>
     <!--Hard coded Users data for "Word Language".-->
     <User>
@@ -975,8 +1078,44 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+    <User>
+      <Name>d2lkiosk.ins</Name>
+      <Password>Password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Unknown</FirstName>
+      <MiddleName>Unknown</MiddleName>
+      <LastName>Unknown</LastName>
+      <UserType>D2LKioskTeacher1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Ecollege_automtion_instructor</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Chethan</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SG</LastName>
+      <UserType>ECollegeTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Ecollege_auto_student</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Ecollege</LastName>
+      <UserType>ECollegeStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+
   </ArrayOfUser>
-  <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
+
+the UI deleted or refreshed.-->
   <ArrayOfProgram>
     <Program>
       <Name>92c7b576-988b-4f5b-bd80-b385dfe40519</Name>
@@ -984,7 +1123,9 @@
       <IsCreated>true</IsCreated>
     </Program>
   </ArrayOfProgram>
-  <!--This is already created activity present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created activity present on the UI to execute the scenarios. This would be change as per data on 
+
+the UI deleted or refreshed.-->
   <ArrayOfActivity>
     <Activity>
       <Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
@@ -1058,8 +1199,16 @@
       <IsCreated>true</IsCreated>
     </Activity>
   </ArrayOfActivity>
-  <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on 
+
+the UI deleted or refreshed.-->
   <ArrayOfProduct>
+    <Product>
+      <Name>CGIE_NR_5_15_9_Automation</Name>
+      <ProductType>DigitalPathCC</ProductType>
+      <PeriodName>05162abf</PeriodName>
+      <IsCreated>true</IsCreated>
+    </Product>
     <Product>
       <Name>Digit Grade6</Name>
       <ProductType>DigitalPath</ProductType>
@@ -1076,8 +1225,15 @@
       <ProductType>DigitalPathDemo</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
+    <Product>
+      <Name>CGIE_5_159</Name>
+      <ProductType>HedMilProgram</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
   </ArrayOfProduct>
-  <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change 
+
+as per data on the UI deleted or refreshed.-->
   <ArrayOfActivityQuestionsList>
     <ActivityQuestionsList>
       <Name>________ are personal judgments based on beliefs rather than facts.</Name>
@@ -1116,7 +1272,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The statement: "Women avoid computer science because it is stereotypically dominated by males leading many women to feel the field is not accessible to them" is a(n):</Name>
+      <Name>
+        The statement: "Women avoid computer science because it is stereotypically dominated by males leading many
+
+        women to feel the field is not accessible to them" is a(n):
+      </Name>
       <InCorrectOption>observation.</InCorrectOption>
       <CorrectOption>explanation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1125,7 +1285,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The text defines a _________ as someone who seeks wisdom and knowledge through thinking and discussion.</Name>
+      <Name>
+        The text defines a _________ as someone who seeks wisdom and knowledge through thinking and
+
+        discussion.
+      </Name>
       <InCorrectOption>psychiatrist</InCorrectOption>
       <CorrectOption>philosopher</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1134,7 +1298,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The process of objectively examining and measuring one's own thoughts and mental activities is known as</Name>
+      <Name>
+        The process of objectively examining and measuring one's own thoughts and mental activities is known
+
+        as
+      </Name>
       <InCorrectOption>an out of body experience.</InCorrectOption>
       <CorrectOption>objective introspection.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1152,7 +1320,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The belief that every experience can be broken down into its individual emotions and sensations is known as</Name>
+      <Name>
+        The belief that every experience can be broken down into its individual emotions and sensations is known
+
+        as
+      </Name>
       <InCorrectOption>objectivity.</InCorrectOption>
       <CorrectOption>structuralism.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1206,7 +1378,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Freud proposed that there is a(n) ________ mind into which we repress threatening urges and desires.</Name>
+      <Name>
+        Freud proposed that there is a(n) ________ mind into which we repress threatening urges and
+
+        desires.
+      </Name>
       <InCorrectOption>conscious</InCorrectOption>
       <CorrectOption>unconscious</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1243,8 +1419,16 @@
     </ActivityQuestionsList>
     <ActivityQuestionsList>
       <Name>In psychology in the twenty-first century,</Name>
-      <InCorrectOption>there is one perspective that is used to explain all human behavior and mental processes.</InCorrectOption>
-      <CorrectOption>there are seven perspectives that are used to explain human behavior and mental processes.</CorrectOption>
+      <InCorrectOption>
+        there is one perspective that is used to explain all human behavior and mental
+
+        processes.
+      </InCorrectOption>
+      <CorrectOption>
+        there are seven perspectives that are used to explain human behavior and mental
+
+        processes.
+      </CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -1260,7 +1444,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>When Rashid graduated from college, he believed he had finally achieved his full potential. Maslow called this</Name>
+      <Name>
+        When Rashid graduated from college, he believed he had finally achieved his full potential. Maslow called
+
+        this
+      </Name>
       <InCorrectOption>delusion.</InCorrectOption>
       <CorrectOption>self-actualization.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1269,7 +1457,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>________ suggests that behavioral responses are reinforced when rewarded with pleasurable consequences.</Name>
+      <Name>
+        ________ suggests that behavioral responses are reinforced when rewarded with pleasurable
+
+        consequences.
+      </Name>
       <InCorrectOption>Cognitive psychology</InCorrectOption>
       <CorrectOption>Operant conditioning.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1296,7 +1488,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The bystander effect says that people in a crowd are _____ help someone in trouble as compared to a person witnessing someone in need of help in the absence of others.</Name>
+      <Name>
+        The bystander effect says that people in a crowd are _____ help someone in trouble as compared to a person
+
+        witnessing someone in need of help in the absence of others.
+      </Name>
       <InCorrectOption>never going to</InCorrectOption>
       <CorrectOption>less likely to</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1314,7 +1510,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Which perspective focuses on the biological bases for universal mental characteristics that all humans share?</Name>
+      <Name>
+        Which perspective focuses on the biological bases for universal mental characteristics that all humans
+
+        share?
+      </Name>
       <InCorrectOption>biopsychosocial</InCorrectOption>
       <CorrectOption>evolutionary</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1323,7 +1523,10 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Which professional has a doctorate degree and works with humans or animals in a variety of settings?</Name>
+      <Name>
+        Which professional has a doctorate degree and works with humans or animals in a variety of settings?
+
+      </Name>
       <InCorrectOption>psychiatric social worker</InCorrectOption>
       <CorrectOption>psychologist</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1379,7 +1582,11 @@
     <ActivityQuestionsList>
       <Name>Scientists report their results even if an experiment failed because</Name>
       <InCorrectOption>the APA requires it.</InCorrectOption>
-      <CorrectOption>researchers studying the same things will gain from what has already been learned.</CorrectOption>
+      <CorrectOption>
+        researchers studying the same things will gain from what has already been
+
+        learned.
+      </CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -1440,7 +1647,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If it is shown that students’ grades go down the more hours they spend watching TV, then grades and hours watching TV have a __________ correlation.</Name>
+      <Name>
+        If it is shown that students’ grades go down the more hours they spend watching TV, then grades and hours
+
+        watching TV have a __________ correlation.
+      </Name>
       <InCorrectOption>positive</InCorrectOption>
       <CorrectOption>negative</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1449,7 +1660,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If researchers find a relationship between students’ grades and the number of hours they spend watching TV,</Name>
+      <Name>
+        If researchers find a relationship between students’ grades and the number of hours they spend watching
+
+        TV,
+      </Name>
       <InCorrectOption>it would be impossible to determine the direction of that relationship.</InCorrectOption>
       <CorrectOption>it still does not prove causation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1467,7 +1682,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A(n) ________ specifically names the steps that the experimenter must use to control or measure the variables in the experiment.</Name>
+      <Name>
+        A(n) ________ specifically names the steps that the experimenter must use to control or measure the
+
+        variables in the experiment.
+      </Name>
       <InCorrectOption>hypothesis</InCorrectOption>
       <CorrectOption>operational definition</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1485,7 +1704,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A(n) __________ reviews a proposed study and judges it according to safety and consideration for its participants.</Name>
+      <Name>
+        A(n) __________ reviews a proposed study and judges it according to safety and consideration for its
+
+        participants.
+      </Name>
       <InCorrectOption>human rights group</InCorrectOption>
       <CorrectOption>institutional review board</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1521,7 +1744,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Psychology is a relatively new science in comparison to other sciences, only about ________ years old.</Name>
+      <Name>
+        Psychology is a relatively new science in comparison to other sciences, only about ________ years
+
+        old.
+      </Name>
       <InCorrectOption>110</InCorrectOption>
       <CorrectOption>130</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1530,7 +1757,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The early psychological approach known as functionalism played a part in the development of which modern perspective in psychology?</Name>
+      <Name>
+        The early psychological approach known as functionalism played a part in the development of which modern
+
+        perspective in psychology?
+      </Name>
       <InCorrectOption>psychoanalysis</InCorrectOption>
       <CorrectOption>evolutionary psychology</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1548,7 +1779,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Some of the earliest research in the area of human memory and the psychology of the self was done by</Name>
+      <Name>
+        Some of the earliest research in the area of human memory and the psychology of the self was done
+
+        by
+      </Name>
       <InCorrectOption>Francis Cecil Sumner.</InCorrectOption>
       <CorrectOption>Mary Whiton Calkins.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1656,8 +1891,16 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Dr. Sanchez has been conducting research with the same group of children for several months and one of the children now wishes to drop out of the study. Dr. Sanchez must now</Name>
-      <InCorrectOption>remind him of his informed consent, and insist that he continue with the study.</InCorrectOption>
+      <Name>
+        Dr. Sanchez has been conducting research with the same group of children for several months and one of the
+
+        children now wishes to drop out of the study. Dr. Sanchez must now
+      </Name>
+      <InCorrectOption>
+        remind him of his informed consent, and insist that he continue with the
+
+        study.
+      </InCorrectOption>
       <CorrectOption>allow him to drop out of the study.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
@@ -1685,7 +1928,11 @@
     <ActivityQuestionsList>
       <Name>Which of the following is TRUE about astrology?</Name>
       <InCorrectOption>Few people believe in its accuracy.</InCorrectOption>
-      <CorrectOption>It is the study of the supposed influence of stars and planets on the birth of an infant.</CorrectOption>
+      <CorrectOption>
+        It is the study of the supposed influence of stars and planets on the birth of an
+
+        infant.
+      </CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -1710,7 +1957,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Wundt referred to the process of examining and measuring one's own thoughts and mental activities as</Name>
+      <Name>
+        Wundt referred to the process of examining and measuring one's own thoughts and mental activities
+
+        as
+      </Name>
       <InCorrectOption>focus of control.</InCorrectOption>
       <CorrectOption>objective introspection.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1719,7 +1970,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The view that objective introspection could be used on thoughts as well as physical sensations is known as</Name>
+      <Name>
+        The view that objective introspection could be used on thoughts as well as physical sensations is known
+
+        as
+      </Name>
       <InCorrectOption>cognitive psychology.</InCorrectOption>
       <CorrectOption>structuralism.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1728,7 +1983,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Which early perspective in psychology, associated with William James, focused on how the mind allows people to adapt, live, work, and play?</Name>
+      <Name>
+        Which early perspective in psychology, associated with William James, focused on how the mind allows
+
+        people to adapt, live, work, and play?
+      </Name>
       <InCorrectOption>conflict.</InCorrectOption>
       <CorrectOption>functionalism.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1782,7 +2041,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The idea that sexual orientation may be related to the birth order of male children was posited by researchers in the field of</Name>
+      <Name>
+        The idea that sexual orientation may be related to the birth order of male children was posited by
+
+        researchers in the field of
+      </Name>
       <InCorrectOption>behaviorism.</InCorrectOption>
       <CorrectOption>biopsychology.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1872,7 +2135,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>_____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest explanation is more often the best one.</Name>
+      <Name>
+        _____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest
+
+        explanation is more often the best one.
+      </Name>
       <InCorrectOption>Cognitive perspective-taking.</InCorrectOption>
       <CorrectOption>The law of parsimony.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1881,7 +2148,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and cause grave medical conditions. The doctor is making a(n)</Name>
+      <Name>
+        A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and
+
+        cause grave medical conditions. The doctor is making a(n)
+      </Name>
       <InCorrectOption>educated guess.</InCorrectOption>
       <CorrectOption>prediction.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1890,7 +2161,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward their peers, the psychologist is</Name>
+      <Name>
+        When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward
+
+        their peers, the psychologist is
+      </Name>
       <InCorrectOption>describing.</InCorrectOption>
       <CorrectOption>explaining.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1908,7 +2183,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s attention will</Name>
+      <Name>
+        According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s
+
+        attention will
+      </Name>
       <InCorrectOption>stop crying so much in the future.</InCorrectOption>
       <CorrectOption>cry again in the future.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1917,7 +2196,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early humans’ avoidance of poisonous plants.</Name>
+      <Name>
+        Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early
+
+        humans’ avoidance of poisonous plants.
+      </Name>
       <InCorrectOption>phobic</InCorrectOption>
       <CorrectOption>adaptive</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1926,7 +2209,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an example of</Name>
+      <Name>
+        Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an
+
+        example of
+      </Name>
       <InCorrectOption>prejudice.</InCorrectOption>
       <CorrectOption>confirmation bias.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1944,7 +2231,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If a researcher is observing a third grade classroom in full view of the students and finds that all the students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?</Name>
+      <Name>
+        If a researcher is observing a third grade classroom in full view of the students and finds that all the
+
+        students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?
+      </Name>
       <InCorrectOption>The teacher is very strict.</InCorrectOption>
       <CorrectOption>The students’ behavior is due to the observer effect.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1953,7 +2244,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and height have a(n)</Name>
+      <Name>
+        If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and
+
+        height have a(n)
+      </Name>
       <InCorrectOption>inverse relationship.</InCorrectOption>
       <CorrectOption>positive correlation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1962,7 +2257,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>In measuring the effect of violent cartoons on childhood aggression, researchers must identify the __________ of “aggressive behavior.”</Name>
+      <Name>
+        In measuring the effect of violent cartoons on childhood aggression, researchers must identify the
+
+        __________ of “aggressive behavior.”
+      </Name>
       <InCorrectOption>disorder</InCorrectOption>
       <CorrectOption>operational definition</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1971,7 +2270,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A drug company conducts a study in which the experimenter gives half of the participants the drug being tested and the other half a placebo. This is an example of</Name>
+      <Name>
+        A drug company conducts a study in which the experimenter gives half of the participants the drug being
+
+        tested and the other half a placebo. This is an example of
+      </Name>
       <InCorrectOption>a double-blind study.</InCorrectOption>
       <CorrectOption>a single-blind study.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2007,7 +2310,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A researcher wants to describe children's normal behavior on the playground. The best method for this research is to use</Name>
+      <Name>
+        A researcher wants to describe children's normal behavior on the playground. The best method for this
+
+        research is to use
+      </Name>
       <InCorrectOption>a case study.</InCorrectOption>
       <CorrectOption>naturalistic observation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2016,7 +2323,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A researcher wants to determine how most U.S. college students feel about the president. Which of the following groups provides a representative sample for this researcher's survey?</Name>
+      <Name>
+        A researcher wants to determine how most U.S. college students feel about the president. Which of the
+
+        following groups provides a representative sample for this researcher's survey?
+      </Name>
       <InCorrectOption>students attending a religious college in the South</InCorrectOption>
       <CorrectOption>students selected randomly at college campuses across the country</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2052,7 +2363,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear rats. This proved that</Name>
+      <Name>
+        By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear
+
+        rats. This proved that
+      </Name>
       <InCorrectOption>children are inherently afraid of rats.</InCorrectOption>
       <CorrectOption>phobias could be learned through conditioning.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2133,7 +2448,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If there is _________ in a medical experiment, the control group will show changes in the dependent variable even if they are given a harmless substitute rather than a real drug.</Name>
+      <Name>
+        If there is _________ in a medical experiment, the control group will show changes in the dependent
+
+        variable even if they are given a harmless substitute rather than a real drug.
+      </Name>
       <InCorrectOption>an observer effect</InCorrectOption>
       <CorrectOption>a placebo effect</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2142,7 +2461,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Neither the participants nor the experimenter know if the participants are in the control or experimental group in a</Name>
+      <Name>
+        Neither the participants nor the experimenter know if the participants are in the control or experimental
+
+        group in a
+      </Name>
       <InCorrectOption>random assignment</InCorrectOption>
       <CorrectOption>double-blind study</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2151,7 +2474,10 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Which of the following is a reason researchers prefer to use animals in experiments instead of humans?</Name>
+      <Name>
+        Which of the following is a reason researchers prefer to use animals in experiments instead of humans?
+
+      </Name>
       <InCorrectOption>There are no limits to what researchers can do with animals.</InCorrectOption>
       <CorrectOption>Studying long-term effects is much easier.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2178,7 +2504,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>________ is the goal in psychology that involves observing human or animal behavior and noting everything about the behavior.</Name>
+      <Name>
+        ________ is the goal in psychology that involves observing human or animal behavior and noting everything
+
+        about the behavior.
+      </Name>
       <InCorrectOption>Prediction</InCorrectOption>
       <CorrectOption>Description</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2187,7 +2517,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Because psychologists want to be precise and measure as carefully as they can, they use ________ to study psychology.</Name>
+      <Name>
+        Because psychologists want to be precise and measure as carefully as they can, they use ________ to study
+
+        psychology.
+      </Name>
       <InCorrectOption>mental processes</InCorrectOption>
       <CorrectOption>the scientific method</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2197,7 +2531,11 @@
     </ActivityQuestionsList>
     <ActivityQuestionsList>
       <Name>Which of the following illustrates psychology's goal of control?</Name>
-      <InCorrectOption>giving psychological tests to a new therapy client to determine the client's symptoms.</InCorrectOption>
+      <InCorrectOption>
+        giving psychological tests to a new therapy client to determine the client's
+
+        symptoms.
+      </InCorrectOption>
       <CorrectOption>using rewards to help a smoker give up cigarettes.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
       <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
@@ -2223,7 +2561,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear rats. This proved that</Name>
+      <Name>
+        By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear
+
+        rats. This proved that
+      </Name>
       <InCorrectOption>children are inherently afraid of rats.</InCorrectOption>
       <CorrectOption>phobias could be learned through conditioning.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2259,7 +2601,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Researchers who allow their expectations about what they will see to affect the results of their observation studies are suffering from</Name>
+      <Name>
+        Researchers who allow their expectations about what they will see to affect the results of their
+
+        observation studies are suffering from
+      </Name>
       <InCorrectOption>the observer effect.</InCorrectOption>
       <CorrectOption>observer bias.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2286,7 +2632,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Experimenters control the effects of extraneous or confounding variables upon members of experimental and control groups by using</Name>
+      <Name>
+        Experimenters control the effects of extraneous or confounding variables upon members of experimental and
+
+        control groups by using
+      </Name>
       <InCorrectOption>independent observers.</InCorrectOption>
       <CorrectOption>random assignment.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2331,7 +2681,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If there is _________ in a medical experiment, the control group will show changes in the dependent variable even if they are given a harmless substitute rather than a real drug.</Name>
+      <Name>
+        If there is _________ in a medical experiment, the control group will show changes in the dependent
+
+        variable even if they are given a harmless substitute rather than a real drug.
+      </Name>
       <InCorrectOption>random sample</InCorrectOption>
       <CorrectOption>a placebo effect</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2340,7 +2694,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Neither the participants nor the experimenter know if the participants are in the control or experimental group in a</Name>
+      <Name>
+        Neither the participants nor the experimenter know if the participants are in the control or experimental
+
+        group in a
+      </Name>
       <InCorrectOption>single-blind study</InCorrectOption>
       <CorrectOption>double-blind study</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2349,7 +2707,10 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Which of the following is a reason researchers prefer to use animals in experiments instead of humans?</Name>
+      <Name>
+        Which of the following is a reason researchers prefer to use animals in experiments instead of humans?
+
+      </Name>
       <InCorrectOption>There are no limits to what researchers can do with animals.</InCorrectOption>
       <CorrectOption>Studying long-term effects is much easier.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2358,7 +2719,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and cause grave medical conditions. The doctor is making a(n)</Name>
+      <Name>
+        A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and
+
+        cause grave medical conditions. The doctor is making a(n)
+      </Name>
       <InCorrectOption>diagnosis</InCorrectOption>
       <CorrectOption>prediction.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2367,7 +2732,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward their peers, the psychologist is</Name>
+      <Name>
+        When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward
+
+        their peers, the psychologist is
+      </Name>
       <InCorrectOption>describing.</InCorrectOption>
       <CorrectOption>explaining.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2376,7 +2745,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Wundt referred to the process of examining and measuring one's own thoughts and mental activities as</Name>
+      <Name>
+        Wundt referred to the process of examining and measuring one's own thoughts and mental activities
+
+        as
+      </Name>
       <InCorrectOption>evolutionary consciousness.</InCorrectOption>
       <CorrectOption>objective introspection.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2385,7 +2758,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The view that objective introspection could be used on thoughts as well as physical sensations is known as</Name>
+      <Name>
+        The view that objective introspection could be used on thoughts as well as physical sensations is known
+
+        as
+      </Name>
       <InCorrectOption>cognitive psychology.</InCorrectOption>
       <CorrectOption>structuralism.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2403,7 +2780,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Which early perspective in psychology, associated with William James, focused on how the mind allows people to adapt, live, work, and play?</Name>
+      <Name>
+        Which early perspective in psychology, associated with William James, focused on how the mind allows
+
+        people to adapt, live, work, and play?
+      </Name>
       <InCorrectOption>psychoanalysis.</InCorrectOption>
       <CorrectOption>functionalism.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2475,7 +2856,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>The idea that sexual orientation may be related to the birth order of male children was posited by researchers in the field of</Name>
+      <Name>
+        The idea that sexual orientation may be related to the birth order of male children was posited by
+
+        researchers in the field of
+      </Name>
       <InCorrectOption>behaviorism.</InCorrectOption>
       <CorrectOption>biopsychology.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2538,7 +2923,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>_____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest explanation is more often the best one.</Name>
+      <Name>
+        _____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest
+
+        explanation is more often the best one.
+      </Name>
       <InCorrectOption>Cognitive perspective-taking.</InCorrectOption>
       <CorrectOption>The law of parsimony.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2603,7 +2992,11 @@
     <ActivityQuestionsList>
       <Name>Freud’s theory of psychoanalysis</Name>
       <InCorrectOption>has no place in modern scientific study.</InCorrectOption>
-      <CorrectOption>is still in use by professionals today, with less emphasis on sex and sexual motivations.</CorrectOption>
+      <CorrectOption>
+        is still in use by professionals today, with less emphasis on sex and sexual
+
+        motivations.
+      </CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
       <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -2637,7 +3030,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an example of</Name>
+      <Name>
+        Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an
+
+        example of
+      </Name>
       <InCorrectOption>a single-blind study.</InCorrectOption>
       <CorrectOption>confirmation bias.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2646,7 +3043,13 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Sasha sat in the preschool classroom and watched the children play, writing down how well they interacted with each other. The children could see that Sasha was watching them, so they made an attempt to be extra well-behaved for her. Sasha's research will be impacted by</Name>
+      <Name>
+        Sasha sat in the preschool classroom and watched the children play, writing down how well they interacted
+
+        with each other. The children could see that Sasha was watching them, so they made an attempt to be extra well-behaved
+
+        for her. Sasha's research will be impacted by
+      </Name>
       <InCorrectOption>observer bias.</InCorrectOption>
       <CorrectOption>the observer effect.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2655,7 +3058,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Dr. Jonas wanted to determine what would happen if rats were given food every time they completed a maze. He believed they would learn to complete the maze faster. This belief is called</Name>
+      <Name>
+        Dr. Jonas wanted to determine what would happen if rats were given food every time they completed a maze.
+
+        He believed they would learn to complete the maze faster. This belief is called
+      </Name>
       <InCorrectOption>control.</InCorrectOption>
       <CorrectOption>a prediction.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2673,7 +3080,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>When Mary took the survey in the mall, she noticed that the interviewer was wearing an Obama button. She answered the questions more favorably toward Obama than she might otherwise have, probably because</Name>
+      <Name>
+        When Mary took the survey in the mall, she noticed that the interviewer was wearing an Obama button. She
+
+        answered the questions more favorably toward Obama than she might otherwise have, probably because
+      </Name>
       <InCorrectOption>the survey questions were biased.</InCorrectOption>
       <CorrectOption>of courtesy bias.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2691,7 +3102,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If a researcher is observing a third grade classroom in full view of the students and finds that all the students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?</Name>
+      <Name>
+        If a researcher is observing a third grade classroom in full view of the students and finds that all the
+
+        students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?
+      </Name>
       <InCorrectOption>A survey would be a better approach.</InCorrectOption>
       <CorrectOption>The students’ behavior is due to the observer effect.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2700,7 +3115,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s attention will</Name>
+      <Name>
+        According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s
+
+        attention will
+      </Name>
       <InCorrectOption>be more attached to his mother.</InCorrectOption>
       <CorrectOption>cry again in the future.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2709,7 +3128,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Mrs. Lewis participated in a study in which she was given no treatment for her condition. Mrs. Lewis was in the ________ group.</Name>
+      <Name>
+        Mrs. Lewis participated in a study in which she was given no treatment for her condition. Mrs. Lewis was
+
+        in the ________ group.
+      </Name>
       <InCorrectOption>experimental</InCorrectOption>
       <CorrectOption>control</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2718,7 +3141,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early humans’ avoidance of poisonous plants.</Name>
+      <Name>
+        Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early
+
+        humans’ avoidance of poisonous plants.
+      </Name>
       <InCorrectOption>phobic</InCorrectOption>
       <CorrectOption>adaptive</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2727,7 +3154,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Mary is a psychologist who focuses on the role of the conscious and unconscious mind. To which perspective does Mary ascribe?</Name>
+      <Name>
+        Mary is a psychologist who focuses on the role of the conscious and unconscious mind. To which perspective
+
+        does Mary ascribe?
+      </Name>
       <InCorrectOption>humanistic</InCorrectOption>
       <CorrectOption>psychodynamic</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2736,7 +3167,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Anna is 45-years-old and is suffering from hot flashes and extreme moodiness. From a _____ perspective, Anna's symptoms can be attributed to menopause.</Name>
+      <Name>
+        Anna is 45-years-old and is suffering from hot flashes and extreme moodiness. From a _____ perspective,
+
+        Anna's symptoms can be attributed to menopause.
+      </Name>
       <InCorrectOption>analytical</InCorrectOption>
       <CorrectOption>biopsychological</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2745,7 +3180,13 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Mrs. O'Connor participated in a study in which she was told she would try out a new allergy medicine. She was in the group that received a sugar pill but she believed that the pill did indeed help control her allergy symptoms. This phenomenon is known as</Name>
+      <Name>
+        Mrs. O'Connor participated in a study in which she was told she would try out a new allergy medicine. She
+
+        was in the group that received a sugar pill but she believed that the pill did indeed help control her allergy
+
+        symptoms. This phenomenon is known as
+      </Name>
       <InCorrectOption>a successful experiment.</InCorrectOption>
       <CorrectOption>the placebo effect.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2754,7 +3195,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A drug company is determining the effects of a treatment for depression. Neither the researcher nor the participants know who is getting the treatment and who is being given a sugar pill. This type of study is</Name>
+      <Name>
+        A drug company is determining the effects of a treatment for depression. Neither the researcher nor the
+
+        participants know who is getting the treatment and who is being given a sugar pill. This type of study is
+      </Name>
       <InCorrectOption>single-blind.</InCorrectOption>
       <CorrectOption>double-blind.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2763,7 +3208,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and height have a(n)</Name>
+      <Name>
+        If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and
+
+        height have a(n)
+      </Name>
       <InCorrectOption>inverse relationship.</InCorrectOption>
       <CorrectOption>positive correlation.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2772,7 +3221,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>Dr. Edwards wants to show a causal relationship between tobacco smoking and cancer. Dr. Edwards should</Name>
+      <Name>
+        Dr. Edwards wants to show a causal relationship between tobacco smoking and cancer. Dr. Edwards
+
+        should
+      </Name>
       <InCorrectOption>observe people smoking.</InCorrectOption>
       <CorrectOption>conduct an experiment using animal participants.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2781,7 +3234,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>In measuring the effect of violent cartoons on childhood aggression, researchers must identify the __________ of “aggressive behavior.”</Name>
+      <Name>
+        In measuring the effect of violent cartoons on childhood aggression, researchers must identify the
+
+        __________ of “aggressive behavior.”
+      </Name>
       <InCorrectOption>hypothesis</InCorrectOption>
       <CorrectOption>operational definition</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2790,7 +3247,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A drug company conducts a study in which the experimenter gives half of the participants the drug being tested and the other half a placebo. This is an example of</Name>
+      <Name>
+        A drug company conducts a study in which the experimenter gives half of the participants the drug being
+
+        tested and the other half a placebo. This is an example of
+      </Name>
       <InCorrectOption>the experimenter effect.</InCorrectOption>
       <CorrectOption>a single-blind study.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2817,7 +3278,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A researcher wants to describe children's normal behavior on the playground. The best method for this research is to use</Name>
+      <Name>
+        A researcher wants to describe children's normal behavior on the playground. The best method for this
+
+        research is to use
+      </Name>
       <InCorrectOption>a case study.</InCorrectOption>
       <CorrectOption>naturalistic observation.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2826,7 +3291,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>In an experiment in which half of the participants are given a caffeinated product and half are given a decaffeinated product to determine if caffeine will make them more talkative, the independent variable is</Name>
+      <Name>
+        In an experiment in which half of the participants are given a caffeinated product and half are given a
+
+        decaffeinated product to determine if caffeine will make them more talkative, the independent variable is
+      </Name>
       <InCorrectOption>the decaffeinated product.</InCorrectOption>
       <CorrectOption>the presence or absence of caffeine.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2835,7 +3304,11 @@
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>A researcher wants to determine how most U.S. college students feel about the president. Which of the following groups provides a representative sample for this researcher's survey?</Name>
+      <Name>
+        A researcher wants to determine how most U.S. college students feel about the president. Which of the
+
+        following groups provides a representative sample for this researcher's survey?
+      </Name>
       <InCorrectOption>honor roll students who have pledged to be truthful</InCorrectOption>
       <CorrectOption>students selected randomly at college campuses across the country</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>

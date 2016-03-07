@@ -275,3 +275,21 @@ Scenario: eCollege User logging into eCollege as a student
 Given User has browsed the url of eCollege as "ECollegeStudent"
 When "ECollegeStudent" logs in using a valid Login credentials
 Then user should be sucessfully signed into eCollege
+
+#Purpose: Open Ws Url and Login as Workspace Admin
+Scenario: User Login as Workspace Admin2 in HedMil
+Given I browsed the login url for "HedWsAdmin2"
+When I logged into the Pegasus as "HedWsAdmin2" in "WorkSpace"
+Given I am on the "Course Enrollment" page
+
+
+#User enter into the program course
+#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Program
+Scenario: User Login as Program Admin and Navigate MyITLabOffice2013Program Course for Course Creation
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
+When I enter in the "MyITLabOffice2013ProgramCourseCreation" course from the Global Home page as "HedProgramAdmin"

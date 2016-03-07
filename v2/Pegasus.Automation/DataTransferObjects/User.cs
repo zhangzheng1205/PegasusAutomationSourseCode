@@ -62,6 +62,11 @@ namespace Pearson.Pegasus.TestAutomation.
         public DateTime CurrentProfileDateTime { get; set; }
 
         /// <summary>
+        /// This is the email of the user.
+        /// </summary>
+        public String WorkSpaceName { get; set; }
+
+        /// <summary>
         /// This is the type of the user
         /// </summary>
         public enum UserTypeEnum
@@ -166,6 +171,8 @@ namespace Pearson.Pegasus.TestAutomation.
             MoodleDirectStudent = 93,
             D2LKioskTeacher1 = 94,
             D2LKioskStudent1 = 95,
+            DPCsTeacherCC=96,
+            HedWsAdmin2 = 97
             #endregion
         }
 

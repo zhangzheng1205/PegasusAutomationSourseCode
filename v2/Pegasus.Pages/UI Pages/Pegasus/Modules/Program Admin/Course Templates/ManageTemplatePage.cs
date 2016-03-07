@@ -48,13 +48,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSection__DivContent_Id_Locator));
                 //To get template name if present
-                String getCourseText = base.GetElementTextById(ManageTemplatePageResource.
-                        ManageTemplate_Page_TemplateSection__DivContent_Id_Locator);
-                if (!getCourseText.Contains(courseName))
-                {
+                //String getCourseText = base.GetElementTextById(ManageTemplatePageResource.
+                //        ManageTemplate_Page_TemplateSection__DivContent_Id_Locator);
+                //if (!getCourseText.Contains(courseName))
+                //{
                     //Creating Template if not Present
-                    this.TemplateCreation();
-                }
+                this.TemplateCreation(courseName);
+                //}
                 base.SelectWindow(ManageTemplatePageResource.
                   ManageTemplate_Page_Window_Title_Name);
             }
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Extract Method From GetCreatedTemplate
         /// </summary>
-        private void TemplateCreation()
+        private void TemplateCreation(string courseName)
         {
             // create template
             Logger.LogMethodEntry("ManageTemplatePage", "TemplateCreation",
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(ManageTemplatePageResource.
                 ManageTemplate_Page_CursorHand_XPath_Locator);
             // create new template
-            new AddNewTemplatePage().CreateNewTemplate();
+            new AddNewTemplatePage().CreateNewTemplate(courseName);
             Logger.LogMethodExit("ManageTemplatePage", "TemplateCreation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -152,8 +152,10 @@ namespace Pegasus.Pages.UI_Pages
             // Wait till entity enters from inactive state to active state
             int minutesToWait = Int32.Parse(ConfigurationManager.
                 AppSettings["AssignedToCopyInterval"]);
+            SearchEntityInProgramAdministration(entityName);
             while (stopwatch.Elapsed.TotalMinutes < minutesToWait)
             {
+                this.SelectMiddleFrame();
                 base.WaitForElement(By.XPath(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSection_Grid_Xpath_Locator));
                 //Get the Text of the Entity
@@ -167,6 +169,7 @@ namespace Pegasus.Pages.UI_Pages
                     SearchEntityInProgramAdministration(entityName);
                     Thread.Sleep(Convert.ToInt32(ManageTemplatePageResource.
                         ManageTemplate_Page_Thread_Sleep_Time));
+                    base.SwitchToDefaultPageContent();
                 }
             }
             Logger.LogMethodExit("ManageTemplatePage", "ApproveEntityInProgramAdministration",
@@ -256,6 +259,8 @@ namespace Pegasus.Pages.UI_Pages
                 SearchEntityInProgramAdministration(entityName);
                 Thread.Sleep(Convert.ToInt32(ManageTemplatePageResource.
                     ManageTemplate_Page_Thread_Sleep_Time));
+                base.SwitchToDefaultPageContent();
+                this.SelectMiddleFrame();
                 base.WaitForElement(By.XPath(ManageTemplatePageResource.
                         ManageTemplate_Page_TemplateSection_Grid_Xpath_Locator));
                 getAssignedToCopyText =
@@ -644,6 +649,68 @@ namespace Pegasus.Pages.UI_Pages
                 ManageTemplate_Page_CopySection_Window_Title_Name);
             Logger.LogMethodExit("ManageTemplatePage", "SelectCopyasSectionWindow",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Store Section Id.
+        /// </summary>
+        /// <param name="sectionName">This is section name.</param>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        public void StoreSharedLibraryID(String sharedLibraryName, Course.CourseTypeEnum courseTypeEnum)
+        {
+            // store section details
+            Logger.LogMethodEntry("ManageTemplatePage", "StoreSectionID",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // search section 
+                SearchSection(sharedLibraryName);
+                base.WaitForElement(By.Id(ManageTemplatePageResource.
+                    ManageTemplate_Page_TemplateSection_Grid_Id_Locator));
+                this.SelectMiddleFrame();
+                // get section id to store
+                String getSharedLibraryID = base.GetElementTextByXPath(ManageTemplatePageResource.
+                    ManageTemplate_Page_TemplateSectionGrid_XPath_Locator);
+                WebDriver.SwitchTo().DefaultContent();
+                // check section Id is not null
+                if (getSharedLibraryID != null)
+                {
+                    // store section Id
+                    StoreSectionNameInMemory(getSharedLibraryID, sharedLibraryName, courseTypeEnum);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ManageTemplatePage", "StoreSectionID",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create template from fresh/existing Shared Library
+        /// </summary>
+        /// <param name="courseTypeEnum">This is the course type</param>
+        public void CreateTemplateFromFreshOrExistingSharedLibrary(Course.CourseTypeEnum 
+            courseTypeEnum)
+        {
+            //Search the fresh shared library
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve Section in Active State
+            this.SearchEntityInProgramAdministration(course.SharedLibraryName);
+            bool sharedLibraryListed=base.IsElementPresent(By.XPath(ManageTemplatePageResource.
+                    ManageTemplate_Page_SectionName_XPath_Locator),15);
+            //If Fresh Shared Library Present create Template
+            if (sharedLibraryListed)
+            this. ClickOnCmenuOfSectionOrTemplate("Copy as Template");
+            //If Fresh Shared Library not present use existing shared library
+            else
+            {
+                this.SearchEntityInProgramAdministration(course.ExistingSharedLibraryName);
+                this.ClickOnCmenuOfSectionOrTemplate("Copy as Template");
+            }
+
         }
     }
 }

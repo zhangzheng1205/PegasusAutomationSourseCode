@@ -602,6 +602,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabProgram:
                             case Course.CourseTypeEnum.AmpProgramCourse:
+                            case Course.CourseTypeEnum.MyITLabOffice2013ProgramCourseCreation:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;

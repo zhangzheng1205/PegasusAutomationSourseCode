@@ -623,9 +623,14 @@ namespace Pegasus.Pages.UI_Pages
                     HomePage_ClassesDivCount_CssSelector_Locator);
                 for (int rowCount = 2; rowCount <= getClassCount; rowCount++)
                 {
+                    base.WaitUntilWindowLoads(HomePageResource.
+                      Home_Page_Home_Window_Title);
+                    base.SelectWindow(HomePageResource.
+                            Home_Page_Home_Window_Title);
                     //Get Class Name
                     getClassNameText = base.GetElementTextByXPath(string.Format(
                         HomePageResource.HomePage_ClassName_Link_Xpath_Locator, rowCount)).Trim();
+                   
                     if (getClassNameText == className)
                     {
                         break;

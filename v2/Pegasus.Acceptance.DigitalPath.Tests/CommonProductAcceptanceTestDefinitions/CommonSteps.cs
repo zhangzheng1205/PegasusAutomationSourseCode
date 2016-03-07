@@ -445,6 +445,21 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Click on Ok button in Alert pop up while assigning hidden contents.
+        /// </summary>
+        [When(@"I click on Ok button in Pegasus pop up")]
+        public void ClickOkButtonInPegasusPopUp()
+        {
+            //Click on Ok button in Alert pop up
+            Logger.LogMethodEntry("CommonSteps", "ClickOkButtonInPegasusPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on Ok button in Alert pop up
+            new ShowMessagePage().ClickOkButtonInPegasusPopUp();
+            Logger.LogMethodExit("CommonSteps", "ClickOkButtonInPegasusPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Click on myprofile link in home page.
         /// </summary>

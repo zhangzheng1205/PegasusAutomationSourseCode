@@ -77,6 +77,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new AdminToolPage().ClickAddNewCourseEnrollmentModeOption();
             //To get the productId and ResourceId stored in memory
             License licence = License.Get(License.LicenseTypeEnum.Rumba);
+            
             //Fill the productId and ResourceId 
             new CourseEnrollmentModePage().CreateLicensing
                 (licence.ProductID, licence.ResourceID);

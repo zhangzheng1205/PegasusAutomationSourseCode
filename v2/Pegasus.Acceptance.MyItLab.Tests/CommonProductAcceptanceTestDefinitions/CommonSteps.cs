@@ -520,6 +520,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         /// <param name="subtabName">This is SubTab Name.</param>
         /// <param name="mainTabName">This is MainTab Name.</param>
         [When(@"I navigate to ""(.*)"" subtab from ""(.*)"" tab")]
+        [When(@"I move to ""(.*)"" subtab from ""(.*)"" tab")]
         public void NavigateToPublishingTab(string subtabName, string mainTabName)
         {
             //Navigate to perticular Page
@@ -996,6 +997,63 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodExit("CommonSteps", "ValidatePastDueDateIcon",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Navigate To Tab Of The Particular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to the ""(.*)"" tab of the ""(.*)"" page")]
+        public void NavigateToTabOfTheParticularPage(string tabName, string pageName)
+        {
+            //Navigate Administrator Tool Page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            //Is The Page Open Already
+            Boolean isPageAlreadyExists = base.IsPopupPresent(pageName, 2);
+            if (isPageAlreadyExists)
+            {
+                //Selecting the Page If Opened
+                base.SelectWindow(pageName);
+            }
+            else
+            {
+                // Navigating To Administrators tab
+                base.WaitForElement(By.PartialLinkText(tabName));
+                IWebElement getTabName = base.GetWebElementPropertiesByPartialLinkText
+                    (tabName);
+                base.ClickByJavaScriptExecutor(getTabName);
+            }
+
+
+            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Section in Active State or not.
+        /// </summary>
+        /// /// <param name="courseTypeEnum">This is course type enum.</param>
+        [Then(@"I should see the shared library created from ""(.*)"" course Template to be successfully out of AssignedToCopy state")]
+        public void ApproveAssignedToCopyStateForSharedLibrary(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("CommonSteps", "ApproveAssignedToCopyStateForSection",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Assert Verify Template in Active State or not
+            Logger.LogAssertion("VerifyTemplateActiveState",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.AreEqual(false, new ManageTemplatePage().GetAssignToCopyStateText
+                (course.SharedLibraryName).Contains(CommonStepsResource.
+                CommonSteps_AssignToCopyState_Text_Value)));
+            Logger.LogMethodExit("CommonSteps", "ApproveAssignedToCopyStateForSection",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }

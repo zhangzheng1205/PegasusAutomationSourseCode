@@ -414,16 +414,34 @@ testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTa
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CourseSpaceTeacher for Course Creation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLoginAsCourseSpaceTeacherForCourseCreation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CourseSpaceTeacher for Course Creation", ((string[])(null)));
+#line 121
+this.ScenarioSetup(scenarioInfo);
+#line 122
+testRunner.Given("I browsed the login url for \"DPCsTeacherCC\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 123
+testRunner.When("I login to Pegasus as \"DPCsTeacherCC\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 124
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User LogOut As CourseSpaceAide")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
         public virtual void UserLogOutAsCourseSpaceAide()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CourseSpaceAide", ((string[])(null)));
-#line 121
+#line 127
 this.ScenarioSetup(scenarioInfo);
-#line 122
+#line 128
 testRunner.When("I \"Sign Out\" from the \"DPCsAide\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 123
+#line 129
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -435,11 +453,11 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void UserLogOutAsNewCourseSpaceAide()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As new CourseSpaceAide", ((string[])(null)));
-#line 126
+#line 132
 this.ScenarioSetup(scenarioInfo);
-#line 127
+#line 133
 testRunner.When("I \"Sign Out\" from the \"DPCsNewAide\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 128
+#line 134
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -451,13 +469,13 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void UserLoginAsNewCourseSpaceAide()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As new CourseSpaceAide", ((string[])(null)));
-#line 131
+#line 137
 this.ScenarioSetup(scenarioInfo);
-#line 132
+#line 138
 testRunner.Given("I browsed the login url for \"DPCsNewAide\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 133
+#line 139
 testRunner.When("I login to Pegasus as \"DPCsNewAide\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 134
+#line 140
 testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -469,13 +487,13 @@ testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTa
         public virtual void UserLoginAsCourseSpaceAide()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CourseSpaceAide", ((string[])(null)));
-#line 137
+#line 143
 this.ScenarioSetup(scenarioInfo);
-#line 138
+#line 144
 testRunner.Given("I browsed the login url for \"DPCsAide\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 139
+#line 145
 testRunner.When("I login to Pegasus as \"DPCsAide\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 140
+#line 146
 testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -487,11 +505,11 @@ testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTa
         public virtual void UserLogOutAsNewCourseSpaceTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As new CourseSpaceTeacher", ((string[])(null)));
-#line 143
+#line 149
 this.ScenarioSetup(scenarioInfo);
-#line 144
+#line 150
 testRunner.When("I \"Sign Out\" from the \"DPCsNewTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 145
+#line 151
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -503,11 +521,11 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void UserLogOutAsCourseSpaceStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CourseSpaceStudent", ((string[])(null)));
-#line 148
+#line 154
 this.ScenarioSetup(scenarioInfo);
-#line 149
+#line 155
 testRunner.When("I \"Sign Out\" from the \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
+#line 156
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -519,13 +537,13 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void UserLoginAsCourseSpaceTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CourseSpaceTeacher", ((string[])(null)));
-#line 153
+#line 159
 this.ScenarioSetup(scenarioInfo);
-#line 154
+#line 160
 testRunner.Given("I browsed the login url for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 155
+#line 161
 testRunner.When("I login to Pegasus as \"DPCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 156
+#line 162
 testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -537,11 +555,11 @@ testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTa
         public virtual void UserLogOutAsCourseSpaceTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CourseSpaceTeacher", ((string[])(null)));
-#line 159
+#line 165
 this.ScenarioSetup(scenarioInfo);
-#line 160
+#line 166
 testRunner.When("I \"Sign out\" from the \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 161
+#line 167
 testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -553,11 +571,11 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void DPTeacherSavingTheProfileDateAndTime()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DP Teacher saving the profile date and time", ((string[])(null)));
-#line 164
+#line 170
 this.ScenarioSetup(scenarioInfo);
-#line 165
+#line 171
 testRunner.When("I click \'My Profile\' link as \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 166
+#line 172
 testRunner.And("I store user current date and time of the teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -569,11 +587,11 @@ testRunner.And("I store user current date and time of the teacher", ((string)(nu
         public virtual void TeacherEnterIntoDigitalPathClass()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher enter into DigitalPath Class", ((string[])(null)));
-#line 169
+#line 175
 this.ScenarioSetup(scenarioInfo);
-#line 170
+#line 176
 testRunner.When("I enter into the DP \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 171
+#line 177
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -585,9 +603,9 @@ testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechT
         public virtual void UpdateEnumValuesForGradebookVerification()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Enum values for gradebook verification", ((string[])(null)));
-#line 174
+#line 180
 this.ScenarioSetup(scenarioInfo);
-#line 175
+#line 181
 testRunner.Given("I update enum values for gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -599,9 +617,9 @@ testRunner.Given("I update enum values for gradebook", ((string)(null)), ((TechT
         public virtual void LaunchIEBrowser()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch IE browser", ((string[])(null)));
-#line 178
+#line 184
 this.ScenarioSetup(scenarioInfo);
-#line 179
+#line 185
 testRunner.Given("I launch \"Internet Explorer\" browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -613,9 +631,9 @@ testRunner.Given("I launch \"Internet Explorer\" browser", ((string)(null)), ((T
         public virtual void LaunchFireFoxBrowser()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch FireFox browser", ((string[])(null)));
-#line 182
+#line 188
 this.ScenarioSetup(scenarioInfo);
-#line 183
+#line 189
 testRunner.Given("I launch \"FireFox\" browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -627,9 +645,9 @@ testRunner.Given("I launch \"FireFox\" browser", ((string)(null)), ((TechTalk.Sp
         public virtual void LaunchChromeBrowser()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Chrome browser", ((string[])(null)));
-#line 186
+#line 192
 this.ScenarioSetup(scenarioInfo);
-#line 187
+#line 193
 testRunner.Given("I launch \"Chrome\" browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();

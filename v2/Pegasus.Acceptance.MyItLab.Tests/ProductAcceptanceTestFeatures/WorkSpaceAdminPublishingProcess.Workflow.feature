@@ -10,3 +10,8 @@ When I search "MyItLabSIM5MasterCourse" course in workspace by "CourseName" and 
 Then I should be able to see the searched "MyItLabSIM5MasterCourse" course
 When I publish the Authored "MyItLabSIM5MasterCourse" in workspace as "Master Course"
 Then I should see the successfull message "Course published successfully."
+
+#Purpose: Workspace Admin Publishing Process of SIM Master Course
+Scenario:Workspace Publish Fresh SIM Master Course Or Existing SIM Master Course
+When I Publish "MyItLabSIM5MasterCourse" or "ExistingCourseForPublish"
+Then I should see the successfull message "Course published successfully."

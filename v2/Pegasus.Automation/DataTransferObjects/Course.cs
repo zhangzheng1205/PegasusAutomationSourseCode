@@ -93,6 +93,13 @@ namespace Pegasus.Automation.DataTransferObjects
             MoodleKioskCourse = 63,
             D2LDirectCourse = 64,
             MoodleDirectCourse = 65,
+            MyItLabSIM5AnotherWorkSpaceMasterCourse=66,
+            ExistingCourseForPublish=67,
+            ExistingPublishedCourse=68,
+            MasterLibrarySameProduct=69,
+            MasterLibraryDifferentProduct=70,
+            MyITLabOffice2013ProgramCourseCreation=71,
+            MyITLabForOffice2013MasterCourseCreation=72
         }
 
         /// <summary>
@@ -111,6 +118,21 @@ namespace Pegasus.Automation.DataTransferObjects
         public String SectionName { get; set; }
 
         /// <summary>
+        /// This gives the shared library id.
+        /// </summary>
+        public String SharedLibraryId { get; set; }
+
+        /// <summary>
+        /// This gives the shared library name.
+        /// </summary>
+        public String SharedLibraryName { get; set; }
+
+        /// <summary>
+        /// This gives the shared library name.
+        /// </summary>
+        public String ExistingSharedLibraryName { get; set; }
+
+        /// <summary>
         /// This gives the course section name.
         /// </summary>
         public String SectionNameForJobDependent { get; set; }
@@ -119,6 +141,16 @@ namespace Pegasus.Automation.DataTransferObjects
         /// This gives the course template name.
         /// </summary>
         public String TemplateName { get; set; }
+
+        /// <summary>
+        /// This gives the course  copy template name.
+        /// </summary>
+        public String CopyTemplateName { get; set; }
+
+        /// <summary>
+        /// This gives the course  copy template name.
+        /// </summary>
+        public String SharedLibraryCopyTemplateName { get; set; }
 
         /// <summary>
         /// This gives the preference status.

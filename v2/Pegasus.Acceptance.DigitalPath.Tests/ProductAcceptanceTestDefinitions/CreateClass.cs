@@ -332,17 +332,31 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// <summary>
         /// Choose the master library from select product page.
         /// </summary>
-        [When(@"I select product and Click on Manage enrollments button")]
-        public void SelectMasterLibraryAndClickManageEnrollmentsButton()
+        [When(@"I select product ""(.*)"" ML")]
+        public void SelectMasterLibrary(Course.CourseTypeEnum courseType)
         {
             //Select master library
-            Logger.LogMethodEntry("CreateClass", "SelectMasterLibraryAndClickManageEnrollmentsButton",
+            Logger.LogMethodEntry("CreateClass", "SelectMasterLibrary",
              base.IsTakeScreenShotDuringEntryExit);
             //Select master library
-            new frmSetupWizardPage().SelectMasterLibrary();
-            Logger.LogMethodExit("CreateClass", "SelectMasterLibraryAndClickManageEnrollmentsButton",
+            Course course = Course.Get(courseType);
+            new frmSetupWizardPage().SelectMasterLibrary(course.Name);
+            Logger.LogMethodExit("CreateClass", "SelectMasterLibrary",
           base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I Click on Manage enrollments button")]
+        public void ClickOnManageEnrollmentsButton()
+        {
+            //Select master library
+            Logger.LogMethodEntry("CreateClass", "ClickOnManageEnrollmentsButton",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Select master library
+            new frmSetupWizardPage().ClickManageEnrollmentsButton();
+            Logger.LogMethodExit("CreateClass", "ClickOnManageEnrollmentsButton",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Click on save and exit button.
@@ -374,9 +388,56 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             string className = Class.Name.ToString();
             Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(className, new HomePage().GetDisplayClassName(className)));
-            Logger.LogMethodExit("CreateClass", "ClickOnSaveAndExitButton",
+            Logger.LogMethodExit("CreateClass", "ValidateClassDisplayInClassesChannel",
           base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [Then(@"I should see ""(.*)"" class for ""(.*)"" displayed in classes channel")]
+        public void VerifyClassForMultipleMLDisplayedInClassesChannel(Class.ClassTypeEnum classTypeEnum,
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Validate class name
+            Logger.LogMethodEntry("CreateClass", "VerifyClassForMultipleMLDisplayedInClassesChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get class and course name from memory
+            Class Class = Class.Get(classTypeEnum);
+            Course Course = Course.Get(courseTypeEnum);
+            string className = Class.Name + ": " + Course.Name;
+            Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(className, new HomePage().GetDisplayClassName(className)));
+            Logger.LogMethodExit("CreateClass", "VerifyClassForMultipleMLDisplayedInClassesChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should not see ""(.*)"" class for ""(.*)"" displayed in classes channel")]
+        public void VerifyRemovalOfClassInClassesChannel(Class.ClassTypeEnum classTypeEnum,
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Validate class name
+            Logger.LogMethodEntry("CreateClass", "VerifyRemovalOfClassInClassesChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get class and course name from memory
+            Class Class = Class.Get(classTypeEnum);
+            Course Course = Course.Get(courseTypeEnum);
+            string className = Class.Name + ": " + Course.Name;
+            Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreNotEqual(className, new HomePage().GetDisplayClassName(className)));
+            Logger.LogMethodExit("CreateClass", "VerifyRemovalOfClassInClassesChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [Then(@"I should see ""(.*)"" copy content class in classes channel")]
+        public void ThenIShouldSeeCopyContentClassForDisplayedInClassesChannel(Class.ClassTypeEnum classTypeEnum)
+        {
+            //Get class name from memory
+            Class Class = Class.Get(classTypeEnum);
+            string copyClassName = "Copy Content - " + Class.Name;
+            Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(copyClassName, new HomePage().GetDisplayClassName(copyClassName)));
+        }
+
+
 
       
         /// <summary>
@@ -410,6 +471,45 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
           base.IsTakeScreenShotDuringEntryExit);
 
         }
+
+        [When(@"I select the ""(.*)"" template")]
+        public void SelectTheTemplate(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Validate class creation success message
+            Logger.LogMethodEntry("CreateClass", "SelectTheTemplate",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Fetch course name from memory
+            Course course = Course.Get(courseTypeEnum);
+
+            Logger.LogMethodExit("CreateClass", "SelectTheTemplate",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [When(@"I select ""(.*)"" ML in ""(.*)"" popup")]
+        public void SelectMLInAddToClassPopup(Course.CourseTypeEnum courseTypeEnum, string windowName)
+        {
+            Logger.LogMethodEntry("CreateClass", "SelectMLInAddToClassPopup",
+            base.IsTakeScreenShotDuringEntryExit);
+          Course course = Course.Get(courseTypeEnum);
+          new frmSetupWizardPage().
+         SelectTemplateAtAddToClassPopup(course.Name);
+          Logger.LogMethodExit("CreateClass", "SelectMLInAddToClassPopup",
+      base.IsTakeScreenShotDuringEntryExit);
+        }
+
+       
+
+        [When(@"I enter details for ""(.*)"" class copy")]
+        public void EnterDetailsForClassCopy(Class.ClassTypeEnum classType)
+        {
+            Logger.LogMethodEntry("CreateClass", "EnterDetailsForClassCopy",
+             base.IsTakeScreenShotDuringEntryExit);
+            Class classDetails = Class.Get(classType);
+            new frmSetupWizardPage().EnterCopyClassDetails(classDetails.Name);
+            Logger.LogMethodExit("CreateClass", "EnterDetailsForClassCopy",
+         base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
 
 

@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select master library
         /// </summary>
-        public void SelectMasterLibrary()
+        public void SelectMasterLibrary(string masterLibrary)
         {
             //Select master library
             logger.LogMethodEntry("frmSetupWizardPage", "SelectMasterLibrary",
@@ -130,14 +130,22 @@ namespace Pegasus.Pages.UI_Pages
                 }
                 else
                 {
-                    base.WaitForElement(By.XPath(frmSetupWizardPageResource.
-                    frmSetupWizardPageResource_CourseListTable_Xpath_Locator));
-                    //Select master library
-                    base.ClickButtonByXPath(frmSetupWizardPageResource.
-                        frmSetupWizardPageResource_CourseListTable_Xpath_Locator);
-                    this.ClickManageEnrollmentsButton();
+                    int masterLibraryCount = base.GetElementCountByCssSelector(".cssTRCN");
+                    for (int i = 1; i <= masterLibraryCount; i++)
+                    {
+                        base.WaitForElement(By.XPath(string.Format("(//tr[@class='cssTRCN']/td[3])[{0}]", i)));
+                        string actualML = base.GetElementInnerTextByXPath(string.Format("(//tr[@class='cssTRCN']/td[3]/span)[{0}]", i));
+                        if (actualML == masterLibrary)
+                        {
+                            
+                            base.WaitForElement(By.XPath(string.Format("(//tr[@class='cssTRCN']/td[1]/input)[{0}]", i)));
+                            IWebElement checkBox = base.GetWebElementPropertiesByXPath(string.Format("(//tr[@class='cssTRCN']/td[1]/input)[{0}]", i));
+                            base.ClickByJavaScriptExecutor(checkBox);
+                        }
+                    }
+                   
                 }
-                base.SwitchToDefaultPageContent();
+               
             }
             catch (Exception e)
             {
@@ -163,6 +171,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on manage enrollments button
                 base.ClickButtonById(frmSetupWizardPageResource.
                     frmSetupWizardPageResource_ManageEnrollmentsButton_Id_Locator);
+                base.SwitchToDefaultPageContent();
             }
             catch (Exception e)
             {
@@ -528,6 +537,45 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+
+           
+        }
+
+        public void SelectTemplateAtAddToClassPopup(String masterLibrary)
+        {
+            int masterLibraryCount = base.GetElementCountByCssSelector(".TRBackGroundClass");
+            for (int i = 1; i <= masterLibraryCount; i++)
+            {
+                bool pres = base.IsElementPresent(By.XPath(string.Format("(//tr[@class='TRBackGroundClass']/td[3])[{0}]", i)), 10);
+                base.WaitForElement(By.XPath(string.Format("(//tr[@class='TRBackGroundClass']/td[3])[{0}]", i)));
+                string actualML = base.GetElementInnerTextByXPath(string.Format("(//tr[@class='TRBackGroundClass']/td[3]/span)[{0}]", i));
+                Thread.Sleep(3000);
+                if (actualML == masterLibrary)
+                {
+                    bool check = base.IsElementPresent(By.XPath(string.Format("(//input[@id='selectcheckbox'])[{0}]", i)), 10);
+                    base.WaitForElement(By.XPath(string.Format("(//input[@id='selectcheckbox'])[{0}]", i)));
+                    IWebElement checkBox = base.GetWebElementPropertiesByXPath(string.Format("(//input[@id='selectcheckbox'])[{0}]", i));
+                    base.ClickByJavaScriptExecutor(checkBox);
+                    break;
+                }
+            }
+
+            base.GetWebElementPropertiesById("btnFinish").Click();
+            Thread.Sleep(10000);
+        }
+
+        public void EnterCopyClassDetails(string className)
+        {
+            string copyClassName = "Copy Content - " + className;
+            base.WaitForElement(By.Id("txtNewTemplateName"));
+            base.ClearTextById("txtNewTemplateName");
+            base.FillTextBoxById("txtNewTemplateName", copyClassName);
+            base.WaitForElement(By.Id("txtDescription"));
+            base.ClearTextById("txtDescription");
+            base.FillTextBoxById("txtDescription", "Course Creation Testing");
+            base.WaitForElement(By.Id("imgbtnAddTemplate"));
+            base.GetWebElementPropertiesById("imgbtnAddTemplate").Click();
+            Thread.Sleep(10000);
         }
     }
 }

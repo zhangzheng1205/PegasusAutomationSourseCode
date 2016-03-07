@@ -354,7 +354,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ClassUserControlsPageResource.
                 ClassUserControls_Page_ClassName_Input_Id_Locator));
             //Class Name Guid
-            Guid className = Guid.NewGuid();
+            String date = DateTime.Now.ToString("yyyy/MM/dd HH-mm-ss");
+
+            String className = "Auto-(" + date + ")-Class";
+           
             //Fill Text Box With Class Name
             base.FillTextBoxById(ClassUserControlsPageResource.
                 ClassUserControls_Page_ClassName_Input_Id_Locator, className.ToString());
@@ -423,8 +426,10 @@ namespace Pegasus.Pages.UI_Pages
             //Switch to Frame
             base.SwitchToIFrame(ClassUserControlsPageResource.
                 ClassUserControls_Page_Frame_Id_Locator);
-            base.WaitForElement(By.XPath(ClassUserControlsPageResource.
-                ClassUserControls_Page_CourseCount_Xpath_Locator));
+           
+
+                base.WaitForElement(By.XPath(ClassUserControlsPageResource.
+                    ClassUserControls_Page_CourseCount_Xpath_Locator));
             //Click On The Master Library Radio Button
             this.ClickOnMasterLibraryRadioButton(masterLibrary);
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnMasterLibrary",

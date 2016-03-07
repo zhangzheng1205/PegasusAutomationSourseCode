@@ -105,8 +105,9 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
             (CourseCopyResource.CourseCopy_CopyasMasterCourse_CMenu_Option_Name);
-            //Copy Workspace Course As MasterCourse
-            new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
+            //Copy Workspace Course As MasterCourse 
+            //Pass workspace name via usertype enum to select the Workspace.The method has been generalized .
+             //new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateCourseCopyInDifferentWorkSpace",
                 base.IsTakeScreenShotDuringEntryExit);
         }

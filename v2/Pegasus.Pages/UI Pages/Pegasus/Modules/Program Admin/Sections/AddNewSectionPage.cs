@@ -55,15 +55,23 @@ namespace Pegasus.Pages.UI_Pages
                             Course.CourseTypeEnum.HSSMyPsychLabProgram);
                         break;
                     case Course.CourseTypeEnum.GraderITSIM5Course:
-                    case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
+               
                         new ManageTemplatePage().StoreSectionID(sectionName,
                           Course.CourseTypeEnum.MyItLabProgramCourse);
                         break;
                     case Course.CourseTypeEnum.MyITLabForOffice2013Master:
+                   
                         new ManageTemplatePage().StoreSectionID(sectionName,
                             Course.CourseTypeEnum.MyITLabOffice2013Program);
                         new ManageTemplatePage().StoreSectionNameForJobDependentInMemory(sectionName,
-                            Course.CourseTypeEnum.MyITLabOffice2013Program);
+                          Course.CourseTypeEnum.MyITLabOffice2013Program);
+                        break;
+                    case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
+                    case Course.CourseTypeEnum.MyITLabForOffice2013MasterCourseCreation:
+                        new ManageTemplatePage().StoreSectionID(sectionName,
+                            Course.CourseTypeEnum.MyITLabOffice2013ProgramCourseCreation);
+                        new ManageTemplatePage().StoreSectionNameForJobDependentInMemory(sectionName,
+                         Course.CourseTypeEnum.MyITLabOffice2013ProgramCourseCreation);
                         break;  
                 }
             }
@@ -182,14 +190,16 @@ namespace Pegasus.Pages.UI_Pages
                 case Course.CourseTypeEnum.HedMilAcceptanceSIMProgramCourse:
                 case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
                 case Course.CourseTypeEnum.MyITLabForOffice2013Master:
+                case Course.CourseTypeEnum.MyITLabForOffice2013MasterCourseCreation:
                 case Course.CourseTypeEnum.HSSMyPsychLabMaster:
                 case Course.CourseTypeEnum.MySpanishLabMaster:
+                case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                     // Enter section count in Drop Down box
                     base.FillTextBoxById(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.
                             AddNewSection_Page_MilCourse_Section_NoList_Value);
                     break;                
-                case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
+                
                 case Course.CourseTypeEnum.GraderITSIM5Course:
                     // Enter section count in Drop Down box
                     base.FillTextBoxById(AddNewSectionPageResource.
@@ -293,6 +303,32 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Enters Start and End Date
+        /// </summary>
+        /// <param name="sectionStartDate">This is Section Start Date</param>
+        /// <param name="sectionEndDate">This is Section End Date</param>
+        private void AddSharedLibraryStartAndEndDate(
+            String sectionStartDate, String sectionEndDate)
+        {
+            //Enters Start and End Date
+            Logger.LogMethodEntry("AddNewSectionPage", "AddSectionStartAndEndDate",
+                    base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(AddNewSectionPageResource.
+               AddNewSection_Page_StartDate_TextBox_Id_Locator));
+            //Enter Start Date
+            base.FillTextBoxById(AddNewSectionPageResource.
+                                     AddNewSection_Page_StartDate_TextBox_Id_Locator, sectionStartDate);
+            base.WaitForElement(By.Id(AddNewSectionPageResource.
+                                          AddNewSection_Page_EndDate_TextBox_Id_Locator));
+            //Enter End Date
+            base.FillTextBoxById(AddNewSectionPageResource.
+                                     AddNewSection_Page_EndDate_TextBox_Id_Locator, sectionEndDate);
+           
+            Logger.LogMethodExit("AddNewSectionPage", "AddSectionStartAndEndDate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         ///  Create section  to validate the section count and give appropriate alert message.
         /// </summary>
         /// <param name="courseTypeEnum"></param>
@@ -331,8 +367,11 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("AddNewSectionPage", "FillingSectionDetails",
                 base.IsTakeScreenShotDuringEntryExit);
             string sectionName = string.Empty;
+           
             // generate new guid section name
-            Guid sectionGuid = Guid.NewGuid();
+            String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+            sectionName = "Auto-(" + date + ")-" + "Section";
+         
             // Get the Current date
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
@@ -348,7 +387,7 @@ namespace Pegasus.Pages.UI_Pages
                     AddNewSection_Page_CourseName_TextName_Id_Locator));
                 // enter the section name
                 base.FillTextBoxById(AddNewSectionPageResource.
-                  AddNewSection_Page_CourseName_TextName_Id_Locator, sectionGuid.ToString());
+                  AddNewSection_Page_CourseName_TextName_Id_Locator, sectionName);
                 // select template
                 this.SelectingTemplateFromDropDown(courseTypeEnum);
                 // enter no. of section count in text box 
@@ -400,7 +439,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("AddNewSectionPage", "FillingSectionDetails",
                 base.IsTakeScreenShotDuringEntryExit);
 
-            return sectionGuid.ToString();
+            return sectionName;
         }
 
         /// <summary>
@@ -420,6 +459,230 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
             Logger.LogMethodExit("AddNewSectionPage", "SaveAndCloseNewSectionWithCount",
                     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create New Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        public void CreateNewSharedLibrary(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create New Section 
+            Logger.LogMethodEntry("AddNewSectionPage", "CreateNewSharedLibrary",
+                base.IsTakeScreenShotDuringEntryExit);
+            string sharedLibraryName = string.Empty;
+            try
+            {
+                sharedLibraryName = FillingSharedLibraryDetails(courseTypeEnum);
+                Course course = Course.Get(courseTypeEnum);
+                //Store Section Details
+                course.SharedLibraryName = sharedLibraryName;
+
+              
+                // save and close section
+                base.WaitForElement(By.Id("imgbtnSave"));
+                //Get Element Property
+                IWebElement getCloseElementButtonProperty = base.GetWebElementPropertiesById(
+                    "imgbtnSave");
+                //Click on Button
+                base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
+                //Wait for the Popup to Close
+                base.IsPopUpClosed(Convert.ToInt32(AddNewSectionPageResource.
+                    AddNewSection_Page_NumberOfWindows_Value));
+                // Select defalut window
+                base.SelectWindow(AddNewSectionPageResource
+                    .AddNewSection_Page_ParentWindow_Page_Title);
+             
+             
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AddNewSectionPage", "CreateNewSharedLibrary",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create New Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        public void CopyAsTemplate(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create New Section 
+            Logger.LogMethodEntry("AddNewSectionPage", "CreateNewSharedLibrary",
+                base.IsTakeScreenShotDuringEntryExit);
+         String copyTemplate = string.Empty;
+         String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+         copyTemplate = "Auto-(" + date + ")-" + "Copy Template";   
+            // generate new guid section name
+           
+            // Get the Current date
+            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+            DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+            String currentTime = instance.ToString();
+
+                // selecting the create new section window
+            base.WaitUntilWindowLoads("Copy as Template");
+                // Select Window
+            base.SelectWindow("Copy as Template");
+                base.WaitForElement(By.Id(AddNewSectionPageResource.
+                    AddNewSection_Page_CourseName_TextName_Id_Locator));
+                // enter the section name
+                base.ClearTextById(AddNewSectionPageResource.
+                  AddNewSection_Page_CourseName_TextName_Id_Locator);
+                base.FillTextBoxById(AddNewSectionPageResource.
+                  AddNewSection_Page_CourseName_TextName_Id_Locator, copyTemplate);
+           
+                Course course = Course.Get(courseTypeEnum);
+                //Store Section Details
+                 course.CopyTemplateName = copyTemplate;
+
+                  // save and close section
+                base.WaitForElement(By.Id("imgbtnSave"));
+                //Get Element Property
+                IWebElement getCloseElementButtonProperty = base.GetWebElementPropertiesById(
+                    "imgbtnSave");
+                //Click on Button
+                base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
+                //Wait for the Popup to Close
+                base.IsPopUpClosed(Convert.ToInt32(AddNewSectionPageResource.
+                    AddNewSection_Page_NumberOfWindows_Value));
+                // Select defalut window
+                base.SelectWindow(AddNewSectionPageResource
+                    .AddNewSection_Page_ParentWindow_Page_Title);
+
+            Logger.LogMethodExit("AddNewSectionPage", "CreateNewSharedLibrary",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Create New Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        public void CopySharedLibraryAsTemplate(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create New Section 
+            Logger.LogMethodEntry("AddNewSectionPage", "CopySharedLibraryAsTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+            String sharedLibraryCopyTemplateName = string.Empty;
+            String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+            sharedLibraryCopyTemplateName = "Auto-(" + date + ")-" + "Shared Library Copy Template";   
+            // generate new guid section name
+                 
+            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+            DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+            String currentTime = instance.ToString();
+
+            // selecting the create new section window
+            base.WaitUntilWindowLoads("Copy as Template");
+            // Select Window
+            base.SelectWindow("Copy as Template");
+            base.WaitForElement(By.Id(AddNewSectionPageResource.
+                AddNewSection_Page_CourseName_TextName_Id_Locator));
+            // enter the section name
+            base.ClearTextById(AddNewSectionPageResource.
+              AddNewSection_Page_CourseName_TextName_Id_Locator);
+            base.FillTextBoxById(AddNewSectionPageResource.
+              AddNewSection_Page_CourseName_TextName_Id_Locator, sharedLibraryCopyTemplateName);
+
+            Course course = Course.Get(courseTypeEnum);
+            //Store Section Details
+            
+            course.SharedLibraryCopyTemplateName = sharedLibraryCopyTemplateName;
+
+            // save and close section
+            base.WaitForElement(By.Id("imgbtnSave"));
+            //Get Element Property
+            IWebElement getCloseElementButtonProperty = base.GetWebElementPropertiesById(
+                "imgbtnSave");
+            //Click on Button
+            base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
+            //Wait for the Popup to Close
+            base.IsPopUpClosed(Convert.ToInt32(AddNewSectionPageResource.
+                AddNewSection_Page_NumberOfWindows_Value));
+            // Select defalut window
+            base.SelectWindow(AddNewSectionPageResource
+                .AddNewSection_Page_ParentWindow_Page_Title);
+
+            Logger.LogMethodExit("AddNewSectionPage", "CopySharedLibraryAsTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// To fill the section fields while creating the section.
+        /// </summary>
+        /// <param name="courseTypeEnum">Template name</param>
+        /// <returns>returns the section name</returns>      
+        public string FillingSharedLibraryDetails(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create New Section 
+            Logger.LogMethodEntry("AddNewSectionPage", "FillingSharedLibraryDetails",
+                base.IsTakeScreenShotDuringEntryExit);
+            string sharedLibraryName = string.Empty;
+            // generate new guid section name
+            String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+            sharedLibraryName = "Auto-(" + date + ")-" + "Shared Library";
+            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+            DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+            String currentTime = instance.ToString();
+            try
+            {
+
+                // selecting the create new section window
+                base.WaitUntilWindowLoads("Copy as Shared Library");
+                // Select Window
+                base.SelectWindow("Copy as Shared Library");
+                base.WaitForElement(By.Id(AddNewSectionPageResource.
+                    AddNewSection_Page_CourseName_TextName_Id_Locator));
+                // enter the section name
+                base.ClearTextById(AddNewSectionPageResource.
+                  AddNewSection_Page_CourseName_TextName_Id_Locator);
+                base.FillTextBoxById(AddNewSectionPageResource.
+                  AddNewSection_Page_CourseName_TextName_Id_Locator, sharedLibraryName);
+           
+                // get date format
+                string getStartDateFormat = base.GetElementTextById(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_StartDate_Format_Id_Locator);
+                string getEndDateFormat = base.GetElementTextById(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_EndDate_Format_Id_Locator);
+
+                // select section date based on acceptable format 
+                if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_Actual_StartDate_Format_DDMMYYYY)
+                    && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
+                {
+                    // enter section start and end date                           
+                    this.AddSharedLibraryStartAndEndDate(instance.ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_DDMMYYYY), instance.AddDays(90).
+                        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
+                }
+                if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
+                   AddNewSection_Page_Section_Actual_StartDate_Format_MMDDYYYY)
+                   && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
+                   AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
+                {
+                    // enter section start and end date                           
+                    this.AddSharedLibraryStartAndEndDate(instance.ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_MMDDYYYY), instance.AddDays(90).
+                        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
+                }
+              
+            }
+
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AddNewSectionPage", "FillingSectionDetails",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            return sharedLibraryName;
         }
 
     }

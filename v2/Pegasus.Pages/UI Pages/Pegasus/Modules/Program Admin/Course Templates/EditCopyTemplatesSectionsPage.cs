@@ -53,10 +53,7 @@ namespace Pegasus.Pages.UI_Pages
             //wait for the required element to come up and then populate it.
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_start_date));
             base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_start_date, GetDateValue(DateType.StartDate));
-            //Prepare the enddate/time with required format by adding 90 days to the current date.
-            //String getSLEndDate = DateTime.Now.AddDays(90).ToString(
-            //base.GetElementInnerTextById("txtStartDateId_lblDateFormat").ToLower());
-            //Populate the enddate
+            
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_end_date));
             base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_end_date, GetDateValue(DateType.EndDate));
             ClickToCreateUpdate();

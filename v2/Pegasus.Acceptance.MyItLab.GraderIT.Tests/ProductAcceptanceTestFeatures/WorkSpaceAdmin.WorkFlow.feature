@@ -89,6 +89,6 @@ Scenario: Delete The Created Empty Course by WS admin
 When I search "HedEmptyClass" course in workspace by "CourseName" and "Equals" dropdown option
 Then I should see the searched "HedEmptyClass" course in Manage Courses frame
 When I select the course to delete in manage course frame
-Then I should see the successfull message ""Courses deleted successfully."
+Then I should see the successfull message "Courses deleted successfully."
 When I search "HedEmptyClass" course in workspace by "CourseName" and "Equals" dropdown option
 Then I should see the "There are no courses. To add courses, click Create New Course." message in Manage Course

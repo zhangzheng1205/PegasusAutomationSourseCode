@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Created Guid Copy Course Name
                 SelectCopyAsMasterCourseWindow();
                 //Enter Course Name
-                String getCourseDetails = this.GetCourseName();
+                String getCourseDetails = this.GetCourseName("dummy");
                 //Click To Save Course
                 ClickOnSaveCourseButton();
                 // Save Copied Course Name in Memory
@@ -56,6 +56,7 @@ namespace Pegasus.Pages.UI_Pages
             //Creating New Course
             logger.LogMethodEntry("NewCoursePage", "CreateNewCourse",
                 base.IsTakeScreenShotDuringEntryExit);
+            String courseName=string.Empty;
             try
             {
                 //Select Window
@@ -63,7 +64,18 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the Course Format
                 this.SelectCourseFormat(courseFormatOption);
                 //Enter Course Name
-                String courseName = this.GetCourseName();
+                switch (courseFormatOption)
+                {
+                    case "Sim Course":
+                        courseName = this.GetCourseName("New Sim5 Course");
+                        break;
+                    case "General Course":
+                        courseName = this.GetCourseName("General Course");
+                        break;
+                    case "MyTest Course":
+                        courseName = this.GetCourseName("MyTest Course");
+                        break;
+                }
                 //Click Save To Course
                 this.ClickOnSaveCourseButton();
                 // Save New Course Name in Memory
@@ -82,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="courseTypeEnum">This is course type emum.</param>
         public void CopyMasterCourseInDifferentWorkspace
-            (Course.CourseTypeEnum courseTypeEnum)
+            (Course.CourseTypeEnum courseTypeEnum, User.UserTypeEnum userTypeEnum )
         {
             //Copy Master Course In Different Workspace
             logger.LogMethodEntry("NewCoursePage", "CopyMasterCourseInDifferentWorkspace",
@@ -92,11 +104,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 SelectCopyAsMasterCourseWindow();
                 //Enter Course Name
-                String courseName = this.GetCourseName();
+                String courseName = this.GetCourseName("Another Workspace");
                 //Select Option To Copy Course To Other WorkSpace
                 this.SelectCopyToAnotherWorkspaceOption();
                 //Select WorkSpace Name
-                this.SelectWorkSpaceName();
+                this.SelectWorkSpaceName(userTypeEnum);
                 // Select Course Save Button
                 this.ClickOnSaveCourseButton();
                 // Store Course Information In Memory
@@ -110,6 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+       
         /// <summary>
         ///Copy Course As Testing Course.
         /// </summary>
@@ -125,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 this.SelectCopyAsTestingCourseWindow();
                 //Enter Course Name
-                String getCourseName = this.GetCourseName();
+                String getCourseName = this.GetCourseName("dummy");
                 //Click Course Save Button
                 this.ClickOnSaveCourseButton();
                 // Store Course Information In Memory
@@ -138,6 +151,48 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("NewCoursePage", "CopyCourseAsTestingCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        ///Copy Course As Testing Course.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        public void CopyCourseActions
+            (string option,Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Copy Course As Testing Course
+            logger.LogMethodEntry("NewCoursePage", "CopyCourseAsTestingCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+            String getCourseName = string.Empty;
+            try
+            {
+                switch (option)
+                {
+                    case "Copy as Testing Course":
+                        this.SelectCopyAsTestingCourseWindow();
+                         getCourseName = this.GetCourseName("Testing Course");
+                        break;
+                    case "Copy as Master Course":
+                        //Select Window
+                        SelectCopyAsMasterCourseWindow();
+                        getCourseName = this.GetCourseName("Master Course");
+                        break;
+                }
+                //Enter Course Name
+               
+                //Click Course Save Button
+                this.ClickOnSaveCourseButton();
+                // Store Course Information In Memory
+                this.StoreCourseDetailsInMemory(getCourseName, courseTypeEnum);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("NewCoursePage", "CopyCourseAsTestingCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        
 
         /// <summary>
         /// Select Course Type Format.
@@ -200,7 +255,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Enter Course Name In Text Box.
         /// </summary>
         /// <returns>Course Name.</returns>
-        private String GetCourseName()
+        private String GetCourseName(string courseType)
         {
             //Enter and Get Course Name
             logger.LogMethodEntry("NewCoursePage", "GetCourseName",
@@ -212,13 +267,16 @@ namespace Pegasus.Pages.UI_Pages
             base.ClearTextById(NewCoursePageResource.
                                    NewCourse_Page_CourseName_TextBox_Id_Locator);
             //Genearate Course Name Guid
-            Guid courseNameGuid = Guid.NewGuid();
+
+            String date = DateTime.Now.ToString("yyyy/MM/dd HH-mm-ss");
+
+            String CourseName = "Auto-(" + date + ")-" + courseType;
             //Enter The Course Name
             base.FillTextBoxById(NewCoursePageResource.
-                NewCourse_Page_CourseName_TextBox_Id_Locator, courseNameGuid.ToString());
+                NewCourse_Page_CourseName_TextBox_Id_Locator, CourseName);
             logger.LogMethodExit("NewCoursePage", "GetCourseName",
            base.IsTakeScreenShotDuringEntryExit);
-            return courseNameGuid.ToString();
+            return CourseName;
         }
 
         /// <summary>
@@ -242,18 +300,20 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select WorkSpace Name From DropDown.
         /// </summary>
-        private void SelectWorkSpaceName()
+        private void SelectWorkSpaceName(User.UserTypeEnum userTypeEnum)
         {
             //Select WorkSpace Name
             logger.LogMethodEntry("NewCoursePage", "SelectWorkSpaceName",
                 base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string expectedWorkspace = user.WorkSpaceName;
             //Wait for Drop down of workspace
             base.WaitForElement(By.Name(NewCoursePageResource.
                 NewCourse_Page_CopyAsMasterCoursePopUp_Dropdown_Name));
             // select workspace
             base.SelectDropDownValueThroughTextByName(NewCoursePageResource.
                 NewCourse_Page_CopyAsMasterCoursePopUp_Dropdown_Name,
-                NewCoursePageResource.NewCourse_Page_CopyAsMasterCoursePopUp_Dropdown_Name_Value);
+               expectedWorkspace);
             logger.LogMethodEntry("NewCoursePage", "SelectWorkSpaceName",
                 base.IsTakeScreenShotDuringEntryExit);
         }

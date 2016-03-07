@@ -90,6 +90,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     // Get URL of workspace admin
                     case User.UserTypeEnum.HedWsAdmin:
+                    case User.UserTypeEnum.HedWsAdmin2:
                     case User.UserTypeEnum.HedMiLWsAdmin:
                     case User.UserTypeEnum.HedCoreVmWsAdmin:
                         _baseLoginUrl = string.Format(
@@ -203,6 +204,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Get Url of Synapse CourseSpace User
                     case User.UserTypeEnum.DPCsTeacher:
+                    case User.UserTypeEnum.DPCsTeacherCC:
                     case User.UserTypeEnum.DPCsNewStudent:
                     case User.UserTypeEnum.DPCsNewTeacher:
                     case User.UserTypeEnum.DPCsNewAide:
@@ -718,6 +720,7 @@ namespace Pegasus.Pages.UI_Pages
                          Login_Page_Password_TextBox_Id_Locator, password);
             //Click on Login Submit Button based on User by Type
             if (User.UserTypeEnum.DPCsTeacher == userTypeEnum
+                || User.UserTypeEnum.DPCsTeacherCC == userTypeEnum
                 || User.UserTypeEnum.DPDemoUser == userTypeEnum
                 || User.UserTypeEnum.DPCsStudent == userTypeEnum
                 || User.UserTypeEnum.DPCsNewStudent == userTypeEnum
@@ -845,6 +848,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Logged in by Hed Ws Admin
                 case User.UserTypeEnum.HedWsAdmin:
+                case User.UserTypeEnum.HedWsAdmin2:
                 //Logged in by DP Ws Admin
                 case User.UserTypeEnum.WsAdmin:
                 case User.UserTypeEnum.DPWsAdmin:
@@ -896,6 +900,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 //Logged in by DP Cs User
                 case User.UserTypeEnum.DPCsTeacher:
+                case User.UserTypeEnum.DPCsTeacherCC:
                 case User.UserTypeEnum.DPCsStudent:
                 case User.UserTypeEnum.DPCsNewTeacher:
                 case User.UserTypeEnum.DPCsNewStudent:

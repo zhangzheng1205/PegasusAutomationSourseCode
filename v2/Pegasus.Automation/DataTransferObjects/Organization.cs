@@ -17,7 +17,8 @@ namespace Pegasus.Automation.DataTransferObjects
         {
             NovaNET = 1,
             DigitalPath = 2,
-            DigitalPathDemo = 3
+            DigitalPathDemo = 3,
+            DigitalPathCC=4
         }
 
         /// <summary>

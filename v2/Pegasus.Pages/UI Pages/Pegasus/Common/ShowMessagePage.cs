@@ -308,6 +308,36 @@ namespace Pegasus.Pages.UI_Pages
                 "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click Ok button in Alert Pop up.
+        /// </summary>
+        public void ClickOkButtonInPegasusPopUp()
+        {
+            //Click on the Pegasus 'OK' button
+            Logger.LogMethodEntry("ShowMessagePage",
+                "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Pegasus Window
+                base.WaitUntilWindowLoads("Pegasus");
+                base.SelectWindow("Pegasus");
+                //Click On 'Ok' Button On Pegasus PopUp Window.
+                base.IsElementPresent(By.Id(ShowMessagePageResource.
+                    ShowMessage_Page_OkButton_Id_Locator), 5);
+                base.ClickButtonById(ShowMessagePageResource.
+                ShowMessage_Page_OkButton_Id_Locator);
+                //Wait for 2 Secs
+                Thread.Sleep(10000);
+             
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ShowMessagePage",
+                "ClickOnPegasusAlertOkButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
         private void SelectActivityAlertWindow()
         {
             Logger.LogMethodEntry("ShowMessagePage",

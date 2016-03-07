@@ -146,6 +146,28 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Create Copy of Authored Course. /// 
+        /// </summary>
+        /// <param name="action"></param>
+        /// <param name="courseTypeEnum"></param>
+        [When(@"I ""(.*)"" as ""(.*)""")]
+        public void CreateCopyOfAuthoredCourse(string cmenuAction, Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create Testing Course Copy In Workspace            
+            Logger.LogMethodEntry("CreateCourse",
+                "CreateCopyOfAuthoredCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click of CMenu Option
+            new ManageCoursesPage().ClickCourseCMenuOption
+             (cmenuAction);
+            //Copy Course 
+            new NewCoursePage().CopyCourseActions(cmenuAction, courseTypeEnum);
+            Logger.LogMethodExit("CreateCourse",
+                "CreateCopyOfAuthoredCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Creates a New Course.
         /// </summary>
@@ -206,7 +228,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new ManageCoursesPage().ClickCourseCMenuOption
             (CourseCopyResource.CourseCopy_CopyasmasterCourse_CMenu_Option_Name);
             //Copy Workspace Course As MasterCourse
-            new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
+            // Pass workspace name via usertype enum to select the Workspace.The method has been generalized .
+           // new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy",
                 "CreateWorkspaceCourseCopyInAuthoredCourse",
                 base.IsTakeScreenShotDuringEntryExit);

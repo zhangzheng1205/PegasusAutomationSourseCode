@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Automation.DataTransferObjects;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -122,5 +123,120 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyTheCourseMessage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+      
+     
+
+        /// <summary>
+        /// Create Testing Course Copy In Workspace.
+        /// </summary>
+        /// <param name=""></param>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        [When(@"I perform ""(.*)"" for ""(.*)"" course")]
+        public void CreateTestingCourseCopyInWorkspace
+            (String cmenuAction, Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create Testing Course Copy In Workspace            
+            Logger.LogMethodEntry("CreateCourse",
+                "CreateTestingCourseCopyInWorkspace",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click of CMenu Option
+            new ManageCoursesPage().ClickCourseCMenuOption
+             (cmenuAction);
+            //Copy Course As Testing Course
+            new NewCoursePage().CopyCourseActions(cmenuAction, courseTypeEnum);
+            Logger.LogMethodExit("CreateCourse",
+                "CreateTestingCourseCopyInWorkspace",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+          [When(@"I perform ""(.*)"" for ""(.*)"" course to another workspace ""(.*)""")]
+        public void CopyCourseToAnotherWorkspace(String cmenuAction,
+              Course.CourseTypeEnum courseTypeEnum,User.UserTypeEnum userTypeEnum)
+        {
+               //Click of CMenu Option
+            new ManageCoursesPage().ClickCourseCMenuOption
+             (cmenuAction);
+            new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum, userTypeEnum);
+        }
+
+
+
+         /// <summary>
+        /// Approve  from the [CourseForAssignedToCopy] State.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        /// <param name="searchRadioButton">This is Search Radio Button.</param>
+        /// <param name="dropdownOption">This is Dropdown Option.</param>
+        [When(@"I verified the course ""(.*)"" for AssignedToCopy state by ""(.*)"" and ""(.*)"" dropdown option")]
+       public void VerifiedTheCourseForAssignedToCopyState(
+            Course.CourseTypeEnum courseTypeEnum,
+            string searchRadioButton, string dropdownOption)
+        {
+            //Check Course for Assigned To Copy State
+            Logger.LogMethodEntry("CreateCourse", "VerifiedTheCourseForAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search course
+            new SearchCoursesPage().SearchCourse(
+                (SearchCoursesPage.SearchRadioButtonEnum)Enum.Parse(typeof(
+                SearchCoursesPage.SearchRadioButtonEnum),
+                searchRadioButton), course.Name, dropdownOption);
+            //Approve Course From [AssignedToCopy] State 
+            new ManageCoursesPage().ApproveAssignedToCopyState(
+                (SearchCoursesPage.SearchRadioButtonEnum)Enum.Parse(
+                typeof(SearchCoursesPage.SearchRadioButtonEnum), searchRadioButton),
+                course.Name, dropdownOption);
+            Logger.LogMethodExit("CreateCourse", "CreateAuthoredCourseCopyInWorkSpace",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Ensure course is out of AssignedToCopy state or not.
+        /// </summary>
+        /// /// <param name="courseTypeEnum">This is course type enum.</param>
+        [Then(@"I should see the Copied ""(.*)"" Course Out Of Assigned to Copy State")]
+        public void CourseOutOfAssignedToCopyState(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Check Course Get Our Of Assigned To Copy State
+            Logger.LogMethodEntry("CreateCourse", "CourseOutOfAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            ManageCoursesPage manageCoursesPage = new ManageCoursesPage();
+            //Assert [CourseForAssignedToCopy] Text Present
+            Logger.LogAssertion("VerifyAssignedToCopyTextPresent",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                    Assert.AreEqual("False"
+                    , manageCoursesPage.
+                    GetAssignedToCopyTextPresentAfterSpecifiedTime()));
+            //Fetch And Store Course Workspace Id
+            manageCoursesPage.FetchAndStoreCourseWorkspaceId(courseTypeEnum);
+            Logger.LogMethodExit("CreateCourse", "CourseOutOfAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Publish the Freshly Copied Course or Existing Course.
+        /// </summary>
+        /// <param name="freshCourseTypeEnum">Freshly created Course name.</param>
+        /// <param name="existingCourseTypeEnum">Existing Course name.</param>
+        [When(@"I Publish ""(.*)"" or ""(.*)""")]
+        public void PublishFreshOrExisting(Course.CourseTypeEnum freshCourseTypeEnum,
+           Course.CourseTypeEnum existingCourseTypeEnum)
+        {
+
+            // Publish the Freshly Copied Course or Existing Course
+            Logger.LogMethodEntry("CreateCourse", "PublishFreshOrExisting",
+              base.IsTakeScreenShotDuringEntryExit);
+            ManageCoursesPage manageCoursesPage = new ManageCoursesPage();
+            manageCoursesPage.PublishFreshOrExistingCourse(freshCourseTypeEnum,
+                existingCourseTypeEnum);
+            Logger.LogMethodExit("CreateCourse", "PublishFreshOrExisting",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+         
+       
+
     }
 }

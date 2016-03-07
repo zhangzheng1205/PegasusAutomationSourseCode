@@ -22,16 +22,36 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Create New Template
         /// </summary>
-        public void CreateNewTemplate()
+        public void CreateNewTemplate(string courseName)
         {
            //Create New Template
             logger.LogMethodEntry("AddNewTemplatePage", "CreateNewTemplate", 
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the Add New Template Window
-                base.SelectWindow(AddNewTemplatePageResource.
-                        AddNewTemplate_Page_Window_Page_Title);
+               
+                    //Select the Add New Template Window
+                courseName = courseName + " Template";
+                    base.SelectWindow(AddNewTemplatePageResource.
+                            AddNewTemplate_Page_Window_Page_Title);
+                    int getTemplateCount = base.GetElementCountByXPath
+                       ("//table[@name='tbltemplates']");
+                    for (int i = 1; i <=getTemplateCount; i++)
+                    {
+                        
+                        base.WaitForElement(By.XPath(string.Format(
+                            "//table[@name='tbltemplates'][{0}]/tbody/tr/td[2]/span", i)));
+                        string templateName = base.GetElementTextByXPath(string.Format(
+                            "//table[@name='tbltemplates'][{0}]/tbody/tr/td[2]/span", i));
+                        if (courseName == templateName)
+                        {
+                            IWebElement radioButton = base.GetWebElementPropertiesByXPath
+                                (string.Format(
+                                "//table[@name='tbltemplates'][{0}]/tbody/tr/td/input", i));
+                            base.ClickByJavaScriptExecutor(radioButton);
+                            break;
+                        }
+                    }
                 base.WaitForElement(By.Id(AddNewTemplatePageResource.
                     AddNewTemplate_Page_AddTemplate_Button_Id_Locator));
                 //Click on the Add Template Button

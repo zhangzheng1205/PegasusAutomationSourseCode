@@ -359,6 +359,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Minimized.PlannerAssignment.BVT.DP.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseCreation_WS_CSA_Teacher-School.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest_RLCNUtility.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

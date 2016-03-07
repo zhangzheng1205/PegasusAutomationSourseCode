@@ -110,8 +110,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             (CourseCopyResource.
             CourseCopy_CopyasMasterCourse_CMenu_Option_Name);
             //Copy Workspace Course As MasterCourse
-            new NewCoursePage().
-                CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
+            // Pass workspace name via usertype enum to select the Workspace.The method has been generalized .
+           //new NewCoursePage(). CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateCourseCopyInDifferentWorkSpace",
                 base.IsTakeScreenShotDuringEntryExit);
         }

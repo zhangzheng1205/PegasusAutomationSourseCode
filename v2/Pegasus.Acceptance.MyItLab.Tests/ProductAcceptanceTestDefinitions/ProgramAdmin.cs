@@ -59,6 +59,45 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Verify Template in Active State.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        [When(@"I verify the ""(.*)"" course Copy Template for AssignedToCopy state")]
+        public void CopyTemplateInAssignedToCopyState(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "TemplateInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Verify Template in Active State
+            new ManageTemplatePage().
+                ApproveInActiveStateOfEntityInProgramAdministration(course.CopyTemplateName);
+            Logger.LogMethodExit("ProgramAdmin", "TemplateInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Template in Active State.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+       [When(@"I verify the ""(.*)"" Shared Library Copy Template for AssignedToCopy state")]
+
+        public void SharedLibraryCopyTemplateForAssignedToCopyState
+           (Course.CourseTypeEnum courseTypeEnum)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "SLCCopyTemplateInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Verify Template in Active State
+            new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration
+                (course.SharedLibraryCopyTemplateName);
+            Logger.LogMethodExit("ProgramAdmin", "SLCCopyTemplateInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Verify Template in Active State or not.
         /// </summary>
         /// <param name="courseTypeEnum">This is course type enum.</param>
@@ -79,6 +118,52 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify Template in Active State or not.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+      [Then(@"I should see the ""(.*)"" Shared Library Copy Template to be successfully out of AssignedToCopy state")]
+        public void ApproveAssignedToCopyStateForSharedLibraryCopyTemplate(Course.CourseTypeEnum courseTypeEnum)
+
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Assert Verify Template in Active State or not
+            Logger.LogAssertion("VerifyTemplateActiveState",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.AreEqual(false, new ManageTemplatePage().
+                GetAssignToCopyStateText(course.SharedLibraryCopyTemplateName).Contains(ProgramAdminResource.
+                ProgramAdmin_Page_AssignToCopyState_Text_Value)));
+            Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Template in Active State or not.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        [Then(@"I should see the ""(.*)"" course Copy Template to be successfully out of AssignedToCopy state")]
+        public void ApproveAssignedToCopyStateForCopyTemplate(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Assert Verify Template in Active State or not
+            Logger.LogAssertion("VerifyTemplateActiveState",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.AreEqual(false, new ManageTemplatePage().
+                GetAssignToCopyStateText(course.CopyTemplateName).Contains(ProgramAdminResource.
+                ProgramAdmin_Page_AssignToCopyState_Text_Value)));
+            Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Click on the Add Sections Link.
         /// </summary>
@@ -256,7 +341,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// To search the section
         /// </summary>
         /// <param name="courseTypeEnum"></param>
-        [When(@"I search the section of ""(.*)""")]
+         [When(@"I search the section of ""(.*)""")]
         public void SearchSection(Course.CourseTypeEnum courseTypeEnum)
         {
             //Verify Section in Active State
@@ -266,6 +351,43 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Course course = Course.Get(courseTypeEnum);
             //Approve Section in Active State
             new ManageTemplatePage().SearchEntityInProgramAdministration(course.SectionName);
+            Logger.LogMethodExit("ProgramAdmin", "SearchSection",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+         /// <summary>
+         /// To search the section
+         /// </summary>
+         /// <param name="courseTypeEnum"></param>
+        [When(@"I search the shared library of ""(.*)""")]
+         public void SearchTheSharedLibrary(Course.CourseTypeEnum courseTypeEnum)
+
+         {
+             //Verify Section in Active State
+             Logger.LogMethodEntry("ProgramAdmin", "SearchSection",
+             base.IsTakeScreenShotDuringEntryExit);
+             //Get Course From Memory
+             Course course = Course.Get(courseTypeEnum);
+             //Approve Section in Active State
+             new ManageTemplatePage().SearchEntityInProgramAdministration(course.SharedLibraryName);
+             Logger.LogMethodExit("ProgramAdmin", "SearchSection",
+             base.IsTakeScreenShotDuringEntryExit);
+         }
+
+        /// <summary>
+        /// To search the section
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        [When(@"I search the template of ""(.*)""")]
+        public void SearchTemplate(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SearchSection",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve Section in Active State
+            new ManageTemplatePage().SearchEntityInProgramAdministration(course.Name);
             Logger.LogMethodExit("ProgramAdmin", "SearchSection",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -357,6 +479,91 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForCopiedSection",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Create a shared library.
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        [When(@"I create Shared Library from ""(.*)"" Template as a Program Admin")]
+        public void CreateSharedLibraryFromTemplateAsAProgramAdmin(Course.CourseTypeEnum courseTypeEnum)
+        {
+           
+            //Create New Section
+            Logger.LogMethodEntry("ProgramAdmin", "CreateSharedLibraryFromTemplateAsAProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create New Section 
+            new AddNewSectionPage().CreateNewSharedLibrary(courseTypeEnum);
+            Logger.LogMethodExit("ProgramAdmin", "CreateSharedLibraryFromTemplateAsAProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create a Template Copy
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        [When(@"I create Template from ""(.*)"" Template as a Program Admin")]
+        public void CreateTemplateFromTemplateAsAProgramAdmin(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create New Section
+            Logger.LogMethodEntry("ProgramAdmin", "CreateTemplateFromTemplateAsAProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create New Section 
+            new AddNewSectionPage().CopyAsTemplate(courseTypeEnum);
+            Logger.LogMethodExit("ProgramAdmin", "CreateTemplateFromTemplateAsAProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create template from shared library.
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+       [When(@"I create Template from ""(.*)"" Shared Lirary as a Program Admin")]
+        public void CreateTemplateFromSharedLiraryAsAProgramAdmin(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create New Section
+            Logger.LogMethodEntry("ProgramAdmin", "CreateTemplateFromSharedLiraryAsAProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create New Section 
+            new AddNewSectionPage().CopySharedLibraryAsTemplate(courseTypeEnum);
+            Logger.LogMethodExit("ProgramAdmin", "CreateTemplateFromSharedLiraryAsAProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Verify Shared Library in Active State.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        [When(@"I verify the shared library created from ""(.*)"" course Template for AssignedToCopy state")]
+        public void SharedLibraryInAssignedToCopyState(
+          Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SharedLibraryInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve Section in Active State
+            new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(
+                course.SharedLibraryName);
+            Logger.LogMethodExit("ProgramAdmin", "SharedLibraryInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create template copy of Fresh or Existing shared library
+        /// </summary>
+        /// <param name="p0"></param>
+        [Then(@"I create Template copy of  fresh or existing ""(.*)"" shared library")]
+        public void ThenICreateTemplateCopyOfFreshOrExistingSharedLibrary(Course.CourseTypeEnum
+            courseTypeEnum)
+        {
+            new ManageTemplatePage().
+                CreateTemplateFromFreshOrExistingSharedLibrary(courseTypeEnum);
+        }
+
+
+
 
     }
 }

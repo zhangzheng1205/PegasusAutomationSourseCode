@@ -117,6 +117,12 @@ Given I browsed the login url for "DPCsNewTeacher"
 When I login to Pegasus as "DPCsNewTeacher" in "CourseSpace"
 Then I should be logged in successfully
 
+#Purpose:Verify The User Login As CourseSpaceTeacher
+Scenario: User Login As CourseSpaceTeacher for Course Creation
+Given I browsed the login url for "DPCsTeacherCC"
+When I login to Pegasus as "DPCsTeacherCC" in "CourseSpace"
+Then I should be logged in successfully
+
 #Purpose:Verify The User LogOut As CourseSpaceAide
 Scenario: User LogOut As CourseSpaceAide
 When I "Sign Out" from the "DPCsAide"

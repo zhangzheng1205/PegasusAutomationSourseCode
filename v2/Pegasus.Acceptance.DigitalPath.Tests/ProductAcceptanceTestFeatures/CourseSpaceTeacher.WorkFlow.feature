@@ -349,7 +349,9 @@ Then I should see "Setup Wizard" light box
 When I enter class name of "DigitalPathMasterLibrary"
 And I click on Select product button
 Then I should see "Select Product" page
-When I select product and Click on Manage enrollments button
+When I select product "MasterLibrary" ML
+
+And I Click on Manage enrollments button
 Then I should see "Manage Enrollments" page
 When I click on Save Class button
 Then I should see the successfull message "Your class has been successfully created and saved." in setup wizard
@@ -635,3 +637,56 @@ Then I should see assigned Media Server Link "Word List"
 When I click on 'MediaServerLink' in the Manage Coursework
 Then I should see the 'MediaServerLink' launched successfully
 And I should see the expected Media Server Content
+
+#Test case id: peg-26025,peg-26027
+#PEGASUS-27282
+#Purpose: To create DP class by teacher using multiple Master Libraries
+#Product: Digital Path
+Scenario: Class creation from classes channel using multiple Master Libraries
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Create button
+Then I should see "Setup Wizard" light box
+When I enter class name of "DigitalPathMasterLibrary"
+And I click on Select product button
+Then I should see "Select Product" page
+When I select product "MasterLibrary" ML
+When I select product "MasterLibrarySameProduct" ML
+When I select product "MasterLibraryDifferentProduct" ML
+And I Click on Manage enrollments button
+Then I should see "Manage Enrollments" page
+When I click on Save Class button
+Then I should see the successfull message "Your class has been successfully created and saved." in setup wizard
+When I click No,Save and Exit button
+Then I should see "DigitalPathMasterLibrary" class for "MasterLibrary" displayed in classes channel
+And I should see "DigitalPathMasterLibrary" class for "MasterLibrarySameProduct" displayed in classes channel
+And I should see "DigitalPathMasterLibrary" class for "MasterLibraryDifferentProduct" displayed in classes channel
+
+
+#Purpose:Add class to Another curriculum
+Scenario: Add Class to Another Curriculum
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Add this Class to Another Curriculum" option
+Then I should see the "Add to Class" popup
+When I select "MasterLibrarySameProduct" ML in "Add to Class" popup
+Then I should see "DigitalPathMasterLibrary" class for "MasterLibrarySameProduct" displayed in classes channel
+
+
+#Purpose:Remove Class from Curriculum
+Scenario: Remove Class from Curriculum
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" for "MasterLibrarySameProduct" to select "Remove Class from Curriculum" option
+And I click on Ok button in Pegasus pop up
+Then I should not see "DigitalPathMasterLibrary" class for "MasterLibrarySameProduct" displayed in classes channel
+
+#Purpose:Copy content into new class
+Scenario:Copy content into new class
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I click on Cmenu option of Class "DigitalPathMasterLibrary" and select "Copy content into new class" option
+Then I should see the "Copy Class" popup
+When I enter details for "DigitalPathMasterLibrary" class copy
+Then I should see "DigitalPathMasterLibrary" copy content class in classes channel
+

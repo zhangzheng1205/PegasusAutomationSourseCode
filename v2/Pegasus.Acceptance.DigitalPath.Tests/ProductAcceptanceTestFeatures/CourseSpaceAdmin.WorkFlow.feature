@@ -246,8 +246,8 @@ Then I should see the "DPCourseSpacePramotedAdmin" in Manage Users frame
 
 #Purpose: Creation of Class Using Master Library Added to the Basal product
 Scenario: Create Class Using Master Library by CS Admin
-When I navigate to the "Course Enrollment" tab
-Then I should be on the "Course Enrollment" page
+When I navigate to the "Organization Admin" tab
+Then I should be on the "Organization Management" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I navigate to the "Classes" tab
 And I click on the Add Classes Option
@@ -518,3 +518,29 @@ Scenario: Open RLCN Utility for triggering failed requests
 When I go to 'LTI Tools' and click 'Services' subtab
 And I click on 'Trigger RLCN Failure' link
 Then I should be on the RLCN Utility Page
+
+#Purpose: To Associate Master Library To Product 
+Scenario:Associate Master Library To Product by CS Admin for Course Creation
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
+And I search the course "MasterLibrary" in coursespace
+Then I should be able to see the searched "MasterLibrary" course in the left frame
+When I select course in left frame
+And I select product type "DigitalPathCC" in right frame
+When I associate the course to Pegasus product
+Then I should see the successfull message "The course has been added successfully."
+
+#Purpose: Creation of Class Using Master Library Added to the Basal product
+Scenario: Create Class Using Master Library by CS Admin for Course Creation
+When I navigate to the "Organization Admin" tab
+Then I should be on the "Organization Management" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPathCC"
+And I navigate to the "Classes" tab
+And I click on the Add Classes Option
+Then I should see the "Create Class" popup
+When I create the class using "MasterLibrary" course
+And I search "DigitalPathMasterLibrary" class in Coursespace
+And I wait for class "DigitalPathMasterLibrary" to copy
+Then I should be able to see the searched "DigitalPathMasterLibrary" class
+When I close the "Manage Organization" window

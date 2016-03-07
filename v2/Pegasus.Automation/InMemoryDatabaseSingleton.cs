@@ -100,6 +100,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             DesearlizeProductTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeGradeTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeActivityQuestionsListTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
+            DesearlizeLicenseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
         }
 
         /// <summary>
@@ -358,6 +359,37 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 }
             }
         }
+
+
+
+             /// <summary>
+        /// Desearlize Organization Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeLicenseTestData(XmlDocument xmlDocument,
+            ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
+        {
+          
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfLicense");
+            xmlSerializer = new XmlSerializer(typeof(List<License>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get organization list
+                var licenseList = (List<License>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (License license in licenseList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(license);
+                }
+            }
+        }
+
 
         /// <summary>
         /// This class returns the instance of the in memory database

@@ -305,3 +305,15 @@ When I click the user cmenu option in manage user frame
 And I select the Cmenu option "Delete"
 And I select 'OK' option
 Then I should see the successfull message "Users deleted successfully."
+
+#Purpose: UseCase To Create Copy As Master Course of authored course 
+Scenario: Course Copy Creation as Master Course by Ws Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I search "DigitsAuthoredCourse" in workspace by "CourseName" and "Equals" dropdown option
+Then I should see the searched "DigitsAuthoredCourse" course in Manage Courses frame
+When I "Copy as Master Course" as "MasterLibrary"
+Then I should see the successfull message "Copied as test course."
+When I verify the course "MasterLibrary" for AssignedToCopy state by "CourseName" and "Equals" dropdown option
+Then I should see the copied course out of Assigned to Copy State
+And I should see the searched "MasterLibrary" course in Manage Courses frame

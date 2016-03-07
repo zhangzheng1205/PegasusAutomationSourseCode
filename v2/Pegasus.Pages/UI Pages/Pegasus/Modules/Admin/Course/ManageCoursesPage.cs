@@ -250,26 +250,40 @@ namespace Pegasus.Pages.UI_Pages
                     ManageCourses_Page_Window_Name_CourseEnrollment);
                 //Select IFrame
                 this.SelectIFrameRight();
-                if (courseTypeEnum.Equals(Course.CourseTypeEnum
-                    .CopiedDigitsAuthoredCourse))
-                {
-                    //Get The Searched Course Name
-                    base.WaitForElement(By.XPath(ManageCoursesPageResource.
-                        ManageCourses_Page_SearchedCourseNameCopied_Xpath_Locator));
-                    //Get the Course Name
-                    getCourseName = base.GetTitleAttributeValueByXPath
-                        (ManageCoursesPageResource.
-                        ManageCourses_Page_SearchedCourseNameCopied_Xpath_Locator);
-                }
-                else
-                {
-                    //Get The Searched Course Name
-                    base.WaitForElement(By.XPath(ManageCoursesPageResource.
-                        ManageCourses_Page_SearchedCourseName_Xpath_Locator));
-                    //Get the Course Name
-                    getCourseName = base.GetTitleAttributeValueByXPath(ManageCoursesPageResource.
-                        ManageCourses_Page_SearchedCourseName_Xpath_Locator);
-                }
+               
+                      if (courseTypeEnum.Equals(Course.CourseTypeEnum
+                         .CopiedDigitsAuthoredCourse))
+                      {
+                          //Get The Searched Course Name
+
+
+                          base.WaitForElement(By.XPath(ManageCoursesPageResource.
+                              ManageCourses_Page_SearchedCourseNameCopied_Xpath_Locator));
+                          //Get the Course Name
+                          getCourseName = base.GetTitleAttributeValueByXPath
+                              (ManageCoursesPageResource.
+                              ManageCourses_Page_SearchedCourseNameCopied_Xpath_Locator);
+                      }
+                      else
+                      {
+                            bool listPresent = base.IsElementPresent(By.XPath(ManageCoursesPageResource.
+                        ManageCourses_Page_SearchedCourseName_Xpath_Locator), 15);
+
+                            if (!listPresent)
+                            {
+
+                            }
+                            else
+                            {
+                                //Get The Searched Course Name
+                                base.WaitForElement(By.XPath(ManageCoursesPageResource.
+                                    ManageCourses_Page_SearchedCourseName_Xpath_Locator));
+                                //Get the Course Name
+                                getCourseName = base.GetTitleAttributeValueByXPath(ManageCoursesPageResource.
+                                    ManageCourses_Page_SearchedCourseName_Xpath_Locator);
+                            }
+                      }
+                  
                 //Switch To Default Page Content
                 base.SwitchToDefaultPageContent();
             }
@@ -775,6 +789,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Message.</returns>
         public string GetMessageInManageCourseFrame(string message)
         {
+   
             //Get Message In Manage Course Frame
             Logger.LogMethodEntry("ManageCoursesPage", "GetMessageInManageCourseFrame",
              base.IsTakeScreenShotDuringEntryExit);
@@ -798,6 +813,50 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ManageCoursesPage", "GetMessageInManageCourseFrame",
             base.IsTakeScreenShotDuringEntryExit);
             return getCourseMessage;
+        }
+
+        /// <summary>
+        /// Publish the Freshly Copied Course or Existing Course.
+        /// </summary>
+       public void PublishFreshOrExistingCourse(Course.CourseTypeEnum freshCourseTypeEnum,
+           Course.CourseTypeEnum existingCourseTypeEnum)
+        {
+            Logger.LogMethodEntry("ManageCoursesPage", "PublishFreshOrExistingCourse",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Search for Freshly created Sim Master Course
+            Course course = Course.Get(freshCourseTypeEnum);
+            new SearchCoursesPage().SearchCourse(
+                           (SearchCoursesPage.SearchRadioButtonEnum)Enum.Parse(typeof(
+                           SearchCoursesPage.SearchRadioButtonEnum),
+                           "CourseName"), course.Name, "Equals");
+            SelectCourseEnrollementWindow();
+            string actualCourseSearched = new ManageCoursesPage().GetSearchedCourse(freshCourseTypeEnum);
+            if (actualCourseSearched!=course.Name)
+            {
+                //If Freshly created course not found,search existing course
+                Course courseExisting = Course.Get(existingCourseTypeEnum);
+                new SearchCoursesPage().SearchCourse(
+                          (SearchCoursesPage.SearchRadioButtonEnum)Enum.Parse(typeof(
+                          SearchCoursesPage.SearchRadioButtonEnum),
+                          "CourseName"), courseExisting.Name, "Equals");
+                SelectCourseEnrollementWindow();
+                
+                string actualExistingCourseSearched = new ManageCoursesPage().GetSearchedCourse(existingCourseTypeEnum);
+                if (actualExistingCourseSearched == courseExisting.Name)
+                {
+                    SelectCourseEnrollementWindow();
+                    new ManageCoursesPage().ClickCourseCMenuOption("Publish Master Course");
+                    //Course Published Successfully
+                    new PublishingNotesPage().PublishCourseInWorkSpace(existingCourseTypeEnum);
+                }
+            }
+            else
+                new ManageCoursesPage().ClickCourseCMenuOption
+                                    ("Publish Master Course");
+            //Course Published Successfully
+            new PublishingNotesPage().PublishCourseInWorkSpace(freshCourseTypeEnum);
+            Logger.LogMethodEntry("ManageCoursesPage", "PublishFreshOrExistingCourse",
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }
