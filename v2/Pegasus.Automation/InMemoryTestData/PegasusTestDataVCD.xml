@@ -95,7 +95,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>K12-DigitGrade6</Name>
+      <Name>digits - grade 6</Name>
       <CourseType>MasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
