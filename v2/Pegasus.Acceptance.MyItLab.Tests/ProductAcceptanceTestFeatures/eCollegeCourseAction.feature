@@ -9,8 +9,8 @@ Then I should see "Academics PSH" Page contents
 
 Scenario: eCollege Instructor selecting a Pegasus link in Academics PSH
 #Given I am on the home PSH of eCollege
-When I select "MIL_Course" Pegasus course
-Then I should see "MIL_Course" contents
+When I select "MIL Course" Pegasus course
+Then I should see "MIL Course" contents
 
 Scenario: eCollege Instructor selecting a Pegasus Grades
 When I select "Grades" of Pegasus course
@@ -35,8 +35,8 @@ Then I should see grade synch for student "ECollegeStudent"
 
 Scenario: eCollege Student selecting a Pegasus link in Academics PSH
 #Given I am on the home PSH of eCollege
-When I select "MIL_Course" Pegasus course
-Then I should see StudentGrades in "MIL_Course" contents
+When I select "MIL Course" Pegasus course
+Then I should see StudentGrades in "MIL Course" contents
 
 Scenario: eCollege student selecting a Pegasus Grades
 When student select "StudentGrades" of Pegasus course

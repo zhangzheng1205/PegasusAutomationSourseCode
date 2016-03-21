@@ -136,17 +136,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     base.WaitForElementDisplayedInUi
                         (By.CssSelector(string.Format("a.MainContentLink[title*='{0}']",p0)));
 
-                    bool e= base.IsElementPresent(By.CssSelector("a.MainContentLink[title^='VCD_ MIL']"));
-                    IWebElement VCDCourse = base.GetWebElementPropertiesByCssSelector("a.MainContentLink[title^='VCD_ MIL']");
+                    bool e= base.IsElementPresent(By.CssSelector(string.Format("a.MainContentLink[title*='{0}']",p0)));
+                    IWebElement VCDCourse = base.GetWebElementPropertiesByCssSelector(string.Format("a.MainContentLink[title*='{0}']",p0));
                     base.ClickByJavaScriptExecutor(VCDCourse);
 
                     break;
-
+                    
                 case "CGIE":
                     base.WaitForElementDisplayedInUi
-                        (By.CssSelector(string.Format("a.MainContentLink[title*='{0}']",p0)));
+                        (By.CssSelector(string.Format("a.MainContentLink[title^='CGIE_{0}']",p0)));
 
-                    IWebElement CGIECourse = base.GetWebElementPropertiesByCssSelector("a.MainContentLink[title^='CGIE_MIL']");
+                    IWebElement CGIECourse = base.GetWebElementPropertiesByCssSelector(string.Format("a.MainContentLink[title^='CGIE_{0}']",p0));
                     base.ClickByJavaScriptExecutor(CGIECourse);
                     break;
 
@@ -335,6 +335,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             t.SendKeys(Keys.Enter);
 
+            base.WaitUntilWindowLoads("Gradebook");
+
+            base.SwitchToDefaultPageContent();
+
+            base.WaitForElement(By.Id("srcGBFrame"));
+
             base.SwitchToIFrameById("srcGBFrame");
 
             base.WaitForElement(By.Id("divSearchName"));
@@ -373,23 +379,31 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         string t = "";
         try
         {
-           
+
+            base.WaitForElement(By.Id("srcGBFrame"));
             base.SwitchToIFrameById("srcGBFrame");
 
             base.WaitForElement(By.Id("GBGridHeaderTable"));
 
             int nuOfRows = base.GetElementCountByCssSelector("#FirstTr>td");
 
-            IWebElement c,d,position,cmenu;
+            IWebElement c,d,position,cmenu,cp, cp1;
+
+            cp = base.GetWebElementPropertiesById("GBGridHeaderTable");
+                cp1= cp.FindElement(By.Id("FirstTr"));
            
             for (int i = 1; i < nuOfRows; i++)
 			{
 
-                c = base.GetWebElementPropertiesByCssSelector
-                    (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>span>a", i));
+                /*c = base.GetWebElementPropertiesByCssSelector
+                    (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>span>a", i));*/
 
-                d = base.GetWebElementPropertiesByCssSelector
-                     (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>div", i));
+                c = cp.FindElement(By.CssSelector(string.Format("#FirstTr>td:nth-child({0})>span>a", i)));
+
+               /* d = base.GetWebElementPropertiesByCssSelector
+                     (string.Format("#GBGridHeaderTable #FirstTr>td:nth-child({0})>div", i)); */
+
+                d=cp1.FindElement(By.CssSelector(string.Format("td:nth-child({0})>div", i)));
 
                 t = c.GetAttribute("title");
                 if (t == p0)

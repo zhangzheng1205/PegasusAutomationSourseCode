@@ -95,9 +95,9 @@ testRunner.Then("I should see \"Academics PSH\" Page contents", ((string)(null))
 #line 10
 this.ScenarioSetup(scenarioInfo);
 #line 12
-testRunner.When("I select \"MIL_Course\" Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"MIL Course\" Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
-testRunner.Then("I should see \"MIL_Course\" contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"MIL Course\" contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -195,9 +195,9 @@ testRunner.Then("I should see grade synch for student \"ECollegeStudent\"", ((st
 #line 36
 this.ScenarioSetup(scenarioInfo);
 #line 38
-testRunner.When("I select \"MIL_Course\" Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"MIL Course\" Pegasus course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
-testRunner.Then("I should see StudentGrades in \"MIL_Course\" contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see StudentGrades in \"MIL Course\" contents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

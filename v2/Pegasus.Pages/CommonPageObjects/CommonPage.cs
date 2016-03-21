@@ -49,8 +49,8 @@ namespace Pegasus.Pages.CommonPageObjects
                     case User.UserTypeEnum.CsSmsStudent:
                     //same support for eCollege student
                     case User.UserTypeEnum.ECollegeStudent:
-                        base.SwitchToLastOpenedWindow();
-                        base.SwitchToIFrameById("ifrmCoursePreview");
+                    /*    base.SwitchToLastOpenedWindow();
+                        base.SwitchToIFrameById("ifrmCoursePreview");*/
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -140,6 +140,14 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                     // Grader IT for Access Activty
                                     case "Access Chapter 1 Grader Project [Assessment 3]":
+                                        //Added if condition only for eCollege
+                                       // if (Convert.ToBoolean(User.UserTypeEnum.ECollegeStudent))
+                                        if(userTypeEnum == User.UserTypeEnum.ECollegeStudent)
+                                        {
+                                            base.SwitchToLastOpenedWindow();
+                                            base.SwitchToIFrameById("ifrmCoursePreview");
+                                        }
+
                                         this.NavigateAccessChapter1GraderActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
