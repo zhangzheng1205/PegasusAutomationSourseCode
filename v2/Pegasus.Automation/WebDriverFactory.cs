@@ -256,7 +256,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.cache.memory.enable", false);
             profile.SetPreference("browser.cache.offline.enable", false);
             profile.SetPreference("network.http.use-cache", false);
-            IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
+            //to be sure that it picks up 32bit of ff always
+            string sBrowserExe = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe";
+            FirefoxBinary Bin = new FirefoxBinary(sBrowserExe);
+            IWebDriver webDriver = new FirefoxDriver(Bin, profile, TimeSpan.FromMinutes(20));           
+            // IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
             // set page load duration
             webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             // set cursor position center of the screen
