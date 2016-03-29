@@ -76,6 +76,7 @@
       <DependentUpon>AssignmentCalendarResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\Blackboard.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\BlackboardClassic.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ContentLibrary.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContent.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContentResource.Designer.cs">
@@ -460,6 +461,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseCreationAtWorkspaceAdminAndCSA-HED.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\Blackboard.Direct.Classic.Instructorflow.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

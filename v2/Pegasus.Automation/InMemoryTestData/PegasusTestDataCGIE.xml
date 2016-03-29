@@ -1111,7 +1111,29 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-
+<!-- Blackboard classic users-->
+    <User>
+      <Name>bb_automation_instructor</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Chethan</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SG</LastName>
+      <UserType>BBInstructor1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>bb_automation_student</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SG</LastName>
+      <UserType>BBStudent1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
 

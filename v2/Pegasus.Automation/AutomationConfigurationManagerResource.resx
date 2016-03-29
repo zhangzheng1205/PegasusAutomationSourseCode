@@ -387,4 +387,7 @@
   <data name="WorkSpaceURLRootVCD_Key" xml:space="preserve">
     <value>WorkSpaceURLRootVCD</value>
   </data>
+  <data name="BBInstructorURLRootVCD_Key" xml:space="preserve">
+    <value>BBInstructorURLRootVCD</value>
+  </data>
 </root>

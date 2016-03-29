@@ -1840,7 +1840,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                   base.IsTakeScreenShotDuringEntryExit);
             base.SelectDefaultWindow();
 
-            int i, docFlag=0, docCont =0;
+            int i;
             
             //Get user login details
             User user = User.Get(userName);

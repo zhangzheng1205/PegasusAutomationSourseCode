@@ -116,6 +116,7 @@ namespace Pearson.Pegasus.TestAutomation.
             RumbaStudent = 42,
             RumbaNonPSNTeacher = 43,
             ECollegeAdmin = 44,
+            //used for eCollege Classic integration
             ECollegeTeacher = 45,
             ECollegeStudent = 46,
             HedCoreAcceptanceInstructor = 47,
@@ -169,8 +170,12 @@ namespace Pearson.Pegasus.TestAutomation.
             CanvasDirectStudent = 91,
             MoodleDirectTeacher = 92,
             MoodleDirectStudent = 93,
+            //for D2L classic integration
             D2LKioskTeacher1 = 94,
             D2LKioskStudent1 = 95,
+            //for BB classic integration
+            BBInstructor1 = 98,
+            BBStudent1 = 99,
             DPCsTeacherCC=96,
             HedWsAdmin2 = 97
             #endregion

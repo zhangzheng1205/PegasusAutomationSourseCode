@@ -3,6 +3,11 @@
 					I want to manage all the Blackboard course management usecases 
 					so that I would validate all the course mana scenarios are working fine.
 
+Scenario: Blackboard Instructors Selects Course
+Given I am on the "My Institution" page of Blackboard
+When I Select "PegasusCourse" link
+Then I should see "Content" links for Pegasus
+
 #Purpose : Blackboard Instructor validate startsync and stop sync option functionality
 Scenario: Blackboard Instructor validate startsync and stop sync
 When I select the cmenu "StopLMSSynchronization" of asset "GO! Excel Chapter 1 Skill-Based Exam (Scenario 1)"

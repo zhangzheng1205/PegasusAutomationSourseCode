@@ -615,7 +615,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                {
                   found= StudentExist(counter,fullName);
 
-                  if (found == true) ;
+                  if (found == true)
                   break;
                  
                }

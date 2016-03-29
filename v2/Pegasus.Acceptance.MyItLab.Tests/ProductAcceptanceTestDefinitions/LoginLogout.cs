@@ -273,23 +273,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Login to the Blackboard Instructor Portal.
         /// </summary>
         [When(@"I login to Blackboard Cert as ""(.*)""")]
-        public void LoginToBBCert(User.UserTypeEnum userTypeEnum)
+        public void LoginToBB(User.UserTypeEnum userTypeEnum)
         {
             //Login to Blackboard
-            Logger.LogMethodEntry("LoginLogout", "LoginToBBCert",
+            Logger.LogMethodEntry("LoginLogout", "LoginToBB",
                 base.IsTakeScreenShotDuringEntryExit);
             //Get User details from memory
             User user = User.Get(userTypeEnum);
             switch (userTypeEnum)
             {
                 //Login as BBInstructor
-                case User.UserTypeEnum.BBInstructor:
-                case User.UserTypeEnum.BBStudent:
+                case User.UserTypeEnum.BBInstructor1:
+                case User.UserTypeEnum.BBStudent1:
                     //Login as BB Instructor/Student
                     new BlackboardLoginPage().LoginToBB(user.Name, user.Password);
                     break;
             }
-            Logger.LogMethodExit("LoginLogout", "LoginToBBCert",
+            Logger.LogMethodExit("LoginLogout", "LoginToBB",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -308,8 +308,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             switch (userType)
             {
                 //Login as BBInstructor
-                case User.UserTypeEnum.BBInstructor:
-                case User.UserTypeEnum.BBStudent:
+                case User.UserTypeEnum.BBInstructor1:
+                case User.UserTypeEnum.BBStudent1:
                     //Login as BB Instructor/Student
                     new BlackboardCourseAction().SignOutByHigherEdUsers(linkName);
                     break;
@@ -319,12 +319,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         
-        public void WhenIOfBlackboardAs(string p0, string p1)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-
+     
         [Then(@"I should be logged in successfully as ""(.*)""")]
         public void LoggedInSuccessfully(User.UserTypeEnum userTypeEnum)
         {
@@ -335,8 +330,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Boolean isUserLoggedIn = false;
             switch (userTypeEnum)
             {
-                case User.UserTypeEnum.BBInstructor:
-                case User.UserTypeEnum.BBStudent:
+                case User.UserTypeEnum.BBInstructor1:
+                case User.UserTypeEnum.BBStudent1:
                     {
                         //Verify If MMNDInstructor Is Logged In Successfully
                         isUserLoggedIn = new BlackboardLoginPage().IsUserLoggedInSuccessFully();

@@ -70,6 +70,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BBInstructorURLRootVCD.
+        /// </summary>
+        internal static string BBInstructorURLRootVCD_Key {
+            get {
+                return ResourceManager.GetString("BBInstructorURLRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browser.
         /// </summary>
         internal static string BrowserName_Key {

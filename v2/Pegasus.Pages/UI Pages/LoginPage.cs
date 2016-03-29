@@ -158,7 +158,13 @@ namespace Pegasus.Pages.UI_Pages
                     //Get BlackBoard URL
                     case User.UserTypeEnum.BBInstructor:
                     case User.UserTypeEnum.BBStudent:
-                        _baseLoginUrl = string.Format(AutomationConfigurationManager.BBInstructorUrlRoot);
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.BBClassicUrlRoot);
+                        base.DeleteAllBrowserCookies();
+                        break;
+                    //Get BlackBoard Classic URL
+                    case User.UserTypeEnum.BBInstructor1:
+                    case User.UserTypeEnum.BBStudent1:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.BBClassicUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
                     //Get D2L Kiosk URL

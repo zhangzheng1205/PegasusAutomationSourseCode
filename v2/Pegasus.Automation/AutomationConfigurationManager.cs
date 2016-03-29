@@ -472,9 +472,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Property for Blackboard url.
         /// </summary>
-        public static string BBInstructorUrlRoot
+        public static string BBClassicUrlRoot
         {
-            get { return GetBBInstructorUrlRoot(); }
+            get { return GetBBClassicUrlRoot(); }
         }
 
         /// <summary>
@@ -488,10 +488,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Property for Canvas Kiosk url.
         /// </summary>
-        public static string CanvasKioskUrlRoot
+      public static string CanvasKioskUrlRoot
         {
             get { return GetCanvasKioskUrlRoot(); }
-        }
+        } 
 
         /// <summary>
         /// Property for Moodle Kiosk url.
@@ -504,8 +504,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Find the blackboard url based on application environment.
         /// </summary> 
-        /// <returns>Rumba url.</returns>
-        private static string GetBBInstructorUrlRoot()
+        /// <returns>Blackboard Classic url.</returns>
+        private static string GetBBClassicUrlRoot()
         {
             string applicationBBUrl;
             switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
@@ -513,15 +513,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             {
                 case "VCD":
                 case "VCDNP":
-                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootVCD_Key];
                     break;
                 case "CGIE":
                 case "CGIENP":
                     applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
                     break;
-                case "PROD":
-                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
-                    break;
+                //case "PROD":
+                  //  applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
+                   // break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationBBUrl;
@@ -530,34 +530,34 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Find the D2L Kiosk url based on application environment.
         /// </summary> 
-        /// <returns>Rumba url.</returns>
-        private static string GetD2LKioskUrlRoot()
+        /// <returns>D2l url.</returns>
+      private static string GetD2LKioskUrlRoot()
         {
             string applicationBBUrl;
-            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
-                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
-            {
-                case "VCD":
-                case "VCDNP":
-                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootVCD_Key];
-                    break;
-                case "CGIE":
-                case "CGIENP":
-                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootCGIE_Key];
-                    break;
-                case "PROD":
-                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootPROD_Key];
-                    break;
-                default: throw new ArgumentException("The suggested application environment was not found");
-            }
-            return applicationBBUrl;
-        }
-
+             switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                 ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+             {
+                 case "VCD":
+                 case "VCDNP":
+                     applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootVCD_Key];
+                     break;
+                 case "CGIE":
+                 case "CGIENP":
+                     applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootCGIE_Key];
+                     break;
+                 case "PROD":
+                     applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootPROD_Key];
+                     break;
+                 default: throw new ArgumentException("The suggested application environment was not found");
+             }
+             return applicationBBUrl;
+        } 
+        
         /// <summary>
         /// Find the Canvas Kiosk url based on application environment.
         /// </summary> 
         /// <returns>Rumba url.</returns>
-        private static string GetCanvasKioskUrlRoot()
+       private static string GetCanvasKioskUrlRoot()
         {
             string applicationBBUrl;
             switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
@@ -577,7 +577,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationBBUrl;
-        }
+        } 
 
         /// <summary>
         /// Find the Moodle Kiosk url based on application environment.
