@@ -28,9 +28,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("PowerTeacherHomePage", "ValidatePowerSchoolUserLogin",
                 base.IsTakeScreenShotDuringEntryExit);
             //Check Is Login Sucessful
+            //Check Is Login Sucessful
             bool isLoginSuccessful = base.IsElementPresent(By.XPath
-                (PowerTeacherHomePageResource.
-                PowerTeacherHomePage_Window_Name_Xpath_Locator), 10);
+                ("//a[@id='btnLogout']"), 10);
             Logger.LogMethodEntry("PowerTeacherHomePage", "ValidatePowerSchoolUserLogin",
                   base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(pearsonCoursesLink);
                 Thread.Sleep(3000);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
                     PowerTeacherHomePage_Window_Title, 10);
                 base.SwitchToDefaultPageContent();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickLinkById(PowerTeacherHomePageResource.
                     PowerTeacherHomePage_SignOut_Link_Id_Locator);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }

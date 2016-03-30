@@ -115,8 +115,8 @@ namespace Pegasus.Pages.UI_Pages
                     MyPearsonLoginPage_Custom_WaitTime_Element));
                 //Wait for The Window
                 base.WaitUntilWindowLoads(MyPearsonLoginPageResource.
-                    MyPearsonLoginPage_Window_Title);
-                base.SelectWindow(MyPearsonLoginPageResource.MyPearsonLoginPage_Window_Title);
+                    MyPearsonHomePage_Window_Title);
+                base.SelectWindow(MyPearsonLoginPageResource.MyPearsonHomePage_Window_Title);
                 //Wait for the Sign Out link
                 base.WaitForElement(By.PartialLinkText(MyPearsonLoginPageResource.
                         MyPearsonLoginPage_Signout_Link_Title_Locator));

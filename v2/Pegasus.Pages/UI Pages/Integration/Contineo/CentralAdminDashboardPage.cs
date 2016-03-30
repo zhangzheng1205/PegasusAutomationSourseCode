@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Contineo
                 //Get current opened page title
                 getActualPageTitle = GetPageTitle;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Contineo
                     Format(CentralAdminDashboardPageResource.
                     CentralAdminDashboardPage_LMS_Title_Xpath_Locator, i));
                 string getLMSName = getLinkName.GetAttribute("title").ToString();
-                if(getLMSName == lmsName)
+                if (getLMSName == lmsName)
                 {
                     bool isLinkPresent = base.IsElementPresent(By.XPath(string.
                         Format(CentralAdminDashboardPageResource.
@@ -97,13 +97,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.Contineo
                     IWebElement getLink = base.GetWebElementPropertiesByXPath(String.
                         Format(CentralAdminDashboardPageResource.
                         CentralAdminDashboardPage_LMS_Name_IMG_Xpath_Locator, i));
+                    Thread.Sleep(3000);
                     base.ClickByJavaScriptExecutor(getLink);
                     Thread.Sleep(3000);
                     break;
                 }
             }
-                Logger.LogMethodExit("CentralAdminDashboardPage", "VerifyPSNPlusLink",
-                        base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CentralAdminDashboardPage", "VerifyPSNPlusLink",
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,12 +125,60 @@ namespace Pegasus.Pages.UI_Pages.Integration.Contineo
                 base.ClickLinkByPartialLinkText(CentralAdminDashboardPageResource.
                     CentralAdminDashboardPage_SignOut_Link_PartialLinkText_Locator);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CentralAdminDashboardPage", "SignOutfromCAT",
                         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Add a product to the class
+        /// </summary>
+        public void contineoTrial(string action ,string expectedProduct)
+        {
+
+           //Click on Manage Products
+            IWebElement manageProduct = base.GetWebElementPropertiesByXPath("//span[@title='Manage Products']");
+            manageProduct.Click();         
+            Thread.Sleep(5000);
+            //Reselect the window
+            base.SelectWindow("Pearson EasyBridge");
+            
+            base.WaitForElement(By.CssSelector("html > body > div:nth-of-type(9) > div:nth-of-type(2) > ul > li"));
+            int listCount = base.GetElementCountByCssSelector("html > body > div:nth-of-type(9) > div:nth-of-type(2) > ul > li");
+
+            //IWebElement prodElement;
+            //string prodName;
+            //string prod;
+            for (int i = 1; i <= listCount; i++)
+            {
+                  string actualProdName = base.GetElementInnerTextByCssSelector(string.
+                  Format("html > body > div:nth-of-type(9) > div:nth-of-type(2) > ul > li:nth-of-type({0}) > span:nth-of-type(2)", i));
+
+                  if (actualProdName.Contains(expectedProduct))
+                {
+                   //Select the product
+                    base.WaitForElement(By.CssSelector(string.Format("html > body > div:nth-of-type(9) > div:nth-of-type(2) > ul > li:nth-of-type({0}) > span >div.customCheckbox", i)));
+                    IWebElement divchkBox = base.GetWebElementPropertiesByCssSelector(string.Format("html > body > div:nth-of-type(9) > div:nth-of-type(2) > ul > li:nth-of-type({0}) > span >div.customCheckbox",i));               
+                    IWebElement chkBox = divchkBox.FindElement(By.TagName("input"));
+                    base.ClickByJavaScriptExecutor(chkBox);
+                    break;
+
+                }
+            }
+            base.WaitForElement(By.Id("dialog-save-btn"));
+            IWebElement saveButton = base.GetWebElementPropertiesById("dialog-save-btn");
+            Thread.Sleep(3000);
+            base.ClickByJavaScriptExecutor(saveButton);
+            if(action=="Delete")
+            {
+                base.WaitForElement(By.Id("dialog-continue-btn"));
+                IWebElement continueButton = base.GetWebElementPropertiesById("dialog-continue-btn");
+                Thread.Sleep(3000);
+                base.ClickByJavaScriptExecutor(continueButton);
+            }
         }
     }
 }

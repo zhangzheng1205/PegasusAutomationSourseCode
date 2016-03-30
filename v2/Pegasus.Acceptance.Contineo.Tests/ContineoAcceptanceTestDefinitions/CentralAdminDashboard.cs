@@ -1,6 +1,9 @@
 ﻿#region
 
 using System;
+using System.Configuration;
+using System.Diagnostics;
+using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -90,6 +93,81 @@ namespace Pegasus.Acceptance.Contineo.
             new CentralAdminDashboardPage().SignOutfromCAT(userTypeEnum);
             Logger.LogMethodExit("CentralAdminDashboard", "ContineoUserSignOutfromCAT",
                 IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To Verify Class on SSO
+        /// </summary>
+        /// <param name="classTypeEnum"></param>
+        /// <param name="courseTypeEnum"></param>
+        [Then(@"I should see ""(.*)"" class for ""(.*)"" displayed in classes channel")]
+        public void VerifyClassForMultipleMLDisplayedInClassesChannel(Class.ClassTypeEnum classTypeEnum,
+            Product.ProductTypeEnum productTypeEnum)
+        {
+            //Validate class name
+            Logger.LogMethodEntry("CreateClass", "VerifyClassForMultipleMLDisplayedInClassesChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get class and course name from memory
+            Class Class = Class.Get(classTypeEnum);
+            Product Product = Product.Get(productTypeEnum);
+            string className = Class.Name + ": " + Product.Name;
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            while (stopwatch.Elapsed.TotalMinutes < 15)
+            {
+                string actualClass = new HomePage().GetDisplayClassName(className);
+                if (actualClass == className) break;
+                {
+                    new HomePage().GetDisplayClassName(className);
+                }
+            }
+
+            Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(className, new HomePage().GetDisplayClassName(className)));
+            Logger.LogMethodExit("CreateClass", "VerifyClassForMultipleMLDisplayedInClassesChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should not see ""(.*)"" class for ""(.*)"" displayed in classes channel")]
+        public void VerifyForClassNotDisplayedInClassesChannel(Class.ClassTypeEnum classTypeEnum,
+            Product.ProductTypeEnum productTypeEnum)
+        {
+            //Validate class name
+            Logger.LogMethodEntry("CreateClass", "VerifyClassForMultipleMLDisplayedInClassesChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get class and course name from memory
+            Class Class = Class.Get(classTypeEnum);
+            Product Product = Product.Get(productTypeEnum);
+            string className = Class.Name + ": " + Product.Name;
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            while (stopwatch.Elapsed.TotalMinutes < 15)
+            {
+                string actualClass = new HomePage().GetDisplayClassName(className);
+                if (!(actualClass == className)) break;
+                {
+                    new HomePage().GetDisplayClassName(className);
+                }
+            }
+
+            Logger.LogAssertion("ValidateClassDisplayInClassesChannel", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreNotEqual(className, new HomePage().GetDisplayClassName(className)));
+            Logger.LogMethodExit("CreateClass", "VerifyClassForMultipleMLDisplayedInClassesChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Add Product to class in Contineo
+        /// </summary>
+        /// <param name="Product Name">This the Product Name</param>
+        [When(@"I ""(.*)"" Product ""(.*)"" to the class")]
+        public void WhenIAddProductToTheClass(string action,Product.ProductTypeEnum productTypeEnum)
+        {
+            //get the product 
+            Product product = Product.Get(productTypeEnum);
+            string productName = product.Name;
+            new CentralAdminDashboardPage().contineoTrial(action,productName);
         }
 
     }

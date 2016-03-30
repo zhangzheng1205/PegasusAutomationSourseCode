@@ -133,7 +133,7 @@
     <value>Sign Out</value>
   </data>
   <data name="CentralAdminDashboardPage_Window_Title_Locator" xml:space="preserve">
-    <value>Central Admin</value>
+    <value>Pearson EasyBridge</value>
   </data>
   <data name="CentralAdminDashboard_PageNotOpened_Message" xml:space="preserve">
     <value>Page not opened in the specified amount of time.</value>

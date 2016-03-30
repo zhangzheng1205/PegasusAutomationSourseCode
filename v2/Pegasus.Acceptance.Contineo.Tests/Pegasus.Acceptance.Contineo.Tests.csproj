@@ -213,6 +213,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonContineoFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="ContineoAcceptanceOrderedTests\OrderedTest.ContineoCourseCreation.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ContineoAcceptanceOrderedTests\OrderedTest.CreateClass.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

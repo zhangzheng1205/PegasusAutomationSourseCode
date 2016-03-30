@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MyPearsonHomePage_Window_Title" xml:space="preserve">
+    <value>MyLab &amp; Mastering | Pearson</value>
+  </data>
   <data name="MyPearsonLoginPage_Custom_TimeToWait_Element" xml:space="preserve">
     <value>5000</value>
   </data>
@@ -124,10 +127,10 @@
     <value>30000</value>
   </data>
   <data name="MyPearsonLoginPage_Password_Textbox_Id_Locator" xml:space="preserve">
-    <value>password-id</value>
+    <value>password</value>
   </data>
   <data name="MyPearsonLoginPage_SignIn_Button_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='login-btn-container']/button</value>
+    <value>//button[@id='mainButton']</value>
   </data>
   <data name="MyPearsonLoginPage_Signout_Link_Title_Locator" xml:space="preserve">
     <value>Sign Out</value>
@@ -136,9 +139,9 @@
     <value>logout-message</value>
   </data>
   <data name="MyPearsonLoginPage_Username_Textbox_Id_Locator" xml:space="preserve">
-    <value>loginname-id</value>
+    <value>username</value>
   </data>
   <data name="MyPearsonLoginPage_Window_Title" xml:space="preserve">
-    <value>MyLab &amp; Mastering | Pearson</value>
+    <value>MyLab &amp; Mastering Sign In</value>
   </data>
 </root>
