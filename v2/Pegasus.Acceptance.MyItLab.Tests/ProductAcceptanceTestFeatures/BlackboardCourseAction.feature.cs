@@ -81,7 +81,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
 testRunner.Given("I am on the \"My Institution\" page of Blackboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.When("I Select \"PegasusCourse\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I Select PegasusCourse link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
 testRunner.Then("I should see \"Content\" links for Pegasus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

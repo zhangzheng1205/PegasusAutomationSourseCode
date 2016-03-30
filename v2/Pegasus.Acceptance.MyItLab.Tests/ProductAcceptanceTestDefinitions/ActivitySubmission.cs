@@ -13,7 +13,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGra
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
-    /// This Class Handles Activity Submission Actions.
+    /// This Class Handles Activity Submission test Actions.
     /// </summary>
 
     [Binding]

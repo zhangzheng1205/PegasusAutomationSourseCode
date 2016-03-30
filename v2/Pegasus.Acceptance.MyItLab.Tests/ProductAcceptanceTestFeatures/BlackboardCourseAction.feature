@@ -5,7 +5,7 @@
 
 Scenario: Blackboard Instructors Selects Course
 Given I am on the "My Institution" page of Blackboard
-When I Select "PegasusCourse" link
+When I Select PegasusCourse link
 Then I should see "Content" links for Pegasus
 
 #Purpose : Blackboard Instructor validate startsync and stop sync option functionality
