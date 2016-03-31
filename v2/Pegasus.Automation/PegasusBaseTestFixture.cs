@@ -898,5 +898,42 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             }
             return optionName;
         }
+
+        /// <summary>
+        /// Is Window Opened In the Specified Interval of Time or not.
+        /// </summary>
+        /// <param name="windowName">This is the name of the window.</param>
+        /// <param name="waitTimeOutDuration">This is the time to wait for window get open.</param>
+        /// <exception cref="TimeoutException">If the window not able to find in the specified time.</exception>
+        /// <exception cref="NoSuchWindowException">If the window not exists on the page.</exception>
+        protected void WaitUntilWindowLoadsPartialTitle(
+            String windowName, int waitTimeOutDuration = -1)
+        {
+            //Wait Until Window Loads
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            if (waitTimeOutDuration == -1)
+            {
+                waitTimeOutDuration = this._waitTimeOut;
+            }
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < waitTimeOutDuration)
+                {
+                    if (WebDriver.WindowHandles.Any(item => WebDriver.SwitchTo().
+                        Window(item).Title.Contains(windowName)))
+                    {
+                        break;
+                    }
+                }
+            }
+            //Exception Handling
+            catch (Exception ex)
+            {
+                stopWatch.Stop();
+                throw ex;
+            }
+            stopWatch.Stop();
+        }
     }
 }

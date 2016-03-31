@@ -76,7 +76,9 @@
       <DependentUpon>AssignmentCalendarResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\Blackboard.cs" />
-    <Compile Include="ProductAcceptanceTestDefinitions\BlackboardClassic.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\BlackboardClassic.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\ContentLibrary.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContent.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContentResource.Designer.cs">

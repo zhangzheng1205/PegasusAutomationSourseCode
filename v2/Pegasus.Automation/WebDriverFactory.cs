@@ -289,6 +289,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("disable-application-cache");
             chromeOptions.AddArguments("disk-cache-size=0");
+            chromeOptions.AddArgument("disable-popup-blocking");
+            chromeOptions.ToCapabilities();
             chromeOptions.AddUserProfilePreference("intl.accept_languages", "en");
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", true);
             chromeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));

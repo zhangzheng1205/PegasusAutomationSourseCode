@@ -128,6 +128,57 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
+        //When I Select "Content" links for Pegasus
+        [When(@"I Select ""(.*)"" links for Pegasus")]
+        public void SelectLinksForPegasus(string p0)
+        {
+            logger.LogMethodEntry("BlackboardClassic", "SelectLinksForPegasus",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+                base.WaitForElementDisplayedInUi(By.Id("courseMenuPalette_contents"));
+                bool content = base.IsElementDisplayedByPartialLinkText(p0);
+                IWebElement selectContentLink = base.GetWebElementPropertiesByPartialLinkText(p0);
+                base.ClickByJavaScriptExecutor(selectContentLink);
+
+             }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodEntry("BlackboardClassic", "SelectLinksForPegasus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        //Then I should see "Gradebook" link for Pegasus
+        [Then(@"I should see ""(.*)"" link for Pegasus")]
+        public void PegasusLinks(string p0)
+        {
+            logger.LogMethodEntry("BlackboardClassic", "PegasusLinks",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+                base.WaitUntilWindowLoadsPartialTitle("Content");
+                base.WaitForElementDisplayedInUi(By.Id("content_listContainer"));
+                bool content = base.IsElementDisplayedByPartialLinkText(p0);
+                IWebElement selectContentLink = base.GetWebElementPropertiesByPartialLinkText(p0);
+
+                base.ClickByJavaScriptExecutor(selectContentLink);
+
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodEntry("BlackboardClassic", "PegasusLinks",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
         //a small method that finds the course name in Myinstitution page
@@ -148,7 +199,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
                 string course = courseName.Text;
 
-                if (CourseName == course)
+                if (courseTitle == course)
                 {
                     base.ClickByJavaScriptExecutor(courseName);
                     break;

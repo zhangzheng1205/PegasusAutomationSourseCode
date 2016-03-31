@@ -1127,9 +1127,9 @@ the UI deleted or refreshed.-->
       <Name>bb_automation_student</Name>
       <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Student</FirstName>
+      <FirstName>Gangoor</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>SG</LastName>
+      <LastName>Chethan</LastName>
       <UserType>BBStudent1</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>

@@ -252,7 +252,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
 
         //Then I should see Pegasus "Gradebook"
-
+    [Given(@"I am on the ""(.*)"" page of Pegasus")]
     [Then(@"I should see Pegasus ""(.*)""")]
     public void PegasusGradebook(string p0)
     {

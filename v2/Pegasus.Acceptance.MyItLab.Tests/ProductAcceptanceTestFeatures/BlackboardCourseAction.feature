@@ -8,6 +8,29 @@ Given I am on the "My Institution" page of Blackboard
 When I Select PegasusCourse link
 Then I should see "Content" links for Pegasus
 
+Scenario: Blackboard Instructors Selects Pegasus Course Links
+#Given I am on the "My Institution" page of Blackboard
+When I Select "Content" links for Pegasus
+Then I should see "Gradebook" link for Pegasus
+
+Scenario: Blackboard Instructors Search activity
+Given I am on the "Gradebook" page of Pegasus
+When I search "Access Chapter 1 Grader Project [Assessment 3]" of Pegasus course
+Then I should see "Access Chapter 1 Grader Project [Assessment 3]" in Gradebook
+
+Scenario: Blackboard Instructor editing score of Pegasus activity
+When instructor sets score for "Access Chapter 1 Grader Project [Assessment 3]" activity for "BBStudent1"
+Then I should see edited score for "Access Chapter 1 Grader Project [Assessment 3]" in Gradebook for "BBStudent1"
+
+Scenario: Blackboard Instructor closing Pegasus Page
+When instructor closes "Gradebook" page
+Then I should not see "Gradebook" page opened
+
+Scenario: Blackboard Instructor accessing GradeCenter
+Given I am on the "Content" page of blackboard
+When I select "Grade Center" of Blackboard
+Then I should see "Full Grade Center" link
+
 #Purpose : Blackboard Instructor validate startsync and stop sync option functionality
 Scenario: Blackboard Instructor validate startsync and stop sync
 When I select the cmenu "StopLMSSynchronization" of asset "GO! Excel Chapter 1 Skill-Based Exam (Scenario 1)"
