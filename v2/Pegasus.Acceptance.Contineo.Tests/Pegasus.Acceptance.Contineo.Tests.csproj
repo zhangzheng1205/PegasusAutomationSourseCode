@@ -216,6 +216,9 @@
     <None Include="ContineoAcceptanceOrderedTests\OrderedTest.ContineoCourseCreation.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ContineoAcceptanceOrderedTests\OrderedTest.ContineoTeacherWorkflowandStudentWorkflow.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ContineoAcceptanceOrderedTests\OrderedTest.CreateClass.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
