@@ -156,7 +156,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Pegasus MyITLab Test</Name>
+      <Name>CGIE MIL Course</Name>
       <CourseType>D2LDirectCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -376,7 +376,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Automation_Course_2015</Name>
+      <Name>CGIE MIL Course</Name>
       <CourseType>BBCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -412,7 +412,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Grade>
     <Grade>
-      <Score>100</Score>
+      <Score>70</Score>
       <GradeType>PegasusEditedGrade</GradeType>
       <IsCreated>true</IsCreated>
     </Grade>
@@ -526,8 +526,8 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for "D2L Direct" .-->
     <User>
-      <Name>peginst2</Name>
-      <Password>peginst2</Password>
+      <Name>D2L_AUTOMATION_INSTRUCTOR</Name>
+      <Password>PASSWORD1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -537,8 +537,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>pegstu1</Name>
-      <Password>pegstu1</Password>
+      <Name>D2L_AUTOMATION_STUDENT</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>Pegasus</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -571,23 +571,23 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>3pl_bb_instructor</Name>
+      <Name>bb_automation_instructor</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Vish</FirstName>
+      <FirstName>Chethan</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
+      <LastName>Gangoor</LastName>
       <UserType>BBInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>3pl_bb_studentdirect</Name>
+      <Name>bb_automation_student</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>student</FirstName>
+      <FirstName>Chethan</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>direct</LastName>
+      <LastName>Gangoor</LastName>
       <UserType>BBStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1173,7 +1173,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <Name>Word Chapter 1 Grader Project [Homework 3]</Name>
       <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
