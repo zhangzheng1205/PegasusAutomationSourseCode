@@ -62,6 +62,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             //Get current opened page title
             string actualPageTitle =
                 WebDriver.Title.ToString(CultureInfo.InvariantCulture);
+            Thread.Sleep(2000);
             //Assert we have correct page opened
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,

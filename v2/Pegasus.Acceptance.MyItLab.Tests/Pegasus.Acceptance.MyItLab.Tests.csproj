@@ -93,6 +93,7 @@
       <DependentUpon>CreateActivityResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\CreateProgram.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\D2LDirect.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\D2LIntegration.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\eCollegeIntegration.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LaunchActivity.cs" />
@@ -291,6 +292,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CTGPublisherAdminAdministrator.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\D2LDirectIntegration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>D2LDirectIntegration.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\D2LIntegration.feature.cs">
       <AutoGen>True</AutoGen>
@@ -689,6 +695,10 @@
     <None Include="ProductAcceptanceTestFeatures\CTGPublisherAdminAdministrator.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CTGPublisherAdminAdministrator.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\D2LDirectIntegration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>D2LDirectIntegration.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\D2LIntegration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

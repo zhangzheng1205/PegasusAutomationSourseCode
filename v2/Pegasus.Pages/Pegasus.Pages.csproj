@@ -128,6 +128,18 @@
     <Compile Include="UI Pages\Integration\D2L\D2LCourseActionResource.Designer.cs" />
     <Compile Include="UI Pages\Integration\D2L\D2LLoginPage.cs" />
     <Compile Include="UI Pages\Integration\D2L\D2LLoginPageResource.Designer.cs" />
+    <Compile Include="UI Pages\Integration\D2L\DirectIntegration\D2LCourseActions.cs" />
+    <Compile Include="UI Pages\Integration\D2L\DirectIntegration\D2LCourseActionsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>D2LCourseActionsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\D2L\DirectIntegration\D2LUserLogin.cs" />
+    <Compile Include="UI Pages\Integration\D2L\DirectIntegration\D2LUserLoginResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>D2LUserLoginResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPage.cs" />
     <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1915,6 +1927,14 @@
     <EmbeddedResource Include="UI Pages\Integration\Contineo\StudentAndParentSignInPageResource.resx" />
     <EmbeddedResource Include="UI Pages\Integration\D2L\D2LCourseActionResource.resx" />
     <EmbeddedResource Include="UI Pages\Integration\D2L\D2LLoginPageResource.resx" />
+    <EmbeddedResource Include="UI Pages\Integration\D2L\DirectIntegration\D2LCourseActionsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>D2LCourseActionsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\D2L\DirectIntegration\D2LUserLoginResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>D2LUserLoginResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CampusAdminNavPageResource.Designer.cs</LastGenOutput>
