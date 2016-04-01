@@ -4167,9 +4167,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Get User Row Count
                 int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
                 this.SelectGradebookFrame();
-                IWebElement getGradeScore = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
-                getUserRowCount, getActivityColumnCount));
-                base.PerformMouseHoverByJavaScriptExecutor(getGradeScore);
+                base.WaitForElement(By.Id("GBGridDataTable"));
+
+                IWebElement getGradeFrame = base.GetWebElementPropertiesById("GBGridDataTable");
+                base.PerformMouseHoverAction(getGradeFrame);
+
 
                 base.WaitForElement(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
                     getUserRowCount, getActivityColumnCount)));

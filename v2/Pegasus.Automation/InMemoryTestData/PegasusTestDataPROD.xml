@@ -552,7 +552,7 @@
     </User>
     <!--Hard coded Users data for "Moodle" .-->
     <User>
-      <Name>gaurav.gupta@excelindia.com</Name>
+      <Name>guru.datta@excelindia.com</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
@@ -563,7 +563,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>deepaanand@excelindia.com</Name>
+      <Name>nithyananda.p@excelindia.com</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>

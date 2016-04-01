@@ -102,6 +102,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BlackboardLoginPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\Canvas\DirectIntegration\CanvasCourseActions.cs" />
+    <Compile Include="UI Pages\Integration\Canvas\DirectIntegration\CanvasCourseActionsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CanvasCourseActionsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Canvas\DirectIntegration\CanvasUserLogin.cs" />
+    <Compile Include="UI Pages\Integration\Canvas\DirectIntegration\CanvasUserLoginResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CanvasUserLoginResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\Contineo\CentralAdminDashboardPage.cs" />
     <Compile Include="UI Pages\Integration\Contineo\CentralAdminDashboardPageResource.Designer.cs" />
     <Compile Include="UI Pages\Integration\Contineo\PowerSchoolHomePage.cs" />
@@ -1887,6 +1899,14 @@
     <EmbeddedResource Include="UI Pages\Integration\Blackboard\BlackboardLoginPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BlackboardLoginPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Canvas\DirectIntegration\CanvasCourseActionsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CanvasCourseActionsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Canvas\DirectIntegration\CanvasUserLoginResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CanvasUserLoginResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\Contineo\CentralAdminDashboardPageResource.resx" />
     <EmbeddedResource Include="UI Pages\Integration\Contineo\PowerSchoolHomePageResource.resx" />

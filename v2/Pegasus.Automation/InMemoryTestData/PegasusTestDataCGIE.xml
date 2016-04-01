@@ -458,7 +458,7 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for "Moodle" .-->
     <User>
-      <Name>gaurav.gupta@excelindia.com</Name>
+      <Name>ganeshprasad.cr@excelindia.com</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
@@ -469,7 +469,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>deepaanand@excelindia.com</Name>
+      <Name>nithyananda.p@excelindia.com</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>

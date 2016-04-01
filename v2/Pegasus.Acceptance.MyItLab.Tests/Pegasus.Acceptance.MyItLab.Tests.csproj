@@ -79,6 +79,7 @@
     <Compile Include="ProductAcceptanceTestDefinitions\BlackboardClassic.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\Canvas.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ContentLibrary.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContent.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseContentResource.Designer.cs">
@@ -170,6 +171,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BlackboardCourseAction.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CanvasDirectIntegration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CanvasDirectIntegration.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -467,6 +473,9 @@
     <None Include="ProductAcceptanceOrderedTests\Blackboard.Direct.Classic.Instructorflow.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\CanvasDirectIntegration.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -584,6 +593,10 @@
     <None Include="ProductAcceptanceTestFeatures\BlackboardCourseAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BlackboardCourseAction.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CanvasDirectIntegration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CanvasDirectIntegration.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

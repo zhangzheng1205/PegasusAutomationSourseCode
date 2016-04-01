@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="CanvasDirectIntegration" storage="d:\testautomationfinalhedintegration\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\canvasdirectintegration.orderedtest" id="89333519-fda9-4ee6-b99c-ebaddc800566" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="fc50ab8e-da43-9155-74b0-d0d3f1f03d34" name="CanvasInstructorCrossoverToPegasusViaDirectIntegratedCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7b4dbdff-3c0a-6858-efbf-9cd6275a8d92" name="CanvasStudentCrossoverToPegasusViaDirectIntegratedCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
