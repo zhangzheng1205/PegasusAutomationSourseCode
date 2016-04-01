@@ -230,6 +230,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OverviewTestPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\Moodle\CourseHomePage.cs" />
+    <Compile Include="UI Pages\Integration\Moodle\MoodleCourseActions.cs" />
+    <Compile Include="UI Pages\Integration\Moodle\MoodleCourseActionsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MoodleCourseActionsResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\Moodle\MoodleLoginPage.cs" />
     <Compile Include="UI Pages\Integration\Moodle\MoodleLoginPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1994,6 +2001,10 @@
     <EmbeddedResource Include="UI Pages\Integration\Mathxl\OverviewTestPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OverviewTestPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Moodle\MoodleCourseActionsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MoodleCourseActionsResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\Moodle\MoodleLoginPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

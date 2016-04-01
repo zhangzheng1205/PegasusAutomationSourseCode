@@ -130,6 +130,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManageAnnouncementResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\Moodle.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\PCTToolLaunch.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdmin.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdminResource.Designer.cs">
@@ -308,6 +309,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>eCollegeCourseAction.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\MoodleDirectIntegration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MoodleDirectIntegration.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -480,6 +486,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\CanvasDirectIntegration.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\D2LDirectIntegration.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
@@ -707,6 +716,10 @@
     <None Include="ProductAcceptanceTestFeatures\eCollegeCourseAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>eCollegeCourseAction.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\MoodleDirectIntegration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MoodleDirectIntegration.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
