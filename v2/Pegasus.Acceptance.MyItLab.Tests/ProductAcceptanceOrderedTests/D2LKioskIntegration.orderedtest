@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="D2LKioskIntegration" storage="d:\testautomationfinalhedintegration\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\d2lkioskintegration.orderedtest" id="05158914-ed39-4736-b671-43a116ee85b8" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="fbbf5ce6-b78b-4665-9ba3-50ebd71df541" name="d2lkioskstudent" storage="d2lkioskstudent.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="8dfcbb07-fa90-4da4-a267-65fa24d0dd7f" name="d2lkioskinstructor" storage="d2lkioskinstructor.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
