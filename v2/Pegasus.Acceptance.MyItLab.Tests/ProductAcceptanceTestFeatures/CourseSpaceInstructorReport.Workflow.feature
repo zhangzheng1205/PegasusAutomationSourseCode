@@ -124,7 +124,7 @@ When I close the "Certificate of Completion (Exam)" window
 Scenario:Activity Result (Multiple students and activities) report generation and data verification by SMS Instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
-When I click on "Activity Result (Multiple students and activities)" report link as "CsSmsInstructor"
+When I click on the "Activity Result (Multiple students and activities)" report link as "CsSmsInstructor"
 Then I should open "Options for Activity Results (Multiple students and activities)" criteria page as "CsSmsInstructor"
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Activities" by "CsSmsInstructor"
 And I 'Select All' in 'Student Options' by "CsSmsInstructor"
@@ -149,7 +149,7 @@ When I close the "Activity Results (Multiple students and activities) " window
 Scenario: Activity Results (Multiple Students) report generation and data verification by SMS Instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
-When I click on "Activity Results (Multiple Students)" report link as "CsSmsInstructor"
+When I click on the "Activity Results (Multiple Students)" report link as "CsSmsInstructor"
 Then I should open "Options for Activity Results (Multiple Students)" criteria page as "CsSmsInstructor"
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in 'Select Activity' 
 And I 'Select All' in 'Student Options' by "CsSmsInstructor"
@@ -175,7 +175,7 @@ And I close the "Activity Results (Multiple Students)" window
 Scenario: To run and save "Exam Frequency Analysis" Report As Section instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
-When I click on "Exam Frequency Analysis" report link as "CsSmsInstructor"
+When I click on the "Exam Frequency Analysis" report link as "CsSmsInstructor"
 Then I should open "Options for Exam Frequency Analysis" criteria page as "CsSmsInstructor"
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Exams" by "CsSmsInstructor"
 And I select 'save settings to My Reports' option by "CsSmsInstructor"
@@ -200,7 +200,7 @@ And I close the "Exam Frequency Analysis" window
 Scenario: To run and save "Training Frequency Analysis" Report As Section instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
-When I click on "Training Frequency Analysis" report link as "CsSmsInstructor"
+When I click on the "Training Frequency Analysis" report link as "CsSmsInstructor"
 Then I should open "Options for Training Frequency Analysis" criteria page as "CsSmsInstructor"
 When I select "Excel Chapter 1 Skill-Based Training" asset in "Select Trainings" by "CsSmsInstructor"
 And I select 'save settings to My Reports' option by "CsSmsInstructor"
@@ -234,7 +234,7 @@ When I search the "MyITLabOffice2013Program" first section
 And I click the "Enter Section as Instructor"
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
-When I click on "Learning Aid Usage" report link as "CsSmsInstructor"
+When I click on the "Learning Aid Usage" report link as "CsSmsInstructor"
 Then I should open "Options for Learning Aid Usage" criteria page as "CsSmsInstructor"
 When I select "Word Chapter 1 Skill-Based Training" asset in 'Select Activity' 
 And I select 'save settings to My Reports' option by "CsSmsInstructor"

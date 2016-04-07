@@ -9,7 +9,7 @@
 Scenario: Activity Result (Multiple students and activities) report generation and data verification by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I click on "Activity Result (Multiple students and activities)" report link as "HedProgramAdmin"
+When I click on the "Activity Result (Multiple students and activities)" report link as "HedProgramAdmin"
 Then I should open "Options for Activity Results (Multiple students and activities)" criteria page as "HedProgramAdmin"
 When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
 And I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Activities" by "HedProgramAdmin"
@@ -35,7 +35,7 @@ And I close the "Activity Results (Multiple students and activities)" window
 Scenario:To run and save "Training Frequency Analysis" Report by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I click on "Training Frequency Analysis" report link as "HedProgramAdmin"
+When I click on the "Training Frequency Analysis" report link as "HedProgramAdmin"
 Then I should open "Options for Training Frequency Analysis" criteria page as "HedProgramAdmin"
 When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
 And I select "Excel Chapter 1 Skill-Based Training" asset in "Select Trainings" by "HedProgramAdmin"
@@ -61,7 +61,7 @@ When I close the "Training Frequency Analysis" window
 Scenario: To run and save "Exam Frequency Analysis" Report by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I click on "Exam Frequency Analysis" report link as "HedProgramAdmin"
+When I click on the "Exam Frequency Analysis" report link as "HedProgramAdmin"
 Then I should open "Options for Exam Frequency Analysis" criteria page as "HedProgramAdmin"
 When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
 And I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Exams" by "HedProgramAdmin"
@@ -87,7 +87,7 @@ And I close the "Exam Frequency Analysis" window
 Scenario: To run and save "Learning Aid Usage" Report by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I click on "Learning Aid Usage" report link as "HedProgramAdmin"
+When I click on the "Learning Aid Usage" report link as "HedProgramAdmin"
 Then I should open "Options for Learning Aid Usage" criteria page as "HedProgramAdmin"
 When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
 And I select the "PowerPoint Chapter 1 Skill-Based Training" asset in'Select Activity'
@@ -111,7 +111,7 @@ And I click  "Close" button
 Scenario: To generate and save the "Integrity Violation" Report by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I click on "Integrity Violation" report link as "HedProgramAdmin"
+When I click on the "Integrity Violation" report link as "HedProgramAdmin"
 Then I should open "Options for Integrity Violation" criteria page as "HedProgramAdmin"
 When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
 And I click on the "Run Report" button in reports by "HedProgramAdmin"
@@ -125,7 +125,7 @@ And I close the "Student Integrity Violation" window
 Scenario: To generate the "Integrity Violation" Report by Program Admin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I click on "Integrity Violation" report link as "HedProgramAdmin"
+When I click on the "Integrity Violation" report link as "HedProgramAdmin"
 Then I should open "Options for Integrity Violation" criteria page as "HedProgramAdmin"
 When I Select All sections in Integrity Violation
 And I click on the "Run Report" button in reports by "HedProgramAdmin"
@@ -140,7 +140,7 @@ Scenario: To View Availability of 'Certificate of Completion (Custom) Report Lin
 When I navigate to "Reports" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 And I should see "Certificate of Completion (Custom)" report under report page
-When I click on "Certificate of Completion (Custom)" report link as "HedProgramAdmin"
+When I click on the "Certificate of Completion (Custom)" report link as "HedProgramAdmin"
 Then I should see "Options for Certificate of Completion (Custom)" header present
 
 
