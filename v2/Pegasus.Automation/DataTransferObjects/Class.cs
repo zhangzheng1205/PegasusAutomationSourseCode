@@ -22,7 +22,9 @@ namespace Pegasus.Automation.DataTransferObjects
             DigitalPathMasterLibrary=4,
             NovaNETPlaceHolder=5,
             DigitalPathPlaceHolder=6,
-            DigitalPathContineoMasterLibrary
+            DigitalPathContineoMasterLibrary=7,
+            MediaServerClass = 8,
+            S7eTextClass = 9
         }
 
         /// <summary>

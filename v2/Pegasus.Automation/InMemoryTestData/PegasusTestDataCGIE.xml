@@ -51,6 +51,16 @@ the UI deleted or refreshed.-->
       <ClassType>NovaNETTemplate</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
+    <Class>
+      <Name>Media Server</Name>
+      <ClassType>MediaServerClass</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>eText_Class</Name>
+      <ClassType>S7eTextClass</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
   </ArrayOfClass>
   <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
@@ -1151,6 +1161,52 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+    <!--Hard coded Users data for "K12 Media Server" Integration.-->
+    <User>
+      <Name>CGIE_Media_Teacher</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_Media_Teacher</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_Media_Teacher</LastName>
+      <UserType>K12MediaSTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>CGIE_Media_STU</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_Media_STU</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_Media_STU</LastName>
+      <UserType>K12MediaSStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "S7 eText" Integration.-->
+    <User>
+      <Name>CGIE_S7eText_Teacher</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Teacher</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Teacher</LastName>
+      <UserType>S7eTextTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>CGIE_S7eText_Student</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>S7eTextStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
 
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
@@ -1238,6 +1294,21 @@ the UI deleted or refreshed.-->
       <ActivityType>Folder</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>Rubric for Self-assessment: Research Writing (6 traits)</Name>
+      <ActivityType>MediaServerLink</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>eText CERT</Name>
+      <ActivityType>S7TeachereText</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>eText CERT</Name>
+      <ActivityType>S7StudenteText</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
   </ArrayOfActivity>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on 
 
@@ -1274,6 +1345,11 @@ the UI deleted or refreshed.-->
     <Product>
       <Name>AP French</Name>
       <ProductType>Contineo</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>RLCN_Product</Name>
+      <ProductType>eTextProduct</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>

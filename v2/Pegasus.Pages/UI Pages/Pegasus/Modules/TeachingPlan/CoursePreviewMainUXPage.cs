@@ -320,6 +320,41 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        ///// <summary>
+        ///// Open Activity In To Do Tab.
+        ///// </summary>
+        ///// <param name="activityName">This is activity name.</param>
+        //public void ClickActivityInToDoTab(string activityName)
+        //{
+        //    Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickActivityInToDoTab",
+        //     base.IsTakeScreenShotDuringEntryExit);
+        //    try
+        //    {
+        //        //Select Activity Frame
+        //        this.SelectActivityFrame();
+        //        //Get activity count in To Do tab
+        //        int getActivityCount = base.GetElementCountByXPath(
+        //            string.Format(CoursePreviewMainUXPageResource.
+        //            CoursePreviewMainUX_Page_ToDo_Activity_Count_Xpath_Locator));
+        //        for (int activitycount = 1; activitycount <= getActivityCount; activitycount++)
+        //        {
+        //            //Get activity name
+        //            string getActivityName = base.GetElementTextByXPath(
+        //                string.Format());
+        //        }
+
+        //            //Click on activity name
+        //            base.ClickButtonByLinkText(activityName);
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        ExceptionHandler.HandleException(e);
+        //    }
+        //    Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickActivityInToDoTab",
+        //     base.IsTakeScreenShotDuringEntryExit);
+        //}
+
         /// <summary>
         /// Select Content Window
         /// </summary>
@@ -1512,31 +1547,25 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToLastOpenedWindow();
                 Stopwatch stopWatch = new Stopwatch();
                 stopWatch.Start();
-                string getTheUrl = base.GetCurrentUrl;
-                switch (Environment.GetEnvironmentVariable(CoursePreviewMainUXPageResource.
-                    PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
-                  ?? ConfigurationManager.AppSettings[CoursePreviewMainUXPageResource.
-                  TestEnvironment_Key].ToUpper())
-                 {
-                    case "VCD":
-                    case "CGIE":
-                        while (!IsPageOpened)
-                        {
-                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
-                                IsPageOpened = getTheUrl.Contains(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMain_UX_Page_MediaServerLink_General_Window_Title_Name);
-                        }
-                        break;
+                string getMediaURL = base.GetCurrentUrl;
+                string getMediaWindowTitle = base.GetPageTitle;
+                string mediaContent = string.Empty;
 
-                    case "PROD":
+                string[] parts = getMediaURL.Split('/');
+
+                if (parts.Length > 0)
+                    mediaContent = parts[parts.Length - 1];
+                else
+                    mediaContent = getMediaURL;
                          while (!IsPageOpened)
                          {
-                          if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
-                          IsPageOpened = getTheUrl.Contains(CoursePreviewMainUXPageResource.
-                              CoursePreviewMain_UX_Page_MediaServerLink_Production_Window_Title_Name);
+                             if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
+                             else
+                             {
+                                 if (getMediaWindowTitle.Contains(mediaContent))
+                                     IsPageOpened = true;
+                             }
                           }
-                          break;
-                 }
                     stopWatch.Stop();
                 }
                 catch (Exception e)
@@ -1546,66 +1575,6 @@ namespace Pegasus.Pages.UI_Pages
               Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenMediaServerLink",
                   base.IsTakeScreenShotDuringEntryExit);
               return IsPageOpened;
-        }
-
-        /// <summary>
-        /// Verify if embed tag is present when Media Server Content is launched
-        /// </summary>
-        /// <returns>True if embed tag is present</returns>
-        public Boolean IsMediaContentPresentInPageSource()
-        {
-            Logger.LogMethodEntry("CoursePreviewMainUXPage", "OpenMediaServerLink",
-                base.IsTakeScreenShotDuringEntryExit);
-            Boolean IsMediaContentPresent = false;
-            //Start Stop Watch 
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            try
-            {
-                switch (Environment.GetEnvironmentVariable(CoursePreviewMainUXPageResource.
-                    PEG_AUTOMATION_BROWSER_KEY)
-                  ?? ConfigurationManager.AppSettings[CoursePreviewMainUXPageResource.
-                  Browser_Key])
-                    {
-                     case "Chrome":
-                     case "Internet Explorer":
-                        while (!IsMediaContentPresent)
-                        {
-                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
-                            {
-                                IsMediaContentPresent = base.IsElementPresent(By.XPath(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMain_UX_Page_MediaServerLink_Chrome_Xpath_Locator), 10);
-                            }   
-                            break;
-                        }
-                        break;
-
-                    case "FireFox":
-                        while (!IsMediaContentPresent)
-                        {
-                            if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
-                            {
-                                string getWindowTitle = base.GetWindowTitleByJavaScriptExecutor();
-                                string getTheURL = base.GetCurrentUrl;
-                                string filename = getTheURL.Substring(getTheURL.LastIndexOf("/")+1);
-                                if (filename == getWindowTitle)
-                                {
-                                    IsMediaContentPresent = true;
-                                }
-                             break;
-                            }
-                        }
-                        stopWatch.Stop();
-                        break;
-                    }
-               }
-                catch (Exception e)
-                {
-                    ExceptionHandler.HandleException(e);
-                }
-            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenMediaServerLink",
-                     base.IsTakeScreenShotDuringEntryExit);
-            return IsMediaContentPresent;
         }
     }
 }

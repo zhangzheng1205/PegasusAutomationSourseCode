@@ -640,6 +640,31 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Asset Cmenu In Table of Content.
+        /// </summary>
+        /// <param name="activityName">This is Class Name</param>
+        public void SetDueDateCurrentForActivityInCurriculum(string className)
+        {
+            //Select Asset Cmenu In Table of Content
+            logger.LogMethodEntry("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Select class radio button
+                new AssignContentPage().SelectClassOnAssignWindow(className);
+                // Configure the due date on assign window 
+                new AssignContentPage().AssignTheActivityOnCurrentDate();
+                base.SwitchToLastOpenedWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Expand the folder in curriculum tab.
         /// </summary>
         /// <param name="folderName">Folder name.</param>

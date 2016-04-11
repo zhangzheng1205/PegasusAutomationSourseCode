@@ -219,6 +219,10 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.DPCsStudent:
                     case User.UserTypeEnum.RumbaTeacher:
                     case User.UserTypeEnum.RumbaStudent:
+                    case User.UserTypeEnum.K12MediaSTeacher:
+                    case User.UserTypeEnum.K12MediaSStudent:
+                    case User.UserTypeEnum.S7eTextTeacher:
+                    case User.UserTypeEnum.S7eTextStudent:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.
                             CourseSpaceUrlRoot
                                  + LoginPageResource
@@ -738,7 +742,11 @@ namespace Pegasus.Pages.UI_Pages
                 || User.UserTypeEnum.DPCsOrganizationAdmin == userTypeEnum
                 || User.UserTypeEnum.NovaNETCsTeacher == userTypeEnum
                 || User.UserTypeEnum.NovaNETCsStudent == userTypeEnum
-                || User.UserTypeEnum.NovaNETCsOrganizationAdmin == userTypeEnum)
+                || User.UserTypeEnum.NovaNETCsOrganizationAdmin == userTypeEnum
+                || User.UserTypeEnum.K12MediaSTeacher== userTypeEnum
+                ||User.UserTypeEnum.K12MediaSStudent== userTypeEnum
+                || User.UserTypeEnum.S7eTextTeacher== userTypeEnum
+                || User.UserTypeEnum.S7eTextStudent == userTypeEnum)
             {
                 this.ClickSynapseSignInButton();
             }
@@ -913,6 +921,10 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.DPCsNewAide:
                 case User.UserTypeEnum.DPCsAide:
                 case User.UserTypeEnum.DPCsOrganizationAdmin:
+                case User.UserTypeEnum.K12MediaSTeacher:
+                case User.UserTypeEnum.K12MediaSStudent:
+                case User.UserTypeEnum.S7eTextTeacher:
+                case User.UserTypeEnum.S7eTextStudent:
                     isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(false);
                     break;
 

@@ -885,6 +885,28 @@
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
     </User>
+    <User>
+      <Name>Prod_Media_Teacher</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>Prod_Media_Teacher</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Prod_Media_Teacher</LastName>
+      <UserType>K12MediaSTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Prod_Media_STU</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>Prod_Media_STU</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Prod_Media_STU</LastName>
+      <UserType>K12MediaSStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
   </ArrayOfUser>
    <!--Hard coded Grades data.-->
   <ArrayOfGrade>
@@ -1015,6 +1037,11 @@
       <ActivityType>Folder</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>Rubric for Self-assessment: Research Writing (6 traits)</Name>
+      <ActivityType>MediaServerLink</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
   </ArrayOfActivity>
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
@@ -1032,6 +1059,11 @@
     <Class>
       <Name>4ea7c842-911b-49bb-ab1b-440ab1a3a950</Name>
       <ClassType>NovaNETTemplate</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>Media Server</Name>
+      <ClassType>MediaServerClass</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
   </ArrayOfClass>

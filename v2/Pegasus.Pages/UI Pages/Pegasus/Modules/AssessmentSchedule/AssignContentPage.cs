@@ -123,21 +123,19 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select Assign Window
-                this.SelectAssignWindow();
-                //Check the Assignd Radio Button
-                base.WaitForElement(By.Id(AssignContentPageResource.
-                    AssignContent_Page_RadioButton_Assigned_Id_Locator));
-                base.ClickButtonById(AssignContentPageResource.
-                    AssignContent_Page_RadioButton_Assigned_Id_Locator);
-                //Click on the Save button
-                base.FocusOnElementById(AssignContentPageResource.
-                    AssignContent_Page_Button_SaveAndAssign_Id_Locator);
-                base.ClickButtonById(AssignContentPageResource.
-                    AssignContent_Page_Button_SaveAndAssign_Id_Locator);
-                //Check for the Window to Close
-                base.IsPopUpClosed(Convert.ToInt32(AssignContentPageResource.
-                    AssignContent_Page_Window_Count));
+                // Click on save and close button
+                base.WaitForElement(By.CssSelector(AssignContentPageResource
+                .AssignContent_Page_SaveandAssign_Button_CssSelector));
+                base.ClickButtonByCssSelector(AssignContentPageResource
+                .AssignContent_Page_SaveandAssign_Button_CssSelector);
+                // Click on Ok Button
+                base.WaitForElement(By.XPath(AssignContentPageResource
+                .AssignContent_Page_OkButton_Xpath));
+                //Get Element Property
+                IWebElement getOkButton = base.GetWebElementPropertiesByXPath(AssignContentPageResource
+               .AssignContent_Page_OkButton_Xpath);
+                //Click on OK button
+                base.ClickByJavaScriptExecutor(getOkButton);
             }
             catch (Exception e)
             {

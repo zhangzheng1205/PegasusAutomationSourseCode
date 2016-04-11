@@ -4357,5 +4357,32 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "ClickEText",
                base.IsTakeScreenShotDuringEntryExit);
           }
+
+        public void ClickTabUnderMore(string tabName)
+        {
+            // Click the tab under more menu
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickTabUnderMore",
+               base.IsTakeScreenShotDuringEntryExit);
+            int getTabCount = base.GetElementCountByXPath(string.
+            Format(TodaysViewUXPageResource.TodayViewUXPageResource_Tab_Count_XPath_Locator));
+            for (int tabcount = 1; tabcount <= getTabCount; getTabCount++)
+            {
+                //Get tab name from application
+                String gettabName = base.GetElementTextByXPath(String.
+                    Format(TodaysViewUXPageResource.TodayViewUXPageResource_Tab_Count_XPath_Locator, tabcount));
+                //Verify tab is as expected
+                if (gettabName.Equals(tabName))
+                {
+                    //Get tab element
+                    IWebElement tabNametoSelect = base.GetWebElementPropertiesByXPath(String.
+                        Format(TodaysViewUXPageResource.TodayViewUXPageResource_Tab_Count_XPath_Locator, tabcount));
+                    //Click the eText link
+                    base.PerformMouseClickAction(tabNametoSelect);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickTabUnderMore",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

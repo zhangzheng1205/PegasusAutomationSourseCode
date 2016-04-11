@@ -628,7 +628,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to divMore.
+        ///   Looks up a localized string similar to more_dd.
         /// </summary>
         internal static string TodaysViewUXPageResource_MoreLink_Id_Locator {
             get {
@@ -637,7 +637,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //td[@id=&apos;_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_tdMore&apos;]/div/span[@id=&apos;divMore&apos;].
+        ///   Looks up a localized string similar to //td[@id=&apos;_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_tdMore&apos;]/div/span[@id=&apos;more&apos;].
         /// </summary>
         internal static string TodaysViewUXPageResource_MoreLink_Xpath_Locator {
             get {
@@ -1813,6 +1813,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_SupportLink_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_SupportLink_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class = &apos;dd_options more_dd&apos;]/li.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Tab_Count_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Tab_Count_XPath_Locator", resourceCulture);
             }
         }
         

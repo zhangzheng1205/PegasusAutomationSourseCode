@@ -174,10 +174,14 @@ namespace Pearson.Pegasus.TestAutomation.
             D2LKioskTeacher1 = 94,
             D2LKioskStudent1 = 95,
             //for BB classic integration
-            BBInstructor1 = 98,
-            BBStudent1 = 99,
-            DPCsTeacherCC=96,
-            HedWsAdmin2 = 97
+            BBInstructor1 = 96,
+            BBStudent1 = 97,
+            DPCsTeacherCC=98,
+            HedWsAdmin2 =99,
+            K12MediaSTeacher = 100,
+            K12MediaSStudent = 101,
+            S7eTextTeacher = 102,
+            S7eTextStudent = 103  
             #endregion
         }
 

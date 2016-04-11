@@ -228,6 +228,24 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I navigate to the ""(.*)"" tab under More link")]
+        public void NavigateToTheTabUnderMore(String tabName)
+        {
+            //Method to Navigate to the Tab Window 
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTheTabUnderMore",
+                IsTakeScreenShotDuringEntryExit);
+            //Click On More Link if More Link Is Present
+            //And The Required Tab Is Not Present
+            new TodaysViewUxPage().ClickMoreLinkIfPresent(tabName);
+            //Click on the tab
+            new TodaysViewUxPage().ClickTabUnderMore(tabName);
+            //Wait For Page Load
+            Thread.Sleep(Convert.ToInt32(CommonStepsResource.
+                 CommonSteps_SleepTime_Value));
+            Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
+                 IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Enter Into Course.
         /// </summary>

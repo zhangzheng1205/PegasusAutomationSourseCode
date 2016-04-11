@@ -282,7 +282,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// Click eText in Curriculum Channel
         /// </summary>
         [When(@"I click on the ""(.*)"" link in the ""(.*)"" product")]
-        public void clickEtextLink(Activity.ActivityTypeEnum etextName, string productName)
+        public void clickEtextLink(Activity.ActivityTypeEnum etextName, Product.ProductTypeEnum productName)
         {
             // Click eText in Curriculum Channel
             Logger.LogMethodEntry("GlobalHome", "clickEtextLink",
