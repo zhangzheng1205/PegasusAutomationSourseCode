@@ -125,6 +125,10 @@ namespace Pegasus.Pages.UI_Pages
                     user = User.Get(CommonResource.CommonResource
                               .SMS_STU_UC2);
                               break;
+              //Added case by Rashmi Shetty.This is to pick 100 scoring details for enrollemnt
+                case "scoring 100":
+                             user = User.Get(userTypeEnum);
+                             break;
             }
             break;
             
@@ -139,6 +143,10 @@ namespace Pegasus.Pages.UI_Pages
                     user = User.Get(CommonResource.CommonResource
                               .SMS_STU_UC4);
                               break;
+                //Added case by Rashmi Shetty.This is to pick 100 scoring details for enrollemnt
+                case "scoring 100":
+                              user = User.Get(userTypeEnum);
+                              break;
             }
             break;
 
@@ -148,6 +156,10 @@ namespace Pegasus.Pages.UI_Pages
                         case "scoring 0":
                             user = User.Get(CommonResource.CommonResource
                                .SMS_STU_UC5);
+                    break;
+                //Added case by Rashmi Shetty.This is to pick 100 scoring details for enrollemnt
+                        case "scoring 100":
+                    user = User.Get(userTypeEnum);
                     break;
                     }
                     break;

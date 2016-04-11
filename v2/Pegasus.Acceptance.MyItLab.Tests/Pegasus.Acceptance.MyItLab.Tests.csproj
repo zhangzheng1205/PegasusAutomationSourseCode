@@ -464,6 +464,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseCreationAtProgramAdminRegression-HED.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProdProgramAdmin.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.IntegrityViolationReport.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

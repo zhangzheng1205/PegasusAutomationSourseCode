@@ -157,6 +157,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ManageCourse.BVT.HSS.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProdProgramAdmin.BVT.HSS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.HSS.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

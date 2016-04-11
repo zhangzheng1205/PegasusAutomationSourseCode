@@ -591,6 +591,9 @@
     <None Include="ProductAcceptanceOrderedTests\orderedTest.InstructorTodaysView.BVT.WL.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProdProgramAdmin.BVT.WL .orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.SpotCheckTest.HedCore.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
