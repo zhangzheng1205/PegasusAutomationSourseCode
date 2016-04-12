@@ -80,6 +80,1198 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to rdNextToResponse.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_DisplayFeedbackAndCorrectAnswers_RadioButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_DisplayFeedbackAndCorre" +
+                        "ctAnswers_RadioButton_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 33.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__33_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__33_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 34.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__34_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__34_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 35.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__35_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__35_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 36.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__36_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__36_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 37.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__37_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__37_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 38.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__38_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__38_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdCorrectAnswerAt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswe_RadioButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswe_RadioB" +
+                        "utton_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtCorrectAnswerAt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswer_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswer_Textb" +
+                        "ox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswer_Textbox_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswer_Textb" +
+                        "ox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdFeedbackAt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_RadioButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_RadioButto" +
+                        "n_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtFeedbackAt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_Textbox_ID" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_Textbox_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_Textbox_Va" +
+                        "lue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdNeedHelpAt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_RadioButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_RadioButto" +
+                        "n_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtNeedHelpAt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_Textbox_ID" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_Textbox_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_Textbox_Va" +
+                        "lue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgBigCloseLock.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_BigLock_ClassName {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_BigLock_ClassName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkSkipQues.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AllowStudentsToSkipQuestions_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AllowStudentsT" +
+                        "oSkipQuestions_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkBookmarkTest.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AllowStudentToFlagQuestions_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AllowStudentTo" +
+                        "FlagQuestions_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkAutosubmitSCOactivity.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AutoSubmitSingleSCOActivities_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AutoSubmitSing" +
+                        "leSCOActivities_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkAllQuesAnswer.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkAllQuesAnswer_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkAllQuesAnsw" +
+                        "er_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkDirectionLines.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkDirectionLines_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkDirectionLi" +
+                        "nes_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkEnableHelplinks.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkEnableHelplinks_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkEnableHelpl" +
+                        "inks_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkEnableTryAgain.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkEnableTryAgain_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkEnableTryAg" +
+                        "ain_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkSaveResponse.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkSaveResponse_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkSaveRespons" +
+                        "e_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkStudSave.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkStudSave_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkStudSave_ID" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkThresholdScore.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkThresholdScore_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkThresholdSc" +
+                        "ore_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkBrowserTranslate.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisableBrowserTranslation_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisableBrowser" +
+                        "Translation_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkDisQuesInColumn.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisplayQuestionsInColumns_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisplayQuestio" +
+                        "nsInColumns_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkQuesScore.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisplayTotalPossiblePoints_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisplayTotalPo" +
+                        "ssiblePoints_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkIncludeCoursePlanScoring.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__IncludeInCoursePlanScoring_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__IncludeInCours" +
+                        "ePlanScoring_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkRemoveIndicators.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__RemoveCorrectIncorrectIndicators_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__RemoveCorrectI" +
+                        "ncorrectIndicators_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkRestrictReviewAnswer.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__RestrictStudentFromReviewing_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__RestrictStuden" +
+                        "tFromReviewing_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkPageSkip.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__ShowScore_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__ShowScore_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdoDisplayPerPage.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquestionsperpage_RadiButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquest" +
+                        "ionsperpage_RadiButton_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtDisplayPerPage.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquestionsperpage_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquest" +
+                        "ionsperpage_Textbox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquestionsperpage_Textbox_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquest" +
+                        "ionsperpage_Textbox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to listDefaultStyle.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_Dropdown_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_Dropdown_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MSL100.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_DropdownOption_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_DropdownOption_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdUnlimitedAttempts.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_NumberOfAttemptsIsUnlimited_RadiButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_NumberOfAttemptsIsUnlimi" +
+                        "ted_RadiButton_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentsToSkipQuestions_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudents" +
+                        "ToSkipQuestions_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 14.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentsToTryAgain_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudents" +
+                        "ToTryAgain_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 21.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentToSaveForLater_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentT" +
+                        "oSaveForLater_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 13.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentToSkipPages_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentT" +
+                        "oSkipPages_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 60.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AutosubmitSingleSCOActivities_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AutosubmitSin" +
+                        "gleSCOActivities_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgCloseLock.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__Close_ClassName {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__Close_ClassNa" +
+                        "me", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 25.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DefaultActivityStyle_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DefaultActivi" +
+                        "tyStyle_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 70.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisableBrowserTranslation_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisableBrowse" +
+                        "rTranslation_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayDirectionLineText_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayDirect" +
+                        "ionLineText_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 26.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayQuestionsInColumns_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayQuesti" +
+                        "onsInColumns_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 9.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayThisNumberOfQuestionsPerPage_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayThisNu" +
+                        "mberOfQuestionsPerPage_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayTotalPossiblePoints_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayTotalP" +
+                        "ossiblePoints_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 19.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__IncludeInCoursePlanScoring_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__IncludeInCour" +
+                        "sePlanScoring_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgOpenLockSmall.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__Open_ClassName {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__Open_ClassNam" +
+                        "e", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 52.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RemoveCorrectIncorrectIndicators_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RemoveCorrect" +
+                        "IncorrectIndicators_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 17.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RequireStudentsToAnswer_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RequireStuden" +
+                        "tsToAnswer_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 55.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RestrictStudentFromReviewing_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RestrictStude" +
+                        "ntFromReviewing_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__SaveResponse_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__SaveResponse_" +
+                        "ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 24.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__ShowHints_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__ShowHints_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 51.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__ShowScoreAndFeedback_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__ShowScoreAndF" +
+                        "eedback_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtAllowAttempts.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttempts_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttempts_" +
+                        "Textbox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttempts_Textbox_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttempts_" +
+                        "Textbox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdSpecifyAttempt.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttemptse_RadiButton {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttemptse" +
+                        "_RadiButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkDisplayIconOnScore.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkDisplayIconOnScore_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkDisplayIcon" +
+                        "OnScore_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkMasteryReport.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkMasteryReport_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkMasteryRepo" +
+                        "rt_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkPracticeMode.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkPracticeMode_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkPracticeMod" +
+                        "e_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ddlSubmitGrade.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Dropdown_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Dropdown_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Highest.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Dropdown_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Dropdown_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 42.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__42_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__42_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 43.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__43_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__43_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 53.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__53_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__53_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 57.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__57_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__57_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 58.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__58_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__58_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 65.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__65_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__65_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 68.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__68_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__68_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdStuIdentified.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_RadioButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_RadioButton_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtMCBeginMsg.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultBeginMessage_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultBeginMessage_Tex" +
+                        "tbox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtMCEndMsg.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultEndMessage_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultEndMessage_Textb" +
+                        "ox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtInsBeginMsg.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorBeginMessage_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorBeginMessage_" +
+                        "Textbox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtInsEndMsg.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorEndMessage_Textbox_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorEndMessage_Te" +
+                        "xtbox_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 27.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_SmallLock__BeginningOfActivity {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_SmallLock__BeginningOfA" +
+                        "ctivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 28.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_SmallLock__EndOfActivity_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_SmallLock__EndOfActivit" +
+                        "y_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default preferences.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Popup_Title {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Popup_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkEnableActivityTool.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__chkEnableActivityTool_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__chkEnableAc" +
+                        "tivityTool_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkEnableResourceToolbar.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__chkEnableResourceToolbar_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__chkEnableRe" +
+                        "sourceToolbar_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkEnableResourceToolbar.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__EnableGracePeriod_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__EnableGrace" +
+                        "Period_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkHideToolLabels.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__HideToolLabels_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__HideToolLab" +
+                        "els_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkHints.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__Hits_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__Hits_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 41.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_Lock__41_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_Lock__41_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 56.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_Lock__56_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_Lock__56_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkRestartNumbering.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Checkbox__chkRestartNumbering_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Checkbox__chkRestartNum" +
+                        "bering_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkShuffleQues.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Checkbox__chkShuffleQues_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Checkbox__chkShuffleQue" +
+                        "s_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 44.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Lock__44_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Lock__44_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 62.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Lock__62_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Lock__62_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkEnableLateSubmission.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_CheckBox__chkEnableLateSubmission_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_CheckBox__chkEnableLateSu" +
+                        "bmission_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkGracePeriod.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_CheckBox__chkGracePeriod_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_CheckBox__chkGracePeriod_" +
+                        "ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rdoNone.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_EnforceToNone_RadioButton_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_EnforceToNone_RadioButton" +
+                        "_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 29.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__29_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__29_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 30.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__30_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__30_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 31.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__31_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__31_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 32.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__32_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__32_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 61.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__61_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__61_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 72.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__72_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__72_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 73.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__73_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__73_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 74.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__74_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__74_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 75.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__75_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__75_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 76.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__76_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__76_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 77.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__77_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__77_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtMaxParticipants.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMax__ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfPartici" +
+                        "pantsMax__ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 6.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMax_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfPartici" +
+                        "pantsMax_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtMinParticipants.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMin_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfPartici" +
+                        "pantsMin_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMin_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfPartici" +
+                        "pantsMin_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to textMinimumMinutes.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumMinutes_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumMinutes_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 01.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumMinutes_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumMinutes_Val" +
+                        "ue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to textMinimumSeconds.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumSeconds_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumSeconds_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 00.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumSeconds_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumSeconds_Val" +
+                        "ue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to textMinutes.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinutes_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinutes_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinutes_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinutes_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to textSeconds.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textSeconds_ID {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textSeconds_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 00.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textSeconds_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textSeconds_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblActivities&apos;]/tbody/tr[{0}]/td[4]/input.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_AddActivityName_GetActivityName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_AddActivityName_GetActivityName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblActivities&apos;]/tbody/tr[{0}]/td[7]/a.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_AddActivityName_GetEditLink_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_AddActivityName_GetEditLink_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lnkAddRow.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_AddActivityName_Link_Id_Locator {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_AddActivityName_Link_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblActivities&apos;]/tbody/tr.
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_AddActivityName_RowCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_AddActivityName_RowCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Grader Project [Homework].
         /// </summary>
         internal static string ActivitiesPreferences_Page_AssignmentActivityTypeName_Value {

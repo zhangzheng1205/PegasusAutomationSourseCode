@@ -4,6 +4,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pegasus.Acceptance.HigherEducationCore.Tests.
     ProductAcceptanceTestDefinitions
@@ -759,5 +760,32 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               "EnableBlackboardVoiceAuthoringOption",
               base.IsTakeScreenShotDuringEntryExit);
        }
+
+       /// <summary>
+       /// This methord is to set preference for the SAM type of activity
+       /// </summary>
+       /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I set the ""(.*)"" preference for ""(.*)"" activity type")]
+       public void SetActivityPreferenceForSAMTypeActivity(string preferenceOption , Activity.ActivityTypeEnum activityType)
+       {
+           Logger.LogMethodEntry("Preference", "SetActivityPreferenceForSAMTypeActivity", base.IsTakeScreenShotDuringEntryExit);
+           new ActivitiesPreferencesPage().SetActivityPreferenceForSAMAvtivityType(preferenceOption, activityType);
+           Logger.LogMethodExit("Preference", "SetActivityPreferenceForSAMTypeActivity", base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Click on button in the activity preference popup
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I click on ""(.*)"" button for ""(.*)""")]
+        public void ClickOnButtonInDefaultPreferencePopup(string buttonName, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("Preference", "ClickOnButtonInDefaultPreferencePopup",base.IsTakeScreenShotDuringEntryExit);
+            new ActivitiesPreferencesPage().ClickButtonInDefaultPreferencePopup(buttonName, activityType);
+            Logger.LogMethodExit("Preference", "ClickOnButtonInDefaultPreferencePopup", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
     }
 }

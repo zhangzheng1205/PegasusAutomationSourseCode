@@ -148,3 +148,23 @@ When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
+
+#Purpose: Instructor enable General preference for SAM activity type
+Scenario: Workspace Instructor enable General preference for SAM activity type
+When I navigate to "Preferences" tab of the "Preferences" page
+Then I should be on the "Preferences" page
+When I click on the "Activities" tab
+And I Create a new "RegSAMActivity" SAM activity type
+Then I should see the successfull message "preferences updated successfully"
+When I click on "RegSAMActivity" edit link
+Then I should see the "Default preferences" popup
+When I set the "General" preference for "RegSAMActivity" activity type
+And I set the "Messages" preference for "RegSAMActivity" activity type
+And I set the "Timing" preference for "RegSAMActivity" activity type
+And I set the "Feedback" preference for "RegSAMActivity" activity type
+And I set the "Res. Toolbar" preference for "RegSAMActivity" activity type
+And I set the "Grading" preference for "RegSAMActivity" activity type
+And I set the "Sections" preference for "RegSAMActivity" activity type
+And I set the "Video Chat" preference for "RegSAMActivity" activity type
+And I click on "Save" button for "RegSAMActivity"
+Then I should see the successfull message "Preference settings updated for selected activity type."

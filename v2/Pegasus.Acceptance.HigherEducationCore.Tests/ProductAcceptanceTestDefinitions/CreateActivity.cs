@@ -501,6 +501,51 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CreateActivity", "VerifyTheHtmlAudioPlayer",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Create SAM activity type in Activity preference
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum</param>
+        [When(@"I Create a new ""(.*)"" SAM activity type")]
+        public void CreateSAMActivityTypeInActivityPreference(
+                         Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Create SAM Activity type
+            Logger.LogMethodEntry("CreateActivity",
+                "CreateSAMActivityTypeInActivityPreference",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Click on Activity Name Link in ActivityPrefrence page
+            new ActivitiesPreferencesPage().ClickAddActivityNameLinkInActivityPrefrence();
+
+            //Store the activity name in memory
+            new ActivitiesPreferencesPage().EnterActivityNameAndStoreActivityInMemory(activityTypeEnum);
+
+            Logger.LogMethodExit("CreateActivity",
+                "CreateSAMActivityTypeInActivityPreference",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click edit link of activity type to enable preferences
+        /// </summary>
+        /// <param name="activityTypeEnum"></param>
+        [When(@"I click on ""(.*)"" edit link")]
+        public void ClickActivityEditLinkInActivtyPreference(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+
+            Logger.LogMethodEntry("CreateActivity",
+                "ClickActivityEditLinkInActivtyPreference",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            //Click Activtiy edit link
+            new ActivitiesPreferencesPage().EditActivityPreference(activityTypeEnum);
+
+            Logger.LogMethodExit("CreateActivity",
+                "ClickActivityEditLinkInActivtyPreference",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

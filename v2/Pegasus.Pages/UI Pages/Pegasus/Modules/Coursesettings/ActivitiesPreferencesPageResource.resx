@@ -177,4 +177,376 @@
   <data name="ActivitiesPreferences_Page_AssignmentActivityTypeName_Value" xml:space="preserve">
     <value>Grader Project [Homework]</value>
   </data>
+  <data name="ActivitiesPreferences_Page_AddActivityName_GetActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblActivities']/tbody/tr[{0}]/td[4]/input</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_AddActivityName_Link_Id_Locator" xml:space="preserve">
+    <value>lnkAddRow</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_AddActivityName_RowCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblActivities']/tbody/tr</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Popup_Title" xml:space="preserve">
+    <value>Default preferences</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_AddActivityName_GetEditLink_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblActivities']/tbody/tr[{0}]/td[7]/a</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_DisplayFeedbackAndCorrectAnswers_RadioButton_ID" xml:space="preserve">
+    <value>rdNextToResponse</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__33_ID" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__34_ID" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__35_ID" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__36_ID" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__37_ID" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_Lock__38_ID" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswer_Textbox_ID" xml:space="preserve">
+    <value>txtCorrectAnswerAt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswer_Textbox_Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowCorrectAnswe_RadioButton_ID" xml:space="preserve">
+    <value>rdCorrectAnswerAt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_RadioButton_ID" xml:space="preserve">
+    <value>rdFeedbackAt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_Textbox_ID" xml:space="preserve">
+    <value>txtFeedbackAt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowFeedback_Textbox_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_RadioButton_ID" xml:space="preserve">
+    <value>rdNeedHelpAt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_Textbox_ID" xml:space="preserve">
+    <value>txtNeedHelpAt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Feedback_ShowNeedHelp_Textbox_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_BigLock_ClassName" xml:space="preserve">
+    <value>imgBigCloseLock</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AllowStudentsToSkipQuestions_ID" xml:space="preserve">
+    <value>chkSkipQues</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AllowStudentToFlagQuestions_ID" xml:space="preserve">
+    <value>chkBookmarkTest</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__AutoSubmitSingleSCOActivities_ID" xml:space="preserve">
+    <value>chkAutosubmitSCOactivity</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkAllQuesAnswer_ID" xml:space="preserve">
+    <value>chkAllQuesAnswer</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkDirectionLines_ID" xml:space="preserve">
+    <value>chkDirectionLines</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkEnableHelplinks_ID" xml:space="preserve">
+    <value>chkEnableHelplinks</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkEnableTryAgain_ID" xml:space="preserve">
+    <value>chkEnableTryAgain</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkSaveResponse_ID" xml:space="preserve">
+    <value>chkSaveResponse</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkStudSave_ID" xml:space="preserve">
+    <value>chkStudSave</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__chkThresholdScore_ID" xml:space="preserve">
+    <value>chkThresholdScore</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisableBrowserTranslation_ID" xml:space="preserve">
+    <value>chkBrowserTranslate</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisplayQuestionsInColumns_ID" xml:space="preserve">
+    <value>chkDisQuesInColumn</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__DisplayTotalPossiblePoints_ID" xml:space="preserve">
+    <value>chkQuesScore</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__IncludeInCoursePlanScoring_ID" xml:space="preserve">
+    <value>chkIncludeCoursePlanScoring</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__RemoveCorrectIncorrectIndicators_ID" xml:space="preserve">
+    <value>chkRemoveIndicators</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__RestrictStudentFromReviewing_ID" xml:space="preserve">
+    <value>chkRestrictReviewAnswer</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_CheckBox__ShowScore_ID" xml:space="preserve">
+    <value>chkPageSkip</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquestionsperpage_RadiButton_ID" xml:space="preserve">
+    <value>rdoDisplayPerPage</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquestionsperpage_Textbox_ID" xml:space="preserve">
+    <value>txtDisplayPerPage</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_Displaythisnumberofquestionsperpage_Textbox_Value" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_DropdownOption_Value" xml:space="preserve">
+    <value>MSL100</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_Dropdown_ID" xml:space="preserve">
+    <value>listDefaultStyle</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_NumberOfAttemptsIsUnlimited_RadiButton_ID" xml:space="preserve">
+    <value>rdUnlimitedAttempts</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentsToSkipQuestions_ID" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentsToTryAgain_ID" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentToSaveForLater_ID" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AllowStudentToSkipPages_ID" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__AutosubmitSingleSCOActivities_ID" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__Close_ClassName" xml:space="preserve">
+    <value>imgCloseLock</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DefaultActivityStyle_ID" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisableBrowserTranslation_ID" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayDirectionLineText_ID" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayQuestionsInColumns_ID" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayThisNumberOfQuestionsPerPage_ID" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__DisplayTotalPossiblePoints_ID" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__IncludeInCoursePlanScoring_ID" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__Open_ClassName" xml:space="preserve">
+    <value>imgOpenLockSmall</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RemoveCorrectIncorrectIndicators_ID" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RequireStudentsToAnswer_ID" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__RestrictStudentFromReviewing_ID" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__SaveResponse_ID" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__ShowHints_ID" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SmallLock__ShowScoreAndFeedback_ID" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttemptse_RadiButton" xml:space="preserve">
+    <value>rdSpecifyAttempt</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttempts_Textbox_ID" xml:space="preserve">
+    <value>txtAllowAttempts</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_General_SpecifyNumberOfAttempts_Textbox_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkDisplayIconOnScore_ID" xml:space="preserve">
+    <value>chkDisplayIconOnScore</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkMasteryReport_ID" xml:space="preserve">
+    <value>chkMasteryReport</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Checkbox__chkPracticeMode_ID" xml:space="preserve">
+    <value>chkPracticeMode</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Dropdown_ID" xml:space="preserve">
+    <value>ddlSubmitGrade</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Dropdown_Value" xml:space="preserve">
+    <value>Highest</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__42_ID" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__43_ID" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__53_ID" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__57_ID" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__58_ID" xml:space="preserve">
+    <value>58</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__65_ID" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_Lock__68_ID" xml:space="preserve">
+    <value>68</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Grading_RadioButton_ID" xml:space="preserve">
+    <value>rdStuIdentified</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultBeginMessage_Textbox_ID" xml:space="preserve">
+    <value>txtMCBeginMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultEndMessage_Textbox_ID" xml:space="preserve">
+    <value>txtMCEndMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorBeginMessage_Textbox_ID" xml:space="preserve">
+    <value>txtInsBeginMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorEndMessage_Textbox_ID" xml:space="preserve">
+    <value>txtInsEndMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_SmallLock__BeginningOfActivity" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_SmallLock__EndOfActivity_ID" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__chkEnableActivityTool_ID" xml:space="preserve">
+    <value>chkEnableActivityTool</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__chkEnableResourceToolbar_ID" xml:space="preserve">
+    <value>chkEnableResourceToolbar</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__EnableGracePeriod_ID" xml:space="preserve">
+    <value>chkEnableResourceToolbar</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__HideToolLabels_ID" xml:space="preserve">
+    <value>chkHideToolLabels</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_CheckBox__Hits_ID" xml:space="preserve">
+    <value>chkHints</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_Lock__41_ID" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_ResToolbar_Lock__56_ID" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Checkbox__chkRestartNumbering_ID" xml:space="preserve">
+    <value>chkRestartNumbering</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Checkbox__chkShuffleQues_ID" xml:space="preserve">
+    <value>chkShuffleQues</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Lock__44_ID" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Sections_Lock__62_ID" xml:space="preserve">
+    <value>62</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_CheckBox__chkEnableLateSubmission_ID" xml:space="preserve">
+    <value>chkEnableLateSubmission</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_CheckBox__chkGracePeriod_ID" xml:space="preserve">
+    <value>chkGracePeriod</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_EnforceToNone_RadioButton_ID" xml:space="preserve">
+    <value>rdoNone</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__29_ID" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__30_ID" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__31_ID" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__32_ID" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_Timing_Lock__61_ID" xml:space="preserve">
+    <value>61</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__72_ID" xml:space="preserve">
+    <value>72</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__73_ID" xml:space="preserve">
+    <value>73</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__74_ID" xml:space="preserve">
+    <value>74</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__75_ID" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__76_ID" xml:space="preserve">
+    <value>76</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_Lock__77_ID" xml:space="preserve">
+    <value>77</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMax_Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMax__ID" xml:space="preserve">
+    <value>txtMaxParticipants</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMin_ID" xml:space="preserve">
+    <value>txtMinParticipants</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_MinimumNumberOfParticipantsMin_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumMinutes_ID" xml:space="preserve">
+    <value>textMinimumMinutes</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumMinutes_Value" xml:space="preserve">
+    <value>01</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumSeconds_ID" xml:space="preserve">
+    <value>textMinimumSeconds</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinimumSeconds_Value" xml:space="preserve">
+    <value>00</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinutes_ID" xml:space="preserve">
+    <value>textMinutes</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textMinutes_Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textSeconds_ID" xml:space="preserve">
+    <value>textSeconds</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_ActivityTypePrefernce_VideoChat_textSeconds_Value" xml:space="preserve">
+    <value>00</value>
+  </data>
 </root>

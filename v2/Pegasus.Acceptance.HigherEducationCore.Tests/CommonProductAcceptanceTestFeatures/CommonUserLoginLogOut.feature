@@ -290,5 +290,7 @@ Scenario: Set the date and time of SMS Instructor
 When I click 'My Profile' link
 And I store user current date and time of the instructor
 
-
-
+#Purpose:Verify The User Login As WorkSpaceTeacher to "MySpanishLabMaster" master course
+Scenario:WL Workspace Instructore enter into MySpanishLabMaster master course
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor" 
