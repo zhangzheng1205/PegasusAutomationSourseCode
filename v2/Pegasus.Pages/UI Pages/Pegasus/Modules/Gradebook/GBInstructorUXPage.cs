@@ -4151,7 +4151,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="userFirstName">This is User First Name.</param>
         /// <returns>Activity Status.</returns>
         public string EditActivityScoreInPegasusByBBIns(Grade.GradeTypeEnum gradeType, Activity.ActivityTypeEnum activityType, string userLastName,
-            string userFirstName)
+                    string userFirstName)
         {
             //Get the Activity Status
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus",
@@ -4167,21 +4167,25 @@ namespace Pegasus.Pages.UI_Pages
                 //Get User Row Count
                 int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
                 this.SelectGradebookFrame();
-                IWebElement getGradeScore = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
-                getUserRowCount, getActivityColumnCount));
-                base.PerformMouseHoverByJavaScriptExecutor(getGradeScore);
-                bool hhj12 = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
-                    getUserRowCount, getActivityColumnCount)), 10);
+                base.WaitForElement(By.Id("GBGridDataTable"));
+
+                IWebElement getGradeFrame = base.GetWebElementPropertiesById("GBGridDataTable");
+                base.PerformMouseHoverAction(getGradeFrame);
+
+
                 base.WaitForElement(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
                     getUserRowCount, getActivityColumnCount)));
                 IWebElement getGrade = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
                     getUserRowCount, getActivityColumnCount));
                 base.PerformMouseHoverAction(getGrade);
+
+                IWebElement getGradeMenu = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
+                 getUserRowCount, getActivityColumnCount));
+                base.PerformMouseHoverAction(getGradeMenu);
+
                 IWebElement getCmenu = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span",
                     getUserRowCount, getActivityColumnCount));
                 base.PerformMouseHoverByJavaScriptExecutor(getCmenu);
-                bool sdwq = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img",
-                    getUserRowCount, getActivityColumnCount)), 10);
                 IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img",
                     getUserRowCount, getActivityColumnCount));
                 base.ClickByJavaScriptExecutor(getCmenuIcon);

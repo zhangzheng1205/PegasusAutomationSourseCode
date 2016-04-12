@@ -1,8 +1,9 @@
-﻿Feature: BlackboardInstructorCourseAction
+﻿Feature: BlackboardCourseAction
 	                As a BB Instructor 
-					I want to manage all the Blackboard course management usecases 
-					so that I would validate all the course mana scenarios are working fine.
-
+					I want check Gradeposting for an activity form Pegasus to blackboard
+					As a BB Student 
+					I want check Gradeposting for an activity form Pegasus to blackboard
+#Author: Chethan S G
 Scenario: Blackboard Instructors Selects Course
 Given I am on the "My Institution" page of Blackboard
 When I Select PegasusCourse link
@@ -30,6 +31,23 @@ Scenario: Blackboard Instructor accessing GradeCenter
 Given I am on the "Content" page of blackboard
 When I select "Grade Center" of Blackboard
 Then I should see "Full Grade Center" link
+
+Scenario: Blackboard Instructor accessing Pearson custom tools
+Given I am on the "Grade Center" page of blackboard
+When I select "Manage" link of GradeCenter
+Then I should see a menu "Pearson Custom Tools"
+
+Scenario: Blackboard Instructor Refresh Pearson Grades
+Given I am on the "Pearson Custom Integration" page of blackboard
+When I select "Refresh Pearson Grades" link of Pearson Custom Integration Tools
+Then I should be on "Refresh Pearson Grades"
+
+Scenario: Blackboard Instructor pulls Pegasus Grades
+Given I am on the "Refresh Pearson Grades" page of blackboard
+When I see grades for "Access Chapter 1 Grader Project [Assessment 3]" activity
+Then I "Submit" grades for synchronization
+
+
 
 #Purpose : Blackboard Instructor validate startsync and stop sync option functionality
 Scenario: Blackboard Instructor validate startsync and stop sync

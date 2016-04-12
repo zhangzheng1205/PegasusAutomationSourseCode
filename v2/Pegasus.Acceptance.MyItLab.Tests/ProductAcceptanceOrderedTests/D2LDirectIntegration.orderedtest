@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="D2LDirectIntegration" storage="d:\testautomationfinalhedintegration\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\d2ldirectintegration.orderedtest" id="2fbc41ff-21be-4089-968f-b943f35a0865" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="0da3fd2a-1ff0-2789-73d7-1b1e63b8bf92" name="D2LInstructorLoginToD2LPortal" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="993b9ebc-0625-db06-959e-a52dbe00f2cc" name="D2LStudentLoginToD2LPortal" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
