@@ -612,6 +612,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.WL.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.AssessmentRegression.WSInstructorAuthoring.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderTest.UserEnrollmentBVT.WL.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.AssessmentRegression.WSInstructorAuthoring" storage="d:\testautomationfinalhedintegration\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\orderedtest.assessmentregression.wsinstructorauthoring.orderedtest" id="5a0a184e-bc39-40a2-9425-1fa26d615b36" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="c3823a5d-8537-d958-f28c-43f5e2861539" name="UserLoginAsWorkSpaceTeacher" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="6ba2316d-5c4d-07bd-33e5-2e8c11bbc4b7" name="WLWorkspaceInstructoreEnterIntoMySpanishLabMasterMasterCourse" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="511fcfe6-d802-3ad7-2dbe-dcd498b58be6" name="WorkspaceInstructorEnableGeneralPreferenceForSAMActivityType" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
