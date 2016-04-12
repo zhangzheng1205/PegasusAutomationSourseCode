@@ -546,6 +546,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Search Text
             base.WaitForElement(By.Id(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchTextBox_Id_Locator));
+            Thread.Sleep(3000);
             //Clear Textbox
             base.ClearTextById(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchTextBox_Id_Locator);

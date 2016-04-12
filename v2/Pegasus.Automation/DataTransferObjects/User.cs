@@ -181,7 +181,11 @@ namespace Pearson.Pegasus.TestAutomation.
             K12MediaSTeacher = 100,
             K12MediaSStudent = 101,
             S7eTextTeacher = 102,
-            S7eTextStudent = 103  
+            S7eTextStudent = 103,
+            WsWCTeacher = 104,
+            WsWCStudent = 105,
+            DPCsWCTeacher = 106,
+            DPCsWCStudent = 107
             #endregion
         }
 

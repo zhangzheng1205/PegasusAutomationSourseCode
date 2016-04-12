@@ -32,6 +32,25 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// Open the activity in view all content tab.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I open ""(.*)"" activity")]
+        public void OpenActivityfromToDo(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Open the Activity in Different Tab's
+            Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Fetctb Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+            //Select Content Window
+            new CoursePreviewUXPage().LaunchAssetFromToDoTab(activityName);
+            Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Open the activity in view all content tab.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         [When(@"I open the activity named as ""(.*)""")]
         public void OpenTheActivity(Activity.ActivityTypeEnum activityTypeEnum)
         {
@@ -426,6 +445,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             CoursePreviewUXPage coursePreviewUxPage = new CoursePreviewUXPage();
             Logger.LogAssertion("VerifySubmissionScore", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(achievedScore, coursePreviewUxPage.GetAssetScore(assetName, underTabName)));
+            Logger.LogAssertion("VerifyTryAgainButtonPresent", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(buttonName, coursePreviewUxPage.GetTryAgainButtonText()));
+            base.SelectDefaultWindow();
+            Logger.LogMethodEntry("ActivitySubmission", "VerifySubmittedActivityScoreAndStatus",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the activity is submitted in To Do tab when status is not enabled
+        /// </summary>
+        /// <param name="buttonName"></param>
+        [Then(@"I should see submitted activity ""(.*)"" button")]
+        public void VerifyActivityIsSubmittedInToDo(string buttonName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "VerifySubmittedActivityScoreAndStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            CoursePreviewUXPage coursePreviewUxPage = new CoursePreviewUXPage();
             Logger.LogAssertion("VerifyTryAgainButtonPresent", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(buttonName, coursePreviewUxPage.GetTryAgainButtonText()));
             base.SelectDefaultWindow();

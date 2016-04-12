@@ -235,3 +235,48 @@ Then I should be logged in successfully
 Scenario: User LogOut As CourseSpaceStudent after S7eText Launch
 When I "Sign Out" from the "S7eTextStudent"
 Then I should see the "Signed Out" message
+
+#Purpose:Verify The User Login As WorkSpaceTeacher Navigate to Writing Coach MasterCourse
+Scenario: User Login As WorkSpaceTeacher Navigate to Writing Coach MasterCourse
+Given I browsed the login url for "WsWCTeacher"
+When I login to Pegasus as "WsWCTeacher" in "WorkSpace"
+Then I should be logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "WCMasterLibrary" as "WsWCTeacher" from the Global Home page
+
+#Purpose:Verify The User LogOut As Writing Coach WorkSpaceTeacher
+Scenario: User LogOut As Writing Coach WorkSpaceTeacher
+When I "Sign out" from the "WsWCTeacher"
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose:Verify The User Login As CourseSpaceTeacher
+Scenario: User Login As Writing Coach CourseSpaceTeacher
+Given I browsed the login url for "DPCsWCTeacher"
+When I login to Pegasus as "DPCsWCTeacher" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As CourseSpaceTeacher
+Scenario: User LogOut As Writing Coach CourseSpaceTeacher
+When I "Sign out" from the "DPCsWCTeacher"
+Then I should see the "Signed Out" message
+
+#Purpose: To save the profile date and time
+Scenario: Writing Coach DP Teacher saving the profile date and time
+When I click 'My Profile' link as "DPCsWCTeacher"
+And I store user current date and time of teacher
+
+#Purpose: Coursespace Teacher enter into digital path class
+Scenario: Teacher enter into Writing Coach DigitalPath Class
+When I enter into the DP "DigitalPathWCMasterLibrary" class
+Then I should be on the "Classes" page
+
+#Purpose:Verify The User Login As Writing Coach CourseSpaceStudent
+Scenario: User Login As Writing Coach CourseSpaceStudent
+Given I browsed the login url for "DPCsWCStudent"
+When I login to Pegasus as "DPCsWCStudent" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As Writing Coach CourseSpaceStudent
+Scenario: User LogOut As Writing Coach CourseSpaceStudent
+When I "Sign Out" from the "DPCsWCStudent"
+Then I should see the "Signed Out" message

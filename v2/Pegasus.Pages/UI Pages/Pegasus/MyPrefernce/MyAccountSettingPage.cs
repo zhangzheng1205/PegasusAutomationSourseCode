@@ -462,5 +462,55 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
 
         }
+
+        /// <summary>
+        /// Save current date and time to memory.
+        /// </summary>
+        public void SaveCurrentDateAndTimeWC()
+        {
+            // Store user profile date and time in memory
+            logger.LogMethodEntry("MyAccountSettingPage", "SaveCurrentDateAndTime",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Changing the Time Zone                
+                base.WaitForElement(By.XPath(MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_Frame_Xpath_Locator));
+                //Get properties of IFrame
+                IWebElement frameProperties = base.GetWebElementPropertiesByXPath
+                    (MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_Frame_Xpath_Locator);
+                //Switching to Frame
+                base.SwitchToIFrameByWebElement(frameProperties);
+                //get the date value from dropdown
+                base.WaitForElement(By.XPath(MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_Date_Dropdown_Xpath_Locator));
+                String currentDate = base.GetElementTextByXPath(MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_Date_Dropdown_Xpath_Locator);
+                //get the time value from dropdown
+                base.WaitForElement(By.XPath(MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_Time_Dropdown_Xpath_Locator));
+                String currentTime = base.GetElementTextByXPath(MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_Time_Dropdown_Xpath_Locator);
+                //store date and time in memory
+                String instance = currentDate + " " + currentTime;
+                DateTime datetime = Convert.ToDateTime(instance);
+                User user = User.Get(User.UserTypeEnum.DPCsWCTeacher);
+                user.CurrentProfileDateTime = datetime;
+                //Close My profile window
+                base.ClickButtonById(MyAccountSettingPageResource.
+                    MyAccountSetting_Page_MyProfile_CanceBtn_Id_Locator);
+                base.SwitchToDefaultPageContent();
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("MyAccountSettingPage", "SaveCurrentDateAndTime",
+                 base.IsTakeScreenShotDuringEntryExit);
+
+        }
     }
 }

@@ -189,6 +189,8 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     // Click my profile  by Cs Teacher
                     case User.UserTypeEnum.DPCsTeacher:
+                    case User.UserTypeEnum.DPCsWCTeacher:
+                    case User.UserTypeEnum.K12MediaSTeacher:
                         //Select the default window
                         base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
                         //Click on User Profile imagelink
@@ -207,6 +209,8 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     // Click my profile  by Cs Student
                     case User.UserTypeEnum.DPCsStudent:
+                    case User.UserTypeEnum.DPCsWCStudent:
+                    case User.UserTypeEnum.K12MediaSStudent:
                         //Select the default window
                         base.SelectWindow(HomePageResource
                              .Home_Page_Overview_Window_Title);

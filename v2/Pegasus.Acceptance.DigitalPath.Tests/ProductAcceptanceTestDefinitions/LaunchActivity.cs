@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
 using TechTalk.SpecFlow;
 
 #endregion
@@ -88,6 +89,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("LaunchActivity", "LaunchTheTestActivity",
                 base.IsTakeScreenShotDuringEntryExit);
 
+        }
+
+        /// <summary>
+        /// Launch the Writing Coach Activity
+        /// </summary>
+        [Then(@"I should see the InteractiveWritingCoach activity successfully launched")]
+        [When(@"I submit the InteractiveWritingCoach activity")]
+        public void LaunchWritingAssistantActivity()
+        {
+            // Open The Activity 
+            Logger.LogMethodEntry("LaunchActivity", "LaunchWritingAssistantActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert for Launch of Presentation window
+            Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new WritingCoachQuestionListPage().IsWritingAssistantActivityLaunched()));
+            Logger.LogMethodExit("LaunchActivity", "LaunchWritingAssistantActivity",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

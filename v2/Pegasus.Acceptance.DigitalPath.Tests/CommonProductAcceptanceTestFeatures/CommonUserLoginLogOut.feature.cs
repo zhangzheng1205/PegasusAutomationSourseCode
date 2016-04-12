@@ -788,6 +788,145 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As WorkSpaceTeacher Navigate to Writing Coach MasterCourse")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLoginAsWorkSpaceTeacherNavigateToWritingCoachMasterCourse()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WorkSpaceTeacher Navigate to Writing Coach MasterCourse", ((string[])(null)));
+#line 240
+this.ScenarioSetup(scenarioInfo);
+#line 241
+testRunner.Given("I browsed the login url for \"WsWCTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 242
+testRunner.When("I login to Pegasus as \"WsWCTeacher\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 243
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 244
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 245
+testRunner.When("I enter in the \"WCMasterLibrary\" as \"WsWCTeacher\" from the Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User LogOut As Writing Coach WorkSpaceTeacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLogOutAsWritingCoachWorkSpaceTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As Writing Coach WorkSpaceTeacher", ((string[])(null)));
+#line 248
+this.ScenarioSetup(scenarioInfo);
+#line 249
+testRunner.When("I \"Sign out\" from the \"WsWCTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 250
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As Writing Coach CourseSpaceTeacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLoginAsWritingCoachCourseSpaceTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As Writing Coach CourseSpaceTeacher", ((string[])(null)));
+#line 253
+this.ScenarioSetup(scenarioInfo);
+#line 254
+testRunner.Given("I browsed the login url for \"DPCsWCTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 255
+testRunner.When("I login to Pegasus as \"DPCsWCTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 256
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User LogOut As Writing Coach CourseSpaceTeacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLogOutAsWritingCoachCourseSpaceTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As Writing Coach CourseSpaceTeacher", ((string[])(null)));
+#line 259
+this.ScenarioSetup(scenarioInfo);
+#line 260
+testRunner.When("I \"Sign out\" from the \"DPCsWCTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 261
+testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Writing Coach DP Teacher saving the profile date and time")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void WritingCoachDPTeacherSavingTheProfileDateAndTime()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Writing Coach DP Teacher saving the profile date and time", ((string[])(null)));
+#line 264
+this.ScenarioSetup(scenarioInfo);
+#line 265
+testRunner.When("I click \'My Profile\' link as \"DPCsWCTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 266
+testRunner.And("I store user current date and time of teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher enter into Writing Coach DigitalPath Class")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void TeacherEnterIntoWritingCoachDigitalPathClass()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher enter into Writing Coach DigitalPath Class", ((string[])(null)));
+#line 269
+this.ScenarioSetup(scenarioInfo);
+#line 270
+testRunner.When("I enter into the DP \"DigitalPathWCMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 271
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As Writing Coach CourseSpaceStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLoginAsWritingCoachCourseSpaceStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As Writing Coach CourseSpaceStudent", ((string[])(null)));
+#line 274
+this.ScenarioSetup(scenarioInfo);
+#line 275
+testRunner.Given("I browsed the login url for \"DPCsWCStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 276
+testRunner.When("I login to Pegasus as \"DPCsWCStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 277
+testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User LogOut As Writing Coach CourseSpaceStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogOut")]
+        public virtual void UserLogOutAsWritingCoachCourseSpaceStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As Writing Coach CourseSpaceStudent", ((string[])(null)));
+#line 280
+this.ScenarioSetup(scenarioInfo);
+#line 281
+testRunner.When("I \"Sign Out\" from the \"DPCsWCStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 282
+testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

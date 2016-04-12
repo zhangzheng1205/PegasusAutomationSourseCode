@@ -110,6 +110,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [Then(@"I should see assigned study plan ""(.*)""")]
         [Then(@"I should see assigned LCC ""(.*)""")]
         [Then(@"I should see assigned Media Server Link ""(.*)""")]
+        [Then(@"I should see assigned Writing Coach activity ""(.*)""")]
         public void ValidateLCCNameDisplayInManageCourseMaterial(string lccName)
         {
             //Validate the display of LCC name
@@ -130,6 +131,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [Then(@"I should see status as ""(.*)"" for MathXL activity ""(.*)""")]
         [Then(@"I should see status as ""(.*)"" for study plan ""(.*)""")]
         [Then(@"I should see status as ""(.*)"" for LCC ""(.*)""")]
+        [Then(@"I should see status as ""(.*)"" for Writing Coach activity ""(.*)""")]
         public void ValidateStatusOftheActivity(string status, string activityName)
         {
             //Validate the Status of assigned LCC
@@ -178,6 +180,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [Then(@"I should see ""(.*)"" text in Shown to column for MathXL activity ""(.*)""")]
         [Then(@"I should see ""(.*)"" text in Shown to column for study plan ""(.*)""")]
         [Then(@"I should see ""(.*)"" text in Shown to column for LCC ""(.*)""")]
+        [Then(@"I should see ""(.*)"" text in Shown to column for Writing Coach activity ""(.*)""")]
         public void ValidateShownColumnTextInMangeCourseMaterials(string shownColumnText, string activityName)
         {
             //Validate the text in shown to column in Manage course materials
@@ -198,6 +201,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [Then(@"I should see Assigned icon for MathXL activity ""(.*)""")]
         [Then(@"I should see Assigned icon for study plan ""(.*)""")]
         [Then(@"I should see Assigned icon for LCC ""(.*)""")]
+        [Then(@"I should see Assigned icon for Writing Coach activity ""(.*)""")]
         public void ValidateDisplayOfAssignIcon(string activityName)
         {
             //Validate the display of assign icon for LCC in Manage course materials

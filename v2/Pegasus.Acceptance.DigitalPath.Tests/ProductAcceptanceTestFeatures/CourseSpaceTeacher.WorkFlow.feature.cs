@@ -1782,6 +1782,108 @@ testRunner.Then("I should see \"DigitalPathMasterLibrary\" copy content class in
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Select Writing Coach DigitalPath class from Class selector dropdown by Teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void SelectWritingCoachDigitalPathClassFromClassSelectorDropdownByTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select Writing Coach DigitalPath class from Class selector dropdown by Teacher", ((string[])(null)));
+#line 701
+this.ScenarioSetup(scenarioInfo);
+#line 702
+testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 703
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 704
+testRunner.When("I select DigitalPath class \"DigitalPathWCMasterLibrary\" from Class selector dropd" +
+                    "own", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 705
+testRunner.Then("I should able to see the \"DigitalPathWCMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign Writing Coach Activity from curriculum channel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void AssignWritingCoachActivityFromCurriculumChannel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign Writing Coach Activity from curriculum channel", ((string[])(null)));
+#line 708
+this.ScenarioSetup(scenarioInfo);
+#line 709
+testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 710
+testRunner.Then("I should be on the \"Curriculum\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 711
+testRunner.When("I select \"Assign\" cmenu of \"Interactive Writing Coach Personal Tutor: Cause and E" +
+                    "ffect Essay\" in table of content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 712
+testRunner.And("I click on Ok button in Alert pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 713
+testRunner.Then("I should see \"Assign\" pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 714
+testRunner.When("I set due date for the \"InteractiveWritingCoach\" activity in curriculum for Writi" +
+                    "ng Coach Class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Teacher validating display of assigned Writing Coach Activity under manage course" +
+            "work on current date")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void TeacherValidatingDisplayOfAssignedWritingCoachActivityUnderManageCourseworkOnCurrentDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher validating display of assigned Writing Coach Activity under manage course" +
+                    "work on current date", ((string[])(null)));
+#line 717
+this.ScenarioSetup(scenarioInfo);
+#line 718
+testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 719
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 720
+testRunner.When("I navigate to the \"Manage Coursework\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 721
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 722
+testRunner.Then("I should see assigned Writing Coach activity \"Interactive Writing Coach Personal " +
+                    "Tutor: Cause and Effect Essay\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 723
+testRunner.And("I should see status as \"Not started\" for Writing Coach activity \"Interactive Writ" +
+                    "ing Coach Personal Tutor: Cause and Effect Essay\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 724
+testRunner.And("I should see \"All\" text in Shown to column for Writing Coach activity \"Interactiv" +
+                    "e Writing Coach Personal Tutor: Cause and Effect Essay\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 725
+testRunner.And("I should see Assigned icon for Writing Coach activity \"Interactive Writing Coach " +
+                    "Personal Tutor: Cause and Effect Essay\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Launch Writing Coach Activity as CS Teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
+        public virtual void LaunchWritingCoachActivityAsCSTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Writing Coach Activity as CS Teacher", ((string[])(null)));
+#line 728
+this.ScenarioSetup(scenarioInfo);
+#line 729
+testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 730
+testRunner.And("I should see assigned Writing Coach activity \"Interactive Writing Coach Personal " +
+                    "Tutor: Cause and Effect Essay\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 731
+testRunner.When("I click on \'InteractiveWritingCoach\' in the Manage Coursework", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 732
+testRunner.Then("I should see the InteractiveWritingCoach activity successfully launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

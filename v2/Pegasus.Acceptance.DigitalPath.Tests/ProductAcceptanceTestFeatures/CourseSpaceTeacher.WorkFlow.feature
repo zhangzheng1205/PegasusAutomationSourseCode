@@ -697,3 +697,36 @@ Then I should see the "Copy Class" popup
 When I enter details for "DigitalPathMasterLibrary" class copy
 Then I should see "DigitalPathMasterLibrary" copy content class in classes channel
 
+#Purpose: DigitalPath Teacher select Writing Coach class from Class selector dropdown.
+Scenario: Select Writing Coach DigitalPath class from Class selector dropdown by Teacher
+When I navigate to the "Classes" tab
+Then I should be on the "Classes" page
+When I select DigitalPath class "DigitalPathWCMasterLibrary" from Class selector dropdown
+Then I should able to see the "DigitalPathWCMasterLibrary" class
+
+#Purpose: DigitalPath teacher assign Writing Coach test from curriculum channel.
+Scenario:Assign Writing Coach Activity from curriculum channel
+When I navigate to the "Curriculum" tab
+Then I should be on the "Curriculum" page
+When I select "Assign" cmenu of "Interactive Writing Coach Personal Tutor: Cause and Effect Essay" in table of content
+And I click on Ok button in Alert pop up
+Then I should see "Assign" pop up
+When I set due date for the "InteractiveWritingCoach" activity in curriculum for Writing Coach Class
+
+#Purpose: To validate display of assigned Writing Coach Activity in class course
+Scenario: Teacher validating display of assigned Writing Coach Activity under manage coursework on current date
+When I navigate to the "Classes" tab
+Then I should be on the "Classes" page
+When I navigate to the "Manage Coursework" tab
+Then I should be on the "Classes" page
+Then I should see assigned Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+And I should see status as "Not started" for Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+And I should see "All" text in Shown to column for Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+And I should see Assigned icon for Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+
+#Purpose: To launch the Writing Coach Activity
+Scenario: Launch Writing Coach Activity as CS Teacher
+Then I should be on the "Classes" page
+And I should see assigned Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+When I click on 'InteractiveWritingCoach' in the Manage Coursework
+Then I should see the InteractiveWritingCoach activity successfully launched

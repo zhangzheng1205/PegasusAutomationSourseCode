@@ -693,6 +693,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ViewSubmissionPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\WritingAssistantAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\WritingAssistantAssessmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WritingAssistantAssessmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\WritingCoachQuestionListPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\WritingCoachQuestionListPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WritingCoachQuestionListPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddeBookLinkPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddeBookLinkPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2369,6 +2381,14 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\ViewSubmission\ViewSubmissionPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ViewSubmissionPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\WritingAssistantAssessmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WritingAssistantAssessmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\WritingCoachQuestionListPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WritingCoachQuestionListPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\AddeBookLinkPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

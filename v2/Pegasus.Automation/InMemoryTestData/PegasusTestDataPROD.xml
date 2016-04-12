@@ -311,6 +311,29 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
+    <!--Hard coded Users data for K12 Writing Coach Integration-->
+    <User>
+      <Name>WC_Prod_Teacher</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>WC_Prod_Teacher</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>WC_Prod_Teacher</LastName>
+      <UserType>DPCsWCTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>WC_Prod_STU</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>WC_Prod_STU</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>WC_Prod_STU</LastName>
+      <UserType>DPCsWCStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
     <User>
       <Name>515utomationmilworkspace</Name>
       <Password>password2</Password>
@@ -1042,7 +1065,28 @@
       <ActivityType>MediaServerLink</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>Interactive Writing Coach Personal Tutor: Cause and Effect Essay</Name>
+      <ActivityType>InteractiveWritingCoach</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
   </ArrayOfActivity>
+  
+  <!--Hard coded question details for K12 Writing Coach Question-->
+  <ArrayOfQuestion>
+    <Question>
+      <Name>10add50a-ec0f-4fc8-9185-42cedbb78f85</Name>
+      <QuestionType>AutoGradedEssayFeedback</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+    <!--Hard coded question details for Grader IT Question-->
+    <Question>
+      <Name>Grader IT 3</Name>
+      <QuestionType>SIMGraderQuestion</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+  </ArrayOfQuestion>
+  
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
@@ -1066,7 +1110,12 @@
       <ClassType>MediaServerClass</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
-  </ArrayOfClass>
+      <Class>
+        <Name>Writing_Coach</Name>
+        <ClassType>DigitalPathWCMasterLibrary</ClassType>
+        <IsCreated>true</IsCreated>
+      </Class>
+    </ArrayOfClass>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
     <Product>

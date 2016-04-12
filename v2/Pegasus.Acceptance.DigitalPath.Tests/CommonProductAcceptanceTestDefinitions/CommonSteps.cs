@@ -645,7 +645,19 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new CommonSteps().ResetDesiredBrowser(browser);
         }
 
-
+        /// <summary>
+        /// Save the current date and time from my profile.
+        /// </summary>
+        [When(@"I store user current date and time of teacher")]
+        public void SaveDateAndTimeWC()
+        {
+            //Save current date and time
+            Logger.LogMethodEntry("CommonSteps", "SaveDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+            new MyAccountSettingPage().SaveCurrentDateAndTimeWC();
+            Logger.LogMethodExit("CommonSteps", "SaveDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 
 }

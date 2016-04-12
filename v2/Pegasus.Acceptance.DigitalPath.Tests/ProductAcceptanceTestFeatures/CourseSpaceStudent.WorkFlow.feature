@@ -126,3 +126,16 @@ When I navigate to the "Calendar" tab
 Then I should be on the "Content" page
 When I open the activity named as "MediaServerLink"
 Then I should see the 'MediaServerLink' launched successfully
+
+#Purpose: Select Writing Coach class from the class selector dropdown
+Scenario: Student select the Writing Coach class from the class selector dropdown
+When I select "DigitalPathWCMasterLibrary" from the class selector dropdown
+Then I should see the "DigitalPathWCMasterLibrary" class present in the overview tab
+
+#Purpose: Submit Writing Coach Activity from To Do
+Scenario: Submit Writing Coach Activity from To Do by CS Student
+When I navigate to the "To Do" tab
+Then I should be on the "Assignments - To Do" page
+When I open "InteractiveWritingCoach" activity
+And I submit the InteractiveWritingCoach activity
+Then I should see submitted activity "Try Again" button

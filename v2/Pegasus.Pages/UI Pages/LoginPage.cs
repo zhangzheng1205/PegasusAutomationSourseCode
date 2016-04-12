@@ -150,6 +150,8 @@ namespace Pegasus.Pages.UI_Pages
                     //Get url of workspace teacher/student for Synapse users
                     case User.UserTypeEnum.WsStudent:
                     case User.UserTypeEnum.WsTeacher:
+                    case User.UserTypeEnum.WsWCTeacher:
+                    case User.UserTypeEnum.WsWCStudent:
                     case User.UserTypeEnum.DPWorkSpacePramotedAdmin:
                         _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.WorkSpaceUrlRoot
@@ -211,6 +213,8 @@ namespace Pegasus.Pages.UI_Pages
                     //Get Url of Synapse CourseSpace User
                     case User.UserTypeEnum.DPCsTeacher:
                     case User.UserTypeEnum.DPCsTeacherCC:
+                    case User.UserTypeEnum.DPCsWCTeacher:
+                    case User.UserTypeEnum.DPCsWCStudent:
                     case User.UserTypeEnum.DPCsNewStudent:
                     case User.UserTypeEnum.DPCsNewTeacher:
                     case User.UserTypeEnum.DPCsNewAide:
@@ -746,7 +750,9 @@ namespace Pegasus.Pages.UI_Pages
                 || User.UserTypeEnum.K12MediaSTeacher== userTypeEnum
                 ||User.UserTypeEnum.K12MediaSStudent== userTypeEnum
                 || User.UserTypeEnum.S7eTextTeacher== userTypeEnum
-                || User.UserTypeEnum.S7eTextStudent == userTypeEnum)
+                || User.UserTypeEnum.S7eTextStudent == userTypeEnum
+                || User.UserTypeEnum.DPCsWCTeacher == userTypeEnum
+                || User.UserTypeEnum.DPCsWCStudent == userTypeEnum)
             {
                 this.ClickSynapseSignInButton();
             }
@@ -904,6 +910,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Logged in by Ws Teacher and Student
                 case User.UserTypeEnum.WsTeacher:
                 case User.UserTypeEnum.WsStudent:
+                case User.UserTypeEnum.WsWCTeacher:
+                case User.UserTypeEnum.WsWCStudent:
                 case User.UserTypeEnum.HedWsInstructor:
                 case User.UserTypeEnum.HedWsStudent:
                 case User.UserTypeEnum.HEDCSCTGPPublisherAdmin:
@@ -915,6 +923,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Logged in by DP Cs User
                 case User.UserTypeEnum.DPCsTeacher:
                 case User.UserTypeEnum.DPCsTeacherCC:
+                case User.UserTypeEnum.DPCsWCTeacher:
+                case User.UserTypeEnum.DPCsWCStudent:
                 case User.UserTypeEnum.DPCsStudent:
                 case User.UserTypeEnum.DPCsNewTeacher:
                 case User.UserTypeEnum.DPCsNewStudent:

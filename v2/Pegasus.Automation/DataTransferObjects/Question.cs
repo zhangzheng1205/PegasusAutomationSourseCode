@@ -42,7 +42,8 @@ namespace Pegasus.Automation.DataTransferObjects
             SIM2007WordQuestionSet = 25,
             SIM2007PowerPointQuestionSet = 26,
             SIM2007MSAccessQuestionSet = 27,
-            SIM5GraderQuestion = 28
+            SIM5GraderQuestion = 28,
+            AutoGradedEssayFeedback = 29
         }
 
         /// <summary>

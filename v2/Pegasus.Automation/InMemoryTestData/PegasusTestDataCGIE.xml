@@ -61,6 +61,11 @@ the UI deleted or refreshed.-->
       <ClassType>S7eTextClass</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
+    <Class>
+      <Name>Writing Coach</Name>
+      <ClassType>DigitalPathWCMasterLibrary</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
   </ArrayOfClass>
   <ArrayOfCourse>
     <!--Hard coded Course data for "Digital Path" Product.-->
@@ -568,6 +573,28 @@ the UI deleted or refreshed.-->
       <UserType>WsAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Blended_DP_teacher</Name>
+      <Password>password2</Password>
+      <Email>rashmi.shetty@excelindia.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>DPCsWCTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Blended_DP_Stu</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Rekha</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Anantha</LastName>
+      <UserType>DPCsWCStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
       <Name>515utomationmilworkspace</Name>
@@ -1309,7 +1336,27 @@ the UI deleted or refreshed.-->
       <ActivityType>S7StudenteText</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>Interactive Writing Coach Personal Tutor: Cause and Effect Essay</Name>
+      <ActivityType>InteractiveWritingCoach</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
   </ArrayOfActivity>
+
+  <!--Hard coded question details for K12 Writing Coach Question-->
+  <ArrayOfQuestion>
+    <Question>
+      <Name>10add50a-ec0f-4fc8-9185-42cedbb78f85</Name>
+      <QuestionType>AutoGradedEssayFeedback</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+    <!--Hard coded question details for Grader IT Question-->
+    <Question>
+      <Name>Grader IT 3</Name>
+      <QuestionType>SIMGraderQuestion</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+  </ArrayOfQuestion>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on 
 
 the UI deleted or refreshed.-->

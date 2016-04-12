@@ -222,12 +222,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                   base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Set The Due Date For The Activity In Curriculum.
+         /// <summary>
+        /// Set The Due Date For The Activity In Curriculum
         /// </summary>
-        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        /// <param name="activityTypeEnum">This is the activity type Enum</param>
         [When(@"I set due date for the ""(.*)"" activity in curriculum for Media Server Class")]
-        public void SetDueDateForTheActivityInCurriculum(
+        public void SetDueDateForTheMSActivityInCurriculum(
             Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Select Cmenu Of Asset In Table Of Contents
@@ -240,6 +240,29 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Class orgClass = Class.Get(Class.ClassTypeEnum.MediaServerClass);
             //Set Due Date For Activity In Curriculum
             new ContentLibraryPage().SetDueDateCurrentForActivityInCurriculum(orgClass.Name);
+            Logger.LogMethodExit("CustomizeContent",
+                "SetTheDueDateForTheActivityInCurriculum",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Set The Due Date For The Activity In Curriculum
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type Enum</param>
+        [When(@"I set due date for the ""(.*)"" activity in curriculum for Writing Coach Class")]
+        public void SetDueDateForTheWCActivityInCurriculum(
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("CustomizeContent",
+                "SetTheDueDateForTheActivityInCurriculum",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Get Activity Name From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            // fetch class name 
+            Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathWCMasterLibrary);
+            //Set Due Date For Activity In Curriculum
+            new ContentLibraryPage().SetDueDateCurrentForActivityInCurriculum(orgClass.Name.ToString());
             Logger.LogMethodExit("CustomizeContent",
                 "SetTheDueDateForTheActivityInCurriculum",
                   base.IsTakeScreenShotDuringEntryExit);
