@@ -23,7 +23,7 @@ Then I should see the Section created from "HSSMyPsychLabProgram" course Templat
 #Author: Rashmi
 #Pre-requisites: Users should be available for enrollment
 Scenario:Enroll  instructor and student user to a section at Enrollments Tab 
-When I navigate to "Enrollments" tab of the "Program Administration" page
+When I navigate to "Enrollments" tab of the "Program Administration" page as Admin
 Then I should be on the "Program Administration" page
 When I search the section of "HSSMyPsychLabProgram" at Enrollments Tab
 And I select "scoring 0" and "HSSCsSmsStudent"student user for enrollment

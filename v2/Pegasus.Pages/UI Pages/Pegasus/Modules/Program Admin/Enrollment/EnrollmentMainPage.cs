@@ -15,7 +15,7 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This class handles Pegasus Enrollment Main Page Actions
     /// </summary>
-    public class EnrollmentMainPage :BasePage
+    public class EnrollmentMainPage : BasePage
     {
         /// <summary>
         /// The static instance of the logger for the class.
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentMainPage", "ClickonAddUserOption",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -86,7 +86,6 @@ namespace Pegasus.Pages.UI_Pages
         /// Date:6/Apr/2016.
         /// </summary>
         /// <param name="courseTypeEnum">Section Name.</param>
-     
         public void SearchSectionAtEnrollmentTab(Course.CourseTypeEnum courseTypeEnum)
         {
             // Search Section at Enrollment Tab.
@@ -100,20 +99,25 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the window and switch to parent frame
                 new ProgramAdminToolPage().SelectFrame();
                 //Switch to child frame
-                base.SwitchToIFrame("ifrmright");
+                base.SwitchToIFrame(EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_RightFrame_Id_Locator);
                 // Search Section at Enrollment Tab
-                base.WaitForElement(By.PartialLinkText("Search"));
+                base.WaitForElement(By.PartialLinkText(EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_SearchLink_LinkText_Locator));
                 //Get Element Property
                 IWebElement getLinkProperty = base.GetWebElementPropertiesByLinkText
-                    ("Search");
+                    (EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_SearchLink_LinkText_Locator);
                 //Click on The Search Link
                 base.ClickByJavaScriptExecutor(getLinkProperty);
-                base.WaitForElement(By.Id("ddSearchCondition"));
+                base.WaitForElement(By.Id(EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_SearchCondition_Id_Locator));
                 //Selecting the Entity by entity details
                 new ManageTemplatePage().SelectTemplate(sectionName);
                 //Click on section link to Enroll Users
                 IWebElement sectionLink = base.GetWebElementPropertiesByCssSelector(
-                                        ".spnTemplateSectionTitle");
+                                       EnrollmentMainPageResource.
+                                       ProgramAdministration_Enrollment_SearchedSection_CSSSelector_Locator);
                 Thread.Sleep(2000);
                 base.ClickByJavaScriptExecutor(sectionLink);
             }
@@ -136,28 +140,63 @@ namespace Pegasus.Pages.UI_Pages
             // Select the User to be Enrolled
             logger.LogMethodEntry("EnrollmentMainPage", "SelectUserForEnrollment",
                            base.IsTakeScreenShotDuringEntryExit);
-            //Select the window and switch to parent frame
-            new ProgramAdminToolPage().SelectFrame();
-            //Switch to child frame
-            base.SwitchToIFrame("ifrmleft");
-            //Get the number of users available for enrollment
-            base.WaitForElement(By.CssSelector("table#grdManageUsers > tbody >tr"));
-            int userCount = base.GetElementCountByCssSelector("table#grdManageUsers > tbody >tr");
-            //Iterate to search the expected user
-            for (int i = 1; i <= userCount;i++ )
+            try
+            {
+                //Select the window and switch to parent frame
+                new ProgramAdminToolPage().SelectFrame();
+                //Switch to child frame
+                base.SwitchToIFrame(EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_LeftFrame_Id_Locator);
+                //Get the number of users available for enrollment
+                base.WaitForElement(By.CssSelector(EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_UserCount_CSSSelector_Locator));
+                int userCount = base.GetElementCountByCssSelector(EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_UserCount_CSSSelector_Locator);
+                //Iterate to search the expected user
+                SelectTheUser(userName, userCount);
+                //Select the window and switch to parent frame
+                new ProgramAdminToolPage().SelectFrame();
+                //Enroll the selected user to the section
+                AddSelectedUserToSection(userType);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("EnrollmentMainPage", "SelectUserForEnrollment",
+                        base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// To Select the expected user.
+        /// Author:Rashmi Shetty.
+        /// Date:6/Apr/2016.
+        /// </summary>
+        /// <param name="userName">This is the user enum</param>
+        /// <param name="userCount">This is number of users</param>
+        private void SelectTheUser(String userName, int userCount)
+        {
+            logger.LogMethodEntry("EnrollmentMainPage", "SelectTheUser",
+                       base.IsTakeScreenShotDuringEntryExit);
+            // To Select the expected user
+            for (int i = 1; i <= userCount; i++)
             {
                 base.WaitForElement(By.CssSelector(string.Format
-                    ("table#grdManageUsers > tbody > tr:nth-of-type({0}) > td >table > tbody >tr >th > span",i)));
+                    (EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_nthrowuser_CSSSelector_Locator, i)));
                 //Get the user name of each user with iteration
                 string userNameActual = base.GetElementInnerTextByCssSelector
                    (string.Format
-                    ("table#grdManageUsers > tbody > tr:nth-of-type({0}) > td >table > tbody >tr >th > span", i));
+                    (EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_nthrowuser_CSSSelector_Locator, i));
                 //Match actual username with expected
-                if(userNameActual==userName)
+                if (userNameActual == userName)
                 {
                     //Select user if actual username matches with expected
                     IWebElement userCheckBox = base.GetWebElementPropertiesByCssSelector(string.Format
-                         ("table#grdManageUsers > tbody > tr:nth-of-type({0}) > td > input", i));
+                         (EnrollmentMainPageResource.
+                         ProgramAdministration_Enrollment_nthrowusercheckbox_CSSSelector_Locator, i));
                     Thread.Sleep(2000);
                     base.ClickByJavaScriptExecutor(userCheckBox);
                     //Switch out of the frames
@@ -165,34 +204,49 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 }
             }
-            //Select the window and switch to parent frame
-            new ProgramAdminToolPage().SelectFrame();
-            //Enroll the selected user to the section
+            logger.LogMethodExit("EnrollmentMainPage", "SelectTheUser",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Add the selected user as teacher or as student.
+        /// Author:Rashmi Shetty.
+        /// Date:6/Apr/2016.
+        /// </summary>
+        /// <param name="userType">This is user enum.</param>
+        private void AddSelectedUserToSection(String userType)
+        {
+            logger.LogMethodEntry("EnrollmentMainPage", "AddSelectedUserToSection",
+                         base.IsTakeScreenShotDuringEntryExit);
+            // Add the selected user as teacher or as student       
             IWebElement addUserButton = base.GetWebElementPropertiesByCssSelector
-                 ("input#btnEnroll");
+                    (EnrollmentMainPageResource.
+                    ProgramAdministration_Enrollment_AddUserButton_CSSSelector_Locator);
             Thread.Sleep(2000);
             base.ClickByJavaScriptExecutor(addUserButton);
             //Select usertype on enrollment
-            switch(userType)
+            switch (userType)
             {
-                    //Enroll Student for MIL product
+                //Enroll Student for MIL product
                 case "CsSmsStudent":
-                    IWebElement addStudent = base.GetWebElementPropertiesByLinkText("Add as Student");
+                    IWebElement addStudent = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
+                        ProgramAdministration_Enrollment_AddStudentUserOption_LinkText_Locator);
                     Thread.Sleep(2000);
                     base.ClickByJavaScriptExecutor(addStudent);
                     break;
                 //EnrollInstructor for MIL product
                 case "CsSmsInstructor":
-                    IWebElement addInstructor = base.GetWebElementPropertiesByLinkText("Add as Instructor");
+                    IWebElement addInstructor = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
+                        ProgramAdministration_Enrollment_AddInstructorUserOption_LinkText_Locator);
                     Thread.Sleep(2000);
                     base.ClickByJavaScriptExecutor(addInstructor);
                     break;
-            }
-            //Switch out of the frames
-            base.SwitchToDefaultPageContent();
-                logger.LogMethodExit("EnrollmentMainPage", "SelectUserForEnrollment",
-                            base.IsTakeScreenShotDuringEntryExit);
+                    //Switch out of the frames
+                    base.SwitchToDefaultPageContent();
 
+                    logger.LogMethodExit("EnrollmentMainPage", "AddSelectedUserToSection",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            }
         }
     }
 }

@@ -121,7 +121,7 @@ testRunner.Then("I should see the Section created from \"MySpanishLabProgram\" c
 #line 27
 this.ScenarioSetup(scenarioInfo);
 #line 28
-testRunner.When("I navigate to \"Enrollments\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Enrollments\" tab of the \"Program Administration\" page as Admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 30
