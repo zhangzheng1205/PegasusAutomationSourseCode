@@ -125,7 +125,7 @@ testRunner.When("I navigate to \"Enrollments\" tab of the \"Program Administrati
 #line 27
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 28
-testRunner.When("I search the section of \"MyITLabOffice2013Program\" at Enrollments Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I search the section of \"HSSMyPsychLabProgram\" at Enrollments Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
 testRunner.And("I select \"scoring 0\" and \"HSSCsSmsStudent\"student user for enrollment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
