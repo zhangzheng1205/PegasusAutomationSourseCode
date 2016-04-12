@@ -34,7 +34,8 @@ namespace Pegasus.Automation.DataTransferObjects
             MyITLabForOffice2013General = 10,
             DigitalPathCustomContent = 11,
             Contineo = 12,
-            DigitalPathCC=13
+            DigitalPathCC=13,
+            eTextProduct = 14
         }
 
         /// <summary>

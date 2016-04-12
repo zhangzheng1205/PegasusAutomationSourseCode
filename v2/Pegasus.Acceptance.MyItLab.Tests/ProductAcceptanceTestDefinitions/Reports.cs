@@ -617,7 +617,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="reportType">This is the report type.</param>
         /// <param name="userTypeEnum">This is the user type enum.</param>
-        [When(@"I click on ""(.*)"" report link as ""(.*)""")]
+        [When(@"I click on the ""(.*)"" report link as ""(.*)""")]
         public void ClickOnReportLink(string reportType, User.UserTypeEnum userTypeEnum)
         {
             //Click on a report link based on instructor

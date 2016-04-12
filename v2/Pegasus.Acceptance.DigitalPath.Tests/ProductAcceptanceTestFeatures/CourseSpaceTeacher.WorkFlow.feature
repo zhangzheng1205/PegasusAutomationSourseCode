@@ -622,21 +622,28 @@ Then I should see the successfull message "Product removed successfully." in Hom
 Scenario: Launch S7 eText from Curriculum Channel as CS Teacher
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
-Then I should see the product "DigitalPath" in the Curriculum channel
-When I click on the "S7TeachereText" link in the "DigitalPath" product
+Then I should see the product "eTextProduct" in the Curriculum channel
+When I click on the "S7TeachereText" link in the "eTextProduct" product
 Then I should see 'S7TeachereText' launch successfully
+
+#Purpose: DigitalPath teacher assign Media Server Link from curriculum channel.
+Scenario:Assign Media Server Link from curriculum channel
+When I navigate to the "Curriculum" tab
+Then I should be on the "Curriculum" page
+When I select "Assign" cmenu of "Rubric for Self-assessment: Research Writing (6 traits)" in table of content
+Then I should see "Assign" pop up
+When I set due date for the "MediaServerLink" activity in curriculum for Media Server Class
 
 #Purpose: To launch Media Server content from Manage Coursework as CS Teacher
 Scenario: Launch Media Server content from Class as CS Teacher
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
-When I enter into the DP "DigitalPathMasterLibrary" class
+When I enter into the DP "MediaServerClass" class
 Then I should be on the "Classes" page
-When I navigate to the "Manage Coursework" tab
-Then I should see assigned Media Server Link "Word List"
+When I navigate to the "Manage Coursework" tab under More link
+Then I should see assigned Media Server Link "Rubric for Self-assessment: Research Writing (6 traits)"
 When I click on 'MediaServerLink' in the Manage Coursework
 Then I should see the 'MediaServerLink' launched successfully
-And I should see the expected Media Server Content
 
 #Test case id: peg-26025,peg-26027
 #PEGASUS-27282

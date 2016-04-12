@@ -98,6 +98,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You don&apos;t have permission to access /curriculum.
+        /// </summary>
+        internal static string CoursePreviewMain_UX_Page_MediaServerLink_Page_Text {
+            get {
+                return ResourceManager.GetString("CoursePreviewMain_UX_Page_MediaServerLink_Page_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to curriculum.media.pearsoncmg.com.
         /// </summary>
         internal static string CoursePreviewMain_UX_Page_MediaServerLink_Production_Window_Title_Name {
@@ -580,6 +589,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_TimeToWait_Value {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_TimeToWait_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;DateGrpContainer_No_Due&apos;]/div.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_ToDo_Activity_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_ToDo_Activity_Count_Xpath_Locator", resourceCulture);
             }
         }
         

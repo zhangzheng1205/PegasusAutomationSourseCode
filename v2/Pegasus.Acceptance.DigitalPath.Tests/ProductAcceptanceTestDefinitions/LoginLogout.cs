@@ -167,6 +167,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 case User.UserTypeEnum.DPCsTeacher:
                 case User.UserTypeEnum.DPCsNewTeacher:
                 case User.UserTypeEnum.DPDemoUser:
+                case User.UserTypeEnum.K12MediaSTeacher:
+                case User.UserTypeEnum.S7eTextTeacher:
                     //Click on Sign Out Link
                     homePage.SignoutByDigitalPathCSTeacher(linkSignOut);
                     break;
@@ -176,6 +178,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     break;
                 case User.UserTypeEnum.DPCsStudent:
                 case User.UserTypeEnum.DPCsNewStudent:
+                case User.UserTypeEnum.K12MediaSStudent:
+                case User.UserTypeEnum.S7eTextStudent:
                     // Click on sign out link
                     homePage.SignOutByDigitalPathCSStudent(linkSignOut);
                     break;

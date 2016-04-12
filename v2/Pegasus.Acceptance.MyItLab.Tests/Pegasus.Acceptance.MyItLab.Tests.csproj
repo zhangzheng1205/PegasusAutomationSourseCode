@@ -464,6 +464,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseCreationAtProgramAdminRegression-HED.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProdProgramAdmin.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.IntegrityViolationReport.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -489,6 +492,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\D2LDirectIntegration.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\MoodleDirectIntegration.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\D2LKioskIntegration.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">

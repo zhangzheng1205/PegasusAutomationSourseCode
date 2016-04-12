@@ -123,6 +123,28 @@ Given I browsed the login url for "DPCsTeacherCC"
 When I login to Pegasus as "DPCsTeacherCC" in "CourseSpace"
 Then I should be logged in successfully
 
+#Purpose:Verify The User Login As CourseSpaceTeacher for Media Server Integration
+Scenario: User Login As CourseSpaceTeacher for Media Server Launch
+Given I browsed the login url for "K12MediaSTeacher"
+When I login to Pegasus as "K12MediaSTeacher" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As CourseSpaceTeacher for Media Server Integration
+Scenario: User LogOut As CourseSpaceTeacher after Media Server Launch
+When I "Sign Out" from the "K12MediaSTeacher"
+Then I should see the "Signed Out" message
+
+#Purpose:Verify The User Login As CourseSpaceStudent for Media Server Integration
+Scenario: User Login As CourseSpaceStudent for Media Server Launch
+Given I browsed the login url for "K12MediaSStudent"
+When I login to Pegasus as "K12MediaSStudent" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As CourseSpaceStudent for Media Server Integration
+Scenario: User LogOut As CourseSpaceStudent after Media Server Launch
+When I "Sign Out" from the "K12MediaSStudent"
+Then I should see the "Signed Out" message
+
 #Purpose:Verify The User LogOut As CourseSpaceAide
 Scenario: User LogOut As CourseSpaceAide
 When I "Sign Out" from the "DPCsAide"
@@ -191,3 +213,25 @@ Given I launch "FireFox" browser
 #Purpose:Get Chrome browser instance
 Scenario:Launch Chrome browser
 Given I launch "Chrome" browser
+
+#Purpose:Verify The User Login As CourseSpaceTeacher for S7eText Integration
+Scenario: User Login As CourseSpaceTeacher for S7eText Launch
+Given I browsed the login url for "S7eTextTeacher"
+When I login to Pegasus as "S7eTextTeacher" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As CourseSpaceTeacher for S7eText Integration
+Scenario: User LogOut As CourseSpaceTeacher after S7eText Launch
+When I "Sign Out" from the "S7eTextTeacher"
+Then I should see the "Signed Out" message
+
+#Purpose:Verify The User Login As CourseSpaceStudent for S7eText Integration
+Scenario: User Login As CourseSpaceStudent for S7eText Launch
+Given I browsed the login url for "S7eTextStudent"
+When I login to Pegasus as "S7eTextStudent" in "CourseSpace"
+Then I should be logged in successfully
+
+#Purpose:Verify The User LogOut As CourseSpaceStudent for S7eText Integration
+Scenario: User LogOut As CourseSpaceStudent after S7eText Launch
+When I "Sign Out" from the "S7eTextStudent"
+Then I should see the "Signed Out" message

@@ -312,4 +312,10 @@
   <data name="PEG_AUTOMATION_BROWSER_KEY" xml:space="preserve">
     <value>PEG_AUTOMATION_BROWSER</value>
   </data>
+  <data name="CoursePreviewMain_UX_Page_MediaServerLink_Page_Text" xml:space="preserve">
+    <value>You don't have permission to access /curriculum</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_ToDo_Activity_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='DateGrpContainer_No_Due']/div</value>
+  </data>
 </root>

@@ -49,6 +49,26 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        ///// <summary>
+        ///// Open the activity in To Do tab.
+        ///// </summary>
+        ///// <param name="activityTypeEnum">This is the Activity Type Enum</param>
+        //[When(@"I open the activity named as ""(.*)"" from To Do tab")]
+        //public void OpenActivityFromToDo(Activity.ActivityTypeEnum activityTypeEnum)
+        //{
+        //    Logger.LogMethodEntry("ActivitySubmission", "OpenActivityFromToDo",
+        //       base.IsTakeScreenShotDuringEntryExit);
+        //    //Fetctb Activity From Memory
+        //    Activity activity = Activity.Get(activityTypeEnum);
+        //    //Select Content Window
+        //    new CoursePreviewMainUXPage().SelectContentWindow();
+        //    //Click To Open Activity
+        //    new CoursePreviewMainUXPage().
+        //        ClickActivityInToDoTab(activity.Name);
+        //    Logger.LogMethodExit("ActivitySubmission", "OpenActivityFromToDo",
+        //       base.IsTakeScreenShotDuringEntryExit);
+        //}
+
         /// <summary>
         /// Submit the activity after launching it.
         /// </summary>

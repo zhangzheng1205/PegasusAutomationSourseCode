@@ -1,9 +1,9 @@
-﻿Feature: BlackboardCourseAction
+﻿Feature: BlackboardInstructorCourseAction
 	                As a BB Instructor 
-					I want check Gradeposting for an activity form Pegasus to blackboard
-					As a BB Student 
-					I want check Gradeposting for an activity form Pegasus to blackboard
-#Author: Chethan S G
+					I want to manage all the Blackboard course management usecases 
+					so that I would validate all the course mana scenarios are working fine.
+
+
 Scenario: Blackboard Instructors Selects Course
 Given I am on the "My Institution" page of Blackboard
 When I Select PegasusCourse link
@@ -32,23 +32,6 @@ Given I am on the "Content" page of blackboard
 When I select "Grade Center" of Blackboard
 Then I should see "Full Grade Center" link
 
-Scenario: Blackboard Instructor accessing Pearson custom tools
-Given I am on the "Grade Center" page of blackboard
-When I select "Manage" link of GradeCenter
-Then I should see a menu "Pearson Custom Tools"
-
-Scenario: Blackboard Instructor Refresh Pearson Grades
-Given I am on the "Pearson Custom Integration" page of blackboard
-When I select "Refresh Pearson Grades" link of Pearson Custom Integration Tools
-Then I should be on "Refresh Pearson Grades"
-
-Scenario: Blackboard Instructor pulls Pegasus Grades
-Given I am on the "Refresh Pearson Grades" page of blackboard
-When I see grades for "Access Chapter 1 Grader Project [Assessment 3]" activity
-Then I "Submit" grades for synchronization
-
-
-
 #Purpose : Blackboard Instructor validate startsync and stop sync option functionality
 Scenario: Blackboard Instructor validate startsync and stop sync
 When I select the cmenu "StopLMSSynchronization" of asset "GO! Excel Chapter 1 Skill-Based Exam (Scenario 1)"
@@ -66,7 +49,7 @@ And I click on the "Gradebook" link
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Gradebook" by "CsSmsInstructor"
 And I click on Edit Grade "PegasusEditedGrade" of "BBEditActivity" activity for "BBStudent" in Pegasus
-Then I should see the score "PegasusEditedGrade" of "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in Pegasus
+Then I should see the score "PegasusEditedGrade" of "Word Chapter 1 Grader Project [Homework 3]" activity for "BBStudent" in Pegasus
 When I "Close" from the "BBInstructor"
 And I click on the "Grade Center" link
 And I click on the "Full Grade Center" link
@@ -74,7 +57,7 @@ When I select option "Pearson Custom Tools" form "Manage" dropdown
 And I click on the "Refresh Pearson Grades" link
 When I click on submit button
 And I click on the "Full Grade Center" link 
-Then I should see the score "PegasusEditedGrade" for "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in BlackBoard
+Then I should see the score "PegasusEditedGrade" for "Word Chapter 1 Grader Project [Homework 3]" activity for "BBStudent" in BlackBoard
 When I "Logout" of Blackboard as "BBInstructor"
 
 #Purpose : Blackbord student submit the activity

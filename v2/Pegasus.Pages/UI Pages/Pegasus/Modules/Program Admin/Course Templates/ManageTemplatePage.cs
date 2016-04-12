@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Search the Program Admin Entity.
         /// </summary>
         /// <param name="entityName">This is Entity Name.</param>
-        private void SelectTemplate(String entityName)
+       public void SelectTemplate(String entityName)
         {
             //Search Program Admin Entity
             Logger.LogMethodEntry("ManageTemplatePage", "SelectTemplate",

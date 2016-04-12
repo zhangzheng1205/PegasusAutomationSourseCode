@@ -116,6 +116,7 @@ Then I should see the "DigitalPathMasterLibrary" class present in the overview t
 Scenario: Launch S7 eText from Course Tool Bar
 When I navigate to the "Overview" tab
 Then I should be on the "Overview" page
+Then I should see the "S7eTextClass" class present in the overview tab
 When I click on 'S7StudenteText' dropdown
 Then I should see 'S7StudenteText' launch successfully
 
@@ -125,4 +126,3 @@ When I navigate to the "Calendar" tab
 Then I should be on the "Content" page
 When I open the activity named as "MediaServerLink"
 Then I should see the 'MediaServerLink' launched successfully
-And I should see the expected Media Server Content

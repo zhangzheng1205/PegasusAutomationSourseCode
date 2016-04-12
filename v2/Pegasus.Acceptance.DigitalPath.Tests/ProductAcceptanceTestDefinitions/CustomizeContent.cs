@@ -222,22 +222,28 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                   base.IsTakeScreenShotDuringEntryExit);
         }
 
-        [When(@"I set the due date for ""(.*)"" activity in curriculum")]
-        public void SetDueDateForInduvidualActivityInCurriculum(string activityName)
+        /// <summary>
+        /// Set The Due Date For The Activity In Curriculum.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I set due date for the ""(.*)"" activity in curriculum for Media Server Class")]
+        public void SetDueDateForTheActivityInCurriculum(
+            Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Select Cmenu Of Asset In Table Of Contents
             Logger.LogMethodEntry("CustomizeContent",
                 "SetTheDueDateForTheActivityInCurriculum",
                   base.IsTakeScreenShotDuringEntryExit);
+            //Get Activity Name From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
             // fetch class name 
-            Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+            Class orgClass = Class.Get(Class.ClassTypeEnum.MediaServerClass);
             //Set Due Date For Activity In Curriculum
-            new ContentLibraryPage().SetDueDateForActivityInCurriculum(orgClass.Name);
+            new ContentLibraryPage().SetDueDateCurrentForActivityInCurriculum(orgClass.Name);
             Logger.LogMethodExit("CustomizeContent",
                 "SetTheDueDateForTheActivityInCurriculum",
                   base.IsTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         /// Verify The Download Option In Print Window.

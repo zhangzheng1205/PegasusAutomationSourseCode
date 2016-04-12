@@ -268,10 +268,10 @@
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="TodaysViewUXPageResource_MoreLink_Id_Locator" xml:space="preserve">
-    <value>divMore</value>
+    <value>more_dd</value>
   </data>
   <data name="TodaysViewUXPageResource_MoreLink_Xpath_Locator" xml:space="preserve">
-    <value>//td[@id='_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_tdMore']/div/span[@id='divMore']</value>
+    <value>//td[@id='_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_tdMore']/div/span[@id='more']</value>
   </data>
   <data name="TodaysViewUXPageResource_MoveDown_Option_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span[2]/div/a</value>
@@ -722,5 +722,8 @@
   </data>
   <data name="TodayViewUXPageResource_EText_XPath_Locator" xml:space="preserve">
     <value>//ul[@id='ulEtext']/li[{0}]/div[{0}]</value>
+  </data>
+  <data name="TodayViewUXPageResource_Tab_Count_XPath_Locator" xml:space="preserve">
+    <value>//ul[@class = 'dd_options more_dd']/li</value>
   </data>
 </root>

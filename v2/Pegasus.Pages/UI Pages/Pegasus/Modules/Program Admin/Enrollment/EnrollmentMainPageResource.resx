@@ -123,4 +123,37 @@
   <data name="EnrollmentMain_Page_EnrollButton_Id_Locator" xml:space="preserve">
     <value>btnEnroll</value>
   </data>
+  <data name="ProgramAdministration_Enrollment_AddInstructorUserOption_LinkText_Locator" xml:space="preserve">
+    <value>Add as Instructor</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_AddStudentUserOption_LinkText_Locator" xml:space="preserve">
+    <value>Add as Student</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_AddUserButton_CSSSelector_Locator" xml:space="preserve">
+    <value>input#btnEnroll</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_LeftFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmleft</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_nthrowusercheckbox_CSSSelector_Locator" xml:space="preserve">
+    <value>table#grdManageUsers &gt; tbody &gt; tr:nth-of-type({0}) &gt; td &gt; input</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_nthrowuser_CSSSelector_Locator" xml:space="preserve">
+    <value>table#grdManageUsers &gt; tbody &gt; tr:nth-of-type({0}) &gt; td &gt;table &gt; tbody &gt;tr &gt;th &gt; span</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_RightFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmright</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_SearchCondition_Id_Locator" xml:space="preserve">
+    <value>ddSearchCondition</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_SearchedSection_CSSSelector_Locator" xml:space="preserve">
+    <value>.spnTemplateSectionTitle</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_SearchLink_LinkText_Locator" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ProgramAdministration_Enrollment_UserCount_CSSSelector_Locator" xml:space="preserve">
+    <value>table#grdManageUsers &gt; tbody &gt;tr</value>
+  </data>
 </root>

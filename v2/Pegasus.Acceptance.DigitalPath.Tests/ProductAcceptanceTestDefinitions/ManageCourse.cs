@@ -241,29 +241,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             string mediaServerLink = activityName.Name.ToString();
             Logger.LogAssertion("MediaSeverSuccessfullyLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CoursePreviewMainUXPage().OpenMediaServerLink(mediaServerLink)));
+                () => Assert.IsTrue(new CoursePreviewMainUXPage().
+                    OpenMediaServerLink(mediaServerLink)));
+            base.CloseBrowserWindow();
+            base.SelectDefaultWindow();
             Logger.LogMethodExit("ManageCourse", "MediaSeverSuccessfullyLaunched",
                   base.IsTakeScreenShotDuringEntryExit);
         }
-
-        /// <summary>
-        /// Verify the Media Server Content
-        /// </summary>
-        [Then(@"I should see the expected Media Server Content")]
-        public void VerifytheMediaServerContent()
-        {
-            Logger.LogMethodEntry("ManageCourse", "VerifytheMediaServerContent",
-                  base.IsTakeScreenShotDuringEntryExit);
-            //Verify embed tag in the launched  page
-            Logger.LogAssertion("VerifytheMediaServerContent",
-                ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CoursePreviewMainUXPage().
-                    IsMediaContentPresentInPageSource()));
-            base.CloseBrowserWindow();
-            base.SelectDefaultWindow();
-            Logger.LogMethodExit("ManageCourse", "VerifytheMediaServerContent",
-                  base.IsTakeScreenShotDuringEntryExit);
-        }
-
     }
 }

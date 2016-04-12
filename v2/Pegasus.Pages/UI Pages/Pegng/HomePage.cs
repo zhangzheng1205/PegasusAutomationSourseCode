@@ -1019,12 +1019,12 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="etextName">S7 eText Name</param>
         /// <param name="prodName">Product Name in which eText is present</param>
-        public void ClickEtext(Activity.ActivityTypeEnum etextName, string prodName)
+        public void ClickEtext(Activity.ActivityTypeEnum etextName, Product.ProductTypeEnum productName)
         {
             //Click eText Link in Curriculum Channel.
             logger.LogMethodEntry("HomePage", "ClickEtext",
             base.IsTakeScreenShotDuringEntryExit);
-            string ProductNameText = null;
+            string ProductNameText = string.Empty;
             try
             {
                 //Switch to Main widow, Home Page
@@ -1032,8 +1032,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Focus on Main window
                 base.SelectDefaultWindow();
                 //Get the Product From Memory
-                Product productDP = Product.Get(Product.ProductTypeEnum.DigitalPath);
-                string productName = productDP.Name.ToString();
+                Product productDP = Product.Get(Product.ProductTypeEnum.eTextProduct);
+                string getProductName = productDP.Name.ToString();
                 //Get the total number of products in curriculum channel
                 int getproductcount = base.GetElementCountByXPath(frmSetupWizardPageResource.
                                     frmSetupWizardPageResource_Verify_Product_InitialCount_Locator);
@@ -1046,7 +1046,7 @@ namespace Pegasus.Pages.UI_Pages
                     ProductNameText = base.GetElementTextByXPath(string.Format(frmSetupWizardPageResource.
                         frmSetupWizardPageResource_Verify_Product_Span_Id_Locator, initialcount));
                     //Compare Product name
-                    if (ProductNameText.Equals(productName))
+                    if (ProductNameText.Equals(getProductName))
                     {
                         //Get product id of product from Curriculum Channel
                         String productID = base.GetWebElementPropertiesByXPath(String.Format(
@@ -1117,6 +1117,8 @@ namespace Pegasus.Pages.UI_Pages
             //Confirm flash element is present in the eText Window
             new LauncheTextPage().IsETextFlashElementPresent();
             Thread.Sleep(3000);
+            //base.SwitchToLastOpenedWindow();
+            base.CloseBrowserWindow();
         }
 
         /// <summary>

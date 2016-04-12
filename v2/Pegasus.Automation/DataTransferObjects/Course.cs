@@ -99,7 +99,7 @@ namespace Pegasus.Automation.DataTransferObjects
             MasterLibrarySameProduct=69,
             MasterLibraryDifferentProduct=70,
             MyITLabOffice2013ProgramCourseCreation=71,
-            MyITLabForOffice2013MasterCourseCreation=72
+            MyITLabForOffice2013MasterCourseCreation=72,
         }
 
         /// <summary>
