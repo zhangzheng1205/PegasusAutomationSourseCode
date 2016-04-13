@@ -416,41 +416,41 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void WorkspaceInstructorEnableGeneralPreferenceForSAMActivityType()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Workspace Instructor enable General preference for SAM activity type", ((string[])(null)));
-#line 153
-this.ScenarioSetup(scenarioInfo);
 #line 154
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 155
-testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 156
-testRunner.When("I click on the \"Activities\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 157
-testRunner.And("I Create a new \"RegSAMActivity\" SAM activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on the \"Activities\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 158
-testRunner.Then("I should see the successfull message \"preferences updated successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I Create a new \"RegSAMActivity\" SAM activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 159
-testRunner.When("I click on \"RegSAMActivity\" edit link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see the successfull message \"preferences updated successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 160
-testRunner.Then("I should see the \"Default preferences\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on \"RegSAMActivity\" edit link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 161
-testRunner.When("I set the \"General\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see the \"Default preferences\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 162
-testRunner.And("I set the \"Messages\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I set the \"General\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 163
-testRunner.And("I set the \"Timing\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Messages\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 164
-testRunner.And("I set the \"Feedback\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Timing\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 165
-testRunner.And("I set the \"Res. Toolbar\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Feedback\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 166
-testRunner.And("I set the \"Grading\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Res. Toolbar\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 167
-testRunner.And("I set the \"Sections\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Grading\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 168
-testRunner.And("I set the \"Video Chat\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Sections\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 169
-testRunner.And("I click on \"Save\" button for \"RegSAMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I set the \"Video Chat\" preference for \"RegSAMActivity\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 170
+testRunner.And("I click on \"Save\" button for \"RegSAMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 171
 testRunner.Then("I should see the successfull message \"Preference settings updated for selected ac" +
                     "tivity type.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
