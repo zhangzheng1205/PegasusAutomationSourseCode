@@ -229,6 +229,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Enroll Student for MIL product
                 case "CsSmsStudent":
+                case "WLCsSmsStudent":
+                case "HSSCsSmsStudent":
                     IWebElement addStudent = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
                         ProgramAdministration_Enrollment_AddStudentUserOption_LinkText_Locator);
                     Thread.Sleep(2000);
@@ -236,6 +238,8 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 //EnrollInstructor for MIL product
                 case "CsSmsInstructor":
+                case "WLCsSmsInstructor":
+                case "HSSCsSmsInstructor":
                     IWebElement addInstructor = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
                         ProgramAdministration_Enrollment_AddInstructorUserOption_LinkText_Locator);
                     Thread.Sleep(2000);
