@@ -367,10 +367,11 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("AddNewSectionPage", "FillingSectionDetails",
                 base.IsTakeScreenShotDuringEntryExit);
             string sectionName = string.Empty;
-           
+            Course course = Course.Get(courseTypeEnum);
+            string productType = course.CourseType.ToString();
             // generate new guid section name
             String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
-            sectionName = "Auto-(" + date + ")-" + "Section";
+            sectionName = "Auto-(" + date + ")-" + productType+"-Section";
          
             // Get the Current date
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
