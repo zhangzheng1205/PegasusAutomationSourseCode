@@ -70,6 +70,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\AssignmentCalendar.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\Component.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\CourseSpaceEnrollments.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\GradeBook.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LoginLogout.cs" />
@@ -180,6 +181,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.UserEnrollments.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\Print.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAssignsContent.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

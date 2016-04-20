@@ -789,6 +789,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MessageGridPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMaterials\CourseMaterialPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\ActivitiesPreferencesPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\ActivitiesPreferencesPageResource.Designer.cs">
       <AutoGen>True</AutoGen>

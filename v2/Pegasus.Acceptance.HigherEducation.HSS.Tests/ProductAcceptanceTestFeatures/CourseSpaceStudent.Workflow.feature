@@ -207,3 +207,33 @@ And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "
 And I should be on the "Gradebook" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
+
+#Purpose: Print tool - Student Accessing a HSS course for testing components
+Scenario: Student Accessing a HSS course for testing components
+When I enter into "HED Components Test Course" from the Global Home page
+Then I should be on the "Course Materials" page
+
+#Purpose: Print tool - Student Accessing Assignment Completed items
+Scenario: Student Accessing Assignment Completed items
+When I click on "Completed" items
+Then I should be on the "Assignments - Done" page
+
+#Purpose: Print tool - Student Accessing View Submission
+Scenario: Student Accessing View Submission
+When I click on View Submissions of Take the Chapter Exam test
+Then I should be on the "View Submission" page
+
+#Purpose: Print tool - Student Accessing submission record
+Scenario: Student Accessing submitted record
+When I click on submission of Take the Chapter Exam test
+Then I should see submitted answers
+
+#Purpose: Print tool - Accessing Print tool
+Scenario: Student Accessing Print tool for a submitted record
+When I click on print tool
+Then I should be on the "Print tool" page
+
+#Purpose: Print tool - Accessing download link of print
+Scenario: Student Accessing download link of print
+When I click on Download link
+Then I should be connected Aspose print tool services
