@@ -196,7 +196,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             try
             {
               
-                new Pos
+                
                 
 
             }
