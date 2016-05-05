@@ -88,7 +88,8 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
         /// <returns>This will return the icon existance status.</returns>
         public bool GetGradeBookExistance(string pageName, User.UserTypeEnum userType)
         {
-            logger.LogMethodEntry("CanvasCourseActions", "GetGradeBookExistance", base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("CanvasCourseActions", "GetGradeBookExistance",
+                base.IsTakeScreenShotDuringEntryExit);
             bool pageStatus = false;
             base.WaitUntilWindowLoads(base.GetPageTitle);
             base.SelectWindow(base.GetPageTitle);

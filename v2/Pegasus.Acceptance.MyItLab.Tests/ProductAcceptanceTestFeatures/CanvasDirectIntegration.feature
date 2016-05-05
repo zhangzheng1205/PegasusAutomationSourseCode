@@ -7,10 +7,10 @@
 Scenario: Canvas Instructor crossover to Pegasus via direct integrated course
 Given I browsed the login url for "CanvasDirectTeacher"
 When I login to Canvas as "CanvasDirectTeacher"
-And I enter into Canvas direct course "CGIE_MIL_Course"
-Then I should be on the "CGIE_MIL_Course" page
-When I click "Instructor Grade Book" link in "CGIE_MIL_Course" page as "CanvasDirectTeacher"
-Then I should be on "Gradebook" page of "CanvasDirectTeacher"
+And I enter into Canvas direct course "CGIE MIL Course"
+Then I should be on the "CGIE MIL Course" page
+When I click "Instructor Grade Book" link in "CGIE MIL Course" page as "CanvasDirectTeacher"
+Then I should be on the "Gradebook" page of "CanvasDirectTeacher"
 When I logout of Canvas
 Then I should be on the "Log In to Canvas" page
 
@@ -18,9 +18,9 @@ Then I should be on the "Log In to Canvas" page
 Scenario: Canvas student crossover to Pegasus via direct integrated course
 Given I browsed the login url for "CanvasDirectStudent"
 When I login to Canvas as "CanvasDirectStudent"
-And I enter into Canvas direct course "CGIE_MIL_Course"
-Then I should be on the "CGIE_MIL_Course" page
-When I click "Student Grade Book" link in "CGIE_MIL_Course" page as "CanvasDirectStudent"
-Then I should be on "Gradebook" page of "CanvasDirectStudent"
+And I enter into Canvas direct course "CGIE MIL Course"
+Then I should be on the "CGIE MIL Course" page
+When I click "Student Grade Book" link in "CGIE MIL Course" page as "CanvasDirectStudent"
+Then I should be on the "Gradebook" page of "CanvasDirectTeacher"
 When I logout of Canvas
 Then I should be on the "Log In to Canvas" page

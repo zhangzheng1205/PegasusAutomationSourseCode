@@ -97,7 +97,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             logger.LogMethodExit("Canvas", "LogoutOfCanvas", base.IsTakeScreenShotDuringEntryExit);
         }
 
-        [Then(@"I should be on ""(.*)"" page of ""(.*)""")]
+       /// <summary>
+        /// Verify the expected Pegasus window on crossover.
+       /// </summary>
+       /// <param name="pageName">The expected Pegasus window</param>
+       /// <param name="userType">This is User Type enum</param>
+
+        [Then(@"I should be on the ""(.*)"" page of ""(.*)""")]
         public void ValidateThePegasusPageDisplayForCanvasUser(string pageName, User.UserTypeEnum userType)
         {
             logger.LogMethodEntry("CanvasCourseActions", "ValidateThePegasusPageDisplayForCanvasUser", base.IsTakeScreenShotDuringEntryExit);
@@ -109,5 +115,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             logger.LogMethodExit("CanvasCourseActions", "ValidateThePegasusPageDisplayForCanvasUser", base.IsTakeScreenShotDuringEntryExit);
         }
+
     }
 }
