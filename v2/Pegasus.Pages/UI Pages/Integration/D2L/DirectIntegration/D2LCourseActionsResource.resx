@@ -126,7 +126,13 @@
   <data name="D2LCourseAction_Page_HomePage_Title" xml:space="preserve">
     <value>Homepage - Pearson Education - Evaluation Site</value>
   </data>
+  <data name="D2LCourseAction_Page_LogOut_LinkText_Value" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
   <data name="D2LCourseAction_Page_Pegasus_GB_Classname" xml:space="preserve">
     <value>GBCMtitle</value>
+  </data>
+  <data name="D2LCourseAction_Page_UserNameDropDown_Xpath_Value" xml:space="preserve">
+    <value>//span[contains(text(),'{0}')]</value>
   </data>
 </root>

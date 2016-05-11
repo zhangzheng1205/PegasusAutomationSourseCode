@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="HEDIntegratios" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\hedintegratios.orderedtest" id="884224d5-3c90-46b4-bbdd-d6aeb387dbea" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="2fbc41ff-21be-4089-968f-b943f35a0865" name="d2ldirectintegration" storage="d2ldirectintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="89333519-fda9-4ee6-b99c-ebaddc800566" name="canvasdirectintegration" storage="canvasdirectintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="644e4f62-a43f-47f3-ad7b-ce2e0d861fa3" name="moodledirectintegration" storage="moodledirectintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

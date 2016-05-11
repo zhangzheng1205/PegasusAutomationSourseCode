@@ -717,7 +717,7 @@ When I set due date for the "InteractiveWritingCoach" activity in curriculum for
 Scenario: Teacher validating display of assigned Writing Coach Activity under manage coursework on current date
 When I navigate to the "Classes" tab
 Then I should be on the "Classes" page
-When I navigate to the "Manage Coursework" tab
+When I navigate to the "Manage Coursework" tab under More link
 Then I should be on the "Classes" page
 Then I should see assigned Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
 And I should see status as "Not started" for Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
@@ -730,3 +730,10 @@ Then I should be on the "Classes" page
 And I should see assigned Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
 When I click on 'InteractiveWritingCoach' in the Manage Coursework
 Then I should see the InteractiveWritingCoach activity successfully launched
+
+
+#Purpose: To Delete Submitted Activity at Manage Coursework
+When I navigate to the "Classes" tab
+Then I should be on the "Classes" page
+When I navigate to the "Manage Coursework" tab under More link
+Then I should be on the "Classes" page

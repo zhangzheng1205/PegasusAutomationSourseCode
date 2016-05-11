@@ -90,8 +90,10 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
                 base.SelectWindow(base.GetPageTitle);
                 //Click on the link in Blackboard portal
                 Thread.Sleep(2000);
-                base.WaitForElement(By.PartialLinkText(linkName));
-                base.ClickLinkByPartialLinkText(linkName);
+                // Click link in content page
+                base.WaitForElement(By.LinkText(linkName));
+                IWebElement clickLink = base.GetWebElementPropertiesByLinkText(linkName);
+                base.ClickByJavaScriptExecutor(clickLink);
             }
             catch (Exception e)
             {

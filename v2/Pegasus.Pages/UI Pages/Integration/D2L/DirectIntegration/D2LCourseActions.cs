@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
             // Click link in content page
             base.WaitForElement(By.PartialLinkText(linkName));
             IWebElement clickFileIcon = base.GetWebElementPropertiesByLinkText(linkName);
-            base.PerformMouseClickAction(clickFileIcon);
+            base.ClickByJavaScriptExecutor(clickFileIcon);
 
             logger.LogMethodExit("D2LCourseActions", "ClicklinkInContentTab", base.IsTakeScreenShotDuringEntryExit);
         }
@@ -150,7 +150,8 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         /// <returns>This will return the icon existance status.</returns>
         public bool GetGradeBookExistance(string pageName, User.UserTypeEnum userType)
         {
-            logger.LogMethodEntry("D2LCourseActions", "GetGradeBookExistance", base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("D2LCourseActions", "GetGradeBookExistance",
+                base.IsTakeScreenShotDuringEntryExit);
             bool pageStatus = false;
             base.WaitUntilWindowLoads(base.GetPageTitle);
             base.SelectWindow(base.GetPageTitle);
@@ -183,9 +184,38 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
                     pageStatus = base.IsElementPresent(By.Id("_ctl0_InnerPageContent_divViewHedaer"), 5);
                     break;
             }
-
-            logger.LogMethodExit("D2LCourseActions", "GetGradeBookExistance", base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToDefaultPageContent();
+            logger.LogMethodExit("D2LCourseActions", "GetGradeBookExistance", 
+                base.IsTakeScreenShotDuringEntryExit);
             return pageStatus;
+        }
+
+        /// <summary>
+        /// To signout from D2L.
+        /// </summary>
+        public void D2LSignOut(User.UserTypeEnum userType)
+        {
+            //To signout from D2L
+            logger.LogMethodEntry("D2LCourseActions", "D2LSignOut",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Click on the User name to get Logout menu
+            base.SwitchToDefaultWindow();
+            User user = User.Get(userType);
+            string userName = user.FirstName + " " + user.LastName;
+            bool pres = base.IsElementPresent(By.XPath(string.
+                Format(D2LCourseActionsResource.
+                D2LCourseAction_Page_UserNameDropDown_Xpath_Value,userName)), 10);
+            IWebElement userNameMenu = base.GetWebElementPropertiesByXPath
+                (string.Format(D2LCourseActionsResource.
+                D2LCourseAction_Page_UserNameDropDown_Xpath_Value, userName));
+            base.ClickByJavaScriptExecutor(userNameMenu);
+            IWebElement logoutLink = base.GetWebElementPropertiesByLinkText
+                (D2LCourseActionsResource.
+                D2LCourseAction_Page_LogOut_LinkText_Value);
+            base.ClickByJavaScriptExecutor(logoutLink);
+            logger.LogMethodExit("D2LCourseActions", "D2LSignOut",
+               base.IsTakeScreenShotDuringEntryExit);
+
         }
     }
 }

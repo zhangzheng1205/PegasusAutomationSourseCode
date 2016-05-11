@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LauncheText_Page_Flash_Id_Locator" xml:space="preserve">
-    <value>ViewerMain</value>
+    <value>flashContent</value>
   </data>
   <data name="LauncheText_Page_GetURL_Split_Value" xml:space="preserve">
     <value>1</value>

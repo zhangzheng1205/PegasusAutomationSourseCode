@@ -95,5 +95,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                  (true, new D2LCourseActions().GetGradeBookExistance(pageName, userType)));
             logger.LogMethodExit("D2LDirect", "ValidatePegasusGradebookPage", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Logout of D2L.
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I logout of D2L as ""(.*)""")]
+        public void WhenILogoutOfDLAs(User.UserTypeEnum userType)
+        {
+            new D2LCourseActions().D2LSignOut(userType);
+        }
+
     }
 }
