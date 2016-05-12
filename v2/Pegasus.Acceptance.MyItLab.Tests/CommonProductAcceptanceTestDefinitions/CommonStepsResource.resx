@@ -211,10 +211,10 @@
     <value>TestEnvironment</value>
   </data>
   <data name="CommonSteps_CGIE_CourseId_Value" xml:space="preserve">
-    <value>CRSKLTL-12001065</value>
+    <value>CRSKLT9-10040067</value>
   </data>
   <data name="CommonSteps_CGIE_SectionName_Value" xml:space="preserve">
-    <value>Dependent_MIL_CGIE</value>
+    <value>Dependent_CGIE_MIL</value>
   </data>
   <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
     <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
