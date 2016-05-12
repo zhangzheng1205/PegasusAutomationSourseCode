@@ -608,7 +608,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>bb_automation_instructor</Name>
+      <Name>Automation_LMS_instructor</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>Chethan</FirstName>
@@ -619,12 +619,12 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>bb_automation_student</Name>
+      <Name>Automation_LMS_student</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Chethan</FirstName>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Gangoor</LastName>
+      <LastName>Student</LastName>
       <UserType>BBStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1256,7 +1256,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Word Chapter 1 Grader Project [Homework 3]</Name>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
       <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>

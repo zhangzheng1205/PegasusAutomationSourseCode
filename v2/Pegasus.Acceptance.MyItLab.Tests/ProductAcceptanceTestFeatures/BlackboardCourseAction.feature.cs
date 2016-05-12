@@ -224,7 +224,7 @@ testRunner.And("I click on Edit Grade \"PegasusEditedGrade\" of \"BBEditActivity
                     "udent\" in Pegasus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
 testRunner.Then("I should see the score \"PegasusEditedGrade\" of \"Word Chapter 1 Grader Project [Ho" +
-                    "mework 3]\" activity for \"BBStudent\" in Pegasus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "mework 3] (Project G)\" activity for \"BBStudent\" in Pegasus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 53
 testRunner.When("I \"Close\" from the \"BBInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 54
@@ -241,7 +241,7 @@ testRunner.When("I click on submit button", ((string)(null)), ((TechTalk.SpecFlo
 testRunner.And("I click on the \"Full Grade Center\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 60
 testRunner.Then("I should see the score \"PegasusEditedGrade\" for \"Word Chapter 1 Grader Project [H" +
-                    "omework 3]\" activity for \"BBStudent\" in BlackBoard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "omework 3] (Project G)\" activity for \"BBStudent\" in BlackBoard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 61
 testRunner.When("I \"Logout\" of Blackboard as \"BBInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

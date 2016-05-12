@@ -284,7 +284,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             {
                 //Login as BBInstructor
                 case User.UserTypeEnum.BBInstructor1:
+                case User.UserTypeEnum.BBInstructor:
                 case User.UserTypeEnum.BBStudent1:
+                case User.UserTypeEnum.BBStudent:
                     //Login as BB Instructor/Student
                     new BlackboardLoginPage().LoginToBB(user.Name, user.Password);
                     break;
@@ -310,6 +312,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 //Login as BBInstructor
                 case User.UserTypeEnum.BBInstructor1:
                 case User.UserTypeEnum.BBStudent1:
+                case User.UserTypeEnum.BBInstructor:
+                case User.UserTypeEnum.BBStudent:
                     //Login as BB Instructor/Student
                     new BlackboardCourseAction().SignOutByHigherEdUsers(linkName);
                     break;
@@ -332,6 +336,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             {
                 case User.UserTypeEnum.BBInstructor1:
                 case User.UserTypeEnum.BBStudent1:
+                case User.UserTypeEnum.BBInstructor:
+                case User.UserTypeEnum.BBStudent:
                     {
                         //Verify If MMNDInstructor Is Logged In Successfully
                         isUserLoggedIn = new BlackboardLoginPage().IsUserLoggedInSuccessFully();

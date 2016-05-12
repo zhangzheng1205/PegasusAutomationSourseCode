@@ -49,7 +49,7 @@ And I click on the "Gradebook" link
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Gradebook" by "CsSmsInstructor"
 And I click on Edit Grade "PegasusEditedGrade" of "BBEditActivity" activity for "BBStudent" in Pegasus
-Then I should see the score "PegasusEditedGrade" of "Word Chapter 1 Grader Project [Homework 3]" activity for "BBStudent" in Pegasus
+Then I should see the score "PegasusEditedGrade" of "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in Pegasus
 When I "Close" from the "BBInstructor"
 And I click on the "Grade Center" link
 And I click on the "Full Grade Center" link
@@ -57,7 +57,7 @@ When I select option "Pearson Custom Tools" form "Manage" dropdown
 And I click on the "Refresh Pearson Grades" link
 When I click on submit button
 And I click on the "Full Grade Center" link 
-Then I should see the score "PegasusEditedGrade" for "Word Chapter 1 Grader Project [Homework 3]" activity for "BBStudent" in BlackBoard
+Then I should see the score "PegasusEditedGrade" for "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in BlackBoard
 When I "Logout" of Blackboard as "BBInstructor"
 
 #Purpose : Blackbord student submit the activity

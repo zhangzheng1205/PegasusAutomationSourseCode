@@ -92,8 +92,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
                 Thread.Sleep(2000);
                 // Click link in content page
                 base.WaitForElement(By.LinkText(linkName));
-                IWebElement clickLink = base.GetWebElementPropertiesByLinkText(linkName);
-                base.ClickByJavaScriptExecutor(clickLink);
+                base.ClickLinkByLinkText(linkName);
             }
             catch (Exception e)
             {
@@ -306,7 +305,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
                 string getUserName = base.GetTitleAttributeValueByXPath(
                     string.Format(BlackboardCourseActionResource.
                     BlackboardCourseActionPage_BBGradbook_getUsername_Xpath_Locator, userRowCount));
-                if (getUserName.Contains(userName))
+                if (getUserName.Equals(userName.ToLower()))
                 {
                     userRowNumber = userRowCount;
                     break;

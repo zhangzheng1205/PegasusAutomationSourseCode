@@ -222,23 +222,23 @@ When I update section name for job dependent
 
 #Purpose: User login as Blackboard student to Blackboard portal
 Scenario: User login as blackboard student
-Given I browsed the URL of "BBStudent1"
-When I login to Blackboard Cert as "BBStudent1"
-Then I should be logged in successfully as "BBStudent1"
+Given I browsed the URL of "BBStudent"
+When I login to Blackboard Cert as "BBStudent"
+Then I should be logged in successfully as "BBStudent"
 
 #Purpose: User login as Blackboard instructor to Blackboard portal
 Scenario: User login as blackboard instructor
-Given I browsed the URL of "BBInstructor1"
-When I login to Blackboard Cert as "BBInstructor1"
-Then I should be logged in successfully as "BBInstructor1"
+Given I browsed the URL of "BBInstructor"
+When I login to Blackboard Cert as "BBInstructor"
+Then I should be logged in successfully as "BBInstructor"
 
 #Purpose: User logout as Blackboard student to Blackboard portal
 Scenario: User logout as blackboard student
-When I login to Blackboard Cert as "BBStudent1"
+When I login to Blackboard Cert as "BBStudent"
 
 #Purpose: User logout as Blackboard instructor to Blackboard portal
 Scenario: User logout as blackboard instructor
-When I "Logout" of Blackboard as "BBInstructor1"
+When I "Logout" of Blackboard as "BBInstructor"
 
 #Purpose: User login as MoodleKiosk instructor to D2L portal
 Scenario: User login as MoodleKiosk instructor

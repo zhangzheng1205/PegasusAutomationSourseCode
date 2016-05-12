@@ -259,6 +259,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Click the Link element by locating it's Link Text.
+        /// </summary>
+        /// <param name="linkTextAttributeValue">This is the Link text Attribute Value.</param>
+        protected void ClickLinkByLinkText(String linkTextAttributeValue)
+        {
+            ClickOnButton(By.LinkText(linkTextAttributeValue));
+        }
+
+        /// <summary>
         /// Click the Link element by locating it's XPath.
         /// </summary>
         /// <param name="xPathValue">This is the Xpath Attribute Value.</param>
@@ -477,6 +486,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void FocusOnElementByPartialLinkText(String partialLinkTextAttributeValue)
         {
             FillEmptyText(By.PartialLinkText(partialLinkTextAttributeValue));
+        }
+
+        /// <summary>
+        /// Use this method to simulate focus on element by typing null value into an element by
+        /// Link text attribute value, which may set its value.
+        /// </summary>
+        /// <param name="partialLinkTextAttributeValue">This is the Partial Link text Attribute Value.</param>
+        protected void FocusOnElementByLinkText(String linkTextAttributeValue)
+        {
+            FillEmptyText(By.LinkText(linkTextAttributeValue));
         }
 
         /// <summary>

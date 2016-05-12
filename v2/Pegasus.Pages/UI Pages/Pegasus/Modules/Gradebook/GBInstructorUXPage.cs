@@ -4168,34 +4168,37 @@ namespace Pegasus.Pages.UI_Pages
                 int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
                 this.SelectGradebookFrame();
                 base.WaitForElement(By.Id("GBGridDataTable"));
-
-                IWebElement getGradeFrame = base.GetWebElementPropertiesById("GBGridDataTable");
+                // Mouse hover on the grades frame
+                IWebElement getGradeFrame = base.GetWebElementPropertiesById(
+                    "GBGridDataTable");
                 base.PerformMouseHoverAction(getGradeFrame);
-
-
-                base.WaitForElement(By.XPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
-                    getUserRowCount, getActivityColumnCount)));
-                IWebElement getGrade = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
+                // Perform mouse hover on the grades
+                IWebElement getGrade = base.GetWebElementPropertiesByXPath(
+                    string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
                     getUserRowCount, getActivityColumnCount));
                 base.PerformMouseHoverAction(getGrade);
-
-                IWebElement getGradeMenu = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
+                // Get the mouse focus on the grades cmenu
+                IWebElement getGradeMenu = base.GetWebElementPropertiesByXPath(
+                    string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]",
                  getUserRowCount, getActivityColumnCount));
                 base.PerformMouseHoverAction(getGradeMenu);
-
-                IWebElement getCmenu = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span",
+                IWebElement getCmenu = base.GetWebElementPropertiesByXPath(
+                    string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span",
                     getUserRowCount, getActivityColumnCount));
                 base.PerformMouseHoverByJavaScriptExecutor(getCmenu);
-                IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img",
+                IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath(
+                    string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img",
                     getUserRowCount, getActivityColumnCount));
                 base.ClickByJavaScriptExecutor(getCmenuIcon);
+                // Click "Edit link" in the grade cmenu option
                 base.WaitForElement(By.Id("_ctl0_InnerPageContent_lbleditgrade1"));
                 base.ClickLinkById("_ctl0_InnerPageContent_lbleditgrade1");
                 // Enter the value in numerator text box
                 base.WaitForElement(By.Id("txtNewValue"));
                 base.ClearTextById("txtNewValue");
+                // Enter 70 score in the edit grades popup
                 base.FillTextBoxById("txtNewValue", "70");
-                // Enter the value in denominator
+                // Enter the 100 value in denominator
                 base.WaitForElement(By.Id("txtNewMaxValue"));
                 base.ClearTextById("txtNewMaxValue");
                 base.FillTextBoxById("txtNewMaxValue", "100");
