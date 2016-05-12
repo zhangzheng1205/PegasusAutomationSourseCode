@@ -163,7 +163,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>3PL Moodle Direct Integration Course -Pegasus5</Name>
+      <Name>CGIE MIL Course</Name>
       <CourseType>MoodleDirectCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -171,7 +171,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>CGIE MIL Course</Name>
+      <Name>CGIE MIL D2L Course2</Name>
       <CourseType>D2LDirectCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -439,7 +439,7 @@ the UI deleted or refreshed.-->
     <!--Hard coded Users data for SMS-->
     <!--Hard coded Users data for "Contineo".-->
     <User>
-      <Name>5156cgieins2</Name>
+      <Name>5159rush1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrains2</FirstName>
@@ -450,7 +450,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>5156cgiestu2</Name>
+      <Name>arunmay5</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrastu2</FirstName>
@@ -518,8 +518,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>3pldirectmoodle.ins1</Name>
-      <Password>Password#1</Password>
+      <Name>Automation_LMS_instructor</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -529,8 +529,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>3pldirectmoodle.stu1</Name>
-      <Password>Password#1</Password>
+      <Name>Automation_LMS_student</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -541,23 +541,23 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for "D2L Direct" .-->
     <User>
-      <Name>D2L_AUTOMATION_INSTRUCTOR</Name>
-      <Password>PASSWORD1</Password>
+      <Name>automation.instructor</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>vijay</FirstName>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>kumar</LastName>
+      <LastName>Instructor1</LastName>
       <UserType>D2LDirectTeacher</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>D2L_AUTOMATION_STUDENT</Name>
+      <Name>Automation.student</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>Pegasus</FirstName>
+      <FirstName>automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Student</LastName>
+      <LastName>student1</LastName>
       <UserType>D2LDirectStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -575,7 +575,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>Blended_DP_teacher</Name>
+      <Name>WC_CGIE_Teacher</Name>
       <Password>password2</Password>
       <Email>rashmi.shetty@excelindia.com</Email>
       <FirstName>Rashmi</FirstName>
@@ -586,7 +586,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>Blended_DP_Stu</Name>
+      <Name>WC_CGIE_STU</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>Rekha</FirstName>
@@ -622,9 +622,9 @@ the UI deleted or refreshed.-->
       <Name>Automation_LMS_student</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Automation</FirstName>
+      <FirstName>Chethan</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Student</LastName>
+      <LastName>Gangoor</LastName>
       <UserType>BBStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1167,23 +1167,23 @@ the UI deleted or refreshed.-->
     </User>
     <!-- Blackboard classic users-->
     <User>
-      <Name>bb_automation_instructor</Name>
+      <Name>Automation_LMS_instructor</Name>
       <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Chethan</FirstName>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>SG</LastName>
+      <LastName>instructor</LastName>
       <UserType>BBInstructor1</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>bb_automation_student</Name>
+      <Name>Automation_LMS_student</Name>
       <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Gangoor</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>Chethan</LastName>
+      <FirstName>Automation</FirstName>
+      <MiddleName>Pegasus</MiddleName>PegasusNewGrade
+      <LastName>student</LastName>
       <UserType>BBStudent1</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1256,7 +1256,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <Name>Word Chapter 1 Grader Project [Homework 3]</Name>
       <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
