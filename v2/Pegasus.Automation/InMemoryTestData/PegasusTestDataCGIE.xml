@@ -439,7 +439,7 @@ the UI deleted or refreshed.-->
     <!--Hard coded Users data for SMS-->
     <!--Hard coded Users data for "Contineo".-->
     <User>
-      <Name>5159rush1</Name>
+      <Name>5159rush12</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrains2</FirstName>
@@ -1234,6 +1234,18 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+     <!--Hard coded Users data for "SSRS Reports" Integration.-->
+        <User>
+      <Name>reporting</Name>
+      <Password>Peg@$u$</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>SSRSReportAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
 
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
@@ -1368,7 +1380,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Product>
     <Product>
-      <Name>Digit Grade6</Name>
+      <Name>Demo_CGIE_Product</Name>
       <ProductType>DigitalPath</ProductType>
       <PeriodName>05162abf</PeriodName>
       <IsCreated>true</IsCreated>
