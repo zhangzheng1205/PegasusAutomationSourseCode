@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="OrderedTest.School.Integrations" storage="d:\11feb16-master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.school.integrations.orderedtest" id="d2e06a5d-41d4-42fd-90c2-04f71fbf0304" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="orderedtest.school.integrations" storage="d:\11feb16-master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.school.integrations.orderedtest" id="d2e06a5d-41d4-42fd-90c2-04f71fbf0304" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestLinks>
     <TestLink id="20aa5658-2e27-44d7-be00-c8a6b88ab970" name="ordertest.etext_integration" storage="ordertest.etext_integration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="3de39c50-99d5-4e0e-a5ba-523d91b22229" name="orderedtest_mediaserver_integration" storage="orderedtest_mediaserver_integration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
