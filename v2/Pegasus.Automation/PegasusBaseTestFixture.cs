@@ -30,6 +30,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public const string InternetExplorer = "Internet Explorer";
         public const string Safari = "Safari";
         public const string FireFox = "FireFox";
+        public const string Edge = "Edge";
         Stopwatch stopWatch = new Stopwatch();
 
         /// <summary>

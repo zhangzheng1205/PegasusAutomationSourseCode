@@ -14,6 +14,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
+using OpenQA.Selenium.Edge;
 
 
 namespace Pearson.Pegasus.TestAutomation.Frameworks
@@ -109,6 +110,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     case PegasusBaseTestFixture.FireFox: remoteCapability = DesiredCapabilities.Firefox(); break;
                     case PegasusBaseTestFixture.Safari: remoteCapability = DesiredCapabilities.Safari(); break;
                     case PegasusBaseTestFixture.Chrome: remoteCapability = DesiredCapabilities.Chrome(); break;
+                    case PegasusBaseTestFixture.Edge: remoteCapability = DesiredCapabilities.Edge(); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
                 // object representing the image of the page on the screen
@@ -125,6 +127,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     case PegasusBaseTestFixture.FireFox: webDriver = FireFoxWebDriver(); break;
                     case PegasusBaseTestFixture.Safari: webDriver = SafariWebDriver(); break;
                     case PegasusBaseTestFixture.Chrome: webDriver = ChromeWebDriver(); break;
+                    case PegasusBaseTestFixture.Edge: webDriver = EdgeWebDriver(); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
             }
@@ -303,6 +306,26 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return webDriver;
         }
 
+
+        private static IWebDriver EdgeWebDriver()
+        {
+            // chrome options
+            var EdgeOptions = new EdgeOptions();
+            /*EdgeOptions.AddArguments("disable-application-cache");
+            EdgeOptions.AddArguments("disk-cache-size=0");
+            EdgeOptions.AddArgument("disable-popup-blocking");*/
+            EdgeOptions.ToCapabilities();
+            /*EdgeOptions.AddUserProfilePreference("intl.accept_languages", "en");
+            EdgeOptions.AddUserProfilePreference("disable-popup-blocking", true);
+            EdgeOptions.AddUserProfilePreference("download.default_directory", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));*/
+            // edge driver path
+            string EdgeDriverPath = (Path.GetDirectoryName
+                (Assembly.GetExecutingAssembly().GetName().CodeBase)
+                + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", "");
+            // create chrome browser instance
+            IWebDriver webDriver = new EdgeDriver(EdgeDriverPath, EdgeOptions, TimeSpan.FromMinutes(3));
+            return webDriver;
+        }
         /// <summary>
         /// Returns list of installed browsers in local machine.
         /// </summary>
@@ -371,6 +394,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     case PegasusBaseTestFixture.FireFox: remoteCapability = DesiredCapabilities.Firefox(); break;
                     case PegasusBaseTestFixture.Safari: remoteCapability = DesiredCapabilities.Safari(); break;
                     case PegasusBaseTestFixture.Chrome: remoteCapability = DesiredCapabilities.Chrome(); break;
+                    case PegasusBaseTestFixture.Edge: remoteCapability = DesiredCapabilities.Edge(); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
                 // object representing the image of the page on the screen
@@ -387,6 +411,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     case PegasusBaseTestFixture.FireFox: webDriver = FireFoxWebDriver(); break;
                     case PegasusBaseTestFixture.Safari: webDriver = SafariWebDriver(); break;
                     case PegasusBaseTestFixture.Chrome: webDriver = ChromeWebDriver(); break;
+                    case PegasusBaseTestFixture.Edge: webDriver = EdgeWebDriver(); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
             }
