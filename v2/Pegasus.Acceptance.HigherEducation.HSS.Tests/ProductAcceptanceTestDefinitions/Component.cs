@@ -10,6 +10,9 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Threading;
 using System.Configuration;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials;
+using Pegasus.Automation;
+using OpenQA.Selenium;
+
 
 namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefinitions
 {
@@ -166,9 +169,21 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
 
 
             try
-            {            
-                base.SelectWindow("Print tool");
-                ClickByJavaScriptExecutor(base.GetWebElementPropertiesById("ibtnOk"));
+            {
+                
+                // Hook up the event for monitoring proxied traffic.
+                //FiddlerProxy.setupDriver();
+
+               base.SelectWindow("Print tool");
+                //string url = "https://www.google.com/";
+
+                IWebElement print = base.GetWebElementPropertiesById("ibtnOk");
+                int returnedcode = FiddlerProxy.ClickNavigate(print);
+
+               
+               // int responseCode = FiddlerProxy.ClickNavigate(base.GetWebElementPropertiesById("ibtnOk"));
+
+               
 
             }
 
@@ -196,7 +211,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             try
             {
 
-               
+             
                 
 
             }

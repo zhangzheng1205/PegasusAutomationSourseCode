@@ -15,6 +15,9 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
 using OpenQA.Selenium.Edge;
+using Fiddler;
+using Pegasus.Automation;
+
 
 
 namespace Pearson.Pegasus.TestAutomation.Frameworks
@@ -135,46 +138,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
 
-        ///// <summary>
-        ///// Returns an instance of Firefox based driver.
-        ///// </summary>
-        ///// <returns>FireFox based driver</returns>
-        //private static IWebDriver Firefox()
-        //{
-        //    // create profile object
-        //    FirefoxProfile profile = new FirefoxProfile();
-        //    //set desired capabilities
-        //    DesiredCapabilities capabilities = DesiredCapabilities.Firefox();
-
-        //    // get Log Execution Path
-        //    String getExecutingPath = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
-        //    profile.SetPreference("FireFox" + DateTime.Now.Ticks + ".log", getExecutingPath);
-        //    profile.SetPreference("browser.helperApps.alwaysAsk.force", false);
-        //    profile.SetPreference("browser.download.folderList", 2);
-        //    profile.SetPreference("browser.download.dir", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
-        //    profile.SetPreference("services.sync.prefs.sync.browser.download.manager.showWhenStarting", false);
-        //    profile.SetPreference("browser.download.useDownloadDir", true);
-        //    profile.SetPreference("browser.download.downloadDir", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
-        //    profile.SetPreference("browser.download.defaultFolder", AutomationConfigurationManager.DownloadFilePath.Replace("file:\\", ""));
-        //    profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/zip, application/x-zip, application/x-zip-compressed, application/download, application/octet-stream");
-        //    profile.EnableNativeEvents = true;
-        //    profile.SetPreference("browser.cache.disk.enable", false);
-        //    profile.SetPreference("browser.cache.memory.enable", false);
-        //    profile.SetPreference("browser.cache.offline.enable", false);
-        //    profile.SetPreference("network.http.use-cache", false);
-        //    //Use custom FireFox profile  with desired capabilities
-        //    capabilities.SetCapability(FirefoxDriver.ProfileCapabilityName, profile);
-        //    capabilities.SetCapability("takesScreenshot", true);
-        //    // initilize webdriver  with desired capabilities & profile set
-        //    IWebDriver webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), capabilities,
-        //    commandTimeout: TimeSpan.FromSeconds(TimeOut));
-        //    // set page load duration
-        //    webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
-        //    // set cursor position center of the screen
-        //    Cursor.Position = new Point(Screen.PrimaryScreen.Bounds.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2);
-        //    return webDriver;
-
-        //}
+  
 
         /// <summary>
         /// Returns an instance of IE based driver.
@@ -239,7 +203,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>FireFox based driver</returns>
         private static IWebDriver FireFoxWebDriver()
         {
-            // create profile object
+            // Proxy setup starts here
+            OpenQA.Selenium.Proxy proxy = new OpenQA.Selenium.Proxy();
+            
+            //start fiddler and get the port used
+            int proxyport = FiddlerProxy.StartFiddlerProxy(0);
+            
+            //use SslProxy for https sites
+            proxy.SslProxy = string.Format("127.0.0.1:{0}",proxyport);
+
+
             var profile = new FirefoxProfile();
             profile.AssumeUntrustedCertificateIssuer = false;
             // get Log Execution Path
@@ -259,6 +232,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.cache.memory.enable", false);
             profile.SetPreference("browser.cache.offline.enable", false);
             profile.SetPreference("network.http.use-cache", false);
+            //set proxyperference
+            profile.SetProxyPreferences(proxy);
             //to be sure that it picks up 32bit of ff always
             string sBrowserExe = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe";
             FirefoxBinary Bin = new FirefoxBinary(sBrowserExe);

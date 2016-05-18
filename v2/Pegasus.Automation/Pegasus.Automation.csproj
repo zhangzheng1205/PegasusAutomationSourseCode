@@ -35,6 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BasicFormatsForCore">
+      <HintPath>..\..\..\FiddlerCoreAPI\DotNet4\BasicFormatsForCore.dll</HintPath>
+    </Reference>
+    <Reference Include="BCMakeCert">
+      <HintPath>..\..\..\FiddlerCoreAPI\DotNet4\BCMakeCert.dll</HintPath>
+    </Reference>
+    <Reference Include="CertMaker">
+      <HintPath>..\..\..\FiddlerCoreAPI\DotNet4\CertMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="FiddlerCore4">
+      <HintPath>..\..\..\FiddlerCoreAPI\DotNet4\FiddlerCore4.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\log4net.dll</HintPath>
@@ -97,6 +109,7 @@
     <Compile Include="DataTransferObjects\Section.cs" />
     <Compile Include="DataTransferObjects\User.cs" />
     <Compile Include="DataTransferObjects\WorkSpace.cs" />
+    <Compile Include="FiddlerProxy.cs" />
     <Compile Include="GenericClick.cs" />
     <Compile Include="InMemoryDatabase.cs" />
     <Compile Include="InMemoryDatabaseSingleton.cs" />
