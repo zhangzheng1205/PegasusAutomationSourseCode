@@ -613,6 +613,22 @@ testRunner.Then("I should be connected Aspose print tool services", ((string)(nu
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student closing all windows and signoff")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentClosingAllWindowsAndSignoff()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student closing all windows and signoff", ((string[])(null)));
+#line 242
+this.ScenarioSetup(scenarioInfo);
+#line 243
+testRunner.When("I close Print and View submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 244
+testRunner.Then("I should see parent page of Pegasus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

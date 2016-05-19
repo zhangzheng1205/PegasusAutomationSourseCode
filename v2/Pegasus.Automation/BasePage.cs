@@ -664,6 +664,26 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Last());
         }
 
+        /// <summary>
+        /// Switch the focus of future commands for this driver to the window specified
+        /// </summary>
+        /// <see cref="List{T}">Return a set of window handles which can be used to iterate over all open windows
+        ///  of this webdriver instance by passing them to #switchTo().window(String)</see>
+        protected void SwitchToWindow(string windowName)
+        {
+            List<String> allWindows = WebDriver.WindowHandles.ToList();
+            foreach(String wins in allWindows)
+            {
+                if(wins==windowName)
+                {
+                 WebDriver.SwitchTo().Window(wins);
+                }
+
+            }
+          }
+             
+            //WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Last());
+        
         #endregion
 
         #region WebDriver Get IWebElement

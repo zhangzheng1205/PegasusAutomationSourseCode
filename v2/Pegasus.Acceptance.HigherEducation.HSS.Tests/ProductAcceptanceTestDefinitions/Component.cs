@@ -170,22 +170,16 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
 
             try
             {
-                
-                // Hook up the event for monitoring proxied traffic.
-                //FiddlerProxy.setupDriver();
 
-               base.SelectWindow("Print tool");
-                //string url = "https://www.google.com/";
 
-                IWebElement print = base.GetWebElementPropertiesById("ibtnOk");
-                int returnedcode = FiddlerProxy.ClickNavigate(print);
 
-               
-               // int responseCode = FiddlerProxy.ClickNavigate(base.GetWebElementPropertiesById("ibtnOk"));
 
-               
+                base.SwitchToWindow("Print tool");
 
-            }
+
+
+
+                }
 
 
 
@@ -211,7 +205,11 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             try
             {
 
-             
+                IWebElement print = base.GetWebElementPropertiesById("ibtnOk");
+                Thread.Sleep(2000);
+                int returnedcode = FiddlerProxy.ClickNavigate(print);
+                Thread.Sleep(2000);
+                Assert.AreEqual(200, returnedcode);
                 
 
             }
@@ -227,7 +225,42 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 base.IsTakeScreenShotDuringEntryExit);
             
         }
+        //When I close Print and View submission page
+        [When(@"I close Print and View submission page")]
+        public void WhenIClosePrintAndViewSubmissionPage()
+        {
 
+            Logger.LogMethodEntry("Component", "WhenIClosePrintAndViewSubmissionPage",
+        base.IsTakeScreenShotDuringEntryExit);
+
+
+
+            try
+            {
+
+                base.SwitchToWindow("Print tool");
+                IWebElement cancelbutton = base.GetWebElementPropertiesById("ibtnCancel");
+                base.ClickByJavaScriptExecutor(cancelbutton);
+
+
+                base.SwitchToWindow("View Submission");
+                IWebElement close = base.GetWebElementPropertiesById("_ctl0:PopupPageContent:btnClose");
+                base.ClickByJavaScriptExecutor(close);
+
+                
+            }
+
+
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("Component", " WhenIClosePrintAndViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            
+        }
 
         
     }

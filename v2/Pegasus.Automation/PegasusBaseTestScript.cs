@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using Selenium;
 using TechTalk.SpecFlow;
+using Pegasus.Automation;
 
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
@@ -69,6 +70,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public void WebDriverCleanUp()
         {
             WebDriverSingleton.GetInstance().Cleanup();
+            FiddlerProxy.StopFiddlerProxy();
         }
 
 

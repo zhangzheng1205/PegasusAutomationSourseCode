@@ -78,7 +78,7 @@ namespace Pegasus.Automation
             driver.Navigate().GoToUrl(targetUrl);
             while (responseCode == 0 && DateTime.Now < endTime)
             {
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(300);
             }
 
             FiddlerApplication.AfterSessionComplete -= responseHandler;
@@ -136,7 +136,7 @@ namespace Pegasus.Automation
             element.Click();
             while (responseCode == 0 && DateTime.Now < endTime)
             {
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(1000);
             }
 
             FiddlerApplication.ResponseHeadersAvailable += responseHandler;

@@ -237,3 +237,8 @@ Then I should be on the "Print tool" page
 Scenario: Student Accessing download link of print
 When I click on Download link
 Then I should be connected Aspose print tool services
+
+#Purpose: Print tool - Clean up
+Scenario: Student closing all windows and signoff
+When I close Print and View submission page
+Then I should see parent page of Pegasus
