@@ -4169,9 +4169,17 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectGradebookFrame();
                 base.WaitForElement(By.Id("GBGridDataTable"));
                 // Mouse hover on the grades frame
-                IWebElement getGradeFrame = base.GetWebElementPropertiesById(
+
+                Thread.Sleep(1000);
+
+                IWebElement getGradeFrame1 = base.GetWebElementPropertiesById(
                     "GBGridDataTable");
+                base.PerformMouseHoverAction(getGradeFrame1);
+
+                IWebElement getGradeFrame = base.GetWebElementPropertiesByClassName("gbImgOW");
+                Thread.Sleep(3000);
                 base.PerformMouseHoverAction(getGradeFrame);
+
                 // Perform mouse hover on the grades
                 IWebElement getGrade = base.GetWebElementPropertiesByXPath(
                     string.Format("//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span",
@@ -4306,14 +4314,18 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize VariableVariable
             string getActivityStatusGrade = string.Empty;
             //Get Activity Column Count
+            base.WaitForElement(By.XPath("//table[@id='GBGridDataTable']/tbody/tr[2]/td"));
             int getActivityCount = base.GetElementCountByXPath("//table[@id='GBGridDataTable']/tbody/tr[2]/td");
+
             for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
                 columnCount++)
             {
+                
                 string getActivityName = base.GetTitleAttributeValueByXPath
                 (string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTitle_Xpath_Locator, columnCount));
+                Thread.Sleep(3000);
                 if (getActivityName.Equals(activityName))
                 {
                     IconStatus = base.IsElementPresent(By.XPath(string.Format("//table[@id='GBGridHeaderTable']/tbody/tr[2]/td[{0}]/div[2]/span", columnCount)), 10);
