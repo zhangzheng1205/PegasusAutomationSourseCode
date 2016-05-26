@@ -206,9 +206,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             {
 
                 IWebElement print = base.GetWebElementPropertiesById("ibtnOk");
-                Thread.Sleep(2000);
+                //Thread.Sleep(2000);
                 int returnedcode = FiddlerProxy.ClickNavigate(print);
-                Thread.Sleep(2000);
+                //Thread.Sleep(2000);
                 Assert.AreEqual(200, returnedcode);
                 
 
@@ -244,6 +244,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
 
 
                 base.SwitchToWindow("View Submission");
+                string x = base.GetWindowTitleByJavaScriptExecutor();
+                bool a = base.IsElementDisplayedById("_ctl0:PopupPageContent:btnClose");
                 IWebElement close = base.GetWebElementPropertiesById("_ctl0:PopupPageContent:btnClose");
                 base.ClickByJavaScriptExecutor(close);
 
@@ -262,6 +264,26 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             
         }
 
-        
+
+        [Then(@"I should see parent page of Pegasus")]
+        public void ThenIShouldSeeParentPageOfPegasus()
+        {
+            try
+            {
+
+                base.SwitchToWindow("Assignments - Done");
+                string primary = WebDriver.Title;
+
+                Assert.AreEqual("Assignments - Done", primary);
+            }
+
+
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
+
     }
 }

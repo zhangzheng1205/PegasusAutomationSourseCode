@@ -358,7 +358,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="textToFill">This is text to fill in the textbox.</param>
         protected void FillTextBoxByClassName(String classNameAttributeValue, String textToFill)
         {
-           
+
             FillTextBox(By.ClassName(classNameAttributeValue), textToFill);
         }
 
@@ -671,19 +671,30 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         ///  of this webdriver instance by passing them to #switchTo().window(String)</see>
         protected void SwitchToWindow(string windowName)
         {
+
+            /* WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Find(x => {
+                 return x == windowName;
+             }));*/
+
             List<String> allWindows = WebDriver.WindowHandles.ToList();
-            foreach(String wins in allWindows)
+            string winsname = "";
+            foreach (String wins in allWindows)
             {
-                if(wins==windowName)
+
+                winsname = WebDriver.SwitchTo().Window(wins).Title;
+
+                    
+                if (winsname == windowName)
                 {
-                 WebDriver.SwitchTo().Window(wins);
+                    WebDriver.SwitchTo().Window(wins);
                 }
 
+
             }
-          }
-             
-            //WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Last());
-        
+        }
+
+        //WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Last());
+
         #endregion
 
         #region WebDriver Get IWebElement

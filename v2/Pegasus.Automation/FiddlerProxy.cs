@@ -27,6 +27,7 @@ namespace Pegasus.Automation
         {
             
             //Setting up flags for fiddler
+
             
             FiddlerCoreStartupFlags flags = FiddlerCoreStartupFlags.Default &
                                             ~FiddlerCoreStartupFlags.RegisterAsSystemProxy;
@@ -41,6 +42,14 @@ namespace Pegasus.Automation
             // a simple debugger to see if the Fiddlerapplication is actually started
             bool fid = FiddlerApplication.IsStarted();
 
+            int iProcCount = Environment.ProcessorCount;
+            int iMinWorkerThreads = Math.Max(16, 6 * iProcCount);
+            int iMinIOThreads = iProcCount;
+            if ((iMinWorkerThreads > 0) && (iMinIOThreads > 0))
+            {
+                System.Threading.ThreadPool.SetMinThreads(iMinWorkerThreads, iMinIOThreads);
+            }
+
             
             return proxyPort;
         }
@@ -48,11 +57,11 @@ namespace Pegasus.Automation
         //Stopping fiddler
         public static int StopFiddlerProxy()
         {
-            if (FiddlerApplication.IsStarted())
-            {
+            
                 FiddlerApplication.Shutdown();
-            }
-            return StopFiddlerProxy();
+                return 1;
+            
+            
         }
 
 
@@ -85,9 +94,9 @@ namespace Pegasus.Automation
             return responseCode;
         }
 
-//A method that clicks a webelement and records the response code 
-
+        [CodeDescription("A method that clicks a webelement and records the response code")]
         public static int ClickNavigate(IWebElement element)
+            
         {
             int responseCode = 0;
             string targetUrl = string.Empty;
@@ -122,26 +131,40 @@ namespace Pegasus.Automation
                     }
                     else
                     {
-                        responseCode = targetSession.responseCode;
+                        if (targetSession.oResponse.headers.Exists("Content-Length"))
+                        {
+                            int iLen = 0;
+                            if (int.TryParse(targetSession.oResponse["Content-Length"], out iLen))
+                            {
+                                // File size is of expectedlength
+                                if (iLen == 261120)
+                                {
+                                    responseCode = targetSession.responseCode;
+                                }
+                            }
+                        }
+                       //
+                        
                     }
                 }
             };
 
             // Note that we're using the ResponseHeadersAvailable event so
             // as to avoid a race condition with the browser 
-            FiddlerApplication.ResponseHeadersAvailable += responseHandler;
+           FiddlerApplication.ResponseHeadersAvailable += responseHandler;
 
             // the same 10 second wait for response
-            DateTime endTime = DateTime.Now.Add(TimeSpan.FromSeconds(10));
+            //DateTime endTime = DateTime.Now.Add(TimeSpan.FromSeconds(20));
             element.Click();
-            while (responseCode == 0 && DateTime.Now < endTime)
+            /*while (responseCode == 0 && DateTime.Now < endTime)
             {
-                System.Threading.Thread.Sleep(1000);
-            }
+                //System.Threading.Thread.Sleep(2000);
+            }*/
 
-            FiddlerApplication.ResponseHeadersAvailable += responseHandler;
-            
+           FiddlerApplication.ResponseHeadersAvailable += responseHandler;
+          
             return responseCode;
+         
         }
 
     }
