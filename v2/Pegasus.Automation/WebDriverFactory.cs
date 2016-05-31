@@ -112,7 +112,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     case PegasusBaseTestFixture.InternetExplorer: remoteCapability = DesiredCapabilities.InternetExplorer(); break;
                     case PegasusBaseTestFixture.FireFox: remoteCapability = DesiredCapabilities.Firefox(); break;
                     case PegasusBaseTestFixture.Safari: remoteCapability = DesiredCapabilities.Safari(); break;
-                    case PegasusBaseTestFixture.Chrome: remoteCapability = DesiredCapabilities.Chrome(); break;
+                    case PegasusBaseTestFixture.Chrome: var chromeOptions = new ChromeOptions();
+                        chromeOptions.AddArgument("disable-popup-blocking");
+                        remoteCapability = (DesiredCapabilities)chromeOptions.ToCapabilities();
+                        break;
                     case PegasusBaseTestFixture.Edge: remoteCapability = DesiredCapabilities.Edge(); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
