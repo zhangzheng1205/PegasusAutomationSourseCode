@@ -43,7 +43,8 @@ namespace Pegasus.Automation.DataTransferObjects
             SIM2007PowerPointQuestionSet = 26,
             SIM2007MSAccessQuestionSet = 27,
             SIM5GraderQuestion = 28,
-            AutoGradedEssayFeedback = 29
+            AutoGradedEssayFeedback = 29,
+            AssessmentRegressionQuestion=30
         }
 
         /// <summary>
@@ -55,7 +56,16 @@ namespace Pegasus.Automation.DataTransferObjects
         /// This is the question Id.
         /// </summary>
         public string QuestionId { get; set; }
-       
+
+        /// <summary>
+        /// This is the question Id.
+        /// </summary>
+        public string QuestionGroup { get; set; }
+
+        /// <summary>
+        /// This is the question Id.
+        /// </summary>
+        public string SectionName { get; set; }
 
         /// <summary>
         /// This method creates a new question
@@ -98,6 +108,9 @@ namespace Pegasus.Automation.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Question>(x => x.QuestionId == questionId && x.IsCreated).First();
         }
+
+     
+
 
         /// <summary>
         /// This method returns all created quesions of the given type.

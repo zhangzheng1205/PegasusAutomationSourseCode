@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on Submit For Grade Button.
         /// </summary>
-        private void ClickOnSubmitForGradingButton()
+        public void ClickOnSubmitForGradingButton()
         {
             //Click on Submit Grade Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitForGradingButton",
@@ -1155,7 +1155,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on the Finish button.
         /// </summary>
-        private void ClickOnFinishButton()
+        public void ClickOnFinishButton()
         {
             //Click on the Finish button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnFinishButton",
@@ -5852,7 +5852,7 @@ namespace Pegasus.Pages.UI_Pages
                 powerPoint.JumpToQuestion("5");
                 AttemptingFifthWordQuestion();
                 // Seventh Question Submission
-                powerPoint.JumpToQuestion("7");             
+                powerPoint.JumpToQuestion("7");
                 AttemptingSeventhWordQuestion();
                 //Eighth Question Submission
                 powerPoint.JumpToQuestion("8");
@@ -6053,11 +6053,11 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_Thread_sleep));
-           
+
             Actions builder = new Actions(WebDriver);
             builder.SendKeys(Keys.Enter).Build().Perform();
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-           
+
             builder.SendKeys(Keys.Enter).Build().Perform();
 
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -6349,8 +6349,8 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingTenthWordQuestion",
            base.IsTakeScreenShotDuringEntryExit);
-           //Add a Box setting page border to the document
-           //Use the first style, and the color Dark Blue, Text 2—in the fourth column, the first color
+            //Add a Box setting page border to the document
+            //Use the first style, and the color Dark Blue, Text 2—in the fourth column, the first color
             this.IsPageLoading();
             this.IsQuestionLoaded("10");
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
@@ -6451,7 +6451,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select position
             powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_Position_Ribbon_Xpath_Locator);
-           // More Layout Options
+            // More Layout Options
             powerPoint.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_Worddocument_DrawingToolFormatTab_MoreLayoutOption_Ribbon_Xpath_Locator);
             //Change the text box Horizontal Alignment to Centered relative to the Page. 
@@ -6474,7 +6474,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(2000);
             base.PerformMouseClickAction(radioButton1);
             Thread.Sleep(2000);
-           
+
             builder.SendKeys(Keys.Tab).Perform();
             Thread.Sleep(2000);
             builder.SendKeys("7.35").Perform();
@@ -6556,7 +6556,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage", "AttemptingFifteenthWordQuestion",
           base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Attempting Sixteenth Word Question.
         /// Adding Document Properties and Previewing and Printing a Document .
@@ -7291,5 +7291,132 @@ namespace Pegasus.Pages.UI_Pages
                   base.IsTakeScreenShotDuringEntryExit);
             return getActivitySubmittedScore;
         }
+
+        /// <summary>
+        /// Return the number of questions listed in the presentation page.
+        /// </summary>
+        /// <returns>The Number of Questions.</returns>
+        public int GetNumberOfQuetionsInAPage()
+        {
+            // Return the number of questions listed in the presentation page
+            logger.LogMethodEntry("StudentPresentationPage",
+               "GetActivityScoreFromCourseMaterialsPage",
+                   base.IsTakeScreenShotDuringEntryExit);
+            int actualNumberOfQuestions = 0;
+            try
+            {
+               //get the count of the questions listed in the page
+                base.WaitForElement(By.CssSelector("div[type='Question'][style*='visible']"));
+                actualNumberOfQuestions = base.GetElementCountByCssSelector("div[type='Question'][style*='visible']");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+              "GetActivityScoreFromCourseMaterialsPage",
+                  base.IsTakeScreenShotDuringEntryExit);
+            // Return the number of questions listed in the presentation page
+            return actualNumberOfQuestions;
+        }
+
+        /// <summary>
+        /// Click on Next Page Button to navigate to next page in Presentation Window.
+        /// </summary>
+        public void ClickNextPage()
+        {
+            // Click on Next Page Button to navigate to next page in Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+               "ClickNextPage", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Click on Next Page Button to navigate to next page in Presentation Window
+                base.WaitForElement(By.CssSelector("span[title='Next Page']"));
+                base.GetWebElementPropertiesByCssSelector("span[title='Next Page']").Click();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+              "ClickNextPage", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Attempt Fill In The Blanks Questions at Presentation Window.
+        /// </summary>
+        /// <param name="questionCount">Number of Question to be answered.</param>
+        public void AttemptFillInTheBlanksQuestions(int questionCount)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+              "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Save all the Text fields in a collection
+                ICollection<IWebElement> textFields = base.
+                      GetWebElementsCollectionByCssSelector("div[style*='visible'] input[answerme='true'][type='text']");
+                //Iterate and enter values in each text fields
+                foreach (var item in textFields)
+                {
+                    base.PerformMoveToElementClickAction(item);
+                    Actions builder = new Actions(WebDriver);
+                    builder.SendKeys("Answer").Perform();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Return bool after verifying the actual warning message.
+        /// </summary>
+        /// <param name="expectedWarning"></param>
+        /// <returns></returns>
+        public bool VerifyWarningMessage(string expectedWarning)
+        {
+            // Return bool after verifying the actual warning message
+            logger.LogMethodEntry("StudentPresentationPage",
+              "VerifyWarningMessage", base.IsTakeScreenShotDuringEntryExit);
+            bool warningPresent = false;
+            bool warningMessagePresent = false;
+            try
+            {
+                //Click on Submit for grading without answering all the questions
+                IWebElement getFinishButton = base.
+                           GetWebElementPropertiesByPartialLinkText
+                           ("FINISH: Submit for Grading");
+                base.ClickByJavaScriptExecutor(getFinishButton);
+                //Wait for warning message
+                warningPresent = base.IsElementPresent(By.CssSelector("#warningmessages"), 10);
+                if (warningPresent)
+                {
+                    //get the actual warning message
+                    string actualWarning = base.GetElementInnerTextByCssSelector("#warningmessages");
+                    //set bool to true if there is a match
+                    if (expectedWarning.Equals(actualWarning))
+                    {
+                        warningMessagePresent = true;
+                        //Close the warning message after verification
+                        base.GetWebElementPropertiesById("_ctl0:APH:Continue").Click();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "VerifyWarningMessage", base.IsTakeScreenShotDuringEntryExit);
+            //Return bool after verifying the actual warning message
+            return warningMessagePresent;
+        }
+
+
+        
     }
 }

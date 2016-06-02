@@ -135,5 +135,35 @@ namespace Pegasus.Pages.UI_Pages
            logger.LogMethodExit("SelectQuestionTypePage", "ClickTheTrueFalseQuestionType",
                 base.IsTakeScreenShotDuringEntryExit);
        }
+
+
+       /// <summary>
+       /// Click on expected type of question at when creating new question.
+       /// </summary>
+       public void ClickTheExpectedQuestionType(string questionType)
+       {
+           // // Click on expected type of question at when creating new question
+           logger.LogMethodEntry("SelectQuestionTypePage", "ClickTheExpectedQuestionType",
+                  base.IsTakeScreenShotDuringEntryExit);
+           try
+           {
+               //Select Create New Question Window
+               this.SelectCreateNewQuestionWindow();
+               Thread.Sleep(6000);
+               base.WaitForElement(By.LinkText(questionType));
+               //Get web element
+               IWebElement expectedQuestionLink = base.GetWebElementPropertiesByLinkText(questionType);
+               Thread.Sleep(3000);
+               //Click on the expected question type
+               base.ClickByJavaScriptExecutor(expectedQuestionLink);
+               Thread.Sleep(3000);
+           }
+           catch (Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+           }
+           logger.LogMethodExit("SelectQuestionTypePage", "ClickTheExpectedQuestionType",
+                base.IsTakeScreenShotDuringEntryExit);
+       }
     }
 }

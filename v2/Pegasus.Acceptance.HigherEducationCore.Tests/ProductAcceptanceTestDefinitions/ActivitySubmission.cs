@@ -553,6 +553,111 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify Number of Question listed in Presentation Window.
+        /// </summary>
+        /// <param name="numberOfQuestions">Number of Questions.</param>
+        /// <param name="pageNo">The Page Number.</param>
+        /// <param name="activityTypeEnum">This is the activity type enum.</param>
+        [Then(@"I should see '(.*)' questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
+        public void VerifyNumberOfQuestionsListedInPage(int numberOfQuestions, int pageNo,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // Verify Number of Question listed in Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+              "VerifyNumberOfQuestionsListedInPage",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Get the Activity Details
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            base.WaitUntilWindowLoads(windowTitle);
+            // Assert the expected and actual number of question in Presentation page
+            Assert.AreEqual(numberOfQuestions, new StudentPresentationPage().GetNumberOfQuetionsInAPage());
+            Logger.LogMethodExit("ActivitySubmission",
+              "VerifyNumberOfQuestionsListedInPage",
+              base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Navigate to next page in Presentation Window.
+        /// </summary>
+        [When(@"I navigate to next page")]
+        public void NavigateToNextPageInPresentationWindow()
+        {
+            // Navigate to next page in Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+             "NavigateToNextPageInPresentationWindow",
+             base.IsTakeScreenShotDuringEntryExit);
+            // Navigate to next page in Presentation Window
+            new StudentPresentationPage().ClickNextPage();
+            Logger.LogMethodExit("ActivitySubmission",
+             "NavigateToNextPageInPresentationWindow",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Attempt Fill In The Blanks Questions at Presentation Window.
+        /// </summary>
+        /// <param name="questionCount">Number of Questions to be Answered.</param>
+        /// <param name="pageNumber">The Page Number.</param>
+        /// <param name="activityTypeEnum">This the activity Type Enum.</param>
+        [When(@"I attempt ""(.*)"" questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
+        public void AttemptSpecificNumberOfFillInTheBlanksQuestions(int questionCount, int pageNumber, 
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+             "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get the Activity Details
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            // Attempt Fill In The Blanks Questions at Presentation Window
+           new StudentPresentationPage().AttemptFillInTheBlanksQuestions(questionCount);
+           Logger.LogMethodExit("ActivitySubmission",
+            "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Warning message on attempt is not complete on grading.
+        /// </summary>
+        [Then(@"I should see warning message on submission of activity for grading")]
+        public void VerifyWarningMessageOnSubmissionOfIncompleteActivity()
+        {
+            // Verify Warning message on attempt is not complete on grading
+            Logger.LogMethodEntry("ActivitySubmission",
+           "VerifyWarningMessageOnSubmissionOfIncompleteActivity",
+           base.IsTakeScreenShotDuringEntryExit);
+            //this is the expected warning message
+            string expectedWarning = "You must answer all questions before you can submit your work for grading.";
+            // Verify Warning message on attempt is not complete on grading
+            Assert.IsTrue(new StudentPresentationPage().VerifyWarningMessage(expectedWarning));
+            Logger.LogMethodExit("ActivitySubmission",
+          "VerifyWarningMessageOnSubmissionOfIncompleteActivity",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit the Activity.
+        /// </summary>
+        [Then(@"I should successfully submit activity for grading")]
+        public void SubmitActivityForGrading()
+        {
+            // Submit the Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+            "SubmitActivityForGrading",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Submit the Activity
+            new CourseContentUXPage().SubmitActivity();
+            Logger.LogMethodExit("ActivitySubmission",
+           "SubmitActivityForGrading",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }

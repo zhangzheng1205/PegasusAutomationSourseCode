@@ -172,5 +172,93 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("ContentBrowserMainUXPage", "SelectQuestionWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select a question from question bank.
+        /// </summary>
+        public void SelectAQuestionFromQuestionBank()
+        {
+            logger.LogMethodEntry("ContentBrowserMainUXPage", "SelectAQuestionFromQuestionBank",
+             base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Current window
+                this.SelectQuestionWindow();
+                base.WaitForElement(By.Id(ContentBrowserMainUXPageResource.
+                   ContentBrowserMainUX_Page_QuestionWindow_Frame_Id_Locator));
+                //Switch to Frame
+                base.SwitchToIFrame(ContentBrowserMainUXPageResource.
+                    ContentBrowserMainUX_Page_QuestionWindow_Frame_Id_Locator);
+                //Navigate into the folders until the page list a Question
+                bool questionPresent = base.IsElementPresent(By.ClassName("cssQuestionSImg"), 5);
+                while (!questionPresent)
+                {
+                    bool pres = base.IsElementPresent(By.CssSelector("img[style*=folder_16]"), 10);
+                    IWebElement questionFolder = base.GetWebElementPropertiesByCssSelector("img[style*=folder_16]");
+                    base.ClickByJavaScriptExecutor(questionFolder);
+                    questionPresent = base.IsElementPresent(By.ClassName("cssQuestionSImg"), 5);
+
+                }
+                //Check on Question's Check box 
+                IWebElement questionCheckbox = base.GetWebElementPropertiesById("grdContentBrowser$_ctrl1");
+                base.ClickByJavaScriptExecutor(questionCheckbox);
+                base.SwitchToDefaultPageContent();
+                //Close the window after selection
+                this.ClickOnAddAndCloseButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentBrowserMainUXPage", "SelectAQuestionFromQuestionBank",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Questions from Question Group.
+        /// </summary>
+        /// <param name="questionGroupName">This the question group name</param>
+        public void SelectAQuestionGroup(string questionGroupName)
+        {
+            logger.LogMethodEntry("ContentBrowserMainUXPage", "SelectAQuestionGroup",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Select the Current window
+            try
+            {
+                this.SelectQuestionWindow();
+                base.WaitForElement(By.Id(ContentBrowserMainUXPageResource.
+                  ContentBrowserMainUX_Page_QuestionWindow_Frame_Id_Locator));
+                //Switch to Frame
+                base.SwitchToIFrame(ContentBrowserMainUXPageResource.
+                    ContentBrowserMainUX_Page_QuestionWindow_Frame_Id_Locator);
+                //Search for Question Group listed and check the relevant checkbox
+                base.WaitForElement(By.Id("grdContentBrowser$_ctrl1"), 10);
+                int questionGroupCount = base.GetElementCountByCssSelector("input[id='grdContentBrowser$_ctrl1']");
+                for (int i = 1; i <= questionGroupCount; i++)
+                {
+                    IWebElement checkBoxElement = base.GetWebElementPropertiesByCssSelector(
+                        string.Format("input[id='grdContentBrowser$_ctrl1']:nth-of-type({0})", i));
+                    string checkBoxValue = checkBoxElement.GetAttribute("value");
+                    string folderId = "tblID_" + checkBoxValue;
+                    string folderName = base.GetElementInnerTextByCssSelector(string.Format
+                        ("table[id='{0}'] > tbody > tr > td:nth-of-type(2) > a", folderId));
+                    //select the group folder on match
+                    if (folderName == questionGroupName)
+                    {
+                        base.ClickByJavaScriptExecutor(checkBoxElement);
+                        break;
+                    }
+                }
+                base.SwitchToDefaultPageContent();
+                //Close the window after selection
+                this.ClickOnAddAndCloseButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+             logger.LogMethodExit("ContentBrowserMainUXPage", "SelectAQuestionGroup",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

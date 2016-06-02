@@ -570,6 +570,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\TrialAssessmentRegression.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

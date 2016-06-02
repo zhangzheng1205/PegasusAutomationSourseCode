@@ -203,7 +203,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>41089e0f-c51e-4c96-855f-e1acb8af2cd0</Name>
+      <Name>AssessmentRegression_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
       <CourseType>HEDGeneral</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -257,7 +257,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>4ce8f544-715e-40ce-a0b3-861b4b72030b</Name>
+      <Name>Automation_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
       <CourseType>MySpanishLabMasterVm</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -330,7 +330,7 @@ the UI deleted or refreshed.-->
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>Automation Section</SectionName>
+      <SectionName>Dependent_CGIE_MIL</SectionName>
       <SectionId>CRSKLRU-14001445</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
@@ -407,6 +407,15 @@ the UI deleted or refreshed.-->
       <SectionId>CRSKL8I-12001015</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
+    </Course>
+  <!--Authored Course Template Name for Assignment Regression Testing.-->
+  <Course>
+      <Name>AssessmentRegression_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
+      <CourseType>RegMySpanishLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
     </Course>
   </ArrayOfCourse>
   <!--Hard coded Grades data.-->
@@ -611,9 +620,9 @@ the UI deleted or refreshed.-->
       <Name>Automation_LMS_instructor</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Chethan</FirstName>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Gangoor</LastName>
+      <LastName>instructor</LastName>
       <UserType>BBInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -622,9 +631,9 @@ the UI deleted or refreshed.-->
       <Name>Automation_LMS_student</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Chethan</FirstName>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Gangoor</LastName>
+      <LastName>Student</LastName>
       <UserType>BBStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1008,13 +1017,24 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>7e291029-3cdf-4df0-a3c8-4cc6545facac</Name>
-      <Password>password2</Password>
+      <Name>automationqa</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
       <UserType>HedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>automationwsstu</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
+      <UserType>HedWsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -1246,7 +1266,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-
+  
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
 
@@ -1353,7 +1373,18 @@ the UI deleted or refreshed.-->
       <ActivityType>InteractiveWritingCoach</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-  </ArrayOfActivity>
+    <!--Sam Activity used for Assessment Regression Testing-->
+    <Activity>
+      <Name>Saved_SAM_Activity</Name>
+       <ActivityType>RegSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegressionActivity1</Name>
+      <ActivityType>RegSavedSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+      </ArrayOfActivity>
 
   <!--Hard coded question details for K12 Writing Coach Question-->
   <ArrayOfQuestion>
@@ -1366,6 +1397,12 @@ the UI deleted or refreshed.-->
     <Question>
       <Name>Grader IT 3</Name>
       <QuestionType>SIMGraderQuestion</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+    <Question>
+      <Name>Grader IT 3</Name>
+      <QuestionGroup>Test group</QuestionGroup>
+      <QuestionType>AssessmentRegressionQuestion</QuestionType>
       <IsCreated>true</IsCreated>
     </Question>
   </ArrayOfQuestion>

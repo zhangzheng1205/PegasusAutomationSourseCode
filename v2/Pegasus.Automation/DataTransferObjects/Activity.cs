@@ -68,7 +68,9 @@ namespace Pegasus.Automation.DataTransferObjects
             BBEditActivity = 37,
             MoodleEditActivity = 38,
             InteractiveWritingCoach = 39,
-            RegSAMActivity = 40
+            RegSAMActivity = 40,
+            RegChildActivity=41,
+            RegSavedSAMActivity=42
         }
 
         /// <summary>
@@ -116,6 +118,11 @@ namespace Pegasus.Automation.DataTransferObjects
         /// Is activity assigned or not.
         /// </summary>
         public bool? IsAssigned { get; set; }
+
+        /// <summary>
+        /// This is the activity ID.
+        /// </summary>
+        public string SavedRegSAMActivity { get; set; }
 
         /// <summary>
         /// This method is used to create a new activity.

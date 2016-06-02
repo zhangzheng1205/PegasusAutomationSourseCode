@@ -100,6 +100,7 @@ namespace Pegasus.Automation.DataTransferObjects
             MasterLibraryDifferentProduct=70,
             MyITLabOffice2013ProgramCourseCreation=71,
             MyITLabForOffice2013MasterCourseCreation=72,
+            RegMySpanishLabMaster=73
         }
 
         /// <summary>

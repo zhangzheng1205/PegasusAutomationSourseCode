@@ -157,7 +157,7 @@
     <value>Access Information</value>
   </data>
   <data name="Reg1_Page_SMSUser_Password_Value" xml:space="preserve">
-    <value>password1</value>
+    <value>Password@1</value>
   </data>
   <data name="Reg1_Page_SMS_AccessCode_MMNDInstructor" xml:space="preserve">
     <value>SMSMMNDInstructorAccessCode</value>

@@ -572,6 +572,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedWsInstructor:
+                    case User.UserTypeEnum.HedWsStudent:
                     case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.AmpProgramAdmin:
                     case User.UserTypeEnum.HSSProgramAdmin:
@@ -583,6 +584,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.ProgramCourse:
                             case Course.CourseTypeEnum.MyItLabProgramCourse:
                             case Course.CourseTypeEnum.MySpanishLabMaster:
+                            case Course.CourseTypeEnum.RegMySpanishLabMaster:
                             case Course.CourseTypeEnum.AmpWSCourse:
                             case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                             case Course.CourseTypeEnum.MyItLabSIMMasterCourse:
@@ -620,6 +622,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.HedMyPsychLabProgram:
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabMaster:
+                            case Course.CourseTypeEnum.RegMySpanishLabMaster:
                             case Course.CourseTypeEnum.MyITLabOffice2013Program:
                             case Course.CourseTypeEnum.MySpanishLabProgram:
                                 //Open the Course

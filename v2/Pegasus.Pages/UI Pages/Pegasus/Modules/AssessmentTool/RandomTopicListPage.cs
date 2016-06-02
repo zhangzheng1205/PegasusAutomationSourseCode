@@ -34,14 +34,14 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                
-            
+
+
                 Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
                      RandomTopicList_Page_Time_Value));
                 //Select window
-                base.SelectWindow(RandomTopicListPageResource.
-                    RandomTopicList_Page_CreateActivity_Window_Title_Locator);
-                    //Wait for Add Question Button
+                //base.SelectWindow(RandomTopicListPageResource.
+                //    RandomTopicList_Page_CreateActivity_Window_Title_Locator);
+                //Wait for Add Question Button
                 base.WaitForElement(By.Id(RandomTopicListPageResource.
                     RandomTopicList_Page_AddQuestion_Button_Id_Locator));
                 //Get Add Question Button Property
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.XPath(RandomTopicListPageResource.
                         RandomTopicList_Page_SelectQuestionFromBank_Xpath_Locator));
-                IWebElement getSelectQuestion=base.GetWebElementPropertiesByXPath
+                IWebElement getSelectQuestion = base.GetWebElementPropertiesByXPath
                     (RandomTopicListPageResource.
                         RandomTopicList_Page_SelectQuestionFromBank_Xpath_Locator);
                 //Click On Select Question From Bank
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);                
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
               base.IsTakeScreenShotDuringEntryExit);
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
 
 
 
-       
+
 
         /// <summary>
         /// Select Question From Bank for Assignment.
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);                
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForAssignment",
               base.IsTakeScreenShotDuringEntryExit);
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);               
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "WaitForQuestionToDisplay",
               base.IsTakeScreenShotDuringEntryExit);
@@ -163,6 +163,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Wait for the element
+                base.SwitchToDefaultWindow();
                 base.WaitForElement(By.Id(RandomTopicListPageResource.
                         RandomTopicList_Page_SaveAndReturn_Id_Locator));
                 //Get Save And Return Button Property
@@ -176,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);               
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickOnSaveAndReturnButton",
                base.IsTakeScreenShotDuringEntryExit);
@@ -214,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
-         
+
 
         /// <summary>
         /// Select Add Questions link.
@@ -307,6 +308,8 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
         /// <summary>
         /// Select The Create New Question link For Asset Creation.
         /// </summary>
@@ -320,13 +323,13 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Create Random Activity Window
-                this.SelectCreateRandomActivityWindow();                
+                this.SelectCreateRandomActivityWindow();
                 //Wait for Create New Question Option 
                 base.WaitForElement(By.XPath(addQuestionLink));
                 IWebElement getCreateQuestion = base.GetWebElementPropertiesByXPath(
                         addQuestionLink);
                 //Click On Create New Question Option
-                base.ClickByJavaScriptExecutor(getCreateQuestion);            
+                base.ClickByJavaScriptExecutor(getCreateQuestion);
             }
             catch (Exception e)
             {
@@ -407,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage",
                    "ClickOnSaveAndReturnButtonInPreference",
@@ -500,6 +503,177 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickOnAddLinksLink",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Create New Question Option.
+        /// </summary>
+        public void SelectOptionForQuestionCreation(string expectedQuestionOption)
+        {
+            //Select Create New Question Option
+            logger.LogMethodEntry("RandomTopicListPage", "SelectOptionForQuestionCreation",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click On Add Question Link
+                this.ClickOnAddQuestionLink();
+                //Select Window
+                this.SelectCreateRandomActivityWindow();
+                //Get total count of Add Questions Option
+                int questionOptionCount = base.GetElementCountByXPath
+                    ("//div[@id='AddQuestionsContextMenu']/table/thead/tr");
+                //Iterate the Add Question Options and select the expected option
+                for (int i = 1; i <= questionOptionCount; i++)
+                {
+                    base.WaitForElement(By.XPath(string.Format
+                        ("//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td", i)));
+                    IWebElement questionOption = base.GetWebElementPropertiesByXPath(string.Format
+                        ("//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td", i));
+                    Thread.Sleep(1000);
+                    string actualquestionOption = base.GetElementInnerTextByXPath(string.Format
+                        ("//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td", i)).Trim();
+                    Thread.Sleep(1000);
+                    //Compare expected option and click on match
+                    if (expectedQuestionOption == actualquestionOption)
+                    {
+                        base.ClickByJavaScriptExecutor(questionOption);
+                        break;
+                    }
+                 }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "SelectOptionForQuestionCreation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Add Sections Option.
+        /// </summary>
+        public void ClickOnAddSections()
+        {
+            //Click On Add Question Link
+            logger.LogMethodEntry("RandomTopicListPage", "ClickOnAddSections",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
+                     RandomTopicList_Page_Time_Value));               
+                //Wait for Add Question Button
+                base.WaitForElement(By.Id("cmdAddsection"));
+                //Get Add Question Button Property
+                IWebElement getAddQuestionsButtonProperty = base.
+                    GetWebElementPropertiesById("cmdAddsection");
+                //Click On Add Question
+                base.ClickByJavaScriptExecutor(getAddQuestionsButtonProperty);
+                Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
+                    RandomTopicList_Page_Time_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "ClickOnAddSections",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Add Sections Option.
+        /// </summary>
+        /// <param name="sectionOptionValue">Add Section Option</param>
+        public void SelectAddSectionsOptions(string sectionOptionValue)
+        {
+            // Select Add Sections Option
+            logger.LogMethodEntry("RandomTopicListPage", "SelectAddSectionsOptions",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click On Add Section
+                this.ClickOnAddSections();
+                //Select Window
+                this.SelectCreateRandomActivityWindow();
+                //Select expected option under Add Section
+                int sectionOptionCount = base.GetElementCountByXPath
+                    ("//div[@id='AddSectionsContextmenu']/table/thead/tr");
+                for (int i = 1; i <= sectionOptionCount; i++)
+                {
+                    base.WaitForElement(By.XPath(string.Format
+                        ("//div[@id='AddSectionsContextmenu']/table/thead/tr[{0}]/td", i)));
+                    IWebElement sectionOption = base.GetWebElementPropertiesByXPath(string.Format
+                        ("//div[@id='AddSectionsContextmenu']/table/thead/tr[{0}]/td", i));
+                    Thread.Sleep(1000);
+                    string actualsectionOption = base.GetElementInnerTextByXPath(string.Format
+                        ("//div[@id='AddSectionsContextmenu']/table/thead/tr[{0}]/td", i)).Trim();
+                    Thread.Sleep(1000);
+                    //Select the option on match
+                    if (sectionOptionValue == actualsectionOption)
+                    {
+                        base.ClickByJavaScriptExecutor(sectionOption);
+                        break;
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "SelectAddSectionsOptions",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create a new Section at activity creation .
+        /// </summary>
+        public void CreateSection()
+        {
+            logger.LogMethodEntry("RandomTopicListPage", "CreateSection",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Create a new Section at activity creation and save
+                base.WaitForElement(By.Id("txtSectionName"));
+                base.FillTextBoxById("txtSectionName", "TrialSection");
+                base.WaitForElement(By.Id("cmdSave"));
+                base.GetWebElementPropertiesById("cmdSave").Click();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "CreateSection",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select expected option for add questionunder a section.
+        /// </summary>
+        /// <param name="optionValue">Expected option value.</param>
+        public void SectionAddQuestionsOptionsUnderSection(string optionValue)
+        {
+            // Select expected option for add questionunder a section
+            logger.LogMethodEntry("RandomTopicListPage", "SectionAddQuestionsOptionsUnderSection",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the current window
+                this.SelectCreateRandomActivityWindow();
+                //Switch to frame
+                base.SwitchToIFrameById("frmTopic");
+                // Select expected option for add questionunder a section
+                base.WaitForElement(By.CssSelector("#cmdadd>span"));
+                base.GetWebElementPropertiesByCssSelector("#cmdadd>span").Click();
+                base.WaitForElement(By.PartialLinkText(optionValue));
+                base.GetWebElementPropertiesByPartialLinkText(optionValue).Click();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "SectionAddQuestionsOptionsUnderSection",
+           base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

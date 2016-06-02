@@ -101,6 +101,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             DesearlizeGradeTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeActivityQuestionsListTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
             DesearlizeLicenseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeQuestionTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+
         }
 
         /// <summary>
@@ -386,6 +388,35 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 {
                     // push in memory
                     _inMemoryDatabase.Insert(license);
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Desearlize Organization Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeQuestionTestData(XmlDocument xmlDocument,
+            ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
+        {
+
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfQuestion");
+            xmlSerializer = new XmlSerializer(typeof(List<Question>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get organization list
+                var questionList = (List<Question>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (Question question in questionList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(question);
                 }
             }
         }

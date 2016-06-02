@@ -545,6 +545,164 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on Activity Type under 
+        /// </summary>
+        /// <param name="activityTypeEnum"></param>
+        [When(@"I click on the ""(.*)"" SAM activity type")]
+        public void ClickOnTheSAMActivityType(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Click On Activity Type
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String generatedActivityName = activity.Name.ToString();
+            //Click On Activity Type
+            new ContentLibraryUXPage().ClickOnActivityType(generatedActivityName);
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create Child Same Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum</param>
+        [When(@"I Create ""(.*)"" SAM activity")]
+        public void CreateChildSAMActivity(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateChildSAMActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+            //Enter Activity Details and Click on Add Question Link
+            addAssessmentPage.EnterActivityDetailsandClickonAddQuestion(activityTypeEnum);
+            Logger.LogMethodExit("CreateActivity", "CreateChildSAMActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+   
+       /// <summary>
+        /// Add question to activity using "Create New Question" option.
+       /// </summary>
+       /// <param name="questionType">Type of New Question Created.</param>
+       /// <param name="questionCreationOption">Add Question Option.</param>
+       [When(@"I create ""(.*)"" question type for at ""(.*)"" for Random Activity and Save Activity")]
+        public void CreateQuestionForRandomActivity(string questionType, string questionCreationOption)
+
+        {
+            // Add question to activity using "Create New Question" option
+            Logger.LogMethodEntry("CreateActivity", "CreateQuestionForRandomActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+            //Select Expected Question Type
+            new SelectQuestionTypePage().ClickTheExpectedQuestionType(questionType);
+            //Create True/False Question
+            new TrueFalsePage().CreateTrueFalseQuestion();
+            //Click on Save and Return
+            randomTopicListPage.ClickOnSaveAndReturnButton();
+            Logger.LogMethodExit("CreateActivity", "CreateQuestionForRandomActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+           
+        }
+
+        /// <summary>
+        /// Option to Add Question.
+        /// </summary>
+       /// <param name="addQuestionOption">This is the option to add question.</param>
+       [When(@"I Add Questions using ""(.*)"" option")]
+       public void SelectOptionToAddQuestion(string addQuestionOption)
+       {
+           // Select Option to Add Question
+           Logger.LogMethodEntry("CreateActivity", "SelectOptionToAddQuestion",
+             base.IsTakeScreenShotDuringEntryExit);
+           // Select Option to Add Question
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           randomTopicListPage.SelectOptionForQuestionCreation(addQuestionOption);
+           Logger.LogMethodExit("CreateActivity", "SelectOptionToAddQuestion",
+            base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Select A Question From Bank.
+        /// </summary>
+       [When(@"I should Add question from Question Bank and Save Activity")]
+       public void AddQuestionFromQuestionBankAndSaveActivity()
+       {
+           // Select A Question From Bank
+           Logger.LogMethodEntry("CreateActivity", "AddQuestionFromQuestionBankAndSaveActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+           // Select A Question From Bank
+           new ContentBrowserMainUXPage().SelectAQuestionFromQuestionBank();
+           //Click on Save and Return for Activity
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           randomTopicListPage.ClickOnSaveAndReturnButton();
+           Logger.LogMethodExit("CreateActivity", "AddQuestionFromQuestionBankAndSaveActivity",
+          base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Select Questions from Question Group .
+       /// </summary>
+       /// <param name="questionTypeEnum">This is Question Group Name.</param>
+       [When(@"I should select ""(.*)"" Question Group and Save Activity")]
+       public void SelectQuestionGroupAndSaveActivity(Question.QuestionTypeEnum questionTypeEnum)
+       {
+           // Select Questions from Question Group
+           Logger.LogMethodEntry("CreateActivity", "SelectQuestionGroupAndSaveActivity",
+          base.IsTakeScreenShotDuringEntryExit);
+           //Get the question Group Name
+           Question question = Question.Get(questionTypeEnum);
+           string questionGroupName = question.QuestionGroup.ToString();
+           // Select Questions from Question Group
+           new ContentBrowserMainUXPage().SelectAQuestionGroup(questionGroupName);
+           //Click on Save and Return for Activity
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           randomTopicListPage.ClickOnSaveAndReturnButton();
+           Logger.LogMethodExit("CreateActivity", "SelectQuestionGroupAndSaveActivity",
+          base.IsTakeScreenShotDuringEntryExit);
+
+
+       }
+
+        /// <summary>
+        /// Create Question Section at Activity Creation.
+        /// </summary>
+        /// <param name="optionValue">Add Section Value.</param>
+        /// <param name="sectionValue">Add Sections</param>
+
+       [When(@"I perform ""(.*)"" under ""(.*)""")]
+       public void CreateQuestionSection(string optionValue, string sectionValue)
+       {
+           // Create Question Section at Activity Creation
+           Logger.LogMethodEntry("CreateActivity", "CreateQuestionSection",
+           base.IsTakeScreenShotDuringEntryExit);
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           //Select Add Sections Option
+           randomTopicListPage.SelectAddSectionsOptions(optionValue);
+           randomTopicListPage.CreateSection();
+           Logger.LogMethodExit("CreateActivity", "CreateQuestionSection",
+           base.IsTakeScreenShotDuringEntryExit);
+       }
+
+      
+        /// <summary>
+        /// Select expected option for add questionunder a section.
+        /// </summary>
+        /// <param name="optionValue">This is Add Question Option Under Section.</param>
+       [When(@"select ""(.*)"" option at add question in section")]
+       public void SelectOptionAtAddQuestionUnderSection(string optionValue)
+       {
+           // Select expected option for add questionunder a section
+           Logger.LogMethodEntry("CreateActivity", "SelectOptionAtAddQuestionUnderSection",
+           base.IsTakeScreenShotDuringEntryExit);
+           // Select expected option for add questionunder a section
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           randomTopicListPage.SectionAddQuestionsOptionsUnderSection(optionValue);
+           Logger.LogMethodExit("CreateActivity", "SelectOptionAtAddQuestionUnderSection",
+           base.IsTakeScreenShotDuringEntryExit);
+       }
+
+
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

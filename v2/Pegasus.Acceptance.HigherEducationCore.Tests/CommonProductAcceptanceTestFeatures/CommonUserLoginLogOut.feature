@@ -290,7 +290,19 @@ Scenario: Set the date and time of SMS Instructor
 When I click 'My Profile' link
 And I store user current date and time of the instructor
 
-#Purpose:Verify The User Login As WorkSpaceTeacher to "MySpanishLabMaster" master course
-Scenario:WL Workspace Instructore enter into MySpanishLabMaster master course
+#Purpose:Verify The User Login As WorkSpaceTeacher to "RegMySpanishLabMaster" master course
+Scenario:WL Workspace Instructor enter into RegMySpanishLabMaster master course
 Given I am on the "Global Home" page
-When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor" 
+When I enter in the "RegMySpanishLabMaster" from the Global Home page as "HedWsInstructor" 
+
+#Purpose:Verify The User Login As WorkSpaceStudent to "RegMySpanishLabMaster" master course
+Scenario:WL Workspace Student enter into RegMySpanishLabMaster master course
+Given I am on the "Global Home" page
+When I enter in the "RegMySpanishLabMaster" from the Global Home page as "HedWsStudent" 
+
+
+#Purpose:Verify The User Login As WorkSpaceStudent GlobalHome
+Scenario: User Login As WorkSpaceStudent
+Given I browsed the login url for "HedWsStudent"
+When I logged into the Pegasus as "HedWsStudent" in "WorkSpace"
+Then I should logged in successfully

@@ -168,3 +168,79 @@ And I set the "Sections" preference for "RegSAMActivity" activity type
 And I set the "Video Chat" preference for "RegSAMActivity" activity type
 And I click on "Save" button for "RegSAMActivity"
 Then I should see the successfull message "Preference settings updated for selected activity type."
+
+
+#Purpose: Create Activity of RegSAMActivity type by adding questions from Create New Question 
+#Pre-requisites: RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity 
+                 # if not created during runtime
+#JIRA ID| #JIRA ID | TestLink ID:PEGASUS-45292 |peg-19509
+Scenario: Create Activity of RegSAMActivity type by adding questions from Create New Question 
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+And I Add Questions using "Create New Question" option
+And I create "True/False" question type for at "Create New Question" for Random Activity and Save Activity
+Then I should see the successfull message "Activity added successfully."
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+
+
+#Purpose:Creation of Random activity of RegSAMActivity type by selecting questions from question library
+#Pre-requisites: RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity 
+#JIRA ID| #JIRA ID | TestLink ID:PEGASUS-45292 |peg-20703
+Scenario: Creation of Random activity of RegSAMActivity type by selecting questions from question library
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+And I Add Questions using "Select Questions from Bank" option
+And I should Add question from Question Bank and Save Activity
+Then I should see the successfull message "Activity added successfully."
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+
+
+#Purpose:Creation of Random activity of RegSAMActivity type by selecting questions from Question Groups
+#Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity 
+               # if not created during runtime
+			   # 2)AssessmentRegressionQuestion Question Group should be either created during runtime or use the 
+			   # saved AssessmentRegressionQuestion 
+#JIRA ID| #JIRA ID | TestLink ID:PEGASUS-45292 |peg-20704
+Scenario:Creation of Random activity of RegSAMActivity type by selecting questions from Question Groups
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+And I Add Questions using "Select Question Groups" option
+And I should select "AssessmentRegressionQuestion" Question Group and Save Activity
+Then I should see the successfull message "Activity added successfully."
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+
+
+#Purpose:Creation of Random activity of RegSAMActivity type by adding section
+#Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity 
+#JIRA ID| #JIRA ID | TestLink ID:PEGASUS-45292 |peg-20711
+Scenario:Creation of Random activity of RegSAMActivity type by adding section
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+And I perform "Create New Section" under "Add Sections"
+And select "Select Questions from Bank" option at add question in section
+And I should Add question from Question Bank and Save Activity
+Then I should see the successfull message "Activity added successfully."
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+
+
+
