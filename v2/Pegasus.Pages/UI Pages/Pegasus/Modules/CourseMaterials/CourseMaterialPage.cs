@@ -95,6 +95,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
        }
 
 
+       public bool ManageMaterials(string materialToFind)
+       {
+           logger.LogMethodEntry("CourseMaterialPage", "ManageMaterials",
+                base.IsTakeScreenShotDuringEntryExit);
+
+           bool materialFound = false;
+
+           try
+           {
+               base.WaitForElement(By.Id("ifrmCoursePreview"));
+               base.SwitchToIFrameById("ifrmCoursePreview");
+
+               base.WaitForElement(By.Id("tblCoursePreview"));
+
+               IWebElement Table = base.GetWebElementPropertiesById("tblCoursePreview");
+
+               int tableRowIds = base.GetElementCountByCssSelector("#tblCoursePreview tr");
+
+
+               
+           }
+
+           catch (Exception e)
+           {
+
+           }
+
+           
+           logger.LogMethodEntry("CourseMaterialPage", "ManageMaterials",
+                base.IsTakeScreenShotDuringEntryExit);
+           return materialFound;
+       }
 
    }
 

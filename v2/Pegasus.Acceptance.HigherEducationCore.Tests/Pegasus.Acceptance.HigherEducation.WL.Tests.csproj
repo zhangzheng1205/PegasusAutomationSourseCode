@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ActivitySubmissionResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\Amplifire.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ApproveCourse.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\AssignmentCalendar.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\AssignmentCalendarResource.Designer.cs">
@@ -235,6 +236,11 @@
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\UserProfile.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ViewToDoContents.cs" />
+    <Compile Include="ProductAcceptanceTestFeatures\Amplifire.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Amplifire.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -570,6 +576,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\Amplifire.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\TrialAssessmentRegression.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -620,6 +629,10 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderTest.UserEnrollmentBVT.WL.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\Amplifire.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Amplifire.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

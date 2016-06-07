@@ -306,3 +306,15 @@ Scenario: User Login As WorkSpaceStudent
 Given I browsed the login url for "HedWsStudent"
 When I logged into the Pegasus as "HedWsStudent" in "WorkSpace"
 Then I should logged in successfully
+
+
+#Amplifire
+#Purpose: Verify The User Login As CourseSpaceSMSInstructor To an MSL Amplifire enabled course
+Scenario: WLCsSMSInstructor Login to MySpanishLabCourse
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+
+
+
+
