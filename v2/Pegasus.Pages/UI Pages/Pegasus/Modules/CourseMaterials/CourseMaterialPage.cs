@@ -104,22 +104,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
 
            try
            {
+               base.SwitchToWindow("Course Materials");
+               base.SwitchToDefaultPageContent();
+               bool x = base.IsElementPresent(By.Id("_ctl0_innerBody"), 20);
                base.WaitForElement(By.Id("ifrmCoursePreview"));
+               
                base.SwitchToIFrameById("ifrmCoursePreview");
 
                base.WaitForElement(By.Id("tblCoursePreview"));
 
                IWebElement Table = base.GetWebElementPropertiesById("tblCoursePreview");
 
-               int tableRowIds = base.GetElementCountByCssSelector("#tblCoursePreview tr");
+               int a = Table.FindElements(By.CssSelector("#tblCoursePreview>tbody>tr")).Count;
 
+               for (int i = 1; i <= a; i++)
+               {
+                   IWebElement linkfinder = Table.FindElement(By.CssSelector(String.Format(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable:nth-child({0}) .CV_tdName>a", i)));
+                   string linkName = linkfinder.Text;
+                   if(linkName==materialToFind)
+                   {
+                       materialFound = true;
+                       break;
+                   }
 
+               }
+
+              
                
            }
 
            catch (Exception e)
            {
-
+               Console.WriteLine(e.Message);
            }
 
            
@@ -128,6 +144,142 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
            return materialFound;
        }
 
+       public bool LaunchMaterials(string materialToFind)
+       {
+           logger.LogMethodEntry("CourseMaterialPage", "LaunchMaterials",
+                base.IsTakeScreenShotDuringEntryExit);
+
+           bool amplifire = false;
+          
+           try
+           {
+
+               base.SwitchToWindow("Course Materials");
+               base.SwitchToDefaultPageContent();
+               //bool x = base.IsElementPresent(By.Id("_ctl0_innerBody"),20);
+               base.WaitForElement(By.Id("ifrmCoursePreview"));
+
+               base.SwitchToIFrameById("ifrmCoursePreview");
+
+               base.WaitForElement(By.Id("tblCoursePreview"));
+
+               IWebElement Table = base.GetWebElementPropertiesById("tblCoursePreview");
+
+               int a = Table.FindElements(By.CssSelector("#tblCoursePreview>tbody>tr")).Count;
+
+               for (int i = 1; i <= a; i++)
+               {
+                   IWebElement linkfinder = Table.FindElement(By.CssSelector(String.Format(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable:nth-child({0})", i)));
+                   IWebElement linkfinders = linkfinder.FindElement(By.CssSelector(".CV_tdName>a"));
+                   string linkName = linkfinders.Text;
+                   if (linkName == materialToFind)
+                   {
+                       IWebElement clickMenu = linkfinder.FindElement(By.CssSelector(".CV_DownImg.CV_imgMore"));
+                       base.ClickByJavaScriptExecutor(clickMenu);
+                     
+                       break;
+                   }
+
+               }
+               base.SwitchToDefaultPageContent();
+
+               base.WaitForElement(By.Id("ifrmCoursePreview"));
+
+               base.SwitchToIFrameById("ifrmCoursePreview");
+
+
+               bool y = base.IsElementDisplayedInPage(By.CssSelector(".Classcmenu_main[style*='block']"),true);
+
+               IWebElement cMenu = base.GetWebElementPropertiesByCssSelector(".Classcmenu_main[style*='block']");
+                              
+               IWebElement openMenu = cMenu.FindElement(By.Id("2"));
+               
+               base.ClickByJavaScriptExecutor(openMenu);
+
+               base.WaitUntilPopUpLoads("amplifire", 200);
+
+              amplifire= base.IsWindowsExists("amplifire");
+               
+                            
+
+
+           }
+
+           catch (Exception e)
+           {
+               Console.WriteLine(e.Message);
+           }
+
+           
+           logger.LogMethodEntry("CourseMaterialPage", "LaunchMaterials",
+                base.IsTakeScreenShotDuringEntryExit);
+           return amplifire;
+       }
+
+
+       public bool Amplifire(string AmpLink)
+
+       {
+           logger.LogMethodEntry("CourseMaterialPage", "Amplifire",
+               base.IsTakeScreenShotDuringEntryExit);
+           bool amplifire = false;
+
+           try
+           {
+               base.SwitchToWindow("amplifire");
+
+               
+               switch(AmpLink)
+
+               {
+                   case "Amplifire Content - Automation":
+
+                   case "Amplifire Content BLANK TARGET - Automation":
+
+                       base.WaitForElementDisplayedInUi(By.ClassName("pageTitle"));
+                       amplifire = base.IsElementDisplayedInPage(By.CssSelector(".pageTitle"), true);
+                       break;
+
+                   case "Amplifire Reporting - Automation":
+
+                       base.WaitForElementDisplayedInUi(By.ClassName("r-tabs-anchor"));
+                       amplifire = base.IsElementDisplayedInPage(By.CssSelector(".r-tabs-anchor>a>p"), true);
+                       break;
+
+                   default: break;
+                       
+
+               }
+
+           }
+
+           catch(Exception e)
+           {
+
+               Console.WriteLine(e.Message);
+           }
+
+               logger.LogMethodEntry("CourseMaterialPage", "Amplifire",
+                base.IsTakeScreenShotDuringEntryExit);
+
+               return amplifire;
+      }
+       
+               
+
+
+       public void CloseAmplifire()
+       {
+           logger.LogMethodEntry("CourseMaterialPage", "CloseAmplifire",
+                base.IsTakeScreenShotDuringEntryExit);
+
+           base.SwitchToWindow("amplifire");
+           base.CloseBrowserWindow();
+
+           logger.LogMethodEntry("CourseMaterialPage", "CloseAmplifire",
+                base.IsTakeScreenShotDuringEntryExit);
+
+       }
    }
 
 }

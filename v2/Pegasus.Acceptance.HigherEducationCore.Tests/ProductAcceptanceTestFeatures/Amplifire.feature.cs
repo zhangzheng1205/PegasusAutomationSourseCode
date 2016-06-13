@@ -31,8 +31,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Amplifire", "This feature contains Amplifire integration scenarios for a WL course.\nTest cases" +
-                    " for both instructor and student reside here", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Amplifire", "This feature contains Amplifire integration scenarios for a WL course.\r\nTest case" +
+                    "s for both instructor and student reside here", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -108,17 +108,56 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WLUser sees Amplifire Content")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WLUser sees Amplifire Content - Automation")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Amplifire")]
-        public virtual void WLUserSeesAmplifireContent()
+        public virtual void WLUserSeesAmplifireContent_Automation()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLUser sees Amplifire Content", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLUser sees Amplifire Content - Automation", ((string[])(null)));
 #line 17
 this.ScenarioSetup(scenarioInfo);
 #line 18
 testRunner.Given("I am on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
-testRunner.Then("I should see \"Amplifire Content - Automation\" link in iframe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I should see \"Amplifire Content - Automation\" link in iframe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+testRunner.Then("I should be able to launch the \"Amplifire Content - Automation\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WLUser sees Amplifire Reporting - Automation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Amplifire")]
+        public virtual void WLUserSeesAmplifireReporting_Automation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLUser sees Amplifire Reporting - Automation", ((string[])(null)));
+#line 22
+this.ScenarioSetup(scenarioInfo);
+#line 23
+testRunner.Given("I am on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 24
+testRunner.And("I should see \"Amplifire Reporting - Automation\" link in iframe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+testRunner.Then("I should be able to launch the \"Amplifire Reporting - Automation\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WLUser sees Amplifire Content BLANK TARGET - Automation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Amplifire")]
+        public virtual void WLUserSeesAmplifireContentBLANKTARGET_Automation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLUser sees Amplifire Content BLANK TARGET - Automation", ((string[])(null)));
+#line 27
+this.ScenarioSetup(scenarioInfo);
+#line 28
+testRunner.Given("I am on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 29
+testRunner.And("I should see \"Amplifire Content BLANK TARGET - Automation\" link in iframe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+testRunner.Then("I should be able to launch the \"Amplifire Content BLANK TARGET - Automation\" link" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

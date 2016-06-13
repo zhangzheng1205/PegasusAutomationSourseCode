@@ -14,6 +14,17 @@ Given I am on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 
-Scenario: WLUser sees Amplifire Content
+Scenario: WLUser sees Amplifire Content - Automation 
 Given I am on the "Course Materials" page
-Then I should see "Amplifire Content - Automation" link in iframe
+And I should see "Amplifire Content - Automation" link in iframe
+Then I should be able to launch the "Amplifire Content - Automation" link
+
+Scenario: WLUser sees Amplifire Reporting - Automation 
+Given I am on the "Course Materials" page
+And I should see "Amplifire Reporting - Automation" link in iframe
+Then I should be able to launch the "Amplifire Reporting - Automation" link
+
+Scenario: WLUser sees Amplifire Content BLANK TARGET - Automation 
+Given I am on the "Course Materials" page
+And I should see "Amplifire Content BLANK TARGET - Automation" link in iframe
+Then I should be able to launch the "Amplifire Content BLANK TARGET - Automation" link
