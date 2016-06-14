@@ -960,6 +960,24 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WLCsSMSStudent Login to MySpanishLabCourse")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void WLCsSMSStudentLoginToMySpanishLabCourse()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLCsSMSStudent Login to MySpanishLabCourse", ((string[])(null)));
+#line 318
+this.ScenarioSetup(scenarioInfo);
+#line 319
+testRunner.Given("I browsed the login url for \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 320
+testRunner.When("I logged into the Pegasus as \"WLCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 321
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

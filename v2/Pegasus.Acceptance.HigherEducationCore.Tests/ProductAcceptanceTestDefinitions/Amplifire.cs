@@ -28,7 +28,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestDefin
         [Given(@"I should see ""(.*)"" link in iframe")]
         public void ThenIShouldSeeLinkInIframe(string p0)
         {
-            bool linkfound = new CourseMaterialPage().ManageMaterials(p0);
+            //bool linkfound = new CourseMaterialPage().ManageMaterials(p0);
 
             logger.LogAssertion("Verify link present",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>

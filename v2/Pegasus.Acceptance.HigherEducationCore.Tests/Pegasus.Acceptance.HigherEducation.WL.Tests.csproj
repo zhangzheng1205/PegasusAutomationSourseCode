@@ -576,7 +576,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\Amplifire.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\AmplifireInstructor.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AmplifireStudent.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\TrialAssessmentRegression.orderedtest">

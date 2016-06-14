@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
            {
                base.SwitchToWindow("Course Materials");
                base.SwitchToDefaultPageContent();
-               bool x = base.IsElementPresent(By.Id("_ctl0_innerBody"), 20);
+               bool x = base.IsElementPresent(By.Id("_ctl0_innerBody"), 15);
                base.WaitForElement(By.Id("ifrmCoursePreview"));
                
                base.SwitchToIFrameById("ifrmCoursePreview");
@@ -115,22 +115,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
 
                IWebElement Table = base.GetWebElementPropertiesById("tblCoursePreview");
 
-               int a = Table.FindElements(By.CssSelector("#tblCoursePreview>tbody>tr")).Count;
+               IWebElement linkfinder;
 
-               for (int i = 1; i <= a; i++)
+
+               linkfinder = Table.FindElement(By.LinkText(materialToFind));
+
+              /* //IWebElement Extendedlink;
+
+               if (base.IsElementPresent(By.CssSelector(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable"), 1) == true)
                {
-                   IWebElement linkfinder = Table.FindElement(By.CssSelector(String.Format(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable:nth-child({0}) .CV_tdName>a", i)));
-                   string linkName = linkfinder.Text;
-                   if(linkName==materialToFind)
-                   {
-                       materialFound = true;
-                       break;
-                   }
 
+                   linkfinder = Table.FindElement(By.LinkText(materialToFind));
                }
 
-              
-               
+               else
+               {
+
+                   linkfinder = Table.FindElement(By.LinkText(materialToFind));
+                   //Extendedlink = Table.FindElement(By.CssSelector(".CV_Gridspacing.CV_contentLists"));
+                   //linkfinder = Extendedlink.FindElement(By.LinkText(materialToFind));
+                 
+               }*/
+
+               materialFound =linkfinder.Displayed;
            }
 
            catch (Exception e)
@@ -165,38 +172,58 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
 
                IWebElement Table = base.GetWebElementPropertiesById("tblCoursePreview");
 
-               int a = Table.FindElements(By.CssSelector("#tblCoursePreview>tbody>tr")).Count;
-
-               for (int i = 1; i <= a; i++)
+               IWebElement linkfinder;
+               //bool x = Table.FindElements
+               bool checker = base.IsElementPresent(By.CssSelector(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable"),5);
+               //bool checker = Table.FindElement(By.CssSelector(".ui-draggable.ui-droppable")).Displayed;
+               if (checker==true)
                {
-                   IWebElement linkfinder = Table.FindElement(By.CssSelector(String.Format(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable:nth-child({0})", i)));
-                   IWebElement linkfinders = linkfinder.FindElement(By.CssSelector(".CV_tdName>a"));
-                   string linkName = linkfinders.Text;
-                   if (linkName == materialToFind)
+
+
+                   int a = Table.FindElements(By.CssSelector("#tblCoursePreview>tbody>tr")).Count;
+
+                   for (int i = 1; i <= a; i++)
                    {
-                       IWebElement clickMenu = linkfinder.FindElement(By.CssSelector(".CV_DownImg.CV_imgMore"));
-                       base.ClickByJavaScriptExecutor(clickMenu);
-                     
-                       break;
+                       linkfinder = Table.FindElement(By.CssSelector(String.Format(".cssRowHeight.CV_GridBackGroundColor.ui-draggable.ui-droppable:nth-child({0})", i)));
+                       IWebElement linkfinders = linkfinder.FindElement(By.CssSelector(".CV_tdName>a"));
+                       string linkName = linkfinders.Text;
+                       if (linkName == materialToFind)
+                       {
+                           IWebElement clickMenu = linkfinder.FindElement(By.CssSelector(".CV_DownImg.CV_imgMore"));
+                           base.ClickByJavaScriptExecutor(clickMenu);
+
+                           break;
+                       }
+
                    }
 
+
+                   base.SwitchToDefaultPageContent();
+
+                   base.WaitForElement(By.Id("ifrmCoursePreview"));
+
+                   base.SwitchToIFrameById("ifrmCoursePreview");
+
+
+                   bool y = base.IsElementDisplayedInPage(By.CssSelector(".Classcmenu_main[style*='block']"), true);
+
+                   IWebElement cMenu = base.GetWebElementPropertiesByCssSelector(".Classcmenu_main[style*='block']");
+
+                   IWebElement openMenu = cMenu.FindElement(By.Id("2"));
+
+                   base.ClickByJavaScriptExecutor(openMenu);
+
                }
-               base.SwitchToDefaultPageContent();
 
-               base.WaitForElement(By.Id("ifrmCoursePreview"));
+               else
+               {
+                   //Extendedlink = Table.FindElement(By.CssSelector(".CV_Gridspacing.CV_contentLists"));
+                   linkfinder = Table.FindElement(By.LinkText(materialToFind));
+                   base.ClickByJavaScriptExecutor(linkfinder);
 
-               base.SwitchToIFrameById("ifrmCoursePreview");
+               }
 
-
-               bool y = base.IsElementDisplayedInPage(By.CssSelector(".Classcmenu_main[style*='block']"),true);
-
-               IWebElement cMenu = base.GetWebElementPropertiesByCssSelector(".Classcmenu_main[style*='block']");
-                              
-               IWebElement openMenu = cMenu.FindElement(By.Id("2"));
-               
-               base.ClickByJavaScriptExecutor(openMenu);
-
-               base.WaitUntilPopUpLoads("amplifire", 200);
+               base.WaitUntilPopUpLoads("amplifire", 20);
 
               amplifire= base.IsWindowsExists("amplifire");
                
