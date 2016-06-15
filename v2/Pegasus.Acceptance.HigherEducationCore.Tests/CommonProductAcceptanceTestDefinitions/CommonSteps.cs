@@ -9,6 +9,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Interactions;
 using Pegasus.Pages.CommonPageObjects;
 using Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTestDefinitions;
 
@@ -210,6 +211,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Verify the Success Message Display on the Page.
         /// </summary>
         /// <param name="successMessage">This is Success Message Text.</param>
+         [Given("I should see the successfull message \"(.*)\"")]
         [Then("I should see the successfull message \"(.*)\"")]
         public void DisplayTheSuccessfullMessage(String successMessage)
         {
@@ -298,6 +300,9 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Close Window
             base.CloseBrowserWindow();
+            Actions builder = new Actions(WebDriver);
+            Thread.Sleep(5000);
+            builder.SendKeys(Keys.Enter);
             Logger.LogMethodExit("CommonSteps", "CloseTheWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -862,6 +867,26 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             base.IsTakeScreenShotDuringEntryExit);
 
 
+        }
+
+
+        /// <summary>
+        /// Select Cmenu Option Of Activity.
+        /// </summary>
+        /// <param name="cmenuOptionName">This is Cmenu Option Name.</param>
+        /// <param name="activityName">This is activity name.</param>
+        [When(@"I select cmenu ""(.*)"" option of activity ""(.*)""")]
+        public void SelectCmenuOptionOfActivity(string cmenuOptionName,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // select cmenu option
+            Logger.LogMethodEntry("LaunchActivity", "SelectCmenuOptionOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select activity cmenu option
+            Activity activity = Activity.Get(activityTypeEnum);
+            new TeachingPlanUxPage().SetActivityAsShown(activity.Name);
+            Logger.LogMethodExit("LaunchActivity", "SelectCmenuOptionOfActivity",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -10,6 +10,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.QuestionLibrary;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -627,7 +628,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Create a new Section at activity creation .
         /// </summary>
-        public void CreateSection()
+        public void CreateSection(string sectionName)
         {
             logger.LogMethodEntry("RandomTopicListPage", "CreateSection",
             base.IsTakeScreenShotDuringEntryExit);
@@ -635,7 +636,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 // Create a new Section at activity creation and save
                 base.WaitForElement(By.Id("txtSectionName"));
-                base.FillTextBoxById("txtSectionName", "TrialSection");
+                base.FillTextBoxById("txtSectionName", sectionName);
                 base.WaitForElement(By.Id("cmdSave"));
                 base.GetWebElementPropertiesById("cmdSave").Click();
             }
@@ -651,7 +652,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Select expected option for add questionunder a section.
         /// </summary>
         /// <param name="optionValue">Expected option value.</param>
-        public void SectionAddQuestionsOptionsUnderSection(string optionValue)
+        public void SectionAddQuestionsOptionsUnderSection(string optionValue,string sectionNumber)
         {
             // Select expected option for add questionunder a section
             logger.LogMethodEntry("RandomTopicListPage", "SectionAddQuestionsOptionsUnderSection",
@@ -662,9 +663,11 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCreateRandomActivityWindow();
                 //Switch to frame
                 base.SwitchToIFrameById("frmTopic");
+                string sectionIdentifier = "(0," + sectionNumber + ")";
                 // Select expected option for add questionunder a section
-                base.WaitForElement(By.CssSelector("#cmdadd>span"));
-                base.GetWebElementPropertiesByCssSelector("#cmdadd>span").Click();
+                base.WaitForElement(By.CssSelector(string.Format("a[id='cmdadd'][onclick*='{0}']", sectionIdentifier)));
+                base.FocusOnElementByCssSelector(string.Format("a[id='cmdadd'][onclick*='{0}']", sectionIdentifier));
+                base.GetWebElementPropertiesByCssSelector(string.Format("a[id='cmdadd'][onclick*='{0}']", sectionIdentifier)).Click();
                 base.WaitForElement(By.PartialLinkText(optionValue));
                 base.GetWebElementPropertiesByPartialLinkText(optionValue).Click();
             }
@@ -675,5 +678,96 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RandomTopicListPage", "SectionAddQuestionsOptionsUnderSection",
            base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public void CreateSectionsWithMultipleQuestions(int numberOfQuestions,
+            string questionType, string sectionNumber)
+        {
+            for(int i=1;i<=numberOfQuestions;i++)
+            {
+
+                this.SectionAddQuestionsOptionsUnderSection("Create New Question", sectionNumber);
+                
+                new SelectQuestionTypePage().ClickTheExpectedQuestionType(questionType);
+                FillInTheBlanksPage fillInTheBlanks = new FillInTheBlanksPage();
+                fillInTheBlanks.CreateFillInBlankAtActivityCreation();
+            }
+        }
+
+        /// <summary>
+        /// Click on Save and Return Button.
+        /// </summary>
+        public void ClickOnSaveAndContinueButton()
+        {
+            //Click On Save And Return Button
+            logger.LogMethodEntry("RandomTopicListPage", "ClickOnSaveAndContinueButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for the element
+                base.SwitchToDefaultWindow();
+                bool pres = base.IsElementPresent(By.Id("cmdTabTopicsNext"), 10);
+                base.WaitForElement(By.Id("cmdTabTopicsNext"));
+                //Get Save And Return Button Property
+                IWebElement getSaveAndReturnButtonProperty = base.
+                    GetWebElementPropertiesById("cmdTabTopicsNext");
+                Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
+                   RandomTopicList_Page_Time_Value));
+                //Click On Save and Return Button
+                base.ClickByJavaScriptExecutor(getSaveAndReturnButtonProperty);
+               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "ClickOnSaveAndContinueButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void NavigatetoTabInCreateRandomActvityWindow(string tabName)
+        {
+            logger.LogMethodEntry("RandomTopicListPage", "NavigatetoTabInCreateRandomActvityWindow",
+                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string idValue = string.Empty;
+                base.SwitchToDefaultWindow();
+                switch (tabName)
+                {
+                    case "Preferences": idValue = "cmdTabPreference";
+                        break;
+                    case "Teaching Support": idValue = "cmdTabHelpPanel";
+                        break;
+                    case "Grades": idValue = "cmdTabGrades";
+                        break;
+                    case "Messages": idValue = "cmdTabMessages";
+                        break;
+                    case "HelpLinks": idValue = "cmdTabHelpLinks";
+                        break;
+                    case "Questions": idValue = "cmdTabTopics";
+                        break;
+                    case "Activity Details": idValue = "cmdTabAssessment";
+                        break;
+                }
+
+                base.WaitForElement(By.Id(idValue));
+                //Get Save And Return Button Property
+                IWebElement getSaveAndReturnButtonProperty = base.
+                    GetWebElementPropertiesById(idValue);
+                Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
+                   RandomTopicList_Page_Time_Value));
+                //Click On Save and Return Button
+                base.ClickByJavaScriptExecutor(getSaveAndReturnButtonProperty);
+               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "NavigatetoTabInCreateRandomActvityWindow",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        
     }
 }

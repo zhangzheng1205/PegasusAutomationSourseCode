@@ -604,5 +604,36 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnPropertiesOption",
                    base.IsTakeScreenShotDuringEntryExit);
         }
-    }
+
+        public void SetActivityAsShown(string activityName)
+        {
+            //Wait for the Window
+            base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_CourseMaterials_WindowName);
+            
+            //Wait for Right Iframe
+            base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                 TeachingPlanUX_Page_Course_Content_Right_Iframe_Id));
+            //Switch to Content Frame
+            base.SwitchToIFrame(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Content_Right_Iframe_Id);
+            int count = base.GetElementCountByCssSelector("tr[id*='grdCourseContentmyTR']");
+            for(int i=count;i>=1;count--)
+            {
+                string id="grdCourseContentmyTR_"+count;
+                string assetName = base.GetWebElementPropertiesById(id).GetAttribute("assetlinkname");
+                if(assetName==activityName)
+                {
+                    IWebElement activityRow = base.GetWebElementPropertiesById(id);
+                    IWebElement activityCheckBox = activityRow.FindElement(By.CssSelector("td > input"));
+                    base.ClickByJavaScriptExecutor(activityCheckBox);
+                    break;
+
+                }
+            }
+
+            base.GetWebElementPropertiesByCssSelector("#_ctl0_InnerPageContent_lnkShowHide").Click();
+        }
+      }
+
 }

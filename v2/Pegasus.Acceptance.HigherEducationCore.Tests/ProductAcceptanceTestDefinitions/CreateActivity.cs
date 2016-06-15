@@ -667,10 +667,10 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Create Question Section at Activity Creation.
         /// </summary>
         /// <param name="optionValue">Add Section Value.</param>
-        /// <param name="sectionValue">Add Sections</param>
+        /// <param name="sectionValue">This is Section Name</param>
 
-       [When(@"I perform ""(.*)"" under ""(.*)""")]
-       public void CreateQuestionSection(string optionValue, string sectionValue)
+       [When(@"I perform ""(.*)"" of name ""(.*)""")]
+       public void CreateQuestionSection(string optionValue, string sectionName)
        {
            // Create Question Section at Activity Creation
            Logger.LogMethodEntry("CreateActivity", "CreateQuestionSection",
@@ -678,7 +678,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
            //Select Add Sections Option
            randomTopicListPage.SelectAddSectionsOptions(optionValue);
-           randomTopicListPage.CreateSection();
+           randomTopicListPage.CreateSection(sectionName);
            Logger.LogMethodExit("CreateActivity", "CreateQuestionSection",
            base.IsTakeScreenShotDuringEntryExit);
        }
@@ -688,17 +688,71 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Select expected option for add questionunder a section.
         /// </summary>
         /// <param name="optionValue">This is Add Question Option Under Section.</param>
-       [When(@"select ""(.*)"" option at add question in section")]
-       public void SelectOptionAtAddQuestionUnderSection(string optionValue)
+       [When(@"select ""(.*)"" option at add question for Section ""(.*)""")]
+       public void SelectOptionAtAddQuestionUnderSection(string optionValue,string sectionNumber)
        {
            // Select expected option for add questionunder a section
            Logger.LogMethodEntry("CreateActivity", "SelectOptionAtAddQuestionUnderSection",
            base.IsTakeScreenShotDuringEntryExit);
            // Select expected option for add questionunder a section
            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
-           randomTopicListPage.SectionAddQuestionsOptionsUnderSection(optionValue);
+           randomTopicListPage.SectionAddQuestionsOptionsUnderSection(optionValue,sectionNumber);
            Logger.LogMethodExit("CreateActivity", "SelectOptionAtAddQuestionUnderSection",
            base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       [Then(@"I add '(.*)' questions of type ""(.*)"" at Section ""(.*)""")]
+       public void AddMultipleQuestionsToASection(int numberOfQuestions, string questionType, string sectionNumber)
+       {
+           //open add questions of respective section
+           //select create new question
+           //add three fill in the blanks
+
+            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+            randomTopicListPage.CreateSectionsWithMultipleQuestions(numberOfQuestions,
+            questionType, sectionNumber);
+          
+       }
+
+        /// <summary>
+       /// Save And Continue Editing At Another Tab
+       /// </summary>
+        /// <param name="tabName">Expected Tab Name</param>
+       [When(@"I Save and Continue and navigate to ""(.*)"" Tab")]
+       public void SaveAndContinueAtAnotherTab(string tabName)
+       {
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+
+           randomTopicListPage.ClickOnSaveAndContinueButton();
+           randomTopicListPage.NavigatetoTabInCreateRandomActvityWindow(tabName);
+       }
+
+       [Then(@"I  should verify Activity Preference Set are saved successfully")]
+       public void VerifyActivityPreferenceSet()
+       {
+           ScenarioContext.Current.Pending();
+       }
+
+       [Then(@"I reset number of questions per page value as ""(.*)"" and Save Activity")]
+       public void ThenIResetSetNumberOfQuestionsPerPageValueAsAndSaveActivity(string questionCount)
+       {
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.SetQuestionsPerPagePreference(questionCount);
+           randomAssessmentPage.SaveandReturnPreferenceAtCreateRandomActivity();
+       }
+
+       [Then(@"I reset style sheet to ""(.*)""")]
+       public void ResetStyleSheet(string sheetType)
+       {
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.SetStyleSheet(sheetType);
+       }
+
+       [Then(@"I check Allow students to skip questions")]
+       public void CheckOrUnCheckSkipQuestionPreference()
+       {
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.ClickSkipQuestion();
        }
 
 

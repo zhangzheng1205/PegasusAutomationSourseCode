@@ -240,8 +240,11 @@ namespace Pegasus.Pages.UI_Pages
                         string.Format("input[id='grdContentBrowser$_ctrl1']:nth-of-type({0})", i));
                     string checkBoxValue = checkBoxElement.GetAttribute("value");
                     string folderId = "tblID_" + checkBoxValue;
-                    string folderName = base.GetElementInnerTextByCssSelector(string.Format
-                        ("table[id='{0}'] > tbody > tr > td:nth-of-type(2) > a", folderId));
+                    IWebElement getTable = base.GetWebElementPropertiesByCssSelector(string.Format
+                        ("table[id='{0}']", folderId));
+                    IWebElement folderElement=getTable.FindElement(By.TagName("a"));
+                    string folderName = base.GetWebElementInnerText(folderElement);
+                    //IWebElement getFoldername=getTable.FindElement(By.)
                     //select the group folder on match
                     if (folderName == questionGroupName)
                     {

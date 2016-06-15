@@ -64,6 +64,31 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        public void CreateFillInBlankAtActivityCreation()
+        {
+          
+            //Create Question
+            string questionDetails = this.EnterQuestionTitle().ToString();
+            //Add Blank Field
+            this.AddBlankFieldAtTop();
+            //Add Text for the Question
+            this.AddTextForQuestionAndBlankAtTop("Answer");
+            //Add Text Field
+            this.AddTextFieldAtTop();
+            Thread.Sleep(Convert.ToInt32(FillInTheBlanksPageResource.
+                FillInTheBlanksPage_WaitTime_Value));
+            //Add Text for the Blank
+            this.AddTextForQuestionAndBlankAtTop(questionDetails+" This is question");
+            //Click on the 'Add Score And Feedback' tab
+            this.ClickOnAddScoreAndFeedBackTab();
+            //Select Partial Grading option
+            this.SelectPartialGradingOption();
+            //Save the Question
+            this.ClickOnSaveAndReturnButton();
+
+
+        }
+
         /// <summary>
         /// Store Question In Memory
         /// </summary>
@@ -240,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("FillInTheBlanksPage", "ClickOnSaveAndReturnButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Switch to the Parent Window
-            base.SwitchToDefaultPageContent();
+           // base.SwitchToDefaultPageContent();
             //Wait and click on the Save Button
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_SaveAndReturn_Id_Locator));
@@ -248,6 +273,9 @@ namespace Pegasus.Pages.UI_Pages
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_SaveAndReturn_Id_Locator);
             base.ClickByJavaScriptExecutor(getSaveReturnButton);
+            bool addAndCloseButton = base.IsElementPresent(By.Id("_ctl0_PopupPageContent_imgBtnAdd_Close"), 10);
+            if (addAndCloseButton)
+                base.GetWebElementPropertiesById("_ctl0_PopupPageContent_imgBtnAdd_Close").Click();
             logger.LogMethodExit("FillInTheBlanksPage", "ClickOnSaveAndReturnButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }

@@ -658,6 +658,84 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
            base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="availaibilityStatus"></param>
+        [Then(@"I should the availibility of Save For Later is ""(.*)"" in ""(.*)"" Activity Presentation Window")]
+        public void VerifyTheAvailibilityOfSaveForLater(bool availaibilityStatus,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("ActivitySubmission",
+          "VerifyTheAvailibilityOfSaveForLater",
+          base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            Assert.AreEqual(availaibilityStatus, 
+                new StudentPresentationPage().VerifySaveForLaterButton());
+            Logger.LogMethodExit("ActivitySubmission",
+         "VerifyTheAvailibilityOfSaveForLater",
+         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I Verify Confirmation Message on Save the Activity for later")]
+        public void SaveTheActivityForLater()
+        {
+            Logger.LogMethodEntry("ActivitySubmission",
+          "SaveTheActivityForLater",
+          base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClickOnSaveForLater();
+            Logger.LogMethodExit("ActivitySubmission",
+         "SaveTheActivityForLater",
+         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see ""(.*)"" questions answers saved in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
+        public void VerifySaveForLaterData(int questionCount, int pageNumber, 
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+
+            Logger.LogMethodEntry("ActivitySubmission",
+          "VerifySaveForLaterData",
+          base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            Assert.IsTrue(new StudentPresentationPage().
+                VerifySavedFillInTheBlanksQuestionAnswers(questionCount));
+
+            Logger.LogMethodExit("ActivitySubmission",
+          "VerifySaveForLaterData",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate activity status of the activity.
+        /// </summary>
+        /// <param name="activityStatus">This is the expected status.</param>
+        /// <param name="activityName">This the activity name.</param>
+        [Then(@"I should see the ""(.*)"" status for the activity ""(.*)""")]
+        public void StatusForTheActivity(string activityStatus,
+             Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "StatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInCourseMaterial(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "StatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }

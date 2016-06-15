@@ -411,5 +411,62 @@ namespace Pegasus.Pages.UI_Pages
                   "ClickSaveandReturnActivityPreferenceButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public void SetQuestionsPerPagePreference(string count)
+        {
+            base.SwitchToDefaultWindow();
+            // Enable "Display this number of questions per page" radio button
+            base.WaitForElement(By.Id("radQuestionperpage"));
+            base.SelectRadioButtonById("radQuestionperpage");
+
+            // Fill textbox "Display this number of questions per page" by ID
+            base.ClearTextById("txtNoOfQuestions");
+            base.FillTextBoxById("txtNoOfQuestions",
+               count);
+        }
+
+        public void SetStyleSheet(string styleType)
+        {
+            base.SwitchToDefaultWindow();
+            base.WaitForElement(By.Id("cboStyleSheet"));
+            base.SelectDropDownValueThroughTextById("cboStyleSheet", styleType);
+          
+        }
+
+        public void ClickSkipQuestion()
+        {
+            base.SwitchToDefaultWindow();
+            base.WaitForElement(By.Id("chkSkip"));
+            base.GetWebElementPropertiesById("chkSkip").Click();
+        }
+
+        /// <summary>
+        /// Click Save and Return Button In Message Tab.
+        /// </summary>
+        public void SaveandReturnPreferenceAtCreateRandomActivity()
+        {
+            //Click Save and Return Button In Message Tab
+            logger.LogMethodEntry("RandomAssessmentPage",
+                  "SaveandReturnPreferenceAtCreateRandomActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id("cmdTabPreferenceFinish"));
+                //Click on Save and Return Button
+                IWebElement getSaveandReturnButton =
+                    base.GetWebElementPropertiesById("cmdTabPreferenceFinish");
+                Thread.Sleep(3000);
+                base.ClickByJavaScriptExecutor(getSaveandReturnButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage",
+                  "SaveandReturnPreferenceAtCreateRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        
     }
 }

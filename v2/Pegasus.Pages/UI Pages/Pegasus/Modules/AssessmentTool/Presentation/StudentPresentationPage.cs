@@ -1745,6 +1745,7 @@ namespace Pegasus.Pages.UI_Pages
             string getActivitySubmittedStatus = string.Empty;
             try
             {
+                
                 //Select Window And Frame
                 this.SelectWindowAndFrame();
                 //Get The Activity Name In CourseMaterial
@@ -2263,6 +2264,8 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save For Later
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSaveForLater",
                         base.IsTakeScreenShotDuringEntryExit);
+            bool confirmationMessage = false;
+            
             try
             {
                 //Wait For Element
@@ -2280,6 +2283,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                     StudentPresentation_Page_Save_Button_Id_Locator));
+                confirmationMessage=this.VerifySaveForLaterConfirmationPopUp();
+                if(!confirmationMessage)
+                {
+                    throw new System.ArgumentException("Confirmation Message Assertion Failed");
+                }
                 IWebElement getSaveButton = base.GetWebElementPropertiesById
                     (StudentPresentationPageResource.
                     StudentPresentation_Page_Save_Button_Id_Locator);
@@ -7376,7 +7384,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Return bool after verifying the actual warning message.
         /// </summary>
         /// <param name="expectedWarning"></param>
-        /// <returns></returns>
+        /// <returns>Returns Bool Value</returns>
         public bool VerifyWarningMessage(string expectedWarning)
         {
             // Return bool after verifying the actual warning message
@@ -7416,7 +7424,56 @@ namespace Pegasus.Pages.UI_Pages
             return warningMessagePresent;
         }
 
+        public bool VerifySaveForLaterButton()
+        {
+            bool buttonPresent = false;
+            logger.LogMethodEntry("StudentPresentationPage",
+                         "VerifySaveForLaterButton", base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id("saveForLater"));
+            buttonPresent = base.IsElementPresent(By.Id("saveForLater"), 10);
+            logger.LogMethodExit("StudentPresentationPage",
+            "VerifySaveForLaterButton", base.IsTakeScreenShotDuringEntryExit);
+            return buttonPresent;
+        }
 
-        
-    }
+        /// <summary>
+        /// Verify Saved Fill In The Blanks Question Answers.
+        /// </summary>
+        /// <param name="questionCount">Number of Question to be answered.</param>
+        public bool VerifySavedFillInTheBlanksQuestionAnswers(int questionCount)
+        {
+            bool answerPresent = false;
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+              "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Save all the Text fields in a collection
+                base.WaitForElement(By.CssSelector("div[style*='visible'] input[value='Answer'][type='text']"),10);
+                ICollection<IWebElement> textFields = base.
+                      GetWebElementsCollectionByCssSelector("div[style*='visible'] input[value='Answer'][type='text']");
+                //Iterate and enter values in each text fields
+                if(questionCount==textFields.Count)
+                    answerPresent = true;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+            return answerPresent;
+        }
+    
+
+    private bool VerifySaveForLaterConfirmationPopUp()
+     {
+            bool messagePresent=false;
+            string expectedMessage = "Are you sure you want to save and close this activity? If you click Save, the activity is not submitted for grading, and you can open it again to complete it.";
+            string actualMessage=base.GetElementInnerTextById("confirmmessages").Trim();
+            if (expectedMessage==actualMessage)
+                messagePresent=true;
+        return messagePresent;
+}
+      }
 }

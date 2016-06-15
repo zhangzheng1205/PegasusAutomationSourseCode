@@ -1752,6 +1752,33 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        ///  Retrieves specified inner text occurs within this string by attribute value of the element saved in Iwebelemnt .
+        /// </summary>
+        /// <param name="by">This is HTML IWebElement.</param>
+        /// <returns>Retrieves inner text to find in the specified string.</returns>
+       public String GetWebElementInnerText(IWebElement webElement)
+        {
+            //Get InnerText for the element based on browser 
+            string getInnerText = string.Empty;
+            switch (Browser)
+            {
+                // This is for Internet Explorer Browser
+                case InternetExplorer:
+                    getInnerText = webElement.GetAttribute("innerText");
+                    break;
+                // This is for Chrome Browser
+                case Chrome:
+                    getInnerText = webElement.GetAttribute("innerText");
+                    break;
+                // This is for Firefox Browser
+                case FireFox:
+                    getInnerText = webElement.Text;
+                    break;
+            }
+            return getInnerText;
+        }
+
+        /// <summary>
         ///  Retrieves Html inner text occurs within this string by id attribute value of the element .
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>

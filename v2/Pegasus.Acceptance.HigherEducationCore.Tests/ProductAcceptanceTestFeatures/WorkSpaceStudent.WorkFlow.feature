@@ -12,7 +12,7 @@
 Scenario: Verify Presentation Window for Questions and Sections Display Preference Setting
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
-When I open the "RegSavedSAMActivity" Activity
+When I open the "RegChildActivity" Activity
 Then I should see '5' questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
 When I navigate to next page
 Then I should see '4' questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window
@@ -26,9 +26,40 @@ Then I should be on the "Course Materials" page
 Scenario:Verify Presentation Window for Require students to answer all questions Preference settings
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
-When I open the "RegSavedSAMActivity" Activity
+When I open the "RegChildActivity" Activity
 And I attempt "5" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
 Then I should see warning message on submission of activity for grading
 When I navigate to next page
 And I attempt "4" questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window
 Then I should successfully submit activity for grading
+
+#Purpose:To Verify Presentation window, when "Allow student to Save for Later" option is selected
+#Jira ID | Test Link ID: PEGASUS-45990|peg-8569,peg-8571
+Scenario:To Verify Presentation window when Allow student to Save for Later option is selected
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I open the "RegChildActivity" Activity
+Then I should the availibility of Save For Later is "true" in "RegSAMActivity" Activity Presentation Window
+When I attempt "5" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
+And I navigate to next page
+Then I Verify Confirmation Message on Save the Activity for later
+And I should be on the "Course Materials" page
+And I should see the "In Progress" status for the activity "RegChildActivity"
+When I open the "RegChildActivity" Activity
+Then I should see "5" questions answers saved in Page "1" of "RegSAMActivity" Activity Presentation Window
+When I navigate to next page
+And I attempt "4" questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window
+Then I should successfully submit activity for grading
+And I should see the "Passed" status for the activity "RegChildActivity"
+
+
+#Purpose:To Verify Presentation window, when "Allow student to Save for Later" option is unselected
+#Jira ID | Test Link ID: PEGASUS-45990|peg-8570 
+Scenario:To Verify Presentation window when Allow student to Save for Later option is unselected
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I open the "RegChildActivity" Activity
+Then I should the availibility of Save For Later is "false" in "RegSAMActivity" Activity Presentation Window
+And I close the Activity window
+And I should be on the "Course Materials" page
+

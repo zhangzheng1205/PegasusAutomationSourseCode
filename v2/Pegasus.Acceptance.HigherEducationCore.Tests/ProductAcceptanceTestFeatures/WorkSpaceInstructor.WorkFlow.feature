@@ -205,6 +205,8 @@ When I associate the "RegChildActivity" activity Content Library to MyCourse fra
 Then I should see the successfull message "Content item is added to My Course"
 
 
+
+
 #Purpose:Creation of Random activity of RegSAMActivity type by selecting questions from Question Groups
 #Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity 
                # if not created during runtime
@@ -235,12 +237,43 @@ When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
 When I Create "RegChildActivity" SAM activity
-And I perform "Create New Section" under "Add Sections"
-And select "Select Questions from Bank" option at add question in section
+And I perform "Create New Section" of name "Section1"
+And select "Select Questions from Bank" option at add question for Section "1"
 And I should Add question from Question Bank and Save Activity
 Then I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
 
+#Purpose:Creatiion of Activity with multiple Fill In The Blanks Question of RegSAMActivity type
+#Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity
+Scenario:Creation of Random activity of RegSAMActivity type by adding section with multiple questions
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+And I perform "Create New Section" of name "Section1"
+And I perform "Create New Section" of name "Section2"
+And I perform "Create New Section" of name "Section3"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
+And I add '3' questions of type "Fill in the Blank" at Section "2"
+And I add '3' questions of type "Fill in the Blank" at Section "3"
+
+
+#Purpose:Verification of set preferences and overwritting preferences
+Scenario:Verification of set preferences and overwritting preferences
+When I Save and Continue and navigate to "Preferences" Tab
+Then I reset style sheet to "Default" 
+And I check Allow students to skip questions
+And I reset number of questions per page value as "5" and Save Activity
+
+
+#Purpose:Add Activity to My Course and set as Shown
+Scenario:Add Activity to My Course and set as shown
+Given I should see the successfull message "Activity added successfully."
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I select cmenu "ShowHide" option of activity "RegChildActivity"
 
 
