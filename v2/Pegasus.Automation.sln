@@ -40,8 +40,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducation.WL.Tests", "Pegasus.Acceptance.HigherEducationCore.Tests\Pegasus.Acceptance.HigherEducation.WL.Tests.csproj", "{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.Hed.Amplifire.Tests", "Pegasus.Integration.Hed.Amplifire.Tests\Pegasus.Integration.Hed.Amplifire.Tests.csproj", "{48738828-D001-4259-BE56-651B1F1BF9D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.SSRSReports.Tests", "Pegasus.Integration.SSRSReports.Tests\Pegasus.Integration.SSRSReports.Tests.csproj", "{83C33F86-256B-4C4B-A1DA-8F4A59C78592}"
 EndProject
 Global
@@ -110,10 +108,6 @@ Global
 		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48738828-D001-4259-BE56-651B1F1BF9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48738828-D001-4259-BE56-651B1F1BF9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48738828-D001-4259-BE56-651B1F1BF9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48738828-D001-4259-BE56-651B1F1BF9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83C33F86-256B-4C4B-A1DA-8F4A59C78592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{83C33F86-256B-4C4B-A1DA-8F4A59C78592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C33F86-256B-4C4B-A1DA-8F4A59C78592}.Release|Any CPU.ActiveCfg = Release|Any CPU

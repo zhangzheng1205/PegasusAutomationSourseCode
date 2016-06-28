@@ -172,5 +172,24 @@ When I select "SAM 01-19 Singular y plural." in "Course Materials" page by "WL
 And I submit the learnocity activity
 Then I should see "Not passed" status for the activity "SAM 01-19 Singular y plural." in "Course Materials" page by "WLCsSmsStudent"
 
+#Purpose: Regression automation for display correct answers after activity is submitted.
+
+Scenario: Student resbumits the activity
+When I navigate to "Assignments" tab
+Then I should be on the "Course Materials" page
+When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
+And I submit the SAM Activity to score '100'
+Then I should see "Passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+
+Scenario: Student sees correct answers after submission
+When I navigate to "Assignments" tab
+Then I should be on the "Course Materials" page
+When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
+And I submit the SAM Activity to score and to see correct answers
+Then I should see "Passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
+
+
 
 

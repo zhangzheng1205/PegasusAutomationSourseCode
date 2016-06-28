@@ -2051,6 +2051,44 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Answer and submit the SAM Activity to see correct answers
+        /// </summary>
+        public bool SubmitSAMActivityToSeeCorrectAnswers()
+        {
+            //Answer the SAM Activity to score 100
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SubmitSAMActivityToSeeCorrectAnswers",
+                  base.IsTakeScreenShotDuringEntryExit);
+            bool found = false;
+            try
+            {
+                //Input answer to the activity questions
+                this.AnswerSAMActivity(1, CourseContentUXPageResource
+                    .CourseContentUXPage_WLActivity_Q1_Answer);
+                this.AnswerSAMActivity(2, CourseContentUXPageResource.
+                    CourseContentUXPage_WLActivity_Q2_Answer);
+                this.AnswerSAMActivity(3, CourseContentUXPageResource.
+                    CourseContentUXPage_WLActivity_Q3_Answer);
+                this.AnswerSAMActivity(4, CourseContentUXPageResource.
+                    CourseContentUXPage_WLActivity_Q4_Answer);
+                this.AnswerSAMActivity(5, CourseContentUXPageResource.
+                    CourseContentUXPage_WLActivity_Q5_Answer);
+                this.AnswerSAMActivity(6, CourseContentUXPageResource.
+                CourseContentUXPage_WLActivity_Q6_Answer);
+                //submit the activity
+                found = this.SubmitActivityCSDisplay();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SubmitSAMActivityToSeeCorrectAnswers",
+                  base.IsTakeScreenShotDuringEntryExit);
+
+            return found;
+        }
+        /// <summary>
         /// Answer the SAM activity questions based on field value.
         /// </summary>
         /// <param name="answerFieldValue">This is the answer field value.</param>
@@ -2255,6 +2293,74 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
                         base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public bool SubmitActivityCSDisplay()
+        {
+            Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            bool feedback = false;
+            try
+            {
+                //Click on submit button
+                IWebElement getFinishButton = base.
+                    GetWebElementPropertiesByPartialLinkText
+                    (CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
+                base.ClickByJavaScriptExecutor(getFinishButton);
+                //Click on Finish button
+                IWebElement finishButton = base.GetWebElementPropertiesById(
+                    CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Finish_Button_Id_Locator);
+                base.ClickByJavaScriptExecutor(finishButton);
+                Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource.
+                    CourseContentUXPage_ShowHide_Status_Time_Value));
+
+                base.WaitForElement(By.CssSelector("#feedbackimg"),5);
+
+                IWebElement displayCorrectElement = base.GetWebElementPropertiesByCssSelector("#feedbackimg:nth-child(1)");
+
+                //base.PerformMouseHoverByJavaScriptExecutor(displayCorrectElement);
+
+                base.PerformMouseClickAction(displayCorrectElement);
+
+                base.ClickByJavaScriptExecutor(displayCorrectElement);
+                base.WaitForElement(By.CssSelector("#_ctl0_APH_feedback>b"), 5);
+
+                feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b"));
+
+                //if (feedback == false)
+
+    
+
+                
+
+               // feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b"));
+                //Click on 'Return to course'
+
+                if (feedback == true)
+                { 
+                IWebElement returnToCourse = base.GetWebElementPropertiesById(
+                   CourseContentUXPageResource.
+                   CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
+                base.ClickByJavaScriptExecutor(returnToCourse);
+                }
+
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            
+            Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return feedback;
+        }
+
 
         /// <summary>
         /// Verify The Activity Status of WL Activity.

@@ -17,3 +17,9 @@ When I change the 'My Profile' settings
 Then I should be on the "Global Home" page
 
 
+Scenario: WLUser accessing a Regression Course
+Given I am on the "Global Home" page
+When enter into "Regression Automation" course 
+Then I should be on the "Today's View" page
+
+

@@ -538,6 +538,23 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
+        /// Submit the WL SAM activity to see correct Answers.
+        /// </summary>
+        [When(@"I submit the SAM Activity to score and to see correct answers")]
+         public void WhenISubmitToSeeCorrectAnswers()
+        {
+            //Submit the WL SAM activity to score 100
+            Logger.LogMethodEntry("ActivitySubmission",
+                "SubmitTheSAMActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            bool found = new CourseContentUXPage().SubmitSAMActivityToSeeCorrectAnswers();
+            Assert.AreEqual(found, true);
+            Logger.LogMethodExit("ActivitySubmission",
+               "SubmitTheSAMActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Submit the WL SAM activity to score 0.
         /// </summary>
         [When(@"I submit SAM Activity to score '0'")]
@@ -652,7 +669,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             "SubmitActivityForGrading",
             base.IsTakeScreenShotDuringEntryExit);
             // Submit the Activity
-            new CourseContentUXPage().SubmitActivity();
+            new CourseContentUXPage().SubmitActivityCSDisplay();
             Logger.LogMethodExit("ActivitySubmission",
            "SubmitActivityForGrading",
            base.IsTakeScreenShotDuringEntryExit);

@@ -582,6 +582,9 @@
     <None Include="ProductAcceptanceOrderedTests\AmplifireStudent.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\RegressionTest.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\TrialAssessmentRegression.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
