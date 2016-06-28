@@ -548,7 +548,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 "SubmitTheSAMActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             bool found = new CourseContentUXPage().SubmitSAMActivityToSeeCorrectAnswers();
-            Assert.AreEqual(found, true);
+            Assert.AreEqual(true, found);
             Logger.LogMethodExit("ActivitySubmission",
                "SubmitTheSAMActivity",
                base.IsTakeScreenShotDuringEntryExit);

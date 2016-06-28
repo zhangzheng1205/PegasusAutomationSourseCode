@@ -2315,27 +2315,28 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource.
                     CourseContentUXPage_ShowHide_Status_Time_Value));
 
-                base.WaitForElement(By.CssSelector("#feedbackimg"),5);
+                //base.IsElementDisplayedInPage(By.CssSelector("a img#feedbackimg"), false, 5);
+                Thread.Sleep(5000);
+                bool check = base.IsElementPresent(By.CssSelector("a img#feedbackimg"));
+               
 
-                IWebElement displayCorrectElement = base.GetWebElementPropertiesByCssSelector("#feedbackimg:nth-child(1)");
+                IWebElement displayCorrectElement = base.GetWebElementPropertiesByCssSelector("a img#feedbackimg:nth-child(1)");
 
-                //base.PerformMouseHoverByJavaScriptExecutor(displayCorrectElement);
+                Thread.Sleep(5000);
+               
 
-                base.PerformMouseClickAction(displayCorrectElement);
-
-                base.ClickByJavaScriptExecutor(displayCorrectElement);
-                base.WaitForElement(By.CssSelector("#_ctl0_APH_feedback>b"), 5);
-
-                feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b"));
-
-                //if (feedback == false)
-
-    
-
+                 displayCorrectElement.Click();
+                              
                 
+                feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b:nth-child(1)"), 5);
 
-               // feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b"));
-                //Click on 'Return to course'
+                if (feedback == false)
+                {
+                    base.ClickByJavaScriptExecutor(displayCorrectElement);
+                feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b:nth-child(1)"), 5);
+                }
+
+                           
 
                 if (feedback == true)
                 { 
@@ -2345,10 +2346,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(returnToCourse);
                 }
 
-                else
-                {
-                    throw new Exception();
-                }
+                
             }
             catch (Exception e)
             {
