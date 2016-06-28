@@ -753,6 +753,76 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Switch to presentation window.
+        /// </summary>
+        /// <param name="activityTypeEnum"></param>
+        [Then(@"I am on ""(.*)"" window")]
+        [Given(@"I am on ""(.*)"" window")]
+        public void SelectPresentationWindow(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+        }
 
+        /// <summary>
+        /// Verify Beginning/end Messages at Presentation Window.
+        /// </summary>
+        /// <param name="p0">messageType</param>
+        /// <param name="p1">availabilityStatus</param>
+        [Then(@"I should see the availability of ""(.*)"" message is ""(.*)""")]
+        public void VerifyMessagesInPresentation(string messageType,
+            string availabilityStatus)
+        {
+            Assert.AreEqual(availabilityStatus, new StudentPresentationPage().
+                VerifyMessageStatus(messageType).ToString());
+        }
+
+        /// <summary>
+        /// Verify Message Button in Presentation Window
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [Then(@"I should see see the availability of ""(.*)"" Button is ""(.*)""")]
+        public void VerifyMessageButton(string buttonType, string availabilityStatus)
+        {
+            Assert.AreEqual(availabilityStatus, new StudentPresentationPage().
+                VerifyMessageButtonStatus(buttonType).ToString());
+        }
+
+        /// <summary>
+        /// Click Message Button.
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I click on ""(.*)"" Button")]
+        public void ClickOnMessageButton(string buttonType)
+        {
+
+            new StudentPresentationPage().
+                  ClickMessageButton(buttonType);
+        }
+
+        /// <summary>
+        /// Verify Activity Direction Lines.
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [Then(@"I should see the availibility ""(.*)"" at Page is ""(.*)""")]
+        public void VerifyActivityDirectionLines(string directionType, string availabilityStatus)
+        {
+            Assert.AreEqual(availabilityStatus, new StudentPresentationPage().
+               VerifyActivityDirectionLine(directionType).ToString());
+
+        }
+
+
+        [Then(@"I should see the Section Direction lines for Section ""(.*)""")]
+        public void VerifySectionDirectionLinesAtPresentation(string sectionNumber)
+        {
+            Assert.IsTrue(new StudentPresentationPage().
+                VerifySectionDirectionLines(sectionNumber));
+        }
     }
 }

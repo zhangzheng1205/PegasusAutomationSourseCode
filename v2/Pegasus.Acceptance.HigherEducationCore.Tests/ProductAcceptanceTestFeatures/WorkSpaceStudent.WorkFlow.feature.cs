@@ -70,31 +70,59 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Launch the RegChildActivity Activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
+        public virtual void LaunchTheRegChildActivityActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch the RegChildActivity Activity", ((string[])(null)));
+#line 7
+this.ScenarioSetup(scenarioInfo);
+#line 8
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Close activity window")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
+        public virtual void CloseActivityWindow()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Close activity window", ((string[])(null)));
+#line 13
+this.ScenarioSetup(scenarioInfo);
+#line 14
+testRunner.Then("I close the Activity window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify Presentation Window for Questions and Sections Display Preference Setting")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
         public virtual void VerifyPresentationWindowForQuestionsAndSectionsDisplayPreferenceSetting()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Presentation Window for Questions and Sections Display Preference Setting", ((string[])(null)));
-#line 12
+#line 23
 this.ScenarioSetup(scenarioInfo);
-#line 13
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 15
-testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
-testRunner.Then("I should see \'5\' questions listed in Page \"1\" of \"RegSAMActivity\" Activity Presen" +
+#line 24
+testRunner.Given("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+testRunner.When("I click on \"Start\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+testRunner.Then("I should see \'2\' questions listed in Page \"1\" of \"RegSAMActivity\" Activity Presen" +
                     "tation Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
+#line 27
 testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
-testRunner.Then("I should see \'4\' questions listed in Page \"2\" of \"RegSAMActivity\" Activity Presen" +
+#line 28
+testRunner.Then("I should see \'1\' questions listed in Page \"2\" of \"RegSAMActivity\" Activity Presen" +
                     "tation Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
-testRunner.Then("I close the Activity window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -107,25 +135,19 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Presentation Window for Require students to answer all questions Preferenc" +
                     "e settings", ((string[])(null)));
-#line 26
-this.ScenarioSetup(scenarioInfo);
-#line 27
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 29
-testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
-testRunner.And("I attempt \"5\" questions listed in Page \"1\" of \"RegSAMActivity\" Activity Presentat" +
-                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-testRunner.Then("I should see warning message on submission of activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 32
-testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
-testRunner.And("I attempt \"4\" questions listed in Page \"2\" of \"RegSAMActivity\" Activity Presentat" +
-                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
+this.ScenarioSetup(scenarioInfo);
+#line 35
+testRunner.When("I attempt \"2\" questions listed in Page \"1\" of \"RegSAMActivity\" Activity Presentat" +
+                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+testRunner.Then("I should see warning message on submission of activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+testRunner.And("I attempt \"1\" questions listed in Page \"2\" of \"RegSAMActivity\" Activity Presentat" +
+                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
 testRunner.Then("I should successfully submit activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -139,42 +161,116 @@ testRunner.Then("I should successfully submit activity for grading", ((string)(n
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify Presentation window when Allow student to Save for Later option is sele" +
                     "cted", ((string[])(null)));
-#line 38
+#line 43
 this.ScenarioSetup(scenarioInfo);
-#line 39
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
-testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 44
+testRunner.Given("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 45
+testRunner.When("I click on \"Start\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 46
 testRunner.Then("I should the availibility of Save For Later is \"true\" in \"RegSAMActivity\" Activit" +
                     "y Presentation Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
-testRunner.When("I attempt \"5\" questions listed in Page \"1\" of \"RegSAMActivity\" Activity Presentat" +
-                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
-testRunner.And("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
-testRunner.Then("I Verify Confirmation Message on Save the Activity for later", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 46
-testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
-testRunner.And("I should see the \"In Progress\" status for the activity \"RegChildActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I attempt \"2\" questions listed in Page \"1\" of \"RegSAMActivity\" Activity Presentat" +
+                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 48
-testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
-testRunner.Then("I should see \"5\" questions answers saved in Page \"1\" of \"RegSAMActivity\" Activity" +
-                    " Presentation Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I Verify Confirmation Message on Save the Activity for later", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 50
-testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
-testRunner.And("I attempt \"4\" questions listed in Page \"2\" of \"RegSAMActivity\" Activity Presentat" +
-                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"In Progress\" status for the activity \"RegChildActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
-testRunner.Then("I should successfully submit activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 53
-testRunner.And("I should see the \"Passed\" status for the activity \"RegChildActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
+testRunner.When("I click on \"Start\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
+testRunner.Then("I should see \"2\" questions answers saved in Page \"1\" of \"RegSAMActivity\" Activity" +
+                    " Presentation Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 56
+testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 57
+testRunner.And("I attempt \"1\" questions listed in Page \"2\" of \"RegSAMActivity\" Activity Presentat" +
+                    "ion Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+testRunner.Then("I should successfully submit activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+testRunner.And("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 60
+testRunner.When("I click on \"Close\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
+testRunner.Then("I should see the \"Passed\" status for the activity \"RegChildActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify Activity and Section Direction Lines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
+        public virtual void VerifyActivityAndSectionDirectionLines()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Activity and Section Direction Lines", ((string[])(null)));
+#line 68
+this.ScenarioSetup(scenarioInfo);
+#line 69
+testRunner.Given("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 70
+testRunner.When("I click on \"Start\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 71
+testRunner.Then("I should see the availibility \"Direction lines (instructions)\" at Page is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 72
+testRunner.And("I should see the Section Direction lines for Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 73
+testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
+testRunner.Then("I should see the availibility \"Direction lines (instructions)\" at Page is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 75
+testRunner.And("I should see the Section Direction lines for Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To verify Beginning of activity message")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
+        public virtual void ToVerifyBeginningOfActivityMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify Beginning of activity message", ((string[])(null)));
+#line 79
+this.ScenarioSetup(scenarioInfo);
+#line 80
+testRunner.Given("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 81
+testRunner.Then("I should see the availability of \"Beginning of activity\" message is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 82
+testRunner.And("I should see see the availability of \"Start\" Button is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 83
+testRunner.And("I should see see the availability of \"Close\" Button is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
+testRunner.When("I click on \"Start\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To verify End of activity message")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
+        public virtual void ToVerifyEndOfActivityMessage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify End of activity message", ((string[])(null)));
+#line 88
+this.ScenarioSetup(scenarioInfo);
+#line 89
+testRunner.Given("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 90
+testRunner.Then("I should see the availability of \"End of activity\" message is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 91
+testRunner.And("I should see see the availability of \"Close\" Button is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 92
+testRunner.When("I click on \"Close\" Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -187,21 +283,36 @@ testRunner.And("I should see the \"Passed\" status for the activity \"RegChildAc
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify Presentation window when Allow student to Save for Later option is unse" +
                     "lected", ((string[])(null)));
-#line 58
+#line 97
 this.ScenarioSetup(scenarioInfo);
-#line 59
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 61
-testRunner.When("I open the \"RegChildActivity\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 98
 testRunner.Then("I should the availibility of Save For Later is \"false\" in \"RegSAMActivity\" Activi" +
                     "ty Presentation Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
+#line 99
 testRunner.And("I close the Activity window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
+#line 100
 testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Verify Display Direction Lines on Each Page option is not selected")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceStudent")]
+        public virtual void ToVerifyDisplayDirectionLinesOnEachPageOptionIsNotSelected()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify Display Direction Lines on Each Page option is not selected", ((string[])(null)));
+#line 106
+this.ScenarioSetup(scenarioInfo);
+#line 107
+testRunner.Given("I am on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 108
+testRunner.Then("I should see the availibility \"Direction lines (instructions)\" at Page is \"True\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 109
+testRunner.When("I navigate to next page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 110
+testRunner.Then("I should see the availibility \"Direction lines (instructions)\" at Page is \"False\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
