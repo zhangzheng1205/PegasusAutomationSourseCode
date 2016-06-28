@@ -256,18 +256,30 @@ When I Create "RegChildActivity" SAM activity
 And I perform "Create New Section" of name "Section1"
 And I perform "Create New Section" of name "Section2"
 And I perform "Create New Section" of name "Section3"
-Then I add '3' questions of type "Fill in the Blank" at Section "1"
-And I add '3' questions of type "Fill in the Blank" at Section "2"
-And I add '3' questions of type "Fill in the Blank" at Section "3"
+Then I add '1' questions of type "Fill in the Blank" at Section "1"
+And I add '1' questions of type "Fill in the Blank" at Section "2"
+And I add '1' questions of type "Fill in the Blank" at Section "3"
+
+
+
+#Purpose:Add messages at activity level
+#Test Link No:peg-20713
+Scenario:Add messages at activity level
+When I perform "Navigate" for "Messages" 
+Then I add "Beginning of activity" message
+And  I add "Direction lines (instructions)" message
+And I add "End of activity" message
+When I perform "Save and Continue" for "Messages" 
+
 
 
 #Purpose:Verification of set preferences and overwritting preferences
 Scenario:Verification of set preferences and overwritting preferences
-When I Save and Continue and navigate to "Preferences" Tab
+When I perform "Navigate" for "Preferences" 
 Then I reset style sheet to "Default" 
 And I check Allow students to skip questions
-And I reset number of questions per page value as "5" and Save Activity
-
+And I reset number of questions per page value as "2"
+When I perform "Save and Return" for "Preferences"
 
 #Purpose:Add Activity to My Course and set as Shown
 Scenario:Add Activity to My Course and set as shown
@@ -276,4 +288,17 @@ When I associate the "RegChildActivity" activity Content Library to MyCourse fra
 Then I should see the successfull message "Content item is added to My Course"
 When I select cmenu "ShowHide" option of activity "RegChildActivity"
 
-
+#Purpose:Clicking on Add link of "Direction Lines" under each section
+#Test Link id:peg-19554
+Scenario:Add Section Direction Lines
+When I "Add" Directions at Section "1"
+Then I should see Directions "added" to Section "1"
+When I "Add" Directions at Section "2"
+Then I should see Directions "added" to Section "2"
+When I "Edit" Directions at Section "2"
+Then I should see Directions "edited" to Section "2"
+When I "Delete" Directions at Section "2"
+Then I should see Directions deleted at Section "2"
+When I "Add" Directions at Section "3"
+Then I should see Directions "added" to Section "3"
+When I perform "Save and Continue" for "Questions" 

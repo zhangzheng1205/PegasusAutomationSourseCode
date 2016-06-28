@@ -631,11 +631,33 @@ testRunner.And("I perform \"Create New Section\" of name \"Section2\"", ((string
 #line 258
 testRunner.And("I perform \"Create New Section\" of name \"Section3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 259
-testRunner.Then("I add \'3\' questions of type \"Fill in the Blank\" at Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I add \'1\' questions of type \"Fill in the Blank\" at Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 260
-testRunner.And("I add \'3\' questions of type \"Fill in the Blank\" at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I add \'1\' questions of type \"Fill in the Blank\" at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 261
-testRunner.And("I add \'3\' questions of type \"Fill in the Blank\" at Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I add \'1\' questions of type \"Fill in the Blank\" at Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add messages at activity level")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceInstructor")]
+        public virtual void AddMessagesAtActivityLevel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add messages at activity level", ((string[])(null)));
+#line 267
+this.ScenarioSetup(scenarioInfo);
+#line 268
+testRunner.When("I perform \"Navigate\" for \"Messages\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 269
+testRunner.Then("I add \"Beginning of activity\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 270
+testRunner.And("I add \"Direction lines (instructions)\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 271
+testRunner.And("I add \"End of activity\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 272
+testRunner.When("I perform \"Save and Continue\" for \"Messages\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -646,16 +668,18 @@ testRunner.And("I add \'3\' questions of type \"Fill in the Blank\" at Section \
         public virtual void VerificationOfSetPreferencesAndOverwrittingPreferences()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verification of set preferences and overwritting preferences", ((string[])(null)));
-#line 265
+#line 277
 this.ScenarioSetup(scenarioInfo);
-#line 266
-testRunner.When("I Save and Continue and navigate to \"Preferences\" Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 267
+#line 278
+testRunner.When("I perform \"Navigate\" for \"Preferences\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 279
 testRunner.Then("I reset style sheet to \"Default\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 268
+#line 280
 testRunner.And("I check Allow students to skip questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 269
-testRunner.And("I reset number of questions per page value as \"5\" and Save Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 281
+testRunner.And("I reset number of questions per page value as \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 282
+testRunner.When("I perform \"Save and Return\" for \"Preferences\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -666,16 +690,50 @@ testRunner.And("I reset number of questions per page value as \"5\" and Save Act
         public virtual void AddActivityToMyCourseAndSetAsShown()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Activity to My Course and set as shown", ((string[])(null)));
-#line 273
+#line 285
 this.ScenarioSetup(scenarioInfo);
-#line 274
+#line 286
 testRunner.Given("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 275
+#line 287
 testRunner.When("I associate the \"RegChildActivity\" activity Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 276
+#line 288
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 277
+#line 289
 testRunner.When("I select cmenu \"ShowHide\" option of activity \"RegChildActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add Section Direction Lines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceInstructor")]
+        public virtual void AddSectionDirectionLines()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Section Direction Lines", ((string[])(null)));
+#line 293
+this.ScenarioSetup(scenarioInfo);
+#line 294
+testRunner.When("I \"Add\" Directions at Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 295
+testRunner.Then("I should see Directions \"added\" to Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 296
+testRunner.When("I \"Add\" Directions at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 297
+testRunner.Then("I should see Directions \"added\" to Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 298
+testRunner.When("I \"Edit\" Directions at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 299
+testRunner.Then("I should see Directions \"edited\" to Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 300
+testRunner.When("I \"Delete\" Directions at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 301
+testRunner.Then("I should see Directions deleted at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 302
+testRunner.When("I \"Add\" Directions at Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 303
+testRunner.Then("I should see Directions \"added\" to Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 304
+testRunner.When("I perform \"Save and Continue\" for \"Questions\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

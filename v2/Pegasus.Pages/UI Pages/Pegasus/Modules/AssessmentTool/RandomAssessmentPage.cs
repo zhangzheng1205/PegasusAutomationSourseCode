@@ -9,6 +9,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
+using OpenQA.Selenium.Interactions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
 
 namespace Pegasus.Pages.UI_Pages
@@ -467,6 +468,123 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        
+        public void EnterMessagesValues(string messageType)
+        {
+            logger.LogMethodEntry("RandomAssessmentPage",
+                 "EnterMessagesValues",
+                base.IsTakeScreenShotDuringEntryExit);
+            string idValue = string.Empty;
+            string message = message = "This is " + messageType + " message"; 
+            switch(messageType)
+            {
+                case "Beginning of activity": idValue = "txtBeginFeedback";
+                                              
+                    break;
+                case "Direction lines (instructions)": idValue = "txtdirectionlines";
+                                                       
+                    break;
+                case "End of activity": idValue = "txtEndFeedback";
+                    break;
+            }
+            WaitForElement(By.Id(idValue));
+            base.ClearTextById(idValue);
+            base.FillTextBoxById(idValue,message);
+            logger.LogMethodExit("RandomAssessmentPage",
+                 "EnterMessagesValues",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        public void EnterDirectionLineToSection(string actionType, string sectionNo)
+        {
+            //Select the current window
+            base.SwitchToDefaultWindow();
+            //Switch to frame
+            base.SwitchToIFrameById("frmTopic");
+            string idValue = string.Empty;
+            string direction = string.Empty;
+            switch(actionType)
+            {
+                case "Add": idValue = "ancAddDirectionLine_" + sectionNo;
+                    direction = "This is direction for Section " + sectionNo;
+                    OpenEditorAndAddDirections(idValue, direction);
+                    break;
+                case "Edit": idValue = "ancAddDirectionLine_" + sectionNo;
+                    direction = " edited" ;
+                    OpenEditorAndAddDirections(idValue, direction);
+                    break;
+                case "Delete": idValue = "ancDeleteDirectionLine_" + sectionNo;
+                     base.WaitForElement(By.Id(idValue));
+                     IWebElement deleteLink =base.GetWebElementPropertiesById(idValue);
+                     base.ClickByJavaScriptExecutor(deleteLink);
+                     base.WaitUntilWindowLoads("Pegasus");
+                     base.GetWebElementPropertiesById("imgOk").Click();
+                     break;
+
+            }
+
+            base.SwitchToDefaultPageContent();
+
+           
+            
+        }
+
+        private void OpenEditorAndAddDirections(string idValue, string direction)
+        {
+            base.WaitForElement(By.Id(idValue));
+            //Click on Save and Return Button
+            IWebElement addLink =
+            base.GetWebElementPropertiesById(idValue);
+            base.ClickByJavaScriptExecutor(addLink);
+            base.WaitUntilWindowLoads("Editor");
+            base.SwitchToIFrameById("ucEditor");
+            base.WaitForElement(By.CssSelector(".WebEditor"));
+
+
+            IWebElement textArea = base.GetWebElementPropertiesByCssSelector(".WebEditor");
+            base.PerformMoveToElementClickAction(textArea);
+            Actions builder = new Actions(WebDriver);
+            Thread.Sleep(3000);
+            builder.SendKeys(direction).Perform();
+            base.SwitchToDefaultPageContent();
+            base.GetWebElementPropertiesById("cmdOK").Click();
+        }
+
+        public bool VerifyTheDirectionLines(string actionType,string sectionNumber)
+        {
+            string expectedDirection = string.Empty;
+            base.SwitchToDefaultWindow();
+            //Switch to frame
+            base.SwitchToIFrameById("frmTopic");
+            bool directionPresent = false;
+            switch (actionType)
+            {
+                case "added":
+                    expectedDirection = "This is direction for Section " + sectionNumber;
+                    break;
+                case "edited":
+                    expectedDirection = "This is direction for Section " + sectionNumber+" edited" ;
+                    break;
+            }
+            string idValue="lbldirectionalline_"+sectionNumber;
+            string actualDirection = base.GetElementInnerTextById(idValue).Trim();
+            if (expectedDirection == actualDirection)
+                directionPresent = true;
+            base.SwitchToDefaultPageContent();
+            return directionPresent;
+          
+
+        }
+
+      public bool VerifyDirectionDeletion(string sectionNumber)
+        {
+            bool DirectionPres = true;
+            base.SwitchToDefaultWindow();
+            string idValue="lbldirectionalline_"+sectionNumber;
+            DirectionPres = base.IsElementPresent(By.Id(idValue), 10);
+            return DirectionPres;
+            
+        }
+
     }
 }

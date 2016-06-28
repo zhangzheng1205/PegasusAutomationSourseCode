@@ -768,6 +768,119 @@ namespace Pegasus.Pages.UI_Pages
            base.IsTakeScreenShotDuringEntryExit);
         }
 
+        public void ButtonActionsForTabsAtEditRandomActivity(string buttonType,string tabName)
+        {
+            logger.LogMethodEntry("RandomTopicListPage", "ButtonActionsForTabsAtEditRandomActivity",
+                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string idValue = string.Empty;
+                base.SwitchToDefaultWindow();
+            switch(buttonType)
+            {
+                case "Save and Return":
+                    switch(tabName)
+                    {
+                        #region Tabs
+                        case "Preferences": idValue = "cmdTabPreferenceFinish";
+                            break;
+                        case "Teaching Support": idValue = "cmdTabHelpPanelFinish";
+                            break;
+                        case "Grades": idValue = "cmdTabGradesFinish";
+                            break;
+                        case "Messages": idValue = "cmdTabMessagesFinish";
+                            break;
+                        case "HelpLinks": idValue = "cmdTabHelpLinksFinish";
+                            break;
+                        case "Questions": idValue = "cmdTabTopicsFinish";
+                            break;
+                        case "Activity Details": idValue = "cmdTabAssessmentFinish";
+                            break; 
+                        #endregion
+                    }
+                    break;
+                 case "Save and Continue":
+                     switch(tabName)
+                    {
+                        #region Tabs
+                        case "Preferences": idValue = "cmdTabPreferenceNext";
+                            break;
+                        case "Teaching Support": idValue = "cmdTabHelpPanelNext";
+                            break;
+                        case "Grades": idValue = "cmdTabGradesNext";
+                            break;
+                        case "Messages": idValue = "cmdTabMessagesNext";
+                            break;
+                        case "HelpLinks": idValue = "cmdTabHelpLinksNext";
+                            break;
+                        case "Questions": idValue = "cmdTabTopicsNext";
+                            break;
+                        case "Activity Details": idValue = "tdcmdTabAssessmentNext";
+                            break; 
+                        #endregion
+                    }
+                    break;
+                 case "Cancel":
+                    switch (tabName)
+                    {
+                        #region Tab
+                        case "Preferences": idValue = "cmdTabPreferenceCancel";
+                            break;
+                        case "Teaching Support": idValue = "cmdTabHelpPanelCancel";
+                            break;
+                        case "Grades": idValue = "cmdTabGradesCancel";
+                            break;
+                        case "Messages": idValue = "cmdTabMessagesCancel";
+                            break;
+                        case "HelpLinks": idValue = "cmdTabHelpLinksCancel";
+                            break;
+                        case "Questions": idValue = "cmdTabTopicsCancel";
+                            break;
+                        case "Activity Details": idValue = "cmdTabAssessmentCancel";
+                            break; 
+                        #endregion
+                    }
+                    break;
+                case "Navigate":
+                    switch(tabName)
+                    {
+                        #region Tab
+                        case "Preferences": idValue = "cmdTabPreference";
+                            break;
+                        case "Teaching Support": idValue = "cmdTabHelpPanel";
+                            break;
+                        case "Grades": idValue = "cmdTabGrades";
+                            break;
+                        case "Messages": idValue = "cmdTabMessages";
+                            break;
+                        case "HelpLinks": idValue = "cmdTabHelpLinks";
+                            break;
+                        case "Questions": idValue = "cmdTabTopics";
+                            break;
+                        case "Activity Details": idValue = "cmdTabAssessment";
+                            break; 
+                        #endregion
+                    }
+                    break;
+            }
+             base.WaitForElement(By.Id(idValue));
+                //Get  Button Property
+                IWebElement getSaveAndReturnButtonProperty = base.
+                    GetWebElementPropertiesById(idValue);
+                Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
+                   RandomTopicList_Page_Time_Value));
+                //Click On  Button
+                base.ClickByJavaScriptExecutor(getSaveAndReturnButtonProperty);
+               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "ButtonActionsForTabsAtEditRandomActivity",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
         
     }
 }

@@ -7475,5 +7475,108 @@ namespace Pegasus.Pages.UI_Pages
                 messagePresent=true;
         return messagePresent;
 }
+
+        public bool VerifyMessageStatus(string messageType)
+    {
+        string expectedMessage = "This is " + messageType + " message"; 
+        bool messagePresent = false;
+        bool messageTextPresent = false;
+        bool messagePass = false;
+        messagePresent = base.IsElementPresent(By.Id("Instructions"), 10);
+        if (messagePresent)
+        {
+            string actualMessage = base.GetElementInnerTextById("Instructions");
+            if (expectedMessage == actualMessage)
+            messageTextPresent = true;
+        }
+        if (messagePresent && messageTextPresent)
+            messagePass = true;
+
+        return messagePass;
+
+    }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="messageType"></param>
+        /// <returns></returns>
+        public bool VerifyMessageButtonStatus(string buttonType)
+        {
+            string id=string.Empty;
+            bool buttonPresent = false;
+            switch (buttonType)
+            {
+                case "Start":
+                    id = "btn" + "Open";
+                    break;
+                case "Close":
+                    id = "btn" + buttonType;
+                    break;
+            }
+       
+            buttonPresent = base.IsElementPresent(By.Id(id), 10);
+            return buttonPresent;
+
+        }
+
+        public void ClickMessageButton(string buttonType)
+        {
+            string id = string.Empty;
+            switch (buttonType)
+            {
+                case "Start":
+                    id = "btn" + "Open";
+                    break;
+                case "Close":
+                    id = "btn" + buttonType;
+                    break;
+            }
+           
+            base.WaitForElement(By.Id(id));
+       
+            base.GetWebElementPropertiesById(id).Click();
+        }
+
+        public bool VerifyActivityDirectionLine(string directionType)
+        {
+            string expectedMessage = "This is " + directionType + " message";
+            bool messagePresent = false;
+            bool messageTextPresent = false;
+            bool messagePass = false;
+            messagePresent = base.IsElementPresent(By.Id("divAssessmentdirections"), 10);
+            if (messagePresent)
+            {
+                string actualMessage = base.GetElementInnerTextById("divAssessmentdirections");
+                if (expectedMessage == actualMessage)
+                   
+                    messageTextPresent = true;
+            }
+            if (messagePresent && messageTextPresent)
+                messagePass = true;
+
+            return messagePass;
+        }
+
+        public bool VerifySectionDirectionLines(string sectionNumber)
+        {
+            string expectedMessage = "This is direction for Section " + sectionNumber;
+            string id = "divsectionfeedback_" + sectionNumber;
+            bool messagePresent = false;
+            bool messageTextPresent = false;
+            bool messagePass = false;
+            messagePresent = base.IsElementPresent(By.Id(id), 10);
+            if (messagePresent)
+            {
+                string actualMessage = base.GetElementInnerTextById(id);
+                if (expectedMessage == actualMessage)
+                    messageTextPresent = true;
+            }
+            if (messagePresent && messageTextPresent)
+                messagePass = true;
+
+            return messagePass;
+        }
+
       }
 }

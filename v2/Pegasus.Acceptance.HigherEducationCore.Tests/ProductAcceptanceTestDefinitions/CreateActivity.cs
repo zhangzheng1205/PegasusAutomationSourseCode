@@ -733,12 +733,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            ScenarioContext.Current.Pending();
        }
 
-       [Then(@"I reset number of questions per page value as ""(.*)"" and Save Activity")]
+       [Then(@"I reset number of questions per page value as ""(.*)""")]
        public void ThenIResetSetNumberOfQuestionsPerPageValueAsAndSaveActivity(string questionCount)
        {
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
            randomAssessmentPage.SetQuestionsPerPagePreference(questionCount);
-           randomAssessmentPage.SaveandReturnPreferenceAtCreateRandomActivity();
+       
        }
 
        [Then(@"I reset style sheet to ""(.*)""")]
@@ -755,7 +755,45 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            randomAssessmentPage.ClickSkipQuestion();
        }
 
+       [Then(@"I perform ""(.*)"" for ""(.*)""")]
+       [When(@"I perform ""(.*)"" for ""(.*)""")]
+       public void PerformButtonActionsAtEditRandomActivityWindow(string actionType, string tabName)
+       {
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           randomTopicListPage.ButtonActionsForTabsAtEditRandomActivity(actionType, tabName);
+          
+       }
 
+       [Then(@"I add ""(.*)"" message")]
+       public void AddMessage(string messageType)
+       {
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.EnterMessagesValues(messageType);
+       }
+
+       [When(@"I ""(.*)"" Directions at Section ""(.*)""")]
+       public void AddDirectionsAtSection(string actionType,string sectionNumber)
+       {
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.EnterDirectionLineToSection(actionType,sectionNumber);
+       }
+
+       [Then(@"I should see Directions ""(.*)"" to Section ""(.*)""")]
+       public void VerifyDirectionsAtSection(string actionType,string sectionNumber)
+       {
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           Assert.IsTrue(randomAssessmentPage.VerifyTheDirectionLines(actionType,sectionNumber));
+       }
+
+       /// <summary>
+       /// Verify Section Direction Line Deletion.
+       /// </summary>
+       /// <param name="p0"></param>
+       [Then(@"I should see Directions deleted at Section ""(.*)""")]
+       public void VerifySectionDirectionDeletion(string sectionNumber)
+       {
+           Assert.IsFalse(new RandomAssessmentPage().VerifyDirectionDeletion(sectionNumber));
+       }
 
 
         /// <summary>
