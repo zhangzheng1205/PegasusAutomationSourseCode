@@ -11,6 +11,7 @@ using OpenQA.Selenium.Interactions;
 using Keys = OpenQA.Selenium.Keys;
 using System.Collections.ObjectModel;
 using System.Collections;
+using System.Diagnostics;
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>
@@ -2948,5 +2949,48 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         #endregion WebDriver FindElements
+
+        #region WebDriver Wait
+
+        /// <summary>
+        /// Executes JavaScript in the context of the currently selected frame or window. 
+        /// The script fragment provided will be executed as the body of an click function.
+        /// </summary>
+        /// <param name="timeoutSecs">Represents an time to wait for the ajax calls to complete.</param>
+        /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
+        /// The script fragment provided will be executed as the body of an anonymous function.</see>
+        /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
+        /// access to the mechanism to do so.</seealso>
+        /// 
+
+        protected void WaitForAjaxToComplete(int timeoutSecs)
+        {
+
+            var stopWatch = new Stopwatch();
+
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < timeoutSecs)
+                {
+
+                    var ajaxIsComplete = (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");
+                    if (ajaxIsComplete)
+                    {
+                        break;
+                    }
+
+                }
+            }
+            //Exception Handling
+            catch (Exception ex)
+            {
+                stopWatch.Stop();
+                throw ex;
+            }
+            stopWatch.Stop();
+
+        }
+
+         #endregion WebDriver Wait
     }
 }
