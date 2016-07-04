@@ -60,24 +60,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
         public void CanvasUserEnterIntoCourse(string courseName)
         {
             logger.LogMethodEntry("CanvasUserLogin", "CanvasUserEnterIntoCourse", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.ClassName(CanvasUserLoginResource.
-                CanvasUserLogin_Page_CourseSelectorDropdown_ClassName_Value));
-
-            //Select the course selector dropdown
-            IWebElement getIcon = base.GetWebElementPropertiesByClassName(CanvasUserLoginResource.
-                CanvasUserLogin_Page_CourseSelectorDropdown_ClassName_Value);
-            base.PerformMouseClickAction(getIcon);
-
-            // Click on Custom list option to view all the enrolled courses in canvas portal
-            IWebElement getViewAllContentLink = base.GetWebElementPropertiesByClassName(CanvasUserLoginResource.
-                CanvasUserLogin_Page_ViewAllCourse_List_ClassName_Value);
-            base.ClickByJavaScriptExecutor(getViewAllContentLink);
-
-            //Wait for window to load
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
-            Thread.Sleep(1000);
             
+            //Wait for window to load
+            base.WaitUntilWindowLoads("User Dashboard");
+            base.SelectWindow("User Dashboard");
+            //Click on course
             base.WaitForElement(By.PartialLinkText(courseName));
             base.FocusOnElementByPartialLinkText(courseName);
             IWebElement getCourseName = base.GetWebElementPropertiesByPartialLinkText(courseName);
@@ -108,10 +95,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
         {
             // Canvas user logout
             logger.LogMethodEntry("CanvasUserLogin", "CanvasUserLogout", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
-            base.WaitForElement(By.PartialLinkText("Logout"));
-            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText("Logout"));
+            base.SwitchToDefaultPageContent();
+            base.SelectDefaultWindow();
+            base.WaitForElement(By.PartialLinkText("Account"),10);
+            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText("Account"));
+            base.SelectDefaultWindow();
+            bool pre = base.IsElementPresent(By.XPath("//button[contains(text(),'Logout')]"), 10);
+
+            base.GetWebElementPropertiesByXPath("//button[contains(text(),'Logout')]").Click();
             logger.LogMethodExit("CanvasUserLogin", "CanvasUserLogout", base.IsTakeScreenShotDuringEntryExit);
         }
     }

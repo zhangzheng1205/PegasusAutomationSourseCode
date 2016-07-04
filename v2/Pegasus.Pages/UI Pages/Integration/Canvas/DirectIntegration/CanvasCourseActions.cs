@@ -30,8 +30,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
         {
             logger.LogMethodEntry("CanvasCourseActions", "SelectTabInCourseLandingPage", base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(1000);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
+          
 
             switch (userType)
             {
@@ -86,13 +85,13 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
         /// <returns>This will return the icon existance status.</returns>
-        public bool GetGradeBookExistance(string pageName, User.UserTypeEnum userType)
+        public bool GetGradeBookExistance(string pageName, User.UserTypeEnum userType,string canvasPage)
         {
             logger.LogMethodEntry("CanvasCourseActions", "GetGradeBookExistance",
                 base.IsTakeScreenShotDuringEntryExit);
             bool pageStatus = false;
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
+            base.WaitUntilWindowLoads(canvasPage);
+            base.SelectWindow(canvasPage);
             
             // Switch based on the Page name
             switch (pageName)
