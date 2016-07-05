@@ -494,15 +494,23 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="actionType"></param>
+        /// <param name="sectionNo"></param>
         public void EnterDirectionLineToSection(string actionType, string sectionNo)
         {
+            logger.LogMethodEntry("RandomAssessmentPage",
+            "EnterDirectionLineToSection",
+            base.IsTakeScreenShotDuringEntryExit);
             //Select the current window
             base.SwitchToDefaultWindow();
             //Switch to frame
             base.SwitchToIFrameById("frmTopic");
             string idValue = string.Empty;
             string direction = string.Empty;
+
             switch(actionType)
             {
                 case "Add": idValue = "ancAddDirectionLine_" + sectionNo;
@@ -522,41 +530,67 @@ namespace Pegasus.Pages.UI_Pages
                      break;
 
             }
-
             base.SwitchToDefaultPageContent();
 
-           
-            
+            logger.LogMethodExit("RandomAssessmentPage",
+             "EnterDirectionLineToSection",
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Adding/Editing direction lines at editor.
+        /// </summary>
+        /// <param name="idValue"></param>
+        /// <param name="direction"></param>
         private void OpenEditorAndAddDirections(string idValue, string direction)
         {
+            logger.LogMethodEntry("RandomAssessmentPage",
+             "OpenEditorAndAddDirections",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Add link and click to open Editor
             base.WaitForElement(By.Id(idValue));
             //Click on Save and Return Button
             IWebElement addLink =
             base.GetWebElementPropertiesById(idValue);
             base.ClickByJavaScriptExecutor(addLink);
+            //Switch to Editor window and frame
             base.WaitUntilWindowLoads("Editor");
             base.SwitchToIFrameById("ucEditor");
+            //Add or Edit direction line at editor
             base.WaitForElement(By.CssSelector(".WebEditor"));
-
-
             IWebElement textArea = base.GetWebElementPropertiesByCssSelector(".WebEditor");
             base.PerformMoveToElementClickAction(textArea);
             Actions builder = new Actions(WebDriver);
             Thread.Sleep(3000);
             builder.SendKeys(direction).Perform();
+            //Switch to default window
             base.SwitchToDefaultPageContent();
+            //Close the Editor Window.
             base.GetWebElementPropertiesById("cmdOK").Click();
+            logger.LogMethodExit("RandomAssessmentPage",
+               "OpenEditorAndAddDirections",
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify the added/edited direction lines.
+        /// </summary>
+        /// <param name="actionType">This is the action performed .</param>
+        /// <param name="sectionNumber">This is the section number.</param>
+        /// <returns></returns>
         public bool VerifyTheDirectionLines(string actionType,string sectionNumber)
         {
+            // Verify the added/edited direction lines
+            logger.LogMethodEntry("RandomAssessmentPage",
+              "VerifyTheDirectionLines",
+             base.IsTakeScreenShotDuringEntryExit);
             string expectedDirection = string.Empty;
+            //Switch the window
             base.SwitchToDefaultWindow();
             //Switch to frame
             base.SwitchToIFrameById("frmTopic");
             bool directionPresent = false;
+            //Switch to action type and get expected direction lines
             switch (actionType)
             {
                 case "added":
@@ -566,22 +600,46 @@ namespace Pegasus.Pages.UI_Pages
                     expectedDirection = "This is direction for Section " + sectionNumber+" edited" ;
                     break;
             }
+            //The element id value
             string idValue="lbldirectionalline_"+sectionNumber;
+            //Get the actual direction line
             string actualDirection = base.GetElementInnerTextById(idValue).Trim();
+            //Compare expected and actual direction line
             if (expectedDirection == actualDirection)
                 directionPresent = true;
+            //Switch back to default window
             base.SwitchToDefaultPageContent();
+            logger.LogMethodExit("RandomAssessmentPage",
+               "VerifyTheDirectionLines",
+             base.IsTakeScreenShotDuringEntryExit);
+            //retur the comparision bool value
             return directionPresent;
           
 
         }
 
-      public bool VerifyDirectionDeletion(string sectionNumber)
+        /// <summary>
+        /// Verify deleted direction lines.
+        /// </summary>
+        /// <param name="sectionNumber">This is the section number.</param>
+        /// <returns></returns>
+        public bool VerifyDirectionDeletion(string sectionNumber)
         {
+            // Verify deleted direction lines
+            logger.LogMethodEntry("RandomAssessmentPage",
+              "VerifyDirectionDeletion",
+             base.IsTakeScreenShotDuringEntryExit);
             bool DirectionPres = true;
+            //Switch to window
             base.SwitchToDefaultWindow();
+            //The element id value
             string idValue="lbldirectionalline_"+sectionNumber;
+            //Verify the non availability of the direction lines after deletion
             DirectionPres = base.IsElementPresent(By.Id(idValue), 10);
+            logger.LogMethodExit("RandomAssessmentPage",
+                 "VerifyDirectionDeletion",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Return the availability status
             return DirectionPres;
             
         }

@@ -409,7 +409,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Post Test Window
                 this.SelectPostTestWindow();
                 //Enter Activity Title
-                new AddAssessmentPage().EnterActivityTitle(activityName);
+                new AddAssessmentPage().EnterActivityTitle(activityName.ToString());
                 //Click On Save and Continue Button
                 new AddAssessmentPage().ClickOnSaveAndContinueButton();
                 //Select Question For Post Test

@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("ActivitySubmission",
                 "AttemptTheActivity"
                 , base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Verify Submission of Activity.
@@ -197,7 +197,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             studentPresentationPage.SelectWebActivityWindow(ActivitySubmissionResource.
                 ActivitySubmission_Quiz_WindowName);
             //Click the start button
-            studentPresentationPage.EssayQuestionSubmission();             
+            studentPresentationPage.EssayQuestionSubmission();
             //Submit the Activity
             studentPresentationPage.FinishAndReturnToCourse();
             // Select close button on the Test window
@@ -224,7 +224,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             studentPresentationPage.SelectWebActivityWindow(ActivitySubmissionResource.
                 ActivitySubmission_Test_WindowName);
             // Attempt Activity 
-            new StudentPresentationPage().SubmitTheActivityInCourseMaterial();            
+            new StudentPresentationPage().SubmitTheActivityInCourseMaterial();
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheActivityInCourseMaterial"
                 , base.IsTakeScreenShotDuringEntryExit);
@@ -440,7 +440,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Click Start Button On Presentation Window
             studentPresentationPage.ClickStartButtonOnPresentationWindow(activityType);
             //Attempt Question In Presentation Page
-            studentPresentationPage.AttemptQuestionInPresentationPage();            
+            studentPresentationPage.AttemptQuestionInPresentationPage();
             Logger.LogMethodExit("ActivitySubmission", "SubmitTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -459,7 +459,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenActivity(activityTypeEnum);
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
-                base.IsTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);
         }
         [Then(@"I should see the status of activity with learnosity audio question as ""(.*)""")]
         public void VerifyStatusOfActivityWithLearnosityAudioQuestion(String activityStatus)
@@ -541,16 +541,16 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// Submit the WL SAM activity to see correct Answers.
         /// </summary>
         [When(@"I submit the SAM Activity to score and to see correct answers")]
-         public void WhenISubmitToSeeCorrectAnswers()
+        public void WhenISubmitToSeeCorrectAnswers()
         {
             //Submit the WL SAM activity to score 100
             Logger.LogMethodEntry("ActivitySubmission",
-                "SubmitTheSAMActivity",
+                "WhenISubmitToSeeCorrectAnswers",
                 base.IsTakeScreenShotDuringEntryExit);
             bool found = new CourseContentUXPage().SubmitSAMActivityToSeeCorrectAnswers();
             Assert.AreEqual(true, found);
             Logger.LogMethodExit("ActivitySubmission",
-               "SubmitTheSAMActivity",
+               "WhenISubmitToSeeCorrectAnswers",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -620,7 +620,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <param name="pageNumber">The Page Number.</param>
         /// <param name="activityTypeEnum">This the activity Type Enum.</param>
         [When(@"I attempt ""(.*)"" questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
-        public void AttemptSpecificNumberOfFillInTheBlanksQuestions(int questionCount, int pageNumber, 
+        public void AttemptSpecificNumberOfFillInTheBlanksQuestions(int questionCount, int pageNumber,
             Activity.ActivityTypeEnum activityTypeEnum)
         {
             // Attempt Fill In The Blanks Questions at Presentation Window
@@ -633,10 +633,10 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Switch to Activity Presentation Window
             base.WaitUntilWindowLoads(windowTitle);
             // Attempt Fill In The Blanks Questions at Presentation Window
-           new StudentPresentationPage().AttemptFillInTheBlanksQuestions(questionCount);
-           Logger.LogMethodExit("ActivitySubmission",
-            "AttemptSpecificNumberOfFillInTheBlanksQuestions",
-            base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().AttemptFillInTheBlanksQuestions(questionCount);
+            Logger.LogMethodExit("ActivitySubmission",
+             "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -676,13 +676,16 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
-        /// 
+        /// Verify The Availibility Of Save For Later in Presentation Window in 
+        /// default Style Sheet.
         /// </summary>
-        /// <param name="availaibilityStatus"></param>
+        /// <param name="availabilityStatus">This is expected availability status.</param>
         [Then(@"I should the availibility of Save For Later is ""(.*)"" in ""(.*)"" Activity Presentation Window")]
-        public void VerifyTheAvailibilityOfSaveForLater(bool availaibilityStatus,
+        public void VerifyTheAvailibilityOfSaveForLater(bool availabilityStatus,
             Activity.ActivityTypeEnum activityTypeEnum)
         {
+            // Verify The Availibility Of Save For Later in Presentation Window in 
+            // default Style Sheet
             Logger.LogMethodEntry("ActivitySubmission",
           "VerifyTheAvailibilityOfSaveForLater",
           base.IsTakeScreenShotDuringEntryExit);
@@ -690,30 +693,43 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             string windowTitle = activity.Name.ToString();
             //Switch to Activity Presentation Window
             base.WaitUntilWindowLoads(windowTitle);
-            Assert.AreEqual(availaibilityStatus, 
+            // Verify The Availibility Of Save For Later in Presentation Window in 
+            // default Style Sheet
+            Assert.AreEqual(availabilityStatus,
                 new StudentPresentationPage().VerifySaveForLaterButton());
             Logger.LogMethodExit("ActivitySubmission",
          "VerifyTheAvailibilityOfSaveForLater",
          base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on Save For Later in Default Style Sheet.
+        /// </summary>
         [Then(@"I Verify Confirmation Message on Save the Activity for later")]
         public void SaveTheActivityForLater()
         {
+            // Click on Save For Later in Default Style Sheet
             Logger.LogMethodEntry("ActivitySubmission",
           "SaveTheActivityForLater",
           base.IsTakeScreenShotDuringEntryExit);
+            // Click on Save For Later in Default Style Sheet
             new StudentPresentationPage().ClickOnSaveForLater();
             Logger.LogMethodExit("ActivitySubmission",
          "SaveTheActivityForLater",
          base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify the Data saved on performin "Save For Later".
+        /// </summary>
+        /// <param name="questionCount">This is the Question Number.</param>
+        /// <param name="pageNumber">This is the Presentation Page Number.</param>
+        /// <param name="activityTypeEnum">This the Acitivity Type Enum.</param>
         [Then(@"I should see ""(.*)"" questions answers saved in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
-        public void VerifySaveForLaterData(int questionCount, int pageNumber, 
+        public void VerifySaveForLaterData(int questionCount, int pageNumber,
             Activity.ActivityTypeEnum activityTypeEnum)
         {
-
+            // Verify the Data saved on performin "Save For Later"
             Logger.LogMethodEntry("ActivitySubmission",
           "VerifySaveForLaterData",
           base.IsTakeScreenShotDuringEntryExit);
@@ -761,68 +777,115 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         [Given(@"I am on ""(.*)"" window")]
         public void SelectPresentationWindow(Activity.ActivityTypeEnum activityTypeEnum)
         {
+            // Switch to presentation window
+            Logger.LogMethodEntry("CommonSteps",
+               "SelectPresentationWindow",
+               base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             string windowTitle = activity.Name.ToString();
             //Switch to Activity Presentation Window
             base.WaitUntilWindowLoads(windowTitle);
+            Logger.LogMethodExit("CommonSteps",
+              "SelectPresentationWindow",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Verify Beginning/end Messages at Presentation Window.
         /// </summary>
-        /// <param name="p0">messageType</param>
-        /// <param name="p1">availabilityStatus</param>
+        /// <param name="messageType">messageType</param>
+        /// <param name="availabilityStatus">availabilityStatus</param>
         [Then(@"I should see the availability of ""(.*)"" message is ""(.*)""")]
         public void VerifyMessagesInPresentation(string messageType,
             string availabilityStatus)
         {
+            // Verify Beginning/end Messages at Presentation Window
+            Logger.LogMethodEntry("CommonSteps",
+            "VerifyMessagesInPresentation",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Verify Beginning/end Messages at Presentation Window
             Assert.AreEqual(availabilityStatus, new StudentPresentationPage().
                 VerifyMessageStatus(messageType).ToString());
+            Logger.LogMethodExit("CommonSteps",
+              "VerifyMessagesInPresentation",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Verify Message Button in Presentation Window
+        /// Verify Message Button in Presentation Window.
         /// </summary>
-        /// <param name="p0"></param>
-        /// <param name="p1"></param>
+        /// <param name="buttonType">This is the button type.</param>
+        /// <param name="availabilityStatus">This is the expected availability status.</param>
         [Then(@"I should see see the availability of ""(.*)"" Button is ""(.*)""")]
         public void VerifyMessageButton(string buttonType, string availabilityStatus)
         {
+            // Verify Message Button in Presentation Window
+            Logger.LogMethodEntry("CommonSteps",
+            "VerifyMessageButton",
+            base.IsTakeScreenShotDuringEntryExit);
             Assert.AreEqual(availabilityStatus, new StudentPresentationPage().
                 VerifyMessageButtonStatus(buttonType).ToString());
+            Logger.LogMethodExit("CommonSteps",
+             "VerifyMessageButton",
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Click Message Button.
         /// </summary>
-        /// <param name="p0"></param>
+        /// <param name="p0">This is button type.</param>
         [When(@"I click on ""(.*)"" Button")]
-        public void ClickOnMessageButton(string buttonType)
+        public void ClickMessageButton(string buttonType)
         {
-
+            // Click Message Button
+            Logger.LogMethodEntry("CommonSteps",
+              "ClickMessageButton",
+              base.IsTakeScreenShotDuringEntryExit);
+            // Click Message Button
             new StudentPresentationPage().
                   ClickMessageButton(buttonType);
+            Logger.LogMethodExit("CommonSteps",
+            "ClickMessageButton",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Verify Activity Direction Lines.
         /// </summary>
-        /// <param name="p0"></param>
-        /// <param name="p1"></param>
+        /// <param name="directionType">This is direction line type.</param>
+        /// <param name="availabilityStatus">This is direction line type.</param>
         [Then(@"I should see the availibility ""(.*)"" at Page is ""(.*)""")]
         public void VerifyActivityDirectionLines(string directionType, string availabilityStatus)
         {
+            // Verify Activity Direction Lines
+            Logger.LogMethodEntry("CommonSteps",
+              "VerifyActivityDirectionLines",
+              base.IsTakeScreenShotDuringEntryExit);
+            // Verify Activity Direction Lines
             Assert.AreEqual(availabilityStatus, new StudentPresentationPage().
                VerifyActivityDirectionLine(directionType).ToString());
-
+            Logger.LogMethodExit("CommonSteps",
+            "VerifyActivityDirectionLines",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Verify Section Direction Lines at Presentation Window.
+        /// </summary>
+        /// <param name="sectionNumber"></param>
         [Then(@"I should see the Section Direction lines for Section ""(.*)""")]
         public void VerifySectionDirectionLinesAtPresentation(string sectionNumber)
         {
+            // Verify Section Direction Lines at Presentation Window
+            Logger.LogMethodEntry("CommonSteps",
+            "VerifySectionDirectionLinesAtPresentation",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Verify Section Direction Lines at Presentation Window
             Assert.IsTrue(new StudentPresentationPage().
                 VerifySectionDirectionLines(sectionNumber));
+            Logger.LogMethodExit("CommonSteps",
+            "VerifySectionDirectionLinesAtPresentation",
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

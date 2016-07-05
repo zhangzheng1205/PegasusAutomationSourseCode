@@ -69,6 +69,8 @@ namespace Pegasus.Pages.UI_Pages
           
             //Create Question
             string questionDetails = this.EnterQuestionTitle().ToString();
+            Guid activity = Guid.NewGuid();
+            string randomValue = activity.ToString().Split('-')[0];
             //Add Blank Field
             this.AddBlankFieldAtTop();
             //Add Text for the Question
@@ -78,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_WaitTime_Value));
             //Add Text for the Blank
-            this.AddTextForQuestionAndBlankAtTop(questionDetails+" This is question");
+            this.AddTextForQuestionAndBlankAtTop("The answer to " + randomValue + " question is ");
             //Click on the 'Add Score And Feedback' tab
             this.ClickOnAddScoreAndFeedBackTab();
             //Select Partial Grading option

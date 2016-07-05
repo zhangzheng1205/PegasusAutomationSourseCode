@@ -680,7 +680,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Enter Activity Title.
         /// </summary>  
         /// <param name="activityTitle">This is Activity Title GUID.</param>
-        public void EnterActivityTitle(Guid activityTitle)
+        public void EnterActivityTitle(string activityTitle)
         {
             //Enter Activity Title
             logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
@@ -793,9 +793,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Pretest Window
                 this.SelectPretestWindow();
                 //Enter Activity Title
-                this.EnterActivityTitle(activityName);
+                this.EnterActivityTitle(activityName.ToString());
                 //Store PreTest Details
-                this.StoreGradableAsset(activityName, Activity.ActivityTypeEnum.PreTest);                        
+                this.StoreGradableAsset(activityName.ToString(), Activity.ActivityTypeEnum.PreTest);                        
                 //Click On Save and Continue Button
                 this.ClickOnSaveAndContinueButton();
             }
@@ -845,7 +845,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Generate Activity Name GUID
-                Guid activityName = Guid.NewGuid();
+                Guid activity = Guid.NewGuid();
+                String date = DateTime.Now.ToString("yyyy/MM/dd");
+                string randomValue = activity.ToString().Split('-')[0];
+                string activityName = "Auto-" + date + "-" + randomValue + "-Activity";
+
                 //Select Window
                 this.SelectCreateActivityWindow();
                 //Enter Activity Title
@@ -901,7 +905,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
         /// <param name="activityTypeEnum">This is Activity Type.</param>
-        private void StoreGradableAsset(Guid activityName,
+        private void StoreGradableAsset(string activityName,
             Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Store Activity Details
@@ -939,7 +943,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 this.SelectCreateActivityWindow();
                 //Enter Activity Title
-                this.EnterActivityTitle(activityName);
+                this.EnterActivityTitle(activityName.ToString());
                 //Select Assignemt Radio Button
                 this.SelectAssignmentRadioButton();
                 //Select Grader checkbox
@@ -1327,7 +1331,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 this.SelectCreateActivityWindow();
                 //Enter Activity Title
-                this.EnterActivityTitle(activityName);
+                this.EnterActivityTitle(activityName.ToString());
                 //Click The Basic Random Radio Button
                 this.SelectAssignmentRadioButton();
                 //Click On Save and Continue Button

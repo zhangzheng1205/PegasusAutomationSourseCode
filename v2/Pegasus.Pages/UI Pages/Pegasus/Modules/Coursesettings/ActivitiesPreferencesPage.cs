@@ -508,7 +508,12 @@ namespace Pegasus.Pages.UI_Pages
                 if (ActivityNameText == "")
                 {
                     // Generate GUID to enter into the activity name text box
-                    Guid activityTypeName = Guid.NewGuid();
+                
+                    Guid activityType = Guid.NewGuid();
+                    String date = DateTime.Now.ToString("yyyy/MM/dd");
+                    string randomValue = activityType.ToString().Split('-')[0];
+                    string activityTypeName = "Auto-" + date + "-" + randomValue + "-Activity Type";
+                 
                     base.FillTextBoxByXPath((string.Format(ActivitiesPreferencesPageResource.
                     ActivitiesPreferences_Page_AddActivityName_GetActivityName_Xpath_Locator, i)), activityTypeName.ToString());
                     // Store the GUID enterd as activity name in memory

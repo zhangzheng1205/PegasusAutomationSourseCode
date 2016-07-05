@@ -2963,14 +2963,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// access to the mechanism to do so.</seealso>
         /// 
 
-        protected void WaitForAjaxToComplete(int timeoutSecs)
+        protected void WaitForAjaxToComplete(int waitTimeOutDuration = -1)
         {
 
             var stopWatch = new Stopwatch();
-
+            if (waitTimeOutDuration == -1)
+            {
+                waitTimeOutDuration = this._waitTimeOut;
+            }
             try
             {
-                while (stopWatch.Elapsed.TotalSeconds < timeoutSecs)
+                while (stopWatch.Elapsed.TotalSeconds < waitTimeOutDuration)
                 {
 
                     var ajaxIsComplete = (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");

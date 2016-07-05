@@ -701,98 +701,174 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            base.IsTakeScreenShotDuringEntryExit);
        }
 
+        /// <summary>
+       /// Add Questions To A Section.
+       /// </summary>
+       /// <param name="numberOfQuestions">This is Number of Questions to be Added.</param>
+       /// <param name="questionType">This is Type of question to be Added.</param>
+       /// <param name="sectionNumber">This is the Section Number.</param>
        [Then(@"I add '(.*)' questions of type ""(.*)"" at Section ""(.*)""")]
-       public void AddMultipleQuestionsToASection(int numberOfQuestions, string questionType, string sectionNumber)
+       public void AddQuestionsToASection(int numberOfQuestions, string questionType, string sectionNumber)
        {
-           //open add questions of respective section
-           //select create new question
-           //add three fill in the blanks
-
-            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
-            randomTopicListPage.CreateSectionsWithMultipleQuestions(numberOfQuestions,
-            questionType, sectionNumber);
+           // Add Questions To A Section
+           Logger.LogMethodEntry("CreateActivity", "AddQuestionsToASection",
+           base.IsTakeScreenShotDuringEntryExit);
+           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           // Add Questions To A Section
+           randomTopicListPage.CreateSectionsWithMultipleQuestions(numberOfQuestions,
+           questionType, sectionNumber);
+           Logger.LogMethodExit("CreateActivity", "AddQuestionsToASection",
+           base.IsTakeScreenShotDuringEntryExit);
           
        }
 
+    
         /// <summary>
-       /// Save And Continue Editing At Another Tab
-       /// </summary>
-        /// <param name="tabName">Expected Tab Name</param>
-       [When(@"I Save and Continue and navigate to ""(.*)"" Tab")]
-       public void SaveAndContinueAtAnotherTab(string tabName)
-       {
-           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
-
-           randomTopicListPage.ClickOnSaveAndContinueButton();
-           randomTopicListPage.NavigatetoTabInCreateRandomActvityWindow(tabName);
-       }
-
-       [Then(@"I  should verify Activity Preference Set are saved successfully")]
-       public void VerifyActivityPreferenceSet()
-       {
-           ScenarioContext.Current.Pending();
-       }
-
+        /// Set Number Of Questions Per Page at Activity level.
+        /// </summary>
+        /// <param name="questionCount">This is number of qusetions.</param>
        [Then(@"I reset number of questions per page value as ""(.*)""")]
-       public void ThenIResetSetNumberOfQuestionsPerPageValueAsAndSaveActivity(string questionCount)
+       public void SetNumberOfQuestionsPerPage(string questionCount)
        {
+           // Set Number Of Questions Per Page at Activity level
+           Logger.LogMethodEntry("CreateActivity",
+            "SetNumberOfQuestionsPerPage",
+          base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           // Set Number Of Questions Per Page at Activity level
            randomAssessmentPage.SetQuestionsPerPagePreference(questionCount);
+           Logger.LogMethodExit("CreateActivity",
+            "SetNumberOfQuestionsPerPage",
+           base.IsTakeScreenShotDuringEntryExit);
        
        }
 
+        /// <summary>
+        /// Set Style Sheet Type at Activity level.
+        /// </summary>
+        /// <param name="sheetType">This is Style type.</param>
        [Then(@"I reset style sheet to ""(.*)""")]
        public void ResetStyleSheet(string sheetType)
        {
+           // Set Style Sheet Type at Activity level
+           Logger.LogMethodEntry("CreateActivity",
+              "ResetStyleSheet",
+          base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           // Set Style Sheet Type at Activity level
            randomAssessmentPage.SetStyleSheet(sheetType);
+           Logger.LogMethodExit("CreateActivity",
+             "ResetStyleSheet",
+          base.IsTakeScreenShotDuringEntryExit);
        }
 
+       /// <summary>
+       /// Set Skip Question Preference at Activity Level.
+       /// </summary>
        [Then(@"I check Allow students to skip questions")]
        public void CheckOrUnCheckSkipQuestionPreference()
        {
+           // Set Skip Question Preference at Activity Level
+           Logger.LogMethodEntry("CreateActivity",
+               "PerformButtonActionsAtEditRandomActivityWindow",
+           base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           // Set Skip Question Preference at Activity Level
            randomAssessmentPage.ClickSkipQuestion();
+           Logger.LogMethodExit("CreateActivity",
+              "PerformButtonActionsAtEditRandomActivityWindow",
+           base.IsTakeScreenShotDuringEntryExit);
        }
 
+        /// <summary>
+        /// Click on buttons at Activity Creation Window.
+        /// </summary>
+        /// <param name="actionType">This is the action/button type.</param>
+        /// <param name="tabName">This is tab name.</param>
        [Then(@"I perform ""(.*)"" for ""(.*)""")]
        [When(@"I perform ""(.*)"" for ""(.*)""")]
        public void PerformButtonActionsAtEditRandomActivityWindow(string actionType, string tabName)
        {
+           // Click on buttons at Activity Creation Window
+           Logger.LogMethodEntry("CreateActivity", 
+               "PerformButtonActionsAtEditRandomActivityWindow",
+           base.IsTakeScreenShotDuringEntryExit);
            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           // Click on buttons at Activity Creation Window
            randomTopicListPage.ButtonActionsForTabsAtEditRandomActivity(actionType, tabName);
+           Logger.LogMethodExit("CreateActivity", 
+               "PerformButtonActionsAtEditRandomActivityWindow",
+           base.IsTakeScreenShotDuringEntryExit);
           
        }
 
+        /// <summary>
+        /// Enter the message in Meassages Tab at Activity Creation Window.
+        /// </summary>
+        /// <param name="messageType">This is Message Type.</param>
        [Then(@"I add ""(.*)"" message")]
        public void AddMessage(string messageType)
        {
+           // Enter the message in Meassages Tab at Activity Creation Window
+           Logger.LogMethodEntry("CreateActivity", "AddMessage",
+           base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           // Enter the message in Meassages Tab at Activity Creation Window
            randomAssessmentPage.EnterMessagesValues(messageType);
+           Logger.LogMethodExit("CreateActivity", "AddMessage",
+           base.IsTakeScreenShotDuringEntryExit);
        }
 
+        /// <summary>
+        /// Add/Edit/Delete Direction Lines to an activity Section.
+        /// </summary>
+        /// <param name="actionType">This is action to be performed.</param>
+        /// <param name="sectionNumber">This is the section number.</param>
        [When(@"I ""(.*)"" Directions at Section ""(.*)""")]
        public void AddDirectionsAtSection(string actionType,string sectionNumber)
        {
+           // Add/Edit/Delete Direction Lines to an activity Section
+           Logger.LogMethodEntry("CreateActivity", "AddDirectionsAtSection",
+           base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           // Add/Edit/Delete Direction Lines to an activity Section
            randomAssessmentPage.EnterDirectionLineToSection(actionType,sectionNumber);
+           Logger.LogMethodExit("CreateActivity", "AddDirectionsAtSection",
+           base.IsTakeScreenShotDuringEntryExit);
        }
 
+        /// <summary>
+        /// Verification of Section Direction Lines at Activity Creation Window.
+        /// </summary>
+        /// <param name="actionType">This is the action type performed on direction lines.</param>
+       /// <param name="sectionNumber">This is the section number.</param>
        [Then(@"I should see Directions ""(.*)"" to Section ""(.*)""")]
        public void VerifyDirectionsAtSection(string actionType,string sectionNumber)
        {
+           // Verification of Section Direction Lines at Activity Creation Window
+           Logger.LogMethodEntry("CreateActivity", "VerifyDirectionsAtSection",
+           base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           // Verification of Section Direction Lines at Activity Creation Window
            Assert.IsTrue(randomAssessmentPage.VerifyTheDirectionLines(actionType,sectionNumber));
+           Logger.LogMethodExit("CreateActivity", "VerifyDirectionsAtSection",
+           base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
        /// Verify Section Direction Line Deletion.
        /// </summary>
-       /// <param name="p0"></param>
+       /// <param name="sectionNumber">This is the section number.</param>
        [Then(@"I should see Directions deleted at Section ""(.*)""")]
        public void VerifySectionDirectionDeletion(string sectionNumber)
        {
+           // Verify Section Direction Line Deletion
+           Logger.LogMethodEntry("CreateActivity", "VerifySectionDirectionDeletion",
+           base.IsTakeScreenShotDuringEntryExit);
+           // Verify Section Direction Line Deletion
            Assert.IsFalse(new RandomAssessmentPage().VerifyDirectionDeletion(sectionNumber));
+           Logger.LogMethodExit("CreateActivity", "VerifySectionDirectionDeletion",
+           base.IsTakeScreenShotDuringEntryExit);
        }
 
 

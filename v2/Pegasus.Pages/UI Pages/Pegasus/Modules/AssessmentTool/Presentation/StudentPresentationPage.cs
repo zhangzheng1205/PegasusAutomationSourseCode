@@ -6794,14 +6794,18 @@ namespace Pegasus.Pages.UI_Pages
                                                 StudentPresentationPageResource.
                                                 StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,
                                                 NthQuestion, NthOption));
-                                            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                                            StudentPresentation_Page_LaunchWindow_TimeValue));
+                                            //Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                                            //StudentPresentation_Page_LaunchWindow_TimeValue));
+                                            //Replacing thread.sleep with Ajax wait
+                                            base.WaitForAjaxToComplete();
                                             String TempOption = RadioOption.Text;
                                             if (TempOption.Equals(Option))
                                             {
                                                 base.ClickByJavaScriptExecutor(RadioOption);
-                                                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                                                StudentPresentation_Page_LaunchWindow_TimeValue));
+                                                //Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                                                //StudentPresentation_Page_LaunchWindow_TimeValue));
+                                                //Replacing thread.sleep with Ajax wait
+                                                base.WaitForAjaxToComplete();
                                                 break;
                                             }
                                         }
@@ -6811,8 +6815,10 @@ namespace Pegasus.Pages.UI_Pages
                                 {
                                     IWebElement SelectOption = base.
                                         GetWebElementPropertiesByLinkText(Option);
-                                    Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                                           StudentPresentation_Page_LaunchWindow_TimeValue));
+                                    //Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                                    //       StudentPresentation_Page_LaunchWindow_TimeValue));
+                                    //Replacing thread.sleep with Ajax wait
+                                    base.WaitForAjaxToComplete();
                                     base.ClickByJavaScriptExecutor(SelectOption);
 
                                 }
@@ -7177,7 +7183,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Switch to window
-                this.SwitchToWindow(StudentPresentationPageResource.
+                this.SwitchToTheWindow(StudentPresentationPageResource.
                     StudentPresentation_Page_OpenStudyPlan_Window_Name);
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                     StudentPrsentation_Page_OpenStudyPlan_ReturnToCourseButton_Id_Value));
@@ -7196,7 +7202,8 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-        private void SwitchToWindow(string windowName)
+
+        private void SwitchToTheWindow(string windowName)
         {
             base.WaitUntilWindowLoads(windowName);
             base.SelectWindow(windowName);
@@ -7218,7 +7225,7 @@ namespace Pegasus.Pages.UI_Pages
             string getActivitySubmittedStatus = string.Empty;
             try
             {
-                this.SwitchToWindow(windowName);
+                this.SwitchToTheWindow(windowName);
                 //Switch To Frame
                 base.SwitchToIFrameById(StudentPresentationPageResource.
                     StudentPresentation_Page_Content_Frame_Id_Locator);
@@ -7424,15 +7431,32 @@ namespace Pegasus.Pages.UI_Pages
             return warningMessagePresent;
         }
 
+        /// <summary>
+        /// Verify Save For Later Button.
+        /// </summary>
+        /// <returns></returns>
         public bool VerifySaveForLaterButton()
         {
+            // Verify Save For Later Button
+            logger.LogMethodEntry("StudentPresentationPage",
+             "VerifySaveForLaterButton", base.IsTakeScreenShotDuringEntryExit);
             bool buttonPresent = false;
             logger.LogMethodEntry("StudentPresentationPage",
                          "VerifySaveForLaterButton", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id("saveForLater"));
-            buttonPresent = base.IsElementPresent(By.Id("saveForLater"), 10);
+            try
+            {
+                //Get the element availability status
+                buttonPresent = base.IsElementPresent(By.Id("saveForLater"), 10);
+
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage",
             "VerifySaveForLaterButton", base.IsTakeScreenShotDuringEntryExit);
+
             return buttonPresent;
         }
 
@@ -7445,7 +7469,7 @@ namespace Pegasus.Pages.UI_Pages
             bool answerPresent = false;
             // Attempt Fill In The Blanks Questions at Presentation Window
             logger.LogMethodEntry("StudentPresentationPage",
-              "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+              "VerifySavedFillInTheBlanksQuestionAnswers", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Save all the Text fields in a collection
@@ -7461,120 +7485,234 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage",
-            "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+            "VerifySavedFillInTheBlanksQuestionAnswers", base.IsTakeScreenShotDuringEntryExit);
             return answerPresent;
         }
     
-
-    private bool VerifySaveForLaterConfirmationPopUp()
+     /// <summary>
+     /// Verify Save For Later Confirmation PopUp.
+     /// </summary>
+     /// <returns>Returns the availability bool value.</returns>
+      private bool VerifySaveForLaterConfirmationPopUp()
      {
+         // Verify Save For Later Confirmation PopUp
+         logger.LogMethodEntry("StudentPresentationPage", "VerifySaveForLaterConfirmationPopUp",
+            base.IsTakeScreenShotDuringEntryExit);
             bool messagePresent=false;
+         //This is the expected warning message in pop up
             string expectedMessage = "Are you sure you want to save and close this activity? If you click Save, the activity is not submitted for grading, and you can open it again to complete it.";
+         //get the actual warning message in pop up
             string actualMessage=base.GetElementInnerTextById("confirmmessages").Trim();
+         //compare expected and actual messages
             if (expectedMessage==actualMessage)
                 messagePresent=true;
-        return messagePresent;
-}
+            logger.LogMethodExit("StudentPresentationPage",
+            "VerifySaveForLaterConfirmationPopUp", base.IsTakeScreenShotDuringEntryExit);
+         //return the availability status
+          return messagePresent;
+  }
 
+        /// <summary>
+        /// Verify Message Availability at Presentation Window.
+        /// </summary>
+        /// <param name="messageType">This is Message type.</param>
+        /// <returns>Returns the availability bool status</returns>
         public bool VerifyMessageStatus(string messageType)
-    {
-        string expectedMessage = "This is " + messageType + " message"; 
-        bool messagePresent = false;
-        bool messageTextPresent = false;
-        bool messagePass = false;
-        messagePresent = base.IsElementPresent(By.Id("Instructions"), 10);
-        if (messagePresent)
-        {
-            string actualMessage = base.GetElementInnerTextById("Instructions");
-            if (expectedMessage == actualMessage)
-            messageTextPresent = true;
-        }
-        if (messagePresent && messageTextPresent)
-            messagePass = true;
+      {
+          // Verify Message Availability at Presentation Window
+          logger.LogMethodEntry("StudentPresentationPage", "VerifyMessageStatus",
+          base.IsTakeScreenShotDuringEntryExit);
+          bool messagePresent = false;
+          bool messageTextPresent = false;
+          bool messagePass = false;
+          //Expected Message string
+          try
+          {
+              string expectedMessage = "This is " + messageType + " message";
+             
+              //Get the actual Availability status
+              messagePresent = base.IsElementPresent(By.Id("Instructions"), 10);
+              // Verify the available message string
+              if (messagePresent)
+              {
+                  string actualMessage = base.GetElementInnerTextById("Instructions");
+                  if (expectedMessage == actualMessage)
+                      messageTextPresent = true;
+              }
+              //Set true when both message is available and the message string is correct
+              if (messagePresent && messageTextPresent)
+                  messagePass = true;
+          }
+          catch (Exception e)
+          {
 
+              ExceptionHandler.HandleException(e);
+          }
+        logger.LogMethodExit("StudentPresentationPage", "VerifyMessageStatus",
+                  base.IsTakeScreenShotDuringEntryExit);
+        //Return the bool value for assertion
         return messagePass;
 
     }
 
         /// <summary>
-        /// 
+        /// Verify Message Button Availability.
         /// </summary>
-        /// <param name="messageType"></param>
+        /// <param name="buttonType">This is the Button Type.</param>
         /// <returns></returns>
         public bool VerifyMessageButtonStatus(string buttonType)
         {
-            string id=string.Empty;
+            // Verify Message Button Availability
+            logger.LogMethodEntry("StudentPresentationPage", "VerifyMessageButtonStatus",
+           base.IsTakeScreenShotDuringEntryExit);
+            string id = string.Empty;
             bool buttonPresent = false;
-            switch (buttonType)
+            try
             {
-                case "Start":
-                    id = "btn" + "Open";
-                    break;
-                case "Close":
-                    id = "btn" + buttonType;
-                    break;
+                //Switch to Button type to set element id value
+                switch (buttonType)
+                {
+                    case "Start":
+                        id = "btn" + "Open";
+                        break;
+                    case "Close":
+                        id = "btn" + buttonType;
+                        break;
+                }
+                //Get the actual Availability status
+                buttonPresent = base.IsElementPresent(By.Id(id), 10);
             }
-       
-            buttonPresent = base.IsElementPresent(By.Id(id), 10);
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "VerifyMessageButtonStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Return the bool value for assertion
             return buttonPresent;
 
         }
 
+        /// <summary>
+        /// Click Message Button.
+        /// </summary>
+        /// <param name="buttonType">This is the Button Type.</param>
         public void ClickMessageButton(string buttonType)
         {
-            string id = string.Empty;
-            switch (buttonType)
+            // Click Message Button
+            logger.LogMethodEntry("StudentPresentationPage", "ClickMessageButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
             {
-                case "Start":
-                    id = "btn" + "Open";
-                    break;
-                case "Close":
-                    id = "btn" + buttonType;
-                    break;
+                string id = string.Empty;
+                //Switch to Button type to set element id value
+                switch (buttonType)
+                {
+                    case "Start":
+                        id = "btn" + "Open";
+                        break;
+                    case "Close":
+                        id = "btn" + buttonType;
+                        break;
+                }
+                //Wait for button element and click
+                base.WaitForElement(By.Id(id));
+                // Click Message Button
+                base.GetWebElementPropertiesById(id).Click();
             }
-           
-            base.WaitForElement(By.Id(id));
-       
-            base.GetWebElementPropertiesById(id).Click();
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "ClickMessageButton",
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify Activity Direction Line.
+        /// </summary>
+        /// <param name="directionType">This is Direction Type.</param>
+        /// <returns>This returns bool value.</returns>
         public bool VerifyActivityDirectionLine(string directionType)
         {
-            string expectedMessage = "This is " + directionType + " message";
+            // Verify Activity Direction Line
+            logger.LogMethodEntry("StudentPresentationPage", "VerifyActivityDirectionLine",
+            base.IsTakeScreenShotDuringEntryExit);
             bool messagePresent = false;
             bool messageTextPresent = false;
             bool messagePass = false;
-            messagePresent = base.IsElementPresent(By.Id("divAssessmentdirections"), 10);
-            if (messagePresent)
+            //This is the expected message string
+            try
             {
-                string actualMessage = base.GetElementInnerTextById("divAssessmentdirections");
-                if (expectedMessage == actualMessage)
-                   
-                    messageTextPresent = true;
-            }
-            if (messagePresent && messageTextPresent)
-                messagePass = true;
+                string expectedMessage = "This is " + directionType + " message";
+                //Get the actual Availability status
+                messagePresent = base.IsElementPresent(By.Id("divAssessmentdirections"), 10);
+                // Verify the available message string
+                if (messagePresent)
+                {
+                    string actualMessage = base.GetElementInnerTextById("divAssessmentdirections");
+                    if (expectedMessage == actualMessage)
 
+                        messageTextPresent = true;
+                }
+                //Set true when both message is available and the message string is correct
+                if (messagePresent && messageTextPresent)
+                    messagePass = true;
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "VerifyActivityDirectionLine",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Return the bool value for assertion
             return messagePass;
         }
 
+        /// <summary>
+        /// Verify Section Direction Lines.
+        /// </summary>
+        /// <param name="sectionNumber">This is Section Number.</param>
+        /// <returns>Returns the actual Availability status.</returns>
         public bool VerifySectionDirectionLines(string sectionNumber)
         {
-            string expectedMessage = "This is direction for Section " + sectionNumber;
-            string id = "divsectionfeedback_" + sectionNumber;
+            // Verify Section Direction Lines
+            logger.LogMethodEntry("StudentPresentationPage", "VerifySectionDirectionLines",
+           base.IsTakeScreenShotDuringEntryExit);
             bool messagePresent = false;
             bool messageTextPresent = false;
             bool messagePass = false;
-            messagePresent = base.IsElementPresent(By.Id(id), 10);
-            if (messagePresent)
+            //This is the expected message string
+            try
             {
-                string actualMessage = base.GetElementInnerTextById(id);
-                if (expectedMessage == actualMessage)
-                    messageTextPresent = true;
-            }
-            if (messagePresent && messageTextPresent)
-                messagePass = true;
+                string expectedMessage = "This is direction for Section " + sectionNumber;
+                //This is the message element id
+                string id = "divsectionfeedback_" + sectionNumber;
 
+                //Get the actual Availability status
+                messagePresent = base.IsElementPresent(By.Id(id), 10);
+                // Verify the available message string
+                if (messagePresent)
+                {
+                    string actualMessage = base.GetElementInnerTextById(id);
+                    if (expectedMessage == actualMessage)
+                        messageTextPresent = true;
+                }
+                //Set true when both message is available and the message string is correct
+                if (messagePresent && messageTextPresent)
+                    messagePass = true;
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "VerifySectionDirectionLines",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Return the bool value for assertion
             return messagePass;
         }
 

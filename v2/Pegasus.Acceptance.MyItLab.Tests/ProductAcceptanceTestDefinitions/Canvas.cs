@@ -103,15 +103,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
        /// <param name="pageName">The expected Pegasus window</param>
        /// <param name="userType">This is User Type enum</param>
 
-        [Then(@"I should be on the ""(.*)"" page of ""(.*)""")]
-        public void ValidateThePegasusPageDisplayForCanvasUser(string pageName, User.UserTypeEnum userType)
+        [Then(@"I should see ""(.*)"" page of ""(.*)"" embedded at ""(.*)"" page" )]
+        public void ValidateThePegasusPageDisplayForCanvasUser(string pageName, User.UserTypeEnum userType,string canvasPage)
         {
             logger.LogMethodEntry("CanvasCourseActions", "ValidateThePegasusPageDisplayForCanvasUser", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
+              
             //Get current opened page title
             logger.LogAssertion("ValidateThePegasusPageDisplayForCanvasUser", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                 (true, new CanvasCourseActions().GetGradeBookExistance(pageName, userType)));
+                 (true, new CanvasCourseActions().GetGradeBookExistance(pageName, userType,canvasPage)));
 
             logger.LogMethodExit("CanvasCourseActions", "ValidateThePegasusPageDisplayForCanvasUser", base.IsTakeScreenShotDuringEntryExit);
         }

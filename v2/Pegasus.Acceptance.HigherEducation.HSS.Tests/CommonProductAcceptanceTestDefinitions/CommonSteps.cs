@@ -127,8 +127,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             }
             else
             {
-                base.WaitUntilWindowLoads(expectedWindowTitle);
-                base.SelectWindow(expectedWindowTitle);
+                //base.WaitUntilWindowLoads(expectedWindowTitle);
+                //base.SelectWindow(expectedWindowTitle);
+                SwitchToWindow(expectedWindowTitle);
                 // Verifies the Correct Page Opened
                 this.ShowThePageInPegasus(expectedWindowTitle);
             }
