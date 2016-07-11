@@ -89,6 +89,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                  base.IsTakeScreenShotDuringEntryExit);
             
             base.SwitchToIFrameByIndex(0);
+            
 
             string c = base.GetElementInnerTextByCssSelector(".pure-menu.pure-menu-open>ul>li>a");
             base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(".pure-menu.pure-menu-open>ul>li>a"));

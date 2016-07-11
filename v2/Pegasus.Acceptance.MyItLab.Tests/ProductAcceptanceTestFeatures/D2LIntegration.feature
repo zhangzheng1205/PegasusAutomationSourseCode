@@ -6,11 +6,11 @@
 #Feature: Instructor selecting a Pegasus course link in home Page
 Scenario: D2L Instructor selecting a Pegasus course link in home Page
 Given I am on the home page of DesiretoLearn
-When I select "D2L Kiosk Integration for Automation - Pegasus" course link in Select Courses
-Then I should see "Homepage - D2L Kiosk Integration for Automation - Pegasus" Page
+When I select "516 CGIE Kiosk Course" course link in Select Courses
+Then I should see "Homepage - 516 CGIE Kiosk Course" Page
 
 Scenario: D2L Instructor selecting a MMND course link
-Given User is on the "Homepage - D2L Kiosk Integration for Automation - Pegasus" page
+Given User is on the "Homepage - 516 CGIE Kiosk Course" page
 When I select "Pearson's Mylab and Mastering" course link 
 Then I should see "Pearson MyLab and Mastering" Page
 

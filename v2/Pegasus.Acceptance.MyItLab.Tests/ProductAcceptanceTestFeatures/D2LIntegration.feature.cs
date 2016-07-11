@@ -79,10 +79,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
 testRunner.Given("I am on the home page of DesiretoLearn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-testRunner.When("I select \"D2L Kiosk Integration for Automation - Pegasus\" course link in Select C" +
-                    "ourses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"516 CGIE Kiosk Course\" course link in Select Courses", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
-testRunner.Then("I should see \"Homepage - D2L Kiosk Integration for Automation - Pegasus\" Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"Homepage - 516 CGIE Kiosk Course\" Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -96,7 +95,7 @@ testRunner.Then("I should see \"Homepage - D2L Kiosk Integration for Automation 
 #line 12
 this.ScenarioSetup(scenarioInfo);
 #line 13
-testRunner.Given("User is on the \"Homepage - D2L Kiosk Integration for Automation - Pegasus\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("User is on the \"Homepage - 516 CGIE Kiosk Course\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
 testRunner.When("I select \"Pearson\'s Mylab and Mastering\" course link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15

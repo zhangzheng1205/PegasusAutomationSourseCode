@@ -263,8 +263,8 @@
     </User>
     <!--Hard coded Users data for "D2L Integration" Product.-->
     <User>
-      <Name>d2lkiosk.ins</Name>
-      <Password>Password1</Password>
+      <Name>ramya.hl</Name>
+      <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
       <FirstName>Madhu</FirstName>
       <MiddleName>Unknown</MiddleName>

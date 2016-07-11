@@ -620,6 +620,28 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             base.WaitForElement(By.Id(idAttributeValue));
             WebDriver.SwitchTo().Frame(idAttributeValue);
         }
+
+        /// <summary>
+        /// Select a frame by its SOURCE. Frames located by matching SRC attributes 
+        /// </summary>
+        /// <param name="nameAttributeValue">This is iFrame source attribute value.</param>
+        protected void SwitchToIFrameBySource(String nameAttributeValue)
+        {
+
+            IEnumerable<IWebElement> frames = WebDriver.FindElements(By.TagName("iframe"));
+
+            if (frames == null)
+                return;
+
+            foreach (IWebElement iframe in frames)
+            {
+                if (iframe.GetAttribute("src").Contains(nameAttributeValue))
+                {
+                    SwitchToIFrameByWebElement(iframe);
+                }
+            }
+        }
+
         #endregion
 
         #region WebDriver SwitchToWindow
@@ -1797,7 +1819,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="by">This is HTML IWebElement.</param>
         /// <returns>Retrieves inner text to find in the specified string.</returns>
-       public String GetWebElementInnerText(IWebElement webElement)
+        public String GetWebElementInnerText(IWebElement webElement)
         {
             //Get InnerText for the element based on browser 
             string getInnerText = string.Empty;
@@ -3034,6 +3056,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         }
 
-         #endregion WebDriver Wait
+        #endregion WebDriver Wait
     }
 }
