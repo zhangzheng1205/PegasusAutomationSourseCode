@@ -88,8 +88,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             logger.LogMethodEntry("D2LIntegration", "SelectCourseLink",
                  base.IsTakeScreenShotDuringEntryExit);
             
-            base.SwitchToIFrameByIndex(0);
-            
+            //base.SwitchToIFrameByIndex(0);
+            base.SwitchToIFrameBySource("/d2l/lms/remoteplugins/lti/launchLti.d2l?");
 
             string c = base.GetElementInnerTextByCssSelector(".pure-menu.pure-menu-open>ul>li>a");
             base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(".pure-menu.pure-menu-open>ul>li>a"));

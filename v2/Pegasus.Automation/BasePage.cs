@@ -638,6 +638,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 if (iframe.GetAttribute("src").Contains(nameAttributeValue))
                 {
                     SwitchToIFrameByWebElement(iframe);
+                    break;
                 }
             }
         }
