@@ -92,6 +92,7 @@
     <Compile Include="BasePage.cs" />
     <Compile Include="BasePegasusAutomationException.cs" />
     <Compile Include="BrowserProcessFactory.cs" />
+    <Compile Include="CertChecker.cs" />
     <Compile Include="DataTransferObjects\Activity.cs" />
     <Compile Include="DataTransferObjects\Announcement.cs" />
     <Compile Include="DataTransferObjects\BaseEntityObject.cs" />

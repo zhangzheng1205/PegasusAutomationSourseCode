@@ -40,7 +40,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducation.WL.Tests", "Pegasus.Acceptance.HigherEducationCore.Tests\Pegasus.Acceptance.HigherEducation.WL.Tests.csproj", "{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.SSRSReports.Tests", "Pegasus.Integration.SSRSReports.Tests\Pegasus.Integration.SSRSReports.Tests.csproj", "{83C33F86-256B-4C4B-A1DA-8F4A59C78592}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Nonfunctional.Tests", "Pegasus.Integration.SSRSReports.Tests\Pegasus.Nonfunctional.Tests.csproj", "{83C33F86-256B-4C4B-A1DA-8F4A59C78592}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
