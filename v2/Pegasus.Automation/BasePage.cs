@@ -719,40 +719,48 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         //WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Last()); */
 
-        protected void SwitchToWindow(string windowName)
+        protected void SwitchToWindow(string windowName,int timeOut = -1)
         {
+            bool windowFound = false;
+            if (timeOut == -1)
+            {
+                timeOut = this._waitTimeOut;
+            }
 
-
-            List<String> allWindows = WebDriver.WindowHandles.ToList();
-            string winsname = "";
-
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             try
             {
 
-                foreach (String wins in allWindows)
+                while (stopWatch.Elapsed.TotalSeconds < timeOut )
                 {
+                    List<String> allWindows = WebDriver.WindowHandles.ToList();
+                    string winsname = "";
 
-                    bool title = base.IsElementDisplayedInPage(By.TagName("title"), true, 60);
 
-                    if (title)
+                    foreach (String wins in allWindows)
                     {
-                        winsname = WebDriver.SwitchTo().Window(wins).Title;
 
-                        if (winsname == windowName)
-                        {
-                            WebDriver.SwitchTo().Window(wins);
-                        }
+                        //bool title = base.IsElementDisplayedInPage(By.TagName("title"),false, 60);
 
+                       
+                            winsname = WebDriver.SwitchTo().Window(wins).Title;
+
+                            if (winsname == windowName)
+                            {
+                                windowFound = true;
+                                WebDriver.SwitchTo().Window(wins);
+                                break;
+                            }
+
+
+                       
                     }
-
-                    else
-                    {
-                        throw new Exception();
-                    }
-
+                    if (windowFound) break;
                 }
+                stopWatch.Stop();
             }
-
+          
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
