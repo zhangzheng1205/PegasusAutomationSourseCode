@@ -154,13 +154,16 @@
     <value>Gradebook</value>
   </data>
   <data name="GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span[2]/span</value>
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span[3]/span</value>
   </data>
   <data name="GBDefaultUXPage_Page_CourseContent_Iframe_ID" xml:space="preserve">
     <value>frmCourseContainer</value>
   </data>
-  <data name="GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value" xml:space="preserve">
-    <value>titleSearch</value>
+  <data name="GBDefaultUXPage_Page_CourseContent_Iframe_srcText" xml:space="preserve">
+    <value>/Modules/Gradebook/GBDefaultUX.aspx?</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_Gradebook_TitleSearchButton_cssSelector_Value" xml:space="preserve">
+    <value>#titleSearch</value>
   </data>
   <data name="GBDefaultUXPage_Page_Gradebook_TitleSearchTextBox_Id_Value" xml:space="preserve">
     <value>txtSearch</value>
@@ -173,5 +176,8 @@
   </data>
   <data name="GBDefaultUXPage_Page_Initial_Count_Value" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="GBDefaultUXPage_Page_srcGBFrame_Iframe_srcText" xml:space="preserve">
+    <value>/Modules/Gradebook/GBInstructorUX.aspx?</value>
   </data>
 </root>

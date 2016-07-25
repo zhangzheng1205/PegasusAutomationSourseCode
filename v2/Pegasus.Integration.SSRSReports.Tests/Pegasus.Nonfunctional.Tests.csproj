@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SQLConnector">
-      <HintPath>..\..\..\Practise\SQLConnector\SQLConnector\bin\Release\SQLConnector.dll</HintPath>
+      <HintPath>..\..\ExternalAssemblies\SQLConnector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
