@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SQLConnector">
-      <HintPath>..\..\ExternalAssemblies\SQLConnector.dll</HintPath>
+      <HintPath>..\..\..\Practise\SQLConnector\SQLConnector\bin\Release\SQLConnector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -92,6 +92,9 @@
     <None Include="CommonProductAcceptanceTestFeatures\CommonSSRSUserLoginFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonSSRSUserLoginFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\CertScanner.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\SSRSReports_CERT.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
