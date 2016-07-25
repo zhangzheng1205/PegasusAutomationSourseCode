@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SQLConnector">
+      <HintPath>..\..\..\Practise\SQLConnector\SQLConnector\bin\Release\SQLConnector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="TechTalk.SpecFlow">
@@ -68,7 +71,13 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CommonProductAcceptanceTestDefinitions\LoginLogout.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CERTCheckerTests.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\Folder.cs" />
+    <Compile Include="ProductAcceptanceTestFeatures\CERTChecker.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CERTChecker.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\SSRSUserWorkflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +98,10 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\SSRSReports.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CERTChecker.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CERTChecker.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\SSRSUserWorkflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

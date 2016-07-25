@@ -779,7 +779,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <seealso cref="IWebElement">The IWebElement interface represents an HTML element. 
         /// Generally, all interesting operations to do with interacting with a page will be performed through this interface.</seealso>
         /// <returns>Web Element Properties.</returns>
-        private IWebElement GetWebElementProperties(By by)
+        public IWebElement GetWebElementProperties(By by)
         {
             base.WaitForElement(by);
             return WebDriver.FindElement(by);
