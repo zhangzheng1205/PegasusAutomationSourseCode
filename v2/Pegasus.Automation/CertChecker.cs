@@ -11,14 +11,7 @@ namespace Pegasus.Automation
 {
    public class CertChecker : BasePage
      {
-       //private DesiredCapabilities configDriver = new DesiredCapabilities();
-
-       //private IWebDriver driver;
-
-      
        
-        //private static Logger CertLogger = Logger.GetInstance(typeof(CertChecker));
-
         private string sslTestUrl = "https://www.ssllabs.com/ssltest/";
         private By SSLPage = By.CssSelector("#main>h1");
         private By inputURL = By.CssSelector("td>input[type='text']");
@@ -27,64 +20,79 @@ namespace Pegasus.Automation
         private By scannedDns = By.CssSelector(".url");
         private By certRate = By.CssSelector(".rating_g");
         private By scanAnother = By.CssSelector("#main>div>a");
+        private By scanAnotherDns= By.LinkText("Scan Another »");
+        
 
         
         private string certRating = null;
         private IWebElement variableElement = null;
         private IWebElement scanNext = null;
+        private bool siteReadyToScan = false;
 
 
+       /// <summary>
+        /// Prepares www.ssllabs.com for scanning
+       /// </summary>
+       /// <returns>True if successfull</returns>
         public bool fireUPSSLServerTest()
         {
 
-            base.NavigateToBrowseUrl(sslTestUrl);
-           
-            bool siteReadyToScan = base.IsElementPresent(SSLPage);
+            try
+            {
+                base.NavigateToBrowseUrl(sslTestUrl);
+
+                siteReadyToScan = base.IsElementPresent(SSLPage);
+            }
+
+            catch (Exception e)
+            {
+                throw e;
+            }
 
             return siteReadyToScan;
         }
       
                  
-       
+       /// <summary>
+       /// Scans input DNS and returns the Certificate Rating
+       /// </summary>
+       /// <param name="dnsToScan">Input DNS</param>
+       /// <returns>DNS Certificate Rating</returns>
         public string scanDns(string dnsToScan)
         {
 
-            base.WaitForElementDisplayedInUi(inputURL);
+            try
+            {
+                base.WaitForElementDisplayedInUi(inputURL);
+                variableElement = base.GetWebElementProperties(inputURL);
+                variableElement.Clear();
+                variableElement.SendKeys(dnsToScan);
 
-            variableElement = base.GetWebElementProperties(inputURL);
-            variableElement.Clear();
-            variableElement.SendKeys(dnsToScan);
-
-            base.WaitForElementDisplayedInUi(submitURL);
-            variableElement = base.GetWebElementProperties(submitURL);
-            variableElement.Click();
+                base.WaitForElementDisplayedInUi(submitURL);
+                variableElement = base.GetWebElementProperties(submitURL);
+                variableElement.Click();
 
 
-            //if (base.IsElementDisplayedInPage(pageLoaderIndicator, false))
-                //base.WaitForAjaxToComplete();
 
-            base.WaitForElementDisplayedInUi(scannedDns);
-            Console.WriteLine(scannedDns);
+                base.WaitForElementDisplayedInUi(scannedDns);
 
-            base.WaitForElementDisplayedInUi(certRate);
+                base.WaitTillElementFound(certRate);
+                variableElement = base.GetWebElementProperties(certRate);
+                certRating = variableElement.Text;
 
-            variableElement = base.GetWebElementProperties(certRate);
+                base.WaitForElementDisplayedInUi(scanAnother, 5);
+                variableElement = base.GetWebElementProperties(scanAnotherDns);
+                variableElement.Click();
+            }
 
-            certRating = variableElement.Text;
-
-            base.WaitForElementDisplayedInUi(scanAnother);
-
-            base.ClickLinkByLinkText("Scan Another");
-
+            catch (Exception e)
+            {
+                throw e;
+            }
+           
             
             return certRating;
         }
-
-      /*public CertChecker()
-      {
-          Console.WriteLine("Starting CERT Tests");
-      }*/
-       
 
 
 

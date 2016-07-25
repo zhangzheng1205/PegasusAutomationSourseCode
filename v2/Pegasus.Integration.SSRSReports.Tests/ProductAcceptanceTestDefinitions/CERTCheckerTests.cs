@@ -17,49 +17,98 @@ namespace Pegasus.Nonfunctional.Tests.ProductAcceptanceTestDefinitions
     {
 
 
-        private static Logger Logger = Logger.GetInstance(typeof(CertCheckerTests));
+        private static Logger CertCheckerTestsLogger = Logger.GetInstance(typeof(CertCheckerTests));
         private CertChecker certCheckerObject = new CertChecker();
-        /*private static string connectionString = System.Configuration.ConfigurationManager.
-                                                    ConnectionStrings["AutomationDB"].ConnectionString;*/
-        private static string connectionString = "Server=ES-LAPTOP-272\\SQL2008;Database=Automation;uid=sa;pwd=mylife612;";
+        private static string connectionString = ConfigurationManager.
+                                                    ConnectionStrings["AutomationDB"].ConnectionString;
         private static string environment = ConfigurationManager.AppSettings["TestEnvironment"];
         private static string query = "select * from dbo.CERTIFICATE Where Environment='{0}'";
         private static string Query = string.Format(query,environment);
         private static string variable = null;
+        List<string> datalistDNS = null;
+        List<string> datalistExpectedRating = null;
+
 
 
         [Given(@"I start the Scanner")]
         public void GivenIStartTheScanner()
         {
-            Logger.LogMethodEntry("CertCheckerTests", "GivenIStartTheScanner", base.IsTakeScreenShotDuringEntryExit);
+            CertCheckerTestsLogger.LogMethodEntry("CertCheckerTests", "GivenIStartTheScanner", 
+                base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+                Assert.AreEqual(true, certCheckerObject.fireUPSSLServerTest());
+            }
+           
+            catch(Exception e)
+            {
+                CertCheckerTestsLogger.LogException("CertCheckerTests", "GivenIStartTheScanner()", e, true);
+            }
 
 
-           Assert.AreEqual(true,certCheckerObject.fireUPSSLServerTest());
-
-
-           Logger.LogMethodExit("CertCheckerTests", "GivenIStartTheScanner", base.IsTakeScreenShotDuringEntryExit);
+           CertCheckerTestsLogger.LogMethodExit("CertCheckerTests", "GivenIStartTheScanner", 
+               base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
 
         [Given(@"Feed in the Environment")]
         public void GivenFeedInTheEnvironment()
         {
-            Logger.LogMethodEntry("CertCheckerTests", "GivenFeedInTheEnvironment", base.IsTakeScreenShotDuringEntryExit);
+            CertCheckerTestsLogger.LogMethodEntry("CertCheckerTests", "GivenFeedInTheEnvironment", 
+                base.IsTakeScreenShotDuringEntryExit);
 
-
-            var datalistDNS = SQLConnectors.dataStreamer(connectionString, Query, "DNS");
-            var datalistExpectedRating = SQLConnectors.dataStreamer(connectionString, Query, "CERT Rating");
-            int counter = 0;
-            foreach(string dns in datalistDNS)
+            try
             {
-                 variable =certCheckerObject.scanDns(dns);
-                 Assert.AreEqual(datalistExpectedRating[counter], variable);
-                 counter++;
-                 
+                datalistDNS = SQLConnectors.dataStreamer(connectionString, Query, "DNS");
+                datalistExpectedRating = SQLConnectors.dataStreamer(connectionString, Query, "CERT Rating");
             }
             
-
-            Logger.LogMethodExit("CertCheckerTests", "GivenFeedInTheEnvironment", base.IsTakeScreenShotDuringEntryExit);
+            catch(Exception e)
+            {
+                CertCheckerTestsLogger.LogException("CertCheckerTests", "GivenFeedInTheEnvironment()", e, true);
+            }
+            
+            CertCheckerTestsLogger.LogMethodExit("CertCheckerTests", "GivenFeedInTheEnvironment", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
+
+
+        [Then(@"I should get all the results of DNS certificate in the environment")]
+        public void ResultsOfDNSCertificateInTheEnvironment()
+        {
+
+            CertCheckerTestsLogger.LogMethodEntry("CertCheckerTests", "ResultsOfDNSCertificateInTheEnvironment", 
+                base.IsTakeScreenShotDuringEntryExit);
+            int counter = 0;
+            try
+            {
+                foreach (string dns in datalistDNS)
+                {
+                    variable = certCheckerObject.scanDns(dns);
+                    Assert.AreEqual(datalistExpectedRating[counter].ToString().Trim(), variable);
+                    counter++;
+
+                }
+            }
+
+            catch (Exception e)
+            {
+                CertCheckerTestsLogger.LogException("CertCheckerTests", "ResultsOfDNSCertificateInTheEnvironment()", e, true);
+            }
+            
+            CertCheckerTestsLogger.LogMethodExit("CertCheckerTests", "ResultsOfDNSCertificateInTheEnvironment", 
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
 
     }
 }

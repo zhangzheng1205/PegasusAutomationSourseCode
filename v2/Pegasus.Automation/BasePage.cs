@@ -3065,6 +3065,32 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         }
 
+        protected IWebElement WaitTillElementFound(By IWebElement, int waitTimeOutDuration = -1)
+        {
+            IWebElement myDynamicElement = null;
+            var stopWatch = new Stopwatch();
+            if (waitTimeOutDuration == -1)
+            {
+                waitTimeOutDuration = this._waitTimeOut;
+            }
+            try
+            {
+               
+                    WebDriverWait wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(waitTimeOutDuration));
+                    myDynamicElement = wait.Until<IWebElement>(d => d.FindElement(IWebElement));
+                
+            }
+            //Exception Handling
+            catch (Exception ex)
+            {
+                stopWatch.Stop();
+                throw ex;
+            }
+            stopWatch.Stop();
+            return myDynamicElement;
+        }
+
+
         #endregion WebDriver Wait
     }
 }
