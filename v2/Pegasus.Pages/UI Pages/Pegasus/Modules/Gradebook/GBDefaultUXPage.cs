@@ -291,6 +291,8 @@ namespace Pegasus.Pages.UI_Pages
                         if (getActivityName.Trim() == assetName.Trim())
                         {
                             // Click On View Grades Button of Asset
+                            bool pres = base.IsElementPresent(By.XPath(string.Format(GBDefaultUXPageResource.
+                                GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator, columnCount)), 10);
                             base.ClickButtonByXPath(string.Format(GBDefaultUXPageResource.
                                 GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator, columnCount));
                             break;
@@ -340,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 this.SwitchToTeacherGradebookIframe();
-                // Getting the counts of Activity                    
+                // Getting the counts of Activity  
                 int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
                 for (int activityColumnNo = Convert.ToInt32(GBInstructorUXPageResource.
@@ -375,14 +377,11 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
             base.IsTakeScreenShotDuringEntryExit);
             // Switch to iFrame
-            base.WaitForElement(By.Id(GBDefaultUXPageResource.
-                GBDefaultUXPage_Page_CourseContent_Iframe_ID));
-            base.SwitchToIFrameById(GBDefaultUXPageResource.
-                GBDefaultUXPage_Page_CourseContent_Iframe_ID);
-            base.WaitForElement(By.Id(GBDefaultUXPageResource.
-                GBDefaultUXPage_Gradebook_Frame));
-            base.SwitchToIFrameById(GBDefaultUXPageResource.
-                GBDefaultUXPage_Gradebook_Frame);
+              base.SwitchToIFrameBySource(GBDefaultUXPageResource.
+                GBDefaultUXPage_Page_CourseContent_Iframe_srcText);
+
+            base.SwitchToIFrameBySource(GBDefaultUXPageResource.
+                GBDefaultUXPage_Page_srcGBFrame_Iframe_srcText);
             logger.LogMethodExit("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -571,15 +570,16 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Switch to Iframe
-                base.WaitForElement(By.Id(GBDefaultUXPageResource.
-                    GBDefaultUXPage_Page_CourseContent_Iframe_ID));
-                base.SwitchToIFrameById(GBDefaultUXPageResource.
-                    GBDefaultUXPage_Page_CourseContent_Iframe_ID);
-                //Wait for and click the Button for searching the asset
-                base.WaitForElement(By.Id(GBDefaultUXPageResource.
-                  GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value));
-                base.ClickButtonById(GBDefaultUXPageResource.
-                  GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value);
+                base.SwitchToDefaultPageContent();
+                base.WaitForAjaxToComplete();
+                //Switching to frame using source.
+                base.SwitchToIFrameBySource(GBDefaultUXPageResource.
+                GBDefaultUXPage_Page_CourseContent_Iframe_srcText);
+
+                IWebElement searchFilter = base.GetWebElementPropertiesByCssSelector(GBDefaultUXPageResource.
+                   GBDefaultUXPage_Page_Gradebook_TitleSearchButton_cssSelector_Value);
+                base.ClickByJavaScriptExecutor(searchFilter);
+
                 //Enter the asset to be searched
                 base.WaitForElement(By.Id(GBDefaultUXPageResource.
                   GBDefaultUXPage_Page_Gradebook_TitleSearchTextBox_Id_Value));

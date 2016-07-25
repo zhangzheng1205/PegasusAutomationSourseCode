@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[3]/span/span[2]/span.
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[3]/span/span[3]/span.
         /// </summary>
         internal static string GBDefaultUXPage_Gradebook_ViewGradesButton_Xpath_Locator {
             get {
@@ -187,11 +187,20 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to titleSearch.
+        ///   Looks up a localized string similar to /Modules/Gradebook/GBDefaultUX.aspx?.
         /// </summary>
-        internal static string GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value {
+        internal static string GBDefaultUXPage_Page_CourseContent_Iframe_srcText {
             get {
-                return ResourceManager.GetString("GBDefaultUXPage_Page_Gradebook_TitleSearchButton_Id_Value", resourceCulture);
+                return ResourceManager.GetString("GBDefaultUXPage_Page_CourseContent_Iframe_srcText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #titleSearch.
+        /// </summary>
+        internal static string GBDefaultUXPage_Page_Gradebook_TitleSearchButton_cssSelector_Value {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Page_Gradebook_TitleSearchButton_cssSelector_Value", resourceCulture);
             }
         }
         
@@ -228,6 +237,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBDefaultUXPage_Page_Initial_Count_Value {
             get {
                 return ResourceManager.GetString("GBDefaultUXPage_Page_Initial_Count_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /Modules/Gradebook/GBInstructorUX.aspx?.
+        /// </summary>
+        internal static string GBDefaultUXPage_Page_srcGBFrame_Iframe_srcText {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_Page_srcGBFrame_Iframe_srcText", resourceCulture);
             }
         }
     }
