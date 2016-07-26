@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SQLConnector">
+    <Reference Include="SQLConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Practise\SQLConnector\SQLConnector\bin\Release\SQLConnector.dll</HintPath>
     </Reference>
     <Reference Include="System" />
