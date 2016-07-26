@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest1" storage="e:\manzil\v2\pegasus.integration.ssrsreports.tests\productacceptanceorderedtests\orderedtest1.orderedtest" id="298f225e-abf4-4849-b223-e1d681571cb6" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="dfb6d810-f3c9-a66c-a84b-6ff3592184ab" name="CERTScannerForSelectedEnvironment" storage="..\bin\debug\pegasus.integration.ssrsreports.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
