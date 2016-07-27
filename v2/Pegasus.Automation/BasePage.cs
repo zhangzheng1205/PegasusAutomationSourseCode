@@ -1146,6 +1146,34 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Get the value of a the given class of the element by locating PartialLinkText attribute value.
+        /// </summary>
+        /// <param name="partialLinkTextAttributeValue"> Retrieves The name of the attribute by locating 
+        /// PartialLinkText attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating PartialLinkText attribute value.</returns>
+        protected String GetIdAttributeValueByPartialLinkText(String partialLinkTextAttributeValue)
+        {
+            return GetIDAttributeValue(By.PartialLinkText(partialLinkTextAttributeValue));
+        }
+
+        /// <summary>
+        /// Get the ID attribute value of a web element.
+        /// </summary>
+        /// <param name="by">This is HTML element locating mechanism to use.</param>
+        /// <returns>The attribute's current value or null if the value is not set.</returns>
+        /// <see cref="GetAttribute">Get the value of a the given attribute of the element. 
+        /// Will return the current value, even if this has been modified after the page has been loaded. 
+        /// More exactly, this method will return the value of the given attribute, unless that attribute is not present, 
+        /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. 
+
+        private String GetIDAttributeValue(By by)
+        {
+            base.WaitForElement(by);
+            return WebDriver.FindElement(by).GetAttribute("id");
+        }
+
+        /// <summary>
         /// Get the value of a href from a web element
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>

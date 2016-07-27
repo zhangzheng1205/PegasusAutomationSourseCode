@@ -7369,6 +7369,9 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Save all the Text fields in a collection
+                bool kkjjd = base.IsElementPresent(By.ClassName("text"),10);
+                bool jj = base.IsElementPresent(By.CssSelector("div[style*='visible'] input[answerme='true'][type='text']"),10);
+                //ICollection<IWebElement> textFields = base.GetWebElementsCollectionByClassName("text");
                 ICollection<IWebElement> textFields = base.
                       GetWebElementsCollectionByCssSelector("div[style*='visible'] input[answerme='true'][type='text']");
                 //Iterate and enter values in each text fields
@@ -7488,6 +7491,39 @@ namespace Pegasus.Pages.UI_Pages
             "VerifySavedFillInTheBlanksQuestionAnswers", base.IsTakeScreenShotDuringEntryExit);
             return answerPresent;
         }
+
+        /// <summary>
+        /// Verify Saved Fill In The Blanks Question Answers.
+        /// </summary>
+        /// <param name="questionCount">Number of Question to be answered.</param>
+        public bool VerifySavedFillInTheBlanksQuestionAnswersForRandomActivity(int questionCount)
+        {
+            bool answerPresent = false;
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+              "VerifySavedFillInTheBlanksQuestionAnswers", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Save all the Text fields in a collection
+                bool hhj = base.IsElementPresent(By.XPath("// td[@class='themeItemMiddleCommon1']/div"), 10);
+                int getCount = base.GetElementCountByXPath("//td[@class='themeItemMiddleCommon1']/div/div");
+                //ICollection<IWebElement> textFields = base.
+                //      GetWebElementsCollectionByCssSelector("div[style*='visible'] input[value='Answer'][type='text']");
+
+                ICollection<IWebElement> textFields1 = base.GetWebElementsCollectionByXPath("//td[@class='themeItemMiddleCommon1']/div/div");
+                int textFields = textFields1.Count - 1;
+                //Iterate and enter values in each text fields
+                if (questionCount == textFields)
+                    answerPresent = true;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "VerifySavedFillInTheBlanksQuestionAnswers", base.IsTakeScreenShotDuringEntryExit);
+            return answerPresent;
+        }
     
      /// <summary>
      /// Verify Save For Later Confirmation PopUp.
@@ -7595,6 +7631,15 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Switch the user controle from Course content to Activity presentation window.
+        /// </summary>
+        public void SelectActivityPresentaionWindow()
+        {
+            Thread.Sleep(2000);
+            base.SwitchToLastOpenedWindow();
+        }
+
+        /// <summary>
         /// Click Message Button.
         /// </summary>
         /// <param name="buttonType">This is the Button Type.</param>
@@ -7605,6 +7650,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitUntilWindowLoads(base.GetPageTitle);
                 string id = string.Empty;
                 //Switch to Button type to set element id value
                 switch (buttonType)
@@ -7673,6 +7719,16 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Student close presentaion window abruptly.
+        /// </summary>
+        public void ClosePersenationWindowAbruptly()
+        {
+            // Close browser popup
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            base.CloseBrowserPopUpByJavaScriptExecutor();
+        }
+
+        /// <summary>
         /// Verify Section Direction Lines.
         /// </summary>
         /// <param name="sectionNumber">This is Section Number.</param>
@@ -7716,5 +7772,34 @@ namespace Pegasus.Pages.UI_Pages
             return messagePass;
         }
 
+        /// <summary>
+        /// Get the actual Message from the Presentation Window
+        /// </summary>
+        /// <returns>The actual message in the Presentation Window</returns>
+        public string VerifyMessageInTestPresentationWindow()
+        {
+            string actualMessage = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id("lblErrorMessage"), 10);
+                IWebElement getMessage = base.GetWebElementPropertiesById("lblErrorMessage");
+                actualMessage = getMessage.Text;
+                this.CancelWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return actualMessage;
+        }
+
+        /// <summary>
+        /// Click Cancel window
+        /// </summary>
+        private void CancelWindow()
+        {
+            IWebElement getCancelButton = base.GetWebElementPropertiesById("Cancel");
+            base.ClickByJavaScriptExecutor(getCancelButton);
+        }
       }
 }

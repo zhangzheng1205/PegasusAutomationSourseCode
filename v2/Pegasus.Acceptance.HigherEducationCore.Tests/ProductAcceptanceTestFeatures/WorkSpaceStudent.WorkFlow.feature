@@ -41,14 +41,13 @@ Then I should successfully submit activity for grading
 #Purpose:To Verify Presentation window, when "Allow student to Save for Later" option is selected
 #Jira ID | Test Link ID: PEGASUS-45990|peg-8569,peg-8571
 Scenario:To Verify Presentation window when Allow student to Save for Later option is selected
-Given I am on "RegSAMActivity" window
 When I click on "Start" Button
 Then I should the availibility of Save For Later is "true" in "RegSAMActivity" Activity Presentation Window
 When I attempt "2" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
 And I navigate to next page
 Then I Verify Confirmation Message on Save the Activity for later
 And I should be on the "Course Materials" page
-And I should see the "In Progress" status for the activity "RegChildActivity"
+And I should see "In Progress" status for the activity "RegChildActivity" from "Course Materials" page
 When I open the "RegChildActivity" Activity
 Then I am on "RegSAMActivity" window
 When I click on "Start" Button
@@ -108,4 +107,10 @@ Given I am on "RegSAMActivity" window
 Then I should see the availibility "Direction lines (instructions)" at Page is "True"
 When I navigate to next page
 Then I should see the availibility "Direction lines (instructions)" at Page is "False"
+
+#Purpose:Workspace student launch newly authored activity
+Scenario: workspace student launch RegChildActivity from Course Materials page
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I launch the  "RegChildActivity" Activity as "HedWsStudent" from "Course Materials" page
 

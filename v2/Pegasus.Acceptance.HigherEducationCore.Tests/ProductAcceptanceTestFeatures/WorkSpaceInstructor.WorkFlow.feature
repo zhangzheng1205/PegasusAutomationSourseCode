@@ -247,6 +247,7 @@ Then I should see the successfull message "Content item is added to My Course"
 #Purpose:Creatiion of Activity with multiple Fill In The Blanks Question of RegSAMActivity type
 #Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity
 Scenario:Creation of Random activity of RegSAMActivity type by adding section with multiple questions
+Scenario:Creation of Random activity of RegSAMActivity type by adding section with multiple questions
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
@@ -256,10 +257,9 @@ When I Create "RegChildActivity" SAM activity
 And I perform "Create New Section" of name "Section1"
 And I perform "Create New Section" of name "Section2"
 And I perform "Create New Section" of name "Section3"
-Then I add '1' questions of type "Fill in the Blank" at Section "1"
+Then I add '2' questions of type "Fill in the Blank" at Section "1"
 And I add '1' questions of type "Fill in the Blank" at Section "2"
 And I add '1' questions of type "Fill in the Blank" at Section "3"
-
 
 
 #Purpose:Add messages at activity level
@@ -271,22 +271,24 @@ And  I add "Direction lines (instructions)" message
 And I add "End of activity" message
 When I perform "Save and Continue" for "Messages" 
 
-
-
-#Purpose:Verification of set preferences and overwritting preferences
+#Purpose:Verification of set preferences and overwritting preferences .
 Scenario:Verification of set preferences and overwritting preferences
 When I perform "Navigate" for "Preferences" 
 Then I reset style sheet to "Default" 
 And I check Allow students to skip questions
 And I reset number of questions per page value as "2"
+
+Scenario: Save and return from activity preference page
 When I perform "Save and Return" for "Preferences"
 
 #Purpose:Add Activity to My Course and set as Shown
 Scenario:Add Activity to My Course and set as shown
-Given I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
-When I select cmenu "ShowHide" option of activity "RegChildActivity"
+When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
+
 
 #Purpose:Clicking on Add link of "Direction Lines" under each section
 #Test Link id:peg-19554
@@ -302,3 +304,134 @@ Then I should see Directions deleted at Section "2"
 When I "Add" Directions at Section "3"
 Then I should see Directions "added" to Section "3"
 When I perform "Save and Continue" for "Questions" 
+
+Scenario:Verification perfernece Save response at the end of each page
+
+#Purpose:Workspace or coursespace teacher navigate to "Course Materials" tab and selected "Add from Library" subtab
+Scenario: User navigate to Course Materials tab and selected Add from Library subtab
+When I navigate to "Course Materials" tab and selected "Add from Library" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+
+#Purpose:Workspace instructor launch create activity wizard and enter activity name
+Scenario: Workspace instructor launches random activity create wizard and enter activity title
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+
+#Purpose:Workspace instructor create single section and add multiple question to it
+Scenario: Workspace instructor create new single section and add 3 fill in the blank question to section1
+When I perform "Create New Section" of name "Section1"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
+When I Save and Continue and navigate to "Preferences" Tab
+
+Scenario: Instructor configore HelpLink and Grades preference for random activity
+When I configure the 'Grades' preference
+And I add 'HelpLinks'
+
+#Purpose:Workspace instructor enable "Save response at the end of each page " preference for random activity
+Scenario: Workspace instructor enable Save response at the end of each page 
+When  I check Save response at the end of each page
+
+#Workspace instructor enable Number of attempts is unlimited option for random activity prefernce
+Scenario: Workspace instructor enable Number of attempts is unlimited preference
+When I set specify number of Attempts to "unlimited"
+#And I set specify number of Attempts to "1"
+
+#Purpose : Workspace instructor adds newly created random activity from Content Library to MyCourse frame to make the content available for students
+Scenario: Workspace instructor adds newly created random activity from Content Library to MyCourse frame
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+
+
+When I "Sign out" from the "HedWsInstructor"
+Then I should see the successfull message "You have been signed out of the application."
+
+
+When I logged into the Pegasus as "HedWsStudent" in "WorkSpace"
+
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsStudent" 
+Then I should logged in successfully
+
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+
+
+
+
+When I attempt questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
+And I click on next button in "RegSAMActivity" Activity Presentation Window	
+And I close activity presenation window Abruptly
+Then I should be on the "Course Materials" page
+
+When I click on "View Submissions" of  "RegChildActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And I should see the message "Activity has been started and saved for later but not yet submitted." in view submission page
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+
+When I "Sign out" from the "HedWsStudent"
+Then I should see the successfull message "You have been signed out of the application."
+
+When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
+Then I should logged in successfully
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor" 
+When I navigate to "Course Materials" tab and selected "Add from Library" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Course Materials" tab
+
+And I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
+
+When I click on "View Submissions"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
+Then I should be on the "View Submission" page
+When I select the student "HedWsStudent" from student frame in view submission page
+Then I should see "Submit Student's Answer" button in "View Submission" page
+When I click  "Submit Student's Answer" button in "View Submission" page
+Then I should be displayed with "Question was not attempted" for unanswered question
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------
+#Purpose:Creating Radom activity with number of attempts set to 1
+#Pre-requisites: RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity 
+Scenario: Creating Radom activity with number of attempts set to 1
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" SAM activity
+And I perform "Create New Section" of name "Section1"
+And I perform "Create New Section" of name "Section2"
+And I perform "Create New Section" of name "Section3"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
+And I add '3' questions of type "Fill in the Blank" at Section "2"
+And I add '3' questions of type "Fill in the Blank" at Section "3"
+When I Save and Continue and navigate to "Preferences" Tab
+
+# Set number of attempts to 1
+And I set Specify Number of Attempts to "1"
+And I Save the activity
+Then I should see the successfull message "Activity added successfully."
+
+#Purpose:To Verify Presentation window when "Number of Attempts" option is set to 1
+Scenario:To Verify Presentation window, when "Number of Attempts" option is set to 1
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I open the "RegChildActivity" Activity
+And I should see Activity Alter indicating activity can be tried only once
+And I attempt "5" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
+When I navigate to next page
+And I attempt "4" questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window
+Then I should successfully submit activity for grading
+When I open the "RegChildActivity" Activity
+Then I should see a message "There are no more attempts available for this activity." in the "Test Presentation" Window
+
+#Purpose: To verify Second attempt
+#Scenario: To verify Second attempt
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I open the "RegChildActivity" Activity
+Then I should see a message "There are no more attempts available for this activity." in the "Test Presentation" Window

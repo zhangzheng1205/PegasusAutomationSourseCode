@@ -1587,4 +1587,10 @@
   <data name="StudentPrsentation_Page_SIM5_PPT_File_Print_Settings_Slides_TextInput_Xpath_Locator" xml:space="preserve">
     <value>//div[@class='editPagesToPrintWrap general-textbox accessible filemenu-manipulator']/input</value>
   </data>
+  <data name="StudentPrsentation_Page_PresentaionWindow_NextButton_Class_Locator" xml:space="preserve">
+    <value>btn_next_quest</value>
+  </data>
+  <data name="StudentPrsentation_Page_CancelButton_Text_Value" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

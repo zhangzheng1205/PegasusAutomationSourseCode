@@ -582,6 +582,24 @@
     <None Include="ProductAcceptanceOrderedTests\AmplifireStudent.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentInstructorPreference.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionInstructorAdd.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionActivityCreation.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentStudentPresenation.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionTeacher.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegression.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\RegressionTest.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -822,7 +840,7 @@
     </None>
     <None Include="ProductAcceptanceTestFeatures\WorkSpaceInstructor.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WorkSpaceInstructor.WorkFlow.feature.cs</LastGenOutput>
+      <LastGenOutput>WorkSpaceInstructor.WorkFlow1.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\WorkspaceInstructorGlobalHome.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

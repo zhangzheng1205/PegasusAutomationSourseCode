@@ -150,6 +150,9 @@
   <data name="RandomAssessment_Page_NeverCorrectAnswer_RadioButton_Id_Locator" xml:space="preserve">
     <value>radCorrectNever</value>
   </data>
+  <data name="RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator" xml:space="preserve">
+    <value>radAttemptsallowedunlimited</value>
+  </data>
   <data name="RandomAssessment_Page_QuestionsTab_ID" xml:space="preserve">
     <value>tdcmdTabTopics</value>
   </data>
@@ -162,6 +165,9 @@
   <data name="RandomAssessment_Page_Savebutton_Id_Locator" xml:space="preserve">
     <value>cmdTabAssessmentFinish</value>
   </data>
+  <data name="RandomAssessment_Page_SaveResponseAtTheEndOfEachPage_Checkbox_Id_Locator" xml:space="preserve">
+    <value>ChkRestartFromLast</value>
+  </data>
   <data name="RandomAssessment_Page_Select_PreferenceTab_Id_Locator" xml:space="preserve">
     <value>cmdTabPreference</value>
   </data>
@@ -170,5 +176,14 @@
   </data>
   <data name="RandomAssessment_Page_WindowName" xml:space="preserve">
     <value>Edit Random activity</value>
+  </data>
+  <data name="RandomAssessment_Page_CreateRandomActivity_PageTitle_Value" xml:space="preserve">
+    <value>Create Random Activity</value>
+  </data>
+  <data name="RandomAssessment_Page_NumberOfAttempts_Id_Locator" xml:space="preserve">
+    <value>radAttemptsallowed</value>
+  </data>
+  <data name="RandomAssessment_Page_NumberOfAttempts_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtAttemptsallowed</value>
   </data>
 </root>

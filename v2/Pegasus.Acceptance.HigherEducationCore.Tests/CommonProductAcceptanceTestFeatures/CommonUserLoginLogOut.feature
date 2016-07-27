@@ -69,6 +69,7 @@ Given I browsed the login url for "HedWsInstructor"
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
 
+
 #Purpose:Verify The User Login As WorkSpaceTeacher GeneralCourse
 Scenario: User Login As WorkSpaceTeacher Navigate to GeneralCourse
 Given I browsed the login url for "HedWsInstructor"

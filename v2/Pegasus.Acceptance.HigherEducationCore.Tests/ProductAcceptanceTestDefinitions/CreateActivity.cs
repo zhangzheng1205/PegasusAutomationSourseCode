@@ -701,28 +701,29 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            base.IsTakeScreenShotDuringEntryExit);
        }
 
+
         /// <summary>
        /// Add Questions To A Section.
        /// </summary>
        /// <param name="numberOfQuestions">This is Number of Questions to be Added.</param>
        /// <param name="questionType">This is Type of question to be Added.</param>
        /// <param name="sectionNumber">This is the Section Number.</param>
-       [Then(@"I add '(.*)' questions of type ""(.*)"" at Section ""(.*)""")]
+      [Then(@"I add '(.*)' questions of type ""(.*)"" at Section ""(.*)""")]
        public void AddQuestionsToASection(int numberOfQuestions, string questionType, string sectionNumber)
-       {
-           // Add Questions To A Section
-           Logger.LogMethodEntry("CreateActivity", "AddQuestionsToASection",
-           base.IsTakeScreenShotDuringEntryExit);
-           RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
-           // Add Questions To A Section
-           randomTopicListPage.CreateSectionsWithMultipleQuestions(numberOfQuestions,
-           questionType, sectionNumber);
-           Logger.LogMethodExit("CreateActivity", "AddQuestionsToASection",
-           base.IsTakeScreenShotDuringEntryExit);
-          
-       }
+      {
+          // Add Questions To A Section
+          Logger.LogMethodEntry("CreateActivity", "AddQuestionsToASection",
+          base.IsTakeScreenShotDuringEntryExit);
+          RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+          // Add Questions To A Section
+          randomTopicListPage.CreateSectionsWithMultipleQuestions(numberOfQuestions,
+          questionType, sectionNumber);
+          Logger.LogMethodExit("CreateActivity", "AddQuestionsToASection",
+          base.IsTakeScreenShotDuringEntryExit);
+      }
+     
 
-    
+
         /// <summary>
         /// Set Number Of Questions Per Page at Activity level.
         /// </summary>
@@ -871,6 +872,210 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            base.IsTakeScreenShotDuringEntryExit);
        }
 
+       /// <summary>
+       /// Enable "Save response at the end of each page" preference at activity preference 
+       /// </summary>
+       [When(@"I check Save response at the end of each page")]
+       public void EnableSaveResponseAtTheEndOfEachPagePreference()
+       {
+           Logger.LogMethodEntry("CreateActivity", "EnableSaveResponseAtTheEndOfEachPagePreference",
+               base.IsTakeScreenShotDuringEntryExit);
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.EnableSaveResponseAtEndOfThePageRandomActivity();
+           Logger.LogMethodExit("CreateActivity", "EnableSaveResponseAtTheEndOfEachPagePreference",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Enable "Save response at the end of each page" preference at activity preference 
+       /// </summary>
+       [When(@"I select Number of attempts is unlimited option")]
+       public void EnableSelectNumberOfAttemptsIsUnlimitedPreferneceOption()
+       {
+           Logger.LogMethodEntry("CreateActivity", "EnableSelectNumberOfAttemptsIsUnlimitedPreferneceOption",
+               base.IsTakeScreenShotDuringEntryExit);
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.EnableNumberOfAttemptsIsUnlimitedOptionRandomActivity();
+           Logger.LogMethodExit("CreateActivity", "EnableSelectNumberOfAttemptsIsUnlimitedPreferneceOption",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Click on "Save and Return" button in preference page
+       /// </summary>
+       [When(@"I click on Save and Return button")]
+       public void ClickOnSaveAndReturnButton()
+       {
+           Logger.LogMethodEntry("CreateActivity", "ClickOnSaveAndReturnButton",
+             base.IsTakeScreenShotDuringEntryExit);
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.ClickSaveAndReturnButton();
+           Logger.LogMethodExit("CreateActivity", "ClickOnSaveAndReturnButton",
+             base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// User search the activtiy in MyCourse frame of "Add from Library"
+       /// </summary>
+       /// <param name="activityType">This is acivity type enum.</param>
+       /// <param name="tabName">This is tab name.</param>
+       [When(@"I search ""(.*)"" in My Course frame  of ""(.*)"" tab")]
+       public void SearchActivtiyInMyCourseFrameOfTab(Activity.ActivityTypeEnum activityType, string tabName)
+       {
+           Logger.LogMethodEntry("CreateActivity", "SearchActivtiyInMyCourseFrameOfTab",
+               base.IsTakeScreenShotDuringEntryExit);
+           new ContentLibraryUXPage().SearchActivityInMyCourse(activityType, tabName);
+           Logger.LogMethodExit("CreateActivity", "SearchActivtiyInMyCourseFrameOfTab",
+           base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Validate the display of searched activity In MyCourse Frame
+       /// </summary>
+       /// <param name="activityType">This is activity type enum.</param>
+       /// <param name="tabName">This is tab name.</param>
+       [Then(@"I should be displayed with ""(.*)"" in My Course frame  of ""(.*)"" tab")]
+       public void ValidateTheDisplayOfSearchedActivityInMyCourseFrame(Activity.ActivityTypeEnum activityType, string tabName)
+       {
+           Logger.LogMethodEntry("CreateActivity", "ValidateTheDisplayOfSearchedActivityInMyCourseFrame",
+
+  base.IsTakeScreenShotDuringEntryExit);
+           Activity activity = Activity.Get(activityType);
+           string activityName = activity.Name.ToString();
+           Logger.LogAssertion("ValidateActivityHasBeenStartedAndSavedMessage", ScenarioContext.
+           Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(activityName, new ContentLibraryUXPage().GetActivityNameFromMyCourseFrame(tabName)));
+           Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayOfSearchedActivityInMyCourseFrame",
+
+  base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// User Click On Activity cmenu in MyCourse of ddd content from library
+       /// </summary>
+       /// <param name="cmenuOptionName">This is cmenu option name.</param>
+       /// <param name="activityType">This is activity type.</param>
+       /// <param name="tabName">This is tab name.</param>
+       /// <param name="userType">This is user type.</param>
+       [When(@"I click on ""(.*)""  of ""(.*)"" in  ""(.*)"" tab as ""(.*)""")]
+       public void UserClickOnActivityCmenuInMyCourseOfAddContentFromLibrary(string cmenuOptionName, Activity.ActivityTypeEnum
+
+activityType, string tabName, User.UserTypeEnum userType)
+       {
+           Logger.LogMethodEntry("CreateActivity", "UserClickOnActivityCmenuInMyCourseOfAddContentFromLibrary",
+               base.IsTakeScreenShotDuringEntryExit);
+           new ContentLibraryUXPage().ClickCmenuOptionBasedOnTheUserRole(cmenuOptionName, activityType, tabName, userType);
+
+           Logger.LogMethodExit("CreateActivity", "UserClickOnActivityCmenuInMyCourseOfAddContentFromLibrary",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Validate the display of submit student answer button in view subission page
+       /// </summary>
+       /// <param name="buttonName">This is button name.</param>
+       /// <param name="pageName">This is page name.</param>
+       [Then(@"I should see ""(.*)"" button in ""(.*)"" page")]
+       public void ValidateTheDisplayofSubmitStudentAnswerButtonInViewSubissionPage(string buttonName, string pageName)
+       {
+           Logger.LogMethodEntry("CreateActivity", "ValidateTheDisplayofSubmitStudentAnswerButtonInViewSubissionPage",
+
+base.IsTakeScreenShotDuringEntryExit);
+           Logger.LogAssertion("ValidateTheDisplayofSubmitStudentAnswerButtonInViewSubissionPage", ScenarioContext.
+             Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(buttonName, new ContentLibraryUXPage().GetButtonNameFromViewSubmissionPage(pageName)));
+           Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayofSubmitStudentAnswerButtonInViewSubissionPage",
+
+base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Instructor click on "Submit Student's Answer" button in "View Submission" page
+       /// </summary>
+       /// <param name="buttonName">This is button name.</param>
+       /// <param name="pageTitle">This is page title.</param>
+       [When(@"I click  ""(.*)"" button in ""(.*)"" page")]
+       public void InstructorClickSubmitStudentAnswerButtonInViewSubmission(string buttonName, string pageTitle)
+       {
+           Logger.LogMethodEntry("CreateActivity", "InstructorClickSubmitStudentAnswerButtonInViewSubmission",
+
+base.IsTakeScreenShotDuringEntryExit);
+           new ViewSubmissionPage().ClickSubmitStudentAnswerbutton(buttonName, pageTitle);
+           Logger.LogMethodExit("CreateActivity", "InstructorClickSubmitStudentAnswerButtonInViewSubmission",
+
+base.IsTakeScreenShotDuringEntryExit);
+       }
+
+
+       /// <summary>
+       /// Validate the "Question was not attempted" message display in view submission page
+       /// </summary>
+       /// <param name="messageText">This is message text.</param>
+       [Then(@"I should be displayed with ""(.*)"" for unanswered question")]
+       public void ValidateDisplayofQuestionWasNotAttemptedMessage(string messageText)
+       {
+           Logger.LogMethodEntry("CreateActivity", "ValidateDisplayofQuestionWasNotAttemptedMessage",
+
+base.IsTakeScreenShotDuringEntryExit);
+           Logger.LogAssertion("ValidateDisplayofQuestionWasNotAttemptedMessage", ScenarioContext.
+             Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(messageText, new ViewSubmissionPage().GetDisplayofQuestionWasNotAttemptedMessageText()));
+           Logger.LogMethodExit("CreateActivity", "ValidateDisplayofQuestionWasNotAttemptedMessage",
+
+base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Set Specify Number of Attempts to a given number
+       /// </summary>
+       /// <param name="allowedAttempts">This is the number of allowed attempts</param>
+       [When(@"I set specify number of Attempts to ""(.*)""")]
+       public void SetSpecifyNumberOfAttempts(string allowedAttempts)
+       {
+           Logger.LogMethodEntry("CreateActivity", "SetSpecifyNumberOfAttempts", base.IsTakeScreenShotDuringEntryExit);
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.SpecifyNumberOfAttempts(allowedAttempts);
+           Logger.LogMethodExit("CreateActivity", "SetSpecifyNumberOfAttempts", base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Save activity preference in create activity creation popup
+       /// </summary>
+       [When(@"I Save the activity")]
+       public void SaveandReturnActivityPreference()
+       {
+           Logger.LogMethodEntry("CreateActivity", "SaveandReturnActivityPreference", base.IsTakeScreenShotDuringEntryExit);
+           RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+           randomAssessmentPage.SaveandReturnPreferenceAtCreateRandomActivity();
+           Logger.LogMethodExit("CreateActivity", "SaveandReturnActivityPreference", base.IsTakeScreenShotDuringEntryExit);
+       }
+
+       /// <summary>
+       /// Add Help links for SAM type Random activity 
+       /// </summary>
+       [When(@"I add 'HelpLinks'")]
+       public void AddHelpLinksSAMActivity()
+       {
+           Logger.LogMethodEntry("CreateActivity", "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+           AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+           //Enter HelpLinks
+           addAssessmentPage.AddHelpLinks();
+           Logger.LogMethodExit("CreateActivity", "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+       }
+
+
+       /// <summary>
+       /// Configure Grades tab of Random activity
+       /// </summary>
+       [When(@"I configure the 'Grades' preference")]
+       public void ConfigureGradesPreferenceSAMActivity()
+       {
+           Logger.LogMethodEntry("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+           AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+           // Configure Grades
+           addAssessmentPage.ConfigureGradesForSamActivity();
+           Logger.LogMethodExit("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+       }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

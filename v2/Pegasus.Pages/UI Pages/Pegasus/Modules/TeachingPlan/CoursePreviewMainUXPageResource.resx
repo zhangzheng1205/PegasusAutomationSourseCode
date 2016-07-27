@@ -318,4 +318,10 @@
   <data name="CoursePreviewMainUX_Page_ToDo_Activity_Count_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='DateGrpContainer_No_Due']/div</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_NextLink_Id_Property" xml:space="preserve">
+    <value>rptCoursePreview$next</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_PaginationText_ClassName_Value" xml:space="preserve">
+    <value>PD_pagingmsg</value>
+  </data>
 </root>

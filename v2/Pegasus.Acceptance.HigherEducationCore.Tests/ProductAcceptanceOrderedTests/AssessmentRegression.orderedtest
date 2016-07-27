@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="AssessmentRegression" storage="d:\regressionassessmentautomationjune23\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\assessmentregression.orderedtest" id="9bb14484-0dff-498b-9399-f537074009df" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="21dc98c0-55c2-485e-9d31-042f3a199587" name="assessmentregressionteacher" storage="assessmentregressionteacher.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="2846a7b1-cb1b-4475-a71e-43b585e97c87" name="assessmentstudentpresenation" storage="assessmentstudentpresenation.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

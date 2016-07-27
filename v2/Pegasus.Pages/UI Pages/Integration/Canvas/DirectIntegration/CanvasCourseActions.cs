@@ -129,5 +129,10 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
             return pageStatus;
         }
 
+
+        public bool GetGradeBookExistance(string pageName, User.UserTypeEnum userType)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -449,6 +449,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to rptCoursePreview$next.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_NextLink_Id_Property {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_NextLink_Id_Property", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PD_pagingmsg.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_PaginationText_ClassName_Value {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_PaginationText_ClassName_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PostTestName.
         /// </summary>
         internal static string CoursePreviewMainUX_Page_PostTest_Id_Locator {

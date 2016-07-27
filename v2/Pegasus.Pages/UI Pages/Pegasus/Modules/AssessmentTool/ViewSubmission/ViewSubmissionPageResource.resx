@@ -333,4 +333,10 @@
   <data name="ViewSubmission_Page_ViewSubmission_GetScore_CSS_Locator" xml:space="preserve">
     <value>div#_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&gt;span&gt;div:nth-of-type(3)&gt;span</value>
   </data>
+  <data name="ViewSubmission_Page_ViewSubmission_Student_ActivityCmenu" xml:space="preserve">
+    <value>//div[@id='PegMenu32']/div[2]/div[3]</value>
+  </data>
+  <data name="ViewSubmission_Page_ViewSubmission_QuestionNotAttempted_Text" xml:space="preserve">
+    <value>Question was not attempted</value>
+  </data>
 </root>

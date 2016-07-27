@@ -1845,5 +1845,184 @@ namespace Pegasus.Pages.UI_Pages
             return pastedAssets.Count;   
         }
 
+        /// <summary>
+        /// Search the activity in the My Course frame.
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="tabName">This is tab name.</param>
+        public void SearchActivityInMyCourse(Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "SearchActivityInMyCourse", 
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Get Activtiy name
+                Activity activity = Activity.Get(activityType);
+                string activityName = activity.Name.ToString();
+                base.WaitUntilWindowLoads(tabName);
+                base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                // Click on Search button
+                base.WaitForElement(By.Id(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Button_Search_ID_Locator));
+                base.ClickButtonById(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Button_Search_ID_Locator);
+                // Enter activity name in the search text box
+                base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Search_Textbox_ID_Locator));
+                base.FillTextBoxByClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Search_Textbox_ID_Locator, activityName);
+                //Click on Go button
+                base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_GoButton_ID_Locator));
+                base.ClickButtonByClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_GoButton_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "SearchActivityInMyCourse", 
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the searched result text from the mycourse frame.
+        /// </summary>
+        /// <param name="returnActivtiyName">This is to store the return value in string formate</param>
+        /// <param name="tabName">This is tab name.</param>
+        /// <returns></returns>
+        public string GetActivityNameFromMyCourseFrame(string tabName)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Initialize the returnActivtiyName variable
+            string returnActivtiyName = null;
+            try
+            {
+                // Wait untill windown loads
+                base.WaitUntilWindowLoads(tabName);
+                base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                // Get activity name
+                string getSearchedActivityName = base.GetElementTextByClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Activity_Id_Locator);
+                returnActivtiyName = getSearchedActivityName.Trim();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            return returnActivtiyName;
+        }
+
+        /// <summary>
+        /// Click on Cmenu option based on the user role and cmenu option name
+        /// </summary>
+        /// <param name="cmenuOptionName">This is cmenu option name.</param>
+        /// <param name="activityType">This is activity type.</param>
+        /// <param name="tabName">This is tab name.</param>
+        /// <param name="userType">This is user type.</param>
+        public void ClickCmenuOptionBasedOnTheUserRole(string cmenuOptionName, Activity.ActivityTypeEnum activityType,
+            string tabName, User.UserTypeEnum userType)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "ClickCmenuOptionBasedOnTheUserRole", base.IsTakeScreenShotDuringEntryExit);
+
+            // Click the cmenu option based on the user role
+            switch (userType)
+            {
+                case User.UserTypeEnum.HedWsInstructor:
+                    this.ClickCmenuOptionBasedOnCmenuOption(cmenuOptionName, activityType);
+                    break;
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "ClickCmenuOptionBasedOnTheUserRole", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click activity cmenu option based on the option type and activity name.
+        /// </summary>
+        /// <param name="cmenuOptionName">This is cmenu option name.</param>
+        /// <param name="activityType">This is activity type.</param>
+        public void ClickCmenuOptionBasedOnCmenuOption(string cmenuOptionName, Activity.ActivityTypeEnum activityType)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "ClickCmenuOptionBasedOnCmenuOption", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                IWebElement getSearchedActivityNameProperty = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
+                           ContentLibraryUXPage_Activity_Id_Locator);
+                base.PerformMouseHoverAction(getSearchedActivityNameProperty);
+
+                switch (cmenuOptionName)
+                {
+                    case "View Submissions":
+                        // Click on cmenu option
+                        base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                            ContentLibraryUXPage_Activity_Cmenu_Id_Locator));
+
+                        IWebElement getCmenuOptionIcon = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
+                            ContentLibraryUXPage_Activity_Cmenu_Id_Locator);
+                        base.PerformMouseClickAction(getCmenuOptionIcon);
+
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator));
+                        IWebElement getCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator);
+                        base.PerformMouseClickAction(getCmenuOption);
+                        break;
+
+                    case "ShowHide":
+
+                        bool getActivityDisplayStatusHidden = base.IsElementPresent(By.XPath("Hidden"), 5);
+                        if (getActivityDisplayStatusHidden == true)
+                        {
+                            base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                             ContentLibraryUXPage_Activity_Cmenu_Id_Locator));
+                            IWebElement getShowHideCmenuOptionIcon = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
+                                ContentLibraryUXPage_Activity_Cmenu_Id_Locator);
+                            base.PerformMouseClickAction(getShowHideCmenuOptionIcon);
+                            base.WaitForElement(By.XPath("div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[10]"));
+                            IWebElement getShowHideCmenuOption = base.GetWebElementPropertiesByXPath("div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[10]");
+                            base.PerformMouseClickAction(getShowHideCmenuOption);
+                        }
+                    break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
+
+        /// <summary>
+        /// Get the searched result text from the mycourse frame.
+        /// </summary>
+        /// <param name="returnActivtiyName">This is to store the return value in string formate</param>
+        /// <param name="tabName">This is tab name.</param>
+        /// <returns></returns>
+        public string GetButtonNameFromViewSubmissionPage(string tabName)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Initialize the returnActivtiyName variable
+            string returnButtonName = null;
+            try
+            {
+                // Wait untill windown loads
+                base.WaitUntilWindowLoads(tabName);
+                // Get button name
+                string getSearchedActivityName = base.GetElementTextByClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_Button_ID_Locator);
+                returnButtonName = getSearchedActivityName.Trim();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            return returnButtonName;
+        }
     }
 }

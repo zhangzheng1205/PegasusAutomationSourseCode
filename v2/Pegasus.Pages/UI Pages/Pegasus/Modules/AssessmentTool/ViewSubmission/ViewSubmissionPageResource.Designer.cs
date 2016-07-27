@@ -611,6 +611,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Question was not attempted.
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_QuestionNotAttempted_Text {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_QuestionNotAttempted_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to item3.
         /// </summary>
         internal static string ViewSubmission_Page_ViewSubmission_Score_ClassName_Locator {
@@ -652,6 +661,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_ViewSubmission_ScoreResult_Int {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_ScoreResult_Int", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;PegMenu32&apos;]/div[2]/div[3].
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_Student_ActivityCmenu {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_Student_ActivityCmenu", resourceCulture);
             }
         }
         

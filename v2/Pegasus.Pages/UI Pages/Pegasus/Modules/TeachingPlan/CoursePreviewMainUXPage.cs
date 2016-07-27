@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 using System.Diagnostics;
 using System.Configuration;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -1525,6 +1526,276 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickonMediaServerLink",
                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch The Activity based on the user type and tab name specified
+        /// </summary>
+        /// <param name="activityTypeEnum">This Is Activity Type Enum.</param>
+        public void LaunchTheActivityBasedOnTheUserTypeAndPage(
+            Activity.ActivityTypeEnum activityTypeEnum, User.UserTypeEnum userTypeEnum, string pageName)
+        {
+            // Get Activity Name
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+
+            // Get User Name
+            User user = User.Get(userTypeEnum);
+            string userName = user.Name.ToString();
+
+            this.LaunchTheActivityBased(activityName, userName, pageName);
+        }
+
+        /// <summary>
+        /// Get the activity status based on the activity Name
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        /// <returns></returns>
+        public string GetActivityStatus(Activity.ActivityTypeEnum activityType, string pageName)
+        {
+            string activityStatus = null;
+            // Get Activity Name
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+          activityStatus=  this.GetActivityStatusBasedOnActivityName(activityName, pageName);
+            return activityStatus;
+        }
+
+        /// <summary>
+        /// Launch the activity based on the activity type and page name
+        /// </summary>
+        /// <param name="activityName">This is activity type enum.</param>
+        /// <param name="userName">This is user name.</param>
+        /// <param name="pageName">This is page name.</param>
+        private void LaunchTheActivityBased(string activityName, string userName, string pageName)
+        {
+            // Launch The Activity
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "LaunchTheActivityBased",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                switch (pageName)
+                {
+                    case "Course Materials":
+                        base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                        //Switch To Frame
+                        base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+
+                        //Get Activity Property
+                        string getPageCount = base.GetElementTextByClassName("PD_pagingmsg");
+                        string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
+                        string getFirstPageNumber = getPageCount.Remove(0, 13);
+                        string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
+                        for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
+                        {
+                            bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                            if (getActivityExistance == false)
+                            {
+                                base.WaitForElement(By.Id("rptCoursePreview$next"));
+                                base.ClickLinkById("rptCoursePreview$next");
+                                base.WaitUntilWindowLoads(pageName);
+                                base.SelectWindow(pageName);
+                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                                //Switch To Frame
+                                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+                            }
+                            else
+                            {
+                                IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
+                                    (activityName);
+                                base.ClickByJavaScriptExecutor(getActivityProperty);
+                            }
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        public string GetActivityStatusBasedOnActivityName(string activityName,string pageName)
+        {
+            // Launch The Activity
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "LaunchTheActivityBased",
+                base.IsTakeScreenShotDuringEntryExit);
+            string activityStatus = null;
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                switch (pageName)
+                {
+                    case "Course Materials":
+                        base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                        //Switch To Frame
+                        base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+
+                        //Get Activity Property
+                        string getPageCount = base.GetElementTextByClassName("PD_pagingmsg");
+                        string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
+                        string getFirstPageNumber = getPageCount.Remove(0, 13);
+                        string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
+                        for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
+                        {
+                            bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                            if (getActivityExistance == false)
+                            {
+                                base.WaitForElement(By.Id("rptCoursePreview$next"));
+                                base.ClickLinkById("rptCoursePreview$next");
+                                base.WaitUntilWindowLoads(pageName);
+                                base.SelectWindow(pageName);
+                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                                //Switch To Frame
+                                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+                            }
+                            else
+                            {
+                                string idValue = base.GetIdAttributeValueByPartialLinkText(activityName);
+                                //Get The Activity Name In CourseMaterial
+                                int activityColumnCount =
+                                    GetTheActivityNameInCourseMaterial(activityName);
+                                //Get the status text
+                                base.WaitForElement(By.XPath(string.
+                                Format(StudentPresentationPageResource.
+                                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount)));
+                                activityStatus = base.GetElementTextByXPath(string.
+                                Format(StudentPresentationPageResource.
+                                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                            }
+                        }
+                        break;
+                        
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            return activityStatus;
+        }
+
+        /// <summary>
+        /// Get The Activity Name In CourseMaterial.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        private int GetTheActivityNameInCourseMaterial(string activityName)
+        {
+            //Get The Activity Name In CourseMaterial
+            Logger.LogMethodEntry("StudentPresentationPage",
+                "GetTheActivityNameInCourseMaterial",
+                      base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            int activityColumnNumber = Convert.ToInt32(StudentPresentationPageResource.
+                StudentPresentation_Page_Loop_Initializer_Value);
+            //Wait for the element
+            base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                StudentPresentation_Page_Activity_TotalCount_Xpath_locator));
+            //Get Activity Count
+            int getActivityCount = base.GetElementCountByXPath(StudentPresentationPageResource.
+                StudentPresentation_Page_Activity_TotalCount_Xpath_locator);
+            for (int rowCount = Convert.ToInt32(StudentPresentationPageResource.
+                StudentPresentation_Page_Loop_InitialValue);
+                rowCount <= getActivityCount; rowCount++)
+            {
+                //Get Activity Name
+                string getActivityName =
+                    base.GetElementTextByXPath(string.Format
+                    (StudentPresentationPageResource.
+                    StudentPresentation_Page_Asset_Name_Xpath_locator, rowCount));
+                if (getActivityName.Contains(activityName))
+                {
+                    activityColumnNumber = rowCount;
+                    break;
+                }
+            }
+            Logger.LogMethodExit("StudentPresentationPage",
+                "GetTheActivityNameInCourseMaterial",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return activityColumnNumber;
+        }
+
+        /// <summary>
+        /// Click on activity cmenu based on the cemnu option type,page name activity name
+        /// </summary>
+        /// <param name="assetCmenu">This is activity cmenu option.</param>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        public void ClickCmenuOptionOfTheActivity(string activityName, string pageName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickCmenuOptionOfTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                switch (pageName)
+                {
+                    case "Course Materials":
+                        base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                        //Switch To Frame
+                        base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+
+                        //Get Activity Property
+                        string getPageCount = base.GetElementTextByClassName(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_PaginationText_ClassName_Value);
+                        // Perform string operation to get the total page count which is a substirng of the pagination text
+                        string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
+                        string getFirstPageNumber = getPageCount.Remove(0, 13);
+                        string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
+
+                        for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
+                        {
+                            // Check if the searchec activity exist in the current page context
+                            bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                            if (getActivityExistance == false)
+                            {
+                                // Wait for next link in the pagination to load and click on the link
+                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_NextLink_Id_Property));
+                                base.ClickLinkById(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_NextLink_Id_Property);
+                                base.WaitUntilWindowLoads(pageName);
+                                base.SelectWindow(pageName);
+                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                                //Switch To Frame
+                                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+                            }
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionOfTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

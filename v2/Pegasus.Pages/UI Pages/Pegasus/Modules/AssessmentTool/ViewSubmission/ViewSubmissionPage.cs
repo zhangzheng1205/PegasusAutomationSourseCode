@@ -295,6 +295,73 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Student click on cmenu option for activity.
+        /// </summary>
+        /// <param name="assetCmenu">This is Cmenu option.</param>
+        /// <param name="activityName">This is activity name.</param>
+        public void ClickCmenuOptionByStudentOfActivtiy(string assetCmenu, string activityName)
+        {
+            base.WaitForElement(By.PartialLinkText(activityName));
+            IWebElement getActivityLink = base.GetWebElementPropertiesByPartialLinkText(activityName);
+            base.PerformMouseHoverByJavaScriptExecutor(getActivityLink);
+            //Get ID of the activity name
+            string getCmenuElementID = base.GetIdAttributeValueByPartialLinkText(activityName);
+            //Remove the text and get the assetid of the activity
+            string cmenuProperty = getCmenuElementID.Remove(0, 8);
+            //Generate the asset cmenu icon id by appending the assetID with "tdContext_"
+            string cmenuID = "tdContext_" + cmenuProperty;
+            string cmenuIconID = cmenuID.Trim();
+            // Perform java script mouse click 
+            IWebElement getCmenuIcon = base.GetWebElementPropertiesById(cmenuIconID);
+            base.PerformMouseClickAction(getCmenuIcon);
+
+            // Launch the cmenu option based on the input provided
+            switch (assetCmenu)
+            {
+                case "View Submissions":
+                    //Click on view submission cmenu option
+                    IWebElement getViewSubmission = base.GetWebElementPropertiesByXPath(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Student_ActivityCmenu);
+                    base.PerformMouseClickAction(getViewSubmission);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Get message from view submission popup
+        /// </summary>
+        /// <returns></returns>
+        public string GetMessageInViewSubmission()
+        {
+            //Get Message In Search Catalog
+            Logger.LogMethodEntry("CourseCatalogMainPage", "GetMessageInSearchCatalog"
+                 , base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getMessage = string.Empty;
+            try
+            {
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+
+                string getGrades = base.GetElementTextByClassName("item3");
+
+                if (getGrades == "--")
+                {
+                    IWebElement getGradesProperty = base.GetWebElementPropertiesByClassName("item3");
+                    base.ClickByJavaScriptExecutor(getGradesProperty);
+                    getMessage = base.GetElementTextByClassName("pop_txt");
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseCatalogMainPage", "GetMessageInSearchCatalog"
+                , base.IsTakeScreenShotDuringEntryExit);
+            return getMessage;
+        }
+
+        /// <summary>
         /// Get View All Submission Count.
         /// </summary>
         /// <returns>All submission count</returns>
@@ -1023,6 +1090,31 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Instructor click no "Submit Student's Answer" button in "View Submission" page
+        /// </summary>
+        /// <param name="pageName">This is page Name.</param>
+        public void ClickSubmitStudentAnswerbutton(string buttonName, string pageTitle)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickSubmitStudentAnswerbutton", 
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill page loads
+                base.WaitUntilPopUpLoads(pageTitle);
+                bool llkk = base.IsElementPresent(By.LinkText(buttonName), 5);
+                // Wait for "Submit Student's Answer" button to load in "View Submission" page
+                base.WaitForElement(By.LinkText(buttonName));
+                base.ClickButtonByLinkText(buttonName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickSubmitStudentAnswerbutton", 
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click on Submission Grade.
         /// </summary>
         public void ClickonSubmissionGrade()
@@ -1089,6 +1181,35 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ViewSubmissionPage", "GetGradeInStudentViewSubmissionPage",
               base.IsTakeScreenShotDuringEntryExit);
             return getSplittedGrade;
+        }
+
+        /// <summary>
+        /// Check for "Question was not attempted" message existance.
+        /// </summary>
+        /// <returns>This returns  Question Was Not Attempted Message Text</returns>
+        public string GetDisplayofQuestionWasNotAttemptedMessageText()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetDisplayofQuestionWasNotAttemptedMessageText", base.IsTakeScreenShotDuringEntryExit);
+            string DisplayofQuestionWasNotAttemptedMessageText = null;
+            try
+            {
+                // Wait till the popup loads
+                base.WaitUntilPopUpLoads(base.GetPageTitle);
+                // Check if "Question was not attempted"
+                bool getMessageExistance = base.IsElementPresent(By.LinkText(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_QuestionNotAttempted_Text), 5);
+                if (getMessageExistance == true)
+                {
+                    DisplayofQuestionWasNotAttemptedMessageText = ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_QuestionNotAttempted_Text;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "GetDisplayofQuestionWasNotAttemptedMessageText", base.IsTakeScreenShotDuringEntryExit);
+            return DisplayofQuestionWasNotAttemptedMessageText;
         }
 
         /// <summary>

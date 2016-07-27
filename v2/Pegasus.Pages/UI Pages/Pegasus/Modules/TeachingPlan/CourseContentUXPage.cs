@@ -2302,10 +2302,12 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Click on submit button
-                IWebElement getFinishButton = base.
-                    GetWebElementPropertiesByPartialLinkText
-                    (CourseContentUXPageResource.
-                    CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
+                //IWebElement getFinishButton = base.
+                //    GetWebElementPropertiesByPartialLinkText
+                //    (CourseContentUXPageResource.
+                //    CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
+
+                IWebElement getFinishButton = base.GetWebElementPropertiesByClassName("btn_subm_grade");
                 base.ClickByJavaScriptExecutor(getFinishButton);
                 //Click on Finish button
                 IWebElement finishButton = base.GetWebElementPropertiesById(

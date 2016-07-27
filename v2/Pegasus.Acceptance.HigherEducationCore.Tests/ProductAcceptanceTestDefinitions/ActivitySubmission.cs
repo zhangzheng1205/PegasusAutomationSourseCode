@@ -5,6 +5,10 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 using TechTalk.SpecFlow;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTestDefinitions;
+using System.Globalization;
+using System.Threading;
 
 namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
     ProductAcceptanceTestDefinitions
@@ -461,6 +465,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         [Then(@"I should see the status of activity with learnosity audio question as ""(.*)""")]
         public void VerifyStatusOfActivityWithLearnosityAudioQuestion(String activityStatus)
         {
@@ -738,7 +743,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Switch to Activity Presentation Window
             base.WaitUntilWindowLoads(windowTitle);
             Assert.IsTrue(new StudentPresentationPage().
-                VerifySavedFillInTheBlanksQuestionAnswers(questionCount));
+                VerifySavedFillInTheBlanksQuestionAnswersForRandomActivity(questionCount));
 
             Logger.LogMethodExit("ActivitySubmission",
           "VerifySaveForLaterData",
@@ -867,6 +872,198 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("CommonSteps",
             "VerifyActivityDirectionLines",
             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see ""(.*)"" status for the activity ""(.*)"" from ""(.*)"" page")]
+        public void ValidateTheActivityStatus(string activityStatus, Activity.ActivityTypeEnum activityType, string pageName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ValidateTheActivityStatus", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("activityStatus", ScenarioContext.Current.ScenarioInfo.
+              Title, () => Assert.AreEqual(activityStatus, new CoursePreviewMainUXPage().GetActivityStatus(activityType,
+
+pageName)));
+            Logger.LogMethodExit("ActivitySubmission", "ValidateTheActivityStatus", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [When(@"I attempt questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
+        public void StudentAttemptQuestionsInActivityPresentationWindow(int questionCount,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+             "StudentAttemptQuestionsInActivityPresentationWindow",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get the Activity Details
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            new StudentPresentationPage().AttemptFillInTheBlanksQuestions(questionCount);
+            Logger.LogMethodExit("ActivitySubmission",
+             "StudentAttemptQuestionsInActivityPresentationWindow",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on next button in the activity presenation window to ansewer next question
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        [When(@"I click on next button in ""(.*)"" Activity Presentation Window")]
+        public void ClickOnNextButtonInActivityPresentationWindow(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnNextButtonInActivityPresentationWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            //new StudentPresentationPage().ClickNextButtonToAnswerNextQuestion();
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnNextButtonInActivityPresentationWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Close activity presentation window abruptly
+        /// </summary>
+        [When(@"I close activity presenation window Abruptly")]
+        public void CloseActivityPresenationWindowAbruptly()
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "CloseActivityPresenationWindowAbruptly",
+                base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClosePersenationWindowAbruptly();
+            Logger.LogMethodExit("ActivitySubmission", "CloseActivityPresenationWindowAbruptly",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// When I click on "View All Submission" of  "RegSAMActivity" Activity in "Course Materials" page
+        /// </summary>
+        /// <param name="assetCmenu">This is cmenu option name.</param>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        [When(@"I click on ""(.*)"" of  ""(.*)"" Activity in ""(.*)"" page")]
+        public void ClickActivityCmenuOptionBasedOnPageName(string assetCmenu, Activity.ActivityTypeEnum activityTypeEnum, string
+
+pageName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickActivityCmenuOptionBasedOnPageName",
+
+base.IsTakeScreenShotDuringEntryExit);
+            // Get Activity Name
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+
+            new CoursePreviewMainUXPage().ClickCmenuOptionOfTheActivity(activityName, pageName);
+            //Student click on cmenu option
+            ViewSubmissionPage viewSubmissionPage = new ViewSubmissionPage();
+            viewSubmissionPage.ClickCmenuOptionByStudentOfActivtiy(assetCmenu, activityName);
+            Logger.LogMethodExit("ActivitySubmission", "ClickActivityCmenuOptionBasedOnPageName",
+
+base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch the activity based on the user type and page type provided
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="pageName">This is the page name where the user action is intended to be performed.</param>
+        [When(@"I launch the  ""(.*)"" Activity as ""(.*)"" from ""(.*)"" page")]
+        public void LaunchTheActivityBasedOnTheUserRole(Activity.ActivityTypeEnum activityTypeEnum, User.UserTypeEnum userTypeEnum, string pageName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "LaunchTheActivityBasedOnTheUserRole",
+
+            base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewMainUXPage().LaunchTheActivityBasedOnTheUserTypeAndPage(activityTypeEnum, userTypeEnum, pageName);
+            Thread.Sleep(1000);
+            new StudentPresentationPage().SelectActivityPresentaionWindow();
+            Logger.LogMethodExit("ActivitySubmission", "LaunchTheActivityBasedOnTheUserRole", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the page title 
+        /// </summary>
+        /// <param name="expectedPageTitle">This is expected page title</param>
+        [Then(@"I should be on ""(.*)"" page")]
+        public void ShowThePageInPegasus(Activity.ActivityTypeEnum activityType)
+        {
+            //Verify Correct Page Opened
+            Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activityName = Activity.Get(activityType);
+            string expectedPageTitle = activityName.Name.ToString();
+            new StudentPresentationPage().SelectActivityPresentaionWindow();
+            //Get current opened page title
+            string actualPageTitle =
+                WebDriver.Title.ToString(CultureInfo.InvariantCulture);
+            //Assert we have correct page opened
+            Logger.LogAssertion("VerifyOpenedPageTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
+            Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Validate Activity Has Been Started And Saved Message
+        /// </summary>
+        /// <param name="message">This is message title.</param>
+        [Then(@"I should see the message ""(.*)"" in view submission page")]
+        public void ValidateActivityHasBeenStartedAndSavedMessage(string message)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ValidateActivityHasBeenStartedAndSavedMessage",
+
+base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateActivityHasBeenStartedAndSavedMessage", ScenarioContext.
+        Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(message, new ViewSubmissionPage().
+        GetMessageInViewSubmission()));
+            Logger.LogMethodExit("ActivitySubmission", "ValidateActivityHasBeenStartedAndSavedMessage",
+
+base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Verify Activity Alter indicating activity can be tried only once and continue to the activity
+        /// </summary>
+        [When(@"I should see Activity Alter indicating activity can be tried only once")]
+        public void VerifyActivityAlterIndicatingActivityCanBeTriedOnlyOnce()
+        {
+            Logger.LogMethodEntry("ActivitySubmission",
+                "VerifyActivityAlterIndicatingActivityCanBeTriedOnlyOnce",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Switch to Activity Alert Window and click Continue button
+            new ShowMessagePage().ClickContinueInActivityAlert();
+            Logger.LogMethodExit("ActivitySubmission",
+                "VerifyActivityAlterIndicatingActivityCanBeTriedOnlyOnce",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify message in the Test Presentation Window indicating there are no more attempts available for the activity
+        /// </summary>
+        /// <param name="message">This is the message</param>
+        //[Then(@"I should see a message ""(.*)"" in the""(.*)"" Activity")]
+        //[Then(@"I should see a message ""(.*)"" in the Test Presentation Window")]
+        [Then(@"I should see a message ""(.*)"" in the ""(.*)"" Window")]
+        public void VerifyMessageInTheTestPresentationWindow(string message,
+            string windowName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission",
+                "VerifyMessageInTheTestPresentationWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            ////Get the Activity Details
+            //Activity activity = Activity.Get(activityTypeEnum);
+            //string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowName);
+            Logger.LogAssertion("VerifyMessageInTheTestPresentationWindow",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(message, new StudentPresentationPage().
+                   VerifyMessageInTestPresentationWindow()));
+            Logger.LogMethodExit("ActivitySubmission",
+                "VerifyMessageInTheTestPresentationWindow",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

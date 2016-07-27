@@ -441,32 +441,6 @@ namespace Pegasus.Pages.UI_Pages
             base.GetWebElementPropertiesById("chkSkip").Click();
         }
 
-        /// <summary>
-        /// Click Save and Return Button In Message Tab.
-        /// </summary>
-        public void SaveandReturnPreferenceAtCreateRandomActivity()
-        {
-            //Click Save and Return Button In Message Tab
-            logger.LogMethodEntry("RandomAssessmentPage",
-                  "SaveandReturnPreferenceAtCreateRandomActivity",
-                 base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                base.WaitForElement(By.Id("cmdTabPreferenceFinish"));
-                //Click on Save and Return Button
-                IWebElement getSaveandReturnButton =
-                    base.GetWebElementPropertiesById("cmdTabPreferenceFinish");
-                Thread.Sleep(3000);
-                base.ClickByJavaScriptExecutor(getSaveandReturnButton);
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            logger.LogMethodExit("RandomAssessmentPage",
-                  "SaveandReturnPreferenceAtCreateRandomActivity",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
 
         public void EnterMessagesValues(string messageType)
         {
@@ -616,6 +590,168 @@ namespace Pegasus.Pages.UI_Pages
             return directionPresent;
           
 
+        }
+
+
+        /// <summary>
+        /// Specify Number of attempts allowed for activity
+        /// </summary>
+        /// <param name="allowedAttempts">This is number of allowed attempts</param>
+        public void SpecifyNumberOfAttempts(string attempts)
+        {
+            logger.LogMethodEntry("RandomAssessmentPage",
+                "SpecifyNumberOfAttempts", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                if (attempts == "unlimited")
+                {
+                    bool getRadioButtonStatus = false;
+                    // Get "Number of attempts is unlimited" radio button enable status
+                    getRadioButtonStatus = base.IsElementSelectedById(RandomAssessmentResource.
+                        RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator);
+                    // Check if "Number of attempts is unlimited" radio button is enabled or disabled
+                    if (getRadioButtonStatus == false)
+                    {
+                        base.SelectRadioButtonById(RandomAssessmentResource.
+                        RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator);
+                    }
+                }
+                else if (Convert.ToInt32(attempts) > 0 && Convert.ToInt32(attempts) < 100)
+                {
+                    base.SwitchToDefaultWindow();
+                    // Enable "Set Number of Attempts" radio button
+                    base.WaitForElement(By.Id(RandomAssessmentResource
+                        .RandomAssessment_Page_NumberOfAttempts_Id_Locator), 10);
+                    base.SelectRadioButtonById(RandomAssessmentResource
+                        .RandomAssessment_Page_NumberOfAttempts_Id_Locator);
+
+                    // Fill textbox "Set Number of Attempts" by ID
+                    base.ClearTextById(RandomAssessmentResource
+                        .RandomAssessment_Page_NumberOfAttempts_TextBox_Id_Locator);
+                    base.FillTextBoxById(RandomAssessmentResource
+                        .RandomAssessment_Page_NumberOfAttempts_TextBox_Id_Locator,
+                       attempts);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage",
+                "SpecifyNumberOfAttempts", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click Save and Return Button In Message Tab.
+        /// </summary>
+        public void SaveandReturnPreferenceAtCreateRandomActivity()
+        {
+            //Click Save and Return Button In Message Tab
+            logger.LogMethodEntry("RandomAssessmentPage",
+                  "SaveandReturnPreferenceAtCreateRandomActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_Select_PreferenceTab_Id_Locator));
+                //Click on Save and Return Button
+                IWebElement getSaveandReturnButton =
+                    base.GetWebElementPropertiesById(RandomAssessmentResource.
+                    RandomAssessment_Page_Select_PreferenceTab_Id_Locator);
+                Thread.Sleep(3000);
+                base.ClickByJavaScriptExecutor(getSaveandReturnButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage",
+                  "SaveandReturnPreferenceAtCreateRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Enable "Save response at the end of each page" prefernece checkbox
+        /// </summary>
+        public void EnableSaveResponseAtEndOfThePageRandomActivity()
+        {
+            logger.LogMethodEntry("RandomAssessmentPage", "EnableSaveResponseAtEndOfThePageRandomActivity",
+           base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SwitchToDefaultWindow();
+                bool getCheckBoxStatus = false;
+                // Get "Save response at the end of each page" preference checkbox status
+                getCheckBoxStatus = base.IsElementSelectedById(RandomAssessmentResource.
+                RandomAssessment_Page_SaveResponseAtTheEndOfEachPage_Checkbox_Id_Locator);
+                // Check if checkbox is in disabled state
+                if (getCheckBoxStatus == false)
+                {
+                    base.SelectCheckBoxById(RandomAssessmentResource.
+                    RandomAssessment_Page_SaveResponseAtTheEndOfEachPage_Checkbox_Id_Locator);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage", "EnableSaveResponseAtEndOfThePageRandomActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enable "Number of attempts is unlimited" radio button
+        /// </summary>
+        public void EnableNumberOfAttemptsIsUnlimitedOptionRandomActivity()
+        {
+            logger.LogMethodEntry("RandomAssessmentPage", "EnableNumberOfAttemptsIsUnlimitedOptionRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SwitchToDefaultWindow();
+                bool getRadioButtonStatus = false;
+                // Get "Number of attempts is unlimited" radio button enable status
+                getRadioButtonStatus = base.IsElementSelectedById(RandomAssessmentResource.
+                    RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator);
+                // Check if "Number of attempts is unlimited" radio button is enabled or disabled
+                if (getRadioButtonStatus == false)
+                {
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage", "EnableNumberOfAttemptsIsUnlimitedOptionRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on "Save and Return" button Create random activity page
+        /// </summary>
+        public void ClickSaveAndReturnButton()
+        {
+            logger.LogMethodExit("RandomAssessmentPage", "EnableNumberOfAttemptsIsUnlimitedOptionRandomActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SelectWindow(RandomAssessmentResource.
+                     RandomAssessment_Page_CreateRandomActivity_PageTitle_Value);
+                base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_ActivityPreference_Savebutton_Id_Locator));
+                base.ClickButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_ActivityPreference_Savebutton_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage", "EnableNumberOfAttemptsIsUnlimitedOptionRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

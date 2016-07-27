@@ -11,6 +11,8 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
+using System.Configuration;
+
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -91,8 +93,6 @@ namespace Pegasus.Pages.UI_Pages
             //Click On SaveAndContinue Button
             logger.LogMethodEntry("AddAssessmentPage", "ClickOnSaveContinueButton",
                  base.IsTakeScreenShotDuringEntryExit);
-            base.FocusOnElementById(AddAssessmentPageResources.
-                AddAsessment_Page_SaveAndContinue_Button_Id_Locator);
             //Click on the "SaveAndContinue" Button
             base.ClickButtonById(AddAssessmentPageResources.
                 AddAsessment_Page_SaveAndContinue_Button_Id_Locator);
@@ -1505,8 +1505,6 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element             
             base.WaitForElement(By.XPath(AddAssessmentPageResources.
                AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator));
-            base.FocusOnElementByXPath(AddAssessmentPageResources.
-               AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator);
             //Get web element
             IWebElement getCreateQuesLinkProperty = base.GetWebElementPropertiesByXPath
                 (AddAssessmentPageResources.
@@ -1631,6 +1629,191 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "ClickOnPreviewHelpLink",
                     base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Create the Activity With HelpLinks.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        public void AddHelpLinks()
+        {
+            //Create The Instructor Gradable Activity
+            logger.LogMethodEntry("AddAssessmentPage", "AddHelpLinks",
+                base.IsTakeScreenShotDuringEntryExit);
+            SkillBasedAssessmentPage skillBasedAssessmentPage =
+                new SkillBasedAssessmentPage();
+            try
+            {
+                //Select Create Random Activity
+                this.SelectCreateRandomActivity();
+                //Click on the HelpLinks tab
+                this.ClickOnHelpLinksTab();
+                //Click on the Add Links link
+                new RandomTopicListPage().ClickOnAddLinksLink();
+                //Open the Add Help Links popup
+                this.ClickTheSelectFromCourseMaterialsLibraryLink();
+                //Save Help Link
+                this.SaveHelpLink();
+                //Preview the added Help Link
+                // this.PreviewHelpLink();
+                //Select Create Activity window
+                base.SelectWindow(AddAssessmentPageResources.AddAsessment_Page_CreateRandomActivity_Window_Name);
+                //Wait for Save and Return button on page
+                new RandomTopicListPage().ClickOnAddLinksLink();
+                //Open the Add Help Links popup
+                this.ClickAddLinkToWebsiteLink();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "AddHelpLinks",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Select From Course Materials Library link.
+        /// </summary>
+        private void ClickAddLinkToWebsiteLink()
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Wait for the element             
+            base.WaitForElement(By.XPath(AddAssessmentPageResources.
+               AddAssessment_Page_AddLinkToWebsite_XPath_Locator));
+            //Get web element
+            IWebElement getCreateQuesLinkProperty = base.GetWebElementPropertiesByXPath
+                (AddAssessmentPageResources.
+               AddAssessment_Page_AddLinkToWebsite_XPath_Locator);
+            //Click the "Add Link to Website" link
+            base.ClickByJavaScriptExecutor(getCreateQuesLinkProperty);
+            base.WaitUntilWindowLoads(AddAssessmentPageResources.
+                AddAsessment_Page_AddLink_Popup_Title);
+            base.SelectWindow(AddAssessmentPageResources.
+                AddAsessment_Page_AddLink_Popup_Title);
+            // Wait for Title field and enter the Title
+            base.WaitForElement(By.Id(AddAssessmentPageResources.
+                AddAsessment_Page_AddLink_LinkText_ID_Value));
+            base.FillTextBoxById(AddAssessmentPageResources.
+                AddAsessment_Page_AddLink_LinkText_ID_Value, AddAssessmentPageResources.
+                AddAsessment_Page_AllLink_Title_Text);
+            // Wait for URL field and enter the URL
+            base.WaitForElement(By.Id(AddAssessmentPageResources.
+             AddAsessment_Page_AddLink_LinkURL_ID_Value));
+
+            switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+            {
+                case "PPE":
+                    base.FillTextBoxById(AddAssessmentPageResources.
+                        AddAsessment_Page_AddLink_LinkURL_ID_Value, AddAssessmentPageResources.
+                        AddAsessment_Page_AllLink_URL_PROD);
+                    break;
+                case "CGIE":
+                    base.FillTextBoxById(AddAssessmentPageResources.
+                        AddAsessment_Page_AddLink_LinkURL_ID_Value, AddAssessmentPageResources.
+                        AddAsessment_Page_AllLink_URL_PROD);
+                    break;
+                case "PROD":
+                    base.FillTextBoxById(AddAssessmentPageResources.
+                        AddAsessment_Page_AddLink_LinkURL_ID_Value, AddAssessmentPageResources.
+                        AddAsessment_Page_AllLink_URL_PROD);
+                    break;
+            }
+            // Wait for Save button to load and click on Save button
+            base.WaitForElement(By.Id(AddAssessmentPageResources.
+                AddAsessment_Page_AddLink_Popup_SaveButton_ID));
+            IWebElement getSaveButton = base.GetWebElementPropertiesById(AddAssessmentPageResources.
+                AddAsessment_Page_AddLink_Popup_SaveButton_ID);
+            base.ClickByJavaScriptExecutor(getSaveButton);
+            logger.LogMethodExit("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Workspace instructor configore default grades option for random activity
+        /// </summary>
+        public void ConfigureGradesForSamActivity()
+        {
+            //Create The Instructor Gradable Activity
+            logger.LogMethodEntry("AddAssessmentPage", "ConfigureGrades",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on the Grades tab
+                this.ClickOnGradesTab();
+                //Select Default grades option from "Select grade schema" dropdown
+                this.SelectDefaultGradeSchema();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "ConfigureGrades",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This methord is to configure default Grade Schema 
+        /// </summary>
+        public void SelectDefaultGradeSchema()
+        {
+            //Create The Instructor Gradable Activity
+            logger.LogMethodEntry("AddAssessmentPage", "SelectDefaultGradeSchema",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Create Random Activity
+                //Click on the Grades tab
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_SchemaSelector_Id_Locator));
+                base.SelectDropDownOptionById(AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_SchemaSelector_Id_Locator, AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_SchemaSelector_Default_DropDown_Option);
+                base.SelectDropDownValueThroughTextById(AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_SchemaSelector_Id_Locator, AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_SchemaSelector_Default_DropDown_Option);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "SelectDefaultGradeSchema",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Click On HelpLinks Tab.
+        /// </summary>
+        public void ClickOnGradesTab()
+        {
+            //Click On SaveAndContinue Button
+            logger.LogMethodEntry("AddAssessmentPage", "ClickOnGradesTab",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Create Random Activity
+                this.SelectCreateRandomActivity();
+                //Wait for the Grades tab
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                        AddAssessment_Page_Grades_Tab_Id_Locator));
+                //Focus control on the Grades tab
+                base.FocusOnElementById(AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_Tab_Id_Locator);
+                //Get Grades Property
+                IWebElement getbuttonProperty = base.GetWebElementPropertiesById(
+                    AddAssessmentPageResources.
+                    AddAssessment_Page_Grades_Tab_Id_Locator);
+                //Click On Grades tab
+                base.ClickByJavaScriptExecutor(getbuttonProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "ClickOnGradesTab",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Preview the added HelpLink when editing activity.
         /// </summary>

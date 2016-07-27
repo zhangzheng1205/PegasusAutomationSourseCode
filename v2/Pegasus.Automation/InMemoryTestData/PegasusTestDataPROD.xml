@@ -154,12 +154,20 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>4ce8f544-715e-40ce-a0b3-861b4b72030b</Name>
-      <CourseType>MySpanishLabMasterVm</CourseType>
+      <Name>9thCopy of QA 5.10 MMND MySpanishLab for ¡Arriba! Comunicación y cultura, 6e</Name>
+      <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
-      <IsPreferenceStatus>true</IsPreferenceStatus>
-      <IsPublished>true</IsPublished>
-      <IsApproved>true</IsApproved>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+        <Course>
+      <Name>9thCopy of QA 5.10 MMND MySpanishLab for ¡Arriba! Comunicación y cultura, 6e</Name>
+      <CourseType>RegMySpanishLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
     </Course>
     <Course>
       <Name>58_MMND_PegasusSpanish - Automation</Name>
@@ -822,13 +830,24 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>actinstructor1</Name>
+      <Name>automationqanitws</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
       <UserType>HedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>student001df</Name>
+      <Password>password2</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>fn</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>ln</LastName>
+      <UserType>HedWsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -967,6 +986,16 @@
     <Activity>
       <Name>1a9733fb-69a1-4c75-88e1-88aeb757ef40</Name>
       <ActivityType>SkillStudyPlan</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+        <Activity>
+      <Name>269f8e87-ebc2-401b-ba27-c7c25f8c6c36</Name>
+      <ActivityType>RegChildActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>0bcce594-fdb6-48f0-a255-38857b09700e</Name>
+      <ActivityType>RegSAMActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>

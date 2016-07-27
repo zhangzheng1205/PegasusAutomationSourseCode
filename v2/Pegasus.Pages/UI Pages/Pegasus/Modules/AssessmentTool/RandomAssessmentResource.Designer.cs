@@ -115,6 +115,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Random Activity.
+        /// </summary>
+        internal static string RandomAssessment_Page_CreateRandomActivity_PageTitle_Value {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_CreateRandomActivity_PageTitle_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 10.
         /// </summary>
         internal static string RandomAssessment_Page_Custom_Wait_Time {
@@ -160,6 +169,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to radAttemptsallowed.
+        /// </summary>
+        internal static string RandomAssessment_Page_NumberOfAttempts_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_NumberOfAttempts_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtAttemptsallowed.
+        /// </summary>
+        internal static string RandomAssessment_Page_NumberOfAttempts_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_NumberOfAttempts_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radAttemptsallowedunlimited.
+        /// </summary>
+        internal static string RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_NumberOfAttemptsIsUnlimited_RadioButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to tdcmdTabTopics.
         /// </summary>
         internal static string RandomAssessment_Page_QuestionsTab_ID {
@@ -192,6 +228,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         internal static string RandomAssessment_Page_Savebutton_Id_Locator {
             get {
                 return ResourceManager.GetString("RandomAssessment_Page_Savebutton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ChkRestartFromLast.
+        /// </summary>
+        internal static string RandomAssessment_Page_SaveResponseAtTheEndOfEachPage_Checkbox_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_SaveResponseAtTheEndOfEachPage_Checkbox_Id_Locator", resourceCulture);
             }
         }
         

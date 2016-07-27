@@ -282,4 +282,16 @@
   <data name="ContentLibraryUXPage_PastedItem_TR_Class_Locator" xml:space="preserve">
     <value>CC_Pasterowstyle</value>
   </data>
+  <data name="ContentLibraryUX_Page_Button_ID_Locator" xml:space="preserve">
+    <value>btn5_s</value>
+  </data>
+  <data name="ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[7]</value>
+  </data>
+  <data name="ContentLibraryUX_Page_GoButton_ID_Locator" xml:space="preserve">
+    <value>btn_syn_s</value>
+  </data>
+  <data name="ContentLibraryUX_Page_Right_Frame_ID_Locator" xml:space="preserve">
+    <value>ifrmRight</value>
+  </data>
 </root>

@@ -115,6 +115,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btn5_s.
+        /// </summary>
+        internal static string ContentLibraryUX_Page_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUX_Page_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[7].
+        /// </summary>
+        internal static string ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Course Materials.
         /// </summary>
         internal static string ContentLibraryUX_Page_CourseMaterials_Window_Name {
@@ -142,6 +160,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btn_syn_s.
+        /// </summary>
+        internal static string ContentLibraryUX_Page_GoButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUX_Page_GoButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tbldivMenu&apos;]/tbody/tr[4]/td.
         /// </summary>
         internal static string ContentLibraryUX_Page_ImportLTIActivityLinksXpath_Locator {
@@ -156,6 +183,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string ContentLibraryUX_Page_Left_Frame_ID_Locator {
             get {
                 return ResourceManager.GetString("ContentLibraryUX_Page_Left_Frame_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmRight.
+        /// </summary>
+        internal static string ContentLibraryUX_Page_Right_Frame_ID_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUX_Page_Right_Frame_ID_Locator", resourceCulture);
             }
         }
         

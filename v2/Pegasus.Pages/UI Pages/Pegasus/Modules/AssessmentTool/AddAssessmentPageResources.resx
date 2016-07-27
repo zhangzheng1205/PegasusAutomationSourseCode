@@ -255,4 +255,40 @@
   <data name="AddAssessment_Page_CreateActivityFillInTheBlanksQuestion_Value" xml:space="preserve">
     <value>FIB</value>
   </data>
+  <data name="AddAsessment_Page_AddLink_LinkText_ID_Value" xml:space="preserve">
+    <value>TxtName</value>
+  </data>
+  <data name="AddAsessment_Page_AddLink_LinkURL_ID_Value" xml:space="preserve">
+    <value>TxtUrl</value>
+  </data>
+  <data name="AddAsessment_Page_AddLink_Popup_SaveButton_ID" xml:space="preserve">
+    <value>imgSave</value>
+  </data>
+  <data name="AddAsessment_Page_AddLink_Popup_Title" xml:space="preserve">
+    <value>Add link</value>
+  </data>
+  <data name="AddAsessment_Page_AllLink_Title_Text" xml:space="preserve">
+    <value>Tips for Assigning from the SAM folders</value>
+  </data>
+  <data name="AddAsessment_Page_AllLink_URL_PROD" xml:space="preserve">
+    <value>http://media.pearsoncmg.com/alt/pegasus/ml_shared_assets/SAM_Folder_Instructions_Fin_Rev.pdf</value>
+  </data>
+  <data name="AddAssessment_Page_AddLinkToWebsite_XPath_Locator" xml:space="preserve">
+    <value>//td[contains(.,'Add Link to Website')]</value>
+  </data>
+  <data name="AddAssessment_Page_Grades_SchemaSelector_Default_DropDown_Option" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="AddAssessment_Page_Grades_SchemaSelector_Id_Locator" xml:space="preserve">
+    <value>cboGradeScheme</value>
+  </data>
+  <data name="AddAssessment_Page_Grades_Tab_Id_Locator" xml:space="preserve">
+    <value>cmdTabGrades</value>
+  </data>
+  <data name="PEG_AUTOMATION_TEST_ENVIRONMENT_KEY" xml:space="preserve">
+    <value>PEG_AUTOMATION_TEST_ENVIRONMENT</value>
+  </data>
+  <data name="TestEnvironment_Key" xml:space="preserve">
+    <value>TestEnvironment</value>
+  </data>
 </root>
