@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
             /// <summary>
             /// Search Criteria link of type Skill
             /// </summary>
-            Skill =2 ,
+            Skill = 2,
             /// <summary>
             /// Search Criteria link of type Content Type
             /// </summary>
@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Selects Window and Switch to Frame
-                this.SelectWindowAndFrame();                
+                this.SelectWindowAndFrame();
                 //Click on Skill and Content Type Link
                 this.ClickOnSearchCriteriaLink(getSearchCriteriaLinkName);
                 //Select Curriculum Window
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
                     ContnetLibrary_Page_SearchTextBox_Id_Locator, activityName);
                 //Click on Search Button
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
-                    ContnetLibrary_Page_SearchButton_Id_Locator));                
+                    ContnetLibrary_Page_SearchButton_Id_Locator));
                 base.ClickButtonById(ContentLibraryPageResource.
                     ContnetLibrary_Page_SearchButton_Id_Locator);
             }
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Selects Window and Switch to Frame
-                 this.SelectWindowAndFrame();  
+                this.SelectWindowAndFrame();
                 //Get all the Asset Names
                 string getAssetNames = base.GetElementTextById(ContentLibraryPageResource.
                     ContnetLibrary_Page_Div_Id_Locator);
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
             //Refresh The Page If Required Activity Name is Present
             logger.LogMethodEntry("ContentLibraryPage",
                 "RefreshThePageIfActivityNameNotPresent",
-                   base.IsTakeScreenShotDuringEntryExit);            
+                   base.IsTakeScreenShotDuringEntryExit);
             for (int rowCount = Convert.ToInt32(ContentLibraryPageResource.
                 ContentLibrary_Page_ForLoopInitialization_Value);
                 rowCount < getActivityCount; rowCount++)
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
                     string.Format(ContentLibraryPageResource.
                     ContentLibrary_Page_AssetName_Xpath_Locator, rowCount));
                 if (activityName == getActivityName)
-                {  
+                {
                     Stopwatch stopwatch = new Stopwatch();
                     stopwatch.Start();
                     //Initialize Variable
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
                     do
                     {
                         //Refresh the Frame
-                        base.SwitchToDefaultPageContent();                        
+                        base.SwitchToDefaultPageContent();
                         base.RefreshIFrameByJavaScriptExecutor(ContentLibraryPageResource.
                 ContentLibrary_Page_Frame_Id_Locator);
                         Thread.Sleep(Convert.ToInt32(ContentLibraryPageResource.
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
                         message = base.GetElementTextByXPath(string.Format(ContentLibraryPageResource.
                             ContentLibrary_Page_AssetCopyMessage_Xpath_Locator, rowCount));
                     } while (message.Contains(ContentLibraryPageResource.
-                        ContentLibrary_Page_AssignToCopy_Message) && 
+                        ContentLibrary_Page_AssignToCopy_Message) &&
                         stopwatch.Elapsed.TotalMinutes < getWaitTimeinMinutes);
                     break;
                 }
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("ContentLibraryPage",
                 "RefreshThePageIfActivityNameNotPresent",
                    base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Selects window and Switch to Frame
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Click On Search Criteria Link
         /// </summary>
         /// <param name="getSearchCriteriaLinkName">This is Search Criteria Link Name Enum</param>
-        private void ClickOnSearchCriteriaLink(ContentLibraryPage.SearchCriteriaEnum 
+        private void ClickOnSearchCriteriaLink(ContentLibraryPage.SearchCriteriaEnum
             getSearchCriteriaLinkName)
         {
             //Click On Search Criteria Link
@@ -247,14 +247,14 @@ namespace Pegasus.Pages.UI_Pages
             switch (getSearchCriteriaLinkName)
             {
                 //Click on Skill Link
-                case SearchCriteriaEnum.Skill: 
+                case SearchCriteriaEnum.Skill:
                     base.WaitForElement(By.Id(ContentLibraryPageResource.
-                    ContnetLibrary_Page_SkillLink_Id_Locator));                    
+                    ContnetLibrary_Page_SkillLink_Id_Locator));
                     base.ClickLinkById(ContentLibraryPageResource.
                         ContnetLibrary_Page_SkillLink_Id_Locator);
                     break;
                 //Click on Content Type Link
-                case SearchCriteriaEnum.ContentType: 
+                case SearchCriteriaEnum.ContentType:
                     base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_ContentTypeLink_Id_Locator));
                     base.ClickLinkById(ContentLibraryPageResource.
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Selects Window and Switch to Frame
-                this.SelectWindowAndFrame();                
+                this.SelectWindowAndFrame();
                 //MouseHover On Activity
                 this.MouseHoverOnActivity();
                 //Click On Customize Content Cmenu Option
@@ -412,7 +412,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }          
+            }
             logger.LogMethodExit("ContentLibraryPage", "ClickOnActivityCustomizeContentCmenu",
                  base.IsTakeScreenShotDuringEntryExit);
 
@@ -446,7 +446,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnCustomizeContentCmenuOption()
         {
             //Click On Customize Content Cmenu Option
-            logger.LogMethodEntry("ContentLibraryPage", 
+            logger.LogMethodEntry("ContentLibraryPage",
                 "ClickOnCustomizeContentCmenuOption",
                   base.IsTakeScreenShotDuringEntryExit);
             //Click on Activity Cmenu Icon               
@@ -455,7 +455,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get HTML peroperty of Cmenu icon
             IWebElement getPropertyOfCmenuIcon = base.GetWebElementPropertiesByCssSelector(ContentLibraryPageResource.
                 ContnetLibrary_Page_ContentFrame_Asset_CmenuIcon_CSS_Locator);
-            base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);           
+            base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
             //Click on Customize Content Cmenu Option
             Thread.Sleep(2000);
             base.WaitForElement(By.ClassName(ContentLibraryPageResource.
@@ -465,7 +465,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement clickCmenuOption = base.GetWebElementPropertiesByPartialLinkText(ContentLibraryPageResource.
                 ContnetLibrary_Page_ActivityCMenuOptionName);
             base.ClickByJavaScriptExecutor(clickCmenuOption);
-            logger.LogMethodExit("ContentLibraryPage", 
+            logger.LogMethodExit("ContentLibraryPage",
                 "ClickOnCustomizeContentCmenuOption",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -475,7 +475,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <returns>This is Success Message</returns>
         public string GetSuccessMessage()
-        {            
+        {
             //Get Success Message
             logger.LogMethodEntry("ContentLibraryPage", "GetSuccessMessage",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -492,7 +492,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }            
+            }
             logger.LogMethodExit("ContentLibraryPage", "GetSuccessMessage",
                   base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
@@ -555,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Search Button
             base.WaitForElement(By.Id(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchButton_Id_Locator));
-            IWebElement getsearchText=base.GetWebElementPropertiesById
+            IWebElement getsearchText = base.GetWebElementPropertiesById
                 (ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchButton_Id_Locator);
             base.ClickByJavaScriptExecutor(getsearchText);
@@ -569,8 +569,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is Activity Name</param>
         /// <param name="assetCmenu">This is Asset Cmenu.</param>
-           public void SelectAssetCmenuInTableOfContent(string activityName, string assetCmenu)
-           {
+        public void SelectAssetCmenuInTableOfContent(string activityName, string assetCmenu)
+        {
             //Select Asset Cmenu In Table of Content
             logger.LogMethodEntry("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -615,8 +615,8 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
-      
-         /// <summary>
+
+        /// <summary>
         /// Select Asset Cmenu In Table of Content.
         /// </summary>
         /// <param name="activityName">This is Class Name</param>
@@ -678,12 +678,12 @@ namespace Pegasus.Pages.UI_Pages
             //Get the folders count in Curriculum tab
             int getFolderCount = base.GetElementCountByXPath(
                 ContentLibraryPageResource.ContentLibrary_Page_Folder_Count_Xpath_Locator);
-            for (int i=1; i<= getFolderCount; i++)
+            for (int i = 1; i <= getFolderCount; i++)
             {
                 //Get the folder name
                 string getFolderName = base.GetElementTextByXPath(string.Format
                     (ContentLibraryPageResource.ContnetLibrary_Page_FolderName_Xpath_Locator, i));
-                if(folderName.Equals(getFolderName))
+                if (folderName.Equals(getFolderName))
                 {
                     IWebElement expandButtonProperties = base.GetWebElementPropertiesByXPath(
                         string.Format(ContentLibraryPageResource.
@@ -691,7 +691,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.ClickByJavaScriptExecutor(expandButtonProperties);
                     break;
                 }
-                
+
             }
             logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -838,7 +838,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectProductFromCurriculumDropdown(String productName)
         {
             // Select Digital Path product
-            logger.LogMethodEntry("ContentLibraryPage", "SelectProductFromCurriculumDropdown",base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("ContentLibraryPage", "SelectProductFromCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
             base.SelectWindow(ContentLibraryPageResource.ContnetLibrary_Page_Window_TitleName);
             // Switch to iframe
             base.SwitchToIFrameById(ContentLibraryPageResource.ContentLibrary_Page_Frame_Id_Locator);
@@ -852,7 +852,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 string getProductName = base.GetElementTextByXPath(string.Format(ContentLibraryPageResource.
                     ContnetLibrary_Page_GetProductName_Xpath_Locator, i));
-                if(productName.Equals(getProductName))
+                if (productName.Equals(getProductName))
                 {
                     IWebElement getProductNameValue = base.GetWebElementPropertiesByXPath(string.Format(ContentLibraryPageResource.
                     ContnetLibrary_Page_GetProductName_Xpath_Locator, i));
@@ -862,6 +862,29 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("ContentLibraryPage", "SelectProductFromCurriculumDropdown", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        public void SelectProductAtCurriculum(string productName)
+        {
+            base.SelectWindow(ContentLibraryPageResource.ContnetLibrary_Page_Window_TitleName);
+            base.SwitchToIFrameById(ContentLibraryPageResource.ContentLibrary_Page_Frame_Id_Locator);
+            base.WaitForElement(By.Id("ucCurriculumSubNavigation_ProductNavigation_imgDrdProducts"));
+            base.GetWebElementPropertiesById("ucCurriculumSubNavigation_ProductNavigation_imgDrdProducts").Click();
+            int productCount = base.GetElementCountByCssSelector(".cssProductTitle");
+            for(int i=1;i<=productCount;i++)
+            {
+                bool pres = base.IsElementPresent(By.CssSelector(string.Format("li:nth-of-type({0})", i)), 10);
+               IWebElement actualProduct = base.GetWebElementPropertiesByCssSelector(string.
+                    Format("li:nth-of-type({0})", i));
+                string actualProductName=actualProduct.GetAttribute("title").Trim();
+                if(actualProductName == productName)
+                {
+                    base.ClickByJavaScriptExecutor(actualProduct);
+                    break;
+                }
+            }
+            base.SwitchToDefaultPageContent();
         }
     }
 }

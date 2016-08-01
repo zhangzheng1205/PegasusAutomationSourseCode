@@ -569,7 +569,10 @@ namespace Pegasus.Pages.UI_Pages
             string objectText = string.Empty;
             try
             {
-                ICollection<IWebElement> objectTryAgainButtonCollections = base.GetWebElementsCollectionByCssSelector
+                base.SwitchToDefaultPageContent();
+           SelectAssignmentsToDoWindow();
+           this.SwitchToIFrameBySource("StudTodoDone.aspx?From=VTD");
+           ICollection<IWebElement> objectTryAgainButtonCollections = base.GetWebElementsCollectionByCssSelector
                     (CoursePreviewUXPageResource.CoursePreviewUX_Page_TryAgain_Button_Class_Locator);
                 objectText = objectTryAgainButtonCollections.ElementAt(0).Text;
             }

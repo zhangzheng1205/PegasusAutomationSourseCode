@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.PKTIntegration.Teacher.Deletion" storage="d:\11feb16-master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.pktintegration.teacher.deletion.orderedtest" id="7b6a4614-a74c-4f03-b3a4-cde9826e6242" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="64ce5817-7c7e-166c-281b-7c9033ef0578" name="UserLoginAsWritingCoachCourseSpaceTeacher" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="4d235ba9-854b-3b56-525d-a981840f1741" name="DeleteSubmittedActivityAtManageCourseworkForWritingCoach" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="41894123-cb38-8d27-f100-4e4a3ed6d7ad" name="UserLogOutAsWritingCoachCourseSpaceTeacher" storage="..\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

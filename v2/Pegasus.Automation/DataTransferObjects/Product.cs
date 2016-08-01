@@ -35,7 +35,9 @@ namespace Pegasus.Automation.DataTransferObjects
             DigitalPathCustomContent = 11,
             Contineo = 12,
             DigitalPathCC=13,
-            eTextProduct = 14
+            eTextProduct = 14,
+            MediaServer=15,
+            WritingCoach=16
         }
 
         /// <summary>

@@ -721,7 +721,7 @@
     <value>//ul[@id='ulEtext']/li</value>
   </data>
   <data name="TodayViewUXPageResource_EText_XPath_Locator" xml:space="preserve">
-    <value>//ul[@id='ulEtext']/li[{0}]/div[{0}]</value>
+    <value>//ul[@id='ulEtext']/li[{0}]/div</value>
   </data>
   <data name="TodayViewUXPageResource_Tab_Count_XPath_Locator" xml:space="preserve">
     <value>//ul[@class = 'dd_options more_dd']/li</value>

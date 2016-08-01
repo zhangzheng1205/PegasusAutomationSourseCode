@@ -630,7 +630,8 @@ Then I should see 'S7TeachereText' launch successfully
 Scenario:Assign Media Server Link from curriculum channel
 When I navigate to the "Curriculum" tab
 Then I should be on the "Curriculum" page
-When I select "Assign" cmenu of "Rubric for Self-assessment: Research Writing (6 traits)" in table of content
+When I select "MediaServer" Product in the Curriculum dropdown
+And I select "Assign" cmenu of "Rubric for Self-assessment: Research Writing (6 traits)" in table of content
 Then I should see "Assign" pop up
 When I set due date for the "MediaServerLink" activity in curriculum for Media Server Class
 
@@ -708,6 +709,7 @@ Then I should able to see the "DigitalPathWCMasterLibrary" class
 Scenario:Assign Writing Coach Activity from curriculum channel
 When I navigate to the "Curriculum" tab
 Then I should be on the "Curriculum" page
+When I select "WritingCoach" Product at Curriculum
 When I select "Assign" cmenu of "Interactive Writing Coach Personal Tutor: Cause and Effect Essay" in table of content
 And I click on Ok button in Alert pop up
 Then I should see "Assign" pop up
@@ -715,8 +717,9 @@ When I set due date for the "InteractiveWritingCoach" activity in curriculum for
 
 #Purpose: To validate display of assigned Writing Coach Activity in class course
 Scenario: Teacher validating display of assigned Writing Coach Activity under manage coursework on current date
-When I navigate to the "Classes" tab
-Then I should be on the "Classes" page
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "DigitalPathWCMasterLibrary" class
 When I navigate to the "Manage Coursework" tab under More link
 Then I should be on the "Classes" page
 Then I should see assigned Writing Coach activity "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
@@ -737,3 +740,31 @@ When I navigate to the "Classes" tab
 Then I should be on the "Classes" page
 When I navigate to the "Manage Coursework" tab under More link
 Then I should be on the "Classes" page
+
+#Purpose: To Delete Submitted Writing Coach Activity at Manage Coursework
+Scenario: Delete Submitted Activity at Manage Coursework for Writing Coach
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "DigitalPathWCMasterLibrary" class
+And I navigate to the "Manage Coursework" tab under More link
+Then I should be on the "Classes" page
+When I select "DeleteAssignment" from cmenu of "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+And I click on Ok button in Delete Assignment pop up
+Then I should be on the "Classes" page
+When I select "Remove" from cmenu of "Interactive Writing Coach Personal Tutor: Cause and Effect Essay"
+And I click on Ok button in Pegasus pop up
+
+
+
+#Purpose: To Delete Submitted Writing Coach Activity at Manage Coursework
+Scenario: Delete Submitted Activity at Manage Coursework for Media Server
+When I navigate to the "Home" tab
+Then I should be on the "Home" page
+When I enter into the DP "MediaServerClass" class
+And I navigate to the "Manage Coursework" tab under More link
+Then I should be on the "Classes" page
+When I select "DeleteAssignment" from cmenu of "Rubric for Self-assessment: Research Writing (6 traits)"
+And I click on Ok button in Delete Assignment pop up
+Then I should be on the "Classes" page
+When I select "Remove" from cmenu of "Rubric for Self-assessment: Research Writing (6 traits)"
+And I click on Ok button in Pegasus pop up

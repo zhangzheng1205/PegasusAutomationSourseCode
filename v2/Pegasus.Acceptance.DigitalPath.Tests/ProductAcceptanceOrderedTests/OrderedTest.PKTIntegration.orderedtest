@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="OrderedTest.PKTIntegration" storage="e:\deepa_1\automation\pegasus_automation_12apr2016_master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.pktintegration.orderedtest" id="b80f5adc-f8b4-49a9-a612-877bbbb2e973" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="orderedtest.pktintegration" storage="d:\11feb16-master\v2\pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.pktintegration.orderedtest" id="b80f5adc-f8b4-49a9-a612-877bbbb2e973" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestLinks>
+    <TestLink id="7b6a4614-a74c-4f03-b3a4-cde9826e6242" name="OrderedTest.PKTIntegration.Teacher.Deletion" storage="orderedtest.pktintegration.teacher.deletion.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="35d7bb24-269d-4a44-9f56-304f28ee8774" name="OrderedTest.PKTIntegration.Teacher" storage="orderedtest.pktintegration.teacher.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="3c9a45c2-406d-484f-a8e0-3e5ab0fa232a" name="OrderedTest.PKTIntegration.Student" storage="orderedtest.pktintegration.student.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
   </TestLinks>

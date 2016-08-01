@@ -324,4 +324,22 @@
   <data name="CoursePreviewMainUX_Page_PaginationText_ClassName_Value" xml:space="preserve">
     <value>PD_pagingmsg</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_DeleteAssignment_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id= 'PegMenu128']/div[2]/div[7]/span</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_DPActivitycmenu_Xpath_Locator" xml:space="preserve">
+    <value>//td[contains(@id, 'tdContext')]/img</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_Remove_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id= 'PegMenu128']/div[2]/div[6]/span</value>
+  </data>
+  <data name="DeleteAllSubmissions_Page_Sleep_Time" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="DeleteAllSubmissions_Window_OKButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_btnOK</value>
+  </data>
+  <data name="DeleteAllSubmissions_Window_Title_Name" xml:space="preserve">
+    <value>Delete Assignment?</value>
+  </data>
 </root>

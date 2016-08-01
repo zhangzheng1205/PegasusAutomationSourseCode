@@ -22,7 +22,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static readonly Logger Logger = 
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(ManageCourse));
 
         /// <summary>
@@ -124,6 +124,23 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         }
 
         /// <summary>
+        /// Select c/menu of the asset
+        /// </summary>
+        /// <param name="cmenu">This is the menu name</param>
+        /// <param name="assetName">This is the asset link name</param>
+        [When(@"I select ""(.*)"" from cmenu of ""(.*)""")]
+        public void SelectCMenu(CoursePreviewMainUXPage.
+            ActivityCmenuEnum cmenu, string assetName)
+        {
+            //Validate the display of LCC name
+            Logger.LogMethodEntry("ManageCourse", "ValidateLCCNameDisplayInManageCourseMaterial",
+               base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewMainUXPage().SelectActivityCmenuOptioninDP(cmenu, assetName);
+            Logger.LogMethodExit("ManageCourse", "ValidateLCCNameDisplayInManageCourseMaterial",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Verify the status of LCC in manage course materials tab.
         /// </summary>
         /// <param name="status">Expected status.</param>
@@ -163,7 +180,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             String CurrentMonth = DateTime.Now.Month.ToString();
             String CurrentDay = DateTime.Now.Day.ToString();
             String CurrentYear = DateTime.Now.Year.ToString();
-            String currentDate = CurrentMonth +"/" +CurrentDay + "/" + CurrentYear;
+            String currentDate = CurrentMonth + "/" + CurrentDay + "/" + CurrentYear;
 
             Logger.LogAssertion("ManageCourse", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(currentDate, new CoursePreviewMainUXPage().GetDueDateOfAssignedContent(lccName)));
@@ -189,7 +206,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Validate the text in shown to column in Manage course materials
             Logger.LogAssertion("ManageCourse", ScenarioContext.Current.ScenarioInfo.Title,
             () => Assert.AreEqual(shownColumnText, new CoursePreviewMainUXPage().GetShownToColumnTextOfAssignedContent(activityName)));
-            
+
             Logger.LogMethodExit("ManageCourse", "ValidateShownColumnTextInMangeCourseMaterials",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -251,6 +268,21 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             base.SelectDefaultWindow();
             Logger.LogMethodExit("ManageCourse", "MediaSeverSuccessfullyLaunched",
                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click OK button in Delete Assignments Pop Up
+        /// </summary>
+        [When(@"I click on Ok button in Delete Assignment pop up")]
+        public void ClickOKinDeleteAssignment()
+        {
+            //Click on Ok button in Alert pop up
+            Logger.LogMethodEntry("CommonSteps", "ClickOKinDeleteAssignment",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on Ok button in Alert pop up
+            new CoursePreviewMainUXPage().ClickOKinDeleteAssignmentPopUp();
+            Logger.LogMethodExit("CommonSteps", "ClickOKinDeleteAssignment",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

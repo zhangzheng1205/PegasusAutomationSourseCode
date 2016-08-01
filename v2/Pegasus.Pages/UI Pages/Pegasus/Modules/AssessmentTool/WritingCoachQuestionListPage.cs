@@ -37,20 +37,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
                 //base.WaitForElement(By.Id(WritingCoachQuestionListPageResource.
                 //    WritingCoachQuestionListPage_Activity_Title_Id_Locator));
                 bool ele = base.IsElementPresent(By.XPath(WritingCoachQuestionListPageResource.
-                    WritingCoachQuestionListPage_FullEssay_RadioButton_XPath_Locator), 10);
-                IWebElement getfullEssayRadioButton = base.GetWebElementPropertiesByXPath(
-                    WritingCoachQuestionListPageResource.
-                    WritingCoachQuestionListPage_FullEssay_RadioButton_XPath_Locator);
-                base.FocusOnElementByXPath(WritingCoachQuestionListPageResource.
-                   WritingCoachQuestionListPage_FullEssay_RadioButton_XPath_Locator);
-                //Thread.Sleep(2000);
-                //Select for Paragraph and Essay Mode
-                base.ClickByJavaScriptExecutor(getfullEssayRadioButton);
-                //Click Next Button
-                IWebElement nextButton = base.GetWebElementPropertiesById(
+                    WritingCoachQuestionListPage_Paragraph_RadioButton_XPath_Locator), 10);
+                if (ele)
+                {
+                    IWebElement getfullParagraphRadioButton = base.GetWebElementPropertiesByXPath(
                         WritingCoachQuestionListPageResource.
-                        WritingCoachQuestionListPage_NextButton_Id_Locator);
-                base.ClickByJavaScriptExecutor(nextButton);
+                        WritingCoachQuestionListPage_Paragraph_RadioButton_XPath_Locator);
+                    base.FocusOnElementByXPath(WritingCoachQuestionListPageResource.
+                       WritingCoachQuestionListPage_Paragraph_RadioButton_XPath_Locator);
+                    //Thread.Sleep(2000);
+                    //Select for Paragraph and Essay Mode
+                    base.ClickByJavaScriptExecutor(getfullParagraphRadioButton);
+                    //Click Next Button
+                    IWebElement nextButton = base.GetWebElementPropertiesById(
+                            WritingCoachQuestionListPageResource.
+                            WritingCoachQuestionListPage_NextButton_Id_Locator);
+                    base.ClickByJavaScriptExecutor(nextButton);
+                }
+
                 //Switch to the presentation window
                 base.WaitUntilWindowLoads(WritingCoachQuestionListPageResource.
                     WritingCoachQuestionListPage_Activity_Window_Name_Locator);
@@ -69,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
                     }
                 }
                 //Answer the Writing Coach Activity
-                this.AnswerWritingCoachActivity();
+                this.AnswerWritingCoachActivityAsParagragph();
                 //Submit the Activity
                 this.submitActivity();
                 //Close the presentation
@@ -90,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
         /// <summary>
         /// Answer Writing Coach Activity
         /// </summary>
-        private void AnswerWritingCoachActivity()
+        private void AnswerWritingCoachActivityAsEssay()
         {
             Logger.LogMethodEntry("WritingCoachQuestionListPage", "AnswerWritingCoachActivity",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -105,6 +109,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
                 WritingCoachQuestionListPage_TextArea_Id_Locator, answer);
             Logger.LogMethodExit("WritingCoachQuestionListPage", "AnswerWritingCoachActivity",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Answer Writing Coach Activity
+        /// </summary>
+        private void AnswerWritingCoachActivityAsParagragph()
+        {
+            Logger.LogMethodEntry("WritingCoachQuestionListPage", "AnswerWritingCoachActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get the answer text
+            string introductionParagraph= WritingCoachQuestionListPageResource.
+                WritingCoachQuestionListPage_IntroductionParagraph_AnswerText;
+            string bodyParagraph = WritingCoachQuestionListPageResource.
+                WritingCoachQuestionListPage_BodyParagraph_AnswerText;
+            string conclusionParagraph = WritingCoachQuestionListPageResource.
+                WritingCoachQuestionListPage_ConclusionParagraph_AnswerText;
+            //Identify Answer Area
+            this.FillAnswerAtParagraph("Introduction", introductionParagraph);
+            this.FillAnswerAtParagraph("Body", bodyParagraph);
+            this.FillAnswerAtParagraph("Conclusion", conclusionParagraph);
+            Logger.LogMethodExit("WritingCoachQuestionListPage", "AnswerWritingCoachActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fill answers into paragraph of writing coach activities.
+        /// </summary>
+        /// <param name="paragraphType">This is type of paragraph.</param>
+        /// <param name="answer">This is the answer string</param>
+        private void FillAnswerAtParagraph(string paragraphType,string answer)
+        {
+            string textAreaId = "ctl00_APH_UCWritingCoachWithFeedback_ucWCTextEditor_UCTextEditor"
+                + paragraphType + "_ucPara0_txtEditor";
+            base.GetWebElementPropertiesById(textAreaId);
+            base.FocusOnElementById(textAreaId);
+            base.FillTextBoxById(textAreaId, answer);
         }
 
         /// <summary>

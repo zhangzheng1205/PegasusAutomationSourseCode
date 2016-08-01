@@ -448,7 +448,7 @@ the UI deleted or refreshed.-->
     <!--Hard coded Users data for SMS-->
     <!--Hard coded Users data for "Contineo".-->
     <User>
-      <Name>5159rush12</Name>
+      <Name>516harteach1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrains2</FirstName>
@@ -459,7 +459,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>arunmay5</Name>
+      <Name>516harstu1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrastu2</FirstName>
@@ -595,12 +595,12 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>WC_CGIE_STU</Name>
-      <Password>password1</Password>
+      <Name>WC_CGIE_STU2</Name>
+      <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Rekha</FirstName>
+      <FirstName>Student</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Anantha</LastName>
+      <LastName>Automation</LastName>
       <UserType>DPCsWCStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1384,12 +1384,12 @@ the UI deleted or refreshed.-->
       <ActivityType>RegSavedSAMActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-    <Activity>
+      <Activity>
       <Name>GBScore</Name>
        <ActivityType>RegChildActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
- </ArrayOfActivity>
+      </ArrayOfActivity>
 
   <!--Hard coded question details for K12 Writing Coach Question-->
   <ArrayOfQuestion>
@@ -1440,6 +1440,18 @@ the UI deleted or refreshed.-->
     <Product>
       <Name>CGIE_5_159</Name>
       <ProductType>HedMilProgram</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Writing Coach</Name>
+      <ProductType>MediaServer</ProductType>
+      <PeriodName>05162abf</PeriodName>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Writing Coach</Name>
+      <ProductType>WritingCoach</ProductType>
+      <PeriodName>05162abf</PeriodName>
       <IsCreated>true</IsCreated>
     </Product>
     <!--Product for Contineo Course Creation-->

@@ -47,9 +47,11 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public enum ActivityCmenuEnum
         {
-            GetInformation=1,
-            SetSchedulingOptions=2,
-            ViewSubmissions=3
+            GetInformation = 1,
+            SetSchedulingOptions = 2,
+            ViewSubmissions = 3,
+            DeleteAssignment = 4,
+            Remove = 5
         }
 
         /// <summary>
@@ -1846,6 +1848,136 @@ namespace Pegasus.Pages.UI_Pages
               Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenMediaServerLink",
                   base.IsTakeScreenShotDuringEntryExit);
               return IsPageOpened;
+        }
+
+        public void SelectActivityCmenuOptioninDP(ActivityCmenuEnum activityCmenuEnum,
+          String activityName)
+        {
+            //Select Activity 
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "SelectActivityCmenuOptioninDP",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click On Activity Cmenu
+                this.ClickOnActivityCmenuinDP(activityName);
+                switch (activityCmenuEnum)
+                {
+                    case CoursePreviewMainUXPage.ActivityCmenuEnum.DeleteAssignment:
+                        //Click On GetInfomration Option
+                        this.ClickOnCmenuOption("Delete Assignment");
+                        break;
+                    case CoursePreviewMainUXPage.ActivityCmenuEnum.Remove:
+                        //Click On GetInfomration Option
+                        this.ClickOnCmenuOption("Remove");
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "SelectActivityCmenuOptioninDP",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Activity Cmenu
+        /// </summary>
+        /// <param name="activityName">This is Activity Name</param>
+        private void ClickOnActivityCmenuinDP(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnActivityCmenuinDP",
+                base.IsTakeScreenShotDuringEntryExit);
+            SwitchToManageCourseMaterialsFrame();
+            //Initialize Variable
+            int activityCount;
+            //Initialize Variable
+            string getActivityname = string.Empty;
+            base.WaitForElement(By.XPath(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator));
+            //Get Activity Count
+            activityCount = base.GetElementCountByXPath(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+            for (int initialCount = 1;
+                   initialCount <= activityCount; initialCount++)
+            {
+                //Get Activity Name
+                getActivityname = base.GetElementTextByXPath
+                        (string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                if (getActivityname == activityName)
+                {
+                    IWebElement getActivityProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                    base.PerformMouseHoverByJavaScriptExecutor(getActivityProperty);
+                    //Get Cmenu Property
+                    IWebElement getCmenuProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_DPActivitycmenu_Xpath_Locator));
+                    base.PerformMoveToElementAction(getCmenuProperty);
+                    //Click On Cmenu Option
+                    base.ClickByJavaScriptExecutor(getCmenuProperty);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnActivityCmenuinDP",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Delete Assignment
+        /// </summary>
+        private void ClickOnCmenuOption(string optionName)
+        {
+            //Click On Delete Assignment Option
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnDeleteAssignment",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Delete Assignment Property
+
+            IWebElement getCmenuOptionProperty = base.
+                GetWebElementPropertiesByCssSelector(string.
+                Format("div[title='{0}'][style*='display']", optionName));
+            //Click On Delete Assignment Link
+            base.ClickByJavaScriptExecutor(getCmenuOptionProperty);
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnDeleteAssignment",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click ok button in Delete Assignment Pop Up
+        /// </summary>
+        public void ClickOKinDeleteAssignmentPopUp()
+        {
+            //Click on the Pegasus 'OK' button
+            Logger.LogMethodEntry("DeleteAllSubmissionsPage",
+                "ClickOKinDeleteAssignmentPopUp", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Pegasus Window
+                base.WaitUntilWindowLoads(CoursePreviewMainUXPageResource.
+                    DeleteAllSubmissions_Window_Title_Name);
+                base.SelectWindow(CoursePreviewMainUXPageResource.
+                    DeleteAllSubmissions_Window_Title_Name);
+                //Click On 'Ok' Button On Pegasus PopUp Window.
+                base.IsElementPresent(By.Id(CoursePreviewMainUXPageResource.
+                    DeleteAllSubmissions_Window_OKButton_Id_Locator), 5);
+                base.ClickButtonById(CoursePreviewMainUXPageResource.
+                DeleteAllSubmissions_Window_OKButton_Id_Locator);
+                //Wait for 2 Secs
+                Thread.Sleep(Convert.ToInt32(CoursePreviewMainUXPageResource.
+                    DeleteAllSubmissions_Page_Sleep_Time));
+                //base.IsPopUpClosed(1, Convert.ToInt32(DeleteAllSubmissionsResource.
+                //    DeleteAllSubmissions_Page_Sleep_Time));
+                //base.SwitchToDefaultWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("DeleteAllSubmissionsPage",
+                "ClickOKinDeleteAssignmentPopUp", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -130,8 +130,14 @@ Alot of students yes to wering uniforms and only a few didn't agree with me. Pre
 
 I think that we should choose uniforms becuse we have a choice and that is just about the only choice we get. And I think the people that agreed with me is right.</value>
   </data>
+  <data name="WritingCoachQuestionListPage_BodyParagraph_AnswerText" xml:space="preserve">
+    <value>Alot of students yes to wering uniforms and only a few didn't agree with me. Pretty much all my class agreed with me. Only some didnt agrey with me becuse they that no uniforms is better. I know alot of people agreed with me becuse they think that school would be better with uniforms. Every one would get along better.</value>
+  </data>
   <data name="WritingCoachQuestionListPage_CloseButton_Id_Locator" xml:space="preserve">
     <value>btnClose</value>
+  </data>
+  <data name="WritingCoachQuestionListPage_ConclusionParagraph_AnswerText" xml:space="preserve">
+    <value>I think that we should choose uniforms becuse we have a choice and that is just about the only choice we get. And I think the people that agreed with me is right.</value>
   </data>
   <data name="WritingCoachQuestionListPage_FinishButton_Id_Locator" xml:space="preserve">
     <value>ctl00$APH$btnFinish</value>
@@ -139,11 +145,14 @@ I think that we should choose uniforms becuse we have a choice and that is just 
   <data name="WritingCoachQuestionListPage_FullEssay_RadioButton_Id_Locator" xml:space="preserve">
     <value>radioFullEssay</value>
   </data>
-  <data name="WritingCoachQuestionListPage_FullEssay_RadioButton_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='divWCFullEssayRadioButton']/input</value>
+  <data name="WritingCoachQuestionListPage_IntroductionParagraph_AnswerText" xml:space="preserve">
+    <value>I think we should wear uniforms. it can take a long time to figire out what to wear. I think uniforms would make us be nicer to each other. I especisly think that becuse a bunch of people agreed. Some kids think clothes show your personalty. You can do other things to show it, like with your hair or cool jewlry.</value>
   </data>
   <data name="WritingCoachQuestionListPage_NextButton_Id_Locator" xml:space="preserve">
     <value>btnNext</value>
+  </data>
+  <data name="WritingCoachQuestionListPage_Paragraph_RadioButton_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='divWCParagraphRadioButton']/input</value>
   </data>
   <data name="WritingCoachQuestionListPage_ReturnToCourse_Button_Id_Locator" xml:space="preserve">
     <value>ctl00$btnReturnCourse</value>

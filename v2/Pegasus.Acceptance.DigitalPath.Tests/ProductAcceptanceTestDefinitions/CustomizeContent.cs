@@ -485,6 +485,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
 
        }
 
-        
+       [When(@"I select ""(.*)"" Product at Curriculum")]
+       public void WhenISelectProductAtCurriculum(Product.ProductTypeEnum productTypeEnum)
+       {
+           Product product = Product.Get(productTypeEnum);
+           string productName = product.Name.ToString();
+           new ContentLibraryPage().SelectProductAtCurriculum(productName);
+       }
+
     }
 }
