@@ -11,8 +11,9 @@ using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using System.Configuration;
 using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
-using Pegasus.Pages;
+using Pegasus.Pages.UI_Pages.Integration.MMND;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
+using Pegasus.Pages;
 
 
 namespace Pegasus.Acceptance.MyITLab.Tests.
@@ -945,7 +946,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
-            string studentName = new RptAllAssessmentAllStudentPage().
+            string studentName = new Pegasus.Pages.RptAllAssessmentAllStudentPage().
                 Get100ScoreUsername(User.UserTypeEnum.CsSmsStudent);
             string successMessage = "The submission by " + studentName + " has been accepted. The grade for this submission will now appear in the Gradebook.";
             //Verify Correct Message Present on the Page
@@ -1053,6 +1054,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 CommonSteps_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("CommonSteps", "ApproveAssignedToCopyStateForSection",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [When(@"""(.*)"" logs into portal using a valid Login credentials")]
+        public void UserLogsIntoPortal(User.UserTypeEnum p0)
+        {
+            var mmndlogin = new MMNDLoginPage();
+            try
+                {
+                    mmndlogin.MMNDLogin(p0);
+                }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
 

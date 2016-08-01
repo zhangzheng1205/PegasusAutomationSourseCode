@@ -196,7 +196,7 @@
     <value>MMNDPPEAdminURLRoot</value>
   </data>
   <data name="MMNDPPEPortalURLRoot_Key" xml:space="preserve">
-    <value>MMNDPPEPortalURLRoot</value>
+    <value>MMNDDirectURLPPE</value>
   </data>
   <data name="MMNDPRODAdminURLRoot_Key" xml:space="preserve">
     <value>MMNDPRODAdminURLRoot</value>

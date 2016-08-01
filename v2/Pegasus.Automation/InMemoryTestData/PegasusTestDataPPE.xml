@@ -318,9 +318,9 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>mmnd5141ins</Name>
+      <Name>Automation_LMS_instructor</Name>
       <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
+      <Email>chethansgangoor@excelindia.com</Email>
       <FirstName>MMND</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>Admin</LastName>
@@ -329,9 +329,9 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>mmnd_wl_stu2</Name>
+      <Name>Automation_LMS_student</Name>
       <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
+      <Email>chethansgangoor@excelindia.com</Email>
       <FirstName>wl</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>student2</LastName>

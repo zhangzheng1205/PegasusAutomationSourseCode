@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest1" storage="e:\manzil\v2\pegasus.acceptance.mmnd.tests\productacceptanceorderedtests\orderedtest1.orderedtest" id="f23ae599-3823-43b9-952d-9e0e3bc585ca" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="5ec55710-9d07-aa03-4127-f886fd3bb5e6" name="UserSignInAsMMNDInstructor" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="a5457c5e-f47f-4de9-0bcb-e01771e9a2a1" name="UserSignOutAsMMNDInstructor" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

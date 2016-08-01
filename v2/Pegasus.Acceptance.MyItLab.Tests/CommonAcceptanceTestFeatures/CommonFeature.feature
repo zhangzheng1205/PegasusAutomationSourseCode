@@ -276,6 +276,18 @@ Given User has browsed the url of eCollege as "ECollegeStudent"
 When "ECollegeStudent" logs in using a valid Login credentials
 Then user should be sucessfully signed into eCollege
 
+#Feature: Login to MMND as an instructor
+Scenario: MMND Instructor logging into portal as a instructor
+Given User has browsed the url of MMND as "MMNDInstructor"
+When "MMNDInstructor" logs into portal using a valid Login credentials
+Then user should be sucessfully signed into eCollege
+
+#Feature: Login to MMND as a student
+Scenario: MMND Student logging into portal as a student
+Given User has browsed the url of eCollege as "ECollegeStudent"
+When "ECollegeStudent" logs in using a valid Login credentials
+Then user should be sucessfully signed into eCollege
+
 #Purpose: Open Ws Url and Login as Workspace Admin
 Scenario: User Login as Workspace Admin2 in HedMil
 Given I browsed the login url for "HedWsAdmin2"

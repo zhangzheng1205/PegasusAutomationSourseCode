@@ -875,18 +875,54 @@ testRunner.Then("user should be sucessfully signed into eCollege", ((string)(nul
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("MMND Instructor logging into portal as a instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
+        public virtual void MMNDInstructorLoggingIntoPortalAsAInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MMND Instructor logging into portal as a instructor", ((string[])(null)));
+#line 280
+this.ScenarioSetup(scenarioInfo);
+#line 281
+testRunner.Given("User has browsed the url of MMND as \"MMNDInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 282
+testRunner.When("\"MMNDInstructor\" logs into portal using a valid Login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 283
+testRunner.Then("user should be sucessfully signed into eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("MMND Student logging into portal as a student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
+        public virtual void MMNDStudentLoggingIntoPortalAsAStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MMND Student logging into portal as a student", ((string[])(null)));
+#line 286
+this.ScenarioSetup(scenarioInfo);
+#line 287
+testRunner.Given("User has browsed the url of eCollege as \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 288
+testRunner.When("\"ECollegeStudent\" logs in using a valid Login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 289
+testRunner.Then("user should be sucessfully signed into eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as Workspace Admin2 in HedMil")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
         public virtual void UserLoginAsWorkspaceAdmin2InHedMil()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as Workspace Admin2 in HedMil", ((string[])(null)));
-#line 280
+#line 292
 this.ScenarioSetup(scenarioInfo);
-#line 281
+#line 293
 testRunner.Given("I browsed the login url for \"HedWsAdmin2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 282
+#line 294
 testRunner.When("I logged into the Pegasus as \"HedWsAdmin2\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 283
+#line 295
 testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -900,21 +936,21 @@ testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as Program Admin and Navigate MyITLabOffice2013Program Course for Cour" +
                     "se Creation", ((string[])(null)));
-#line 288
+#line 300
 this.ScenarioSetup(scenarioInfo);
-#line 289
+#line 301
 testRunner.Given("I browsed the login url for \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 290
+#line 302
 testRunner.When("I logged into the Pegasus as \"HedProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 291
+#line 303
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 292
+#line 304
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 293
+#line 305
 testRunner.When("I click \'My Profile\' link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 294
+#line 306
 testRunner.And("I store user current date and time of the instructor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 295
+#line 307
 testRunner.When("I enter in the \"MyITLabOffice2013ProgramCourseCreation\" course from the Global Ho" +
                     "me page as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

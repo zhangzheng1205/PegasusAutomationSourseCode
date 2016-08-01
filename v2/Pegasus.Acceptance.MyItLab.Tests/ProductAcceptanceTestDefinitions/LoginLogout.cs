@@ -37,7 +37,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="userType">Type of the user.</param>
         /// <seealso cref="User.UserTypeEnum"/>
-
+        [Given(@"User has browsed the url of MMND as ""(.*)""")]
         [Given("I browsed the login url for \"(.*)\"")]
         public void BrowsePegasusLoginUrl(string userType)
         {

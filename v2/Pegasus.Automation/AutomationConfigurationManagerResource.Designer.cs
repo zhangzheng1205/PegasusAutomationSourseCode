@@ -304,7 +304,7 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MMNDPPEPortalURLRoot.
+        ///   Looks up a localized string similar to MMNDDirectURLPPE.
         /// </summary>
         internal static string MMNDPPEPortalURLRoot_Key {
             get {
