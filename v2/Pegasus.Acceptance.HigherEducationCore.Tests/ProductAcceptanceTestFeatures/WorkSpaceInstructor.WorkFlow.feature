@@ -182,7 +182,8 @@ And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
 When I Create "RegChildActivity" SAM activity
 And I Add Questions using "Create New Question" option
-And I create "True/False" question type for at "Create New Question" for Random Activity and Save Activity
+And I create "True/False" question using "Create New Question"
+When I perform "Save and Return" for "Questions"
 Then I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
@@ -199,7 +200,8 @@ And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
 When I Create "RegChildActivity" SAM activity
 And I Add Questions using "Select Questions from Bank" option
-And I should Add question from Question Bank and Save Activity
+And I should Add question from Question Bank
+When I perform "Save and Return" for "Questions"
 Then I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
@@ -221,7 +223,8 @@ And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
 When I Create "RegChildActivity" SAM activity
 And I Add Questions using "Select Question Groups" option
-And I should select "AssessmentRegressionQuestion" Question Group and Save Activity
+And I should select "AssessmentRegressionQuestion" Question Group
+When I perform "Save and Return" for "Questions"
 Then I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
@@ -239,14 +242,14 @@ Then I should be on the "Create activity" page
 When I Create "RegChildActivity" SAM activity
 And I perform "Create New Section" of name "Section1"
 And select "Select Questions from Bank" option at add question for Section "1"
-And I should Add question from Question Bank and Save Activity
+And I should Add question from Question Bank
+When I perform "Save and Return" for "Questions"
 Then I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
 
 #Purpose:Creatiion of Activity with multiple Fill In The Blanks Question of RegSAMActivity type
 #Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity
-Scenario:Creation of Random activity of RegSAMActivity type by adding section with multiple questions
 Scenario:Creation of Random activity of RegSAMActivity type by adding section with multiple questions
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
@@ -278,8 +281,35 @@ Then I reset style sheet to "Default"
 And I check Allow students to skip questions
 And I reset number of questions per page value as "2"
 
+#-----------------------------Save activity--------------------------------
+#Purpose: Save activity from various tabs in activity creation wizard
+Scenario: Save and return from activity Activity Details tab
+When I perform "Save and Return" for "Activity Details"
+Then I should see the successfull message "Activity added successfully."
+
+Scenario: Save and return from activity Questions tab
+When I perform "Save and Return" for "Questions"
+Then I should see the successfull message "Activity added successfully."
+
+Scenario: Save and return from activity Messages tab
+When I perform "Save and Return" for "Messages"
+Then I should see the successfull message "Activity added successfully."
+
+Scenario: Save and return from Grades tab
+When I perform "Save and Return" for "Grades"
+Then I should see the successfull message "Activity added successfully."
+
+Scenario: Save and return from Teaching Support tab
+When I perform "Save and Return" for "Teaching Support"
+Then I should see the successfull message "Activity added successfully."
+
+Scenario: Save and return from HelpLinks tab
+When I perform "Save and Return" for "HelpLinks"
+Then I should see the successfull message "Activity added successfully."
+
 Scenario: Save and return from activity preference page
 When I perform "Save and Return" for "Preferences"
+Then I should see the successfull message "Activity added successfully."
 
 #Purpose:Add Activity to My Course and set as Shown
 Scenario:Add Activity to My Course and set as shown
@@ -289,7 +319,7 @@ When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
 Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
 When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
 
-
+#------------------------------Add Section Direction Lines-----------------------
 #Purpose:Clicking on Add link of "Direction Lines" under each section
 #Test Link id:peg-19554
 Scenario:Add Section Direction Lines
@@ -305,7 +335,33 @@ When I "Add" Directions at Section "3"
 Then I should see Directions "added" to Section "3"
 When I perform "Save and Continue" for "Questions" 
 
-Scenario:Verification perfernece Save response at the end of each page
+#------------------------------Save and Continue from various tabs in Activity Creation Wizard-----------------------
+Scenario: Save and Continue from Activity Details tab
+When I perform "Save and Continue" for "Activity Details"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Questions tab
+When I perform "Save and Continue" for "Questions"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Help Links tab
+When I perform "Save and Continue" for "HelpLinks"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Messages tab
+When I perform "Save and Continue" for "Messages"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Grades tab
+When I perform "Save and Continue" for "Grades"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Teaching Support tab
+When I perform "Save and Continue" for "Teaching Support"
+Then I should be on the "Create Random Activity" page
+
+
+
 
 #Purpose:Workspace or coursespace teacher navigate to "Course Materials" tab and selected "Add from Library" subtab
 Scenario: User navigate to Course Materials tab and selected Add from Library subtab
@@ -314,12 +370,39 @@ Then I should be on the "Course Materials" page
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 
+#------------------------------Fill Activity Details in Activity Creation Wizard-----------------------
 #Purpose:Workspace instructor launch create activity wizard and enter activity name
 Scenario: Workspace instructor launches random activity create wizard and enter activity title
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
 When I Create "RegChildActivity" SAM activity
+
+
+#--------------------------------------Add Questions in Questions tab--------------------------------------
+#Purpose: Workspace instructor adds questions to activity
+
+#--------------------------------------Create New Question--------------------------------------
+Scenario: Add questions using create new question
+When I perform "Navigate" for "Questions"
+And I Add Questions using "Create New Question" option
+And I create "True/False" question using "Create New Question"
+
+#---------------------------------Add Questions using "Select Question Groups"-------------------
+Scenario: Add questions using Select Question Group
+When I perform "Navigate" for "Questions"
+And I Add Questions using "Select Question Groups" option
+And I should select "AssessmentRegressionQuestion" Question Group
+
+#---------------------------------Add Questions using "Select Question from Bank"-------------------
+Scenario: Add questions using Select Questions from Bank
+When I perform "Navigate" for "Questions"
+And I Add Questions using "Select Questions from Bank" option
+And I should Add question from Question Bank
+
+#----------------------------------------------------Create Section--------------------------------------
+Scenario: Create New Section in Questions tab
+When I perform "Create New Section" of name "Section1"
 
 #Purpose:Workspace instructor create single section and add multiple question to it
 Scenario: Workspace instructor create new single section and add 3 fill in the blank question to section1
@@ -346,21 +429,13 @@ When I associate the "RegChildActivity" activity Content Library to MyCourse fra
 Then I should see the successfull message "Content item is added to My Course"
 
 
-When I "Sign out" from the "HedWsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
-
-
-When I logged into the Pegasus as "HedWsStudent" in "WorkSpace"
-
-When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsStudent" 
-Then I should logged in successfully
-
+#------------------------------------Navigate to various Course Tools on the Course Tool Bar--------------------
+Scenario: Navigate to Manage Course Materials
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
 
 
-
-
+Scenario:Verification perfernece Save response at the end of each page
 When I attempt questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
 And I click on next button in "RegSAMActivity" Activity Presentation Window	
 And I close activity presenation window Abruptly
@@ -371,10 +446,6 @@ Then I should be on the "View Submission" page
 And I should see the message "Activity has been started and saved for later but not yet submitted." in view submission page
 When I close the "View Submission" window
 Then I should be on the "Course Materials" page
-
-
-When I "Sign out" from the "HedWsStudent"
-Then I should see the successfull message "You have been signed out of the application."
 
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
@@ -435,3 +506,39 @@ When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
 When I open the "RegChildActivity" Activity
 Then I should see a message "There are no more attempts available for this activity." in the "Test Presentation" Window
+
+#-----------------------------------------------------Add asset from Content Library to My Course----------------------
+Scenario: Add asset from Content Library to My Course
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+
+
+#-----------------------------------------------------Show/Hide asset in My Course ------------------------------------
+Scenario: Search asset in MyCourse and Show/Hide
+When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
+
+
+#-----------------------------------------------------Record this score in Gradebook------------------------------------
+#Purpose: Verifying the "Record this score in Gradebook" option
+#TestLink id: peg-20728
+Scenario: Setting the "Record this score in Gradebook" option to First
+When I perform "Navigate" for "Preferences"
+Then set Record this score in Gradebook option to "First"
+
+Scenario: Setting the "Record this score in Gradebook" option to Last
+When I perform "Navigate" for "Preferences"
+Then set Record this score in Gradebook option to "Last"
+
+Scenario: Setting the "Record this score in Gradebook" option to Highest
+When I perform "Navigate" for "Preferences"
+Then set Record this score in Gradebook option to "Highest"
+
+Scenario: Setting the "Record this score in Gradebook" option to Lowest
+When I perform "Navigate" for "Preferences"
+Then set Record this score in Gradebook option to "Lowest"
+
+Scenario: Setting the "Record this score in Gradebook" option to Average
+When I perform "Navigate" for "Preferences"
+Then set Record this score in Gradebook option to "Average"

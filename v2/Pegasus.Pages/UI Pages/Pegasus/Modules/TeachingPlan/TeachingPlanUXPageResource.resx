@@ -223,7 +223,7 @@
     <value>//table[@id='grdCourseContent']/tbody/tr</value>
   </data>
   <data name="TeachingPlanUX_Page_ActivityName_Xpath_Locator" xml:space="preserve">
-    <value>//div[@title='{0}']</value>
+    <value>//a[@title='{0}']</value>
   </data>
   <data name="TeachingPlanUX_Page_Activity_CMenu_Image_ClassName_Locator" xml:space="preserve">
     <value>CC_icn_down_opt</value>
@@ -239,5 +239,8 @@
   </data>
   <data name="TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='PegMenu128']/div[2]/div[3]/span</value>
+  </data>
+  <data name="TeachingPlanUX_Page_Activity_CMenu_Image_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCourseContent']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td[3]/img</value>
   </data>
 </root>

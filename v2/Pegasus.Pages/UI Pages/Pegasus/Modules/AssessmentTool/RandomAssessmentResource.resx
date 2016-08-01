@@ -186,4 +186,22 @@
   <data name="RandomAssessment_Page_NumberOfAttempts_TextBox_Id_Locator" xml:space="preserve">
     <value>txtAttemptsallowed</value>
   </data>
+  <data name="RandomAssessmentPage_SubmissionScore_DropDown_Average_Text" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="RandomAssessmentPage_SubmissionScore_DropDown_First_Text" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="RandomAssessmentPage_SubmissionScore_DropDown_Highest_Text" xml:space="preserve">
+    <value>Highest</value>
+  </data>
+  <data name="RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator" xml:space="preserve">
+    <value>ddlsubmission</value>
+  </data>
+  <data name="RandomAssessmentPage_SubmissionScore_DropDown_Last_Text" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="RandomAssessmentPage_SubmissionScore_DropDown_Lowest_Text" xml:space="preserve">
+    <value>Lowest</value>
+  </data>
 </root>

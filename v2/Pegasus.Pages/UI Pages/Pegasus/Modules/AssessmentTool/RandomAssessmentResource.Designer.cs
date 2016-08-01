@@ -266,5 +266,59 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
                 return ResourceManager.GetString("RandomAssessment_Page_WindowName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average.
+        /// </summary>
+        internal static string RandomAssessmentPage_SubmissionScore_DropDown_Average_Text {
+            get {
+                return ResourceManager.GetString("RandomAssessmentPage_SubmissionScore_DropDown_Average_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First.
+        /// </summary>
+        internal static string RandomAssessmentPage_SubmissionScore_DropDown_First_Text {
+            get {
+                return ResourceManager.GetString("RandomAssessmentPage_SubmissionScore_DropDown_First_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Highest.
+        /// </summary>
+        internal static string RandomAssessmentPage_SubmissionScore_DropDown_Highest_Text {
+            get {
+                return ResourceManager.GetString("RandomAssessmentPage_SubmissionScore_DropDown_Highest_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ddlsubmission.
+        /// </summary>
+        internal static string RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last.
+        /// </summary>
+        internal static string RandomAssessmentPage_SubmissionScore_DropDown_Last_Text {
+            get {
+                return ResourceManager.GetString("RandomAssessmentPage_SubmissionScore_DropDown_Last_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lowest.
+        /// </summary>
+        internal static string RandomAssessmentPage_SubmissionScore_DropDown_Lowest_Text {
+            get {
+                return ResourceManager.GetString("RandomAssessmentPage_SubmissionScore_DropDown_Lowest_Text", resourceCulture);
+            }
+        }
     }
 }

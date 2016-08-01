@@ -780,5 +780,57 @@ namespace Pegasus.Pages.UI_Pages
             
         }
 
+        /// <summary>
+        /// Set the desired score to be recorded in Gradebook
+        /// </summary>
+        /// <param name="GBScore">This is the score to be recorded in Gradebook</param>
+        public void ScoreInGradebookPreference(string GBScore)
+        {
+            logger.LogMethodEntry("RandomAssessmentPage", "ScoreInGradebook",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //
+                base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator));
+                base.GetWebElementPropertiesById(string.Format(RandomAssessmentResource.
+                    RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator));
+                switch(GBScore)
+                {
+                    case "First":
+                        base.SelectDropDownValueThroughTextById(RandomAssessmentResource.
+                            RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator, 
+                            RandomAssessmentResource.RandomAssessmentPage_SubmissionScore_DropDown_First_Text);
+                        break;
+                    case "Last":
+                        base.SelectDropDownValueThroughTextById(RandomAssessmentResource.
+                            RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator,
+                            RandomAssessmentResource.RandomAssessmentPage_SubmissionScore_DropDown_Last_Text);
+                        break;
+                    case "Highest":
+                        base.SelectDropDownValueThroughTextById(RandomAssessmentResource.
+                            RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator,
+                            RandomAssessmentResource.RandomAssessmentPage_SubmissionScore_DropDown_Highest_Text);
+                        break;
+                    case "Lowest":
+                        base.SelectDropDownValueThroughTextById(RandomAssessmentResource.
+                            RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator,
+                            RandomAssessmentResource.RandomAssessmentPage_SubmissionScore_DropDown_Lowest_Text);
+                        break;
+                    case "Average":
+                        base.SelectDropDownValueThroughTextById(RandomAssessmentResource.
+                            RandomAssessmentPage_SubmissionScore_DropDown_Id_Locator,
+                            RandomAssessmentResource.RandomAssessmentPage_SubmissionScore_DropDown_Average_Text);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage", "ScoreInGradebook",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

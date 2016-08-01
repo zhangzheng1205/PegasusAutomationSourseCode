@@ -890,6 +890,27 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
+        /// Select cmenu option of asset
+        /// </summary>
+        /// <param name="p0">This is the cmenu option to be selected</param>
+        /// <param name="p1">This is the asset name</param>
+        [When(@"I select cmenu ""(.*)"" option of ""(.*)""")]
+        public void selectCmenuOptionofAsset(string cmenuOption,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // select cmenu option
+            Logger.LogMethodEntry("CommonSteps", "selectCmenuOptionofAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select activity cmenu option
+            Activity activity = Activity.Get(activityTypeEnum);
+            //            new TeachingPlanUxPage().SetActivityAsShown(activity.Name);
+            new TeachingPlanUxPage().SelectActivityCmenuOptionInMyCourseFrame((TeachingPlanUxPage.ActivityCmenuEnum)
+                Enum.Parse(typeof(TeachingPlanUxPage.ActivityCmenuEnum), cmenuOption), activity.Name);
+            Logger.LogMethodExit("CommonSteps", "selectCmenuOptionofAsset",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

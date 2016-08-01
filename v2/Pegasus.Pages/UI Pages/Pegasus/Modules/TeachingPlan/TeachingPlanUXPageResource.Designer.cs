@@ -88,6 +88,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td[3]/img.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Activity_CMenu_Image_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Activity_CMenu_Image_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img.
         /// </summary>
         internal static string TeachingPlanUX_Page_Activitycmenu_Xpath_Locator_Ins {
@@ -97,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@title=&apos;{0}&apos;].
+        ///   Looks up a localized string similar to //a[@title=&apos;{0}&apos;].
         /// </summary>
         internal static string TeachingPlanUX_Page_ActivityName_Xpath_Locator {
             get {

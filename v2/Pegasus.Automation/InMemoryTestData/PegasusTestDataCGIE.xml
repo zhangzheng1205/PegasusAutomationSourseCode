@@ -1384,7 +1384,12 @@ the UI deleted or refreshed.-->
       <ActivityType>RegSavedSAMActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-      </ArrayOfActivity>
+    <Activity>
+      <Name>GBScore</Name>
+       <ActivityType>RegChildActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+ </ArrayOfActivity>
 
   <!--Hard coded question details for K12 Writing Coach Question-->
   <ArrayOfQuestion>

@@ -585,7 +585,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        /// </summary>
        /// <param name="questionType">Type of New Question Created.</param>
        /// <param name="questionCreationOption">Add Question Option.</param>
-       [When(@"I create ""(.*)"" question type for at ""(.*)"" for Random Activity and Save Activity")]
+       [When(@"I create ""(.*)"" question using ""(.*)""")]
+       [Then(@"I create ""(.*)"" question using ""(.*)""")]
         public void CreateQuestionForRandomActivity(string questionType, string questionCreationOption)
 
         {
@@ -597,18 +598,33 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new SelectQuestionTypePage().ClickTheExpectedQuestionType(questionType);
             //Create True/False Question
             new TrueFalsePage().CreateTrueFalseQuestion();
-            //Click on Save and Return
-            randomTopicListPage.ClickOnSaveAndReturnButton();
             Logger.LogMethodExit("CreateActivity", "CreateQuestionForRandomActivity",
              base.IsTakeScreenShotDuringEntryExit);
            
         }
 
         /// <summary>
+        /// Save the activity
+        /// </summary>
+        [Then(@"I Save the Activity")]
+        public void SaveTheActivity()
+        {
+            Logger.LogMethodEntry("CreateActivity", "SaveTheActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+            //Click on Save and Return
+            randomTopicListPage.ClickOnSaveAndReturnButton();
+            Logger.LogMethodExit("CreateActivity", "SaveTheActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+
+        /// <summary>
         /// Option to Add Question.
         /// </summary>
        /// <param name="addQuestionOption">This is the option to add question.</param>
        [When(@"I Add Questions using ""(.*)"" option")]
+       [Then(@"I Add Questions using ""(.*)"" option")]
        public void SelectOptionToAddQuestion(string addQuestionOption)
        {
            // Select Option to Add Question
@@ -624,7 +640,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// Select A Question From Bank.
         /// </summary>
-       [When(@"I should Add question from Question Bank and Save Activity")]
+       [When(@"I should Add question from Question Bank")]
        public void AddQuestionFromQuestionBankAndSaveActivity()
        {
            // Select A Question From Bank
@@ -643,7 +659,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        /// Select Questions from Question Group .
        /// </summary>
        /// <param name="questionTypeEnum">This is Question Group Name.</param>
-       [When(@"I should select ""(.*)"" Question Group and Save Activity")]
+       [When(@"I should select ""(.*)"" Question Group")]
        public void SelectQuestionGroupAndSaveActivity(Question.QuestionTypeEnum questionTypeEnum)
        {
            // Select Questions from Question Group
@@ -1075,6 +1091,21 @@ base.IsTakeScreenShotDuringEntryExit);
            // Configure Grades
            addAssessmentPage.ConfigureGradesForSamActivity();
            Logger.LogMethodExit("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+       /// Set the "Record this score in Gradebook" option to record the desired attempt's score in Gradebook
+        /// </summary>
+        /// <param name="GBScore">This is the score to be recorded in Gradebook</param>
+       [Then(@"set Record this score in Gradebook option to ""(.*)""")]
+       public void SetRecordThisScoreInGradebookOptionTo(string GBScore)
+       {
+           Logger.LogMethodEntry("CreateActivity", "SetRecordThisScoreInGradebookOptionTo", 
+               base.IsTakeScreenShotDuringEntryExit);
+           RandomAssessmentPage radomAssessmentPage = new RandomAssessmentPage();
+           radomAssessmentPage.ScoreInGradebookPreference(GBScore);
+           Logger.LogMethodExit("CreateActivity", "SetRecordThisScoreInGradebookOptionTo",
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
