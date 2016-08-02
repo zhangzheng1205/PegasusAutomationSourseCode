@@ -28,7 +28,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         
 
         //Given user access the course link "MMNDCoOrdinate"
-        
+        [When(@"user access the course link ""(.*)""")]            
         [Given(@"user access the course link ""(.*)""")]
         public void UserAccessTheCourseLink(Course.CourseTypeEnum p0)
         {
@@ -125,6 +125,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
+        ///Scenario: MMND Instructor access the course link
+        //Given user access the course template "PPE Template"
+
+        [Given(@"user access the course template ""(.*)""")]
+        public void UserAccessTheCourseTemplate(string p0)
+        {
+            MMNDStandalonelogger.LogMethodEntry("CommonSteps", "UserAccessTheCourseTemplate",
+              base.IsTakeScreenShotDuringEntryExit);
+
+
+
+            try
+            {
+                Assert.AreEqual(true, CourseHomePage.clickCourse(p0));
+            }
+
+            catch (Exception ex)
+            {
+                MMNDStandalonelogger.LogMessage("CommonSteps", "UserAccessTheCourseTemplate", ex.Message, true);
+            }
+
+            MMNDStandalonelogger.LogMethodExit("CommonSteps", "UserAccessTheCourseTemplate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
 

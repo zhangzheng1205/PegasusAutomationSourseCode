@@ -57,7 +57,27 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
             return success;
         }
 
+        public bool clickCourse(String courseName)
+        {
+            bool success = false;
 
+            IList<IWebElement> courseList = base.GetWebElementsProperties(courseNameList);
+
+            //string courseNametoMatch = getCourseName(courseName);
+
+            foreach (IWebElement course in courseList)
+            {
+
+
+                if (course.GetAttribute("title") == courseName)
+                {
+                    success = true;
+                    base.ClickByJavaScriptExecutor(course);
+                    break;
+                }
+            }
+            return success;
+        }
       
          
 
