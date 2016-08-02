@@ -613,7 +613,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetRumbaUrlRoot()
         {
             string applicationRumbaUrl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+               ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "VCD":
                 case "VCDNP":
@@ -645,7 +646,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetContineoUrlRoot()
         {
             string applicationContineoUrl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "VCD":
                 case "VCDNP":
