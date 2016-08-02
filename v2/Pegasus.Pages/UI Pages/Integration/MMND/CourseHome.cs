@@ -17,6 +17,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
         //locators
         By signOut = By.LinkText("Sign Out");
         By courseNameList = By.CssSelector(".title.ellipsis.ng-binding.pointer");
+        By templateNameList = By.CssSelector(".template-card-title.ellipsis.ng-binding.pointer");
         By Title = By.TagName("title");
 
        
@@ -61,15 +62,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
         {
             bool success = false;
 
-            IList<IWebElement> courseList = base.GetWebElementsProperties(courseNameList);
+            IList<IWebElement> courseList = base.GetWebElementsProperties(templateNameList);
 
             //string courseNametoMatch = getCourseName(courseName);
 
             foreach (IWebElement course in courseList)
             {
 
-
-                if (course.GetAttribute("title") == courseName)
+               if (course.GetAttribute("title") == courseName)
                 {
                     success = true;
                     base.ClickByJavaScriptExecutor(course);

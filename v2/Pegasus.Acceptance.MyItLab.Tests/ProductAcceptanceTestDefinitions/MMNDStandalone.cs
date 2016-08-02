@@ -45,6 +45,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             catch (Exception ex)
             {
                 MMNDStandalonelogger.LogMessage("CommonSteps", "UserAccessTheCourseLink", ex.Message, true);
+                ExceptionHandler.HandleException(ex);
             }
 
             MMNDStandalonelogger.LogMethodExit("CommonSteps", "UserAccessTheCourseLink",
@@ -69,6 +70,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             catch (Exception ex)
             {
                 MMNDStandalonelogger.LogMessage("CommonSteps", "InsideTheCourse", ex.Message, true);
+                ExceptionHandler.HandleException(ex);
             }
 
             MMNDStandalonelogger.LogMethodExit("CommonSteps", "InsideTheCourse",
@@ -96,6 +98,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             catch (Exception ex)
             {
                 MMNDStandalonelogger.LogMessage("CommonSteps", "UserAccessThePegausLink", ex.Message, true);
+                ExceptionHandler.HandleException(ex);
             }
 
             MMNDStandalonelogger.LogMethodExit("CommonSteps", "UserAccessThePegausLink",
@@ -119,6 +122,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             catch (Exception ex)
             {
                 MMNDStandalonelogger.LogMessage("CommonSteps", "InsideThePegasusPage", ex.Message, true);
+                ExceptionHandler.HandleException(ex);
             }
 
             MMNDStandalonelogger.LogMethodExit("CommonSteps", "InsideThePegasusPage",
@@ -146,6 +150,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             catch (Exception ex)
             {
                 MMNDStandalonelogger.LogMessage("CommonSteps", "UserAccessTheCourseTemplate", ex.Message, true);
+                ExceptionHandler.HandleException(ex);
             }
 
             MMNDStandalonelogger.LogMethodExit("CommonSteps", "UserAccessTheCourseTemplate",
