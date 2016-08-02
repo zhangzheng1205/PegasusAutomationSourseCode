@@ -123,8 +123,11 @@
   <data name="CanvasCourseAction_Page_GradeBook_Iframe_ID_Value" xml:space="preserve">
     <value>tool_content</value>
   </data>
-  <data name="CanvasCourseAction_Page_INSGradeBook_Header_ID_Value" xml:space="preserve">
-    <value>ResourceBarHeader</value>
+  <data name="CanvasCourseAction_Page_GradeBook_Instructor_Iframe_ID_Value" xml:space="preserve">
+    <value>srcGBFrame</value>
+  </data>
+  <data name="CanvasCourseAction_Page_INSGradeBook_Classname_Value" xml:space="preserve">
+    <value>selectionmaindiv</value>
   </data>
   <data name="CanvasCourseAction_Page_STUGradeBook_GradeTitle_Class_Name" xml:space="preserve">
     <value>GBCMtitle</value>

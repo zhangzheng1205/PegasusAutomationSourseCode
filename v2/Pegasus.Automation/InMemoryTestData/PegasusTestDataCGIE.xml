@@ -145,6 +145,15 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+   <!--Course reference for Canvas Direct-->
+    <Course>
+      <Name>CGIE MIL Course</Name>
+      <CourseType>CanvasDirectCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
     <!--Hard coded Course data for "HED" Product.-->
     <Course>
       <Name>MySpanishLab-release</Name>

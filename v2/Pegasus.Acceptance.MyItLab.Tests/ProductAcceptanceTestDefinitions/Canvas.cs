@@ -1,14 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using OpenQA.Selenium;
-using Pearson.Pegasus.TestAutomation.Frameworks;
-using TechTalk.SpecFlow;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+﻿
+
 using Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration;
+using System;
 using System.Globalization;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using Pegasus.Pages.CommonPageObjects;
+using Pegasus.Automation.DataTransferObjects;
+using Pearson.Pegasus.TestAutomation.Frameworks;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Pages.UI_Pages;
+using TechTalk.SpecFlow;
+using System.Configuration;
+using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
+using Pegasus.Pages.UI_Pages.Integration.MMND;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
+using Pegasus.Pages;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -38,9 +46,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="courseName">This is the course name.</param>
         [When(@"I enter into Canvas direct course ""(.*)""")]
-        public void EnterIntoCanvasDirectCourse(string courseName)
+        public void EnterIntoCanvasDirectCourse(Course.CourseTypeEnum courseTypeEnum)
         {
             logger.LogMethodEntry("Canvas", "EnterIntoCanvasDirectCourse", base.IsTakeScreenShotDuringEntryExit);
+             Course course = Course.Get(courseTypeEnum);
+             string courseName = course.Name;
             new CanvasUserLogin().CanvasUserEnterIntoCourse(courseName);
             logger.LogMethodExit("Canvas", "EnterIntoCanvasDirectCourse", base.IsTakeScreenShotDuringEntryExit);
         }
@@ -52,9 +62,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="courseName">This is the course name.</param>
         /// <param name="userType">This is the user type enum.</param>
         [When(@"I click ""(.*)"" link in ""(.*)"" page as ""(.*)""")]
-        public void ClickLinkInCanvasCourseLandingPage(string linkName, string courseName, User.UserTypeEnum userType)
+        public void ClickLinkInCanvasCourseLandingPage(string linkName, Course.CourseTypeEnum courseTypeEnum, User.UserTypeEnum userType)
         {
             logger.LogMethodEntry("Canvas", "ClickLinkInCanvasCourseLandingPage", base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            string courseName = course.Name;
             new CanvasCourseActions().SelectTabInCourseLandingPage(linkName, courseName, userType);
             logger.LogMethodExit("Canvas", "ClickLinkInCanvasCourseLandingPage", base.IsTakeScreenShotDuringEntryExit);
         }

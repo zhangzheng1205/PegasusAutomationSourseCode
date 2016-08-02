@@ -282,6 +282,15 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+    <!--Course reference for Canvas Direct-->
+    <Course>
+      <Name>QATestCourse, 5xProduction</Name>
+      <CourseType>CanvasDirectCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>

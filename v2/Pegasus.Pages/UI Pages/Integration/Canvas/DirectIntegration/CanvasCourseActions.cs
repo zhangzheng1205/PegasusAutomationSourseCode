@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
         {
             logger.LogMethodEntry("CanvasCourseActions", "SelectTabInCourseLandingPage", base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(1000);
-          
+            base.SwitchToWindow(courseName);
 
             switch (userType)
             {
@@ -90,27 +90,32 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
             logger.LogMethodEntry("CanvasCourseActions", "GetGradeBookExistance",
                 base.IsTakeScreenShotDuringEntryExit);
             bool pageStatus = false;
-            base.WaitUntilWindowLoads(canvasPage);
-            base.SelectWindow(canvasPage);
-            
+            base.SwitchToWindow(pageName);
             // Switch based on the Page name
             switch (pageName)
             {
                 case "Gradebook":
-                    if (userType == User.UserTypeEnum.CanvasDirectTeacher)
-                    {
-                        // Switch to iframe
+                    // Switch to iframe
+                      base.WaitForAjaxToComplete();
+                        base.WaitForElement(By.Id(CanvasCourseActionsResource.
+                            CanvasCourseAction_Page_GradeBook_Iframe_ID_Value));
                         base.SwitchToIFrameById(CanvasCourseActionsResource.
                             CanvasCourseAction_Page_GradeBook_Iframe_ID_Value);
+                    if (userType == User.UserTypeEnum.CanvasDirectTeacher)
+                    {
+                        //Switch to Instructor Gradebook Specific Frame
+                        base.WaitForElement(By.Id(CanvasCourseActionsResource.
+                            CanvasCourseAction_Page_GradeBook_Instructor_Iframe_ID_Value));
+                        base.SwitchToIFrameById(CanvasCourseActionsResource.
+                            CanvasCourseAction_Page_GradeBook_Instructor_Iframe_ID_Value);
+                      
                         // Get the status of Grade page existance
-                        pageStatus = base.IsElementPresent(By.Id(CanvasCourseActionsResource.
-                            CanvasCourseAction_Page_INSGradeBook_Header_ID_Value), 5);
+                        pageStatus = base.IsElementPresent(By.ClassName(CanvasCourseActionsResource.
+                            CanvasCourseAction_Page_INSGradeBook_Classname_Value), 5);
                     }
                     else
                     {
-                        // Switch to iframe
-                        base.SwitchToIFrameById(CanvasCourseActionsResource.
-                            CanvasCourseAction_Page_GradeBook_Iframe_ID_Value);
+                      
                         // Get the status of Grade page existance
                         pageStatus = base.IsElementPresent(By.ClassName(CanvasCourseActionsResource.
                             CanvasCourseAction_Page_STUGradeBook_GradeTitle_Class_Name), 5);
