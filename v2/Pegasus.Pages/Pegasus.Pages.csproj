@@ -230,6 +230,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OverviewTestPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\MMND\CourseHome.cs" />
+    <Compile Include="UI Pages\Integration\MMND\CourseLinks.cs" />
     <Compile Include="UI Pages\Integration\MMND\MMNDLogin.cs" />
     <Compile Include="UI Pages\Integration\Moodle\CourseHomePage.cs" />
     <Compile Include="UI Pages\Integration\Moodle\MoodleCourseActions.cs" />

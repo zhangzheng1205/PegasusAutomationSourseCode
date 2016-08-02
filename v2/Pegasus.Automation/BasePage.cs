@@ -785,6 +785,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return WebDriver.FindElement(by);
         }
 
+        public IList<IWebElement> GetWebElementsProperties(By by)
+        {
+            base.WaitForElement(by);
+            return WebDriver.FindElements(by);
+        }
+
         /// <summary>
         /// Get the value of a the given attribute of the element by specified locator attribute value.
         /// </summary>

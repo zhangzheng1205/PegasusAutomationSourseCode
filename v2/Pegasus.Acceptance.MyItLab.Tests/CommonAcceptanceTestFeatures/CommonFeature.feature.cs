@@ -887,7 +887,7 @@ testRunner.Given("User has browsed the url of MMND as \"MMNDInstructor\"", ((str
 #line 282
 testRunner.When("\"MMNDInstructor\" logs into portal using a valid Login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 283
-testRunner.Then("user should be sucessfully signed into eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("user should be sucessfully signed into MMND", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -901,11 +901,11 @@ testRunner.Then("user should be sucessfully signed into eCollege", ((string)(nul
 #line 286
 this.ScenarioSetup(scenarioInfo);
 #line 287
-testRunner.Given("User has browsed the url of eCollege as \"ECollegeStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("User has browsed the url of MMND as \"MMNDStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 288
-testRunner.When("\"ECollegeStudent\" logs in using a valid Login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("\"MMNDStudent\" logs into portal using a valid Login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 289
-testRunner.Then("user should be sucessfully signed into eCollege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("user should be sucessfully signed into MMND", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

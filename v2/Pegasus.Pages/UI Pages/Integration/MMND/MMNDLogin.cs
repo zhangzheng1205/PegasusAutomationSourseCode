@@ -12,17 +12,15 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages.Integration.MMND
 {
-    [Binding]
-   public class MMNDLoginPage : BasePage
+      public class MMNDLoginPage : BasePage
    
     {
-       //private static Logger MMNDLoginlogger = Logger.GetInstance(typeof(MMNDLoginPage));
-
+      
        //Locators
 
       private By userName = By.Id("username");
       private By passWord = By.Id("password");
-      private By signIn = By.Name("Sign In");
+      private By signIn = By.CssSelector(".btn.btn-lg.btn-primary.btn-block");
 
      
 
@@ -42,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
         {
             base.IsElementPresent(userName, 10);
             keyIn = base.GetWebElementProperties(userName);
-            keyIn.SendKeys(mmndUser.FirstName);
+            keyIn.SendKeys(mmndUser.Name);
 
             base.IsElementPresent(passWord, 10);
             keyIn = base.GetWebElementProperties(passWord);

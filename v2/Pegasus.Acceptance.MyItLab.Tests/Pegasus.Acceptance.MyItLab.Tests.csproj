@@ -130,6 +130,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManageAnnouncementResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\MMNDStandalone.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\Moodle.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\PCTToolLaunch.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdmin.cs" />
@@ -308,6 +309,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>eCollegeCourseAction.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\MMNDStandaloneIns.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MMNDStandaloneIns.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\MoodleDirectIntegration.feature.cs">
       <AutoGen>True</AutoGen>
@@ -501,6 +507,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\HEDIntegrations.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\MMNDStandaloneIns.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\MMNDStandaloneStu.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
@@ -728,6 +740,10 @@
     <None Include="ProductAcceptanceTestFeatures\eCollegeCourseAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>eCollegeCourseAction.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\MMNDStandaloneIns.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MMNDStandaloneIns.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\MoodleDirectIntegration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

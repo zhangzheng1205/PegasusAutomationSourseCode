@@ -1060,6 +1060,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         [When(@"""(.*)"" logs into portal using a valid Login credentials")]
         public void UserLogsIntoPortal(User.UserTypeEnum p0)
         {
+            Logger.LogMethodEntry("CommonSteps", "UserLogsIntoPortal",
+               base.IsTakeScreenShotDuringEntryExit);
+            
             var mmndlogin = new MMNDLoginPage();
             try
                 {
@@ -1068,8 +1071,33 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
 
             catch (Exception ex)
             {
-                throw ex;
+                Logger.LogMessage("CommonSteps", "UserLogsIntoPortal", ex.Message, true);
             }
+
+            Logger.LogMethodExit("CommonSteps", "UserLogsIntoPortal",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [Then(@"user should be sucessfully signed into MMND")]
+        public void SucessfullySignedIntoMMND()
+        {
+            Logger.LogMethodEntry("CommonSteps", "SucessfullySignedIntoMMND",
+              base.IsTakeScreenShotDuringEntryExit);
+
+            var mmndLoginSuccess= new CourseHome();
+            try
+            {
+                Assert.AreEqual(true, mmndLoginSuccess.loginSuccess());
+            }
+
+            catch (Exception ex)
+            {
+                Logger.LogMessage("CommonSteps", "SucessfullySignedIntoMMND", ex.Message, true);
+            }
+
+            Logger.LogMethodExit("CommonSteps", "SucessfullySignedIntoMMND",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

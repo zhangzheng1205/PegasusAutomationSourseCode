@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="MMNDStandaloneStu" storage="e:\manzil\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\mmndstandalonestu.orderedtest" id="778ed85b-ea54-4379-98d4-3e0217fd9b7c" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="2418b0f8-acca-193f-6ef8-7e9d537ca2f3" name="MMNDStudentLoggingIntoPortalAsAStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="02f4f58b-05fe-75d0-16d4-f072aed75659" name="MMNDUserAccessTheCourseLink" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="583ea72f-171f-ab0d-c6f0-b58153190b69" name="MMNDUserAccessThePegasusLink" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

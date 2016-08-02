@@ -202,8 +202,8 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>58_MMND_PegasusSpanish - Automation</Name>
-      <CourseType>MMNDNonCoOrdinate</CourseType>
+      <Name>PPE MIL Course</Name>
+      <CourseType>MMNDCoOrdinate</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>

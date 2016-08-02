@@ -280,13 +280,13 @@ Then user should be sucessfully signed into eCollege
 Scenario: MMND Instructor logging into portal as a instructor
 Given User has browsed the url of MMND as "MMNDInstructor"
 When "MMNDInstructor" logs into portal using a valid Login credentials
-Then user should be sucessfully signed into eCollege
+Then user should be sucessfully signed into MMND
 
 #Feature: Login to MMND as a student
 Scenario: MMND Student logging into portal as a student
-Given User has browsed the url of eCollege as "ECollegeStudent"
-When "ECollegeStudent" logs in using a valid Login credentials
-Then user should be sucessfully signed into eCollege
+Given User has browsed the url of MMND as "MMNDStudent"
+When "MMNDStudent" logs into portal using a valid Login credentials
+Then user should be sucessfully signed into MMND
 
 #Purpose: Open Ws Url and Login as Workspace Admin
 Scenario: User Login as Workspace Admin2 in HedMil
