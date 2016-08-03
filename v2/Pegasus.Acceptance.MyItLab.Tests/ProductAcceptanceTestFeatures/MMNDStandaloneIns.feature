@@ -20,4 +20,4 @@ Then user should land inside the "MMNDCoOrdinate" course
 	
 Scenario: MMND Instructor access the Pegasus link
 Given user access the Pegaus link "Grades"
-Then user should land inside the "View All Course Materials" page
+Then user should land inside the Grades page

@@ -158,6 +158,31 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
+        //Then user should land inside the Grades page
+        [Then(@"user should land inside the Grades page")]
+        public void TheGradesPage()
+        {
+             MMNDStandalonelogger.LogMethodEntry("CommonSteps", "TheGradesPage",
+              base.IsTakeScreenShotDuringEntryExit);
+
+
+
+            try
+            {
+                Assert.AreEqual(true, CourseLinksPage.gradesInsPage());
+            }
+
+            catch (Exception ex)
+            {
+                MMNDStandalonelogger.LogMessage("CommonSteps", "TheGradesPage", ex.Message, true);
+                ExceptionHandler.HandleException(ex);
+            }
+
+            MMNDStandalonelogger.LogMethodExit("CommonSteps", "TheGradesPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+
 
     }
 }

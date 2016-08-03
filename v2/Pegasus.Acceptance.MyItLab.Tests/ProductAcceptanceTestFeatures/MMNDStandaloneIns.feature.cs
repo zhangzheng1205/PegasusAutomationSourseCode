@@ -132,7 +132,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 22
 testRunner.Given("user access the Pegaus link \"Grades\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
-testRunner.Then("user should land inside the \"View All Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("user should land inside the Grades page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

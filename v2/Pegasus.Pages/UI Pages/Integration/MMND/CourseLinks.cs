@@ -15,17 +15,29 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
    public class CourseLinks : BasePage
     {
 
-        By coursetitle = By.CssSelector("h1.ng-binding");
-        By availablelinks = By.CssSelector("#content>blockquote>p>a");
+       //locators on this page
+       By coursetitle = By.CssSelector("h1.ng-binding");
+        By availablelinks = By.CssSelector("#content");
+        By scanlinks = By.CssSelector("blockquote>p>a");
         By centerIframe = By.Id("centerIframe");
         By pegasuslandingpageheader = By.Id("_ctl0_InnerPageContent_divViewHedaer");
+        By pegasusgbins = By.CssSelector("#CreateColumnButtton");
 
-       public void getInsideFrame()
+       //Iframes on this page
+        string centerFrameSrc = "http://coursehome.next.qaprod.ecollege.com";
+        string gbInsframeSrc = "GBInstructorUX.aspx?";
+        string viewallframeSrc = "CoursePreviewMainUX.aspx?";
+
+      /// <summary>
+      /// Given a Iframe source, switches inside the Iframe
+      /// </summary>
+      /// <param name="frame"></param>
+       
+       public void getInsideFrame(string frame)
         {
             base.SwitchToDefaultPageContent();
-            base.SwitchToIFrameBySource("http://coursehome.next.qaprod.ecollege.com");
-            //IWebElement Iframe = base.GetWebElementProperties(centerIframe);
-            //base.SwitchToIFrameByWebElement(Iframe);
+            base.SwitchToIFrameBySource(frame);
+            
         }
 
        /// <summary>
@@ -60,9 +72,16 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        public void clickGivenLink(string link)
         {
 
-            getInsideFrame();
+            
+            getInsideFrame(centerFrameSrc);
+            base.WaitForAjaxToComplete();
+          // base.WaitTillElementFound()
+            //base.FindElementTill(availablelinks, 20);
 
-           IList<IWebElement> listOfLinks = base.GetWebElementsProperties(availablelinks);
+            IWebElement linkobject = base.FindElementTill(availablelinks, 30); 
+
+                        
+           IList<IWebElement> listOfLinks = linkobject.FindElements(scanlinks);
 
            foreach(IWebElement links in listOfLinks)
            {
@@ -76,17 +95,18 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            
         }
     /// <summary>
-    /// This method returns true if the page to land matches the page landed
+    /// This method returns true if the page to land matches the page landed.
     /// </summary>
     /// <param name="link">Pegasus header page name</param>
     /// <returns>bool true or false</returns>
        public bool landedLink(string link)
        {
            base.WaitForAjaxToComplete();
-           getInsideFrame();
+           getInsideFrame(centerFrameSrc);
+           base.SwitchToIFrameBySource(viewallframeSrc);
            bool success = false;
 
-           bool x = base.IsElementPresent(pegasuslandingpageheader, 10);
+           bool x = base.IsElementPresent(pegasuslandingpageheader);
            IWebElement header = base.GetWebElementProperties(pegasuslandingpageheader);
 
 
@@ -94,6 +114,17 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
                success = true;
            
 
+           return success;
+       }
+
+       public bool gradesInsPage()
+       {
+           bool success = false;
+           
+           getInsideFrame(centerFrameSrc);
+           base.SwitchToIFrameBySource(gbInsframeSrc);
+           base.WaitForAjaxToComplete();
+           success = base.IsElementPresent(pegasusgbins,10);
            return success;
        }
 
