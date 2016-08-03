@@ -5,24 +5,15 @@
 
 #Purpose : Moodle instructor cross over to Pegasus
 Scenario: Moodle instructor crossover to Pegasus via direct integrated course
-Given I browsed the login url for "MoodleDirectTeacher"
-When I login to Moodle as "MoodleDirectTeacher"
-And I enter into the moodle kiosk course "MoodleDirectCourse"
-And I click on "MyITLab Instructor Access"
+When I click on "MoodleDirectInstructorLink"
 Then I should be on the "Course Materials" page
-When I click on "Close" link in pegasus
-Then I should be redirected to "MoodleDirectCourse" page
-When I click on "Logout"
-Then I should be on the moodle login page
 
 #Purpose : Moodle student cross over to Pegasus
 Scenario: Moodle student crossover to Pegasus via direct integrated course
-Given I browsed the login url for "MoodleDirectStudent"
-When I login to Moodle as "MoodleDirectStudent"
-And I enter into the moodle kiosk course "MoodleDirectCourse"
-And I click on "Assignment Calendar"
+When I click on "MoodleDirectStudentLink"
 Then I should be on the "Course Materials" page
+
+#Purpose: Close Pegasus Crossover
+Scenario:Close Pegasus Crossover
 When I click on "Close" link in pegasus
 Then I should be redirected to "MoodleDirectCourse" page
-When I click on "Logout"
-Then I should be on the moodle login page

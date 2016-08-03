@@ -305,3 +305,20 @@ Given I am on the "Global Home" page
 When I click 'My Profile' link
 And I store user current date and time of the instructor
 When I enter in the "MyITLabOffice2013ProgramCourseCreation" course from the Global Home page as "HedProgramAdmin"
+
+#Purpose:Login to Moodle Direct as Instructor
+Scenario:Login to Moodle Direct as Instructor
+Given I browsed the login url for "MoodleDirectTeacher"
+When I login to Moodle as "MoodleDirectTeacher"
+And I enter into the moodle kiosk course "MoodleDirectCourse"
+
+#Purpose:Login to Moodle Direct as Student
+Scenario:Login to Moodle Direct as Student
+Given I browsed the login url for "MoodleDirectStudent"
+When I login to Moodle as "MoodleDirectStudent"
+And I enter into the moodle kiosk course "MoodleDirectCourse"
+
+#Purpose:Logout of Moodle
+Scenario:Logout of Moodle
+When I "Logout" of Moodle
+Then I should be on the moodle login page

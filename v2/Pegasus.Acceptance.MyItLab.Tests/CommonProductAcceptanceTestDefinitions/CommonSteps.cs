@@ -59,7 +59,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
                 IsTakeScreenShotDuringEntryExit);
                       //Wait For Page Get Switched
-            base.WaitUntilWindowLoads(expectedPageTitle);
+            base.SwitchToWindow(expectedPageTitle);
             //Get current opened page title
             string actualPageTitle =
                 WebDriver.Title.ToString(CultureInfo.InvariantCulture);

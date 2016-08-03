@@ -1475,6 +1475,18 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
+  <ArrayOfToolLinks>
+    <ToolLinks>
+       <Name>MyITLab Instructor Access</Name>
+       <LinkType>MoodleDirectInstructorLink</LinkType>
+       <IsCreated>true</IsCreated>
+    </ToolLinks>
+      <ToolLinks>
+       <Name>Assignment Calendar</Name>
+       <LinkType>MoodleDirectStudentLink</LinkType>
+        <IsCreated>true</IsCreated>
+    </ToolLinks>
+  </ArrayOfToolLinks>
   <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivityQuestionsList>
     <ActivityQuestionsList>

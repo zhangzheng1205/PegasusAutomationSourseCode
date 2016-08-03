@@ -101,6 +101,7 @@
     <Compile Include="DataTransferObjects\Grade.cs" />
     <Compile Include="DataTransferObjects\License.cs" />
     <Compile Include="DataTransferObjects\Mail.cs" />
+    <Compile Include="DataTransferObjects\ToolLinks.cs" />
     <Compile Include="DataTransferObjects\MMNDToolLinks.cs" />
     <Compile Include="DataTransferObjects\Organization.cs" />
     <Compile Include="DataTransferObjects\Product.cs" />

@@ -102,6 +102,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             DesearlizeActivityQuestionsListTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
             DesearlizeLicenseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeQuestionTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeToolLinksData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
 
         }
 
@@ -420,6 +421,35 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 }
             }
         }
+
+        /// <summary>
+        /// Desearlize Integration Tool Links Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeToolLinksData(XmlDocument xmlDocument,
+            ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
+        {
+
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfToolLinks");
+            xmlSerializer = new XmlSerializer(typeof(List<ToolLinks>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get organization list
+                var linkList = (List<ToolLinks>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (ToolLinks link in linkList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(link);
+                }
+            }
+        }
+
 
 
         /// <summary>

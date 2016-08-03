@@ -291,6 +291,15 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+    <!--Course reference for Moodle Direct-->
+    <Course>
+      <Name>Pegasus Three</Name>
+      <CourseType>MoodleDirectCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
@@ -980,6 +989,29 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+    <!--Moodle Direct Users.-->
+    <User>
+      <Name>peginstructor515</Name>
+      <Password>Password#1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>MoodleDirectTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>pegstudent515</Name>
+      <Password>Password#1</Password>
+      <Email>nithyananda.p@excelindia.com</Email>
+      <FirstName>vijay</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>kumar</LastName>
+      <UserType>MoodleDirectStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
   </ArrayOfUser>
    <!--Hard coded Grades data.-->
   <ArrayOfGrade>
@@ -1141,7 +1173,18 @@
       <IsCreated>true</IsCreated>
     </Activity>
    </ArrayOfActivity>
-  
+  <ArrayOfToolLinks>
+    <ToolLinks>
+      <Name>MyPsychLab Manage Course Materials</Name>
+      <LinkType>MoodleDirectInstructorLink</LinkType>
+      <IsCreated>true</IsCreated>
+    </ToolLinks>
+    <ToolLinks>
+      <Name>MyPsychLab Assignment Calendar</Name>
+      <LinkType>MoodleDirectStudentLink</LinkType>
+      <IsCreated>true</IsCreated>
+    </ToolLinks>
+  </ArrayOfToolLinks>
   <!--Hard coded question details for K12 Writing Coach Question-->
   <ArrayOfQuestion>
     <Question>

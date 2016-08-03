@@ -53,14 +53,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.Moodle
         /// Click 'MyLab & Mastering Tools' link in moodle page
         /// </summary>
         /// <param name="optionName"></param>
-        public void clickMyLabAndMasteringTools(string optionName)
+        public void clickMyLabAndMasteringTools(string linkName)
         {
             Logger.LogMethodEntry("Moodle", "clickMyLabAndMasteringTools", base.IsTakeScreenShotDuringEntryExit);
             // wait for window to load
             waitForWindowToLoad();
             // wait for 'MyLab & Mastering Tools' and click on the link
-            base.WaitForElement(By.PartialLinkText(optionName));
-            IWebElement getMyLabMasteringToolLink = base.GetWebElementPropertiesByPartialLinkText(optionName);
+            base.WaitForElement(By.PartialLinkText(linkName));
+            IWebElement getMyLabMasteringToolLink = base.GetWebElementPropertiesByPartialLinkText(linkName);
             base.ClickByJavaScriptExecutor(getMyLabMasteringToolLink);
             Logger.LogMethodExit("Moodle", "clickMyLabAndMasteringTools", base.IsTakeScreenShotDuringEntryExit);
         }

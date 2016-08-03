@@ -39,10 +39,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="optionName">This is the option name.</param>
         [When(@"I click on ""(.*)""")]
-        public void ClickMyLabMasteringTools(string optionName)
+        public void ClickMyLabMasteringTools(ToolLinks.LinkTypeEnum linkTypeEnum)
         {
             Logger.LogMethodEntry("Moodle", "ClickMyLabMasteringTools", base.IsTakeScreenShotDuringEntryExit);
-            new MoodleCourseActions().clickMyLabAndMasteringTools(optionName);
+            ToolLinks toolLinks = ToolLinks.Get(linkTypeEnum);
+            string linkName = toolLinks.Name;
+            new MoodleCourseActions().clickMyLabAndMasteringTools(linkName);
             Logger.LogMethodExit("Moodle", "ClickMyLabMasteringTools", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -161,6 +163,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new MoodleCourseActions().ClickSyncMyLabMasteringGradesButton();
             Logger.LogMethodExit("Moodle", "ClickSyncMyLabMasteringGradesButton", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Logout from moodle.
+        /// </summary>
+        /// <param name="linkName">This is logout link name.</param>
+        [When(@"I ""(.*)"" of Moodle")]
+        public void LogoutfromMoodle(string linkName)
+        {
+            Logger.LogMethodEntry("Moodle", "LogoutfromMoodle", base.IsTakeScreenShotDuringEntryExit);
+            new MoodleCourseActions().clickMyLabAndMasteringTools(linkName);
+            Logger.LogMethodExit("Moodle", "LogoutfromMoodle", base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }
