@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        /// <returns></returns>
         public bool loginSuccess()
         {
-            base.WaitForElementDisplayedInUi(signOut, 10);
+            base.WaitForElementDisplayedInUi(signOut);
             bool success = base.IsElementPresent(signOut);
             return success;
         }

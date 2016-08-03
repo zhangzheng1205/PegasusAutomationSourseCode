@@ -38,15 +38,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
 
         try
         {
-            base.IsElementPresent(userName, 10);
+            base.IsElementPresent(userName);
             keyIn = base.GetWebElementProperties(userName);
             keyIn.SendKeys(mmndUser.Name);
 
-            base.IsElementPresent(passWord, 10);
+            base.IsElementPresent(passWord);
             keyIn = base.GetWebElementProperties(passWord);
             keyIn.SendKeys(mmndUser.Password);
 
-            base.IsElementPresent(signIn, 10);
+            base.IsElementPresent(signIn);
             keyIn = base.GetWebElementProperties(signIn);
             base.ClickByJavaScriptExecutor(keyIn);
 

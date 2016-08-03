@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
           // base.WaitTillElementFound()
             //base.FindElementTill(availablelinks, 20);
 
-            IWebElement linkobject = base.FindElementTill(availablelinks, 30); 
+            IWebElement linkobject = base.FindElementTill(availablelinks); 
 
                         
            IList<IWebElement> listOfLinks = linkobject.FindElements(scanlinks);
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            getInsideFrame(centerFrameSrc);
            base.SwitchToIFrameBySource(gbInsframeSrc);
            base.WaitForAjaxToComplete();
-           success = base.IsElementPresent(pegasusgbins,10);
+           success = base.IsElementPresent(pegasusgbins);
            return success;
        }
 
