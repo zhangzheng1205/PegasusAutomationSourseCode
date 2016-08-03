@@ -37,6 +37,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
             return courseNametoMatch;
         }
 
+        public string getTemplateName(Course.CourseTypeEnum courseName)
+        {
+            string courseNametoMatch = Course.Get(courseName).Template.ToString();
+            return courseNametoMatch;
+        }
        /// <summary>
        /// Locates the signout button present and returns true or false
        /// </summary>
@@ -75,18 +80,18 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
             return success;
         }
 
-        public bool clickCourse(String courseName)
+        public bool clickTemplate(Course.CourseTypeEnum courseName)
         {
             bool success = false;
 
             IList<IWebElement> courseList = base.GetWebElementsProperties(templateNameList);
 
-            //string courseNametoMatch = getCourseName(courseName);
+            string courseNametoMatch = getTemplateName(courseName);
 
             foreach (IWebElement course in courseList)
             {
 
-               if (course.GetAttribute("title") == courseName)
+                if (course.GetAttribute("title") == courseNametoMatch)
                 {
                     success = true;
                     base.ClickByJavaScriptExecutor(course);

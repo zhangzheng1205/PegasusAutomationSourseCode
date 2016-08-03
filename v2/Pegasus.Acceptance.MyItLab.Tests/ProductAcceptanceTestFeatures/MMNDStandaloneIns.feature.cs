@@ -112,7 +112,7 @@ testRunner.Then("user should land inside the \"View All Course Materials\" page"
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 16
-testRunner.Given("user access the course template \"PPE Template\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("user access the course template \"MMNDCoOrdinate\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
 testRunner.When("user access the course link \"MMNDCoOrdinate\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18

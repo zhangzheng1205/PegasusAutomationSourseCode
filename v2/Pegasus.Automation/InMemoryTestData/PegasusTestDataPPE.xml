@@ -204,6 +204,7 @@
     <Course>
       <Name>PPE MIL Course</Name>
       <CourseType>MMNDCoOrdinate</CourseType>
+      <Template>PPE Template</Template>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>

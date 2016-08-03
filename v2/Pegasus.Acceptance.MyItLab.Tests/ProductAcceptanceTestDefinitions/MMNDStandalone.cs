@@ -135,7 +135,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         //Given user access the course template "PPE Template"
 
         [Given(@"user access the course template ""(.*)""")]
-        public void UserAccessTheCourseTemplate(string p0)
+        public void UserAccessTheCourseTemplate(Course.CourseTypeEnum p0)
         {
             MMNDStandalonelogger.LogMethodEntry("CommonSteps", "UserAccessTheCourseTemplate",
               base.IsTakeScreenShotDuringEntryExit);
@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             try
             {
-                Assert.AreEqual(true, CourseHomePage.clickCourse(p0));
+                Assert.AreEqual(true, CourseHomePage.clickTemplate(p0));
             }
 
             catch (Exception ex)

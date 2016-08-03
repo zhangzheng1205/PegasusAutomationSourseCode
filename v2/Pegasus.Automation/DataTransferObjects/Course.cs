@@ -214,6 +214,7 @@ namespace Pegasus.Automation.DataTransferObjects
         /// </summary>
         public DateTime EnrollmentDate { get; set; }
 
+        public String Template { get; set; }
         /// <summary>
         /// This class returns the course based on condition.
         /// </summary>
