@@ -70,7 +70,8 @@ namespace Pegasus.Automation.DataTransferObjects
             InteractiveWritingCoach = 39,
             RegSAMActivity = 40,
             RegChildActivity=41,
-            RegSavedSAMActivity=42
+            RegSavedSAMActivity = 42, 
+            BBGradeSynchActivity=43
         }
 
         /// <summary>

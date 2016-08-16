@@ -331,6 +331,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Grader Activities.
+        /// </summary>
+        internal static string CommonPage_ExcelChapter1GraderActivities_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_ExcelChapter1GraderActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Excel Chapter 1: Simulation Activities.
         /// </summary>
         internal static string CommonPage_ExcelChapter1SimulationActivities_FolderName {

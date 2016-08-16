@@ -440,13 +440,23 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Grade>
     <Grade>
-      <Score>100</Score>
+      <Score>3</Score>
       <GradeType>PegasusNewGrade</GradeType>
       <IsCreated>true</IsCreated>
     </Grade>
     <Grade>
-      <Score>70</Score>
+      <Score>2</Score>
       <GradeType>PegasusEditedGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>66.7</Score>
+      <GradeType>PegasusEditedGradePerc</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>PegasusNewGradePerc</GradeType>
       <IsCreated>true</IsCreated>
     </Grade>
   </ArrayOfGrade>
@@ -1211,7 +1221,7 @@ the UI deleted or refreshed.-->
       <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
       <FirstName>Automation</FirstName>
-      <MiddleName>Pegasus</MiddleName>PegasusNewGrade
+      <MiddleName>Pegasus</MiddleName>
       <LastName>student</LastName>
       <UserType>BBStudent1</UserType>
       <IsCreated>true</IsCreated>
@@ -1297,7 +1307,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Word Chapter 1 Grader Project [Homework 3]</Name>
+      <Name>1 New Grade Act</Name>
       <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
@@ -1396,6 +1406,11 @@ the UI deleted or refreshed.-->
       <Activity>
       <Name>GBScore</Name>
        <ActivityType>RegChildActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>BB Grade Synch Activity</Name>
+      <ActivityType>BBGradeSynchActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
       </ArrayOfActivity>

@@ -366,4 +366,7 @@
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
   </data>
+  <data name="CommonPage_ExcelChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Grader Activities</value>
+  </data>
 </root>

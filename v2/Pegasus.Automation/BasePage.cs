@@ -637,9 +637,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             {
                 if (iframe.GetAttribute("src").Contains(nameAttributeValue))
                 {
+
                     SwitchToIFrameByWebElement(iframe);
                     break;
                 }
+                else throw new Exception("Iframe " +nameAttributeValue+" do not  exist.");
             }
         }
 
@@ -761,6 +763,54 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 stopWatch.Stop();
             }
           
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        protected void SwitchToPartialWindowTitle(string windowName, int timeOut = -1)
+        {
+            bool windowFound = false;
+            if (timeOut == -1)
+            {
+                timeOut = this._waitTimeOut;
+            }
+
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            try
+            {
+
+                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                {
+                    List<String> allWindows = WebDriver.WindowHandles.ToList();
+                    string winsname = "";
+
+
+                    foreach (String wins in allWindows)
+                    {
+
+                        //bool title = base.IsElementDisplayedInPage(By.TagName("title"),false, 60);
+
+
+                        winsname = WebDriver.SwitchTo().Window(wins).Title;
+
+                        if (winsname.Contains(windowName))
+                        {
+                            windowFound = true;
+                            WebDriver.SwitchTo().Window(wins);
+                            break;
+                        }
+
+
+
+                    }
+                    if (windowFound) break;
+                }
+                stopWatch.Stop();
+            }
+
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -2464,6 +2514,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return getBrowserInfo;
         }
 
+     
         /// <summary>
         /// Hover the mouse on the element.
         /// </summary>
@@ -3099,6 +3150,46 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         }
 
+        /// <summary>
+        /// Executes JavaScript in the context of the currently selected frame or window. 
+        /// The script fragment provided will be executed as the body of an click function.
+        /// </summary>
+        /// <param name="timeoutSecs">Represents an time to wait for the document load to complete.</param>
+        /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
+        /// The script fragment provided will be executed as the body of an anonymous function.</see>
+        /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
+        /// access to the mechanism to do so.</seealso>
+        protected void WaitForDocumentLoadToComplete(int waitTimeOutDuration = -1)
+        {
+
+            var stopWatch = new Stopwatch();
+            if (waitTimeOutDuration == -1)
+            {
+                waitTimeOutDuration = this._waitTimeOut;
+            }
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < waitTimeOutDuration)
+                {
+
+                    var documentLoadIsComplete = (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript("return document.readyState == 'complete'");
+                    if (documentLoadIsComplete)
+                    {
+                        break;
+                    }
+
+                }
+            }
+            //Exception Handling
+            catch (Exception ex)
+            {
+                stopWatch.Stop();
+                throw ex;
+            }
+            stopWatch.Stop();
+
+        }
+
         protected IWebElement WaitTillElementFound(By IWebElement, int waitTimeOutDuration = -1)
         {
             IWebElement myDynamicElement = null;
@@ -3149,5 +3240,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return myDynamicElement;
         }
         #endregion WebDriver Wait
+
+       
     }
 }

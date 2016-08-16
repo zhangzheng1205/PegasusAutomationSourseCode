@@ -21,6 +21,8 @@ namespace Pegasus.Automation.DataTransferObjects
             PegasusEditedGrade = 4,
             D2LDirectIntegrationEditedGrade = 5,
             D2LDirectNewGrade = 6,
+            PegasusEditedGradePerc=7,
+            PegasusNewGradePerc=8
         }
 
         /// <summary>

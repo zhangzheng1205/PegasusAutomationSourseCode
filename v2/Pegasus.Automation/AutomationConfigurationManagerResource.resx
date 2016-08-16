@@ -390,4 +390,7 @@
   <data name="BBInstructorURLRootVCD_Key" xml:space="preserve">
     <value>BBInstructorURLRootVCD</value>
   </data>
+  <data name="BBInstructorURLRootPROD_Key" xml:space="preserve">
+    <value>BBInstructorURLRootPROD</value>
+  </data>
 </root>

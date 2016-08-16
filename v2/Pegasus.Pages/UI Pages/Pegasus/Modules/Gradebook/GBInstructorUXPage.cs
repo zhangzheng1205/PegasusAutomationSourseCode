@@ -9,6 +9,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
 using System.Diagnostics;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
+using OpenQA.Selenium.Interactions;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -4169,16 +4170,17 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectGradebookFrame();
                 base.WaitForElement(By.Id("GBGridDataTable"));
                 // Mouse hover on the grades frame
-
                 Thread.Sleep(1000);
-
                 IWebElement getGradeFrame1 = base.GetWebElementPropertiesById(
                     "GBGridDataTable");
                 base.PerformMouseHoverAction(getGradeFrame1);
-
-                IWebElement getGradeFrame = base.GetWebElementPropertiesByClassName("gbImgOW");
-                Thread.Sleep(3000);
-                base.PerformMouseHoverAction(getGradeFrame);
+                bool check = base.IsElementPresent(By.ClassName("gbImgOW"), 10);
+                if (check)
+                {
+                    IWebElement getGradeFrame = base.GetWebElementPropertiesByClassName("gbImgOW");
+                    Thread.Sleep(3000);
+                    base.PerformMouseHoverAction(getGradeFrame);
+                }
 
                 // Perform mouse hover on the grades
                 IWebElement getGrade = base.GetWebElementPropertiesByXPath(
@@ -4205,21 +4207,25 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id("txtNewValue"));
                 base.ClearTextById("txtNewValue");
                 // Enter 70 score in the edit grades popup
-                base.FillTextBoxById("txtNewValue", "70");
+                base.FillTextBoxById("txtNewValue", "2");
                 // Enter the 100 value in denominator
                 base.WaitForElement(By.Id("txtNewMaxValue"));
                 base.ClearTextById("txtNewMaxValue");
-                base.FillTextBoxById("txtNewMaxValue", "100");
+                base.FillTextBoxById("txtNewMaxValue", "3");
                 // Get the edited score
                 string actualEditedScore = base.GetElementTextById("idnewpercentage");
                 string scoreAfterEdit1 = actualEditedScore.Replace("[", "");
                 string scoreAfterEdit2 = scoreAfterEdit1.Replace("]", "");
                 getEditedActivityStatusGrade = scoreAfterEdit2.Replace("%", "");
+            
                 // Click Update button in edit score lightbox
                 base.WaitForElement(By.PartialLinkText("Update"));
-                base.ClickButtonByPartialLinkText("Update");
-                // Store the edited score in grade enum
-                new ViewSubmissionPage().StoreGradeDetails(gradeType, getEditedActivityStatusGrade);
+                IWebElement Update = base.GetWebElementPropertiesByLinkText("Update");
+                Thread.Sleep(3000);
+                base.ClickByJavaScriptExecutor(Update);
+                base.RefreshIFrameByJavaScriptExecutor("srcGBFrame");
+                //// Store the edited score in grade enum
+                //new ViewSubmissionPage().StoreGradeDetails(gradeType, getEditedActivityStatusGrade);
             }
             catch (Exception e)
             {
@@ -4359,6 +4365,9 @@ namespace Pegasus.Pages.UI_Pages
                     user = User.Get(CommonResource.CommonResource
                               .SMS_STU_UC2);
                     break;
+                default :
+                    user = User.Get(studentName);
+                    break;
             }
             logger.LogMethodExit("LoginContentPage", "FetchTheUserDetails",
              base.IsTakeScreenShotDuringEntryExit);
@@ -4409,6 +4418,57 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCount",
            base.IsTakeScreenShotDuringEntryExit);
             return activityColumnNumber;
+        }
+
+        /// <summary>
+        /// Get the Activity Status.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="userLastName">This is User Last name.</param>
+        /// <param name="userFirstName">This is User First Name.</param>
+        /// <returns>Activity Status.</returns>
+        public void EditActivityScoreInPegasusAtViewSubmission(Grade.GradeTypeEnum gradeType, Activity.ActivityTypeEnum activityType, string userLastName,
+                    string userFirstName)
+        {
+            //Get the Activity Status
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+     try{
+          ViewSubmissionPage viewSubmission =new ViewSubmissionPage();
+         // Get student property by searching sent student
+         IWebElement getStudentProperty = viewSubmission.SearchStudentByLastAndFirstName(userLastName, userFirstName);
+         // Click on student index
+         viewSubmission.ClickStudent(getStudentProperty);
+         
+                base.SwitchToWindow("View Submission");
+                base.WaitForDocumentLoadToComplete();
+                base.WaitForElement(By.Id("divEdit"));
+                base.GetWebElementPropertiesById("divEdit").Click();
+
+                // Enter the value in numerator text box
+                base.WaitForElement(By.Id("txtRawNewVal"));
+                base.ClearTextById("txtRawNewVal");
+                // Enter 70 score in the edit grades popup
+                base.FillTextBoxById("txtRawNewVal", "2");
+                // Enter the 100 value in denominator
+                base.WaitForElement(By.Id("txtRawMaxVal"));
+                base.ClearTextById("txtRawMaxVal");
+                base.FillTextBoxById("txtRawMaxVal", "3");
+                // Click Update button in edit score lightbox
+                base.WaitForElement(By.Id("btnUpdateGrade"));
+                base.GetWebElementPropertiesById("btnUpdateGrade").Click();
+                base.WaitForDocumentLoadToComplete();
+                base.SwitchToWindow("View Submission");
+                base.WaitForElement(By.Id("_ctl0_PopupPageContent_btnSaveAndClose"));
+                base.GetWebElementPropertiesById("_ctl0_PopupPageContent_btnSaveAndClose").Click();
+               }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+           
         }
     }
 }

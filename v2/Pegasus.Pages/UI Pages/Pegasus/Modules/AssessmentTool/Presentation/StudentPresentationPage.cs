@@ -7295,7 +7295,7 @@ namespace Pegasus.Pages.UI_Pages
               CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator, activityColumnCount));
                 getActivitySubmittedScore = getActivitySubmittedScore.Replace("%", "");
                 // Store the edited score in grade enum
-                new ViewSubmissionPage().StoreGradeDetails(gradeType, getActivitySubmittedScore);
+                //new ViewSubmissionPage().StoreGradeDetails(gradeType, getActivitySubmittedScore);
             }
             catch (Exception e)
             {
@@ -7801,5 +7801,41 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getCancelButton = base.GetWebElementPropertiesById("Cancel");
             base.ClickByJavaScriptExecutor(getCancelButton);
         }
+
+         public void AttempBBGradeSynchActivity()
+        {
+            logger.LogMethodEntry("StudentPresentationPage",
+            "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(string.Format("//div[@id='nextQuextion']/div")));
+                int Qcount = base.GetElementCountByXPath(string.Format("//div[@id='nextQuextion']/div"));
+              
+
+                        for (int i = 1; i <= Qcount; i++)
+                        {
+                            string getQtype = base.GetWebElementPropertiesByXPath
+                                (string.Format("//div[@id='nextQuextion']/div[{0}]", i))
+                                .GetAttribute("questiontype");
+                            if (getQtype == "True / False")
+                            {
+                                string questionId = base.GetWebElementPropertiesByXPath
+                                    (string.Format("//div[@id='nextQuextion']/div[{0}]", i)).GetAttribute("id");
+                                base.WaitForElement(By.Id("radio_T" + questionId));
+                                bool radio = base.IsElementPresent(By.Id("radio_T" + questionId));
+                                base.SelectRadioButtonById("radio_T" + questionId);
+                            }
+                     
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
+        }
       }
+
+    
 }

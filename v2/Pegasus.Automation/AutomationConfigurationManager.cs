@@ -519,9 +519,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 case "CGIENP":
                     applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
                     break;
-                //case "PROD":
-                  //  applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootCGIE_Key];
-                   // break;
+                case "PROD":
+                    applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BBInstructorURLRootPROD_Key];
+                    break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationBBUrl;

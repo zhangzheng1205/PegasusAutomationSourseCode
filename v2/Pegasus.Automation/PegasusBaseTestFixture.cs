@@ -624,7 +624,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             //Select Default Window
             try
             {
-                Thread.Sleep(3000);
+                Thread.Sleep(5000);
                 WebDriver.SwitchTo().Window(WebDriver.WindowHandles.First());
             }
             //Exception Handling

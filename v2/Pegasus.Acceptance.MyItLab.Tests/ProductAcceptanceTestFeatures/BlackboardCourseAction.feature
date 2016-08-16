@@ -3,30 +3,35 @@
 					I want to manage all the Blackboard course management usecases 
 					so that I would validate all the course mana scenarios are working fine.
 
-
+#Purpose:Blackboard Instructors Selects Course
 Scenario: Blackboard Instructors Selects Course
 Given I am on the "My Institution" page of Blackboard
 When I Select PegasusCourse link
 Then I should see "Content" links for Pegasus
 
+#Purpose:Blackboard Instructors Selects Pegasus Course Links
 Scenario: Blackboard Instructors Selects Pegasus Course Links
 #Given I am on the "My Institution" page of Blackboard
 When I Select "Content" links for Pegasus
 Then I should see "Gradebook" link for Pegasus
 
+#Purpose:Blackboard Instructors Search activity
 Scenario: Blackboard Instructors Search activity
 Given I am on the "Gradebook" page of Pegasus
 When I search "Access Chapter 1 Grader Project [Assessment 3]" of Pegasus course
 Then I should see "Access Chapter 1 Grader Project [Assessment 3]" in Gradebook
 
+#Purpose:Blackboard Instructor editing score of Pegasus activity
 Scenario: Blackboard Instructor editing score of Pegasus activity
 When instructor sets score for "Access Chapter 1 Grader Project [Assessment 3]" activity for "BBStudent1"
 Then I should see edited score for "Access Chapter 1 Grader Project [Assessment 3]" in Gradebook for "BBStudent1"
 
+#Purpose:Blackboard Instructor closing Pegasus Page
 Scenario: Blackboard Instructor closing Pegasus Page
 When instructor closes "Gradebook" page
 Then I should not see "Gradebook" page opened
 
+#Purpose:Blackboard Instructor accessing GradeCenter
 Scenario: Blackboard Instructor accessing GradeCenter
 Given I am on the "Content" page of blackboard
 When I select "Grade Center" of Blackboard
@@ -44,69 +49,53 @@ Then I should see the successfull message "LMS Synchronization is enabled" in "G
 Scenario: Blackboard instructor Edit Grade in Pegasus
 When I enter into blackboard course "BBCourse"
 Then I should be displayed with "Home Page"
-When I click on the "Content" link
-And I click on the "Gradebook" link
+When I click on the "Content" link at "Home Page" 
+And I click on the "Gradebook" link at "Content"
 Then I should be on the "Gradebook" page
-When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Gradebook" by "CsSmsInstructor"
+When I select "1 New Grade Act" in "Gradebook" by "CsSmsInstructor"
+When I select the cmenu "ViewAllSubmissions" of asset "1 New Grade Act"
 And I click on Edit Grade "PegasusEditedGrade" of "BBEditActivity" activity for "BBStudent" in Pegasus
-Then I should see the score "PegasusEditedGrade" of "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in Pegasus
+Then I should see the score "PegasusEditedGradePerc" of "1 New Grade Act" activity for "BBStudent" in Pegasus
 When I "Close" from the "BBInstructor"
-And I click on the "Grade Center" link
-And I click on the "Full Grade Center" link
-When I select option "Pearson Custom Tools" form "Manage" dropdown
-And I click on the "Refresh Pearson Grades" link
-When I click on submit button
-And I click on the "Full Grade Center" link 
-Then I should see the score "PegasusEditedGrade" for "Word Chapter 1 Grader Project [Homework 3] (Project G)" activity for "BBStudent" in BlackBoard
+And I click on the "Grade Center" link at "Content"
+And I click on the "Full Grade Center" link at "Content" 
+Then I refresh and see "PegasusEditedGrade" for "1 New Grade Act" activity for "BBStudent" in BlackBoard at "Grade Center"
 When I "Logout" of Blackboard as "BBInstructor"
 
 #Purpose : Blackbord student submit the activity
 Scenario: BBStudent submit activity
 When I enter into blackboard course "BBCourse"
 Then I should be displayed with "Home Page"
-When I click on the "Content" link
-And I click on the "Grades" link
+When I click on the "Content" link at "Home Page"
+And I click on the "Grades" link at "Content"
 When I navigate to "Course Materials" tab
-And I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "Word Chapter 1 Grader Project [Assessment 3]"
-Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
-When I click on Download Files button on Test Presentation pop up
-And I click on download icon of "go_w01_grader_a3.docx"
-And I click on Close and Return button
-Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
-When I click on Upload Completed File button on Test Presentation pop up
-And I upload the downloaded file "Grader Word file for 100%"
-Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
-When I submit "Word Chapter 1 Grader Project [Assessment 3]" activity
-Then I should see message "Your file, go_w01_grader_a3.docx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
-When I click on Return To Course button
-Then I should be on the "Course Materials" page
-When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see a "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent" 
-And I should see "100" score "PegasusNewGrade" for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page in Pegasus
+And I select "1 New Grade Act" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "1 New Grade Act"
+Then I am on "BBGradeSynchActivity" window
+When I attempt the questions in activity
+Then I should successfully submit activity for grading
+Then I should see a "Passed" status for the activity "1 New Grade Act" in "Course Materials" by "CsSmsStudent" 
+And I should see "PegasusNewGradePerc" score "PegasusNewGrade" for the activity "1 New Grade Act" in course material page in Pegasus
 When I "Close" from the "BBStudent"
-When I logout of Pegasus
+And I logout of Pegasus
 
 #Purpose : Blackboard instructor validate the newly submited grades in Pegasus
 Scenario: BBInstructor validate new activity submission in Pegasus
+Given I browsed the URL of "BBInstructor"
 When I login to Blackboard Cert as "BBInstructor"
 Then I should be logged in successfully as "BBInstructor"
 When I enter into blackboard course "BBCourse"
 Then I should be displayed with "Home Page"
-When I click on the "Content" link
-And I click on the "Gradebook" link
+When I click on the "Content" link at "Home Page"
+And I click on the "Gradebook" link at "Content"
 Then I should be on the "Gradebook" page
-When I select "Word Chapter 1 Grader Project [Assessment 3]" in the "Gradebook" by "CsSmsInstructor"
-Then I should see GBSync icon for "Word Chapter 1 Grader Project [Assessment 3]" activity
-And I should see the score "PegasusNewGrade" of "Word Chapter 1 Grader Project [Assessment 3]" activity for "BBStudent" in Pegasus
+When I select "1 New Grade Act" in "Gradebook" by "CsSmsInstructor"
+Then I should see GBSync icon for "1 New Grade Act" activity
+And I should see the score "PegasusNewGradePerc" of "1 New Grade Act" activity for "BBStudent" in Pegasus
 When I "Close" from the "BBInstructor"
 
 #Purpose : Blackboard instructor validate the sync grades in Pegasus
 Scenario: BBInstructor validate newly sync grades in Blackboard
-When I click on the "Grade Center" link
-And I click on the "Full Grade Center" link
-When I select option "Pearson Custom Tools" form "Manage" dropdown
-And I click on the "Refresh Pearson Grades" link
-And I click on submit button
-And I click on the "Full Grade Center" link 
-Then I should see the score "PegasusNewGrade" for "Word Chapter 1 Grader Project [Assessment 3]" activity for "BBStudent" in BlackBoard
+When I click on the "Grade Center" link at "Content"
+And I click on the "Full Grade Center" link at "Content" 
+Then I refresh and see "PegasusNewGrade" for "1 New Grade Act" activity for "BBStudent" in BlackBoard at "Grade Center"

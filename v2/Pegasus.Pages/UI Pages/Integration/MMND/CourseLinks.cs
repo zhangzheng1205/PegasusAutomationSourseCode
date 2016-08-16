@@ -17,7 +17,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
 
        //locators on this page
        By coursetitle = By.CssSelector("h1.ng-binding");
-        By availablelinks = By.CssSelector("#content");
+       By availablelinks = By.Id("content");
         By scanlinks = By.CssSelector("blockquote>p>a");
         By centerIframe = By.Id("centerIframe");
         By pegasuslandingpageheader = By.Id("_ctl0_InnerPageContent_divViewHedaer");
@@ -36,6 +36,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        public void getInsideFrame(string frame)
         {
             base.SwitchToDefaultPageContent();
+            base.WaitForElement(By.CssSelector(string.Format("iframe[src*='{0}']", frame)));
             base.SwitchToIFrameBySource(frame);
             
         }
@@ -72,9 +73,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        public void clickGivenLink(string link)
         {
 
-            
-            getInsideFrame(centerFrameSrc);
             base.WaitForAjaxToComplete();
+            getInsideFrame(centerFrameSrc);
+           
           // base.WaitTillElementFound()
             //base.FindElementTill(availablelinks, 20);
 
@@ -101,12 +102,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
     /// <returns>bool true or false</returns>
        public bool landedLink(string link)
        {
+          
            base.WaitForAjaxToComplete();
            getInsideFrame(centerFrameSrc);
+
+           base.WaitForElement(By.CssSelector("iframe[src*='CoursePreviewMainUX.aspx?']"));
            base.SwitchToIFrameBySource(viewallframeSrc);
            bool success = false;
 
-           bool x = base.IsElementPresent(pegasuslandingpageheader);
+           bool x = base.IsElementPresent((pegasuslandingpageheader),10);
            IWebElement header = base.GetWebElementProperties(pegasuslandingpageheader);
 
 
@@ -122,6 +126,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            bool success = false;
            
            getInsideFrame(centerFrameSrc);
+           base.WaitForElement(By.CssSelector("iframe[src*='GBInstructorUX.aspx?']"));
            base.SwitchToIFrameBySource(gbInsframeSrc);
            base.WaitForAjaxToComplete();
            success = base.IsElementPresent(pegasusgbins);

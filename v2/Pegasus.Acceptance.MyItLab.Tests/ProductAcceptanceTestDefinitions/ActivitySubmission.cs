@@ -371,7 +371,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
                 base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
 
         /// <summary>
         /// Open the activity
@@ -393,7 +393,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //wait for frame to load
             studentPresentationPage.WaitForActivitytoLoad(activityName);
             studentPresentationPage.SelectSimActivityStudentWindowName(studentName, activityName);
-            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch", 
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -443,9 +443,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //wait for frame to load
             studentPresentationPage.WaitForActivitytoLoad(activityName);
             //Select the window
-            studentPresentationPage.SelectSimActivityStudentWindowName(studentName, 
-                activityName,scenerioName);
-            Logger.LogMethodExit("ActivitySubmission", 
+            studentPresentationPage.SelectSimActivityStudentWindowName(studentName,
+                activityName, scenerioName);
+            Logger.LogMethodExit("ActivitySubmission",
                 "OpenTheActivityToLaunchBasedOnScnerio",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -457,7 +457,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [Then(@"I should see the message ""(.*)"" in activity presentation page")]
         public void VerifyMessageInActivityPresentationPage(string expectedPastDueActivityMessage)
         {
-            
+
             Logger.LogMethodEntry("ActivitySubmission",
             "VerifyMessageInActivityPresentationPage",
             base.IsTakeScreenShotDuringEntryExit);
@@ -484,8 +484,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-             base.IsTakeScreenShotDuringEntryExit);           
-                new StudentPresentationPage().SubmitPastDueActivity();                       
+             base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().SubmitPastDueActivity();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -498,7 +498,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         public void ReturnToParentWindow()
         {
             Logger.LogMethodEntry("ActivitySubmission", "ReturnToParentWindow",
-            base.IsTakeScreenShotDuringEntryExit);  
+            base.IsTakeScreenShotDuringEntryExit);
             //Return to parent window
             new StudentPresentationPage().ReturnToParentWindow();
             Logger.LogMethodEntry("ActivitySubmission", "ReturnToParentWindow",
@@ -899,9 +899,79 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ActivitySubmission", "AttemptAccessActivityFor70Score",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Switch to presentation window.
+        /// </summary>
+        /// <param name="activityTypeEnum"></param>
+        [Then(@"I am on ""(.*)"" window")]
+        [Given(@"I am on ""(.*)"" window")]
+        public void SelectPresentationWindow(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // Switch to presentation window
+            Logger.LogMethodEntry("ActivitySubmission",
+               "SelectPresentationWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            Logger.LogMethodExit("ActivitySubmission",
+              "SelectPresentationWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Attempt Fill In The Blanks Questions at Presentation Window.
+        /// </summary>
+        /// <param name="questionCount">Number of Questions to be Answered.</param>
+        /// <param name="pageNumber">The Page Number.</param>
+        /// <param name="activityTypeEnum">This the activity Type Enum.</param>
+        [When(@"I attempt ""(.*)"" questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
+        public void AttemptSpecificNumberOfFillInTheBlanksQuestions(int questionCount, int pageNumber,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+             "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get the Activity Details
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            new StudentPresentationPage().AttemptFillInTheBlanksQuestions(questionCount);
+            Logger.LogMethodExit("ActivitySubmission",
+             "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit the Activity.
+        /// </summary>
+        [Then(@"I should successfully submit activity for grading")]
+        public void SubmitActivityForGrading()
+        {
+            // Submit the Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+            "SubmitActivityForGrading",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Submit the Activity
+            new CourseContentUXPage().SubmitActivityCSDisplay();
+            Logger.LogMethodExit("ActivitySubmission",
+           "SubmitActivityForGrading",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [When(@"I attempt the questions in activity")]
+        public void WhenIAttemptTheQuestionsInActivity()
+        {
+            new StudentPresentationPage().AttempBBGradeSynchActivity();
+        }
+
+
     }
-
-          
-
-
 }

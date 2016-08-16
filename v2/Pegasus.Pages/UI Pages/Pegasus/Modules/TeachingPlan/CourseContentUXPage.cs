@@ -2301,11 +2301,7 @@ namespace Pegasus.Pages.UI_Pages
             bool feedback = false;
             try
             {
-                //Click on submit button
-                //IWebElement getFinishButton = base.
-                //    GetWebElementPropertiesByPartialLinkText
-                //    (CourseContentUXPageResource.
-                //    CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
+              
 
                 IWebElement getFinishButton = base.GetWebElementPropertiesByClassName("btn_subm_grade");
                 base.ClickByJavaScriptExecutor(getFinishButton);
@@ -2314,39 +2310,39 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPageResource.
                     CoursePreviewUX_Page_Finish_Button_Id_Locator);
                 base.ClickByJavaScriptExecutor(finishButton);
-                Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource.
-                    CourseContentUXPage_ShowHide_Status_Time_Value));
+                
 
-                //base.IsElementDisplayedInPage(By.CssSelector("a img#feedbackimg"), false, 5);
-                Thread.Sleep(5000);
-                bool check = base.IsElementPresent(By.CssSelector("a img#feedbackimg"));
+                ////base.IsElementDisplayedInPage(By.CssSelector("a img#feedbackimg"), false, 5);
+                //Thread.Sleep(5000);
+                //bool check = base.IsElementPresent(By.CssSelector("a img#feedbackimg"),10);
+               
+                //if (check)
+                //{ 
+                //IWebElement displayCorrectElement = base.GetWebElementPropertiesByCssSelector("a img#feedbackimg:nth-child(1)");
+
+                //Thread.Sleep(5000);
                
 
-                IWebElement displayCorrectElement = base.GetWebElementPropertiesByCssSelector("a img#feedbackimg:nth-child(1)");
-
-                Thread.Sleep(5000);
-               
-
-                 displayCorrectElement.Click();
+                // displayCorrectElement.Click();
                               
                 
-                feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b:nth-child(1)"), 5);
+                //feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b:nth-child(1)"), 5);
 
-                if (feedback == false)
-                {
-                    base.ClickByJavaScriptExecutor(displayCorrectElement);
-                feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b:nth-child(1)"), 5);
-                }
+                //if (feedback == false)
+                //{
+                //    base.ClickByJavaScriptExecutor(displayCorrectElement);
+                //feedback = base.IsElementPresent(By.CssSelector("#_ctl0_APH_feedback>b:nth-child(1)"), 5);
+                //}
 
                            
 
-                if (feedback == true)
-                { 
+                //if (feedback == true)
+                //{ 
                 IWebElement returnToCourse = base.GetWebElementPropertiesById(
                    CourseContentUXPageResource.
                    CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
                 base.ClickByJavaScriptExecutor(returnToCourse);
-                }
+                //}
 
                 
             }

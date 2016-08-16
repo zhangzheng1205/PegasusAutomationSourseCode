@@ -1035,7 +1035,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             User user = User.Get(userType);
             string userFirstName = user.FirstName.ToString();
             string userLastName = user.LastName.ToString();
-            new GBInstructorUXPage().EditActivityScoreInPegasusByBBIns(gradeType, activityType, userLastName, userFirstName);
+            new GBInstructorUXPage().EditActivityScoreInPegasusAtViewSubmission(gradeType, activityType, userLastName, userFirstName);
             Logger.LogMethodExit("Gradebook", "EditGradeOfActivityInPegasusByBBIns", base.IsTakeScreenShotDuringEntryExit);
         }
 

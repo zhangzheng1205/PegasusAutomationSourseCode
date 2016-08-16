@@ -426,9 +426,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ViewSubmissionPage", "SelectViewSubmissionWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select the window          
-            base.WaitUntilWindowLoads(ViewSubmissionPageResource.
-                ViewSubmission_Page_ViewSubmission_Window_Name);
-            base.SelectWindow(ViewSubmissionPageResource.
+            //base.WaitUntilWindowLoads(ViewSubmissionPageResource.
+            //    ViewSubmission_Page_ViewSubmission_Window_Name);
+            base.SwitchToWindow(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Window_Name);
             Logger.LogMethodExit("ViewSubmissionPage", "SelectViewSubmissionWindow",
                           base.IsTakeScreenShotDuringEntryExit);

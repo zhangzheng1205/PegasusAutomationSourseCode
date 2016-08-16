@@ -50,12 +50,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
-        [When(@"I click on the ""(.*)"" link")]
-        public void WhenIClickOnTheLink(string linkName)
+        [When(@"I click on the ""(.*)"" link at ""(.*)""")]
+        public void WhenIClickOnTheLink(string linkName,string partialPagename)
         {
             Logger.LogMethodEntry("Blackboard", "BBInstructorEnterIntoCourse",
                  base.IsTakeScreenShotDuringEntryExit);
-            new BlackboardCourseAction().BBInstructorSSOToPegasus(linkName);
+            new BlackboardCourseAction().BBInstructorSSOToPegasus(linkName, partialPagename);
             Logger.LogMethodExit("Blackboard", "BBInstructorEnterIntoCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -83,23 +83,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="optionName">This is the name of the option in the dropdown.</param>
         /// <param name="dropdownName">This is the dropdown name.</param>
-        [When(@"I select option ""(.*)"" form ""(.*)"" dropdown")]
-        public void BBInstructorSelectPearsonCourseTool(string optionName, string dropdownName)
+        [When(@"I select option ""(.*)"" form ""(.*)"" dropdown at ""(.*)""")]
+        public void BBInstructorSelectPearsonCourseTool(string optionName, string dropdownName
+            ,string partialPageName)
         {
             // Select the option in the Manege dropdown
             Logger.LogMethodEntry("Blackboard", "BBInstructorSelectPearsonCourseTool", base.IsTakeScreenShotDuringEntryExit);
-            new BlackboardCourseAction().bbInstructorSelectPearsonCourseTool(optionName, dropdownName);
+            new BlackboardCourseAction().bbInstructorSelectPearsonCourseTool(optionName, dropdownName, partialPageName);
             Logger.LogMethodExit("Blackboard", "BBInstructorSelectPearsonCourseTool", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// BB Instructor click onn submit button 'Refresh Pearson Grades for All Available Pearson Assignments'
         /// </summary>
-        [When(@"I click on submit button")]
-        public void ClickSubmitButton()
+        [When(@"I click on submit button at ""(.*)""")]
+        public void ClickSubmitButton(string partialPageName)
         {
             Logger.LogMethodEntry("Blackboard", "ClickSubmitButton", base.IsTakeScreenShotDuringEntryExit);
-            new BlackboardCourseAction().clickSubmitButtonInBB();
+            new BlackboardCourseAction().clickSubmitButtonInBB(partialPageName);
             Logger.LogMethodExit("Blackboard", "ClickSubmitButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -109,9 +110,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="p0"></param>
         /// <param name="p1"></param>
         /// <param name="p2"></param>
-        [Then(@"I should see the score ""(.*)"" for ""(.*)"" activity for ""(.*)"" in BlackBoard")]
+        [Then(@"I should see the score ""(.*)"" for ""(.*)"" activity for ""(.*)"" in BlackBoard at ""(.*)""")]
         public void VerifyTheScoreOfActivityBB(
-                    Grade.GradeTypeEnum score, string activityName, User.UserTypeEnum userTypeEnum)
+                    Grade.GradeTypeEnum score, string activityName
+            , User.UserTypeEnum userTypeEnum,string partialPageName)
         {
             //Verify The Score Of Activity
             Logger.LogMethodEntry("Blackboard",
@@ -125,11 +127,40 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                  (activityScore, new BlackboardCourseAction().GetActivityStatusBB(
-                    activityName, user.LastName, user.FirstName, user.Name)));
+                    activityName, user.LastName, user.FirstName, user.Name,partialPageName)));
             Logger.LogMethodExit("Blackboard",
                 "VerifyTheScoreOfActivityBB",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify The Grade synch.
+        /// </summary>
+        /// <param name="score"></param>
+        /// <param name="activityName"></param>
+        /// <param name="userTypeEnum"></param>
+        /// <param name="partialPageName"></param>
+        [Then(@"I refresh and see ""(.*)"" for ""(.*)"" activity for ""(.*)"" in BlackBoard at ""(.*)""")]
+        public void VerifyGradeSynch(Grade.GradeTypeEnum score, string activityName
+            , User.UserTypeEnum userTypeEnum, string partialPageName)
+        {
+            //Verify The Score Of Activity
+            Logger.LogMethodEntry("Blackboard",
+                "VerifyGradeSynchAtBB",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            Grade grade = Grade.Get(score);
+            string activityScore = grade.Score.ToString();
+            Assert.IsTrue(new BlackboardCourseAction().VerifyGradeSynch(activityName
+                , activityScore, user.LastName,
+                user.FirstName, user.Name, partialPageName));
+        }
+
+
+       
+       
+
 
         /// <summary>
         /// Validate the student grade in student gradebook
@@ -137,15 +168,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityScore"></param>
         /// <param name="activityName"></param>
         [Then(@"I should see ""(.*)"" score ""(.*)"" for the activity ""(.*)"" in course material page in Pegasus")]
-        public void ValidateTheActivityScoreForTheActivityInCourseMaterialPage(string activityScore, Grade.GradeTypeEnum gradeType, string activityName)
+        public void ValidateTheActivityScoreForTheActivityInCourseMaterialPage(Grade.GradeTypeEnum gradeType1, Grade.GradeTypeEnum gradeType2, string activityName)
         {
             //Validate the submitted activity score
             Logger.LogMethodEntry("CommonSteps",
                 "ValidateActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);
+            Grade grade = Grade.Get(gradeType1);
+            string activityScore = grade.Score.ToString();
             Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(activityScore, new StudentPresentationPage().
-                    GetActivityScoreFromCourseMaterialsPageBB(gradeType, activityName)));
+                    GetActivityScoreFromCourseMaterialsPageBB(gradeType2, activityName)));
             Logger.LogMethodExit("CommonSteps",
                 "ValidateActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);

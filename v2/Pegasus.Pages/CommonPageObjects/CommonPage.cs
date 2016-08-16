@@ -71,6 +71,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             userTypeEnum, activityUnderTabName);
                                         break;
                                     case "Excel Chapter 1 Skill-Based Training":
+                                  
                                         this.NavigateToExcelChapter1SimulationActivitiesFolder
                                             (CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator,
@@ -82,7 +83,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
-                                }
+                                                                 }
                                 break;
                             case "Course Materials":
                                 switch (activityName)
@@ -154,6 +155,12 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                     case "Amplifire Study Module 0P: Vocabulario en contexto":
                                         this.NavigateToAmplifierFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
+                                        //BB Grade Synch verification activity:
+                                    case "1 New Grade Act":
+                                        this.NavigateToBBGradeSynchFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
@@ -256,6 +263,16 @@ namespace Pegasus.Pages.CommonPageObjects
                                     case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                         this.SelectExcelActivityFolderNavigationInInstructorGradebook(CommonPageResource.
                                             CommonPage_Gradebook_BackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
+                                        case "Excel Chapter 1 Grader Project [Homework 3]":
+                                        this.SelectExcelGraderActivityFolderNavigationInInstructorGradebook(CommonPageResource.
+                                           CommonPage_Gradebook_BackArrow_Id_Locator,
+                                           userTypeEnum, activityUnderTabName);
+                                        break;
+                                        case "1 New Grade Act":
+                                        this.NavigateToBBGradeSynchFolderAtGradeBook(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
                                 }
@@ -361,6 +378,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateToAmplifierFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Navigate To Access Chapter1 Grader Activities Folder.
@@ -1193,6 +1211,43 @@ namespace Pegasus.Pages.CommonPageObjects
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
                 CommonPage_ExcelChapter1SimulationActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage",
+                "SelectExcelActivityFolderNavigationInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select Excel Activity Folder Navigation In Instructor Gradebook.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void SelectExcelGraderActivityFolderNavigationInInstructorGradebook
+            (string webElementToWait, User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            //Word Excel Folder Navigation In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "SelectExcelActivityFolderNavigationInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_Excel2013_FolderName, webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName,
+                webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_ExcelChapter1Activities_FolderName, webElementToWait);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+                CommonPage_ExcelChapter1GraderActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectExcelActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
@@ -2218,6 +2273,47 @@ namespace Pegasus.Pages.CommonPageObjects
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Navigate To Access Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToBBGradeSynchFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToBBGradeSynchFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab("BB Grade Synch Testing", webElementToWait);
+            //click folder second leve
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                       Logger.LogMethodExit("CommonPage",
+                "NavigateToBBGradeSynchFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select Excel Activity Folder Navigation In Instructor Gradebook.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void NavigateToBBGradeSynchFolderAtGradeBook
+            (string webElementToWait, User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            //Word Excel Folder Navigation In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToBBGradeSynchFolderAtGradeBook",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateToActivityFolderInInstructorGradebook("BB Grade Synch Testing", webElementToWait);
+               Logger.LogMethodExit("CommonPage",
+                "NavigateToBBGradeSynchFolderAtGradeBook",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+       
 
 
     }

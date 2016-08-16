@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Diagnostics;
 
 
 namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
@@ -78,19 +79,20 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
         /// Blackboard Instructor crossover to Pegasus
         /// </summary>
         /// <param name="linkName">This is the name of the link.</param>
-        public void BBInstructorSSOToPegasus(string linkName)
+        public void BBInstructorSSOToPegasus(string linkName,string partialPageName)
         {
             //Blackboard instructor crossover to pegasus
             logger.LogMethodEntry("BlackboardCourseAction", "BBInstructorSSOToPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.SelectDefaultWindow();
-                base.WaitUntilWindowLoads(base.GetPageTitle);
-                base.SelectWindow(base.GetPageTitle);
-                //Click on the link in Blackboard portal
-                Thread.Sleep(2000);
-                // Click link in content page
+                base.SwitchToPartialWindowTitle(partialPageName);
+            //    base.SelectDefaultWindow();
+            //    base.WaitUntilWindowLoads(base.GetPageTitle);
+            //    base.SelectWindow(base.GetPageTitle);
+            //    //Click on the link in Blackboard portal
+            //    Thread.Sleep(2000);
+            //    // Click link in content page
                 base.WaitForElement(By.LinkText(linkName));
                 base.ClickLinkByLinkText(linkName);
             }
@@ -130,13 +132,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
         /// </summary>
         /// <param name="optionName">This is the option name in the dropdown.</param>
         /// <param name="dropdownName">This is the dropdown name.</param>
-        public void bbInstructorSelectPearsonCourseTool(string optionName, string dropdownName)
+        public void bbInstructorSelectPearsonCourseTool(string optionName, string dropdownName
+            ,string partialPageName)
         {
             logger.LogMethodEntry("BlackboardCourseAction", "getGradebookWindowTitle",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitUntilWindowLoads(base.GetPageTitle);
+                base.SwitchToPartialWindowTitle(partialPageName);
                 base.WaitForElement(By.PartialLinkText(dropdownName));
                 Thread.Sleep(1000);
                 IWebElement getManageDropdown = base.GetWebElementPropertiesByLinkText(dropdownName);
@@ -156,14 +159,16 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
         /// <summary>
         /// Click submit button
         /// </summary>
-        public void clickSubmitButtonInBB()
+        public void clickSubmitButtonInBB(string partialPageName)
         {
             // Click submit button
             logger.LogMethodEntry("BlackboardCourseAction", "clickSubmitButtonInBB", base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToPartialWindowTitle(partialPageName);
             base.WaitForElement(By.Name("top_Submit"));
             IWebElement getSubmitButton = base.GetWebElementPropertiesByName(
                 BlackboardCourseActionResource.BlackboardCourseActionPage_SubmitButton_Id_Locator);
-            base.ClickByJavaScriptExecutor(getSubmitButton);
+            Thread.Sleep(3000);
+            getSubmitButton.Click();
             base.AcceptAlert();
             logger.LogMethodExit("BlackboardCourseAction", "clickSubmitButtonInBB", base.IsTakeScreenShotDuringEntryExit);
         }
@@ -176,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
         /// <param name="userFirstName">This is User First Name.</param>
         /// <returns>Activity Status.</returns>
         public string GetActivityStatusBB(string activityName, string userLastName,
-            string userFirstName, string userName)
+            string userFirstName, string userName,string partialPageName)
         {
             //Get the Activity Status
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityStatus",
@@ -187,7 +192,21 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
             try
             {
                 //Get Activity Column Count
+                base.SwitchToPartialWindowTitle(partialPageName);
+               
+                base.WaitForDocumentLoadToComplete();
                 int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName, userName);
+                base.WaitForElement(By.CssSelector("a#sortItemsByButton > img[src*='expand.gif']"));
+                IWebElement dropDown= base.GetWebElementPropertiesByCssSelector("a#sortItemsByButton > img[src*='expand.gif']");
+                
+               // base.FocusOnElementByCssSelector("a#sortItemsByButton > img[src*='expand.gif']");
+             
+                base.ClickByJavaScriptExecutor(dropDown);
+            
+                 base.WaitForElement(By.CssSelector("li#name"));
+                IWebElement value = base.GetWebElementPropertiesByCssSelector("li#name");
+
+                value.Click();
                 int getActivityColumnCount = this.GetActivityColumnCount(activityName);
                 getActivityColumnCount = getActivityColumnCount - 3;
                 //Get User Row Count
@@ -205,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
                 getactivityScore = getActivityStatusGrade.Substring(0, 3);
                 if (getactivityScore.Contains("."))
                 {
-                    getActivityStatusGrade = getactivityScore.Replace(".", "");
+                     getActivityStatusGrade = getactivityScore.Split('.')[0];
                     getactivityScore = getActivityStatusGrade.Trim();
                 }
             }
@@ -343,6 +362,50 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
             }
             logger.LogMethodExit("AdminToolPage", "SignOutByHigherEdUsers",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void PeformRefreshPearsonGrades()
+        {
+            //select option "Pearson Custom Tools" form "Manage" dropdown at "Grade Center"
+            bbInstructorSelectPearsonCourseTool("Pearson Custom Tools", "Manage", "Grade Center");
+           // click on the "Refresh Pearson Grades" link at "Pearson Custom Integration Tools"
+            BBInstructorSSOToPegasus("Refresh Pearson Grades", "Pearson Custom Integration Tools");
+           //click on submit button at "Refresh Pearson Grades"
+            clickSubmitButtonInBB("Refresh Pearson Grades");
+            //click on the "Full Grade Center" link at "Pearson Custom Integration Tools" 
+            BBInstructorSSOToPegasus("Full Grade Center", "Pearson Custom Integration Tools");
+        }
+
+
+        public bool VerifyGradeSynch(string activityName, string expectedScore,string userLastName,
+            string userFirstName, string userName,string partialPageName)
+        {
+            bool gradeSynchSuccess = false;
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            try
+            {
+
+                while (stopWatch.Elapsed.TotalMinutes < 10)
+                {
+                    PeformRefreshPearsonGrades();
+
+                    string actualScore = GetActivityStatusBB(activityName, userLastName,
+                    userFirstName, userName, partialPageName);
+                    if (actualScore == expectedScore)
+                    {
+                        gradeSynchSuccess = true;
+                        break;
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return gradeSynchSuccess;
+
         }
 
     }

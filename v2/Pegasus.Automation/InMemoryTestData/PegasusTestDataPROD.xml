@@ -300,7 +300,48 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+    <Course>
+      <Name>MyPsychLab for Ciccarelli Psychology An Exploration 2nd Edition</Name>
+      <CourseType>BBCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
   </ArrayOfCourse>
+  <!--Hard coded Grades data.-->
+  <ArrayOfGrade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>BBNewGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>BBEditedGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>3</Score>
+      <GradeType>PegasusNewGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>2</Score>
+      <GradeType>PegasusEditedGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>66.7</Score>
+      <GradeType>PegasusEditedGradePerc</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>PegasusNewGradePerc</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+  </ArrayOfGrade>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
     <!--Hard coded Users data for "Digital Path" Product.-->
@@ -1012,6 +1053,28 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
+    <User>
+      <Name>snhutestinst</Name>
+      <Password>snhutestinst</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Automation</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>instructor</LastName>
+      <UserType>BBInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>snhuteststu</Name>
+      <Password>snhuteststu</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>SNHU</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Student</LastName>
+      <UserType>BBStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
   </ArrayOfUser>
    <!--Hard coded Grades data.-->
   <ArrayOfGrade>
@@ -1170,6 +1233,16 @@
     <Activity>
       <Name>0bcce594-fdb6-48f0-a255-38857b09700e</Name>
       <ActivityType>RegSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>BB Grade Synch Activity</Name>
+      <ActivityType>BBGradeSynchActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>1 New Grade Act</Name>
+      <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
    </ArrayOfActivity>
