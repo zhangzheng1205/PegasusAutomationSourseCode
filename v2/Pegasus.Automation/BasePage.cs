@@ -12,6 +12,7 @@ using Keys = OpenQA.Selenium.Keys;
 using System.Collections.ObjectModel;
 using System.Collections;
 using System.Diagnostics;
+
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>
@@ -627,7 +628,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="nameAttributeValue">This is iFrame source attribute value.</param>
         protected void SwitchToIFrameBySource(String nameAttributeValue)
         {
-
+            
             IEnumerable<IWebElement> frames = WebDriver.FindElements(By.TagName("iframe"));
 
             if (frames == null)
@@ -641,10 +642,40 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     SwitchToIFrameByWebElement(iframe);
                     break;
                 }
+<<<<<<< Updated upstream
                 else throw new Exception("Iframe " +nameAttributeValue+" do not  exist.");
+=======
+                else
+                    throw new Exception("Iframe does not exist");
             }
         }
 
+        //new method overload
+       protected void SwitchToIFrame(string source, int countofFrames)
+        {
+
+            if (countofFrames > 0)
+            {
+                //IEnumerable<IWebElement> frames = WebDriver.FindElements(By.TagName("iframe"));
+
+                for (int i = 1; i <= countofFrames; i++)
+                {
+
+                    IWebElement iframe = WebDriver.FindElement(By.TagName("iframe"));
+                      if (iframe.GetAttribute("src").Contains(source))
+                      {
+                          SwitchToIFrameByWebElement(iframe);
+                          break;
+                      }
+                      else
+                          throw new Exception("Iframe does not exist");
+                }
+                //}
+>>>>>>> Stashed changes
+            }
+        }
+
+      
         #endregion
 
         #region WebDriver SwitchToWindow
@@ -3133,6 +3164,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 {
 
                     var ajaxIsComplete = (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript("return jQuery.active == 0");
+                    //ajaxIsComplete.IgnoreExceptionTypes(typeof(System.InvalidOperationException));
+
+                                      
+
                     if (ajaxIsComplete)
                     {
                         break;
@@ -3141,15 +3176,51 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 }
             }
             //Exception Handling
-            catch (Exception ex)
+            catch (System.InvalidOperationException)
             {
                 stopWatch.Stop();
-                throw ex;
+                //throw ex;
             }
             stopWatch.Stop();
 
         }
 
+// new method
+        protected void WaitForJSLoadToComplete(int waitTimeOutDuration = -1)
+        {
+
+            var stopWatch = new Stopwatch();
+            if (waitTimeOutDuration == -1)
+            {
+                waitTimeOutDuration = this._waitTimeOut;
+            }
+            try
+            {
+                while (stopWatch.Elapsed.TotalSeconds < waitTimeOutDuration)
+                {
+
+
+                   var JSloaded= (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript("return document.readyState").Equals("complete");
+
+                    if(JSloaded){
+
+                        break;
+                    }
+                }
+
+
+            }
+            //Exception Handling
+            catch (Exception ex)
+            {
+                stopWatch.Stop();
+                //throw ex;
+            }
+            stopWatch.Stop();
+
+        }
+
+<<<<<<< Updated upstream
         /// <summary>
         /// Executes JavaScript in the context of the currently selected frame or window. 
         /// The script fragment provided will be executed as the body of an click function.
@@ -3163,6 +3234,76 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
 
             var stopWatch = new Stopwatch();
+=======
+        //wait till complex js page is loaded
+
+    /*    protected void masala(int waitTimeOutDuration = -1)
+        {
+            if (waitTimeOutDuration == -1)
+            {
+                waitTimeOutDuration = this._waitTimeOut;
+            }
+           
+             var pageLoadWait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(waitTimeOutDuration));
+            pageLoadWait.Until<bool>(
+                (driver) =>
+                {
+                    return (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript(
+@"
+try {
+  if (document.readyState !== 'complete') {
+    return false; // Page not loaded yet
+  }
+  if (window.jQuery) {
+    if (window.jQuery.active) {
+      return false;
+    } else if (window.jQuery.ajax && window.jQuery.ajax.active) {
+      return false;
+    }
+  }
+  if (window.angular) {
+    if (!window.qa) {
+      // Used to track the render cycle finish after loading is complete
+      window.qa = {
+        doneRendering: false
+      };
+    }
+    // Get the angular injector for this app (change element if necessary)
+    var injector = window.angular.element('body').injector();
+    // Store providers to use for these checks
+    var $rootScope = injector.get('$rootScope');
+    var $http = injector.get('$http');
+    var $timeout = injector.get('$timeout');
+    // Check if digest
+    if ($rootScope.$$phase === '$apply' || $rootScope.$$phase === '$digest' || $http.pendingRequests.length !== 0) {
+      window.qa.doneRendering = false;
+      return false; // Angular digesting or loading data
+    }
+    if (!window.qa.doneRendering) {
+      // Set timeout to mark angular rendering as finished
+      $timeout(function() {
+        window.qa.doneRendering = true;
+      }, 0);
+      return false;
+    }
+  }
+  return true;
+} catch (ex) {
+  return false;
+}
+");
+                );
+        }}*/
+        
+        //new Method for list of frames
+
+        protected int FindCountOfFrames(int waitTimeOutDuration = -1)
+        {
+
+            var stopWatch = new Stopwatch();
+            int frameCount = 0;
+            
+>>>>>>> Stashed changes
             if (waitTimeOutDuration == -1)
             {
                 waitTimeOutDuration = this._waitTimeOut;
@@ -3172,6 +3313,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 while (stopWatch.Elapsed.TotalSeconds < waitTimeOutDuration)
                 {
 
+<<<<<<< Updated upstream
                     var documentLoadIsComplete = (bool)(WebDriver as IJavaScriptExecutor).ExecuteScript("return document.readyState == 'complete'");
                     if (documentLoadIsComplete)
                     {
@@ -3179,6 +3321,24 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     }
 
                 }
+=======
+
+                  var frames = (WebDriver as IJavaScriptExecutor).ExecuteScript("return window.length");
+
+                  frameCount = int.Parse(frames.ToString());
+
+                 
+
+                  if (frameCount>0)
+                  {
+
+                      break;
+
+                  }
+                }
+
+
+>>>>>>> Stashed changes
             }
             //Exception Handling
             catch (Exception ex)
@@ -3187,7 +3347,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 throw ex;
             }
             stopWatch.Stop();
+<<<<<<< Updated upstream
 
+=======
+            return frameCount;
+>>>>>>> Stashed changes
         }
 
         protected IWebElement WaitTillElementFound(By IWebElement, int waitTimeOutDuration = -1)
