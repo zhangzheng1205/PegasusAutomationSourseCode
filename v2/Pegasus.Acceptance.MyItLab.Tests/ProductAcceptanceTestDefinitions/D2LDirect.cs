@@ -90,9 +90,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         public void ValidatePegasusGradebookPage(string pageName, User.UserTypeEnum userType)
         {
             logger.LogMethodEntry("D2LDirect", "ValidatePegasusGradebookPage", base.IsTakeScreenShotDuringEntryExit);
-            logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual
-                 (true, new D2LCourseActions().GetGradeBookExistance(pageName, userType)));
+            Assert.AreEqual
+                 (true, new D2LCourseActions().GetGradeBookExistance(pageName, userType));
             logger.LogMethodExit("D2LDirect", "ValidatePegasusGradebookPage", base.IsTakeScreenShotDuringEntryExit);
         }
 

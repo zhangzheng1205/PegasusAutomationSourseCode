@@ -84,7 +84,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Pegasus MyITLab Test</Name>
+      <Name>hs_d2lmayupgrade_custom_pegasus</Name>
       <CourseType>D2LDirectCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -619,23 +619,23 @@
     </User>
     <!--Hard coded Users data for "D2L Direct" .-->
     <User>
-      <Name>peginst2</Name>
-      <Password>peginst2</Password>
+      <Name>manu.niranjan</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>vijay</FirstName>
+      <FirstName>manu</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>kumar</LastName>
+      <LastName>nijranjan</LastName>
       <UserType>D2LDirectTeacher</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>pegstu1</Name>
-      <Password>pegstu1</Password>
+      <Name>Automation.student</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>Pegasus</FirstName>
+      <FirstName>automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Student</LastName>
+      <LastName>student1</LastName>
       <UserType>D2LDirectStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>

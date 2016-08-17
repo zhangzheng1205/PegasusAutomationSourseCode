@@ -24,11 +24,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             logger.LogMethodEntry("D2LUserLogin", "LoginToD2L", base.IsTakeScreenShotDuringEntryExit);
             // Select window
-            base.WaitUntilWindowLoads(D2LUserLoginResource.
+            base.SwitchToWindow(D2LUserLoginResource.
                 D2LUserLogin_Page_Title_Name);
-            base.SelectWindow(D2LUserLoginResource.
-                D2LUserLogin_Page_Title_Name);
-
             User user = User.Get(userType);
             string userName = user.Name.ToString();
             string password = user.Password.ToString();

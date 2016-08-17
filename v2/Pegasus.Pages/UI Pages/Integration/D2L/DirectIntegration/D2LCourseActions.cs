@@ -20,9 +20,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         public void EnterIntoD2LCourse(Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
         {
             logger.LogMethodEntry("D2LCourseActions", "EnterIntoD2LCourse", base.IsTakeScreenShotDuringEntryExit);
-            // Wait untill window loads
-            SelectHomePageWindow();
-
+        
             // Get the course name
             Course course = Course.Get(courseType);
             string courseName = course.Name.ToString();
@@ -34,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
                     this.D2LUserEnterIntoCourse(courseType);
                     break;
                 case User.UserTypeEnum.D2LDirectStudent:
-                    base.WaitUntilWindowLoads(base.GetPageTitle);
+                   // base.WaitUntilWindowLoads(base.GetPageTitle);
 
                     //Select the course and Click
                     base.WaitForElement(By.XPath(D2LCourseActionsResource.
@@ -55,8 +53,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         private void SelectHomePageWindow()
         {
             // Wait for windowload and select the window
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToPartialWindowTitle("Homepage");
         }
 
         /// <summary>
@@ -67,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         {
             logger.LogMethodEntry("D2LCourseActions", "D2LUserEnterIntoCourse", base.IsTakeScreenShotDuringEntryExit);
             // Wait for home page to load and select the window
-            SelectHomePageWindow();
+          
 
             // Get the course name
             Course course = Course.Get(courseType);
@@ -90,13 +87,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         public void ClickTabInD2L(string tabName)
         {
             logger.LogMethodEntry("D2LCourseActions", "ClickTabInD2L", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            Thread.Sleep(2000);
             // Click on tab in D2L page
             base.WaitForElement(By.PartialLinkText(tabName));
             IWebElement getTabName = base.GetWebElementPropertiesByPartialLinkText(tabName);
             base.PerformMouseClickAction(getTabName);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
+       
 
             logger.LogMethodExit("D2LCourseActions", "ClickTabInD2L", base.IsTakeScreenShotDuringEntryExit);
         }
@@ -108,7 +103,8 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         public void ClicklinkInContentTab(string linkName)
         {
             logger.LogMethodEntry("D2LCourseActions", "ClicklinkInContentTab", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
+           
+            base.SwitchToPartialWindowTitle("Table of Contents");
 
             // Click link in content page
             base.WaitForElement(By.PartialLinkText(linkName));
@@ -125,8 +121,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
         public void ClickSSOlinkInContentTab(string linkName)
         {
             logger.LogMethodEntry("D2LCourseActions", "ClicklinkInContentTab", base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToPartialWindowTitle("Pegasus Tools");
 
             bool jjkk = base.IsElementPresent(By.XPath(D2LCourseActionsResource.
                 D2LCourseAction_Page_D2LIframe_Xpath_Value), 10);
@@ -153,8 +148,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
             logger.LogMethodEntry("D2LCourseActions", "GetGradeBookExistance",
                 base.IsTakeScreenShotDuringEntryExit);
             bool pageStatus = false;
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToPartialWindowTitle("Pegasus Tools");
 
             switch (pageName)
             {
@@ -199,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
             logger.LogMethodEntry("D2LCourseActions", "D2LSignOut",
               base.IsTakeScreenShotDuringEntryExit);
             //Click on the User name to get Logout menu
-            base.SwitchToDefaultWindow();
+            base.SwitchToPartialWindowTitle("Pegasus Tools");
             User user = User.Get(userType);
             string userName = user.FirstName + " " + user.LastName;
             bool pres = base.IsElementPresent(By.XPath(string.
