@@ -169,7 +169,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             try
             {
-                Assert.AreEqual(true, CourseLinksPage.gradesInsPage());
+                Assert.AreEqual(true, CourseLinksPage.gradesInsPagePegasus());
             }
 
             catch (Exception ex)

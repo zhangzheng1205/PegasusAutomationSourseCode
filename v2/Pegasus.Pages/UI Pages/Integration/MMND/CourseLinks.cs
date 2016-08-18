@@ -21,6 +21,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
         By scanlinks = By.CssSelector("blockquote>p>a");
         By centerIframe = By.Id("centerIframe");
         By pegasusViewAllCourseMaterialframe = By.Id("ifrmCoursePreview");
+        By PegasusGradebookframe = By.Id("srcGBFrame");
         By pegasusViewAllCourseMaterialHeader = By.Id("_ctl0_InnerPageContent_divViewHedaer");
         By pegasusgbins = By.CssSelector("#CreateColumnButtton");
 
@@ -142,14 +143,24 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            return success;
        }
 
-       public bool gradesInsPage()
+       public bool gradesInsPagePegasus()
        {
            bool success = false;
-           
-           getInsideFrame(centerFrameSrc);
-           base.WaitForElement(By.CssSelector("iframe[src*='GBInstructorUX.aspx?']"));
-           base.SwitchToIFrameBySource(gbInsframeSrc);
+           base.SwitchToDefaultWindow();
+
+
+           getInsideFrame(centerIframe);
+           base.WaitForDocumentLoadToComplete();
            base.WaitForAjaxToComplete();
+
+           getInsideFrame(PegasusGradebookframe);
+           base.WaitForDocumentLoadToComplete();
+           base.WaitForAjaxToComplete();
+
+           //getInsideFrame(centerFrameSrc);
+           //base.WaitForElement(By.CssSelector("iframe[src*='GBInstructorUX.aspx?']"));
+           //base.SwitchToIFrameBySource(gbInsframeSrc);
+           //base.WaitForAjaxToComplete();
            success = base.IsElementPresent(pegasusgbins);
            return success;
        }
