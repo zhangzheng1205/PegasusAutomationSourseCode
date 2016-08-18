@@ -4454,11 +4454,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id("txtRawMaxVal"));
                 base.ClearTextById("txtRawMaxVal");
                 base.FillTextBoxById("txtRawMaxVal", "3");
+                base.FillTextBoxById("txtDescription", "Edited Score");
                 // Click Update button in edit score lightbox
                 base.WaitForElement(By.Id("btnUpdateGrade"));
                 base.GetWebElementPropertiesById("btnUpdateGrade").Click();
-                base.WaitForDocumentLoadToComplete();
                 base.SwitchToWindow("View Submission");
+                base.WaitForDocumentLoadToComplete();
                 base.WaitForElement(By.Id("_ctl0_PopupPageContent_btnSaveAndClose"));
                 base.GetWebElementPropertiesById("_ctl0_PopupPageContent_btnSaveAndClose").Click();
                }
