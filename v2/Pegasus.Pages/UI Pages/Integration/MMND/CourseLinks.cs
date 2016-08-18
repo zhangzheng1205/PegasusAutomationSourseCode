@@ -20,7 +20,8 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        By availablelinks = By.Id("content");
         By scanlinks = By.CssSelector("blockquote>p>a");
         By centerIframe = By.Id("centerIframe");
-        By pegasuslandingpageheader = By.Id("_ctl0_InnerPageContent_divViewHedaer");
+        By pegasusViewAllCourseMaterialframe = By.Id("ifrmCoursePreview");
+        By pegasusViewAllCourseMaterialHeader = By.Id("_ctl0_InnerPageContent_divViewHedaer");
         By pegasusgbins = By.CssSelector("#CreateColumnButtton");
 
        //Iframes on this page
@@ -39,7 +40,16 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
             base.WaitForElement(By.CssSelector(string.Format("iframe[src*='{0}']", frame)));
             base.SwitchToIFrameBySource(frame);
             
+            
         }
+
+       public void getInsideFrame(By frame)
+       {
+          IWebDriver myDriver= this.WebDriver;
+          base.WaitForElement(frame);
+          myDriver.SwitchTo().Frame(myDriver.FindElement(frame));
+
+       }
 
        /// <summary>
        /// Accepts coursetypeenum and compares the course displayed inside digital vellum with the expected course
@@ -73,12 +83,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        public void clickGivenLink(string link)
         {
 
-            base.WaitForAjaxToComplete();
-            getInsideFrame(centerFrameSrc);
-           
-          // base.WaitTillElementFound()
-            //base.FindElementTill(availablelinks, 20);
+            base.SwitchToDefaultWindow(); 
+            
+            
+            getInsideFrame(centerIframe);
 
+            base.WaitForDocumentLoadToComplete();
+            base.WaitForAjaxToComplete();
+          
             IWebElement linkobject = base.FindElementTill(availablelinks); 
 
                         
@@ -100,18 +112,27 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
     /// </summary>
     /// <param name="link">Pegasus header page name</param>
     /// <returns>bool true or false</returns>
-       public bool landedLink(string link)
+       public bool viewAllContentPegaus(string link)
        {
-          
-           base.WaitForAjaxToComplete();
-           getInsideFrame(centerFrameSrc);
 
-           base.WaitForElement(By.CssSelector("iframe[src*='CoursePreviewMainUX.aspx?']"));
-           base.SwitchToIFrameBySource(viewallframeSrc);
+           base.SwitchToDefaultWindow();
+
+           
+           getInsideFrame(centerIframe);
+           base.WaitForDocumentLoadToComplete();
+           base.WaitForAjaxToComplete();
+
+           getInsideFrame(pegasusViewAllCourseMaterialframe);
+           base.WaitForDocumentLoadToComplete();
+           base.WaitForAjaxToComplete();
+
+           //base.WaitForElement(By.CssSelector("iframe[src*='CoursePreviewMainUX.aspx?']"));
+           //base.SwitchToIFrameBySource(viewallframeSrc);
+           
            bool success = false;
 
-           bool x = base.IsElementPresent((pegasuslandingpageheader),10);
-           IWebElement header = base.GetWebElementProperties(pegasuslandingpageheader);
+           bool x = base.IsElementPresent((pegasusViewAllCourseMaterialHeader),10);
+           IWebElement header = base.GetWebElementProperties(pegasusViewAllCourseMaterialHeader);
 
 
            if (header.Text.ToString().Trim() == link)

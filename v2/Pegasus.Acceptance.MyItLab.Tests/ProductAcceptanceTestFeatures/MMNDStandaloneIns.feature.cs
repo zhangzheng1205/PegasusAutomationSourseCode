@@ -31,8 +31,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "MMNDStandaloneIns", "In order to avoid silly mistakes\nAs a math idiot\nI want to be told the sum of two" +
-                    " numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "MMNDStandaloneIns", "In order to avoid silly mistakes\r\nAs a math idiot\r\nI want to be told the sum of t" +
+                    "wo numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,12 +70,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("MMND user access the course link")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("MMND student access the course link")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MMNDStandaloneIns")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void MMNDUserAccessTheCourseLink()
+        public virtual void MMNDStudentAccessTheCourseLink()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MMND user access the course link", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MMND student access the course link", new string[] {
                         "mytag"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
@@ -88,11 +88,11 @@ testRunner.Then("user should land inside the \"MMNDCoOrdinate\" course", ((strin
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("MMND user access the Pegasus link")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("MMND student access the Pegasus link")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MMNDStandaloneIns")]
-        public virtual void MMNDUserAccessThePegasusLink()
+        public virtual void MMNDStudentAccessThePegasusLink()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MMND user access the Pegasus link", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MMND student access the Pegasus link", ((string[])(null)));
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 12

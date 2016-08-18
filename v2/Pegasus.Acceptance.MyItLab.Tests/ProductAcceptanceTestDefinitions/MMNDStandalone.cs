@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             try
             {
-                Assert.AreEqual(true, CourseLinksPage.landedLink(p0));
+                Assert.AreEqual(true, CourseLinksPage.viewAllContentPegaus(p0));
             }
 
             catch (Exception ex)
