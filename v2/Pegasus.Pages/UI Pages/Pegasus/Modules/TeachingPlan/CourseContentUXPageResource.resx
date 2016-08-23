@@ -426,4 +426,7 @@
   <data name="CoursePreviewUX_Page_Submit_Button_LinkText_Locator" xml:space="preserve">
     <value>Finish: Submit for Grading</value>
   </data>
+  <data name="CoursePreviewUX_Page_Feedback_Icon_CSS_Locator" xml:space="preserve">
+    <value>#_ctl0_APH_feedback&amp;gt;b:nth-child(1)</value>
+  </data>
 </root>

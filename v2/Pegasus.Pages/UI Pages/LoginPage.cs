@@ -99,7 +99,9 @@ namespace Pegasus.Pages.UI_Pages
                                  .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     // Get URL of workspace Teacher/Student
                     case User.UserTypeEnum.HedWsInstructor:
+                    case User.UserTypeEnum.RegHedWsInstructor:
                     case User.UserTypeEnum.HedWsStudent:
+                    case User.UserTypeEnum.RegHedWsStudent:
                         _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.WorkSpaceUrlRoot
                                  + LoginPageResource
@@ -914,6 +916,8 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.WsWCStudent:
                 case User.UserTypeEnum.HedWsInstructor:
                 case User.UserTypeEnum.HedWsStudent:
+                case User.UserTypeEnum.RegHedWsStudent:
+                case User.UserTypeEnum.RegHedWsInstructor:
                 case User.UserTypeEnum.HEDCSCTGPPublisherAdmin:
                 case User.UserTypeEnum.HEDWSCTGPublisherAdmin:
                 case User.UserTypeEnum.HedMiLWsAdmin:

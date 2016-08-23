@@ -1589,32 +1589,41 @@ namespace Pegasus.Pages.UI_Pages
                         //Switch To Frame
                         base.SwitchToIFrame(CoursePreviewMainUXPageResource.
                             CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
-
-                        //Get Activity Property
-                        string getPageCount = base.GetElementTextByClassName("PD_pagingmsg");
-                        string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
-                        string getFirstPageNumber = getPageCount.Remove(0, 13);
-                        string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
-                        for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
+                        bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                        if (getActivityExistance == true)
                         {
-                            bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
-                            if (getActivityExistance == false)
+                            IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
+                                (activityName);
+                            base.ClickByJavaScriptExecutor(getActivityProperty);
+                        }
+                        else
+                        {
+                            //Get Activity Property
+                            string getPageCount = base.GetElementTextByClassName("PD_pagingmsg");
+                            string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
+                            string getFirstPageNumber = getPageCount.Remove(0, 13);
+                            string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
+                            for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
                             {
-                                base.WaitForElement(By.Id("rptCoursePreview$next"));
-                                base.ClickLinkById("rptCoursePreview$next");
-                                base.WaitUntilWindowLoads(pageName);
-                                base.SelectWindow(pageName);
-                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
-                                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
-                                //Switch To Frame
-                                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
-                            }
-                            else
-                            {
-                                IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
-                                    (activityName);
-                                base.ClickByJavaScriptExecutor(getActivityProperty);
+                                getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                                if (getActivityExistance == false)
+                                {
+                                    base.WaitForElement(By.Id("rptCoursePreview$next"));
+                                    base.ClickLinkById("rptCoursePreview$next");
+                                    base.WaitUntilWindowLoads(pageName);
+                                    base.SelectWindow(pageName);
+                                    base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                                    //Switch To Frame
+                                    base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                                        CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+                                }
+                                else
+                                {
+                                    IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
+                                        (activityName);
+                                    base.ClickByJavaScriptExecutor(getActivityProperty);
+                                }
                             }
                         }
                         break;
@@ -1628,7 +1637,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Get the activity status in manage course work 
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="pageName">This is page name.</param>
+        /// <returns>This methord returns the activity status.</returns>
         public string GetActivityStatusBasedOnActivityName(string activityName,string pageName)
         {
             // Launch The Activity
@@ -1648,44 +1662,64 @@ namespace Pegasus.Pages.UI_Pages
                         //Switch To Frame
                         base.SwitchToIFrame(CoursePreviewMainUXPageResource.
                             CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
-
-                        //Get Activity Property
-                        string getPageCount = base.GetElementTextByClassName("PD_pagingmsg");
-                        string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
-                        string getFirstPageNumber = getPageCount.Remove(0, 13);
-                        string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
-                        for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
+                        bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                        if (getActivityExistance == true)
                         {
-                            bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
-                            if (getActivityExistance == false)
+                            string idValue = base.GetIdAttributeValueByPartialLinkText(activityName);
+                            //Get The Activity Name In CourseMaterial
+                            int activityColumnCount =
+                                GetTheActivityNameInCourseMaterial(activityName);
+                            //Get the status text
+                            base.WaitForElement(By.XPath(string.
+                            Format(StudentPresentationPageResource.
+                            StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount)));
+                            activityStatus = base.GetElementTextByXPath(string.
+                            Format(StudentPresentationPageResource.
+                            StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                        }
+                        else
+                        {
+                            //Get Activity Property
+                            string getPageCount = base.GetElementTextByClassName(CoursePreviewMainUXPageResource.
+                                CoursePreviewMainUX_Page_PaginationText_ClassName_Value);
+                            string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
+                            string getFirstPageNumber = getPageCount.Remove(0, 13);
+                            string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
+                            for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
                             {
-                                base.WaitForElement(By.Id("rptCoursePreview$next"));
-                                base.ClickLinkById("rptCoursePreview$next");
-                                base.WaitUntilWindowLoads(pageName);
-                                base.SelectWindow(pageName);
-                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
-                                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
-                                //Switch To Frame
-                                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
-                            }
-                            else
-                            {
-                                string idValue = base.GetIdAttributeValueByPartialLinkText(activityName);
-                                //Get The Activity Name In CourseMaterial
-                                int activityColumnCount =
-                                    GetTheActivityNameInCourseMaterial(activityName);
-                                //Get the status text
-                                base.WaitForElement(By.XPath(string.
-                                Format(StudentPresentationPageResource.
-                                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount)));
-                                activityStatus = base.GetElementTextByXPath(string.
-                                Format(StudentPresentationPageResource.
-                                StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                                getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
+                                if (getActivityExistance == false)
+                                {
+                                    // Click on next link in the bottom of the page
+                                    base.WaitForElement(By.Id(CoursePreviewMainUXPageResource
+                                    .CoursePreviewMainUX_Page_NextLink_Id_Property));
+                                    base.ClickLinkById(CoursePreviewMainUXPageResource
+                                    .CoursePreviewMainUX_Page_NextLink_Id_Property);
+                                    base.WaitUntilWindowLoads(pageName);
+                                    base.SelectWindow(pageName);
+                                    base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                                    //Switch To Frame
+                                    base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                                        CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+                                }
+                                else
+                                {
+                                    string idValue = base.GetIdAttributeValueByPartialLinkText(activityName);
+                                    //Get The Activity Name In CourseMaterial
+                                    int activityColumnCount =
+                                        GetTheActivityNameInCourseMaterial(activityName);
+                                    //Get the status text
+                                    base.WaitForElement(By.XPath(string.
+                                    Format(StudentPresentationPageResource.
+                                    StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount)));
+                                    activityStatus = base.GetElementTextByXPath(string.
+                                    Format(StudentPresentationPageResource.
+                                    StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                                }
                             }
                         }
                         break;
-                        
                 }
             }
             catch (Exception e)

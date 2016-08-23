@@ -204,4 +204,31 @@
   <data name="RandomAssessmentPage_SubmissionScore_DropDown_Lowest_Text" xml:space="preserve">
     <value>Lowest</value>
   </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_CorrectAfterTheDueDate_Id_Locator" xml:space="preserve">
+    <value>radCorrectDue</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_CorrectAlways_Id_Locator" xml:space="preserve">
+    <value>radCorrectAlways</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_CorrectAtAttempt_Id_Locator" xml:space="preserve">
+    <value>radCorrectX</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_CorrectNever_Id_Locator" xml:space="preserve">
+    <value>radCorrectNever</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_FeedbackAlways_Id_Locator" xml:space="preserve">
+    <value>radFeedbackAlways</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_FeedbackNever_Id_Locator" xml:space="preserve">
+    <value>radFeedbackNever</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_FeedbackX_Id_Locator" xml:space="preserve">
+    <value>radFeedbackX</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_ShowFeedbackattempt_Id_Locator" xml:space="preserve">
+    <value>txtShowFeedBackAttemptAt</value>
+  </data>
+  <data name="RandomAssessment_Page_FeedBackPreference_txtShowCorrectAnswerAttemptAt_Id" xml:space="preserve">
+    <value>txtShowCorrectAnswerAttemptAt</value>
+  </data>
 </root>

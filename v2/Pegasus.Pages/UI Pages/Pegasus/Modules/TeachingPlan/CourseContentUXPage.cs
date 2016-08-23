@@ -2294,6 +2294,122 @@ namespace Pegasus.Pages.UI_Pages
                         base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Student submit the activity by click on finish button
+        /// </summary>
+        public void StudentSubmitAnsweredActivity(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string activityName = Activity.Get(activityType).Name.ToString();
+                base.WaitUntilWindowLoads(activityName);
+                //Click on submit button
+                IWebElement getFinishButton = base.GetWebElementPropertiesByClassName(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_SubmitForGrading_Button_ClassName);
+                base.ClickByJavaScriptExecutor(getFinishButton);
+
+                //Click on Finish button
+                IWebElement finishButton = base.GetWebElementPropertiesById(
+                    CourseContentUXPageResource.
+                    CoursePreviewUX_Page_Finish_Button_Id_Locator);
+                base.ClickByJavaScriptExecutor(finishButton);
+                Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource.
+                    CourseContentUXPage_ShowHide_Status_Time_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Student get the feedback from the presenation popup
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <returns></returns>
+        public Boolean GetFeedbackIconStatus(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage", "GetFeedbackIconStatus", base.IsTakeScreenShotDuringEntryExit);
+            Boolean isFeedbackIconExist = false;
+            try
+            {
+                string activityName = Activity.Get(activityType).Name.ToString();
+                // Wait untill page loads
+                base.WaitUntilWindowLoads(activityName);
+                base.SelectWindow(activityName);
+                Thread.Sleep(1000);
+                // Check if the feedback icon exist
+                isFeedbackIconExist = base.IsElementPresent(By.Id("feedbackimg"), 5);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage", "GetFeedbackIconStatus", base.IsTakeScreenShotDuringEntryExit);
+            return isFeedbackIconExist;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <returns></returns>
+        public void StudentClickFeedBackIcon(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage", "StudentClickFeedBackIcon", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string activityName = Activity.Get(activityType).Name.ToString();
+                // Wait untill page loads
+                base.WaitUntilWindowLoads(activityName);
+                base.SelectWindow(activityName);
+                // Click on feedback Icon 
+                IWebElement getFeedBackIcon = base.GetWebElementPropertiesById("feedbackimg");
+                base.PerformMouseClickAction(getFeedBackIcon);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage", "StudentClickFeedBackIcon", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the text in feedback
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <returns></returns>
+        public string GetFeedbackText(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage", "GetFeedbackIconStatus", base.IsTakeScreenShotDuringEntryExit);
+            string feedBackText = string.Empty;
+            try
+            {
+                string activityName = Activity.Get(activityType).Name.ToString();
+                // Wait untill page loads
+                base.WaitUntilWindowLoads(activityName);
+                base.SelectWindow(activityName);
+                Thread.Sleep(1000);
+                // Check if the feedback icon exist
+                string getFeedBackText = base.GetElementTextByClassName(CoursePreviewMainUXPageResource.
+                     CoursePreviewMainUX_Page_GetFeedbackIcon_ClassName_Value);
+                //Correct Answer:  Answer\r\nFeedback:  Incorrect Feedback
+                feedBackText = getFeedBackText.Substring(34).Trim().ToString();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage", "GetFeedbackIconStatus", base.IsTakeScreenShotDuringEntryExit);
+            return feedBackText;
+        }
+
+
         public bool SubmitActivityCSDisplay()
         {
             Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",

@@ -342,4 +342,10 @@
   <data name="DeleteAllSubmissions_Window_Title_Name" xml:space="preserve">
     <value>Delete Assignment?</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_GetFeedbackIcon_ClassName_Value" xml:space="preserve">
+    <value>FeedBackBorder</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_SubmitForGrading_Button_ClassName" xml:space="preserve">
+    <value>btn_subm_grade</value>
+  </data>
 </root>

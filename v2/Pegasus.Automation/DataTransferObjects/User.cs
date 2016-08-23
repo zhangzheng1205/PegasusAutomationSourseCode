@@ -185,7 +185,9 @@ namespace Pearson.Pegasus.TestAutomation.
             WsWCTeacher = 104,
             WsWCStudent = 105,
             DPCsWCTeacher = 106,
-            DPCsWCStudent = 107
+            DPCsWCStudent = 107,
+            RegHedWsInstructor = 108,
+            RegHedWsStudent = 109,
             #endregion
         }
 

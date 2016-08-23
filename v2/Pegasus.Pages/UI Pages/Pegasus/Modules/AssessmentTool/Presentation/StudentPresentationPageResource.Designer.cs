@@ -3167,6 +3167,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //td[@class=&apos;themeItemMiddleCommon1&apos;]/div/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_QuestionTextBox_Count_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_QuestionTextBox_Count_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[3]/div/div/span[9]/span[1]/span[13]/span[4]/span[3]/span[2].
         /// </summary>
         internal static string StudentPrsentation_Page_Raptext_Option_Xpath_Locator {

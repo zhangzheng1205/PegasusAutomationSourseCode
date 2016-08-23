@@ -1593,4 +1593,7 @@
   <data name="StudentPrsentation_Page_CancelButton_Text_Value" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="StudentPrsentation_Page_QuestionTextBox_Count_XPath_Locator" xml:space="preserve">
+    <value>//td[@class='themeItemMiddleCommon1']/div/div</value>
+  </data>
 </root>

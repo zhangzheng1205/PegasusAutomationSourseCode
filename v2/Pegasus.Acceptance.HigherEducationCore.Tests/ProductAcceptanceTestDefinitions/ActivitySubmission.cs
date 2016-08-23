@@ -119,6 +119,100 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
+        /// Attempt Fill In The Blanks Questions at Presentation Window based on the answer type.
+        /// </summary>
+        /// <param name="questionCount">Number of Questions to be Answered.</param>
+        /// <param name="pageNumber">The Page Number.</param>
+        /// <param name="activityTypeEnum">This the activity Type Enum.</param>
+        [When(@"I attempt ""(.*)"" questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window with ""(.*)"" answer")]
+        public void AttemptFillInTheBlanksQuestions(int questionCount, int pageNumber,
+            Activity.ActivityTypeEnum activityTypeEnum, string answerType)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+             "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Get the Activity Details
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            switch (answerType)
+            {
+                case "Valid":
+                    // Attempt Fill In The Blanks Questions at Presentation Window with correct answer
+                    new StudentPresentationPage().AttemptFillInTheBlanksQuestionsValidAnswer(questionCount);
+                    break;
+                case "In Valid":
+                    // Attempt Fill In The Blanks Questions at Presentation Window with incorrect answer
+                    new StudentPresentationPage().AttemptFillInTheBlanksQuestionsInValidAnswer(questionCount);
+                    break;
+            }
+            Logger.LogMethodExit("ActivitySubmission",
+             "AttemptSpecificNumberOfFillInTheBlanksQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Validate for the feedback icon existance in presenation page 
+        /// </summary>
+        /// <param name="activityType">This is acivity type enum.</param>
+        [Then(@"I should be displayed with Feedback Icon in ""(.*)"" window")]
+        public void StudentValidateFeedbackIconExistance(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "StudentValidateFeedbackIconExistance", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("activityStatus", ScenarioContext.Current.ScenarioInfo.
+              Title, () => Assert.AreEqual(true, new CourseContentUXPage().GetFeedbackIconStatus(activityType)));
+            Logger.LogMethodExit("ActivitySubmission", "StudentValidateFeedbackIconExistance", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Student click on Feedback Icon in presentaion window
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I click on the Feedback Icon in ""(.*)"" window")]
+        public void ClickOnTheFeedbackIcon(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnTheFeedbackIcon", base.IsTakeScreenShotDuringEntryExit);
+            new CourseContentUXPage().StudentClickFeedBackIcon(activityType);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnTheFeedbackIcon", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get feedback text and validate
+        /// </summary>
+        /// <param name="feedBackText">This is feedback text.</param>
+        /// <param name="activityType">This is activity type.</param>
+        [Then(@"I should displayed with ""(.*)"" text in ""(.*)"" window")]
+        public void ValidateFeedbackText(string feedBackText, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ValidateFeedbackText", base.IsTakeScreenShotDuringEntryExit);
+            // Assert the expected and actual number of question in Presentation page
+            Logger.LogAssertion("activityStatus", ScenarioContext.Current.ScenarioInfo.
+            Title, () => Assert.AreEqual(feedBackText, new CourseContentUXPage().GetFeedbackText(activityType)));
+            Logger.LogMethodExit("ActivitySubmission", "ValidateFeedbackText", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Student submit the answered activity
+        /// </summary>
+        /// <param name="activityType">This activity type enum.</param>
+        [When(@"I submit the answered activity ""(.*)""")]
+        public void SubmitTheAnsweredActivity(Activity.ActivityTypeEnum activityType)
+        {
+            // Submit the Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+            "SubmitTheAnsweredActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Submit the Activity
+            new CourseContentUXPage().StudentSubmitAnsweredActivity(activityType);
+            Logger.LogMethodExit("ActivitySubmission",
+           "SubmitTheAnsweredActivity",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Navigate inside the activity in gradbook page.
         /// </summary>
         [When(@"I navigate inside the activity")]
@@ -874,6 +968,12 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Get the activity status and validate the result
+        /// </summary>
+        /// <param name="activityStatus">This is activity status.</param>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
         [Then(@"I should see ""(.*)"" status for the activity ""(.*)"" from ""(.*)"" page")]
         public void ValidateTheActivityStatus(string activityStatus, Activity.ActivityTypeEnum activityType, string pageName)
         {
@@ -885,7 +985,45 @@ pageName)));
             Logger.LogMethodExit("ActivitySubmission", "ValidateTheActivityStatus", base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Student enter answers and click on Return To Course button
+        /// </summary>
+        /// <param name="buttonName">This is button name.</param>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I click on ""(.*)"" button in ""(.*)"" window")]
+        public void ClickOnReturnToCourseButton(string buttonName, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnReturnToCourseButton", base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClickReturnToCourseButtonStudentPresentation(buttonName, activityType);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnReturnToCourseButton", base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        //When I click on "Try Again" button of "RegChildActivity" 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I click on ""(.*)"" button of ""(.*)""")]
+        public void ClickOnButton(string buttonName, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnButton", base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClickOnButtonStudentPresentation(buttonName, activityType);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should be displayed with ""(.*)"" score page")]
+        public void ValidateStudentScoreInViewSubmission(int score)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ValidateActivityHasBeenStartedAndSavedMessage",
+            base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateActivityHasBeenStartedAndSavedMessage", ScenarioContext.
+        Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(true, new ViewSubmissionPage().
+        GetScoreInViewSubmission(score)));
+            Logger.LogMethodExit("ActivitySubmission", "ValidateActivityHasBeenStartedAndSavedMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         [When(@"I attempt questions listed in Page ""(.*)"" of ""(.*)"" Activity Presentation Window")]
         public void StudentAttemptQuestionsInActivityPresentationWindow(int questionCount,
             Activity.ActivityTypeEnum activityTypeEnum)

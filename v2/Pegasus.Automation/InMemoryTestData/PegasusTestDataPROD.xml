@@ -357,6 +357,28 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>automationqanitws</Name>
+      <Password>password2</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
+      <UserType>RegHedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>student001df</Name>
+      <Password>password2</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>QA</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>WS Student</LastName>
+      <UserType>RegHedWsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>nitprodstudprod2</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -1225,14 +1247,24 @@
       <ActivityType>S7StudenteText</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-     <Activity>
-      <Name>269f8e87-ebc2-401b-ba27-c7c25f8c6c36</Name>
+    <Activity>
+      <Name>Auto-2016/08/01-38f619e6-Activity</Name>
+      <ActivityType>RegChildAbruptActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/07/31-88e674b4-Activity</Name>
       <ActivityType>RegChildActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>0bcce594-fdb6-48f0-a255-38857b09700e</Name>
+      <Name>Auto-2016/07/31-d50b9cb9-Activity Type</Name>
       <ActivityType>RegSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/08/01-1d68fea0-Activity Type</Name>
+      <ActivityType>RegSAMAbruptActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>

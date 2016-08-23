@@ -62,6 +62,14 @@ the UI deleted or refreshed.-->
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+        <Course>
+      <Name>MySpanishLab for ¡Arriba! Comunicación y cultura, 6e, Summer 2014 Re-Release</Name>
+      <CourseType>RegMySpanishLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
     <Course>
       <Name>Master-MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14]</Name>
       <CourseType>MyItLabAuthoredCourse</CourseType>
@@ -387,6 +395,28 @@ the UI deleted or refreshed.-->
       <UserType>WsAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
+    </User>
+       <User>
+      <Name>QAAutomationVCDWSTeach</Name>
+      <Password>password2</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
+      <UserType>RegHedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>QAAutomationVCDWSStudent</Name>
+      <Password>password2</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>QA</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>WS Student</LastName>
+      <UserType>RegHedWsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
       <Name>515utomationmilworkspace</Name>
@@ -976,6 +1006,26 @@ the UI deleted or refreshed.-->
     <Activity>
       <Name>8405d01b-d9ac-4884-94cf-b0658ba0c7ec</Name>
       <ActivityType>StudyPlan</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+        <Activity>
+      <Name>Auto-2016/08/01-38f619e6-Activity</Name>
+      <ActivityType>RegChildAbruptActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/07/31-88e674b4-Activity</Name>
+      <ActivityType>RegChildActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/07/31-d50b9cb9-Activity Type</Name>
+      <ActivityType>RegSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/08/01-1d68fea0-Activity Type</Name>
+      <ActivityType>RegSAMAbruptActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>

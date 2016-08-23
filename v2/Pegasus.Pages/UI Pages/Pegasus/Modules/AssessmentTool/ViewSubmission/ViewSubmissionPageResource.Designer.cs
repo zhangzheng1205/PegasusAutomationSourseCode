@@ -584,6 +584,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to pop_txt.
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_GetMessageText_ClassName {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_GetMessageText_ClassName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to div#_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&gt;span&gt;div:nth-of-type(3)&gt;span.
         /// </summary>
         internal static string ViewSubmission_Page_ViewSubmission_GetScore_CSS_Locator {

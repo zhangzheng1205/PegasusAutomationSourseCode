@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="AssessmentRegressionActivityCreationSingleSection" storage="d:\automationforcheckinassessment\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\assessmentregressionactivitycreationsinglesection.orderedtest" id="1b17d9a4-adc1-4afb-a64a-15b8dde7f924" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="c7ac3715-3585-7924-5c17-62bd451433ff" name="CreationOfRandomActivityOfRegSAMActivityTypeByAddingSingleSection" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

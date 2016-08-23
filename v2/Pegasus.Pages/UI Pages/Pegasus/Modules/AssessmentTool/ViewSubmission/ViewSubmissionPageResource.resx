@@ -339,4 +339,7 @@
   <data name="ViewSubmission_Page_ViewSubmission_QuestionNotAttempted_Text" xml:space="preserve">
     <value>Question was not attempted</value>
   </data>
+  <data name="ViewSubmission_Page_ViewSubmission_GetMessageText_ClassName" xml:space="preserve">
+    <value>pop_txt</value>
+  </data>
 </root>

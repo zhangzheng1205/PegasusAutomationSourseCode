@@ -153,6 +153,18 @@
   <data name="FillInTheBlanksPage_CreateFillInTheBlank_Window_Title" xml:space="preserve">
     <value>Create Fill in the Blank</value>
   </data>
+  <data name="FillInTheBlanksPage_FeedbackForCorrectAnswe_TextBox_ID" xml:space="preserve">
+    <value>_ctl1_dgdBlanks__ctl2_txtFeedbackCorrect</value>
+  </data>
+  <data name="FillInTheBlanksPage_FeedbackForCorrectAnswe_Text_Value" xml:space="preserve">
+    <value>Correct Feedback</value>
+  </data>
+  <data name="FillInTheBlanksPage_FeedbackForInCorrectAnswer_TextBox_ID" xml:space="preserve">
+    <value>_ctl1_dgdBlanks__ctl2_txtFeedbackWrong</value>
+  </data>
+  <data name="FillInTheBlanksPage_FeedbackForInCorrectAnswer_Text_Value" xml:space="preserve">
+    <value>Incorrect Feedback</value>
+  </data>
   <data name="FillInTheBlanksPage_PartialGrading_RadioButton_Id_Locator" xml:space="preserve">
     <value>_ctl1_rblstgrading_1</value>
   </data>

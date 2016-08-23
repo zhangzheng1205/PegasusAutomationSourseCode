@@ -48,6 +48,35 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
+        /// Create Child Same Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum</param>
+        ///  <param name="activityTypeEnum">This is behavioral Mode</param>
+        [When(@"I Create ""(.*)"" SAM activity with Behavioral Mode ""(.*)""")]
+        public void SelectBehavioralMode(Activity.ActivityTypeEnum activityTypeEnum, string behavioralMode)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateChildSAMActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+            //Enter Activity Details and Click on Add Question Link
+            addAssessmentPage.EnterActivityDetails(activityTypeEnum, behavioralMode);
+            Logger.LogMethodExit("CreateActivity", "CreateChildSAMActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the question from the "SelectQuestionsFromBank"  and add to the activity
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I add ""(.*)"" question from 'Select Questions from Bank'")]
+        public void AddQuestionFromSelectQuestionsFromBank(Question.QuestionTypeEnum questionType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "AddQuestionFromSelectQuestionsFromBank", base.IsTakeScreenShotDuringEntryExit);
+            new AddAssessmentPage().AddQuestionFromSelectQuestionsFromBank(questionType);
+            Logger.LogMethodExit("CreateActivity", "AddQuestionFromSelectQuestionsFromBank", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click On Activity Type.
         /// </summary>
         /// <param name="activityType">This is Activity Type.</param>
@@ -692,6 +721,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            Logger.LogMethodEntry("CreateActivity", "CreateQuestionSection",
            base.IsTakeScreenShotDuringEntryExit);
            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+           new AddAssessmentPage().SelectCreateRandomActivity();
            //Select Add Sections Option
            randomTopicListPage.SelectAddSectionsOptions(optionValue);
            randomTopicListPage.CreateSection(sectionName);
@@ -737,8 +767,44 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
           Logger.LogMethodExit("CreateActivity", "AddQuestionsToASection",
           base.IsTakeScreenShotDuringEntryExit);
       }
-     
 
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="feedBackPerferenceType">This is Feedback prefernce type</param>
+      /// <param name="feedBackSubOptionName">This is Feedback option name.</param>
+      [When(@"I enable ""(.*)"" with ""(.*)"" for Feedback preference")]
+      public void EnableFeedbackPreferenceForRandomActivity(string feedBackPerferenceType, string feedBackSubOptionName)
+      {
+          Logger.LogMethodEntry("CreateActivity", "EnableFeedbackPreferenceForRandomActivity", base.IsTakeScreenShotDuringEntryExit);
+          RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+          // Execute based on the feed back preference type option 
+          switch (feedBackPerferenceType)
+          {
+              case "Correct Answer":
+                  randomAssessmentPage.EnableCorrectAnswerPreferenceRandomActivity(feedBackSubOptionName);
+                  break;
+
+              case "Display feedback":
+                  randomAssessmentPage.DisplayFeedbackPreferenceRandomActivity(feedBackSubOptionName);
+                  break;
+          }
+
+          Logger.LogMethodExit("CreateActivity", "EnableFeedbackPreferenceForRandomActivity", base.IsTakeScreenShotDuringEntryExit);
+      }
+
+      /// <summary>
+      /// Workspace instructor Enable late submissions 
+      /// </summary>
+      /// <param name="preferenceOptionName">This is preference option name</param>
+      [When(@"I enable ""(.*)"" in activity preference")]
+      public void EnableRandomActivityPreference(string preferenceOptionName)
+      {
+          Logger.LogMethodEntry("CreateActivity", "EnableRandomActivityPreference", base.IsTakeScreenShotDuringEntryExit);
+          RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+          randomAssessmentPage.EnableRandomActivityLevelPreference(preferenceOptionName);
+          Logger.LogMethodEntry("CreateActivity", "EnableRandomActivityPreference", base.IsTakeScreenShotDuringEntryExit);
+      }
 
         /// <summary>
         /// Set Number Of Questions Per Page at Activity level.

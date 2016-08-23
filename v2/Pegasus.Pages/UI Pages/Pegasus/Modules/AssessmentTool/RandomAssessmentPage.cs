@@ -484,28 +484,31 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrameById("frmTopic");
             string idValue = string.Empty;
             string direction = string.Empty;
-
-            switch(actionType)
+            try
             {
-                case "Add": idValue = "ancAddDirectionLine_" + sectionNo;
-                    direction = "This is direction for Section " + sectionNo;
-                    OpenEditorAndAddDirections(idValue, direction);
-                    break;
-                case "Edit": idValue = "ancAddDirectionLine_" + sectionNo;
-                    direction = " edited" ;
-                    OpenEditorAndAddDirections(idValue, direction);
-                    break;
-                case "Delete": idValue = "ancDeleteDirectionLine_" + sectionNo;
-                     base.WaitForElement(By.Id(idValue));
-                     IWebElement deleteLink =base.GetWebElementPropertiesById(idValue);
-                     base.ClickByJavaScriptExecutor(deleteLink);
-                     base.WaitUntilWindowLoads("Pegasus");
-                     base.GetWebElementPropertiesById("imgOk").Click();
-                     break;
-
-            }
-            base.SwitchToDefaultPageContent();
-
+                switch (actionType)
+                {
+                    case "Add": idValue = "ancAddDirectionLine_" + sectionNo;
+                        direction = "This is direction for Section " + sectionNo;
+                        OpenEditorAndAddDirections(idValue, direction);
+                        break;
+                    case "Edit": idValue = "ancAddDirectionLine_" + sectionNo;
+                        direction = "This is direction for Section " + sectionNo + " edited";
+                        OpenEditorAndAddDirections(idValue, direction);
+                        break;
+                    case "Delete": idValue = "ancDeleteDirectionLine_" + sectionNo;
+                        base.WaitForElement(By.Id(idValue));
+                        IWebElement deleteLink = base.GetWebElementPropertiesById(idValue);
+                        base.ClickByJavaScriptExecutor(deleteLink);
+                        base.WaitUntilWindowLoads("Pegasus");
+                        base.GetWebElementPropertiesById("imgOk").Click();
+                        break;
+                    }
+                }
+                catch(Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
             logger.LogMethodExit("RandomAssessmentPage",
              "EnterDirectionLineToSection",
            base.IsTakeScreenShotDuringEntryExit);
@@ -519,28 +522,43 @@ namespace Pegasus.Pages.UI_Pages
         private void OpenEditorAndAddDirections(string idValue, string direction)
         {
             logger.LogMethodEntry("RandomAssessmentPage",
-             "OpenEditorAndAddDirections",
-            base.IsTakeScreenShotDuringEntryExit);
-            //Wait for Add link and click to open Editor
-            base.WaitForElement(By.Id(idValue));
-            //Click on Save and Return Button
-            IWebElement addLink =
-            base.GetWebElementPropertiesById(idValue);
-            base.ClickByJavaScriptExecutor(addLink);
-            //Switch to Editor window and frame
-            base.WaitUntilWindowLoads("Editor");
-            base.SwitchToIFrameById("ucEditor");
-            //Add or Edit direction line at editor
-            base.WaitForElement(By.CssSelector(".WebEditor"));
-            IWebElement textArea = base.GetWebElementPropertiesByCssSelector(".WebEditor");
-            base.PerformMoveToElementClickAction(textArea);
-            Actions builder = new Actions(WebDriver);
-            Thread.Sleep(3000);
-            builder.SendKeys(direction).Perform();
-            //Switch to default window
-            base.SwitchToDefaultPageContent();
-            //Close the Editor Window.
-            base.GetWebElementPropertiesById("cmdOK").Click();
+            "OpenEditorAndAddDirections", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                    //Wait for Add link and click to open Editor
+                    base.WaitForElement(By.Id(idValue));
+                    //Click on Save and Return Button
+                    IWebElement addLink =
+                    base.GetWebElementPropertiesById(idValue);
+                    base.ClickByJavaScriptExecutor(addLink);
+                    //Switch to Editor window and frame
+                    base.WaitUntilWindowLoads("Editor");
+                    base.SwitchToIFrameById("ucEditor");
+                    Thread.Sleep(5000);
+                    //Add or Edit direction line at editor
+                    base.WaitForElement(By.CssSelector(".WebEditor"));
+                    IWebElement textArea = base.GetWebElementPropertiesByCssSelector(".WebEditor");
+                    //  base.WaitForElement(By.ClassName("WebEditor"));
+                    //IWebElement textArea = base.GetWebElementPropertiesByClassName("WebEditor");
+                    base.PerformMoveToElementClickAction(textArea);
+                    Thread.Sleep(5000);
+                    Actions builder = new Actions(WebDriver);
+                    builder.Click(textArea)
+                        .SendKeys(Keys.End)
+                        .KeyDown(Keys.Shift)
+                        .SendKeys(Keys.Home)
+                        .KeyUp(Keys.Shift)
+                        .SendKeys(Keys.Backspace);
+                    builder.SendKeys(direction).Perform();
+                    //Switch to default window
+                    base.SwitchToDefaultPageContent();
+                    //Close the Editor Window.
+                    base.GetWebElementPropertiesById("cmdOK").Click();
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("RandomAssessmentPage",
                "OpenEditorAndAddDirections",
              base.IsTakeScreenShotDuringEntryExit);
@@ -562,6 +580,7 @@ namespace Pegasus.Pages.UI_Pages
             //Switch the window
             base.SwitchToDefaultWindow();
             //Switch to frame
+
             base.SwitchToIFrameById("frmTopic");
             bool directionPresent = false;
             //Switch to action type and get expected direction lines
@@ -571,12 +590,13 @@ namespace Pegasus.Pages.UI_Pages
                     expectedDirection = "This is direction for Section " + sectionNumber;
                     break;
                 case "edited":
-                    expectedDirection = "This is direction for Section " + sectionNumber+" edited" ;
+                    expectedDirection = "This is direction for Section " + sectionNumber + " edited";
                     break;
             }
             //The element id value
-            string idValue="lbldirectionalline_"+sectionNumber;
+            string idValue = "lbldirectionalline_" + sectionNumber;
             //Get the actual direction line
+            base.WaitForElement(By.Id(idValue));
             string actualDirection = base.GetElementInnerTextById(idValue).Trim();
             //Compare expected and actual direction line
             if (expectedDirection == actualDirection)
@@ -588,8 +608,6 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
             //retur the comparision bool value
             return directionPresent;
-          
-
         }
 
 
@@ -778,6 +796,135 @@ namespace Pegasus.Pages.UI_Pages
             //Return the availability status
             return DirectionPres;
             
+        }
+
+        /// <summary>
+        /// Enable Correct Answer Preference for random activity
+        /// </summary>
+        /// <param name="feedBackSubOptionName">This is Feedback option name.</param>
+        public void EnableCorrectAnswerPreferenceRandomActivity(string feedBackSubOptionName)
+        {
+            logger.LogMethodEntry("RandomAssessmentPage", "EnableCorrectAnswerPreferenceRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+
+            switch (feedBackSubOptionName)
+            {
+                case "Always":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectAlways_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectAlways_Id_Locator);
+                    break;
+
+                case "Never":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectNever_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectNever_Id_Locator);
+                    break;
+
+                case "At attempt":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                     RandomAssessment_Page_FeedBackPreference_CorrectAtAttempt_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectAtAttempt_Id_Locator);
+                    base.ClearTextById(RandomAssessmentResource.
+                        RandomAssessment_Page_FeedBackPreference_txtShowCorrectAnswerAttemptAt_Id);
+                    base.FillTextBoxById(RandomAssessmentResource.
+                        RandomAssessment_Page_FeedBackPreference_txtShowCorrectAnswerAttemptAt_Id, "1");
+                    break;
+
+                case "After the due date":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectAfterTheDueDate_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_CorrectAfterTheDueDate_Id_Locator);
+                    break;
+            }
+
+            logger.LogMethodExit("RandomAssessmentPage", "EnableCorrectAnswerPreferenceRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="preferenceOptionName">This is preference option name.</param>
+        public void EnableRandomActivityLevelPreference(string preferenceOptionName)
+        {
+            logger.LogMethodEntry("RandomAssessmentPage", "EnableRandomActivityLevelPreference", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (preferenceOptionName)
+                {
+                    case "Enable late submissions":
+                        base.WaitForElement(By.Id("ChkEnableLateSubmissions"));
+                        IWebElement getEnablelateSubmissionsValue = base.GetWebElementPropertiesById("ChkEnableLateSubmissions");
+                        if (getEnablelateSubmissionsValue.GetAttribute("checked") == null)
+                        {
+                            base.SelectCheckBoxById("ChkEnableLateSubmissions");
+                        }
+                        break;
+
+                    case "Enable Grace Period":
+                        base.WaitForElement(By.Id("chkEnableGracePeriod"));
+                        IWebElement getWebelement = base.GetWebElementPropertiesById("chkEnableGracePeriod");
+                        if (getWebelement.GetAttribute("checked") == null)
+                        {
+                            base.SelectCheckBoxById("chkEnableGracePeriod");
+                        }
+                        break;
+
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage", "EnableRandomActivityLevelPreference", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enable Display Feedback Preference Random Activity Preference for random activity
+        /// </summary>
+        /// <param name="feedBackSubOptionName">This is Feedback option name.</param>
+        public void DisplayFeedbackPreferenceRandomActivity(string feedBackSubOptionName)
+        {
+            logger.LogMethodEntry("RandomAssessmentPage", "EnableCorrectAnswerPreferenceRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+
+            switch (feedBackSubOptionName)
+            {
+                case "Always":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_FeedbackAlways_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_FeedbackAlways_Id_Locator);
+                    break;
+
+                case "Never":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_FeedbackNever_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_FeedbackNever_Id_Locator);
+                    break;
+
+                case "At attempt":
+                    base.WaitForElement(By.Id(RandomAssessmentResource.
+                     RandomAssessment_Page_FeedBackPreference_FeedbackX_Id_Locator));
+                    base.SelectRadioButtonById(RandomAssessmentResource.
+                    RandomAssessment_Page_FeedBackPreference_FeedbackX_Id_Locator);
+                    base.ClearTextById(RandomAssessmentResource.
+                        RandomAssessment_Page_FeedBackPreference_ShowFeedbackattempt_Id_Locator);
+                    base.FillTextBoxById(RandomAssessmentResource.
+                        RandomAssessment_Page_FeedBackPreference_ShowFeedbackattempt_Id_Locator, "1");
+                    break;
+            }
+
+            logger.LogMethodExit("RandomAssessmentPage", "EnableCorrectAnswerPreferenceRandomActivity",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

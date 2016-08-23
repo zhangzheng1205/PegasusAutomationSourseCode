@@ -248,6 +248,27 @@ Then I should see the successfull message "Activity added successfully."
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
 
+Scenario:Add RegChildAbruptActivity Activity to My Course and set as shown
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I associate the "RegChildAbruptActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegChildAbruptActivity" in My Course frame  of "Course Materials" tab
+Then I should be displayed with "RegChildAbruptActivity" in My Course frame  of "Course Materials" tab
+When I click on "ShowHide"  of "RegChildAbruptActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+#Purpose:Instructor enable Feedback preference for random activity
+Scenario: Instructor enable Feedback preference for random activity
+When I enable "Correct Answer" with "Always" for Feedback preference
+And I enable "Display feedback" with "Always" for Feedback preference
+
+#Purpose:Click on Save and return button based on the page type in activity creation page
+Scenario: Instructor click on Save and Return button based on the page type in activity creation page
+When I perform "Save and Return" for "Questions" 
+
+Scenario: Instructor enable Enable late submissions for Random activity
+When I enable "Enable late submissions" in activity preference
+
 #Purpose:Creatiion of Activity with multiple Fill In The Blanks Question of RegSAMActivity type
 #Pre-requisites: 1)RegSAMActivity SAM activity should be either created during runtime or use the saved RegSAMActivity
 Scenario:Creation of Random activity of RegSAMActivity type by adding section with multiple questions
@@ -256,13 +277,25 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
+When I Create "RegChildActivity" SAM activity with Behavioral Mode "Basic Random"
+And I perform "Save and Continue" for "Activity Details"
 And I perform "Create New Section" of name "Section1"
 And I perform "Create New Section" of name "Section2"
 And I perform "Create New Section" of name "Section3"
-Then I add '2' questions of type "Fill in the Blank" at Section "1"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
 And I add '1' questions of type "Fill in the Blank" at Section "2"
 And I add '1' questions of type "Fill in the Blank" at Section "3"
+
+Scenario:Creation of Random activity of RegSAMActivity type by adding single section
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildAbruptActivity" SAM activity with Behavioral Mode "Basic Random"
+And I perform "Save and Continue" for "Activity Details"
+And I perform "Create New Section" of name "Section1"
+Then I add '2' questions of type "Fill in the Blank" at Section "1"
 
 
 #Purpose:Add messages at activity level
@@ -312,12 +345,12 @@ When I perform "Save and Return" for "Preferences"
 Then I should see the successfull message "Activity added successfully."
 
 #Purpose:Add Activity to My Course and set as Shown
-Scenario:Add Activity to My Course and set as shown
+Scenario:Add RegChildActivity Activity to My Course and set as shown
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
 When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
 Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
-When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
+When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "RegHedWsInstructor"
 
 #------------------------------Add Section Direction Lines-----------------------
 #Purpose:Clicking on Add link of "Direction Lines" under each section
@@ -359,8 +392,6 @@ Then I should be on the "Create Random Activity" page
 Scenario: Save and Continue from Teaching Support tab
 When I perform "Save and Continue" for "Teaching Support"
 Then I should be on the "Create Random Activity" page
-
-
 
 
 #Purpose:Workspace or coursespace teacher navigate to "Course Materials" tab and selected "Add from Library" subtab

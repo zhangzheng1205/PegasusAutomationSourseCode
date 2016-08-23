@@ -291,4 +291,10 @@
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
   </data>
+  <data name="AddAsessment_Page_BehavioralMode_AdaptiveRadioButton_Id_Locator" xml:space="preserve">
+    <value>radAdaptive</value>
+  </data>
+  <data name="AddAsessment_Page_BehavioralMode_AssignmentRadioButton_Id_Locator" xml:space="preserve">
+    <value>radAssignment</value>
+  </data>
 </root>

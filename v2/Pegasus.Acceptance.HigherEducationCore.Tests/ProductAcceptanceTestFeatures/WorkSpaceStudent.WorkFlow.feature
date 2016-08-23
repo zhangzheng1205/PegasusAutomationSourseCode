@@ -41,23 +41,18 @@ Then I should successfully submit activity for grading
 #Purpose:To Verify Presentation window, when "Allow student to Save for Later" option is selected
 #Jira ID | Test Link ID: PEGASUS-45990|peg-8569,peg-8571
 Scenario:To Verify Presentation window when Allow student to Save for Later option is selected
+Given I am on "RegSAMActivity" window
 When I click on "Start" Button
 Then I should the availibility of Save For Later is "true" in "RegSAMActivity" Activity Presentation Window
-When I attempt "2" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window
+When I attempt "2" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window with "In Valid" answer
 And I navigate to next page
 Then I Verify Confirmation Message on Save the Activity for later
-And I should be on the "Course Materials" page
+
+
+Scenario:To Verify activity status as In Progress when Allow student to Save for Later option is selected
+Then I should be on the "Course Materials" page
 And I should see "In Progress" status for the activity "RegChildActivity" from "Course Materials" page
-When I open the "RegChildActivity" Activity
-Then I am on "RegSAMActivity" window
-When I click on "Start" Button
-Then I should see "2" questions answers saved in Page "1" of "RegSAMActivity" Activity Presentation Window
-When I navigate to next page
-And I attempt "1" questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window
-Then I should successfully submit activity for grading
-And I am on "RegSAMActivity" window
-When I click on "Close" Button
-Then I should see the "Passed" status for the activity "RegChildActivity"
+
 
 #Purpose:To verify Display of Direction Lines when “Enable activity-level direction lines” enabled
 #Purpose:To Verify Display Direction Lines on Each Page option is selected 
@@ -65,22 +60,30 @@ Then I should see the "Passed" status for the activity "RegChildActivity"
 #Purpose:To verify section level direction lines
 #Test Link ID:peg-8557
 Scenario:Verify Activity and Section Direction Lines
-Given I am on "RegSAMActivity" window
+When I open the "RegChildActivity" Activity
+Then I am on "RegSAMActivity" window
 When I click on "Start" Button
 Then I should see the availibility "Direction lines (instructions)" at Page is "True"
 And I should see the Section Direction lines for Section "1"
+
+Scenario:Student submit the activity with incorrect answer and fails
+Then I should see "2" questions answers saved in Page "1" of "RegSAMActivity" Activity Presentation Window
 When I navigate to next page
-Then I should see the availibility "Direction lines (instructions)" at Page is "True"
-And I should see the Section Direction lines for Section "3"
+And I attempt "1" questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window with "In Valid" answer
+When I navigate to next page
+And I attempt "1" questions listed in Page "3" of "RegSAMActivity" Activity Presentation Window with "Valid" answer
+When I submit the answered activity "RegSAMActivity" 
+
+Scenario:Student verify feedback status in presenation window
+Then I should be displayed with Feedback Icon in "RegSAMActivity" window
+When I click on the Feedback Icon in "RegSAMActivity" window
+Then I should displayed with "Correct Feedback" text in "RegSAMActivity" window
 
 
-#Purpose:To verify Beginning of activity message
-Scenario:To verify Beginning of activity message
-Given I am on "RegSAMActivity" window
-Then I should see the availability of "Beginning of activity" message is "True"
-And I should see see the availability of "Start" Button is "True"
-And I should see see the availability of "Close" Button is "True"
-When I click on "Start" Button
+Scenario:Student verify activity status as pass for correct submission
+When I click on "Return to Course" button in "RegSAMActivity" window
+Then I should be on the "Course Materials" page
+And I should see "Passed" status for the activity "RegChildActivity" from "Course Materials" page
 
 
 #Purpose:To verify Beginning of activity message
@@ -98,8 +101,6 @@ Then I should the availibility of Save For Later is "false" in "RegSAMActivity" 
 And I close the Activity window
 And I should be on the "Course Materials" page
 
-
-
 #Purpose:To Verify Display Direction Lines on Each Page option is not selected
 #Test Link ID:peg-8558
 Scenario:To Verify Display Direction Lines on Each Page option is not selected
@@ -112,5 +113,48 @@ Then I should see the availibility "Direction lines (instructions)" at Page is "
 Scenario: workspace student launch RegChildActivity from Course Materials page
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
-When I launch the  "RegChildActivity" Activity as "HedWsStudent" from "Course Materials" page
+When I launch the  "RegChildActivity" Activity as "RegHedWsStudent" from "Course Materials" page
 
+#Purpose:To verify Beginning of activity message
+Scenario:To verify Beginning of activity message
+Given I am on "RegSAMActivity" window
+Then I should see the availability of "Instructor Begin Message" message is "True"
+And I should see see the availability of "Start" Button is "True"
+And I should see see the availability of "Close" Button is "True"
+
+Scenario: Student abruptly closes the presenation window and validate
+When I click on "Start" Button
+And I close activity presenation window Abruptly
+Then I should be on the "Course Materials" page
+And I should see "Not started" status for the activity "RegChildAbruptActivity" from "Course Materials" page
+
+Scenario: Student Validate abruptly closed activity status in view submission page
+When I click on "View Submissions" of  "RegChildAbruptActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And I should see the message "Activity has been started but not yet submitted." in view submission page
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Student resubmit the assessment by chick on try again and secure 100 percent
+Given I am on "RegSAMActivity" window
+When I click on "Try Again" button of "RegSAMActivity" 
+When I attempt "2" questions listed in Page "1" of "RegSAMActivity" Activity Presentation Window with "Valid" answer
+When I navigate to next page
+And I attempt "1" questions listed in Page "2" of "RegSAMActivity" Activity Presentation Window with "Valid" answer
+When I navigate to next page
+And I attempt "1" questions listed in Page "3" of "RegSAMActivity" Activity Presentation Window with "Valid" answer
+When I submit the answered activity "RegSAMActivity" 
+
+Scenario: Workspace student launch RegChildAbruptActivity from Course Materials page
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I launch the  "RegChildAbruptActivity" Activity as "RegHedWsStudent" from "Course Materials" page
+
+Scenario: Student Validate 100 percent score in view submission page
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I click on "View Submissions" of  "RegChildActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And  I should be displayed with "100" score page
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page

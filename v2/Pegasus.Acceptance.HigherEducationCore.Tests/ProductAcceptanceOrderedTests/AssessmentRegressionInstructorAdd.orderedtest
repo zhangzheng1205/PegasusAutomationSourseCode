@@ -1,3 +1,3 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="OrderedTest2" storage="d:\regressionassessmentautomationjune23\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\orderedtest2.orderedtest" id="781e31d3-e69a-4f61-892f-c8f1cc6a76db" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="assessmentregressioninstructoradd" storage="d:\automationforcheckinassessment\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\assessmentregressioninstructoradd.orderedtest" id="781e31d3-e69a-4f61-892f-c8f1cc6a76db" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
 </OrderedTest>

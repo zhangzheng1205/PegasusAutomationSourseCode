@@ -961,6 +961,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #_ctl0_APH_feedback&amp;gt;b:nth-child(1).
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Feedback_Icon_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Feedback_Icon_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0:APH:btnfinish.
         /// </summary>
         internal static string CoursePreviewUX_Page_Finish_Button_Id_Locator {

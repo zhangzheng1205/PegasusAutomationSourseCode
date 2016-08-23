@@ -728,24 +728,32 @@ namespace Pegasus.Pages.UI_Pages
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultBeginMessage_Textbox_ID));
                         base.ClearTextById(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultBeginMessage_Textbox_ID);
+                        base.FillTextBoxById(ActivitiesPreferencesPageResource.
+                           ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultBeginMessage_Textbox_ID, "Default Begin Message");
 
                         // Clear text box "Instructor Message"  of Beginning of activity
                         base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorBeginMessage_Textbox_ID));
                         base.ClearTextById(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorBeginMessage_Textbox_ID);
+                        base.FillTextBoxById(ActivitiesPreferencesPageResource.
+                        ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorBeginMessage_Textbox_ID, "Instructor Begin Message");
 
                         // Clear text box "Default Message" of Beginning of activity
                         base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultEndMessage_Textbox_ID));
                         base.ClearTextById(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultEndMessage_Textbox_ID);
-                    
+                        base.FillTextBoxById(ActivitiesPreferencesPageResource.
+                        ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_DefaultEndMessage_Textbox_ID, "Default End Message");
+
                         // Clear text box "Instructor Message"  of End of activity
                         base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorEndMessage_Textbox_ID));
                         base.ClearTextById(ActivitiesPreferencesPageResource.
                         ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorEndMessage_Textbox_ID);
+                        base.FillTextBoxById(ActivitiesPreferencesPageResource.
+                        ActivitiesPreferences_Page_ActivityTypePrefernce_Messages_InstructorEndMessage_Textbox_ID, "Instructor End Message");
                         break;
 
                 case "Timing":

@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Get message from view submission popup
         /// </summary>
-        /// <returns></returns>
+        /// <returns>This methord returns the message in view submission page.</returns>
         public string GetMessageInViewSubmission()
         {
             //Get Message In Search Catalog
@@ -343,13 +343,17 @@ namespace Pegasus.Pages.UI_Pages
                 //Select View Submission Window
                 this.SelectViewSubmissionWindow();
 
+                // Get grades from view submission popup
                 string getGrades = base.GetElementTextByClassName("item3");
 
                 if (getGrades == "--")
                 {
-                    IWebElement getGradesProperty = base.GetWebElementPropertiesByClassName("item3");
+                    // Click on the grades based on the match condition
+                    IWebElement getGradesProperty = base.GetWebElementPropertiesByClassName(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Score_ClassName_Locator);
                     base.ClickByJavaScriptExecutor(getGradesProperty);
-                    getMessage = base.GetElementTextByClassName("pop_txt");
+                    getMessage = base.GetElementTextByClassName(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_GetMessageText_ClassName);
                 }
             }
             catch (Exception e)
@@ -360,6 +364,45 @@ namespace Pegasus.Pages.UI_Pages
                 , base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
+
+        /// <summary>
+        /// Get message from view submission popup
+        /// </summary>
+        /// <returns>This methord returns the message in view submission page.</returns>
+        public int GetScoreInViewSubmission(int score)
+        {
+            //Get Message In Search Catalog
+            Logger.LogMethodEntry("CourseCatalogMainPage", "GetMessageInSearchCatalog"
+                 , base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getMessage = 0;
+            try
+            {
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+
+                // Get grades from view submission popup
+                string getGrades = base.GetElementTextByClassName("item3");
+
+                if (getGrades == "--")
+                {
+                    // Click on the grades based on the match condition
+                    IWebElement getGradesProperty = base.GetWebElementPropertiesByClassName(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Score_ClassName_Locator);
+                    base.ClickByJavaScriptExecutor(getGradesProperty);
+                    //getMessage = base.GetElementTextByClassName(ViewSubmissionPageResource.
+                    //    ViewSubmission_Page_ViewSubmission_GetMessageText_ClassName);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseCatalogMainPage", "GetMessageInSearchCatalog"
+                , base.IsTakeScreenShotDuringEntryExit);
+            return getMessage;
+        }
+
 
         /// <summary>
         /// Get View All Submission Count.
@@ -393,6 +436,33 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ViewSubmissionPage", "GetViewAllSubmissionCount",
                            base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionCount.ToString();
+        }
+
+        /// <summary>
+        /// Get Student score
+        /// </summary>
+        /// <returns></returns>
+        public string GetStudentScoreViewSubmission()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+            "GetStudentScore", base.IsTakeScreenShotDuringEntryExit);
+            string getScore = string.Empty;
+            //Select View Submission Window
+            this.SelectViewSubmissionWindow();
+            base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                ViewSubmission_Page_StudentSubmission_Grade_Id_Locator));
+            //Get Score
+            getScore = base.GetElementTextById(ViewSubmissionPageResource.
+                ViewSubmission_Page_StudentSubmission_Grade_Id_Locator);
+            // Eliminate % delimeter from getScore
+            getScore = getScore.Replace(ViewSubmissionPageResource.
+                ViewSubmission_Page_ViewSubmission_Grade_Delimiter, string.Empty).Trim();
+            //close the view submission window
+            base.CloseBrowserWindow();
+            Logger.LogMethodEntry("ViewSubmissionPage",
+            "GetStudentScore", base.IsTakeScreenShotDuringEntryExit);
+
+            return getScore;
         }
 
         /// <summary>

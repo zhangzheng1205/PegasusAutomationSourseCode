@@ -944,18 +944,88 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As RegWorkSpaceTeacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLoginAsRegWorkSpaceTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As RegWorkSpaceTeacher", ((string[])(null)));
+#line 312
+this.ScenarioSetup(scenarioInfo);
+#line 313
+testRunner.Given("I browsed the login url for \"RegHedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 314
+testRunner.When("I logged into the Pegasus as \"RegHedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 315
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User LogOut As RegWorkSpaceTeacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLogOutAsRegWorkSpaceTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As RegWorkSpaceTeacher", ((string[])(null)));
+#line 318
+this.ScenarioSetup(scenarioInfo);
+#line 319
+testRunner.When("I \"Sign out\" from the \"RegHedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 320
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Logout as RegHedWsStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLogoutAsRegHedWsStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logout as RegHedWsStudent", ((string[])(null)));
+#line 323
+this.ScenarioSetup(scenarioInfo);
+#line 324
+testRunner.When("I \"Sign out\" from the \"RegHedWsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 325
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As RegWorkSpaceStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLoginAsRegWorkSpaceStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As RegWorkSpaceStudent", ((string[])(null)));
+#line 328
+this.ScenarioSetup(scenarioInfo);
+#line 329
+testRunner.Given("I browsed the login url for \"RegHedWsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 330
+testRunner.When("I logged into the Pegasus as \"RegHedWsStudent\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 331
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WLCsSMSInstructor Login to MySpanishLabCourse")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
         public virtual void WLCsSMSInstructorLoginToMySpanishLabCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLCsSMSInstructor Login to MySpanishLabCourse", ((string[])(null)));
-#line 314
+#line 335
 this.ScenarioSetup(scenarioInfo);
-#line 315
+#line 336
 testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 316
+#line 337
 testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 317
+#line 338
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -967,13 +1037,13 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
         public virtual void WLCsSMSStudentLoginToMySpanishLabCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WLCsSMSStudent Login to MySpanishLabCourse", ((string[])(null)));
-#line 319
+#line 340
 this.ScenarioSetup(scenarioInfo);
-#line 320
+#line 341
 testRunner.Given("I browsed the login url for \"WLCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 321
+#line 342
 testRunner.When("I logged into the Pegasus as \"WLCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 322
+#line 343
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

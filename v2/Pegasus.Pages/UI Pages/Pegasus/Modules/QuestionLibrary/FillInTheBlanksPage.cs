@@ -21,7 +21,7 @@ namespace Pegasus.Pages.UI_Pages
         ///  Static instance of the logger
         /// </summary>
         private static Logger logger = Logger.GetInstance(typeof(FillInTheBlanksPage));
-        
+
         /// <summary>
         /// Create 'Fill In The Blanks' Question
         /// </summary>
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(FillInTheBlanksPageResource.
                     FillInTheBlanksPage_WaitTime_Value));
                 //Add Text for the Blank
-                this.AddTextForQuestionAndBlankAtTop(questionDetails);                
+                this.AddTextForQuestionAndBlankAtTop(questionDetails);
                 //Click on the 'Add Score And Feedback' tab
                 this.ClickOnAddScoreAndFeedBackTab();
                 //Select Partial Grading option
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
 
         public void CreateFillInBlankAtActivityCreation()
         {
-          
+
             //Create Question
             string questionDetails = this.EnterQuestionTitle().ToString();
             Guid activity = Guid.NewGuid();
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("FillInTheBlanksPage", "AddTextForQuestionAndBlankAtTop",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-                
+
 
         /// <summary>
         /// Add Text Field At Top
@@ -145,8 +145,8 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAddTextField);
             //Wait for the Add Text Drop Down
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
-                FillInTheBlanksPage_AddBlank_AddText_DropDown_Div_Id_Locator));  
-            IWebElement getAddTopLink=base.GetWebElementPropertiesByPartialLinkText
+                FillInTheBlanksPage_AddBlank_AddText_DropDown_Div_Id_Locator));
+            IWebElement getAddTopLink = base.GetWebElementPropertiesByPartialLinkText
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_AddAtTop_PartialLink_Text_Locator);
             //Click on the 'Add at Top' option
@@ -196,22 +196,22 @@ namespace Pegasus.Pages.UI_Pages
                 FillInTheBlanksPage_CharacterPallette_a_Id_Locator);
             //Add a character
             base.ClickByJavaScriptExecutor(getCharactera);
-            IWebElement getCharactere=base.GetWebElementPropertiesById
+            IWebElement getCharactere = base.GetWebElementPropertiesById
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CharacterPallette_e_Id_Locator);
             //Add e character
             base.ClickByJavaScriptExecutor(getCharactere);
-            IWebElement getCharacteri=base.GetWebElementPropertiesById
+            IWebElement getCharacteri = base.GetWebElementPropertiesById
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CharacterPallette_i_Id_Locator);
             //Add i character
             base.ClickByJavaScriptExecutor(getCharacteri);
-            IWebElement getCharactero=base.GetWebElementPropertiesById
+            IWebElement getCharactero = base.GetWebElementPropertiesById
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CharacterPallette_o_Id_Locator);
             //Add o character
             base.ClickByJavaScriptExecutor(getCharactero);
-            IWebElement getCharacteru=base.GetWebElementPropertiesById
+            IWebElement getCharacteru = base.GetWebElementPropertiesById
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CharacterPallette_u_Id_Locator);
             //Add u character
@@ -267,7 +267,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("FillInTheBlanksPage", "ClickOnSaveAndReturnButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Switch to the Parent Window
-           // base.SwitchToDefaultPageContent();
+            // base.SwitchToDefaultPageContent();
             //Wait and click on the Save Button
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_SaveAndReturn_Id_Locator));
@@ -297,6 +297,26 @@ namespace Pegasus.Pages.UI_Pages
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_AddScoreAndFeedback_Tab_Id_Locator);
             base.ClickByJavaScriptExecutor(getScoreFeedback);
+
+            // Fill text in "Feedback for correct answer" textbox
+            //FillInTheBlanksPageResource.FillInTheBlanksPage_FeedbackForCorrectAnswe_TextBox_ID
+            base.WaitForElement(By.Id(FillInTheBlanksPageResource.
+                FillInTheBlanksPage_FeedbackForCorrectAnswe_TextBox_ID));
+            base.ClearTextById(FillInTheBlanksPageResource.
+                FillInTheBlanksPage_FeedbackForCorrectAnswe_TextBox_ID);
+            base.FillTextBoxById(FillInTheBlanksPageResource.
+                FillInTheBlanksPage_FeedbackForCorrectAnswe_TextBox_ID, FillInTheBlanksPageResource.
+                FillInTheBlanksPage_FeedbackForCorrectAnswe_Text_Value);
+
+            // Fill text in "Feedback for incorrect answer" textbox
+            base.WaitForElement(By.Id(FillInTheBlanksPageResource.
+            FillInTheBlanksPage_FeedbackForInCorrectAnswer_TextBox_ID));
+            base.ClearTextById(FillInTheBlanksPageResource.
+            FillInTheBlanksPage_FeedbackForInCorrectAnswer_TextBox_ID);
+            base.FillTextBoxById(FillInTheBlanksPageResource.
+            FillInTheBlanksPage_FeedbackForInCorrectAnswer_TextBox_ID, FillInTheBlanksPageResource.
+            FillInTheBlanksPage_FeedbackForInCorrectAnswer_Text_Value);
+
             logger.LogMethodExit("FillInTheBlanksPage", "ClickOnAddScoreAndFeedBackTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -312,7 +332,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the 'Partial Grading' Radio Button
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_PartialGrading_RadioButton_Id_Locator));
-            IWebElement getPartialRadioButton=base.GetWebElementPropertiesById
+            IWebElement getPartialRadioButton = base.GetWebElementPropertiesById
                 (FillInTheBlanksPageResource.
                 FillInTheBlanksPage_PartialGrading_RadioButton_Id_Locator);
             base.ClickByJavaScriptExecutor(getPartialRadioButton);

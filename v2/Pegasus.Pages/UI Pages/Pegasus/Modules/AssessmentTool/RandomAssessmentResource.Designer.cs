@@ -142,6 +142,87 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to radCorrectDue.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_CorrectAfterTheDueDate_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_CorrectAfterTheDueDate_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radCorrectAlways.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_CorrectAlways_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_CorrectAlways_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radCorrectX.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_CorrectAtAttempt_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_CorrectAtAttempt_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radCorrectNever.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_CorrectNever_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_CorrectNever_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radFeedbackAlways.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_FeedbackAlways_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_FeedbackAlways_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radFeedbackNever.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_FeedbackNever_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_FeedbackNever_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radFeedbackX.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_FeedbackX_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_FeedbackX_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtShowFeedBackAttemptAt.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_ShowFeedbackattempt_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_ShowFeedbackattempt_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtShowCorrectAnswerAttemptAt.
+        /// </summary>
+        internal static string RandomAssessment_Page_FeedBackPreference_txtShowCorrectAnswerAttemptAt_Id {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_FeedBackPreference_txtShowCorrectAnswerAttemptAt_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to txtShowCorrectAnswerAttemptAt.
         /// </summary>
         internal static string RandomAssessment_Page_InputAtAttempt_Id_Locator {

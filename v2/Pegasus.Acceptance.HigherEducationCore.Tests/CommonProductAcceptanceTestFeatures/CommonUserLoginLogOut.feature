@@ -308,6 +308,27 @@ Given I browsed the login url for "HedWsStudent"
 When I logged into the Pegasus as "HedWsStudent" in "WorkSpace"
 Then I should logged in successfully
 
+#Purpose:Verify The User Login As WorkSpaceTeacher GlobalHome
+Scenario: User Login As RegWorkSpaceTeacher 
+Given I browsed the login url for "RegHedWsInstructor"
+When I logged into the Pegasus as "RegHedWsInstructor" in "WorkSpace"
+Then I should logged in successfully
+
+#Purpose:Verify The User LogOut As Regression WorkSpaceTeacher
+Scenario: User LogOut As RegWorkSpaceTeacher
+When I "Sign out" from the "RegHedWsInstructor"
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose: Logout as Word Language Regression Student
+Scenario: User Logout as RegHedWsStudent
+When I "Sign out" from the "RegHedWsStudent"
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose:Verify The User Login As Regression WorkSpaceStudent GlobalHome
+Scenario: User Login As RegWorkSpaceStudent
+Given I browsed the login url for "RegHedWsStudent"
+When I logged into the Pegasus as "RegHedWsStudent" in "WorkSpace"
+Then I should logged in successfully
 
 #Amplifire
 #Purpose: Verify The User Login As CourseSpaceSMSInstructor To an MSL Amplifire enabled course

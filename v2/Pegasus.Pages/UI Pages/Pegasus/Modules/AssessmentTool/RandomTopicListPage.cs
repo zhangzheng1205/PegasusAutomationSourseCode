@@ -815,7 +815,8 @@ namespace Pegasus.Pages.UI_Pages
                             break;
                         case "Questions": idValue = "cmdTabTopicsNext";
                             break;
-                        case "Activity Details": idValue = "tdcmdTabAssessmentNext";
+                        case "Activity Details": idValue = AddAssessmentPageResources.
+                        AddAsessment_Page_SaveAndContinue_Button_Id_Locator; ;
                             break; 
                         #endregion
                     }

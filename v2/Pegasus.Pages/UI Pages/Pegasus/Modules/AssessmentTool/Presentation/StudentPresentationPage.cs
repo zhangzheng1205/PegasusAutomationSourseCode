@@ -7369,9 +7369,6 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Save all the Text fields in a collection
-                bool kkjjd = base.IsElementPresent(By.ClassName("text"),10);
-                bool jj = base.IsElementPresent(By.CssSelector("div[style*='visible'] input[answerme='true'][type='text']"),10);
-                //ICollection<IWebElement> textFields = base.GetWebElementsCollectionByClassName("text");
                 ICollection<IWebElement> textFields = base.
                       GetWebElementsCollectionByCssSelector("div[style*='visible'] input[answerme='true'][type='text']");
                 //Iterate and enter values in each text fields
@@ -7380,6 +7377,80 @@ namespace Pegasus.Pages.UI_Pages
                     base.PerformMoveToElementClickAction(item);
                     Actions builder = new Actions(WebDriver);
                     builder.SendKeys("Answer").Perform();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Attempt Fill In The Blanks Questions at Presentation Window.
+        /// </summary>
+        /// <param name="questionCount">Number of Question to be answered.</param>
+        public void AttemptFillInTheBlanksQuestionsValidAnswer(int questionCount)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+              "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Save all the Text fields in a collection
+                ICollection<IWebElement> textFields = base.
+                      GetWebElementsCollectionByCssSelector("div[style*='visible'] input[answerme='true'][type='text']");
+                //Iterate and enter values in each text fields
+                foreach (var item in textFields)
+                {
+
+                    base.PerformMoveToElementClickAction(item);
+                    Actions builder = new Actions(WebDriver);
+                    builder.Click(item)
+                        .SendKeys(Keys.End)
+                        .KeyDown(Keys.Shift)
+                        .SendKeys(Keys.Home)
+                        .KeyUp(Keys.Shift)
+                        .SendKeys(Keys.Backspace);
+                    builder.SendKeys("Answer").Perform();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Attempt Fill In The Blanks Questions at Presentation Window.
+        /// </summary>
+        /// <param name="questionCount">Number of Question to be answered.</param>
+        public void AttemptFillInTheBlanksQuestionsInValidAnswer(int questionCount)
+        {
+            // Attempt Fill In The Blanks Questions at Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+              "AttemptFillInTheBlanksQuestions", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Save all the Text fields in a collection
+                ICollection<IWebElement> textFields = base.
+                      GetWebElementsCollectionByCssSelector("div[style*='visible'] input[answerme='true'][type='text']");
+                //Iterate and enter values in each text fields
+                foreach (var item in textFields)
+                {
+                    base.PerformMoveToElementClickAction(item);
+                    Actions builder = new Actions(WebDriver);
+                    builder.Click(item)
+                        .SendKeys(Keys.End)
+                        .KeyDown(Keys.Shift)
+                        .SendKeys(Keys.Home)
+                        .KeyUp(Keys.Shift)
+                        .SendKeys(Keys.Backspace);
+                    builder.SendKeys("Incorrect Answer").Perform();
                 }
             }
             catch (Exception e)
@@ -7505,13 +7576,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Save all the Text fields in a collection
-                bool hhj = base.IsElementPresent(By.XPath("// td[@class='themeItemMiddleCommon1']/div"), 10);
-                int getCount = base.GetElementCountByXPath("//td[@class='themeItemMiddleCommon1']/div/div");
-                //ICollection<IWebElement> textFields = base.
-                //      GetWebElementsCollectionByCssSelector("div[style*='visible'] input[value='Answer'][type='text']");
-
-                ICollection<IWebElement> textFields1 = base.GetWebElementsCollectionByXPath("//td[@class='themeItemMiddleCommon1']/div/div");
-                int textFields = textFields1.Count - 1;
+                int getCount = base.GetElementCountByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_QuestionTextBox_Count_XPath_Locator);
+                ICollection<IWebElement> textField = base.GetWebElementsCollectionByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_QuestionTextBox_Count_XPath_Locator);
+                int textFields = textField.Count - 1;
                 //Iterate and enter values in each text fields
                 if (questionCount == textFields)
                     answerPresent = true;
@@ -7564,15 +7633,18 @@ namespace Pegasus.Pages.UI_Pages
           //Expected Message string
           try
           {
+              //Instructor Begin Message
+              //This is Beginning of activity message
               string expectedMessage = "This is " + messageType + " message";
-             
+
               //Get the actual Availability status
               messagePresent = base.IsElementPresent(By.Id("Instructions"), 10);
               // Verify the available message string
               if (messagePresent)
-              {
+              {//This is Beginning of activity message
                   string actualMessage = base.GetElementInnerTextById("Instructions");
-                  if (expectedMessage == actualMessage)
+                  string actuaDirectionLinelMessage = actualMessage.Substring(23).Trim().ToString();
+                  if (messageType == actuaDirectionLinelMessage)
                       messageTextPresent = true;
               }
               //Set true when both message is available and the message string is correct
@@ -7584,12 +7656,73 @@ namespace Pegasus.Pages.UI_Pages
 
               ExceptionHandler.HandleException(e);
           }
-        logger.LogMethodExit("StudentPresentationPage", "VerifyMessageStatus",
-                  base.IsTakeScreenShotDuringEntryExit);
-        //Return the bool value for assertion
-        return messagePass;
+          logger.LogMethodExit("StudentPresentationPage", "VerifyMessageStatus",
+                    base.IsTakeScreenShotDuringEntryExit);
+          //Return the bool value for assertion
+          return messagePass;
 
     }
+
+        /// <summary>
+        /// Student click on return to course button.
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        public void ClickReturnToCourseButtonStudentPresentation(string buttonName,
+            Activity.ActivityTypeEnum activityType)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "ClickReturnToCourseButtonStudentPresentation",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string activityName = Activity.Get(activityType).Name.ToString();
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(activityName);
+                base.SelectWindow(activityName);
+
+                // Click on "Return to Course" button
+                base.WaitForElement(By.LinkText(buttonName));
+                base.ClickButtonByLinkText(buttonName);
+
+                // Click on Close button
+                base.WaitForElement(By.LinkText("Close"));
+                base.ClickButtonByLinkText("Close");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "ClickReturnToCourseButtonStudentPresentation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Student click on return to course button.
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        public void ClickOnButtonStudentPresentation(string buttonName,
+            Activity.ActivityTypeEnum activityType)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "ClickReturnToCourseButtonStudentPresentation",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string activityName = Activity.Get(activityType).Name.ToString();
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(activityName);
+                base.SelectWindow(activityName);
+
+                // Click on "Return to Course" button
+                base.WaitForElement(By.LinkText(buttonName));
+                base.ClickButtonByLinkText(buttonName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "ClickReturnToCourseButtonStudentPresentation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Verify Message Button Availability.
@@ -7723,9 +7856,23 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void ClosePersenationWindowAbruptly()
         {
-            // Close browser popup
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            base.CloseBrowserPopUpByJavaScriptExecutor();
+            logger.LogMethodEntry("StudentPresentationPage", "ClosePersenationWindowAbruptly",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Close browser popup
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                // Select window
+                base.SelectWindow(base.GetPageTitle);
+                // Abruptly close the popup
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "ClosePersenationWindowAbruptly",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

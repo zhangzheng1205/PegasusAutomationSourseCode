@@ -160,11 +160,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to radAdaptive.
+        /// </summary>
+        internal static string AddAsessment_Page_BehavioralMode_AdaptiveRadioButton_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddAsessment_Page_BehavioralMode_AdaptiveRadioButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to radAssignment.
         /// </summary>
         internal static string AddAsessment_Page_BehavioralMode_Assignment_RadioButton_Id_Locator {
             get {
                 return ResourceManager.GetString("AddAsessment_Page_BehavioralMode_Assignment_RadioButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to radAssignment.
+        /// </summary>
+        internal static string AddAsessment_Page_BehavioralMode_AssignmentRadioButton_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddAsessment_Page_BehavioralMode_AssignmentRadioButton_Id_Locator", resourceCulture);
             }
         }
         

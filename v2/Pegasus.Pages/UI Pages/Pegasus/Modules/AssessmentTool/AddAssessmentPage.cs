@@ -154,6 +154,173 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Behavioral Mode Type.
+        /// </summary>
+        public void SelectBehavioralModeType(string behavioralMode)
+        {
+            //Click the Radio button
+            logger.LogMethodEntry("AddAssessmentPage",
+                "ClickTheBasicRandomRadioButton",
+                 base.IsTakeScreenShotDuringEntryExit);
+            switch (behavioralMode)
+            {
+                case "Basic Random":
+                    //Wait for the element
+                    base.WaitForElement(By.Id(AddAssessmentPageResources.
+                         AddAsessment_Page_BehavioralMode_RedioButton_Id_Locator));
+                    IWebElement getBasicRadioButton = base.GetWebElementPropertiesById(
+                        AddAssessmentPageResources.
+                         AddAsessment_Page_BehavioralMode_RedioButton_Id_Locator);
+                    //Click on Radio Button
+                    base.ClickByJavaScriptExecutor(getBasicRadioButton);
+                    break;
+
+                case "Adaptive":
+                    //Wait for the element
+                    base.WaitForElement(By.Id(AddAssessmentPageResources.
+                         AddAsessment_Page_BehavioralMode_RedioButton_Id_Locator));
+                    IWebElement getAdaptiveRadioButton = base.GetWebElementPropertiesById(
+                        AddAssessmentPageResources.
+                         AddAsessment_Page_BehavioralMode_AdaptiveRadioButton_Id_Locator);
+                    //Click on Radio Button 
+                    base.ClickByJavaScriptExecutor(getAdaptiveRadioButton);
+                    break;
+
+                case "Assignment":
+                    //Wait for the element
+                    base.WaitForElement(By.Id(AddAssessmentPageResources.
+                         AddAsessment_Page_BehavioralMode_RedioButton_Id_Locator));
+                    IWebElement getAssignmentRadioButton = base.GetWebElementPropertiesById(
+                        AddAssessmentPageResources.
+                         AddAsessment_Page_BehavioralMode_AssignmentRadioButton_Id_Locator);
+                    //Click on Radio Button 
+                    base.ClickByJavaScriptExecutor(getAssignmentRadioButton);
+                    break;
+
+            }
+            logger.LogMethodExit("AddAssessmentPage",
+                "ClickTheBasicRandomRadioButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Add question from Select Questions From Bank
+        /// </summary>
+        /// <param name="questionType">This is question type enum.</param>
+        public void AddQuestionFromSelectQuestionsFromBank(Question.QuestionTypeEnum questionType)
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "AddQuestionFromSelectQuestionsFromBank", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                this.SelectQuestionFromBankForBasicRandom(questionType);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "AddQuestionFromSelectQuestionsFromBank", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Select Question From Bank for Basic Random.
+        /// </summary>
+        public void SelectQuestionFromBankForBasicRandom(Question.QuestionTypeEnum questionType)
+        {
+            //Select Question From Bank for Basic Random
+            logger.LogMethodEntry("AddAssessmentPage", "SelectQuestionFromBankForBasicRandom",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                Question question = Question.Get(questionType);
+                string questionName = question.Name.ToString();
+
+                // Switch to IFrame
+                base.WaitForElement(By.Id("frmTopic"));
+                base.SwitchToIFrameById("frmTopic");
+
+                IWebElement getAddQuestionsLink = base.GetWebElementPropertiesById("cmdadd");
+                base.ClickByJavaScriptExecutor(getAddQuestionsLink);
+
+                // Click "Select Questions from Bank" option
+                base.WaitForElement(By.ClassName("trrandomstyle3"));
+                IWebElement getSelectQuestionsFromBank = base.GetWebElementPropertiesByClassName("trrandomstyle3");
+                base.PerformMouseClickAction(getSelectQuestionsFromBank);
+                base.SwitchToLastOpenedWindow();
+                base.WaitUntilWindowLoads("Select Questions");
+                base.SelectWindow("Select Questions");
+                base.SwitchToIFrameById("_ctl0_PopupPageContent_ifrmLeft"); ;
+
+                // Enter the search text
+                base.WaitForElement(By.ClassName("txtESearchc"));
+                base.ClearTextByClassName("txtESearchc");
+                base.FillTextBoxByClassName("txtESearchc", "Culture Close-Up: United States");
+
+                // Click Go button
+                base.WaitForElement(By.Id("btnContainer"));
+                base.ClickButtonById("btnContainer");
+
+                // Select select all check box
+                base.WaitForElement(By.ClassName("ES_PreviewMultiSel"));
+                base.SelectCheckBoxByClassName("ES_PreviewMultiSel");
+
+                // Wait for popup to load
+                base.WaitUntilWindowLoads("Select Questions");
+                base.SelectWindow("Select Questions");
+
+                //Click "Add and Close" button
+                base.WaitForElement(By.LinkText("Add and Close"));
+                base.ClickButtonByLinkText("Add and Close");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "SelectQuestionFromBankForBasicRandom",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Details and Click on Add Question.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity type.</param>
+        /// <param name="behavioralMode">This is behavioral Mode.</param>
+        public void EnterActivityDetails(Activity.ActivityTypeEnum activityTypeEnum, string behavioralMode)
+        {
+            //Enter Activity Details and Click on Add Question
+            logger.LogMethodEntry("AddAssessmentPage",
+                "EnterActivityDetailsandClickonAddQuestion",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Generate Activity Name GUID
+                Guid activity = Guid.NewGuid();
+                String date = DateTime.Now.ToString("yyyy/MM/dd");
+                string randomValue = activity.ToString().Split('-')[0];
+                string activityName = "Auto-" + date + "-" + randomValue + "-Activity";
+
+                //Select Window
+                this.SelectCreateActivityWindow();
+                //Enter Activity Title
+                this.EnterActivityTitle(activityName);
+                //Click The Basic Random Radio Button
+                this.SelectBehavioralModeType(behavioralMode);
+                //Store Gradable NonGradable Asset
+                this.StoreGradableAsset(activityName, activityTypeEnum);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage",
+                "EnterActivityDetailsandClickonAddQuestion",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Store NonLicensed Activity
         /// </summary>
         /// <param name="activityTest">This is activity</param>
