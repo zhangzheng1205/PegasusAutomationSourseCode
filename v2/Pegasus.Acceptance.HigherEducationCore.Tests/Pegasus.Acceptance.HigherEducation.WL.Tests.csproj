@@ -585,10 +585,10 @@
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionInstructorAdd.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\AssessmentStudentPresenation.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionStudentOnly.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionTeacher.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionTeacherOnly.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegression.orderedtest">
