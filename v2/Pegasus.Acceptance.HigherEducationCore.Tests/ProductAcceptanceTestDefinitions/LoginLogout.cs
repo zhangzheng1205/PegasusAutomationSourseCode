@@ -174,6 +174,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 case User.UserTypeEnum.HedWsInstructor:
                 case User.UserTypeEnum.WLCsSmsInstructor:
                 case User.UserTypeEnum.WLCsSmsStudent:
+                case User.UserTypeEnum.RegHedWsInstructor:
+                case User.UserTypeEnum.RegHedWsStudent:
                 case User.UserTypeEnum.HedWsStudent:
                     // Click Sign out link 
                     new AdminToolPage().SignOutByHigherEdUsers(linkSignOut);
