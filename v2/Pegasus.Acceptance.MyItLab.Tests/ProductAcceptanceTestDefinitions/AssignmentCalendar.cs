@@ -630,15 +630,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         ///  /// Drag and drop 'Word Chapter 1: Simulation Activities' folder to current date.
         /// </summary>
-        [When(@"I drag and drop the 'Word Chapter 1: Simulation Activities' folder to the current date")]
-        public void DragAndDropFolderToCurrentDate()
+        [When(@"I drag and drop the ""(.*)"" folder to the current date")]
+       public void DragAndDropFolderToCurrentDate(string activityName)
         {
             // Drag and drop a folder asset to current date.
             Logger.LogMethodEntry("AssignmentCalendar",
                "DragAndDropFolderToCurrentDate",
                base.IsTakeScreenShotDuringEntryExit);
             // Drag and drop a folder asset to current date.
-            new CalendarHedDefaultUxPage().DragAndDropWordFolderAsset();
+            new CalendarHedDefaultUxPage().DragAndDropFolderAsset(activityName);
+            //the commented code stopped working due to compatability issues with recent webdriver/browser.
+            //new CalendarHedDefaultUxPage().DragAndDropWordFolderAsset();
             Logger.LogMethodExit("AssignmentCalendar",
               "DragAndDropFolderToCurrentDate",
               base.IsTakeScreenShotDuringEntryExit);
