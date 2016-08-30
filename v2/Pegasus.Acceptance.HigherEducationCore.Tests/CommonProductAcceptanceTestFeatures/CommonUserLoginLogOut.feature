@@ -337,9 +337,9 @@ Given I browsed the login url for "WLCsSmsInstructor"
 When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 
-Scenario: WLCsSMSStudent Login to MySpanishLabCourse
-Given I browsed the login url for "WLCsSmsStudent"
-When I logged into the Pegasus as "WLCsSmsStudent" in "CourseSpace"
+Scenario: AmpCsSmsStudent Login to MySpanishLabCourse
+Given I browsed the login url for "AmpCsSmsStudent"
+When I logged into the Pegasus as "AmpCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 
 
