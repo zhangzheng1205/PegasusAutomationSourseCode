@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="AmplifireIntegration" storage="d:\11feb16-master\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\amplifireintegration.orderedtest" id="80b920ac-434e-43a5-b0c3-feda127c0b9d" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="be9e3e8e-3b3e-4ef9-9925-5b109da5c8c4" name="amplifireinstructor" storage="amplifireinstructor.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7cbf2383-11f2-423d-ac9c-c36b339084bb" name="amplifirestudent" storage="amplifirestudent.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -106,7 +106,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.CourseMaterials
            {
                base.SwitchToWindow("Course Materials");
                base.SwitchToDefaultPageContent();
-               bool x = base.IsElementPresent(By.Id("_ctl0_innerBody"), 15);
                base.WaitForElement(By.Id("ifrmCoursePreview"));
                
                base.SwitchToIFrameById("ifrmCoursePreview");
