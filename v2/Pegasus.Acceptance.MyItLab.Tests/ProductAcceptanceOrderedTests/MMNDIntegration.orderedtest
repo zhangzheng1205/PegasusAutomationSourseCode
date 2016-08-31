@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="MMNDIntegration" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\mmndintegration.orderedtest" id="4cfba654-f9fb-44e4-a574-cb72840dade1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="f8ed8091-6686-4783-81e4-a1d6a1fc6c20" name="mmndstandaloneins" storage="mmndstandaloneins.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="778ed85b-ea54-4379-98d4-3e0217fd9b7c" name="mmndstandalonestu" storage="mmndstandalonestu.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

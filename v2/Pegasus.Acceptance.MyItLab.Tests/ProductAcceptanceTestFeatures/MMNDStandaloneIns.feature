@@ -21,3 +21,7 @@ Then user should land inside the "MMNDCoOrdinate" course
 Scenario: MMND Instructor access the Pegasus link
 Given user access the Pegaus link "Grades"
 Then user should land inside the Grades page
+
+Scenario: MMND User verify Pegasus Crossover
+Given I navigate to "Notifications"
+Then I should crossover to Pegasus Notification Page

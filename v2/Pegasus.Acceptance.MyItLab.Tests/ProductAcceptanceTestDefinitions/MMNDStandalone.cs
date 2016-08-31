@@ -112,7 +112,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             MMNDStandalonelogger.LogMethodEntry("CommonSteps", "InsideThePegasusPage",
              base.IsTakeScreenShotDuringEntryExit);
 
-
+         
 
             try
             {
@@ -181,7 +181,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             MMNDStandalonelogger.LogMethodExit("CommonSteps", "TheGradesPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
+        /// <summary>
+        ///  Click a link at MMND.
+        /// </summary>
+        /// <param name="linkName">This is the link name.</param>
+        [Given(@"I navigate to ""(.*)""")]
+        public void NavigateToAViewInMMND(string linkName)
+        {
+            CourseLinksPage.ClickLinkInMMND(linkName);
+        }
+
+        /// <summary>
+        /// Verify the crossover to pegasus from MMND.
+        /// </summary>
+        [Then(@"I should crossover to Pegasus Notification Page")]
+        public void VerifyCrossoverToPegasus()
+        {
+             Assert.AreEqual(true,CourseLinksPage.IsPegasusCrossoverSuccessful());
+        }
+
 
 
     }

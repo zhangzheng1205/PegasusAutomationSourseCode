@@ -24,6 +24,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
         By PegasusGradebookframe = By.Id("srcGBFrame");
         By pegasusViewAllCourseMaterialHeader = By.Id("_ctl0_InnerPageContent_divViewHedaer");
         By pegasusgbins = By.CssSelector("#CreateColumnButtton");
+         By notification = By.ClassName("NotifyHeader2");
 
        //Iframes on this page
         string centerFrameSrc = "http://coursehome.next.qaprod.ecollege.com";
@@ -65,6 +66,8 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
 
             string courseNameToMatch = new CourseHome().getCourseName(courseName);
             base.WaitForAjaxToComplete();
+            base.WaitForDocumentLoadToComplete();
+         
             base.WaitTillElementFound(coursetitle);
             
             string actualCourseDisplayed = base.GetWebElementProperties(coursetitle).Text.ToString();
@@ -162,6 +165,57 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            //base.SwitchToIFrameBySource(gbInsframeSrc);
            //base.WaitForAjaxToComplete();
            success = base.IsElementPresent(pegasusgbins);
+           return success;
+       }
+
+       /// <summary>
+       /// Click a link at MMND.
+       /// </summary>
+       /// <param name="linkName"></param>
+       public void ClickLinkInMMND(string linkName)
+       {
+           try
+           {
+               base.SwitchToDefaultWindow();
+               getInsideFrame(centerIframe);
+               base.WaitForDocumentLoadToComplete();
+               base.WaitForAjaxToComplete();
+               base.SwitchToDefaultPageContent();
+               base.WaitForElement(By.LinkText(linkName));
+               base.GetWebElementPropertiesByLinkText(linkName).Click();
+           }
+           catch (Exception ex)
+           {
+               
+              ExceptionHandler.HandleException(ex);
+           }
+       }
+
+       /// <summary>
+       /// Verify Crossover to Pegasus.
+       /// </summary>
+       /// <returns>This returns bool value.</returns>
+       public bool IsPegasusCrossoverSuccessful()
+       {
+           bool success = false;
+           try
+           {
+               base.SwitchToDefaultWindow();
+               getInsideFrame(centerIframe);
+               base.WaitForDocumentLoadToComplete();
+               base.WaitForAjaxToComplete();
+               bool header = base.IsElementPresent(notification, 10);
+               if (header)
+               {
+                   success = true;
+
+               }
+           }
+           catch (Exception ex)
+           {
+               
+               ExceptionHandler.HandleException(ex);
+           }
            return success;
        }
 

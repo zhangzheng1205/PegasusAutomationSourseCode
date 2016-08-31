@@ -464,6 +464,9 @@
     <None Include="ProductAcceptanceOrderedTests\eCollege.Direct.Classic.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\MMNDIntegration.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.Cert.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
