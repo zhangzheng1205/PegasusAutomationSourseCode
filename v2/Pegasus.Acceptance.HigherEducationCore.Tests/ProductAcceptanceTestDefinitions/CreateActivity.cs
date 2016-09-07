@@ -52,7 +52,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// </summary>
         /// <param name="activityTypeEnum">This is the activity type enum</param>
         ///  <param name="activityTypeEnum">This is behavioral Mode</param>
-        [When(@"I Create ""(.*)"" SAM activity with Behavioral Mode ""(.*)""")]
+        [When(@"I Create ""(.*)"" activity with Behavioral Mode ""(.*)""")]
         public void SelectBehavioralMode(Activity.ActivityTypeEnum activityTypeEnum, string behavioralMode)
         {
             Logger.LogMethodEntry("CreateActivity", "CreateChildSAMActivity",
@@ -670,6 +670,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Select A Question From Bank.
         /// </summary>
        [When(@"I should Add question from Question Bank")]
+       [Then(@"I should Add question from Question Bank")]
        public void AddQuestionFromQuestionBankAndSaveActivity()
        {
            // Select A Question From Bank
@@ -689,6 +690,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        /// </summary>
        /// <param name="questionTypeEnum">This is Question Group Name.</param>
        [When(@"I should select ""(.*)"" Question Group")]
+       [Then(@"I should select ""(.*)"" Question Group")]
        public void SelectQuestionGroupAndSaveActivity(Question.QuestionTypeEnum questionTypeEnum)
        {
            // Select Questions from Question Group
@@ -997,16 +999,17 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        }
 
        /// <summary>
-       /// User search the activtiy in MyCourse frame of "Add from Library"
+       /// User searches the activtiy in MyCourse frame of "Add from Library"
        /// </summary>
-       /// <param name="activityType">This is acivity type enum.</param>
-       /// <param name="tabName">This is tab name.</param>
-       [When(@"I search ""(.*)"" in My Course frame  of ""(.*)"" tab")]
-       public void SearchActivtiyInMyCourseFrameOfTab(Activity.ActivityTypeEnum activityType, string tabName)
+       /// <param name="activityType">This is the activity type</param>
+       /// <param name="framName">This is the "Course Materials Library" OR the "My Course" frame</param>
+       /// <param name="tabName">This is the Course Tool bar tab</param>
+       [When(@"I search ""(.*)"" in ""(.*)"" frame  of ""(.*)"" tab")]
+       public void SearchActivtiyInFrameOfTab(Activity.ActivityTypeEnum activityType, string framName, string tabName)
        {
            Logger.LogMethodEntry("CreateActivity", "SearchActivtiyInMyCourseFrameOfTab",
                base.IsTakeScreenShotDuringEntryExit);
-           new ContentLibraryUXPage().SearchActivityInMyCourse(activityType, tabName);
+           new ContentLibraryUXPage().SearchActivityInCourseMaterials(activityType, framName, tabName);
            Logger.LogMethodExit("CreateActivity", "SearchActivtiyInMyCourseFrameOfTab",
            base.IsTakeScreenShotDuringEntryExit);
        }
@@ -1026,7 +1029,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            string activityName = activity.Name.ToString();
            Logger.LogAssertion("ValidateActivityHasBeenStartedAndSavedMessage", ScenarioContext.
            Current.ScenarioInfo.Title,
-               () => Assert.AreEqual(activityName, new ContentLibraryUXPage().GetActivityNameFromMyCourseFrame(tabName)));
+               () => Assert.AreEqual(activityName, new ContentLibraryUXPage().GetActivityNameFromMyCourseFrame(activityType, tabName)));
            Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayOfSearchedActivityInMyCourseFrame",
 
   base.IsTakeScreenShotDuringEntryExit);
@@ -1171,6 +1174,69 @@ base.IsTakeScreenShotDuringEntryExit);
            RandomAssessmentPage radomAssessmentPage = new RandomAssessmentPage();
            radomAssessmentPage.ScoreInGradebookPreference(GBScore);
            Logger.LogMethodExit("CreateActivity", "SetRecordThisScoreInGradebookOptionTo",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Open the Folder
+        /// </summary>
+        /// <param name="activityType">This is the folder type</param>
+        /// <param name="frameName">This is the frame in Course Materials tab</param>
+       [When(@"I open the ""(.*)"" in ""(.*)"" frame")]
+       public void OpenTheFolder(Activity.ActivityTypeEnum activityType, string frameName)
+       {
+           Logger.LogMethodEntry("CreateActivity", "OpenTheFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+           TeachingPlanUxPage teachingPlanUxPage = new TeachingPlanUxPage();
+           Activity activity = Activity.Get(activityType);
+           string activityName = activity.Name;
+           teachingPlanUxPage.OpenFolder(activityName, frameName);
+           Logger.LogMethodExit("CreateActivity", "OpenTheFolder",
+              base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Click back arrow icon in Course Materials tab
+        /// </summary>
+        /// <param name="frameName">This is the frame</param>
+       [When(@"I click on back arrow icon in the ""(.*)"" frame")]
+       public void ClickOnBackArrowIcon(string frameName)
+       {
+           Logger.LogMethodEntry("CreateActivity", "ClickOnBackArrowIcon",
+               base.IsTakeScreenShotDuringEntryExit);
+           TeachingPlanUxPage teachingPlanUxPage = new TeachingPlanUxPage();
+           //Click back arrow icon
+           teachingPlanUxPage.ClickBackArrow(frameName);
+           Logger.LogMethodExit("CreateActivity", "ClickOnBackArrowIcon",
+              base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Select all contents
+        /// </summary>
+       [When(@"I select all the contents")]
+       public void SelectAllTheContents()
+       {
+           Logger.LogMethodEntry("CreateActivity", "SelectAllTheContents", 
+               base.IsTakeScreenShotDuringEntryExit);
+           TeachingPlanUxPage teachingPlanUxPage = new TeachingPlanUxPage();
+           //Click back arrow icon
+           teachingPlanUxPage.SelectAllContents();
+           Logger.LogMethodExit("CreateActivity", "SelectAllTheContents", 
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
+        /// <summary>
+        /// Show Hide using the Show/Hide button in My Course
+        /// </summary>
+       [When(@"I click ShowHide in MyCourse")]
+       public void ShowHideInMyCourse()
+       {
+           Logger.LogMethodEntry("CreateActivity", "ShowHideInMyCourse", 
+               base.IsTakeScreenShotDuringEntryExit);
+           TeachingPlanUxPage teachingPlanUxPage = new TeachingPlanUxPage();
+           teachingPlanUxPage.ShowHideInMyCourse();
+           Logger.LogMethodExit("CreateActivity", "ShowHideInMyCourse", 
                base.IsTakeScreenShotDuringEntryExit);
        }
 

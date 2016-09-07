@@ -210,4 +210,28 @@
   <data name="CoursePreviewUX_Page_ScoreValue_CssSelector_Locator" xml:space="preserve">
     <value>.txtMinorcss</value>
   </data>
+  <data name="CoursePreviewUXPage_ElementLoad_Time_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="CoursePreviewUXPage_Searched_Table_Next_Id_Locator" xml:space="preserve">
+    <value>rptCoursePreview$next</value>
+  </data>
+  <data name="CoursePreviewUX_Page_ActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Activity_Counter" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Activity_Count_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="CoursePreviewUX_Page_CoursePreview_Id_Locator" xml:space="preserve">
+    <value>tblCoursePreview</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Customized_TimeOut" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Search_Time_Value" xml:space="preserve">
+    <value>7000</value>
+  </data>
 </root>

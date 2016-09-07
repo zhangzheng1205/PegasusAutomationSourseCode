@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Activity Details and Click on Add Question
             logger.LogMethodEntry("AddAssessmentPage",
-                "EnterActivityDetailsandClickonAddQuestion",
+                "EnterActivityDetails",
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -299,8 +299,35 @@ namespace Pegasus.Pages.UI_Pages
                 Guid activity = Guid.NewGuid();
                 String date = DateTime.Now.ToString("yyyy/MM/dd");
                 string randomValue = activity.ToString().Split('-')[0];
-                string activityName = "Auto-" + date + "-" + randomValue + "-Activity";
+                string activityName = string.Empty;
 
+                switch (activityTypeEnum)
+                {
+                    //Create Activity Name for general activity
+                    case Activity.ActivityTypeEnum.RegChildActivity:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Activity";
+                        break;
+                    //Create Activity Name for activity with GB Score set to First
+                    case Activity.ActivityTypeEnum.RegFirstScoreActivity:
+                        activityName = "Auto-" + date + "-" + randomValue + "-First-Activity";
+                        break;
+                    //Create Activity Name for activity with GB Score set to Last
+                    case Activity.ActivityTypeEnum.RegLastScoreActivity:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Last-Activity";
+                        break;
+                    //Create Activity Name for activity with GB Score set to Highest
+                    case Activity.ActivityTypeEnum.RegHighestScoreActivity:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Highest-Activity";
+                        break;
+                    //Create Activity Name for activity with GB Score set to Lowest
+                    case Activity.ActivityTypeEnum.RegLowestScoreActivity:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Lowest-Activity";
+                        break;
+                    //Create Activity Name for activity with GB Score set to Average
+                    case Activity.ActivityTypeEnum.RegAverageScoreActivity:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Average-Activity";
+                        break;
+                }
                 //Select Window
                 this.SelectCreateActivityWindow();
                 //Enter Activity Title
@@ -316,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage",
-                "EnterActivityDetailsandClickonAddQuestion",
+                "EnterActivityDetails",
                    base.IsTakeScreenShotDuringEntryExit);
         }
 

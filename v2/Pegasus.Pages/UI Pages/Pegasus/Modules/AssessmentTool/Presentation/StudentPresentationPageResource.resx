@@ -1596,4 +1596,10 @@
   <data name="StudentPrsentation_Page_QuestionTextBox_Count_XPath_Locator" xml:space="preserve">
     <value>//td[@class='themeItemMiddleCommon1']/div/div</value>
   </data>
+  <data name="StudentPresentation_Page_Question_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='nextQuextion']/div</value>
+  </data>
+  <data name="StudentPresentation_Page_Question_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='nextQuextion']/div[{0}]</value>
+  </data>
 </root>

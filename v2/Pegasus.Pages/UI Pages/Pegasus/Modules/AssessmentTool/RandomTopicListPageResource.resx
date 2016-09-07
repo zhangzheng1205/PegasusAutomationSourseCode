@@ -186,4 +186,10 @@
   <data name="RandomTopicList_Page_CreateActivity_Window_Title_Locator" xml:space="preserve">
     <value>Create activity</value>
   </data>
+  <data name="RandomTopicList_Page_AddQuestionOption_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='AddQuestionsContextMenu']/table/thead/tr</value>
+  </data>
+  <data name="RandomTopicList_Page_AddQuestionOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td</value>
+  </data>
 </root>

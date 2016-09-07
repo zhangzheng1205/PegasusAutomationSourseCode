@@ -412,6 +412,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_ucSearchMessageBoard_lnkClear.
+        /// </summary>
+        internal static string ContentLibraryUXPage_ClearSearch_Id_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUXPage_ClearSearch_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Content.
         /// </summary>
         internal static string ContentLibraryUXPage_ContentWindow_Name {
@@ -444,6 +453,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string ContentLibraryUXPage_Go_Button_Id_Locator {
             get {
                 return ResourceManager.GetString("ContentLibraryUXPage_Go_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdCourseContent.
+        /// </summary>
+        internal static string ContentLibraryUXPage_MyCourse_Searched_Table_ID_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUXPage_MyCourse_Searched_Table_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdCourseContent$next.
+        /// </summary>
+        internal static string ContentLibraryUXPage_MyCourse_Searched_Table_Next_Id_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUXPage_MyCourse_Searched_Table_Next_Id_Locator", resourceCulture);
             }
         }
         
@@ -574,6 +601,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td/table/tbody/tr/td[2]/a.
+        /// </summary>
+        internal static string CourseContentUXPage_Activity_InMyCourse_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_Activity_InMyCourse_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to *[id ^=&apos;lnkName_&apos;].
         /// </summary>
         internal static string CourseContentUXPage_AssetPartial_Id_Locator {
@@ -588,6 +624,114 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CourseContentUXPage_CourseMaterials_Window_Title {
             get {
                 return ResourceManager.GetString("CourseContentUXPage_CourseMaterials_Window_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[2].
+        /// </summary>
+        internal static string CourseContentUXPage_EditCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_EditCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[9].
+        /// </summary>
+        internal static string CourseContentUXPage_GetInformationCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_GetInformationCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btn_type29.
+        /// </summary>
+        internal static string CourseContentUXPage_MyCourse_Search_Expand_ID_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_MyCourse_Search_Expand_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[3].
+        /// </summary>
+        internal static string CourseContentUXPage_PreviewCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_PreviewCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[5].
+        /// </summary>
+        internal static string CourseContentUXPage_PrintCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_PrintCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[4].
+        /// </summary>
+        internal static string CourseContentUXPage_PropertiesCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_PropertiesCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[10].
+        /// </summary>
+        internal static string CourseContentUXPage_RemoveCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_RemoveCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr.
+        /// </summary>
+        internal static string CourseContentUXPage_Searched_Activity_Count_InMyCourse_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_Searched_Activity_Count_InMyCourse_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td/table/tbody/tr/td[2]/table/tbody/tr/td/div.
+        /// </summary>
+        internal static string CourseContentUXPage_Searched_Activity_InMyCourse_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_Searched_Activity_InMyCourse_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[8].
+        /// </summary>
+        internal static string CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId8&apos;]/table/tbody/tr/td/div[2]/a[3].
+        /// </summary>
+        internal static string CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[6].
+        /// </summary>
+        internal static string CourseContentUXPage_ViewGradesCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_ViewGradesCmenuOption_Xpath_Locator", resourceCulture);
             }
         }
     }

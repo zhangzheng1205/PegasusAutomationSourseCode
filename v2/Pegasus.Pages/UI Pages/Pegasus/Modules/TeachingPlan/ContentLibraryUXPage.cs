@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
@@ -493,6 +494,58 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Clicks On Next Link If Activity Is Not Present in My Course
+        /// </summary>
+        /// <param name="activityName">This is Activity Name</param>
+        public void ClickOnNextLinkIfActivityNotPresentMyCourse(String activityName)
+        {
+            //Clicks On Next Link If Activity Not Present
+            logger.LogMethodEntry("ContentLibraryUXPage", "ClickOnNextLinkIfActivityNotPresent",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Initialized Variable
+                string getTableText = string.Empty;
+                do
+                {
+                    base.WaitForElement(By.Id(ContentLibraryUXPageResource.
+                        ContentLibraryUXPage_MyCourse_Searched_Table_ID_Locator));
+                    getTableText = base.GetElementTextById(ContentLibraryUXPageResource.
+                        ContentLibraryUXPage_MyCourse_Searched_Table_ID_Locator);
+                    Thread.Sleep(Convert.ToInt32(ContentLibraryUXPageResource.
+                            ContentLibraryUXPage_Search_Time_Value));
+                    if (!getTableText.Contains(activityName))
+                    {
+                        if (base.IsElementPresent(By.Id(ContentLibraryUXPageResource.
+                            ContentLibraryUXPage_MyCourse_Searched_Table_Next_Id_Locator), Convert.ToInt32
+                            (ContentLibraryUXPageResource.ContentLibraryUX_Page_Customized_TimeOut)))
+                        {
+                            IWebElement getNextButton = base.GetWebElementPropertiesById
+                                (ContentLibraryUXPageResource.
+                                ContentLibraryUXPage_MyCourse_Searched_Table_Next_Id_Locator);
+                            //Click on the Next
+                            base.ClickByJavaScriptExecutor(getNextButton);
+                            Thread.Sleep(Convert.ToInt32(ContentLibraryUXPageResource.
+                                ContentLibraryUXPage_ElementLoad_Time_Value));
+                            //Select Default Window
+                            base.SelectDefaultWindow();
+                            base.SwitchToIFrame(ContentLibraryUXPageResource.
+                                ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                            getTableText = base.GetElementTextById(ContentLibraryUXPageResource.
+                                ContentLibraryUXPage_MyCourse_Searched_Table_ID_Locator);
+                        }
+                    }
+                } while (!getTableText.Contains(activityName));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "ClickOnNextLinkIfActivityNotPresent",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Clicks on the Activity Add Button.
         /// </summary>
@@ -1850,7 +1903,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityType">This is activity type enum.</param>
         /// <param name="tabName">This is tab name.</param>
-        public void SearchActivityInMyCourse(Activity.ActivityTypeEnum activityType, string tabName)
+        public void SearchActivityInCourseMaterials(Activity.ActivityTypeEnum activityType, string frameName, string tabName)
         {
             logger.LogMethodEntry("ContentLibraryUXPage", "SearchActivityInMyCourse", 
                 base.IsTakeScreenShotDuringEntryExit);
@@ -1860,16 +1913,33 @@ namespace Pegasus.Pages.UI_Pages
                 Activity activity = Activity.Get(activityType);
                 string activityName = activity.Name.ToString();
                 base.WaitUntilWindowLoads(tabName);
-                base.SwitchToIFrameById(ContentLibraryUXPageResource.
-                    ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                switch (frameName)
+                {
+                    case "My Course":
+                        base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                        break;
+                    case "Course Materials Library":
+                        base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_Left_Frame_ID_Locator);
+                        break;
+                }
+
                 // Click on Search button
                 base.WaitForElement(By.Id(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_Button_Search_ID_Locator));
-                base.ClickButtonById(ContentLibraryUXPageResource.
+                string searchExpanded = base.GetWebElementPropertiesById(string.Format(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Button_Search_ID_Locator)).GetAttribute("class");
+                if (searchExpanded == ContentLibraryUXPageResource.CourseContentUXPage_MyCourse_Search_Expand_ID_Locator)
+                {
+                    base.ClickButtonById(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_Button_Search_ID_Locator);
+                }
                 // Enter activity name in the search text box
                 base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_Search_Textbox_ID_Locator));
+                base.ClearTextByClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Search_Textbox_ID_Locator);
                 base.FillTextBoxByClassName(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_Search_Textbox_ID_Locator, activityName);
                 //Click on Go button
@@ -1877,6 +1947,7 @@ namespace Pegasus.Pages.UI_Pages
                     ContentLibraryUX_Page_GoButton_ID_Locator));
                 base.ClickButtonByClassName(ContentLibraryUXPageResource.
                     ContentLibraryUX_Page_GoButton_ID_Locator);
+                base.WaitUntilWindowLoads(tabName);
             }
             catch (Exception e)
             {
@@ -1889,25 +1960,38 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Get the searched result text from the mycourse frame.
         /// </summary>
-        /// <param name="returnActivtiyName">This is to store the return value in string formate</param>
-        /// <param name="tabName">This is tab name.</param>
-        /// <returns></returns>
-        public string GetActivityNameFromMyCourseFrame(string tabName)
+        /// <param name="activityTypeEnum">This is the activity type</param>
+        /// <param name="tabName">this is the tab name</param>
+        /// <returns>returns the searched activity's name</returns>
+        public string GetActivityNameFromMyCourseFrame(Activity.ActivityTypeEnum activityTypeEnum, string tabName)
         {
             logger.LogMethodEntry("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
                 base.IsTakeScreenShotDuringEntryExit);
             // Initialize the returnActivtiyName variable
-            string returnActivtiyName = null;
+            // Initialize the returnActivtiyName variable
+            string returnActivtiyName = string.Empty;
+
+            Activity activity = Activity.Get(activityTypeEnum);
+            string expectedActivity = activity.Name;
             try
             {
                 // Wait untill windown loads
                 base.WaitUntilWindowLoads(tabName);
                 base.SwitchToIFrameById(ContentLibraryUXPageResource.
                     ContentLibraryUX_Page_Right_Frame_ID_Locator);
-                // Get activity name
-                string getSearchedActivityName = base.GetElementTextByClassName(ContentLibraryUXPageResource.
-                    ContentLibraryUXPage_Activity_Id_Locator);
-                returnActivtiyName = getSearchedActivityName.Trim();
+                int activityCount = base.GetElementCountByXPath(string.Format(ContentLibraryUXPageResource.
+                    CourseContentUXPage_Searched_Activity_Count_InMyCourse_Xpath_Locator));
+
+                for (int i = 1; i <= activityCount; i++)
+                {
+                    // Get activity name
+                    IWebElement getSearchedActivityName = base.GetWebElementPropertiesByXPath(string.Format(
+                         ContentLibraryUXPageResource.
+                     CourseContentUXPage_Searched_Activity_InMyCourse_Xpath_Locator, i));
+                    returnActivtiyName = getSearchedActivityName.GetAttribute("title").ToString().Trim();
+                    if (expectedActivity == returnActivtiyName)
+                        break;
+                }
             }
             catch (Exception e)
             {
@@ -1934,6 +2018,7 @@ namespace Pegasus.Pages.UI_Pages
             switch (userType)
             {
                 case User.UserTypeEnum.HedWsInstructor:
+                case User.UserTypeEnum.RegHedWsInstructor:
                     this.ClickCmenuOptionBasedOnCmenuOption(cmenuOptionName, activityType);
                     break;
             }
@@ -1950,49 +2035,234 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("ContentLibraryUXPage", "ClickCmenuOptionBasedOnCmenuOption", base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                string windowName = base.GetPageTitle;
+                //Click on the c.menu option of the searched activity
                 IWebElement getSearchedActivityNameProperty = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
                            ContentLibraryUXPage_Activity_Id_Locator);
                 base.PerformMouseHoverAction(getSearchedActivityNameProperty);
 
                 switch (cmenuOptionName)
                 {
-                    case "View Submissions":
-                        // Click on cmenu option
-                        base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
-                            ContentLibraryUXPage_Activity_Cmenu_Id_Locator));
-
-                        IWebElement getCmenuOptionIcon = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
-                            ContentLibraryUXPage_Activity_Cmenu_Id_Locator);
-                        base.PerformMouseClickAction(getCmenuOptionIcon);
-
+                    //Click on Edit option
+                    case "Edit":
+                        //Click on c.menu icon
+                        this.clickCmenuIcon();
+                        //Get element properties of the c.menu option
                         base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
-                            ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator));
-                        IWebElement getCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
-                            ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator);
-                        base.PerformMouseClickAction(getCmenuOption);
+                            CourseContentUXPage_EditCmenuOption_Xpath_Locator));
+                        IWebElement getEditCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_EditCmenuOption_Xpath_Locator);
+                        //Click on the c.menu option
+                        base.PerformMouseClickAction(getEditCmenuOption);
                         break;
 
-                    case "ShowHide":
+                    //Click on Preview option
+                    case "Preview":
+                        //Click on c.menu icon
+                        this.clickCmenuIcon();
+                        //Get element properties of the c.menu option
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_PreviewCmenuOption_Xpath_Locator));
+                        IWebElement getPreviewCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_PreviewCmenuOption_Xpath_Locator);
+                        //Click on the c.menu option
+                        base.PerformMouseClickAction(getPreviewCmenuOption);
+                        break;
 
-                        bool getActivityDisplayStatusHidden = base.IsElementPresent(By.XPath("Hidden"), 5);
-                        if (getActivityDisplayStatusHidden == true)
+                    //Click on Properties option
+                    case "Properties":
+                        //Click on c.menu icon
+                        this.clickCmenuIcon();
+                        //Get element properties of the c.menu option
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_PropertiesCmenuOption_Xpath_Locator));
+                        IWebElement getPropertiesCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_PropertiesCmenuOption_Xpath_Locator);
+                        //Click on the c.menu option
+                        base.PerformMouseClickAction(getPropertiesCmenuOption);
+                        break;
+
+                    //Click on Print option
+                    case "Print":
+                        //Click on c.menu icon
+                        this.clickCmenuIcon();
+                        //Get element properties of the c.menu option
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_PrintCmenuOption_Xpath_Locator));
+                        IWebElement getPrintCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_PrintCmenuOption_Xpath_Locator);
+                        //Click on the c.menu option
+                        base.PerformMouseClickAction(getPrintCmenuOption);
+                        break;
+
+                    //Click on View Grades option
+                    case "View Grades":
+                        //Click on c.menu icon
+                        this.clickCmenuIcon();
+                        //Get element properties of the c.menu option
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_ViewGradesCmenuOption_Xpath_Locator));
+                        IWebElement getViewGradesCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_ViewGradesCmenuOption_Xpath_Locator);
+                        //Click on the c.menu option
+                        base.PerformMouseClickAction(getViewGradesCmenuOption);
+                        break;
+
+                    //Click on View Submissions option
+                    case "View Submissions":
+                        // Click on cmenu option
+                        this.clickCmenuIcon();
+                        //Get element properties of the c.menu option
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator));
+                        IWebElement getVSCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_ClickOnCmenuIcon_XPath_Locator);
+                        //Click on the c.menu option
+                        base.PerformMouseClickAction(getVSCmenuOption);
+                        break;
+
+                    //Click on Show/Hide option when asset is Hidden
+                    case "Show":
+                        //Get element properties of MyCourse Frame
+                        IWebElement getSearchedActivityProperty = base.GetWebElementPropertiesById(
+                                        ContentLibraryUXPageResource.
+                                        ContentLibraryUXPage_SearchedContent_Table_Id_Locator);
+                        //Get the Activity Status text
+                        String SearchedActivityStatus = getSearchedActivityProperty.Text;
+                        //Verify if the activity is in Hidden state
+                        if (SearchedActivityStatus.Contains("Hidden"))
                         {
-                            base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
-                             ContentLibraryUXPage_Activity_Cmenu_Id_Locator));
-                            IWebElement getShowHideCmenuOptionIcon = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
-                                ContentLibraryUXPage_Activity_Cmenu_Id_Locator);
-                            base.PerformMouseClickAction(getShowHideCmenuOptionIcon);
-                            base.WaitForElement(By.XPath("div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[10]"));
-                            IWebElement getShowHideCmenuOption = base.GetWebElementPropertiesByXPath("div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[10]");
-                            base.PerformMouseClickAction(getShowHideCmenuOption);
+                            //Click on c.menu icon
+                            this.clickCmenuIcon();
+                            switch(activityType)
+                            {
+                                case Activity.ActivityTypeEnum.RegAverageScoreActivity:
+                                case Activity.ActivityTypeEnum.RegChildAbruptActivity:
+                                case Activity.ActivityTypeEnum.RegChildActivity:
+                                case Activity.ActivityTypeEnum.RegFirstScoreActivity:
+                                case Activity.ActivityTypeEnum.RegHighestScoreActivity:
+                                case Activity.ActivityTypeEnum.RegLastScoreActivity:
+                                case Activity.ActivityTypeEnum.RegLowestScoreActivity:
+                                case Activity.ActivityTypeEnum.RegSAMAbruptActivity:
+                                case Activity.ActivityTypeEnum.RegSAMActivity:
+                                case Activity.ActivityTypeEnum.RegSavedSAMActivity:
+                                    //Get element properties of the c.menu option
+                                    base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                    CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator));
+                                    IWebElement getShowHideCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator);
+                                    //Click on the c.menu option
+                                    base.PerformMouseClickAction(getShowHideCmenuOption);
+                                    break;
+
+                                case Activity.ActivityTypeEnum.RegFolderGBPreference:
+                                case Activity.ActivityTypeEnum.Folder:
+                                    //Get element properties of the c.menu option
+                                    base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                    CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator));
+                                    IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator);
+                                    //Click on the c.menu option
+                                    base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
+                                    break;
+                            }
+                            base.WaitUntilWindowLoads(windowName);
                         }
-                    break;
+                        break;
+
+                    //Click on Show/Hide option when asset is Shown
+                    case "Hide":
+                        //Get element properties of MyCourse Frame
+                        IWebElement getSearchedActivityproperty = base.GetWebElementPropertiesById(
+                                        ContentLibraryUXPageResource.
+                                        ContentLibraryUXPage_SearchedContent_Table_Id_Locator);
+                        //Get the Activity Status text
+                        String SearchedActivitystatus = getSearchedActivityproperty.Text;
+                        //Verify if the activity is in Shown state
+                        if (SearchedActivitystatus.Contains("Shown"))
+                        {
+                            //Click on c.menu icon
+                            this.clickCmenuIcon();
+                            switch (activityType)
+                            {
+                                case Activity.ActivityTypeEnum.RegAverageScoreActivity:
+                                case Activity.ActivityTypeEnum.RegChildAbruptActivity:
+                                case Activity.ActivityTypeEnum.RegChildActivity:
+                                case Activity.ActivityTypeEnum.RegFirstScoreActivity:
+                                case Activity.ActivityTypeEnum.RegHighestScoreActivity:
+                                case Activity.ActivityTypeEnum.RegLastScoreActivity:
+                                case Activity.ActivityTypeEnum.RegLowestScoreActivity:
+                                case Activity.ActivityTypeEnum.RegSAMAbruptActivity:
+                                case Activity.ActivityTypeEnum.RegSAMActivity:
+                                case Activity.ActivityTypeEnum.RegSavedSAMActivity:
+                                    //Get element properties of the c.menu option
+                                    base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                    CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator));
+                                    IWebElement getShowHideCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator);
+                                    //Click on the c.menu option
+                                    base.PerformMouseClickAction(getShowHideCmenuOption);
+                                    break;
+
+                                case Activity.ActivityTypeEnum.RegFolderGBPreference:
+                                case Activity.ActivityTypeEnum.Folder:
+                                    //Get element properties of the c.menu option
+                                    base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                    CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator));
+                                    IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator);
+                                    //Click on the c.menu option
+                                    base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
+                                    break;
+                            }
+                            base.WaitUntilWindowLoads(windowName);
+                        }
+                        break;
+
+                    //Click on Get Information option
+                    case "Get Information":
+                        this.clickCmenuIcon();
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator));
+                        IWebElement getGetInformationCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator);
+                        base.PerformMouseClickAction(getGetInformationCmenuOption);
+                        break;
+                    //Click on Remove option
+                    case "Remove":
+                        this.clickCmenuIcon();
+                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_RemoveCmenuOption_Xpath_Locator));
+                        IWebElement getGetRemoveCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                            CourseContentUXPage_RemoveCmenuOption_Xpath_Locator);
+                        base.PerformMouseClickAction(getGetRemoveCmenuOption);
+                        break;
                 }
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
+        }
+
+        /// <summary>
+        /// Click on c.menu icon of searched asset
+        /// </summary>
+        private void clickCmenuIcon()
+        {
+            //Get the element properties of the searched activity
+            IWebElement getSearchedActivityNameProperty = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
+                      ContentLibraryUXPage_Activity_Id_Locator);
+            //Mouse Hover over the searched activity
+            base.MouseOverByJavaScriptExecutor(getSearchedActivityNameProperty);
+            base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Activity_Cmenu_Id_Locator));
+            //Get the element properties of the cmenu icon
+            IWebElement getCmenuOptionIcon = base.GetWebElementPropertiesByClassName(
+                ContentLibraryUXPageResource.
+                ContentLibraryUXPage_Activity_Cmenu_Id_Locator);
+            //Click on the cmenu icon
+            base.ClickByJavaScriptExecutor(getCmenuOptionIcon);
         }
 
         /// <summary>
@@ -2003,7 +2273,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns></returns>
         public string GetButtonNameFromViewSubmissionPage(string tabName)
         {
-            logger.LogMethodEntry("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
+            logger.LogMethodEntry("ContentLibraryUXPage", "GetButtonNameFromViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             // Initialize the returnActivtiyName variable
             string returnButtonName = null;
@@ -2020,7 +2290,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ContentLibraryUXPage", "GetActivityNameFromMyCourseFrame",
+            logger.LogMethodExit("ContentLibraryUXPage", "GetButtonNameFromViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             return returnButtonName;
         }

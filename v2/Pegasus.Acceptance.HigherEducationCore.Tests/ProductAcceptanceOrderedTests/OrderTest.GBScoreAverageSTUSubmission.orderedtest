@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderTest.GBScoreStuAverage" storage="e:\deepa_1\automation\28jul2016\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\ordertest.gbscorestuaverage.orderedtest" id="da32d023-5c68-462f-8402-31556511e8ac" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="458f6f73-0ded-8118-05c5-39e26f1c27d5" name="LaunchActivityForAverageScore" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="cd290834-5f4f-dff6-b067-93a45678a327" name="StudentAnswersActivityWithIncorrectAnswers" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="458f6f73-0ded-8118-05c5-39e26f1c27d5" name="LaunchActivityForAverageScore" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e0717e3c-9e5e-c6c0-8e78-57888f6b9f0d" name="StudentSubmitsActivityWithCorrectAnswers" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

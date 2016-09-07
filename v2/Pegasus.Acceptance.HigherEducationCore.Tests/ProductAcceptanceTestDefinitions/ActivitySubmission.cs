@@ -760,6 +760,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <summary>
         /// Submit the Activity.
         /// </summary>
+        [When(@"I should successfully submit activity for grading")]
         [Then(@"I should successfully submit activity for grading")]
         public void SubmitActivityForGrading()
         {
@@ -871,8 +872,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         /// <summary>
         /// Switch to presentation window.
         /// </summary>
-        /// <param name="activityTypeEnum"></param>
+        /// <param name="activityTypeEnum">This the activity type</param>
         [Then(@"I am on ""(.*)"" window")]
+        [When(@"I am on ""(.*)"" window")]
         [Given(@"I am on ""(.*)"" window")]
         public void SelectPresentationWindow(Activity.ActivityTypeEnum activityTypeEnum)
         {
@@ -1078,25 +1080,40 @@ pageName)));
         /// <param name="activityTypeEnum">This is activity type enum.</param>
         /// <param name="pageName">This is page name.</param>
         [When(@"I click on ""(.*)"" of  ""(.*)"" Activity in ""(.*)"" page")]
-        public void ClickActivityCmenuOptionBasedOnPageName(string assetCmenu, Activity.ActivityTypeEnum activityTypeEnum, string
-
-pageName)
+        public void ClickActivityCmenuOptionBasedOnPageName(string assetCmenu,
+            Activity.ActivityTypeEnum activityTypeEnum, string pageName)
         {
             Logger.LogMethodEntry("ActivitySubmission", "ClickActivityCmenuOptionBasedOnPageName",
-
-base.IsTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Get Activity Name
             Activity activity = Activity.Get(activityTypeEnum);
             string activityName = activity.Name.ToString();
-
-            new CoursePreviewMainUXPage().ClickCmenuOptionOfTheActivity(activityName, pageName);
-            //Student click on cmenu option
-            ViewSubmissionPage viewSubmissionPage = new ViewSubmissionPage();
-            viewSubmissionPage.ClickCmenuOptionByStudentOfActivtiy(assetCmenu, activityName);
+            new CoursePreviewUXPage().ClickCmenuOptionOfTheActivity(assetCmenu, activityName, pageName);
             Logger.LogMethodExit("ActivitySubmission", "ClickActivityCmenuOptionBasedOnPageName",
-
-base.IsTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on Folder cmenu options
+        /// </summary>
+        /// <param name="assetCmenu">This is the c.menu option</param>
+        /// <param name="activityTypeEnum">This is the activity type</param>
+        /// <param name="pageName">This is the page name</param>
+        [When(@"I click on ""(.*)"" of  ""(.*)"" Folder in ""(.*)"" page")]
+        public void ClickOnOfFolder(string assetCmenu,
+            Activity.ActivityTypeEnum activityTypeEnum, string pageName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickOnOfFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get Folder Name
+            Activity activity = Activity.Get(activityTypeEnum);
+            string folderName = activity.Name.ToString();
+            //Click on the folder cmenu options
+            new CoursePreviewUXPage().ClickCmenuOptionOfTheFolder(assetCmenu, folderName, pageName);
+            Logger.LogMethodExit("ActivitySubmission", "ClickOnOfFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Launch the activity based on the user type and page type provided
@@ -1221,6 +1238,46 @@ base.IsTakeScreenShotDuringEntryExit);
             Logger.LogMethodExit("CommonSteps",
             "VerifySectionDirectionLinesAtPresentation",
             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the score recorded in Gradebook is as per the score preference
+        /// </summary>
+        /// <param name="userType">This is the user role</param>
+        /// <param name="gbScore">This is the Gradebook score preference</param>
+        [Then(@"as ""(.*)"" I should see the ""(.*)"" score recorded")]
+        public void TheScoreRecorded(User.UserTypeEnum userType, string gbScore)
+        {
+            // Verify the score recorded in Gradebook is as per the score preference
+            Logger.LogMethodEntry("ActivitySubmission",
+                "TheScoreRecorded"
+                , base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyRecordedScoresMatchtheScorePreference",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(gbScore, new
+                    ViewSubmissionPage().verifyGradebookScore(userType, gbScore)));
+            Logger.LogMethodExit("ActivitySubmission",
+               "TheScoreRecorded"
+               , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select answer for True/False question
+        /// </summary>
+        /// <param name="answerChoice">This is the answer choice</param>
+        [When(@"I select ""(.*)"" answer for True/False question")]
+        [Then(@"I select ""(.*)"" answer for True/False question")]
+        public void SelectCAnswerForQuestion(string answerChoice)
+        {
+            //Select correct answer for the question
+            Logger.LogMethodEntry("ActivitySubmission",
+                "SelectCorrectAnswerForQuestion"
+                , base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().SelectAnswer(answerChoice);
+            Logger.LogMethodExit("ActivitySubmission",
+               "SelectCorrectAnswerForQuestion"
+               , base.IsTakeScreenShotDuringEntryExit);
+
         }
     }
 }

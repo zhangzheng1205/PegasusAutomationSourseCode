@@ -11,6 +11,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 using Pegasus.Pages.CommonPageObjects;
 using System.Configuration;
 using System.Diagnostics;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -607,6 +608,249 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CoursePreviewUXPage", "GetImDoneButtonText",
                       base.IsTakeScreenShotDuringEntryExit);
             return objectText;
+        }
+
+        /// <summary>
+        /// Click on activity cmenu based on the cemnu option type,page name activity name
+        /// </summary>
+        /// <param name="assetCmenu">This is activity cmenu option.</param>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        public void ClickCmenuOptionOfTheActivity(string assetCmenu, string activityName, string pageName)
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage", "ClickCmenuOptionOfTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                switch (pageName)
+                {
+                    case "Course Materials":
+                        base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator));
+                        //Switch To Frame
+                        base.SwitchToIFrame(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
+                        //Click on the Next link if Activity Not Present
+                        this.ClickOnNextLinkIfActivityNotPresent(activityName);
+                        //Select the Activity
+                        int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Activity_Count_Xpath_Locator);
+                        for (int rowCount = Convert.ToInt32(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Activity_Counter); rowCount <= getActivityCount;
+                            rowCount++)
+                        {
+                            //Gets the Activity Name
+                            string getActivityName = base.GetElementTextByXPath
+                                (string.Format(CoursePreviewUXPageResource.
+                                CoursePreviewUX_Page_ActivityName_Xpath_Locator, rowCount)).Trim();
+                            if (getActivityName.Contains(activityName))
+                            {
+                                this.ClickCmenuOptionByStudentOfActivity(assetCmenu, activityName);
+                                break;
+                            }
+                        }
+                        break;
+                }
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionOfTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void ClickCmenuOptionOfTheFolder(string assetCmenu, string folderName, string pageName)
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage", "ClickCmenuOptionOfTheFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                switch (pageName)
+                {
+                    case "Course Materials":
+                        base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator));
+                        //Switch To Frame
+                        base.SwitchToIFrame(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
+                        //Click on the Next link if Activity Not Present
+                        this.ClickOnNextLinkIfActivityNotPresent(folderName);
+                        //Select the Activity
+                        int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Activity_Count_Xpath_Locator);
+                        for (int rowCount = Convert.ToInt32(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Activity_Counter); rowCount <= getActivityCount;
+                            rowCount++)
+                        {
+                            //Gets the Activity Name
+                            string getFolderName = base.GetElementTextByXPath
+                                (string.Format(CoursePreviewUXPageResource.
+                                CoursePreviewUX_Page_ActivityName_Xpath_Locator, rowCount)).Trim();
+                            if (getFolderName.Contains(folderName))
+                            {
+                                this.ClickCmenuOptionByStudentOfFolder(assetCmenu, folderName);
+                                break;
+                            }
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionOfTheFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Student click on cmenu option for activity.
+        /// </summary>
+        /// <param name="assetCmenu">This is Cmenu option.</param>
+        /// <param name="activityName">This is activity name.</param>
+        private void ClickCmenuOptionByStudentOfActivity(string assetCmenu, string activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickCmenuOptionByStudentOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.PartialLinkText(activityName));
+            IWebElement getActivityLink = base.GetWebElementPropertiesByPartialLinkText(activityName);
+            base.PerformMouseHoverByJavaScriptExecutor(getActivityLink);
+            //Get ID of the activity name
+            string getCmenuElementID = base.GetIdAttributeValueByPartialLinkText(activityName);
+            //Remove the text and get the assetid of the activity
+            string cmenuProperty = getCmenuElementID.Remove(0, 8);
+            //Generate the asset cmenu icon id by appending the assetID with "tdContext_"
+            string cmenuID = "tdContext_" + cmenuProperty;
+            string cmenuIconID = cmenuID.Trim();
+            // Perform java script mouse click 
+            IWebElement getCmenuIcon = base.GetWebElementPropertiesById(cmenuIconID);
+            base.PerformMouseClickAction(getCmenuIcon);
+
+            // Launch the cmenu option based on the input provided
+            switch (assetCmenu)
+            {
+                case "View Submissions":
+                    //Click on view submission cmenu option
+                    IWebElement getViewSubmission = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_ViewSubmissions_Xpath_Locator);
+                    base.PerformMouseClickAction(getViewSubmission);
+                    break;
+
+                case "Open":
+                        //Click on Open cmenu option of activity
+                        IWebElement getOpen = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_Open_Xpath_Locator);
+                        base.PerformMouseClickAction(getOpen);                    
+                        break;
+                    
+                case "View Grades":
+                    //Click on View Grades cmenu option
+                    IWebElement getViewGrades = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_ViewGrades_Xpath_Locator);
+                    base.PerformMouseClickAction(getViewGrades);
+                    break;
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionByStudentOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select c/menu of Folder
+        /// </summary>
+        /// <param name="assetCmenu">This is the cmenu</param>
+        /// <param name="activityName">This is the folder name</param>
+        private void ClickCmenuOptionByStudentOfFolder(string assetCmenu, string activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickCmenuOptionByStudentOfFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.PartialLinkText(activityName));
+            IWebElement getActivityLink = base.GetWebElementPropertiesByPartialLinkText(activityName);
+            base.PerformMouseHoverByJavaScriptExecutor(getActivityLink);
+            //Get ID of the folder name
+            string getCmenuElementID = base.GetIdAttributeValueByPartialLinkText(activityName);
+            //Remove the text and get the assetid of the folder
+            string cmenuProperty = getCmenuElementID.Remove(0, 8);
+            //Generate the asset cmenu icon id by appending the assetID with "tdContext_"
+            string cmenuID = "tdContext_" + cmenuProperty;
+            string cmenuIconID = cmenuID.Trim();
+            // Perform java script mouse click 
+            IWebElement getCmenuIcon = base.GetWebElementPropertiesById(cmenuIconID);
+            base.PerformMouseClickAction(getCmenuIcon);
+
+            // Launch the cmenu option based on the input provided
+            switch (assetCmenu)
+            {
+
+                case "Open":
+                    //Click on Open cmenu option of Folder
+                    IWebElement getOpen = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_FolderOpen_Xpath_Locator);
+                    base.PerformMouseClickAction(getOpen);
+                    break;
+                
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionByStudentOfFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Next link if assesst is not available in current the Page
+        /// </summary>
+        /// <param name="activityName">This is the activity name</param>
+        private void ClickOnNextLinkIfActivityNotPresent(string activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnNextLinkIfActivityNotPresent",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Initialized Variable
+                string getTableText = string.Empty;
+                do
+                {
+                    //tblCoursePreview
+                    base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                        CoursePreviewUX_Page_CoursePreview_Id_Locator));
+                    getTableText = base.GetElementTextById(CoursePreviewUXPageResource.
+                        CoursePreviewUX_Page_CoursePreview_Id_Locator);
+                    Thread.Sleep(Convert.ToInt32(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Search_Time_Value));
+                    if (!getTableText.Contains(activityName))
+                    {
+                        if (base.IsElementPresent(By.Id(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_Searched_Table_Next_Id_Locator), Convert.ToInt32
+                            (CoursePreviewUXPageResource.CoursePreviewUX_Page_Customized_TimeOut)))
+                        {
+                            IWebElement getNextButton = base.GetWebElementPropertiesById
+                                (CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_Searched_Table_Next_Id_Locator);
+                            //Click on the Next
+                            base.ClickByJavaScriptExecutor(getNextButton);
+                            Thread.Sleep(Convert.ToInt32(CoursePreviewUXPageResource.
+                                CoursePreviewUXPage_ElementLoad_Time_Value));
+                            //Select Default Window
+                            base.SelectDefaultWindow();
+                            base.SwitchToIFrame(CoursePreviewUXPageResource.
+                                CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
+                            getTableText = base.GetElementTextById(CoursePreviewUXPageResource.
+                                CoursePreviewUX_Page_CoursePreview_Id_Locator);
+                        }
+                    }
+                } while (!getTableText.Contains(activityName));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "ClickOnNextLinkIfActivityNotPresent",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

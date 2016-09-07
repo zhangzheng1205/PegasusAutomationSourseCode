@@ -1336,5 +1336,29 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("Gradebook", "ProvideEssayActivityScore",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// View all submission attempts in View Submission
+        /// </summary>
+        /// <param name="userTypeEnum">this is user type</param>
+        [When(@"I view all submissions of ""(.*)"" in view submission page")]
+        public void ViewAllSubmissionsOfStudent(User.UserTypeEnum userTypeEnum)
+        {
+            //Select student from View submission window
+            Logger.LogMethodEntry("Gradebook",
+                "SelectTheStudentFromStudentFrameInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            string studentName = user.LastName + ", " + user.FirstName;
+            // Search the particular student and perform click for that
+            new ViewSubmissionPage().InstructorViewAllSubmission(studentName);
+            Logger.LogMethodExit("Gradebook",
+                "SelectTheStudentFromStudentFrameInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
     }
 }

@@ -142,6 +142,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to imgBackArrow.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_BackArrowIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_BackArrowIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to grdContentLibrary$_ctrl0.
         /// </summary>
         internal static string TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator {

@@ -73,7 +73,13 @@ namespace Pegasus.Automation.DataTransferObjects
             RegSavedSAMActivity = 42, 
             BBGradeSynchActivity=43,
             RegChildAbruptActivity = 44,
-            RegSAMAbruptActivity = 45
+            RegSAMAbruptActivity = 45,
+            RegHighestScoreActivity = 46,
+            RegLowestScoreActivity = 47,
+            RegFirstScoreActivity = 48,
+            RegLastScoreActivity = 49,
+            RegAverageScoreActivity = 50,
+            RegFolderGBPreference = 51
         }
 
         /// <summary>

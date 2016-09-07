@@ -578,6 +578,8 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.WLProgramAdmin:
+                    case User.UserTypeEnum.RegHedWsInstructor:
+                    case User.UserTypeEnum.RegHedWsStudent:
                         switch (courseTypeEnum)
                         {
                             //Course Type Enum

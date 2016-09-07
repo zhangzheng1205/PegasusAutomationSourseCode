@@ -980,6 +980,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;nextQuextion&apos;]/div.
+        /// </summary>
+        internal static string StudentPresentation_Page_Question_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Question_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;nextQuextion&apos;]/div[{0}].
+        /// </summary>
+        internal static string StudentPresentation_Page_Question_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Question_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id =&apos;_ctl0_NPH_ucN_tblNavigation&apos;]/tbody/tr/td.
         /// </summary>
         internal static string StudentPresentation_Page_QuestionNavigation_Id_Locator {

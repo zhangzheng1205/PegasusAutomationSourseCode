@@ -377,6 +377,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;PegMenu8&apos;]/div[@id=&apos;cmenuCont&apos;]/div[@id=&apos;2&apos;].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_FolderOpen_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_FolderOpen_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrmCoursePreview.
         /// </summary>
         internal static string CoursePreviewMainUX_Page_Frame_Id_Locator {
@@ -481,6 +490,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_NextLink_Id_Property {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_NextLink_Id_Property", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;PegMenu32&apos;]/div[@id=&apos;cmenuCont&apos;]/div[@id=&apos;2&apos;].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_Open_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_Open_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -679,6 +697,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_ViewAllContent_TableText_Id_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_ViewAllContent_TableText_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;PegMenu32&apos;]/div[@id=&apos;cmenuCont&apos;]/div[@id=&apos;10&apos;].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_ViewGrades_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_ViewGrades_Xpath_Locator", resourceCulture);
             }
         }
         

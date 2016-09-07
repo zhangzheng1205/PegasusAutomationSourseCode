@@ -789,14 +789,14 @@ the UI deleted or refreshed.-->
 
     <!--Hard coded Users data for "HED" Product.-->
     <User>
-      <Name>cgienradmin</Name>
+      <Name>autowsins</Name>
       <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Rashmi</FirstName>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
+      <LastName>WSAdmin</LastName>
       <UserType>HedWsAdmin</UserType>
-      <WorkSpaceName>CGIENR5.159</WorkSpaceName>
+      <WorkSpaceName>Qaworkspace-Auto</WorkSpaceName>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
@@ -1036,13 +1036,35 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
+      <Name>Auto_Instructor</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>Auto</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Instructor</LastName>
+      <UserType>HedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Auto_Student</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>Auto</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Student</LastName>
+      <UserType>HedWsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>automationqa</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
+      <FirstName>pegasus</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
-      <UserType>HedWsInstructor</UserType>
+      <LastName>automation</LastName>
+      <UserType>RegHedWsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -1050,10 +1072,10 @@ the UI deleted or refreshed.-->
       <Name>automationwsstu</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
-      <UserType>HedWsStudent</UserType>
+      <LastName>Shetty</LastName>
+      <UserType>RegHedWsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -1403,17 +1425,47 @@ the UI deleted or refreshed.-->
       <ActivityType>RegSavedSAMActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-      <Activity>
-      <Name>GBScore</Name>
-       <ActivityType>RegChildActivity</ActivityType>
-      <IsCreated>true</IsCreated>
-    </Activity>
     <Activity>
       <Name>BB Grade Synch Activity</Name>
       <ActivityType>BBGradeSynchActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-      </ArrayOfActivity>
+    <Activity>
+      <Name>Auto-2016/08/03-75d5a410-Activity</Name>
+       <ActivityType>RegChildActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/08/26-9b14f2dc-Highest-Activity</Name>
+       <ActivityType>RegHighestScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-7de3f654-Lowest-Activity</Name>
+       <ActivityType>RegLowestScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-3510348f-First-Activity</Name>
+       <ActivityType>RegFirstScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-bede83a7-Last-Activity</Name>
+       <ActivityType>RegLastScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-01b0f155-Average-Activity</Name>
+       <ActivityType>RegAverageScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto Reg GB Preference-2016/09/02-e345153f-Folder</Name>
+      <ActivityType>RegFolderGBPreference</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+</ArrayOfActivity>
 
   <!--Hard coded question details for K12 Writing Coach Question-->
   <ArrayOfQuestion>

@@ -10,6 +10,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 using Pegasus.Pages.UI_Pages;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -634,6 +635,194 @@ namespace Pegasus.Pages.UI_Pages
 
             base.GetWebElementPropertiesByCssSelector("#_ctl0_InnerPageContent_lnkShowHide").Click();
         }
-      }
 
+        /// <summary>
+        /// Open the folder in Course Materials tab
+        /// </summary>
+        /// <param name="activityName">this is the activity name</param>
+        /// <param name="frameName">This is the frame in Course Materials tab</param>
+        public void OpenFolder(string activityName, string frameName)
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "OpenFolder",
+                    base.IsTakeScreenShotDuringEntryExit);
+            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            try
+            {
+                base.WaitUntilWindowLoads(TeachingPlanUXPageResource
+                    .TeachingPlanUX_Page__CourseMaterial_Window_Name);
+                switch(frameName)
+                {
+                    case "Course Materials Library":
+                        base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_Left_Frame_ID_Locator);
+                        contentLibraryUXPage.ClickOnNextLinkIfActivityNotPresent(activityName);
+                        this.OpenFolderinCL(activityName);
+                        break;
+
+                    case "My Course":
+                        base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                        //contentLibraryUXPage.ClickOnNextLinkIfActivityNotPresentMyCourse(activityName);
+                        this.OpenFolderinCC(activityName);
+                        break;
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TeachingPlanUXPage", "OpenFolder",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Open Folder in Course Materials Library frame
+        /// </summary>
+        /// <param name="activityName">This is the folder name</param>
+        private void OpenFolderinCL(string activityName)
+        {
+            int getActivityCount = base.GetElementCountByXPath(ContentLibraryUXPageResource.
+                   ContentLibraryUXPage_SearchedActivityCount_XPath_Locator);
+            for (int rowCount = Convert.ToInt32(ContentLibraryUXPageResource.
+                ContentLibraryUXPage_Activity_Counter); rowCount <= getActivityCount;
+                rowCount++)
+            {
+                //Gets the Activity Name
+                string getActivityName = base.GetWebElementPropertiesByXPath
+                    (string.Format(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_ActivityName_Xpath_Locator, rowCount)).GetAttribute("title").Trim();
+                if (getActivityName == activityName)
+                {
+                    IWebElement getActivityNameProperty = base.GetWebElementPropertiesByXPath
+                    (string.Format(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_ActivityName_Xpath_Locator, rowCount));
+                    base.ClickByJavaScriptExecutor(getActivityNameProperty);
+                    Thread.Sleep(5000);
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Open Folder in My Course frame
+        /// </summary>
+        /// <param name="activityName">This is the folder name</param>
+        private void OpenFolderinCC(string activityName)
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "OpenFolderinCC", 
+                base.IsTakeScreenShotDuringEntryExit);
+            //bool searchResult = false;
+            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            //searchResult = base.IsElementPresent(By.Id(ContentLibraryUXPageResource
+            //    .ContentLibraryUXPage_ClearSearch_Id_Locator));
+            //if (searchResult)
+            //{
+            //    base.ClickLinkById(ContentLibraryUXPageResource
+            //    .ContentLibraryUXPage_ClearSearch_Id_Locator);
+            //}
+            contentLibraryUXPage.ClickOnNextLinkIfActivityNotPresentMyCourse(activityName);
+            int getActivityCount = base.GetElementCountByXPath(ContentLibraryUXPageResource.
+                   CourseContentUXPage_Searched_Activity_Count_InMyCourse_Xpath_Locator);
+            for (int rowCount = (Convert.ToInt32(ContentLibraryUXPageResource
+                .ContentLibraryUXPage_Activity_Counter)); rowCount <= getActivityCount;
+                rowCount++)
+            {
+                //Gets the Folder Name
+                string getActivityName = base.GetWebElementPropertiesByXPath
+                    (string.Format(ContentLibraryUXPageResource.
+                    CourseContentUXPage_Activity_InMyCourse_Xpath_Locator, rowCount)).GetAttribute("title").Trim();
+                //Check if the folder name found matches the expected folder name
+                if (getActivityName == activityName)
+                {
+                    IWebElement getActivityNameProperty = base.GetWebElementPropertiesByXPath
+                    (string.Format(ContentLibraryUXPageResource.
+                    CourseContentUXPage_Activity_InMyCourse_Xpath_Locator, rowCount));
+                    //Click on Folder to Open
+                    base.ClickByJavaScriptExecutor(getActivityNameProperty);
+                    Thread.Sleep(5000);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("TeachingPlanUXPage", "OpenFolderinCC", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Back Arrow icon in Course Materials tab
+        /// </summary>
+        /// <param name="frameName">this is the frame name</param>
+        public void ClickBackArrow(string frameName)
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickBackArrow", 
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+
+                switch(frameName)
+                {
+                    case "Course Materials Library":
+                        base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_Left_Frame_ID_Locator);
+                        break;
+
+                    case "My Course":
+                        base.SwitchToIFrameById(ContentLibraryUXPageResource.
+                            ContentLibraryUX_Page_Right_Frame_ID_Locator);
+                        break;
+                }
+                IWebElement backArrow = base.GetWebElementPropertiesById(TeachingPlanUXPageResource
+                    .TeachingPlanUX_Page_BackArrowIcon_Id_Locator);
+                base.ClickByJavaScriptExecutor(backArrow);
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickBackArrow", 
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the contents using the select all checkbox
+        /// </summary>
+        public void SelectAllContents()
+        {
+            Logger.LogMethodEntry("TeachingPlanUxPage", "SelectAllContents", 
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                IWebElement getCheckBox = base.GetWebElementPropertiesById("grdCourseContent$_ctrl0");
+                base.ClickByJavaScriptExecutor(getCheckBox);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TeachingPlanUxPage", "SelectAllContents", 
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Show/Hide the contents in My Course using the Show/Hide button
+        /// </summary>
+        public void ShowHideInMyCourse()
+        {
+            Logger.LogMethodEntry("TeachingPlanUxPage", "ShowHideInMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                IWebElement getShowHidebutton = base.GetWebElementPropertiesById("_ctl0_InnerPageContent_lnkShowHide");
+                base.ClickByJavaScriptExecutor(getShowHidebutton);
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TeachingPlanUxPage", "ShowHideInMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+      }
 }

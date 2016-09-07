@@ -348,4 +348,13 @@
   <data name="CoursePreviewMainUX_Page_SubmitForGrading_Button_ClassName" xml:space="preserve">
     <value>btn_subm_grade</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_Open_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='PegMenu32']/div[@id='cmenuCont']/div[@id='2']</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_ViewGrades_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='PegMenu32']/div[@id='cmenuCont']/div[@id='10']</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_FolderOpen_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='PegMenu8']/div[@id='cmenuCont']/div[@id='2']</value>
+  </data>
 </root>

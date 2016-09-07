@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderTest.GBScoreStuLast" storage="e:\deepa_1\automation\28jul2016\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\ordertest.gbscorestulast.orderedtest" id="8d98b57c-8a3e-462a-8f4c-db4d21b6b77f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="44064c9a-07ca-03ab-7069-85fb589fbd71" name="LaunchActivityForLastScore" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="cd290834-5f4f-dff6-b067-93a45678a327" name="StudentAnswersActivityWithIncorrectAnswers" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="44064c9a-07ca-03ab-7069-85fb589fbd71" name="LaunchActivityForLastScore" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e0717e3c-9e5e-c6c0-8e78-57888f6b9f0d" name="StudentSubmitsActivityWithCorrectAnswers" storage="..\bin\debug\pegasus.acceptance.highereducation.wl.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

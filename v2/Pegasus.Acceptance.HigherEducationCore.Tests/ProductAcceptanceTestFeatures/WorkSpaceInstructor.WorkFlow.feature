@@ -180,7 +180,7 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 And I Add Questions using "Create New Question" option
 And I create "True/False" question using "Create New Question"
 When I perform "Save and Return" for "Questions"
@@ -198,7 +198,7 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 And I Add Questions using "Select Questions from Bank" option
 And I should Add question from Question Bank
 When I perform "Save and Return" for "Questions"
@@ -221,7 +221,7 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 And I Add Questions using "Select Question Groups" option
 And I should select "AssessmentRegressionQuestion" Question Group
 When I perform "Save and Return" for "Questions"
@@ -239,7 +239,7 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 And I perform "Create New Section" of name "Section1"
 And select "Select Questions from Bank" option at add question for Section "1"
 And I should Add question from Question Bank
@@ -253,7 +253,7 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I associate the "RegChildAbruptActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
-When I search "RegChildAbruptActivity" in My Course frame  of "Course Materials" tab
+When I search "RegChildAbruptActivity" in "My Course" frame  of "Course Materials" tab
 Then I should be displayed with "RegChildAbruptActivity" in My Course frame  of "Course Materials" tab
 When I click on "ShowHide"  of "RegChildAbruptActivity" in  "Course Materials" tab as "RegHedWsInstructor"
 
@@ -277,7 +277,7 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity with Behavioral Mode "Basic Random"
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 And I perform "Save and Continue" for "Activity Details"
 And I perform "Create New Section" of name "Section1"
 And I perform "Create New Section" of name "Section2"
@@ -292,7 +292,7 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildAbruptActivity" SAM activity with Behavioral Mode "Basic Random"
+When I Create "RegChildAbruptActivity" activity with Behavioral Mode "Basic Random"
 And I perform "Save and Continue" for "Activity Details"
 And I perform "Create New Section" of name "Section1"
 Then I add '2' questions of type "Fill in the Blank" at Section "1"
@@ -348,9 +348,9 @@ Then I should see the successfull message "Activity added successfully."
 Scenario:Add RegChildActivity Activity to My Course and set as shown
 When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
-When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I search "RegChildActivity" in "My Course" frame  of "Course Materials" tab
 Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
-When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+When I click on "Show"  of "RegChildActivity" in  "Course Materials" tab as "RegHedWsInstructor"
 
 #------------------------------Add Section Direction Lines-----------------------
 #Purpose:Clicking on Add link of "Direction Lines" under each section
@@ -403,32 +403,30 @@ Then I should be on the "Course Materials" page
 
 #------------------------------Fill Activity Details in Activity Creation Wizard-----------------------
 #Purpose:Workspace instructor launch create activity wizard and enter activity name
-Scenario: Workspace instructor launches random activity create wizard and enter activity title
+Scenario: Workspace instructor launches random activity create wizard
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
 
+Scenario: Add activity details in Activity Creation Wizard
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 
 #--------------------------------------Add Questions in Questions tab--------------------------------------
 #Purpose: Workspace instructor adds questions to activity
 
 #--------------------------------------Create New Question--------------------------------------
 Scenario: Add questions using create new question
-When I perform "Navigate" for "Questions"
-And I Add Questions using "Create New Question" option
+Then I Add Questions using "Create New Question" option
 And I create "True/False" question using "Create New Question"
 
 #---------------------------------Add Questions using "Select Question Groups"-------------------
 Scenario: Add questions using Select Question Group
-When I perform "Navigate" for "Questions"
-And I Add Questions using "Select Question Groups" option
+Then I Add Questions using "Select Question Groups" option
 And I should select "AssessmentRegressionQuestion" Question Group
 
 #---------------------------------Add Questions using "Select Question from Bank"-------------------
 Scenario: Add questions using Select Questions from Bank
-When I perform "Navigate" for "Questions"
-And I Add Questions using "Select Questions from Bank" option
+Then I Add Questions using "Select Questions from Bank" option
 And I should Add question from Question Bank
 
 #----------------------------------------------------Create Section--------------------------------------
@@ -439,7 +437,6 @@ When I perform "Create New Section" of name "Section1"
 Scenario: Workspace instructor create new single section and add 3 fill in the blank question to section1
 When I perform "Create New Section" of name "Section1"
 Then I add '3' questions of type "Fill in the Blank" at Section "1"
-When I Save and Continue and navigate to "Preferences" Tab
 
 Scenario: Instructor configore HelpLink and Grades preference for random activity
 When I configure the 'Grades' preference
@@ -485,7 +482,7 @@ When I navigate to "Course Materials" tab and selected "Add from Library" subtab
 Then I should be on the "Course Materials" page
 When I navigate to "Course Materials" tab
 
-And I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+And I search "RegChildActivity" in "My Course" frame  of "Course Materials" tab
 Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
 
 When I click on "View Submissions"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
@@ -504,14 +501,13 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "RegSAMActivity" SAM activity type
 Then I should be on the "Create activity" page
-When I Create "RegChildActivity" SAM activity
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
 And I perform "Create New Section" of name "Section1"
 And I perform "Create New Section" of name "Section2"
 And I perform "Create New Section" of name "Section3"
 Then I add '3' questions of type "Fill in the Blank" at Section "1"
 And I add '3' questions of type "Fill in the Blank" at Section "2"
 And I add '3' questions of type "Fill in the Blank" at Section "3"
-When I Save and Continue and navigate to "Preferences" Tab
 
 # Set number of attempts to 1
 And I set Specify Number of Attempts to "1"
@@ -546,30 +542,182 @@ Then I should see the successfull message "Content item is added to My Course"
 
 #-----------------------------------------------------Show/Hide asset in My Course ------------------------------------
 Scenario: Search asset in MyCourse and Show/Hide
-When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+#When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I search "RegChildActivity" in "My Course" frame  of "Course Materials" tab
 Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
-When I click on "ShowHide"  of "RegChildActivity" in  "Course Materials" tab as "HedWsInstructor"
+When I click on "Show"  of "RegChildActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+Scenario: Search asset with Highest Score Preference in MyCourse and Show/Hide
+When I associate the "RegHighestScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegHighestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegHighestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegHighestScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+Scenario: Search asset with Lowest Score Preference in MyCourse and Show/Hide
+When I associate the "RegLowestScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegLowestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLowestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegLowestScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+Scenario: Search asset with First Score Preference in MyCourse and Show/Hide
+When I associate the "RegFirstScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegFirstScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegFirstScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegFirstScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+Scenario: Search asset with Last Score Preference in MyCourse and Show/Hide
+When I associate the "RegLastScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegLastScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLastScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegLastScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+Scenario: Search asset with Average Score Preference in MyCourse and Show/Hide
+When I associate the "RegAverageScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegAverageScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegAverageScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegAverageScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+
+#------------------------------Create activity for verifying "Record this score in Gradebook" functionality-----------------------
+#Purpose: Create activity for verifying "Record this score in Gradebook" functionality
+
+#--------------------------------------Verify Highest Score--------------------------------------
+Scenario: Create activity for verifying Highest score
+When I Create "RegHighestScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify Lowest Score--------------------------------------
+Scenario: Create activity for verifying Lowest score
+When I Create "RegLowestScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify First Score--------------------------------------
+Scenario: Create activity for verifying First score
+When I Create "RegFirstScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify Last Score--------------------------------------
+Scenario: Create activity for verifying Last score
+When I Create "RegLastScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify Average Score--------------------------------------
+Scenario: Create activity for verifying Average score
+When I Create "RegAverageScoreActivity" activity with Behavioral Mode "Basic Random"
 
 
 #-----------------------------------------------------Record this score in Gradebook------------------------------------
 #Purpose: Verifying the "Record this score in Gradebook" option
 #TestLink id: peg-20728
 Scenario: Setting the "Record this score in Gradebook" option to First
-When I perform "Navigate" for "Preferences"
 Then set Record this score in Gradebook option to "First"
 
 Scenario: Setting the "Record this score in Gradebook" option to Last
-When I perform "Navigate" for "Preferences"
 Then set Record this score in Gradebook option to "Last"
 
 Scenario: Setting the "Record this score in Gradebook" option to Highest
-When I perform "Navigate" for "Preferences"
 Then set Record this score in Gradebook option to "Highest"
 
 Scenario: Setting the "Record this score in Gradebook" option to Lowest
-When I perform "Navigate" for "Preferences"
 Then set Record this score in Gradebook option to "Lowest"
 
 Scenario: Setting the "Record this score in Gradebook" option to Average
-When I perform "Navigate" for "Preferences"
 Then set Record this score in Gradebook option to "Average"
+
+#------------------------Navigate to various tabs in the Activity Creation Wizard---------------------
+Scenario: Navigate to Activity Details tab in Activity Creation Wizard
+When I perform "Navigate" for "Activity Details"
+
+Scenario: Navigate to Questions tab in Activity Creation Wizard
+When I perform "Navigate" for "Questions"
+
+Scenario: Navigate to Messages tab in Activity Creation Wizard
+When I perform "Navigate" for "Messages"
+
+Scenario: Navigate to Grades tab in Activity Creation Wizard
+When I perform "Navigate" for "Grades"
+
+Scenario: Navigate to Teaching Support tab in Activity Creation Wizard
+When I perform "Navigate" for "Teaching Support"
+
+Scenario: Navigate to HelpLinks tab in Activity Creation Wizard
+When I perform "Navigate" for "HelpLinks"
+
+Scenario: Navigate to Preferences tab in Activity Creation Wizard
+When I perform "Navigate" for "Preferences"
+
+Scenario: Instructor Views Average Score in View Submission
+When I search "RegAverageScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegAverageScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegAverageScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegHedWsStudent" in view submission page
+Then as "RegHedWsInstructor" I should see the "Average" score recorded
+
+Scenario: Instructor Views First Score in View Submission
+When I search "RegFirstScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegFirstScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegFirstScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegHedWsStudent" in view submission page
+Then as "RegHedWsInstructor" I should see the "First" score recorded 
+
+Scenario: Instructor Views Last Score in View Submission
+When I search "RegLastScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLastScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegLastScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegHedWsStudent" in view submission page
+Then as "RegHedWsInstructor" I should see the "Last" score recorded 
+
+Scenario: Instructor Views Highest Score in View Submission
+When I search "RegHighestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegHighestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegHighestScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegHedWsStudent" in view submission page
+Then as "RegHedWsInstructor" I should see the "Highest" score recorded 
+
+Scenario: Instructor Views Lowest Score in View Submission
+When I search "RegLowestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLowestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegLowestScoreActivity" in  "Course Materials" tab as "RegHedWsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegHedWsStudent" in view submission page
+Then as "RegHedWsInstructor" I should see the "Lowest" score recorded 
+
+Scenario: Close View Submission Page
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+#Purpose: Create Folder in content library and then create link to my course frame
+Scenario: Creation of folder in Course Materials Library
+When I click on the 'Add Course Materials' option
+And I click on the "Add Folder" activity type
+Then I should be on the "Create New Folder" page
+When I create "RegFolderGBPreference" type Folder
+Then I should see the successfull message "Folder saved successfully."
+
+#Purpose: Open a folder
+Scenario: Opening a folder in Course Materials tab
+When I open the "RegFolderGBPreference" in "Course Materials Library" frame
+
+#Purpose: Navigate one level up using the back button in Course Materials
+Scenario: Navigate one level up using the back button in Course Materials
+When I click on back arrow icon in the "Course Materials Library" frame
+Then I should be on the "Course Materials" page
+
+#Purpose: Add Folder from Course Materials Library to My Course and Unhide the contents
+Scenario: Add Folder from Course Materials Library to My Course and Unhide the contents
+When I associate the "RegFolderGBPreference" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegFolderGBPreference" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegFolderGBPreference" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegFolderGBPreference" in  "Course Materials" tab as "RegHedWsInstructor"
+
+#Purpose: Open folder in My Course frame
+Scenario: Open folder in My Course frame
+When I open the "RegFolderGBPreference" in "My Course" frame
+#And I select all the contents
+#And I click ShowHide in MyCourse
+#Then I should see the contents in "Shown" state

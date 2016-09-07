@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -2093,6 +2094,360 @@ namespace Pegasus.Pages.UI_Pages
             grade.StoreGradeInMemory();
             Logger.LogMethodExit("AddUserPage", "SaveUserInMemory",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// View all Submission and get the details of recorded submission
+        /// </summary>
+        /// <param name="studentName">this is student name</param>
+        public void InstructorViewAllSubmission(string studentName)
+        {
+            //Get details of the recorded submission
+            Logger.LogMethodEntry("ViewSubmissionPage", "InstructorViewAllSubmission",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string windowName = base.GetPageTitle;
+                //Search the student
+                IWebElement getStudentName = this.SearchStudentInInsViewSubmission(studentName);
+                string expectedStudent = getStudentName.Text;
+                if (expectedStudent == studentName)
+                {
+                    //Click expand button next to student
+                    base.ClickImageByXPath(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Expand_Xpath_Locator);
+                    base.WaitUntilPopUpLoads(windowName);
+                    Thread.Sleep(2000);
+                    //Get details of the recorded submission
+                    this.GetRecordedAttemptDetails();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "InstructorViewAllSubmission",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search student in Instructor View Submission based on Name
+        /// </summary>
+        /// <param name="studentName">This is the student name</param>
+        /// <returns></returns>
+        public IWebElement SearchStudentInInsViewSubmission(string studentName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+            "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);
+            IWebElement getStudentNameProperty = null;
+            try
+            {
+                this.SelectViewSubmissionWindow();
+                base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_Xpath_Locator), 10);
+                int studentCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_Xpath_Locator);
+                for (int studentIndex = Convert.ToInt16(ViewSubmissionPageResource.
+                    ViewSubmission_Page_Index_Value_One);
+                    studentIndex <= studentCount; studentIndex++)
+                {
+                    string getStudent = base.GetTitleAttributeValueByXPath(
+                        String.Format(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator,
+                        studentIndex));
+                    base.WaitForElement(By.XPath(
+                        string.Format(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator,
+                        studentIndex)));
+                    if (getStudent == studentName)
+                    {
+                        // Get web element for the particular student and click
+                        getStudentNameProperty = base.
+                            GetWebElementPropertiesByXPath(
+                             string.Format(ViewSubmissionPageResource.
+                             ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator,
+                             studentIndex));
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                    "SearchStudentByLastAndFirstName", base.IsTakeScreenShotDuringEntryExit);
+            return getStudentNameProperty;
+        }
+
+        /// <summary>
+        /// Get recorded attempt details
+        /// </summary>
+        /// <returns>the recoded attempt details</returns>
+        private string GetRecordedAttemptDetails()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetRecordedAttemptDetails",
+              base.IsTakeScreenShotDuringEntryExit);
+            // Get recorded attempt details
+            string recordedAttempt = base.GetWebElementPropertiesByXPath(
+                ViewSubmissionPageResource.ViewSubmission_Page_RecordedAttemptDateTime_Xpath_Locator)
+                .Text.Replace("\r\n", " ");
+
+            Logger.LogMethodExit("ViewSubmissionPage", "GetRecordedAttemptDetails",
+                          base.IsTakeScreenShotDuringEntryExit);
+            return recordedAttempt;
+        }
+
+        /// <summary>
+        /// Verify Score Recorded in Gradebook
+        /// </summary>
+        /// <param name="userType">This is the user type</param>
+        /// <param name="gbScore">This is the GB score preference</param>
+        /// <returns></returns>
+        public string verifyGradebookScore(User.UserTypeEnum userType, string gbScore)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "verifyGradebookScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            string obtainedScore = string.Empty;
+            try
+            {
+                obtainedScore = VerifyRecordedScore(userType, gbScore);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "verifyGradebookScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            return obtainedScore;
+        }
+
+        /// <summary>
+        /// Verify if the recorded score is same as setting
+        /// </summary>
+        /// <param name="gbScore">This is the score preference for recording the score</param>
+        public string VerifyRecordedScore(User.UserTypeEnum userType, string gbScore)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "VerifyRecordedScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Initialize variable for getting Obtained Score
+            string obtainedScore = string.Empty;
+
+            try
+            {
+                // Initialize variable for storing recorded score
+                int recordedScore = Convert.ToInt32(this.GetRecordedScoreDetails(userType));
+                //initialize array for storing scores of all attempts
+                ArrayList scoreofeachattemptlist = new ArrayList();
+                //Get scores of all attempts
+                scoreofeachattemptlist = this.GetAttemptsandScore(userType);
+                int numberofScores = scoreofeachattemptlist.Count;
+                switch (gbScore)
+                {
+                    //Verify if score of First attempt is recorded
+                    case "First":
+                        //Get score of first attempt
+                        int firstscore = (int)scoreofeachattemptlist[0];
+                        //Verify if recorded score matches score of first attempt
+                        if (recordedScore == firstscore)
+                        {
+                            //Confirm recorded score is of first attempt
+                            obtainedScore = "First";
+                        }
+                        break;
+
+                    //Verify if score of Last attempt is recorded
+                    case "Last":
+                        //Get score of last attempt
+                        int lastScore = (int)scoreofeachattemptlist[numberofScores - 1];
+                        //Verify if recorded score matches score of last attempt
+                        if (recordedScore == lastScore)
+                        {
+                            //Confirm recorded score is of last attempt
+                            obtainedScore = "Last";
+                        }
+                        break;
+
+                    //Verify if Highest score of attempts is recorded
+                    case "Highest":
+                        //Get Highest score form attempts
+                        int highScore = scoreofeachattemptlist.Cast<Int32>().Max();
+                        //Verify if recorded score is Lowest of attempts
+                        if (recordedScore == highScore)
+                        {
+                            //Confirm recorded score is highest of attempts
+                            obtainedScore = "Highest";
+                        }
+                        break;
+
+                    //Verify if Lowest score of attempts is recorded
+                    case "Lowest":
+                        //Get Lowest score form attempts
+                        int lowScore = scoreofeachattemptlist.Cast<Int32>().Min();
+                        //Verify if recorded score is Lowest of attempts
+                        if (recordedScore == lowScore)
+                        {
+                            //Confirm recorded score is Lowest of attempts
+                            obtainedScore = "Lowest";
+                        }
+                        break;
+
+                    //Verify if Average score of attempts is recorded
+                    case "Average":
+                        //Get Average score form attempts
+                        int totalScore = 0;
+                        foreach (Object attemptScore in scoreofeachattemptlist)
+                        {
+                            totalScore += (int)attemptScore;
+                        }
+                        double avg = totalScore / numberofScores;
+                        int averageScore = Convert.ToInt32(avg);
+                        //Verify if recorded score is Average of attempts
+                        if (recordedScore == averageScore)
+                        {
+                            //Confirm recorded score is Average of attempts
+                            obtainedScore = "Average";
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "VerifyRecordedScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            return obtainedScore;
+        }
+
+        /// <summary>
+        /// Get the recorded score details
+        /// </summary>
+        /// <returns>returns the recorded score details</returns>
+        private string GetRecordedScoreDetails(User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetRecordedScoreDetails",
+              base.IsTakeScreenShotDuringEntryExit);
+            string recordedScore = string.Empty;
+            switch (userType)
+            {
+                case User.UserTypeEnum.HedWsInstructor:
+                case User.UserTypeEnum.RegHedWsInstructor:
+                    //Get the recorded score details
+                    recordedScore = base.GetWebElementPropertiesByXPath(ViewSubmissionPageResource.
+                        ViewSubmission_Page_RecordedScore_Xpath_Locator).Text.Trim('%').Trim();
+                    break;
+
+                case User.UserTypeEnum.HedWsStudent:
+                case User.UserTypeEnum.RegHedWsStudent:
+                    bool attempt = base.IsElementPresent(By.ClassName(ViewSubmissionPageResource
+                        .ViewSubmission_Page_AttemptScore_STU_VS_ClassName_Locator), 5);
+                    IWebElement getAttempt = base.GetWebElementPropertiesByClassName(ViewSubmissionPageResource
+                        .ViewSubmission_Page_AttemptScore_STU_VS_ClassName_Locator);
+                    base.ClickByJavaScriptExecutor(getAttempt);
+                    recordedScore = base.GetWebElementPropertiesById(ViewSubmissionPageResource.
+                        ViewSubmission_Page_RecordedScore_STU_VS_Id_Locator)
+                        .Text.Trim('%').Trim();
+                    string[] getScoreResult = recordedScore.Split(':');
+                    //Split the score result
+                    recordedScore = getScoreResult[1].Trim();
+                    break;
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "GetRecordedScoreDetails",
+                          base.IsTakeScreenShotDuringEntryExit);
+            return recordedScore;
+        }
+
+        /// <summary>
+        /// Get details of all the submitted attempts and the scores
+        /// </summary>
+        /// <returns>returns array of scores</returns>
+        private ArrayList GetAttemptsandScore(User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage", "GetAttemptsandScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            //initialize the array to store attempt details
+            ArrayList attemptlist = new ArrayList();
+            ArrayList scorelist = new ArrayList();
+            bool submissionData = false;
+            int submissioDatacount = 0;
+
+            switch (userType)
+            {
+                case User.UserTypeEnum.HedWsInstructor:
+                case User.UserTypeEnum.WLCsSmsInstructor:
+                case User.UserTypeEnum.HSSCsSmsInstructor:
+                case User.UserTypeEnum.HedProgramAdmin:
+                case User.UserTypeEnum.HedMilAcceptanceInstructor:
+                case User.UserTypeEnum.RegHedWsInstructor:
+                    // Verify the submissions are present
+                    submissionData = base.IsElementPresent(By.XPath(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Xpath_Locator), 5);
+                    if (submissionData)
+                    {
+                        // Get count of submissions
+                        submissioDatacount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                            ViewSubmission_Page_ViewSubmission_Xpath_Locator);
+                        for (int i = 2; i <= submissioDatacount; i++)
+                        {
+                            //Get details of submissions from other students
+                            string otherStudent = base.GetWebElementPropertiesByXPath(string.Format(
+                                ViewSubmissionPageResource.ViewSubmission_UnExpectedStudent_XpathLocator, i))
+                                .GetAttribute("class");
+                            //Verify if attempt belongs to same student
+                            if (otherStudent == "NonExpandable_GridNode_Name")
+                            {
+                                //Get attempt detials
+                                string attemptdatetime = base.GetWebElementPropertiesByXPath(string.Format(
+                                    ViewSubmissionPageResource.ViewSubmission_Page_AttemptDateTime_Xpath_Locator, i))
+                                    .Text.Replace("\r\n", " ");
+                                attemptlist.Add(attemptdatetime);
+
+                                //Get score details
+                                string grade = base.GetWebElementPropertiesByXPath(string.Format(
+                                    ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_StudentGrade_Xpath_Locator, i))
+                                    .GetAttribute("title").Trim('%').Trim();
+                                int attemptGrade = Convert.ToInt32(grade);
+                                scorelist.Add(attemptGrade);
+                            }
+                        }
+                    }
+                    break;
+
+                case User.UserTypeEnum.HedWsStudent:
+                case User.UserTypeEnum.WLCsSmsStudent:
+                case User.UserTypeEnum.HSSCsSmsStudent:
+                case User.UserTypeEnum.HedMilAcceptanceStudent:
+                case User.UserTypeEnum.RegHedWsStudent:
+                    // Verify the submissions are present
+                    submissionData = base.IsElementPresent(By.XPath(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Xpath_Locator), 5);
+                    if (submissionData)
+                    {
+                        // Get count of submissions
+                        submissioDatacount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                            ViewSubmission_Page_ViewSubmission_Xpath_Locator);
+                        for (int i = 1; i <= submissioDatacount; i++)
+                        {
+                            //Get attempt detials
+                            string attemptdatetime = base.GetWebElementPropertiesByXPath(string.Format(
+                                ViewSubmissionPageResource.ViewSubmission_Page_AttemptDateTime_STU_VS_Xpath_Locator, i))
+                                .Text.Replace("\r\n", " ");
+                            attemptlist.Add(attemptdatetime);
+                            //Get score details
+                            string grade = base.GetWebElementPropertiesByXPath(string.Format(
+                                ViewSubmissionPageResource.ViewSubmission_Page_AttemptScore_STU_VS_Xpath_Locator, i))
+                                .GetAttribute("title").Trim('%').Trim();
+                            int attemptGrade = Convert.ToInt32(grade);
+                            scorelist.Add(attemptGrade);
+                        }
+                    }
+                    break;
+            }
+            Logger.LogMethodExit("ViewSubmissionPage", "GetAttemptsandScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Return array of scores
+            return scorelist;
         }
     }
 }

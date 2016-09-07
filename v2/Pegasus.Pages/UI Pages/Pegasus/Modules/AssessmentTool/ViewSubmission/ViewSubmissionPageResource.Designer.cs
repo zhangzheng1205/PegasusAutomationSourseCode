@@ -179,6 +179,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[{0}]/div[1]/div.
+        /// </summary>
+        internal static string ViewSubmission_Page_AttemptDateTime_STU_VS_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_AttemptDateTime_STU_VS_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[{0}]/div[2]/div.
+        /// </summary>
+        internal static string ViewSubmission_Page_AttemptDateTime_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_AttemptDateTime_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to item2.
+        /// </summary>
+        internal static string ViewSubmission_Page_AttemptScore_STU_VS_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_AttemptScore_STU_VS_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[{0}]/div[2]/span.
+        /// </summary>
+        internal static string ViewSubmission_Page_AttemptScore_STU_VS_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_AttemptScore_STU_VS_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string ViewSubmission_Page_Cancel_PartialLinkText_Locator {
@@ -364,6 +400,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_QuestionCount_XPath_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_QuestionCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[1]/div[2]/div.
+        /// </summary>
+        internal static string ViewSubmission_Page_RecordedAttemptDateTime_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_RecordedAttemptDateTime_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook.
+        /// </summary>
+        internal static string ViewSubmission_Page_RecordedScore_STU_VS_Id_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_RecordedScore_STU_VS_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[1]/div[3]/span.
+        /// </summary>
+        internal static string ViewSubmission_Page_RecordedScore_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_RecordedScore_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -733,6 +796,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_ViewSubmission_Xpath_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[{0}]/div.
+        /// </summary>
+        internal static string ViewSubmission_UnExpectedStudent_XpathLocator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_UnExpectedStudent_XpathLocator", resourceCulture);
             }
         }
     }

@@ -37,17 +37,34 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Intialize Guid for Folder
                 Guid activityFolder = Guid.NewGuid();
+                String date = DateTime.Now.ToString("yyyy/MM/dd");
+                string randomValue = activityFolder.ToString().Split('-')[0];
+                string activityFolderName = string.Empty;
                 //Select Add Folder Window
                 this.SelectAddFolderWindow();
                 //Wait for the element
                 base.WaitForElement(By.Id(AddFolderPageResource.
                     AddFolder_Page_Fold_Name_Textbox_Id_Locator));
-                //Fill the Activity Folder Name in textbox
-                base.FillTextBoxById(AddFolderPageResource.
-                AddFolder_Page_Fold_Name_Textbox_Id_Locator,
-                activityFolder.ToString());
+                switch(activityTypeEnum)
+                {
+                    case Activity.ActivityTypeEnum.Folder:
+                        activityFolderName = "Auto-" + date + "-" + randomValue + "-Folder";
+                        //Fill the Activity Folder Name in textbox
+                        base.FillTextBoxById(AddFolderPageResource.
+                        AddFolder_Page_Fold_Name_Textbox_Id_Locator,
+                        activityFolderName.ToString());
+                        break;
+
+                    case Activity.ActivityTypeEnum.RegFolderGBPreference:
+                        activityFolderName = "Auto Reg GB Preference-" + date + "-" + randomValue + "-Folder";
+                        //Fill the Activity Folder Name in textbox
+                        base.FillTextBoxById(AddFolderPageResource.
+                        AddFolder_Page_Fold_Name_Textbox_Id_Locator,
+                        activityFolderName.ToString());
+                        break;
+                }
                 //Store the Activity Folder content
-                this.StoreTheActivityFolderContent(activityFolder,activityTypeEnum);
+                this.StoreTheActivityFolderContent(activityFolderName, activityTypeEnum);
                 if (activityTypeEnum == Activity.ActivityTypeEnum.QuestionFolder)
                 {
                     if (!base.IsElementSelectedById(AddFolderPageResource.
@@ -63,7 +80,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickButtonById(AddFolderPageResource.
                     AddFolder_Page_Folder_Create_Button_Id_Locator);
                 Thread.Sleep(Convert.ToInt32(AddFolderPageResource.
-            AddFolder_Page_Create_ButtonClick_Time_value));
+                    AddFolder_Page_Create_ButtonClick_Time_value));
+                base.SwitchToDefaultWindow();
             }
             catch (Exception e)
             { ExceptionHandler.HandleException(e);
@@ -93,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
       /// Store The Activity Folder Content
       /// </summary>
       /// <param name="activityFolder">This is Activity Folder Guid</param>
-      private void StoreTheActivityFolderContent(Guid activityFolder,
+      private void StoreTheActivityFolderContent(string activityFolder,
           Activity.ActivityTypeEnum activityTypeEnum)
       {
           //Store The Activity Folder Content

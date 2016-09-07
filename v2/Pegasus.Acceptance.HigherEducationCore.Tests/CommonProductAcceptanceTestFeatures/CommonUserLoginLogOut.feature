@@ -294,12 +294,12 @@ And I store user current date and time of the instructor
 #Purpose:Verify The User Login As WorkSpaceTeacher to "RegMySpanishLabMaster" master course
 Scenario:WL Workspace Instructor enter into RegMySpanishLabMaster master course
 Given I am on the "Global Home" page
-When I enter in the "RegMySpanishLabMaster" from the Global Home page as "HedWsInstructor" 
+When I enter in the "RegMySpanishLabMaster" from the Global Home page as "RegHedWsInstructor" 
 
 #Purpose:Verify The User Login As WorkSpaceStudent to "RegMySpanishLabMaster" master course
 Scenario:WL Workspace Student enter into RegMySpanishLabMaster master course
 Given I am on the "Global Home" page
-When I enter in the "RegMySpanishLabMaster" from the Global Home page as "HedWsStudent" 
+When I enter in the "RegMySpanishLabMaster" from the Global Home page as "RegHedWsStudent" 
 
 
 #Purpose:Verify The User Login As WorkSpaceStudent GlobalHome
@@ -342,6 +342,9 @@ Given I browsed the login url for "AmpCsSmsStudent"
 When I logged into the Pegasus as "AmpCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 
-
+#Purpose:Verify The User LogOut As WorkSpaceStudent
+Scenario: User LogOut As WorkSpaceStudent
+When I "Sign out" from the "HedWsStudent"
+Then I should see the successfull message "You have been signed out of the application."
 
 

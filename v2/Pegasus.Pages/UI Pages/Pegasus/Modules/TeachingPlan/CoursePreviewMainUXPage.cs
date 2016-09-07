@@ -1772,69 +1772,6 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Click on activity cmenu based on the cemnu option type,page name activity name
-        /// </summary>
-        /// <param name="assetCmenu">This is activity cmenu option.</param>
-        /// <param name="activityTypeEnum">This is activity type enum.</param>
-        /// <param name="pageName">This is page name.</param>
-        public void ClickCmenuOptionOfTheActivity(string activityName, string pageName)
-        {
-            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickCmenuOptionOfTheActivity",
-                base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                //Select Window
-                base.WaitUntilWindowLoads(pageName);
-                base.SelectWindow(pageName);
-                switch (pageName)
-                {
-                    case "Course Materials":
-                        base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
-                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
-                        //Switch To Frame
-                        base.SwitchToIFrame(CoursePreviewMainUXPageResource.
-                            CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
-
-                        //Get Activity Property
-                        string getPageCount = base.GetElementTextByClassName(CoursePreviewMainUXPageResource.
-                            CoursePreviewMainUX_Page_PaginationText_ClassName_Value);
-                        // Perform string operation to get the total page count which is a substirng of the pagination text
-                        string getTotalPageCount = getPageCount.Remove(0, 17).Trim().ToString();
-                        string getFirstPageNumber = getPageCount.Remove(0, 13);
-                        string getStarPageNumber = getFirstPageNumber.Remove(2, 4).Trim().ToString();
-
-                        for (int i = Convert.ToInt32(getStarPageNumber); i <= Convert.ToInt32(getTotalPageCount); i++)
-                        {
-                            // Check if the searchec activity exist in the current page context
-                            bool getActivityExistance = base.IsElementPresent(By.PartialLinkText(activityName), 5);
-                            if (getActivityExistance == false)
-                            {
-                                // Wait for next link in the pagination to load and click on the link
-                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMainUX_Page_NextLink_Id_Property));
-                                base.ClickLinkById(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMainUX_Page_NextLink_Id_Property);
-                                base.WaitUntilWindowLoads(pageName);
-                                base.SelectWindow(pageName);
-                                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
-                                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
-                                //Switch To Frame
-                                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
-                                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
-                            }
-                        }
-                        break;
-                }
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionOfTheActivity",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
         /// Verify expected Media Server Link is opened
         /// </summary>
         /// <param name="activityName">Media Server Link Name</param>

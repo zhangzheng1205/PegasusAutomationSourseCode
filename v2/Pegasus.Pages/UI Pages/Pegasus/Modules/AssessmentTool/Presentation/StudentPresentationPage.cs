@@ -7982,7 +7982,63 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage",
             "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
         }
-      }
 
-    
+         /// <summary>
+         /// Select correct answer
+         /// </summary>
+         /// <param name="questionType">this is the question type</param>
+         public void SelectAnswer(string answerChoice)
+         {
+             logger.LogMethodEntry("StudentPresentationPage",
+               "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
+             try
+             {
+                 int Qcount = base.GetElementCountByXPath(string.Format(StudentPresentationPageResource.
+                            StudentPresentation_Page_Question_Count_Xpath_Locator));
+                 switch (answerChoice)
+                 {
+                     case "correct":
+                         //Select correct answer
+
+                         for (int i = 1; i <= Qcount; i++)
+                         {
+                             string getQtype = base.GetWebElementPropertiesByXPath(string.Format(StudentPresentationPageResource.
+                                 StudentPresentation_Page_Question_Xpath_Locator, i)).GetAttribute("questiontype");
+                             if (getQtype == "True / False")
+                             {
+                                 string questionId = base.GetWebElementPropertiesByXPath(string.Format(StudentPresentationPageResource.
+                                 StudentPresentation_Page_Question_Xpath_Locator, i)).GetAttribute("id");
+                                 base.WaitForElement(By.Id("radio_T" + questionId));
+                                 bool radio = base.IsElementPresent(By.Id("radio_T" + questionId));
+                                 base.SelectRadioButtonById("radio_T" + questionId);
+                             }
+                         }
+                         break;
+
+                     case "incorrect":
+                         //Select correct answer
+                         for (int i = 1; i <= Qcount; i++)
+                         {
+                             string getQtype = base.GetWebElementPropertiesByXPath(string.Format(StudentPresentationPageResource.
+                                 StudentPresentation_Page_Question_Xpath_Locator, i)).GetAttribute("questiontype");
+                             if (getQtype == "True / False")
+                             {
+                                 string questionId = base.GetWebElementPropertiesByXPath(string.Format(StudentPresentationPageResource.
+                                 StudentPresentation_Page_Question_Xpath_Locator, i)).GetAttribute("id");
+                                 base.WaitForElement(By.Id("radio_F" + questionId));
+                                 bool radio = base.IsElementPresent(By.Id("radio_F" + questionId));
+                                 base.SelectRadioButtonById("radio_F" + questionId);
+                             }
+                         }
+                         break;
+                 }
+             }
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+             }
+             logger.LogMethodExit("StudentPresentationPage",
+             "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
+         }
+      }
 }

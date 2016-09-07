@@ -294,4 +294,52 @@
   <data name="ContentLibraryUX_Page_Right_Frame_ID_Locator" xml:space="preserve">
     <value>ifrmRight</value>
   </data>
+  <data name="CourseContentUXPage_MyCourse_Search_Expand_ID_Locator" xml:space="preserve">
+    <value>btn_type29</value>
+  </data>
+  <data name="CourseContentUXPage_EditCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[2]</value>
+  </data>
+  <data name="CourseContentUXPage_GetInformationCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[9]</value>
+  </data>
+  <data name="CourseContentUXPage_PreviewCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[3]</value>
+  </data>
+  <data name="CourseContentUXPage_PrintCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[5]</value>
+  </data>
+  <data name="CourseContentUXPage_PropertiesCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[4]</value>
+  </data>
+  <data name="CourseContentUXPage_RemoveCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[10]</value>
+  </data>
+  <data name="CourseContentUXPage_Searched_Activity_Count_InMyCourse_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCourseContent']/tbody/tr</value>
+  </data>
+  <data name="CourseContentUXPage_Searched_Activity_InMyCourse_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCourseContent']/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td/table/tbody/tr/td[2]/table/tbody/tr/td/div</value>
+  </data>
+  <data name="CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[8]</value>
+  </data>
+  <data name="CourseContentUXPage_ViewGradesCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId32']/table/tbody/tr/td/div[2]/a[6]</value>
+  </data>
+  <data name="ContentLibraryUXPage_MyCourse_Searched_Table_ID_Locator" xml:space="preserve">
+    <value>grdCourseContent</value>
+  </data>
+  <data name="ContentLibraryUXPage_MyCourse_Searched_Table_Next_Id_Locator" xml:space="preserve">
+    <value>grdCourseContent$next</value>
+  </data>
+  <data name="CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId8']/table/tbody/tr/td/div[2]/a[3]</value>
+  </data>
+  <data name="CourseContentUXPage_Activity_InMyCourse_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCourseContent']/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="ContentLibraryUXPage_ClearSearch_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_ucSearchMessageBoard_lnkClear</value>
+  </data>
 </root>

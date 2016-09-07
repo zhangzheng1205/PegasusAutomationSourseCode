@@ -7,7 +7,7 @@
 Scenario: Launch the RegChildActivity Activity
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
-When I open the "RegChildActivity" Activity
+When I click on "Open" of  "RegChildActivity" Activity in "Course Materials" page
 
 #Purpose:To close activity window
 Scenario:Close activity window
@@ -113,7 +113,7 @@ Then I should see the availibility "Direction lines (instructions)" at Page is "
 Scenario: workspace student launch RegChildActivity from Course Materials page
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
-When I launch the  "RegChildActivity" Activity as "RegHedWsStudent" from "Course Materials" page
+When I click on "Open" of  "RegChildActivity" Activity in "Course Materials" page
 
 #Purpose:To verify Beginning of activity message
 Scenario:To verify Beginning of activity message
@@ -148,7 +148,7 @@ When I submit the answered activity "RegSAMActivity"
 Scenario: Workspace student launch RegChildAbruptActivity from Course Materials page
 When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
-When I launch the  "RegChildAbruptActivity" Activity as "RegHedWsStudent" from "Course Materials" page
+When I click on "Open" of  "RegChildAbruptActivity" Activity in "Course Materials" page
 
 Scenario: Student Validate 100 percent score in view submission page
 When I navigate to "Course Materials" tab of the "Course Materials" page
@@ -158,3 +158,78 @@ Then I should be on the "View Submission" page
 And  I should be displayed with "100" score page
 When I close the "View Submission" window
 Then I should be on the "Course Materials" page
+
+#Pupose: Student submits activity with correct answers
+Scenario: Student submits activity with correct answers
+When I select "correct" answer for True/False question
+And I should successfully submit activity for grading
+
+#Purpose: Student submits activity with incorrect answers
+Scenario: Student answers activity with incorrect answers
+When I select "incorrect" answer for True/False question
+And I should successfully submit activity for grading
+
+#Purpose: Student opens Activity for Highest score
+Scenario: Launch Activity for Highest score
+When I click on "Open" of  "RegHighestScoreActivity" Activity in "Course Materials" page
+Given I am on "RegSAMActivity" window
+
+#Purpose: Student opens Activity for Lowest score
+Scenario: Launch Activity for Lowest score
+When I click on "Open" of  "RegLowestScoreActivity" Activity in "Course Materials" page
+Given I am on "RegSAMActivity" window
+
+#Purpose: Student opens Activity for First score
+Scenario: Launch Activity for First score
+When I click on "Open" of  "RegFirstScoreActivity" Activity in "Course Materials" page
+Given I am on "RegSAMActivity" window
+
+#Purpose: Student opens Activity for Last score
+Scenario: Launch Activity for Last score
+When I click on "Open" of  "RegLastScoreActivity" Activity in "Course Materials" page
+Given I am on "RegSAMActivity" window
+
+#Purpose: Student opens Activity for Average score
+Scenario: Launch Activity for Average score
+When I click on "Open" of  "RegAverageScoreActivity" Activity in "Course Materials" page
+Given I am on "RegSAMActivity" window
+
+#Purpose: Verify score recorded in Gradebook is as per the score Preference
+Scenario: Verify Average Score is Recorded
+When I click on "View Submissions" of  "RegAverageScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "HedWsStudent" I should see the "Average" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify Highest Score is Recorded
+When I click on "View Submissions" of  "RegHighestScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "HedWsStudent" I should see the "Highest" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify Lowest Score is Recorded
+When I click on "View Submissions" of  "RegLowestScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "HedWsStudent" I should see the "Lowest" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify First Score is Recorded
+When I click on "View Submissions" of  "RegFirstScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "HedWsStudent" I should see the "First" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify Last Score is Recorded
+When I click on "View Submissions" of  "RegLastScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "HedWsStudent" I should see the "Last" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+#Purpose: Student opens Folder
+Scenario: Student Opens folder in Course Materials page
+When I click on "Open" of  "RegFolderGBPreference" Folder in "Course Materials" page

@@ -342,4 +342,28 @@
   <data name="ViewSubmission_Page_ViewSubmission_GetMessageText_ClassName" xml:space="preserve">
     <value>pop_txt</value>
   </data>
+  <data name="ViewSubmission_Page_RecordedAttemptDateTime_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[1]/div[2]/div</value>
+  </data>
+  <data name="ViewSubmission_Page_AttemptDateTime_STU_VS_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[1]/div</value>
+  </data>
+  <data name="ViewSubmission_Page_AttemptDateTime_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[2]/div</value>
+  </data>
+  <data name="ViewSubmission_Page_AttemptScore_STU_VS_ClassName_Locator" xml:space="preserve">
+    <value>item2</value>
+  </data>
+  <data name="ViewSubmission_Page_AttemptScore_STU_VS_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[2]/span</value>
+  </data>
+  <data name="ViewSubmission_Page_RecordedScore_STU_VS_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook</value>
+  </data>
+  <data name="ViewSubmission_Page_RecordedScore_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[1]/div[3]/span</value>
+  </data>
+  <data name="ViewSubmission_UnExpectedStudent_XpathLocator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div</value>
+  </data>
 </root>

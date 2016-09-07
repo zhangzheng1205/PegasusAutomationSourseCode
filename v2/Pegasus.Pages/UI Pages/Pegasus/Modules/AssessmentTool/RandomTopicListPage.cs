@@ -522,17 +522,17 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCreateRandomActivityWindow();
                 //Get total count of Add Questions Option
                 int questionOptionCount = base.GetElementCountByXPath
-                    ("//div[@id='AddQuestionsContextMenu']/table/thead/tr");
+                    (RandomTopicListPageResource.RandomTopicList_Page_AddQuestionOption_Count_Xpath_Locator);
                 //Iterate the Add Question Options and select the expected option
                 for (int i = 1; i <= questionOptionCount; i++)
                 {
                     base.WaitForElement(By.XPath(string.Format
-                        ("//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td", i)));
+                        (RandomTopicListPageResource.RandomTopicList_Page_AddQuestionOption_Xpath_Locator, i)));
                     IWebElement questionOption = base.GetWebElementPropertiesByXPath(string.Format
-                        ("//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td", i));
+                        (RandomTopicListPageResource.RandomTopicList_Page_AddQuestionOption_Xpath_Locator, i));
                     Thread.Sleep(1000);
                     string actualquestionOption = base.GetElementInnerTextByXPath(string.Format
-                        ("//div[@id='AddQuestionsContextMenu']/table/thead/tr[{0}]/td", i)).Trim();
+                        (RandomTopicListPageResource.RandomTopicList_Page_AddQuestionOption_Xpath_Locator, i)).Trim();
                     Thread.Sleep(1000);
                     //Compare expected option and click on match
                     if (expectedQuestionOption == actualquestionOption)
