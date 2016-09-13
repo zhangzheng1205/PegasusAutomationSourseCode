@@ -1124,5 +1124,40 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VaidateGBSyncIconForActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+         /// <summary>
+        /// Verify Badge Icon is present in Gradebook
+        /// </summary>
+        /// <param name="activityName">This is the activity name</param>
+        /// <param name="userTypeEnum">This is the user type</param>
+        [Then(@"I should see the badge icon for ""(.*)"" as ""(.*)""")]
+        public void isBadgeIconPresentInGradebook(string activityName,
+            User.UserTypeEnum userTypeEnum)
+        {
+            // Verify Badge Icon is present in Student Gradebook
+            Logger.LogMethodEntry("Gradebook",
+                "isBadgeIconPresentInGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            string userLastName = User.Get(User.UserTypeEnum.CsSmsStudent).LastName.ToString();
+            string userFirstName = User.Get(User.UserTypeEnum.CsSmsStudent).FirstName.ToString();
+            //Assert Badge is displayed for submitted badged activity
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.CsSmsInstructor:
+                    Logger.LogAssertion("isBadgeIconPresentInInstructorGB", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (true, new GBInstructorUXPage()
+                            .VerifyBadge(activityName, userLastName, userFirstName)));
+                    break;
+                case User.UserTypeEnum.CsSmsStudent:
+                    Logger.LogAssertion("isBadgeIconPresentInStudentGB", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (true, new GBStudentUXPage().isBadgePresent(activityName)));
+                    break;
+            }
+            Logger.LogMethodExit("Gradebook",
+                "isBadgeIconPresentInGradebook", base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
+   

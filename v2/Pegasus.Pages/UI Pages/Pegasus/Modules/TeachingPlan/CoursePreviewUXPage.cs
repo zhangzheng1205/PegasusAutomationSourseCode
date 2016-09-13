@@ -852,5 +852,41 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ContentLibraryUXPage", "ClickOnNextLinkIfActivityNotPresent",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Validate the display of Congratulation message after submitting badge activity
+        /// </summary>
+        /// <returns></returns>
+        public bool isCongralutionMessageDisplayedforBadge()
+        {
+            // Validate the Congratulations message is displayed after submitting badged activity
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "isCongralutionMessageDisplayedforBadge",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Initiate variable
+            bool isCongratulationDisplayed = false;
+            try
+            {
+                Thread.Sleep(3000);
+                new StudentPresentationPage().SelectWindowAndFrame();
+                base.WaitForElementDisplayedInUi(By.Id(
+                    CoursePreviewUXPageResource.CoursePreviewUX_Page_Badge_Message_Id_Locator));
+                isCongratulationDisplayed = base.IsElementDisplayedInPage(By.Id(
+                    CoursePreviewUXPageResource.CoursePreviewUX_Page_Badge_Message_Id_Locator), true, 10);
+                //if (isCongratulationDisplayed)
+                //{
+                //    isbadgepresent = true;
+                //}               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+                "isCongralutionMessageDisplayedforBadge",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isCongratulationDisplayed;
+        }
+
     }
 }

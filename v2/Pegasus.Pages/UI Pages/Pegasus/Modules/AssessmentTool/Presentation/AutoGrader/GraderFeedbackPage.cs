@@ -151,5 +151,31 @@ namespace Pegasus.Pages.UI_Pages.Pegasus
             Logger.LogMethodExit("GraderFeedbackPage", "RefreshCoursePreviewIframe",
                       base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click Return to course button operation.
+        /// </summary>
+        public void ClickReturnToCourseButtonforBadgeActivity()
+        {
+            //To perform click operation on "Retuen To Course" button.
+            Logger.LogMethodEntry("GraderFeedbackPage", "ClickReturnToCourseButton",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(GraderFeedbackResource.
+                GraderFeedbackResource_Popup_Title);
+            base.SelectWindow(GraderFeedbackResource.
+                GraderFeedbackResource_Popup_Title);
+            Thread.Sleep(10000);
+            // Wait untill "Retuen To Course" button loads and click.
+            IWebElement returnToCoursebtnid = base.GetWebElementPropertiesByClassName
+                (GraderFeedbackResource.
+                GraderFeedbackResource_ReturnToCourse_Button_ID);
+            base.ClickByJavaScriptExecutor(returnToCoursebtnid);
+            base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_Window_Title_Name_HED);
+            base.SelectWindow(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_Window_Title_Name_HED);
+            Logger.LogMethodExit("GraderFeedbackPage", "ClickReturnToCourseButton",
+                      base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -144,3 +144,10 @@ When I select the option "Accept" in view submission page
 And I close the "View Submission" window
 Then I should see the score "0" of "Excel Chapter 1 Skill-Based Training" activity for "CsSmsStudent"
 And I click on 'My Course' link in gradebook by "CsSmsInstructor"
+
+#Purpose: Instructor Validating badge in instructor grade book
+Scenario: Instructor Validating badge in instructor grade book By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Gradebook" by "CsSmsInstructor"
+Then I should see the badge icon for "Word Chapter 1 Grader Project [Assessment 3]" as "CsSmsInstructor"

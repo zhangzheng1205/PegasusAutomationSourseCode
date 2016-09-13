@@ -426,6 +426,22 @@ the UI deleted or refreshed.-->
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+    <Course>
+      <Name>Automation_MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14]</Name>
+      <CourseType>MyITLabForOffice2013Master</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+       <Course>
+      <Name>Badging-CGIE-MyITLab for Office 2013</Name>
+      <CourseType>BadgingCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--Hard coded Grades data.-->
   <ArrayOfGrade>
@@ -931,9 +947,9 @@ the UI deleted or refreshed.-->
       <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@exelindia.com</Email>
-      <FirstName>Nithya</FirstName>
+      <FirstName>BDD</FirstName>
       <MiddleName>Nanda</MiddleName>
-      <LastName>Nanda</LastName>
+      <LastName>ae6d</LastName>
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>

@@ -223,6 +223,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[3]/span/span/img.
+        /// </summary>
+        internal static string GBStudentUXPage_Badge_Icon_Percent_Score_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBStudentUXPage_Badge_Icon_Percent_Score_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_InnerPageContent_Completeditems.
         /// </summary>
         internal static string GBStudentUXPage_Completeditems_Id_Locator {

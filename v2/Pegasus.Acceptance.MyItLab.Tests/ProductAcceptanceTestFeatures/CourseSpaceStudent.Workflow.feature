@@ -730,3 +730,21 @@ And I open the activity named as "Access Chapter 1 Skill-Based Training"
 And I attempt the questions for "70%" in activity "Access Chapter 1 Skill-Based Training"
 Then I should see the "Passed" status for the activity "Access Chapter 1 Skill-Based Training"
 And I should see "72%" score for the activity "Access Chapter 1 Skill-Based Training" in course material page
+
+#Purpose : Student GraderIT Word Activity submission to verify Badging
+Scenario: Student GraderIT Word Activity submission to verify Badging
+When I navigate to "Course Materials" tab
+And I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_w01_grader_a3.docx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Word file for 70%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Word Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_w01_grader_a3.docx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button for badged activity
+Then I should see a Congratulation message

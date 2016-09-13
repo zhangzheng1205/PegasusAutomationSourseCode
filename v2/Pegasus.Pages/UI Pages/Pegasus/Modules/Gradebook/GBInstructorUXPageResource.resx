@@ -558,4 +558,7 @@
   <data name="GBInstructorUXPage_Back_Arrow_Link_Id_Locator" xml:space="preserve">
     <value>divBackArrow</value>
   </data>
+  <data name="GBInstructorUX_Page_BadgeICon_CSS_Locator" xml:space="preserve">
+    <value>div#badgeURI.GBBadgeIcon</value>
+  </data>
 </root>

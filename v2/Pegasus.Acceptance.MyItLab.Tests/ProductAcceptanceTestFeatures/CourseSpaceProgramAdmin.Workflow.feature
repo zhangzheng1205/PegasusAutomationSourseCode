@@ -187,4 +187,24 @@ And I select "set idle" and "CsSmsStudent"student user for enrollment
 And I select "scoring 100" and "CsSmsStudent"student user for enrollment
 And I select "CsSmsInstructor" teacher user for enrollment
 
+#Purpose: Create a new section for badging verification
+Scenario: Create a new section for badging verification
+When I navigate to "Sections" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I click on Add Sections link from the Program Administration page
+And I create Section from "BadgingCourse" Template as a Program Admin
+When I navigate to "Sections" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I verify the Section created from "MyITLabOffice2013Program" course Template for AssignedToCopy state
+Then I should see the Section created from "MyITLabOffice2013Program" course Template to be successfully out of AssignedToCopy state
 
+#Purpose:To Enroll instructor and  a student to verify badging
+#Product:MIL
+#Author: Rashmi
+#Pre-requisites: Users should be available for enrollment
+Scenario:Enroll  instructor and a student to verify badging
+When I navigate to "Enrollments" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I search the section of "MyITLabOffice2013Program" at Enrollments Tab
+And I select "scoring 100" and "CsSmsStudent"student user for enrollment
+And I select "CsSmsInstructor" teacher user for enrollment

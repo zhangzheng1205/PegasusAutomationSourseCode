@@ -294,4 +294,7 @@
   <data name="GBStudentUXPage_GradeBook_Temp_Cmenu_CssSelector_Locator" xml:space="preserve">
     <value>#GridStudent tbody tr:nth-child({0}) td:nth-child(2) span</value>
   </data>
+  <data name="GBStudentUXPage_Badge_Icon_Percent_Score_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span/img</value>
+  </data>
 </root>

@@ -1303,5 +1303,47 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBStudentUXPage", "GotoViewSubmissionPage",
                           base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify if Badge icon is displayed in the Student Gradebook
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <returns>True if Badge icon is displayed</returns>
+        public bool isBadgePresent(string activityName)
+        {
+            logger.LogMethodEntry("GBStudentUXPage",
+                "isBadgePresent",
+                base.IsTakeScreenShotDuringEntryExit);
+            bool IconPresent = false;
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Initialize Variable
+            string getActivityStatusGrade = string.Empty;
+            //Get Activity Column Count
+            int getActivityCount = base.GetElementCountByCssSelector(
+                GBStudentUXPageResource.
+                GBStudentUXPage_GradeBook_assetCount_CssSelector_Locator);
+            for (int columnCount = 1; columnCount <= getActivityCount;
+                columnCount++)
+            {
+                string getActivityName = base.GetTitleAttributeValueByXPath
+                (string.Format(GBStudentUXPageResource.
+                        GBStudentUXPage_Activity_Name_Xpath_Locator, columnCount))
+                        .Trim();
+                if (getActivityName.Equals(activityName))
+                {
+                    bool isBadgePresent = base.IsElementPresent(By.XPath
+                        (string.Format(GBStudentUXPageResource.
+                        GBStudentUXPage_Badge_Icon_Percent_Score_Xpath_Locator, columnCount)), 10);
+                    if (isBadgePresent)
+                    {
+                        IconPresent = true;
+                        break;
+                    }
+                }
+            }
+            logger.LogMethodExit("GBStudentUXPage", "GetActivityColumnCount",
+           base.IsTakeScreenShotDuringEntryExit);
+            return IconPresent;
+        }
     }
 }

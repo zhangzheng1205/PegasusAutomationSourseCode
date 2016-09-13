@@ -972,6 +972,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new StudentPresentationPage().AttempBBGradeSynchActivity();
         }
 
+        /// <summary>
+        /// Click Return To Course button for Badged Activity
+        /// </summary>
+        [When(@"I click on Return To Course button for badged activity")]
+        public void ClickReturnToCourseButtonforBadgeActivity()
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickReturnToCourseButton",
+              base.IsTakeScreenShotDuringEntryExit);
+            new GraderFeedbackPage().ClickReturnToCourseButtonforBadgeActivity();
+            Logger.LogMethodExit("ActivitySubmission", "ClickReturnToCourseButton",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Validate the Congratulations message is displayed after submitting badged activity
+        /// </summary>
+        [Then(@"I should see a Congratulation message")]
+        public void ValidateCongratulationMessage()
+        {
+            Logger.LogMethodEntry("CommonSteps", "ValidateCongratulationMessage",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Validate the Congratulations message is displayed after submitting badged activity
+            Logger.LogAssertion("VerifyBadgeIssued", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CoursePreviewUXPage().isCongralutionMessageDisplayedforBadge()));
+            Logger.LogMethodExit("CommonSteps", "ValidateCongratulationMessage",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

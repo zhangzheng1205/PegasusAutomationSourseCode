@@ -4471,6 +4471,48 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
            
         }
+
+        public void OpenSpecifiSubmission(string submissionCount)
+        {
+
+        }
+
+        /// <summary>
+        /// This method verify the badge
+        /// </summary>
+        /// <param name="activityName">This is the activity name</param>
+        /// <param name="userLastName">This is student's last name</param>
+        /// <param name="userFirstName">This is student's first name</param>
+        /// <returns></returns>
+        public bool VerifyBadge(string activityName, string userLastName, string userFirstName)
+        {
+            //Verify the badge is present
+            logger.LogMethodEntry("GBInstructorUXPage", "VerifyBadge",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            bool isBadgePresent = false;
+            try
+            {
+                //Get Activity Column Count
+                int getActivityColumnCount = this.GetActivityColumnCount(activityName);
+                //Get User Row Count
+                int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
+                base.WaitForElement(By.CssSelector(string.Format(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_BadgeICon_CSS_Locator,
+                    getUserRowCount, getActivityColumnCount)));
+                //Verify Badge Present
+                isBadgePresent = base.IsElementPresent(By.CssSelector(string.Format(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_BadgeICon_CSS_Locator,
+                    getUserRowCount, getActivityColumnCount)), 10);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "VerifyBadge",
+            base.IsTakeScreenShotDuringEntryExit);
+            return isBadgePresent;
+        }
     }
 }
 

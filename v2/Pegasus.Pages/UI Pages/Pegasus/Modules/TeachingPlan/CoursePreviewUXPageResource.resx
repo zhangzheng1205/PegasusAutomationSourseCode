@@ -234,4 +234,7 @@
   <data name="CoursePreviewUX_Page_Search_Time_Value" xml:space="preserve">
     <value>7000</value>
   </data>
+  <data name="CoursePreviewUX_Page_Badge_Message_Id_Locator" xml:space="preserve">
+    <value>badgeImage</value>
+  </data>
 </root>
