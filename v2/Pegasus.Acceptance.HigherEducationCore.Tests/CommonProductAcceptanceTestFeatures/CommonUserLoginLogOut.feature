@@ -127,13 +127,13 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 
 #Verify the usecases in Program Course
-#Purpose:Verify The User Login As CourseSpaceSMSInstructor
-Scenario: User Login As CsSMSInstructor Navigate To ProgramCourse
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+#Purpose:Verify The User Login As RegCsSmsInstructor
+Scenario: User Login As RegCsSmsInstructor Navigate To ProgramCourse
+Given I browsed the login url for "RegCsSmsInstructor"
+When I logged into the Pegasus as "RegCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "ProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I enter in the "RegWLMasterCourse" from the Global Home page as "RegCsSmsInstructor"
 
 #Verify the usecases in Instructor Course
 #Purpose:Verify The User Login As CourseSpaceSMSInstructor

@@ -647,6 +647,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.RegCsSmsInstructor:
                     case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.WLCsSmsInstructor:
@@ -660,6 +661,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.InstructorCourse:
                             case Course.CourseTypeEnum.AmpInstructorCourse:
+                            case Course.CourseTypeEnum.RegWLMasterCourse:
 
 
                                 //Open the Program Course

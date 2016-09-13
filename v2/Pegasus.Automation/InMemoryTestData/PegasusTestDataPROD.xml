@@ -75,6 +75,14 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+        <Course>
+      <Name>Automation Section</Name>
+      <CourseType>RegWLMasterCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
     <Course>
       <Name>AutomationMilProgram</Name>
       <CourseType>HedMilAcceptanceSIM5ProgramCourse</CourseType>
@@ -788,6 +796,17 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>Anand</LastName>
       <UserType>CsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+        <User>
+      <Name>depins011</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Deepa</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Anand</LastName>
+      <UserType>RegCsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>

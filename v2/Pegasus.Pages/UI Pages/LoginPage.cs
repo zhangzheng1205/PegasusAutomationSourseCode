@@ -114,6 +114,7 @@ namespace Pegasus.Pages.UI_Pages
                                  .Login_Page_CourseSpaceAdminURL_Append_Parameters); break;
                     //Get url of course space teacher/student
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.RegCsSmsInstructor:
                     case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.CsSmsStudent:
                     case User.UserTypeEnum.AmpCsSmsStudent:
@@ -681,6 +682,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //User Type SMS Instructor and Student
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.RegCsSmsInstructor:
                     case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.AmpCsSmsStudent:
                     case User.UserTypeEnum.CsSmsStudent:
@@ -889,6 +891,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 //Logged in by SMS Instructor and Student
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.RegCsSmsInstructor:
                 case User.UserTypeEnum.AmpCsSmsInstructor:
                 case User.UserTypeEnum.AmpCsSmsStudent:
                 case User.UserTypeEnum.CsSmsStudent:

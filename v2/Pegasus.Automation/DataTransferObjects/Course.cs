@@ -101,7 +101,8 @@ namespace Pegasus.Automation.DataTransferObjects
             MyITLabOffice2013ProgramCourseCreation=71,
             MyITLabForOffice2013MasterCourseCreation=72,
             RegMySpanishLabMaster=73,
-            CanvasDirectCourse = 74
+            CanvasDirectCourse = 74,
+            RegWLMasterCourse = 75
         }
 
         /// <summary>
