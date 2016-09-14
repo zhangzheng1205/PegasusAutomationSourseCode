@@ -326,6 +326,14 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
+    <Course>
+      <Name>QA_Automation Badging - MyITLab for Office 2013: GO! 08.01.13</Name>
+      <CourseType>BadgingCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--Hard coded Grades data.-->
   <ArrayOfGrade>
