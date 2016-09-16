@@ -190,6 +190,8 @@ namespace Pearson.Pegasus.TestAutomation.
             RegHedWsStudent = 109,
             RegCsSmsInstructor = 110,
             RegCsSmsStudent = 111,
+            S11eTextInstructor=112,
+            S11eTextStudent = 113
             #endregion
         }
 

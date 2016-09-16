@@ -442,6 +442,14 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+    <Course>
+      <Name>Psychology, 4e S11 Course2</Name>
+      <CourseType>eTextCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--Hard coded Grades data.-->
   <ArrayOfGrade>
@@ -1323,8 +1331,30 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-  
-  </ArrayOfUser>
+    <!--S11 etext Instructor and student-->
+      <User>
+      <Name>livechatinstructor</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>S11eTextInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+      <User>
+      <Name>vipcgiestud1</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>S11eTextStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
 
 the UI deleted or refreshed.-->

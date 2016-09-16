@@ -19,7 +19,14 @@ namespace Pegasus.Pages.UI_Pages
     /// This class handles Course Preview Page Actions.
     /// </summary>
     public class CoursePreviewUXPage : BasePage
+
     {
+        //Locators for eText S11 launch at HED
+        By toolDropDown = By.CssSelector("a[id*='tools']");
+        By eTextDropDownOption = By.CssSelector("div[title='eText']");
+        By eTextDirectSpan = By.CssSelector("span[id*='tdHEDEbook']");
+        By eTextDirectTd = By.CssSelector("td[id*='tdHEDEbook']");
+      
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
@@ -166,14 +173,41 @@ namespace Pegasus.Pages.UI_Pages
             // Launches the Etext Window
             Logger.LogMethodEntry("CoursePreviewUXPage", "LaunchEText",
                 base.IsTakeScreenShotDuringEntryExit);
+            bool tooldropDownPres = false;
+            IWebElement etextLink;
             try
             {
-                base.WaitForElement(By.Id(CoursePreviewUXPageResource.
-                CoursePreviewUX_Page_Etext_Link));
-                IWebElement etextLink = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.
-                CoursePreviewUX_Page_Etext_Link);
-                // Launches the Etext Window
+                //Launch Etext via Tool DropDown if present or directly via eText link
+               tooldropDownPres= base.IsElementPresent (toolDropDown, 10);
+               if(tooldropDownPres)
+                {
+                    IWebElement dropDown = WebDriver.FindElement(toolDropDown);
+                    base.ClickByJavaScriptExecutor(dropDown);
+                    base.WaitForElement(eTextDropDownOption);
+                    etextLink = WebDriver.FindElement(eTextDropDownOption);
+                }
+
+                else 
+                {
+                    base.SwitchToDefaultWindow();
+                   //Launch Direct eText link as instructor
+                    bool span = base.IsElementPresent(eTextDirectSpan, 10);
+                   if(span)
+                   {
+                       base.WaitForElement(eTextDirectSpan);
+                       etextLink = WebDriver.FindElement(eTextDirectSpan);
+                   }
+                   else
+                   //Launch Direct eText link as student
+                   {
+                       base.WaitForElement(eTextDirectTd);
+                       etextLink = WebDriver.FindElement(eTextDirectTd);
+                   }
+                  
+                }
+                //Click on link
                 base.ClickByJavaScriptExecutor(etextLink);
+  
             }
             catch (Exception e)
             {

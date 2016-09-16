@@ -6,13 +6,10 @@
 #Purpose : Student launching eText
 #Test case ID : peg-22168
 #PEGASUS-29431
-Scenario: Student launching eText
+Scenario: User launching eText
 When I Click on eText link
-Then I should be on the "Pearson eText Sign In Page" window
-And I close eText Window
-Then I should be on the "Course Materials" page
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
+Then I should see 'S11TeachereText' launch successfully
+
 
 #Purpose : Basic/Random activity launch from Course Calendar and student abruptly closes the presentation
 #Test case ID : peg-22160

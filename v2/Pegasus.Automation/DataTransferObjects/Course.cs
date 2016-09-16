@@ -104,7 +104,8 @@ namespace Pegasus.Automation.DataTransferObjects
             CanvasDirectCourse = 74,
             RegWLMasterCourse = 75,
             BadgingCourse = 76,
-            BadgingCourseProgram = 77
+            BadgingCourseProgram = 77,
+            eTextCourse=78
         }
 
         /// <summary>

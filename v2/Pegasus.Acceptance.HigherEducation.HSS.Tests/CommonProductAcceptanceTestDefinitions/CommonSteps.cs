@@ -1282,5 +1282,17 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
           base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see 'S11TeachereText' launch successfully")]
+        [Then(@"I should see 'S11StudenteText' launch successfully")]
+        public void verifyEtextLaunch()
+        {
+            //Verify the eText launch
+            Logger.LogMethodEntry("GlobalHome", "verifyEtextLaunch",
+                base.IsTakeScreenShotDuringEntryExit);
+            new HomePage().LaunchandVerifyEtext();
+            Logger.LogMethodExit("GlobalHome", "verifyEtextLaunch",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

@@ -580,6 +580,8 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.WLProgramAdmin:
                     case User.UserTypeEnum.RegHedWsInstructor:
                     case User.UserTypeEnum.RegHedWsStudent:
+                    case User.UserTypeEnum.S11eTextInstructor:
+                    case User.UserTypeEnum.S11eTextStudent:
                         switch (courseTypeEnum)
                         {
                             //Course Type Enum
@@ -607,6 +609,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MySpanishLabProgram:
                             case Course.CourseTypeEnum.AmpProgramCourse:
                             case Course.CourseTypeEnum.MyITLabOffice2013ProgramCourseCreation:
+                            case Course.CourseTypeEnum.eTextCourse:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;

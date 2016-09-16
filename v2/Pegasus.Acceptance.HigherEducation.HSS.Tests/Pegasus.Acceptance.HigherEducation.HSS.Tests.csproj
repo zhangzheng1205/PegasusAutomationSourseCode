@@ -182,6 +182,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.UserEnrollments.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\eTextS11.HED.Integration.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\Print.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

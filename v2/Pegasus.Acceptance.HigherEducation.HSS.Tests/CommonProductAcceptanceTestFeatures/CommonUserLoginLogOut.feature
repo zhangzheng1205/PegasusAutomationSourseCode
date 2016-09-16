@@ -92,3 +92,22 @@ And I click the "Enter Section as Instructor"
 Scenario: Set the date and time of SMS Instructor
 When I click 'My Profile' link
 And I store user current date and time of the instructor
+
+
+#Purpose: Verify The User Login As S11eTextInstructor To eTextCourse Course
+Scenario: User Login As S11eTextInstructor and navigate to eTextCourse Course
+Given I browsed the login url for "S11eTextInstructor"
+When I logged into the Pegasus as "S11eTextInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I click 'My Profile' link
+And I store user current date and time of the instructor
+When I enter in the "eTextCourse" from the Global Home page as "S11eTextInstructor"
+
+#Purpose: Verify The User Login As S11eTextStudent To eTextCourse Course
+Scenario: User Login As S11eTextStudent and navigate to eTextCourse Course
+Given I browsed the login url for "S11eTextStudent"
+When I logged into the Pegasus as "S11eTextStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "eTextCourse" from the Global Home page as "S11eTextStudent"
