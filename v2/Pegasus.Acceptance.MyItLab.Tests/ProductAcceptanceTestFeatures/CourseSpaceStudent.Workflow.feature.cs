@@ -900,7 +900,7 @@ testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"C
 testRunner.Then("I should see a \"Passed\" status for the activity \"Excel Chapter 1 Grader Project [" +
                     "Homework 3]\" in \"Course Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 380
-testRunner.And("I should see \"73.4%\" score for the activity \"Excel Chapter 1 Grader Project [Home" +
+testRunner.And("I should see \"71.8%\" score for the activity \"Excel Chapter 1 Grader Project [Home" +
                     "work 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 381
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
