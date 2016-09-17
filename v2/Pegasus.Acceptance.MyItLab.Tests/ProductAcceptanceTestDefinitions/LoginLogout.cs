@@ -307,8 +307,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Get User details from memory
             User user = User.Get(userType);
+            Course course=Course.Get(Course.CourseTypeEnum.BBCourse);
+            string partialWindow = course.Name;
+            base.SwitchToPartialWindowTitle(partialWindow);
             switch (userType)
             {
+                   
                 //Login as BBInstructor
                 case User.UserTypeEnum.BBInstructor1:
                 case User.UserTypeEnum.BBStudent1:

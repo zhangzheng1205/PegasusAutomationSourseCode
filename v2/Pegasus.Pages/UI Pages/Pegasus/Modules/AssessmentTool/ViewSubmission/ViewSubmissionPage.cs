@@ -19,6 +19,10 @@ namespace Pegasus.Pages.UI_Pages
     /// </summary>
     public class ViewSubmissionPage : BasePage
     {
+
+        By deleteButtonLocator=By.Id("lnkDelete");
+        By deleteAllOptionLocator = By.CssSelector("span[id*='lblDeleteSubmissionAll']");
+        By deleteAllConfirmation = By.Id("VSbtnDeleteYesClientALL");
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
@@ -2449,5 +2453,45 @@ namespace Pegasus.Pages.UI_Pages
             //Return array of scores
             return scorelist;
         }
+
+        /// <summary>
+        /// Get Submission Score In View Submission for a student
+        /// </summary>
+        /// <returns>This is Submission Score.</returns>
+        public void DeleteAllSubmission(string lastname, string firstname)
+        {
+            //Get Submitted Grade In ViewSubmission Page
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                "DeleteAllSubmission",
+                base.IsTakeScreenShotDuringEntryExit);
+                     try
+            {
+                // Get student property by searching sent student
+                IWebElement getStudentProperty = this.SearchStudentByLastAndFirstName(lastname, firstname);
+                // Click on student index
+                this.ClickStudent(getStudentProperty);
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+
+                base.WaitForElement(deleteButtonLocator);
+                IWebElement deleteButton = WebDriver.FindElement(deleteButtonLocator);
+                base.ClickByJavaScriptExecutor(deleteButton);
+                base.WaitForElement(deleteAllOptionLocator);
+                IWebElement deleteAllOption = WebDriver.FindElement(deleteAllOptionLocator);
+                base.ClickByJavaScriptExecutor(deleteAllOption);
+                base.WaitForElement(deleteAllConfirmation);
+                IWebElement confirmButton = WebDriver.FindElement(deleteAllConfirmation);
+                base.ClickByJavaScriptExecutor(confirmButton);
+               
+             
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                "DeleteAllSubmission",
+                           base.IsTakeScreenShotDuringEntryExit);
+         }
     }
 }

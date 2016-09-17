@@ -1138,8 +1138,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("Gradebook",
                 "isBadgeIconPresentInGradebook",
                base.IsTakeScreenShotDuringEntryExit);
-            string userLastName = User.Get(User.UserTypeEnum.CsSmsStudent).LastName.ToString();
-            string userFirstName = User.Get(User.UserTypeEnum.CsSmsStudent).FirstName.ToString();
+            string userLastName = User.Get(userTypeEnum).LastName.ToString();
+            string userFirstName = User.Get(userTypeEnum).FirstName.ToString();
             //Assert Badge is displayed for submitted badged activity
             switch (userTypeEnum)
             {
@@ -1158,6 +1158,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Gradebook",
                 "isBadgeIconPresentInGradebook", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I perform Delete All Submission ""(.*)"" for the activity")]
+        public void PerformDeleteAllSubmissionForTheActivity(User.UserTypeEnum userTypeEnum)
+        {
+            string userLastName = User.Get(userTypeEnum).LastName.ToString();
+            string userFirstName = User.Get(userTypeEnum).FirstName.ToString();
+            new ViewSubmissionPage().DeleteAllSubmission(userLastName, userFirstName);
+            new GBInstructorUXPage().SelectGradebookFrame();
+        }
+
     }
 }
    

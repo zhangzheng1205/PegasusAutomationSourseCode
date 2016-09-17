@@ -99,3 +99,18 @@ Scenario: BBInstructor validate newly sync grades in Blackboard
 When I click on the "Grade Center" link at "Content"
 And I click on the "Full Grade Center" link at "Content" 
 Then I refresh and see "PegasusNewGrade" for "1 New Grade Act" activity for "BBStudent" in BlackBoard at "Grade Center"
+
+#Purpose:To Delete All Submissions for BBStudent
+Scenario:Delete All Submissions for BBStudent
+Given I browsed the URL of "BBInstructor"
+When I login to Blackboard Cert as "BBInstructor"
+Then I should be logged in successfully as "BBInstructor"
+When I enter into blackboard course "BBCourse"
+Then I should be displayed with "Home Page"
+When I click on the "Content" link at "Home Page"
+And I click on the "Gradebook" link at "Content"
+Then I should be on the "Gradebook" page
+When I select "1 New Grade Act" in "Gradebook" by "CsSmsInstructor"
+And I select the cmenu "ViewAllSubmissions" of asset "1 New Grade Act"
+And I perform Delete All Submission "BBStudent" for the activity
+When I "Close" from the "BBInstructor" 

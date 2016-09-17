@@ -96,7 +96,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.Blackboard
         /// </summary>
         public void logoutOfPegasus()
         {
-            base.NavigateToBrowseUrl("https://pearsonintegrationqa1.blackboard.com");
+            //Since "Close" button isnt functioning we directly browse the BB URL to navigate back to BB
+             string baseLoginUrl = string.Format(AutomationConfigurationManager.BBClassicUrlRoot);
+             base.NavigateToBrowseUrl(baseLoginUrl);
             base.WaitForElement(By.Id("topframe.logout.label"));
             IWebElement getLogoutIcon = base.GetWebElementPropertiesById("topframe.logout.label");
             base.ClickByJavaScriptExecutor(getLogoutIcon);
