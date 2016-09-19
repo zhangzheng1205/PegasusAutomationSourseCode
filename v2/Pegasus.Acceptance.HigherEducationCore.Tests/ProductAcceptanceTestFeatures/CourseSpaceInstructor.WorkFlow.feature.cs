@@ -475,17 +475,17 @@ testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((Te
 #line 160
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 161
-testRunner.When("I associate the \"RegCSSAMActivity\" activity Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I associate the \"RegChildActivity\" activity Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 162
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 163
-testRunner.When("I search \"RegCSSAMActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I search \"RegChildActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 164
-testRunner.Then("I should be displayed with \"RegCSSAMActivity\" in My Course frame  of \"Course Mate" +
+testRunner.Then("I should be displayed with \"RegChildActivity\" in My Course frame  of \"Course Mate" +
                     "rials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 165
-testRunner.When("I click on \"ShowHide\"  of \"RegCSSAMActivity\" in  \"Course Materials\" tab as \"RegCs" +
-                    "SmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Show\"  of \"RegChildActivity\" in  \"Course Materials\" tab as \"RegCsSmsI" +
+                    "nstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

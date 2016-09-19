@@ -168,6 +168,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 case User.UserTypeEnum.HedWsAdmin:
                 case User.UserTypeEnum.HedCsAdmin:
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.RegCsSmsInstructor:
                 case User.UserTypeEnum.CsSmsStudent:
                 case User.UserTypeEnum.HedTeacherAssistant:
                 case User.UserTypeEnum.HedProgramAdmin:

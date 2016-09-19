@@ -2019,6 +2019,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 case User.UserTypeEnum.HedWsInstructor:
                 case User.UserTypeEnum.RegHedWsInstructor:
+                case User.UserTypeEnum.RegCsSmsInstructor:
                     this.ClickCmenuOptionBasedOnCmenuOption(cmenuOptionName, activityType);
                     break;
             }
@@ -2148,9 +2149,9 @@ namespace Pegasus.Pages.UI_Pages
                                 case Activity.ActivityTypeEnum.RegSavedSAMActivity:
                                     //Get element properties of the c.menu option
                                     base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
-                                    CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator));
+                                    CourseContentUXPage_RemoveCmenuOption_Xpath_Locator));
                                     IWebElement getShowHideCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
-                                        CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator);
+                                        CourseContentUXPage_RemoveCmenuOption_Xpath_Locator);
                                     //Click on the c.menu option
                                     base.PerformMouseClickAction(getShowHideCmenuOption);
                                     break;
@@ -2159,9 +2160,9 @@ namespace Pegasus.Pages.UI_Pages
                                 case Activity.ActivityTypeEnum.Folder:
                                     //Get element properties of the c.menu option
                                     base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
-                                    CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator));
+                                    CourseContentUXPage_RemoveCmenuOption_Xpath_Locator));
                                     IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
-                                        CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator);
+                                        CourseContentUXPage_RemoveCmenuOption_Xpath_Locator);
                                     //Click on the c.menu option
                                     base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
                                     break;
@@ -2250,11 +2251,10 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void clickCmenuIcon()
         {
-            //Get the element properties of the searched activity
+            //Click on the c.menu option of the searched activity
             IWebElement getSearchedActivityNameProperty = base.GetWebElementPropertiesByClassName(ContentLibraryUXPageResource.
-                      ContentLibraryUXPage_Activity_Id_Locator);
-            //Mouse Hover over the searched activity
-            base.MouseOverByJavaScriptExecutor(getSearchedActivityNameProperty);
+                       ContentLibraryUXPage_Activity_Id_Locator);
+            base.PerformMouseHoverAction(getSearchedActivityNameProperty);
             base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_Activity_Cmenu_Id_Locator));
             //Get the element properties of the cmenu icon

@@ -158,9 +158,9 @@ And I add '1' questions of type "Fill in the Blank" at Section "3"
 Scenario:Add RegCSSAMActivity Activity to My Course and set as shown
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I associate the "RegCSSAMActivity" activity Content Library to MyCourse frame
+When I associate the "RegChildActivity" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
-When I search "RegCSSAMActivity" in "My Course" frame  of "Course Materials" tab
-Then I should be displayed with "RegCSSAMActivity" in My Course frame  of "Course Materials" tab
-When I click on "ShowHide"  of "RegCSSAMActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+When I search "RegChildActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegChildActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
 

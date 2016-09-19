@@ -1044,13 +1044,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        /// <param name="userType">This is user type.</param>
        [When(@"I click on ""(.*)""  of ""(.*)"" in  ""(.*)"" tab as ""(.*)""")]
        public void UserClickOnActivityCmenuInMyCourseOfAddContentFromLibrary(string cmenuOptionName, Activity.ActivityTypeEnum
-
-activityType, string tabName, User.UserTypeEnum userType)
+        activityType, string tabName, User.UserTypeEnum userType)
        {
            Logger.LogMethodEntry("CreateActivity", "UserClickOnActivityCmenuInMyCourseOfAddContentFromLibrary",
                base.IsTakeScreenShotDuringEntryExit);
            new ContentLibraryUXPage().ClickCmenuOptionBasedOnTheUserRole(cmenuOptionName, activityType, tabName, userType);
-
            Logger.LogMethodExit("CreateActivity", "UserClickOnActivityCmenuInMyCourseOfAddContentFromLibrary",
                base.IsTakeScreenShotDuringEntryExit);
        }

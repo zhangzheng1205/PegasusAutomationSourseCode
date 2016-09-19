@@ -618,6 +618,9 @@
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionStudentCourseSpace.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionCourseSpaceFull.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScorePreferenceStudentVS.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

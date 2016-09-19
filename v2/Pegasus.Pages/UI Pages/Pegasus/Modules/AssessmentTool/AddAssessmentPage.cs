@@ -1731,7 +1731,6 @@ namespace Pegasus.Pages.UI_Pages
                     AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator);
 
                 // Click on "Instructor's Resources" folder
-                bool jjk = base.IsElementPresent(By.PartialLinkText("Instructor's Resources"),10);
                 base.ClickLinkByPartialLinkText("Instructor's Resources");
 
                 Thread.Sleep(2000);
