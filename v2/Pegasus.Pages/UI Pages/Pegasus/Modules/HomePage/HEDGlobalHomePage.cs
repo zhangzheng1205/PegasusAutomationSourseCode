@@ -620,7 +620,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HSSCsSmsStudent:
                     case User.UserTypeEnum.WLCsSmsStudent:
                     case User.UserTypeEnum.AmpCsSmsStudent:
-
+                    case User.UserTypeEnum.RegCsSmsStudent:
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -639,6 +639,7 @@ namespace Pegasus.Pages.UI_Pages
                                     HEDGlobalHomePageResource.HEDGlobalHome_Page_SectionValue);
                                 break;
                             case Course.CourseTypeEnum.InstructorCourse:
+                            case Course.CourseTypeEnum.RegWLMasterCourse:
                             case Course.CourseTypeEnum.AmpInstructorCourse:
                             case Course.CourseTypeEnum.MyTestInstructorCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:

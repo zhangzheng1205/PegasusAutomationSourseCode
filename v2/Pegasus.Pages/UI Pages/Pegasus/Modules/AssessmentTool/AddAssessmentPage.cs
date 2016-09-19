@@ -1730,6 +1730,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrame(AddAssessmentPageResources.
                     AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator);
 
+                // Click on "Instructor's Resources" folder
+                bool jjk = base.IsElementPresent(By.PartialLinkText("Instructor's Resources"),10);
+                base.ClickLinkByPartialLinkText("Instructor's Resources");
+
+                Thread.Sleep(2000);
+
                 //Gets the collection of all Help Link assets
                 ICollection<IWebElement> getAllHelpLinkAssets = base.GetWebElementsCollectionById(
                     AddAssessmentPageResources.AddAssessment_Page_HelpLinkAssets_CheckBox_Id_Locator);

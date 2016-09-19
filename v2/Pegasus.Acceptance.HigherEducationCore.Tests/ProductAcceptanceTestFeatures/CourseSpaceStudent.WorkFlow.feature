@@ -190,6 +190,57 @@ When I select "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in 
 And I submit the SAM Activity to score and to see correct answers
 Then I should see "Passed" status for the activity "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "WLCsSmsStudent"
 
+#Purpose:Coursespace SMS student launch newly authored activity RegCSSAMActivity
+Scenario: Coursespace SMS student launch RegCSSAMActivity from Course Materials page
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I click on "Open" of  "RegChildActivity" Activity in "Course Materials" page
 
+#Purpose:To Verify Presentation window, when "Allow student to Save for Later" option is selected
+Scenario:To Verify Presentation window of RegCSSAMActivity when Allow student to Save for Later option is selected
+Given I am on "RegCSSAMActivity" window
+When I click on "Start" Button
+Then I should the availibility of Save For Later is "true" in "RegCSSAMActivity" Activity Presentation Window
+When I attempt "2" questions listed in Page "1" of "RegCSSAMActivity" Activity Presentation Window with "In Valid" answer
+And I navigate to next page
+Then I Verify Confirmation Message on Save the Activity for later
 
+#Purpose:To verify Display of Direction Lines when “Enable activity-level direction lines” enabled
+#Purpose:To Verify Display Direction Lines on Each Page option is selected 
+#Purpose:To verify Display of Direction Lines when “ Enable activity section-level direction lines ” enabled
+#Purpose:To verify section level direction lines
+#Test Link ID:peg-8557
+Scenario:Verify Activity and Section Direction Lines of RegCSSAMActivity
+When I open the "RegChildActivity" Activity
+Then I am on "RegCSSAMActivity" window
+When I click on "Start" Button
+Then I should see the availibility "Direction lines (instructions)" at Page is "True"
+And I should see the Section Direction lines for Section "1"
 
+Scenario:Student submit the RegCSSAMActivity activity with incorrect answer and fails
+Then I should see "2" questions answers saved in Page "1" of "RegCSSAMActivity" Activity Presentation Window
+When I navigate to next page
+And I attempt "1" questions listed in Page "2" of "RegCSSAMActivity" Activity Presentation Window with "In Valid" answer
+When I navigate to next page
+And I attempt "1" questions listed in Page "3" of "RegCSSAMActivity" Activity Presentation Window with "Valid" answer
+When I submit the answered activity "RegCSSAMActivity"
+
+Scenario: Student resubmit the assessment RegCSSAMActivity by click on try again and secure 100 percent
+Given I am on "RegCSSAMActivity" window
+When I click on "Try Again" button of "RegCSSAMActivity" 
+When I attempt "2" questions listed in Page "1" of "RegCSSAMActivity" Activity Presentation Window with "Valid" answer
+When I navigate to next page
+And I attempt "1" questions listed in Page "2" of "RegCSSAMActivity" Activity Presentation Window with "Valid" answer
+When I navigate to next page
+And I attempt "1" questions listed in Page "3" of "RegCSSAMActivity" Activity Presentation Window with "Valid" answer
+When I submit the answered activity "RegCSSAMActivity" 
+
+Scenario:Student verify feedback status in presenation window of RegCSSAMActivity
+Then I should be displayed with Feedback Icon in "RegCSSAMActivity" window
+When I click on the Feedback Icon in "RegCSSAMActivity" window
+Then I should displayed with "Correct Feedback" text in "RegCSSAMActivity" window
+
+Scenario:Student verify activity RegCSSAMActivity status as pass for correct submission
+When I click on "Return to Course" button in "RegCSSAMActivity" window
+Then I should be on the "Course Materials" page
+And I should see "Passed" status for the activity "RegChildActivity" from "Course Materials" page

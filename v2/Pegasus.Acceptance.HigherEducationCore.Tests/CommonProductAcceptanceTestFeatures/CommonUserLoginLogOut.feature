@@ -135,6 +135,11 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "RegWLMasterCourse" from the Global Home page as "RegCsSmsInstructor"
 
+#Purpose:Verify The User LogOut As RegCsSmsInstructor
+Scenario: User LogOut As RegCsSmsInstructor
+When I "Sign out" from the "RegCsSmsInstructor"
+Then I should see the successfull message "You have been signed out of the application."
+
 #Verify the usecases in Instructor Course
 #Purpose:Verify The User Login As CourseSpaceSMSInstructor
 Scenario: User Login As CsSMSInstructor Navigate To InstructorCourse
@@ -157,6 +162,14 @@ When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 
+#Verify the global home page usecases
+#Purpose:Verify The User Login As RegCsSMSStudent
+Scenario: User Login As RegCsSMSStudent
+Given I browsed the login url for "RegCsSmsStudent"
+When I logged into the Pegasus as "RegCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "RegWLMasterCourse" from the Global Home page as "CsSmsStudent"
 
 #Verify the usecases in InstructorCourse
 #Purpose:Verify The User Login As CourseSpaceSMSStudent

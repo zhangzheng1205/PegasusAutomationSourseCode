@@ -391,6 +391,17 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>516prodstudent</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Deepa</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Anand</LastName>
+      <UserType>RegCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
       <Name>automationqanitws</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -1321,7 +1332,12 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Auto-2016/07/31-88e674b4-Activity</Name>
+      <Name>SAM Activity</Name>
+      <ActivityType>RegCSSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/09/13-50af8c5c-Activity</Name>
       <ActivityType>RegChildActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>

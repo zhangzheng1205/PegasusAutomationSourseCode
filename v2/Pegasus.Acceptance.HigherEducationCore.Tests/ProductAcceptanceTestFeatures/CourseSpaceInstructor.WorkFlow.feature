@@ -137,6 +137,30 @@ Then I should see the following subtabs under Gradebook page
 | Custom View      | Custom View      |
 | Reports		   | Reports          |
 
+#Purpose:Creation of Activity with multiple Fill In The Blanks Question of RegCSSAMActivity type
+#Pre-requisites: 1)RegCSSAMActivity SAM activity should be either created during runtime or use the saved RegCSSAMActivity 
+Scenario:Creation of Random activity of RegCSSAMActivity type by adding section with multiple questions in Coursespace
+When I navigate to "Course Materials" tab
+And I navigate to "Add from Library" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegCSSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
+And I perform "Save and Continue" for "Activity Details"
+And I perform "Create New Section" of name "Section1"
+And I perform "Create New Section" of name "Section2"
+And I perform "Create New Section" of name "Section3"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
+And I add '1' questions of type "Fill in the Blank" at Section "2"
+And I add '1' questions of type "Fill in the Blank" at Section "3"
 
-
+Scenario:Add RegCSSAMActivity Activity to My Course and set as shown
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I associate the "RegCSSAMActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegCSSAMActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegCSSAMActivity" in My Course frame  of "Course Materials" tab
+When I click on "ShowHide"  of "RegCSSAMActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
 

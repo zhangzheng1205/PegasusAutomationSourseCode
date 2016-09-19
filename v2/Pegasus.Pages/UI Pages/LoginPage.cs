@@ -117,6 +117,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.RegCsSmsInstructor:
                     case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.RegCsSmsStudent:
                     case User.UserTypeEnum.AmpCsSmsStudent:
                     case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.AmpProgramAdmin:
@@ -688,6 +689,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.AmpCsSmsInstructor:
                     case User.UserTypeEnum.AmpCsSmsStudent:
                     case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.RegCsSmsStudent:
                     case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.HSSCsSmsStudent:
                     case User.UserTypeEnum.HedTeacherAssistant:
@@ -899,6 +901,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.AmpCsSmsInstructor:
                 case User.UserTypeEnum.AmpCsSmsStudent:
                 case User.UserTypeEnum.CsSmsStudent:
+                case User.UserTypeEnum.RegCsSmsStudent:
                 case User.UserTypeEnum.HSSCsSmsInstructor:
                 case User.UserTypeEnum.HSSCsSmsStudent:
                 case User.UserTypeEnum.HedTeacherAssistant:
