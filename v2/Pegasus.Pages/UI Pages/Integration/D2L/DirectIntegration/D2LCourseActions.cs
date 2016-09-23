@@ -29,9 +29,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
             switch (userType)
             {
                 case User.UserTypeEnum.D2LDirectTeacher:
+                case User.UserTypeEnum.D2LKioskTeacher1:
                     this.D2LUserEnterIntoCourse(courseType);
                     break;
                 case User.UserTypeEnum.D2LDirectStudent:
+                case User.UserTypeEnum.D2LKioskStudent1:
                    // base.WaitUntilWindowLoads(base.GetPageTitle);
 
                     //Select the course and Click
@@ -209,6 +211,28 @@ namespace Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration
             base.ClickByJavaScriptExecutor(logoutLink);
             logger.LogMethodExit("D2LCourseActions", "D2LSignOut",
                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        public void D2LKioskSignOut(User.UserTypeEnum userType)
+        {
+            base.WaitForElement(By.Id("topMenu_sign_out"));
+            base.GetWebElementPropertiesById("topMenu_sign_out").Click();
+            base.SwitchToDefaultWindow();
+            User user = User.Get(userType);
+            string userName = user.FirstName + " " + user.LastName;
+        
+            bool pres = base.IsElementPresent(By.XPath(string.
+                Format(D2LCourseActionsResource.
+                D2LCourseAction_Page_UserNameDropDown_Xpath_Value, userName)), 10);
+            IWebElement userNameMenu = base.GetWebElementPropertiesByXPath
+                (string.Format(D2LCourseActionsResource.
+                D2LCourseAction_Page_UserNameDropDown_Xpath_Value, userName));
+            base.ClickByJavaScriptExecutor(userNameMenu);
+            IWebElement logoutLink = base.GetWebElementPropertiesByLinkText
+                (D2LCourseActionsResource.
+                D2LCourseAction_Page_LogOut_LinkText_Value);
+            base.ClickByJavaScriptExecutor(logoutLink);
 
         }
     }

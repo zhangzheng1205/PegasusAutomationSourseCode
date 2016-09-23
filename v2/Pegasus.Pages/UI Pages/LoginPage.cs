@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
                     //D2L 10.5 URL
                     case User.UserTypeEnum.D2LKioskStudent1:
                     case User.UserTypeEnum.D2LKioskTeacher1:
-                        _baseLoginUrl = string.Format(AutomationConfigurationManager.D2LKioskUrlRoot1);
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.D2LKioskUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
 

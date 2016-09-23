@@ -803,11 +803,11 @@ testRunner.Then("I should be logged in successfully as \"MoodleKioskStduent\"", 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User logging into D2L as a instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User logging into D2L Kiosk as a instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoggingIntoD2LAsAInstructor()
+        public virtual void UserLoggingIntoD2LKioskAsAInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User logging into D2L as a instructor", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User logging into D2L Kiosk as a instructor", ((string[])(null)));
 #line 256
 this.ScenarioSetup(scenarioInfo);
 #line 257
@@ -821,11 +821,11 @@ testRunner.Then("user should be sucessfully signed in", ((string)(null)), ((Tech
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User logging into D2L as a student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User logging into D2L Kiosk as a student")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoggingIntoD2LAsAStudent()
+        public virtual void UserLoggingIntoD2LKioskAsAStudent()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User logging into D2L as a student", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User logging into D2L Kiosk as a student", ((string[])(null)));
 #line 262
 this.ScenarioSetup(scenarioInfo);
 #line 263

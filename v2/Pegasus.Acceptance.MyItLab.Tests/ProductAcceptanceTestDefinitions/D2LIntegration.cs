@@ -12,6 +12,9 @@ using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Globalization;
+using Pegasus.Pages.UI_Pages.Integration.D2L;
+using Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration;
+
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -44,12 +47,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
  // When I select "D2L Kiosk Integration for Automation - Pegasus" course link in Select Courses
         [When(@"I select ""(.*)"" course link in Select Courses")]
-        public void SelectCourses(string courseLink)
+        public void SelectCourses(string  course)
         {
             logger.LogMethodEntry("D2LIntegration", "HomePageOfDesiretoLearn",
                   base.IsTakeScreenShotDuringEntryExit);
 
-            new D2LCourseAction().D2LCourseSelect(courseLink);
+            new D2LCourseAction().D2LCourseSelect(course);
 
             logger.LogMethodEntry("D2LIntegration", "HomePageOfDesiretoLearn",
               base.IsTakeScreenShotDuringEntryExit);
@@ -87,31 +90,21 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             logger.LogMethodEntry("D2LIntegration", "SelectCourseLink",
                  base.IsTakeScreenShotDuringEntryExit);
-            
-            //base.SwitchToIFrameByIndex(0);
-            base.SwitchToIFrameBySource("/d2l/lms/remoteplugins/lti/launchLti.d2l?");
 
-            string c = base.GetElementInnerTextByCssSelector(".pure-menu.pure-menu-open>ul>li>a");
-            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByCssSelector(".pure-menu.pure-menu-open>ul>li>a"));
-
+            new D2LCourseAction().SelectMMNDCourseLink();
+            base.SwitchToDefaultPageContent();
             logger.LogMethodEntry("D2LIntegration", "SelectCourseLink",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-//When Instructor access "MyITLab Course Home" Link
+        //When Instructor access "MyITLab Course Home" Link
         [When(@"Instructor access ""(.*)"" Link")]
-        public void InstructorAccessLink(string p0)
+        public void InstructorAccessLink(Course.CourseTypeEnum courseTypeEnum)
         {
             logger.LogMethodEntry("D2LIntegration", "InstructorAccessLink",
                  base.IsTakeScreenShotDuringEntryExit);
-            
-            string d = base.GetElementInnerTextByCssSelector("#studlinks>h3>a");
-            
-            IWebElement c = base.GetWebElementPropertiesByCssSelector("#studlinks>h3>a");
-            
-            if (d == p0)
 
-                base.ClickByJavaScriptExecutor(c);
+            new D2LCourseAction().SelectPegasusCourseFromD2LKiosk(courseTypeEnum);
 
             logger.LogMethodEntry("D2LIntegration", "InstructorAccessLink",
               base.IsTakeScreenShotDuringEntryExit);
@@ -466,6 +459,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 }
             
         }
+
+        [When(@"I Sign Out from the D2L Kiosk as ""(.*)""")]
+        public void WhenIFromTheDLKioskAs( User.UserTypeEnum userTypeEnum)
+        {
+            new D2LCourseActions().D2LKioskSignOut(userTypeEnum);
+        }
+
+
 
 
     }

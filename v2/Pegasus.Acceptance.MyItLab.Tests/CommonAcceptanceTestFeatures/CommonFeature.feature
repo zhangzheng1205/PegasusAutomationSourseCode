@@ -253,13 +253,13 @@ When I login to MoodleKiosk as "MoodleKioskStduent"
 Then I should be logged in successfully as "MoodleKioskStduent"
 
 #Feature: Login to D2L as an instructor
-Scenario: User logging into D2L as a instructor
+Scenario: User logging into D2L Kiosk as a instructor
 Given Instructor has browsed the url of "D2LKioskTeacher1"
 When "D2LKioskTeacher1" signs in using a valid Login credentials
 Then user should be sucessfully signed in
 
 #Feature: Login to D2L as a student
-Scenario: User logging into D2L as a student
+Scenario: User logging into D2L Kiosk as a student
 Given Student has browsed the url of "D2LKioskStudent1"
 When "D2LKioskStudent1" signs in using a valid Login credentials
 Then user should be sucessfully signed in

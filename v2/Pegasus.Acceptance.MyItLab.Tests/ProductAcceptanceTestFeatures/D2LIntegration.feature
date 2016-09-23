@@ -5,19 +5,19 @@
 
 #Feature: Instructor selecting a Pegasus course link in home Page
 Scenario: D2L Instructor selecting a Pegasus course link in home Page
-Given I am on the home page of DesiretoLearn
-When I select "516 CGIE Kiosk Course" course link in Select Courses
-Then I should see "Homepage - 516 CGIE Kiosk Course" Page
+Given I am on the "Instructor Dashboard" page
+When I enter into D2L direct course "D2LKioskCourse" as "D2LKioskTeacher1"
+Then I should be on the "Homepage" page
 
-Scenario: D2L Instructor selecting a MMND course link
-Given User is on the "Homepage - 516 CGIE Kiosk Course" page
+#Purpose:D2L Instructor selecting a MMND course link
+Scenario: D2L User selecting a MMND course link
 When I select "Pearson's Mylab and Mastering" course link 
 Then I should see "Pearson MyLab and Mastering" Page
 
-Scenario: D2L Instructor accessing Pegasus from MMND
-#Given Instructor is on the "Pearson MyLab and Mastering" Page
-When Instructor access "MyITLab Course Home" Link
-Then I should be on the "Pearson" page
+#Purpose:
+Scenario: D2L User accessing Pegasus from MMND
+When Instructor access "D2LPegasusKioskCourse" Link
+#Then I should be on the "Pearson" page
 
 Scenario: D2L Instructor accessing Pegasus from Portal
 #Given Instructor is on the "Pearson" Page
@@ -42,11 +42,18 @@ Then I should see 80% for "Chapter 1 Exam" on Pegasus Gradebook page
 
 #Feature: Student selecting a Pegasus course link in home Page
 Scenario: D2L Student selecting a Pegasus course link in home Page
-Given I am on the home page of DesiretoLearn
-When I select "D2L Kiosk Integration for Automation - Pegasus" course link in Select Courses
-Then I should see "Homepage - D2L Kiosk Integration for Automation - Pegasus" Page
+Given I am on the "Homepage" page
+When I enter into D2L direct course "D2LKioskCourse" as "D2LKioskStudent1"
+Then I should be on the "Homepage" page
 
 Scenario: D2L Student selecting a MMND course link
-Given User is on the "Homepage - D2L Kiosk Integration for Automation - Pegasus" page
 When I select "Pearson's Mylab and Mastering" course link 
 Then I should see "Pearson MyLab and Mastering" Page
+
+#Feature:Instructor Logout from D2L Kiosk
+Scenario:Instructor Logout from D2L Kiosk
+When I Sign Out from the D2L Kiosk as "D2LKioskTeacher1"
+
+#Feature:Student Logout from D2L Kiosk
+Scenario:Student Logout from D2L Kiosk
+When I Sign Out from the D2L Kiosk as "D2LKioskStudent1"
