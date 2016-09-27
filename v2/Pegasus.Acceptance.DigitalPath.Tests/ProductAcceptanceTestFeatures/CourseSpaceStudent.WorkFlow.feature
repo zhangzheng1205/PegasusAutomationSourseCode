@@ -138,4 +138,3 @@ When I navigate to the "To Do" tab
 Then I should be on the "Assignments - To Do" page
 When I open "InteractiveWritingCoach" activity
 And I submit the InteractiveWritingCoach activity
-Then I should see submitted activity "Try Again" button

@@ -1791,22 +1791,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToLastOpenedWindow();
                 Stopwatch stopWatch = new Stopwatch();
                 stopWatch.Start();
-                string getMediaURL = base.GetCurrentUrl;
-                string getMediaWindowTitle = base.GetPageTitle;
-                string mediaContent = string.Empty;
-
-                string[] parts = getMediaURL.Split('/');
-
-                if (parts.Length > 0)
-                    mediaContent = parts[parts.Length - 1];
-                else
-                    mediaContent = getMediaURL;
+                
                          while (!IsPageOpened)
                          {
+                             string getMediaURL = base.GetCurrentUrl;
+                           
                              if (stopWatch.Elapsed.TotalMinutes < 2 == false) break;
                              else
                              {
-                                 if (getMediaWindowTitle.Contains(mediaContent))
+                                 if (getMediaURL.Contains(".pdf")) 
                                      IsPageOpened = true;
                              }
                           }
