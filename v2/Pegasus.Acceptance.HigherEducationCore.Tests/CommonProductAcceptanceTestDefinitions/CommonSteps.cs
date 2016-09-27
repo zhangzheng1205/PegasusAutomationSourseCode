@@ -218,6 +218,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(3000);
             //Verify Correct Message Present on the Page
             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
                 CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);

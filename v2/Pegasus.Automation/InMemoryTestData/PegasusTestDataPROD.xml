@@ -416,9 +416,9 @@
       <Name>student001df</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>QA</FirstName>
+      <FirstName>fn</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>WS Student</LastName>
+      <LastName>ln</LastName>
       <UserType>RegHedWsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1342,7 +1342,7 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Auto-2016/07/31-d50b9cb9-Activity Type</Name>
+      <Name>SAM Activity</Name>
       <ActivityType>RegSAMActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="AssessmentRegressionComplete" storage="d:\automationassessmentregcoursespacenit\v2\pegasus.acceptance.highereducationcore.tests\productacceptanceorderedtests\assessmentregressioncomplete.orderedtest" id="b5af10b7-c46b-4e57-ae05-110a84804576" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="9bb14484-0dff-498b-9399-f537074009df" name="AssessmentRegressionWorkspaceFull" storage="assessmentregressionworkspacefull.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="37285a69-bad3-464d-b4cf-df67a630e2e4" name="AssessmentRegressionCourseSpaceFull" storage="assessmentregressioncoursespacefull.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

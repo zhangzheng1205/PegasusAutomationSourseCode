@@ -892,6 +892,31 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
         }
 
         /// <summary>
+        /// Validate the window existance
+        /// </summary>
+        /// <param name="activityTypeEnum">This the activity type</param>
+        [Then(@"I should be on ""(.*)"" window")]
+        public void ValidateWindowExistance(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            // Switch to presentation window
+            Logger.LogMethodEntry("CommonSteps",
+               "SelectPresentationWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            //Switch to Activity Presentation Window
+            base.WaitUntilWindowLoads(windowTitle);
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+            Title, () => Assert.AreEqual(windowTitle, new StudentPresentationPage().
+             GetPageName()));
+            new StudentPresentationPage().validateButtonExistanceAndClick();
+            Logger.LogMethodExit("CommonSteps",
+              "SelectPresentationWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Verify Beginning/end Messages at Presentation Window.
         /// </summary>
         /// <param name="messageType">messageType</param>

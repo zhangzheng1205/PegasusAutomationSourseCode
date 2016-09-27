@@ -305,6 +305,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Create Activity Name for general activity
                     case Activity.ActivityTypeEnum.RegChildActivity:
+                    case Activity.ActivityTypeEnum.RegChildAbruptActivity:
                         activityName = "Auto-" + date + "-" + randomValue + "-Activity";
                         break;
                     //Create Activity Name for activity with GB Score set to First

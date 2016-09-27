@@ -37,8 +37,7 @@ namespace Pegasus.Pages.UI_Pages
             {
 
 
-                Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
-                     RandomTopicList_Page_Time_Value));
+                Thread.Sleep(Convert.ToInt32(1000));
                 //Select window
                 //base.SelectWindow(RandomTopicListPageResource.
                 //    RandomTopicList_Page_CreateActivity_Window_Title_Locator);

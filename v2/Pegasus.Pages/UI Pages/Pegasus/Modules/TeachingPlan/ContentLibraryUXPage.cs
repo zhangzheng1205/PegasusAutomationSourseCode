@@ -408,6 +408,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                Thread.Sleep(2000);
                 //Click on the Next link if Activity Not Present
                 ClickOnNextLinkIfActivityNotPresent(activityName);
                 //Select the Activity
@@ -423,6 +424,7 @@ namespace Pegasus.Pages.UI_Pages
                         ContentLibraryUXPage_ActivityName_Xpath_Locator, rowCount)).Trim();
                     if (getActivityName.Contains(activityName))
                     {
+                        Thread.Sleep(1000);
                         base.FocusOnElementByXPath(string.Format(ContentLibraryUXPageResource.
                         ContentLibraryUXPage_Checkbox_Activity_XPath_Locator, rowCount));
                         IWebElement getCheckBox=base.GetWebElementPropertiesByXPath
@@ -454,7 +456,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Initialized Variable
-                string getTableText = string.Empty;
+               string getTableText = string.Empty;
                 do
                 {
                     base.WaitForElement(By.Id(ContentLibraryUXPageResource.
@@ -558,6 +560,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Selects the Default window
                 base.SelectDefaultWindow();
+                Thread.Sleep(2000);
                 base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
                 ContentLibraryUXPage_Add_Button_ID_Locator));
                 IWebElement getAddButton = base.GetWebElementPropertiesByClassName
@@ -614,6 +617,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
+                Thread.Sleep(3000);
                 base.WaitUntilWindowLoads(windowName);
                 base.SelectWindow(windowName);                
             }
@@ -637,6 +641,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Wait for the element
+                Thread.Sleep(1000);
                 base.WaitForElement(By.Id(frameAttributeValue));
                 //Switch to Frame
                 base.SwitchToIFrame(frameAttributeValue);
@@ -1926,6 +1931,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
 
                 // Click on Search button
+                Thread.Sleep(2000);
                 base.WaitForElement(By.Id(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_Button_Search_ID_Locator));
                 string searchExpanded = base.GetWebElementPropertiesById(string.Format(ContentLibraryUXPageResource.

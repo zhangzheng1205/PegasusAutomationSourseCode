@@ -1773,6 +1773,38 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Get page title
+        /// </summary>
+        /// <returns>Page title.</returns>
+        public String GetPageName()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "GetPageTitle",base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            string getPageTitle = base.GetPageTitle;
+            logger.LogMethodExit("StudentPresentationPage", "GetPageTitle", base.IsTakeScreenShotDuringEntryExit);
+            return getPageTitle;
+        }
+
+        /// <summary>
+        /// Validate the button existance and click button accordingly.
+        /// </summary>
+        public void validateButtonExistanceAndClick()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "validateButtonExistanceAndClick",base.IsTakeScreenShotDuringEntryExit);
+            bool isStartButtonExit = base.IsElementPresent(By.Id("btnOpen"),5);
+            bool isCloseButtonExist = base.IsElementPresent(By.Id("btnClose"), 5);
+            if (isStartButtonExit == true && isCloseButtonExist == true)
+            {
+                base.ClickButtonById("btnOpen");
+            }
+            else if (isCloseButtonExist == true)
+            {
+                base.ClickButtonById("btnClose");
+            }
+            logger.LogMethodExit("StudentPresentationPage", "validateButtonExistanceAndClick", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Get Status Of Submitted Grader IT Activity In CourseMaterial.
         /// </summary>
         /// <param name="assetName">This is Activity Name.</param>

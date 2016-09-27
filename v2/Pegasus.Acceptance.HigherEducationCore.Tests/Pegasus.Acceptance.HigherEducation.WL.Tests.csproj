@@ -594,7 +594,7 @@
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionTeacherOnly.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\AssessmentRegression.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionWorkspaceFull.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\AssessmentInstructorPreference.orderedtest">
@@ -609,7 +609,7 @@
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionGBScorePreferenceSTU.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionGBScorePreference.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionGBScorePreferenceWS.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionInstructorCourseSpace.orderedtest">
@@ -619,6 +619,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionCourseSpaceFull.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionComplete.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScorePreferenceStudentVS.orderedtest">
