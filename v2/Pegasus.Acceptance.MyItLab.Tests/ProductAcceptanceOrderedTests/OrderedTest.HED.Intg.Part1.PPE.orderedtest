@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.HED.Intg.Part1.PPE" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hed.intg.part1.ppe.orderedtest" id="9f7e8f7a-072b-4f96-bbe8-82f53b0c2f3a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="05158914-ed39-4736-b671-43a116ee85b8" name="d2lkioskintegration" storage="d2lkioskintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="4cfba654-f9fb-44e4-a574-cb72840dade1" name="mmndintegration" storage="mmndintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
