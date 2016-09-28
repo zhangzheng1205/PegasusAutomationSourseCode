@@ -548,6 +548,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                  case "PROD":
                      applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRootPROD_Key];
                      break;
+                 case"PPE":
+                     applicationBBUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.D2LKioskUrlRoot1PPE_Key];
+                     break;
                  default: throw new ArgumentException("The suggested application environment was not found");
              }
              return applicationBBUrl;

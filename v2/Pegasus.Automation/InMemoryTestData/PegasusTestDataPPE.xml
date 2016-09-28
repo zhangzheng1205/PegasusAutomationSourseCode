@@ -247,6 +247,22 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+    <Course>
+      <Name>Kiosk PPE MIL Course</Name>
+      <CourseType>D2LKioskCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>MyITLab Course Home</Name>
+      <CourseType>D2LPegasusKioskCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
@@ -264,23 +280,23 @@
     </User>
     <!--Hard coded Users data for "D2L Integration" Product.-->
     <User>
-      <Name>ramya.hl</Name>
+      <Name>Automation_LMS_instructor</Name>
       <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Madhu</FirstName>
+      <FirstName>automation</FirstName>
       <MiddleName>Unknown</MiddleName>
-      <LastName>Kumar</LastName>
+      <LastName>instructor</LastName>
       <UserType>D2LKioskTeacher1</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>d2lkiosk.stu2</Name>
-      <Password>Password1</Password>
+      <Name>automation_lms_student</Name>
+      <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Madhu</FirstName>
+      <FirstName>automation</FirstName>
       <MiddleName>Unknown</MiddleName>
-      <LastName>Kumar</LastName>
+      <LastName>student</LastName>
       <UserType>D2LKioskStudent1</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
