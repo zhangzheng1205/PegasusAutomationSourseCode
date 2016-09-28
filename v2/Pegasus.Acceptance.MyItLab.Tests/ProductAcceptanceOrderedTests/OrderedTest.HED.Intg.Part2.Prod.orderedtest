@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="OrderedTest.HED.Intg.Part2.Prod" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hed.intg.part2.prod.orderedtest" id="7a7daac3-58ca-4d7b-b122-e9a0c0a6b954" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="OrderedTest.HED.Intg.Part2.Prod" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hed.intg.part2.prod.orderedtest" id="7a7daac3-58ca-4d7b-b122-e9a0c0a6b954" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestLinks>
     <TestLink id="2fbc41ff-21be-4089-968f-b943f35a0865" name="d2ldirectintegration" storage="d2ldirectintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="be38a0a1-8de2-4bdd-bc04-6bdb98626225" name="moodledirectintegration" storage="moodledirectintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />

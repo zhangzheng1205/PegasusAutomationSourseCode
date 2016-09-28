@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="OrderedTest.HED.Intg.Part1.Prod" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hed.intg.part1.prod.orderedtest" id="08c0f4fc-9380-461c-91f0-38f42690559b" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="OrderedTest.HED.Intg.Part1.Prod" storage="d:\11feb16-master\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hed.intg.part1.prod.orderedtest" id="08c0f4fc-9380-461c-91f0-38f42690559b" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestLinks>
     <TestLink id="f09a8098-76fc-4929-bd6c-ba6f0b307bce" name="orderedtest.bb.gradesync.cert" storage="orderedtest.bb.gradesync.cert.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="004505a1-9bbe-479f-bf10-157ab168f6c7" name="badgingintegration" storage="badgingintegration.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
