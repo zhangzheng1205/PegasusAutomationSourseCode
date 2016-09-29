@@ -2129,6 +2129,7 @@ namespace Pegasus.Pages.UI_Pages
                 string getUserName = base.GetTitleAttributeValueByXPath(
                     string.Format(GBInstructorUXPageResource.
                         GBInstructorUX_Page_User_Title_Xpath_Locator, userRowCount));
+                Thread.Sleep(3000);
                 if (getUserName.Contains(userLastName + GBInstructorUXPageResource.
                     GBInstructorUX_Page_Space_value + userFirstName))
                 {
@@ -4493,17 +4494,17 @@ namespace Pegasus.Pages.UI_Pages
             bool isBadgePresent = false;
             try
             {
+                base.SwitchToDefaultPageContent();
+                base.SwitchToIFrameById("srcGBFrame");
                 //Get Activity Column Count
-                int getActivityColumnCount = this.GetActivityColumnCount(activityName);
-                //Get User Row Count
-                int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
-                base.WaitForElement(By.CssSelector(string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_BadgeICon_CSS_Locator,
-                    getUserRowCount, getActivityColumnCount)));
+                //int getActivityColumnCount = this.GetActivityColumnCount(activityName);
+                ////Get User Row Count
+                //int getUserRowCount = this.GetUserRowCount(userLastName, userFirstName);
+                base.WaitForElement(By.CssSelector(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_BadgeICon_CSS_Locator));
                 //Verify Badge Present
-                isBadgePresent = base.IsElementPresent(By.CssSelector(string.Format(GBInstructorUXPageResource.
-                    GBInstructorUX_Page_BadgeICon_CSS_Locator,
-                    getUserRowCount, getActivityColumnCount)), 10);
+                isBadgePresent = base.IsElementPresent(By.CssSelector(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_BadgeICon_CSS_Locator),10);
             }
             catch (Exception e)
             {
