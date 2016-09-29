@@ -41,19 +41,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             logger.LogMethodExit("Canvas", "CanvasUserLogin", base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// User enter into Canvas direct course.
-        /// </summary>
-        /// <param name="courseName">This is the course name.</param>
-        [When(@"I enter into Canvas direct course ""(.*)""")]
-        public void EnterIntoCanvasDirectCourse(Course.CourseTypeEnum courseTypeEnum)
-        {
-            logger.LogMethodEntry("Canvas", "EnterIntoCanvasDirectCourse", base.IsTakeScreenShotDuringEntryExit);
-             Course course = Course.Get(courseTypeEnum);
-             string courseName = course.Name;
-            new CanvasUserLogin().CanvasUserEnterIntoCourse(courseName);
-            logger.LogMethodExit("Canvas", "EnterIntoCanvasDirectCourse", base.IsTakeScreenShotDuringEntryExit);
-        }
 
         /// <summary>
         /// Click link in moodle portal inside the course
@@ -128,5 +115,25 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             logger.LogMethodExit("CanvasCourseActions", "ValidateThePegasusPageDisplayForCanvasUser", base.IsTakeScreenShotDuringEntryExit);
         }
 
-    }
+        /// <summary>
+        /// User enter into Canvas direct course.
+        /// </summary>
+        /// <param name="courseName">This is the course name.</param>
+        [When(@"I enter into Canvas direct course ""(.*)""")]
+        [When(@"I enter into ""(.*)"" course")]
+        public void EnterIntoCanvasCourse(Course.CourseTypeEnum courseTypeEnum)
+        {
+            logger.LogMethodEntry("Canvas", "EnterIntoCanvasDirectCourse", base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            string courseName = course.Name;
+            new CanvasUserLogin().CanvasUserEnterIntoCourse(courseName);
+            logger.LogMethodExit("Canvas", "EnterIntoCanvasDirectCourse", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I perform ""(.*)"" for ""(.*)""")]
+        public void ThenIPerformFor(string operation, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            ScenarioContext.Current.Pending();
+        }
+ }
 }

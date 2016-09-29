@@ -90,13 +90,13 @@ namespace Pegasus.Pages.UI_Pages.Integration.Canvas.DirectIntegration
             logger.LogMethodEntry("CanvasCourseActions", "GetGradeBookExistance",
                 base.IsTakeScreenShotDuringEntryExit);
             bool pageStatus = false;
-            base.SwitchToWindow(pageName);
+            base.SwitchToWindow(canvasPage);  
             // Switch based on the Page name
             switch (pageName)
             {
                 case "Gradebook":
                     // Switch to iframe
-                      base.WaitForAjaxToComplete();
+                    
                         base.WaitForElement(By.Id(CanvasCourseActionsResource.
                             CanvasCourseAction_Page_GradeBook_Iframe_ID_Value));
                         base.SwitchToIFrameById(CanvasCourseActionsResource.
