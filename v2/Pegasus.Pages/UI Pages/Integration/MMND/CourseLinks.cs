@@ -176,20 +176,18 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        {
            try
            {
-              
-               base.SwitchToWindow(linkName);
+               base.SwitchToDefaultWindow();
                getInsideFrame(centerIframe);
                base.WaitForDocumentLoadToComplete();
                base.WaitForAjaxToComplete();
                base.SwitchToDefaultPageContent();
                base.WaitForElement(By.LinkText(linkName));
                base.GetWebElementPropertiesByLinkText(linkName).Click();
-               base.SwitchToDefaultPageContent();
            }
            catch (Exception ex)
            {
-               
-              ExceptionHandler.HandleException(ex);
+
+               ExceptionHandler.HandleException(ex);
            }
        }
 
@@ -202,7 +200,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            bool success = false;
            try
            {
-               base.SwitchToWindow("Notifications");
+               base.SwitchToDefaultWindow();
                getInsideFrame(centerIframe);
                base.WaitForDocumentLoadToComplete();
                base.WaitForAjaxToComplete();
@@ -212,17 +210,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
                    success = true;
 
                }
-               base.SwitchToDefaultPageContent();
-               base.SwitchToWindow("Notifications");
            }
            catch (Exception ex)
            {
-               
+
                ExceptionHandler.HandleException(ex);
            }
            return success;
        }
-
 
 
     }
