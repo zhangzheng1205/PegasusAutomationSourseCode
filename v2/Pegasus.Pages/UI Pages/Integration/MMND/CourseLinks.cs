@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Pegasus.Pages.Exceptions;
+using System.Threading;
 using Pegasus.Automation;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using OpenQA.Selenium;
@@ -48,6 +49,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        public void getInsideFrame(By frame)
        {
           IWebDriver myDriver= this.WebDriver;
+          bool pres = base.IsElementPresent(frame,10);
           base.WaitForElement(frame);
           myDriver.SwitchTo().Frame(myDriver.FindElement(frame));
 
@@ -176,13 +178,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
        {
            try
            {
-               base.SwitchToDefaultWindow();
+               Thread.Sleep(60000);
+               base.SwitchToLastOpenedWindow();
                getInsideFrame(centerIframe);
                base.WaitForDocumentLoadToComplete();
                base.WaitForAjaxToComplete();
                base.SwitchToDefaultPageContent();
                base.WaitForElement(By.LinkText(linkName));
                base.GetWebElementPropertiesByLinkText(linkName).Click();
+               base.SwitchToDefaultPageContent();
            }
            catch (Exception ex)
            {
@@ -200,7 +204,8 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
            bool success = false;
            try
            {
-               base.SwitchToDefaultWindow();
+               Thread.Sleep(15000);
+               base.SwitchToWindow("Notifications");
                getInsideFrame(centerIframe);
                base.WaitForDocumentLoadToComplete();
                base.WaitForAjaxToComplete();
@@ -210,6 +215,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
                    success = true;
 
                }
+               base.SwitchToDefaultPageContent();
+               base.SwitchToWindow("Notifications");
+
            }
            catch (Exception ex)
            {
