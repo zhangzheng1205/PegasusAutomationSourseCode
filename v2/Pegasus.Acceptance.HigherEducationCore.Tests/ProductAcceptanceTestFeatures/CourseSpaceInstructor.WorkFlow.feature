@@ -164,3 +164,117 @@ When I search "RegChildActivity" in "My Course" frame  of "Course Materials" tab
 Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
 When I click on "Show"  of "RegChildActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
 
+#-----------------------------------------------------Show/Hide asset in My Course ------------------------------------
+Scenario: Search asset in MyCourse and Show/Hide as RegCsSmsInstructor
+#When I search "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I search "RegChildActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegChildActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegChildActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+Scenario: Search asset with Highest Score Preference in MyCourse and Show/Hide as RegCsSmsInstructor
+When I associate the "RegHighestScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegHighestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegHighestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegHighestScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+Scenario: Search asset with Lowest Score Preference in MyCourse and Show/Hide as RegCsSmsInstructor
+When I associate the "RegLowestScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegLowestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLowestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegLowestScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+Scenario: Search asset with First Score Preference in MyCourse and Show/Hide as RegCsSmsInstructor
+When I associate the "RegFirstScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegFirstScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegFirstScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegFirstScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+Scenario: Search asset with Last Score Preference in MyCourse and Show/Hide as RegCsSmsInstructor
+When I associate the "RegLastScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegLastScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLastScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegLastScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+Scenario: Search asset with Average Score Preference in MyCourse and Show/Hide as RegCsSmsInstructor
+When I associate the "RegAverageScoreActivity" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegAverageScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegAverageScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegAverageScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+#Purpose: Add Folder from Course Materials Library to My Course and Unhide the contents as RegCsSmsInstructor
+Scenario: Add Folder from Course Materials Library to My Course and Unhide the contents as RegCsSmsInstructor
+When I associate the "RegFolderGBPreference" activity Content Library to MyCourse frame
+Then I should see the successfull message "Content item is added to My Course"
+When I search "RegFolderGBPreference" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegFolderGBPreference" in My Course frame  of "Course Materials" tab
+When I click on "Show"  of "RegFolderGBPreference" in  "Course Materials" tab as "RegCsSmsInstructor"
+
+Scenario: Instructor Views Average Score in View Submission as RegCsSmsInstructor
+When I search "RegAverageScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegAverageScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegAverageScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegCsSmsStudent" in view submission page
+Then as "RegCsSmsInstructor" I should see the "Average" score recorded
+
+Scenario: Instructor Views First Score in View Submission as RegCsSmsInstructor
+When I search "RegFirstScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegFirstScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegFirstScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegCsSmsStudent" in view submission page
+Then as "RegCsSmsInstructor" I should see the "First" score recorded 
+
+Scenario: Instructor Views Last Score in View Submission as RegCsSmsInstructor
+When I search "RegLastScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLastScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegLastScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegCsSmsStudent" in view submission page
+Then as "RegCsSmsInstructor" I should see the "Last" score recorded 
+
+Scenario: Instructor Views Highest Score in View Submission as RegCsSmsInstructor
+When I search "RegHighestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegHighestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegHighestScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegCsSmsStudent" in view submission page
+Then as "RegCsSmsInstructor" I should see the "Highest" score recorded 
+
+Scenario: Instructor Views Lowest Score in View Submission as RegCsSmsInstructor
+When I search "RegLowestScoreActivity" in "My Course" frame  of "Course Materials" tab
+Then I should be displayed with "RegLowestScoreActivity" in My Course frame  of "Course Materials" tab
+When I click on "View Submissions"  of "RegLowestScoreActivity" in  "Course Materials" tab as "RegCsSmsInstructor"
+Then I should be on the "View Submission" page
+When I view all submissions of "RegCsSmsStudent" in view submission page
+Then as "RegCsSmsInstructor" I should see the "Lowest" score recorded 
+
+Scenario: Close View Submission Page as RegCsSmsInstructor
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+#--------------------------------------Verify Highest Score--------------------------------------
+Scenario: Create activity for verifying Highest score in coursespace
+When I Create "RegCSHighestScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify Lowest Score--------------------------------------
+Scenario: Create activity for verifying Lowest score in coursespace
+When I Create "RegCSLowestScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify First Score--------------------------------------
+Scenario: Create activity for verifying First score in coursespace
+When I Create "RegCSFirstScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify Last Score--------------------------------------
+Scenario: Create activity for verifying Last score in coursespace
+When I Create "RegCSLastScoreActivity" activity with Behavioral Mode "Basic Random"
+
+#--------------------------------------Verify Average Score--------------------------------------
+Scenario: Create activity for verifying Average score in coursespace
+When I Create "RegCSAverageScoreActivity" activity with Behavioral Mode "Basic Random"
+

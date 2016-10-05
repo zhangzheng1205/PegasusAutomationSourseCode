@@ -520,8 +520,6 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I select \"correct\" answer for True/False question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 165
 testRunner.And("I should successfully submit activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -532,14 +530,12 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void StudentAnswersActivityWithIncorrectAnswers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers activity with incorrect answers", ((string[])(null)));
-#line 169
+#line 168
 this.ScenarioSetup(scenarioInfo);
-#line 170
+#line 169
 testRunner.When("I select \"incorrect\" answer for True/False question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 171
+#line 170
 testRunner.And("I should successfully submit activity for grading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 172
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -550,13 +546,13 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void LaunchActivityForHighestScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Activity for Highest score", ((string[])(null)));
-#line 175
+#line 173
 this.ScenarioSetup(scenarioInfo);
-#line 176
+#line 174
 testRunner.When("I click on \"Open\" of  \"RegHighestScoreActivity\" Activity in \"Course Materials\" pa" +
                     "ge", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 177
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 175
+testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -567,13 +563,13 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void LaunchActivityForLowestScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Activity for Lowest score", ((string[])(null)));
-#line 180
+#line 178
 this.ScenarioSetup(scenarioInfo);
-#line 181
+#line 179
 testRunner.When("I click on \"Open\" of  \"RegLowestScoreActivity\" Activity in \"Course Materials\" pag" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 182
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 180
+testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -584,13 +580,13 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void LaunchActivityForFirstScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Activity for First score", ((string[])(null)));
-#line 185
+#line 183
 this.ScenarioSetup(scenarioInfo);
-#line 186
+#line 184
 testRunner.When("I click on \"Open\" of  \"RegFirstScoreActivity\" Activity in \"Course Materials\" page" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 187
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 185
+testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -601,12 +597,12 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void LaunchActivityForLastScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Activity for Last score", ((string[])(null)));
-#line 190
+#line 188
 this.ScenarioSetup(scenarioInfo);
-#line 191
+#line 189
 testRunner.When("I click on \"Open\" of  \"RegLastScoreActivity\" Activity in \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 192
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 190
+testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -617,13 +613,13 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void LaunchActivityForAverageScore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch Activity for Average score", ((string[])(null)));
-#line 195
+#line 193
 this.ScenarioSetup(scenarioInfo);
-#line 196
+#line 194
 testRunner.When("I click on \"Open\" of  \"RegAverageScoreActivity\" Activity in \"Course Materials\" pa" +
                     "ge", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 197
-testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 195
+testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -634,18 +630,18 @@ testRunner.Then("I should be on \"RegSAMActivity\" window", ((string)(null)), ((
         public virtual void VerifyAverageScoreIsRecorded()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Average Score is Recorded", ((string[])(null)));
-#line 200
+#line 198
 this.ScenarioSetup(scenarioInfo);
-#line 201
+#line 199
 testRunner.When("I click on \"View Submissions\" of  \"RegAverageScoreActivity\" Activity in \"Course M" +
                     "aterials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 202
+#line 200
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 203
+#line 201
 testRunner.And("as \"HedWsStudent\" I should see the \"Average\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 204
+#line 202
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 205
+#line 203
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -657,18 +653,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void VerifyHighestScoreIsRecorded()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Highest Score is Recorded", ((string[])(null)));
-#line 207
+#line 205
 this.ScenarioSetup(scenarioInfo);
-#line 208
+#line 206
 testRunner.When("I click on \"View Submissions\" of  \"RegHighestScoreActivity\" Activity in \"Course M" +
                     "aterials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 209
+#line 207
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 210
+#line 208
 testRunner.And("as \"HedWsStudent\" I should see the \"Highest\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 211
+#line 209
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 212
+#line 210
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -680,18 +676,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void VerifyLowestScoreIsRecorded()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Lowest Score is Recorded", ((string[])(null)));
-#line 214
+#line 212
 this.ScenarioSetup(scenarioInfo);
-#line 215
+#line 213
 testRunner.When("I click on \"View Submissions\" of  \"RegLowestScoreActivity\" Activity in \"Course Ma" +
                     "terials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 216
+#line 214
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 217
+#line 215
 testRunner.And("as \"HedWsStudent\" I should see the \"Lowest\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 218
+#line 216
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 219
+#line 217
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -703,18 +699,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void VerifyFirstScoreIsRecorded()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify First Score is Recorded", ((string[])(null)));
-#line 221
+#line 219
 this.ScenarioSetup(scenarioInfo);
-#line 222
+#line 220
 testRunner.When("I click on \"View Submissions\" of  \"RegFirstScoreActivity\" Activity in \"Course Mat" +
                     "erials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 223
+#line 221
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 224
+#line 222
 testRunner.And("as \"HedWsStudent\" I should see the \"First\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 225
+#line 223
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 226
+#line 224
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -726,18 +722,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void VerifyLastScoreIsRecorded()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Last Score is Recorded", ((string[])(null)));
-#line 228
+#line 226
 this.ScenarioSetup(scenarioInfo);
-#line 229
+#line 227
 testRunner.When("I click on \"View Submissions\" of  \"RegLastScoreActivity\" Activity in \"Course Mate" +
                     "rials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 230
+#line 228
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 231
+#line 229
 testRunner.And("as \"HedWsStudent\" I should see the \"Last\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 232
+#line 230
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 233
+#line 231
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -749,9 +745,9 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void StudentOpensFolderInCourseMaterialsPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Opens folder in Course Materials page", ((string[])(null)));
-#line 236
+#line 234
 this.ScenarioSetup(scenarioInfo);
-#line 237
+#line 235
 testRunner.When("I click on \"Open\" of  \"RegFolderGBPreference\" Folder in \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();

@@ -1788,20 +1788,74 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Validate the button existance and click button accordingly.
         /// </summary>
-        public void validateButtonExistanceAndClick()
+        public void validateButtonExistanceAndClick(Activity.ActivityTypeEnum activityTypeEnum)
         {
             logger.LogMethodEntry("StudentPresentationPage", "validateButtonExistanceAndClick",base.IsTakeScreenShotDuringEntryExit);
-            bool isStartButtonExit = base.IsElementPresent(By.Id("btnOpen"),5);
-            bool isCloseButtonExist = base.IsElementPresent(By.Id("btnClose"), 5);
-            if (isStartButtonExit == true && isCloseButtonExist == true)
+            Activity activity = Activity.Get(activityTypeEnum);
+            string windowTitle = activity.Name.ToString();
+            if (windowTitle == base.GetPageTitle)
             {
-                base.ClickButtonById("btnOpen");
+                base.SwitchToLastOpenedWindow();
+                base.WaitUntilWindowLoads(windowTitle);
+                bool isStartButtonExit = base.IsElementPresent(By.Id("btnOpen"), 5);
+                bool isCloseButtonExist = base.IsElementPresent(By.Id("btnClose"), 5);
+                if (isStartButtonExit == true && isCloseButtonExist == true)
+                {
+                    base.ClickButtonById("btnOpen");
+                }
+                else if (isCloseButtonExist == true)
+                {
+                    base.ClickButtonById("btnClose");
+                }
             }
-            else if (isCloseButtonExist == true)
+            else
             {
-                base.ClickButtonById("btnClose");
+                base.SwitchToDefaultWindow();
+                base.WaitUntilWindowLoads(base.GetPageTitle);
             }
             logger.LogMethodExit("StudentPresentationPage", "validateButtonExistanceAndClick", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void getButtonAndPerformAction(string buttonName, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "getButtonAndPerformAction",base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+            // Check for the condition and switch accordingly
+            switch(buttonName)
+            {
+                case "Start" :
+                        // Switch the controll to the popup
+                        base.SwitchToLastOpenedWindow();
+                        base.WaitUntilWindowLoads(activityName);
+                        base.SelectWindow(activityName);
+                        bool isStartButtonExist = base.IsElementPresent(By.Id("btnOpen"), 5);
+                        if (isStartButtonExist == true)
+                        {
+                            base.ClickButtonById("btnOpen");
+                        }
+                       break;
+
+                case "Close" :
+                        bool isCloseButtonExist = base.IsElementPresent(By.Id("btnClose"), 5);
+                        bool popupStatus = base.IsPopupPresent(activityName);
+                        if (popupStatus == true && isCloseButtonExist == true)
+                        {
+                            base.ClickButtonById("btnOpen");
+                        }
+                        else
+                        {
+                            base.SelectDefaultWindow();
+                            base.WaitUntilWindowLoads(base.GetPageTitle);
+                        }
+                       break;
+
+            }
+
+            logger.LogMethodEntry("StudentPresentationPage", "getButtonAndPerformAction", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -8025,6 +8079,7 @@ namespace Pegasus.Pages.UI_Pages
                "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
              try
              {
+                
                  int Qcount = base.GetElementCountByXPath(string.Format(StudentPresentationPageResource.
                             StudentPresentation_Page_Question_Count_Xpath_Locator));
                  switch (answerChoice)

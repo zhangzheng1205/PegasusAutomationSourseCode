@@ -163,38 +163,36 @@ Then I should be on the "Course Materials" page
 Scenario: Student submits activity with correct answers
 When I select "correct" answer for True/False question
 And I should successfully submit activity for grading
-Then I should be on "RegSAMActivity" window 
 
 #Purpose: Student submits activity with incorrect answers
 Scenario: Student answers activity with incorrect answers
 When I select "incorrect" answer for True/False question
 And I should successfully submit activity for grading
-Then I should be on "RegSAMActivity" window 
 
 #Purpose: Student opens Activity for Highest score
 Scenario: Launch Activity for Highest score
 When I click on "Open" of  "RegHighestScoreActivity" Activity in "Course Materials" page
-Then I should be on "RegSAMActivity" window 
+And I click on "Start" button in "RegSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for Lowest score
 Scenario: Launch Activity for Lowest score
 When I click on "Open" of  "RegLowestScoreActivity" Activity in "Course Materials" page
-Then I should be on "RegSAMActivity" window 
+And I click on "Start" button in "RegSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for First score
 Scenario: Launch Activity for First score
 When I click on "Open" of  "RegFirstScoreActivity" Activity in "Course Materials" page
-Then I should be on "RegSAMActivity" window 
+And I click on "Start" button in "RegSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for Last score
 Scenario: Launch Activity for Last score
 When I click on "Open" of  "RegLastScoreActivity" Activity in "Course Materials" page
-Then I should be on "RegSAMActivity" window 
+And I click on "Start" button in "RegSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for Average score
 Scenario: Launch Activity for Average score
 When I click on "Open" of  "RegAverageScoreActivity" Activity in "Course Materials" page
-Then I should be on "RegSAMActivity" window 
+And I click on "Start" button in "RegSAMActivity" presentation window 
 
 #Purpose: Verify score recorded in Gradebook is as per the score Preference
 Scenario: Verify Average Score is Recorded

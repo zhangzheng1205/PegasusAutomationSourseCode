@@ -624,6 +624,39 @@
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionComplete.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionWSandCSComplete.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.CreateActivityInCSGBScoreLowest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.CreateActivityInCSGBScoreLast.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.CreateActivityInCSGBScoreHighest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.CreateActivityInCSGBScoreFirst.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.CreateActivityInCSGBScoreAverage.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScoreAverageSTUSubmissionInCS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScoreFirstSTUSubmissionInCS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScoreHighestSTUSubmissionInCS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScoreLastSTUSubmissionInCS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScoreLowestSTUSubmissionInCS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderTest.GBScorePreferenceStudentVS.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

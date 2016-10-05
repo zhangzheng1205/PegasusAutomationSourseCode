@@ -81,6 +81,11 @@ namespace Pegasus.Automation.DataTransferObjects
             RegAverageScoreActivity = 50,
             RegFolderGBPreference = 51,
             RegCSSAMActivity=52,
+            RegCSHighestScoreActivity =53,
+            RegCSLowestScoreActivity=54,
+            RegCSAverageScoreActivity=55,
+            RegCSLastScoreActivity=56,
+            RegCSFirstScoreActivity=57
         }
 
         /// <summary>

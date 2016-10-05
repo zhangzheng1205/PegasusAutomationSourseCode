@@ -2215,6 +2215,7 @@ namespace Pegasus.Pages.UI_Pages
             string obtainedScore = string.Empty;
             try
             {
+                Thread.Sleep(2000);
                 obtainedScore = VerifyRecordedScore(userType, gbScore);
             }
             catch (Exception e)
@@ -2337,6 +2338,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 case User.UserTypeEnum.HedWsInstructor:
                 case User.UserTypeEnum.RegHedWsInstructor:
+                case User.UserTypeEnum.RegCsSmsInstructor:
                     //Get the recorded score details
                     recordedScore = base.GetWebElementPropertiesByXPath(ViewSubmissionPageResource.
                         ViewSubmission_Page_RecordedScore_Xpath_Locator).Text.Trim('%').Trim();
@@ -2344,6 +2346,7 @@ namespace Pegasus.Pages.UI_Pages
 
                 case User.UserTypeEnum.HedWsStudent:
                 case User.UserTypeEnum.RegHedWsStudent:
+                case User.UserTypeEnum.RegCsSmsStudent:
                     bool attempt = base.IsElementPresent(By.ClassName(ViewSubmissionPageResource
                         .ViewSubmission_Page_AttemptScore_STU_VS_ClassName_Locator), 5);
                     IWebElement getAttempt = base.GetWebElementPropertiesByClassName(ViewSubmissionPageResource
@@ -2384,6 +2387,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HedProgramAdmin:
                 case User.UserTypeEnum.HedMilAcceptanceInstructor:
                 case User.UserTypeEnum.RegHedWsInstructor:
+                case User.UserTypeEnum.RegCsSmsInstructor:
                     // Verify the submissions are present
                     submissionData = base.IsElementPresent(By.XPath(ViewSubmissionPageResource.
                         ViewSubmission_Page_ViewSubmission_Xpath_Locator), 5);
@@ -2423,6 +2427,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HSSCsSmsStudent:
                 case User.UserTypeEnum.HedMilAcceptanceStudent:
                 case User.UserTypeEnum.RegHedWsStudent:
+                case User.UserTypeEnum.RegCsSmsStudent:
                     // Verify the submissions are present
                     submissionData = base.IsElementPresent(By.XPath(ViewSubmissionPageResource.
                         ViewSubmission_Page_ViewSubmission_Xpath_Locator), 5);

@@ -904,15 +904,26 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             string windowTitle = activity.Name.ToString();
-            //Switch to Activity Presentation Window
-            base.WaitUntilWindowLoads(windowTitle);
-            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
-            Title, () => Assert.AreEqual(windowTitle, new StudentPresentationPage().
-             GetPageName()));
-            new StudentPresentationPage().validateButtonExistanceAndClick();
+            //Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+            //Title, () => Assert.AreEqual(windowTitle, new StudentPresentationPage().
+            // GetPageName()));
+            new StudentPresentationPage().validateButtonExistanceAndClick(activityTypeEnum);
             Logger.LogMethodExit("CommonSteps",
               "SelectPresentationWindow",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the button existance on the Presenation window and perform action
+        /// </summary>
+        /// <param name="buttonName">This is button name.</param>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I click on ""(.*)"" button in ""(.*)"" presentation window")]
+        public void CheckButtonExistanceAndClick(string buttonName, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "CheckButtonExistanceAndClick",base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().getButtonAndPerformAction(buttonName, activityType);
+            Logger.LogMethodExit("ActivitySubmission", "CheckButtonExistanceAndClick", base.IsTakeScreenShotDuringEntryExit);
         }
 
 

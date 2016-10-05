@@ -2026,7 +2026,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HedWsInstructor:
                 case User.UserTypeEnum.RegHedWsInstructor:
                 case User.UserTypeEnum.RegCsSmsInstructor:
-                    this.ClickCmenuOptionBasedOnCmenuOption(cmenuOptionName, activityType);
+                    this.ClickCmenuOptionBasedOnCmenuOption(cmenuOptionName, activityType, userType);
                     break;
             }
             logger.LogMethodExit("ContentLibraryUXPage", "ClickCmenuOptionBasedOnTheUserRole", base.IsTakeScreenShotDuringEntryExit);
@@ -2037,7 +2037,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="cmenuOptionName">This is cmenu option name.</param>
         /// <param name="activityType">This is activity type.</param>
-        public void ClickCmenuOptionBasedOnCmenuOption(string cmenuOptionName, Activity.ActivityTypeEnum activityType)
+        public void ClickCmenuOptionBasedOnCmenuOption(string cmenuOptionName, Activity.ActivityTypeEnum activityType, User.UserTypeEnum userType)
         {
             logger.LogMethodEntry("ContentLibraryUXPage", "ClickCmenuOptionBasedOnCmenuOption", base.IsTakeScreenShotDuringEntryExit);
             try
@@ -2164,13 +2164,22 @@ namespace Pegasus.Pages.UI_Pages
 
                                 case Activity.ActivityTypeEnum.RegFolderGBPreference:
                                 case Activity.ActivityTypeEnum.Folder:
-                                    //Get element properties of the c.menu option
-                                    base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
-                                    CourseContentUXPage_RemoveCmenuOption_Xpath_Locator));
-                                    IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
-                                        CourseContentUXPage_RemoveCmenuOption_Xpath_Locator);
-                                    //Click on the c.menu option
-                                    base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
+
+                                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                            CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator));
+                                        IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator);
+                                        base.PerformMouseHoverByJavaScriptExecutor(getShowHideCmenuOptionFolder);
+                                        base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
+
+                                        ////Get element properties of the c.menu option
+                                        //base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                        //CourseContentUXPage_RemoveCmenuOption_Xpath_Locator));
+                                        //base.WaitForElement(By.XPath("//div[@id='referenceId8']/table/tbody/tr/td/div[2]/a[3]"));
+                                        //IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        //    CourseContentUXPage_RemoveCmenuOption_Xpath_Locator);
+                                        ////Click on the c.menu option
+                                        //base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
                                     break;
                             }
                             base.WaitUntilWindowLoads(windowName);
@@ -2204,22 +2213,30 @@ namespace Pegasus.Pages.UI_Pages
                                 case Activity.ActivityTypeEnum.RegSavedSAMActivity:
                                     //Get element properties of the c.menu option
                                     base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
-                                    CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator));
+                                    CourseContentUXPage_RemoveCmenuOption_Xpath_Locator));
                                     IWebElement getShowHideCmenuOption = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
-                                        CourseContentUXPage_ShowHideCmenuOption_Xpath_Locator);
+                                        CourseContentUXPage_RemoveCmenuOption_Xpath_Locator);
                                     //Click on the c.menu option
                                     base.PerformMouseClickAction(getShowHideCmenuOption);
                                     break;
 
                                 case Activity.ActivityTypeEnum.RegFolderGBPreference:
                                 case Activity.ActivityTypeEnum.Folder:
-                                    //Get element properties of the c.menu option
-                                    base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
-                                    CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator));
-                                    IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
-                                        CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator);
-                                    //Click on the c.menu option
-                                    base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
+                                        base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                            CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator));
+                                        IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator);
+                                        //Click on the c.menu option
+                                        base.PerformMouseClickAction(getShowHideCmenuOptionFolder);    
+
+                                        ////Get element properties of the c.menu option
+                                        //base.WaitForElement(By.XPath(ContentLibraryUXPageResource.
+                                        //CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator));
+                                        //IWebElement getShowHideCmenuOptionFolder = base.GetWebElementPropertiesByXPath(ContentLibraryUXPageResource.
+                                        //    CourseContentUXPage_ShowHideCmenuOptionFolder_Xpath_Locator);
+                                        ////Click on the c.menu option
+                                        //base.PerformMouseClickAction(getShowHideCmenuOptionFolder);
+
                                     break;
                             }
                             base.WaitUntilWindowLoads(windowName);

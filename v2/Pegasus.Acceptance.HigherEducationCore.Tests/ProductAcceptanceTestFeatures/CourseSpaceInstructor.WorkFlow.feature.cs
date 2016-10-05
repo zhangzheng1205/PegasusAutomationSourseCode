@@ -489,6 +489,412 @@ testRunner.When("I click on \"Show\"  of \"RegChildActivity\" in  \"Course Mater
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search asset in MyCourse and Show/Hide as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void SearchAssetInMyCourseAndShowHideAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset in MyCourse and Show/Hide as RegCsSmsInstructor", ((string[])(null)));
+#line 168
+this.ScenarioSetup(scenarioInfo);
+#line 170
+testRunner.When("I search \"RegChildActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 171
+testRunner.Then("I should be displayed with \"RegChildActivity\" in My Course frame  of \"Course Mate" +
+                    "rials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 172
+testRunner.When("I click on \"Show\"  of \"RegChildActivity\" in  \"Course Materials\" tab as \"RegCsSmsI" +
+                    "nstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search asset with Highest Score Preference in MyCourse and Show/Hide as RegCsSmsI" +
+            "nstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void SearchAssetWithHighestScorePreferenceInMyCourseAndShowHideAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset with Highest Score Preference in MyCourse and Show/Hide as RegCsSmsI" +
+                    "nstructor", ((string[])(null)));
+#line 174
+this.ScenarioSetup(scenarioInfo);
+#line 175
+testRunner.When("I associate the \"RegHighestScoreActivity\" activity Content Library to MyCourse fr" +
+                    "ame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 176
+testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 177
+testRunner.When("I search \"RegHighestScoreActivity\" in \"My Course\" frame  of \"Course Materials\" ta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 178
+testRunner.Then("I should be displayed with \"RegHighestScoreActivity\" in My Course frame  of \"Cour" +
+                    "se Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 179
+testRunner.When("I click on \"Show\"  of \"RegHighestScoreActivity\" in  \"Course Materials\" tab as \"Re" +
+                    "gCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search asset with Lowest Score Preference in MyCourse and Show/Hide as RegCsSmsIn" +
+            "structor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void SearchAssetWithLowestScorePreferenceInMyCourseAndShowHideAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset with Lowest Score Preference in MyCourse and Show/Hide as RegCsSmsIn" +
+                    "structor", ((string[])(null)));
+#line 181
+this.ScenarioSetup(scenarioInfo);
+#line 182
+testRunner.When("I associate the \"RegLowestScoreActivity\" activity Content Library to MyCourse fra" +
+                    "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 183
+testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 184
+testRunner.When("I search \"RegLowestScoreActivity\" in \"My Course\" frame  of \"Course Materials\" tab" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 185
+testRunner.Then("I should be displayed with \"RegLowestScoreActivity\" in My Course frame  of \"Cours" +
+                    "e Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 186
+testRunner.When("I click on \"Show\"  of \"RegLowestScoreActivity\" in  \"Course Materials\" tab as \"Reg" +
+                    "CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search asset with First Score Preference in MyCourse and Show/Hide as RegCsSmsIns" +
+            "tructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void SearchAssetWithFirstScorePreferenceInMyCourseAndShowHideAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset with First Score Preference in MyCourse and Show/Hide as RegCsSmsIns" +
+                    "tructor", ((string[])(null)));
+#line 188
+this.ScenarioSetup(scenarioInfo);
+#line 189
+testRunner.When("I associate the \"RegFirstScoreActivity\" activity Content Library to MyCourse fram" +
+                    "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 190
+testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 191
+testRunner.When("I search \"RegFirstScoreActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 192
+testRunner.Then("I should be displayed with \"RegFirstScoreActivity\" in My Course frame  of \"Course" +
+                    " Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 193
+testRunner.When("I click on \"Show\"  of \"RegFirstScoreActivity\" in  \"Course Materials\" tab as \"RegC" +
+                    "sSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search asset with Last Score Preference in MyCourse and Show/Hide as RegCsSmsInst" +
+            "ructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void SearchAssetWithLastScorePreferenceInMyCourseAndShowHideAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset with Last Score Preference in MyCourse and Show/Hide as RegCsSmsInst" +
+                    "ructor", ((string[])(null)));
+#line 195
+this.ScenarioSetup(scenarioInfo);
+#line 196
+testRunner.When("I associate the \"RegLastScoreActivity\" activity Content Library to MyCourse frame" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 197
+testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 198
+testRunner.When("I search \"RegLastScoreActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 199
+testRunner.Then("I should be displayed with \"RegLastScoreActivity\" in My Course frame  of \"Course " +
+                    "Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 200
+testRunner.When("I click on \"Show\"  of \"RegLastScoreActivity\" in  \"Course Materials\" tab as \"RegCs" +
+                    "SmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search asset with Average Score Preference in MyCourse and Show/Hide as RegCsSmsI" +
+            "nstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void SearchAssetWithAverageScorePreferenceInMyCourseAndShowHideAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset with Average Score Preference in MyCourse and Show/Hide as RegCsSmsI" +
+                    "nstructor", ((string[])(null)));
+#line 202
+this.ScenarioSetup(scenarioInfo);
+#line 203
+testRunner.When("I associate the \"RegAverageScoreActivity\" activity Content Library to MyCourse fr" +
+                    "ame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 204
+testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 205
+testRunner.When("I search \"RegAverageScoreActivity\" in \"My Course\" frame  of \"Course Materials\" ta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 206
+testRunner.Then("I should be displayed with \"RegAverageScoreActivity\" in My Course frame  of \"Cour" +
+                    "se Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 207
+testRunner.When("I click on \"Show\"  of \"RegAverageScoreActivity\" in  \"Course Materials\" tab as \"Re" +
+                    "gCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add Folder from Course Materials Library to My Course and Unhide the contents as " +
+            "RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void AddFolderFromCourseMaterialsLibraryToMyCourseAndUnhideTheContentsAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Folder from Course Materials Library to My Course and Unhide the contents as " +
+                    "RegCsSmsInstructor", ((string[])(null)));
+#line 210
+this.ScenarioSetup(scenarioInfo);
+#line 211
+testRunner.When("I associate the \"RegFolderGBPreference\" activity Content Library to MyCourse fram" +
+                    "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 212
+testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 213
+testRunner.When("I search \"RegFolderGBPreference\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 214
+testRunner.Then("I should be displayed with \"RegFolderGBPreference\" in My Course frame  of \"Course" +
+                    " Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 215
+testRunner.When("I click on \"Show\"  of \"RegFolderGBPreference\" in  \"Course Materials\" tab as \"RegC" +
+                    "sSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Views Average Score in View Submission as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void InstructorViewsAverageScoreInViewSubmissionAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Views Average Score in View Submission as RegCsSmsInstructor", ((string[])(null)));
+#line 217
+this.ScenarioSetup(scenarioInfo);
+#line 218
+testRunner.When("I search \"RegAverageScoreActivity\" in \"My Course\" frame  of \"Course Materials\" ta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 219
+testRunner.Then("I should be displayed with \"RegAverageScoreActivity\" in My Course frame  of \"Cour" +
+                    "se Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 220
+testRunner.When("I click on \"View Submissions\"  of \"RegAverageScoreActivity\" in  \"Course Materials" +
+                    "\" tab as \"RegCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 221
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 222
+testRunner.When("I view all submissions of \"RegCsSmsStudent\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 223
+testRunner.Then("as \"RegCsSmsInstructor\" I should see the \"Average\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Views First Score in View Submission as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void InstructorViewsFirstScoreInViewSubmissionAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Views First Score in View Submission as RegCsSmsInstructor", ((string[])(null)));
+#line 225
+this.ScenarioSetup(scenarioInfo);
+#line 226
+testRunner.When("I search \"RegFirstScoreActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 227
+testRunner.Then("I should be displayed with \"RegFirstScoreActivity\" in My Course frame  of \"Course" +
+                    " Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 228
+testRunner.When("I click on \"View Submissions\"  of \"RegFirstScoreActivity\" in  \"Course Materials\" " +
+                    "tab as \"RegCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 229
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 230
+testRunner.When("I view all submissions of \"RegCsSmsStudent\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 231
+testRunner.Then("as \"RegCsSmsInstructor\" I should see the \"First\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Views Last Score in View Submission as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void InstructorViewsLastScoreInViewSubmissionAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Views Last Score in View Submission as RegCsSmsInstructor", ((string[])(null)));
+#line 233
+this.ScenarioSetup(scenarioInfo);
+#line 234
+testRunner.When("I search \"RegLastScoreActivity\" in \"My Course\" frame  of \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 235
+testRunner.Then("I should be displayed with \"RegLastScoreActivity\" in My Course frame  of \"Course " +
+                    "Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 236
+testRunner.When("I click on \"View Submissions\"  of \"RegLastScoreActivity\" in  \"Course Materials\" t" +
+                    "ab as \"RegCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 237
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 238
+testRunner.When("I view all submissions of \"RegCsSmsStudent\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 239
+testRunner.Then("as \"RegCsSmsInstructor\" I should see the \"Last\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Views Highest Score in View Submission as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void InstructorViewsHighestScoreInViewSubmissionAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Views Highest Score in View Submission as RegCsSmsInstructor", ((string[])(null)));
+#line 241
+this.ScenarioSetup(scenarioInfo);
+#line 242
+testRunner.When("I search \"RegHighestScoreActivity\" in \"My Course\" frame  of \"Course Materials\" ta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 243
+testRunner.Then("I should be displayed with \"RegHighestScoreActivity\" in My Course frame  of \"Cour" +
+                    "se Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 244
+testRunner.When("I click on \"View Submissions\"  of \"RegHighestScoreActivity\" in  \"Course Materials" +
+                    "\" tab as \"RegCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 245
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 246
+testRunner.When("I view all submissions of \"RegCsSmsStudent\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 247
+testRunner.Then("as \"RegCsSmsInstructor\" I should see the \"Highest\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Views Lowest Score in View Submission as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void InstructorViewsLowestScoreInViewSubmissionAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Views Lowest Score in View Submission as RegCsSmsInstructor", ((string[])(null)));
+#line 249
+this.ScenarioSetup(scenarioInfo);
+#line 250
+testRunner.When("I search \"RegLowestScoreActivity\" in \"My Course\" frame  of \"Course Materials\" tab" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 251
+testRunner.Then("I should be displayed with \"RegLowestScoreActivity\" in My Course frame  of \"Cours" +
+                    "e Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 252
+testRunner.When("I click on \"View Submissions\"  of \"RegLowestScoreActivity\" in  \"Course Materials\"" +
+                    " tab as \"RegCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 253
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 254
+testRunner.When("I view all submissions of \"RegCsSmsStudent\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 255
+testRunner.Then("as \"RegCsSmsInstructor\" I should see the \"Lowest\" score recorded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Close View Submission Page as RegCsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CloseViewSubmissionPageAsRegCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Close View Submission Page as RegCsSmsInstructor", ((string[])(null)));
+#line 257
+this.ScenarioSetup(scenarioInfo);
+#line 258
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 259
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create activity for verifying Highest score in coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreateActivityForVerifyingHighestScoreInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create activity for verifying Highest score in coursespace", ((string[])(null)));
+#line 262
+this.ScenarioSetup(scenarioInfo);
+#line 263
+testRunner.When("I Create \"RegCSHighestScoreActivity\" activity with Behavioral Mode \"Basic Random\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create activity for verifying Lowest score in coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreateActivityForVerifyingLowestScoreInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create activity for verifying Lowest score in coursespace", ((string[])(null)));
+#line 266
+this.ScenarioSetup(scenarioInfo);
+#line 267
+testRunner.When("I Create \"RegCSLowestScoreActivity\" activity with Behavioral Mode \"Basic Random\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create activity for verifying First score in coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreateActivityForVerifyingFirstScoreInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create activity for verifying First score in coursespace", ((string[])(null)));
+#line 270
+this.ScenarioSetup(scenarioInfo);
+#line 271
+testRunner.When("I Create \"RegCSFirstScoreActivity\" activity with Behavioral Mode \"Basic Random\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create activity for verifying Last score in coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreateActivityForVerifyingLastScoreInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create activity for verifying Last score in coursespace", ((string[])(null)));
+#line 274
+this.ScenarioSetup(scenarioInfo);
+#line 275
+testRunner.When("I Create \"RegCSLastScoreActivity\" activity with Behavioral Mode \"Basic Random\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create activity for verifying Average score in coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreateActivityForVerifyingAverageScoreInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create activity for verifying Average score in coursespace", ((string[])(null)));
+#line 278
+this.ScenarioSetup(scenarioInfo);
+#line 279
+testRunner.When("I Create \"RegCSAverageScoreActivity\" activity with Behavioral Mode \"Basic Random\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -310,22 +310,27 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Create Activity Name for activity with GB Score set to First
                     case Activity.ActivityTypeEnum.RegFirstScoreActivity:
+                    case Activity.ActivityTypeEnum.RegCSFirstScoreActivity:
                         activityName = "Auto-" + date + "-" + randomValue + "-First-Activity";
                         break;
                     //Create Activity Name for activity with GB Score set to Last
                     case Activity.ActivityTypeEnum.RegLastScoreActivity:
+                    case Activity.ActivityTypeEnum.RegCSLastScoreActivity:
                         activityName = "Auto-" + date + "-" + randomValue + "-Last-Activity";
                         break;
                     //Create Activity Name for activity with GB Score set to Highest
                     case Activity.ActivityTypeEnum.RegHighestScoreActivity:
+                    case Activity.ActivityTypeEnum.RegCSHighestScoreActivity:
                         activityName = "Auto-" + date + "-" + randomValue + "-Highest-Activity";
                         break;
                     //Create Activity Name for activity with GB Score set to Lowest
                     case Activity.ActivityTypeEnum.RegLowestScoreActivity:
+                    case Activity.ActivityTypeEnum.RegCSLowestScoreActivity:
                         activityName = "Auto-" + date + "-" + randomValue + "-Lowest-Activity";
                         break;
                     //Create Activity Name for activity with GB Score set to Average
                     case Activity.ActivityTypeEnum.RegAverageScoreActivity:
+                    case Activity.ActivityTypeEnum.RegCSAverageScoreActivity:
                         activityName = "Auto-" + date + "-" + randomValue + "-Average-Activity";
                         break;
                 }

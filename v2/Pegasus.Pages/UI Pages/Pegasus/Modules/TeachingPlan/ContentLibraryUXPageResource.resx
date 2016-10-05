@@ -342,4 +342,7 @@
   <data name="ContentLibraryUXPage_ClearSearch_Id_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_ucSearchMessageBoard_lnkClear</value>
   </data>
+  <data name="CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId8']/table/tbody/tr/td/div[2]/a[3]</value>
+  </data>
 </root>

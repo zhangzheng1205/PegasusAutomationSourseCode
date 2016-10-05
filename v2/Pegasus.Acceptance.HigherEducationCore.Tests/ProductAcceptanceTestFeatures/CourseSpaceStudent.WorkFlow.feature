@@ -244,3 +244,64 @@ Scenario:Student verify activity RegCSSAMActivity status as pass for correct sub
 When I click on "Return to Course" button in "RegCSSAMActivity" window
 Then I should be on the "Course Materials" page
 And I should see "Passed" status for the activity "RegChildActivity" from "Course Materials" page
+
+#Purpose: Verify score recorded in Gradebook is as per the score Preference as RegCsSmsStudent
+Scenario: Verify Average Score is Recorded as RegCsSmsStudent
+When I click on "View Submissions" of  "RegCSAverageScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "RegCsSmsStudent" I should see the "Average" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify Highest Score is Recorded as RegCsSmsStudent
+When I click on "View Submissions" of  "RegCSHighestScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "RegCsSmsStudent" I should see the "Highest" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify Lowest Score is Recorded as RegCsSmsStudent
+When I click on "View Submissions" of  "RegCSLowestScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "RegCsSmsStudent" I should see the "Lowest" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify First Score is Recorded as RegCsSmsStudent
+When I click on "View Submissions" of  "RegCSFirstScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "RegCsSmsStudent" I should see the "First" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+Scenario: Verify Last Score is Recorded as RegCsSmsStudent
+When I click on "View Submissions" of  "RegCSLastScoreActivity" Activity in "Course Materials" page
+Then I should be on the "View Submission" page
+And as "RegCsSmsStudent" I should see the "Last" score recorded
+When I close the "View Submission" window
+Then I should be on the "Course Materials" page
+
+#Purpose: Student opens Activity for Highest score
+Scenario: Launch Activity for Highest score as coursespace student
+When I click on "Open" of  "RegCSHighestScoreActivity" Activity in "Course Materials" page
+And I click on "Start" button in "RegSAMActivity" presentation window 
+
+#Purpose: Student opens Activity for Lowest score
+Scenario: Launch Activity for Lowest score as coursespace student
+When I click on "Open" of  "RegCSLowestScoreActivity" Activity in "Course Materials" page
+And I click on "Start" button in "RegSAMActivity" presentation window 
+
+#Purpose: Student opens Activity for First score
+Scenario: Launch Activity for First score as coursespace student
+When I click on "Open" of  "RegCSFirstScoreActivity" Activity in "Course Materials" page
+And I click on "Start" button in "RegSAMActivity" presentation window 
+
+#Purpose: Student opens Activity for Last score
+Scenario: Launch Activity for Last score as coursespace student
+When I click on "Open" of  "RegCSLastScoreActivity" Activity in "Course Materials" page
+And I click on "Start" button in "RegSAMActivity" presentation window 
+
+#Purpose: Student opens Activity for Average score
+Scenario: Launch Activity for Average score as coursespace student
+When I click on "Open" of  "RegCSAverageScoreActivity" Activity in "Course Materials" page
+And I click on "Start" button in "RegSAMActivity" presentation window 

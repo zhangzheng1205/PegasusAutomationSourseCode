@@ -394,7 +394,7 @@
       <Name>516prodstudent</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Deepa</FirstName>
+      <FirstName>516</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>Anand</LastName>
       <UserType>RegCsSmsStudent</UserType>
@@ -1210,6 +1210,11 @@
   </ArrayOfProgram>
   <!--This is already created activity present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivity>
+      <Activity>
+      <Name>Auto Reg GB Preference-2016/09/02-e345153f-Folder</Name>
+      <ActivityType>RegFolderGBPreference</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
     <Activity>
       <Name>1a9733fb-69a1-4c75-88e1-88aeb757ef40</Name>
       <ActivityType>SkillStudyPlan</ActivityType>

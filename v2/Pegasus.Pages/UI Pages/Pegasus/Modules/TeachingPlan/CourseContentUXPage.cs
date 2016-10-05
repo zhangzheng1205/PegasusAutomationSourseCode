@@ -1915,7 +1915,7 @@ namespace Pegasus.Pages.UI_Pages
 
                 IWebElement getAsset = base.GetWebElementPropertiesByXPath(string.Format(CourseContentUXPageResource.
                     CourseContentUXPage_chkLink_Xpath_Locator, rID));
-                
+
                 base.ClickByJavaScriptExecutor(getAsset);
             }
             catch (Exception e)
@@ -1975,7 +1975,7 @@ namespace Pegasus.Pages.UI_Pages
             int rID = 0;
 
             try
-            {               
+            {
                 //Select Right Frame
                 this.SelectFrameInWindow(CourseContentUXPageResource.
                     CourseContentUXPage_CourseMaterials_Window_Title,
@@ -2024,7 +2024,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SubmitSAMActivityToScore100",
                   base.IsTakeScreenShotDuringEntryExit);
             try
-            {               
+            {
                 //Input answer to the activity questions
                 this.AnswerSAMActivity(1, CourseContentUXPageResource
                     .CourseContentUXPage_WLActivity_Q1_Answer);
@@ -2036,18 +2036,18 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPage_WLActivity_Q4_Answer);
                 this.AnswerSAMActivity(5, CourseContentUXPageResource.
                     CourseContentUXPage_WLActivity_Q5_Answer);
-                    this.AnswerSAMActivity(6, CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_Q6_Answer);
+                this.AnswerSAMActivity(6, CourseContentUXPageResource.
+                CourseContentUXPage_WLActivity_Q6_Answer);
                 //submit the activity
-            this.SubmitActivity();
+                this.SubmitActivity();
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
-             Logger.LogMethodExit("CourseContentUXPage",
-                 "SubmitSAMActivityToScore100",
-                   base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SubmitSAMActivityToScore100",
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2096,14 +2096,14 @@ namespace Pegasus.Pages.UI_Pages
         public void AnswerSAMActivity(int answerFieldValue, string fieldAnswer)
         {
             //Answer the SAM activity questions based on field value
-            Logger.LogMethodEntry("CourseContentUXPage", 
+            Logger.LogMethodEntry("CourseContentUXPage",
                 "AnswerSAMActivity",
                   base.IsTakeScreenShotDuringEntryExit);
-           try
+            try
             {
                 //Switch to Activity window
                 this.SelectActivityWindow(CourseContentUXPageResource.
-                    CourseContentUXPage_WL_ActivityWindowName);                       
+                    CourseContentUXPage_WL_ActivityWindowName);
                 IWebElement getAnswerField = base.
                     GetWebElementPropertiesByCssSelector(
                     string.Format(CourseContentUXPageResource.
@@ -2120,9 +2120,9 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-             ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("CourseContentUXPage", 
+            Logger.LogMethodExit("CourseContentUXPage",
                 "AnswerSAMActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2151,7 +2151,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectActivityWindow",
                    base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Answer and submit the SAM Activity to score 0.
         /// </summary>
@@ -2170,14 +2170,14 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentUXPage_ActivityLoop_End_Value); i++)
                 {
                     this.AnswerSAMActivity(i, CourseContentUXPageResource.
-                        CourseContentUXPage_WLActivity_WrongAnswer);                    
+                        CourseContentUXPage_WLActivity_WrongAnswer);
                 }
                 //submit the activity
-               this.SubmitActivity();
+                this.SubmitActivity();
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "SubmitSamActivityToScore0",
@@ -2263,8 +2263,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void SubmitActivity()
         {
-           Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
-                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on submit button
@@ -2421,26 +2421,34 @@ namespace Pegasus.Pages.UI_Pages
             bool feedback = false;
             try
             {
-              
 
-                IWebElement getFinishButton = base.GetWebElementPropertiesByClassName("btn_subm_grade");
-                base.ClickByJavaScriptExecutor(getFinishButton);
-                //Click on Finish button
-                IWebElement finishButton = base.GetWebElementPropertiesById(
-                    CourseContentUXPageResource.
-                    CoursePreviewUX_Page_Finish_Button_Id_Locator);
-                base.ClickByJavaScriptExecutor(finishButton);
-                IWebElement returnToCourse = base.GetWebElementPropertiesById(
-                   CourseContentUXPageResource.
-                   CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
-                base.ClickByJavaScriptExecutor(returnToCourse);
+                    IWebElement getFinishButton = base.GetWebElementPropertiesByClassName("btn_subm_grade");
+                    base.ClickByJavaScriptExecutor(getFinishButton);
+                    string title = base.GetPageTitle;
+                    //Click on Finish button
+                    IWebElement finishButton = base.GetWebElementPropertiesById(
+                        CourseContentUXPageResource.
+                        CoursePreviewUX_Page_Finish_Button_Id_Locator);
+                    base.ClickByJavaScriptExecutor(finishButton);
+                    IWebElement returnToCourse = base.GetWebElementPropertiesById(
+                       CourseContentUXPageResource.
+                       CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
+                    base.ClickByJavaScriptExecutor(returnToCourse);
+                    Thread.Sleep(1000);
+                    bool getPopupStatus = base.IsPopupPresent(title, 5);
+               // // Check if Close button exist
+               //bool isCloseButtonExist = base.IsElementPresent(By.Id("btnClose"), 5);
+                    if (getPopupStatus == true)
+                    {
+                        base.CloseBrowserWindow();
+                    }
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
 
-            
+
             Logger.LogMethodEntry("CourseContentUXPage", "SubmitActivity",
                         base.IsTakeScreenShotDuringEntryExit);
             return feedback;
@@ -2471,7 +2479,7 @@ namespace Pegasus.Pages.UI_Pages
                 CourseContentUXPage_WL_SAMActivity_Attribute);
                 string textactivityId = activityId.Split('_')[1];
                 string activityStatusId = CourseContentUXPageResource.
-                    CourseContentUXPage_WLActivity_AppendText + 
+                    CourseContentUXPage_WLActivity_AppendText +
                     CourseContentUXPageResource.
                     CourseContentUXPage_WLActivity_AppendSymbol + textactivityId;
                 base.WaitForElement(By.Id(activityStatusId));
@@ -2482,9 +2490,9 @@ namespace Pegasus.Pages.UI_Pages
 
                 ExceptionHandler.HandleException(e);
             }
-           Logger.LogMethodEntry("CoursePreviewUXPage",
-                "GetTheActivityStatusofWordLanguageActivity",
-                        base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                 "GetTheActivityStatusofWordLanguageActivity",
+                         base.IsTakeScreenShotDuringEntryExit);
             return getactivityStatus;
         }
 

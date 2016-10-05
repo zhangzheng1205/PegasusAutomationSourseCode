@@ -628,6 +628,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId8&apos;]/table/tbody/tr/td/div[2]/a[3].
+        /// </summary>
+        internal static string CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;referenceId32&apos;]/table/tbody/tr/td/div[2]/a[2].
         /// </summary>
         internal static string CourseContentUXPage_EditCmenuOption_Xpath_Locator {
