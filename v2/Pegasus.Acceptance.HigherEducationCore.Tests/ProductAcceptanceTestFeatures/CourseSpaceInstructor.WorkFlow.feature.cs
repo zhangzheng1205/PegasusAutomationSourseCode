@@ -895,6 +895,24 @@ testRunner.When("I Create \"RegCSAverageScoreActivity\" activity with Behavioral
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Workspace instructor launches random activity create wizard as CS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void WorkspaceInstructorLaunchesRandomActivityCreateWizardAsCSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Workspace instructor launches random activity create wizard as CS Instructor", ((string[])(null)));
+#line 283
+this.ScenarioSetup(scenarioInfo);
+#line 284
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 285
+testRunner.And("I click on the \"RegCSSAMActivity\" SAM activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 286
+testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

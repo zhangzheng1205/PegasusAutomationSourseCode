@@ -278,3 +278,9 @@ When I Create "RegCSLastScoreActivity" activity with Behavioral Mode "Basic Rand
 Scenario: Create activity for verifying Average score in coursespace
 When I Create "RegCSAverageScoreActivity" activity with Behavioral Mode "Basic Random"
 
+#------------------------------Fill Activity Details in Activity Creation Wizard-----------------------
+#Purpose:Workspace instructor launch create activity wizard and enter activity name
+Scenario: Workspace instructor launches random activity create wizard as CS Instructor
+When I click on the 'Add Course Materials' option
+And I click on the "RegCSSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
