@@ -284,24 +284,24 @@ Then I should be on the "Course Materials" page
 #Purpose: Student opens Activity for Highest score
 Scenario: Launch Activity for Highest score as coursespace student
 When I click on "Open" of  "RegCSHighestScoreActivity" Activity in "Course Materials" page
-And I click on "Start" button in "RegSAMActivity" presentation window 
+And I click on "Start" button in "RegCSSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for Lowest score
 Scenario: Launch Activity for Lowest score as coursespace student
 When I click on "Open" of  "RegCSLowestScoreActivity" Activity in "Course Materials" page
-And I click on "Start" button in "RegSAMActivity" presentation window 
+And I click on "Start" button in "RegCSSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for First score
 Scenario: Launch Activity for First score as coursespace student
 When I click on "Open" of  "RegCSFirstScoreActivity" Activity in "Course Materials" page
-And I click on "Start" button in "RegSAMActivity" presentation window 
+And I click on "Start" button in "RegCSSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for Last score
 Scenario: Launch Activity for Last score as coursespace student
 When I click on "Open" of  "RegCSLastScoreActivity" Activity in "Course Materials" page
-And I click on "Start" button in "RegSAMActivity" presentation window 
+And I click on "Start" button in "RegCSSAMActivity" presentation window 
 
 #Purpose: Student opens Activity for Average score
 Scenario: Launch Activity for Average score as coursespace student
 When I click on "Open" of  "RegCSAverageScoreActivity" Activity in "Course Materials" page
-And I click on "Start" button in "RegSAMActivity" presentation window 
+And I click on "Start" button in "RegCSSAMActivity" presentation window 

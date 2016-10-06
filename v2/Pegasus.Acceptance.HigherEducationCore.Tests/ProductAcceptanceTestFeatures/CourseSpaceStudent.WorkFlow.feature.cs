@@ -820,7 +820,7 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I click on \"Open\" of  \"RegCSHighestScoreActivity\" Activity in \"Course Materials\" " +
                     "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 287
-testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"Start\" button in \"RegCSSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -837,7 +837,7 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I click on \"Open\" of  \"RegCSLowestScoreActivity\" Activity in \"Course Materials\" p" +
                     "age", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 292
-testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"Start\" button in \"RegCSSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -854,7 +854,7 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I click on \"Open\" of  \"RegCSFirstScoreActivity\" Activity in \"Course Materials\" pa" +
                     "ge", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 297
-testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"Start\" button in \"RegCSSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -871,7 +871,7 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I click on \"Open\" of  \"RegCSLastScoreActivity\" Activity in \"Course Materials\" pag" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 302
-testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"Start\" button in \"RegCSSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -888,7 +888,7 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I click on \"Open\" of  \"RegCSAverageScoreActivity\" Activity in \"Course Materials\" " +
                     "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 307
-testRunner.And("I click on \"Start\" button in \"RegSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on \"Start\" button in \"RegCSSAMActivity\" presentation window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
