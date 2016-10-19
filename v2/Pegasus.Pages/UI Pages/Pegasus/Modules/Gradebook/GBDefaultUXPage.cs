@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
@@ -342,6 +343,13 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 this.SwitchToTeacherGradebookIframe();
+                bool pres1 = base.IsElementPresent(By.CssSelector("#srcGBFrame"), 10);
+
+                IWebElement frame = base.GetWebElementProperties(By.CssSelector
+                    ("#srcGBFrame"));
+
+                WebDriver.SwitchTo().Frame(frame);
+           
                 // Getting the counts of Activity  
                 int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
@@ -377,11 +385,19 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
             base.IsTakeScreenShotDuringEntryExit);
             // Switch to iFrame
-              base.SwitchToIFrameBySource(GBDefaultUXPageResource.
-                GBDefaultUXPage_Page_CourseContent_Iframe_srcText);
+            //  base.SwitchToIFrameBySource(GBDefaultUXPageResource.
+            //    GBDefaultUXPage_Page_CourseContent_Iframe_srcText);
 
-            base.SwitchToIFrameBySource(GBDefaultUXPageResource.
-                GBDefaultUXPage_Page_srcGBFrame_Iframe_srcText);
+            //base.SwitchToIFrameBySource(GBDefaultUXPageResource.
+            //    GBDefaultUXPage_Page_srcGBFrame_Iframe_srcText);
+            bool pres1 = base.IsElementPresent(By.CssSelector("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"), 10);
+
+            IWebElement frame = base.GetWebElementProperties(By.CssSelector
+                ("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"));
+          
+            WebDriver.SwitchTo().Frame(frame);
+           
+                
             logger.LogMethodExit("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -479,6 +495,12 @@ namespace Pegasus.Pages.UI_Pages
             {
                 // Switch to iFrame
                 this.SwitchToTeacherGradebookIframe();
+                bool pres1 = base.IsElementPresent(By.CssSelector("#srcGBFrame"), 10);
+
+                IWebElement frame = base.GetWebElementProperties(By.CssSelector
+                    ("#srcGBFrame"));
+
+                WebDriver.SwitchTo().Frame(frame);
                 // Getting the counts of Activity                    
                 int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
@@ -573,8 +595,17 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToDefaultPageContent();
                 base.WaitForAjaxToComplete();
                 //Switching to frame using source.
-                base.SwitchToIFrameBySource(GBDefaultUXPageResource.
-                GBDefaultUXPage_Page_CourseContent_Iframe_srcText);
+                //bool pres = base.IsElementPresent(By.CssSelector(string.Format("iframe[src='{0}']", GBDefaultUXPageResource.
+                //GBDefaultUXPage_Page_CourseContent_Iframe_srcText)), 10);
+                bool pres1 = base.IsElementPresent(By.CssSelector("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"), 10);
+               
+                IWebElement frame=base.GetWebElementProperties(By.CssSelector
+                    ("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"));
+                //base.WaitForElement(By.CssSelector(string.Format("iframe[src='{0}']",GBDefaultUXPageResource.
+                //GBDefaultUXPage_Page_CourseContent_Iframe_srcText)));
+                WebDriver.SwitchTo().Frame(frame);
+                //base.SwitchToIFrameBySource(GBDefaultUXPageResource.
+                
 
                 IWebElement searchFilter = base.GetWebElementPropertiesByCssSelector(GBDefaultUXPageResource.
                    GBDefaultUXPage_Page_Gradebook_TitleSearchButton_cssSelector_Value);
