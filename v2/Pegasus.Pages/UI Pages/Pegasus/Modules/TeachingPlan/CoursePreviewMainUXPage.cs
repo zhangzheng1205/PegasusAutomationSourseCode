@@ -1278,10 +1278,19 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CoursePreviewMainUXPage", "SwitchToManageCourseMaterialsFrame",
                 base.IsTakeScreenShotDuringEntryExit);
             //base.SwitchToDefaultPageContent();
-            base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
-                CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator);
-            base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
-               CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+            bool pres = base.IsElementPresent(By.CssSelector
+                ("#course-OrganizeContent iframe[id='frmCourseContainer']"), 10);
+            IWebElement frame1 = base.GetWebElementPropertiesByCssSelector
+                ("#course-OrganizeContent iframe[id='frmCourseContainer']");
+            WebDriver.SwitchTo().Frame(frame1);
+            IWebElement frame2 = base.GetWebElementPropertiesByCssSelector
+               ("#ifrmCoursePreview");
+            WebDriver.SwitchTo().Frame(frame2);
+
+            //base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
+            //    CoursePreviewMainUX_Page_CoursePreview_ParentIFrame_Id_Locator);
+            //base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
+            //   CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
             Logger.LogMethodExit("CoursePreviewMainUXPage", "SwitchToManageCourseMaterialsFrame",
                 base.IsTakeScreenShotDuringEntryExit);
         }
