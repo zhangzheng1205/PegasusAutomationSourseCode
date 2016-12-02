@@ -88,6 +88,10 @@ namespace Pegasus.Pages.CommonPageObjects
                             case "Course Materials":
                                 switch (activityName)
                                 {
+                                    //For activites not within a folder structure
+                                    case "GradeIT Access 2016 Assessment 5":
+                                    break;
+
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                     case "Word Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":

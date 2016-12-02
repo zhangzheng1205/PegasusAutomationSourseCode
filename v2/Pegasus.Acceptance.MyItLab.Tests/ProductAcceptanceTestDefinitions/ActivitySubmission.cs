@@ -792,6 +792,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Upload the downloaded file for 2016.
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I upload the downloaded file ""(.*)"" for course 2016")]
+        public void UploadDownloadedFileFor2016(string uploadFileName)
+        {
+            // Upload document
+            Logger.LogMethodEntry("ActivitySubmission",
+                "UploadTheDownloadedFile",
+                base.IsTakeScreenShotDuringEntryExit);
+            new UploadCompletedFilesPage().UploadGraderItFile2016(uploadFileName);
+            Logger.LogMethodExit("ActivitySubmission", "UploadTheDownloadedFile",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// To Validate the obtained message on the Presentation popup page.
         /// </summary>
         /// <param name="message">Message displayed in the popup.</param>
@@ -999,5 +1017,62 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CommonSteps", "ValidateCongratulationMessage",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on Button at Test presentation page of GraderIT 2016
+        /// </summary>
+        /// <param name="p0">This is the button name</param>
+        [Then(@"I click on the button ""(.*)""")]
+        [When(@"I click on the button ""(.*)""")]
+        public void ClickTestPresentationPageButton(string buttonName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickTestPresentationPageButton",
+             base.IsTakeScreenShotDuringEntryExit);
+            new PresentationPage().ClickButton(buttonName);
+            Logger.LogMethodExit("CommonSteps", "ClickTestPresentationPageButton",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Test Prsentation Page based on buttons available at grader IT 2016.
+        /// </summary>
+        /// <param name="p0">This is Download Button.</param>
+        /// <param name="p1">This is Upload Button.</param>
+        [Then(@"I should see a pop up with ""(.*)"" and ""(.*)""")]
+        public void IsTestPresentationPageLaunched(string downloadButtonText, string uploadButtonText)
+        {
+            new PresentationPage().VerifyTestPresentationPageButtons(downloadButtonText, uploadButtonText);
+        }
+
+        /// <summary>
+        /// Verify Successful download of file at UI at grader IT 2016
+        /// </summary>
+        [Then(@"I successfully download the files")]
+        public void IsDownloadSuccessful()
+        {
+            Assert.IsTrue(new PresentationPage().VerifyDownloadProgressBarColor());
+        }
+
+        /// <summary>
+        /// Verify successful file upload at grader IT 2016
+        /// </summary>
+        [Then(@"I should see success message on upload")]
+        public void ThenIShouldSeeSuccessMessageOnUpload()
+        {
+            Assert.IsTrue(new PresentationPage().VerifySuccessfulUpload());
+        }
+
+        /// <summary>
+        /// Verify successful submission at grader IT 2016
+        /// </summary>
+        [Then(@"I should see success message on successful submission")]
+        public void ThenIShouldSeeSuccessMessageOnSuccessfulSubmission()
+        {
+            Assert.IsTrue(new PresentationPage().VerifySuccessfulSubmission());
+        }
+
+
+
+
     }
 }

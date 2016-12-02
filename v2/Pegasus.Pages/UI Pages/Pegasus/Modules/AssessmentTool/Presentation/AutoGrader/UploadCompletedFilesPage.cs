@@ -7,6 +7,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Common;
 using System.Threading;
+using System.Diagnostics;
 
 
 namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGrader
@@ -237,7 +238,52 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             }
             logger.LogMethodExit("ImportUsersPage", "UploadBulkUserFile",
                 base.IsTakeScreenShotDuringEntryExit);
-        }
+        
+    }
 
+     /// <summary>
+        /// Upload the Grader IT file based on the activity and 
+        /// submission score type
+        /// by selecting from appropriate path.
+        /// </summary>
+        /// <param name="uploadFileName">File name to be uploaded.</param>
+        public void UploadGraderItFile2016(String uploadFileName)
+        {
+            //Upload graderIT file
+            logger.LogMethodEntry("UploadCompletedFilesPage", "UploadGraderItFile",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                Thread.Sleep(10000);
+                switch (uploadFileName)
+                {
+                    //To Support this execution save the AutoIt exe file at E:/SeleniumGrid/AutoItScripts/ path at remote and
+                    // E:/SeleniumGrid/AutoItScripts/ at Local.Also your file for upload should be mantained at
+                    // E:/SeleniumGrid/TestData at remote and D:/SeleniumGrid/TestData
+                        /*AutoIT Script used at remote for reference
+                         #region --- Au3Recorder generated code Start (v3.3.9.5 KeyboardLayout=00000409)  ---
+                          Sleep(30000)
+                          WinWait('Open')
+                          Sleep(2000)
+                          Send("E:\SeleniumGrid\TestData\Access\AccessFileFor70Percent\go_a01_grader_a3_Open_Houses")
+                          Sleep(2000)
+                          Send("{ENTER}")
+                        #endregion --- Au3Recorder generated code End ---
+                         */
+                    case "Grader Access file for 70%":
+
+                        Process process = Process.Start(@"E:\SeleniumGrid\AutoItScripts\UploadGrader2016a.exe");
+                                              
+                        break;
+                }
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ImportUsersPage", "UploadBulkUserFile",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

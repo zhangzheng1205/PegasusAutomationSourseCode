@@ -748,3 +748,30 @@ When I submit "Word Chapter 1 Grader Project [Assessment 3]" activity
 Then I should see message "Your file, go_w01_grader_a3.docx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button for badged activity
 Then I should see a Congratulation message
+
+
+
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 70%.
+#Test case ID : peg-22008.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Submit Grader IT Access Activity for 2016 course
+When I navigate to "Course Materials" tab
+And I open the activity named as "GradeIT Access 2016 Assessment 5"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Access file for 70%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should see a "Not passed" status for the activity "GradeIT Access 2016 Assessment 5" in "Course Materials" by "CsSmsStudent" 
+

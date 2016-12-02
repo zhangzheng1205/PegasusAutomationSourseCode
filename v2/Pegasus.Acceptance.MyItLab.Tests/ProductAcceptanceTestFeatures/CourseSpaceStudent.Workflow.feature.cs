@@ -1742,6 +1742,53 @@ testRunner.Then("I should see a Congratulation message", ((string)(null)), ((Tec
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Submit Grader IT Access Activity for 2016 course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void SubmitGraderITAccessActivityFor2016Course()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit Grader IT Access Activity for 2016 course", ((string[])(null)));
+#line 759
+this.ScenarioSetup(scenarioInfo);
+#line 760
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 761
+testRunner.And("I open the activity named as \"GradeIT Access 2016 Assessment 5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 762
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 763
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 764
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 765
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 766
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 767
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 768
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 769
+testRunner.And("I upload the downloaded file \"Grader Access file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 770
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 771
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 772
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 773
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 774
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 775
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 776
+testRunner.Then("I should see a \"Not passed\" status for the activity \"GradeIT Access 2016 Assessme" +
+                    "nt 5\" in \"Course Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

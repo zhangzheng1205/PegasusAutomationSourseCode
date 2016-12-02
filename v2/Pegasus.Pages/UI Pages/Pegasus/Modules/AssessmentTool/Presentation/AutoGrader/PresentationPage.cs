@@ -13,6 +13,18 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
 {
     public class PresentationPage : BasePage
     {
+
+        By download1CssSelector = By.CssSelector(".btn.btn-default.btn-sm.bottom-align-text.gd_well1_buttonText");
+        By download2CssSelector = By.CssSelector(".btn.btn-primary.btn-sm.gt_download_all.paddClose");
+        By chooseFileCssSelector=By.CssSelector("#btnChooseFile");
+        By uploadFileCssSelector = By.CssSelector("#btnUpload");
+        By closeDownloadCssSelector = By.CssSelector(".btn.btn-default.btn-sm.paddClose.gd_downloadPopUp_closeText");
+        By submitCssSelector = By.CssSelector("#btn_gd_submission");
+        By closeAssignmentCssSelector = By.CssSelector("#btnCloseAssignment");
+        By progressBarColorCssSelector = By.CssSelector("div[id='downloadall_progress_bar'][style*='green']");
+        By uploadSuccessMessageCssSelector = By.CssSelector(".Messagealert.alert-success.hyphenate");
+        By submissionSuccessMessageCssSelector = By.CssSelector(".alert.alert-success.gd_submission_success_msg");
+
         // <summary>
         /// The static instance of the logger for the class.
         /// </summary>
@@ -217,6 +229,175 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             logger.LogMethodExit("PresentationPage", "ValidateTheMessageOnPopupPage",
             base.IsTakeScreenShotDuringEntryExit);
             return IsTrue;
+        }
+
+        /// <summary>
+        /// Click on Button on basis of button text.
+        /// </summary>
+        /// <param name="buttonText"></param>
+        public void ClickButton(string buttonText)
+        {
+            logger.LogMethodEntry("PresentationPage", "ClickButton",
+           base.IsTakeScreenShotDuringEntryExit);
+            // Click on Button on basis of button text
+            try
+            {
+                IWebElement buttonElement = null;
+                switch (buttonText)
+                {
+
+                    case "Download Materials":
+                        base.WaitForElement(download1CssSelector);
+                        buttonElement = base.GetWebElementProperties(download1CssSelector);
+                        break;
+                    case "Choose File":
+                        base.WaitForElement(chooseFileCssSelector);
+                        buttonElement = base.GetWebElementProperties(chooseFileCssSelector);
+                        break;
+                    case "Download All Files":
+                        base.WaitForElement(download2CssSelector);
+                        buttonElement = base.GetWebElementProperties(download2CssSelector);
+                        break;
+                    case "Close":
+                        base.WaitForElement(closeDownloadCssSelector);
+                        buttonElement = base.GetWebElementProperties(closeDownloadCssSelector);
+                        break;
+                    case "Submit for Grading":
+                        base.WaitForElement(submitCssSelector);
+                        buttonElement = base.GetWebElementProperties(submitCssSelector);
+                        break;
+                    case "Close Assignment":
+                        base.WaitForElement(closeAssignmentCssSelector);
+                        buttonElement = base.GetWebElementProperties(closeAssignmentCssSelector);
+                        break;
+                    case "Upload":
+                        base.WaitForElement(uploadFileCssSelector);
+                        buttonElement = base.GetWebElementProperties(uploadFileCssSelector);
+                        break;
+                }
+                //Click Button
+                buttonElement.Click();
+            }
+            catch (Exception e)
+            {
+                
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PresentationPage", "ClickButton",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Return button validation bool value .
+        /// </summary>
+        /// <param name="expectedDownloadButton"> this is expected Download Button.</param>
+        /// <param name="expectedUploadButton">This is expected Uopload Button.</param>
+        /// <returns></returns>
+        public bool VerifyTestPresentationPageButtons(string expectedDownloadButton,string expectedUploadButton)
+        {
+            logger.LogMethodEntry("PresentationPage", "VerifyTestPresentationPageButtons",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Return button validation bool value
+            bool buttonsPresent = false;
+            try
+            {
+                Thread.Sleep(15000);
+                base.SwitchToLastOpenedWindow();
+                bool downloadPresent = false;
+                bool uploadPresent = false;
+                //Verify download and upload buttons
+                downloadPresent = base.IsElementPresent(download1CssSelector, 10);
+                uploadPresent = base.IsElementPresent(chooseFileCssSelector, 10);
+                if (downloadPresent & uploadPresent)
+                {
+                    buttonsPresent = true;
+                }
+            }
+            catch (Exception e)
+            {
+                
+               ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PresentationPage", "VerifyTestPresentationPageButtons",
+           base.IsTakeScreenShotDuringEntryExit);
+            //Return button validation bool value
+            return buttonsPresent;
+        }
+
+        /// <summary>
+        /// Returns Bool value of Download Progressbar Color .
+        /// </summary>
+        /// <returns>This is bool value.</returns>
+        public bool VerifyDownloadProgressBarColor()
+        {
+            logger.LogMethodEntry("PresentationPage", "VerifyDownloadProgressBarColor",
+            base.IsTakeScreenShotDuringEntryExit);
+            bool isGreen = false;
+            try
+            {
+                //Returns Bool value of Download Progressbar Color
+                isGreen = base.IsElementPresent(progressBarColorCssSelector, 15);
+            }
+            catch (Exception e)
+            {
+                
+                 ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PresentationPage", "VerifyDownloadProgressBarColor",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Returns Bool value of Download Progressbar Color
+            return isGreen;
+
+        }
+
+        /// <summary>
+        /// Returns Bool value of Upload Success Message.
+        /// </summary>
+        /// <returns>This is bool value.</returns>
+        public bool VerifySuccessfulUpload()
+        {
+            logger.LogMethodEntry("PresentationPage", "VerifySuccessfulUpload",
+           base.IsTakeScreenShotDuringEntryExit);
+            bool uploadCompleted = false;
+            try
+            {
+                //Returns Bool value of Upload Success Message
+                uploadCompleted = base.IsElementPresent(uploadSuccessMessageCssSelector, 20);
+            }
+            catch (Exception e)
+            {
+                
+               ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PresentationPage", "VerifySuccessfulUpload",
+          base.IsTakeScreenShotDuringEntryExit);
+            //Returns Bool value of Upload Success Message
+            return uploadCompleted;
+        }
+
+        /// <summary>
+        /// Returns Bool value of Submission Success Message.
+        /// </summary>
+        /// <returns>This is bool value.</returns>
+        public bool VerifySuccessfulSubmission()
+        {
+            logger.LogMethodEntry("PresentationPage", "VerifySuccessfulSubmission",
+          base.IsTakeScreenShotDuringEntryExit);
+            bool submissionCompleted = false;
+            try
+            {
+                //Returns Bool value of Submission Success Message
+                submissionCompleted = base.IsElementPresent(submissionSuccessMessageCssSelector, 20);
+            }
+            catch (Exception e)
+            {
+                
+                 ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PresentationPage", "VerifySuccessfulSubmission",
+          base.IsTakeScreenShotDuringEntryExit);
+            //Returns Bool value of Submission Success Message
+            return submissionCompleted;
         }
     }
 }

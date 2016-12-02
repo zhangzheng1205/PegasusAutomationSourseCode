@@ -481,13 +481,13 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
-	  <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.GraderITSubmission.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.GraderITSubmission.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Assignment_CourseCreation.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-      <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Sim5Submission.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.Sim5Submission.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseCreationAtProgramAdminRegression-HED.orderedtest">
@@ -666,6 +666,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Instructor.TodaysView.PastDueDate.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest100TimesGraderITSubmission.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\BlackboardCourseAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
