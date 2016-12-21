@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Bytescout.Spreadsheet</id>
+    <version>2.70.1553</version>
+    <title>Bytescout.Spreadsheet</title>
+    <authors>ByteScout</authors>
+    <owners>ByteScout</owners>
+    <licenseUrl>http://bytescout.com/files/help/BytescoutBarCodeReaderSDK/source/html/e68cfc5e-7860-4a18-830c-08c244332fc2.htm</licenseUrl>
+    <projectUrl>http://bytescout.com/products/developer/barcodereadersdk/bytescoutbarcodereadersdk.html</projectUrl>
+    <iconUrl>http://bytescout.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bytescout Spreadsheet SDK for .NET, ASP.NET, ActiveX/COM - create and modify Excel files</description>
+    <summary>Bytescout Spreadsheet SDK for .NET, ASP.NET, ActiveX/COM
+
+ByteScout (c) 2006-2016
+
+Bytescout Spreadsheet SDK reads, writes, calculates and converts spreadsheets (XLS, XLSX, ODS, CSV)
+
+- Does not require Excel or Office installed;
+- Formula calculation support (Excel style formulas);
+- Reads XLS, XLSX, ODS (Open Office Calc), CSV formats;
+- Writes XLS, XLSX, CSV, TXT, XML, JSON, HTML, PDF formats;
+- Imports from and exports to JSON format;
+- Supports cell formating, rich text, charts, images, borders, etc.;
+- Supports legacy languages like Visual Basic 6, VBScript, JScript, ASP through ActiveX/COM interface;
+- Command line utility is included for conversion of spreadsheet files from command line or .BAT files;
+- And much more...
+
+Web-site:
+https://bytescout.com/products/developer/spreadsheetsdk/bytescoutspreadsheetsdk.html</summary>
+    <releaseNotes>2.60.1545 (June 16, 2016)
+- Fixed custom date format processing.
+- Fixed calucaltion of ROW and COLUMN functions.
+= Other minor improvements and bug fixes.
+
+2.50.1535 (April 12, 2016)
+= Improved support of old versions of protected XLS documents.
+= Improved parsing of formulas.
++ Added Spreadsheet.ExportToJSON() and Spreadsheet.ImportFromJSON() methods.
++ Added support of Open XML and OpenDocument files with wrong file extension.
+
+2.46.1494 (February 15, 2016)
+Added source code example for unamanaged C++.
+Added support for TRIM and LOOKUP functions.
+Fixed VLOOKUP function.  
+Fixed calculation of formulas with logcal values.  
+Improved auto-calculation.
+Fixed images location when exporting to PDF.
+
+...</releaseNotes>
+    <copyright>ByteScout (c) 2006-2016</copyright>
+    <tags>bytescout excel spreadsheet workbook worksheet read write xls xlsx xlsm ods csv xml json formula calculate import export dataset datatable pdf</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

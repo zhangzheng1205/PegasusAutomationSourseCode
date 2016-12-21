@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Pages.UI_Pages.Integration.SMS;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -19,6 +20,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         /// </summary>
         private static readonly Logger Logger =
             Logger.GetInstance(typeof(SmsRegistration));
+        Reg1Page reg1page = new Reg1Page();
+        Reg2Page reg2page = new Reg2Page();
 
         /// <summary>
         /// Accept The License Agreement And Privacy Policy 
@@ -39,19 +42,20 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         }
 
         /// <summary>
-        /// Register a New SMS User.
+        /// Create new user.
         /// </summary>
-        /// <param name="userTypeEnum">This is user Type Enum.</param>
-        [When(@"I register new SMS user as ""(.*)""")]
-        public void RegisterNewSmsUser(User.UserTypeEnum userTypeEnum)
+        /// <param name="userTypeEnum"></param>
+        /// <param name="mode"></param>
+        [When(@"I register new SMS user as ""(.*)"" with ""(.*)"" mode")]
+        public void RegisterNewSmsUser(User.UserTypeEnum userTypeEnum,string mode)
         {
             // Create New SMS User
             Logger.LogMethodEntry("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
             //submit Access Information 
-            new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum);
+            reg1page.EnterSmsUserAccessInformation(userTypeEnum, mode);
             //Submit Account Information
-            new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum);
+            reg2page.EnterSmsUserAccountOtherInformation(userTypeEnum, mode);
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -70,9 +74,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("SMSRegistration", "RegisterNewSmsUserForDifferentScenarios",
                 base.IsTakeScreenShotDuringEntryExit);
             //submit Access Information 
-            new Reg1Page().EnterSmsUserAccessInformationBasedOnScenario(scenarioName, userTypeEnum);
+            reg1page.EnterSmsUserAccessInformationBasedOnScenario(scenarioName, userTypeEnum);
             //Submit Account Information
-            new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum, scenarioName);
+            reg2page.EnterSmsUserAccountInformation(userTypeEnum, scenarioName);
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUserForDifferentScenarios",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -100,5 +104,28 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+       /// <summary>
+        /// Create 'n' number of SMS users(student/instructor) from runtime generated values/Static Excel values.
+       /// </summary>
+       /// <param name="count">This is the number of users.</param>
+       /// <param name="userTypeEnum">This is the type of user.</param>
+       /// <param name="mode">This is the mode of user generation.</param>
+       /// <param name="smsUser">This is the user type creating user.</param>
+        [Given(@"I create '(.*)' users of type ""(.*)"" with mode ""(.*)"" as ""(.*)""")]
+        public void CreateBulkSMSUsers(int count, User.UserTypeEnum userTypeEnum, string mode,User.UserTypeEnum smsUser)
+        {
+            //Create 'n' number of SMS users(student/instructor) from runtime generated values/Static Excel values
+            Logger.LogMethodEntry("SMSRegistration",
+               "CreateBulkSMSUsers",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Create 'n' number of SMS users(student/instructor) from runtime generated values/Static Excel values
+            reg1page.BulkUserCreation(count, userTypeEnum, mode, smsUser);
+            Logger.LogMethodExit("SMSRegistration",
+                "CreateBulkSMSUsers",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
     }
 }

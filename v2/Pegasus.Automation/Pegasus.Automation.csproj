@@ -41,6 +41,9 @@
     <Reference Include="BCMakeCert">
       <HintPath>..\..\..\FiddlerCoreAPI\DotNet4\BCMakeCert.dll</HintPath>
     </Reference>
+    <Reference Include="Bytescout.Spreadsheet">
+      <HintPath>..\packages\Bytescout.Spreadsheet.2.70.1553\lib\net40\Bytescout.Spreadsheet.dll</HintPath>
+    </Reference>
     <Reference Include="CertMaker">
       <HintPath>..\..\..\FiddlerCoreAPI\DotNet4\CertMaker.dll</HintPath>
     </Reference>
@@ -52,7 +55,7 @@
       <HintPath>..\..\ExternalAssemblies\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Selenium.WebDriverBackedSelenium, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+    <Reference Include="Selenium.WebDriverBackedSelenium, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
@@ -68,15 +71,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
-    <Reference Include="ThoughtWorks.Selenium.Core, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+    <Reference Include="ThoughtWorks.Selenium.Core, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\ThoughtWorks.Selenium.Core.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+    <Reference Include="WebDriver.Support, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
     </Reference>
@@ -111,6 +114,7 @@
     <Compile Include="DataTransferObjects\Section.cs" />
     <Compile Include="DataTransferObjects\User.cs" />
     <Compile Include="DataTransferObjects\WorkSpace.cs" />
+    <Compile Include="ExcelReadWrite.cs" />
     <Compile Include="FiddlerProxy.cs" />
     <Compile Include="GenericClick.cs" />
     <Compile Include="InMemoryDatabase.cs" />
@@ -140,7 +144,9 @@
     <Content Include="InMemoryTestData\PegasusTestDataST.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="InMemoryTestData\PegasusTestDataPPE.xml" />
+    <Content Include="InMemoryTestData\PegasusTestDataPPE.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="InMemoryTestData\PegasusTestDataVCD.xml">
       <SubType>Designer</SubType>
     </Content>

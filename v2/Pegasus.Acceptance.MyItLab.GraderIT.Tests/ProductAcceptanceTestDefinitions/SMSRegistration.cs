@@ -43,13 +43,13 @@ namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.
         /// </summary>
         /// <param name="userTypeEnum">This is SMS User Type Enum.</param>
         [When(@"I register new SMS user as ""(.*)""")]
-        public void RegisterNewSmsUser(User.UserTypeEnum userTypeEnum)
+        public void RegisterNewSmsUser(User.UserTypeEnum userTypeEnum,string mode)
         {
             // Create New SMS User
             Logger.LogMethodEntry("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
             //submit Access Information 
-            new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum);
+            new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum,mode);
             //Submit Account Information
             new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum);
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUser",

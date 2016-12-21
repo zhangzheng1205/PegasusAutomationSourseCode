@@ -34,6 +34,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter SmsUser Personal Information.
                string getLastName = this.EnterSmsUserPersonalInformation(userType);
                string getFirstName = this.EnterSmsFirstNameDetails();
+               string school = Reg2PageResource.Reg2_Page_OtherSchoolCity_TextBox_Value;
+               string schoolCity = Reg2PageResource.Reg2_Page_OtherSchoolCity_TextBox_Value;
+               string securityQuestion = Reg2PageResource.Reg2_Page_Person_VerifyQuestion_DropDown_Value;
+               string securityAnswer = Reg2PageResource.Reg2_Page_Password3_TextBox_Value;
                if (scenarioName != "Default Value")
                {
                    //Update The User LastName In Memory
@@ -52,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                     Reg2_Page_Entered_Country_DropDown_Id_Locator,
                     Reg2PageResource.Reg2_Page_Entered_Country_DropDown_Value);
                 //Enter SMS User School Information
-                this.EnterSmsUserSchoolInformation();
+                this.EnterSmsUserSchoolInformation(school,schoolCity, securityQuestion, securityAnswer);
             }
             catch (Exception e)
             {
@@ -158,11 +162,12 @@ namespace Pegasus.Pages.UI_Pages
             Guid userLastName = Guid.NewGuid();
             //Initialize Variable
             string getUserLastName = string.Empty;
+            string mailId = "raghavendra.ga@excelindia.com";
             try
             {
                 //Select Window
                 base.SelectWindow(Reg2PageResource.
-                        Reg2_Page_AccountInformation_Window_Title_Name); 
+                        Reg2_Page_AccountInformation_Window_Title_Name);
                 //Splitt User Last Name
                 string[] getSplittedUserLastName = userLastName.ToString().Split('-');
                 //Get Splitted User Last Name
@@ -177,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                     Reg2_Page_LastName_TextBox_Id_Locator,
                     getUserLastName);
                 //Enter Email Id
-                this.EnterEmailIdForTheUser();                
+                this.EnterEmailIdForTheUser(mailId);
             }
             catch (Exception e)
             {
@@ -191,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter the Email id details for the user
         /// </summary>
-        private void EnterEmailIdForTheUser()
+        private void EnterEmailIdForTheUser(string mailId)
         {
             //Enter the Email id details for the user
             Logger.LogMethodEntry("Reg2Page", "EnterEmailIdForTheUser",
@@ -203,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Email Id
             base.FillTextBoxById(Reg2PageResource.
                 Reg2_Page_Email_TextBox_Id_Locator, 
-                Reg2PageResource.Reg2_Page_Email_TextBox_Value);
+              mailId);
             //Wait For Element
             base.WaitForElement(By.Id(Reg2PageResource.
                 Reg2_Page_EmailConfirm_TextBox_Id_Locator));
@@ -213,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Confirmation Email
             base.FillTextBoxById(Reg2PageResource.
                 Reg2_Page_EmailConfirm_TextBox_Id_Locator,
-                Reg2PageResource.Reg2_Page_Email_TextBox_Value);
+            mailId);
             Logger.LogMethodExit("Reg2Page", "EnterEmailIdForTheUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -221,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter SMS User School Information for Registeration
         /// </summary>
-        private void EnterSmsUserSchoolInformation()
+        private void EnterSmsUserSchoolInformation(string schoolName,string schoolCity,string securityQuestion,string securityAnswer )
         {
             // Enter SMS User School Information
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserSchoolInformation",
@@ -231,21 +236,21 @@ namespace Pegasus.Pages.UI_Pages
             //Enter School Name
             base.FillTextBoxById(Reg2PageResource.
                 Reg2_Page_OtherSchoolName_TextBox_Id_Locator,
-                Reg2PageResource.Reg2_Page_OtherSchoolName_TextBox_Value);
+                schoolName);
             base.WaitForElement(By.Id(Reg2PageResource.
                 Reg2_Page_OtherSchoolCity_TextBox_Id_Locator));
             //Entyer City
             base.FillTextBoxById(Reg2PageResource.
                 Reg2_Page_OtherSchoolCity_TextBox_Id_Locator,
-                Reg2PageResource.Reg2_Page_OtherSchoolCity_TextBox_Value);
+              schoolCity);
             base.WaitForElement(By.Name(Reg2PageResource.
                 Reg2_Page_Person_VerifyQuestion_DropDown_Name_Locator));
             //Select Verification Question
             base.SelectDropDownValueThroughTextByName(Reg2PageResource.
                 Reg2_Page_Person_VerifyQuestion_DropDown_Name_Locator,
-                Reg2PageResource.Reg2_Page_Person_VerifyQuestion_DropDown_Value);
+               securityQuestion);
             //Enter SMS Personal Account Information
-            this.EnterSmsUserSecurityInformation();
+            this.EnterSmsUserSecurityInformation(securityAnswer);
             Logger.LogMethodExit("Reg2Page", "EnterSmsUserSchoolInformation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -253,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter SMS User Security Information
         /// </summary>
-        private void EnterSmsUserSecurityInformation()
+        private void EnterSmsUserSecurityInformation(string answer)
         {
             //Enter SMS User Security Information
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserSecurityInformation",
@@ -264,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClearTextById(Reg2PageResource.Reg2_Page_Password3_TextBox_Id_Locator);
             //Fill City text box
             base.FillTextBoxById(Reg2PageResource.Reg2_Page_Password3_TextBox_Id_Locator,
-                                 Reg2PageResource.Reg2_Page_Password3_TextBox_Value);
+                                answer);
             base.WaitForElement(By.Id(Reg2PageResource.
                                           Reg2_Page_Next_Button_Id_Locator));
             IWebElement getNextClickButton = base.GetWebElementPropertiesById
@@ -280,5 +285,83 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("Reg2Page", "EnterSmsUserSecurityInformation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Fill SMS User Account Information for Registeration
+        /// </summary>
+        /// <param name="userType">This is user type enum.</param>
+        /// <param name="scenarioName">This is scenarion name.</param>
+        public void EnterSmsUserAccountOtherInformation(User.UserTypeEnum userType,
+           string mode)
+        {
+            // Fill SMS User Account Information
+            Logger.LogMethodEntry("Reg2Page", "EnterSmsUserAccountInformation",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+
+                Guid userLastName = Guid.NewGuid();
+                string[] getSplittedUserLastName = userLastName.ToString().Split('-');
+                string getUserLastName = getSplittedUserLastName[1];
+                string userFirstName = "BDD";
+                string country = Reg2PageResource.Reg2_Page_Entered_Country_DropDown_Value;
+                string school = Reg2PageResource.Reg2_Page_OtherSchoolName_TextBox_Value;
+                string schoolCity = Reg2PageResource.Reg2_Page_OtherSchoolCity_TextBox_Value;
+                string securityQuestion = Reg2PageResource.Reg2_Page_Person_VerifyQuestion_DropDown_Value;
+                string securityAnswer = Reg2PageResource.Reg2_Page_Password3_TextBox_Value;
+                string mailId="raghavendra.ga@excelindia.com";
+                this.EnterUserOtherDetails(userFirstName, getUserLastName, mailId, country, school, schoolCity,securityQuestion, securityAnswer); 
+                    //Update The User LastName In Memory
+                this.UpdateTheUserLastNameInMemory(userType, getUserLastName, userFirstName);
+               
+                            
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("Reg2Page", "EnterSmsUserAccountInformation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        public void EnterUserOtherDetails(string FN,string LN,string mailId,string country,string schoolName,string schoolCity,string question,string answer )
+        {
+
+              base.SelectWindow(Reg2PageResource.
+                        Reg2_Page_AccountInformation_Window_Title_Name); 
+                             
+                //Wait For Element
+                base.WaitForElement(By.Id(Reg2PageResource.
+                    Reg2_Page_LastName_TextBox_Id_Locator));
+                base.ClearTextById(Reg2PageResource.
+                    Reg2_Page_LastName_TextBox_Id_Locator);
+                //Enter Last Name
+                base.FillTextBoxById(Reg2PageResource.
+                    Reg2_Page_LastName_TextBox_Id_Locator,
+                    LN);
+                //Enter Email Id
+                this.EnterEmailIdForTheUser(mailId);
+                base.SelectWindow(Reg2PageResource.
+                       Reg2_Page_AccountInformation_Window_Title_Name);
+                //Wait for Element
+                base.WaitForElement(By.Id(Reg2PageResource.
+                    Reg2_Page_FirstName_TextBox_Id_Locator));
+                base.ClearTextById(Reg2PageResource.
+                    Reg2_Page_FirstName_TextBox_Id_Locator);
+                //Enter First Name
+                base.FillTextBoxById(Reg2PageResource.
+                    Reg2_Page_FirstName_TextBox_Id_Locator,
+                   FN);
+                base.WaitForElement(By.Id(Reg2PageResource.
+                       Reg2_Page_Entered_Country_DropDown_Id_Locator));
+                //Select Drop Down Value
+                base.SelectDropDownValueThroughTextById(Reg2PageResource.
+                    Reg2_Page_Entered_Country_DropDown_Id_Locator,
+                    country);
+                //Enter SMS User School Information
+                this.EnterSmsUserSchoolInformation(schoolName,schoolCity,question,answer);
+        }
+
     }
 }
