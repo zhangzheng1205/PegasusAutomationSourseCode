@@ -744,24 +744,24 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>6f77f3b7-d37a-4f03-85d2-8760a82df0f9</Name>
-      <Password>password1</Password>
+      <Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>c338</LastName>
+      <LastName>4227</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <!--Hard coded Users data for Zero Score "CsSMSStudent".-->
     <User>
-      <Name>2bc5c2be-5eea-41cc-bde1-dfb7cb1c1a5c</Name>
-      <Password>password1</Password>
+      <Name>159e88b6-0f14-4e9f-9d4a-26f5b6d1076d</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>5c9f</LastName>
+      <LastName>50c5</LastName>
       <UserType>CsSmsStudent</UserType>
       <UserId>Hed_User_SMS_STU_UC1</UserId>
       <IsCreated>true</IsCreated>
@@ -781,36 +781,36 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for Set Idle "CsSMSStudent".-->
     <User>
-      <Name>427e4aec-b504-4af2-9395-2210a1bd7e88</Name>
-      <Password>password1</Password>
+      <Name>fb45089b-5f07-4444-80a9-b76668e82eb9</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>d1a9</LastName>
+      <LastName>9fbb</LastName>
       <UserType>CsSmsStudent</UserType>
       <UserId>Hed_User_SMS_STU_UC2</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>6f77f3b7-d37a-4f03-85d2-8760a82df0f9</Name>
-      <Password>password1</Password>
+      <Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>c338</LastName>
+      <LastName>4227</LastName>
       <UserType>HSSCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <!--Hard coded Users data for Zero Score "HSSCsSMSStudent".-->
     <User>
-      <Name>2bc5c2be-5eea-41cc-bde1-dfb7cb1c1a5c</Name>
-      <Password>password1</Password>
+      <Name>159e88b6-0f14-4e9f-9d4a-26f5b6d1076d</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>5c9f</LastName>
+      <LastName>50c5</LastName>
       <UserType>HSSCsSmsStudent</UserType>
       <UserId>HSS_User_SMS_STU_UC3</UserId>
       <IsCreated>true</IsCreated>
@@ -818,12 +818,12 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for Set Idle "HSSCsSMSStudent".-->
     <User>
-      <Name>427e4aec-b504-4af2-9395-2210a1bd7e88</Name>
+      <Name>fb45089b-5f07-4444-80a9-b76668e82eb9</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>d1a9</LastName>
+      <LastName>9fbb</LastName>
       <UserType>HSSCsSmsStudent</UserType>
       <UserId>HSS_User_SMS_STU_UC4</UserId>
       <IsCreated>true</IsCreated>
@@ -864,24 +864,24 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>6f77f3b7-d37a-4f03-85d2-8760a82df0f9</Name>
-      <Password>password1</Password>
+      <Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>c338</LastName>
+      <LastName>4227</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <!--Hard coded Users data for Zero Score "WLCsSmsStudent".-->
     <User>
-      <Name>2bc5c2be-5eea-41cc-bde1-dfb7cb1c1a5c</Name>
-      <Password>password1</Password>
+      <Name>159e88b6-0f14-4e9f-9d4a-26f5b6d1076d</Name>
+      <Password>Password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>5c9f</LastName>
+      <LastName>50c5</LastName>
       <UserType>WLCsSmsStudent</UserType>
       <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
