@@ -14,24 +14,42 @@ And I select 'View Advanced calendar' option in calendar
 Then I should see the "Assign Course Materials" option with "DayWeekMonth" and "Add Note" button
 And I should see the message of calendar "0 Items Due Today" and "No Items are Due Today"
 
+
 #Purpose : Drag and drop a single content to a day and display of Assigned content in Day View
-#Test Case Id :HED_MIL_PWF_280
 #MyItLabProgramCourse
-Scenario: Drag and drop a single content to a day and display of Assigned content in Day View
-When I navigate to "Sections" tab of the "Program Administration" page
-Then I should be on the "Program Administration" page
-When I search the "MyItLabProgramCourse" first section
-And I click the "Enter Section as Instructor"
-And I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
+Scenario: Drag and drop a single content to a day and display of Assigned content in Day View as SMS Teacher
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-When I search the "SIM5Activity" activity of behavioral mode "SkillBased"
-Then I should see the searched "SIM5Activity" activity of behavioral mode "SkillBased"
-When I 'Drag and Drop' the "SIM5Activity" activity of behavioral mode "SkillBased" on current day
-Then I should see the "SIM5Activity" activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view
-And I should see the message "1 Item Due Today" in day view
+When I search the "RegTodayDateAssignment " activity of behavioral mode "SkillBased"
+Then I should see the searched "RegTodayDateAssignment " activity of behavioral mode "SkillBased"
+When I 'Drag and Drop' the "RegTodayDateAssignment " activity of behavioral mode "SkillBased" on "Current date"
+Then I should see the "RegTodayDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Current date"
+And I should see the message "1 Item Due Today" in day view of "Current date" frame
+When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
+Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
+When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
+Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
+And I should see the message "1 Item Due Today" in day view of "Future date" frame
 When I select 'Home' option
 Then I should be on the "Program Administration" page
 
+Scenario: Cmenu assign from Assignment Calendar pastdue
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "RegPastDueAssignment  " activity of behavioral mode "SkillBased"
+Then I should see the searched "RegPastDueAssignment  " activity of behavioral mode "SkillBased"
+When I click cmenu "Assignment Properties" of activity "RegPastDueAssignment"
+Then I should see the "Assign" popup
 
 #Purpose : Drag and drop a single content to a day and display of Assigned content in Month View
 #Test Case Id :HED_MIL_PWF_280

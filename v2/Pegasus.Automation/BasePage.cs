@@ -1335,6 +1335,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Get the value of a the given inner text of the element by locating className attribute value.
+        /// </summary>
+        /// <param name="classNameAttributeValue"> Retrieves The name of the attribute by locating class attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not set by locating id attribute value.</returns>
+        protected String GetInnerTextAttributeValueByClassName(String classNameAttributeValue)
+        {
+            return GetInnerTextAttributeValueByLocator(By.ClassName(classNameAttributeValue));
+        }
+
+
+        /// <summary>
         /// Get the value of a the given inner text of the element by locating Xpath value.
         /// </summary>
         /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath value.</param>
@@ -3240,7 +3251,5 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return myDynamicElement;
         }
         #endregion WebDriver Wait
-
-       
     }
 }

@@ -18,3 +18,10 @@ When I click on 'Feedback' option
 Then I should be on the "Feedback" page
 And I should see the "General feedbackCourse Materials feedback" in the 'Feedback' window
 When I close the "Feedback" window
+
+Scenario: Validate expand and collapse functionaly of "My Courses and Testbanks" as CsSmsStudent
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I click on "Expand" icon in "My Courses and Testbanks" frame as "CsSmsStudent" user

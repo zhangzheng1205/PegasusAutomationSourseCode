@@ -69,6 +69,47 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 IsTakeScreenShotDuringEntryExit);
         }
+        
+        /// <summary>
+        /// Verify the user name and welcome message in header
+        /// </summary>
+        /// <param name="message">This is message text.</param>
+        /// <param name="userType">This is user type.</param>
+        [Then(@"I should be displayed with ""(.*)"" message for ""(.*)"" user")]
+        public void VerifyWelcomeMessageForUser(string message, User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("CommonSteps","VerifyWelcomeMessageForUser",base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+            .ScenarioInfo.Title, () => Assert.IsTrue(new
+            TodaysViewUxPage().getMessageAndUser(message, userType)));
+            Logger.LogMethodExit("CommonSteps", "VerifyWelcomeMessageForUser", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of option on the course Header
+        /// </summary>
+        /// <param name="optionName"></param>
+        [Then(@"I should be displayed with ""(.*)"" option")]
+        public void DisplayedOfOptionInHeader(string optionName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "DisplayedOfOptionInHeader", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(optionName, new TodaysViewUxPage().
+                    getHeaderOption(optionName)));
+            Logger.LogMethodExit("CommonSteps", "DisplayedOfOptionInHeader", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click option in header frame of course.
+        /// </summary>
+        /// <param name="optionName">This is the option name.</param>
+        [When(@"I click on ""(.*)"" option")]
+        public void ClickOptionInHeader(string optionName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOptionInHeader", base.IsTakeScreenShotDuringEntryExit);
+            new TodaysViewUxPage().clickHeaderOption(optionName);
+            Logger.LogMethodExit("CommonSteps", "ClickOptionInHeader", base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Validate the status of the submitted activity.
@@ -421,6 +462,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Verify Section in Active State or not.
@@ -1098,6 +1140,48 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click Subtab of maintab base on the user role
+        /// </summary>
+        /// <param name="subTabName">This is sub tab name.</param>
+        /// <param name="mainTabName">This is main tab name.</param>
+        /// <param name="userType">This is user type enum.</param>
+       [When(@"I click on ""(.*)"" subtab in ""(.*)"" tab as ""(.*)"" user")]
+        public void ClickSubtabInMainTab(string subTabName, string mainTabName, User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickSubtabInMainTab",base.IsTakeScreenShotDuringEntryExit);
+           // Perform the action based on the user type
+           switch(userType)
+           {
+               case User.UserTypeEnum.CsSmsStudent:
+                   // Click subtab as a HED student
+                   new CommonPage().ClickSubTab(subTabName, mainTabName);
+                   break;
+
+               case User.UserTypeEnum.CsSmsInstructor:
+                   break;
+           }
+            
+            Logger.LogMethodExit("CommonSteps", "ClickSubtabInMainTab", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="operationName">This is operation type.</param>
+        /// <param name="frameName">This is Frame name.</param>
+        /// <param name="userType"></param>
+       [When(@"I click on ""(.*)"" icon in ""(.*)"" frame as ""(.*)"" user")]
+       public void ValidateFrameExpandAndCollapseFunctionalty(string operationName, string frameName, 
+           User.UserTypeEnum userType)
+       {
+           Logger.LogMethodEntry("CommonSteps", "ValidateFrameExpandAndCollapseFunctionalty", 
+               base.IsTakeScreenShotDuringEntryExit);
+
+           Logger.LogMethodExit("CommonSteps", "ValidateFrameExpandAndCollapseFunctionalty", 
+               base.IsTakeScreenShotDuringEntryExit);
+       }
 
     }
 }

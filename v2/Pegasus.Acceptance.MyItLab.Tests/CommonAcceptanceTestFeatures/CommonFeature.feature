@@ -322,3 +322,77 @@ And I enter into the moodle kiosk course "MoodleDirectCourse"
 Scenario:Logout of Moodle
 When I "Logout" of Moodle
 Then I should be on the moodle login page
+
+#Purpose:Login to CsSmsStudent and enter into MyItLabInstructorCourse course
+Scenario: User enter into MyItLabInstructorCourse as CsSmsStudent
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+
+#Purpose:Logout as CsSmsStudent from todays view of MyItLabInstructorCourse course
+Scenario: Logout of Pegasus as CsSmsStudent from Today's View page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Sign out" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose:Logout as CsSmsStudent
+Scenario: Logout of Pegasus as CsSmsStudent
+When I click on "Sign out" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose:User navigate to todays view as CsSmsStudent
+Scenario:User navigate to todays view as CsSmsStudent
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+
+#Purpose:Validate the functionality of Home option in header inside course as CsSmsStudent
+Scenario:Validate the functionality of Home option in header inside course as CsSmsStudent
+When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on the "Global Home" page
+
+Scenario:CSSMSStudent validate functionality of help link in header
+When I click on "Help" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on "Student Help" page as "CsSmsStudent" user
+When I close the "Student Help" window
+Then I should be on the "Today's View" page
+
+Scenario: CSSMSStudent validate functionality of Suport link in header
+When I click on "Support" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsStudent" user
+When I close the "Student Help" window
+Then I should be on the "Today's View" page
+
+Scenario: CSSMSStudent validate functionality of MyProfile link in header
+When I click on "My Profile" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be displayed with "My Profile" lightbox
+
+Scenario: CSSMSStudent validate functionality of Welcome message in header
+Then I should be displayed with "Welcome," message for "CsSmsStudent" user
+
+Scenario: Navigate tabs as CsSmsStudent
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I navigate to "Assignments" tab
+Then I should be on the "Course Materials" page
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "Communicate" tab
+Then I should be on the "Communicate" page
+
+Scenario: Navigate subTabs as CsSmsStudent
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+And I click on "To Do" subtab in "Assignments" tab as "CsSmsStudent" user
+Then I should be on the "Assignments - To Do" page
+When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
+Then I should be on the "Custom View" page

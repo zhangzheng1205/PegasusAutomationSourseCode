@@ -748,6 +748,7 @@ namespace Pegasus.Pages.UI_Pages
                 , base.IsTakeScreenShotDuringEntryExit);
             //Get Course Row Counter
             const int getCourseRowCounter = 1;
+            bool hjsd = base.IsElementPresent(By.XPath("//div[@class='channel-content']/div/div"),10);
             base.WaitForElement(
                 By.XPath(string.Format(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Course_Table_Row_XPath_Locator,
@@ -766,10 +767,11 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickCourseNameOnHomePage
             (string courseName, int courseDivCounter)
         {
-            //Get HTML Element Property
+            //Get HTML Element Property 
+            //HEDGlobalHomePageResource.
+                //HEDGlobalHome_Page_Course_Table_Row_XPath_Locator
             IWebElement courseTable = base.GetWebElementPropertiesByXPath(
-                string.Format(HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
+                string.Format("//div[@class='channel-content']/div/div/div[{0}]", courseDivCounter));
             if (!courseTable.Text.Contains(courseName))
             {
                 //Get The Course From Each Row
@@ -1420,7 +1422,41 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-       
+        /// <summary>
+        /// Get lightbox name
+        /// </summary>
+        /// <param name="pageTitle">This is Page title.</param>
+        /// <returns>Return lightbox name.</returns>
+        public string getLightboxTitle(string lightboxName)
+        {
+            Logger.LogMethodEntry("HEDGlobalHomePage", "getLightboxTitle",base.IsTakeScreenShotDuringEntryExit);
 
+            string getLightboxName = null;
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            try
+            {
+                switch (lightboxName)
+                {
+                    case "My Profile":
+                        bool ddf = base.IsElementPresent(By.Id("lblMail"),10);
+                        base.WaitForElement(By.Id("lblMail"));
+                        getLightboxName = base.GetInnerTextAttributeValueByClassName("lblMail");
+                        break;
+
+                    case "Basic Preferences":
+                        base.SwitchToLastOpenedWindow();
+                        bool kkjas = base.IsElementPresent(By.Id("form1"), 5);
+                        base.WaitForElement(By.ClassName("csssimPref"));
+                        getLightboxName = base.GetInnerTextAttributeValueByClassName("csssimPref");
+                        break;
+                }
+            }
+           catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HEDGlobalHomePage", "getLightboxTitle", base.IsTakeScreenShotDuringEntryExit);
+            return getLightboxName;
+        }
     }
 }

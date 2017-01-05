@@ -369,4 +369,7 @@
   <data name="CommonPage_ExcelChapter1GraderActivities_FolderName" xml:space="preserve">
     <value>Excel Chapter 1: Grader Activities</value>
   </data>
+  <data name="ComonPage_SubTabNavigationCmenu_XPath_Locator" xml:space="preserve">
+    <value>//li[@class='navoptnav main-menu-link navactive']/span/a[2]</value>
+  </data>
 </root>

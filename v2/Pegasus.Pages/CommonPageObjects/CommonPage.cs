@@ -2317,7 +2317,36 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-       
+        /// <summary>
+        ///  Click Subtab of maintab inside the course
+        /// </summary>
+        /// <param name="subTabName">This is sub tab name.</param>
+        /// <param name="mainTabName">This is main tab name.</param>
+        public void ClickSubTab(string subTabName, string mainTabName)
+        {
+            Logger.LogMethodEntry("CommonPage", "ClickSubTab",base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill page loads
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                // Click main tab based on the input provided "mainTabName"
+                base.ClickLinkByPartialLinkText(mainTabName);
+                // Click the menu icon based on the active tab
+                IWebElement getElement = base.GetWebElementPropertiesByXPath(
+                    CommonPageResource.
+                    ComonPage_SubTabNavigationCmenu_XPath_Locator);
+                base.ClickByJavaScriptExecutor(getElement);
+                // Click on the submenu option
+                IWebElement getSubTabOption = base.GetWebElementPropertiesByLinkText
+                    (subTabName);
+                base.ClickByJavaScriptExecutor(getSubTabOption);
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "ClickSubTab", base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
     }

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.HEDMIL.Regression.Student" storage="d:\uxhedautomation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedmil.regression.student.orderedtest" id="ca540f4f-e82d-4a89-9cf4-3f241035473d" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="240831c3-3a92-93db-1dbc-87b24fd80b28" name="UserLoginAsSMSStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="48002ac7-4b54-f488-930d-28a510e955ab" name="UserEnterIntoMyItLabInstructorCourseAsCsSmsStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="04d5ba1e-09bc-4fb1-9313-168ca65f5d22" name="OrderedTest.HEDMIL.StudentTodaysView" storage="orderedtest.hedmil.studenttodaysview.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="5dfa0536-38e0-c742-200f-5d36bdfd3f00" name="LogoutOfPegasusAsCsSmsStudentFromTodaySViewPage" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

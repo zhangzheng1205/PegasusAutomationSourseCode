@@ -153,15 +153,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
         /// 'Drag And Drop' The Activity On Current Day.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         /// <param name="activityBehavioralModeEnum">This is Activity Behavioral Type Enum.</param>
-        [When(@"I 'Drag and Drop' the ""(.*)"" activity of behavioral mode ""(.*)"" on current day")]
-        public void DragAndDropTheActivityOnCurrentDay(
-            Activity.ActivityTypeEnum activityTypeEnum,
-            Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum)
+        [When(@"I 'Drag and Drop' the ""(.*)"" activity of behavioral mode ""(.*)"" on ""(.*)""")]
+        public void WhenITheActivityOfBehavioralModeOn(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum, string dateType)
         {
             //'Drag And Drop' The Activity On Current Day
             Logger.LogMethodEntry("AssignmentCalendar",
@@ -171,11 +171,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Activity activity =
                 Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
             //Drag and Drop the Activity
-            new CalendarHedDefaultUxPage().DragAndDropActivity(activity.Name);
+            switch(dateType)
+            {
+                case "Current date":
+                    new CalendarHedDefaultUxPage().DragAndDropActivityCurrentDate(activity.Name);
+                    break;
+
+                case "Future date":
+                    new CalendarHedDefaultUxPage().DragAndDropActivityFutureDate(activity.Name);
+                    break;
+            }
+    
             Logger.LogMethodExit("AssignmentCalendar",
                 "DragAndDropTheActivityOnCurrentDay",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Display Of Assigned Activity On Current Day.
@@ -203,6 +214,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'Drag and Drop' in day view of ""(.*)""")]
+        public void ValidateDisplayOfAssignedActivityInDayView(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum, string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
+            //Assert the Assigned Activity            
+            Logger.LogAssertion("VerifyActivityAssigned",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                    GetAssignedActivityNameBasedOnDay(activity.Name, dateType), activity.Name));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Verify Assigned Content Count.
         /// </summary>
@@ -223,6 +255,31 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAssignedContentCount",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        [Then(@"I should see the message ""(.*)"" in day view of ""(.*)"" frame")]
+        public void VerifyAssignedContentCountBasedOnDate(string assignedContentCountMessage, string dateType)
+        {
+            switch (dateType)
+            {
+                case "Current date":
+                    //Enter the Day View for current date
+                    new CalendarHedDefaultUxPage().EnterTheDayViewForAssignedActivity();
+                    break;
+
+                case "Future date":
+                    //Enter the Day View for future date
+                    new CalendarHedDefaultUxPage().EnterTheDayViewForAssignedActivityForFutureDate();
+                    break;
+            }
+            //Verify Assign Count Message
+            Logger.LogAssertion("VerifyAssignCountMessage",
+               ScenarioContext.Current.ScenarioInfo.Title, () =>
+               Assert.AreEqual(assignedContentCountMessage,
+               new CalendarHedDefaultUxPage().GetAssignedCountWithText()));
+
+        }
+
 
         /// <summary>
         /// Verify The Status Of Assigned Content In Status Column.
@@ -774,6 +831,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "SelectCmenuOfActivity",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Click on the cmenu option of the asset.
+        /// </summary>
+        /// <param name="cmenuOptionName">This is cmenu option name.</param>
+        /// <param name="activityType">This is activity type.</param>
+        [When(@"I click cmenu ""(.*)"" of activity ""(.*)""")]
+        public void ClickCmenuOfActivity(string cmenuOptionName, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+
+            // Get the activity name from inmemeory 
+            Activity activity = Activity.Get(activityType);
+            string assetName = activity.Name.ToString();
+
+            //click on cmenu option
+            new CalendarHedDefaultUxPage().SelectActivityCmenu
+                (cmenuOptionName, assetName);
+            Logger.LogMethodExit("AssignmentCalendar",
+                "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Verify the schedule checkmark and due date icon beside the activity name.

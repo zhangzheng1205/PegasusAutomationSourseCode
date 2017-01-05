@@ -173,16 +173,17 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// 'Drag And Drop' Activity.
+        /// 'Drag And Drop' Activity to current date
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        public void DragAndDropActivity(String activityName)
+        public void DragAndDropActivityCurrentDate(String activityName)
         {
             //'Drag And Drop' Activity
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                string getAppDate = string.Empty;
                 //Select Calendar Window
                 this.SelectCalendarWindow();
                 //Wait for the element
@@ -201,6 +202,110 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for 10 Secs
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
+ 
+                }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+                /// <summary>
+        /// 'Drag And Drop' Activity to current date
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        public void DragAndDropActivity(String activityName)
+        {
+            //'Drag And Drop' Activity
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string getAppDate = string.Empty;
+                //Select Calendar Window
+                this.SelectCalendarWindow();
+                //Wait for the element
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
+                //Drag and Drop
+                base.PerformClickAndHoldAction(base.
+                    GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
+                //Wait for the element
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                base.PerformMoveToElementClickAction(base.
+                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                //Wait for 10 Secs
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
+ 
+                }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+
+        //----------------------------------------------------------------------------------
+        /// <summary>
+        /// 'Drag And Drop' Activity to current date
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        public void DragAndDropActivityFutureDate(String activityName)
+        {
+            //'Drag And Drop' Activity
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string getAppDate = string.Empty;
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString("d");
+
+                DateTime fDate = date.AddDays(5);
+                string getFutureDate = fDate.ToString("d");
+
+                //Get the Total Activities Count
+                bool exitLoop = false;
+                int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
+                for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                    i <= getRowCount && !exitLoop; ++i)
+                {
+                    int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
+                    for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                      CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                      j <= getColumCount; ++j)
+                    {
+                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
+
+                        if (getAppDate == getFutureDate)
+                        {
+                            this.SelectCalendarWindow();
+                            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                              CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
+                            //Drag and Drop
+                            base.PerformClickAndHoldAction(base.
+                                GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
+                            //Wait for the element
+                            base.PerformMoveToElementClickAction(base.
+                                GetWebElementPropertiesByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
+                            exitLoop = true;
+                            break;
+                        }
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -209,6 +314,73 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Get Assigned Activity Name On Current Day.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <returns>Assigned Activity Name.</returns>
+        public String GetAssignedActivityNameBasedOnDay(string activityName, string dateType)
+        {
+            //Get Assigned Activity
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize the Variable
+            string getAssignedActivityName = string.Empty;
+            try
+            {
+                switch(dateType)
+                {
+                    case "Current date":
+                        //Enter the Day View for current date
+                        this.EnterTheDayViewForAssignedActivity();
+                        break;
+
+                    case "Future date":
+                        //Enter the Day View for future date
+                        this.EnterTheDayViewForAssignedActivityForFutureDate();
+                        break;
+                }
+
+                //Get the Assigned Activity Name
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_AssignedActivitiesInDayView_Xpath_Locator));
+                //Get the Total Activities Count
+                int getCountOfActivitiesAssigned =
+                    base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_AssignedActivitiesInDayView_Xpath_Locator);
+                for (int rowCount = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                    rowCount <= getCountOfActivitiesAssigned; rowCount++)
+                {
+                    //Get the Activity Name
+                    getAssignedActivityName = base.GetElementTextByXPath(string.
+                        Format(CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator,
+                        rowCount));
+                    if (getAssignedActivityName.Contains(activityName))
+                    {
+                        getAssignedActivityName = activityName;
+                        break;
+                    }
+                }
+                //Refresh Current Page
+                base.RefreshTheCurrentPage();
+                //Accept the Alert
+              //  this.AcceptTheAlert();
+                //wait for Calendar Window
+                base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Calendar_WindowName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getAssignedActivityName;
+        }
+
 
         /// <summary>
         /// Get Assigned Activity Name On Current Day.
@@ -317,6 +489,65 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "EnterTheDayViewForAssignedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Enter The Day View For Assigned Activity.
+        /// </summary>
+        public void EnterTheDayViewForAssignedActivityForFutureDate()
+        {
+            //Enter The Day View For Assigned Activity
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "EnterTheDayViewForAssignedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                    bool exitLoop = false;
+                    string getAppDate = string.Empty;
+
+                    DateTime date = DateTime.Today;
+                    string getDate = date.ToString("d");
+
+                    DateTime fDate = date.AddDays(5);
+                    string getFutureDate = fDate.ToString("d");
+
+                    int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
+                    for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                        i <= getRowCount && !exitLoop; i++)
+                    {
+                        int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
+                        for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                          CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                          j <= getColumCount; j++)
+                        {
+                            getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
+
+                            if (getAppDate == getFutureDate)
+                            {
+                                this.SelectCalendarWindow();
+
+                                base.PerformMoveToElementClickAction(base.
+                                    GetWebElementPropertiesByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
+                                base.WaitForElement(By.XPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
+                                IWebElement getDayViewImage = base.GetWebElementPropertiesByXPath
+                                    (string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j));
+                                //Click on the Date to enter the Day view and see the assignments
+                                base.ClickByJavaScriptExecutor(getDayViewImage);
+                                exitLoop = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
             Logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "EnterTheDayViewForAssignedActivity",
                 base.IsTakeScreenShotDuringEntryExit);

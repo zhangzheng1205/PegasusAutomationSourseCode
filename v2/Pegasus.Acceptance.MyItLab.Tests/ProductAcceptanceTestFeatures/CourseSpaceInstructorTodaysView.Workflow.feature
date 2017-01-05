@@ -167,5 +167,120 @@ And I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Today
 Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Grade" as "50%"
 And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Content Completed" as "66.67%"
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Scenario: Instructor validate navigate Home link functionality in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be on the "Homepage" page
 
 
+Scenario: Instructor validate navigate Help link functionality in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Help" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be on "Instructor Help" page as "CsSmsInstructor" user
+
+Scenario: Instructor validate Support link functionality in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Support" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsInstructor" user
+
+Scenario: Instructor validate  My Profile link functionality in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "My Profile" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be displayed with "My Profile" lightbox
+
+Scenario: Validate user name and welcome message in header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+And I should be displayed with "Welcome," message for "CsSmsInstructor" user
+
+Scenario: Instructor validate Privacy link functionality in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Privacy" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be on the "Privacy" page
+
+Scenario: Instructor validate  Sign out link functionality in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Sign out" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should see the successfull message "You have been signed out of the application."
+
+Scenario: Verify the course title and ID display in the course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+And I should be displayed with "MyItLabInstructorCourse" course information for "CsSmsInstructor" user
+
+Scenario: Verify the display and functionaly to "Preference" option in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+And I should be displayed with "Preferences" option
+When I click on "Preferences" option
+Then I should be displayed with "Basic Preferences" lightbox
+When I click on the button "Go to Advanced Preferences"
+
+
+Scenario: Verify the display and functionaly to "Go to Student View" option in course header
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+And I should be displayed with "Go to Student View" option
+When I click on "Go to Student View" option
+Then I should be displayed with "Return to Instructor View" option
+When I click on "Return to Instructor View" option
+Then I should be on the "Today's View" page
+And I should be displayed with "Go to Student View" option

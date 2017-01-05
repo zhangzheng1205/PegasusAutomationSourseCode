@@ -392,8 +392,9 @@ the UI deleted or refreshed.-->
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>SIM5 Grader IT Drop - Sec</Name>
+      <Name>¡Anda! Curso elemental, Second Edition-P</Name>
       <CourseType>MyItLabInstructorCourse</CourseType>
+      <SectionId>CRSKLYU-10041353</SectionId>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
@@ -968,12 +969,12 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
+      <Name>516cgievijayinstructor</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@exelindia.com</Email>
-      <FirstName>BDD</FirstName>
+      <FirstName>Vijay </FirstName>
       <MiddleName>Nanda</MiddleName>
-      <LastName>ae6d</LastName>
+      <LastName>Kumar</LastName>
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -990,12 +991,12 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>1dd99b5c-24b5-4ba8-92ce-c7a1e8f3bcc0</Name>
+      <Name>pradeepkumard</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>BDD</FirstName>
+      <FirstName>Pradeep</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>00b6</LastName>
+      <LastName> o'Kumar</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -1397,8 +1398,33 @@ the UI deleted or refreshed.-->
 the UI deleted or refreshed.-->
   <ArrayOfActivity>
     <Activity>
-      <Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
+      <Name>SAM Activity0915</Name>
       <ActivityType>SkillStudyPlan</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Activity 0822</Name>
+      <ActivityType>RegPastDueAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Act0823</Name>
+      <ActivityType>RegTodayDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Study Plan 0826</Name>
+      <ActivityType>RegFutureDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Activity 1</Name>
+      <ActivityType>SIM5Activity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>

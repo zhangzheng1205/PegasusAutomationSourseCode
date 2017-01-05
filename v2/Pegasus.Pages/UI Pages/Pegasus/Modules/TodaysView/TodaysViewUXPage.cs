@@ -11,6 +11,8 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.TemplateClassManagement.Class
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Text.RegularExpressions;
 using Pegasus.Automation.DataTransferObjects;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
+using System.Configuration;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -4384,5 +4386,359 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "ClickTabUnderMore",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        //---------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// This is to verify header option as HED user and perform operation based on the options
+        /// </summary>
+        /// <param name="optionName">This is the option name.</param>
+        /// <param name="tabName">This is the tab name.</param>
+        /// <param name="couseTypeEnum">This is course type enum.</param>
+        /// <param name="userType">This is user type enum</param>
+        public void ValidateOptionsInTopHeaderAndPerformOperation(string optionName, string tabName, Course.CourseTypeEnum couseTypeEnum)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ValidateOptionsInTopHeaderAndPerformOperation",base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+               switch(couseTypeEnum)
+               {
+                   case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                       this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName);
+                    break;
+
+                   case Course.CourseTypeEnum.DigitsCourse:
+                    break;
+
+               }
+
+            }
+                catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ValidateOptionsInTopHeaderAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Tab Nam
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        /// <param name="tabName">This is tab name.</param>
+        private void VerifyTheTabExistanceAndPerformOperation(string optionName, string tabName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string actualPageTitle = base.GetPageTitle;
+                if (tabName == actualPageTitle)
+                {
+                    this.ClickOptionInCourseHeader(optionName);
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click the option in course header.
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        /// <param name="tabName">This is tab name.</param>
+        private void ClickOptionInCourseHeader(string optionName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch(optionName)
+                {
+                    case "Home":
+                        //TodayViewUXPageResource_Header_HomeOption_ID
+                        base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink"));
+                        base.ClickLinkById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink");
+                        break;
+                    case "Help":
+                        //TodayViewUXPageResource_Header_HelpOption_ID
+                        base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_HelpLink"));
+                        base.ClickLinkById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_HelpLink");
+                        break;
+                    case "Support":
+                        //TodayViewUXPageResource_Header_SupportOption_ID
+                        base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport"));
+                        base.ClickLinkById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport");
+                        break;
+
+                    case "My Profile":
+                    case " Privacy ":
+                    case "Sign out":
+                        this.ClickOptionAvailableInUserDropdownHeader(optionName);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click header option
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        private void ClickOptionAvailableInUserDropdownHeader(string optionName)
+        {
+            base.WaitForElement(By.ClassName("icon-chevron-down"));
+            IWebElement getDrodownIcon = base.GetWebElementPropertiesByClassName("icon-chevron-down");
+            base.ClickByJavaScriptExecutor(getDrodownIcon);
+
+            switch(optionName)
+            {
+                case "My Profile":
+                    base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancMyAccount"));
+                    IWebElement getMyAccountOption = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancMyAccount");
+                    base.PerformMouseHoverAction(getMyAccountOption);
+                    base.PerformMouseClickAction(getMyAccountOption);
+                    break;
+
+                case " Privacy ":
+                    base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_spanPrivacyPolicyt"));
+                    IWebElement getPrivacyOption = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_spanPrivacyPolicy");
+                    base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                    base.PerformMouseClickAction(getPrivacyOption);
+                    break;
+
+                case "Sign out":
+                    base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut"));
+                    IWebElement getSignoutOption = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut");
+                    base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                    base.PerformMouseClickAction(getSignoutOption);
+                    break;
+            }
+        }
+
+        public bool getInsPageURLAndPageTitle(string pageTitle,User.UserTypeEnum userType)
+        {
+            string URL = null;
+            bool status = false;
+            try
+            {
+                User user = User.Get(userType);
+                string userName = user.Name.ToString();
+                base.SwitchToWindow(pageTitle);
+                
+                switch (pageTitle)
+                {
+                    case "Instructor Help":
+                        {
+                            string getApplicationURL = base.GetCurrentUrl;
+                            switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                                 ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+                            {
+                                case "PPE":
+                                    break;
+                                case "CGIE":
+                                    URL = "http://help.pearsoncmg.com/pegasus/help/instr-wlang/index.htm";
+                                    break;
+                                case "PROD":
+                                    break;
+                            }
+                            if (URL == getApplicationURL && pageTitle == GetPageTitle)
+                            {
+                                status = true;
+                            }
+                        }
+                        break;
+
+                    case "Pearson Education Customer Technical Support":
+                        string getUser = base.GetInnerTextAttributeValueById("lblLogin");
+                        string getUserName = getUser.Trim();
+                        if (getUserName == userName && pageTitle == GetPageTitle)
+                            {
+                                status = true;
+                            }
+                        break;
+                }
+              }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return status;
+        }
+
+        public bool getStudPageURLAndPageTitle(string pageTitle, User.UserTypeEnum userType)
+        {
+            string URL = null;
+            bool status = false;
+            try
+            {
+                User user = User.Get(userType);
+                string userName = user.Name.ToString();
+                base.SwitchToWindow(pageTitle);
+
+                switch (pageTitle)
+                {
+                    case "Student Help":
+                        {
+                            string getApplicationURL = base.GetCurrentUrl;
+                            switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                                 ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+                            {
+                                case "PPE":
+                                    break;
+                                case "CGIE":
+                                    URL = "http://help.pearsoncmg.com/pegasus/help/stu-wlang/index.htm";
+                                    break;
+                                case "PROD":
+                                    break;
+                            }
+                            if (URL == getApplicationURL && pageTitle == GetPageTitle)
+                            {
+                                status = true;
+                            }
+                        }
+                        break;
+
+                    case "Pearson Education Customer Technical Support":
+                        string getUser = base.GetInnerTextAttributeValueById("lblLogin");
+                        string getUserName = getUser.Trim();
+                        if (getUserName == userName && pageTitle == GetPageTitle)
+                        {
+                            status = true;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return status;
+        }
+
+        public bool getMessageAndUser(string message, User.UserTypeEnum userType)
+        {
+            bool status = false;
+            try
+            {
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                string getmessage = base.GetInnerTextAttributeValueByClassName("rightmenu");
+
+                // Actual message dispayed on application
+                string getActualWelcomeMessage = getmessage.Remove(8);
+                string getActualUserName = getmessage.Remove(0, 10);
+                string actualWelcomeMesage = (getActualWelcomeMessage + getActualUserName).Trim();
+
+                // Expected message
+                string getExpectedlWelcomeMessage = message;
+                User user =  User.Get(userType);
+                string firstName = user.FirstName.ToString();
+                 string LastName = user.LastName.ToString();
+                string expectedUserName = firstName+LastName;
+                string expectedWelcomeMesage = (getExpectedlWelcomeMessage + expectedUserName).Trim();
+
+                // Compare actual message with expected message
+                if (actualWelcomeMesage==expectedWelcomeMesage)
+                    {
+                        status = true;
+                    }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            return status;
+        }
+
+        /// <summary>
+        /// This methord is used to get the course information from the application within the course
+        /// </summary>
+        /// <param name="courseType">This is course type enum.</param>
+        /// <returns></returns>
+        public bool getCourseInfoDetails(Course.CourseTypeEnum courseType)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "getCourseInfoDetails", base.IsTakeScreenShotDuringEntryExit);
+            bool status = false;
+            Course course = Course.Get(courseType);
+            // Expected course details from Enum(In memeory)
+            string getExpectedCourseID = course.SectionId.ToString();
+            string getExpectedCourseName = course.Name.ToString();
+
+            // Actual course details from application
+                string getActualCourseID = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_HeaderCourseID");
+                string getActualCourseName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_headerCourseName");
+
+                if (getActualCourseID == getExpectedCourseID && getActualCourseName == getExpectedCourseName)
+                    {
+                        status = true;
+                    }
+            Logger.LogMethodExit("TodaysViewUXPage", "getCourseInfoDetails", base.IsTakeScreenShotDuringEntryExit);
+            return status;
+        }
+
+        /// <summary>
+        /// This methord is to get the title of option in the course header.
+        /// </summary>
+        /// <returns>Return option title.</returns>
+        public string getHeaderOption(string optionName)
+        {
+            string optionDisplayed = null;
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            switch(optionName)
+            {
+                case "Preferences":
+                    base.WaitForElement(By.XPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a"));
+                    optionDisplayed = base.GetInnerTextAttributeValueByXPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a");
+                break;
+
+                case "Go to Student View":
+                base.WaitForElement(By.ClassName("blubaropts"));
+                optionDisplayed = base.GetInnerTextAttributeValueByClassName("blubaropts");
+                break;
+
+                case "Return to Instructor View":
+                base.WaitForElement(By.ClassName("InsViewtxt"));
+                optionDisplayed = base.GetInnerTextAttributeValueByClassName("InsViewtxt");
+                break;
+            }
+            return optionDisplayed;
+        }
+
+        /// <summary>
+        /// This methord is used to click the option in the header.
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        public void clickHeaderOption(string optionName)
+        {
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            switch(optionName)
+            {
+                case "Preferences":
+                    base.WaitForElement(By.XPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a"));
+                    IWebElement getPreferenceOption = base.GetWebElementPropertiesByXPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a");
+                    base.PerformMouseClickAction(getPreferenceOption);
+                    break;
+ 
+                   case "Go to Student View":
+                    base.WaitForElement(By.ClassName("blubaropts"));
+                    IWebElement getStudentViewOption = base.GetWebElementPropertiesByClassName("blubaropts");
+                    base.PerformMouseClickAction(getStudentViewOption);
+                    break;
+
+                   case "Return to Instructor View":
+                    base.WaitForElement(By.ClassName("InsViewtxt"));
+                    IWebElement getInstructorViewOption = base.GetWebElementPropertiesByClassName("InsViewtxt");
+                    base.PerformMouseClickAction(getInstructorViewOption);
+                    break;
+            }
+        }
+
+       
     }
 }
