@@ -651,9 +651,6 @@
   <data name="TodayViewUXPageResource_Tools_Dropdown_Id_Locator" xml:space="preserve">
     <value>_ctl0:_ctl0:phHeader:_ctl0:ucs_Toolbar:ucs_RT:tools</value>
   </data>
-  <data name="TodayViewUXPageResource_VerbChart_Image_Id_Locator" xml:space="preserve">
-    <value>imgVerbChart</value>
-  </data>
   <data name="TodayViewUXPageResource__SubTab_SelectedTab_Value" xml:space="preserve">
     <value>SubNavigationTabSelected1</value>
   </data>
@@ -725,5 +722,65 @@
   </data>
   <data name="TodayViewUXPageResource_Tab_Count_XPath_Locator" xml:space="preserve">
     <value>//ul[@class = 'dd_options more_dd']/li</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_CourseId_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_HeaderCourseID</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_CourseName_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_headerCourseName</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_GoToStudentViewLink_ClassName_Locator" xml:space="preserve">
+    <value>blubaropts</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_HelpOption_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_HelpLink</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_HomeOption_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_MyProfileOption_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancMyAccount</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_PreferenceLink_Xpath_Locator" xml:space="preserve">
+    <value>//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_PrivacyOption_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_spanPrivacyPolicyt</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_ReturnToInstructorViewLink_ClassName_Locator" xml:space="preserve">
+    <value>InsViewtxt</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_SignOutOption_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_SupportOption_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='5']/div/div/div/span[2]/span[2]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='5']/div/div/div/span[2]/span/button</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='5']/div/div/div/span[2]/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='5']/div/div/div/span[2]/span[3]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='5']/div/div/div/span[2]/span[2]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='4']/div/div/div/span[2]/span/button</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_MinimizeButton_ClassName_Locator" xml:space="preserve">
+    <value>channel-options-min</value>
+  </data>
+  <data name="TodayViewUXPageResource_VerbChart_Image_Id_Locator" xml:space="preserve">
+    <value>imgVerbChart</value>
   </data>
 </root>

@@ -689,14 +689,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
        /// <param name="couseTypeEnum">This is course type enum.</param>
        /// <param name="userType">This is user type enum</param>
         [When(@"I click on ""(.*)"" option in ""(.*)"" tab of ""(.*)"" as ""(.*)"" user")]
-        public void VerifyTheHeaderOptions(string optionName, string tabName, Course.CourseTypeEnum couseTypeEnum,User.UserTypeEnum userType)
+        public void VerifyTheHeaderOptions(string optionName, string tabName,
+            Course.CourseTypeEnum couseTypeEnum,User.UserTypeEnum userType)
         {
             // Verify the header option based on the page and user type
             Logger.LogMethodEntry("TodaysView", "VerifyTheHeaderOptions",
                 base.IsTakeScreenShotDuringEntryExit);
             switch(userType)
             {
-                    // Check user type and 
+                    // Check user type 
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.CsSmsStudent:
                 new TodaysViewUxPage().ValidateOptionsInTopHeaderAndPerformOperation
@@ -708,7 +709,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     break;
 
             }
-            Logger.LogMethodExit("TodaysView", "VerifyTheHeaderOptions", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("TodaysView", "VerifyTheHeaderOptions",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
        
@@ -719,33 +721,46 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
          [Then(@"I should be displayed with ""(.*)"" lightbox")]
         public void VerifyTheDisplayedOfWithLightbox(string lightboxName)
         {
-            Logger.LogMethodEntry("TodaysView", "VerifyTheDisplayedOfWithLightbox",base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("TodaysView", "VerifyTheDisplayedOfWithLightbox",
+                base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
             Current.ScenarioInfo.Title, () => Assert.AreEqual(lightboxName,
-            new HEDGlobalHomePage().getLightboxTitle(lightboxName)));
-            Logger.LogMethodExit("TodaysView", "VerifyTheDisplayedOfWithLightbox", base.IsTakeScreenShotDuringEntryExit);
+            new HEDGlobalHomePage().GetLightboxTitle(lightboxName)));
+            Logger.LogMethodExit("TodaysView", "VerifyTheDisplayedOfWithLightbox", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
-       
+       /// <summary>
+         /// This is to validate the  Help Page display as HED user 
+       /// </summary>
+       /// <param name="pageTitle">This is the page name.</param>
+       /// <param name="userType">This is the User type enum</param>
          [Then(@"I should be on ""(.*)"" page as ""(.*)"" user")]
         public void ValidateHelpPageDisplay(string pageTitle, User.UserTypeEnum userType)
         {
-            Logger.LogMethodEntry("TodaysView", "ValidateHelpPageDisplay", base.IsTakeScreenShotDuringEntryExit);
+            //validate the Help Page display as HED user 
+            Logger.LogMethodEntry("TodaysView", "ValidateHelpPageDisplay", 
+                base.IsTakeScreenShotDuringEntryExit);
             switch(userType)
             {
                 case User.UserTypeEnum.CsSmsInstructor:
-                    Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                    //Verify Help page display for Instructor
+                    Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", 
+                        ScenarioContext.Current
                     .ScenarioInfo.Title, () => Assert.IsTrue(new
-                   TodaysViewUxPage().getInsPageURLAndPageTitle(pageTitle, userType)));
+                   TodaysViewUxPage().GetInsPageURLAndPageTitle(pageTitle, userType)));
                     break;
 
+                //Verify Help page display for Student
                 case User.UserTypeEnum.CsSmsStudent:
-                    Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                    Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel",
+                        ScenarioContext.Current
             .ScenarioInfo.Title, () => Assert.IsTrue(new
-            TodaysViewUxPage().getStudPageURLAndPageTitle(pageTitle, userType)));
+            TodaysViewUxPage().GetStudPageURLAndPageTitle(pageTitle, userType)));
                                 break;
             }
-            Logger.LogMethodExit("TodaysView", "ValidateHelpPageDisplay", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("TodaysView", "ValidateHelpPageDisplay", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -754,21 +769,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="courseType">This is the course type enum.</param>
         /// <param name="userType">This is user type enum.</param>
          [Then(@"I should be displayed with ""(.*)"" course information for ""(.*)"" user")]
-         public void ValidateDisplayedWithCourseInformationForUser(Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
+         public void ValidateDisplayedWithCourseInformationForUser(
+             Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
          {
-             Logger.LogMethodEntry("TodaysView", "ValidateDisplayedWithCourseInformationForUser", base.IsTakeScreenShotDuringEntryExit);
+             //Verify the course details displayed in the header part of the course
+             Logger.LogMethodEntry("TodaysView", "ValidateDisplayedWithCourseInformationForUser", 
+                 base.IsTakeScreenShotDuringEntryExit);
                  switch (userType)
                  {
                      case User.UserTypeEnum.CsSmsInstructor:
-                         Logger.LogAssertion("ValidateDisplayedWithCourseInformationForUser", ScenarioContext.Current
+                         Logger.LogAssertion("ValidateDisplayedWithCourseInformationForUser", 
+                             ScenarioContext.Current
                          .ScenarioInfo.Title, () => Assert.IsTrue(new
-                        TodaysViewUxPage().getCourseInfoDetails(courseType)));
+                        TodaysViewUxPage().GetCourseInfoDetails(courseType)));
                          break;
 
                      case User.UserTypeEnum.CsSmsStudent:
                          break;
                  }
-                 Logger.LogMethodExit("TodaysView", "ValidateDisplayedWithCourseInformationForUser", base.IsTakeScreenShotDuringEntryExit);
+                 Logger.LogMethodExit("TodaysView", "ValidateDisplayedWithCourseInformationForUser",
+                     base.IsTakeScreenShotDuringEntryExit);
          }
 
 

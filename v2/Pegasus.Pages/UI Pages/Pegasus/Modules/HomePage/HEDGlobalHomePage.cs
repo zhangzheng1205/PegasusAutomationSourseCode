@@ -1426,31 +1426,50 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="pageTitle">This is Page title.</param>
         /// <returns>Return lightbox name.</returns>
-        public string getLightboxTitle(string lightboxName)
+        public string GetLightboxTitle(string lightboxName)
         {
-            Logger.LogMethodEntry("HEDGlobalHomePage", "getLightboxTitle", base.IsTakeScreenShotDuringEntryExit);
+            //Returns the name of light box
+            Logger.LogMethodEntry("HEDGlobalHomePage", "GetLightboxTitle", 
+                base.IsTakeScreenShotDuringEntryExit);
 
             string getLightboxName = null;
+            //Wait for th window to load
             base.WaitUntilWindowLoads(base.GetPageTitle);
             try
             {
+                //Check for lightbox
                 switch (lightboxName)
                 {
                     case "My Profile":
-                        bool ddf = base.IsElementPresent(By.Id("lblMail"), 10);
-                        base.WaitForElement(By.Id("lblMail"));
-                        getLightboxName = base.GetInnerTextAttributeValueByClassName("lblMail");
+                        //Wait for My Profile light box
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_MyProfileLightBox_ID_Locator));
+                        //Get the name of the lightbox
+                        getLightboxName = base.GetInnerTextAttributeValueByClassName(
+                            HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_MyProfileLightBox_ID_Locator);
                         break;
 
                     case "Basic Preferences":
+                        //Switch to last opened window
                         base.SwitchToLastOpenedWindow();
-                        base.WaitForElement(By.ClassName("csssimPref"));
-                        getLightboxName = base.GetInnerTextAttributeValueByClassName("csssimPref");
+                        //Wait for My Profile light box
+                        base.WaitForElement(By.ClassName(HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_MyProfileLightBox_BasicPreference_ClassName_Locator));
+                        //Get the name of the lightbox
+                        getLightboxName = base.GetInnerTextAttributeValueByClassName(
+                            HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_MyProfileLightBox_BasicPreference_ClassName_Locator);
                         break;
 
                     case "Enroll in a Course":
-                        base.WaitForElement(By.Id("myModalLabel"));
-                        getLightboxName = base.GetInnerTextAttributeValueById("myModalLabel");
+                        //Wait for Enroll in a Course light box
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator));
+                        //Get the name of the lightbox
+                        getLightboxName = base.GetInnerTextAttributeValueById(
+                            HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator);
                         break;
 
                 }
@@ -1459,38 +1478,51 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("HEDGlobalHomePage", "getLightboxTitle", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("HEDGlobalHomePage", "GetLightboxTitle", 
+                base.IsTakeScreenShotDuringEntryExit);
             return getLightboxName;
         }
 
         /// <summary>
-        /// Get the status of channel existance
+        /// Get the channel name
         /// </summary>
         /// <param name="channelName">This is Channel Name.</param>
-        /// <returns>Return status of channel existance.</returns>
-        public string getINSChannelDetails(string pageTitle, string channelName)
+        /// <returns>Return the channel name.</returns>
+        public string GetINSChannelDetails(string pageTitle, string channelName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetINSChannelDetails",
+                                  base.IsTakeScreenShotDuringEntryExit);
             string returnChannelName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(pageTitle);
-             
-            switch (channelName)
+            try
             {
-                case "My Courses and Testbanks":
-                    //HEDGlobalHomePageResource.HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID
-                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
-                    returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
-                    break;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageTitle);
 
-                case "Announcements":
-                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_Announcement_Channel_ID));
-                    returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_Announcement_Channel_ID);
-                    break;
+                switch (channelName)
+                {
+                    case "My Courses and Testbanks":
+                        //Wait for the element to load
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
+                        returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
+                        break;
+
+                    case "Announcements":
+                        //Wait for the element to load
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_Announcement_Channel_ID));
+                        returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_Announcement_Channel_ID);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetINSChannelDetails",
+                                 base.IsTakeScreenShotDuringEntryExit);
             // Convert the text to lowercase and return the value
             return returnChannelName.ToLower();
         }
@@ -1500,56 +1532,74 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="channelName">This is Channel Name.</param>
         /// <returns>Return status of channel existance.</returns>
-        public string getStudChannelDetails(string pageTitle, string channelName)
+        public string GetStudChannelDetails(string pageTitle, string channelName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetStudChannelDetails",
+                                  base.IsTakeScreenShotDuringEntryExit);
             string returnChannelName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(pageTitle);
-
-            switch(pageTitle)
+            try
             {
-                case "Today's View":
-                    switch (channelName)
-                    {
-                        case "Notifications":
-                            base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading"));
-                            returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading");
-                            break;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageTitle);
 
-                        case "Announcements":
-                            base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading"));
-                            returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading");
-                            break;
+                switch (pageTitle)
+                {
+                    case "Today's View":
+                        switch (channelName)
+                        {
+                            case "Notifications":
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_TodaysView_Notification_Channel_ID));
+                                returnChannelName = base.GetInnerTextAttributeValueById(
+                                    HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_TodaysView_Notification_Channel_ID);
+                                break;
 
-                        case "Calendar":
-                            base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading"));
-                            returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading");
-                            break;
-                    }
-                    break;
+                            case "Announcements":
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_TodaysView_Announcement_Channel_ID));
+                                returnChannelName = base.GetInnerTextAttributeValueById(
+                                    HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_TodaysView_Announcement_Channel_ID);
+                                break;
 
-                case "Global Home":
-                    switch (channelName)
-                    {
-                        case "My Courses and Testbanks":
-                            //HEDGlobalHomePageResource.HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID
-                            base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
-                            returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                                HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
-                            break;
+                            case "Calendar":
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                      HEDGlobalHomePage_TodaysView_Calendar_Channel_ID));
+                                returnChannelName = base.GetInnerTextAttributeValueById(
+                                    HEDGlobalHomePageResource.
+                                      HEDGlobalHomePage_TodaysView_Calendar_Channel_ID);
+                                break;
+                        }
+                        break;
 
-                        case "Announcements":
-                            base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                HEDGlobalHome_Page_Announcement_Channel_ID));
-                            returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                                HEDGlobalHome_Page_Announcement_Channel_ID);
-                            break;
-                    }
-                    break;
+                    case "Global Home":
+                        switch (channelName)
+                        {
+                            case "My Courses and Testbanks":
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
+                                returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                                    HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
+                                break;
+
+                            case "Announcements":
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHome_Page_Announcement_Channel_ID));
+                                returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                                    HEDGlobalHome_Page_Announcement_Channel_ID);
+                                break;
+                        }
+                        break;
+                }
             }
- 
-            // Convert the text to lowercase and return the value
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetStudChannelDetails",
+                                 base.IsTakeScreenShotDuringEntryExit);
+             // Convert the text to lowercase and return the value
             return returnChannelName.ToLower();
         }
 
@@ -1558,30 +1608,41 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="channelName">This is Channel Name.</param>
         /// <returns>Return status of channel existance.</returns>
-        public string getMyCoursesTestbanksButtonDetails(string buttonName)
+        public string GetMyCoursesTestbanksButtonDetails(string buttonName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetMyCoursesTestbanksButtonDetails",
+                                 base.IsTakeScreenShotDuringEntryExit);
             string returnButtonName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-
-            switch (buttonName)
+            try
             {
-                case "Create a Course":
-                    // Get text from the application
-                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator));
-                    returnButtonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator);
-                    break;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(base.GetPageTitle);
 
-                case "Enroll in a Course":
-                    // Get text from the application
-                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator));
-                    returnButtonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator);
-                    break;
+                switch (buttonName)
+                {
+                    case "Create a Course":
+                        // Get text from the application
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator);
+                        break;
+
+                    case "Enroll in a Course":
+                        // Get text from the application
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetMyCoursesTestbanksButtonDetails",
+                                 base.IsTakeScreenShotDuringEntryExit);
             // Convert the text to lowercase and return the value
             return returnButtonName.ToLower();
         }
@@ -1591,22 +1652,33 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="channelName">This is Channel Name.</param>
         /// <returns>Return status of channel existance.</returns>
-        public string getAnnouncementsButtonDetails(string buttonName)
+        public string GetAnnouncementsButtonDetails(string buttonName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetAnnouncementsButtonDetails",
+                                 base.IsTakeScreenShotDuringEntryExit);
             string returnbuttonName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-
-            switch (buttonName)
+            try
             {
-                case "Manage All":
-                    // Get text from the application
-                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_ManageAll_Button_ID_Locator));
-                    returnbuttonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_ManageAll_Button_ID_Locator);
-                    break;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+
+                switch (buttonName)
+                {
+                    case "Manage All":
+                        // Get text from the application
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_ManageAll_Button_ID_Locator));
+                        returnbuttonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_ManageAll_Button_ID_Locator);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetAnnouncementsButtonDetails",
+                                 base.IsTakeScreenShotDuringEntryExit);
             // Convert the text to lowercase and return the value
             return returnbuttonName.ToLower();
         }
@@ -1637,6 +1709,10 @@ namespace Pegasus.Pages.UI_Pages
             }
         }
 
+        /// <summary>
+        /// Click on the Manage All option in Announcement channel
+        /// </summary>
+        /// <param name="channelName">This is the channel name.</param>
         public void ClickOptionsInAnnouncementsChannel(string channelName)
         {
             base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
@@ -1667,7 +1743,8 @@ namespace Pegasus.Pages.UI_Pages
                 string courseID = course.InstructorCourseId.ToString();
                 // Wait for Course ID text box to load
                 base.SelectWindow(base.GetPageTitle);
-                base.SwitchToIFrameById("iframeSelfEnrollment");
+                base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
                 base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                        HedGlobalHome_Page_CourseID_TextBox_Id_Locator));
                 // Fill textbox with course ID
@@ -1697,7 +1774,8 @@ namespace Pegasus.Pages.UI_Pages
             bool returnStatus = false;
 
             base.SelectWindow(base.GetPageTitle);
-            base.SwitchToIFrameById("iframeSelfEnrollment");
+            base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
             switch (stepCount)
             {
                 case 1:
@@ -1744,7 +1822,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(base.GetPageTitle);
 
                 // Switch to Iframe
-                base.SwitchToIFrameById("iframeSelfEnrollment");
+                base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
                 base.WaitForElement(By.XPath("//div[@class='span11 seccess-msg']"));
                 returnSuccessMessage = base.GetInnerTextAttributeValueByXPath("//div[@class='span11 seccess-msg']");
             }
@@ -1768,7 +1847,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(base.GetPageTitle);
 
                 // Switch to Iframe
-                base.SwitchToIFrameById("iframeSelfEnrollment");
+                base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
                 base.WaitForElement(By.Id("spnCourseName"));
                 returnCourseName = base.GetInnerTextAttributeValueById("spnCourseName");
             }
@@ -1788,9 +1868,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickButton", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(base.GetPageTitle);
             base.SelectWindow(base.GetPageTitle);
-            base.SwitchToIFrameById("iframeSelfEnrollment");
-
-            bool hjas = base.IsElementPresent(By.Id("btnConfirm"), 10);
+            base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_HomePageIframe_ID_Locator);                      
             base.WaitForElement(By.Id("btnConfirm"));
             base.ClickButtonById("btnConfirm");
 
@@ -1810,7 +1889,6 @@ namespace Pegasus.Pages.UI_Pages
             {
                 Course course = Course.Get(courseType);
                 string courseName = course.Name.ToString();
-
                 base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
                     HEDGlobalHome_Page_Window_Title_Name);
                 //Select Window
@@ -2081,10 +2159,9 @@ namespace Pegasus.Pages.UI_Pages
             (string courseName, int courseDivCounter)
         {
             //Get HTML Element Property 
-            //HEDGlobalHomePageResource.
-            //HEDGlobalHome_Page_Course_Table_Row_XPath_Locator
             IWebElement courseTable = base.GetWebElementPropertiesByXPath(
-                string.Format("//div[@class='channel-content']/div/div/div[{0}]", courseDivCounter));
+                string.Format(HEDGlobalHomePageResource.
+            HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
             if (!courseTable.Text.Contains(courseName))
             {
                 //Get The Course From Each Row
@@ -2104,7 +2181,7 @@ namespace Pegasus.Pages.UI_Pages
                         base.FillEmptyTextByPartialLinkText(courseName);
 
                         IWebElement getCourseName = base.GetWebElementPropertiesByXPath(string.Format(
-                      "//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]", courseDivCounter));
+                          "//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]", courseDivCounter));
                         //Click on Link
                         base.PerformMouseClickAction(getCourseName);
                         break;
@@ -2114,9 +2191,7 @@ namespace Pegasus.Pages.UI_Pages
             else
             {
                 //Clicks on the course name
-                //base.FillEmptyTextByPartialLinkText(courseName);
-
-                base.WaitForElement(By.LinkText(courseName));
+                 base.WaitForElement(By.LinkText(courseName));
                 // base.WaitForElement(By.PartialLinkText(courseName));
                 IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
                     (courseName);

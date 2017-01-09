@@ -77,14 +77,10 @@ Then I should see the "Discussion" frame
 When I click on cancel button in Discussion Page
 Then I should be on the "Today's View" page
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Validate the display of channels dispalyed in Today's view tab for CsSmsStudent
 Scenario: Validate channels in Todays view
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
-When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
-Then I should be on the "Global Home" page
 When I click on Open button of "MyItLabInstructorCourse" as "CsSmsStudent" user
 Then I should be on the "Today's View" page
 Then I should be displayed with "Notifications" channel  on "Today's View" page as "CsSmsStudent" user 

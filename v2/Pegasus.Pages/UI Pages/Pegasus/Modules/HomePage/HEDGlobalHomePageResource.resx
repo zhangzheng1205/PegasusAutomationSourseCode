@@ -258,4 +258,28 @@
   <data name="HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID" xml:space="preserve">
     <value>_ctl5__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
+  <data name="HEDGlobalHomePage_HomePageIframe_ID_Locator" xml:space="preserve">
+    <value>iframeSelfEnrollment</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator" xml:space="preserve">
+    <value>myModalLabel</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_MyProfileLightBox_BasicPreference_ClassName_Locator" xml:space="preserve">
+    <value>csssimPref</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_MyProfileLightBox_ID_Locator" xml:space="preserve">
+    <value>lblMail</value>
+  </data>
+  <data name="HEDGlobalHomePage_TodaysView_Announcement_Channel_ID" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="HEDGlobalHomePage_TodaysView_Calendar_Channel_ID" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="HEDGlobalHomePage_TodaysView_Notification_Channel_ID" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Name_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]</value>
+  </data>
 </root>

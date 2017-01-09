@@ -29,79 +29,124 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Verify the channel existance in Home page 
         /// </summary>
         /// <param name="channelName">This is channel name.</param>
+        /// <param name="pageTitle">This is Page title.</param>
         /// <param name="userType">This is user type enum.</param>
          [Then(@"I should be displayed with ""(.*)"" channel  on ""(.*)"" page as ""(.*)"" user")]
         public void DisplayedOfChannelInHomePage(string channelName, string pageTitle, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("HomePage", "DisplayedOfChannelInHomePage",base.IsTakeScreenShotDuringEntryExit);
-             switch(userType)
-             {
-                 // Get channel name from the application
-                 case User.UserTypeEnum.CsSmsInstructor:
-                             Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                                Title, () => Assert.AreEqual(channelName.ToLower(), new HEDGlobalHomePage().getINSChannelDetails(pageTitle, channelName)));
-                             break;
-                 case User.UserTypeEnum.CsSmsStudent:
-                             Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                             Title, () => Assert.AreEqual(channelName.ToLower(), new HEDGlobalHomePage().getStudChannelDetails(pageTitle, channelName)));
-                             break;
-             }
-            Logger.LogMethodExit("HomePage", "DisplayedOfChannelInHomePage", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userType)
+                {
+                    // Get channel name from the application
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        Logger.LogAssertion("DisplayedOfOptionInHeader",
+                            ScenarioContext.Current.ScenarioInfo.
+                           Title, () => Assert.AreEqual(channelName.ToLower(),
+                               new HEDGlobalHomePage().
+                               GetINSChannelDetails(pageTitle, channelName)));
+                        break;
+                    case User.UserTypeEnum.CsSmsStudent:
+                        Logger.LogAssertion("DisplayedOfOptionInHeader",
+                            ScenarioContext.Current.ScenarioInfo.
+                        Title, () => Assert.AreEqual(channelName.ToLower(),
+                            new HEDGlobalHomePage().
+                            GetStudChannelDetails(pageTitle, channelName)));
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HomePage", "DisplayedOfChannelInHomePage",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
          
+        /// <summary>
+        /// Validate the display of options dispalyed in the specified channel
+        /// </summary>
+        /// <param name="buttonName">This is the button name.</param>
+        /// <param name="channelName">This is the channel name.</param>
+        /// <param name="pageName">This is the page name.</param>
          [Then(@"I should be displayed with ""(.*)"" icon in ""(.*)"" channel of ""(.*)"" page")]
          [Then(@"I should be displayed with ""(.*)"" icon in ""(.*)"" channel")]
          [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel")]
          public void DisplayedOfOptionsInChannels(string buttonName, string channelName, string pageName)
          {
-             Logger.LogMethodEntry("HomePage","DisplayedOfOptionsInChannels",base.IsTakeScreenShotDuringEntryExit);
-             switch (pageName)
+             Logger.LogMethodEntry("HomePage","DisplayedOfOptionsInChannels",
+                 base.IsTakeScreenShotDuringEntryExit);
+             try
              {
-                 case "Today's View":
-                     switch (channelName)
-                     {
-                         case "Notifications":
-                             Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                                Title, () => Assert.AreEqual(buttonName.ToLower(), new TodaysViewUxPage().getNotificationsChannelIconsTodaysView(buttonName, pageName)));
-                             break;
-
-                         case "Calendar":
-                             Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                                Title, () => Assert.AreEqual(buttonName.ToLower(), new TodaysViewUxPage().GetCalendarChannelIconsTodaysView(buttonName, pageName)));
-                             break;
-
-                         case "Announcements":
-                             Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                                Title, () => Assert.AreEqual(buttonName.ToLower(), new TodaysViewUxPage().GetAnnouncementsChannelIconsTodaysView(buttonName, pageName)));
-                             break;
-                     }
-                     break;
-
-                 case "Global Home":
+                 switch (pageName)
+                 {
+                     case "Today's View":
                          switch (channelName)
                          {
-                             case "My Courses and Testbanks":
-                                 Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                                    Title, () => Assert.AreEqual(buttonName.ToLower(), new HEDGlobalHomePage().getMyCoursesTestbanksButtonDetails(buttonName)));
+                             case "Notifications":
+                                 Logger.LogAssertion("DisplayedOfOptionInHeader",
+                                     ScenarioContext.Current.ScenarioInfo.
+                                    Title, () => Assert.AreEqual(buttonName.ToLower(),
+                                        new TodaysViewUxPage().
+                                        getNotificationsChannelIconsTodaysView(buttonName, pageName)));
+                                 break;
+
+                             case "Calendar":
+                                 Logger.LogAssertion("DisplayedOfOptionInHeader",
+                                     ScenarioContext.Current.ScenarioInfo.
+                                    Title, () => Assert.AreEqual(buttonName.ToLower(),
+                                        new TodaysViewUxPage().
+                                        GetCalendarChannelIconsTodaysView(buttonName, pageName)));
                                  break;
 
                              case "Announcements":
-                                 Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
-                                    Title, () => Assert.AreEqual(buttonName.ToLower(), new HEDGlobalHomePage().getAnnouncementsButtonDetails(buttonName)));
+                                 Logger.LogAssertion("DisplayedOfOptionInHeader",
+                                     ScenarioContext.Current.ScenarioInfo.
+                                    Title, () => Assert.AreEqual(buttonName.ToLower(),
+                                        new TodaysViewUxPage().
+                                        GetAnnouncementsChannelIconsTodaysView(buttonName, pageName)));
                                  break;
-                        }
-                     break;
+                         }
+                         break;
+
+                     case "Global Home":
+                         switch (channelName)
+                         {
+                             case "My Courses and Testbanks":
+                                 Logger.LogAssertion("DisplayedOfOptionInHeader",
+                                     ScenarioContext.Current.ScenarioInfo.
+                                    Title, () => Assert.AreEqual(buttonName.ToLower(),
+                                        new HEDGlobalHomePage().
+                                        GetMyCoursesTestbanksButtonDetails(buttonName)));
+                                 break;
+
+                             case "Announcements":
+                                 Logger.LogAssertion("DisplayedOfOptionInHeader",
+                                     ScenarioContext.Current.ScenarioInfo.
+                                    Title, () => Assert.AreEqual(buttonName.ToLower(),
+                                        new HEDGlobalHomePage().
+                                        GetAnnouncementsButtonDetails(buttonName)));
+                                 break;
+                         }
+                         break;
+                 }
              }
-             Logger.LogMethodExit("HomePage", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+             }
+             Logger.LogMethodExit("HomePage", "DisplayedOfOptionsInChannels", 
+                 base.IsTakeScreenShotDuringEntryExit);
          }
 
 
         /// <summary>
-        /// Click Option on
+        /// Click on the buttons in Today's view page channel
         /// </summary>
-        /// <param name="buttonName"></param>
-        /// <param name="channelName"></param>
+         /// <param name="buttonName">This is the button name.</param>
+         /// <param name="channelName">This is the channel name.</param>
          [When(@"I click on ""(.*)"" button in ""(.*)"" channel")]
          public void ClickOnButtonInChannel(string buttonName, string channelName)
          {

@@ -4395,9 +4395,13 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="tabName">This is the tab name.</param>
         /// <param name="couseTypeEnum">This is course type enum.</param>
         /// <param name="userType">This is user type enum</param>
-        public void ValidateOptionsInTopHeaderAndPerformOperation(string optionName, string tabName, Course.CourseTypeEnum couseTypeEnum)
+        public void ValidateOptionsInTopHeaderAndPerformOperation(string optionName, 
+            string tabName, Course.CourseTypeEnum couseTypeEnum)
         {
-            Logger.LogMethodEntry("TodaysViewUXPage", "ValidateOptionsInTopHeaderAndPerformOperation",base.IsTakeScreenShotDuringEntryExit);
+            //verify header option as HED user and perform operation based on the options
+            Logger.LogMethodEntry("TodaysViewUXPage", 
+                "ValidateOptionsInTopHeaderAndPerformOperation",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                switch(couseTypeEnum)
@@ -4416,20 +4420,26 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("TodaysViewUXPage", "ValidateOptionsInTopHeaderAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("TodaysViewUXPage", 
+                "ValidateOptionsInTopHeaderAndPerformOperation",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Verify the Tab Nam
+        /// Verify the Tab Name
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="tabName">This is tab name.</param>
         private void VerifyTheTabExistanceAndPerformOperation(string optionName, string tabName)
         {
-            Logger.LogMethodEntry("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            //Verify the Tab Name
+            Logger.LogMethodEntry("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                //Get the page title from the application
                 string actualPageTitle = base.GetPageTitle;
+                //Compare the tab name and Page title
                 if (tabName == actualPageTitle)
                 {
                     this.ClickOptionInCourseHeader(optionName);
@@ -4440,7 +4450,8 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            Logger.LogMethodExit("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -4450,30 +4461,40 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="tabName">This is tab name.</param>
         private void ClickOptionInCourseHeader(string optionName)
         {
-            Logger.LogMethodEntry("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCourseHeader",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch(optionName)
                 {
                     case "Home":
-                        //TodayViewUXPageResource_Header_HomeOption_ID
-                        base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink"));
-                        base.ClickLinkById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink");
+                        //Wait for the Home Link
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_HomeOption_ID_Locator));
+                        //CLick on Home Link
+                        base.ClickLinkById(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_HomeOption_ID_Locator);
                         break;
                     case "Help":
-                        //TodayViewUXPageResource_Header_HelpOption_ID
-                        base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_HelpLink"));
-                        base.ClickLinkById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_HelpLink");
+                        //Wait for the Help Link
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_HelpOption_ID_Locator));
+                        //Click on Help Link
+                        base.ClickLinkById(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_HelpOption_ID_Locator);
                         break;
                     case "Support":
-                        //TodayViewUXPageResource_Header_SupportOption_ID
-                        base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport"));
-                        base.ClickLinkById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport");
+                        //Wait for the Support Link
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_SupportOption_ID_Locator));
+                        //Click on Support Link
+                        base.ClickLinkById(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_SupportOption_ID_Locator);
                         break;
 
                     case "My Profile":
                     case " Privacy ":
-                    case "Sign out":
+                    case "Sign out":                       
                         this.ClickOptionAvailableInUserDropdownHeader(optionName);
                         break;
                 }
@@ -4483,7 +4504,8 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            Logger.LogMethodExit("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInCourseHeader",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -4492,52 +4514,99 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="optionName">This is option name.</param>
         private void ClickOptionAvailableInUserDropdownHeader(string optionName)
         {
-            base.WaitForElement(By.ClassName("icon-chevron-down"));
-            IWebElement getDrodownIcon = base.GetWebElementPropertiesByClassName("icon-chevron-down");
-            base.ClickByJavaScriptExecutor(getDrodownIcon);
-
-            switch(optionName)
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionAvailableInUserDropdownHeader",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            try
             {
-                case "My Profile":
-                    base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancMyAccount"));
-                    IWebElement getMyAccountOption = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancMyAccount");
-                    base.PerformMouseHoverAction(getMyAccountOption);
-                    base.PerformMouseClickAction(getMyAccountOption);
-                    break;
+                //Wait for the Dropdown icon
+                base.WaitForElement(By.ClassName("icon-chevron-down"));
+                //Get the properties of dropdown icon
+                IWebElement getDrodownIcon = base.GetWebElementPropertiesByClassName("icon-chevron-down");
+                //Click on Dropdown icon
+                base.ClickByJavaScriptExecutor(getDrodownIcon);
 
-                case " Privacy ":
-                    base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_spanPrivacyPolicyt"));
-                    IWebElement getPrivacyOption = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_spanPrivacyPolicy");
-                    base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
-                    base.PerformMouseClickAction(getPrivacyOption);
-                    break;
+                switch (optionName)
+                {
+                    case "My Profile":
+                        //Wait for My Profile option 
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
+                        //Get the properties of My Profile option
+                        IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                            (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
+                        //MouseHover on My Profile option
+                        base.PerformMouseHoverAction(getMyProfileOption);
+                        //CLick on My Profile option
+                        base.PerformMouseClickAction(getMyProfileOption);
+                        break;
 
-                case "Sign out":
-                    base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut"));
-                    IWebElement getSignoutOption = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_testLogOut");
-                    base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
-                    base.PerformMouseClickAction(getSignoutOption);
-                    break;
+                    case " Privacy ":
+                        //Wait for Privacy option
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_PrivacyOption_ID_Locator));
+                        //Get the properties of Privacy option
+                        IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                            (TodaysViewUXPageResource.TodayViewUXPageResource_Header_PrivacyOption_ID_Locator);
+                        //MouseHover on Privacy option
+                        base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                        //CLick on Privacy option
+                        base.PerformMouseClickAction(getPrivacyOption);
+                        break;
+
+                    case "Sign out":
+                        //Wait for Sign out option
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
+                        //Get the properties of Sign out option
+                        IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
+                        //MouseHover on Sign out option
+                        base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                        //CLick on Signout option
+                        base.PerformMouseClickAction(getSignoutOption);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionAvailableInUserDropdownHeader",
+                          base.IsTakeScreenShotDuringEntryExit);
         }
 
-        public bool getInsPageURLAndPageTitle(string pageTitle,User.UserTypeEnum userType)
+        /// <summary>
+        /// Checks if the Instructor URL and the page title is present
+        /// </summary>
+        /// <param name="pageTitle">This is the Page name.</param>
+        /// <param name="userType">This is the User type enum.</param>
+        /// <returns>True or False status based on the Instructor url and the page title.</returns>
+        public bool GetInsPageURLAndPageTitle(string pageTitle,User.UserTypeEnum userType)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetInsPageURLAndPageTitle",
+                                  base.IsTakeScreenShotDuringEntryExit);
             string URL = null;
             bool status = false;
             try
             {
+                //Get User
                 User user = User.Get(userType);
                 string userName = user.Name.ToString();
+                //Switch to specified page title
                 base.SwitchToWindow(pageTitle);
                 
                 switch (pageTitle)
                 {
                     case "Instructor Help":
                         {
+                            //Get the current page URL from the application
                             string getApplicationURL = base.GetCurrentUrl;
-                            switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
-                                 ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+                            //Check for the environment specified in App config
+                            switch (Environment.GetEnvironmentVariable(
+                                AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                                 ?? ConfigurationManager.AppSettings[
+                                 AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
                             {
                                 case "PPE":
                                     break;
@@ -4547,6 +4616,7 @@ namespace Pegasus.Pages.UI_Pages
                                 case "PROD":
                                     break;
                             }
+                            //Compare the Application URL and Page title
                             if (URL == getApplicationURL && pageTitle == GetPageTitle)
                             {
                                 status = true;
@@ -4555,8 +4625,10 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
                     case "Pearson Education Customer Technical Support":
+                        //Get the User name from application
                         string getUser = base.GetInnerTextAttributeValueById("lblLogin");
                         string getUserName = getUser.Trim();
+                        //Compare the Username and Page title
                         if (getUserName == userName && pageTitle == GetPageTitle)
                             {
                                 status = true;
@@ -4568,24 +4640,38 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetInsPageURLAndPageTitle",
+                                base.IsTakeScreenShotDuringEntryExit);
             return status;
         }
 
-        public bool getStudPageURLAndPageTitle(string pageTitle, User.UserTypeEnum userType)
+        /// <summary>
+        /// Checks if the Student URL and the page title is present
+        /// </summary>
+        /// <param name="pageTitle">This is the Page name.</param>
+        /// <param name="userType">This is the User type enum.</param>
+        /// <returns>True or False status based on the Instructor url and the page title.</returns>
+        public bool GetStudPageURLAndPageTitle(string pageTitle, User.UserTypeEnum userType)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetStudPageURLAndPageTitle",
+                                  base.IsTakeScreenShotDuringEntryExit);
             string URL = null;
             bool status = false;
             try
             {
+                //Get User
                 User user = User.Get(userType);
                 string userName = user.Name.ToString();
+                //Switch to specified page title
                 base.SwitchToWindow(pageTitle);
 
                 switch (pageTitle)
                 {
                     case "Student Help":
                         {
+                            //Get the current page URL from the application
                             string getApplicationURL = base.GetCurrentUrl;
+                            //Check for the environment specified in App config
                             switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
                                  ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
                             {
@@ -4597,6 +4683,7 @@ namespace Pegasus.Pages.UI_Pages
                                 case "PROD":
                                     break;
                             }
+                            //Compare the Application URL and Page title
                             if (URL == getApplicationURL && pageTitle == GetPageTitle)
                             {
                                 status = true;
@@ -4605,8 +4692,10 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
                     case "Pearson Education Customer Technical Support":
+                        //Get the User name from application
                         string getUser = base.GetInnerTextAttributeValueById("lblLogin");
                         string getUserName = getUser.Trim();
+                        //Compare the Username and Page title
                         if (getUserName == userName && pageTitle == GetPageTitle)
                         {
                             status = true;
@@ -4618,20 +4707,33 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetStudPageURLAndPageTitle",
+                                 base.IsTakeScreenShotDuringEntryExit);
             return status;
         }
 
-        public bool getMessageAndUser(string message, User.UserTypeEnum userType)
+        /// <summary>
+        /// Checks if the User name and Message text is present
+        /// </summary>
+        /// <param name="message">This is the message text.</param>
+        /// <param name="userType">This is the user type enum.</param>
+        /// <returns>True or False status based on the Username and message text.</returns>
+        public bool GetMessageAndUser(string message, User.UserTypeEnum userType)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetMessageAndUser", 
+                base.IsTakeScreenShotDuringEntryExit);
             bool status = false;
             try
             {
+                //Wait for the window to load
                 base.WaitUntilWindowLoads(base.GetPageTitle);
                 string getmessage = base.GetInnerTextAttributeValueByClassName("rightmenu");
 
-                // Actual message dispayed on application
+                //Actual message dispayed on application
                 string getActualWelcomeMessage = getmessage.Remove(8);
+                //User name displayed in application
                 string getActualUserName = getmessage.Remove(0, 10);
+                //Message displayed in the application
                 string actualWelcomeMesage = (getActualWelcomeMessage + getActualUserName).Trim();
 
                 // Expected message
@@ -4652,6 +4754,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetMessageAndUser",
+                base.IsTakeScreenShotDuringEntryExit);
 
             return status;
         }
@@ -4660,54 +4764,89 @@ namespace Pegasus.Pages.UI_Pages
         /// This methord is used to get the course information from the application within the course
         /// </summary>
         /// <param name="courseType">This is course type enum.</param>
-        /// <returns></returns>
-        public bool getCourseInfoDetails(Course.CourseTypeEnum courseType)
+        /// <returns>True of False based on the COurse ID and Name</returns>
+        public bool GetCourseInfoDetails(Course.CourseTypeEnum courseType)
         {
-            Logger.LogMethodEntry("TodaysViewUXPage", "getCourseInfoDetails", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetCourseInfoDetails", 
+                base.IsTakeScreenShotDuringEntryExit);
             bool status = false;
-            Course course = Course.Get(courseType);
-            // Expected course details from Enum(In memeory)
-            string getExpectedCourseID = course.SectionId.ToString();
-            string getExpectedCourseName = course.Name.ToString();
+            try
+            {
+                Course course = Course.Get(courseType);
+                // Expected course details from Enum(In memeory)
+                string getExpectedCourseID = course.SectionId.ToString();
+                string getExpectedCourseName = course.Name.ToString();
 
-            // Actual course details from application
-                string getActualCourseID = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_HeaderCourseID");
-                string getActualCourseName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_headerCourseName");
-
+                // Actual course ID from application
+                string getActualCourseID = base.GetInnerTextAttributeValueById(
+                    TodaysViewUXPageResource.TodayViewUXPageResource_Header_CourseId_ID_Locator);
+                // Actual course Name from application
+                string getActualCourseName = base.GetInnerTextAttributeValueById(
+                    TodaysViewUXPageResource.TodayViewUXPageResource_Header_CourseName_ID_Locator);
                 if (getActualCourseID == getExpectedCourseID && getActualCourseName == getExpectedCourseName)
-                    {
-                        status = true;
-                    }
-            Logger.LogMethodExit("TodaysViewUXPage", "getCourseInfoDetails", base.IsTakeScreenShotDuringEntryExit);
+                {
+                    status = true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetCourseInfoDetails", 
+                base.IsTakeScreenShotDuringEntryExit);
             return status;
         }
 
         /// <summary>
         /// This methord is to get the title of option in the course header.
         /// </summary>
+        /// <param name="optionName">This is option name.</param>
         /// <returns>Return option title.</returns>
-        public string getHeaderOption(string optionName)
+        public string GetHeaderOption(string optionName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetHeaderOption",
+                                  base.IsTakeScreenShotDuringEntryExit);
             string optionDisplayed = null;
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            switch(optionName)
+            try
             {
-                case "Preferences":
-                    base.WaitForElement(By.XPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a"));
-                    optionDisplayed = base.GetInnerTextAttributeValueByXPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a");
-                break;
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                switch (optionName)
+                {
+                    case "Preferences":
+                        //Wait for 'Preference' option
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_PreferenceLink_Xpath_Locator));
+                        optionDisplayed = base.GetInnerTextAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_PreferenceLink_Xpath_Locator);
+                        break;
 
-                case "Go to Student View":
-                base.WaitForElement(By.ClassName("blubaropts"));
-                optionDisplayed = base.GetInnerTextAttributeValueByClassName("blubaropts");
-                break;
+                    case "Go to Student View":
+                        //Wait for the 'Go To Student' option
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_GoToStudentViewLink_ClassName_Locator));
+                        optionDisplayed = base.GetInnerTextAttributeValueByClassName
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_GoToStudentViewLink_ClassName_Locator);
+                        break;
 
-                case "Return to Instructor View":
-                base.WaitForElement(By.ClassName("InsViewtxt"));
-                optionDisplayed = base.GetInnerTextAttributeValueByClassName("InsViewtxt");
-                break;
+                    case "Return to Instructor View":
+                        //Wait for 'Return to Instructor View' option
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_ReturnToInstructorViewLink_ClassName_Locator));
+                        optionDisplayed = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_ReturnToInstructorViewLink_ClassName_Locator);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetHeaderOption",
+                                 base.IsTakeScreenShotDuringEntryExit);
             return optionDisplayed;
+
         }
 
         /// <summary>
@@ -4716,125 +4855,214 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="optionName">This is option name.</param>
         public void clickHeaderOption(string optionName)
         {
-            base.WaitUntilWindowLoads(base.GetPageTitle);
-            switch(optionName)
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickHeaderOption",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            //click the option in the header
+            try
             {
-                case "Preferences":
-                    base.WaitForElement(By.XPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a"));
-                    IWebElement getPreferenceOption = base.GetWebElementPropertiesByXPath("//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a");
-                    base.PerformMouseClickAction(getPreferenceOption);
-                    break;
- 
-                   case "Go to Student View":
-                    base.WaitForElement(By.ClassName("blubaropts"));
-                    IWebElement getStudentViewOption = base.GetWebElementPropertiesByClassName("blubaropts");
-                    base.PerformMouseClickAction(getStudentViewOption);
-                    break;
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                switch (optionName)
+                {
+                    case "Preferences":
+                        //Wait for 'Preference' Link
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_PreferenceLink_Xpath_Locator));
+                        //Get the properties of the 'Preferences' link
+                        IWebElement getPreferenceOption = base.
+                            GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Header_PreferenceLink_Xpath_Locator);
+                        //Click on the 'Preferences' link
+                        base.PerformMouseClickAction(getPreferenceOption);
+                        break;
 
-                   case "Return to Instructor View":
-                    base.WaitForElement(By.ClassName("InsViewtxt"));
-                    IWebElement getInstructorViewOption = base.GetWebElementPropertiesByClassName("InsViewtxt");
-                    base.PerformMouseClickAction(getInstructorViewOption);
-                    break;
+                    case "Go to Student View":
+                        //Wait for 'Go to Student View' Link
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Header_GoToStudentViewLink_ClassName_Locator));
+                        //Get the properties of the 'Go to Student View' link
+                        IWebElement getStudentViewOption = base.
+                            GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Header_GoToStudentViewLink_ClassName_Locator);
+                        //Click on the 'Go to Student View' link
+                        base.PerformMouseClickAction(getStudentViewOption);
+                        break;
+
+                    case "Return to Instructor View":
+                        //Wait for 'Return to Instructor View' Link
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Header_ReturnToInstructorViewLink_ClassName_Locator));
+                        //Get the properties of the 'Return to Instructor View' link
+                        IWebElement getInstructorViewOption = base.GetWebElementPropertiesByClassName
+                            (TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Header_ReturnToInstructorViewLink_ClassName_Locator);
+                        //Click on the 'Return to Instructor View' link
+                        base.PerformMouseClickAction(getInstructorViewOption);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickHeaderOption",
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
 
         /// <summary>
-        /// Get the status of channel existance
+        /// Verify the Icons present in Today's view Notification channel
         /// </summary>
-        /// <param name="channelName">This is Channel Name.</param>
-        /// <returns>Return status of channel existance.</returns>
-        public string getNotificationsChannelIconsTodaysView(string buttonName,string pageName)
+        /// <param name="buttonName">This is Button Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        /// <returns>Return button name of present in the channel.</returns>
+        public string GetNotificationsChannelIconsTodaysView(string buttonName,string pageName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetNotificationsChannelIconsTodaysView",
+                                 base.IsTakeScreenShotDuringEntryExit);
             string returnButtonName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(pageName);
-
-            switch (buttonName)
+            try
             {
-                case "Minmize":
-                    // Get text from the application
-                    base.WaitForElement(By.ClassName("channel-options-min"));
-                    returnButtonName = base.GetInnerTextAttributeValueByClassName("channel-options-min");
-                    break;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageName);
 
-                case "Close":
-                    // Get text from the application
-                    base.WaitForElement(By.ClassName("remove"));
-                    returnButtonName = base.GetInnerTextAttributeValueByClassName("remove");
-                    break;
+                switch (buttonName)
+                {
+                    case "Minmize":
+                        // Get text from the application
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_ClassName_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByClassName
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_ClassName_Locator);
+                        break;
+
+                    case "Close":
+                        // Get text from the application
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByClassName(
+                            TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+              ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetNotificationsChannelIconsTodaysView",
+                                 base.IsTakeScreenShotDuringEntryExit);
             // Convert the text to lowercase and return the value
             return returnButtonName.ToLower();
         }
 
         /// <summary>
-        /// Get the status of channel existance
+        /// Verify the Icons present in Today's view Announcement channel
         /// </summary>
-        /// <param name="channelName">This is Channel Name.</param>
-        /// <returns>Return status of channel existance.</returns>
+        /// <param name="buttonName">This is Button Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        /// <returns>Return Button name of present in the Announcement channel.</returns>
         public string GetAnnouncementsChannelIconsTodaysView(string buttonName, string pageName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetAnnouncementsChannelIconsTodaysView",
+                                  base.IsTakeScreenShotDuringEntryExit);
             string returnButtonName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(pageName);
-
-            switch (buttonName)
+            try
             {
-                case "Move Down":
-                    // Get text from the application
-                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span/button"));
-                    returnButtonName = base.GetTitleAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span/button");
-                    break;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageName);
 
-                case "Move Up":
-                    // Get text from the application
-                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span/button"));
-                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span");
-                    break;
+                switch (buttonName)
+                {
+                    case "Move Down":
+                        //Wait for the element to load in UI
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator));
+                        returnButtonName = base.GetTitleAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator);
+                        break;
 
-                case "Minmize":
-                    // Get text from the application
-                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span[2]/a"));
-                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span[2]/a");
-                    break;
+                    case "Move Up":
+                        //Wait for the element to load in UI
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator);
+                        break;
+
+                    case "Minmize":
+                        //Wait for the element to load in UI
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator);
+                        break;
+                }
             }
-            // Convert the text to lowercase and return the value
-            return returnButtonName.ToLower();
+            catch (Exception e)
+            {
+              ExceptionHandler.HandleException(e);
+            }
+                 Logger.LogMethodExit("TodaysViewUXPage", "GetAnnouncementsChannelIconsTodaysView",
+                                 base.IsTakeScreenShotDuringEntryExit);
+                 // Convert the text to lowercase and return the value
+                 return returnButtonName.ToLower();
         }
 
         /// <summary>
-        /// Get the status of channel existance
+        /// Verify the Icons present in Today's view Calendar frame
         /// </summary>
-        /// <param name="channelName">This is Channel Name.</param>
+        /// <param name="buttonName">This is Button Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
         /// <returns>Return status of channel existance.</returns>
-        public string GetCalendarChannelIconsTodaysView(string buttonName, string pageName)
+       public string GetCalendarChannelIconsTodaysView(string buttonName, string pageName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetCalendarChannelIconsTodaysView",
+                                   base.IsTakeScreenShotDuringEntryExit);
             string returnButtonName = string.Empty;
-            // Wait untill window loads
-            base.WaitUntilWindowLoads(pageName);
+            try
+            {               
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageName);
 
-            switch (buttonName)
-            {
-                case "Move Up":
-                    // Get text from the application
-                    base.WaitForElement(By.XPath("//div[@id='4']/div/div/div/span[2]/span/button"));
-                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='4']/div/div/div/span[2]/span/button");
-                    break;
+                switch (buttonName)
+                {
+                    case "Move Up":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
+                        break;
 
-                case "Minimize":
-                    // Get text from the application
-                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span[2]/a"));
-                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span[2]/a");
-                    break;
+                    case "Minimize":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator);
+                        break;
 
-                case "Close":
-                    // Get text from the application
-                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span[3]/a"));
-                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span[3]/a");
-                    break;
+                    case "Close":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }      
+            Logger.LogMethodExit("TodaysViewUXPage", "GetCalendarChannelIconsTodaysView",
+                                  base.IsTakeScreenShotDuringEntryExit);
             // Convert the text to lowercase and return the value
             return returnButtonName.ToLower();
         }
