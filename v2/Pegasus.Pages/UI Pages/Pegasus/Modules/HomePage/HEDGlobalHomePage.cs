@@ -748,7 +748,6 @@ namespace Pegasus.Pages.UI_Pages
                 , base.IsTakeScreenShotDuringEntryExit);
             //Get Course Row Counter
             const int getCourseRowCounter = 1;
-            bool hjsd = base.IsElementPresent(By.XPath("//div[@class='channel-content']/div/div"),10);
             base.WaitForElement(
                 By.XPath(string.Format(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Course_Table_Row_XPath_Locator,
@@ -769,7 +768,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get HTML Element Property 
             //HEDGlobalHomePageResource.
-                //HEDGlobalHome_Page_Course_Table_Row_XPath_Locator
+            //HEDGlobalHome_Page_Course_Table_Row_XPath_Locator
             IWebElement courseTable = base.GetWebElementPropertiesByXPath(
                 string.Format("//div[@class='channel-content']/div/div/div[{0}]", courseDivCounter));
             if (!courseTable.Text.Contains(courseName))
@@ -1429,7 +1428,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Return lightbox name.</returns>
         public string getLightboxTitle(string lightboxName)
         {
-            Logger.LogMethodEntry("HEDGlobalHomePage", "getLightboxTitle",base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("HEDGlobalHomePage", "getLightboxTitle", base.IsTakeScreenShotDuringEntryExit);
 
             string getLightboxName = null;
             base.WaitUntilWindowLoads(base.GetPageTitle);
@@ -1438,25 +1437,692 @@ namespace Pegasus.Pages.UI_Pages
                 switch (lightboxName)
                 {
                     case "My Profile":
-                        bool ddf = base.IsElementPresent(By.Id("lblMail"),10);
+                        bool ddf = base.IsElementPresent(By.Id("lblMail"), 10);
                         base.WaitForElement(By.Id("lblMail"));
                         getLightboxName = base.GetInnerTextAttributeValueByClassName("lblMail");
                         break;
 
                     case "Basic Preferences":
                         base.SwitchToLastOpenedWindow();
-                        bool kkjas = base.IsElementPresent(By.Id("form1"), 5);
                         base.WaitForElement(By.ClassName("csssimPref"));
                         getLightboxName = base.GetInnerTextAttributeValueByClassName("csssimPref");
                         break;
+
+                    case "Enroll in a Course":
+                        base.WaitForElement(By.Id("myModalLabel"));
+                        getLightboxName = base.GetInnerTextAttributeValueById("myModalLabel");
+                        break;
+
                 }
             }
-           catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "getLightboxTitle", base.IsTakeScreenShotDuringEntryExit);
             return getLightboxName;
         }
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string getINSChannelDetails(string pageTitle, string channelName)
+        {
+            string returnChannelName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(pageTitle);
+             
+            switch (channelName)
+            {
+                case "My Courses and Testbanks":
+                    //HEDGlobalHomePageResource.HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
+                    returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
+                    break;
+
+                case "Announcements":
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_Announcement_Channel_ID));
+                    returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_Announcement_Channel_ID);
+                    break;
+            }
+            // Convert the text to lowercase and return the value
+            return returnChannelName.ToLower();
+        }
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string getStudChannelDetails(string pageTitle, string channelName)
+        {
+            string returnChannelName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(pageTitle);
+
+            switch(pageTitle)
+            {
+                case "Today's View":
+                    switch (channelName)
+                    {
+                        case "Notifications":
+                            base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading"));
+                            returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading");
+                            break;
+
+                        case "Announcements":
+                            base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading"));
+                            returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading");
+                            break;
+
+                        case "Calendar":
+                            base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading"));
+                            returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading");
+                            break;
+                    }
+                    break;
+
+                case "Global Home":
+                    switch (channelName)
+                    {
+                        case "My Courses and Testbanks":
+                            //HEDGlobalHomePageResource.HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID
+                            base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
+                            returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                                HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
+                            break;
+
+                        case "Announcements":
+                            base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                HEDGlobalHome_Page_Announcement_Channel_ID));
+                            returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                                HEDGlobalHome_Page_Announcement_Channel_ID);
+                            break;
+                    }
+                    break;
+            }
+ 
+            // Convert the text to lowercase and return the value
+            return returnChannelName.ToLower();
+        }
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string getMyCoursesTestbanksButtonDetails(string buttonName)
+        {
+            string returnButtonName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+
+            switch (buttonName)
+            {
+                case "Create a Course":
+                    // Get text from the application
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator));
+                    returnButtonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator);
+                    break;
+
+                case "Enroll in a Course":
+                    // Get text from the application
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator));
+                    returnButtonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator);
+                    break;
+            }
+            // Convert the text to lowercase and return the value
+            return returnButtonName.ToLower();
+        }
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string getAnnouncementsButtonDetails(string buttonName)
+        {
+            string returnbuttonName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+
+            switch (buttonName)
+            {
+                case "Manage All":
+                    // Get text from the application
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_ManageAll_Button_ID_Locator));
+                    returnbuttonName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_ManageAll_Button_ID_Locator);
+                    break;
+            }
+            // Convert the text to lowercase and return the value
+            return returnbuttonName.ToLower();
+        }
+
+        public void ClickOptionsInMyCoursesTestbanksChannel(string channelName)
+        {
+            base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
+                HEDGlobalHome_Page_Window_Title_Name);
+            switch (channelName)
+            {
+                case "Create a Course":
+                    // Get text from the application
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator));
+                    base.ClickButtonById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator);
+                    break;
+
+                case "Enroll in a Course":
+                    // Get text from the application
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator));
+                    base.FocusOnElementById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator);
+                    base.ClickButtonById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator);
+                    break;
+            }
+        }
+
+        public void ClickOptionsInAnnouncementsChannel(string channelName)
+        {
+            base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
+                HEDGlobalHome_Page_Window_Title_Name);
+            switch (channelName)
+            {
+                case "Manage All":
+                    // Get text from the application
+                    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_ManageAll_Button_ID_Locator));
+                    base.ClickButtonById(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_ManageAll_Button_ID_Locator);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Enter CourseId in Enroll in a Course wizard 
+        /// </summary>
+        /// <param name="courseType">This is course type enum.</param>
+        public void EnterCourseID(Course.CourseTypeEnum courseType)
+        {
+            Logger.LogMethodEntry("HEDGlobalHomePage", "EnterCourseID", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Get course ID from InMemory
+                Course course = Course.Get(courseType);
+                string courseID = course.InstructorCourseId.ToString();
+                // Wait for Course ID text box to load
+                base.SelectWindow(base.GetPageTitle);
+                base.SwitchToIFrameById("iframeSelfEnrollment");
+                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                       HedGlobalHome_Page_CourseID_TextBox_Id_Locator));
+                // Fill textbox with course ID
+                base.FillTextBoxById(HEDGlobalHomePageResource.
+                       HedGlobalHome_Page_CourseID_TextBox_Id_Locator, courseID);
+                // Click submit button
+                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_EnrollInCourse_SubmitButtonl_ID_Locator));
+                base.ClickButtonById(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_EnrollInCourse_SubmitButtonl_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HEDGlobalHomePage", "EnterCourseID", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This methord is to get the options available in Enroll In Course
+        /// </summary>
+        /// <param name="stepCount">This is step count available in "Enroll In Course" lightbox.</param>
+        /// <param name="stepName">This is step name available in "Enroll In Course" lightbox.</param>
+        /// <returns>Return status.</returns>
+        public bool GetEnrollInCourseOptions(int stepCount, string stepName)
+        {
+            bool returnStatus = false;
+
+            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToIFrameById("iframeSelfEnrollment");
+            switch (stepCount)
+            {
+                case 1:
+                    bool jsd = base.IsElementPresent(By.XPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-15']"), 10);
+                    base.WaitForElement(By.XPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-15']"));
+                    string count = base.GetInnerTextAttributeValueByXPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-15']");
+                    int appCount = Convert.ToInt32(count);
+
+                    bool jkksd = base.IsElementPresent(By.ClassName("fntsize"), 10);
+                    base.WaitForElement(By.ClassName("fntsize"));
+                    string appStepName = base.GetInnerTextAttributeValueByClassName("fntsize");
+
+                    if (appCount == stepCount && appStepName == stepName)
+                    {
+                        returnStatus = true;
+                    }
+                    break;
+
+                case 2:
+                    base.WaitForElement(By.XPath("//button[@class='btn-circle-peg btn-blue-peg  margin-left-50']"));
+                    count = base.GetInnerTextAttributeValueByXPath("//button[@class='btn-circle-peg btn-blue-peg  margin-left-50']");
+                    appCount = Convert.ToInt32(count);
+                    if (appCount == stepCount)
+                    {
+                        returnStatus = true;
+                    }
+                    break;
+            }
+
+
+            return returnStatus;
+        }
+
+        /// <summary>
+        /// Get the course enrollment success message from the application.
+        /// </summary>
+        /// <returns>Return success message.</returns>
+        public string getSuccessMessage()
+        {
+            string returnSuccessMessage = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                base.SelectWindow(base.GetPageTitle);
+
+                // Switch to Iframe
+                base.SwitchToIFrameById("iframeSelfEnrollment");
+                base.WaitForElement(By.XPath("//div[@class='span11 seccess-msg']"));
+                returnSuccessMessage = base.GetInnerTextAttributeValueByXPath("//div[@class='span11 seccess-msg']");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return returnSuccessMessage;
+        }
+
+        /// <summary>
+        /// This methord is to get the course name.
+        /// </summary>
+        /// <returns>Return the course name.</returns>
+        public string getCourseName()
+        {
+            string returnCourseName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                base.SelectWindow(base.GetPageTitle);
+
+                // Switch to Iframe
+                base.SwitchToIFrameById("iframeSelfEnrollment");
+                base.WaitForElement(By.Id("spnCourseName"));
+                returnCourseName = base.GetInnerTextAttributeValueById("spnCourseName");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return returnCourseName;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="buttonName"></param>
+        public void ClickConfirmButtoninEnrollACourse(string buttonName)
+        {
+            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickButton", base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToIFrameById("iframeSelfEnrollment");
+
+            bool hjas = base.IsElementPresent(By.Id("btnConfirm"), 10);
+            base.WaitForElement(By.Id("btnConfirm"));
+            base.ClickButtonById("btnConfirm");
+
+            Logger.LogMethodExit("HEDGlobalHomePage", "ClickButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the enrolled course details from "My Courses and Testbanks " channel
+        /// </summary>
+        /// <param name="courseType">This is course type enum.</param>
+        /// <param name="frameName">This is frame name.</param>
+        /// <returns>Return status of course display</returns>
+        public bool GetEnrolledCourseDetailsInChanne(Course.CourseTypeEnum courseType, string frameName)
+        {
+            bool returnCourseDisplay = false;
+            try
+            {
+                Course course = Course.Get(courseType);
+                string courseName = course.Name.ToString();
+
+                base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Window_Title_Name);
+                //Select Window
+                base.SelectWindow(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Window_Title_Name);
+
+              returnCourseDisplay=  getCourseName(courseName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return returnCourseDisplay;
+        }
+
+        /// <summary>
+        /// This methord is to get the course name from "My Courses and Testbanks" channel
+        /// </summary>
+        /// <param name="courseName">This is course type enum.</param>
+        /// <returns>Return course existance status.</returns>
+        private bool getCourseName(string courseName)
+        {
+            bool returnStatus = false;
+            // Search and Click Course Link
+            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnCourseLink"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Get Course Row Counter
+            const int getCourseRowCounter = 1;
+            base.WaitForElement(
+                By.XPath(string.Format(HEDGlobalHomePageResource.
+                HEDGlobalHome_Page_Course_Table_Row_XPath_Locator,
+                                       getCourseRowCounter)));
+            // Click the course name
+           returnStatus=  GetCourseNameOnHomePage(courseName, getCourseRowCounter);
+
+            Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnCourseLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            return returnStatus;
+        }
+
+        /// <summary>
+        /// Select the course on home page.
+        /// </summary>
+        /// <param name="courseName">This is the course name.</param>
+        /// <param name="courseDivCounter">This is the div count.</param>
+        private bool GetCourseNameOnHomePage
+            (string courseName, int courseDivCounter)
+        {
+            bool returnStatus = false;
+            //Get HTML Element Property 
+            IWebElement courseTable = base.GetWebElementPropertiesByXPath(
+                string.Format("//div[@class='channel-content']/div/div/div[{0}]", courseDivCounter));
+            if (!courseTable.Text.Contains(courseName))
+            {
+                //Get The Course From Each Row
+                while (!courseTable.Text.Contains(courseName))
+                {
+                    courseDivCounter = courseDivCounter + 1;
+                    //Get Course Row Text
+                    string getCourseRowText = base.GetElementTextByXPath(string.Format(
+                      HEDGlobalHomePageResource.
+                      HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
+                    //If Course Present on the User Home Page
+                    if (getCourseRowText.Contains(courseName))
+                    {
+                        returnStatus = true;
+                        break;
+                    }
+                }
+            }
+            return returnStatus;
+        }
+
+            /// <summary>
+            /// Click open button of the course.
+            /// </summary>
+            /// <param name="courseType">This is course type enum.</param>
+        public void ClickOpenButtonOfCourse(Course.CourseTypeEnum courseTypeEnum, User.UserTypeEnum userTypeEnum)
+            {
+                Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOpenButtonOfCourse",base.IsTakeScreenShotDuringEntryExit);
+                //Enter Inside the Course
+
+                try
+                {
+                    //Get Course From Memory
+                    Course course = Course.Get(courseTypeEnum);
+                    switch (userTypeEnum)
+                    {
+                        case User.UserTypeEnum.HedCoreAcceptanceInstructor:
+                        case User.UserTypeEnum.HedCoreAcceptanceStudent:
+                        case User.UserTypeEnum.HedWsInstructor:
+                        case User.UserTypeEnum.HedWsStudent:
+                        case User.UserTypeEnum.HedProgramAdmin:
+                        case User.UserTypeEnum.AmpProgramAdmin:
+                        case User.UserTypeEnum.HSSProgramAdmin:
+                        case User.UserTypeEnum.HedMilAcceptanceInstructor:
+                        case User.UserTypeEnum.WLProgramAdmin:
+                        case User.UserTypeEnum.RegHedWsInstructor:
+                        case User.UserTypeEnum.RegHedWsStudent:
+                        case User.UserTypeEnum.S11eTextInstructor:
+                        case User.UserTypeEnum.S11eTextStudent:
+                            switch (courseTypeEnum)
+                            {
+                                //Course Type Enum
+                                case Course.CourseTypeEnum.ProgramCourse:
+                                case Course.CourseTypeEnum.MyItLabProgramCourse:
+                                case Course.CourseTypeEnum.MySpanishLabMaster:
+                                case Course.CourseTypeEnum.RegMySpanishLabMaster:
+                                case Course.CourseTypeEnum.AmpWSCourse:
+                                case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
+                                case Course.CourseTypeEnum.MyItLabSIMMasterCourse:
+                                case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                                case Course.CourseTypeEnum.InstructorCourse:
+                                case Course.CourseTypeEnum.HEDGeneral:
+                                case Course.CourseTypeEnum.HedMilAcceptanceSIMProgramCourse:
+                                case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
+                                case Course.CourseTypeEnum.HedCoreAcceptanceProgramCourse:
+                                case Course.CourseTypeEnum.MyTestInstructorCourse:
+                                case Course.CourseTypeEnum.MyTestBankCourse:
+                                case Course.CourseTypeEnum.HedEmptyClass:
+                                case Course.CourseTypeEnum.GraderITSIM5Course:
+                                case Course.CourseTypeEnum.MyITLabOffice2013Program:
+                                case Course.CourseTypeEnum.HedMyPsychLabProgram:
+                                case Course.CourseTypeEnum.MySpanishLabTestingMaster:
+                                case Course.CourseTypeEnum.HSSMyPsychLabProgram:
+                                case Course.CourseTypeEnum.MySpanishLabProgram:
+                                case Course.CourseTypeEnum.AmpProgramCourse:
+                                case Course.CourseTypeEnum.MyITLabOffice2013ProgramCourseCreation:
+                                case Course.CourseTypeEnum.eTextCourse:
+                                    //Open the Course
+                                    this.ClickOpenButtonOfTheCourse(course.Name);
+                                    break;
+                            }
+                            break;
+                        case User.UserTypeEnum.HedTeacherAssistant:
+                        case User.UserTypeEnum.CsSmsStudent:
+                        case User.UserTypeEnum.HSSCsSmsStudent:
+                        case User.UserTypeEnum.WLCsSmsStudent:
+                        case User.UserTypeEnum.AmpCsSmsStudent:
+                        case User.UserTypeEnum.RegCsSmsStudent:
+                            switch (courseTypeEnum)
+                            {
+                                case Course.CourseTypeEnum.ProgramCourse:
+                                case Course.CourseTypeEnum.HedMyPsychLabProgram:
+                                case Course.CourseTypeEnum.HSSMyPsychLabProgram:
+                                case Course.CourseTypeEnum.MySpanishLabMaster:
+                                case Course.CourseTypeEnum.RegMySpanishLabMaster:
+                                case Course.CourseTypeEnum.MyITLabOffice2013Program:
+                                case Course.CourseTypeEnum.MySpanishLabProgram:
+                                    //Open the Course
+                                    this.ClickOpenButtonOfTheCourse(course.SectionName);
+                                    break;
+                                case Course.CourseTypeEnum.MyItLabProgramCourse:
+                                    //Open the Course
+                                    this.ClickOpenButtonOfTheCourse(course.SectionName +
+                                        HEDGlobalHomePageResource.HEDGlobalHome_Page_SectionValue);
+                                    break;
+                                case Course.CourseTypeEnum.InstructorCourse:
+                                case Course.CourseTypeEnum.RegWLMasterCourse:
+                                case Course.CourseTypeEnum.AmpInstructorCourse:
+                                case Course.CourseTypeEnum.MyTestInstructorCourse:
+                                case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                                case Course.CourseTypeEnum.HedMyItLabPPECourse:
+                                case Course.CourseTypeEnum.HedMilSelfStudy:
+                                    //Open the Course
+                                    this.ClickOpenButtonOfTheCourse(course.Name);
+                                    break;
+                            }
+                            break;
+                        case User.UserTypeEnum.CsSmsInstructor:
+                        case User.UserTypeEnum.RegCsSmsInstructor:
+                        case User.UserTypeEnum.AmpCsSmsInstructor:
+                        case User.UserTypeEnum.HSSCsSmsInstructor:
+                        case User.UserTypeEnum.WLCsSmsInstructor:
+                        case User.UserTypeEnum.MyTestSmsInstructor:
+                            switch (courseTypeEnum)
+                            {
+                                case Course.CourseTypeEnum.ProgramCourse:
+                                case Course.CourseTypeEnum.MyTestInstructorCourse:
+                                case Course.CourseTypeEnum.RegMyITLabNewCourse:
+                                case Course.CourseTypeEnum.MyTestBankCourse:
+                                case Course.CourseTypeEnum.MyItLabProgramCourse:
+                                case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                                case Course.CourseTypeEnum.InstructorCourse:
+                                case Course.CourseTypeEnum.AmpInstructorCourse:
+                                case Course.CourseTypeEnum.RegWLMasterCourse:
+
+
+                                    //Open the Program Course
+                                    this.ClickOpenButtonOfTheCourse(course.Name);
+                                    break;
+                                case Course.CourseTypeEnum.MyITLabOffice2013Program:
+                                case Course.CourseTypeEnum.HSSMyPsychLabProgram:
+                                case Course.CourseTypeEnum.MySpanishLabProgram:
+                                case Course.CourseTypeEnum.MySpanishLabProgramMyTest:
+                                    //Open the Course
+                                    this.ClickOpenButtonOfTheCourse(course.SectionName);
+                                    break;
+
+                            }
+                            break;
+                    }
+                    //Store User Last Login Details In Memory
+                    this.StoreUserLastLoginDetailsInMemory();
+                }
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
+                Logger.LogMethodExit("HEDGlobalHomePage", "ClickOpenButtonOfCourse", base.IsTakeScreenShotDuringEntryExit);
+            }
+
+        /// <summary>
+        /// Open The Course.
+        /// </summary>
+        /// <param name="courseName">This is Course Name.</param>
+        public void ClickOpenButtonOfTheCourse(String courseName)
+        {
+            // Open Course by clicking on course Link
+            Logger.LogMethodEntry("HEDGlobalHomePage", "OpenTheCourse"
+                , base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Window_Title_Name);
+                //Select Window
+                base.SelectWindow(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Window_Title_Name);
+                //Click Course Name Link
+                ClickOnOpenButton(courseName);
+                CourseName = courseName;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HEDGlobalHomePage", "OpenTheCourse"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on the Course Link To Open.
+        /// </summary>
+        /// <param name="courseName">This is Course Name.</param>
+        private void ClickOnOpenButton(String courseName)
+        {
+            // Search and Click Course Link
+            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnCourseLink"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Get Course Row Counter
+            const int getCourseRowCounter = 1;
+            base.WaitForElement(
+                By.XPath(string.Format(HEDGlobalHomePageResource.
+                HEDGlobalHome_Page_Course_Table_Row_XPath_Locator,
+                                       getCourseRowCounter)));
+            // Click the course name
+            ClickOpenButtonOnHomePage(courseName, getCourseRowCounter);
+            Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnCourseLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the course on home page.
+        /// </summary>
+        /// <param name="courseName">This is the course name.</param>
+        /// <param name="courseDivCounter">This is the div count.</param>
+        private void ClickOpenButtonOnHomePage
+            (string courseName, int courseDivCounter)
+        {
+            //Get HTML Element Property 
+            //HEDGlobalHomePageResource.
+            //HEDGlobalHome_Page_Course_Table_Row_XPath_Locator
+            IWebElement courseTable = base.GetWebElementPropertiesByXPath(
+                string.Format("//div[@class='channel-content']/div/div/div[{0}]", courseDivCounter));
+            if (!courseTable.Text.Contains(courseName))
+            {
+                //Get The Course From Each Row
+                while (!courseTable.Text.Contains(courseName))
+                {
+                    courseDivCounter = courseDivCounter + 1;
+                    //Get Course Row Text
+                    string getCourseRowText = base.GetElementTextByXPath(string.Format(
+                      HEDGlobalHomePageResource.
+                      HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
+                    //If Course Present on the User Home Page
+                    if (getCourseRowText.Contains(courseName))
+                    {
+                        //Wait For Element
+                        base.WaitForElement(By.PartialLinkText(courseName));
+                        //Clicks on the course
+                        base.FillEmptyTextByPartialLinkText(courseName);
+
+                        IWebElement getCourseName = base.GetWebElementPropertiesByXPath(string.Format(
+                      "//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]", courseDivCounter));
+                        //Click on Link
+                        base.PerformMouseClickAction(getCourseName);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                //Clicks on the course name
+                //base.FillEmptyTextByPartialLinkText(courseName);
+
+                base.WaitForElement(By.LinkText(courseName));
+                // base.WaitForElement(By.PartialLinkText(courseName));
+                IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
+                    (courseName);
+                base.ClickByJavaScriptExecutor(getCourseName);
+            }
+        }
     }
+
 }

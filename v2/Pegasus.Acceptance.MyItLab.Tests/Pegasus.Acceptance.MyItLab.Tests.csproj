@@ -96,6 +96,7 @@
     <Compile Include="ProductAcceptanceTestDefinitions\D2LDirect.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\D2LIntegration.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\eCollegeIntegration.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\HomePage.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LaunchActivity.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ManageAnnouncement.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ApproveCourse.cs" />

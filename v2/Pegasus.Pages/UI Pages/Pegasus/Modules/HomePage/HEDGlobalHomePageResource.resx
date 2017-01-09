@@ -240,4 +240,22 @@
   <data name="HEDGlobalHome_Page_MyProfileFrame_XPath_Locator" xml:space="preserve">
     <value>//iframe[contains( @src,'/Pegasus/Modules/MyPrefernce/frmMyAccountSetting.aspx?mode=1')]</value>
   </data>
+  <data name="HEDGlobalHome_Page_Announcement_Channel_ID" xml:space="preserve">
+    <value>_ctl5__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator" xml:space="preserve">
+    <value>_ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnSearchCatalog</value>
+  </data>
+  <data name="HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator" xml:space="preserve">
+    <value>_ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnEnrollCourse</value>
+  </data>
+  <data name="HEDGlobalHome_Page_EnrollInCourse_SubmitButtonl_ID_Locator" xml:space="preserve">
+    <value>btnSubmit</value>
+  </data>
+  <data name="HEDGlobalHome_Page_ManageAll_Button_ID_Locator" xml:space="preserve">
+    <value>_ctl5__ctl1__ctl0__ctl1__ctl0_btnViewAll</value>
+  </data>
+  <data name="HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID" xml:space="preserve">
+    <value>_ctl5__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
 </root>

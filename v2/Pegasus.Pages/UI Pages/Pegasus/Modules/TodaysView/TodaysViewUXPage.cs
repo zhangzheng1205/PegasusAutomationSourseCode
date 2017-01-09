@@ -4739,6 +4739,105 @@ namespace Pegasus.Pages.UI_Pages
             }
         }
 
-       
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string getNotificationsChannelIconsTodaysView(string buttonName,string pageName)
+        {
+            string returnButtonName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(pageName);
+
+            switch (buttonName)
+            {
+                case "Minmize":
+                    // Get text from the application
+                    base.WaitForElement(By.ClassName("channel-options-min"));
+                    returnButtonName = base.GetInnerTextAttributeValueByClassName("channel-options-min");
+                    break;
+
+                case "Close":
+                    // Get text from the application
+                    base.WaitForElement(By.ClassName("remove"));
+                    returnButtonName = base.GetInnerTextAttributeValueByClassName("remove");
+                    break;
+            }
+            // Convert the text to lowercase and return the value
+            return returnButtonName.ToLower();
+        }
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string GetAnnouncementsChannelIconsTodaysView(string buttonName, string pageName)
+        {
+            string returnButtonName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(pageName);
+
+            switch (buttonName)
+            {
+                case "Move Down":
+                    // Get text from the application
+                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span/button"));
+                    returnButtonName = base.GetTitleAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span/button");
+                    break;
+
+                case "Move Up":
+                    // Get text from the application
+                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span/button"));
+                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span");
+                    break;
+
+                case "Minmize":
+                    // Get text from the application
+                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span[2]/a"));
+                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span[2]/a");
+                    break;
+            }
+            // Convert the text to lowercase and return the value
+            return returnButtonName.ToLower();
+        }
+
+        /// <summary>
+        /// Get the status of channel existance
+        /// </summary>
+        /// <param name="channelName">This is Channel Name.</param>
+        /// <returns>Return status of channel existance.</returns>
+        public string GetCalendarChannelIconsTodaysView(string buttonName, string pageName)
+        {
+            string returnButtonName = string.Empty;
+            // Wait untill window loads
+            base.WaitUntilWindowLoads(pageName);
+
+            switch (buttonName)
+            {
+                case "Move Up":
+                    // Get text from the application
+                    base.WaitForElement(By.XPath("//div[@id='4']/div/div/div/span[2]/span/button"));
+                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='4']/div/div/div/span[2]/span/button");
+                    break;
+
+                case "Minimize":
+                    // Get text from the application
+                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span[2]/a"));
+                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span[2]/a");
+                    break;
+
+                case "Close":
+                    // Get text from the application
+                    base.WaitForElement(By.XPath("//div[@id='5']/div/div/div/span[2]/span[3]/a"));
+                    returnButtonName = base.GetInnerTextAttributeValueByXPath("//div[@id='5']/div/div/div/span[2]/span[3]/a");
+                    break;
+            }
+            // Convert the text to lowercase and return the value
+            return returnButtonName.ToLower();
+        }
+
     }
 }

@@ -392,6 +392,15 @@ the UI deleted or refreshed.-->
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
+      <Name>Dependent_MIL_VCD</Name>
+      <CourseType>RegMyITLabNewCourse</CourseType>
+      <InstructorCourseId>CRSKLFL-10041126</InstructorCourseId>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
       <Name>¡Anda! Curso elemental, Second Edition-P</Name>
       <CourseType>MyItLabInstructorCourse</CourseType>
       <SectionId>CRSKLYU-10041353</SectionId>

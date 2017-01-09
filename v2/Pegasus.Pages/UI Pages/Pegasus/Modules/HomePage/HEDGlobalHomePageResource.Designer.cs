@@ -70,6 +70,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl5__ctl1__ctl0__ctl0__ctl0_lblHeading.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_Announcement_Channel_ID {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_Announcement_Channel_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //iframe[@src=&apos;/Pegasus/Modules/CourseAnnouncement/AnnouncementDefaultUX.aspx&apos;].
         /// </summary>
         internal static string HEDGlobalHome_Page_AnnouncementFrame_XPath_Locator {
@@ -205,6 +214,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnSearchCatalog.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create a Course.
         /// </summary>
         internal static string HEDGlobalHome_Page_CreateaCourse_LinkButton_Locator {
@@ -232,6 +250,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnEnrollCourse.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl5:_ctl2:_ctl0:_ctl0:_ctl0:btnEnrollCourse.
         /// </summary>
         internal static string HEDGlobalHome_Page_EnrollInCourse_Button_Id_Locator {
@@ -246,6 +273,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHome_Page_EnrollInCourse_Button_PartialLinkText_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHome_Page_EnrollInCourse_Button_PartialLinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnSubmit.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_EnrollInCourse_SubmitButtonl_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_EnrollInCourse_SubmitButtonl_ID_Locator", resourceCulture);
             }
         }
         
@@ -286,11 +322,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl5__ctl1__ctl0__ctl1__ctl0_btnViewAll.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_ManageAll_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_ManageAll_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl3__ctl3__ctl0__ctl1__ctl0_btnViewAll.
         /// </summary>
         internal static string HEDGlobalHome_Page_ManageAllButton_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHome_Page_ManageAllButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl5__ctl0__ctl0__ctl0__ctl0_lblHeading.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID", resourceCulture);
             }
         }
         
