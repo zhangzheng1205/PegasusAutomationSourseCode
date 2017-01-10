@@ -90,7 +90,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                                      ScenarioContext.Current.ScenarioInfo.
                                     Title, () => Assert.AreEqual(buttonName.ToLower(),
                                         new TodaysViewUxPage().
-                                        getNotificationsChannelIconsTodaysView(buttonName, pageName)));
+                                        GetNotificationsChannelIconsTodaysView(buttonName, pageName)));
                                  break;
 
                              case "Calendar":

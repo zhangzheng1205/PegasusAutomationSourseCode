@@ -81,6 +81,13 @@ Then I should be on the "Today's View" page
 #Products : MyItLab, HSS and World Language.
 #Purpose:Validate the display of channels dispalyed in Today's view tab for CsSmsStudent
 Scenario: Validate channels in Todays view
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on the "Global Home" page
 When I click on Open button of "MyItLabInstructorCourse" as "CsSmsStudent" user
 Then I should be on the "Today's View" page
 Then I should be displayed with "Notifications" channel  on "Today's View" page as "CsSmsStudent" user 
@@ -89,4 +96,45 @@ And I should be displayed with "Close" icon in "Notifications" channel of "Today
 Then I should be displayed with "Announcements" channel  on "Today's View" page as "CsSmsStudent" user 
 And I should be displayed with "Minmize" icon in "Announcements" channel of "Today's View" page 
 And I should be displayed with "Move Down" icon in "Announcements" channel of "Today's View" page 
+Then I should be displayed with "Calendar" channel  on "Today's View" page as "CsSmsStudent" user 
+And I should be displayed with "Minmize" icon in "Calendar" channel of "Today's View" page 
+And I should be displayed with "Move Up" icon in "Calendar" channel of "Today's View" page 
+And I should be displayed with "Close" icon in "Calendar" channel of "Today's View" page 
+
+Scenario: Move Announcements channel in Today's View page
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+#When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+#Then I should be on the "Global Home" page
+#When I click on Open button of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on the "Today's View" page
+Then I should be displayed with "Announcements" channel  on "Today's View" page as "CsSmsStudent" user 
+#Scenario: Move Announcements channel in Today's View page
+When I move the "Announcements" channel "Move Down" on "Today's View" page
+Then I should be displayed with "Move Up" icon in "Announcements" channel of "Today's View" page 
+When I move the "Announcements" channel "Move Up" on "Today's View" page
+Then I should be displayed with "Move Down" icon in "Announcements" channel of "Today's View" page 
+#Scenario: Minmize and Minmize Announcements channel in Today's View page
+When I move the "Announcements" channel "Minmize" on "Today's View" page
+Then I should be displayed with "Maximize" icon in "Announcements" channel of "Today's View" page 
+When I move the "Announcements" channel "Maximize" on "Today's View" page
+Then I should be displayed with "Minmize" icon in "Announcements" channel of "Today's View" page 
+#Scenario: Move Calendar channel in Today's View page
+When I move the "Calendar" channel "Move Up" on "Today's View" page
+Then I should be displayed with "Move Down" icon in "Calendar" channel of "Today's View" page 
+When I move the "Calendar" channel "Move Down" on "Today's View" page
+Then I should be displayed with "Move Up" icon in "Calendar" channel of "Today's View" page 
+#Scenario: Minmize and Minmize Calendar channel in Today's View page
+When I move the "Calendar" channel "Minmize" on "Today's View" page
+Then I should be displayed with "Maximize" icon in "Calendar" channel of "Today's View" page 
+When I move the "Calendar" channel "Maximize" on "Today's View" page
+Then I should be displayed with "Minmize" icon in "Calendar" channel of "Today's View" page 
+#Scenario: Minmize and Minmize Notifications  channel in Today's View page
+When I move the "Notifications" channel "Minmize" on "Today's View" page
+Then I should be displayed with "Maximize" icon in "Notifications" channel of "Today's View" page 
+When I move the "Notifications" channel "Maximize" on "Today's View" page
+Then I should be displayed with "Minmize" icon in "Notifications" channel of "Today's View" page 
 

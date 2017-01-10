@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps","VerifyWelcomeMessageForUser",base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
             .ScenarioInfo.Title, () => Assert.IsTrue(new
-            TodaysViewUxPage().getMessageAndUser(message, userType)));
+            TodaysViewUxPage().GetMessageAndUser(message, userType)));
             Logger.LogMethodExit("CommonSteps", "VerifyWelcomeMessageForUser", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -95,7 +95,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "DisplayedOfOptionInHeader", base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(optionName, new TodaysViewUxPage().
-                    getHeaderOption(optionName)));
+                    GetHeaderOption(optionName)));
             Logger.LogMethodExit("CommonSteps", "DisplayedOfOptionInHeader", base.IsTakeScreenShotDuringEntryExit);
         }
 

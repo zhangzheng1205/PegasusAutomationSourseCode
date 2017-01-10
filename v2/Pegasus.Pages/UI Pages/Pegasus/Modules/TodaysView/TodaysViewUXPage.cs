@@ -4944,6 +4944,14 @@ namespace Pegasus.Pages.UI_Pages
                             TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator);
                         break;
+
+                    case "Maximize":
+                        // Get text from the application
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MaximizeButton_ClassName_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MaximizeButton_ClassName_Locator);
+                        break;
                 }
             }
             catch (Exception e)
@@ -4987,12 +4995,21 @@ namespace Pegasus.Pages.UI_Pages
                         //Wait for the element to load in UI
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator));
-                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                        returnButtonName = base.GetTitleAttributeValueByXPath
                             (TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator);
                         break;
 
                     case "Minmize":
+                        //Wait for the element to load in UI
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                            (TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator);
+                        break;
+
+                    case "Maximize":
                         //Wait for the element to load in UI
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
@@ -5034,11 +5051,11 @@ namespace Pegasus.Pages.UI_Pages
                         // Get text from the application
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
-                        returnButtonName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                        returnButtonName = base.GetTitleAttributeValueByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
                         break;
 
-                    case "Minimize":
+                    case "Minmize":
                         // Get text from the application
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
@@ -5055,6 +5072,23 @@ namespace Pegasus.Pages.UI_Pages
                             (TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator);
                         break;
+
+                case "Move Down":
+                    // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
+                        returnButtonName = base.GetTitleAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
+                    break;
+
+                case "Maximize":
+                    // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
+                        returnButtonName = base.GetInnerTextAttributeValueByXPath
+                            ("//div[@id='4']/div/div/div/span[2]/span[2]/a");
+                            break;
+
                 }
             }
             catch (Exception e)
@@ -5067,5 +5101,150 @@ namespace Pegasus.Pages.UI_Pages
             return returnButtonName.ToLower();
         }
 
+       /// <summary>
+       /// Click on option in notification channel.
+       /// </summary>
+       /// <param name="optionName">This is option name.</param>
+       /// <param name="pageTitle">This is page title.</param>
+       public void ClickOptionInNotificationsChannelTodaysView(string optionName, string pageTitle)
+       {
+           // Wait untill window loads
+           base.WaitUntilWindowLoads(pageTitle);
+
+           switch (optionName)
+           {
+               case "Minmize":
+                   // Get text from the application
+                   base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_MinimizeButton_ClassName_Locator));
+                   IWebElement getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_MinimizeButton_ClassName_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Maximize":
+                   // Get text from the application
+                   base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_MaximizeButton_ClassName_Locator));
+                   getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_MaximizeButton_ClassName_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Close":
+                   // Get text from the application
+                   base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator));
+                   getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+           }
+       }
+
+
+       public void ClickOptionInAnnouncementsChannelTodaysView(string optionName, string pageTitle)
+       {
+           // Wait untill window loads
+           base.WaitUntilWindowLoads(pageTitle);
+
+           switch (optionName)
+           {
+               case "Move Down":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator));
+                   IWebElement getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Move Up":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Minmize":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Maximize":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+           }
+       }
+
+        /// <summary>
+        /// Click options available in todays view channel
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        /// <param name="pageTitle">This is page title.</param>
+       public void ClickOptionInCalendarChannelTodaysView(string optionName, string pageTitle)
+       {
+           // Wait untill window loads
+           base.WaitUntilWindowLoads(pageTitle);
+
+           switch (optionName)
+           {
+               case "Move Up":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
+                   IWebElement getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Move Down":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Minmize":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Maximize":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+
+               case "Close":
+                   // Get text from the application
+                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator));
+                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator);
+                   base.PerformMouseClickAction(getOption);
+                   break;
+           }
+       }
     }
 }

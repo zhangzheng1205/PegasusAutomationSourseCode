@@ -763,13 +763,13 @@
     <value>//div[@id='5']/div/div/div/span[2]/span/button</value>
   </data>
   <data name="TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='5']/div/div/div/span[2]/span</value>
+    <value>//div[@id='5']/div/div/div/span[2]/span/button</value>
   </data>
   <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='5']/div/div/div/span[2]/span[3]/a</value>
   </data>
   <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='5']/div/div/div/span[2]/span[2]/a</value>
+    <value>//div[@id='4']/div/div/div/span[2]/span[2]/a</value>
   </data>
   <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='4']/div/div/div/span[2]/span/button</value>
@@ -782,5 +782,8 @@
   </data>
   <data name="TodayViewUXPageResource_VerbChart_Image_Id_Locator" xml:space="preserve">
     <value>imgVerbChart</value>
+  </data>
+  <data name="TodayViewUXPageResource_TodaysView_MaximizeButton_ClassName_Locator" xml:space="preserve">
+    <value>channel-options-max</value>
   </data>
 </root>

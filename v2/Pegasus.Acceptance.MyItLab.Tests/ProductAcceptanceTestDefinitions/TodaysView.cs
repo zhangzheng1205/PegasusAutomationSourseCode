@@ -791,6 +791,56 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                      base.IsTakeScreenShotDuringEntryExit);
          }
 
+         /// <summary>
+         /// Move the channel and reorder.
+         /// </summary>
+         /// <param name="channelName">This is channel name.</param>
+         /// <param name="operationName">This is operation name.</param>
+         /// <param name="pageName">This is page name.</param>
+         /// <param name="userType">This is user type enum.</param>
+         [When(@"I move the ""(.*)"" channel ""(.*)"" on ""(.*)"" page")]
+         public void MoveTheChannelOnPageAsUser(string channelName, string operationName,
+             string pageName)
+         {
+             Logger.LogMethodEntry("HomePage", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
+             switch (pageName)
+             {
+                 case "Today's View":
+                     switch (channelName)
+                     {
+                         case "Notifications":
+                             new TodaysViewUxPage().ClickOptionInNotificationsChannelTodaysView(operationName, pageName);
+                             Thread.Sleep(2000);
+                             break;
+
+                         case "Calendar":
+                             new TodaysViewUxPage().ClickOptionInCalendarChannelTodaysView(operationName, pageName);
+                             Thread.Sleep(2000);
+                             break;
+
+                         case "Announcements":
+                             new TodaysViewUxPage().ClickOptionInAnnouncementsChannelTodaysView(operationName, pageName);
+                             Thread.Sleep(2000);
+                             break;
+                     }
+                     break;
+
+                 case "Global Home":
+                     switch (channelName)
+                     {
+                         case "My Courses and Testbanks":
+
+                             break;
+
+                         case "Announcements":
+
+                             break;
+                     }
+                     break;
+             }
+             Logger.LogMethodExit("TodaysView", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
+         }
+
 
     }
 }
