@@ -177,7 +177,7 @@ Scenario: Instructor validate navigate Home link functionality in course header
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-Then I should be on the "Homepage" page
+Then I should be on the "Global Home" page
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -263,3 +263,73 @@ Then I should be displayed with "Return to Instructor View" option
 When I click on "Return to Instructor View" option
 Then I should be on the "Today's View" page
 And I should be displayed with "Go to Student View" option
+
+
+#Purpose:Validate the display of Notifications channels dispalyed in Today's view tab of CsSmsInstructor.
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Notification channel should be added by the Instructor in Today's view tab.
+Scenario: Display of Notifications channel in Today's View page of Instructor
+When I navigate to "Today's View" tab
+Then I should be displayed with "Notifications" channel  on "Today's View" page as "CsSmsInstructor" user 
+
+#Purpose:Validate the display of Announcements channels dispalyed in Today's view tab of CsSmsInstructor.
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Announcements channel should be added by the Instructor in Today's view tab.
+Scenario: Display of Announcements channel in Today's View page of Instructor
+When I navigate to "Today's View" tab
+Then I should be displayed with "Announcements" channel  on "Today's View" page as "CsSmsInstructor" user 
+
+#Purpose:Validate the display of Calendar channels dispalyed in Today's view tab of CsSmsStudent.
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Calendar channel should be added by the Instructor in Today's view tab
+Scenario: Display of Calendar channel in Today's View page of Instructor
+When I navigate to "Today's View" tab
+Then I should be displayed with "Calendar" channel  on "Today's View" page as "CsSmsInstructor" user 
+
+#Purpose:Validate the functionality of Maximizing and minimizing Notifications channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Minmize and Minmize Notifications  channel in Today's View page of Instructor
+When I "Minimize" the "Notifications" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Maximize" icon in "Notifications" channel of "Today's View" page 
+When I "Maximize" the "Notifications" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Minmize" icon in "Notifications" channel of "Today's View" page 
+
+#Purpose:Validate the functionality of Moving Announcements channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Move Announcements channel in Today's View page of Instructor
+When I "Move Up" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Move Down" icon in "Announcements" channel of "Today's View" page 
+When I "Move Down" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Move Up" icon in "Announcements" channel of "Today's View" page 
+
+#Purpose:Validate the functionality of Maximizing and minimizing Notifications channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Minmize and Minmize Announcements channel in Today's View page of Instructor
+When I "Minimize" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Maximize" icon in "Announcements" channel of "Today's View" page 
+When I "Maximize" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Minmize" icon in "Announcements" channel of "Today's View" page
+
+#Purpose:Validate the functionality of Moving Calendar channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Move Calendar channel in Today's View page of Instructor
+When I "Move Down" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Move Down" icon in "Calendar" channel of "Today's View" page 
+When I "Move Up" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Move Up" icon in "Calendar" channel of "Today's View" page 
+ 
+#Purpose:Validate the functionality of Maximizing and minimizing Calendar channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Minmize and Minmize Calendar channel in Today's View page of Instructor
+When I "Minimize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Maximize" icon in "Calendar" channel of "Today's View" page 
+When I "Maximize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Minmize" icon in "Calendar" channel of "Today's View" page

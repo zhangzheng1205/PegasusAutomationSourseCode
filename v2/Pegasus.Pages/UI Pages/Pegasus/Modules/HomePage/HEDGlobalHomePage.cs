@@ -1511,10 +1511,29 @@ namespace Pegasus.Pages.UI_Pages
                     case "Announcements":
                         //Wait for the element to load
                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                            HEDGlobalHome_Page_Announcement_Channel_ID));
-                        returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                            HEDGlobalHome_Page_Announcement_Channel_ID);
+                                    HEDGlobalHomePage_TodaysView_Announcement_Channel_ID));
+                                returnChannelName = base.GetInnerTextAttributeValueById(
+                                    HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_TodaysView_Announcement_Channel_ID);
+                                break;
+
+                    case "Notifications":
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_TodaysView_Notification_Channel_ID));
+                        returnChannelName = base.GetInnerTextAttributeValueById(
+                            HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_TodaysView_Notification_Channel_ID);
                         break;
+
+                    case "Calendar":
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                              HEDGlobalHomePage_TodaysView_Calendar_Channel_ID));
+                        returnChannelName = base.GetInnerTextAttributeValueById(
+                            HEDGlobalHomePageResource.
+                              HEDGlobalHomePage_TodaysView_Calendar_Channel_ID);
+                        break;
+
+
                 }
             }
             catch (Exception e)
@@ -1528,10 +1547,10 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Get the status of channel existance
+        /// Get the name of channel 
         /// </summary>
         /// <param name="channelName">This is Channel Name.</param>
-        /// <returns>Return status of channel existance.</returns>
+        /// <returns>Return name of channel.</returns>
         public string GetStudChannelDetails(string pageTitle, string channelName)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "GetStudChannelDetails",
@@ -1648,10 +1667,10 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Get the status of channel existance
+        /// Get the name of channel 
         /// </summary>
         /// <param name="channelName">This is Channel Name.</param>
-        /// <returns>Return status of channel existance.</returns>
+        /// <returns>Return name of channel.</returns>
         public string GetAnnouncementsButtonDetails(string buttonName)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "GetAnnouncementsButtonDetails",

@@ -572,6 +572,12 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.BVT.Student.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.StudentTodaysViewChannels.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorTodaysViewChannels.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -688,6 +694,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest100TimesGraderITSubmission.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.TodaysViewChannels.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\BlackboardCourseAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

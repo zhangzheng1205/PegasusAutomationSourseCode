@@ -432,7 +432,7 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
 testRunner.When("I click on \"Home\" option in \"Today\'s View\" tab of \"MyItLabInstructorCourse\" as \"C" +
                     "sSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 180
-testRunner.Then("I should be on the \"Homepage\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -631,6 +631,173 @@ testRunner.When("I click on \"Return to Instructor View\" option", ((string)(nul
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 265
 testRunner.And("I should be displayed with \"Go to Student View\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of Notifications channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void DisplayOfNotificationsChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Notifications channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 272
+this.ScenarioSetup(scenarioInfo);
+#line 273
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 274
+testRunner.Then("I should be displayed with \"Notifications\" channel  on \"Today\'s View\" page as \"Cs" +
+                    "SmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of Announcements channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void DisplayOfAnnouncementsChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Announcements channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 280
+this.ScenarioSetup(scenarioInfo);
+#line 281
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 282
+testRunner.Then("I should be displayed with \"Announcements\" channel  on \"Today\'s View\" page as \"Cs" +
+                    "SmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of Calendar channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void DisplayOfCalendarChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Calendar channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 288
+this.ScenarioSetup(scenarioInfo);
+#line 289
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 290
+testRunner.Then("I should be displayed with \"Calendar\" channel  on \"Today\'s View\" page as \"CsSmsIn" +
+                    "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Minmize and Minmize Notifications  channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void MinmizeAndMinmizeNotificationsChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minmize and Minmize Notifications  channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 295
+this.ScenarioSetup(scenarioInfo);
+#line 296
+testRunner.When("I \"Minimize\" the \"Notifications\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
+                    "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 297
+testRunner.Then("I should be displayed with \"Maximize\" icon in \"Notifications\" channel of \"Today\'s" +
+                    " View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 298
+testRunner.When("I \"Maximize\" the \"Notifications\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
+                    "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 299
+testRunner.Then("I should be displayed with \"Minmize\" icon in \"Notifications\" channel of \"Today\'s " +
+                    "View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Move Announcements channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void MoveAnnouncementsChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move Announcements channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 304
+this.ScenarioSetup(scenarioInfo);
+#line 305
+testRunner.When("I \"Move Up\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstructor" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 306
+testRunner.Then("I should be displayed with \"Move Down\" icon in \"Announcements\" channel of \"Today\'" +
+                    "s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 307
+testRunner.When("I \"Move Down\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstruct" +
+                    "or\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 308
+testRunner.Then("I should be displayed with \"Move Up\" icon in \"Announcements\" channel of \"Today\'s " +
+                    "View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Minmize and Minmize Announcements channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void MinmizeAndMinmizeAnnouncementsChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minmize and Minmize Announcements channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 313
+this.ScenarioSetup(scenarioInfo);
+#line 314
+testRunner.When("I \"Minimize\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
+                    "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 315
+testRunner.Then("I should be displayed with \"Maximize\" icon in \"Announcements\" channel of \"Today\'s" +
+                    " View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 316
+testRunner.When("I \"Maximize\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
+                    "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 317
+testRunner.Then("I should be displayed with \"Minmize\" icon in \"Announcements\" channel of \"Today\'s " +
+                    "View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Move Calendar channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void MoveCalendarChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move Calendar channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 322
+this.ScenarioSetup(scenarioInfo);
+#line 323
+testRunner.When("I \"Move Down\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 324
+testRunner.Then("I should be displayed with \"Move Down\" icon in \"Calendar\" channel of \"Today\'s Vie" +
+                    "w\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 325
+testRunner.When("I \"Move Up\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 326
+testRunner.Then("I should be displayed with \"Move Up\" icon in \"Calendar\" channel of \"Today\'s View\"" +
+                    " page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Minmize and Minmize Calendar channel in Today\'s View page of Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void MinmizeAndMinmizeCalendarChannelInTodaySViewPageOfInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minmize and Minmize Calendar channel in Today\'s View page of Instructor", ((string[])(null)));
+#line 331
+this.ScenarioSetup(scenarioInfo);
+#line 332
+testRunner.When("I \"Minimize\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 333
+testRunner.Then("I should be displayed with \"Maximize\" icon in \"Calendar\" channel of \"Today\'s View" +
+                    "\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 334
+testRunner.When("I \"Maximize\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 335
+testRunner.Then("I should be displayed with \"Minmize\" icon in \"Calendar\" channel of \"Today\'s View\"" +
+                    " page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

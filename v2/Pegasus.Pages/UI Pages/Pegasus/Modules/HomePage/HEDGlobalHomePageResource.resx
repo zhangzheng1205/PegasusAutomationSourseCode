@@ -271,10 +271,10 @@
     <value>lblMail</value>
   </data>
   <data name="HEDGlobalHomePage_TodaysView_Announcement_Channel_ID" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHomePage_TodaysView_Calendar_Channel_ID" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading</value>
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHomePage_TodaysView_Notification_Channel_ID" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
