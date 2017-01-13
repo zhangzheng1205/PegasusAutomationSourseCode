@@ -214,7 +214,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'Drag and Drop' in day view of ""(.*)""")]
         public void ValidateDisplayOfAssignedActivityInDayView(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum, string dateType)
@@ -224,6 +223,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
+
             //Assert the Assigned Activity            
             Logger.LogAssertion("VerifyActivityAssigned",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -232,6 +232,91 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar",
                 "DisplayOfAssignedActivityInDayView",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Add notes option in calendar view.
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        /// <param name="dateType">This is date type.</param>
+        [When(@"I click on 'Add Notes' option")]
+        public void ClickAddNoteOption()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ClickAddNoteOption",base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().ClickAddNote();
+            Logger.LogMethodExit("AssignmentCalendar", "ClickAddNoteOption", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of wizard 
+        /// </summary>
+        /// <param name="wizardName"></param>
+        [Then(@"I should be displayed with ""(.*)"" wizard")]
+        public void ValidateDisplayOfWizard(string wizardName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ValidateDisplayOfWizard", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyActivityAssigned",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                    getNotesWizardTitle(), wizardName));
+            Logger.LogMethodExit("AssignmentCalendar", "ValidateDisplayOfWizard", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter notes and click on save and close button
+        /// </summary>
+        [When(@"I enter notes and click on 'Save and Close' button")]
+        public void EnterNotesAndClickOnButton()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "EnterNotesAndClickOnButton", base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().EnterNotes();
+            Logger.LogMethodExit("AssignmentCalendar", "EnterNotesAndClickOnButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click view type in the Advance calender
+        /// </summary>
+        /// <param name="viewType"></param>
+        [When(@"I click on ""(.*)"" view in Advance calender")]
+        public void SelectViewInAdvanceCalender(string viewType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "SelectViewInAdvanceCalender",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Select view type from the drop down
+            new CalendarHedDefaultUxPage().SelectViewType(viewType);
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "SelectViewInAdvanceCalender",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        [Then(@"I should see the ""(.*)"" activity assigned in ""(.*)"" view of ""(.*)"" in Advance calender")]
+        public void ThenIShouldSeeTheActivityAssignedInViewOfInAdvanceCalender(Activity.ActivityTypeEnum activityType, string viewType, string dateType)
+        {
+            Activity activity = Activity.Get(activityType);
+            switch(viewType)
+            {
+                case "Day":
+                    //Assert the Assigned Activity            
+                    Logger.LogAssertion("VerifyActivityAssigned",
+                        ScenarioContext.Current.ScenarioInfo.Title,
+                        () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                            GetAssignedActNameOnCurrentDayInAdvaceCalender(activity.Name, dateType), activity.Name));
+
+                    break;
+
+                case "Week":
+                    new CalendarHedDefaultUxPage().SelectViewType(viewType);
+                    break;
+
+                case "Month":
+                    new CalendarHedDefaultUxPage().SelectViewType(viewType);
+                    break;
+
+            }
         }
 
 
@@ -279,6 +364,37 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                new CalendarHedDefaultUxPage().GetAssignedCountWithText()));
 
         }
+       
+        /// <summary>
+        /// Click option in Calender frame
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        /// <param name="pageTitle">This is page name.</param>
+         [When(@"I click on ""(.*)"" option in calender frame of ""(.*)"" page")]
+        public void ClickOnOptionInCalenderFrame(string optionName, string pageTitle)
+        {
+            // Click option in calender frame
+            Logger.LogMethodEntry("AssignmentCalendar", "ClickOnOptionInCalenderFrame",base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().ClickOptionInCalendar(optionName, pageTitle);
+            Logger.LogMethodExit("AssignmentCalendar", "ClickOnOptionInCalenderFrame", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+         /// <summary>
+         /// Validate display of options in calender
+         /// </summary>
+         /// <param name="optionName"></param>
+         /// <param name="calenderType"></param>
+         /// <param name="pageTitle"></param>
+         [Then(@"I should be displayed with ""(.*)"" option in ""(.*)"" of ""(.*)"" page")]
+         public void ValidateDisplayOfOptionCalenderBased(string optionName, string calenderType, string pageTitle)
+         {
+             Logger.LogMethodEntry("AssignmentCalendar", "ValidateDisplayOfOptionCalenderBased", base.IsTakeScreenShotDuringEntryExit);
+             // Validate the display of options available in the calender
+                 Logger.LogAssertion("VerifyTheStatusOfAssignedContent",
+                ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
+                new CalendarHedDefaultUxPage().GetOptionExistanceStatus(optionName, calenderType, pageTitle)));
+             Logger.LogMethodExit("AssignmentCalendar", "ValidateDisplayOfOptionCalenderBased", base.IsTakeScreenShotDuringEntryExit);
+         }
 
 
         /// <summary>
@@ -881,5 +997,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     IsDuedateIconDisplayedBesideAsset(activityName, containerId)));
 
         }
+        /// <summary>
+        /// Validate the date displayed in Advance view of calender
+        /// </summary>
+        /// <param name="dateType"></param>
+        [Then(@"I should be on the ""(.*)"" in Advance calender")]
+        public void ValidateDateInAdvanceCalender(string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ValidateDateInAdvanceCalender",base.IsTakeScreenShotDuringEntryExit);
+            
+            Logger.LogMethodExit("AssignmentCalendar", "ValidateDateInAdvanceCalender", base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

@@ -645,8 +645,8 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
 #line 241
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 242
-testRunner.Then("I should be displayed with \"My Courses and Testbanks\" channel  as \"CsSmsInstructo" +
-                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"\"My Courses and Testbanks\" channel  on \"Global Home\" " +
+                    "page as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 243
 testRunner.And("I should be displayed with \"Create a Course\" button in \"My Courses and Testbanks\"" +
                     " channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

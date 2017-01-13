@@ -239,7 +239,7 @@ Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-Then I should be displayed with "My Courses and Testbanks" channel  as "CsSmsInstructor" user
+Then I should be displayed with ""My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
 And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel 
 And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel

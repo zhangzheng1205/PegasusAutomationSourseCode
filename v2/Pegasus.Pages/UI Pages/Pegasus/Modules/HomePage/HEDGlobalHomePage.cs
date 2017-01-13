@@ -800,10 +800,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Clicks on the course name
                 //base.FillEmptyTextByPartialLinkText(courseName);
-
-                base.WaitForElement(By.LinkText(courseName));
+                base.WaitForElement(By.PartialLinkText(courseName));
                 // base.WaitForElement(By.PartialLinkText(courseName));
-                IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
+                IWebElement getCourseName = base.GetWebElementPropertiesByPartialLinkText
                     (courseName);
                 base.ClickByJavaScriptExecutor(getCourseName);
             }

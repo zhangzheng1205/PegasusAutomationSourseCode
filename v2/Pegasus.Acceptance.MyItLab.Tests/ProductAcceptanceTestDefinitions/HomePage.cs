@@ -64,7 +64,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-         
+
         /// <summary>
         /// Validate the display of options dispalyed in the specified channel
         /// </summary>
