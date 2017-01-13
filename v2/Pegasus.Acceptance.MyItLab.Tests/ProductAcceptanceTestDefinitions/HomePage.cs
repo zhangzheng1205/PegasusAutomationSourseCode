@@ -73,8 +73,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="pageName">This is the page name.</param>
          [Then(@"I should be displayed with ""(.*)"" icon in ""(.*)"" channel of ""(.*)"" page")]
          [Then(@"I should be displayed with ""(.*)"" icon in ""(.*)"" channel")]
-         [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel")]
-         public void DisplayedOfOptionsInChannels(string buttonName, string channelName, string pageName)
+         [Then(@"I should be displayed with ""(.*)"" button on ""(.*)"" page as ""(.*)"" user")]
+            public void DisplayedOfOptionsInChannels(string buttonName, string channelName, string pageName)
          {
              Logger.LogMethodEntry("HomePage","DisplayedOfOptionsInChannels",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -226,6 +226,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             /// <param name="userType">This is user type enum.</param>
             /// <param name="frameName">This is frame name.</param>
             [Then(@"I should be displayed with ""(.*)"" course as ""(.*)"" in ""(.*)"" channel")]
+            [Then(@"I should be displayed with ""(.*)"" channel  as ""(.*)"" user")]
             public void DisplayedOfEnrolledCourseInChannel(Course.CourseTypeEnum courseType, 
                 User.UserTypeEnum userType, string frameName)
             {
@@ -243,7 +244,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     base.IsTakeScreenShotDuringEntryExit);
             }
 
-
+            
             /// <summary>
             /// This methord is to click on "Open" button of the course.
             /// </summary>

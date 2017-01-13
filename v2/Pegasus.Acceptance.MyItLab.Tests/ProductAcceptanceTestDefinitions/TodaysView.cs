@@ -792,48 +792,57 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
          }
 
          /// <summary>
-         /// Move the channel and reorder.
+         /// Click on the specified channel and move operation.
          /// </summary>
          /// <param name="channelName">This is channel name.</param>
          /// <param name="operationName">This is operation name.</param>
          /// <param name="pageName">This is page name.</param>
-         /// <param name="userType">This is user type enum.</param>
-         [When(@"I move the ""(.*)"" channel ""(.*)"" on ""(.*)"" page")]
-         public void MoveTheChannelOnPageAsUser(string channelName, string operationName,
-             string pageName)
+         /// <param name="userType">This is user type enum.</param>        
+         [When(@"I ""(.*)"" the ""(.*)"" channel on ""(.*)"" tab as ""(.*)""")]
+         public void PerformClickOnChannelsInTodaysViewTab(string operationName, string channelName,
+             string pageName, User.UserTypeEnum userType)
          {
              Logger.LogMethodEntry("HomePage", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
-             switch (pageName)
+             switch (userType)
              {
-                 case "Today's View":
-                     switch (channelName)
+                 case User.UserTypeEnum.CsSmsInstructor:
+                 case User.UserTypeEnum.CsSmsStudent:
+                     switch (pageName)
                      {
-                         case "Notifications":
-                             new TodaysViewUxPage().ClickOptionInNotificationsChannelTodaysView(operationName, pageName);
-                             Thread.Sleep(2000);
+                         case "Today's View":
+                             switch (channelName)
+                             {
+                                 case "Notifications":
+                                     new TodaysViewUxPage().
+                                         ClickOptionInNotificationsChannelTodaysView(operationName, pageName);
+                                     Thread.Sleep(2000);
+                                     break;
+
+                                 case "Calendar":
+                                     new TodaysViewUxPage().
+                                         ClickOptionInCalendarChannelTodaysView(operationName, pageName);
+                                     Thread.Sleep(2000);
+                                     break;
+
+                                 case "Announcements":
+                                     new TodaysViewUxPage().
+                                         ClickOptionInAnnouncementsChannelTodaysView(operationName, pageName);
+                                     Thread.Sleep(2000);
+                                     break;
+                             }
                              break;
 
-                         case "Calendar":
-                             new TodaysViewUxPage().ClickOptionInCalendarChannelTodaysView(operationName, pageName);
-                             Thread.Sleep(2000);
-                             break;
+                         case "Global Home":
+                             switch (channelName)
+                             {
+                                 case "My Courses and Testbanks":
 
-                         case "Announcements":
-                             new TodaysViewUxPage().ClickOptionInAnnouncementsChannelTodaysView(operationName, pageName);
-                             Thread.Sleep(2000);
-                             break;
-                     }
-                     break;
+                                     break;
 
-                 case "Global Home":
-                     switch (channelName)
-                     {
-                         case "My Courses and Testbanks":
+                                 case "Announcements":
 
-                             break;
-
-                         case "Announcements":
-
+                                     break;
+                             }
                              break;
                      }
                      break;

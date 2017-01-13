@@ -247,7 +247,7 @@
     <value>_ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnSearchCatalog</value>
   </data>
   <data name="HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator" xml:space="preserve">
-    <value>_ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnEnrollCourse</value>
+    <value>_ctl6:_ctl0:_ctl0:_ctl0:_ctl0:btnEnrollCourse</value>
   </data>
   <data name="HEDGlobalHome_Page_EnrollInCourse_SubmitButtonl_ID_Locator" xml:space="preserve">
     <value>btnSubmit</value>
@@ -256,7 +256,7 @@
     <value>_ctl5__ctl1__ctl0__ctl1__ctl0_btnViewAll</value>
   </data>
   <data name="HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID" xml:space="preserve">
-    <value>_ctl5__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
+    <value>_ctl6__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHomePage_HomePageIframe_ID_Locator" xml:space="preserve">
     <value>iframeSelfEnrollment</value>
@@ -271,10 +271,10 @@
     <value>lblMail</value>
   </data>
   <data name="HEDGlobalHomePage_TodaysView_Announcement_Channel_ID" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHomePage_TodaysView_Calendar_Channel_ID" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl1__ctl0__ctl0_lblHeading</value>
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHomePage_TodaysView_Notification_Channel_ID" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
