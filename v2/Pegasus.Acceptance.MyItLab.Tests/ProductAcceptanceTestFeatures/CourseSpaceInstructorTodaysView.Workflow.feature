@@ -177,7 +177,7 @@ Scenario: Instructor validate navigate Home link functionality in course header
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-Then I should be on the "Global Home" page
+Then I should be on the "Homepage" page
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -186,7 +186,8 @@ Scenario: Instructor validate navigate Help link functionality in course header
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Help" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-Then I should be on "Instructor Help" page as "CsSmsInstructor" user
+Then I should be on "MyTest Testbank Help" page as "CsSmsInstructor" user
+
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -212,7 +213,7 @@ Then I should be displayed with "My Profile" lightbox
 Scenario: Validate user name and welcome message in header
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
-And I should be displayed with "Welcome," message for "CsSmsInstructor" user
+And I should be displayed with "Hi," message for "CsSmsInstructor" user
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -222,6 +223,8 @@ When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Privacy" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
 Then I should be on the "Privacy" page
+And I close the "Privacy" window
+
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -248,8 +251,8 @@ When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 And I should be displayed with "Preferences" option
 When I click on "Preferences" option
-Then I should be displayed with "Basic Preferences" lightbox
-When I click on the button "Go to Advanced Preferences"
+Then I should be on the "Preferences" page
+
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.

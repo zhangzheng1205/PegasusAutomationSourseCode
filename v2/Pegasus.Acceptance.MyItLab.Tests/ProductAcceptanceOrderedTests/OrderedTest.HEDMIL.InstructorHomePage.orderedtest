@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.HEDMIL.InstructorHomePage" storage="d:\ux 5th jan\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedmil.instructorhomepage.orderedtest" id="d2ad51c1-b417-4ccb-abbf-412d65609221" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="39ac7cba-ce22-94cb-11cc-05c9e33533ae" name="InstructorValidateNavigateHomeLinkFunctionalityInCourseHeader" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="c9e60ae4-b935-ea1f-1f75-96691e85b6ee" name="ValidateChannelsInHomePageAsCsSmsInstructor" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b4fa27b6-18a0-0452-74d4-5c82972cdd50" name="ValidateCourseEnrollmentAsCsSmsInstructor" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="5165f75a-b6ab-d256-9972-db024c362d93" name="ValidateEnrolledCourseInMyCoursesAndTestbanksChannel" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -799,12 +799,11 @@ namespace Pegasus.Pages.UI_Pages
             else
             {
                 //Clicks on the course name
-                //base.FillEmptyTextByPartialLinkText(courseName);
+                base.FillEmptyTextByPartialLinkText(courseName);
 
-                base.WaitForElement(By.LinkText(courseName));
+                base.WaitForElement(By.PartialLinkText(courseName));
                 // base.WaitForElement(By.PartialLinkText(courseName));
-                IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
-                    (courseName);
+                IWebElement getCourseName = base.GetWebElementPropertiesByPartialLinkText(courseName);
                 base.ClickByJavaScriptExecutor(getCourseName);
             }
         }
@@ -1429,7 +1428,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetLightboxTitle(string lightboxName)
         {
             //Returns the name of light box
-            Logger.LogMethodEntry("HEDGlobalHomePage", "GetLightboxTitle", 
+            Logger.LogMethodEntry("HEDGlobalHomePage", "GetLightboxTitle",
                 base.IsTakeScreenShotDuringEntryExit);
 
             string getLightboxName = null;
@@ -1441,13 +1440,19 @@ namespace Pegasus.Pages.UI_Pages
                 switch (lightboxName)
                 {
                     case "My Profile":
+
+                        base.WaitForElement(By.XPath("//iframe[contains(@src,'Modules/MyPrefernce/frmMyAccountSetting.aspx?')]"));
+                        IWebElement getProfile = base.GetWebElementPropertiesByXPath("//iframe[contains(@src,'Modules/MyPrefernce/frmMyAccountSetting.aspx?')]");
+                        base.SwitchToIFrameByWebElement(getProfile);
+                        bool bdg = base.IsElementPresent(By.Id("lblMyAccount"), 10);
                         //Wait for My Profile light box
                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_MyProfileLightBox_ID_Locator));
                         //Get the name of the lightbox
-                        getLightboxName = base.GetInnerTextAttributeValueByClassName(
+                        getLightboxName = base.GetElementInnerTextById(
                             HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_MyProfileLightBox_ID_Locator);
+                        base.ClickButtonById("imgbtnCancel");
                         break;
 
                     case "Basic Preferences":
@@ -1478,7 +1483,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("HEDGlobalHomePage", "GetLightboxTitle", 
+            Logger.LogMethodExit("HEDGlobalHomePage", "GetLightboxTitle",
                 base.IsTakeScreenShotDuringEntryExit);
             return getLightboxName;
         }
@@ -1504,36 +1509,17 @@ namespace Pegasus.Pages.UI_Pages
                         //Wait for the element to load
                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                             HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID));
-                        returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
-                            HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
+                        returnChannelName = base.GetInnerTextAttributeValueById
+                            (HEDGlobalHomePageResource.HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID);
                         break;
 
                     case "Announcements":
                         //Wait for the element to load
                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_TodaysView_Announcement_Channel_ID));
-                                returnChannelName = base.GetInnerTextAttributeValueById(
-                                    HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_TodaysView_Announcement_Channel_ID);
-                                break;
-
-                    case "Notifications":
-                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_TodaysView_Notification_Channel_ID));
-                        returnChannelName = base.GetInnerTextAttributeValueById(
-                            HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_TodaysView_Notification_Channel_ID);
+                            HEDGlobalHome_Page_Announcement_Channel_ID));
+                        returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                            HEDGlobalHome_Page_Announcement_Channel_ID);
                         break;
-
-                    case "Calendar":
-                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                              HEDGlobalHomePage_TodaysView_Calendar_Channel_ID));
-                        returnChannelName = base.GetInnerTextAttributeValueById(
-                            HEDGlobalHomePageResource.
-                              HEDGlobalHomePage_TodaysView_Calendar_Channel_ID);
-                        break;
-
-
                 }
             }
             catch (Exception e)
@@ -1702,11 +1688,11 @@ namespace Pegasus.Pages.UI_Pages
             return returnbuttonName.ToLower();
         }
 
-        public void ClickOptionsInMyCoursesTestbanksChannel(string channelName)
+        public void ClickOptionsInMyCoursesTestbanksChannel(string buttonName)
         {
             base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Window_Title_Name);
-            switch (channelName)
+            switch (buttonName)
             {
                 case "Create a Course":
                     // Get text from the application
@@ -1719,7 +1705,7 @@ namespace Pegasus.Pages.UI_Pages
                 case "Enroll in a Course":
                     // Get text from the application
                     base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                        HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator));
+                    HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator));
                     base.FocusOnElementById(HEDGlobalHomePageResource.
                         HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator);
                     base.ClickButtonById(HEDGlobalHomePageResource.
@@ -1727,6 +1713,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
         }
+
 
         /// <summary>
         /// Click on the Manage All option in Announcement channel
@@ -1798,9 +1785,9 @@ namespace Pegasus.Pages.UI_Pages
             switch (stepCount)
             {
                 case 1:
-                    bool jsd = base.IsElementPresent(By.XPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-15']"), 10);
-                    base.WaitForElement(By.XPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-15']"));
-                    string count = base.GetInnerTextAttributeValueByXPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-15']");
+                    bool jsd = base.IsElementPresent(By.XPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-26']"), 10);
+                    base.WaitForElement(By.XPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-26']"));
+                    string count = base.GetInnerTextAttributeValueByXPath("//button[@class='btn-circle-peg btn-blue-peg margin-left-26']");
                     int appCount = Convert.ToInt32(count);
 
                     bool jkksd = base.IsElementPresent(By.ClassName("fntsize"), 10);
@@ -1843,8 +1830,9 @@ namespace Pegasus.Pages.UI_Pages
                 // Switch to Iframe
                 base.SwitchToIFrameById(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePageIframe_ID_Locator);
-                base.WaitForElement(By.XPath("//div[@class='span11 seccess-msg']"));
-                returnSuccessMessage = base.GetInnerTextAttributeValueByXPath("//div[@class='span11 seccess-msg']");
+                bool xss = base.IsElementPresent(By.Id("coursematchmsg"));
+                base.WaitForElement(By.XPath("//div[@id='coursematchmsg']"));
+                returnSuccessMessage = base.GetInnerTextAttributeValueByXPath("//div[@id='coursematchmsg']");
             }
             catch (Exception e)
             {

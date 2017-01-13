@@ -745,7 +745,7 @@
     <value>//td[@id='_ctl0__ctl0_phHeader__ctl0_tdStudView']/div[2]/a</value>
   </data>
   <data name="TodayViewUXPageResource_Header_PrivacyOption_ID_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_spanPrivacyPolicyt</value>
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_aPrivacyPolicy</value>
   </data>
   <data name="TodayViewUXPageResource_Header_ReturnToInstructorViewLink_ClassName_Locator" xml:space="preserve">
     <value>InsViewtxt</value>
@@ -794,5 +794,20 @@
   </data>
   <data name="TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl1_Container']/div/div[2]/div/div/div/div/span[2]/span[1]/button</value>
+  </data>
+  <data name="TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator" xml:space="preserve">
+    <value>//li[@class = 'separatorwlcometxt']/div/a/div/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_aPrivacyPolicy</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_ReturnToInstructorView_XPath_Locator" xml:space="preserve">
+    <value>//a[@id='_ctl0__ctl0_phHeader__ctl0_stdView_ancInsView']/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_SignOutLink_Id_Locator" xml:space="preserve">
+    <value>rightmenu</value>
+  </data>
+  <data name="TodayViewUXPageResource_Support_PopUp_Id_Locator" xml:space="preserve">
+    <value>lblLogin</value>
   </data>
 </root>
