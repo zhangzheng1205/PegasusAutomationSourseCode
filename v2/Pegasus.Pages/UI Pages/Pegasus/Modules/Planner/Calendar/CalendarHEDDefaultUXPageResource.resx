@@ -522,4 +522,25 @@
   <data name="CalendarHEDDefaultUXPageResource_Notes_Text" xml:space="preserve">
     <value>Test Notes entered on</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_AssignedButton_Id_Locator" xml:space="preserve">
+    <value>rdAssigned</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ClickOn_SetSchedulingOption_XPath_Locator" xml:space="preserve">
+    <value>//div[@id ='PegMenu32']/div[2]/div[4]/span</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CmenuIcon_Id_Locator" xml:space="preserve">
+    <value>ES_CMenuImg</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator" xml:space="preserve">
+    <value>txtDueDate</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_FocusOnActivity_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='dvAssetName']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_SaveButton_Id_Locator" xml:space="preserve">
+    <value>btn_save_assign</value>
+  </data>
 </root>

@@ -966,7 +966,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             string assetName = activity.Name.ToString();
 
             //click on cmenu option
-            new CalendarHedDefaultUxPage().SelectActivityCmenu
+            new CalendarHedDefaultUxPage().SelectActivityCmenuOption
                 (cmenuOptionName, assetName);
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectCmenuOfActivity",
