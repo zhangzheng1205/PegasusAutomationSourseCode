@@ -55,8 +55,8 @@ When I search the "RegPastDueAssignment" activity of behavioral mode "SkillBased
 Then I should see the searched "RegPastDueAssignment" activity of behavioral mode "SkillBased"
 When I click cmenu "Set Scheduling Options" of activity "RegPastDueAssignment"
 Then I should see the "Assign" popup
-And I assign the searched activity to past due date
-And I should be on the "Calendar" page
+When I assign the searched activity to past due date
+Then I should be on the "Calendar" page
 And I should see the pastdue icon
 
 #Purpose : Drag and drop a single content to a day and display of Assigned content in Month View
