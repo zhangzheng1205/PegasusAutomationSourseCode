@@ -647,6 +647,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to iframeAddNote.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_AddNote_Iframe_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_AddNote_Iframe_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnSaveAndClose.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtareaAddnote.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //input[@class=&apos;dvAddNotesButtonCss&apos;].
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_AddNote_Xpath_Locator {
@@ -1071,11 +1098,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_btnDeleteNote.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_DeleteNotes_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_DeleteNotes_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[contains(text(),&apos;{0}&apos;)].
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_btnEditNote.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_EditNotes_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_EditNotes_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test notes edited on.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_EditNotes_Text {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_EditNotes_Text", resourceCulture);
             }
         }
         
@@ -1179,7 +1233,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test Notes entered on.
+        ///   Looks up a localized string similar to Test notes entered on.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_Notes_Text {
             get {
