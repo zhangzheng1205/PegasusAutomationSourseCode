@@ -2625,6 +2625,8 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+       
+
         /// <summary>
         /// Select an option in cmenu.
         /// </summary>
@@ -3296,6 +3298,114 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
+        }
+
+
+        /// <summary>
+        /// Assign actiivty to previous date.
+        /// </summary>
+        public void AssignActiivtyToPreviousDate()
+        {
+            Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Assigned radio button
+                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
+                //Get the application date
+                string getAppDate = string.Empty;
+                //Get today's date
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                //Decrement the day by 1
+                DateTime pDate = date.AddDays(-1);
+                string getPreviousDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                //Clear the prefilled textbox value
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
+                //Enter the stored previous date value
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
+                //Save the assign details by clicking Save button            
+                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Select the Cmenu of the activity.
+        /// </summary>
+        /// <param name="cmenuOption">This is the Cmenu option.</param>
+        /// <param name="assetName">This is the name of the asset.</param>
+        public void SelectActivityCmenuOption(string cmenuOption, string assetName)
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Calendar window
+                this.SelectCalendarWindow();
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Element_Time));
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
+                IWebElement getActivity = base.GetWebElementPropertiesById
+                    (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator);
+                //Hover the mouse on the searched actiivty
+                base.PerformMouseHoverByJavaScriptExecutor(getActivity);
+                //Store the cmenu icon property
+                IWebElement getCmenuIcon = base.GetWebElementPropertiesByClassName
+                    (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CmenuIcon_Id_Locator);
+                //Click on cmenu icon
+                base.PerformMouseClickAction(getCmenuIcon);
+                //Focus on the asset
+                base.PerformFocusOnElementActionByXPath(String.Format
+                    (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_FocusOnActivity_XPath_Locator, assetName));
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                   CalendarHEDDefaultUXPage_Element_Time));
+                //Get property of set scheduling cmenu option 
+                IWebElement getViewSubmissionLink = base.GetWebElementPropertiesByXPath
+                (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_ClickOn_SetSchedulingOption_XPath_Locator);
+                //Click the 'Set Scheduling options' cmenu option
+                base.ClickByJavaScriptExecutor(getViewSubmissionLink);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Check the past due icon display status.
+        /// </summary>
+        public bool PastDueActivityIcon()
+        {
+            Logger.LogMethodEntry("iconDisplayStatus", "Pastdueactivityicon",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Return the icon display status
+            bool iconDisplayStatus = base.IsElementPresent(By.ClassName("cssPastDueDate"), 10);
+            return iconDisplayStatus;
+            Logger.LogMethodExit("iconDisplayStatus", "Pastdueactivityicon",
+            base.IsTakeScreenShotDuringEntryExit);
+
         }
 
         /// <summary>
