@@ -991,7 +991,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             if (base.IsElementLoadedInWindow(LoginPageResource.
             Login_Page_PageTitle_Locator_GlobalHome,
-                By.CssSelector("a[id$='_testLogOut']"), 600))
+                By.CssSelector("span[class$='opthide']"), 600))
             {
                 isLoginSuccessful = true;
             }

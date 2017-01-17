@@ -235,17 +235,61 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Click day view in assignment calender.
+        /// </summary>
+        /// <param name="dateType">This is date type.</param>
+        [When(@"I click on ""(.*)"" in normal calender view")]
+        public void ClickOnDayView(string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "ClickOnDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+            switch(dateType)
+            { 
+                case "Future date":
+                new CalendarHedDefaultUxPage().EnterTheDayViewForAssignedActivityForFutureDate();
+                break;
+        }
+            Logger.LogMethodExit("AssignmentCalendar",
+                "ClickOnDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        
+        public void WhenIClickOnIconInDate(string p0, string p1)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        /// <summary>
         /// Click Add notes option in calendar view.
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="dateType">This is date type.</param>
-        [When(@"I click on 'Add Notes' option")]
-        public void ClickAddNoteOption()
+        [When(@"I click on ""(.*)"" icon in ""(.*)"" date")]
+        public void ClickAddNoteOption(string optionName, string dateType)
         {
             Logger.LogMethodEntry("AssignmentCalendar", "ClickAddNoteOption",base.IsTakeScreenShotDuringEntryExit);
-            new CalendarHedDefaultUxPage().ClickAddNote();
+            switch(dateType)
+            {
+                case "Future date":
+                    new CalendarHedDefaultUxPage().ClickOptionInDayView(optionName);
+                break;
+             }
             Logger.LogMethodExit("AssignmentCalendar", "ClickAddNoteOption", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click OK button in the delete note confirmation popup
+        /// </summary>
+        [When(@"I click Ok button in confirmation lightbox")]
+        public void ClickOkButtonInConfirmationLightbox()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ClickOkButtonInConfirmationLightbox", base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().ClickOkButton();
+            Logger.LogMethodExit("AssignmentCalendar", "ClickOkButtonInConfirmationLightbox", base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Validate the display of wizard 
@@ -262,15 +306,62 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar", "ValidateDisplayOfWizard", base.IsTakeScreenShotDuringEntryExit);
         }
 
+        
+        public void WhenINotesAndClickOnButton(string p0, string p1)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+       
         /// <summary>
         /// Enter notes and click on save and close button
         /// </summary>
-        [When(@"I enter notes and click on 'Save and Close' button")]
-        public void EnterNotesAndClickOnButton()
+     [When(@"I ""(.*)"" notes and click on 'Save and Close' button")]
+        public void EnterNotesAndClickOnButton(string noteType)
         {
             Logger.LogMethodEntry("AssignmentCalendar", "EnterNotesAndClickOnButton", base.IsTakeScreenShotDuringEntryExit);
-            new CalendarHedDefaultUxPage().EnterNotes();
+           switch(noteType)
+           {
+               case "Create":
+                new CalendarHedDefaultUxPage().EnterNotes();
+                break;
+
+               case "Edit":
+                new CalendarHedDefaultUxPage().EditNotes();
+                break;
+            }
             Logger.LogMethodExit("AssignmentCalendar", "EnterNotesAndClickOnButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of notes created in the day view
+        /// </summary>
+        [Then(@"I should be displayed with the notes in the day view")]
+        public void ValidateDisplayOfNotesInTheDayView()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ValidateDisplayOfNotesInTheDayView", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyStudentPresent",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.IsTrue(new CalendarHedDefaultUxPage().ValidateNotes()));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("AssignmentCalendar", "ValidateDisplayOfNotesInTheDayView", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        //Then I should be displayed with 'Due date' icon and 'Notes' icon in "Future date"
+        [Then(@"I should be displayed with 'Due date' icon and 'Notes' icon in ""(.*)""")]
+        public void ValidateDisplayOfIcon(string dateType)
+        {
+            switch(dateType)
+            {
+                case "Future date":
+                       Logger.LogAssertion("VerifyStudentPresent",
+                        ScenarioContext.Current.ScenarioInfo.Title, () =>
+                        Assert.IsTrue(new CalendarHedDefaultUxPage().ValidateOptionInAssignmentCalendar()));
+                        Logger.LogMethodExit("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
+                           base.IsTakeScreenShotDuringEntryExit);
+                    break;
+            }
         }
 
 
@@ -966,7 +1057,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             string assetName = activity.Name.ToString();
 
             //click on cmenu option
-            new CalendarHedDefaultUxPage().SelectActivityCmenu
+            new CalendarHedDefaultUxPage().SelectActivityCmenuOption
                 (cmenuOptionName, assetName);
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectCmenuOfActivity",
@@ -997,6 +1088,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     IsDuedateIconDisplayedBesideAsset(activityName, containerId)));
 
         }
+
         /// <summary>
         /// Validate the date displayed in Advance view of calender
         /// </summary>
@@ -1007,6 +1099,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar", "ValidateDateInAdvanceCalender",base.IsTakeScreenShotDuringEntryExit);
             
             Logger.LogMethodExit("AssignmentCalendar", "ValidateDateInAdvanceCalender", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click option in assignment calender
+        /// </summary>
+        /// <param name="optionName">This is option Name.</param>
+        [When(@"I click on ""(.*)"" option of notes")]
+        public void ClickIconInCalendar(string optionName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ClickIconInCalendar", base.IsTakeScreenShotDuringEntryExit);
+
+            Logger.LogMethodExit("AssignmentCalendar", "ClickIconInCalendar", base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

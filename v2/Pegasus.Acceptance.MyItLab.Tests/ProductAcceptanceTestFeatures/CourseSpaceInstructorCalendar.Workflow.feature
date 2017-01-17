@@ -37,29 +37,38 @@ Then I should be on the "Calendar" page
 #When I click on "Day" view in Advance calender
 #Then I should see the "RegTodayDateAssignment " activity assigned in "Day" view of "Current date" in Advance calender
 #When I click on "Assignments" option in calender frame of "Calendar" page
-When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
-Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
-When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
-Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
-When I click on 'Add Notes' option
-Then I should be displayed with "Add Note" wizard
-When I enter notes and click on 'Save and Close' button
-
+#When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
+#Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
+#When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
+#Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
+#When I click on "Future date" in normal calender view
+#When I click on "Add Notes" icon in "Future date" date
+#Then I should be displayed with "Add Note" wizard
+#When I "Create" notes and click on 'Save and Close' button
+#Then I should be displayed with the notes in the day view
+#When I click on "Back to Month"
+Then I should be displayed with 'Due date' icon and 'Notes' icon in "Future date"
+#Scenario: Edit notes in day view of calendar
+When I click on "Future date" in normal calender view
+#And I click on "Edit" icon in "Future date" date
+#Then I should be displayed with "Add Note" wizard
+#When I "Edit" notes and click on 'Save and Close' button
+#Then I should see the successfull message "Note updated successfully." in "Calendar" window
+When I click on "Delete" icon in "Future date" date
+And I click Ok button in confirmation lightbox
 #When I select 'Home' option
 #Then I should be on the "Program Administration" page
 
+#Purpose : Cmenu assign of single content to past due date
+#MyItLabProgramCourse
 Scenario: Cmenu assign from Assignment Calendar pastdue
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Assignment Calendar" tab
-Then I should be on the "Calendar" page
-When I search the "RegPastDueAssignment  " activity of behavioral mode "SkillBased"
-Then I should see the searched "RegPastDueAssignment  " activity of behavioral mode "SkillBased"
-When I click cmenu "Assignment Properties" of activity "RegPastDueAssignment"
+When I search the "RegPastDueAssignment" activity of behavioral mode "SkillBased"
+Then I should see the searched "RegPastDueAssignment" activity of behavioral mode "SkillBased"
+When I click cmenu "Set Scheduling Options" of activity "RegPastDueAssignment"
 Then I should see the "Assign" popup
+And I assign the searched activity to past due date
+And I should be on the "Calendar" page
+And I should see the pastdue icon
 
 #Purpose : Drag and drop a single content to a day and display of Assigned content in Month View
 #Test Case Id :HED_MIL_PWF_280
