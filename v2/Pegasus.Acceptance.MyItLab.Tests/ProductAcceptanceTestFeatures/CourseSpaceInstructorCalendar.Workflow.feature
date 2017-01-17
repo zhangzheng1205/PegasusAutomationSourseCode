@@ -37,14 +37,25 @@ Then I should be on the "Calendar" page
 #When I click on "Day" view in Advance calender
 #Then I should see the "RegTodayDateAssignment " activity assigned in "Day" view of "Current date" in Advance calender
 #When I click on "Assignments" option in calender frame of "Calendar" page
-When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
-Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
-When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
-Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
-When I click on 'Add Notes' option
-Then I should be displayed with "Add Note" wizard
-When I enter notes and click on 'Save and Close' button
-
+#When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
+#Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
+#When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
+#Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
+#When I click on "Future date" in normal calender view
+#When I click on "Add Notes" icon in "Future date" date
+#Then I should be displayed with "Add Note" wizard
+#When I "Create" notes and click on 'Save and Close' button
+#Then I should be displayed with the notes in the day view
+#When I click on "Back to Month"
+Then I should be displayed with 'Due date' icon and 'Notes' icon in "Future date"
+#Scenario: Edit notes in day view of calendar
+When I click on "Future date" in normal calender view
+#And I click on "Edit" icon in "Future date" date
+#Then I should be displayed with "Add Note" wizard
+#When I "Edit" notes and click on 'Save and Close' button
+#Then I should see the successfull message "Note updated successfully." in "Calendar" window
+When I click on "Delete" icon in "Future date" date
+And I click Ok button in confirmation lightbox
 #When I select 'Home' option
 #Then I should be on the "Program Administration" page
 

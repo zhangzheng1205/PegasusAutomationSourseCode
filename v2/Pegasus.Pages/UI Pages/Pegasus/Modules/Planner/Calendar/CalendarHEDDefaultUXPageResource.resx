@@ -520,6 +520,24 @@
     <value>stuWelcom_title</value>
   </data>
   <data name="CalendarHEDDefaultUXPageResource_Notes_Text" xml:space="preserve">
-    <value>Test Notes entered on</value>
+    <value>Test notes entered on</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_DeleteNotes_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_btnDeleteNote</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_EditNotes_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_btnEditNote</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AddNote_Iframe_Id_Locator" xml:space="preserve">
+    <value>iframeAddNote</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator" xml:space="preserve">
+    <value>btnSaveAndClose</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtareaAddnote</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_EditNotes_Text" xml:space="preserve">
+    <value>Test notes edited on</value>
   </data>
 </root>

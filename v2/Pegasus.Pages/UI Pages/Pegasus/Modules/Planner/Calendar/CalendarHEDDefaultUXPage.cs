@@ -3140,20 +3140,49 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Add notes
         /// </summary>
-        public void ClickAddNote()
+        public void ClickOptionInDayView(string optionName)
         {
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickAddNote",base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                // Wait untill window load
-                base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_Calendar_Window_Name);
-                // Wait and click on Add note option
-                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_AddNotes_Button_Id_Locator));
-                IWebElement getNoteElement = base.GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_AddNotes_Button_Id_Locator);
-                base.ClickByJavaScriptExecutor(getNoteElement);
+                switch(optionName)
+                { 
+                    case "Add Notes":
+                            // Wait untill window load
+                            base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_Calendar_Window_Name);
+                            // Wait and click on Add note option
+                            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPageResource_AddNotes_Button_Id_Locator));
+                            IWebElement getNoteElement = base.GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPageResource_AddNotes_Button_Id_Locator);
+                            base.ClickByJavaScriptExecutor(getNoteElement);
+                            break;
+
+                    case  "Edit":
+                            // Wait untill window load
+                            base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_Calendar_Window_Name);
+                            // Wait and click on Add note option
+                            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPageResource_EditNotes_Button_Id_Locator));
+                            IWebElement getEditElement = base.GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPageResource_EditNotes_Button_Id_Locator);
+                            base.ClickByJavaScriptExecutor(getEditElement);
+                            break;
+
+                    case "Delete":
+                        // Wait untill window load
+                            base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_Calendar_Window_Name);
+                            // Wait and click on Add note option
+                            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPageResource_DeleteNotes_Button_Id_Locator));
+                            IWebElement getDeleteElement = base.GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPageResource_DeleteNotes_Button_Id_Locator);
+                            base.ClickByJavaScriptExecutor(getDeleteElement);
+                            break;
+            }
             }
             catch(Exception e)
             {
@@ -3203,15 +3232,24 @@ namespace Pegasus.Pages.UI_Pages
                 string fillText = CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPageResource_Notes_Text + " " + getFutureDate;
 
                 // Switch to iframe 
-                base.SwitchToIFrameById("iframeAddNote");
-                bool ad = base.IsElementPresent(By.Id("txtareaAddnote"), 10);
+                base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_Iframe_Id_Locator);
 
                 // Wait untill the text box loads and enter the text
-                base.WaitForElement(By.Id("txtareaAddnote"));
-                base.FillTextBoxById("txtareaAddnote", fillText);
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator));
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator);
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator, fillText);
 
-                bool hjsad = base.IsElementPresent(By.Id("btnSaveAndClose"),10);
-                base.WaitForElement(By.Id("btnSaveAndClose"));
+                // Wait untill the text box loads and enter the text
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator));
+                IWebElement getSaveCloseButton = base.GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator);
+                base.ClickByJavaScriptExecutor(getSaveCloseButton);
+
                 Logger.LogMethodExit("CalendarHEDDefaultUXPage", "EnterNotes", base.IsTakeScreenShotDuringEntryExit);
             }
             catch(Exception e)
@@ -3219,5 +3257,165 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
         }
+
+        /// <summary>
+        /// Enter notes and save in the "Add notes" wizard
+        /// </summary>
+        public void EditNotes()
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "EnterNotes", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Get Future date
+                DateTime date = DateTime.Today;
+                DateTime fDate = date.AddDays(5);
+                string getFutureDate = fDate.ToString("d");
+                string fillText = CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPageResource_EditNotes_Text + " " + getFutureDate;
+
+                // Switch to iframe 
+                base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_Iframe_Id_Locator);
+
+                // Wait untill the text box loads and enter the text
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator));
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator);
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_TextBox_Id_Locator, fillText);
+
+                // Wait and click "Save and close" button
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator));
+                IWebElement getSaveCloseButton = base.GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AddNote_SaveClose_Id_Locator);
+                base.ClickByJavaScriptExecutor(getSaveCloseButton);
+                Logger.LogMethodExit("CalendarHEDDefaultUXPage", "EnterNotes", base.IsTakeScreenShotDuringEntryExit);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
+
+        /// <summary>
+        /// Validate the display of notes.
+        /// </summary>
+        /// <returns>Return notes display status.</returns>
+        public bool ValidateNotes()
+        {
+            bool getStatus = false;
+            try
+            {
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+            CalendarHEDDefaultUXPage_Div_AssignedActivitiesInDayView_Xpath_Locator));
+                ////table[@id='ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList']/tbody/tr[{0}]
+                bool tst = base.IsElementPresent(By.ClassName("divnotetext"),10);
+                //Get the Total Activities Count
+                string getText = base.GetInnerTextAttributeValueByClassName("divnotetext");
+                // Get Future date
+                DateTime date = DateTime.Today;
+                DateTime fDate = date.AddDays(5);
+                string getFutureDate = fDate.ToString("d");
+                string getActualText = CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_Notes_Text + " " + getFutureDate;
+
+                if (getText.Equals(getActualText))
+                    {
+                        getStatus = true;
+                    }
+                //Refresh Current Page
+                base.RefreshTheCurrentPage();
+                //Accept the Alert
+                //  this.AcceptTheAlert();
+                //wait for Calendar Window
+                base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Calendar_WindowName);
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return getStatus;
+        }
+
+        /// <summary>
+        /// Validate icon existance in calendar frame.
+        /// </summary>
+        /// <returns>Return icon existance.</returns>
+        public bool ValidateOptionInAssignmentCalendar()
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ValidateOptionInAssignmentCalendar",base.IsTakeScreenShotDuringEntryExit);
+            bool getStatus = false;
+            try
+            {
+                bool exitLoop = false;
+                string getAppDate = string.Empty;
+
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString("d");
+
+                DateTime fDate = date.AddDays(5);
+                string getFutureDate = fDate.ToString("d");
+
+                int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
+                for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                    i <= getRowCount && !exitLoop; i++)
+                {
+                    int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
+                    for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                      CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                      j <= getColumCount; j++)
+                    {
+                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
+
+                        if (getAppDate == getFutureDate)
+                        {
+                            this.SelectCalendarWindow();
+
+                            // Get Note icon existance
+                            bool getNoteIconStatus = base.IsElementPresent(By.XPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div[2]/div/div[2]/span",i,j)),10);
+
+                            // Get due date icon
+                            bool getDueDateIconStatus = base.IsElementPresent(By.XPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div[2]/div/div[1]/div/div/div/span", i, j)), 10);
+
+                            if (getNoteIconStatus && getDueDateIconStatus == true)
+                            {
+                                getStatus = true;
+                                exitLoop = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "ValidateOptionInAssignmentCalendar", base.IsTakeScreenShotDuringEntryExit);
+            return getStatus;
+        }
+
+        /// <summary>
+        /// Click "Ok" button in the confirmation popup
+        /// </summary>
+        public void ClickOkButton()
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOkButton", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Calendar_Window_Name);
+                base.ClickButtonById("confirm");
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOkButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
