@@ -151,3 +151,59 @@ When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Gradebook" by "CsSmsInstructor"
 Then I should see the badge icon for "Word Chapter 1 Grader Project [Assessment 3]" as "CsSmsInstructor"
+
+#---------------------------------------------------------------------------------------------------------------------
+
+#Purpose: :Instructor validating the functionality of saving column to Custom View from Gradebook tab
+#TestCase Id: 
+#MyItLabProgramCourse, MySpanishLabCourse
+#Pre Condition: Activity should have submission
+Scenario:Instructor Validating the functionality of saving columns to custom view from Gradebook tab
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
+And I select the cmenu "Save to Custom View" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+Then I should be able to see "Column successfully saved to Custom View." message
+When I navigate to "Gradebook" tab
+And I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Gradebook" by "CsSmsInstructor"
+And I select the cmenu "Save to Custom View" of asset "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
+Then I should be able to see "Column successfully saved to Custom View." message
+
+#Purpose: :Instructor validating the functionality of removing column from Custom View from Gradebook tab
+#TestCase Id: 
+#MyItLabProgramCourse, MySpanishLabCourse
+#Pre Condition: Activity should have submission
+Scenario:Instructor Validating the functionality of removing saved custom columns from Gradebook tab
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
+And I select the cmenu "Remove from Custom View" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+Then I should be able to see "Column successfully removed from Custom View." message
+
+#Purpose: :Instructor validating the display of saved column name, students and score in Custom View subtab
+#TestCase Id: 
+#MyItLabProgramCourse, MySpanishLabCourse
+#Pre Condition: Column should be saved to Custom view tab
+Scenario:Instructor verifying the display of saved custom column in custom view tab
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I navigate to "Gradebook" tab and selected "Custom View" subtab
+Then I should be on the "Custom View" page
+And I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity with "0" score for "ZeroScore" with "CsSmsStudent" in Custom view tab
+And I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity with "100" score for "CsSmsStudent" in Custom view tab
+
+
+
+

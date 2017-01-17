@@ -276,6 +276,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceStudentGlobalHomePage.Workflow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGradebook.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceStudentGradebook.Workflow.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudentReport.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -781,6 +786,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGlobalHomePage.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceStudentGlobalHomePage.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGradebook.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceStudentGradebook.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentReport.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

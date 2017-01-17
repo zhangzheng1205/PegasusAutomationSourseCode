@@ -1168,6 +1168,78 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new GBInstructorUXPage().SelectGradebookFrame();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="subMenuTitle"></param>
+        /// <param name="activityColumn"></param>
+        /// <param name="gradeColumn"></param>
+        /// <param name="userTypeEnum"></param>
+        [Then(@"I should be able to see ""(.*)"" submenu text with ""(.*)"" and ""(.*)"" columns as ""(.*)"" user")]        
+        public void ValidateCustomViewTab(string subMenuTitle,
+           string activityColumn, string gradeColumn, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                "ValidateCustonViewTab",
+               base.IsTakeScreenShotDuringEntryExit);            
+           //Verify sub menu title displayed
+            Logger.LogAssertion("ValidateCustomViewTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (subMenuTitle, new GBCustomViewUX().
+                            GetCustomViewTabDisplayItems(subMenuTitle, userTypeEnum)));
+            //Verify Activity column dispalyed
+            Logger.LogAssertion("ValidateCustomViewTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (activityColumn, new GBCustomViewUX().
+                            GetCustomViewTabDisplayItems(activityColumn, userTypeEnum)));
+            //Verify Grade column dispalyed
+            Logger.LogAssertion("ValidateCustomViewTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (gradeColumn, new GBCustomViewUX().
+                            GetCustomViewTabDisplayItems(gradeColumn, userTypeEnum)));
+            Logger.LogMethodExit("Gradebook",
+                "ValidateCustonViewTab",
+               base.IsTakeScreenShotDuringEntryExit); 
+        }
+
+
+        [Then(@"I should see ""(.*)"" with ""(.*)"" having ""(.*)"" grade for ""(.*)"" as ""(.*)"" user")]
+        public void VerifySavedActivityDisplayInCustomView(Activity.ActivityTypeEnum activityTypeEnum,
+            string activityIcon, int activityScore, string userScenario, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                   "VerifySavedActivityDisplayInCustomView",
+                  base.IsTakeScreenShotDuringEntryExit);
+          
+            //Get Activity name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            String expectedActivity = activity.Name;
+            //Verify Activity dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (expectedActivity, new GBCustomViewUX().
+                            GetActivitySavedInCustomView(expectedActivity, userTypeEnum)));
+            ////Verify Activity column dispalyed
+            //Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+            //            Current.ScenarioInfo.Title, () => Assert.AreEqual
+            //                (activityColumn, new GBCustomViewUX().
+            //                GetCustomViewTabDisplayItems(activityColumn, userTypeEnum)));
+            ////Verify Grade column dispalyed
+            //Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+            //            Current.ScenarioInfo.Title, () => Assert.AreEqual
+            //                (gradeColumn, new GBCustomViewUX().
+            //                GetCustomViewTabDisplayItems(gradeColumn, userTypeEnum)));
+
+            Logger.LogMethodExit("Gradebook",
+                "VerifySavedActivityDisplayInCustomView",
+               base.IsTakeScreenShotDuringEntryExit); 
+
+
+        }
+
+
+        
+
     }
 }
    
