@@ -975,7 +975,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeedbackPageResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBCustomViewUX .cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBCustomViewUX.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
