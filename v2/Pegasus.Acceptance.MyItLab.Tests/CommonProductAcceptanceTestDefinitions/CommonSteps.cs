@@ -1183,9 +1183,43 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                base.IsTakeScreenShotDuringEntryExit);
        }
 
-    }
+    
+    
+
+
+            /// <summary>
+        /// Assign the activity to paste due .
+        /// </summary>
+        [When(@"I assign the searched activity to past due date")]
+        public void AssignActivityToPastDueDate()
+        {
+            //Assign actiivty to past due date
+            Logger.LogMethodEntry("CommonSteps", "AssignActivityToPastDueDate",
+             base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().AssignActiivtyToPreviousDate();
+            Logger.LogMethodExit("CommonSteps", "AssignActivityToPastDueDate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+                   
+        /// <summary>
+        /// Verify the activity assigned to previous date .
+        /// </summary>
+        /// [Then(@"I should see the pastdue icon")]
+        [Then(@"I should see the pastdue icon")]
+        public void DisplayOfPastDueRedIcon()
+        {
+            //Assign actiivty to past due date
+            Logger.LogMethodEntry("CommonSteps", "DisplayOfPastDueRedIcon",
+             base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyDisplayofPastDeueIcon", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CalendarHedDefaultUxPage().PastDueActivityIcon()));
+            Logger.LogMethodExit("CommonSteps", "DisplayOfPastDueRedIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 }
 
-
+}
 
 
