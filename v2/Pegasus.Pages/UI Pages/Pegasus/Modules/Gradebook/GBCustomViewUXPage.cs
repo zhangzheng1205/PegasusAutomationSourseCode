@@ -76,6 +76,8 @@ namespace Pegasus.Pages.UI_Pages
                             case "Custom View":
                                 //Wait for the sub menu element to be loaded
                                 this.SwitchToCustomViewFrame();
+                                bool customElement = base.IsElementPresent(By.Id(GBCustomViewUXPageResource.
+                                    GBCustomViewUXPage_CustomView_subMenu_ID_Locator));
                                 base.WaitForElement(By.Id(GBCustomViewUXPageResource.
                                     GBCustomViewUXPage_CustomView_subMenu_ID_Locator));
                                 //Get the sub menu title text
