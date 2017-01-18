@@ -810,4 +810,13 @@
   <data name="TodayViewUXPageResource_Support_PopUp_Id_Locator" xml:space="preserve">
     <value>lblLogin</value>
   </data>
+  <data name="TodayViewUXPageResource_Header_HomePage_HelpOption_ID_Locator" xml:space="preserve">
+    <value>_ctl9_pegHello_HelpLink</value>
+  </data>
+  <data name="TodayViewUXPageResource_Header_HomePage_SupportOption_ID_Locator" xml:space="preserve">
+    <value>_ctl9_pegHello_ancSupport</value>
+  </data>
+  <data name="TodayViewUXPageResource_Stu_Support_UserName_ID_Locator" xml:space="preserve">
+    <value>lblLogin</value>
+  </data>
 </root>

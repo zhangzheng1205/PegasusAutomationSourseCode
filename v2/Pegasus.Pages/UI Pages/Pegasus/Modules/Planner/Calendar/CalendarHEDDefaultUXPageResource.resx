@@ -561,4 +561,16 @@
   <data name="CalendarHEDDefaultUXPage_SaveButton_Id_Locator" xml:space="preserve">
     <value>btn_save_assign</value>
   </data>
+  <data name="CalendarHEDDefaultUXPageResource_AdvanceCal_MonthView_GetAssignCount_Xpath" xml:space="preserve">
+    <value>//div[@class ='rsTopWrap rsOverflowExpand']/div/table/tbody/tr[2]/td/div/table/tbody/tr[{0}]/td[{1}]/div[2]/div/div/div/div/div/div/span</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AdvanceCal_MonthView_GetCalColCount_Xpath" xml:space="preserve">
+    <value>//div[@class ='rsTopWrap rsOverflowExpand']/div/table/tbody/tr[2]/td/div/table/tbody/tr[{0}]/td</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AdvanceCal_MonthView_GetCalRowCount_Xpath" xml:space="preserve">
+    <value>//div[@class ='rsTopWrap rsOverflowExpand']/div/table/tbody/tr[2]/td/div/table/tbody/tr</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AdvanceCal_MonthView_GetCellDate_Xpath" xml:space="preserve">
+    <value>//div[@class ='rsTopWrap rsOverflowExpand']/div/table/tbody/tr[2]/td/div/table/tbody/tr[{0}]/td[{1}]/div/div/a</value>
+  </data>
 </root>

@@ -282,4 +282,28 @@
   <data name="HEDGlobalHome_Page_Course_Name_XPath_Locator" xml:space="preserve">
     <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]</value>
   </data>
+  <data name="HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_PegasushelloK5_ancMyAccount</value>
+  </data>
+  <data name="HEDGlobalHomePage_Header_Privacy_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_PegasushelloK5_aPrivacyPolicy</value>
+  </data>
+  <data name="HEDGlobalHomePage_Header_Signout_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_PegasushelloK5_testLogOut</value>
+  </data>
+  <data name="HEDGlobalHomePage_MyProfile_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_pegHello_ancMyAccount</value>
+  </data>
+  <data name="HEDGlobalHomePage_Privacy_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_pegHello_Span2</value>
+  </data>
+  <data name="HEDGlobalHomePage_Signout_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_pegHello_testLogOut</value>
+  </data>
+  <data name="HEDGlobalHomePage_Header_Support_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_PegasushelloK5_ancSupport</value>
+  </data>
+  <data name="HEDGlobalHomePage_Stu_Help_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl9_PegasushelloK5_HelpLink</value>
+  </data>
 </root>

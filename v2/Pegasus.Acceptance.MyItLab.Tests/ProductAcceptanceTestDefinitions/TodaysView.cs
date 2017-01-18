@@ -701,7 +701,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.CsSmsStudent:
                 new TodaysViewUxPage().ValidateOptionsInTopHeaderAndPerformOperation
-                        (optionName, tabName, couseTypeEnum);
+                        (optionName, tabName, couseTypeEnum, userType);
                 break;
 
                 case User.UserTypeEnum.DPCsNewTeacher:
@@ -713,7 +713,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-       
+               
         /// <summary>
         /// Verify the lightbox display
         /// </summary>
@@ -850,6 +850,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              Logger.LogMethodExit("TodaysView", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
          }
 
-
+        
     }
 }

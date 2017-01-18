@@ -201,6 +201,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructorEnrollement.Workflow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -583,13 +588,13 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorTodaysViewChannels.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHearderLinksPageUX.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageUX.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHomePageUX.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageUX.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHearderLinksPageUX.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
@@ -735,6 +740,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorEnrollement.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorEnrollement.Workflow1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
