@@ -8,20 +8,45 @@
 #TestCase Id: 
 #MyItLabProgramCourse, MySpanishLabCourse
 Scenario: Validate the CustomView subtab as CsSmsStudent
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
 When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
 Then I should be able to see "Custom View" submenu text with "Activity" and "Grade" columns as "CsSmsStudent" user
 
-
-#Purpose: :Students validating the functionality of saving an activity to custom view
+#Purpose: :Students validating the Activity and Grade saved to custom view
 #TestCase Id: 
-#MyItLabProgramCourse, MySpanishLabCourse
+#MyItLabProgramCourse
 #Pre Condition: Activity should be submitted by the student
-Scenario: Saving an activity to custom view tab from Grades tab
+Scenario: Validate the activity saved to custom view by Zero score student
+When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
+Then I should see "RegCustomViewActivity1" with "ActivityIcon" having "0" grade for "ZeroScore" as "CsSmsStudent" user
+
+#Purpose: Students validating the Activity and Grade saved to custom view                                    
+#TestCase Id: 
+#MyItLabProgramCourse
+#Pre Condition: Activity should be submitted by the student
+Scenario: Validate the activity saved to custom view by 100 score student
+When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
+Then I should see "RegCustomViewActivity1" with the "ActivityIcon" having "100" grade for "CsSmsStudent" user
+
+#Purpose: Student validating the functionality of sorting 'Activity' colum in Custom view tab
+#TestCase Id: 
+#MyItLabProgramCourse
+#Pre Condition: Activity should be submitted by the student
+Scenario: Sorting the activity column in Custom View tab
+When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
+And I sort the "Activity" in 'Descending' order
+Then I should see "Descending" icon for the sorted column
+And I should see "RegCustomViewActivity1" activity at position "2" of custom view frame 
+And I should see "RegCustomViewActivity2" activity at position "1" of custom view frame 
+When I sort the "Activity" in 'Ascending' order
+Then I should see "Ascending" icon for the sorted column
+Then I should see "RegCustomViewActivity1" activity at position "1" of custom view frame 
+And I should see "RegCustomViewActivity2" activity at position "2" of custom view frame 
+
+#Purpose: Student validating the functionality of sorting 'Grade' colum in Custom view tab
+#TestCase Id: 
+#MyItLabProgramCourse
+#Pre Condition: Activity should be submitted by the student and Grades should be displayed
+Scenario: Sorting the Grade column in Custom View tab
 Given I browsed the login url for "CsSmsStudent"
 When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
@@ -30,6 +55,9 @@ When I enter in the "MyItLabInstructorCourse" course from the Global Home page a
 And I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
-Then I should see "RegCustomViewActivity1" with "ActivityIcon" having "0" grade for "ZeroScore" as "CsSmsStudent" user
-
-
+And I sort the "Activity" in 'Descending' order
+Then I should see "Descending" icon for the sorted column
+And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Descending" order
+When I sort the "Grade" in 'Ascending' order
+Then I should see "Ascending" icon for the sorted column
+And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Ascending" order

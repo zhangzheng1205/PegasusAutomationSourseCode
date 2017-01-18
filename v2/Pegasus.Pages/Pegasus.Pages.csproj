@@ -975,6 +975,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeedbackPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBCustomViewUX .cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1040,6 +1041,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ManageStudentsDefaultPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBCustomViewUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBCustomViewUXPageResource.resx</DependentUpon>
     </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\HomePage\AdminHomePage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\HomePage\AdminHomePageResource.Designer.cs">
@@ -2639,6 +2645,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\ManageStudentsDefaultPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ManageStudentsDefaultPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBCustomViewUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBCustomViewUXPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\HomePage\AdminHomePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
