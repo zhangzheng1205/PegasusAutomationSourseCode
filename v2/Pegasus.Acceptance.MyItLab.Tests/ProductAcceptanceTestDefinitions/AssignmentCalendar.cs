@@ -255,11 +255,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        
-        public void WhenIClickOnIconInDate(string p0, string p1)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I click on ""(.*)"" in advanced calender view")]
+        public void ClickOnDateInAdvancedCalenderView(string dateType)
         {
-            ScenarioContext.Current.Pending();
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "ClickOnInAdvancedCalenderView",
+                base.IsTakeScreenShotDuringEntryExit);
+            switch (dateType)
+            {
+                case "Future date":
+                    new CalendarHedDefaultUxPage().ClickAssignmentFuturedateInAdvCal();
+                    break;
+            }
+            Logger.LogMethodExit("AssignmentCalendar",
+                "ClickOnInAdvancedCalenderView",
+                base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Click Add notes option in calendar view.
@@ -290,6 +306,21 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar", "ClickOkButtonInConfirmationLightbox", base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Validate assigned item count based on view type
+        /// </summary>
+        /// <param name="assignedItemCount"></param>
+        /// <param name="dateType"></param>
+        [Then(@"I should be displayed with assigned item count ""(.*)"" in ""(.*)""")]
+        public void ValidateAssignedItemCount(int assignedItemCount, string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar", "ValidateAssignedItemCount", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyActivityAssigned",
+            ScenarioContext.Current.ScenarioInfo.Title,
+            () => Assert.AreEqual(assignedItemCount,new CalendarHedDefaultUxPage().
+                GetAssignedItemCount()));
+            Logger.LogMethodExit("AssignmentCalendar", "ValidateAssignedItemCount", base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Validate the display of wizard 
@@ -383,7 +414,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
-
+        /// <summary>
+        /// Validate the activity display in day view of assignment calendar
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="viewType">This is calendar view type.</param>
+        /// <param name="dateType">This is date type.</param>
         [Then(@"I should see the ""(.*)"" activity assigned in ""(.*)"" view of ""(.*)"" in Advance calender")]
         public void ThenIShouldSeeTheActivityAssignedInViewOfInAdvanceCalender(Activity.ActivityTypeEnum activityType, string viewType, string dateType)
         {
