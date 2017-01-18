@@ -25,3 +25,47 @@ When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I click on "Expand" icon in "My Courses and Testbanks" frame as "CsSmsStudent" user
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The Help Link functionality on the home page
+Scenario:CSSMSStudent validate functionality of help link in header on global home
+When I click on "Help" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on "Home Page Help" page as "CsSmsStudent" user
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The Support Link functionality on the home page
+Scenario: CSSMSStudent validate Support link functionality on global home
+When I click on "Support" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsStudent" user
+When I close the "Support" window
+Then I should be on the "Global Home" page
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The User name and Welcome message displayed on the home page
+Scenario: Validate user name and welcome message in header of global home for CSSMSStudent
+Then I should be displayed with "Hi," message for "CsSmsStudent" user
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The My Profile Link functionality on the home page
+Scenario: CSSMSStudent validate  My Profile link functionality in global home
+When I click on "My Profile" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be displayed with "My Profile" lightbox
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The Privacy link functionality displayed on the home page
+Scenario: CSSMSStudent validate Privacy link functionality in course global home
+When I click on "Privacy" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should be on the "Privacy" page
+And I close the "Privacy" window
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Logout as CsSmsStudent from global home of MyItLabInstructorCourse course
+Scenario: Logout of Pegasus as CsSmsStudent from global home
+When I click on "Sign out" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should see the successfull message "You have been signed out of the application."

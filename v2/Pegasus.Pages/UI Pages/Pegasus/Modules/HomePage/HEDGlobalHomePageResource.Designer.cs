@@ -493,6 +493,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl9_PegasushelloK5_ancMyAccount.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_PegasushelloK5_aPrivacyPolicy.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Header_Privacy_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Header_Privacy_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_PegasushelloK5_testLogOut.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Header_Signout_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Header_Signout_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_PegasushelloK5_ancSupport.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Header_Support_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Header_Support_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to myModalLabel.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator {
@@ -525,6 +561,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHomePage_HomePageIframe_ID_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePageIframe_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_pegHello_ancMyAccount.
+        /// </summary>
+        internal static string HEDGlobalHomePage_MyProfile_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_MyProfile_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_pegHello_Span2.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Privacy_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Privacy_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_pegHello_testLogOut.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Signout_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Signout_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_PegasushelloK5_HelpLink.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Stu_Help_Link_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Stu_Help_Link_ID_Locator", resourceCulture);
             }
         }
         

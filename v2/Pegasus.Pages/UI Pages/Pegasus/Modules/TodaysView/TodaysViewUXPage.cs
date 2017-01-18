@@ -4395,8 +4395,8 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="tabName">This is the tab name.</param>
         /// <param name="couseTypeEnum">This is course type enum.</param>
         /// <param name="userType">This is user type enum</param>
-        public void ValidateOptionsInTopHeaderAndPerformOperation(string optionName, 
-            string tabName, Course.CourseTypeEnum couseTypeEnum)
+        public void ValidateOptionsInTopHeaderAndPerformOperation(string optionName,
+            string tabName, Course.CourseTypeEnum couseTypeEnum, User.UserTypeEnum userType)
         {
             //verify header option as HED user and perform operation based on the options
             Logger.LogMethodEntry("TodaysViewUXPage", 
@@ -4407,7 +4407,7 @@ namespace Pegasus.Pages.UI_Pages
                switch(couseTypeEnum)
                {
                    case Course.CourseTypeEnum.MyItLabInstructorCourse:
-                       this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName);
+                       this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName, userType);
                     break;
 
                    case Course.CourseTypeEnum.DigitsCourse:
@@ -4430,7 +4430,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="tabName">This is tab name.</param>
-        private void VerifyTheTabExistanceAndPerformOperation(string optionName, string tabName)
+        private void VerifyTheTabExistanceAndPerformOperation(string optionName, string tabName, User.UserTypeEnum userType)
         {
             //Verify the Tab Name
             Logger.LogMethodEntry("TodaysViewUXPage", "VerifyTheTabExistanceAndPerformOperation",
@@ -4442,7 +4442,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Compare the tab name and Page title
                 if (tabName == actualPageTitle)
                 {
-                    this.ClickOptionInCourseHeader(optionName);
+                    this.ClickOptionInCourseHeader(optionName, tabName, userType);
                 }
             }
             catch(Exception e)
@@ -4454,51 +4454,163 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
         /// <summary>
         /// Click the option in course header.
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="tabName">This is tab name.</param>
-        private void ClickOptionInCourseHeader(string optionName)
+        private void ClickOptionInCourseHeader(string optionName, string tabName,User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCourseHeader",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                switch(optionName)
-                {
-                    case "Home":
-                        //Wait for the Home Link
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_HomeOption_ID_Locator));
-                        //CLick on Home Link
-                        base.ClickLinkById(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_HomeOption_ID_Locator);
-                        break;
-                    case "Help":
-                        //Wait for the Help Link
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_HelpOption_ID_Locator));
-                        //Click on Help Link
-                        base.ClickLinkById(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_HelpOption_ID_Locator);
-                        break;
-                    case "Support":
-                        //Wait for the Support Link
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_SupportOption_ID_Locator));
-                        //Click on Support Link
-                        base.ClickLinkById(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_SupportOption_ID_Locator);
-                        break;
 
-                    case "My Profile":
-                    case "Privacy":
-                    case "Sign out":                       
-                        this.ClickOptionAvailableInUserDropdownHeader(optionName);
+                switch (userType)
+                {
+                    case User.UserTypeEnum.CsSmsInstructor:
+
+                        switch (tabName)
+                        {
+                            case "Global Home":
+                                switch (optionName)
+                                {
+                                    case "Help":
+                                        //Wait for the Help Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomePage_HelpOption_ID_Locator));
+                                        //Click on Help Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomePage_HelpOption_ID_Locator);
+                                        break;
+                                    case "Support":
+                                        //Wait for the Support Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomePage_SupportOption_ID_Locator));
+                                        //Click on Support Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomePage_SupportOption_ID_Locator);
+                                        break;
+                                    case "My Profile":
+                                    case "Privacy":
+                                    case "Sign out":
+                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
+                                        break;
+                                }
+                                break;
+
+                            case "Today's view":
+                                switch (optionName)
+                                {
+                                    case "Home":
+                                        //Wait for the Home Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomeOption_ID_Locator));
+                                        //CLick on Home Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomeOption_ID_Locator);
+                                        break;
+                                    case "Help":
+                                        //Wait for the Help Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HelpOption_ID_Locator));
+                                        //Click on Help Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HelpOption_ID_Locator);
+                                        break;
+                                    case "Support":
+                                        //Wait for the Support Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SupportOption_ID_Locator));
+                                        //Click on Support Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SupportOption_ID_Locator);
+                                        break;
+
+                                    case "My Profile":
+                                    case "Privacy":
+                                    case "Sign out":
+                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
+                                        break;
+                                }
+
+                          break;
+                        }
                         break;
+                            case User.UserTypeEnum.CsSmsStudent:
+
+                                switch (tabName)
+                                {
+                                    case "Global Home":
+                                        switch (optionName)
+                                        {
+                                            case "Help":
+                                                //Wait for the Help Link
+                                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                                    HEDGlobalHomePage_Stu_Help_Link_ID_Locator));
+                                                //Click on Help Link
+                                                base.ClickLinkById(HEDGlobalHomePageResource.
+                                                    HEDGlobalHomePage_Stu_Help_Link_ID_Locator);
+                                                break;
+                                            case "Support":
+                                                //Wait for the Support Link
+                                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                                    HEDGlobalHomePage_Header_Support_Link_ID_Locator));
+                                                //Click on Support Link
+                                                base.ClickLinkById(HEDGlobalHomePageResource.
+                                                    HEDGlobalHomePage_Header_Support_Link_ID_Locator);
+                                                break;
+                                            case "My Profile":
+                                            case "Privacy":
+                                            case "Sign out":
+                                                this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
+                                                break;
+                                        }
+
+                                        break;
+                                    case "Today's view":
+                                        switch (optionName)
+                                        {
+                                            case "Home":
+                                                //Wait for the Home Link
+                                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                                    TodayViewUXPageResource_Header_HomeOption_ID_Locator));
+                                                //CLick on Home Link
+                                                base.ClickLinkById(TodaysViewUXPageResource.
+                                                    TodayViewUXPageResource_Header_HomeOption_ID_Locator);
+                                                break;
+                                            case "Help":
+                                                //Wait for the Help Link
+                                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                                    TodayViewUXPageResource_Header_HelpOption_ID_Locator));
+                                                //Click on Help Link
+                                                base.ClickLinkById(TodaysViewUXPageResource.
+                                                    TodayViewUXPageResource_Header_HelpOption_ID_Locator);
+                                                break;
+                                            case "Support":
+                                                //Wait for the Support Link
+                                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                                    TodayViewUXPageResource_Header_SupportOption_ID_Locator));
+                                                //Click on Support Link
+                                                base.ClickLinkById(TodaysViewUXPageResource.
+                                                    TodayViewUXPageResource_Header_SupportOption_ID_Locator);
+                                                break;
+
+                                            case "My Profile":
+                                            case "Privacy":
+                                            case "Sign out":
+                                                this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
+                                                break;
+                                        }
+                                        break;
+                                }
+                                break;
+                        }
                 }
-            }
+            
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -4508,78 +4620,241 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+      
         /// <summary>
-        /// Click header option
+        /// Click the option in course header.
         /// </summary>
         /// <param name="optionName">This is option name.</param>
-        private void ClickOptionAvailableInUserDropdownHeader(string optionName)
+        /// <param name="tabName">This is tab name.</param>
+        private void ClickOptionAvailableInUserDropdownHeader(string optionName, 
+            string tabName,User.UserTypeEnum userType)
         {
-            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionAvailableInUserDropdownHeader",
-                                  base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCourseHeader",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-
                 //Wait for the Dropdown icon
-               base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator));
+                base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                             TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator));
                 //Get the properties of dropdown icon
-                IWebElement getDrodownIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator);
+                IWebElement getInstructorProfileDrodownIcon = base.GetWebElementPropertiesByXPath
+                    (TodaysViewUXPageResource.TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator);
                 //Click on Dropdown icon
-                base.ClickByJavaScriptExecutor(getDrodownIcon);
+                base.ClickByJavaScriptExecutor(getInstructorProfileDrodownIcon);
 
-                switch (optionName)
+
+                switch (userType)
                 {
-                    case "My Profile":
-                        //Wait for My Profile option 
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
-                        //Get the properties of My Profile option
-                        IWebElement getMyProfileOption = base.GetWebElementPropertiesById
-                            (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
-                        //MouseHover on My Profile option
-                        base.PerformMouseHoverAction(getMyProfileOption);
-                        //CLick on My Profile option
-                        base.PerformMouseClickAction(getMyProfileOption);
-                        break;
+                    case User.UserTypeEnum.CsSmsInstructor:
 
-                    case "Privacy":
-                        //Wait for Privacy option
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
-                        //Get the properties of Privacy option
-                        IWebElement getPrivacyOption = base.GetWebElementPropertiesById
-                            (TodaysViewUXPageResource.
-                            TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
-                        //MouseHover on Privacy option
-                        base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
-                        //CLick on Privacy option
-                        base.PerformMouseClickAction(getPrivacyOption);
-                        break;
+                        switch (tabName)
+                        {
+                            case "Global Home":
+                                switch (optionName)
+                                {
+                            case "My Profile":
+                                        
+                                //Wait for My Profile option 
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_MyProfile_Link_ID_Locator));
+                                //Get the properties of My Profile option
+                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_MyProfile_Link_ID_Locator);
+                                //MouseHover on My Profile option
+                                base.PerformMouseHoverAction(getMyProfileOption);
+                                //CLick on My Profile option
+                                base.PerformMouseClickAction(getMyProfileOption);
+                                break;
 
-                    case "Sign out":
-                        //Wait for Sign out option
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
-                        //Get the properties of Sign out option
-                        IWebElement getSignoutOption = base.GetWebElementPropertiesById
-                            (TodaysViewUXPageResource.
-                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
-                        //MouseHover on Sign out option
-                        base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
-                        //CLick on Signout option
-                        base.PerformMouseClickAction(getSignoutOption);
+                            case "Privacy":
+                                //Wait for Privacy option
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_Privacy_Link_ID_Locator));
+                                //Get the properties of Privacy option
+                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Privacy_Link_ID_Locator);
+                                //MouseHover on Privacy option
+                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                //CLick on Privacy option
+                                base.PerformMouseClickAction(getPrivacyOption);
+                                break;
+
+                            case "Sign out":
+                                //Wait for Sign out option
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_Signout_Link_ID_Locator));
+                                //Get the properties of Sign out option
+                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Signout_Link_ID_Locator);
+                                //MouseHover on Sign out option
+                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                //CLick on Signout option
+                                base.PerformMouseClickAction(getSignoutOption);
+                                break;
+                                }
+                                break;
+
+                            case "Today's view":
+                                switch (optionName)
+                                {
+                                   case "My Profile":
+                                //Wait for My Profile option 
+                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
+                                //Get the properties of My Profile option
+                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                    (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
+                                //MouseHover on My Profile option
+                                base.PerformMouseHoverAction(getMyProfileOption);
+                                //CLick on My Profile option
+                                base.PerformMouseClickAction(getMyProfileOption);
+                                break;
+
+                            case "Privacy":
+                                //Wait for Privacy option
+                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
+                                //Get the properties of Privacy option
+                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                    (TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
+                                //MouseHover on Privacy option
+                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                //CLick on Privacy option
+                                base.PerformMouseClickAction(getPrivacyOption);
+                                break;
+
+                            case "Sign out":
+                                //Wait for Sign out option
+                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
+                                //Get the properties of Sign out option
+                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                    (TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
+                                //MouseHover on Sign out option
+                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                //CLick on Signout option
+                                base.PerformMouseClickAction(getSignoutOption);
+                                break;
+                                }
+
+                          break;
+                        }
                         break;
+                            case User.UserTypeEnum.CsSmsStudent:
+
+                                switch (tabName)
+                                {
+                                    case "Global Home":
+                                        switch (optionName)
+                                        {
+                            case "My Profile":
+                                
+                                //Wait for My Profile option 
+                                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                                    HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator));
+                                //Get the properties of My Profile option
+                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator);
+                                //MouseHover on My Profile option
+                                base.PerformMouseHoverAction(getMyProfileOption);
+                                //CLick on My Profile option
+                                base.PerformMouseClickAction(getMyProfileOption);
+                                break;
+
+                            case "Privacy":
+
+                                bool dsad = base.IsElementPresent(By.Id("_ctl9_PegasushelloK5_aPrivacyPolicy"),10);
+                                //Wait for Privacy option
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_Header_Privacy_Link_ID_Locator));
+                                //Get the properties of Privacy option
+                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_Privacy_Link_ID_Locator);
+                                //MouseHover on Privacy option
+                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                //CLick on Privacy option
+                                base.PerformMouseClickAction(getPrivacyOption);
+                                break;
+
+                            case "Sign out":
+                                //Wait for Sign out option
+                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                    HEDGlobalHomePage_Header_Signout_Link_ID_Locator));
+                                //Get the properties of Sign out option
+                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_Signout_Link_ID_Locator);
+                                //MouseHover on Sign out option
+                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                //CLick on Signout option
+                                base.PerformMouseClickAction(getSignoutOption);
+                                break;
+                                        }
+
+                                        break;
+                            case "Today's view":
+                                        switch (optionName)
+                                        {
+                                           case "My Profile":
+                                //Wait for My Profile option 
+                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
+                                //Get the properties of My Profile option
+                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                    (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
+                                //MouseHover on My Profile option
+                                base.PerformMouseHoverAction(getMyProfileOption);
+                                //CLick on My Profile option
+                                base.PerformMouseClickAction(getMyProfileOption);
+                                break;
+
+                            case "Privacy":
+                                //Wait for Privacy option
+                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
+                                //Get the properties of Privacy option
+                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                    (TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
+                                //MouseHover on Privacy option
+                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                //CLick on Privacy option
+                                base.PerformMouseClickAction(getPrivacyOption);
+                                break;
+
+                            case "Sign out":
+                                //Wait for Sign out option
+                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
+                                //Get the properties of Sign out option
+                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                    (TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
+                                //MouseHover on Sign out option
+                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                //CLick on Signout option
+                                base.PerformMouseClickAction(getSignoutOption);
+                                break;
+                                        }
+                                        break;
+                                }
+                                break;
+                        }
                 }
-            }
+            
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionAvailableInUserDropdownHeader",
-                          base.IsTakeScreenShotDuringEntryExit);
+
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInCourseHeader",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
+           
         /// <summary>
         /// Checks if the Instructor URL and the page title is present
         /// </summary>
@@ -4631,9 +4906,41 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
 
+
+                    case "Home Page Help":
+                        {
+                            //Get the current page URL from the application
+                            string getApplicationURL = base.GetCurrentUrl;
+                            //Check for the environment specified in App config
+                            switch (Environment.GetEnvironmentVariable(
+                                AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                                 ?? ConfigurationManager.AppSettings[
+                                 AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+                            {
+                                case "VCD":
+                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
+                                    break;
+                                case "PPE":
+                                    break;
+                                case "CGIE":
+                                    break;
+                                case "PROD":
+                                    break;
+
+                            }
+                            //Compare the Application URL and Page title
+                            if (URL == getApplicationURL && pageTitle == GetPageTitle)
+                            {
+                                status = true;
+                            }
+                        }
+                        break;
+
+
                     case "Pearson Education Customer Technical Support":
                         //Get the User name from application
-                        string getUser = base.GetInnerTextAttributeValueById("lblLogin");
+                        string getUser = base.GetInnerTextAttributeValueById(
+                            TodaysViewUXPageResource.TodayViewUXPageResource_Stu_Support_UserName_ID_Locator);
                         string getUserName = getUser.Trim();
                         //Compare the Username and Page title
                         if (getUserName == userName && pageTitle == GetPageTitle)
@@ -4642,6 +4949,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                 }
+
             }
             catch (Exception e)
             {
@@ -4652,6 +4960,8 @@ namespace Pegasus.Pages.UI_Pages
             base.CloseBrowserWindow();
             return status;
         }
+
+               
 
         /// <summary>
         /// Checks if the Student URL and the page title is present
@@ -4673,9 +4983,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to specified page title
                 base.SwitchToWindow(pageTitle);
 
-                switch (pageTitle)
-                {
-                    case "Student Help":
+                                    
+                            switch(pageTitle)
+                            {
+                                case "Home Page Help":
                         {
                             //Get the current page URL from the application
                             string getApplicationURL = base.GetCurrentUrl;
@@ -4684,7 +4995,7 @@ namespace Pegasus.Pages.UI_Pages
                                  ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
                             {
                                 case "VCD":
-                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/mytest/index_Left.htm#CSHID=0|SkinName=frameset";
+                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "PPE":
                                     break;
@@ -4701,8 +5012,35 @@ namespace Pegasus.Pages.UI_Pages
                             }
                         }
                         break;
-                       
-                    case "Pearson Education Customer Technical Support":
+
+
+                                case "Student Help":
+                        {
+                            //Get the current page URL from the application
+                            string getApplicationURL = base.GetCurrentUrl;
+                            //Check for the environment specified in App config
+                            switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                                 ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+                            {
+                                case "VCD":
+                                    URL = "http://help.pearsoncmg.com/pegasus/help/stu-wlang/index.htm";
+                                    break;
+                                case "PPE":
+                                    break;
+                                case "CGIE":
+                                    break;
+                                case "PROD":
+                                    break;
+                            }
+                            //Compare the Application URL and Page title
+                            if (URL == getApplicationURL && pageTitle == GetPageTitle)
+                            {
+                                status = true;
+                            }
+                        }
+                        break;
+
+                   case "Pearson Education Customer Technical Support":
                         //Get the User name from application
                         string getUser = base.GetInnerTextAttributeValueById(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Support_PopUp_Id_Locator);
@@ -4721,6 +5059,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "GetStudPageURLAndPageTitle",
                                  base.IsTakeScreenShotDuringEntryExit);
+            base.CloseBrowserWindow();
             return status;
         }
 
@@ -5303,6 +5642,7 @@ namespace Pegasus.Pages.UI_Pages
            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInCalendarChannelTodaysView",
                                    base.IsTakeScreenShotDuringEntryExit);
        }
-        
+
+                     
     }
 }
