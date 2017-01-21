@@ -412,39 +412,92 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "SelectViewInAdvanceCalender",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        
         /// <summary>
         /// Validate the activity display in day view of assignment calendar
         /// </summary>
         /// <param name="activityType">This is activity type enum.</param>
-        /// <param name="viewType">This is calendar view type.</param>
-        /// <param name="dateType">This is date type.</param>
-        [Then(@"I should see the ""(.*)"" activity assigned in ""(.*)"" view of ""(.*)"" in Advance calender")]
-        public void ThenIShouldSeeTheActivityAssignedInViewOfInAdvanceCalender(Activity.ActivityTypeEnum activityType, string viewType, string dateType)
+     [Then(@"I should see the ""(.*)"" activity assigned in day view of Advance calender")]
+        public void ValidateActivityAssignedInViewOfInAdvanceCalender(Activity.ActivityTypeEnum activityType)
         {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "ValidateActivityAssignedInViewOfInAdvanceCalender",
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityType);
-            switch(viewType)
-            {
-                case "Day":
-                    //Assert the Assigned Activity            
-                    Logger.LogAssertion("VerifyActivityAssigned",
-                        ScenarioContext.Current.ScenarioInfo.Title,
-                        () => Assert.AreEqual(new CalendarHedDefaultUxPage().
-                            GetAssignedActNameOnCurrentDayInAdvaceCalender(activity.Name, dateType), activity.Name));
-
-                    break;
-
-                case "Week":
-                    new CalendarHedDefaultUxPage().SelectViewType(viewType);
-                    break;
-
-                case "Month":
-                    new CalendarHedDefaultUxPage().SelectViewType(viewType);
-                    break;
-
-            }
+            //Assert the Assigned Activity            
+            Logger.LogAssertion("ValidateActivityAssignedInViewOfInAdvanceCalender",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                    GetAssignedActNameOnCurrentDayInAdvaceCalender(activity.Name), activity.Name));
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "ValidateActivityAssignedInViewOfInAdvanceCalender",
+               base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+     public void WhenIMoveToMonthInView(string p0, string p1)
+     {
+         ScenarioContext.Current.Pending();
+     }
+
+        /// <summary>
+        /// Navigate between months
+        /// </summary>
+     [When(@"I move to ""(.*)"" month in ""(.*)"" view")]
+     public void WhenIMoveToNextMonth(string navigationType, string viewType)
+     {
+         Logger.LogMethodEntry("AssignmentCalendar",
+               "WhenIMoveToNextMonth",
+               base.IsTakeScreenShotDuringEntryExit);
+         new CalendarHedDefaultUxPage().NavigateBetweenMonth(navigationType, viewType);
+         Logger.LogMethodExit("AssignmentCalendar",
+               "WhenIMoveToNextMonth",
+               base.IsTakeScreenShotDuringEntryExit);
+     }
+
+    
+
+    [Then(@"I should be on ""(.*)"" month  in ""(.*)"" view")]
+     public void ValidateMonth(string operationType,string viewType)
+     {
+         Logger.LogMethodEntry("AssignmentCalendar",
+               "ValidateMonth",
+               base.IsTakeScreenShotDuringEntryExit);
+         string getAppDate = string.Empty;
+
+         DateTime date = DateTime.Today;
+         string getDate = date.ToString("d");
+         switch(viewType)
+         {
+             case "Month":
+              DateTime mDate = date.AddMonths(1);
+
+              string getFutureMonthName = mDate.ToString("MMMM");
+                 string getYear = date.Year.ToString();
+                 string futureMonthDisplay = getFutureMonthName+" "+getYear;
+
+             Logger.LogAssertion("ValidateMonth",
+                 ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(futureMonthDisplay, new CalendarHedDefaultUxPage().
+                     GetDisplayMonth(operationType)));
+                 break;
+
+             case "Week":
+                 DateTime wDate = date.AddMonths(1);
+
+                 string getFutureWeekRange = wDate.ToString("MMMM");
+
+                 Logger.LogAssertion("ValidateMonth",
+                     ScenarioContext.Current.ScenarioInfo.Title,
+                     () => Assert.AreEqual(getFutureWeekRange, new CalendarHedDefaultUxPage().
+                         GetDisplayMonth(operationType)));
+                 break;
+         }
+
+         Logger.LogMethodExit("AssignmentCalendar",
+               "ValidateMonth",
+               base.IsTakeScreenShotDuringEntryExit);
+     }
 
 
         /// <summary>
@@ -1094,7 +1147,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             //click on cmenu option
             new CalendarHedDefaultUxPage().SelectActivityCmenuOption
-                (cmenuOptionName, assetName);
+                (assetName);
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectCmenuOfActivity",
               base.IsTakeScreenShotDuringEntryExit);
@@ -1126,28 +1179,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Validate the date displayed in Advance view of calender
+        /// Asset assignment by providing due date.
         /// </summary>
-        /// <param name="dateType"></param>
-        [Then(@"I should be on the ""(.*)"" in Advance calender")]
-        public void ValidateDateInAdvanceCalender(string dateType)
+        /// <param name="assignmentType">This is assignment type.</param>
+        /// <param name="dateType">This is date type.</param>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I ""(.*)"" for ""(.*)"" of activity ""(.*)""")]
+        public void AssetAssignmentType(string assignmentType, string dateType, Activity.ActivityTypeEnum activityType)
         {
-            Logger.LogMethodEntry("AssignmentCalendar", "ValidateDateInAdvanceCalender",base.IsTakeScreenShotDuringEntryExit);
-            
-            Logger.LogMethodExit("AssignmentCalendar", "ValidateDateInAdvanceCalender", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "AssetAssignmentType",
+              base.IsTakeScreenShotDuringEntryExit);
+            switch (assignmentType)
+            {
+                case "Assign with due date":
+                    new CalendarHedDefaultUxPage().AssignWithDueDate(dateType, activityType);
+                    break;
+
+                case "Simple assign":
+                    new CalendarHedDefaultUxPage().SimpleAssign(dateType, activityType);
+                    break;
+            }
+            Logger.LogMethodExit("AssignmentCalendar",
+                "AssetAssignmentType",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Click option in assignment calender
-        /// </summary>
-        /// <param name="optionName">This is option Name.</param>
-        [When(@"I click on ""(.*)"" option of notes")]
-        public void ClickIconInCalendar(string optionName)
-        {
-            Logger.LogMethodEntry("AssignmentCalendar", "ClickIconInCalendar", base.IsTakeScreenShotDuringEntryExit);
-
-            Logger.LogMethodExit("AssignmentCalendar", "ClickIconInCalendar", base.IsTakeScreenShotDuringEntryExit);
-        }
 
     }
 }

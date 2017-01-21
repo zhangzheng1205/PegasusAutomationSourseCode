@@ -465,7 +465,52 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
         /// <returns>Assigned Activity Name.</returns>
-        public String GetAssignedActNameOnCurrentDayInAdvaceCalender(string activityName, string dateType)
+        public String GetAssignedActNameOnCurrentDayInAdvaceCalender(string activityName)
+        {
+            //Get Assigned Activity
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize the Variable
+            string getAssignedActivityName = string.Empty;
+            try
+            {
+
+                //Get the Assigned Activity Name
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Div_AssignedActivitiesInDayView_Xpath_Locator));
+                //Get the Total Activities Count
+                int getCountOfActivitiesAssigned =
+                    base.GetElementCountByXPath("//span[@class='dvAssignmentTitleCss']");
+                for (int rowCount = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Loop_Initializer_Value);
+                    rowCount <= getCountOfActivitiesAssigned; rowCount++)
+                {
+                    //Get the Activity Name
+                    getAssignedActivityName = base.GetElementTextByXPath(string.
+                        Format(CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator,
+                        rowCount));
+                    if (getAssignedActivityName.Contains(activityName))
+                    {
+                        getAssignedActivityName = activityName;
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getAssignedActivityName;
+        }
+
+        /// <summary>
+        /// Get Assigned Activity Name On Current Day.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <returns>Assigned Activity Name.</returns>
+        public String GetAssignedActNameOnFutureDateInAdvaceCalender(string activityName)
         {
             //Get Assigned Activity
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
@@ -3305,6 +3350,8 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the Assigned radio button
+                base.SwitchToLastOpenedWindow();
+
                 base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
                 //Get the application date
@@ -3317,6 +3364,12 @@ namespace Pegasus.Pages.UI_Pages
                 DateTime pDate = date.AddDays(-1);
                 string getPreviousDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+                if(isTextBoxSelected == false)
+                {
+                    base.SelectCheckBoxById("ckbAssign");
+                }
+
                 //Clear the prefilled textbox value
                 base.ClearTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
@@ -3338,11 +3391,193 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Assign actiivty to previous date.
+        /// </summary>
+        public void AssignActiivtyToCurrentDate()
+        {
+            Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Assigned radio button
+                base.SwitchToLastOpenedWindow();
+
+                //Select the Assigned radio button
+                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
+                //Get the application date
+                string getAppDate = string.Empty;
+                //Get today's date
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                string getPreviousDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+                if (isTextBoxSelected == false)
+                {
+                    base.SelectCheckBoxById("ckbAssign");
+                }
+
+                //Clear the prefilled textbox value
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
+                //Enter the stored previous date value
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
+
+                // Select radio button "Set Available Date"
+                base.SelectRadioButtonById("rdSetAvailableDate");
+
+
+
+                //Save the assign details by clicking Save button            
+                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+
+        /// <summary>
+        /// Assign actiivty to previous date.
+        /// </summary>
+        public void ScheduleActiivtyToCurrentDate()
+        {
+            Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Assigned radio button
+                base.SwitchToLastOpenedWindow();
+
+                //Select the Assigned radio button
+                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
+                //Get the application date
+                string getAppDate = string.Empty;
+                //Get today's date
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                string getPreviousDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+                if (isTextBoxSelected == false)
+                {
+                    base.SelectCheckBoxById("ckbAssign");
+                }
+
+                //Clear the prefilled textbox value
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
+                //Enter the stored previous date value
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
+
+
+                base.SelectRadioButtonById("rdSetAvailableDate");
+
+                
+                base.ClearTextById("txtFromDate");
+                //Enter the stored previous date value
+                base.FillTextBoxById("txtFromDate", getPreviousDate);
+                base.ClearTextById("txtFromHrs");
+                base.FillTextBoxById("txtFromHrs","1");
+
+                base.SelectDropDownValueThroughTextById("cmbFromAMPM", "PM");
+
+                base.ClearTextById("txtToDate");
+                //Enter the stored previous date value
+                base.FillTextBoxById("txtToDate", getPreviousDate);
+
+                base.ClearTextById("txtToHrs");
+                base.FillTextBoxById("txtToHrs", "11");
+
+                base.SelectDropDownValueThroughTextById("cmbToAMPM","PM");
+
+                base.SelectCheckBoxById("chkBetSDandED");
+                base.SelectCheckBoxById("chkCalNotify");
+  
+                //Save the assign details by clicking Save button            
+                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+        
+
+        /// <summary>
+        /// Assign actiivty to previous date.
+        /// </summary>
+        public void AssignActiivtyToFutureDate()
+        {
+            Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Assigned radio button
+                base.SwitchToLastOpenedWindow();
+
+                //Select the Assigned radio button
+                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
+                //Get the application date
+                string getAppDate = string.Empty;
+                //Get today's date
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                //Decrement the day by 1
+                DateTime pDate = date.AddDays(1);
+                string getPreviousDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+                if (isTextBoxSelected == false)
+                {
+                    base.SelectCheckBoxById("ckbAssign");
+                }
+
+                //Clear the prefilled textbox value
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
+                //Enter the stored previous date value
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
+                //Save the assign details by clicking Save button            
+                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("PastDueAssignment", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+        /// <summary>
         /// Select the Cmenu of the activity.
         /// </summary>
         /// <param name="cmenuOption">This is the Cmenu option.</param>
         /// <param name="assetName">This is the name of the asset.</param>
-        public void SelectActivityCmenuOption(string cmenuOption, string assetName)
+        public void SelectActivityCmenuOption(string assetName)
         {
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -3655,6 +3890,110 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "EnterTheDayViewForAssignedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void NavigateBetweenMonth(string actionType, string viewType)
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "NavigateBetweenMonth",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                this.SelectViewType(viewType);
+               base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                   CalendarHEDDefaultUXPage_Calendar_Window_Name);
+               // Click Next icon
+               base.WaitForElement(By.Id("ctl00_ctl00_phBody_PageContent_calendarContainer_imgBtnNext"));
+               base.ClickImageById("ctl00_ctl00_phBody_PageContent_calendarContainer_imgBtnNext");
+               base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+                   CalendarHEDDefaultUXPage_Calendar_Window_Name);
+
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "NavigateBetweenMonth",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public string GetDisplayMonth(string viewType)
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "GetDisplayMonth",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getNextMonth = string.Empty;
+            getNextMonth = base.GetInnerTextAttributeValueById("ctl00_ctl00_phBody_PageContent_calendarContainer_lblCurrentDate");
+
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "GetDisplayMonth",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            return getNextMonth;
+        }
+
+        /// <summary>
+        /// Asset assign with due date
+        /// </summary>
+        /// <param name="dateType">This is date type.</param>
+        /// <param name="activityType">This is activity type.</param>
+        public void AssignWithDueDate(string dateType, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "AssignWithDueDate",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the activity name from inmemeory 
+            Activity activity = Activity.Get(activityType);
+            string assetName = activity.Name.ToString();
+
+            //Click on cmenu option
+            new CalendarHedDefaultUxPage().SelectActivityCmenuOption
+                (assetName);
+
+            switch(dateType)
+            {
+                case "Current Date":
+                    new CalendarHedDefaultUxPage().AssignActiivtyToCurrentDate();
+                    break;
+
+                case "Future Date":
+                    new CalendarHedDefaultUxPage().AssignActiivtyToFutureDate();
+                    break;
+
+                case "Past Date":
+                    new CalendarHedDefaultUxPage().AssignActiivtyToPreviousDate();
+                    break;
+            }
+            base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
+            CalendarHEDDefaultUXPage_Calendar_Window_Name);
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "AssignWithDueDate",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Asset simple assign
+        /// </summary>
+        /// <param name="dateType">This is date type.</param>
+        /// <param name="activityType">This is activity type.</param>
+        public void SimpleAssign(string dateType, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "SimpleAssign",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the activity name from inmemeory 
+            Activity activity = Activity.Get(activityType);
+            string assetName = activity.Name.ToString();
+
+            //Click on cmenu option
+            new CalendarHedDefaultUxPage().SelectActivityCmenuOption
+                (assetName);
+
+            new CalendarHedDefaultUxPage().ScheduleActiivtyToCurrentDate();
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "SimpleAssign",
                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
