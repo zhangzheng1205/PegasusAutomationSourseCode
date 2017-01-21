@@ -86,12 +86,11 @@ namespace Pegasus.Automation.DataTransferObjects
             RegCSAverageScoreActivity=55,
             RegCSLastScoreActivity=56,
             RegCSFirstScoreActivity=57,
-            RegSimpleAssignPastDue = 58,
+            RegPastDueAssignment = 58,
             RegTodayDateAssignment = 59,
             RegFutureDateAssignment = 60,
-            RegSimpleAssignCurrentDate = 61,
-            RegSimpleAssignFutureDate = 62,
-            RegSimpleAssign =63,
+            RegCustomViewActivity1=61,
+            RegCustomViewActivity2=62
         }
 
         /// <summary>

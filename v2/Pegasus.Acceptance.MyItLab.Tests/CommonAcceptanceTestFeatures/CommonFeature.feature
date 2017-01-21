@@ -359,7 +359,7 @@ Then I should be on the "Today's View" page
 Scenario: CSSMSStudent validate functionality of Suport link in header
 When I click on "Support" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
 Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsStudent" user
-When I close the "Student Help" window
+When I close the "Support" window
 Then I should be on the "Today's View" page
 
 Scenario: CSSMSStudent validate functionality of MyProfile link in header

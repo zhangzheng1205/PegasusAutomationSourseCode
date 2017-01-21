@@ -201,10 +201,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructorEnrollement.Workflow.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGlobalHomePage.Workflow.feature.cs">
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceInstructorGlobalHomePage.Workflow.feature</DependentUpon>
+      <DependentUpon>CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -280,6 +280,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceStudentGlobalHomePage.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGradebook.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceStudentGradebook.Workflow.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudentReport.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -736,9 +741,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorEnrollement.Workflow1.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGlobalHomePage.Workflow.feature">
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceInstructorGlobalHomePage.Workflow.feature.cs</LastGenOutput>
+      <LastGenOutput>CourseSpaceInstructorGlobalHomePage.WorkflowUX.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -799,6 +804,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGlobalHomePage.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceStudentGlobalHomePage.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentGradebook.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceStudentGradebook.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentReport.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -1619,6 +1619,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl9_pegHello_HelpLink.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Header_HomePage_HelpOption_ID_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Header_HomePage_HelpOption_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_pegHello_ancSupport.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Header_HomePage_SupportOption_ID_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Header_HomePage_SupportOption_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancMyAccount.
         /// </summary>
         internal static string TodayViewUXPageResource_Header_MyProfileOption_ID_Locator {
@@ -1885,6 +1903,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_SignOutLink_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_SignOutLink_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lblLogin.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Stu_Support_UserName_ID_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Stu_Support_UserName_ID_Locator", resourceCulture);
             }
         }
         

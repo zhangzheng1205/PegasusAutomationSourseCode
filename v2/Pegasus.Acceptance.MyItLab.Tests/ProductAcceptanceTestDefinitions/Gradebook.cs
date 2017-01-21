@@ -808,7 +808,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityScore">This is Activity Score.</param>
         /// <param name="activityName">This is Activity Name.</param>
-        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>        
         [Then(@"I should see the score ""(.*)"" of ""(.*)"" activity for ""(.*)""")]
         public void VerifyTheScoreOfActivity(
             string activityScore, string activityName, User.UserTypeEnum userTypeEnum)
@@ -1167,6 +1167,180 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new ViewSubmissionPage().DeleteAllSubmission(userLastName, userFirstName);
             new GBInstructorUXPage().SelectGradebookFrame();
         }
+
+        /// <summary>
+        /// Verify the submenu details
+        /// </summary>
+        /// <param name="subMenuTitle">This is the sub menu title.</param>
+        /// <param name="activityColumn">This is the column name.</param>
+        /// <param name="gradeColumn">This is the column name.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [Then(@"I should be able to see ""(.*)"" submenu text with ""(.*)"" and ""(.*)"" columns as ""(.*)"" user")]        
+        public void ValidateCustomViewTab(string subMenuTitle,
+           string activityColumn, string gradeColumn, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                "ValidateCustonViewTab",
+               base.IsTakeScreenShotDuringEntryExit);            
+           //Verify sub menu title displayed
+            Logger.LogAssertion("ValidateCustomViewTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (subMenuTitle, new GBCustomViewUX().
+                            GetCustomViewTabDisplayItems(subMenuTitle, userTypeEnum)));
+            //Verify Activity column dispalyed
+            Logger.LogAssertion("ValidateCustomViewTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (activityColumn, new GBCustomViewUX().
+                            GetCustomViewTabDisplayItems(activityColumn, userTypeEnum)));
+            //Verify Grade column dispalyed
+            Logger.LogAssertion("ValidateCustomViewTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (gradeColumn, new GBCustomViewUX().
+                            GetCustomViewTabDisplayItems(gradeColumn, userTypeEnum)));
+            Logger.LogMethodExit("Gradebook",
+                "ValidateCustonViewTab",
+               base.IsTakeScreenShotDuringEntryExit); 
+        }
+
+        /// <summary>
+        /// Verify the activity saved in Customview tab
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum.</param>
+        /// <param name="activityIcon">This is the activity icon.</param>
+        /// <param name="activityScore">This is the activity score.</param>
+        /// <param name="userScenario">This is scenerio name of the student.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [Then(@"I should see ""(.*)"" with ""(.*)"" having ""(.*)"" grade for ""(.*)"" as ""(.*)"" user")]
+        public void VerifySavedActivityDisplayInCustomViewBasedOnScenerio(
+            Activity.ActivityTypeEnum activityTypeEnum,string activityIcon, 
+             int activityScore, string userScenario, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                   "VerifySavedActivityDisplayInCustomView",
+                  base.IsTakeScreenShotDuringEntryExit);
+          
+            //Get Activity name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            String expectedActivity = activity.Name;
+            //Verify Activity dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (expectedActivity, new GBCustomViewUX().
+                            GetActivitySavedInCustomView(expectedActivity, userTypeEnum)));
+            ////Verify Activity icon dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.IsTrue
+                            (new GBCustomViewUX().
+                            GetActivityIconInCustomView(expectedActivity, userTypeEnum)));
+            ////Verify Grade column dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (activityScore, new GBCustomViewUX().
+                            GetActivityScoreInCustomView(expectedActivity, userTypeEnum)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifySavedActivityDisplayInCustomView",
+               base.IsTakeScreenShotDuringEntryExit); 
+        }
+
+        /// <summary>
+        /// Verify the activity saved in Customview tab
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum.</param>
+        /// <param name="activityIcon">This is the activity icon.</param>
+        /// <param name="activityScore">This is the activity score.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [Then(@"I should see ""(.*)"" with the ""(.*)"" having ""(.*)"" grade for ""(.*)"" user")]
+        public void VerifySavedActivityDisplayInCustomView(Activity.ActivityTypeEnum activityTypeEnum,
+            string activityIcon, int activityScore, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                   "VerifySavedActivityDisplayInCustomView",
+                  base.IsTakeScreenShotDuringEntryExit);
+
+            //Get Activity name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            String expectedActivity = activity.Name;
+            //Verify Activity dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (expectedActivity, new GBCustomViewUX().
+                            GetActivitySavedInCustomView(expectedActivity, userTypeEnum)));
+            ////Verify Activity icon dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.IsTrue
+                            (new GBCustomViewUX().
+                            GetActivityIconInCustomView(expectedActivity, userTypeEnum)));
+            ////Verify Grade column dispalyed
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (activityScore, new GBCustomViewUX().
+                            GetActivityScoreInCustomView(expectedActivity, userTypeEnum)));
+
+            Logger.LogMethodExit("Gradebook",
+                "VerifySavedActivityDisplayInCustomView",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the activity position in custom view tab
+        /// </summary>
+        /// <param name="p0">This is the activity type enum.</param>
+        /// <param name="p1">This is the expected activity position.</param>
+        [Then(@"I should see ""(.*)"",""(.*)"" activity in ""(.*)"" order")]       
+        public void VerifyActivityPositioInCustomViewFrame(
+            Activity.ActivityTypeEnum activityTypeEnum1,Activity.ActivityTypeEnum activityTypeEnum2, string sortOrder)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyActivityPositioInCustomViewFrame",
+                          base.IsTakeScreenShotDuringEntryExit);
+            //Get the 1st Activity from InMemory
+            Activity firstActivity1 = Activity.Get(activityTypeEnum1);
+            String activity1 = firstActivity1.Name;
+            //Get the 2nd Activity from InMemory
+            Activity secondActivity = Activity.Get(activityTypeEnum2);
+            String activity2 = secondActivity.Name;
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue(
+                           new GBCustomViewUX().IsTheActivtiyColumnSorted(activity1,activity2,sortOrder)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifySavedActivityDisplayInCustomView",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Sort the Activity and Grades column in Custom view tab
+        /// </summary>
+        /// <param name="sortColumn">This is the column name.</param>
+        [When(@"I sort the ""(.*)"" in 'Ascending' order")]        
+        [When(@"I sort the ""(.*)"" in 'Descending' order")]
+        public void SortActivityInCustomView(string sortColumn)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "SortActivityInCUstomView",
+                          base.IsTakeScreenShotDuringEntryExit);                     
+           new GBCustomViewUX().SortCustomViewActivity(sortColumn);
+            Logger.LogMethodExit("Gradebook",
+                "VerifySavedActivityDisplayInCustomView",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the display of sorted columns in custom view tab
+        /// </summary>
+        /// <param name="sortType">Tis is the type of sorting to be done</param>
+        [Then(@"I should see ""(.*)"" icon for the sorted column")]        
+        public void VerifyCustomColumnSort(string sortType)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                            "VerifyActivityPositioInCustomViewFrame",
+                           base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifySavedActivityDisplayInCustomView", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue(
+                           new GBCustomViewUX().IsCustomViewColumnSorted(sortType)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifySavedActivityDisplayInCustomView",
+               base.IsTakeScreenShotDuringEntryExit);
+        }       
 
     }
 }

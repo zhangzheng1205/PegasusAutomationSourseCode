@@ -4514,6 +4514,8 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             return isBadgePresent;
         }
+
+       
     }
 }
 
