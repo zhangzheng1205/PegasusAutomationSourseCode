@@ -32,7 +32,6 @@ data on the UI deleted or refreshed.-->
     </Organization>
   </ArrayOfOrganization>
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on 
-
 the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
@@ -145,7 +144,7 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-   <!--Course reference for Canvas Direct-->
+    <!--Course reference for Canvas Direct-->
     <Course>
       <Name>CGIE MIL Course</Name>
       <CourseType>CanvasDirectCourse</CourseType>
@@ -427,8 +426,8 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-  <!--Authored Course Template Name for Assignment Regression Testing.-->
-  <Course>
+    <!--Authored Course Template Name for Assignment Regression Testing.-->
+    <Course>
       <Name>AssessmentRegression_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
       <CourseType>RegMySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
@@ -444,7 +443,7 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-       <Course>
+    <Course>
       <Name>Badging-CGIE-MyITLab for Office 2013</Name>
       <CourseType>BadgingCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -460,7 +459,7 @@ the UI deleted or refreshed.-->
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-  <Course>
+    <Course>
       <Name>Kiosk PPE MIL Course</Name>
       <CourseType>D2LKioskCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -511,7 +510,6 @@ the UI deleted or refreshed.-->
     </Grade>
   </ArrayOfGrade>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on 
-
 the UI deleted or refreshed.-->
   <ArrayOfUser>
     <!--Hard coded Users data for SMS-->
@@ -1413,8 +1411,32 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
+      <Name>SAM Activity0915</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Activity16</Name>
+      <ActivityType>RegSimpleAssign</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+   <Activity>
+      <Name>SAM Activity0915</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
       <Name>SAM Activity 0822</Name>
-      <ActivityType>RegPastDueAssignment</ActivityType>
+      <ActivityType>RegSimpleAssignPastDue</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+        <Activity>
+      <Name>SAM 08-58 Una ocasión de compras. (Taller)</Name>
+      <ActivityType>RegSimpleAssignFutureDate</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
@@ -3438,4 +3460,50 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
   </ArrayOfActivityQuestionsList>
+    <!-- Welcome Message-->
+    <ArrayOfWelcomeMessage>
+      <WelcomeMessage>
+      <Message>Welcome to WL course</Message>
+      <WelcomeMessageType>RegTVInsWelcomeMsg</WelcomeMessageType>
+      <IsCreated>true</IsCreated>
+    </WelcomeMessage>
+	  </ArrayOfWelcomeMessage>
+  <!-- Alert-->
+  <ArrayOfAlert>
+    <Alert>
+      <AlertCount>3</AlertCount>
+      <AlertType>RegNotPassedAlertCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>0</AlertCount>
+      <AlertType>RegNewGradesAlertCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>4</AlertCount>
+      <AlertType>RegIdleStudentCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>2</AlertCount>
+      <AlertType>RegPastDueSubmittedCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>6275</AlertCount>
+      <AlertType>RegPastDueNotSubmittedCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>10</AlertCount>
+      <AlertType>RegUnreadCommentsCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>6294</AlertCount>
+      <AlertType>RegAlertsCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+  </ArrayOfAlert>
 </Data>
