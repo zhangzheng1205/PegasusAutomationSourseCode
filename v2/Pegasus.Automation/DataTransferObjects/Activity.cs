@@ -90,7 +90,11 @@ namespace Pegasus.Automation.DataTransferObjects
             RegTodayDateAssignment = 59,
             RegFutureDateAssignment = 60,
             RegCustomViewActivity1=61,
-            RegCustomViewActivity2=62
+            RegCustomViewActivity2=62,
+            RegSimpleAssignCurrentDate = 63,
+            RegSimpleAssignFutureDate = 64,
+            RegSimpleAssign =65,
+            RegSimpleAssignPastDue = 56,
         }
 
         /// <summary>

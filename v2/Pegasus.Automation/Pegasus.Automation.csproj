@@ -97,6 +97,7 @@
     <Compile Include="BrowserProcessFactory.cs" />
     <Compile Include="CertChecker.cs" />
     <Compile Include="DataTransferObjects\Activity.cs" />
+    <Compile Include="DataTransferObjects\Alert.cs" />
     <Compile Include="DataTransferObjects\Announcement.cs" />
     <Compile Include="DataTransferObjects\BaseEntityObject.cs" />
     <Compile Include="DataTransferObjects\Class.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="DataTransferObjects\Report.cs" />
     <Compile Include="DataTransferObjects\Section.cs" />
     <Compile Include="DataTransferObjects\User.cs" />
+    <Compile Include="DataTransferObjects\WelcomeMessage.cs" />
     <Compile Include="DataTransferObjects\WorkSpace.cs" />
     <Compile Include="ExcelReadWrite.cs" />
     <Compile Include="FiddlerProxy.cs" />

@@ -1249,6 +1249,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to img0.
+        /// </summary>
+        internal static string TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ac_divstyle3.
+        /// </summary>
+        internal static string TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[1]/div[1]/a.
+        /// </summary>
+        internal static string TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to img3.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[4]/div[1]/a.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ActionItems_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ActionItems_Title_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View Submission.
         /// </summary>
         internal static string TodayViewUXPageResource_Activity_WindowName {
@@ -1290,6 +1335,87 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_ActivityCmenuOption_IDLocator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_ActivityCmenuOption_IDLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[1]/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[2]/div/div/ul/li[3]/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[2]/div/div/ul/li[2]/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[2]/div/div/ul/li/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[2]/div/div/ul/li[5]/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[2]/div/div/ul/li[4]/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[2]/div/div/ul/li[6]/a/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to img2.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[3]/div[1]/a.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Alerts_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Alerts_Title_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -1835,6 +1961,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading.
+        /// </summary>
+        internal static string TodayViewUXPageResource_NotificationChannel_Title_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_NotificationChannel_Title_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to frmCourseContainer.
         /// </summary>
         internal static string TodayViewUXPageResource_Outer_Frame_Id_Locator {
@@ -1885,6 +2020,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_PCTInstructorResourceToolLink {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_PCTInstructorResourceToolLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to img4.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[5]/div[1]/a.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Performance_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Performance_Title_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -2150,6 +2303,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_VerbChart_Image_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_VerbChart_Image_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to img1.
+        /// </summary>
+        internal static string TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@class =&apos;wc_tblstyle1&apos;]/tbody/tr[2]/td/div/div/font.
+        /// </summary>
+        internal static string TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;accordion2&apos;]/div[2]/div[1]/a.
+        /// </summary>
+        internal static string TodayViewUXPageResource_WelcomeMessage_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_WelcomeMessage_Title_Xpath_Locator", resourceCulture);
             }
         }
         

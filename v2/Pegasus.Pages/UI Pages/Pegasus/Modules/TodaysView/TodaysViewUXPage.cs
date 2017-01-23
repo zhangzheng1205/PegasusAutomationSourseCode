@@ -5643,6 +5643,343 @@ namespace Pegasus.Pages.UI_Pages
                                    base.IsTakeScreenShotDuringEntryExit);
        }
 
-                     
+
+       public bool GetSubChannelInNotification(string subChannelName, string channelName)
+       {
+           bool getStatus = false;
+           string getSubchannelName = string.Empty;
+           try
+           {
+               base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                   TodaysViewUXPageResource_WindowsTitle);
+
+               string getNotificationChannelName = base.GetInnerTextAttributeValueById(TodaysViewUXPageResource.
+                   TodayViewUXPageResource_NotificationChannel_Title_Id_Locator);
+
+               switch (subChannelName)
+               {
+                   case "About This Course":
+                          getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                           TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator);
+                       break;
+
+                   case "Welcome Message":
+                       getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_WelcomeMessage_Title_Xpath_Locator);
+                       break;
+
+                   case "Alerts":
+                       string AlertchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Alerts_Title_Xpath_Locator);
+                       getSubchannelName = AlertchannelName.Remove(6);
+                       break;
+
+                   case "Action Items":
+                       string AlertItemsName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_ActionItems_Title_Xpath_Locator);
+                      getSubchannelName = AlertItemsName.Remove(12);
+                       break;
+
+                   case "Performance":
+                       string performanceName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Performance_Title_Xpath_Locator);
+                       getSubchannelName = performanceName.Remove(11);
+                       break;
+               }
+
+               if (getNotificationChannelName == channelName && getSubchannelName == subChannelName)
+               {
+                   getStatus = true;
+               }
+           }
+            catch(Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+           }
+
+           return getStatus;
+       }
+
+        /// <summary>
+        /// Click on expand icon in notification channel.
+        /// </summary>
+        /// <param name="subChannelName">This is subchannel name.</param>
+       public void ClickExpanIconInNotificationChannel(string subChannelName)
+       {
+           try
+           {
+               base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                   TodaysViewUXPageResource_WindowsTitle);
+
+               switch (subChannelName)
+               {
+                   case "About This Course": 
+                            base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator));
+                            IWebElement getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                                TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator);
+                            base.PerformMouseClickAction(getIconID);
+                             break;
+
+                   case "Welcome Message":
+                             base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                          TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator));
+                            getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator);
+                            base.PerformMouseClickAction(getIconID);
+                       break;
+
+                   case "Alerts":
+                       base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                      TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator));
+                         getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                     TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator);
+                         base.PerformMouseClickAction(getIconID);
+                       break;
+
+                   case "Action Items":
+                       base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                          TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator));
+                       getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                      TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator);
+                       base.PerformMouseClickAction(getIconID);
+                       break;
+
+                   case "Performance":
+                       base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator));
+                       getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator);
+                       base.PerformMouseClickAction(getIconID);
+                       break;
+               }
+           }
+           catch (Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+           }
+       }
+
+
+        /// <summary>
+        /// Get success message from About this course message channel.
+        /// </summary>
+        public string GetAboutThisCourseMessage()
+       {
+           Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                                   base.IsTakeScreenShotDuringEntryExit);
+           string getText = string.Empty;
+           try
+           {
+               // Wait untill window loads
+               base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                   TodaysViewUXPageResource_WindowsTitle);
+
+               base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                   TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator));
+               // Get text of message displayed in About this course channel
+               getText = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.
+                   TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator);
+           }
+            catch(Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+            }
+           Logger.LogMethodExit("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                                   base.IsTakeScreenShotDuringEntryExit);
+            return getText;
+       }
+
+        /// <summary>
+        /// Get the welcome message
+        /// </summary>
+        /// <returns>Return welcome message.</returns>
+        public string GetWelcomeMessage()
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetWelcomeMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string getText = string.Empty;
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
+                base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator));
+                // Get text of message displayed in About this course channel
+                getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetWelcomeMessage",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            return getText;
+        }
+
+                /// <summary>
+        /// Get the welcome message
+        /// </summary>
+        /// <returns>Return welcome message.</returns>
+        public string GetAlertCount(Alert.AlertTypeEnum alertType)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetWelcomeMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string getText = string.Empty;
+            try
+            {
+                bool tes = false;
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
+
+                switch(alertType)
+                {
+
+                    case Alert.AlertTypeEnum.RegAlertsCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegIdleStudentCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegNewGradesAlertCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegNotPassedAlertCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator);
+                        // Get text of message displayed in About this course channel
+                        break;
+
+                    case Alert.AlertTypeEnum.RegPastDueNotSubmittedCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegPastDueSubmittedCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegUnreadCommentsCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator));
+                        getText = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetWelcomeMessage",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            return getText;
+        }
+
+        /// <summary>
+        /// Click alert count in Alert channel
+        /// </summary>
+        /// <param name="alertType"></param>
+        public void ClickAlertCount(Alert.AlertTypeEnum alertType)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetWelcomeMessage",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
+
+                switch (alertType)
+                {
+
+                    case Alert.AlertTypeEnum.RegAlertsCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator));
+                        IWebElement getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegIdleStudentCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator));
+                        getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegNewGradesAlertCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator));
+                        getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegNotPassedAlertCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator));
+                        getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegPastDueNotSubmittedCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator));
+                        getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegPastDueSubmittedCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator));
+                        getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+
+                    case Alert.AlertTypeEnum.RegUnreadCommentsCount:
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator));
+                        getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator);
+                        base.PerformMouseClickAction(getAlertIcon);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetWelcomeMessage",
+                                    base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

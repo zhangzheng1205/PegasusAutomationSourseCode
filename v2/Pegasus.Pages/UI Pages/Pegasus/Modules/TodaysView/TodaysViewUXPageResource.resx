@@ -819,4 +819,64 @@
   <data name="TodayViewUXPageResource_Stu_Support_UserName_ID_Locator" xml:space="preserve">
     <value>lblLogin</value>
   </data>
+  <data name="TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator" xml:space="preserve">
+    <value>img0</value>
+  </data>
+  <data name="TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[1]/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator" xml:space="preserve">
+    <value>img3</value>
+  </data>
+  <data name="TodayViewUXPageResource_ActionItems_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[4]/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator" xml:space="preserve">
+    <value>img2</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alerts_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_NotificationChannel_Title_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator" xml:space="preserve">
+    <value>img4</value>
+  </data>
+  <data name="TodayViewUXPageResource_Performance_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[5]/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator" xml:space="preserve">
+    <value>img1</value>
+  </data>
+  <data name="TodayViewUXPageResource_WelcomeMessage_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[2]/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator" xml:space="preserve">
+    <value>ac_divstyle3</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[1]/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li[3]/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li[2]/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li[5]/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li[4]/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li[6]/a/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class ='wc_tblstyle1']/tbody/tr[2]/td/div/div/font</value>
+  </data>
 </root>

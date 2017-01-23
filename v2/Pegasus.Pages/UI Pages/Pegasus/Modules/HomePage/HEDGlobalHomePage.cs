@@ -774,7 +774,7 @@ namespace Pegasus.Pages.UI_Pages
             if (!courseTable.Text.Contains(courseName))
             {
                 //Get The Course From Each Row
-                while (!courseTable.Text.Contains(courseName))
+                while (!courseTable.Text.Equals(courseName))
                 {
                     courseDivCounter = courseDivCounter + 1;
                     //Get Course Row Text
@@ -782,7 +782,7 @@ namespace Pegasus.Pages.UI_Pages
                       HEDGlobalHomePageResource.
                       HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
                     //If Course Present on the User Home Page
-                    if (getCourseRowText.Contains(courseName))
+                    if (getCourseRowText.Equals(courseName))
                     {
                         //Wait For Element
                         base.WaitForElement(By.PartialLinkText(courseName));

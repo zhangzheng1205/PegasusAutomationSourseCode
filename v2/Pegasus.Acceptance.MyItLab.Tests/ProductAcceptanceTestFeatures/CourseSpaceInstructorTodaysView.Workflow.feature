@@ -336,3 +336,70 @@ When I "Minimize" the "Calendar" channel on "Today's View" tab as "CsSmsInstruct
 Then I should be displayed with "Maximize" icon in "Calendar" channel of "Today's View" page 
 When I "Maximize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
 Then I should be displayed with "Minmize" icon in "Calendar" channel of "Today's View" page
+
+
+Scenario: Todays view subchannel validation of notification channel
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should see "About This Course" in "Notifications" channel
+Then I should see "Welcome Message" in "Notifications" channel
+Then I should see "Alerts" in "Notifications" channel
+Then I should see "Action Items" in "Notifications" channel
+Then I should see "Performance" in "Notifications" channel
+
+Scenario: Validate About This Course channel display
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should see "About This Course" in "Notifications" channel
+When I expand "About This Course" channel
+Then I should be displayed with "You and your students can view this message. To create or edit this message, click Customize." message
+
+
+Scenario: Validate Welcome Message channel display
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should see "Welcome Message" in "Notifications" channel
+When I expand "Welcome Message" channel
+Then I should be displayed with "RegTVInsWelcomeMsg" welcome message
+
+
+Scenario: Validate NotPassedAlertCount in Alert channel
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should see "Alerts" in "Notifications" channel
+When I expand "Alerts" channel
+Then I should be displayed with "RegNotPassedAlertCount" count
+Then I should be displayed with "RegNewGradesAlertCount" count
+Then I should be displayed with "RegIdleStudentCount" count
+Then I should be displayed with "RegPastDueSubmittedCount" count
+Then I should be displayed with "RegPastDueNotSubmittedCount" count
+Then I should be displayed with "RegUnreadCommentsCount" count
+Then I should be displayed with "RegAlertsCount" count
+
+Scenario: Validate IdleStudentCount and display of Idle Student
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should see "Alerts" in "Notifications" channel
+When I expand "Alerts" channel
+Then I should be displayed with "RegIdleStudentCount" count
+When I click on "RegIdleStudentCount" count

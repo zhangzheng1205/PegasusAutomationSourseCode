@@ -103,7 +103,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             DesearlizeLicenseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeQuestionTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeToolLinksData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
-
+            DesearlizeWelcomeMessageTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeAlertTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
         }
 
         /// <summary>
@@ -192,6 +193,66 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 }
             }
         }
+
+        /// <summary>
+        /// Desearlize Welcome Message Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeWelcomeMessageTestData(XmlDocument xmlDocument,
+            ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
+        {
+            // get xml node list for class
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfWelcomeMessage");
+            // created object xml serializer
+            xmlSerializer = new XmlSerializer(typeof(List<WelcomeMessage>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get Welcome Message list
+                var getWelcomeMessageList = (List<WelcomeMessage>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (WelcomeMessage welcomeMessage in getWelcomeMessageList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(welcomeMessage);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Desearlize Welcome Message Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeAlertTestData(XmlDocument xmlDocument,
+            ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
+        {
+            // get xml node list for class
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfAlert");
+            // created object xml serializer
+            xmlSerializer = new XmlSerializer(typeof(List<Alert>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get Welcome Message list
+                var getAlertList = (List<Alert>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (Alert alert in getAlertList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(alert);
+                }
+            }
+        }
+
+
         /// <summary>
         /// Desearlize Activity Test Data In Memory.
         /// </summary>

@@ -850,6 +850,99 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              Logger.LogMethodExit("TodaysView", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
          }
 
-        
+
+         [Then(@"I should see ""(.*)"" in ""(.*)"" channel")]
+         public void ValidateSubChannelInNotificationChannel(string subChannelName, string channelName)
+         {
+             Logger.LogMethodEntry("TodaysView", "ValidateSubChannelInNotificationChannel",
+                 base.IsTakeScreenShotDuringEntryExit);
+           // verify subchannel in  can be select
+            Logger.LogAssertion("VerifyToSelectThePastDueActivity", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new TodaysViewUxPage().GetSubChannelInNotification(subChannelName, channelName)));
+             Logger.LogMethodExit("TodaysView", "ValidateSubChannelInNotificationChannel", 
+                 base.IsTakeScreenShotDuringEntryExit);
+         }
+
+
+        /// <summary>
+        /// Expand the subchannel based on the subchannel channel name
+        /// </summary>
+        /// <param name="subchannelName">This is subchannel name.</param>
+         [When(@"I expand ""(.*)"" channel")]
+         public void ExpandChannelInNotificationChannel(string subchannelName)
+         {
+             Logger.LogMethodEntry("TodaysView", "ExpandChannelInNotificationChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+             new TodaysViewUxPage().ClickExpanIconInNotificationChannel(subchannelName);
+             Logger.LogMethodEntry("TodaysView", "ExpandChannelInNotificationChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+         }
+
+        /// <summary>
+         /// Validate message display in About This Course channel.
+        /// </summary>
+        /// <param name="message">This is message.</param>
+         [Then(@"I should be displayed with ""(.*)"" message")]
+         public void ValidateMessageInAboutThisCourse(string message)
+         {
+             Logger.LogMethodEntry("TodaysView", "ValidateMessageInAboutThisCourse",
+             base.IsTakeScreenShotDuringEntryExit);
+             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
+                new TodaysViewUxPage().GetAboutThisCourseMessage()));
+             Logger.LogMethodExit("TodaysView", "ValidateMessageInAboutThisCourse",
+             base.IsTakeScreenShotDuringEntryExit);
+         }
+
+
+        /// <summary>
+        /// Validate the display of welcome message in Todays view page.
+        /// </summary>
+        /// <param name="welcomeMessage">This is welcome message type enum.</param>
+         [Then(@"I should be displayed with ""(.*)"" welcome message")]
+         public void ValidateWelcomeMessageInWelcomeMessageChannel(WelcomeMessage.WelcomeMessageTypeEnum welcomeMessageType)
+         {
+             Logger.LogMethodExit("TodaysView", "ValidateWelcomeMessageInWelcomeMessageChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+             // Get welcome message from enum.
+             WelcomeMessage welcomeMessage = WelcomeMessage.Get(welcomeMessageType);
+             string getWelcomeMessage = welcomeMessage.Message.ToString();
+
+             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
+               Current.ScenarioInfo.Title, () => Assert.AreEqual(getWelcomeMessage,
+               new TodaysViewUxPage().GetWelcomeMessage()));
+
+             Logger.LogMethodExit("TodaysView", "ValidateWelcomeMessageInWelcomeMessageChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+
+         [Then(@"I should be displayed with ""(.*)"" count")]
+         public void ValidateAlertCountInAlertChannel(Alert.AlertTypeEnum alertType)
+         {
+             Logger.LogMethodExit("TodaysView", "ValidateAlertCountInAlertChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+             // Get welcome message from enum.
+             Alert alert = Alert.Get(alertType);
+             string getAlertCount = alert.AlertCount.ToString();
+
+             Logger.LogAssertion("ValidateAlertCountInAlertChannel", ScenarioContext.
+               Current.ScenarioInfo.Title, () => Assert.AreEqual(getAlertCount,
+               new TodaysViewUxPage().GetAlertCount(alertType)));
+
+             Logger.LogMethodExit("TodaysView", "ValidateAlertCountInAlertChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         [When(@"I click on ""(.*)"" count")]
+         public void WhenIClickOnCount(Alert.AlertTypeEnum alertType)
+         {
+             Logger.LogMethodEntry("TodaysView", "WhenIClickOnCount",
+                base.IsTakeScreenShotDuringEntryExit);
+             new TodaysViewUxPage().ClickAlertCount(alertType);
+             Logger.LogMethodExit("TodaysView", "WhenIClickOnCount",
+                base.IsTakeScreenShotDuringEntryExit);
+         }
+
     }
 }

@@ -801,6 +801,180 @@ testRunner.Then("I should be displayed with \"Minmize\" icon in \"Calendar\" cha
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Todays view subchannel validation of notification channel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void TodaysViewSubchannelValidationOfNotificationChannel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Todays view subchannel validation of notification channel", ((string[])(null)));
+#line 341
+this.ScenarioSetup(scenarioInfo);
+#line 342
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 343
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 344
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 345
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 346
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 347
+testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 348
+testRunner.Then("I should see \"About This Course\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 349
+testRunner.Then("I should see \"Welcome Message\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 350
+testRunner.Then("I should see \"Alerts\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 351
+testRunner.Then("I should see \"Action Items\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 352
+testRunner.Then("I should see \"Performance\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate About This Course channel display")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void ValidateAboutThisCourseChannelDisplay()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate About This Course channel display", ((string[])(null)));
+#line 354
+this.ScenarioSetup(scenarioInfo);
+#line 355
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 356
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 357
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 358
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 359
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 360
+testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 361
+testRunner.Then("I should see \"About This Course\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 362
+testRunner.When("I expand \"About This Course\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 363
+testRunner.Then("I should be displayed with \"You and your students can view this message. To creat" +
+                    "e or edit this message, click Customize.\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Welcome Message channel display")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void ValidateWelcomeMessageChannelDisplay()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Welcome Message channel display", ((string[])(null)));
+#line 366
+this.ScenarioSetup(scenarioInfo);
+#line 367
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 368
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 369
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 370
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 371
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 372
+testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 373
+testRunner.Then("I should see \"Welcome Message\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 374
+testRunner.When("I expand \"Welcome Message\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 375
+testRunner.Then("I should be displayed with \"RegTVInsWelcomeMsg\" welcome message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate NotPassedAlertCount in Alert channel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void ValidateNotPassedAlertCountInAlertChannel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate NotPassedAlertCount in Alert channel", ((string[])(null)));
+#line 378
+this.ScenarioSetup(scenarioInfo);
+#line 379
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 380
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 381
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 382
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 383
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 384
+testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 385
+testRunner.Then("I should see \"Alerts\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 386
+testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 387
+testRunner.Then("I should be displayed with \"RegNotPassedAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 388
+testRunner.Then("I should be displayed with \"RegNewGradesAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 389
+testRunner.Then("I should be displayed with \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 390
+testRunner.Then("I should be displayed with \"RegPastDueSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 391
+testRunner.Then("I should be displayed with \"RegPastDueNotSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 392
+testRunner.Then("I should be displayed with \"RegUnreadCommentsCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 393
+testRunner.Then("I should be displayed with \"RegAlertsCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate IdleStudentCount and display of Idle Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void ValidateIdleStudentCountAndDisplayOfIdleStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate IdleStudentCount and display of Idle Student", ((string[])(null)));
+#line 395
+this.ScenarioSetup(scenarioInfo);
+#line 396
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 397
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 398
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 399
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 400
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 401
+testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 402
+testRunner.Then("I should see \"Alerts\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 403
+testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 404
+testRunner.Then("I should be displayed with \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 405
+testRunner.When("I click on \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
