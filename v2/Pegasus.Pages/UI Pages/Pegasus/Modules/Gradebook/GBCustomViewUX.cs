@@ -459,5 +459,231 @@ namespace Pegasus.Pages.UI_Pages
                      base.IsTakeScreenShotDuringEntryExit);
             return isColumnSortIconPresent;
         }
+
+        public void FolderLevelNavigation(string activityName, string tabName, User.UserTypeEnum userTypeEnum)
+        {
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.CsSmsStudent:
+                    switch (tabName)
+                    {
+                        case "Grades":
+                            this.NavigateToChapter1SimulationActivitiesFolder();
+                            break;
+                    }
+                    break;
+            }
+
+        }
+
+        private void NavigateToChapter1SimulationActivitiesFolder()
+        {
+            this.FolderLevel1Navigation("Word 2013");
+        }
+
+
+        private void FolderLevel1Navigation(string activityFolderName)
+        {
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            int activityFolder1Index = 0;
+            bool dsf = base.IsElementPresent(By.XPath("//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/span[2]"), 10);
+            //ExpandRoot Folder
+            IWebElement getRootExpandIcon = base.GetWebElementPropertiesByXPath("//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/span[2]");
+            base.PerformMouseClickAction(getRootExpandIcon);
+            bool fdg = base.IsElementPresent(By.XPath("//div[@class='ko-childrens']/ul/li"), 10);
+            base.WaitForElement(By.XPath("//div[@class='ko-childrens']/ul/li"));
+            int getFolderCount = base.GetElementCountByXPath(string.Format("//div[@class='ko-childrens']/ul/li"));
+            for (activityFolder1Index = 1; activityFolder1Index <= getFolderCount; activityFolder1Index++)
+            {
+                bool hg = base.IsElementPresent(By.XPath("//div[@class='ko-childrens']/ul/li[1]/div/span[4]"));
+                base.IsElementPresent(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]", activityFolder1Index)));
+                base.WaitForElement(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]", activityFolder1Index)));
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]", activityFolder1Index));
+                if (getFolderName == "Word 2013")
+                {
+                    base.IsElementPresent(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]", activityFolder1Index)));
+                    base.WaitForElement(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]", activityFolder1Index)));
+                    IWebElement expandL1Folder = base.GetWebElementPropertiesByXPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]", activityFolder1Index));
+                    base.ClickByJavaScriptExecutor(expandL1Folder);
+                    break;
+
+                }
+            }
+            this.FolderLevel2Navigation("Word Chapter 1: Creating Documents with Microsoft Word 2013", activityFolder1Index);
+        }
+
+
+        private void FolderLevel2Navigation(string activityFolderName, int activityFolder1Index)
+        {
+            //ExpandRoot Folder
+            int activityFolder2Index;
+            bool fdg = base.IsElementPresent(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li", activityFolder1Index)), 10);
+            base.WaitForElement(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li", activityFolder1Index)), 10);
+            int getLevel2FolderCount = base.GetElementCountByXPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li", activityFolder1Index));
+            for (activityFolder2Index = 1; activityFolder2Index <= getLevel2FolderCount; activityFolder2Index++)
+            {
+                bool hg = base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index)), 10);
+                base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index)));
+                base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index)));
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index));
+                if (getFolderName == activityFolderName)
+                {
+                    base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]", activityFolder1Index, activityFolder2Index)));
+                    base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]", activityFolder1Index, activityFolder2Index)));
+                    IWebElement expandL2Folder = base.GetWebElementPropertiesByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]", activityFolder1Index, activityFolder2Index));
+                    base.ClickByJavaScriptExecutor(expandL2Folder);
+                    break;
+                }
+            }
+            this.FolderLevel3Navigation("Word Chapter 1: Activities", activityFolder1Index, activityFolder2Index);
+        }
+
+        private void FolderLevel3Navigation(string activityFolderName, int activityFolder1Index, int activityFolder2Index)
+        {
+            int activityFolder3Index;
+            bool yghg = base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index)), 10);
+            base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index)));
+            base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index)));
+            int getLevel3FolderCount = base.GetElementCountByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index));
+            for (activityFolder3Index = 1; activityFolder3Index <= getLevel3FolderCount; activityFolder3Index++)
+            {
+                bool hg = base.IsElementPresent(By.XPath(string.Format(
+                   "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
+                   activityFolder1Index, activityFolder2Index, activityFolder3Index)), 10);
+                base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index));
+                if (getFolderName == activityFolderName)
+                {
+                    base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                    base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                    IWebElement expandL3Folder = base.GetWebElementPropertiesByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index));
+                    base.ClickByJavaScriptExecutor(expandL3Folder);
+                    break;
+                }
+            }
+            this.FolderLevel4Navigation("Word Chapter 1: Simulation Activities", activityFolder1Index,
+                activityFolder2Index, activityFolder3Index);
+        }
+
+        private void FolderLevel4Navigation(string activityFolderName, int activityFolder1Index,
+                int activityFolder2Index, int activityFolder3Index)
+        {
+            bool jh = base.IsElementPresent(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)), 10);
+            base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+            int getLevel4FolderCount = base.GetElementCountByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index));
+            for (int activityFolder4Index = 1; activityFolder4Index <= getLevel4FolderCount; activityFolder4Index++)
+            {
+                base.WaitForElement(By.XPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index)));
+
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(
+                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]",
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index));
+                if (getFolderName.Contains("Word Chapter 1: Simulation Activities"))
+                {
+                    IWebElement expandL4Folder = base.GetWebElementPropertiesByXPath(
+                        string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]",
+                          activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index));
+                    base.PerformMouseClickAction(expandL4Folder);
+                    break;
+                }
+            }
+        }
+
+        public string IsActivityDisplayedInGradesTab(string activityName)
+        {
+            base.SwitchToIFrameById("srcGBFrame");
+            string getActivityName = string.Empty;
+            base.WaitForElement(By.XPath("//table[@id='GridStudent']/tbody/tr"));
+            int getActivityCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
+            for (int i = 1; i <= getActivityCount; i++)
+            {
+                bool hgsd = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i)), 10);
+                getActivityName = base.GetElementInnerTextByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
+                if (getActivityName == activityName)
+                {
+                    break;
+                }
+            }
+            base.SwitchToDefaultPageContent();
+            return getActivityName;
+        }
+
+
+        public void ClickOnActivitycMenuOption(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
+        {
+           switch(userTypeEnum)
+           {
+               case User.UserTypeEnum.CsSmsInstructor:
+                   break;
+
+               case User.UserTypeEnum.CsSmsStudent:
+                   this.SelectActivitycMenuOption(cmenuOption, activityName);
+                   break;
+           }
+        }
+
+        private void SelectActivitycMenuOption(string cmenuOption, string activityName)
+        {
+            base.SwitchToIFrameById("srcGBFrame");
+            string getActivityName = string.Empty;
+            base.WaitForElement(By.XPath("//table[@id='GridStudent']/tbody/tr"));
+            int getActivityCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
+            for (int i = 1; i <= getActivityCount; i++)
+            {
+                bool hgsd = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i)), 10);
+                getActivityName = base.GetElementInnerTextByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
+                if (getActivityName == activityName)
+                {
+                    bool hgssad = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i)), 10);
+                    IWebElement activityName1 = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i));
+                    base.PerformMouseHoverAction(activityName1);
+                    Thread.Sleep(2000);
+                    bool jh = base.IsElementPresent(By.XPath(string.Format(".//*[@id='spFeed']/input")), 10);
+                    IWebElement cmenuOption1 = base.GetWebElementPropertiesByXPath(string.Format(".//*[@id='spFeed']/input"));
+                    base.PerformMouseClickAction(cmenuOption1);
+
+                    Thread.Sleep(1000);
+                    bool hgfs = base.IsElementPresent(By.XPath(".//*div[@class='PC_mainLinks']/a"), 10);
+                    bool hgfks = base.IsElementPresent(By.ClassName("PC_mainLinks"), 10);
+                    Thread.Sleep(4000);
+                    IWebElement activityCmenu = base.GetWebElementPropertiesByPartialLinkText("cmenuOption");
+                    base.PerformMouseClickAction(activityCmenu);
+                   
+                }
+            }
+        }
     }
 }
+

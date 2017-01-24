@@ -1340,8 +1340,58 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Gradebook",
                 "VerifySavedActivityDisplayInCustomView",
                base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
 
+        /// <summary>
+        /// Select the SIM5 activity based on the tab required
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="tabName">This is the tab name.</param>
+        /// <param name="userTypeEnum">This is the User tyoe enum.</param>
+        [When(@"I navigate to ""(.*)"" activity in ""(.*)"" by ""(.*)""")]
+        public void SelectSIM5Activity(string activityName, string tabName, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                            "SelectSIM5Activity",
+                           base.IsTakeScreenShotDuringEntryExit);
+            new GBCustomViewUX().FolderLevelNavigation(activityName,tabName,userTypeEnum);
+            Logger.LogMethodExit("Gradebook",
+               "SelectSIM5Activity",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityName"></param>
+        [Then(@"I should see ""(.*)"" activity in Grades tab")]
+        public void VerifyActivityDisplayInTab(string activityName)
+        {
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (activityName, new GBCustomViewUX().IsActivityDisplayedInGradesTab(activityName)));
+            Logger.LogMethodExit("Gradebook",
+               "VerifyActivityDisplayInTab",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cmenuOption"></param>
+        /// <param name="activityName"></param>
+        /// <param name="userTypeEnum"></param>
+        [When(@"I click on ""(.*)"" cmenu option of ""(.*)"" as ""(.*)"" user")]
+        public void ClickOnCmenuOptionOfAsUser(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyActivityPositioInCustomViewFrame",
+                          base.IsTakeScreenShotDuringEntryExit);
+            new GBCustomViewUX().ClickOnActivitycMenuOption(cmenuOption, activityName, userTypeEnum);
+            Logger.LogMethodExit("Gradebook",
+               "VerifySavedActivityDisplayInCustomView",
+              base.IsTakeScreenShotDuringEntryExit);
+        }        
     }
 }
-   
+  

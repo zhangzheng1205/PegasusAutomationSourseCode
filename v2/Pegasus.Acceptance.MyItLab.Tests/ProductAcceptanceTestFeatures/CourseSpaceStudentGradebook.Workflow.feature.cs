@@ -136,21 +136,15 @@ testRunner.And("I sort the \"Activity\" in \'Descending\' order", ((string)(null
 #line 37
 testRunner.Then("I should see \"Descending\" icon for the sorted column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 38
-testRunner.And("I should see \"RegCustomViewActivity1\" activity at position \"2\" of custom view fra" +
-                    "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \"RegCustomViewActivity1\",\"RegCustomViewActivity2\" activity in \"Desce" +
+                    "nding\" order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
-testRunner.And("I should see \"RegCustomViewActivity2\" activity at position \"1\" of custom view fra" +
-                    "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
 testRunner.When("I sort the \"Activity\" in \'Ascending\' order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 40
 testRunner.Then("I should see \"Ascending\" icon for the sorted column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
-testRunner.Then("I should see \"RegCustomViewActivity1\" activity at position \"1\" of custom view fra" +
-                    "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
-testRunner.And("I should see \"RegCustomViewActivity2\" activity at position \"2\" of custom view fra" +
-                    "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+testRunner.And("I should see \"RegCustomViewActivity1\",\"RegCustomViewActivity2\" activity in \"Ascen" +
+                    "ding\" order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -161,39 +155,60 @@ testRunner.And("I should see \"RegCustomViewActivity2\" activity at position \"2
         public virtual void SortingTheGradeColumnInCustomViewTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sorting the Grade column in Custom View tab", ((string[])(null)));
-#line 49
+#line 47
 this.ScenarioSetup(scenarioInfo);
-#line 50
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 51
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 54
-testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
-                    "msStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 55
-testRunner.And("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 57
+#line 48
 testRunner.When("I click on \"Custom View\" subtab in \"Grades\" tab as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
+#line 49
 testRunner.And("I sort the \"Activity\" in \'Descending\' order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
+#line 50
 testRunner.Then("I should see \"Descending\" icon for the sorted column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 60
+#line 51
 testRunner.And("I should see \"RegCustomViewActivity1\",\"RegCustomViewActivity2\" activity in \"Desce" +
                     "nding\" order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
+#line 52
 testRunner.When("I sort the \"Grade\" in \'Ascending\' order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 53
 testRunner.Then("I should see \"Ascending\" icon for the sorted column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
+#line 54
 testRunner.And("I should see \"RegCustomViewActivity1\",\"RegCustomViewActivity2\" activity in \"Ascen" +
                     "ding\" order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Folder Navigation in Grades tab of coursespace student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentGradebook")]
+        public virtual void FolderNavigationInGradesTabOfCoursespaceStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Folder Navigation in Grades tab of coursespace student", ((string[])(null)));
+#line 60
+this.ScenarioSetup(scenarioInfo);
+#line 61
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 62
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 64
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 65
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 66
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 68
+testRunner.When("I navigate to \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity " +
+                    "in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 69
+testRunner.Then("I should see \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity i" +
+                    "n Grades tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 70
+testRunner.When("I click on \"view submission\" cmenu option of \"Word Chapter 1 Project 1A Skill-Bas" +
+                    "ed Exam (Scenario 1)\" as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
