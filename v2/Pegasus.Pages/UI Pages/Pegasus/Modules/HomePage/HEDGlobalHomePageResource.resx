@@ -244,7 +244,7 @@
     <value>_ctl5__ctl1__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHome_Page_CreateaCourse_Button_ID_Locator" xml:space="preserve">
-    <value>_ctl5:_ctl0:_ctl0:_ctl0:_ctl0:btnSearchCatalog</value>
+    <value>_ctl7__ctl0__ctl0__ctl0__ctl0_btnSearchCatalog</value>
   </data>
   <data name="HEDGlobalHome_Page_EnrollinaCourse_Button_ID_Locator" xml:space="preserve">
     <value>_ctl6:_ctl0:_ctl0:_ctl0:_ctl0:btnEnrollCourse</value>
@@ -305,5 +305,71 @@
   </data>
   <data name="HEDGlobalHomePage_Stu_Help_Link_ID_Locator" xml:space="preserve">
     <value>_ctl9_PegasushelloK5_HelpLink</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateaCourse_ID_Locator" xml:space="preserve">
+    <value>_ctl7__ctl0__ctl0__ctl0__ctl0_lblCreateClassHeading</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_BrowseByDiscipline_Id_Locator" xml:space="preserve">
+    <value>rndDiscipline</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CopyInterval_time_Text_Id_Locator" xml:space="preserve">
+    <value>AssignedToCopyInterval</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CopyStatus_Text_Id_Locator" xml:space="preserve">
+    <value>Course is being prepared and will be available soon.</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateaCourse_IFrame_Id_Locator" xml:space="preserve">
+    <value>iframeCreateCourse</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateaCourse_Step1Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='mainCatalogTbl']/ul/li/span/span[1]</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateaCourse_Step1Name_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='bootstrap-wizard-1']/div/ul/li/span/span[2]</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateaCourse_Step2Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@class = 'form-bootstrapWizard']/ul/li[2]/span/span</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateCourse_FinishButton_Id_Locator" xml:space="preserve">
+    <value>btnFinish</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator" xml:space="preserve">
+    <value>_ctl8_rptCatalogSearchResults__ctl0_btnCatalogType</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Count_XPath_Locator" xml:space="preserve">
+    <value>//button[@class='btn-circle-peg btn-blue-peg margin-left-26']</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Name_ClassName_Locator" xml:space="preserve">
+    <value>fntsize</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_Step2Count_XPath_Locator" xml:space="preserve">
+    <value>//button[@class='btn-circle-peg btn-blue-peg  margin-left-50']</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnterCourseDesc_Id_Locator" xml:space="preserve">
+    <value>txtDesc</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnterCourseName_Id_Locator" xml:space="preserve">
+    <value>txtProductName</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_GetCourseText_Table_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='repeatertbl']/div[{0}]/div/div/div[2]/div/div[7]/span</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_GetCourse_Table_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='repeatertbl']/div</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_MyProfileLightBox_XPath_Locator" xml:space="preserve">
+    <value>//iframe[contains(@src,'Modules/MyPrefernce/frmMyAccountSetting.aspx?')]</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_SelectDiscipline_Id_Locator" xml:space="preserve">
+    <value>drdDiscipline</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_SingleCourseCreation_NextButton_Id_Locator" xml:space="preserve">
+    <value>btnNext</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='tblSearchCatalog']/div[2]/div/div/input</value>
   </data>
 </root>

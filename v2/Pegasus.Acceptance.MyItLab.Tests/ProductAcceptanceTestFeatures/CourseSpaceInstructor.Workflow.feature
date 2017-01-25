@@ -233,29 +233,26 @@ Then I should see the "Project Creation Tool" popup
 When I close Project creation tool popup
 Then I should be on the "Today's View" page
 
-
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The My Courses and Testbanks displayed on the home page
 Scenario:Validate Channels in home page as CsSmsInstructor
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-Then I should be displayed with ""My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
-And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel 
-And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel
+Then I should be displayed with "My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
+And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
+And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel
 Then I should be displayed with "Enroll in a Course" lightbox
-And I should be displayed with step "1" and "Course ID"
-When I enter "RegMyITLabNewCourse" and click submit
-Then I should be displayed with step "2" and "Confirm Course"
+And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup
+When I enter "RegMyITLabNewCourseForEnrollment" and click submit
+Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup
 And I should be displayed with message "The Course ID you entered matched the following instructor and course."
-And I should be displayed with the course name "RegMyITLabNewCourse"
+And I should be displayed with the course name "RegMyITLabNewCourseForEnrollment"
 When I click "Confirm" button
-Then I should be displayed with "RegMyITLabNewCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate enrolled course in "My Courses and Testbanks" channel
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-Then I should be displayed with "RegMyITLabNewCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
-When I click on Open button of "RegMyITLabNewCourse" as "CsSmsInstructor" user
+Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsInstructor" user

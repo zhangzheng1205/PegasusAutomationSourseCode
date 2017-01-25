@@ -171,6 +171,62 @@ testRunner.Then("I should see the successfull message \"You have been signed out
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate course creation from Create a Course catlog based on course ISBN")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGlobalHomePage")]
+        public virtual void ValidateCourseCreationFromCreateACourseCatlogBasedOnCourseISBN()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate course creation from Create a Course catlog based on course ISBN", ((string[])(null)));
+#line 53
+this.ScenarioSetup(scenarioInfo);
+#line 54
+testRunner.When("I click on \"Create a Course\" button in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
+testRunner.Then("I should be displayed with \"Create a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 56
+testRunner.And("I should be displayed step \"1\" with \"Search Catalog\" in \"Create a Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+testRunner.When("I click on next button with \"RegMyITLabNewlyCreatedCourse\" course ISBN as search " +
+                    "criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 58
+testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Create a Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+testRunner.When("I click on \"Select Course\" button of \"RegMyITLabNewlyCreatedCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" course as \"CsSmsInstruc" +
+                    "tor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate course creation from Create a Course catlog based on course decipline")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGlobalHomePage")]
+        public virtual void ValidateCourseCreationFromCreateACourseCatlogBasedOnCourseDecipline()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate course creation from Create a Course catlog based on course decipline", ((string[])(null)));
+#line 65
+this.ScenarioSetup(scenarioInfo);
+#line 66
+testRunner.When("I click on \"Create a Course\" button in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
+testRunner.Then("I should be displayed with \"Create a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 68
+testRunner.And("I should be displayed step \"1\" with \"Search Catalog\" in \"Create a Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 69
+testRunner.When("I select \"All Disciplines\" option in \'Browse by Discipline\' dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 70
+testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Create a Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 71
+testRunner.When("I click on \"Select Course\" button of \"MyItLabAuthoredCourse\" using course descipl" +
+                    "ine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
+testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" course as \"CsSmsInstruc" +
+                    "tor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -47,3 +47,30 @@ When I click on "Sign out" option in "Global Home" tab of "MyItLabInstructorCour
 Then I should see the successfull message "You have been signed out of the application."
 
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The course creation by CsSmsInstructor using course ISBN number
+Scenario:Validate course creation from Create a Course catlog based on course ISBN
+When I click on "Create a Course" button in "My Courses and Testbanks" channel
+Then I should be displayed with "Create a Course" lightbox
+And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup
+When I click on next button with "RegMyITLabNewlyCreatedCourse" course ISBN as search criteria
+Then I should be displayed step "2" with "Select Course" in "Create a Course" popup
+When I click on "Select Course" button of "RegMyITLabNewlyCreatedCourse" course
+Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The course creation by CsSmsInstructor using course discipline
+Scenario:Validate course creation from Create a Course catlog based on course decipline
+When I click on "Create a Course" button in "My Courses and Testbanks" channel
+Then I should be displayed with "Create a Course" lightbox
+And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup
+When I select "All Disciplines" option in 'Browse by Discipline' dropdown
+Then I should be displayed step "2" with "Select Course" in "Create a Course" popup
+When I click on "Select Course" button of "MyItLabAuthoredCourse" using course descipline
+Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+
+
+
+

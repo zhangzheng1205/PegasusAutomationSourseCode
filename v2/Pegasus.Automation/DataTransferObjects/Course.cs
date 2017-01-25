@@ -107,7 +107,8 @@ namespace Pegasus.Automation.DataTransferObjects
             BadgingCourseProgram = 77,
             eTextCourse=78,
             D2LPegasusKioskCourse=79,
-            RegMyITLabNewCourse=80,
+            RegMyITLabNewCourseForEnrollment=80,
+            RegMyITLabNewlyCreatedCourse=81
         }
 
         /// <summary>
@@ -179,6 +180,11 @@ namespace Pegasus.Automation.DataTransferObjects
         /// This is instructor course id.
         /// </summary>
         public String InstructorCourseId { get; set; }
+
+        /// <summary>
+        /// This is ISBN.
+        /// </summary>
+        public String ISBN { get; set; }
 
         /// <summary>
         /// This is Integration Point id.
