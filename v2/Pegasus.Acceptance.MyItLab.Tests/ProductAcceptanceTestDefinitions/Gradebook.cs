@@ -1345,16 +1345,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Select the SIM5 activity based on the tab required
         /// </summary>
-        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="activityName">This is the activity type enum.</param>
         /// <param name="tabName">This is the tab name.</param>
         /// <param name="userTypeEnum">This is the User tyoe enum.</param>
         [When(@"I navigate to ""(.*)"" activity in ""(.*)"" by ""(.*)""")]
-        public void SelectSIM5Activity(string activityName, string tabName, User.UserTypeEnum userTypeEnum)
+        public void SelectSIM5Activity(Activity.ActivityTypeEnum activityTypeEnum, string tabName, User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("Gradebook",
                             "SelectSIM5Activity",
                            base.IsTakeScreenShotDuringEntryExit);
-            new GBCustomViewUX().FolderLevelNavigation(activityName,tabName,userTypeEnum);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String activityName = activity.Name;
+            new GBDefaultUXPage().FolderLevelNavigation(activityName, tabName, userTypeEnum);
             Logger.LogMethodExit("Gradebook",
                "SelectSIM5Activity",
               base.IsTakeScreenShotDuringEntryExit);
@@ -1364,18 +1366,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Verify the Activity and its grade in Grades tab
         /// </summary>
        /// </summary>
-       /// <param name="activityName">This is the Activity name.</param>
+       /// <param name="activityName">This is the Activity type enum.</param>
        /// <param name="activityGrade">This is the activity grade.</param>
         [Then(@"I should see ""(.*)"" activity in Grades tab with ""(.*)"" grade")]
-        public void VerifyActivityDisplayInTab(string activityName, int activityGrade)
+        public void VerifyActivityDisplayInTab(Activity.ActivityTypeEnum activityTypeEnum, String activityGrade)
         {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyActivityDisplayInTab",
+                          base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String activityName = activity.Name;
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                         Current.ScenarioInfo.Title, () => Assert.AreEqual
-                            (activityName, new GBCustomViewUX().IsActivityDisplayedInGradesTab(activityName)));
-
+                            (activityName, new GBDefaultUXPage().IsActivityDisplayedInGradesTab(activityName)));
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                         Current.ScenarioInfo.Title, () => Assert.AreEqual
-                            (activityGrade, new GBCustomViewUX().
+                            (activityGrade, new GBDefaultUXPage().
                             IsActivityGradeDisplayedInGradesTab(activityName, activityGrade)));
             Logger.LogMethodExit("Gradebook",
                "VerifyActivityDisplayInTab",
@@ -1389,16 +1395,105 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityName">This is the activity name.</param>
         /// <param name="userTypeEnum">This is the user type enum.</param>
         [When(@"I click on ""(.*)"" cmenu option of ""(.*)"" as ""(.*)"" user")]
-        public void ClickOnCmenuOptionOfActivity(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
+        public void ClickOnCmenuOptionOfActivity(string cmenuOption, Activity.ActivityTypeEnum activityTypeEnum
+            , User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("Gradebook",
                            "VerifyActivityPositioInCustomViewFrame",
                           base.IsTakeScreenShotDuringEntryExit);
-            new GBCustomViewUX().ClickOnActivitycMenuOption(cmenuOption, activityName, userTypeEnum);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String activityName = activity.Name;
+            //new GBDefaultUXPage().ClickOnActivitycMenuOption(cmenuOption, activityName, userTypeEnum);
             Logger.LogMethodExit("Gradebook",
                "VerifySavedActivityDisplayInCustomView",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
+
+        /// <summary>
+        /// Verify the activity name i Viw submission page of student
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum.</param>
+        [Then(@"I should see ""(.*)"" activity name")]
+        public void VerifyActivityNameInViewSubmissionPage(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyActivityNameInViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String activityName = activity.Name;
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (activityName, new GBDefaultUXPage().IsActivityPresentInViewSubmissionPage(activityName)));
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyActivityNameInViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Attempts grid and its column dispaly in student view submission page
+        /// </summary>
+        /// <param name="attemptGrid">This is the attempt grid name.</param>
+        /// <param name="dateColumnName">This is the Date column name.</param>
+        /// <param name="gradeColumnName">This is the Grade column name.</param>
+        /// <param name="totalAttemptRows">This is the total number of attempt rows.</param>
+        [Then(@"I should see ""(.*)"" grid with ""(.*)"" ""(.*)"" columns having ""(.*)"" entries")]
+        public void VerifyAtemptsGridInViewSubmission(string attemptGrid, 
+            string dateColumnName, string gradeColumnName, int totalAttemptRows)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                            "VerifyAtemptsGridInViewSubmission",
+                           base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue
+                           (new GBDefaultUXPage().IsAttemptGridPresentInViewSubmissionPage(
+                attemptGrid, dateColumnName, gradeColumnName, totalAttemptRows)));
+            
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyAtemptsGridInViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// CLick on the required attemp row to view the submission details
+        /// </summary>
+        /// <param name="activityScore">This is the activity score.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I click on attempt having ""(.*)"" grade as ""(.*)""")]
+        public void ViewActivitySubmission(String activityScore, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                            "VerifyAtemptsGridInViewSubmission",
+                           base.IsTakeScreenShotDuringEntryExit);
+            new GBDefaultUXPage().ClickOnActivityAttemptToViewSubmission(activityScore);
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyAtemptsGridInViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Activity Score In ViewSubmission page of student
+        /// </summary>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        /// <param name="activityScore">This is the activity score.</param>
+        [Then(@"I should see ""(.*)"" with ""(.*)"" score")]
+        public void VerifyActivityScoreInViewSubmission(User.UserTypeEnum userTypeEnum, String activityScore)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                            "VerifyActivityScoreInViewSubmission",
+                           base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string expectedUserName = user.LastName + ", " + user.FirstName;
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (activityScore, new GBDefaultUXPage().GetActivityScoreInViewSubmission()));
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                      Current.ScenarioInfo.Title, () => Assert.AreEqual
+                          (expectedUserName, new GBDefaultUXPage().GetStudentNameInViewSUbmissionPage()));             
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyActivityScoreInViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }       
+
     }
 }
   

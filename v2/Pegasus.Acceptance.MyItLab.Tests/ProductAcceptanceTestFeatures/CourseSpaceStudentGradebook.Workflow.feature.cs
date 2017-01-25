@@ -201,14 +201,22 @@ testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.Spe
 #line 67
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 68
-testRunner.When("I navigate to \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity " +
-                    "in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"RegCustomViewActivity1\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 69
-testRunner.Then("I should see \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity i" +
-                    "n Grades tab with \"100\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"RegCustomViewActivity1\" activity in Grades tab with \"100\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
-testRunner.When("I click on \"view submission\" cmenu option of \"Word Chapter 1 Project 1A Skill-Bas" +
-                    "ed Exam (Scenario 1)\" as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"view submission\" cmenu option of \"RegCustomViewActivity1\" as \"CsSmsSt" +
+                    "udent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 71
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 72
+testRunner.And("I should see \"RegCustomViewActivity1\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 73
+testRunner.And("I should see \"Attempts\" grid with \"Date\" \"Grade\" columns having \"2\" entries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 74
+testRunner.When("I click on attempt having \"100\" grade as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+testRunner.Then("I should see \"CsSmsStudent\" with \"100%\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

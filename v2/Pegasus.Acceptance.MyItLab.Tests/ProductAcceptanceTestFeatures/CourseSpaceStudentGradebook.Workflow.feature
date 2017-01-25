@@ -65,6 +65,11 @@ Given I am on the "Global Home" page
 When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
-When I navigate to "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in "Grades" by "CsSmsStudent"
-Then I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in Grades tab with "100" grade
-When I click on "view submission" cmenu option of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" as "CsSmsStudent" user
+When I navigate to "RegCustomViewActivity1" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegCustomViewActivity1" activity in Grades tab with "100" grade
+When I click on "view submission" cmenu option of "RegCustomViewActivity1" as "CsSmsStudent" user
+Then I should be on the "View Submission" page
+And I should see "RegCustomViewActivity1" activity name 
+And I should see "Attempts" grid with "Date" "Grade" columns having "2" entries
+When I click on attempt having "100" grade as "CsSmsStudent"
+Then I should see "CsSmsStudent" with "100%" score 

@@ -536,8 +536,8 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickViewGradeButton(int activityColumnNo)
         {
             //Click The View Grade Button
-            logger.LogMethodEntry("GBInstructorUXPage", "ClickViewGradeButton",
-                 base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickViewGradeButton",
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
                 GBInstructorUX_Page_GB_GradeCell_Xpath_Locator, activityColumnNo)));
@@ -549,8 +549,8 @@ namespace Pegasus.Pages.UI_Pages
             base.PerformMouseHoverByJavaScriptExecutor(getGradeCell);
             //Click on View Grades Button
             this.ClickonViewGradesButton();
-            logger.LogMethodExit("GBInstructorUXPage", "ClickViewGradeButton",
-              base.IsTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickViewGradeOption",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickonViewGradesButton()
         {
             //Click on View Grades Button
-            logger.LogMethodEntry("GBInstructorUXPage", "ClickonViewGradesButton",
+            logger.LogMethodEntry("GBDefaultUXPage", "ClickonViewGradesButton",
                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
@@ -574,7 +574,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getViewGrades);
             Thread.Sleep(Convert.ToInt32(GBInstructorUXPageResource.
                     GBInstructorUX_Page_WaitWindowTime_Value));
-            logger.LogMethodExit("GBInstructorUXPage", "ClickonViewGradesButton",
+            logger.LogMethodExit("GBDefaultUXPage", "ClickonViewGradesButton",
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -586,7 +586,7 @@ namespace Pegasus.Pages.UI_Pages
         {
 
             // Search an asset at Gradebook in DP
-            logger.LogMethodEntry("GBInstructorUXPage",
+            logger.LogMethodEntry("GBDefaultUXPage",
                 "SearchAssetInDPInstructorGradebook",
                 base.IsTakeScreenShotDuringEntryExit);
             try
@@ -633,6 +633,540 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
+        /// <summary>
+        /// This method is to navigate nside the folder in the Grades tab
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="tabName">This is the tab name.</param>
+        /// <param name="userTypeEnum">This is the User type enum.</param>
+        public void FolderLevelNavigation(string activityName, string tabName, User.UserTypeEnum userTypeEnum)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsStudent:
+                        switch (activityName)
+                        {
+                            case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.NavigateToWordChapter1SimulationActivitiesFolder();
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This method is to navigate inside the Word simulation folder 
+        /// </summary>
+        private void NavigateToWordChapter1SimulationActivitiesFolder()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Navigate inside the Word 1st folder 
+            int f1Index = this.FolderLevel1Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Word2013_FolderName);
+            //Navigate into 2nd folder
+            int f2Index = this.FolderLevel2Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_CreatingDocumentswithMicrosoftWord2013_FolderName, f1Index);
+            //Navigate into 3rd folder
+            int f3Index = this.FolderLevel3Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_WordChapter1_Activities_FolderName, f1Index, f2Index);
+            //Navigate into 4th folder
+            this.FolderLevel4Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_WordChapter1_SimulationActivities_FolderName,
+                f1Index, f2Index, f3Index);
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate inside folder at the root level
+        /// </summary>
+        /// <param name="activityFolderName">This is the Folder name.</param>
+        /// <returns>Returns the index of the folder level.</returns>
+        private int FolderLevel1Navigation(string activityFolderName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevel1Navigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            int activityFolder1Index = 0;
+            //ExpandRoot Folder Plus icon
+            IWebElement getRootExpandIcon = base.GetWebElementPropertiesByXPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_RootFolderPlus_Xpath_Locator);
+            base.PerformMouseClickAction(getRootExpandIcon);
+            //Get the count of folders inside root folder
+            base.WaitForElement(By.XPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator));
+            int getFolderCount = base.GetElementCountByXPath(string.Format(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator));
+            for (activityFolder1Index = 1; activityFolder1Index <= getFolderCount; activityFolder1Index++)
+            {
+                //Get the name of the folder
+                base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator, activityFolder1Index)));
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator, activityFolder1Index));
+                if (getFolderName == activityFolderName)
+                {
+                    //Expand sub folder 1
+                    IWebElement expandL1Folder = base.GetWebElementPropertiesByXPath(string.Format(GBDefaultUXPageResource.
+                        GBDefaultUXPage_StudentGrades_Level1Folder_PlusIcon_XPath_Locator, activityFolder1Index));
+                    base.ClickByJavaScriptExecutor(expandL1Folder);
+                    break;
+
+                }
+            }
+            logger.LogMethodEntry("GBDefaultUXPage",
+                        "FolderLevel1Navigation",
+                       base.IsTakeScreenShotDuringEntryExit);
+            return activityFolder1Index;
+        }
+
+        /// <summary>
+        /// Navigate inside level 2 folder
+        /// /// </summary>
+        /// <param name="activityFolderName">This is the activity folder name.</param>
+        /// <param name="activityFolder1Index">This is the folder1 index.</param>
+        /// <returns>Returns the index of the level 2 folder.</returns>
+        private int FolderLevel2Navigation(string activityFolderName, int activityFolder1Index)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevel2Navigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Expand level 2 folder
+            int activityFolder2Index;
+            base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Level2SubFolders_Count_XPath_Locator,
+                activityFolder1Index)));
+            //Get the sub folders count in level 2
+            int getLevel2FolderCount = base.GetElementCountByXPath(string.Format(
+                GBDefaultUXPageResource.GBDefaultUXPage_StudentGrades_Level2SubFolders_Count_XPath_Locator,
+                activityFolder1Index));
+            for (activityFolder2Index = 1; activityFolder2Index <= getLevel2FolderCount; activityFolder2Index++)
+            {
+                base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                     GBDefaultUXPage_StudentGrades_Level2SubFolder_Name_XPath_Locator,
+                     activityFolder1Index, activityFolder2Index)));
+                //Get the sub folders name in level 2
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level2SubFolder_Name_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index));
+                if (getFolderName == activityFolderName)
+                {
+                    //Expand the folder in Level 2
+                    base.WaitForElement(By.XPath(string.Format(
+                    GBDefaultUXPageResource.
+                        GBDefaultUXPage_StudentGrades_Level2Folder_PlusIcon_XPath_Locator,
+                        activityFolder1Index, activityFolder2Index)));
+                    IWebElement expandL2Folder = base.GetWebElementPropertiesByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                        GBDefaultUXPage_StudentGrades_Level2Folder_PlusIcon_XPath_Locator,
+                        activityFolder1Index, activityFolder2Index));
+                    base.ClickByJavaScriptExecutor(expandL2Folder);
+                    break;
+                }
+            }
+            logger.LogMethodEntry("GBDefaultUXPage",
+                        "FolderLevel2Navigation",
+                       base.IsTakeScreenShotDuringEntryExit);
+            return activityFolder2Index;
+        }
+
+        /// <summary>
+        /// Navigate inside level 3 folder
+        /// </summary>
+        /// <param name="activityFolderName">This is the activity folder name.</param>
+        /// <param name="activityFolder1Index">This is the folder1 index.</param>
+        /// <param name="activityFolder2Index">This is the folder2 index.</param>
+        /// <returns>Returns the index of the level 3 folder.</returns>
+        private int FolderLevel3Navigation(string activityFolderName, int activityFolder1Index, int activityFolder2Index)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevel3Navigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            int activityFolder3Index;
+            base.WaitForElement(By.XPath(string.Format(
+                    GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Level3SubFolders_Count_XPath_Locator,
+                activityFolder1Index, activityFolder2Index)));
+            //Get the sub folders count in level 3
+            int getLevel3FolderCount = base.GetElementCountByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Level3SubFolders_Count_XPath_Locator,
+                activityFolder1Index, activityFolder2Index));
+            for (activityFolder3Index = 1; activityFolder3Index <= getLevel3FolderCount; activityFolder3Index++)
+            {
+                base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level3SubFolder_Name_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                //Get the sub folders name in level 3
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level3SubFolder_Name_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index));
+                if (getFolderName == activityFolderName)
+                {
+                    base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level3Folder_PlusIcon_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                    //Expand level 3 folder plus icon
+                    IWebElement expandL3Folder = base.GetWebElementPropertiesByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level3Folder_PlusIcon_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index));
+                    base.ClickByJavaScriptExecutor(expandL3Folder);
+                    break;
+                }
+            }
+            logger.LogMethodExit("GBDefaultUXPage",
+                         "FolderLevel3Navigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return activityFolder3Index;
+        }
+
+        /// <summary>
+        /// Navigate inside level 4 folder
+        /// </summary>
+        /// <param name="activityFolderName">This is the activity folder name.</param>
+        /// <param name="activityFolder1Index">This is the folder1 index.</param>
+        /// <param name="activityFolder2Index">This is the folder2 index.</param>
+        /// <param name="activityFolder3Index">This is the folder3 index.</param>
+        private void FolderLevel4Navigation(string activityFolderName, int activityFolder1Index,
+                int activityFolder2Index, int activityFolder3Index)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevel4Navigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+            int getLevel4FolderCount = base.GetElementCountByXPath(string.Format(
+                   GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index));
+            for (int activityFolder4Index = 1; activityFolder4Index <= getLevel4FolderCount; activityFolder4Index++)
+            {
+                base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level4Folder_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder4Index, activityFolder4Index)));
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_Level4Folder_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index));
+                if (getFolderName.Contains(activityFolderName))
+                {
+                    //Click on the Folder name
+                    IWebElement expandL4Folder = base.GetWebElementPropertiesByXPath(
+                        string.Format(GBDefaultUXPageResource.
+                        GBDefaultUXPage_StudentGrades_Level4Folder_XPath_Locator,
+                          activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index));
+                    base.PerformMouseClickAction(expandL4Folder);
+                    break;
+                }
+            }
+            logger.LogMethodExit("GBDefaultUXPage",
+                         "FolderLevel4Navigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the activity name displayed
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <returns>Activity name.</returns>
+        public String IsActivityDisplayedInGradesTab(string activityName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "IsActivityDisplayedInGradesTab",
+                        base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToIFrameById(GBDefaultUXPageResource.
+                GBDefaultUXPage_Grades_Frame_ID_Locator);
+            string getActivityName = string.Empty;
+            base.WaitForElement(By.XPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_ActivityCount_XPath_Locator));
+            //Get the Activity count in Grades tab
+            int getActivityCount = base.GetElementCountByXPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_ActivityCount_XPath_Locator);
+            for (int i = 1; i <= getActivityCount; i++)
+            {
+                //Get the Activity name in Grades tab
+                getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
+                if (getActivityName == activityName)
+                {
+                    break;
+                }
+            }
+            base.SwitchToDefaultPageContent();
+            logger.LogMethodExit("GBDefaultUXPage",
+                         "IsActivityDisplayedInGradesTab",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
+
+        /// <summary>
+        /// Verify the activity grade displayed
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <param name="grade">This is the Activity grade.</param>
+        /// <returns>Activity grade.</returns>
+        public String IsActivityGradeDisplayedInGradesTab(string activityName, String grade)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "IsActivityGradeDisplayedInGradesTab",
+                        base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToIFrameById(GBDefaultUXPageResource.
+                GBDefaultUXPage_Grades_Frame_ID_Locator);
+            string getActivityName = string.Empty;
+            string getActivitygrade = string.Empty;
+            base.WaitForElement(By.XPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_ActivityCount_XPath_Locator));
+            int getActivityCount = base.GetElementCountByXPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_ActivityCount_XPath_Locator);
+            for (int i = 1; i <= getActivityCount; i++)
+            {
+                //Get the Activity Grade in Grades tab
+                getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
+                    GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
+                if (getActivityName == activityName)
+                {
+                    getActivitygrade = base.GetElementInnerTextByXPath(string.Format(
+                        GBDefaultUXPageResource.GBDefaultUXPage_StudentGrades_Activity_Grade_XPath_Locator, i));
+                    break;
+                }
+            }
+            base.SwitchToDefaultPageContent();
+            logger.LogMethodExit("GBDefaultUXPage",
+                         "IsActivityGradeDisplayedInGradesTab",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getActivitygrade;
+        }
+
+        /// <summary>
+        /// Click on the cmen option of an activity in Grades tab
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="userTypeEnum">This is the User type enum.</param>
+        public void ClickOnActivitycMenuOption(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "ClickOnActivitycMenuOption",
+                        base.IsTakeScreenShotDuringEntryExit);
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.CsSmsInstructor:
+                    break;
+
+                case User.UserTypeEnum.CsSmsStudent:
+                    this.SelectActivitycMenuOption(cmenuOption, activityName);
+                    break;
+            }
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "ClickOnActivitycMenuOption",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void SelectActivitycMenuOption(string cmenuOption, string activityName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "SelectActivitycMenuOption",
+                        base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToIFrameById("srcGBFrame");
+            string getActivityName = string.Empty;
+            base.WaitForElement(By.XPath("//table[@id='GridStudent']/tbody/tr"));
+            int getActivityCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
+            for (int i = 1; i <= getActivityCount; i++)
+            {
+                bool hgsd = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i)), 10);
+                getActivityName = base.GetElementInnerTextByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
+                if (getActivityName == activityName)
+                {
+                    bool hgssad = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i)), 10);
+                    IWebElement activityName1 = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i));
+                    base.PerformMouseHoverAction(activityName1);
+                    Thread.Sleep(2000);
+                    bool jh = base.IsElementPresent(By.XPath(string.Format(".//*[@id='spFeed']/input")), 10);
+                    IWebElement cmenuOption1 = base.GetWebElementPropertiesByXPath(string.Format(".//*[@id='spFeed']/input"));
+                    base.PerformMouseClickAction(cmenuOption1);
+
+                    Thread.Sleep(1000);
+                    base.SelectDropDownOptionById("35d15ecb-88ec-40a1-b497-2095239d1ac7", cmenuOption);
+                    bool jhrjt = base.IsElementPresent(By.XPath("//a[@class = 'PU_render']"), 10);
+                    bool hgfks = base.IsElementPresent(By.XPath("//div[contains(@id,'reference')]"), 10);
+                    Thread.Sleep(2000);
+                    IWebElement activityCmenu = base.GetWebElementPropertiesByPartialLinkText("cmenuOption");
+                    base.PerformMouseClickAction(activityCmenu);
+
+                }
+            }
+            logger.LogMethodExit("GBDefaultUXPage",
+                         "SelectActivitycMenuOption",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <returns></returns>
+        public string IsActivityPresentInViewSubmissionPage(string activityName)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "IsActivityPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string getActivityNameDisplayed = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id("_ctl0_PopupPageContent_divActivityName"));
+                getActivityNameDisplayed = base.GetElementTextById("_ctl0_PopupPageContent_divActivityName");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }         
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "IsActivityPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getActivityNameDisplayed;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="attemptGrid"></param>
+        /// <param name="dateColumnName"></param>
+        /// <param name="gradeColumnName"></param>
+        /// <param name="totalAttemptRows"></param>
+        /// <returns></returns>
+        public bool IsAttemptGridPresentInViewSubmissionPage(string attemptGrid, 
+            string dateColumnName, string gradeColumnName, int totalAttemptRows)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "IsAttemptGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isAttemptGridDetailsPresent = false;
+            int getAttemptsCount = 0;
+            string getAttemtsGridText = string.Empty;
+            string getDateColumnName = string.Empty;
+            string getGradeColumnName = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id("btnStudentsRoleButton"));
+                getAttemtsGridText = base.GetElementTextById("btnStudentsRoleButton");
+                getAttemptsCount = base.GetElementCountByXPath("//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_header']/span/div");
+                getDateColumnName = base.GetElementTextByXPath("//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_header']/span/div[1]");
+                getGradeColumnName = base.GetElementTextByXPath("//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_header']/span/div[2]");
+                if (getAttemtsGridText == attemptGrid && dateColumnName == getDateColumnName
+                    && gradeColumnName == getGradeColumnName && totalAttemptRows == getAttemptsCount)
+                {
+                    isAttemptGridDetailsPresent = true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "IsAttemptGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isAttemptGridDetailsPresent;
+        }
+
+        public void ClickOnActivityAttemptToViewSubmission(String activityGrade)
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "ClickOnActivityAttemptToViewSubmission",
+                        base.IsTakeScreenShotDuringEntryExit);
+            int getAttemptsCount = base.GetElementCountByXPath("//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span");
+            for (int i = 1; i <= getAttemptsCount; i++)
+            {
+                try
+                {
+                    base.WaitForElement(By.XPath(String.Format(
+                                "//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[2]/span/p[1]", i)));
+                    String getActivityGrade = base.GetElementTextByXPath(String.Format(
+                        "//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[2]/span/p[1]", i));
+                    if (getActivityGrade.Contains(activityGrade))
+                    {
+                        bool jhd = base.IsElementPresent(By.XPath(String.Format(
+                            ".//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[1]", i)), 10);
+                        IWebElement clickActivity = base.GetWebElementPropertiesByXPath(String.Format(
+                            "//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[1]", i));
+                        base.ClickByJavaScriptExecutor(clickActivity);
+                        break;
+                    }
+                }
+
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
+            }
+                logger.LogMethodExit("GBDefaultUXPage",
+                             "ClickOnActivityAttemptToViewSubmission",
+                            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public String GetActivityScoreInViewSubmission()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "GetActivityScoreInViewSubmission",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string activityGrade = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id("_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook"));
+                activityGrade = base.GetElementInnerTextById("_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+         
+            logger.LogMethodExit("GBDefaultUXPage",
+                        "GetActivityScoreInViewSubmission",
+                       base.IsTakeScreenShotDuringEntryExit);
+            return activityGrade;
+        }
+
+        public String GetStudentNameInViewSUbmissionPage()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                          "GetStudentNameInViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            string activityName = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id("_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblStudentName"));
+                activityName = base.GetElementInnerTextById("_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblStudentName");
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBDefaultUXPage",
+                          "GetStudentNameInViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return activityName;
+        }
     }
 }
 
