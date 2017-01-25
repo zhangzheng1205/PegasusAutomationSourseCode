@@ -53,7 +53,7 @@ When I sort the "Grade" in 'Ascending' order
 Then I should see "Ascending" icon for the sorted column
 And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Ascending" order
 
-#Purpose : Folder Navigation in Course Materials tab
+#Purpose : Folder Navigation in Grades tab
 #Test case ID :
 #Products : MyItLab.
 #Pre condition : 
@@ -66,5 +66,5 @@ When I enter in the "MyItLabInstructorCourse" course from the Global Home page a
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I navigate to "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in "Grades" by "CsSmsStudent"
-Then I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in Grades tab
+Then I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in Grades tab with "100" grade
 When I click on "view submission" cmenu option of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" as "CsSmsStudent" user

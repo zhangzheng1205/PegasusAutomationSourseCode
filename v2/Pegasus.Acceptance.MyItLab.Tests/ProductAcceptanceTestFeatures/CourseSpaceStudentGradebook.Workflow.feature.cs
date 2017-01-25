@@ -205,7 +205,7 @@ testRunner.When("I navigate to \"Word Chapter 1 Project 1A Skill-Based Exam (Sce
                     "in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 69
 testRunner.Then("I should see \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity i" +
-                    "n Grades tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "n Grades tab with \"100\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
 testRunner.When("I click on \"view submission\" cmenu option of \"Word Chapter 1 Project 1A Skill-Bas" +
                     "ed Exam (Scenario 1)\" as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

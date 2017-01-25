@@ -460,160 +460,227 @@ namespace Pegasus.Pages.UI_Pages
             return isColumnSortIconPresent;
         }
 
+        /// <summary>
+        /// This method is to navigate nside the folder in the Grades tab
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="tabName">This is the tab name.</param>
+        /// <param name="userTypeEnum">This is the User type enum.</param>
         public void FolderLevelNavigation(string activityName, string tabName, User.UserTypeEnum userTypeEnum)
         {
-            switch (userTypeEnum)
+            logger.LogMethodEntry("GBCustomViewUX",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            try
             {
-                case User.UserTypeEnum.CsSmsStudent:
-                    switch (tabName)
-                    {
-                        case "Grades":
-                            this.NavigateToChapter1SimulationActivitiesFolder();
-                            break;
-                    }
-                    break;
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsStudent:
+                        switch (activityName)
+                        {
+                            case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.NavigateToWordChapter1SimulationActivitiesFolder();
+                                break;
+                        }
+                        break;
+                }
             }
-
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBCustomViewUX",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void NavigateToChapter1SimulationActivitiesFolder()
+        /// <summary>
+        /// This method is to navigate inside the Word simulation folder 
+        /// </summary>
+        private void NavigateToWordChapter1SimulationActivitiesFolder()
         {
-            this.FolderLevel1Navigation("Word 2013");
+            logger.LogMethodEntry("GBCustomViewUX",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Navigate inside the Word 1st folder 
+            int f1Index = this.FolderLevel1Navigation(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_Word2013_FolderName);
+            //Navigate into 2nd folder
+            int f2Index = this.FolderLevel2Navigation(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_CreatingDocumentswithMicrosoftWord2013_FolderName, f1Index);
+            //Navigate into 3rd folder
+            int f3Index = this.FolderLevel3Navigation(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_WordChapter1_Activities_FolderName, f1Index, f2Index);
+            //Navigate into 4th folder
+            this.FolderLevel4Navigation(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_WordChapter1_SimulationActivities_FolderName,
+                f1Index, f2Index, f3Index);
+            logger.LogMethodEntry("GBCustomViewUX",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
-
-        private void FolderLevel1Navigation(string activityFolderName)
+        /// <summary>
+        /// Navigate inside folder at the root level
+        /// </summary>
+        /// <param name="activityFolderName">This is the Folder name.</param>
+        /// <returns>Returns the index of the folder level.</returns>
+        private int FolderLevel1Navigation(string activityFolderName)
         {
             base.WaitUntilWindowLoads(base.GetPageTitle);
             int activityFolder1Index = 0;
-            bool dsf = base.IsElementPresent(By.XPath("//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/span[2]"), 10);
-            //ExpandRoot Folder
-            IWebElement getRootExpandIcon = base.GetWebElementPropertiesByXPath("//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/span[2]");
+            //ExpandRoot Folder Plus icon
+            IWebElement getRootExpandIcon = base.GetWebElementPropertiesByXPath(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_RootFolderPlus_Xpath_Locator);
             base.PerformMouseClickAction(getRootExpandIcon);
-            bool fdg = base.IsElementPresent(By.XPath("//div[@class='ko-childrens']/ul/li"), 10);
-            base.WaitForElement(By.XPath("//div[@class='ko-childrens']/ul/li"));
-            int getFolderCount = base.GetElementCountByXPath(string.Format("//div[@class='ko-childrens']/ul/li"));
+            //Get the count of folders inside root folder
+            base.WaitForElement(By.XPath(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator));
+            int getFolderCount = base.GetElementCountByXPath(string.Format(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator));
             for (activityFolder1Index = 1; activityFolder1Index <= getFolderCount; activityFolder1Index++)
             {
-                bool hg = base.IsElementPresent(By.XPath("//div[@class='ko-childrens']/ul/li[1]/div/span[4]"));
-                base.IsElementPresent(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]", activityFolder1Index)));
-                base.WaitForElement(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]", activityFolder1Index)));
-                string getFolderName = base.GetElementInnerTextByXPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]", activityFolder1Index));
-                if (getFolderName == "Word 2013")
+                //Get the name of the folder
+                base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator, activityFolder1Index)));
+                string getFolderName = base.GetElementInnerTextByXPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator, activityFolder1Index));
+                if (getFolderName == activityFolderName)
                 {
-                    base.IsElementPresent(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]", activityFolder1Index)));
-                    base.WaitForElement(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]", activityFolder1Index)));
-                    IWebElement expandL1Folder = base.GetWebElementPropertiesByXPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]", activityFolder1Index));
+                    //Expand sub folder 1
+                    IWebElement expandL1Folder = base.GetWebElementPropertiesByXPath(string.Format(GBCustomViewUXPageResource.
+                        GBCustomViewUXPage_StudentGrades_Level1Folder_PlusIcon_XPath_Locator, activityFolder1Index));
                     base.ClickByJavaScriptExecutor(expandL1Folder);
                     break;
 
                 }
             }
-            this.FolderLevel2Navigation("Word Chapter 1: Creating Documents with Microsoft Word 2013", activityFolder1Index);
+            return activityFolder1Index;
         }
 
-
-        private void FolderLevel2Navigation(string activityFolderName, int activityFolder1Index)
+        /// <summary>
+        /// Navigate inside level 2 folder
+        /// /// </summary>
+        /// <param name="activityFolderName">This is the activity folder name.</param>
+        /// <param name="activityFolder1Index">This is the folder1 index.</param>
+        /// <returns>Returns the index of the level 2 folder.</returns>
+        private int FolderLevel2Navigation(string activityFolderName, int activityFolder1Index)
         {
-            //ExpandRoot Folder
-            int activityFolder2Index;
-            bool fdg = base.IsElementPresent(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li", activityFolder1Index)), 10);
-            base.WaitForElement(By.XPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li", activityFolder1Index)), 10);
-            int getLevel2FolderCount = base.GetElementCountByXPath(string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li", activityFolder1Index));
+            //Expand level 2 folder
+            int activityFolder2Index;            
+            base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_Level2SubFolders_Count_XPath_Locator, 
+                activityFolder1Index)));
+            //Get the sub folders count in level 2
+            int getLevel2FolderCount = base.GetElementCountByXPath(string.Format(
+                GBCustomViewUXPageResource.GBCustomViewUXPage_StudentGrades_Level2SubFolders_Count_XPath_Locator,
+                activityFolder1Index));
             for (activityFolder2Index = 1; activityFolder2Index <= getLevel2FolderCount; activityFolder2Index++)
             {
-                bool hg = base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index)), 10);
-                base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index)));
-                base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index)));
+                base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                     GBCustomViewUXPage_StudentGrades_Level2SubFolder_Name_XPath_Locator,
+                     activityFolder1Index, activityFolder2Index)));
+               //Get the sub folders name in level 2
                 string getFolderName = base.GetElementInnerTextByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]", activityFolder1Index, activityFolder2Index));
+                    GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level2SubFolder_Name_XPath_Locator, 
+                    activityFolder1Index, activityFolder2Index));
                 if (getFolderName == activityFolderName)
                 {
-                    base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]", activityFolder1Index, activityFolder2Index)));
+                    //Expand the folder in Level 2
                     base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]", activityFolder1Index, activityFolder2Index)));
+                    GBCustomViewUXPageResource.
+                        GBCustomViewUXPage_StudentGrades_Level2Folder_PlusIcon_XPath_Locator, 
+                        activityFolder1Index, activityFolder2Index)));
                     IWebElement expandL2Folder = base.GetWebElementPropertiesByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]", activityFolder1Index, activityFolder2Index));
+                    GBCustomViewUXPageResource.
+                        GBCustomViewUXPage_StudentGrades_Level2Folder_PlusIcon_XPath_Locator,
+                        activityFolder1Index, activityFolder2Index));
                     base.ClickByJavaScriptExecutor(expandL2Folder);
                     break;
                 }
             }
-            this.FolderLevel3Navigation("Word Chapter 1: Activities", activityFolder1Index, activityFolder2Index);
+            return activityFolder2Index;
         }
 
-        private void FolderLevel3Navigation(string activityFolderName, int activityFolder1Index, int activityFolder2Index)
+        /// <summary>
+        /// Navigate inside level 3 folder
+        /// </summary>
+        /// <param name="activityFolderName">This is the activity folder name.</param>
+        /// <param name="activityFolder1Index">This is the folder1 index.</param>
+        /// <param name="activityFolder2Index">This is the folder2 index.</param>
+        /// <returns>Returns the index of the level 3 folder.</returns>
+        private int FolderLevel3Navigation(string activityFolderName, int activityFolder1Index, int activityFolder2Index)
         {
-            int activityFolder3Index;
-            bool yghg = base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index)), 10);
-            base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index)));
+            int activityFolder3Index;  
             base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index)));
+                    GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_Level3SubFolders_Count_XPath_Locator, 
+                activityFolder1Index, activityFolder2Index)));
+            //Get the sub folders count in level 3
             int getLevel3FolderCount = base.GetElementCountByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li", activityFolder1Index, activityFolder2Index));
+                    GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_Level3SubFolders_Count_XPath_Locator, 
+                activityFolder1Index, activityFolder2Index));
             for (activityFolder3Index = 1; activityFolder3Index <= getLevel3FolderCount; activityFolder3Index++)
             {
-                bool hg = base.IsElementPresent(By.XPath(string.Format(
-                   "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
-                   activityFolder1Index, activityFolder2Index, activityFolder3Index)), 10);
-                base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
+                base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level3SubFolder_Name_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index)));
-                base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
-                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                //Get the sub folders name in level 3
                 string getFolderName = base.GetElementInnerTextByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]",
+                    GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level3SubFolder_Name_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index));
                 if (getFolderName == activityFolderName)
-                {
-                    base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]",
+                {                   
+                    base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level3Folder_PlusIcon_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index)));
-                    base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]",
-                    activityFolder1Index, activityFolder2Index, activityFolder3Index)));
+                    //Expand level 3 folder plus icon
                     IWebElement expandL3Folder = base.GetWebElementPropertiesByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]",
+                    GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level3Folder_PlusIcon_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index));
                     base.ClickByJavaScriptExecutor(expandL3Folder);
                     break;
                 }
             }
-            this.FolderLevel4Navigation("Word Chapter 1: Simulation Activities", activityFolder1Index,
-                activityFolder2Index, activityFolder3Index);
+            return activityFolder3Index;            
         }
 
+        /// <summary>
+        /// Navigate inside level 4 folder
+        /// </summary>
+        /// <param name="activityFolderName">This is the activity folder name.</param>
+        /// <param name="activityFolder1Index">This is the folder1 index.</param>
+        /// <param name="activityFolder2Index">This is the folder2 index.</param>
+        /// <param name="activityFolder3Index">This is the folder3 index.</param>
         private void FolderLevel4Navigation(string activityFolderName, int activityFolder1Index,
                 int activityFolder2Index, int activityFolder3Index)
         {
-            bool jh = base.IsElementPresent(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li",
-                    activityFolder1Index, activityFolder2Index, activityFolder3Index)), 10);
-            base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li",
+            base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index)));
             int getLevel4FolderCount = base.GetElementCountByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li",
+                   GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index));
             for (int activityFolder4Index = 1; activityFolder4Index <= getLevel4FolderCount; activityFolder4Index++)
             {
-                base.WaitForElement(By.XPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]",
-                    activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index)));
-
+                base.WaitForElement(By.XPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level4Folder_XPath_Locator,
+                    activityFolder1Index, activityFolder2Index, activityFolder4Index, activityFolder4Index)));
                 string getFolderName = base.GetElementInnerTextByXPath(string.Format(
-                    "//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]",
+                    GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_Level4Folder_XPath_Locator,
                     activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index));
-                if (getFolderName.Contains("Word Chapter 1: Simulation Activities"))
+                if (getFolderName.Contains(activityFolderName))
                 {
+                    //Click on the Folder name
                     IWebElement expandL4Folder = base.GetWebElementPropertiesByXPath(
-                        string.Format("//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]",
+                        string.Format(GBCustomViewUXPageResource.
+                        GBCustomViewUXPage_StudentGrades_Level4Folder_XPath_Locator,                        
                           activityFolder1Index, activityFolder2Index, activityFolder3Index, activityFolder4Index));
                     base.PerformMouseClickAction(expandL4Folder);
                     break;
@@ -621,16 +688,26 @@ namespace Pegasus.Pages.UI_Pages
             }
         }
 
+        /// <summary>
+        /// Verify the activity name displayed
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <returns>Activity name.</returns>
         public string IsActivityDisplayedInGradesTab(string activityName)
         {
-            base.SwitchToIFrameById("srcGBFrame");
+            base.SwitchToIFrameById(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_CustomView_Frame_ID_Locator);
             string getActivityName = string.Empty;
-            base.WaitForElement(By.XPath("//table[@id='GridStudent']/tbody/tr"));
-            int getActivityCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
+            base.WaitForElement(By.XPath(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_ActivityCount_XPath_Locator));
+            //Get the Activity count in Grades tab
+            int getActivityCount = base.GetElementCountByXPath(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_ActivityCount_XPath_Locator);
             for (int i = 1; i <= getActivityCount; i++)
             {
-                bool hgsd = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i)), 10);
-                getActivityName = base.GetElementInnerTextByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
+                //Get the Activity name in Grades tab
+                getActivityName = base.GetElementInnerTextByXPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_ActivityName_XPath_Locator, i));
                 if (getActivityName == activityName)
                 {
                     break;
@@ -640,7 +717,44 @@ namespace Pegasus.Pages.UI_Pages
             return getActivityName;
         }
 
+        /// <summary>
+        /// Verify the activity grade displayed
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <param name="grade">This is the Activity grade.</param>
+        /// <returns>Activity grade.</returns>
+        public string IsActivityGradeDisplayedInGradesTab(string activityName,int grade)
+        {
+            base.SwitchToIFrameById(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_CustomView_Frame_ID_Locator);
+            string getActivityName = string.Empty;
+            string getActivitygrade = string.Empty;
+            base.WaitForElement(By.XPath(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_ActivityCount_XPath_Locator));
+            int getActivityCount = base.GetElementCountByXPath(GBCustomViewUXPageResource.
+                GBCustomViewUXPage_StudentGrades_ActivityCount_XPath_Locator);
+            for (int i = 1; i <= getActivityCount; i++)
+            {
+                //Get the Activity Grade in Grades tab
+                getActivityName = base.GetElementInnerTextByXPath(string.Format(GBCustomViewUXPageResource.
+                    GBCustomViewUXPage_StudentGrades_ActivityName_XPath_Locator, i));
+                if (getActivityName == activityName)
+                {
+                    getActivitygrade = base.GetElementInnerTextByXPath(string.Format(
+                        GBCustomViewUXPageResource.GBCustomViewUXPage_StudentGrades_Activity_Grade_XPath_Locator, i));
+                    break;
+                }
+            }
+            base.SwitchToDefaultPageContent();
+            return getActivitygrade;
+        }
 
+        /// <summary>
+        /// Click on the cmen option of an activity in Grades tab
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="userTypeEnum">This is the User type enum.</param>
         public void ClickOnActivitycMenuOption(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
         {
            switch(userTypeEnum)
@@ -675,9 +789,10 @@ namespace Pegasus.Pages.UI_Pages
                     base.PerformMouseClickAction(cmenuOption1);
 
                     Thread.Sleep(1000);
-                    bool hgfs = base.IsElementPresent(By.XPath(".//*div[@class='PC_mainLinks']/a"), 10);
-                    bool hgfks = base.IsElementPresent(By.ClassName("PC_mainLinks"), 10);
-                    Thread.Sleep(4000);
+                    base.SelectDropDownOptionById("35d15ecb-88ec-40a1-b497-2095239d1ac7",cmenuOption);
+                    bool jhrjt = base.IsElementPresent(By.XPath("//a[@class = 'PU_render']"), 10);
+                    bool hgfks = base.IsElementPresent(By.XPath("//div[contains(@id,'reference')]"), 10);
+                    Thread.Sleep(2000);
                     IWebElement activityCmenu = base.GetWebElementPropertiesByPartialLinkText("cmenuOption");
                     base.PerformMouseClickAction(activityCmenu);
                    

@@ -1360,29 +1360,36 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// 
+       /// <summary>
+        /// Verify the Activity and its grade in Grades tab
         /// </summary>
-        /// <param name="activityName"></param>
-        [Then(@"I should see ""(.*)"" activity in Grades tab")]
-        public void VerifyActivityDisplayInTab(string activityName)
+       /// </summary>
+       /// <param name="activityName">This is the Activity name.</param>
+       /// <param name="activityGrade">This is the activity grade.</param>
+        [Then(@"I should see ""(.*)"" activity in Grades tab with ""(.*)"" grade")]
+        public void VerifyActivityDisplayInTab(string activityName, int activityGrade)
         {
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                         Current.ScenarioInfo.Title, () => Assert.AreEqual
                             (activityName, new GBCustomViewUX().IsActivityDisplayedInGradesTab(activityName)));
+
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.AreEqual
+                            (activityGrade, new GBCustomViewUX().
+                            IsActivityGradeDisplayedInGradesTab(activityName, activityGrade)));
             Logger.LogMethodExit("Gradebook",
                "VerifyActivityDisplayInTab",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// 
+        /// Select the option from the activity cmenu in Grades tab
         /// </summary>
-        /// <param name="cmenuOption"></param>
-        /// <param name="activityName"></param>
-        /// <param name="userTypeEnum"></param>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
         [When(@"I click on ""(.*)"" cmenu option of ""(.*)"" as ""(.*)"" user")]
-        public void ClickOnCmenuOptionOfAsUser(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
+        public void ClickOnCmenuOptionOfActivity(string cmenuOption, string activityName, User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("Gradebook",
                            "VerifyActivityPositioInCustomViewFrame",

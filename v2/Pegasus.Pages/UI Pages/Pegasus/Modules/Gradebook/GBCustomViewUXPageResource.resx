@@ -141,4 +141,61 @@
   <data name="GBCustomViewUXPage_CustomView_subMenu_ID_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_subMenuText</value>
   </data>
+  <data name="GBCustomViewUXPage_StudentGrades_ActivityCount_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_ActivityName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Activity_Grade_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_CreatingDocumentswithMicrosoftWord2013_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Creating Documents with Microsoft Word 2013</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level1Folder_PlusIcon_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level2Folder_PlusIcon_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level2SubFolders_Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level2SubFolder_Name_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level3Folder_PlusIcon_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level3SubFolders_Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level3SubFolder_Name_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level4Folder_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_RootFolderPlus_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/span[2]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_Word2013_FolderName" xml:space="preserve">
+    <value>Word 2013</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_WordChapter1_Activities_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Activities</value>
+  </data>
+  <data name="GBCustomViewUXPage_StudentGrades_WordChapter1_SimulationActivities_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Simulation Activities</value>
+  </data>
 </root>
