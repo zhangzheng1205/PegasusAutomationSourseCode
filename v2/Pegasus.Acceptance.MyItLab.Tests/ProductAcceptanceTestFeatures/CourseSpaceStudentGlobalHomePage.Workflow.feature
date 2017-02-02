@@ -28,16 +28,27 @@ When I click on "Expand" icon in "My Courses and Testbanks" frame as "CsSmsStude
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
+#Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
+Scenario: Validate enrolled course in "My Courses and Testbanks" channel for SMS Student
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsStudent" in "My Courses and Testbanks" channel
+When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsStudent" user
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Help Link functionality on the home page
 Scenario:CSSMSStudent validate functionality of help link in header on global home
-When I click on "Help" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+When I click on "Help" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be on "Home Page Help" page as "CsSmsStudent" user
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Support Link functionality on the home page
 Scenario: CSSMSStudent validate Support link functionality on global home
-When I click on "Support" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+When I click on "Support" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsStudent" user
 When I close the "Support" window
 Then I should be on the "Global Home" page
@@ -52,14 +63,14 @@ Then I should be displayed with "Hi," message for "CsSmsStudent" user
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The My Profile Link functionality on the home page
 Scenario: CSSMSStudent validate  My Profile link functionality in global home
-When I click on "My Profile" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+When I click on "My Profile" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be displayed with "My Profile" lightbox
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Privacy link functionality displayed on the home page
 Scenario: CSSMSStudent validate Privacy link functionality in course global home
-When I click on "Privacy" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+When I click on "Privacy" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be on the "Privacy" page
 And I close the "Privacy" window
 
@@ -67,5 +78,34 @@ And I close the "Privacy" window
 #Products : MyItLab, HSS and World Language.
 #Purpose:Logout as CsSmsStudent from global home of MyItLabInstructorCourse course
 Scenario: Logout of Pegasus as CsSmsStudent from global home
-When I click on "Sign out" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+When I click on "Sign out" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should see the successfull message "You have been signed out of the application."
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The course enrollment for SMS student
+Scenario:Validate Channels in home page as CsSmsStudent
+When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsStudent" user
+Then I should be displayed with "Enroll in a Course" lightbox
+And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsStudent" user
+When I enter "MyItLabAuthoredCourse" and click submit
+Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup as "CsSmsStudent" user
+And I should be displayed with message "The Course ID you entered matched the following instructor and course."
+And I should be displayed with the course name "MyItLabAuthoredCourse"
+When I click "Confirm" button
+Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#PreCondition : Course should be in marked for deletion by CsSMSInstructor
+#Purpose:Verify "Mark for Deletion" ststus for CsSMSStudent
+Scenario:Validate mark for deletion status for CsSMSStudent
+Then I should see the "Marked for Deletion" status updated for the "MyItLabAuthoredCourse" course as "CsSmsStudent"
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#PreCondition : Course should be in inactivated by CsSMSInstructor
+#Purpose:Verify "Course is Inactive" ststus for CsSMSStudent
+Scenario:Validate course inactive status for CsSMSStudent
+Then I should see the "Course is Inactive" status updated for the "MyItLabAuthoredCourse" course as "CsSmsStudent"
+

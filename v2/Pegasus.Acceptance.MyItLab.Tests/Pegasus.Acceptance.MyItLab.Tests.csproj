@@ -597,6 +597,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHearderLinksPageUX.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.CourseCreationAndContextMenuFunctionalityUX.Orderedtest.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

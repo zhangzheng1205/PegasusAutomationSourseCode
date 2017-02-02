@@ -49,27 +49,94 @@ Then I should see the successfull message "You have been signed out of the appli
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
+#Purpose:Verify The My Courses and Testbanks displayed on the home page
+Scenario:Validate Channels in home page as CsSmsInstructor
+Then I should be displayed with "My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
+And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
+And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
+When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
+Then I should be displayed with "Enroll in a Course" lightbox
+And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsInstructor" user 
+When I enter "RegMyITLabNewCourseForEnrollment" and click submit
+Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup as "CsSmsInstructor" user
+And I should be displayed with message "The Course ID you entered matched the following instructor and course."
+And I should be displayed with the course name "RegMyITLabNewCourseForEnrollment"
+When I click "Confirm" button
+Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
 #Purpose:Verify The course creation by CsSmsInstructor using course ISBN number
 Scenario:Validate course creation from Create a Course catlog based on course ISBN
-When I click on "Create a Course" button in "My Courses and Testbanks" channel
+When I click on "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
 Then I should be displayed with "Create a Course" lightbox
-And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup
+And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on next button with "RegMyITLabNewlyCreatedCourse" course ISBN as search criteria
-Then I should be displayed step "2" with "Select Course" in "Create a Course" popup
+Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "RegMyITLabNewlyCreatedCourse" course
 Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
+#Pre-Condition : Master Course should be specified in the in memory
 #Purpose:Verify The course creation by CsSmsInstructor using course discipline
 Scenario:Validate course creation from Create a Course catlog based on course decipline
-When I click on "Create a Course" button in "My Courses and Testbanks" channel
+When I click on "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
 Then I should be displayed with "Create a Course" lightbox
-And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup
+And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
-Then I should be displayed step "2" with "Select Course" in "Create a Course" popup
+Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "MyItLabAuthoredCourse" using course descipline
-Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
+Scenario: Validate enrolled course in "My Courses and Testbanks" channel
+Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsInstructor" user
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Verify "Edit Course Info" cmenu option on home page
+Scenario:Validate course information update on CsSmsInstructor home page
+When I select cmenu "Edit Course Info" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
+Then I should be displayed with "Update Course" lightbox
+When I click on "Update" button for course "MyItLabAuthoredCourse" created
+Then I should  see the updated course "MyItLabAuthoredCourse" name on my test bank
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Verify "Mark for Deletion" cmenu option on home page
+Scenario:Validate mark for delete cmenu option of IC course on CsSmsInstructor home page
+Given I am on the "Global Home" page
+When I select cmenu "Mark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
+Then I should see the "Marked for Deletion" status updated for the "MyItLabAuthoredCourse" course as "CsSmsInstructor"
+And I should see the successfull message "Course marked for deletion."
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Verify " Copy as Instructor Course" cmenu option on home page
+Scenario:Validate copy as instructor Course cmenu option of IC course
+Given I am on the "Global Home" page
+When I select cmenu "Copy as Instructor Course" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
+Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+And I should see the successfull message "Course updated successfully."
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Verify "Unmark for Deletion" cmenu option on home page
+Scenario:Validate Unmark for deletion cmenu option of IC course on CsSmsInstructor home page
+Given I am on the "Global Home" page
+When I select cmenu "Unmark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
+Then I should see the successfull message "Program removed from deletion list."
+
+
+
 
 
 

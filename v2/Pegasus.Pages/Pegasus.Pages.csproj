@@ -1973,6 +1973,7 @@
     <EmbeddedResource Include="UI Pages\Integration\eCollege\CampusAdmin\SingleCrsCreationBottomPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SingleCrsCreationBottomPageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\eCollege\DotNextLaunchPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -2049,6 +2050,7 @@
     <EmbeddedResource Include="UI Pages\Integration\SIM5\SIM5Services\SIM5FramePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SIM5FramePageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\SMS\CourseIdInputPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -2065,6 +2067,7 @@
     <EmbeddedResource Include="UI Pages\MMND\AdminPages\PubInclude\EPContentPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EPContentPageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\MMND\AdminPages\PubInclude\LoginContentPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

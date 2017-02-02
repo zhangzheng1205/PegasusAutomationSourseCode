@@ -627,66 +627,6 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
 #line hidden
             this.ScenarioCleanup();
         }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Channels in home page as CsSmsInstructor")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
-        public virtual void ValidateChannelsInHomePageAsCsSmsInstructor()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Channels in home page as CsSmsInstructor", ((string[])(null)));
-#line 239
-this.ScenarioSetup(scenarioInfo);
-#line 240
-testRunner.Then("I should be displayed with \"My Courses and Testbanks\" channel  on \"Global Home\" p" +
-                    "age as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 241
-testRunner.And("I should be displayed with \"Create a Course\" button in \"My Courses and Testbanks\"" +
-                    " channel as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 242
-testRunner.And("I should be displayed with \"Enroll in a Course\" button in \"My Courses and Testban" +
-                    "ks\" channel as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 243
-testRunner.When("I click on \"Enroll in a Course\" button in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 244
-testRunner.Then("I should be displayed with \"Enroll in a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 245
-testRunner.And("I should be displayed step \"1\" with \"Course ID\" in \"Enroll in a Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 246
-testRunner.When("I enter \"RegMyITLabNewCourseForEnrollment\" and click submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 247
-testRunner.Then("I should be displayed step \"2\" with \"Confirm Course\" in \"Enroll in a Course\" popu" +
-                    "p", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 248
-testRunner.And("I should be displayed with message \"The Course ID you entered matched the followi" +
-                    "ng instructor and course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 249
-testRunner.And("I should be displayed with the course name \"RegMyITLabNewCourseForEnrollment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 250
-testRunner.When("I click \"Confirm\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 251
-testRunner.Then("I should be displayed with \"RegMyITLabNewCourseForEnrollment\" course as \"CsSmsIns" +
-                    "tructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate enrolled course in \"My Courses and Testbanks\" channel")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
-        public virtual void ValidateEnrolledCourseInMyCoursesAndTestbanksChannel()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate enrolled course in \"My Courses and Testbanks\" channel", ((string[])(null)));
-#line 256
-this.ScenarioSetup(scenarioInfo);
-#line 257
-testRunner.Then("I should be displayed with \"RegMyITLabNewCourseForEnrollment\" course as \"CsSmsIns" +
-                    "tructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 258
-testRunner.When("I click on Open button of \"RegMyITLabNewCourseForEnrollment\" as \"CsSmsInstructor\"" +
-                    " user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            this.ScenarioCleanup();
-        }
     }
 }
 #pragma warning restore

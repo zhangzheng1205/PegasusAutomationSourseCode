@@ -149,14 +149,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="buttonName">This is the button name.</param>
         /// <param name="channelName">This is the channel name.</param>
-        [When(@"I click on ""(.*)"" button in ""(.*)"" channel")]
-        public void ClickOnButtonInChannel(string buttonName, string channelName)
+        [When(@"I click on ""(.*)"" button in ""(.*)"" channel as ""(.*)"" user")]
+        public void ClickOnButtonInChannel(string buttonName, string channelName, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("HomePage", "ClickOnButtonInChannel", base.IsTakeScreenShotDuringEntryExit);
             switch (channelName)
             {
                 case "My Courses and Testbanks":
-                    new HEDGlobalHomePage().ClickOptionsInMyCoursesTestbanksChannel(buttonName);
+                    new HEDGlobalHomePage().ClickOptionsInMyCoursesTestbanksChannel(buttonName, userType);
                     break;
 
                 case "Announcements ":
@@ -198,13 +198,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="stepCount">This is step count available in "Enroll In Course" lightbox.</param>
         /// <param name="stepName">This is step name available in "Enroll In Course" lightbox.</param>
         /// <param name="popUpName">This is popup name available in "Enroll In Course" lightbox.</param>
-        [Then(@"I should be displayed step ""(.*)"" with ""(.*)"" in ""(.*)"" popup")]
-        public void DisplayedOfStepGuide(int stepNumber, string stepName, string popUpName)
+        [Then(@"I should be displayed step ""(.*)"" with ""(.*)"" in ""(.*)"" popup as ""(.*)"" user")]
+        public void DisplayedOfStepGuide(int stepNumber, string stepName, string popUpName, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("HomePage", "DisplayedOfStepGuide", base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
             .ScenarioInfo.Title, () => Assert.IsTrue(new
-            HEDGlobalHomePage().GetCourseOptions(stepNumber, stepName, popUpName)));
+            HEDGlobalHomePage().GetCourseOptions(stepNumber, stepName, popUpName, userType)));
             Logger.LogMethodExit("HomePage", "DisplayedOfStepGuide", base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -271,6 +271,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                       .ScenarioInfo.Title, () => Assert.IsTrue(new
                       HEDGlobalHomePage().GetEnrolledCourseDetailsInChannel(courseType, frameName)));
                     break;
+
+                case User.UserTypeEnum.CsSmsStudent:
+                    Logger.LogAssertion("DisplayedOfEnrolledCourseInChannel", ScenarioContext.Current
+                      .ScenarioInfo.Title, () => Assert.IsTrue(new
+                      HEDGlobalHomePage().GetEnrolledCourseDetailsInChannel(courseType, frameName)));
+                    break;
             }
             Logger.LogMethodExit("HomePage", "DisplayedOfEnrolledCourseInChannel",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -301,7 +307,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new HEDGlobalHomePage().CreateICCourseByISBN(btnName, courseType);
             Logger.LogMethodExit("HomePage", "SelectCourseToCreateIcCourse", base.IsTakeScreenShotDuringEntryExit);
         }
-
 
 
         /// <summary>
@@ -372,6 +377,84 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
+
+
+        //#--------------------------------------
+        //#-------------------------------------
+        /// <summary>
+        /// This methord is to access the c-menu option of course
+        /// </summary>
+        /// <param name="cmenuOption">This is cmenu option name.</param>
+        /// <param name="courseType">This is course type enum.</param>
+        /// <param name="userType">This is user type enum.</param>
+        [When(@"I select cmenu ""(.*)"" option of Instructor course ""(.*)"" for ""(.*)""")]
+        public void OpenCmenuOption(string cmenuOption, Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
+        {
+
+            Logger.LogMethodEntry("GlobalHomePage", "OpenCmenuOption",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Open the cmenu option of the course on home page
+            new HEDGlobalHomePage().CmenuOptionForCourse(cmenuOption, courseType, userType);
+
+            Logger.LogMethodExit("GlobalHomePage", "OpenCmenuOption",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This methord is to update the course name
+        /// </summary>
+        /// /// <param name="btnName">This is button name.</param>
+        /// <param name="courseType">This is course type enum.</param>
+        [When(@"I click on ""(.*)"" button for course ""(.*)"" created")]
+        public void UpdateTheCourseName(string btnName, Course.CourseTypeEnum courseType)
+        {
+            Logger.LogMethodEntry("GlobalHomePage", "UpdateTheCourseName",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Update the course name on home page
+            new HEDGlobalHomePage().UpdateCourseInfo(btnName, courseType);
+
+            Logger.LogMethodExit("GlobalHomePage", "UpdateTheCourseName",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// This methord is to check the update course information
+        /// </summary>
+        /// <param name="courseType">This is course type enum.</param>
+        [Then(@"I should  see the updated course ""(.*)"" name on my test bank")]
+        public void UpdatedCourseNameOnHomePage(Course.CourseTypeEnum courseType)
+        {
+            Logger.LogMethodEntry("GlobalHomePage", "UpdatedCourseNameOnHomePage",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Validate the course information updated
+            new HEDGlobalHomePage().DisplayOfUpdateCourseName(courseType);
+
+            Logger.LogMethodExit("GlobalHomePage", "UpdatedCourseNameOnHomePage",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This methord is to create course based on discipline.
+        /// </summary>
+        /// <param name="courseStatus">This is course status.</param>
+        /// <param name="courseType">This is course type enum.</param>
+        /// <param name="userType">This is user type enum.</param>
+        [Then(@"I should see the ""(.*)"" status updated for the ""(.*)"" course as ""(.*)""")]
+        public void StatusOfCourse(string courseStatus, Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("GlobalHomePage", "StatusOfCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Validate the course updated status 
+            Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+            .ScenarioInfo.Title, () => Assert.IsTrue(new
+            HEDGlobalHomePage().CourseStatusOnHomePage(courseStatus, courseType)));
+
+            Logger.LogMethodExit("GlobalHomePage", "StatusOfCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
     }
