@@ -8,15 +8,18 @@
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Help Link functionality on the home page
 Scenario: Instructor validate navigate Help link functionality on global home
-When I click on "Help" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+When I click on "Help" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
 Then I should be on "Home Page Help" page as "CsSmsInstructor" user
+And I close the "Home Page Help" window
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Support Link functionality on the home page
 Scenario: Instructor validate Support link functionality on global home
-When I click on "Support" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Given I am on the "Global Home" page
+When I click on "Support" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
 Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsInstructor" user
+And I close the "Pearson Education Customer Technical Support" window
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -28,14 +31,14 @@ Then I should be displayed with "Hi," message for "CsSmsInstructor" user
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The My Profile Link functionality on the home page
 Scenario: Instructor validate  My Profile link functionality in global home
-When I click on "My Profile" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-Then I should be displayed with "My Profile" lightbox
+When I click on "My Profile" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
+Then I should be displayed with "My Pearson account" lightbox
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Privacy link functionality displayed on the home page
 Scenario: Instructor validate Privacy link functionality in course global home
-When I click on "Privacy" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+When I click on "Privacy" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
 Then I should be on the "Privacy" page
 And I close the "Privacy" window
 
@@ -43,7 +46,7 @@ And I close the "Privacy" window
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Signout link functionality displayed on the home page
 Scenario: Instructor validate sign out link functionality in course global home
-When I click on "Sign out" option in "Global Home" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+When I click on "Sign out" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
 Then I should see the successfull message "You have been signed out of the application."
 
 
@@ -57,7 +60,7 @@ And I should be displayed with "Enroll in a Course" button in "My Courses and Te
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
 Then I should be displayed with "Enroll in a Course" lightbox
 And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsInstructor" user 
-When I enter "RegMyITLabNewCourseForEnrollment" and click submit
+When I enter "RegMyITLabNewCourseForEnrollment" ID and click submit
 Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup as "CsSmsInstructor" user
 And I should be displayed with message "The Course ID you entered matched the following instructor and course."
 And I should be displayed with the course name "RegMyITLabNewCourseForEnrollment"
@@ -101,11 +104,15 @@ When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsInstr
 #Pre-Condition : Course should be created
 #Purpose:Verify "Edit Course Info" cmenu option on home page
 Scenario:Validate course information update on CsSmsInstructor home page
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
 When I select cmenu "Edit Course Info" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
 Then I should be displayed with "Update Course" lightbox
 When I click on "Update" button for course "MyItLabAuthoredCourse" created
-Then I should  see the updated course "MyItLabAuthoredCourse" name on my test bank
-
+Then I should see the successfull message "Course updated successfully."
+ 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Pre-Condition : Course should be created

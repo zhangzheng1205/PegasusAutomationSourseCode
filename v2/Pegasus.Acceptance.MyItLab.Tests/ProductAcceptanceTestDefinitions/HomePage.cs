@@ -170,10 +170,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Enter course and click submit for enrollment
         /// </summary>
         /// <param name="courseType">This is course type enum.</param>
-        [When(@"I enter ""(.*)"" and click submit")]
+        [When(@"I enter ""(.*)"" ID and click submit")]
         public void EnterCourseIDAndClickSubmit(Course.CourseTypeEnum courseType)
         {
             Logger.LogMethodEntry("HomePage", "EnterCourseIDAndClickSubmit", base.IsTakeScreenShotDuringEntryExit);
+            //Enter course ID to enroll the student
             new HEDGlobalHomePage().EnterCourseID(courseType);
             Logger.LogMethodExit("HomePage", "EnterCourseIDAndClickSubmit", base.IsTakeScreenShotDuringEntryExit);
         }

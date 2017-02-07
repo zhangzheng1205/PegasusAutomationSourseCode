@@ -529,6 +529,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span.
+        /// </summary>
+        internal static string HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl9_PegasushelloK5_ancMyAccount.
         /// </summary>
         internal static string HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator {
@@ -727,7 +736,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl8_rptCatalogSearchResults__ctl0_btnCatalogType.
+        ///   Looks up a localized string similar to _ctl7_rptCatalogSearchResults__ctl0_btnCatalogType.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator {
             get {
@@ -1033,6 +1042,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to lblPersonalProfile.
+        /// </summary>
+        internal static string HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading.
         /// </summary>
         internal static string HEDGlobalHomePage_TodaysView_Notification_Channel_ID {
@@ -1040,7 +1058,5 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
                 return ResourceManager.GetString("HEDGlobalHomePage_TodaysView_Notification_Channel_ID", resourceCulture);
             }
         }
-
-        public static string HEDGlobalHomePage_HomePage_EnrollnCourse_StudStepName_XPath_Locator { get; set; }
     }
 }

@@ -334,7 +334,7 @@
     <value>btnFinish</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator" xml:space="preserve">
-    <value>_ctl8_rptCatalogSearchResults__ctl0_btnCatalogType</value>
+    <value>_ctl7_rptCatalogSearchResults__ctl0_btnCatalogType</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_XPath_Locator" xml:space="preserve">
     <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]</value>
@@ -443,5 +443,11 @@
   </data>
   <data name="HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator" xml:space="preserve">
     <value>//div[@id='coursematchmsg']</value>
+  </data>
+  <data name="HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator" xml:space="preserve">
+    <value>lblPersonalProfile</value>
+  </data>
+  <data name="HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span</value>
   </data>
 </root>

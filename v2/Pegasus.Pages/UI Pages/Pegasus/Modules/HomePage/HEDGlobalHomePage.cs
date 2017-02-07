@@ -1458,6 +1458,24 @@ namespace Pegasus.Pages.UI_Pages
                             HEDGlobalHomePage_HomePage_MyProfileLightBox_Cancel_ID_Locator);
                         break;
 
+                    case "My Pearson account":
+
+                        //Wait for My Profile light box
+                        base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_MyProfileLightBox_XPath_Locator));
+                        IWebElement getPopupTitle = base.GetWebElementPropertiesByXPath(
+                            HEDGlobalHomePageResource.HEDGlobalHomePage_HomePage_MyProfileLightBox_XPath_Locator);
+                        base.SwitchToIFrameByWebElement(getPopupTitle);
+                        //Wait for My Profile light box
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                             HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator));
+                        //Get the name of the lightbox
+                        getLightboxName = base.GetElementInnerTextById(
+                            HEDGlobalHomePageResource.HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator);
+                        //Click on cancel button
+                        base.ClickButtonById("imgbtnCancel");
+                        break;
+
                     case "Basic Preferences":
                         //Switch to last opened window
                         base.SwitchToLastOpenedWindow();
@@ -1958,6 +1976,7 @@ namespace Pegasus.Pages.UI_Pages
                     HEDGlobalHomePage_HomePage_CourseNameFromTheTable_Id_Locator));
                 returnCourseName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePage_CourseNameFromTheTable_Id_Locator);
+
             }
             catch (Exception e)
             {
@@ -2460,7 +2479,7 @@ namespace Pegasus.Pages.UI_Pages
                                             int appCount = Convert.ToInt32(count);
                                             //Get appliation step name
                                             base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollnCourse_StudStepName_XPath_Locator));
+                                                HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator));
                                             string appStepName = base.GetInnerTextAttributeValueByXPath
                                                 (HEDGlobalHomePageResource.HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator);
                                             //Compare appcount and appname with expected ount and name
@@ -2519,8 +2538,6 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the course
                 base.ClickButtonById(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator);
-                bool fdsfdf = IsElementPresent(By.Id(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_HomePage_EnterCourseName_Id_Locator), 10);
                 //Get course name from the inmemory
                 string courseNameGUID = this.GenerateCourseGUID(courseType);
                 this.StoreCourseGUID(courseNameGUID, courseType);
@@ -2533,6 +2550,24 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on finish button
                 base.ClickButtonById(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePage_CreateCourse_FinishButton_Id_Locator);
+                //Get the course ID and store to inmemory
+                int rowCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
+               HEDGlobalHomePage_GetCourseCount_XPath_Locator);
+
+                for (int i = 1; i <= rowCount; i++)
+                {
+                    string courseTable = base.GetElementTextByXPath(string.Format("//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div/a", i));
+                    if (courseTable.Contains(courseNameGUID))
+                    {
+                        //Get the ID of the course
+                        string courseId = base.GetElementTextByXPath(string.Format(HEDGlobalHomePageResource.
+                        HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator, i));
+                        string courseIDForEnrollment = courseId.Substring(4);
+                        this.StoreCourseIdGUID(courseIDForEnrollment, courseNameGUID, courseType);
+                        break;
+
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -2670,6 +2705,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get course name
                 Course courseName = Course.Get(courseType);
                 string actualCourseName = courseName.Name.ToString();
+
                 //Generate the unique GUID
                 string courseNameGUID = this.GenerateCourseGUID(courseType);
                 //Store the GUID in memory
@@ -2700,6 +2736,27 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on finish button
                 base.ClickButtonById(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePage_CreateCourse_FinishButton_Id_Locator);
+                //Get the course ID and store to inmemory
+                int rowCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
+             HEDGlobalHomePage_GetCourseCount_XPath_Locator);
+
+                for (int i = 1; i <= rowCount; i++)
+                {
+                    string courseTable = base.GetElementTextByXPath(string.Format(HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_Course_Name_XPath_Locator, i));
+                    if (courseTable.Contains(courseNameGUID))
+                    {
+                        //Get the ID of the course
+                        string courseId = base.GetElementTextByXPath(string.Format("//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span", i));
+                        //Remove he ID: prefix
+                        string courseIDForEnrollment = courseId.Substring(4);
+                        //Store the course ID in memory
+                        this.StoreCourseIdGUID(courseIDForEnrollment, courseNameGUID, courseType);
+                        break;
+
+                    }
+                }
+
             }
             catch (Exception e)
             {
@@ -2709,6 +2766,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("HEDGlobalHomePage", "CreateICCourseByDiscipline"
             , base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
 
         /// <summary>
         /// This methord is to generate the GUID for course name
@@ -2753,6 +2813,32 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Store Course Details
                 Name = courseNameGUID.ToString(),
+                CourseType = courseType,
+                IsCreated = true,
+            };
+            //Call store method using an object
+            hedMILProductCourse.StoreCourseInMemory();
+            Logger.LogMethodExit("HEDGlobalHomePage", "StoreCourseGUID"
+            , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This methord is to store the GUID in inmemory
+        /// </summary>
+        /// <param name="courseNameGUID">This is generated course GUID.</param>
+        /// <param name="courseType">This is course choosen to create.</param>
+        private void StoreCourseIdGUID(string courseIDForEnrollment, string courseNameGUID, Course.CourseTypeEnum courseType)
+        {
+
+            Logger.LogMethodEntry("HEDGlobalHomePage", "StoreCourseGUID"
+                   , base.IsTakeScreenShotDuringEntryExit);
+            //Create an object and Store the generated course GUID
+            Course hedMILProductCourse;
+            hedMILProductCourse = new Course
+            {
+                //Store Course Details
+                Name = courseNameGUID.ToString(),
+                InstructorCourseId = courseIDForEnrollment.ToString(),
                 CourseType = courseType,
                 IsCreated = true,
             };
@@ -2826,22 +2912,18 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("HEDGlobalHomePage", "UpdateCourseInfo"
                 , base.IsTakeScreenShotDuringEntryExit);
-            //Compare the row text and identify the course
-            Course courseName = Course.Get(courseType);
-            //Get the acctual course name
-            string actualCourseName = courseName.Name.ToString();
-            //Get the updated course title
-            string updatedCourseTitle = actualCourseName + "Updated";
             base.SwitchToIFrameById(HEDGlobalHomePageResource.
-    HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator);
-            base.ClearTextById(HEDGlobalHomePageResource.
-    HEDGlobalHomePage_HomePage_CourseName_Textbox_ID_Locator);
-            //Get course title and append the test _Updated
-            base.FillTextBoxById(HEDGlobalHomePageResource.
-    HEDGlobalHomePage_HomePage_CourseName_Textbox_ID_Locator, updatedCourseTitle);
+            HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator);
+            //Wait for desc text box
+            bool dsfdf = base.IsElementPresent(By.Id("txtCourseDescription"), 10);
+            //Clear the desc text box
+            base.ClearTextById("txtCourseDescription");
+            //Update the desc 
+            string CourseDesc = "This is MyItLab Updated Course description";
+            base.FillTextBoxById("txtCourseDescription", CourseDesc);
             //Click on update button
             base.ClickButtonById(HEDGlobalHomePageResource.
-    HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator);
+            HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator);
             Logger.LogMethodExit("HEDGlobalHomePage", "UpdateCourseInfo"
             , base.IsTakeScreenShotDuringEntryExit);
         }

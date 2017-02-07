@@ -43,6 +43,7 @@ When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsStude
 Scenario:CSSMSStudent validate functionality of help link in header on global home
 When I click on "Help" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be on "Home Page Help" page as "CsSmsStudent" user
+And I close the "Home Page Help" window
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -51,7 +52,7 @@ Scenario: CSSMSStudent validate Support link functionality on global home
 When I click on "Support" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be on "Pearson Education Customer Technical Support" page as "CsSmsStudent" user
 When I close the "Support" window
-Then I should be on the "Global Home" page
+
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -64,7 +65,8 @@ Then I should be displayed with "Hi," message for "CsSmsStudent" user
 #Purpose:Verify The My Profile Link functionality on the home page
 Scenario: CSSMSStudent validate  My Profile link functionality in global home
 When I click on "My Profile" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
-Then I should be displayed with "My Profile" lightbox
+Then I should be displayed with "My Pearson account" lightbox
+
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -84,11 +86,11 @@ Then I should see the successfull message "You have been signed out of the appli
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The course enrollment for SMS student
-Scenario:Validate Channels in home page as CsSmsStudent
+Scenario:Validate self enrollment for student
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsStudent" user
 Then I should be displayed with "Enroll in a Course" lightbox
 And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsStudent" user
-When I enter "MyItLabAuthoredCourse" and click submit
+When I enter "MyItLabAuthoredCourse" ID and click submit
 Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup as "CsSmsStudent" user
 And I should be displayed with message "The Course ID you entered matched the following instructor and course."
 And I should be displayed with the course name "MyItLabAuthoredCourse"
