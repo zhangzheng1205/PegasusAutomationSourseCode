@@ -783,7 +783,7 @@ namespace Pegasus.Pages.UI_Pages
                       HEDGlobalHomePageResource.
                       HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
                     //If Course Present on the User Home Page
-                    if (getCourseRowText.Equals(courseName))
+                    if (getCourseRowText.Contains(courseName))
                     {
                         //Wait For Element
                         base.WaitForElement(By.PartialLinkText(courseName));
