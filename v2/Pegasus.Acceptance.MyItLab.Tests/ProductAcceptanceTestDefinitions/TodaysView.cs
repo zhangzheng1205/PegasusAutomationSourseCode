@@ -741,7 +741,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //validate the Help Page display as HED user 
             Logger.LogMethodEntry("TodaysView", "ValidateHelpPageDisplay", 
                 base.IsTakeScreenShotDuringEntryExit);
-            switch(userType)
+            
+             switch(userType)
             {
                 case User.UserTypeEnum.CsSmsInstructor:
                     //Verify Help page display for Instructor
@@ -934,6 +935,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             base.IsTakeScreenShotDuringEntryExit);
          }
 
+
+         
+         
          [When(@"I click on ""(.*)"" count")]
          public void WhenIClickOnCount(Alert.AlertTypeEnum alertType)
          {

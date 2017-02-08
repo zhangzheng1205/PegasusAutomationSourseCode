@@ -35,25 +35,16 @@ Scenario: Sorting the activity column in Custom View tab
 When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
 And I sort the "Activity" in 'Descending' order
 Then I should see "Descending" icon for the sorted column
-And I should see "RegCustomViewActivity1" activity at position "2" of custom view frame 
-And I should see "RegCustomViewActivity2" activity at position "1" of custom view frame 
+And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Descending" order
 When I sort the "Activity" in 'Ascending' order
 Then I should see "Ascending" icon for the sorted column
-Then I should see "RegCustomViewActivity1" activity at position "1" of custom view frame 
-And I should see "RegCustomViewActivity2" activity at position "2" of custom view frame 
+And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Ascending" order
 
 #Purpose: Student validating the functionality of sorting 'Grade' colum in Custom view tab
 #TestCase Id: 
 #MyItLabProgramCourse
 #Pre Condition: Activity should be submitted by the student and Grades should be displayed
 Scenario: Sorting the Grade column in Custom View tab
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
-And I navigate to "Grades" tab
-Then I should be on the "Gradebook" page
 When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
 And I sort the "Activity" in 'Descending' order
 Then I should see "Descending" icon for the sorted column
@@ -61,3 +52,24 @@ And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "
 When I sort the "Grade" in 'Ascending' order
 Then I should see "Ascending" icon for the sorted column
 And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Ascending" order
+
+#Purpose : Folder Navigation in Grades tab
+#Test case ID :
+#Products : MyItLab.
+#Pre condition : 
+Scenario: Folder Navigation in Grades tab of coursespace student
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegCustomViewActivity1" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegCustomViewActivity1" activity in Grades tab with "100" grade
+When I click on "view submission" cmenu option of "RegCustomViewActivity1" as "CsSmsStudent" user
+Then I should be on the "View Submission" page
+And I should see "RegCustomViewActivity1" activity name 
+And I should see "Attempts" grid with "Date" "Grade" columns having "2" entries
+When I click on attempt having "100" grade as "CsSmsStudent"
+Then I should see "CsSmsStudent" with "100%" score 

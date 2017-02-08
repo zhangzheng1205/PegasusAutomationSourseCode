@@ -597,7 +597,20 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHearderLinksPageUX.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+<<<<<<< HEAD
     <None Include="ProductAcceptanceOrderedTests\OrderedTestNonGradableAsset.orderedtest">
+=======
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.HomePageCourseCreationUX.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageInstructorUXBVT.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageStudentUxBVT.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageUXFullBVT.orderedtest">
+>>>>>>> 702c640fe752e4801cb2be1f907b20bb3f52dd3c
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">

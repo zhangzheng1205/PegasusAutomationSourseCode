@@ -4406,7 +4406,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                switch(couseTypeEnum)
                {
-                   case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                   case Course.CourseTypeEnum.MyItLabAuthoredCourse:
                        this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName, userType);
                     break;
 
@@ -4634,6 +4634,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                base.SwitchToDefaultWindow();
                 //Wait for the Dropdown icon
                 base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                              TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator));
@@ -4957,7 +4959,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "GetInsPageURLAndPageTitle",
                                 base.IsTakeScreenShotDuringEntryExit);
-            base.CloseBrowserWindow();
             return status;
         }
 
@@ -5059,8 +5060,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "GetStudPageURLAndPageTitle",
                                  base.IsTakeScreenShotDuringEntryExit);
-            base.CloseBrowserWindow();
-            return status;
+           return status;
         }
 
         /// <summary>
@@ -5076,6 +5076,8 @@ namespace Pegasus.Pages.UI_Pages
             bool status = false;
             try
             {
+                base.SwitchToDefaultWindow();
+                
                 //Wait for the window to load
                 base.WaitUntilWindowLoads(base.GetPageTitle);
                 string getmessage = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.

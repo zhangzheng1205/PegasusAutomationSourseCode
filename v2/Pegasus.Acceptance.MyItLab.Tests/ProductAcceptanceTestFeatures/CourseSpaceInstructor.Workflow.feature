@@ -234,31 +234,6 @@ When I close Project creation tool popup
 Then I should be on the "Today's View" page
 
 
-Scenario:Validate Channels in home page as CsSmsInstructor
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-Then I should be displayed with ""My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
-And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel 
-And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel
-When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel
-Then I should be displayed with "Enroll in a Course" lightbox
-And I should be displayed with step "1" and "Course ID"
-When I enter "RegMyITLabNewCourse" and click submit
-Then I should be displayed with step "2" and "Confirm Course"
-And I should be displayed with message "The Course ID you entered matched the following instructor and course."
-And I should be displayed with the course name "RegMyITLabNewCourse"
-When I click "Confirm" button
-Then I should be displayed with "RegMyITLabNewCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
-
-Scenario: Validate enrolled course in "My Courses and Testbanks" channel
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-Then I should be displayed with "RegMyITLabNewCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
-When I click on Open button of "RegMyITLabNewCourse" as "CsSmsInstructor" user
 
 
 #------------------------------------ Assessment------------------------------------------------------------------------------

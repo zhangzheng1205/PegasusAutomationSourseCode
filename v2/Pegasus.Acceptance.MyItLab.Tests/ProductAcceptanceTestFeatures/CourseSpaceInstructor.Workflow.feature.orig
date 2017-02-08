@@ -1,0 +1,435 @@
+﻿Feature: CourseSpaceInstructorViewSubmission
+	As a CS Instructor 
+					I want to manage all the coursespace instructor workflow related usecases 
+					so that I would validate all the coursespace instructor workflow related scenarios are working fine.
+
+#Purpose : Set Time limit for SIM Study Plan Pre test as SMS Instructor
+#MyItLabInstructorCourse
+Scenario: Set Time limit for SIM Study Plan Pre test as SMS Instructor
+When I navigate to "Course Materials" tab and selected "Add from Library" subtab
+Then I should be on the "Course Materials" page
+And I should see "SIM5StudyPlan" activity in the Content Library Frame
+When I click on "Edit" cmenu option of activity in "CsSmsInstructor"
+And I edit the "PreTest"
+Then I should be on the "Create Pre-test:" page
+When I Click on "Preferences" Tab of Edit SIM PreTest
+And I enter "02" minute in Set time limit for activity preference
+Then I should see the successfull message "Myitlab Study Plan updated successfully."
+
+#Purpose : To Set Feedback Preference for Test with Basic Random Activity By SMS Instructor
+# TestCase Id: HED_MIL_PWF_492
+#MyItLabInstructorCourse
+Scenario: To Set Feedback Preference for Test with Basic Random Activity By SMS Instructor
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+And I should see "Test" activity in the Content Library Frame
+When I click on "Edit" cmenu option of activity in "CsSmsInstructor"
+And I set the feedback correct answer preference
+Then I should see the successfull message "Activity updated successfully."
+
+
+#Purpose :Instructor assign the asset with duedate in Managecoursework
+#TestCase Id: peg-22005
+#MyITLabOffice2013SectionCourse
+Scenario: Instructor assign the asset with duedate in Managecoursework
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Excel Chapter 1 Project 1A Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Training" asset
+Then I should be on the "Properties" page
+When I assign asset with due date and save
+Then I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Training" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose : Instructor assign the assets with duedate,startdate and endate in Managecoursework
+#TestCase Id: peg-22006
+#MyITLabOffice2013SectionCourse
+Scenario: Instructor assign the assets with duedate,startdate and endate in Managecoursework
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Excel Chapter 1 Project 1A Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+When I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset
+Then I should be on the "Properties" page
+When I assign and schedule the asset and save
+Then I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
+And I should see scheduled icon for "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose: : Instructor Validating student grade in view submission
+#TestCase Id: peg-22002
+#MyItLabProgramCourse
+Scenario: Instructor validating the grade of student in view submission page By Instructor 
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsInstructor"
+And I click on "ViewSubmissions" option in c menu of "Word Chapter 1 Grader Project [Assessment 3]" asset
+Then I should see the "0" score in view submission page for a "ZeroScore" with "CsSmsStudent"
+And I close the "View Submission" window
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose: Assign Access Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign Access Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset
+Then I should be on the "Properties" page
+When I assign the asset to with a due date near to past due date
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+
+
+#Purpose: Assign Word Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign Word Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset
+Then I should be on the "Properties" page
+When I assign the asset to with a due date near to past due date
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+
+#Purpose: Assign PowerPoint Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign PowerPoint Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "PowerPoint Chapter 1 Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "PowerPoint Chapter 1 Skill-Based Training" asset
+Then I should be on the "Properties" page
+And I should unassign the activity and save
+When I click on "SetSchedulingOptions" option in c menu of "PowerPoint Chapter 1 Skill-Based Training" asset
+And I assign the asset to with a due date near to past due date
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose: Assign Excel Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign Excel Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Excel Chapter 1 Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Skill-Based Training" asset
+Then I should be on the "Properties" page
+When I assign the asset to with a due date near to past due date
+
+#Purpose: PCT crossover by SMS Instructor
+Scenario:SMS Instructor launch PCT link
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on Tools DropDown
+And I click "Project Creation Tool" link
+Then I should be on the "Project Creation Tool" page
+And I should see PCT page loaded sucessfully
+
+#Purpose: CSSMS Instructor setup new PCT word project
+Scenario:SMS Instructor setup new PCT word project
+When I click on Create link
+And I select "Word" project type
+And I enter project name of "PCTWordProject"
+And I Click on Done button
+Then I should be on the "Project Creation Tool" page
+When I click on upload icon of "Final Document"
+And I upload the file "Final Document Word File"
+Then I should see file "final.docx" uploaded sucessfully in "Final Document" frame
+When I click on upload icon of "Start Document"
+And I upload the file "Start Document Word File"
+Then I should see file "initial.docx" uploaded sucessfully in "Start Document" frame
+When I click on upload icon of "Instruction Document"
+And I upload the file "Instruction Document Word File"
+Then I should see file "Instruction.docx" uploaded sucessfully in "Instruction Document" frame
+When I map skill "Table Styles" from "TABLE"
+And I publish the project in project creation tool page
+When I close the "Project Creation Tool" window
+Then I should be on the "Today's View" page
+
+#Purpose: CSSMS Instructor setup new PCT excel project
+Scenario:SMS Instructor setup new PCT Excel project
+When I click on Create link
+And I select "Excel" project type
+And I enter project name of "PCTExcelProject"
+And I Click on Done button
+Then I should be on the "Project Creation Tool" page
+When I click on upload icon of "Final Document"
+And I upload the file "Final Document Excel File"
+Then I should see file "excel.xlsx" uploaded sucessfully in "Final Document" frame
+When I click on upload icon of "Start Document"
+And I upload the file "Start Document Excel File"
+Then I should see file "excel.xlsx" uploaded sucessfully in "Start Document" frame
+When I click on upload icon of "Instruction Document"
+And I upload the file "Instruction Document Excel File"
+Then I should see file "Instruction.docx" uploaded sucessfully in "Instruction Document" frame
+When I map skill "Excel Options - Advanced" from "FILE"
+And I publish the project in project creation tool page
+When I close the "Project Creation Tool" window
+Then I should be on the "Today's View" page
+
+#Purpose: CSSMS Instructor setup new PCT PPT project
+Scenario:SMS Instructor setup new PCT PPT project
+When I click on Create link
+And I select "PPT" project type
+And I enter project name of "PCTPPTProject"
+And I Click on Done button
+Then I should be on the "Project Creation Tool" page
+When I click on upload icon of "Final Document"
+And I upload the file "Final Document PPT File"
+Then I should see file "testcase.pptx" uploaded sucessfully in "Final Document" frame
+When I click on upload icon of "Start Document"
+And I upload the file "Start Document PPT File"
+Then I should see file "blank.pptx" uploaded sucessfully in "Start Document" frame
+When I click on upload icon of "Instruction Document"
+And I upload the file "Instruction Document PPT File"
+Then I should see file "Instruction.docx" uploaded sucessfully in "Instruction Document" frame
+When I map skill "Presentation Properties" from "FILE"
+And I publish the project in project creation tool page
+When I close the "Project Creation Tool" window
+Then I should be on the "Today's View" page
+
+#Purpose: CSSMS Instructor create new GraderIT word question
+Scenario:SMS Instructor create new grader word question
+When I navigate to the "Course Materials" tab
+And I select the "Manage Question Bank" tab
+Then I should be on the "Question Bank" page
+When I select 'Add Course Materials' option
+And I select "Grader Project" option
+And I create "SIMGraderQuestion" question with "PCTWordProject" project
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
+
+#Purpose: CSSMS Instructor create new GraderIT PPT question
+Scenario:SMS Instructor create new grader PPT question
+When I navigate to the "Course Materials" tab
+And I select the "Manage Question Bank" tab
+Then I should be on the "Question Bank" page
+When I select 'Add Course Materials' option
+And I select "Grader Project" option
+And I create "SIMGraderQuestion" question with "PCTPPTProject" project
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
+
+#Purpose: CSSMS Instructor create new GraderIT Excel question
+Scenario:SMS Instructor create new grader Excel question
+When I navigate to the "Course Materials" tab
+And I select the "Manage Question Bank" tab
+Then I should be on the "Question Bank" page
+When I select 'Add Course Materials' option
+And I select "Grader Project" option
+And I create "SIMGraderQuestion" question with "PCTExcelProject" project
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
+
+#Purpose: CSSMS Instructor close PCT tool
+Scenario:SMS Instructor close PCT popup
+Then I should see the "Project Creation Tool" popup
+When I close Project creation tool popup
+Then I should be on the "Today's View" page
+
+
+<<<<<<< HEAD
+Scenario:Validate Channels in home page as CsSmsInstructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+Then I should be displayed with ""My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
+And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel 
+And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel
+When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel
+Then I should be displayed with "Enroll in a Course" lightbox
+And I should be displayed with step "1" and "Course ID"
+When I enter "RegMyITLabNewCourse" and click submit
+Then I should be displayed with step "2" and "Confirm Course"
+And I should be displayed with message "The Course ID you entered matched the following instructor and course."
+And I should be displayed with the course name "RegMyITLabNewCourse"
+When I click "Confirm" button
+Then I should be displayed with "RegMyITLabNewCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+
+Scenario: Validate enrolled course in "My Courses and Testbanks" channel
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+Then I should be displayed with "RegMyITLabNewCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+When I click on Open button of "RegMyITLabNewCourse" as "CsSmsInstructor" user
+
+
+#------------------------------------ Assessment------------------------------------------------------------------------------
+Scenario:Creation of Random activity of RegCSSAMActivity type by adding section with multiple questions in Coursespace test
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegCSSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
+And I perform "Save and Continue" for "Activity Details"
+And I perform "Create New Section" of name "Section1"
+And I perform "Create New Section" of name "Section2"
+And I perform "Create New Section" of name "Section3"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
+And I add '1' questions of type "Fill in the Blank" at Section "2"
+And I add '1' questions of type "Fill in the Blank" at Section "3"
+#Purpose:Clicking on Add link of "Direction Lines" under each section
+#Test Link id:peg-19554
+#Scenario:Add Section Direction Lines
+When I "Add" Directions at Section "1"
+Then I should see Directions "added" to Section "1"
+When I "Add" Directions at Section "2"
+Then I should see Directions "added" to Section "2"
+When I "Edit" Directions at Section "2"
+Then I should see Directions "edited" to Section "2"
+When I "Delete" Directions at Section "2"
+Then I should see Directions deleted at Section "2"
+When I "Add" Directions at Section "3"
+Then I should see Directions "added" to Section "3"
+When I perform "Save and Continue" for "Questions" 
+#Purpose:Add messages at activity level
+#Test Link No:peg-20713
+#Scenario:Add messages at activity level
+When I perform "Navigate" for "Messages" 
+Then I add "Beginning of activity" message
+And  I add "Direction lines (instructions)" message
+And I add "End of activity" message
+When I perform "Save and Continue" for "Messages" 
+
+
+#------------------------------Save and Continue from various tabs in Activity Creation Wizard-----------------------
+Scenario: Save and Continue from Activity Details tab
+When I perform "Save and Continue" for "Activity Details"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Questions tab
+When I perform "Save and Continue" for "Questions"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Help Links tab
+When I perform "Save and Continue" for "HelpLinks"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Messages tab
+When I perform "Save and Continue" for "Messages"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Grades tab
+When I perform "Save and Continue" for "Grades"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Teaching Support tab
+When I perform "Save and Continue" for "Teaching Support"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Instructor configore HelpLink and Grades preference for random activity
+When I configure the 'Grades' preference
+And I add 'HelpLinks'
+
+#--------------------------------------------Link type activity creation -----------------
+Scenario: Creation of Link type asset of RegLinkAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Link" asset type
+Then I should be on "Add Link" lightbox
+When I create "RegLinkAsset" activity
+
+
+Scenario: Creation of Etext Link asset of RegLinkAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add eText Link" asset type
+Then I should be on "Add eText Link" lightbox
+When I create "RegEtextLinkAsset" activity
+
+Scenario: Creation of eText Link type asset of RegEtextLinkAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add eText Link" asset type
+Then I should be on "Add eText Link" lightbox
+When I create "RegEtextLinkAsset" activity
+
+
+Scenario: Creation of Multiple File Asset type asset of RegMultipleFileAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Multiple Files" asset type
+Then I should be on "Add Multiple Files" lightbox
+When I create "RegMultipleFileAsset" activity
+
+
+Scenario: Creation of File Asset type asset of RegFileAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add File" asset type
+Then I should be on "Add File" lightbox
+When I create "RegFileAsset" activity
+
+
+Scenario: Creation of Page type asset of RegPageAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Page" asset type
+Then I should be on "Add Page" lightbox
+When I create "RegPageAsset" activity
+
+
+Scenario: Creation of Page type asset of RegDiscussionTopic in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Discussion Topic" asset type
+Then I should be on "Add Discussion Topic" lightbox
+When I create "RegDiscussionTopic" activity
+=======
+>>>>>>> 702c640fe752e4801cb2be1f907b20bb3f52dd3c

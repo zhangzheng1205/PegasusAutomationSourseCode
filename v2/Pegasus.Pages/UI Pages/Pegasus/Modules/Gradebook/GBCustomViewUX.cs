@@ -458,6 +458,7 @@ namespace Pegasus.Pages.UI_Pages
                       "IsCustomViewColumnSorted",
                      base.IsTakeScreenShotDuringEntryExit);
             return isColumnSortIconPresent;
-        }
+        }       
     }
 }
+
