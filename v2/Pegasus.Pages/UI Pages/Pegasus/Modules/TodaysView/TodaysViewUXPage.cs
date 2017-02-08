@@ -5981,5 +5981,34 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "GetWelcomeMessage",
                                     base.IsTakeScreenShotDuringEntryExit);
         }
+        
+        /// <summary>
+        /// Click on the Course Tool Bar in Today's view
+        /// </summary>
+        /// <param name="toolBarOption">This is the Tool bar option.</param>
+        public void ClickOnCourseToolBar(string toolBarOption)
+        {
+ 	       Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseToolBar",
+                        base.IsTakeScreenShotDuringEntryExit);
+           
+           int getCourseToolsCount = base.GetElementCountByXPath(".//*[@id='dvInlineCC']/table/tbody/tr/td");
+           for(int i=1; i <= getCourseToolsCount; i++)
+            {
+                bool jhk = base.IsElementPresent(By.XPath(String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)), 10);
+                base.WaitForElement(By.XPath(String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)));
+                string getCourseToolName = base.GetInnerTextAttributeValueByXPath(string.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i));
+                string courseToolOption = getCourseToolName.TrimStart();
+                if (courseToolOption == toolBarOption)
+               {
+                   base.WaitForElement(By.XPath(String.Format
+                       (".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)));
+                   IWebElement clickCourseTool = base.GetWebElementPropertiesByXPath(
+                       String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i));
+                   base.PerformMouseClickAction(clickCourseTool);
+               }
+            }     
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOnCourseToolBar",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }    
     }
 }

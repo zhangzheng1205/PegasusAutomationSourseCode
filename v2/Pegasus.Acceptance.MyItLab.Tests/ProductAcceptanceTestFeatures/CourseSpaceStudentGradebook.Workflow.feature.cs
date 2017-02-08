@@ -178,44 +178,34 @@ testRunner.And("I should see \"RegCustomViewActivity1\",\"RegCustomViewActivity2
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Folder Navigation in Grades tab of coursespace student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student validating view submission for SIM5 Word activity By SMS Student")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentGradebook")]
-        public virtual void FolderNavigationInGradesTabOfCoursespaceStudent()
+        public virtual void StudentValidatingViewSubmissionForSIM5WordActivityBySMSStudent()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Folder Navigation in Grades tab of coursespace student", ((string[])(null)));
-#line 60
-this.ScenarioSetup(scenarioInfo);
-#line 61
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating view submission for SIM5 Word activity By SMS Student", ((string[])(null)));
 #line 62
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 63
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 64
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 65
-testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
-                    "msStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
 testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 64
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
+#line 65
 testRunner.When("I navigate to \"RegCustomViewActivity1\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 66
 testRunner.Then("I should see \"RegCustomViewActivity1\" activity in Grades tab with \"100\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
+#line 67
 testRunner.When("I click on \"view submission\" cmenu option of \"RegCustomViewActivity1\" as \"CsSmsSt" +
                     "udent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 68
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 72
+#line 69
 testRunner.And("I should see \"RegCustomViewActivity1\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
-testRunner.And("I should see \"Attempts\" grid with \"Date\" \"Grade\" columns having \"2\" entries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
+#line 70
+testRunner.And("I should see \'Attempts\' grid with \"Date\" \"Grade\" columns having \"2\" entries as \"C" +
+                    "sSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 71
 testRunner.When("I click on attempt having \"100\" grade as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
+#line 72
 testRunner.Then("I should see \"CsSmsStudent\" with \"100%\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

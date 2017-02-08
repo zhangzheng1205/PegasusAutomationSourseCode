@@ -470,5 +470,16 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodExit("TodaysView", "MarkAsReadForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I click on ""(.*)"" link")]
+        public void CourseToolBar(string toolBarOption)
+        {
+            //Click on tool bar in Today's view tab
+            Logger.LogMethodEntry("TodaysView", "CourseToolBar",
+                  base.IsTakeScreenShotDuringEntryExit);
+            new TodaysViewUxPage().ClickOnCourseToolBar(toolBarOption);
+            Logger.LogMethodExit("TodaysView", "CourseToolBar", base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

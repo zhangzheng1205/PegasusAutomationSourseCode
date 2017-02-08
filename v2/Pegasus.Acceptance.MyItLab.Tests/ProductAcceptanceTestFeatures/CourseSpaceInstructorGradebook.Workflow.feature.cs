@@ -552,6 +552,80 @@ testRunner.And("I should see \"Word Chapter 1 Project 1A Skill-Based Exam (Scena
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor verifying the View Submission page of past due submitted activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void InstructorVerifyingTheViewSubmissionPageOfPastDueSubmittedActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor verifying the View Submission page of past due submitted activity", ((string[])(null)));
+#line 213
+this.ScenarioSetup(scenarioInfo);
+#line 214
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 215
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 216
+testRunner.When("I search the \"RegMILPastDueActivity\" in My Course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 217
+testRunner.Then("I should see the \"RegMILPastDueActivity\" in \'My Course\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 218
+testRunner.When("I click the activity cmenu option in MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 219
+testRunner.And("I click on \"View Submissions\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 220
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 221
+testRunner.And("I should see \"RegMILPastDueActivity\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 222
+testRunner.And("I should see \'StudentsList\' grid with \"Name\" \"Grade\" columns having \"4\" entries a" +
+                    "s \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 223
+testRunner.When("I click on \"CsSmsStudent\" in the StudentList", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 224
+testRunner.Then("I should see \"CsSmsStudent\" with \"Pastdue\" icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor verifying the View Submission page of forcefully submitted activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void InstructorVerifyingTheViewSubmissionPageOfForcefullySubmittedActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor verifying the View Submission page of forcefully submitted activity", ((string[])(null)));
+#line 230
+this.ScenarioSetup(scenarioInfo);
+#line 231
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 232
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 233
+testRunner.When("I search the \"RegMILForcefullSubmissionActivity\" in My Course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 234
+testRunner.Then("I should see the \"RegMILForcefullSubmissionActivity\" in \'My Course\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 235
+testRunner.When("I click the activity cmenu option in MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 236
+testRunner.And("I click on \"View Submissions\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 237
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 238
+testRunner.And("I should see \"RegMILForcefullSubmissionActivity\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 239
+testRunner.And("I should see \'StudentsList\' grid with \"Name\" \"Grade\" columns having \"4\" entries a" +
+                    "s \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 240
+testRunner.And("I should see \"CsSmsStudent\" with \"--\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 241
+testRunner.When("I click on \"CsSmsStudent\" in the StudentList", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 242
+testRunner.And("I click on \'Submit Students Answer\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 243
+testRunner.Then("I should see \"CsSmsStudent\" with \"0\" submission grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

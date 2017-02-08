@@ -20,13 +20,14 @@ namespace Pegasus.Pages.UI_Pages
     public class ViewSubmissionPage : BasePage
     {
 
-        By deleteButtonLocator=By.Id("lnkDelete");
+        By deleteButtonLocator = By.Id("lnkDelete");
         By deleteAllOptionLocator = By.CssSelector("span[id*='lblDeleteSubmissionAll']");
         By deleteAllConfirmation = By.Id("VSbtnDeleteYesClientALL");
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
         private static readonly Logger Logger = Logger.GetInstance(typeof(ViewSubmissionPage));
+        private static string ViewSubmissionPage_AttemptCount_Xpath_Locator;
 
         /// <summary>
         ///Click the StudyPlan Triangle Option Cmenu
@@ -1170,7 +1171,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="pageName">This is page Name.</param>
         public void ClickSubmitStudentAnswerbutton(string buttonName, string pageTitle)
         {
-            Logger.LogMethodEntry("ViewSubmissionPage", "ClickSubmitStudentAnswerbutton", 
+            Logger.LogMethodEntry("ViewSubmissionPage", "ClickSubmitStudentAnswerbutton",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1185,7 +1186,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("ViewSubmissionPage", "ClickSubmitStudentAnswerbutton", 
+            Logger.LogMethodExit("ViewSubmissionPage", "ClickSubmitStudentAnswerbutton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1541,21 +1542,26 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectViewSubmissionWindow();
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
                ViewSubmission_Page_ViewSubmission_Xpath_Locator));
-            int studentCount = base.GetElementCountByXPath(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Xpath_Locator);
-            for (int studentIndex = Convert.ToInt16(ViewSubmissionPageResource.ViewSubmission_Page_Index_Value_One);
+            int studentCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                ViewSubmission_Page_ViewSubmission_Xpath_Locator);
+            for (int studentIndex = Convert.ToInt16(ViewSubmissionPageResource.
+                ViewSubmission_Page_Index_Value_One);
                 studentIndex <= studentCount; studentIndex++)
             {
                 string getStudent = base.GetTitleAttributeValueByXPath(
-                    String.Format(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex));
+                    String.Format(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex));
                 base.WaitForElement(By.XPath(
-                    string.Format(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex)));
+                    string.Format(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex)));
 
                 if (getStudent == name)
                 {
                     // Get web element for the particulat student index
                     getSubmissionGradeProperty =
                         base.GetWebElementPropertiesByXPath(
-                        string.Format(ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex));
+                        string.Format(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex));
                     break;
                 }
             }
@@ -1573,7 +1579,8 @@ namespace Pegasus.Pages.UI_Pages
             "ClickStudent", base.IsTakeScreenShotDuringEntryExit);
             // Click on particular student index
             base.ClickByJavaScriptExecutor(getStudentProperty);
-            Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.ViewSubmission_Page_SleepTime_Value));
+            Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
+                ViewSubmission_Page_SleepTime_Value));
             Logger.LogMethodExit("ViewSubmissionPage",
                 "ClickStudent", base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1619,7 +1626,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectViewSubmissionWindow();
 
                 //Get the Collection of all the Submission in Submission List
-                ICollection<IWebElement> getAllSubmissionsInSubmissionList = base.GetWebElementsCollectionByClassName(
+                ICollection<IWebElement> getAllSubmissionsInSubmissionList =                     
+                    base.GetWebElementsCollectionByClassName(
                 ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Score_ClassName_Locator);
 
                 //Get the Last submission from the collection of Submissions in Submission List
@@ -1940,7 +1948,7 @@ namespace Pegasus.Pages.UI_Pages
 
                 //Select View Submission Window
                 this.SelectViewSubmissionWindow();
-               
+
                 //Get Score
                 getScore = base.GetElementTextByCssSelector(
                     ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_GetScore_CSS_Locator);
@@ -1948,7 +1956,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Eliminate % delimeter from getScore
                 getScore = getScore.Replace("%", string.Empty).Trim();
                 //close the view submission window
-              
+
 
             }
             catch (Exception e)
@@ -2410,7 +2418,6 @@ namespace Pegasus.Pages.UI_Pages
                                     ViewSubmissionPageResource.ViewSubmission_Page_AttemptDateTime_Xpath_Locator, i))
                                     .Text.Replace("\r\n", " ");
                                 attemptlist.Add(attemptdatetime);
-
                                 //Get score details
                                 string grade = base.GetWebElementPropertiesByXPath(string.Format(
                                     ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_StudentGrade_Xpath_Locator, i))
@@ -2469,7 +2476,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ViewSubmissionPage",
                 "DeleteAllSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
-                     try
+            try
             {
                 // Get student property by searching sent student
                 IWebElement getStudentProperty = this.SearchStudentByLastAndFirstName(lastname, firstname);
@@ -2487,8 +2494,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(deleteAllConfirmation);
                 IWebElement confirmButton = WebDriver.FindElement(deleteAllConfirmation);
                 base.ClickByJavaScriptExecutor(confirmButton);
-               
-             
+
+
             }
             catch (Exception e)
             {
@@ -2497,6 +2504,619 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ViewSubmissionPage",
                 "DeleteAllSubmission",
                            base.IsTakeScreenShotDuringEntryExit);
-         }
+        }
+
+        /// <summary>
+        /// Select the Student in Instructor View Submission page
+        /// </summary>
+        /// <param name="lastName">This is the Last name.</param>
+        /// <param name="firstName">This is the First name.</param>
+        public void SelectStudentInInstructorViewSubmissionPage(String lastName, 
+            String firstName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                  "SelectStudentInInstructorViewSubmissionPage",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                IWebElement getStudentProperty = this.
+                    SearchStudentByLastAndFirstName(lastName, firstName);
+                this.ClickStudent(getStudentProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                   "SelectStudentInInstructorViewSubmissionPage",
+                   base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Get the Student name in Instructor View Submission page
+        /// </summary>
+        /// <returns>Student name.</returns>
+        public String GetStudentNameInInstructorViewSubmissionPage()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                            "GetStudentNameInInstructorViewSUbmissionPage",
+                           base.IsTakeScreenShotDuringEntryExit);
+            string studentName = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_StudentNameInInstructorViewSubmission_ID_Locator));                    
+                studentName = base.GetElementInnerTextById(ViewSubmissionPageResource.
+                    ViewSubmission_StudentNameInInstructorViewSubmission_ID_Locator);
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                          "GetStudentNameInInstructorViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return studentName;
+        }
+
+        /// <summary>
+        /// Verify Past due icon in View Submission page of Instructor
+        /// </summary>
+        /// <returns>True</returns>
+        public bool IsPastdueIconDisplayedInInstructorViewSubmissionPage()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                               "IsPastdueIconDisplayedInInstructorViewSUbmissionPage",
+                              base.IsTakeScreenShotDuringEntryExit);
+            bool pastDueIconDisplay = false;
+            try
+            {//Fetch the Pastdue icon display status from View submission page
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_StudentPastDueIconInInstructorViewSubmission_ID_Locator));
+                pastDueIconDisplay = base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_StudentPastDueIconInInstructorViewSubmission_ID_Locator), 10);
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                          "GetStudentNameInInstructorViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return pastDueIconDisplay;
+        }
+
+        /// <summary>
+        /// Get Student Name in Instructor View Submission List
+        /// </summary>
+        /// <param name="lastName">This is the Last name.</param>
+        /// <param name="firstName">This is the First name</param>
+        /// <returns>Student Name.</returns>
+        public string GetStudentNameInInstructorViewSubmissionList(String lastName, String firstName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                    "SelectStudentInInstructorViewSubmissionPage",
+                    base.IsTakeScreenShotDuringEntryExit);
+            string studentName = string.Empty;
+            try
+            {
+                IWebElement getStudentProperty = this.SearchStudentByLastAndFirstName(lastName, firstName);
+                String getStudentName = base.GetWebElementInnerText(getStudentProperty);
+                string[] hj = getStudentName.Split('\r');
+                studentName = hj[0];
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                   "SelectStudentInInstructorViewSubmissionPage",
+                   base.IsTakeScreenShotDuringEntryExit);
+            return studentName;
+        }
+
+        /// <summary>
+        /// Get Student Score In Instructor View SubmissionList in left frame
+        /// </summary>
+        /// <param name="expectedUserName">This is the Username.</param>
+        /// <returns>Student Score / Grade.</returns>
+        public string GetStudentScoreInInstructorViewSubmissionList(String expectedUserName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                    "SelectStudentInInstructorViewSubmissionPage",
+                    base.IsTakeScreenShotDuringEntryExit);
+            string getStudentName = string.Empty;
+            string getSubmissionGrade = string.Empty;
+            try
+            {
+                base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+                  ViewSubmission_Page_ViewSubmission_Xpath_Locator));
+                int studentCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_Xpath_Locator);
+                for (int studentIndex = Convert.ToInt16(ViewSubmissionPageResource.
+                    ViewSubmission_Page_Index_Value_One);
+                    studentIndex <= studentCount; studentIndex++)
+                {
+                    string getStudent = base.GetTitleAttributeValueByXPath(
+                        String.Format(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex));
+                    base.WaitForElement(By.XPath(
+                        string.Format(ViewSubmissionPageResource.
+                        ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator, studentIndex)));
+
+                    if (getStudent == expectedUserName)
+                    {
+                        // Get web element for the particulat student index
+                        IWebElement getStudentGradeProperty = base.GetWebElementPropertiesByXPath(
+                            string.Format(ViewSubmissionPageResource.
+                            ViewSubmission_Page_ViewSubmission_StudentGrade_Xpath_Locator, studentIndex));
+                        getSubmissionGrade = base.GetWebElementInnerText(getStudentGradeProperty);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                   "SelectStudentInInstructorViewSubmissionPage",
+                   base.IsTakeScreenShotDuringEntryExit);
+            return getSubmissionGrade;
+        }
+
+        /// <summary>
+        /// Forcefully submit student answr in Instructor View submission.
+        /// </summary>
+        public void SubmitStudentAnswerForcefully()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                              "SubmitStudentAnswerForcefully",
+                              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_SubmitStudentAnswerButton_Id_Locator));
+                //Click on Submit Student Answer button
+                IWebElement clickSubmitAnswerButton = base.GetWebElementPropertiesById(
+                    ViewSubmissionPageResource.ViewSubmission_SubmitStudentAnswerButton_Id_Locator);
+                base.ClickByJavaScriptExecutor(clickSubmitAnswerButton);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                            "SubmitStudentAnswerForcefully",
+                            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Submission Grade In Instructor View Submission main frame
+        /// </summary>
+        /// <returns>Submission Grade.</returns>
+        public string GetSubmissionGradeInInstructorViewSubmission()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                             "SubmitStudentAnswerForcefully",
+                             base.IsTakeScreenShotDuringEntryExit);
+            string getStudentSubmissionGrade = string.Empty;
+            base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                ViewSubmissionPage_StudentSubmissionGrade_Id_Locator));
+            getStudentSubmissionGrade = base.GetElementTextById(ViewSubmissionPageResource.
+                ViewSubmissionPage_StudentSubmissionGrade_Id_Locator);
+            Logger.LogMethodExit("ViewSubmissionPage",
+                            "SubmitStudentAnswerForcefully",
+                            base.IsTakeScreenShotDuringEntryExit);
+            return getStudentSubmissionGrade;
+        }
+
+        /// <summary>
+        /// Verify Activity displayed in View Submission page
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <returns>Activity Name.</returns>
+        public string IsActivityPresentInViewSubmissionPage(string activityName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsActivityPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string getActivityNameDisplayed = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_ActivityName_ID_Locator));
+                //Get the activity name from view submission page
+                getActivityNameDisplayed = base.GetElementTextById(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_ActivityName_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsActivityPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getActivityNameDisplayed;
+        }
+
+        /// <summary>
+        /// Verify Submission list display in Instructor View Submission oage
+        /// </summary>
+        /// <param name="columnTitle">This is the Column name.</param>
+        /// <param name="gradeColumnName">This is the Grades Column Name.</param>
+        /// <param name="totalRows">This is the total rows count in submission list.</param>
+        /// <param name="userTypeEnum">This is the User type enum.</param>
+        public bool IsLeftFrameGridPresentInViewSubmissionPage(string columnTitle,
+           string gradeColumnName, int totalRows, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsLeftFrameGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool leftFrameGrid = false;
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        leftFrameGrid = this.IsStudentListGridPresent();
+                        break;
+
+
+                    case User.UserTypeEnum.CsSmsStudent:
+                        leftFrameGrid = this.IsAttemptGridPresentInStudentViewSubmissionPage(
+                            columnTitle,gradeColumnName, totalRows);
+                        break;
+
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                         "IsLeftFrameGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return leftFrameGrid;
+        }
+
+        /// <summary>
+        /// Validate the display of Attempt grid in Student view submission page
+        /// </summary>
+        /// <param name="attemptGrid">This is the Attempt grid name.</param>
+        /// <param name="dateColumnName">This is the Date column name.</param>
+        /// <param name="gradeColumnName">This is the Grade Column name.</param>
+        /// <param name="totalAttemptRows">This is the number of attempt rows.</param>
+        /// <returns>True/False.</returns>
+        public bool IsAttemptGridPresentInStudentViewSubmissionPage(string dateColumnName,
+            string gradeColumnName, int totalAttemptRows)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsAttemptGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isAttemptGridDetailsPresent = false;
+            int getAttemptsCount = 0;
+            string getDateColumnName = string.Empty;
+            string getGradeColumnName = string.Empty;
+            try
+            {
+                getAttemptsCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                    ViewSubmissionPage_AttemptCount_Xpath_Locator);
+                getDateColumnName = base.GetElementTextByXPath(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DateColumnName_Xpath_Locator);
+                getGradeColumnName = base.GetElementTextByXPath(ViewSubmissionPageResource.
+                    ViewSubmissionPage_GradeColumnName_Xpath_Locator);
+                if (dateColumnName == getDateColumnName
+                    && gradeColumnName == getGradeColumnName && 
+                    totalAttemptRows == getAttemptsCount)
+                {
+                    isAttemptGridDetailsPresent = true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsAttemptGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isAttemptGridDetailsPresent;
+        }
+
+        /// <summary>
+        /// Verify student dispalyed in View submission page left frame
+        /// </summary>
+        /// <returns>True/False.</returns>
+        public bool IsStudentListGridPresent()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsStudentListGridPresent",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isStudentListGridPresent = false;
+            bool isStudentNameColumnPresent = base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                ViewSubmissionPage_StudentNameDisplay_Id_Locator), 10);
+            bool isGradeColumnPresent = base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                ViewSubmissionPage_StudentNameDisplay_Id_Locator), 10);
+            if (isStudentNameColumnPresent && isGradeColumnPresent == true)
+            {
+                isStudentListGridPresent = true;
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                         "IsStudentListGridPresent",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isStudentListGridPresent;
+        }
+
+        /// <summary>
+        /// Click On Activity Attempt To View The Submission
+        /// </summary>
+        /// <param name="activityGrade">This is the Activity Grade.</param>
+        public void ClickOnActivityAttemptToViewSubmission(String activityGrade)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "ClickOnActivityAttemptToViewSubmission",
+                        base.IsTakeScreenShotDuringEntryExit);
+            int getAttemptsCount = base.GetElementCountByXPath(
+                ViewSubmissionPageResource.ViewSubmissionPage_ActivityAttemptCount_Xpath_Locator);
+            for (int i = 1; i <= getAttemptsCount; i++)
+            {
+                try
+                {
+                    base.WaitForElement(By.XPath(String.Format(ViewSubmissionPageResource.
+                       ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator, i)));
+                    String getActivityGrade = base.GetElementTextByXPath(String.Format(
+                        ViewSubmissionPageResource.
+                       ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator, i));
+                    if (getActivityGrade.Contains(activityGrade))
+                    {
+                         IWebElement clickActivity = base.GetWebElementPropertiesByXPath(String.Format(
+                         ViewSubmissionPageResource.
+                       ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator, i));
+                        base.ClickByJavaScriptExecutor(clickActivity);
+                        break;
+                    }
+                }
+
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                         "ClickOnActivityAttemptToViewSubmission",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fetch the Activity Score from ViewSubmission page
+        /// </summary>
+        /// <returns>Activity Score</returns>
+        public String GetActivityScoreInViewSubmission()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "GetActivityScoreInViewSubmission",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string activityGrade = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_ActivityGrade_Id_Locator));
+                //Fetch the activity score
+                activityGrade = base.GetElementInnerTextById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_ActivityGrade_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("ViewSubmissionPage",
+                        "GetActivityScoreInViewSubmission",
+                       base.IsTakeScreenShotDuringEntryExit);
+            return activityGrade;
+        }
+
+        /// <summary>
+        /// Fetch the Student name from View Submission page
+        /// </summary>
+        /// <returns>Studet Name.</returns>
+        public String GetStudentNameInViewSUbmissionPage()
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "GetStudentNameInViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            string studentName = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_StudentNameDisplay_Id_Locator));
+                studentName = base.GetElementInnerTextById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_StudentName_Id_Locator);
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                          "GetStudentNameInViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return studentName;
+        }
+
+        /// <summary>
+        /// Select the display mode in View submission page.
+        /// </summary>
+        /// <param name="mode">This is the mode type.</param>
+        public void SelectModeInViewSubmission(string mode)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "GetStudentNameInViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.PerformFocusOnElementActionById(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_DisplayMode_ID_Locator);
+                IWebElement getViewSubmissionMode = base.GetWebElementPropertiesById(
+                    ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_DisplayMode_ID_Locator);
+                base.SelectDropDownValueThroughTextById(ViewSubmissionPageResource.
+                    ViewSubmission_Page_ViewSubmission_DisplayMode_ID_Locator, mode);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                          "GetStudentNameInViewSUbmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Question in View Submission Page
+        /// </summary>
+        /// <param name="questionNumber">This is the question number.</param>
+        public void SelectQuestionInViewSubmissionPage(string questionNumber)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "SelectQuestionInViewSubmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                int getQuestionsCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                        ViewSubmission_QuestionCountInVS_XpathLocator);
+                for (int i = 1; i <= getQuestionsCount; i++)
+                {
+                    String getQuestions = base.GetElementTextByXPath(String.Format(ViewSubmissionPageResource.
+                        ViewSubmission_QuestionInViewSubmission_XpathLocator, i));
+                    if (getQuestions == questionNumber)
+                    {
+                        IWebElement clickQuestion = base.GetWebElementPropertiesByXPath(String.Format(
+                           ViewSubmissionPageResource.ViewSubmission_QuestionInViewSubmission_XpathLocator, i));
+                        base.ClickByJavaScriptExecutor(clickQuestion);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                          "SelectQuestionInViewSubmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the question displayed in View Submission Page
+        /// </summary>
+        /// <param name="questionNumber">This is the question number.</param>
+        /// <returns>True/False.</returns>
+        public bool IsQuestionDisplayedInViewSubmissionPage(String questionNumber)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "IsQuestionDisplayedInViewSubmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            bool IsQuestionDisplayed = false;
+            try
+            {
+                //Get the Question displayed from the UI
+                string questionFText = base.GetElementTextById(ViewSubmissionPageResource.
+                    ViewSubmission_QuestionDisplayed_Id_Locator);
+                string questionLText = base.GetElementTextById(ViewSubmissionPageResource.
+                    ViewSubmission_QuestionDisplayed_Id_Locator);
+                //Concatinate the Question text to form the question number
+                string questionText = ((questionFText) + " " + (questionLText));
+                if (questionText == questionNumber)
+                {
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "IsQuestionDisplayedInViewSubmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return IsQuestionDisplayed;
+        }
+
+        /// <summary>
+        /// Fetch the Student name from View Submission page
+        /// </summary>
+        /// <param name="userName">This is the User name.</param>
+        /// <returns>True/False.</returns>
+        public bool GetStudentNameFromViewSubmissionPage(string userName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "GetStudentNameFromViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isStudentPresent = false;
+            try
+            {
+                int getStudentNameCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                    ViewSubmission_GetCountOfStudentInViewSubmission_Xpath_Locator);
+              
+                for (int i = 1; i < getStudentNameCount; i++)
+                {
+                    string getStudentName = base.GetElementInnerTextByXPath(String.Format(ViewSubmissionPageResource.
+                    ViewSubmission_GetStudentNameInViewSubmission_Xpath_Locator, i));                      
+                    if (getStudentName == userName)
+                    {
+                        isStudentPresent = true;
+                        break;
+                    }
+                    i++;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "GetStudentNameFromViewSubmissionPage",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return isStudentPresent;
+        }
+
+        /// <summary>
+        /// Fetch the Student score from View Submission Page
+        /// </summary>
+        /// <param name="userName">This is the UserName</param>
+        /// <param name="studentQuestionScore">This is the score of the question.</param>
+        /// <returns>True/False.</returns>
+        public bool GetStudentScoreFromViewSubmissionPage(string userName, String studentQuestionScore)
+        {
+            bool isStudentQuestionScoreDisplayed = false;
+            try
+            {
+                //Fetch the count of scores displayed in View submission page
+                int getStudentScoreCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                    ViewSubmission_QuestionScoreCountInViewSubmission_XpathLocator);
+                for (int i = 2; i <= getStudentScoreCount; i++)
+                {
+                    String getStudentQuestionScore = base.GetElementInnerTextByXPath(String.Format
+                        (ViewSubmissionPageResource.ViewSubmission_QuestionScoreInViewSubmission_XpathLocator, i));
+                    String questionScore = getStudentQuestionScore.TrimStart(' ');
+
+                    if (getStudentQuestionScore.Contains(studentQuestionScore))
+                    {
+                        isStudentQuestionScoreDisplayed = true;
+                        break;
+                    }
+                    i++;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return isStudentQuestionScoreDisplayed;
+        }
     }
 }

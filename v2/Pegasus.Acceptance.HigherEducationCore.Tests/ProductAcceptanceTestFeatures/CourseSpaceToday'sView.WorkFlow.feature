@@ -31,4 +31,82 @@ Scenario: Instructor should be notified with alert count in "Instructor Grading"
 Then I should see the "Instructor Grading (1)" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Instructor Grading (1)" channel
 
-                                
+#Purpose:Validate the functionality of Tutorials link in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate the functionality of Tutorial link in Today's view tab as WLCsSmsInstructor
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Tutorial" link
+Then I should be on the "Tutorials" page
+When I close the "Tutorials" window
+Then I should be on the "Today's View" page
+
+#Purpose:Validate the functionality of Glossary link in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate the functionality of Glossary link in Today's view tab as WLCsSmsInstructor
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Glossary" link
+Then I should be on the "Glossary" page
+When I close the "Glossary" window
+Then I should be on the "Today's View" page
+
+#Purpose:Validate the functionality of Verb Chart link in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate the functionality of Verb Chart link in Today's view tab as WLCsSmsInstructor
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Verb Chart" link
+Then I should be on the "Verb Chart" page
+When I close the "Verb Chart" window
+Then I should be on the "Today's View" page
+
+#Purpose:Validate the functionality of User Guide link in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate the functionality of User Guide link in Today's view tab as WLCsSmsInstructor
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "User Guide" link
+Then I should be on the "Instructor User Guide" page  
+When I close the "Instructor User Guide" window
+Then I should be on the "Today's View" page
+
+#Purpose:Validate the functionality of More Resources  link in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate the functionality of More Resources link in Today's view tab as WLCsSmsInstructor
+Given I browsed the login url for "WLCsSmsInstructor"
+When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
+And I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "User Guide" link
+Then I should be on the "More Resources" page 
+When I close the "More Resources" window
+Then I should be on the "Today's View" page                  

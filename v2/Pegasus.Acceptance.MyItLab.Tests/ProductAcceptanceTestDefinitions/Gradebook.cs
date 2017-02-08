@@ -1423,7 +1423,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             String activityName = activity.Name;
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                        Current.ScenarioInfo.Title, () => Assert.AreEqual
-                           (activityName, new GBDefaultUXPage().IsActivityPresentInViewSubmissionPage(activityName)));
+                           (activityName, new ViewSubmissionPage().
+                           IsActivityPresentInViewSubmissionPage(activityName)));
             Logger.LogMethodExit("Gradebook",
                            "VerifyActivityNameInViewSubmissionPage",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -1432,22 +1433,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Verify the Attempts grid and its column dispaly in student view submission page
         /// </summary>
-        /// <param name="attemptGrid">This is the attempt grid name.</param>
         /// <param name="dateColumnName">This is the Date column name.</param>
         /// <param name="gradeColumnName">This is the Grade column name.</param>
         /// <param name="totalAttemptRows">This is the total number of attempt rows.</param>
-        [Then(@"I should see ""(.*)"" grid with ""(.*)"" ""(.*)"" columns having ""(.*)"" entries")]
-        public void VerifyAtemptsGridInViewSubmission(string attemptGrid, 
-            string dateColumnName, string gradeColumnName, int totalAttemptRows)
+        /// /// <param name="userTypeEnum">This is the user type enum.</param>
+        [Then(@"I should see 'Attempts' grid with ""(.*)"" ""(.*)"" columns having ""(.*)"" entries as ""(.*)"" user")]
+        [Then(@"I should see 'StudentsList' grid with ""(.*)"" ""(.*)"" columns having ""(.*)"" entries as ""(.*)"" user")]
+        public void VerifyAtemptsGridInViewSubmission(string columnTitle, 
+            string gradeColumnName, int totalRows, User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("Gradebook",
                             "VerifyAtemptsGridInViewSubmission",
                            base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                        Current.ScenarioInfo.Title, () => Assert.IsTrue
-                           (new GBDefaultUXPage().IsAttemptGridPresentInViewSubmissionPage(
-                attemptGrid, dateColumnName, gradeColumnName, totalAttemptRows)));
-            
+                           (new ViewSubmissionPage().IsLeftFrameGridPresentInViewSubmissionPage(columnTitle,
+            gradeColumnName,  totalRows, userTypeEnum)));            
             Logger.LogMethodExit("Gradebook",
                            "VerifyAtemptsGridInViewSubmission",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -1464,7 +1465,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("Gradebook",
                             "VerifyAtemptsGridInViewSubmission",
                            base.IsTakeScreenShotDuringEntryExit);
-            new GBDefaultUXPage().ClickOnActivityAttemptToViewSubmission(activityScore);
+            new ViewSubmissionPage().ClickOnActivityAttemptToViewSubmission(activityScore);
             Logger.LogMethodExit("Gradebook",
                            "VerifyAtemptsGridInViewSubmission",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -1485,15 +1486,123 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             string expectedUserName = user.LastName + ", " + user.FirstName;
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                        Current.ScenarioInfo.Title, () => Assert.AreEqual
-                           (activityScore, new GBDefaultUXPage().GetActivityScoreInViewSubmission()));
+                           (activityScore, new ViewSubmissionPage().GetActivityScoreInViewSubmission()));
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                       Current.ScenarioInfo.Title, () => Assert.AreEqual
-                          (expectedUserName, new GBDefaultUXPage().GetStudentNameInViewSUbmissionPage()));             
+                          (expectedUserName, new ViewSubmissionPage().GetStudentNameInViewSUbmissionPage()));             
             Logger.LogMethodExit("Gradebook",
                            "VerifyActivityScoreInViewSubmission",
                           base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
 
+        /// <summary>
+        /// Click on Student in Instructor View Submission left frame
+        /// </summary>
+        /// <param name="userTypeEnum">This is the UserType enum.</param>
+        [When(@"I click on ""(.*)"" in the StudentList")]
+        public void ClickStudentList(User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "ClickStudentList",
+                          base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the User from the memory
+            User user = User.Get(userTypeEnum);
+            string lastName = user.LastName;
+            string firstName = user.FirstName;
+            //Click on Student in View Submission Frame
+            new ViewSubmissionPage().SelectStudentInInstructorViewSubmissionPage(lastName, firstName);
+            Logger.LogMethodExit("Gradebook",
+                           "ClickStudentList",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Student name in Instructor View Submission left frame
+        /// </summary>
+        /// <param name="userTypeEnum">This is the UserType enum.</param>
+        /// <param name="pastDueIcon">This is the pastdue icon.</param>
+        [Then(@"I should see ""(.*)"" with ""(.*)"" icon")]
+        public void VerifyStudentNameInInstructorViewSubmission(User.UserTypeEnum userTypeEnum, string pastDueIcon)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyStudentNameInInstructorViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string expectedUserName = user.LastName + ", " + user.FirstName;
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (expectedUserName, new ViewSubmissionPage().
+                           GetStudentNameInInstructorViewSubmissionPage()));
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                      Current.ScenarioInfo.Title, () => Assert.IsTrue
+                          (new ViewSubmissionPage().
+                          IsPastdueIconDisplayedInInstructorViewSubmissionPage()));
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyActivityScoreInViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see ""(.*)"" with ""(.*)"" grade")]
+        public void ValidateStudentandGradeInInstructorViewSubmission(User.UserTypeEnum userTypeEnum, string studentGrade)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "ValidateStudentandGradeInInstructorViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            string lastName = user.LastName;
+            string firstName = user.FirstName;
+            string expectedUserName = lastName + ", " + firstName;
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (expectedUserName, new ViewSubmissionPage().
+                           GetStudentNameInInstructorViewSubmissionList(lastName, firstName)));
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                      Current.ScenarioInfo.Title, () => Assert.AreEqual
+                          (studentGrade, new ViewSubmissionPage().
+                          GetStudentScoreInInstructorViewSubmissionList(expectedUserName)));
+            Logger.LogMethodExit("Gradebook", 
+                           "ValidateStudentandGradeInInstructorViewSubmission",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [When(@"I click on 'Submit Students Answer' button")]
+        public void SubmitStudentAnswerInInstructorViewSubmission()
+        {
+            Logger.LogMethodEntry("Gradebook",
+                          "SubmitStudentAnswerInInstructorViewSubmission",
+                         base.IsTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().SubmitStudentAnswerForcefully();
+            Logger.LogMethodExit("Gradebook",
+                         "SubmitStudentAnswerInInstructorViewSubmission",
+                        base.IsTakeScreenShotDuringEntryExit);   
+        }
+
+        [Then(@"I should see ""(.*)"" with ""(.*)"" submission grade")]
+        public void ValidateSubmissionGrade(User.UserTypeEnum userTypeEnum, string studentGrade)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                          "ValidateSubmissionGrade",
+                         base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (studentGrade, new ViewSubmissionPage().
+                           GetSubmissionGradeInInstructorViewSubmission()));
+            //Fetch User from the memory
+            User user = User.Get(userTypeEnum);
+            string lastName = user.LastName;
+            string firstName = user.FirstName;
+            string expectedUserName = lastName + ", " + firstName;
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (expectedUserName, new ViewSubmissionPage().
+                           GetStudentNameInInstructorViewSubmissionPage()));
+            Logger.LogMethodExit("Gradebook",
+                          "ValidateSubmissionGrade",
+                         base.IsTakeScreenShotDuringEntryExit);            
+        }
     }
 }
   

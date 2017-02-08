@@ -1619,8 +1619,9 @@ namespace Pegasus.Pages.CommonPageObjects
 
                                     case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]":
                                     case "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.":
+                                    case "SAM 01-01 Las familias famosas. [Vocabulario 1. La familia]":
                                         this.NavigateToActivityFolderInInstructorGradebook(
-                                            "Capítulo 01: ¿Quiénes somos? (ORGANIZED BY CONTENT TYPE)",
+                                            "Capítulo 01: ¿Quiénes somos?",
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         this.NavigateToActivityFolderInInstructorGradebook(
                                            "STUDENT ACTIVITIES MANUAL",

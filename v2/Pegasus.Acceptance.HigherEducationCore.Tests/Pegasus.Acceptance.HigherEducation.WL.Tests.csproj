@@ -627,6 +627,9 @@
     <None Include="ProductAcceptanceOrderedTests\AssessmentRegressionWSandCSComplete.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest1.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderTest.CreateActivityInCSGBScoreLowest.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -929,5 +929,40 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             new CommonSteps().WebDriverCleanUp();
         }
+
+        /// <summary>
+        /// Manage The Activity Folder Level Navigation HED Core.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="userTypeEnum">This is user Type Enum.</param>
+        /// <param name="activityUnderTabName">This is Tab Name.</param>
+        /// <remarks>This folder navigation is only valid for MyLab authored course such as
+        /// section course, instructor course and Templates will only valid for this method.</remarks>
+        [When(@"I select ""(.*)"" in ""(.*)"" tab by ""(.*)""")]        
+        public void ManageTheActivityFolderLevelNavigation(Activity.ActivityTypeEnum activityTypeEnum,
+            string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Manage The Activity Folder Level Navigation
+            Logger.LogMethodEntry("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select particular window here
+            Activity activity = Activity.Get(activityTypeEnum);
+            String activityName = activity.Name;
+            base.SelectWindow(base.GetPageTitle);
+            if (activityUnderTabName.Equals("Gradebook"))
+            {
+                // select grade book left iframe here
+                new GBInstructorUXPage().SelectGradebookFrame();
+            }
+            // make sleep intentionally to load frame completely
+            Thread.Sleep(15000);
+            //Manage The Folder Navigation
+            new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
+               activityName, activityUnderTabName, userTypeEnum);
+            Logger.LogMethodExit("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

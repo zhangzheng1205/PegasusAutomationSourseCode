@@ -1124,7 +1124,7 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             // Verify Student Submission Score In ViewSubmission Page
             Logger.LogMethodEntry("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Fetch the data from memory
+            //Fetch the user data from memory
             User user = User.Get(userTypeEnum);
             //Assert Grades of Submitted Activity
             Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
@@ -1360,5 +1360,156 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
 
         }
 
+        /// <summary>
+        /// Click On Cmenu Of Asset In Gradebook.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
+        /// <param name="assetName">This is Asset name</param>
+        [When(@"I click on cmenu option ""(.*)"" of the asset ""(.*)""")]
+        public void ClickOnCmenuOfAssetInHEDGradebook(string assetCmenu,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Click On Cmenu Of Asset In Gradebook
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
+                  IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String assetName = activity.Name;
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Frame
+            gbInstructorPage.SelectGradebookFrame();
+            //Select The Cmenu Option Of Asset
+            gbInstructorPage.SelectTheCmenuOptionOfAssetHed(
+                (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHed",
+                 IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the activity name i Viw submission page of student
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum.</param>
+        [Then(@"I should see ""(.*)"" activity name")]
+        public void VerifyActivityNameInViewSubmissionPage(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyActivityNameInViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String activityName = activity.Name;
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.AreEqual
+                           (activityName, new ViewSubmissionPage().
+                           IsActivityPresentInViewSubmissionPage(activityName)));
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyActivityNameInViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Question / Student Mode in View Submission page
+        /// </summary>
+        /// <param name="mode">This is the type of mode.</param>
+        [When(@"I select ""(.*)"" mode in view submission page")]
+        public void SelectModeInViewSubmissionPage(string mode)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "SelectModeInViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().SelectModeInViewSubmission(mode);
+            Logger.LogMethodExit("Gradebook",
+                           "SelectModeInViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select question in View Submission Page
+        /// </summary>
+        /// <param name="questionNumber">This is the question number</param>
+        [When(@"click on the '(.*)' in question list")]
+        public void SelectQuestionInQuestionList(string questionNumber)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "SelectQuestionInQuestionList",
+                          base.IsTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().SelectQuestionInViewSubmissionPage(questionNumber);
+            Logger.LogMethodExit("Gradebook",
+                           "SelectQuestionInQuestionList",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Question in View Submission page
+        /// </summary>
+        /// <param name="questionNumber">This is the question number</param>
+        [Then(@"I should see ""(.*)"" in view submission frame")]
+        public void VerifyQuestionNumberInViewSubmissionFrame(string questionNumber)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                           "VerifyQuestionNumberInViewSubmissionFrame",
+                          base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue
+                           (new ViewSubmissionPage().
+                           IsQuestionDisplayedInViewSubmissionPage(questionNumber)));
+            Logger.LogMethodExit("Gradebook",
+                           "VerifyQuestionNumberInViewSubmissionFrame",
+                          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Zero score student and score displayed in Question mode of View Submission page
+        /// </summary>
+        /// <param name="questionScore">This is the Score type enum.</param>
+        /// <param name="userTypeEnum">This is the User Type Enum.</param>
+        [Then(@"I should see ""(.*)"" score for the question in view submission page for 'Zero' ""(.*)""")]
+        public void VerifyZeroScoreStudentAndScoreInViewSubmissionFrame(String questionScore,
+            User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                          "VerifyZeroScoreStudentAndScoreInViewSubmissionFrame",
+                         base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the User from XML memory
+            User user = User.Get("WL_User_SMS_STU_UC5");
+            String zeroScoreStudentName = user.FirstName + ", " + user.LastName;
+            //Verify the Student name in View Submission Page       
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue
+                           (new ViewSubmissionPage().GetStudentNameFromViewSubmissionPage(zeroScoreStudentName)));
+            //Verify the Student score for the question in View Submission Page       
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue
+                           (new ViewSubmissionPage().GetStudentScoreFromViewSubmissionPage(zeroScoreStudentName,
+                           questionScore)));
+            Logger.LogMethodExit("Gradebook",
+                          "VerifyZeroScoreStudentAndScoreInViewSubmissionFrame",
+                         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify 100 score student and score displayed in Question mode of View Submission page
+        /// </summary>
+        /// <param name="questionScore">This is the Score type enum.</param>
+        /// <param name="userTypeEnum">This is the User Type Enum.</param>
+        [Then(@"I should see ""(.*)"" score for the question in view submission page for ""(.*)""")]
+        public void Verify100ScoreStudentAndScoreInViewSubmissionFrame(string questionScore,
+            User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                         "VerifyZeroScoreStudentAndScoreInViewSubmissionFrame",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the User from XML memory
+            User user = User.Get(userTypeEnum);
+            string studentName = user.FirstName + ", " + user.LastName;
+            //Verify the Student name in View Submission Page 
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                        Current.ScenarioInfo.Title, () => Assert.IsTrue
+                            (new ViewSubmissionPage().GetStudentNameFromViewSubmissionPage(studentName)));
+            //Verify the Student score for the question in View Submission Page     
+            Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
+                       Current.ScenarioInfo.Title, () => Assert.IsTrue
+                           (new ViewSubmissionPage().GetStudentScoreFromViewSubmissionPage(studentName, 
+                           questionScore)));          
+        }
     }
 }

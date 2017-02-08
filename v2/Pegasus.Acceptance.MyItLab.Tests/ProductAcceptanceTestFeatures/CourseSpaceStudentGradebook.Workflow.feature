@@ -53,16 +53,13 @@ When I sort the "Grade" in 'Ascending' order
 Then I should see "Ascending" icon for the sorted column
 And I should see "RegCustomViewActivity1","RegCustomViewActivity2" activity in "Ascending" order
 
-#Purpose : Folder Navigation in Grades tab
+#-------------------------------------------------------------------------------------------------------------------------
+
+#Purpose : Folder Navigation and student validating view submission for SIM5 Word activity in Grades tab
 #Test case ID :
 #Products : MyItLab.
 #Pre condition : 
-Scenario: Folder Navigation in Grades tab of coursespace student
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+Scenario: Student validating view submission for SIM5 Word activity By SMS Student
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I navigate to "RegCustomViewActivity1" activity in "Grades" by "CsSmsStudent"
@@ -70,6 +67,6 @@ Then I should see "RegCustomViewActivity1" activity in Grades tab with "100" gra
 When I click on "view submission" cmenu option of "RegCustomViewActivity1" as "CsSmsStudent" user
 Then I should be on the "View Submission" page
 And I should see "RegCustomViewActivity1" activity name 
-And I should see "Attempts" grid with "Date" "Grade" columns having "2" entries
+And I should see 'Attempts' grid with "Date" "Grade" columns having "2" entries as "CsSmsStudent" user
 When I click on attempt having "100" grade as "CsSmsStudent"
 Then I should see "CsSmsStudent" with "100%" score 

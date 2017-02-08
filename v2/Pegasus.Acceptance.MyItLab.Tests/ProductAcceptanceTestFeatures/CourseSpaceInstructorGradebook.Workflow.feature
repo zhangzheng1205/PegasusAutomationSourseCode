@@ -204,6 +204,45 @@ Then I should be on the "Custom View" page
 And I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity with "0" score for "ZeroScore" with "CsSmsStudent" in Custom view tab
 And I should see "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity with "100" score for "CsSmsStudent" in Custom view tab
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Purpose: :Instructor validating the View Submission page of past due submitted activity
+#TestCase Id: 
+#MyItLabProgramCourse
+#Pre Condition: Pastdue activity should be submitted by the student
+Scenario:Instructor verifying the View Submission page of past due submitted activity
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I search the "RegMILPastDueActivity" in My Course frame
+Then I should see the "RegMILPastDueActivity" in 'My Course'
+When I click the activity cmenu option in MyCourse Frame
+And I click on "View Submissions" cmenu option
+Then I should be on the "View Submission" page
+And I should see "RegMILPastDueActivity" activity name 
+And I should see 'StudentsList' grid with "Name" "Grade" columns having "4" entries as "CsSmsInstructor" user
+When I click on "CsSmsStudent" in the StudentList
+Then I should see "CsSmsStudent" with "Pastdue" icon
+
+#Purpose: :Instructor validating the View Submission page of an activity submitted forcefully
+#TestCase Id: 
+#MyItLabProgramCourse
+#Pre Condition: An activity should be saved for later by the student
+Scenario:Instructor verifying the View Submission page of forcefully submitted activity
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I search the "RegMILForcefullSubmissionActivity" in My Course frame
+Then I should see the "RegMILForcefullSubmissionActivity" in 'My Course'
+When I click the activity cmenu option in MyCourse Frame
+And I click on "View Submissions" cmenu option
+Then I should be on the "View Submission" page
+And I should see "RegMILForcefullSubmissionActivity" activity name 
+And I should see 'StudentsList' grid with "Name" "Grade" columns having "4" entries as "CsSmsInstructor" user
+And I should see "CsSmsStudent" with "--" grade
+When I click on "CsSmsStudent" in the StudentList
+And I click on 'Submit Students Answer' button
+Then I should see "CsSmsStudent" with "0" submission grade 
+
+
 
 
 

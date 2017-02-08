@@ -366,4 +366,70 @@
   <data name="ViewSubmission_UnExpectedStudent_XpathLocator" xml:space="preserve">
     <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div</value>
   </data>
+  <data name="ViewSubmission_GetCountOfStudentInViewSubmission_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='divQuestionModeMasterUserControl']/div</value>
+  </data>
+  <data name="ViewSubmission_GetStudentNameInViewSubmission_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='divQuestionModeMasterUserControl']/div[{0}]/div/div[1]/span</value>
+  </data>
+  <data name="ViewSubmission_Page_ViewSubmission_ActivityName_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_divActivityName</value>
+  </data>
+  <data name="ViewSubmission_Page_ViewSubmission_DisplayMode_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_ucSubmissionList_ddlVSMode</value>
+  </data>
+  <data name="ViewSubmission_QuestionCountInVS_XpathLocator" xml:space="preserve">
+    <value>//div[@id = '_ctl0_PopupPageContent_ucSubmissionList_gtQuestions_items']/span</value>
+  </data>
+  <data name="ViewSubmission_QuestionDisplayed_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_QuestionHeader_lblQuestion</value>
+  </data>
+  <data name="ViewSubmission_QuestionInViewSubmission_XpathLocator" xml:space="preserve">
+    <value>//div[@id = '_ctl0_PopupPageContent_ucSubmissionList_gtQuestions_items']/span[{0}]/div[1]</value>
+  </data>
+  <data name="ViewSubmission_QuestionScoreCountInViewSubmission_XpathLocator" xml:space="preserve">
+    <value>//div[@id = 'divQuestionModeMasterUserControl']/div</value>
+  </data>
+  <data name="ViewSubmission_QuestionScoreInViewSubmission_XpathLocator" xml:space="preserve">
+    <value>//div[@id = 'divQuestionModeMasterUserControl']/div[{0}]/div[1]/div[1]/div/div/div/div/div/table/tbody/tr[3]/td/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="ViewSubmissionPage_ActivityAttemptCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span</value>
+  </data>
+  <data name="ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[2]/span/p[1]</value>
+  </data>
+  <data name="ViewSubmissionPage_ActivityGrade_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook</value>
+  </data>
+  <data name="ViewSubmissionPage_AttemptCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_header']/span/div</value>
+  </data>
+  <data name="ViewSubmissionPage_DateColumnName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_header']/span/div[1]</value>
+  </data>
+  <data name="ViewSubmissionPage_GradeColumnName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_header']/span/div[2]</value>
+  </data>
+  <data name="ViewSubmissionPage_StudentGradeColumn_Id_Locator" xml:space="preserve">
+    <value>spnStuGradeSortingIcon</value>
+  </data>
+  <data name="ViewSubmissionPage_StudentNameDisplay_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblStudentName</value>
+  </data>
+  <data name="ViewSubmissionPage_StudentName_Id_Locator" xml:space="preserve">
+    <value>spnStuNameSortingIcon</value>
+  </data>
+  <data name="ViewSubmissionPage_StudentSubmissionGrade_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblVSInstructorHeaderGrade</value>
+  </data>
+  <data name="ViewSubmission_StudentNameInInstructorViewSubmission_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblStudent</value>
+  </data>
+  <data name="ViewSubmission_StudentPastDueIconInInstructorViewSubmission_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblStudent</value>
+  </data>
+  <data name="ViewSubmission_SubmitStudentAnswerButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_submissionDetailMaster__ctl1_btnFroceSubmit</value>
+  </data>
 </root>

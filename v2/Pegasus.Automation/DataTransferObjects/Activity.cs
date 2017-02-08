@@ -95,6 +95,9 @@ namespace Pegasus.Automation.DataTransferObjects
             RegSimpleAssignFutureDate = 64,
             RegSimpleAssign =65,
             RegSimpleAssignPastDue = 56,
+            RegMILPastDueActivity = 57,
+            RegMILForcefullSubmissionActivity = 58,
+            RegWLSubmissionActivity = 59
         }
 
         /// <summary>
