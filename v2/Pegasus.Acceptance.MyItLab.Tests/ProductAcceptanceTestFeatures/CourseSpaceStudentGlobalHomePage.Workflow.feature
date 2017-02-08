@@ -20,20 +20,12 @@ And I should see the "General feedbackCourse Materials feedback" in the 'Feedbac
 When I close the "Feedback" window
 
 Scenario: Validate expand and collapse functionaly of "My Courses and Testbanks" as CsSmsStudent
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
 When I click on "Expand" icon in "My Courses and Testbanks" frame as "CsSmsStudent" user
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate enrolled course in "My Courses and Testbanks" channel for SMS Student
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
 Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsStudent" in "My Courses and Testbanks" channel
 When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsStudent" user
 
@@ -66,7 +58,6 @@ Then I should be displayed with "Hi," message for "CsSmsStudent" user
 Scenario: CSSMSStudent validate  My Profile link functionality in global home
 When I click on "My Profile" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should be displayed with "My Pearson account" lightbox
-
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
