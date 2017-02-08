@@ -379,11 +379,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
-
-
-
-        //#--------------------------------------
-        //#-------------------------------------
         /// <summary>
         /// This methord is to access the c-menu option of course
         /// </summary>
