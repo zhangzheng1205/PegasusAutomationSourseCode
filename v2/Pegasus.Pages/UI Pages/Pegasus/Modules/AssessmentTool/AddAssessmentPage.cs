@@ -12,6 +12,8 @@ using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
 using System.Configuration;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGrader;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.ContentTool;
 
 
 namespace Pegasus.Pages.UI_Pages
@@ -351,6 +353,195 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage",
                 "EnterActivityDetails",
                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Enter Activity Details and Click on Add Question.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity type.</param>
+        /// <param name="behavioralMode">This is behavioral Mode.</param>
+        public void EnterAssetDetails(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Enter Activity Details and Click on Add Question
+            logger.LogMethodEntry("AddAssessmentPage",
+                "EnterAssetDetails",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Generate Activity Name GUID
+                Guid activity = Guid.NewGuid();
+                String date = DateTime.Now.ToString("yyyy/MM/dd");
+                string randomValue = activity.ToString().Split('-')[0];
+                string activityName = string.Empty;
+
+                //Intialize Guid for Page Asset
+                Guid newPageAsset = Guid.NewGuid();
+                //Generate New Guid Page Name
+                Guid newHTMLDiscription = Guid.NewGuid();
+
+                switch (activityTypeEnum)
+                {
+                    //Create Activity Name for general activity
+                    case Activity.ActivityTypeEnum.RegLinkAsset:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Link Asset";
+                        //Select Window
+                        this.SelectCreateLinkAssetWindow();
+                        //Enter Activity Title
+                        this.EnterLinkAssetTitle(activityName);
+                        //Enter Description
+                        this.EnterLinkAssetDescription();
+                        //Enter website URL
+                        this.EnterURLInLinkAsset();
+                        // Click add button
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator));
+                        base.ClickButtonById(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator);
+                        //Click On Add And Close Button
+                        new ContentBrowserUXPage().ClickOnAddAndCloseButton();
+                        break;
+
+                    case Activity.ActivityTypeEnum.RegEtextLinkAsset:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Etext Link Asset";
+                        //Select Window
+                        this.SelectCreateEtextLinkAssetWindow();
+                        //Enter Activity Title
+                        this.EnterEtextLinkAssetTitle(activityName);
+                        //Enter Description
+                        this.SelectBookInEtextLinkAsset();
+                        // Click add button
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator));
+                        base.ClickButtonById(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator);
+                        //Click On Add And Close Button
+                        new ContentBrowserUXPage().ClickOnAddAndCloseButton();
+                        break;
+
+                    case Activity.ActivityTypeEnum.RegFileAsset:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable File Asset";
+                        //Select Window
+                        this.SelectCreateFileAssetWindow();
+                       string getGraderItWordFilePathFor70Percent = (AutomationConfigurationManager.PegasusPagesTestDataPath + 
+                            UploadCompletedFilesResource.UploadCompleteFile_Page_GraderIT_Word_File_70Percent_Path).
+                        Replace("file:\\", "");
+                        //Upload the xls File
+                       base.UploadFile(getGraderItWordFilePathFor70Percent, By.Id("txtFile"));
+                        //Enter Activity Title
+                        this.EnterFileAssetTitle(activityName);
+                        //Enter Description
+                        this.SelectBookInEtextLinkAsset();
+                        //Enter website URL
+                        this.EnterURLInLinkAsset();
+                        // Click add button
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator));
+                        base.ClickButtonById(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator);
+                        break;
+
+                    case Activity.ActivityTypeEnum.RegMultipleFileAsset:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Multiple File Asset";
+                        //Select Window
+                        this.SelectCreateFileAssetWindow();
+                        getGraderItWordFilePathFor70Percent = (AutomationConfigurationManager.PegasusPagesTestDataPath + 
+                            UploadCompletedFilesResource.UploadCompleteFile_Page_GraderIT_Word_File_70Percent_Path).
+                        Replace("file:\\", "");
+                        //Upload the xls File
+                        base.UploadFile(getGraderItWordFilePathFor70Percent, By.Id("MultiPowUpload"));
+                        //Enter Activity Title
+                        this.EnterFileAssetTitle(activityName);
+                        //Enter Description
+                        this.SelectBookInEtextLinkAsset();
+                        //Enter website URL
+                        this.EnterURLInLinkAsset();
+                        // Click add button
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator));
+                        base.ClickButtonById(AddAssessmentPageResources.
+                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator);
+                        break;
+
+                    //Create Activity Name for general activity
+                    case Activity.ActivityTypeEnum.RegPageAsset:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Page Asset";
+                        //Select Window
+                        this.SelectCreatePageAssetWindow();
+                        //Enter Activity Title
+                        this.EnterPageAssetTitle(activityName);
+                        //Enter Description
+                        this.EnterPageAssetDescription();
+                        //Fill The HTML Description
+                        this.FillTheHTMLDescription(newHTMLDiscription.ToString());
+
+                        // Click add button
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_PageAsset_AddButton_Id_Locator));
+                        IWebElement getElement = base.GetWebElementPropertiesById("_ctl0__ctl0_phBody_PageContent_btnSave_Return");
+                        base.PerformMouseClickAction(getElement);
+                        //Click On Add And Close Button
+                        new ContentBrowserUXPage().ClickOnAddAndCloseButton();
+                        break;
+ 
+                    case Activity.ActivityTypeEnum.RegDiscussionTopic:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Discussion Topic";
+                        //Select Window
+                        this.SelectCreateLinkAssetWindow();
+                        // Enter title in discussion topic
+                        this.EnterDiscussionTopicTitle(activityName);
+                        //Enter discussion topic description
+                        this.EnterDiscussionTopicDescription();
+                        //Fill The HTML Description
+                        this.FillTheHTMLDescription(newHTMLDiscription.ToString());
+                        break;
+                }
+
+                //Store Gradable NonGradable Asset
+                this.StoreGradableAsset(activityName, activityTypeEnum);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage",
+                "EnterAssetDetails",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fill The HTML Description.
+        /// </summary>
+        /// <param name="newHTMLDiscription">This is HTML Description.</param>
+        private void FillTheHTMLDescription(string newHTMLDiscription)
+        {
+            //Fill The HTML Description
+            logger.LogMethodEntry("PegasusHTMLUXPage", "FillTheHTMLDescription",
+                      base.IsTakeScreenShotDuringEntryExit);
+            //Wait For Element
+            base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator));
+
+            // Click on ShowHTML button
+            base.PerformFocusOnElementActionById(PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator);
+            IWebElement getHTMLSourceButton = base.GetWebElementPropertiesById
+                (PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator);
+            //Click the sourse link
+            base.PerformClickAndHoldAction(getHTMLSourceButton);
+            base.PerformDoubleClickAction(getHTMLSourceButton);
+            //Wait For HTML Editor
+            base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator));
+            // Fill Description text in HTMLEditor textbox
+            base.FillTextBoxById(PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator,
+                newHTMLDiscription.ToString());
+            base.SwitchToDefaultPageContent();
+            logger.LogMethodExit("PegasusHTMLUXPage", "FillTheHTMLDescription",
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -716,7 +907,94 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "SelectCreateActivityWindow",
                    base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
+
+        /// <summary>
+        /// Select Create Activity Window.
+        /// </summary>
+        private void SelectCreateLinkAssetWindow()
+        {
+            //Select Create Activity Window
+            logger.LogMethodEntry("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+            // Select window    
+            base.SelectWindow(base.GetPageTitle);
+                base.SwitchToDefaultWindow();
+            // Switch to iFrame 
+                base.SwitchToIFrameById(AddAssessmentPageResources.
+                    AddAssessment_Page_AssetCreation_IFrame_Id_Locator);
+            logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Create Activity Window.
+        /// </summary>
+        private void SelectCreatePageAssetWindow()
+        {
+            //Select Create Activity Window
+            logger.LogMethodEntry("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+            // Select window    
+            base.SelectWindow(base.GetPageTitle);
+            logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Create Activity Window.
+        /// </summary>
+        private void SelectCreateEtextLinkAssetWindow()
+        {
+            //Select Create Activity Window
+            logger.LogMethodEntry("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+            // Select window    
+            base.SelectWindow(base.GetPageTitle);
+                base.SwitchToDefaultWindow();
+            // Switch to iFrame 
+                base.SwitchToIFrameById(AddAssessmentPageResources.
+                    AddAssessment_Page_EtextLinkAssetCreation_IFrame_Id_Locator);
+            logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Create Activity Window.
+        /// </summary>
+        private void SelectCreateFileAssetWindow()
+        {
+            //Select Create Activity Window
+            logger.LogMethodEntry("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+            // Select window    
+            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToDefaultWindow();
+            // Switch to iFrame 
+            base.SwitchToIFrameById(AddAssessmentPageResources.
+                AddAssessment_Page_AssetCreation_IFrame_Id_Locator);
+            logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Create Activity Window.
+        /// </summary>
+        private void SelectCreateAddMultipleFileAssetWindow()
+        {
+            //Select Create Activity Window
+            logger.LogMethodEntry("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+            // Select window    
+            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToDefaultWindow();
+            // Switch to iFrame 
+            base.SwitchToIFrameById(AddAssessmentPageResources.
+                AddAssessment_Page_AssetCreation_IFrame_Id_Locator);
+            logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Fill Asset Name
@@ -899,6 +1177,312 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterLinkAssetTitle(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                             AddAsessment_Page_AssetName_Id_Locator));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                             AddAsessment_Page_AssetName_Id_Locator, activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterDicsussionTopicDescription(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterDicsussionTopicDescription",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                             AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                             AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName, 
+                             activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterDicsussionTopicDescription",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterDiscussionTopicTitle(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                    AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                    AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator, 
+                    activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterEtextLinkAssetTitle(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                             AddAssessment_Page_EtextLinkAsset_Title_TextBox_Id_Locator));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                             AddAssessment_Page_EtextLinkAsset_Title_TextBox_Id_Locator, activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterFileAssetTitle(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                             AddAssessment_Page_FileAsset_Title_TextBox_Id_Locator));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                             AddAssessment_Page_FileAsset_Title_TextBox_Id_Locator, activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterPageAssetTitle(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                             AddAssessment_Page_PageAsset_Title_TextBox_Id_Locator));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                             AddAssessment_Page_PageAsset_Title_TextBox_Id_Locator, activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterLinkAssetDescription()
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Generate Activity description
+            String date = DateTime.Now.ToString("yyyy/MM/dd");
+            string activityDescription = string.Empty;
+            activityDescription = "Auto-" + "Activity description entered on " + "-" + date;
+            try
+            {
+                base.ClearTextByClassName(AddAssessmentPageResources.
+                    AddAssessment_Page_LinkAsset_Description_TextBox_ClassName);
+                //Fill the Activity Name in textbox
+                base.FillTextBoxByClassName(AddAssessmentPageResources.
+                    AddAssessment_Page_LinkAsset_Description_TextBox_ClassName, activityDescription);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterPageAssetDescription()
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Generate Activity description
+            String date = DateTime.Now.ToString("yyyy/MM/dd");
+            string activityDescription = string.Empty;
+            activityDescription = "Auto-" + "Activity description entered on " + "-" + date;
+            try
+            {
+
+                base.ClearTextById(AddAssessmentPageResources.
+                    AddAssessment_Page_PageAsset_Description_TextBox_Id_Locator);
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                    AddAssessment_Page_PageAsset_Description_TextBox_Id_Locator, activityDescription);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterDiscussionTopicDescription()
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Generate Activity description
+            String date = DateTime.Now.ToString("yyyy/MM/dd");
+            string activityDescription = string.Empty;
+            activityDescription = "Auto-" + "Discussion Topic description entered on " + "-" + date;
+            try
+            {
+
+                base.ClearTextById(AddAssessmentPageResources.
+                    AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName);
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                    AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName, 
+                    activityDescription);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Activity Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void SelectBookInEtextLinkAsset()
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                    AddAssessment_Page_EtextLinkAsset_SelectBook_Id_Locator));
+                base.SelectDropDownValueThroughIndexById(AddAssessmentPageResources.
+                    AddAssessment_Page_EtextLinkAsset_SelectBook_Id_Locator,1);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Select From Course Materials Library link.
+        /// </summary>
+        private void EnterURLInLinkAsset()
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Wait for the element             
+            base.WaitForElement(By.Id(AddAssessmentPageResources.
+               AddAssessment_Page_LinkAsset_URL_TextBox_Id_Locator));
+            base.ClearTextById(AddAssessmentPageResources.
+               AddAssessment_Page_LinkAsset_URL_TextBox_Id_Locator);
+
+            switch (Environment.GetEnvironmentVariable(AddAssessmentPageResources.PEG_AUTOMATION_TEST_ENVIRONMENT_KEY.ToUpper())
+                ?? ConfigurationManager.AppSettings[AddAssessmentPageResources.TestEnvironment_Key].ToUpper())
+            {
+                case "PPE":
+                    base.FillTextBoxById(AddAssessmentPageResources.
+                        AddAssessment_Page_LinkAsset_URL_TextBox_Id_Locator, AddAssessmentPageResources.
+                        AddAsessment_Page_LinkAsset_URL_VCD);
+                    break;
+                case "CGIE":
+                case "VCD":
+                    base.FillTextBoxById(AddAssessmentPageResources.
+                        AddAssessment_Page_LinkAsset_URL_TextBox_Id_Locator, AddAssessmentPageResources.
+                        AddAsessment_Page_LinkAsset_URL_VCD);
+                    break;
+                case "PROD":
+                    base.FillTextBoxById(AddAssessmentPageResources.
+                        AddAssessment_Page_LinkAsset_URL_TextBox_Id_Locator, AddAssessmentPageResources.
+                        AddAsessment_Page_LinkAsset_URL_VCD);
+                    break;
+            }
+            logger.LogMethodExit("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2037,6 +2621,57 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage", "PreviewHelpLinkOnEdit",
                     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get lightbox title
+        /// </summary>
+        /// <returns>Return lightbox name.</returns>
+        public string GetLightBoxTitle(string lightBoxName)
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "GetLightBoxTitle",
+                    base.IsTakeScreenShotDuringEntryExit);
+            string getLightBoxName = string.Empty;
+            string lightBoxTitle = string.Empty;
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(base.GetPageTitle);
+                // Switch to default window lightbox
+                base.SwitchToDefaultWindow();
+                switch(lightBoxName)
+                {
+                    case "Add Link":
+                    case "Add File":
+                    case "Add Multiple Files":
+                    case "Add Discussion Topic":
+                        getLightBoxName = base.GetInnerTextAttributeValueByClassName("boostrap-model-title");
+                        break;
+
+                    case "Add eText Link":
+                        getLightBoxName = base.GetInnerTextAttributeValueById("openModalPopupHeader");
+                        break;
+
+                    case"Add Page":
+                       string getPageTitle = base.GetPageTitle;
+                       if (getPageTitle == "Create page")
+                       {
+                           getLightBoxName= "Add Page";
+                       }
+                        break;
+
+                }
+
+                // Get the lightbox title based on the class name
+
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "GetLightBoxTitle",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getLightBoxName;
         }
     }
 }

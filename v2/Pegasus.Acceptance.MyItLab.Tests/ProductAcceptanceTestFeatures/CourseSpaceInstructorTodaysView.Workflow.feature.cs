@@ -972,6 +972,8 @@ testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.Spec
 testRunner.Then("I should be displayed with \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 405
 testRunner.When("I click on \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 406
+testRunner.Then("I should see \"RegIdleStudentCount\" idle student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

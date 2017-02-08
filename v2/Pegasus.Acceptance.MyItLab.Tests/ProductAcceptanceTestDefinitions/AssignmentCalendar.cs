@@ -116,6 +116,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search the Activity
             Logger.LogMethodEntry("AssignmentCalendar", "SearchActivity",
+
+
                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
@@ -124,6 +126,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar", "SearchActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Search the Activity.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I search the ""(.*)"" activity")]
+        public void SearchTheActivityInCalender(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Search the Activity
+            Logger.LogMethodEntry("AssignmentCalendar", "SearchActivity",
+
+
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            //Search the Activity            
+            new CalendarHedDefaultUxPage().SearchTheActivity(activity.Name);
+            Logger.LogMethodExit("AssignmentCalendar", "SearchActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Display Of Searched Activity.
@@ -153,6 +176,30 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Display Of Searched Activity.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [Then(@"I should see the searched ""(.*)"" activity in content frame")]
+        public void ValidateTheSearchedActivityInContentFrame(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Display Of Searched Activity
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DisplayOfSearchedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity =
+                Activity.Get(activityTypeEnum);
+            //Assert the Searched Activity            
+            Logger.LogAssertion("VerifySearchedActivity",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activity.Name,
+                    new CalendarHedDefaultUxPage().
+                GetSearchedActivityName()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DisplayOfSearchedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// 'Drag And Drop' The Activity On Current Day.
@@ -182,6 +229,37 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     break;
             }
     
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DragAndDropTheActivityOnCurrentDay",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 'Drag And Drop' The Activity On Current Day.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I 'Drag and Drop' the ""(.*)"" activity on ""(.*)""")]
+        public void WhenITheActivityOn(Activity.ActivityTypeEnum activityTypeEnum, string dateType)
+        {
+            //'Drag And Drop' The Activity On Current Day
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DragAndDropTheActivityOnCurrentDay",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity =
+                Activity.Get(activityTypeEnum);
+            //Drag and Drop the Activity
+            switch (dateType)
+            {
+                case "Current date":
+                    new CalendarHedDefaultUxPage().DragAndDropActivityCurrentDate(activity.Name);
+                    break;
+
+                case "Future date":
+                    new CalendarHedDefaultUxPage().DragAndDropActivityFutureDate(activity.Name);
+                    break;
+            }
+
             Logger.LogMethodExit("AssignmentCalendar",
                 "DragAndDropTheActivityOnCurrentDay",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -233,6 +311,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "DisplayOfAssignedActivityInDayView",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Validate the assigned activity display in day view.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="dateType">This is date type enum.</param>
+        [Then(@"I should see the ""(.*)"" activity assigned by 'Drag and Drop' in day view of ""(.*)""")]
+        public void ValidateActivityAssignedByInDayViewOf(Activity.ActivityTypeEnum activityTypeEnum, 
+            string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+
+            //Assert the Assigned Activity            
+            Logger.LogAssertion("VerifyActivityAssigned",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                    GetAssignedActivityNameBasedOnDay(activity.Name, dateType), activity.Name));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Click day view in assignment calender.

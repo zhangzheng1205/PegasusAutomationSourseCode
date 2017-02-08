@@ -403,3 +403,5 @@ Then I should see "Alerts" in "Notifications" channel
 When I expand "Alerts" channel
 Then I should be displayed with "RegIdleStudentCount" count
 When I click on "RegIdleStudentCount" count
+Then I should see "RegIdleStudentCount" idle student
+

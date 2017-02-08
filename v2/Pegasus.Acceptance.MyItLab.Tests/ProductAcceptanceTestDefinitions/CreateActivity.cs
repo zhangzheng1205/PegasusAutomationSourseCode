@@ -563,9 +563,247 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-      
+        /// <summary>
+        /// Click on Activity Type under 
+        /// </summary>
+        /// <param name="activityTypeEnum"></param>
+        [When(@"I click on the ""(.*)"" SAM activity type")]
+        public void ClickOnTheSAMActivityType(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Click On Activity Type
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            String generatedActivityName = activity.Name.ToString();
+            //Click On Activity Type
+            new ContentLibraryUXPage().ClickOnActivityType(generatedActivityName);
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
-        
+
+        [When(@"I click on the ""(.*)"" asset type")]
+        public void WhenIClickOnTheAssetType(string assetType)
+        {
+            //Click On Activity Type
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click On Activity Type
+            new ContentLibraryUXPage().ClickOnActivityType(assetType);
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create Child Same Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the activity type enum</param>
+        ///  <param name="activityTypeEnum">This is behavioral Mode</param>
+        [When(@"I Create ""(.*)"" activity with Behavioral Mode ""(.*)""")]
+        public void SelectBehavioralMode(Activity.ActivityTypeEnum activityTypeEnum, string behavioralMode)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateChildSAMActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+            //Enter Activity Details and Click on Add Question Link
+            addAssessmentPage.EnterActivityDetails(activityTypeEnum, behavioralMode);
+            Logger.LogMethodExit("CreateActivity", "CreateChildSAMActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create asset type
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        [When(@"I create ""(.*)"" activity")]
+        public void CreateActivityType(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateActivityType",
+             base.IsTakeScreenShotDuringEntryExit);
+            AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+            //Enter Activity Details and Click on Add Question Link
+            addAssessmentPage.EnterAssetDetails(activityTypeEnum);
+            Logger.LogMethodExit("CreateActivity", "CreateActivityType",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on buttons at Activity Creation Window.
+        /// </summary>
+        /// <param name="actionType">This is the action/button type.</param>
+        /// <param name="tabName">This is tab name.</param>
+        [Then(@"I perform ""(.*)"" for ""(.*)""")]
+        [When(@"I perform ""(.*)"" for ""(.*)""")]
+        public void PerformButtonActionsAtEditRandomActivityWindow(string actionType, string tabName)
+        {
+            // Click on buttons at Activity Creation Window
+            Logger.LogMethodEntry("CreateActivity",
+                "PerformButtonActionsAtEditRandomActivityWindow",
+            base.IsTakeScreenShotDuringEntryExit);
+            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+            // Click on buttons at Activity Creation Window
+            randomTopicListPage.ButtonActionsForTabsAtEditRandomActivity(actionType, tabName);
+            Logger.LogMethodExit("CreateActivity",
+                "PerformButtonActionsAtEditRandomActivityWindow",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter the message in Meassages Tab at Activity Creation Window.
+        /// </summary>
+        /// <param name="messageType">This is Message Type.</param>
+        [Then(@"I add ""(.*)"" message")]
+        public void AddMessage(string messageType)
+        {
+            // Enter the message in Meassages Tab at Activity Creation Window
+            Logger.LogMethodEntry("CreateActivity", "AddMessage",
+            base.IsTakeScreenShotDuringEntryExit);
+            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+            // Enter the message in Meassages Tab at Activity Creation Window
+            randomAssessmentPage.EnterMessagesValues(messageType);
+            Logger.LogMethodExit("CreateActivity", "AddMessage",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Section Direction Line Deletion.
+        /// </summary>
+        /// <param name="sectionNumber">This is the section number.</param>
+        [Then(@"I should see Directions deleted at Section ""(.*)""")]
+        public void VerifySectionDirectionDeletion(string sectionNumber)
+        {
+            // Verify Section Direction Line Deletion
+            Logger.LogMethodEntry("CreateActivity", "VerifySectionDirectionDeletion",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Verify Section Direction Line Deletion
+            Assert.IsFalse(new RandomAssessmentPage().VerifyDirectionDeletion(sectionNumber));
+            Logger.LogMethodExit("CreateActivity", "VerifySectionDirectionDeletion",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Configure Grades tab of Random activity
+        /// </summary>
+        [When(@"I configure the 'Grades' preference")]
+        public void ConfigureGradesPreferenceSAMActivity()
+        {
+            Logger.LogMethodEntry("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+            AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+            // Configure Grades
+            addAssessmentPage.ConfigureGradesForSamActivity();
+            Logger.LogMethodExit("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Add Help links for SAM type Random activity 
+        /// </summary>
+        [When(@"I add 'HelpLinks'")]
+        public void AddHelpLinksSAMActivity()
+        {
+            Logger.LogMethodEntry("CreateActivity", "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+            AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
+            //Enter HelpLinks
+            addAssessmentPage.AddHelpLinks();
+            Logger.LogMethodExit("CreateActivity", "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Add Questions To A Section.
+        /// </summary>
+        /// <param name="numberOfQuestions">This is Number of Questions to be Added.</param>
+        /// <param name="questionType">This is Type of question to be Added.</param>
+        /// <param name="sectionNumber">This is the Section Number.</param>
+        [Then(@"I add '(.*)' questions of type ""(.*)"" at Section ""(.*)""")]
+        public void AddQuestionsToASection(int numberOfQuestions, string questionType, string sectionNumber)
+        {
+            // Add Questions To A Section
+            Logger.LogMethodEntry("CreateActivity", "AddQuestionsToASection",
+            base.IsTakeScreenShotDuringEntryExit);
+            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+            // Add Questions To A Section
+            randomTopicListPage.CreateSectionsWithMultipleQuestions(numberOfQuestions,
+            questionType, sectionNumber);
+            Logger.LogMethodExit("CreateActivity", "AddQuestionsToASection",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create Question Section at Activity Creation.
+        /// </summary>
+        /// <param name="optionValue">Add Section Value.</param>
+        /// <param name="sectionValue">This is Section Name</param>
+
+        [When(@"I perform ""(.*)"" of name ""(.*)""")]
+        public void CreateQuestionSection(string optionValue, string sectionName)
+        {
+            // Create Question Section at Activity Creation
+            Logger.LogMethodEntry("CreateActivity", "CreateQuestionSection",
+            base.IsTakeScreenShotDuringEntryExit);
+            RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
+            new AddAssessmentPage().SelectCreateRandomActivity();
+            //Select Add Sections Option
+            randomTopicListPage.SelectAddSectionsOptions(optionValue);
+            randomTopicListPage.CreateSection(sectionName);
+            Logger.LogMethodExit("CreateActivity", "CreateQuestionSection",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Add/Edit/Delete Direction Lines to an activity Section.
+        /// </summary>
+        /// <param name="actionType">This is action to be performed.</param>
+        /// <param name="sectionNumber">This is the section number.</param>
+        [When(@"I ""(.*)"" Directions at Section ""(.*)""")]
+        public void AddDirectionsAtSection(string actionType, string sectionNumber)
+        {
+            // Add/Edit/Delete Direction Lines to an activity Section
+            Logger.LogMethodEntry("CreateActivity", "AddDirectionsAtSection",
+            base.IsTakeScreenShotDuringEntryExit);
+            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+            // Add/Edit/Delete Direction Lines to an activity Section
+            randomAssessmentPage.EnterDirectionLineToSection(actionType, sectionNumber);
+            Logger.LogMethodExit("CreateActivity", "AddDirectionsAtSection",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verification of Section Direction Lines at Activity Creation Window.
+        /// </summary>
+        /// <param name="actionType">This is the action type performed on direction lines.</param>
+        /// <param name="sectionNumber">This is the section number.</param>
+        [Then(@"I should see Directions ""(.*)"" to Section ""(.*)""")]
+        public void VerifyDirectionsAtSection(string actionType, string sectionNumber)
+        {
+            // Verification of Section Direction Lines at Activity Creation Window
+            Logger.LogMethodEntry("CreateActivity", "VerifyDirectionsAtSection",
+            base.IsTakeScreenShotDuringEntryExit);
+            RandomAssessmentPage randomAssessmentPage = new RandomAssessmentPage();
+            // Verification of Section Direction Lines at Activity Creation Window
+            Assert.IsTrue(randomAssessmentPage.VerifyTheDirectionLines(actionType, sectionNumber));
+            Logger.LogMethodExit("CreateActivity", "VerifyDirectionsAtSection",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Validate the lighbox name
+        /// </summary>
+        /// <param name="lightBoxName">This is lightbox name.</param>
+        [Then(@"I should be on ""(.*)"" lightbox")]
+        public void ValidateLightboxTitle(string lightBoxName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateLightboxTitle",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Assert we have correct page opened
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(lightBoxName,
+                    new AddAssessmentPage().
+                    GetLightBoxTitle(lightBoxName)));
+            Logger.LogMethodExit("CreateActivity", "ValidateLightboxTitle",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
 
     }
 }

@@ -95,6 +95,12 @@ namespace Pegasus.Automation.DataTransferObjects
             RegSimpleAssignFutureDate = 64,
             RegSimpleAssign =65,
             RegSimpleAssignPastDue = 56,
+            RegLinkAsset = 57,
+            RegEtextLinkAsset = 58,
+            RegFileAsset=59,
+            RegMultipleFileAsset=60,
+            RegPageAsset =61,
+            RegDiscussionTopic=62,
         }
 
         /// <summary>

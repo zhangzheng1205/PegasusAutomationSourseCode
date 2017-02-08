@@ -377,7 +377,8 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Get the Activity Name
                     getAssignedActivityName = base.GetElementTextByXPath(string.
-                        Format(CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator,
+                        Format(CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator,
                         rowCount));
                     if (getAssignedActivityName.Contains(activityName))
                     {

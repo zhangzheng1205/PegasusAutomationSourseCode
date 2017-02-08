@@ -1154,11 +1154,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
            switch(userType)
            {
                case User.UserTypeEnum.CsSmsStudent:
+               case User.UserTypeEnum.CsSmsInstructor:
                    // Click subtab as a HED student
                    new CommonPage().ClickSubTab(subTabName, mainTabName);
-                   break;
-
-               case User.UserTypeEnum.CsSmsInstructor:
                    break;
            }
             

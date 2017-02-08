@@ -234,8 +234,15 @@ Then I should see Assign/Unassign link in active state on the content frame head
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
 
-
-
+#Purpose : Drag and drop a single content to a day and display of Assigned content in Day View
+#MyItLabProgramCourse
+Scenario: Drag and drop a Link asset content to a day and display of Assigned content in Day View as SMS Teacher
+When I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "RegLinkAsset" activity
+Then I should see the searched "RegLinkAsset" activity in content frame
+When I 'Drag and Drop' the "RegLinkAsset" activity on "Current date"
+ Then I should see the "RegLinkAsset" activity assigned by 'Drag and Drop' in day view of "Current date"
 
 
 

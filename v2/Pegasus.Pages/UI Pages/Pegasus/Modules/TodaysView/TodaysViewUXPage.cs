@@ -5830,7 +5830,6 @@ namespace Pegasus.Pages.UI_Pages
             string getText = string.Empty;
             try
             {
-                bool tes = false;
                 // Wait untill window loads
                 base.WaitUntilWindowLoads(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_WindowsTitle);
@@ -5923,6 +5922,8 @@ namespace Pegasus.Pages.UI_Pages
                         IWebElement getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_AlertsCount_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_WindowsTitle);
                         break;
 
                     case Alert.AlertTypeEnum.RegIdleStudentCount:
@@ -5931,6 +5932,8 @@ namespace Pegasus.Pages.UI_Pages
                         getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_IdleStudentCount_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_WindowsTitle);
                         break;
 
                     case Alert.AlertTypeEnum.RegNewGradesAlertCount:
@@ -5939,6 +5942,8 @@ namespace Pegasus.Pages.UI_Pages
                         getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_NewGradesAlertCount_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_WindowsTitle);
                         break;
 
                     case Alert.AlertTypeEnum.RegNotPassedAlertCount:
@@ -5947,6 +5952,8 @@ namespace Pegasus.Pages.UI_Pages
                         getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_NotPassedAlertCount_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_WindowsTitle);
                         break;
 
                     case Alert.AlertTypeEnum.RegPastDueNotSubmittedCount:
@@ -5955,6 +5962,8 @@ namespace Pegasus.Pages.UI_Pages
                         getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_PastDueNotSubmittedCountt_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                            TodaysViewUXPageResource_WindowsTitle);
                         break;
 
                     case Alert.AlertTypeEnum.RegPastDueSubmittedCount:
@@ -5963,6 +5972,8 @@ namespace Pegasus.Pages.UI_Pages
                         getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_PastDueSubmittedCount_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_WindowsTitle);
                         break;
 
                     case Alert.AlertTypeEnum.RegUnreadCommentsCount:
@@ -5971,6 +5982,8 @@ namespace Pegasus.Pages.UI_Pages
                         getAlertIcon = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Alert_UnreadCommentsCount_Xpath_Locator);
                         base.PerformMouseClickAction(getAlertIcon);
+                        base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_WindowsTitle);
                         break;
                 }
             }
@@ -5980,6 +5993,34 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "GetWelcomeMessage",
                                     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the idle student count in the Idlestudent frame
+        /// </summary>
+        /// <returns>Return idle student count.</returns>
+        public string GetIdleStudentCount()
+        {
+            Logger.LogMethodEntry("TodaysViewUxPage", "GetIdleStudentCount",
+                base.IsTakeScreenShotDuringEntryExit);
+            string idleCount = string.Empty;
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
+
+                base.WaitForElement(By.Id("TVIdlStuDatagrid"));
+                int count = base.GetElementCountByXPath("//table[@id='TVIdlStuDatagrid']/tbody/tr");
+                idleCount = count.ToString();
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("TodaysViewUxPage", "GetIdleStudentCount", 
+                base.IsTakeScreenShotDuringEntryExit);
+            return idleCount;
         }
     }
 }

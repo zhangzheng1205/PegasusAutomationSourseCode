@@ -944,5 +944,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
          }
 
+        /// <summary>
+        /// Validate the count of Idle students displayed in the Idle Students frame
+        /// </summary>
+        /// <param name="alertType">This is alert type enum.</param>
+         [Then(@"I should see ""(.*)"" idle student")]
+         public void GetIdleStudentCount(Alert.AlertTypeEnum alertType)
+         {
+             Logger.LogMethodEntry("TodaysView", "GetIdleStudentCount",
+                base.IsTakeScreenShotDuringEntryExit);
+             Alert alert = Alert.Get(alertType);
+             string getAlert = alert.AlertCount.ToString();
+             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
+              Current.ScenarioInfo.Title, () => Assert.AreEqual(getAlert,
+              new TodaysViewUxPage().GetIdleStudentCount()));
+             Logger.LogMethodExit("TodaysView", "GetIdleStudentCount",
+                base.IsTakeScreenShotDuringEntryExit);
+         }
+
     }
 }
