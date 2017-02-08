@@ -119,15 +119,25 @@ testRunner.When("I close the \"Feedback\" window", ((string)(null)), ((TechTalk.
 #line 22
 this.ScenarioSetup(scenarioInfo);
 #line 23
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 27
 testRunner.When("I click on \"Expand\" icon in \"My Courses and Testbanks\" frame as \"CsSmsStudent\" us" +
+                    "er", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate enrolled course in \"My Courses and Testbanks\" channel for SMS Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentGlobalHomePage")]
+        public virtual void ValidateEnrolledCourseInMyCoursesAndTestbanksChannelForSMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate enrolled course in \"My Courses and Testbanks\" channel for SMS Student", ((string[])(null)));
+#line 28
+this.ScenarioSetup(scenarioInfo);
+#line 29
+testRunner.Then("I should be displayed with \"RegMyITLabNewCourseForEnrollment\" course as \"CsSmsStu" +
+                    "dent\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
+testRunner.When("I click on Open button of \"RegMyITLabNewCourseForEnrollment\" as \"CsSmsStudent\" us" +
                     "er", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -139,13 +149,15 @@ testRunner.When("I click on \"Expand\" icon in \"My Courses and Testbanks\" fram
         public virtual void CSSMSStudentValidateFunctionalityOfHelpLinkInHeaderOnGlobalHome()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CSSMSStudent validate functionality of help link in header on global home", ((string[])(null)));
-#line 32
+#line 35
 this.ScenarioSetup(scenarioInfo);
-#line 33
-testRunner.When("I click on \"Help\" option in \"Global Home\" tab of \"MyItLabInstructorCourse\" as \"Cs" +
-                    "SmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 36
+testRunner.When("I click on \"Help\" option in \"Global Home\" tab of \"MyItLabAuthoredCourse\" as \"CsSm" +
+                    "sStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
 testRunner.Then("I should be on \"Home Page Help\" page as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 38
+testRunner.And("I close the \"Home Page Help\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -156,18 +168,16 @@ testRunner.Then("I should be on \"Home Page Help\" page as \"CsSmsStudent\" user
         public virtual void CSSMSStudentValidateSupportLinkFunctionalityOnGlobalHome()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CSSMSStudent validate Support link functionality on global home", ((string[])(null)));
-#line 39
+#line 43
 this.ScenarioSetup(scenarioInfo);
-#line 40
-testRunner.When("I click on \"Support\" option in \"Global Home\" tab of \"MyItLabInstructorCourse\" as " +
-                    "\"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 44
+testRunner.When("I click on \"Support\" option in \"Global Home\" tab of \"MyItLabAuthoredCourse\" as \"C" +
+                    "sSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
 testRunner.Then("I should be on \"Pearson Education Customer Technical Support\" page as \"CsSmsStude" +
                     "nt\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
+#line 46
 testRunner.When("I close the \"Support\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
-testRunner.Then("I should be on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -178,9 +188,9 @@ testRunner.Then("I should be on the \"Global Home\" page", ((string)(null)), ((T
         public virtual void ValidateUserNameAndWelcomeMessageInHeaderOfGlobalHomeForCSSMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate user name and welcome message in header of global home for CSSMSStudent", ((string[])(null)));
-#line 48
+#line 52
 this.ScenarioSetup(scenarioInfo);
-#line 49
+#line 53
 testRunner.Then("I should be displayed with \"Hi,\" message for \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -192,13 +202,13 @@ testRunner.Then("I should be displayed with \"Hi,\" message for \"CsSmsStudent\"
         public virtual void CSSMSStudentValidateMyProfileLinkFunctionalityInGlobalHome()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CSSMSStudent validate  My Profile link functionality in global home", ((string[])(null)));
-#line 54
+#line 58
 this.ScenarioSetup(scenarioInfo);
-#line 55
-testRunner.When("I click on \"My Profile\" option in \"Global Home\" tab of \"MyItLabInstructorCourse\" " +
-                    "as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
-testRunner.Then("I should be displayed with \"My Profile\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+testRunner.When("I click on \"My Profile\" option in \"Global Home\" tab of \"MyItLabAuthoredCourse\" as" +
+                    " \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+testRunner.Then("I should be displayed with \"My Pearson account\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -209,14 +219,14 @@ testRunner.Then("I should be displayed with \"My Profile\" lightbox", ((string)(
         public virtual void CSSMSStudentValidatePrivacyLinkFunctionalityInCourseGlobalHome()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CSSMSStudent validate Privacy link functionality in course global home", ((string[])(null)));
-#line 61
+#line 65
 this.ScenarioSetup(scenarioInfo);
-#line 62
-testRunner.When("I click on \"Privacy\" option in \"Global Home\" tab of \"MyItLabInstructorCourse\" as " +
-                    "\"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 66
+testRunner.When("I click on \"Privacy\" option in \"Global Home\" tab of \"MyItLabAuthoredCourse\" as \"C" +
+                    "sSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
 testRunner.Then("I should be on the \"Privacy\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 64
+#line 68
 testRunner.And("I close the \"Privacy\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -228,14 +238,79 @@ testRunner.And("I close the \"Privacy\" window", ((string)(null)), ((TechTalk.Sp
         public virtual void LogoutOfPegasusAsCsSmsStudentFromGlobalHome()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logout of Pegasus as CsSmsStudent from global home", ((string[])(null)));
-#line 69
+#line 73
 this.ScenarioSetup(scenarioInfo);
-#line 70
-testRunner.When("I click on \"Sign out\" option in \"Global Home\" tab of \"MyItLabInstructorCourse\" as" +
-                    " \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 74
+testRunner.When("I click on \"Sign out\" option in \"Global Home\" tab of \"MyItLabAuthoredCourse\" as \"" +
+                    "CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate self enrollment for student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentGlobalHomePage")]
+        public virtual void ValidateSelfEnrollmentForStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate self enrollment for student", ((string[])(null)));
+#line 80
+this.ScenarioSetup(scenarioInfo);
+#line 81
+testRunner.When("I click on \"Enroll in a Course\" button in \"My Courses and Testbanks\" channel as \"" +
+                    "CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 82
+testRunner.Then("I should be displayed with \"Enroll in a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 83
+testRunner.And("I should be displayed step \"1\" with \"Course ID\" in \"Enroll in a Course\" popup as " +
+                    "\"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
+testRunner.When("I enter \"MyItLabAuthoredCourse\" ID and click submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 85
+testRunner.Then("I should be displayed step \"2\" with \"Confirm Course\" in \"Enroll in a Course\" popu" +
+                    "p as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 86
+testRunner.And("I should be displayed with message \"The Course ID you entered matched the followi" +
+                    "ng instructor and course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 87
+testRunner.And("I should be displayed with the course name \"MyItLabAuthoredCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 88
+testRunner.When("I click \"Confirm\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 89
+testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" course as \"CsSmsInstructor\" in" +
+                    " \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate mark for deletion status for CsSMSStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentGlobalHomePage")]
+        public virtual void ValidateMarkForDeletionStatusForCsSMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate mark for deletion status for CsSMSStudent", ((string[])(null)));
+#line 95
+this.ScenarioSetup(scenarioInfo);
+#line 96
+testRunner.Then("I should see the \"Marked for Deletion\" status updated for the \"MyItLabAuthoredCou" +
+                    "rse\" course as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate course inactive status for CsSMSStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentGlobalHomePage")]
+        public virtual void ValidateCourseInactiveStatusForCsSMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate course inactive status for CsSMSStudent", ((string[])(null)));
+#line 102
+this.ScenarioSetup(scenarioInfo);
+#line 103
+testRunner.Then("I should see the \"Course is Inactive\" status updated for the \"MyItLabAuthoredCour" +
+                    "se\" course as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

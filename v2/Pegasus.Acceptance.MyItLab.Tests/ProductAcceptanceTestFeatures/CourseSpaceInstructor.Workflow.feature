@@ -233,26 +233,175 @@ Then I should see the "Project Creation Tool" popup
 When I close Project creation tool popup
 Then I should be on the "Today's View" page
 
-#Test case ID : 
-#Products : MyItLab, HSS and World Language.
-#Purpose:Verify The My Courses and Testbanks displayed on the home page
-Scenario:Validate Channels in home page as CsSmsInstructor
-Then I should be displayed with "My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
-And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
-And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
-When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel
-Then I should be displayed with "Enroll in a Course" lightbox
-And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup
-When I enter "RegMyITLabNewCourseForEnrollment" and click submit
-Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup
-And I should be displayed with message "The Course ID you entered matched the following instructor and course."
-And I should be displayed with the course name "RegMyITLabNewCourseForEnrollment"
-When I click "Confirm" button
-Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
-#Test case ID : 
-#Products : MyItLab, HSS and World Language.
-#Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
-Scenario: Validate enrolled course in "My Courses and Testbanks" channel
-Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
-When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsInstructor" user
+
+
+#------------------------------------ Assessment------------------------------------------------------------------------------
+Scenario:Creation of Random activity of RegCSSAMActivity type by adding section with multiple questions in Coursespace test
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "RegCSSAMActivity" SAM activity type
+Then I should be on the "Create activity" page
+When I Create "RegChildActivity" activity with Behavioral Mode "Basic Random"
+And I perform "Save and Continue" for "Activity Details"
+And I perform "Create New Section" of name "Section1"
+And I perform "Create New Section" of name "Section2"
+And I perform "Create New Section" of name "Section3"
+Then I add '3' questions of type "Fill in the Blank" at Section "1"
+And I add '1' questions of type "Fill in the Blank" at Section "2"
+And I add '1' questions of type "Fill in the Blank" at Section "3"
+#Purpose:Clicking on Add link of "Direction Lines" under each section
+#Test Link id:peg-19554
+#Scenario:Add Section Direction Lines
+When I "Add" Directions at Section "1"
+Then I should see Directions "added" to Section "1"
+When I "Add" Directions at Section "2"
+Then I should see Directions "added" to Section "2"
+When I "Edit" Directions at Section "2"
+Then I should see Directions "edited" to Section "2"
+When I "Delete" Directions at Section "2"
+Then I should see Directions deleted at Section "2"
+When I "Add" Directions at Section "3"
+Then I should see Directions "added" to Section "3"
+When I perform "Save and Continue" for "Questions" 
+#Purpose:Add messages at activity level
+#Test Link No:peg-20713
+#Scenario:Add messages at activity level
+When I perform "Navigate" for "Messages" 
+Then I add "Beginning of activity" message
+And  I add "Direction lines (instructions)" message
+And I add "End of activity" message
+When I perform "Save and Continue" for "Messages" 
+
+
+#------------------------------Save and Continue from various tabs in Activity Creation Wizard-----------------------
+Scenario: Save and Continue from Activity Details tab
+When I perform "Save and Continue" for "Activity Details"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Questions tab
+When I perform "Save and Continue" for "Questions"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Help Links tab
+When I perform "Save and Continue" for "HelpLinks"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Messages tab
+When I perform "Save and Continue" for "Messages"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Grades tab
+When I perform "Save and Continue" for "Grades"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Save and Continue from Teaching Support tab
+When I perform "Save and Continue" for "Teaching Support"
+Then I should be on the "Create Random Activity" page
+
+Scenario: Instructor configore HelpLink and Grades preference for random activity
+When I configure the 'Grades' preference
+And I add 'HelpLinks'
+
+#--------------------------------------------Link type activity creation -----------------
+Scenario: Creation of Link type asset of RegLinkAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Link" asset type
+Then I should be on "Add Link" lightbox
+When I create "RegLinkAsset" activity
+
+
+Scenario: Creation of Etext Link asset of RegLinkAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add eText Link" asset type
+Then I should be on "Add eText Link" lightbox
+When I create "RegEtextLinkAsset" activity
+
+Scenario: Creation of eText Link type asset of RegEtextLinkAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add eText Link" asset type
+Then I should be on "Add eText Link" lightbox
+When I create "RegEtextLinkAsset" activity
+
+
+Scenario: Creation of Multiple File Asset type asset of RegMultipleFileAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Multiple Files" asset type
+Then I should be on "Add Multiple Files" lightbox
+When I create "RegMultipleFileAsset" activity
+
+
+Scenario: Creation of File Asset type asset of RegFileAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add File" asset type
+Then I should be on "Add File" lightbox
+When I create "RegFileAsset" activity
+
+
+Scenario: Creation of Page type asset of RegPageAsset in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Page" asset type
+Then I should be on "Add Page" lightbox
+When I create "RegPageAsset" activity
+
+
+Scenario: Creation of Page type asset of RegDiscussionTopic in Coursespace
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Add from Library" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option
+And I click on the "Add Discussion Topic" asset type
+Then I should be on "Add Discussion Topic" lightbox
+When I create "RegDiscussionTopic" activity

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest1" storage="d:\auto\uxhedautomation-new\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest1.orderedtest" id="30aa1778-d3fc-4fba-9b14-6eb880fcbd6e" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="3c2f5a03-c6bd-63ee-11a5-e0c180ec542d" name="CreationOfLinkTypeAssetOfRegLinkAssetInCoursespace" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="5286bd48-3c6d-6d46-7b77-1709027f048a" name="DragAndDropALinkAssetContentToADayAndDisplayOfAssignedContentInDayViewAsSMSTeacher" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

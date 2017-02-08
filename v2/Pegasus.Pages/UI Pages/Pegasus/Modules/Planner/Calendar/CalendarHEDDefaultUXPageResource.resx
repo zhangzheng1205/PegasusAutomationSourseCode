@@ -148,7 +148,7 @@
     <value>//td[contains(@class,'HighlightTodayCell')]/div[2]/div[3]</value>
   </data>
   <data name="CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvPeriodBody']/div[3]/div/div/div[2]/div[{0}]/div/span</value>
+    <value>//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1720421118_1']/div[{0}]/div/table/tbody/tr/td[3]/span[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvPeriodBody']/div[3]/div/div/div[2]/div[{0}]/div/span</value>
   </data>
   <data name="CalendarHEDDefaultUXPage_AssignmentProperties_Link_Id_Locator" xml:space="preserve">
     <value>40</value>

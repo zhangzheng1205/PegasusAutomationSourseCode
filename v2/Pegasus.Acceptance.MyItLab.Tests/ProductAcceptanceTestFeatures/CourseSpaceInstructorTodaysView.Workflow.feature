@@ -403,8 +403,5 @@ Then I should see "Alerts" in "Notifications" channel
 When I expand "Alerts" channel
 Then I should be displayed with "RegIdleStudentCount" count
 When I click on "RegIdleStudentCount" count
+Then I should see "RegIdleStudentCount" idle student
 
-#Purpose:Validate the functionality of Tutorials link in Today's View tab
-#Test case ID : 
-#Products : MyItLab, HSS and World Language.
-Scenario: Validate the functionality of Tutorial link in Today's view tab as CsSMSInstructor

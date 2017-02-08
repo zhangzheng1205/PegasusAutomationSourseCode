@@ -741,7 +741,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //validate the Help Page display as HED user 
             Logger.LogMethodEntry("TodaysView", "ValidateHelpPageDisplay", 
                 base.IsTakeScreenShotDuringEntryExit);
-            switch(userType)
+            
+             switch(userType)
             {
                 case User.UserTypeEnum.CsSmsInstructor:
                     //Verify Help page display for Instructor
@@ -934,6 +935,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             base.IsTakeScreenShotDuringEntryExit);
          }
 
+
+         
+         
          [When(@"I click on ""(.*)"" count")]
          public void WhenIClickOnCount(Alert.AlertTypeEnum alertType)
          {
@@ -941,6 +945,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
              new TodaysViewUxPage().ClickAlertCount(alertType);
              Logger.LogMethodExit("TodaysView", "WhenIClickOnCount",
+                base.IsTakeScreenShotDuringEntryExit);
+         }
+
+        /// <summary>
+        /// Validate the count of Idle students displayed in the Idle Students frame
+        /// </summary>
+        /// <param name="alertType">This is alert type enum.</param>
+         [Then(@"I should see ""(.*)"" idle student")]
+         public void GetIdleStudentCount(Alert.AlertTypeEnum alertType)
+         {
+             Logger.LogMethodEntry("TodaysView", "GetIdleStudentCount",
+                base.IsTakeScreenShotDuringEntryExit);
+             Alert alert = Alert.Get(alertType);
+             string getAlert = alert.AlertCount.ToString();
+             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
+              Current.ScenarioInfo.Title, () => Assert.AreEqual(getAlert,
+              new TodaysViewUxPage().GetIdleStudentCount()));
+             Logger.LogMethodExit("TodaysView", "GetIdleStudentCount",
                 base.IsTakeScreenShotDuringEntryExit);
          }
 

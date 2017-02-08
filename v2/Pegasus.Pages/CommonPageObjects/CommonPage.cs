@@ -2348,8 +2348,6 @@ namespace Pegasus.Pages.CommonPageObjects
             }
             Logger.LogMethodExit("CommonPage", "ClickSubTab", base.IsTakeScreenShotDuringEntryExit);
         }
-
-
     }
 }
 

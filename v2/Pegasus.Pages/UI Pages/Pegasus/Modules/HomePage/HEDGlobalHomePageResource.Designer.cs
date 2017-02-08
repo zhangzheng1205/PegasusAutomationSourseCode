@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@class=&apos;channel-content&apos;]/div/div/div[{0}]/div/div/div[4].
+        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div/a.
         /// </summary>
         internal static string HEDGlobalHome_Page_Course_Name_XPath_Locator {
             get {
@@ -255,6 +255,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHome_Page_ElementFindTimeoutInSeconds {
             get {
                 return ResourceManager.GetString("HEDGlobalHome_Page_ElementFindTimeoutInSeconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl7__ctl0__ctl0__ctl0__ctl0_btnEnrollCourse.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_EnrollCourse_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_EnrollCourse_Button_ID_Locator", resourceCulture);
             }
         }
         
@@ -493,6 +502,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;tblCourse&apos;]/div/div[{0}]/div/div/div/div/a.
+        /// </summary>
+        internal static string HEDGlobalHomePage_Course_CmenuOption_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_Course_CmenuOption_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;tblCourse&apos;]/div/div.
+        /// </summary>
+        internal static string HEDGlobalHomePage_GetCourseCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_GetCourseCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div/a.
+        /// </summary>
+        internal static string HEDGlobalHomePage_GetCourseTitle_CourseListGrid_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_GetCourseTitle_CourseListGrid_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span.
+        /// </summary>
+        internal static string HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl9_PegasushelloK5_ancMyAccount.
         /// </summary>
         internal static string HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator {
@@ -529,11 +574,56 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainCatalogTbl&apos;]/ul/li/span/span[2].
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_AppStepname_CreateCourse_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_AppStepname_CreateCourse_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to rndDiscipline.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_BrowseByDiscipline_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_BrowseByDiscipline_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to confirm.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_Confirm_Deletion_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_Confirm_Deletion_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy as Instructor Course.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Cmenu_LinkText_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Cmenu_LinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to openModalPopupframe.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgbtnSave.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator", resourceCulture);
             }
         }
         
@@ -552,6 +642,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHomePage_HomePage_CopyStatus_Text_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CopyStatus_Text_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtCourseName.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CourseName_Textbox_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CourseName_Textbox_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to spnCourseName.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CourseNameFromTheTable_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CourseNameFromTheTable_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtProductTextBook.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CourseNameTextbox_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CourseNameTextbox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;channel-content&apos;]/div/div/div[{0}].
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CourseTotalCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CourseTotalCount_XPath_Locator", resourceCulture);
             }
         }
         
@@ -610,11 +736,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl8_rptCatalogSearchResults__ctl0_btnCatalogType.
+        ///   Looks up a localized string similar to _ctl7_rptCatalogSearchResults__ctl0_btnCatalogType.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Course Info.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_EditCourseInfo_Cmenu_LinkText_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_EditCourseInfo_Cmenu_LinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnConfirm.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_EnrollInACourse_Confirm_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_EnrollInACourse_Confirm_Id_Locator", resourceCulture);
             }
         }
         
@@ -655,11 +799,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;Div1&apos;]/div/div/div/div/label.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to myModalLabel.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;Div1&apos;]/div/div/div/div/button.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_EnrollnCourse_StudStep2_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_EnrollnCourse_StudStep2_XPath_Locator", resourceCulture);
             }
         }
         
@@ -700,11 +862,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mark for Deletion.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_MarkforDeletion_Cmenu_LinkText_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_MarkforDeletion_Cmenu_LinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to csssimPref.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_MyProfileLightBox_BasicPreference_ClassName_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_MyProfileLightBox_BasicPreference_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgbtnCancel.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_MyProfileLightBox_Cancel_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_MyProfileLightBox_Cancel_ID_Locator", resourceCulture);
             }
         }
         
@@ -754,6 +934,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to iframeCreateCourse.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_SwitchToCCFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_SwitchToCCFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unmark for Deletion.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_UnmarkforDeletion_Cmenu_LinkText_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_UnmarkforDeletion_Cmenu_LinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to openModalPopupHeader.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_Update_Course_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_Update_Course_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to iframeSelfEnrollment.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePageIframe_ID_Locator {
@@ -790,11 +997,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id =&apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[2]/div/span.
+        /// </summary>
+        internal static string HEDGlobalHomePage_StatusOfCourse_CourseListGrid_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_StatusOfCourse_CourseListGrid_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl9_PegasushelloK5_HelpLink.
         /// </summary>
         internal static string HEDGlobalHomePage_Stu_Help_Link_ID_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_Stu_Help_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;coursematchmsg&apos;].
+        /// </summary>
+        internal static string HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator", resourceCulture);
             }
         }
         
@@ -813,6 +1038,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHomePage_TodaysView_Calendar_Channel_ID {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_TodaysView_Calendar_Channel_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lblPersonalProfile.
+        /// </summary>
+        internal static string HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator", resourceCulture);
             }
         }
         

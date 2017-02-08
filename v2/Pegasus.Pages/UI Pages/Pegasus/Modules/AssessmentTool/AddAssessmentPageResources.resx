@@ -297,4 +297,49 @@
   <data name="AddAsessment_Page_BehavioralMode_AssignmentRadioButton_Id_Locator" xml:space="preserve">
     <value>radAssignment</value>
   </data>
+  <data name="AddAsessment_Page_AssetName_Id_Locator" xml:space="preserve">
+    <value>txtURLTitle</value>
+  </data>
+  <data name="AddAsessment_Page_LinkAsset_AddButton_Id_Locator" xml:space="preserve">
+    <value>imgBtnSave_Update</value>
+  </data>
+  <data name="AddAsessment_Page_LinkAsset_URL_VCD" xml:space="preserve">
+    <value>http://media.pearsoncmg.com/alt/myspanishlab/anda2e/video/Chapitre04_caption_video.html</value>
+  </data>
+  <data name="AddAssessment_Page_AssetCreation_IFrame_Id_Locator" xml:space="preserve">
+    <value>boostrap-model-iframe</value>
+  </data>
+  <data name="AddAssessment_Page_EtextLinkAssetCreation_IFrame_Id_Locator" xml:space="preserve">
+    <value>openModalPopupframe</value>
+  </data>
+  <data name="AddAssessment_Page_EtextLinkAsset_SelectBook_Id_Locator" xml:space="preserve">
+    <value>ddlSingleSelectBook</value>
+  </data>
+  <data name="AddAssessment_Page_EtextLinkAsset_Title_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtLinkTitle</value>
+  </data>
+  <data name="AddAssessment_Page_FileAsset_Title_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtFileName</value>
+  </data>
+  <data name="AddAssessment_Page_LinkAsset_Description_TextBox_ClassName" xml:space="preserve">
+    <value>text_description</value>
+  </data>
+  <data name="AddAssessment_Page_LinkAsset_URL_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtURL</value>
+  </data>
+  <data name="AddAssessment_Page_PageAsset_Title_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_txtPgsTittle</value>
+  </data>
+  <data name="AddAsessment_Page_PageAsset_AddButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_btnSave_Return</value>
+  </data>
+  <data name="AddAssessment_Page_PageAsset_Description_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_txtpgsdescrption</value>
+  </data>
+  <data name="AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName" xml:space="preserve">
+    <value>modaltxtHeading</value>
+  </data>
+  <data name="AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtDiscussionTitle</value>
+  </data>
 </root>

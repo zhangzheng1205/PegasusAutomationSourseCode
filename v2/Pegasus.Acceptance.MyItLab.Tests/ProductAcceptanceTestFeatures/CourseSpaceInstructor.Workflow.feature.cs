@@ -629,61 +629,451 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Channels in home page as CsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Random activity of RegCSSAMActivity type by adding section with multi" +
+            "ple questions in Coursespace test")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
-        public virtual void ValidateChannelsInHomePageAsCsSmsInstructor()
+        public virtual void CreationOfRandomActivityOfRegCSSAMActivityTypeByAddingSectionWithMultipleQuestionsInCoursespaceTest()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Channels in home page as CsSmsInstructor", ((string[])(null)));
-#line 239
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Random activity of RegCSSAMActivity type by adding section with multi" +
+                    "ple questions in Coursespace test", ((string[])(null)));
 #line 240
-testRunner.Then("I should be displayed with \"My Courses and Testbanks\" channel  on \"Global Home\" p" +
-                    "age as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 241
-testRunner.And("I should be displayed with \"Create a Course\" button in \"My Courses and Testbanks\"" +
-                    " channel as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 242
-testRunner.And("I should be displayed with \"Enroll in a Course\" button in \"My Courses and Testban" +
-                    "ks\" channel as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 243
-testRunner.When("I click on \"Enroll in a Course\" button in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 244
-testRunner.Then("I should be displayed with \"Enroll in a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 245
-testRunner.And("I should be displayed step \"1\" with \"Course ID\" in \"Enroll in a Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 246
-testRunner.When("I enter \"RegMyITLabNewCourseForEnrollment\" and click submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 247
-testRunner.Then("I should be displayed step \"2\" with \"Confirm Course\" in \"Enroll in a Course\" popu" +
-                    "p", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 248
-testRunner.And("I should be displayed with message \"The Course ID you entered matched the followi" +
-                    "ng instructor and course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 249
-testRunner.And("I should be displayed with the course name \"RegMyITLabNewCourseForEnrollment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on the \"RegCSSAMActivity\" SAM activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 250
-testRunner.When("I click \"Confirm\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 251
-testRunner.Then("I should be displayed with \"RegMyITLabNewCourseForEnrollment\" course as \"CsSmsIns" +
-                    "tructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I Create \"RegChildActivity\" activity with Behavioral Mode \"Basic Random\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 252
+testRunner.And("I perform \"Save and Continue\" for \"Activity Details\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 253
+testRunner.And("I perform \"Create New Section\" of name \"Section1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 254
+testRunner.And("I perform \"Create New Section\" of name \"Section2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 255
+testRunner.And("I perform \"Create New Section\" of name \"Section3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 256
+testRunner.Then("I add \'3\' questions of type \"Fill in the Blank\" at Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 257
+testRunner.And("I add \'1\' questions of type \"Fill in the Blank\" at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 258
+testRunner.And("I add \'1\' questions of type \"Fill in the Blank\" at Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 262
+testRunner.When("I \"Add\" Directions at Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 263
+testRunner.Then("I should see Directions \"added\" to Section \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 264
+testRunner.When("I \"Add\" Directions at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 265
+testRunner.Then("I should see Directions \"added\" to Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 266
+testRunner.When("I \"Edit\" Directions at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 267
+testRunner.Then("I should see Directions \"edited\" to Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 268
+testRunner.When("I \"Delete\" Directions at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 269
+testRunner.Then("I should see Directions deleted at Section \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 270
+testRunner.When("I \"Add\" Directions at Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 271
+testRunner.Then("I should see Directions \"added\" to Section \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 272
+testRunner.When("I perform \"Save and Continue\" for \"Questions\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 276
+testRunner.When("I perform \"Navigate\" for \"Messages\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 277
+testRunner.Then("I add \"Beginning of activity\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 278
+testRunner.And("I add \"Direction lines (instructions)\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 279
+testRunner.And("I add \"End of activity\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 280
+testRunner.When("I perform \"Save and Continue\" for \"Messages\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate enrolled course in \"My Courses and Testbanks\" channel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save and Continue from Activity Details tab")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
-        public virtual void ValidateEnrolledCourseInMyCoursesAndTestbanksChannel()
+        public virtual void SaveAndContinueFromActivityDetailsTab()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate enrolled course in \"My Courses and Testbanks\" channel", ((string[])(null)));
-#line 256
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save and Continue from Activity Details tab", ((string[])(null)));
+#line 284
 this.ScenarioSetup(scenarioInfo);
-#line 257
-testRunner.Then("I should be displayed with \"RegMyITLabNewCourseForEnrollment\" course as \"CsSmsIns" +
-                    "tructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 258
-testRunner.When("I click on Open button of \"RegMyITLabNewCourseForEnrollment\" as \"CsSmsInstructor\"" +
-                    " user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 285
+testRunner.When("I perform \"Save and Continue\" for \"Activity Details\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 286
+testRunner.Then("I should be on the \"Create Random Activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save and Continue from Questions tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void SaveAndContinueFromQuestionsTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save and Continue from Questions tab", ((string[])(null)));
+#line 288
+this.ScenarioSetup(scenarioInfo);
+#line 289
+testRunner.When("I perform \"Save and Continue\" for \"Questions\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 290
+testRunner.Then("I should be on the \"Create Random Activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save and Continue from Help Links tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void SaveAndContinueFromHelpLinksTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save and Continue from Help Links tab", ((string[])(null)));
+#line 292
+this.ScenarioSetup(scenarioInfo);
+#line 293
+testRunner.When("I perform \"Save and Continue\" for \"HelpLinks\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 294
+testRunner.Then("I should be on the \"Create Random Activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save and Continue from Messages tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void SaveAndContinueFromMessagesTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save and Continue from Messages tab", ((string[])(null)));
+#line 296
+this.ScenarioSetup(scenarioInfo);
+#line 297
+testRunner.When("I perform \"Save and Continue\" for \"Messages\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 298
+testRunner.Then("I should be on the \"Create Random Activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save and Continue from Grades tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void SaveAndContinueFromGradesTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save and Continue from Grades tab", ((string[])(null)));
+#line 300
+this.ScenarioSetup(scenarioInfo);
+#line 301
+testRunner.When("I perform \"Save and Continue\" for \"Grades\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 302
+testRunner.Then("I should be on the \"Create Random Activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Save and Continue from Teaching Support tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void SaveAndContinueFromTeachingSupportTab()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Save and Continue from Teaching Support tab", ((string[])(null)));
+#line 304
+this.ScenarioSetup(scenarioInfo);
+#line 305
+testRunner.When("I perform \"Save and Continue\" for \"Teaching Support\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 306
+testRunner.Then("I should be on the \"Create Random Activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor configore HelpLink and Grades preference for random activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void InstructorConfigoreHelpLinkAndGradesPreferenceForRandomActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor configore HelpLink and Grades preference for random activity", ((string[])(null)));
+#line 308
+this.ScenarioSetup(scenarioInfo);
+#line 309
+testRunner.When("I configure the \'Grades\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 310
+testRunner.And("I add \'HelpLinks\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Link type asset of RegLinkAsset in Coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfLinkTypeAssetOfRegLinkAssetInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Link type asset of RegLinkAsset in Coursespace", ((string[])(null)));
+#line 313
+this.ScenarioSetup(scenarioInfo);
+#line 314
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 315
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 316
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 317
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 318
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 319
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 320
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 321
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 322
+testRunner.And("I click on the \"Add Link\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 323
+testRunner.Then("I should be on \"Add Link\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 324
+testRunner.When("I create \"RegLinkAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Etext Link asset of RegLinkAsset in Coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfEtextLinkAssetOfRegLinkAssetInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Etext Link asset of RegLinkAsset in Coursespace", ((string[])(null)));
+#line 327
+this.ScenarioSetup(scenarioInfo);
+#line 328
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 329
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 330
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 331
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 332
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 333
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 334
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 335
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 336
+testRunner.And("I click on the \"Add eText Link\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 337
+testRunner.Then("I should be on \"Add eText Link\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 338
+testRunner.When("I create \"RegEtextLinkAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of eText Link type asset of RegEtextLinkAsset in Coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfETextLinkTypeAssetOfRegEtextLinkAssetInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of eText Link type asset of RegEtextLinkAsset in Coursespace", ((string[])(null)));
+#line 340
+this.ScenarioSetup(scenarioInfo);
+#line 341
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 342
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 343
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 344
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 345
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 346
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 347
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 348
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 349
+testRunner.And("I click on the \"Add eText Link\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 350
+testRunner.Then("I should be on \"Add eText Link\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 351
+testRunner.When("I create \"RegEtextLinkAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Multiple File Asset type asset of RegMultipleFileAsset in Coursespace" +
+            "")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfMultipleFileAssetTypeAssetOfRegMultipleFileAssetInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Multiple File Asset type asset of RegMultipleFileAsset in Coursespace" +
+                    "", ((string[])(null)));
+#line 354
+this.ScenarioSetup(scenarioInfo);
+#line 355
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 356
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 357
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 358
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 359
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 360
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 361
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 362
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 363
+testRunner.And("I click on the \"Add Multiple Files\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 364
+testRunner.Then("I should be on \"Add Multiple Files\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 365
+testRunner.When("I create \"RegMultipleFileAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of File Asset type asset of RegFileAsset in Coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfFileAssetTypeAssetOfRegFileAssetInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of File Asset type asset of RegFileAsset in Coursespace", ((string[])(null)));
+#line 368
+this.ScenarioSetup(scenarioInfo);
+#line 369
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 370
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 371
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 372
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 373
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 374
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 375
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 376
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 377
+testRunner.And("I click on the \"Add File\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 378
+testRunner.Then("I should be on \"Add File\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 379
+testRunner.When("I create \"RegFileAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Page type asset of RegPageAsset in Coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfPageTypeAssetOfRegPageAssetInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Page type asset of RegPageAsset in Coursespace", ((string[])(null)));
+#line 382
+this.ScenarioSetup(scenarioInfo);
+#line 383
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 384
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 385
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 386
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 387
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 388
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 389
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 390
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 391
+testRunner.And("I click on the \"Add Page\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 392
+testRunner.Then("I should be on \"Add Page\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 393
+testRunner.When("I create \"RegPageAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Page type asset of RegDiscussionTopic in Coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void CreationOfPageTypeAssetOfRegDiscussionTopicInCoursespace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Page type asset of RegDiscussionTopic in Coursespace", ((string[])(null)));
+#line 396
+this.ScenarioSetup(scenarioInfo);
+#line 397
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 398
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 399
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 400
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 401
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 402
+testRunner.When("I click on \"Add from Library\" subtab in \"Course Materials\" tab as \"CsSmsInstructo" +
+                    "r\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 403
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 404
+testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 405
+testRunner.And("I click on the \"Add Discussion Topic\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 406
+testRunner.Then("I should be on \"Add Discussion Topic\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 407
+testRunner.When("I create \"RegDiscussionTopic\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

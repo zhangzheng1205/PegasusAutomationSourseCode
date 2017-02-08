@@ -280,7 +280,7 @@
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHome_Page_Course_Name_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]</value>
+    <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div/a</value>
   </data>
   <data name="HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator" xml:space="preserve">
     <value>_ctl9_PegasushelloK5_ancMyAccount</value>
@@ -334,7 +334,7 @@
     <value>btnFinish</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator" xml:space="preserve">
-    <value>_ctl8_rptCatalogSearchResults__ctl0_btnCatalogType</value>
+    <value>_ctl7_rptCatalogSearchResults__ctl0_btnCatalogType</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_XPath_Locator" xml:space="preserve">
     <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[4]</value>
@@ -371,5 +371,83 @@
   </data>
   <data name="HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator" xml:space="preserve">
     <value>//div[@id='tblSearchCatalog']/div[2]/div/div/input</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_Confirm_Deletion_ID_Locator" xml:space="preserve">
+    <value>confirm</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator" xml:space="preserve">
+    <value>imgbtnSave</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Cmenu_LinkText_Locator" xml:space="preserve">
+    <value>Copy as Instructor Course</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator" xml:space="preserve">
+    <value>openModalPopupframe</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EditCourseInfo_Cmenu_LinkText_Locator" xml:space="preserve">
+    <value>Edit Course Info</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_MarkforDeletion_Cmenu_LinkText_Locator" xml:space="preserve">
+    <value>Mark for Deletion</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_MyProfileLightBox_Cancel_ID_Locator" xml:space="preserve">
+    <value>imgbtnCancel</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_UnmarkforDeletion_Cmenu_LinkText_Locator" xml:space="preserve">
+    <value>Unmark for Deletion</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_Update_Course_ID_Locator" xml:space="preserve">
+    <value>openModalPopupHeader</value>
+  </data>
+  <data name="HEDGlobalHome_Page_EnrollCourse_Button_ID_Locator" xml:space="preserve">
+    <value>_ctl7__ctl0__ctl0__ctl0__ctl0_btnEnrollCourse</value>
+  </data>
+  <data name="HEDGlobalHomePage_Course_CmenuOption_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='tblCourse']/div/div[{0}]/div/div/div/div/a</value>
+  </data>
+  <data name="HEDGlobalHomePage_GetCourseCount_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='tblCourse']/div/div</value>
+  </data>
+  <data name="HEDGlobalHomePage_GetCourseTitle_CourseListGrid_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div/a</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_AppStepname_CreateCourse_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='mainCatalogTbl']/ul/li/span/span[2]</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CourseName_Textbox_ID_Locator" xml:space="preserve">
+    <value>txtCourseName</value>
+  </data>
+  <data name="HEDGlobalHomePage_StatusOfCourse_CourseListGrid_XPath_Locator" xml:space="preserve">
+    <value>//div[@id ='tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[2]/div/span</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'Div1']/div/div/div/div/label</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CourseNameFromTheTable_Id_Locator" xml:space="preserve">
+    <value>spnCourseName</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CourseNameTextbox_Id_Locator" xml:space="preserve">
+    <value>txtProductTextBook</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CourseTotalCount_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='channel-content']/div/div/div[{0}]</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_Confirm_Id_Locator" xml:space="preserve">
+    <value>btnConfirm</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_EnrollnCourse_StudStep2_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'Div1']/div/div/div/div/button</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_SwitchToCCFrame_Id_Locator" xml:space="preserve">
+    <value>iframeCreateCourse</value>
+  </data>
+  <data name="HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='coursematchmsg']</value>
+  </data>
+  <data name="HEDGlobalHomePage_TodaysView_MyProfilePopUpname_Id_Locator" xml:space="preserve">
+    <value>lblPersonalProfile</value>
+  </data>
+  <data name="HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span</value>
   </data>
 </root>
