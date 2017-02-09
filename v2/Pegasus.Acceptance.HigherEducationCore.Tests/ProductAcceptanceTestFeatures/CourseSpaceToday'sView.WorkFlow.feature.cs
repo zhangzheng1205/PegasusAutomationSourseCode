@@ -181,27 +181,16 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
 #line 53
 this.ScenarioSetup(scenarioInfo);
 #line 54
-testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 55
-testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 57
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 58
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLCsSmsInstruc" +
-                    "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 59
-testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 61
+#line 56
 testRunner.When("I click on \"Glossary\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 57
 testRunner.Then("I should be on the \"Glossary\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
+#line 58
 testRunner.When("I close the \"Glossary\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 59
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -215,30 +204,19 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the functionality of Verb Chart link in Today\'s view tab as WLCsSmsInstr" +
                     "uctor", ((string[])(null)));
-#line 69
+#line 64
 this.ScenarioSetup(scenarioInfo);
-#line 70
-testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 71
-testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 73
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 74
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLCsSmsInstruc" +
-                    "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
-testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 76
+#line 65
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 66
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 77
+#line 67
 testRunner.When("I click on \"Verb Chart\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 78
+#line 68
 testRunner.Then("I should be on the \"Verb Chart\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 79
+#line 69
 testRunner.When("I close the \"Verb Chart\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
+#line 70
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -252,30 +230,19 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the functionality of User Guide link in Today\'s view tab as WLCsSmsInstr" +
                     "uctor", ((string[])(null)));
-#line 85
+#line 75
 this.ScenarioSetup(scenarioInfo);
-#line 86
-testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 87
-testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 88
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 89
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 90
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLCsSmsInstruc" +
-                    "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
-testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 76
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 77
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 93
+#line 78
 testRunner.When("I click on \"User Guide\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 94
+#line 79
 testRunner.Then("I should be on the \"Instructor User Guide\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 95
+#line 80
 testRunner.When("I close the \"Instructor User Guide\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
+#line 81
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -289,30 +256,19 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the functionality of More Resources link in Today\'s view tab as WLCsSmsI" +
                     "nstructor", ((string[])(null)));
-#line 101
+#line 86
 this.ScenarioSetup(scenarioInfo);
-#line 102
-testRunner.Given("I browsed the login url for \"WLCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 103
-testRunner.When("I logged into the Pegasus as \"WLCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 104
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 105
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 106
-testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"WLCsSmsInstruc" +
-                    "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 107
-testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
+#line 87
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 109
-testRunner.When("I click on \"User Guide\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
+#line 89
+testRunner.When("I click on \"More Resources\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 90
 testRunner.Then("I should be on the \"More Resources\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 111
+#line 91
 testRunner.When("I close the \"More Resources\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 112
+#line 92
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

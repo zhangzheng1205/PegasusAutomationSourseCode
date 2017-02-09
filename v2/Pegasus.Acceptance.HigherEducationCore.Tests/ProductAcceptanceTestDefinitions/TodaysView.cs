@@ -471,6 +471,10 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on the Course Tool bar
+        /// </summary>
+        /// <param name="toolBarOption">This is the Tool bar option.</param>
         [When(@"I click on ""(.*)"" link")]
         public void CourseToolBar(string toolBarOption)
         {
@@ -478,7 +482,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             Logger.LogMethodEntry("TodaysView", "CourseToolBar",
                   base.IsTakeScreenShotDuringEntryExit);
             new TodaysViewUxPage().ClickOnCourseToolBar(toolBarOption);
-            Logger.LogMethodExit("TodaysView", "CourseToolBar", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("TodaysView", "CourseToolBar", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

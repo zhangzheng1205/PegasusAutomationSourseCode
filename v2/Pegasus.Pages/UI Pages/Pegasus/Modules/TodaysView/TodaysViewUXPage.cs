@@ -6033,20 +6033,25 @@ namespace Pegasus.Pages.UI_Pages
         {
  	       Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseToolBar",
                         base.IsTakeScreenShotDuringEntryExit);
-           
-           int getCourseToolsCount = base.GetElementCountByXPath(".//*[@id='dvInlineCC']/table/tbody/tr/td");
+
+           int getCourseToolsCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+               TodaysView_CoursToolsCount_Xpath_Locator);            
            for(int i=1; i <= getCourseToolsCount; i++)
             {
-                bool jhk = base.IsElementPresent(By.XPath(String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)), 10);
-                base.WaitForElement(By.XPath(String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)));
-                string getCourseToolName = base.GetInnerTextAttributeValueByXPath(string.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i));
+                base.WaitForElement(By.XPath(String.Format(TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i)));
+                string getCourseToolName = base.GetInnerTextAttributeValueByXPath(
+                    string.Format(TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i));
                 string courseToolOption = getCourseToolName.TrimStart();
-                if (courseToolOption == toolBarOption)
+                if (courseToolOption.Contains(toolBarOption))
                {
                    base.WaitForElement(By.XPath(String.Format
-                       (".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)));
+                       (TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i)));
                    IWebElement clickCourseTool = base.GetWebElementPropertiesByXPath(
-                       String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i));
+                       String.Format(TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i));
                    base.PerformMouseClickAction(clickCourseTool);
                }
             }     

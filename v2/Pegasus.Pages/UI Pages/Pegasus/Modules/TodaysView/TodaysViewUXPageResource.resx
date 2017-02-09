@@ -879,4 +879,10 @@
   <data name="TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator" xml:space="preserve">
     <value>//table[@class ='wc_tblstyle1']/tbody/tr[2]/td/div/div/font</value>
   </data>
+  <data name="TodaysView_CoursToolsCount_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='dvInlineCC']/table/tbody/tr/td</value>
+  </data>
+  <data name="TodaysView_CoursToolsName_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]</value>
+  </data>
 </root>
