@@ -88,6 +88,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to normallabel.
+        /// </summary>
+        internal static string TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id = &apos;TVIdlStuDatagrid$contentCntr&apos;]/tbody/tr/td/table/tbody/tr.
+        /// </summary>
+        internal static string TodaysViewPageResource_AlertChannel_IdleStudentCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewPageResource_AlertChannel_IdleStudentCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id = &apos;TVIdlStuDatagrid$contentCntr&apos;]/tbody/tr/td/table/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td/div.
+        /// </summary>
+        internal static string TodaysViewPageResource_AlertChannel_IdleStudentName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewPageResource_AlertChannel_IdleStudentName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl0__ctl0__ctl0_lblHeading.
         /// </summary>
         internal static string TodaysViewPageResource_GetCalendarText_Id_Locator {

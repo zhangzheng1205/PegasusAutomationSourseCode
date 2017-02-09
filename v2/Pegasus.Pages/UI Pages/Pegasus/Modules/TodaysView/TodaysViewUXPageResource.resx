@@ -885,4 +885,13 @@
   <data name="TodaysView_CoursToolsName_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]</value>
   </data>
+  <data name="TodaysViewPageResource_AlertChannel_IdleStudentCount_XPath_Locator" xml:space="preserve">
+    <value>//table[@id = 'TVIdlStuDatagrid$contentCntr']/tbody/tr/td/table/tbody/tr</value>
+  </data>
+  <data name="TodaysViewPageResource_AlertChannel_IdleStudentName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id = 'TVIdlStuDatagrid$contentCntr']/tbody/tr/td/table/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td/div</value>
+  </data>
+  <data name="TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator" xml:space="preserve">
+    <value>normallabel</value>
+  </data>
 </root>

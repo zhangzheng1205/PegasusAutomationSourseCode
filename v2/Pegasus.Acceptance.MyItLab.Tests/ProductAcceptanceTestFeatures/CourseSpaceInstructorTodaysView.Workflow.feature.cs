@@ -971,9 +971,12 @@ testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.Spec
 #line 404
 testRunner.Then("I should be displayed with \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 405
-testRunner.When("I click on \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Idle Students\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 406
-testRunner.Then("I should see \"RegIdleStudentCount\" idle student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \'Zero\' \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 407
+testRunner.And("I should be displayed with the \"Students listed here have not entered the course\"" +
+                    " message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

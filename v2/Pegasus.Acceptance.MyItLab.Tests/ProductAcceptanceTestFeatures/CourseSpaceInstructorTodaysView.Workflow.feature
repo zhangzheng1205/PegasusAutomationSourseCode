@@ -402,6 +402,7 @@ And I navigate to "Today's View" tab
 Then I should see "Alerts" in "Notifications" channel
 When I expand "Alerts" channel
 Then I should be displayed with "RegIdleStudentCount" count
-When I click on "RegIdleStudentCount" count
-Then I should see "RegIdleStudentCount" idle student
+When I click on "Idle Students" alert option
+Then I should see 'Zero' "CsSmsStudent"
+And I should be displayed with the "Students listed here have not entered the course" message 
 

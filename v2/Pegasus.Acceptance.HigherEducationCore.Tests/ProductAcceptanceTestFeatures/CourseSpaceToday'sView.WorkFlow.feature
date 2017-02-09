@@ -51,12 +51,7 @@ Then I should be on the "Today's View" page
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 Scenario: Validate the functionality of Glossary link in Today's view tab as WLCsSmsInstructor
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Glossary" link
 Then I should be on the "Glossary" page
