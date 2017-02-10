@@ -450,7 +450,4 @@
   <data name="HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator" xml:space="preserve">
     <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span</value>
   </data>
-  <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_OpenButton_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[3]</value>
-  </data>
 </root>

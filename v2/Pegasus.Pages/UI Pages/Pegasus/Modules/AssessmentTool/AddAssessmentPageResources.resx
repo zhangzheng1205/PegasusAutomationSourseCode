@@ -342,13 +342,4 @@
   <data name="AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator" xml:space="preserve">
     <value>txtDiscussionTitle</value>
   </data>
-  <data name="AddAsessment_Page_FolderDescription_Id_Locator" xml:space="preserve">
-    <value>txtFolderDescription</value>
-  </data>
-  <data name="AddAsessment_Page_FolderName_Id_Locator" xml:space="preserve">
-    <value>txtFolderName</value>
-  </data>
-  <data name="AddAsessment_Page_Folder_CreateButton_Id_Locator" xml:space="preserve">
-    <value>imgBtnSave_Update</value>
-  </data>
 </root>

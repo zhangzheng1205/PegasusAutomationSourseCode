@@ -102,8 +102,7 @@ namespace Pegasus.Automation.DataTransferObjects
             RegPageAsset =71,
             RegDiscussionTopic=72,
             RegMILPastDueActivity = 73,
-            RegMILForcefullSubmissionActivity = 74,
-            RegFolderAsset =75
+            RegMILForcefullSubmissionActivity = 74            
         }
 
         /// <summary>

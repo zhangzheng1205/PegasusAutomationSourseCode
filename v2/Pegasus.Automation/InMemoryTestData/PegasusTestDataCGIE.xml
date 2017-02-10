@@ -32,7 +32,6 @@ data on the UI deleted or refreshed.-->
     </Organization>
   </ArrayOfOrganization>
   <!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on 
-
 the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
@@ -40,9 +39,30 @@ the UI deleted or refreshed.-->
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
+    <!--Contineo Class Name for Course Creation-->
+    <Class>
+      <Name>Computer OS - 1(A-B) - 15-16</Name>
+      <ClassType>DigitalPathContineoMasterLibrary</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
     <Class>
       <Name>4ea7c842-911b-49bb-ab1b-440ab1a3a950</Name>
       <ClassType>NovaNETTemplate</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>Media Server</Name>
+      <ClassType>MediaServerClass</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>eText_Class</Name>
+      <ClassType>S7eTextClass</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
+    <Class>
+      <Name>Writing Coach</Name>
+      <ClassType>DigitalPathWCMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
   </ArrayOfClass>
@@ -124,6 +144,15 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+    <!--Course reference for Canvas Direct-->
+    <Course>
+      <Name>CGIE MIL Course</Name>
+      <CourseType>CanvasDirectCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
     <!--Hard coded Course data for "HED" Product.-->
     <Course>
       <Name>MySpanishLab-release</Name>
@@ -142,7 +171,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>3PL Moodle Direct Integration Course -Pegasus5</Name>
+      <Name>CGIE MIL Course</Name>
       <CourseType>MoodleDirectCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -150,7 +179,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Pegasus MyITLab Test</Name>
+      <Name>CGIE MIL D2L Course2</Name>
       <CourseType>D2LDirectCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -182,7 +211,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>41089e0f-c51e-4c96-855f-e1acb8af2cd0</Name>
+      <Name>AssessmentRegression_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
       <CourseType>HEDGeneral</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -236,7 +265,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>4ce8f544-715e-40ce-a0b3-861b4b72030b</Name>
+      <Name>Automation_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
       <CourseType>MySpanishLabMasterVm</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -271,7 +300,7 @@ the UI deleted or refreshed.-->
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>CGIE-MyITLab for Office 2013: GO! Series + Technology in Action</Name>
+      <Name>Automation_MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14]</Name>
       <CourseType>MyITLabForOffice2013Master</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -279,7 +308,7 @@ the UI deleted or refreshed.-->
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>CGIE-MASTER, MyPsychLab for Ciccarelli-3/e-Automation</Name>
+      <Name>Automation_MASTER, MyPsychLab for Ciccarelli, Psychology, 3/e</Name>
       <CourseType>HSSMyPsychLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -287,7 +316,7 @@ the UI deleted or refreshed.-->
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>MySpanishLab for ¡Anda! Curso elemental, 2e, Summer 2014 Re-Release</Name>
+      <Name>Automation_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
       <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -309,7 +338,7 @@ the UI deleted or refreshed.-->
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>Automation Section</SectionName>
+      <SectionName>Dependent_CGIE_MIL</SectionName>
       <SectionId>CRSKLRU-14001445</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
@@ -362,15 +391,25 @@ the UI deleted or refreshed.-->
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
+      <Name>Dependent_MIL_VCD</Name>
+      <CourseType>RegMyITLabNewCourse</CourseType>
+      <InstructorCourseId>CRSKLFL-10041126</InstructorCourseId>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
       <Name>¡Anda! Curso elemental, Second Edition-P</Name>
       <CourseType>MyItLabInstructorCourse</CourseType>
+      <SectionId>CRSKLYU-10041353</SectionId>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Automation_Course_2015</Name>
+      <Name>CGIE MIL Course</Name>
       <CourseType>BBCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -387,6 +426,55 @@ the UI deleted or refreshed.-->
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+    <!--Authored Course Template Name for Assignment Regression Testing.-->
+    <Course>
+      <Name>AssessmentRegression_MySpanishLab for ¡Anda! Curso elemental, 2e, 2015 Release</Name>
+      <CourseType>RegMySpanishLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Automation_MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14]</Name>
+      <CourseType>MyITLabForOffice2013Master</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>Badging-CGIE-MyITLab for Office 2013</Name>
+      <CourseType>BadgingCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>Psychology, 4e S11 Course2</Name>
+      <CourseType>eTextCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Kiosk PPE MIL Course</Name>
+      <CourseType>D2LKioskCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>MyITLab Course Home</Name>
+      <CourseType>D2LPegasusKioskCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
   </ArrayOfCourse>
   <!--Hard coded Grades data.-->
   <ArrayOfGrade>
@@ -401,24 +489,33 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Grade>
     <Grade>
-      <Score>100</Score>
+      <Score>3</Score>
       <GradeType>PegasusNewGrade</GradeType>
       <IsCreated>true</IsCreated>
     </Grade>
     <Grade>
-      <Score>100</Score>
+      <Score>2</Score>
       <GradeType>PegasusEditedGrade</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>66.7</Score>
+      <GradeType>PegasusEditedGradePerc</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <Score>100</Score>
+      <GradeType>PegasusNewGradePerc</GradeType>
       <IsCreated>true</IsCreated>
     </Grade>
   </ArrayOfGrade>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on 
-
 the UI deleted or refreshed.-->
   <ArrayOfUser>
     <!--Hard coded Users data for SMS-->
     <!--Hard coded Users data for "Contineo".-->
     <User>
-      <Name>5156cgieins2</Name>
+      <Name>516harteach1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrains2</FirstName>
@@ -429,7 +526,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>5156cgiestu2</Name>
+      <Name>516harstu1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>5156Raghavendrastu2</FirstName>
@@ -452,7 +549,7 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for "Moodle" .-->
     <User>
-      <Name>gaurav.gupta@excelindia.com</Name>
+      <Name>ganeshprasad.cr@excelindia.com</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
@@ -463,7 +560,7 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>deepaanand@excelindia.com</Name>
+      <Name>nithyananda.p@excelindia.com</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
@@ -497,8 +594,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>3pldirectmoodle.ins1</Name>
-      <Password>Password#1</Password>
+      <Name>Automation_LMS_instructor</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -508,8 +605,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>3pldirectmoodle.stu1</Name>
-      <Password>Password#1</Password>
+      <Name>Automation_LMS_student</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
       <FirstName>vijay</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -520,23 +617,23 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for "D2L Direct" .-->
     <User>
-      <Name>peginst2</Name>
-      <Password>peginst2</Password>
+      <Name>automation.instructor</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>vijay</FirstName>
+      <FirstName>Rashmi</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>kumar</LastName>
+      <LastName>Instructor1</LastName>
       <UserType>D2LDirectTeacher</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>pegstu1</Name>
-      <Password>pegstu1</Password>
+      <Name>Automation.student</Name>
+      <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
-      <FirstName>Pegasus</FirstName>
+      <FirstName>automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Student</LastName>
+      <LastName>student1</LastName>
       <UserType>D2LDirectStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -554,6 +651,28 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>WC_CGIE_Teacher</Name>
+      <Password>password2</Password>
+      <Email>rashmi.shetty@excelindia.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>DPCsWCTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>WC_CGIE_STU2</Name>
+      <Password>password2</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Automation</LastName>
+      <UserType>DPCsWCStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>515utomationmilworkspace</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -565,23 +684,23 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>3pl_bb_instructor</Name>
+      <Name>Automation_LMS_instructor</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Vish</FirstName>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
+      <LastName>instructor</LastName>
       <UserType>BBInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>3pl_bb_studentdirect</Name>
+      <Name>Automation_LMS_student</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>student</FirstName>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>direct</LastName>
+      <LastName>Student</LastName>
       <UserType>BBStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -718,14 +837,14 @@ the UI deleted or refreshed.-->
 
     <!--Hard coded Users data for "HED" Product.-->
     <User>
-      <Name>cgienradmin</Name>
+      <Name>autowsins</Name>
       <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Rashmi</FirstName>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Automation</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Shetty</LastName>
+      <LastName>WSAdmin</LastName>
       <UserType>HedWsAdmin</UserType>
-      <WorkSpaceName>CGIENR5.159</WorkSpaceName>
+      <WorkSpaceName>Qaworkspace-Auto</WorkSpaceName>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
@@ -824,8 +943,8 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
-      <Password>password1</Password>
+      <Name>240d0201-25dc-4fc2-b9f8-8dc40b0bd48e</Name>
+      <Password>password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -835,8 +954,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
-      <Password>password1</Password>
+      <Name>240d0201-25dc-4fc2-b9f8-8dc40b0bd48e</Name>
+      <Password>password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -846,8 +965,8 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
-      <Password>password1</Password>
+      <Name>240d0201-25dc-4fc2-b9f8-8dc40b0bd48e</Name>
+      <Password>password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>Ramesh</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -860,20 +979,31 @@ the UI deleted or refreshed.-->
       <Name>516cgievijayinstructor</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@exelindia.com</Email>
-      <FirstName>Nithya</FirstName>
+      <FirstName>Vijay</FirstName>
       <MiddleName>Nanda</MiddleName>
-      <LastName>Nanda</LastName>
+      <LastName>Kumar</LastName>
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>1dd99b5c-24b5-4ba8-92ce-c7a1e8f3bcc0</Name>
+      <Name>03ea190c-3f8e-4f32-9a65-10f15f08b2b5</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>00b6</LastName>
+      <LastName>0c93</LastName>
+      <UserType>HSSCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>pradeepkumard</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Pradeep</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName> o'Kumar</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
@@ -954,13 +1084,46 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>7e291029-3cdf-4df0-a3c8-4cc6545facac</Name>
-      <Password>password2</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
+      <Name>Auto_Instructor</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>Auto</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>45f1937e-5049-42b1-b50e-dcbab74f24b6</LastName>
+      <LastName>Instructor</LastName>
       <UserType>HedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Auto_Student</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>Auto</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Student</LastName>
+      <UserType>HedWsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>automationqa</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>pegasus</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>automation</LastName>
+      <UserType>RegHedWsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>automationwsstu</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Rashmi</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>Shetty</LastName>
+      <UserType>RegHedWsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -1033,8 +1196,8 @@ the UI deleted or refreshed.-->
     </User>
     <!--Hard coded Users data for "Word Language".-->
     <User>
-      <Name>b156b2c4-763e-4353-b983-39f6c1aacb8f</Name>
-      <Password>password1</Password>
+      <Name>240d0201-25dc-4fc2-b9f8-8dc40b0bd48e</Name>
+      <Password>password@1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -1079,13 +1242,24 @@ the UI deleted or refreshed.-->
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>d2lkiosk.ins</Name>
-      <Password>Password1</Password>
+      <Name>Automation_LMS_instructor</Name>
+      <Password>password1</Password>
       <Email>chethansgangoor@excelindia.com</Email>
-      <FirstName>Unknown</FirstName>
+      <FirstName>automation</FirstName>
       <MiddleName>Unknown</MiddleName>
-      <LastName>Unknown</LastName>
+      <LastName>instructor</LastName>
       <UserType>D2LKioskTeacher1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>automation_lms_student</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>automation</FirstName>
+      <MiddleName>Unknown</MiddleName>
+      <LastName>student</LastName>
+      <UserType>D2LKioskStudent1</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -1111,8 +1285,111 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-
-  </ArrayOfUser>
+    <!-- Blackboard classic users-->
+    <User>
+      <Name>Automation_LMS_instructor</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Automation</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>instructor</LastName>
+      <UserType>BBInstructor1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>Automation_LMS_student</Name>
+      <Password>password1</Password>
+      <Email>chethansgangoor@excelindia.com</Email>
+      <FirstName>Automation</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>student</LastName>
+      <UserType>BBStudent1</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "K12 Media Server" Integration.-->
+    <User>
+      <Name>CGIE_Media_Teacher</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_Media_Teacher</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_Media_Teacher</LastName>
+      <UserType>K12MediaSTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>CGIE_Media_STU</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_Media_STU</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_Media_STU</LastName>
+      <UserType>K12MediaSStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for "S7 eText" Integration.-->
+    <User>
+      <Name>CGIE_S7eText_Teacher</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Teacher</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Teacher</LastName>
+      <UserType>S7eTextTeacher</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>CGIE_S7eText_Student</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>S7eTextStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+     <!--Hard coded Users data for "SSRS Reports" Integration.-->
+        <User>
+      <Name>reporting</Name>
+      <Password>Peg@$u$</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>SSRSReportAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--S11 etext Instructor and student-->
+      <User>
+      <Name>livechatinstructor</Name>
+      <Password>password2</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>S11eTextInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+      <User>
+      <Name>vipcgiestud1</Name>
+      <Password>password1</Password>
+      <Email>deepaanand@excelindia.com</Email>
+      <FirstName>CGIE_S7eText_Student</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>CGIE_S7eText_Student</LastName>
+      <UserType>S11eTextStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on 
 
 the UI deleted or refreshed.-->
@@ -1128,12 +1405,61 @@ the UI deleted or refreshed.-->
 the UI deleted or refreshed.-->
   <ArrayOfActivity>
     <Activity>
-      <Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
+      <Name>SAM Activity0915</Name>
       <ActivityType>SkillStudyPlan</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <Name>SAM Activity0915</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Activity16</Name>
+      <ActivityType>RegSimpleAssign</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+   <Activity>
+      <Name>SAM Activity0915</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Activity 0822</Name>
+      <ActivityType>RegSimpleAssignPastDue</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+        <Activity>
+      <Name>SAM 08-58 Una ocasión de compras. (Taller)</Name>
+      <ActivityType>RegSimpleAssignFutureDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Act0823</Name>
+      <ActivityType>RegTodayDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Study Plan 0826</Name>
+      <ActivityType>RegFutureDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>SAM Activity 1</Name>
+      <ActivityType>SIM5Activity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>1 New Grade Act</Name>
       <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
@@ -1198,7 +1524,99 @@ the UI deleted or refreshed.-->
       <ActivityType>Folder</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-  </ArrayOfActivity>
+    <Activity>
+      <Name>Rubric for Self-assessment: Research Writing (6 traits)</Name>
+      <ActivityType>MediaServerLink</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>eText CERT</Name>
+      <ActivityType>S7TeachereText</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>eText CERT</Name>
+      <ActivityType>S7StudenteText</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Interactive Writing Coach Personal Tutor: Cause and Effect Essay</Name>
+      <ActivityType>InteractiveWritingCoach</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <!--Sam Activity used for Assessment Regression Testing-->
+    <Activity>
+      <Name>Saved_SAM_Activity</Name>
+       <ActivityType>RegSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegressionActivity1</Name>
+      <ActivityType>RegSavedSAMActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>BB Grade Synch Activity</Name>
+      <ActivityType>BBGradeSynchActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/08/03-75d5a410-Activity</Name>
+       <ActivityType>RegChildActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2016/08/26-9b14f2dc-Highest-Activity</Name>
+       <ActivityType>RegHighestScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-7de3f654-Lowest-Activity</Name>
+       <ActivityType>RegLowestScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-3510348f-First-Activity</Name>
+       <ActivityType>RegFirstScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-bede83a7-Last-Activity</Name>
+       <ActivityType>RegLastScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto-2016/08/26-01b0f155-Average-Activity</Name>
+       <ActivityType>RegAverageScoreActivity</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+  <Activity>
+      <Name>Auto Reg GB Preference-2016/09/02-e345153f-Folder</Name>
+      <ActivityType>RegFolderGBPreference</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+</ArrayOfActivity>
+
+  <!--Hard coded question details for K12 Writing Coach Question-->
+  <ArrayOfQuestion>
+    <Question>
+      <Name>10add50a-ec0f-4fc8-9185-42cedbb78f85</Name>
+      <QuestionType>AutoGradedEssayFeedback</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+    <!--Hard coded question details for Grader IT Question-->
+    <Question>
+      <Name>Grader IT 3</Name>
+      <QuestionType>SIMGraderQuestion</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+    <Question>
+      <Name>Grader IT 3</Name>
+      <QuestionGroup>Test group</QuestionGroup>
+      <QuestionType>AssessmentRegressionQuestion</QuestionType>
+      <IsCreated>true</IsCreated>
+    </Question>
+  </ArrayOfQuestion>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on 
 
 the UI deleted or refreshed.-->
@@ -1210,7 +1628,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Product>
     <Product>
-      <Name>Digit Grade6</Name>
+      <Name>Demo_CGIE_Product</Name>
       <ProductType>DigitalPath</ProductType>
       <PeriodName>05162abf</PeriodName>
       <IsCreated>true</IsCreated>
@@ -1230,10 +1648,43 @@ the UI deleted or refreshed.-->
       <ProductType>HedMilProgram</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
+    <Product>
+      <Name>Writing Coach</Name>
+      <ProductType>MediaServer</ProductType>
+      <PeriodName>05162abf</PeriodName>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>Writing Coach</Name>
+      <ProductType>WritingCoach</ProductType>
+      <PeriodName>05162abf</PeriodName>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <!--Product for Contineo Course Creation-->
+    <Product>
+      <Name>AP French</Name>
+      <ProductType>Contineo</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>RLCN_Product</Name>
+      <ProductType>eTextProduct</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
   </ArrayOfProduct>
-  <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change 
-
-as per data on the UI deleted or refreshed.-->
+  <ArrayOfToolLinks>
+    <ToolLinks>
+       <Name>MyITLab Instructor Access</Name>
+       <LinkType>MoodleDirectInstructorLink</LinkType>
+       <IsCreated>true</IsCreated>
+    </ToolLinks>
+      <ToolLinks>
+       <Name>Assignment Calendar</Name>
+       <LinkType>MoodleDirectStudentLink</LinkType>
+        <IsCreated>true</IsCreated>
+    </ToolLinks>
+  </ArrayOfToolLinks>
+  <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivityQuestionsList>
     <ActivityQuestionsList>
       <Name>________ are personal judgments based on beliefs rather than facts.</Name>
@@ -1272,11 +1723,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The statement: "Women avoid computer science because it is stereotypically dominated by males leading many
-
-        women to feel the field is not accessible to them" is a(n):
-      </Name>
+      <Name>The statement: "Women avoid computer science because it is stereotypically dominated by males leading many women to feel the field is not accessible to them" is a(n):</Name>
       <InCorrectOption>observation.</InCorrectOption>
       <CorrectOption>explanation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1285,11 +1732,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The text defines a _________ as someone who seeks wisdom and knowledge through thinking and
-
-        discussion.
-      </Name>
+      <Name>The text defines a _________ as someone who seeks wisdom and knowledge through thinking and discussion.</Name>
       <InCorrectOption>psychiatrist</InCorrectOption>
       <CorrectOption>philosopher</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1298,11 +1741,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The process of objectively examining and measuring one's own thoughts and mental activities is known
-
-        as
-      </Name>
+      <Name>The process of objectively examining and measuring one's own thoughts and mental activities is known as</Name>
       <InCorrectOption>an out of body experience.</InCorrectOption>
       <CorrectOption>objective introspection.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1320,11 +1759,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The belief that every experience can be broken down into its individual emotions and sensations is known
-
-        as
-      </Name>
+      <Name>The belief that every experience can be broken down into its individual emotions and sensations is known as</Name>
       <InCorrectOption>objectivity.</InCorrectOption>
       <CorrectOption>structuralism.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1378,11 +1813,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Freud proposed that there is a(n) ________ mind into which we repress threatening urges and
-
-        desires.
-      </Name>
+      <Name>Freud proposed that there is a(n) ________ mind into which we repress threatening urges and desires.</Name>
       <InCorrectOption>conscious</InCorrectOption>
       <CorrectOption>unconscious</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1419,16 +1850,8 @@ as per data on the UI deleted or refreshed.-->
     </ActivityQuestionsList>
     <ActivityQuestionsList>
       <Name>In psychology in the twenty-first century,</Name>
-      <InCorrectOption>
-        there is one perspective that is used to explain all human behavior and mental
-
-        processes.
-      </InCorrectOption>
-      <CorrectOption>
-        there are seven perspectives that are used to explain human behavior and mental
-
-        processes.
-      </CorrectOption>
+      <InCorrectOption>there is one perspective that is used to explain all human behavior and mental processes.</InCorrectOption>
+      <CorrectOption>there are seven perspectives that are used to explain human behavior and mental processes.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -1444,11 +1867,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        When Rashid graduated from college, he believed he had finally achieved his full potential. Maslow called
-
-        this
-      </Name>
+      <Name>When Rashid graduated from college, he believed he had finally achieved his full potential. Maslow called this</Name>
       <InCorrectOption>delusion.</InCorrectOption>
       <CorrectOption>self-actualization.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1457,11 +1876,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        ________ suggests that behavioral responses are reinforced when rewarded with pleasurable
-
-        consequences.
-      </Name>
+      <Name>________ suggests that behavioral responses are reinforced when rewarded with pleasurable consequences.</Name>
       <InCorrectOption>Cognitive psychology</InCorrectOption>
       <CorrectOption>Operant conditioning.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1488,11 +1903,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The bystander effect says that people in a crowd are _____ help someone in trouble as compared to a person
-
-        witnessing someone in need of help in the absence of others.
-      </Name>
+      <Name>The bystander effect says that people in a crowd are _____ help someone in trouble as compared to a person witnessing someone in need of help in the absence of others.</Name>
       <InCorrectOption>never going to</InCorrectOption>
       <CorrectOption>less likely to</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1510,11 +1921,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Which perspective focuses on the biological bases for universal mental characteristics that all humans
-
-        share?
-      </Name>
+      <Name>Which perspective focuses on the biological bases for universal mental characteristics that all humans share?</Name>
       <InCorrectOption>biopsychosocial</InCorrectOption>
       <CorrectOption>evolutionary</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1523,10 +1930,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Which professional has a doctorate degree and works with humans or animals in a variety of settings?
-
-      </Name>
+      <Name>Which professional has a doctorate degree and works with humans or animals in a variety of settings?</Name>
       <InCorrectOption>psychiatric social worker</InCorrectOption>
       <CorrectOption>psychologist</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1582,11 +1986,7 @@ as per data on the UI deleted or refreshed.-->
     <ActivityQuestionsList>
       <Name>Scientists report their results even if an experiment failed because</Name>
       <InCorrectOption>the APA requires it.</InCorrectOption>
-      <CorrectOption>
-        researchers studying the same things will gain from what has already been
-
-        learned.
-      </CorrectOption>
+      <CorrectOption>researchers studying the same things will gain from what has already been learned.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -1647,11 +2047,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If it is shown that students’ grades go down the more hours they spend watching TV, then grades and hours
-
-        watching TV have a __________ correlation.
-      </Name>
+      <Name>If it is shown that students’ grades go down the more hours they spend watching TV, then grades and hours watching TV have a __________ correlation.</Name>
       <InCorrectOption>positive</InCorrectOption>
       <CorrectOption>negative</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1660,11 +2056,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If researchers find a relationship between students’ grades and the number of hours they spend watching
-
-        TV,
-      </Name>
+      <Name>If researchers find a relationship between students’ grades and the number of hours they spend watching TV,</Name>
       <InCorrectOption>it would be impossible to determine the direction of that relationship.</InCorrectOption>
       <CorrectOption>it still does not prove causation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1682,11 +2074,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A(n) ________ specifically names the steps that the experimenter must use to control or measure the
-
-        variables in the experiment.
-      </Name>
+      <Name>A(n) ________ specifically names the steps that the experimenter must use to control or measure the variables in the experiment.</Name>
       <InCorrectOption>hypothesis</InCorrectOption>
       <CorrectOption>operational definition</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1704,11 +2092,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A(n) __________ reviews a proposed study and judges it according to safety and consideration for its
-
-        participants.
-      </Name>
+      <Name>A(n) __________ reviews a proposed study and judges it according to safety and consideration for its participants.</Name>
       <InCorrectOption>human rights group</InCorrectOption>
       <CorrectOption>institutional review board</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1744,11 +2128,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Psychology is a relatively new science in comparison to other sciences, only about ________ years
-
-        old.
-      </Name>
+      <Name>Psychology is a relatively new science in comparison to other sciences, only about ________ years old.</Name>
       <InCorrectOption>110</InCorrectOption>
       <CorrectOption>130</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1757,11 +2137,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The early psychological approach known as functionalism played a part in the development of which modern
-
-        perspective in psychology?
-      </Name>
+      <Name>The early psychological approach known as functionalism played a part in the development of which modern perspective in psychology?</Name>
       <InCorrectOption>psychoanalysis</InCorrectOption>
       <CorrectOption>evolutionary psychology</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1779,11 +2155,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Some of the earliest research in the area of human memory and the psychology of the self was done
-
-        by
-      </Name>
+      <Name>Some of the earliest research in the area of human memory and the psychology of the self was done by</Name>
       <InCorrectOption>Francis Cecil Sumner.</InCorrectOption>
       <CorrectOption>Mary Whiton Calkins.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1891,16 +2263,8 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Dr. Sanchez has been conducting research with the same group of children for several months and one of the
-
-        children now wishes to drop out of the study. Dr. Sanchez must now
-      </Name>
-      <InCorrectOption>
-        remind him of his informed consent, and insist that he continue with the
-
-        study.
-      </InCorrectOption>
+      <Name>Dr. Sanchez has been conducting research with the same group of children for several months and one of the children now wishes to drop out of the study. Dr. Sanchez must now</Name>
+      <InCorrectOption>remind him of his informed consent, and insist that he continue with the study.</InCorrectOption>
       <CorrectOption>allow him to drop out of the study.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
@@ -1928,11 +2292,7 @@ as per data on the UI deleted or refreshed.-->
     <ActivityQuestionsList>
       <Name>Which of the following is TRUE about astrology?</Name>
       <InCorrectOption>Few people believe in its accuracy.</InCorrectOption>
-      <CorrectOption>
-        It is the study of the supposed influence of stars and planets on the birth of an
-
-        infant.
-      </CorrectOption>
+      <CorrectOption>It is the study of the supposed influence of stars and planets on the birth of an infant.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -1957,11 +2317,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Wundt referred to the process of examining and measuring one's own thoughts and mental activities
-
-        as
-      </Name>
+      <Name>Wundt referred to the process of examining and measuring one's own thoughts and mental activities as</Name>
       <InCorrectOption>focus of control.</InCorrectOption>
       <CorrectOption>objective introspection.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1970,11 +2326,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The view that objective introspection could be used on thoughts as well as physical sensations is known
-
-        as
-      </Name>
+      <Name>The view that objective introspection could be used on thoughts as well as physical sensations is known as</Name>
       <InCorrectOption>cognitive psychology.</InCorrectOption>
       <CorrectOption>structuralism.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -1983,11 +2335,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Which early perspective in psychology, associated with William James, focused on how the mind allows
-
-        people to adapt, live, work, and play?
-      </Name>
+      <Name>Which early perspective in psychology, associated with William James, focused on how the mind allows people to adapt, live, work, and play?</Name>
       <InCorrectOption>conflict.</InCorrectOption>
       <CorrectOption>functionalism.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2041,11 +2389,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The idea that sexual orientation may be related to the birth order of male children was posited by
-
-        researchers in the field of
-      </Name>
+      <Name>The idea that sexual orientation may be related to the birth order of male children was posited by researchers in the field of</Name>
       <InCorrectOption>behaviorism.</InCorrectOption>
       <CorrectOption>biopsychology.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2135,11 +2479,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        _____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest
-
-        explanation is more often the best one.
-      </Name>
+      <Name>_____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest explanation is more often the best one.</Name>
       <InCorrectOption>Cognitive perspective-taking.</InCorrectOption>
       <CorrectOption>The law of parsimony.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2148,11 +2488,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and
-
-        cause grave medical conditions. The doctor is making a(n)
-      </Name>
+      <Name>A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and cause grave medical conditions. The doctor is making a(n)</Name>
       <InCorrectOption>educated guess.</InCorrectOption>
       <CorrectOption>prediction.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2161,11 +2497,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward
-
-        their peers, the psychologist is
-      </Name>
+      <Name>When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward their peers, the psychologist is</Name>
       <InCorrectOption>describing.</InCorrectOption>
       <CorrectOption>explaining.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2183,11 +2515,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s
-
-        attention will
-      </Name>
+      <Name>According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s attention will</Name>
       <InCorrectOption>stop crying so much in the future.</InCorrectOption>
       <CorrectOption>cry again in the future.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2196,11 +2524,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early
-
-        humans’ avoidance of poisonous plants.
-      </Name>
+      <Name>Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early humans’ avoidance of poisonous plants.</Name>
       <InCorrectOption>phobic</InCorrectOption>
       <CorrectOption>adaptive</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2209,11 +2533,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an
-
-        example of
-      </Name>
+      <Name>Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an example of</Name>
       <InCorrectOption>prejudice.</InCorrectOption>
       <CorrectOption>confirmation bias.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2231,11 +2551,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If a researcher is observing a third grade classroom in full view of the students and finds that all the
-
-        students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?
-      </Name>
+      <Name>If a researcher is observing a third grade classroom in full view of the students and finds that all the students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?</Name>
       <InCorrectOption>The teacher is very strict.</InCorrectOption>
       <CorrectOption>The students’ behavior is due to the observer effect.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2244,11 +2560,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and
-
-        height have a(n)
-      </Name>
+      <Name>If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and height have a(n)</Name>
       <InCorrectOption>inverse relationship.</InCorrectOption>
       <CorrectOption>positive correlation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2257,11 +2569,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        In measuring the effect of violent cartoons on childhood aggression, researchers must identify the
-
-        __________ of “aggressive behavior.”
-      </Name>
+      <Name>In measuring the effect of violent cartoons on childhood aggression, researchers must identify the __________ of “aggressive behavior.”</Name>
       <InCorrectOption>disorder</InCorrectOption>
       <CorrectOption>operational definition</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2270,11 +2578,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A drug company conducts a study in which the experimenter gives half of the participants the drug being
-
-        tested and the other half a placebo. This is an example of
-      </Name>
+      <Name>A drug company conducts a study in which the experimenter gives half of the participants the drug being tested and the other half a placebo. This is an example of</Name>
       <InCorrectOption>a double-blind study.</InCorrectOption>
       <CorrectOption>a single-blind study.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2310,11 +2614,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A researcher wants to describe children's normal behavior on the playground. The best method for this
-
-        research is to use
-      </Name>
+      <Name>A researcher wants to describe children's normal behavior on the playground. The best method for this research is to use</Name>
       <InCorrectOption>a case study.</InCorrectOption>
       <CorrectOption>naturalistic observation.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2323,11 +2623,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A researcher wants to determine how most U.S. college students feel about the president. Which of the
-
-        following groups provides a representative sample for this researcher's survey?
-      </Name>
+      <Name>A researcher wants to determine how most U.S. college students feel about the president. Which of the following groups provides a representative sample for this researcher's survey?</Name>
       <InCorrectOption>students attending a religious college in the South</InCorrectOption>
       <CorrectOption>students selected randomly at college campuses across the country</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2363,11 +2659,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear
-
-        rats. This proved that
-      </Name>
+      <Name>By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear rats. This proved that</Name>
       <InCorrectOption>children are inherently afraid of rats.</InCorrectOption>
       <CorrectOption>phobias could be learned through conditioning.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2448,11 +2740,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If there is _________ in a medical experiment, the control group will show changes in the dependent
-
-        variable even if they are given a harmless substitute rather than a real drug.
-      </Name>
+      <Name>If there is _________ in a medical experiment, the control group will show changes in the dependent variable even if they are given a harmless substitute rather than a real drug.</Name>
       <InCorrectOption>an observer effect</InCorrectOption>
       <CorrectOption>a placebo effect</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2461,11 +2749,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Neither the participants nor the experimenter know if the participants are in the control or experimental
-
-        group in a
-      </Name>
+      <Name>Neither the participants nor the experimenter know if the participants are in the control or experimental group in a</Name>
       <InCorrectOption>random assignment</InCorrectOption>
       <CorrectOption>double-blind study</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2474,10 +2758,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Which of the following is a reason researchers prefer to use animals in experiments instead of humans?
-
-      </Name>
+      <Name>Which of the following is a reason researchers prefer to use animals in experiments instead of humans?</Name>
       <InCorrectOption>There are no limits to what researchers can do with animals.</InCorrectOption>
       <CorrectOption>Studying long-term effects is much easier.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2504,11 +2785,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        ________ is the goal in psychology that involves observing human or animal behavior and noting everything
-
-        about the behavior.
-      </Name>
+      <Name>________ is the goal in psychology that involves observing human or animal behavior and noting everything about the behavior.</Name>
       <InCorrectOption>Prediction</InCorrectOption>
       <CorrectOption>Description</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
@@ -2517,11 +2794,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Because psychologists want to be precise and measure as carefully as they can, they use ________ to study
-
-        psychology.
-      </Name>
+      <Name>Because psychologists want to be precise and measure as carefully as they can, they use ________ to study psychology.</Name>
       <InCorrectOption>mental processes</InCorrectOption>
       <CorrectOption>the scientific method</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2531,11 +2804,7 @@ as per data on the UI deleted or refreshed.-->
     </ActivityQuestionsList>
     <ActivityQuestionsList>
       <Name>Which of the following illustrates psychology's goal of control?</Name>
-      <InCorrectOption>
-        giving psychological tests to a new therapy client to determine the client's
-
-        symptoms.
-      </InCorrectOption>
+      <InCorrectOption>giving psychological tests to a new therapy client to determine the client's symptoms.</InCorrectOption>
       <CorrectOption>using rewards to help a smoker give up cigarettes.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
       <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
@@ -2561,11 +2830,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear
-
-        rats. This proved that
-      </Name>
+      <Name>By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear rats. This proved that</Name>
       <InCorrectOption>children are inherently afraid of rats.</InCorrectOption>
       <CorrectOption>phobias could be learned through conditioning.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2601,11 +2866,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Researchers who allow their expectations about what they will see to affect the results of their
-
-        observation studies are suffering from
-      </Name>
+      <Name>Researchers who allow their expectations about what they will see to affect the results of their observation studies are suffering from</Name>
       <InCorrectOption>the observer effect.</InCorrectOption>
       <CorrectOption>observer bias.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2632,11 +2893,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Experimenters control the effects of extraneous or confounding variables upon members of experimental and
-
-        control groups by using
-      </Name>
+      <Name>Experimenters control the effects of extraneous or confounding variables upon members of experimental and control groups by using</Name>
       <InCorrectOption>independent observers.</InCorrectOption>
       <CorrectOption>random assignment.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2681,11 +2938,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If there is _________ in a medical experiment, the control group will show changes in the dependent
-
-        variable even if they are given a harmless substitute rather than a real drug.
-      </Name>
+      <Name>If there is _________ in a medical experiment, the control group will show changes in the dependent variable even if they are given a harmless substitute rather than a real drug.</Name>
       <InCorrectOption>random sample</InCorrectOption>
       <CorrectOption>a placebo effect</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2694,11 +2947,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Neither the participants nor the experimenter know if the participants are in the control or experimental
-
-        group in a
-      </Name>
+      <Name>Neither the participants nor the experimenter know if the participants are in the control or experimental group in a</Name>
       <InCorrectOption>single-blind study</InCorrectOption>
       <CorrectOption>double-blind study</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2707,10 +2956,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Which of the following is a reason researchers prefer to use animals in experiments instead of humans?
-
-      </Name>
+      <Name>Which of the following is a reason researchers prefer to use animals in experiments instead of humans?</Name>
       <InCorrectOption>There are no limits to what researchers can do with animals.</InCorrectOption>
       <CorrectOption>Studying long-term effects is much easier.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2719,11 +2965,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and
-
-        cause grave medical conditions. The doctor is making a(n)
-      </Name>
+      <Name>A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and cause grave medical conditions. The doctor is making a(n)</Name>
       <InCorrectOption>diagnosis</InCorrectOption>
       <CorrectOption>prediction.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2732,11 +2974,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward
-
-        their peers, the psychologist is
-      </Name>
+      <Name>When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward their peers, the psychologist is</Name>
       <InCorrectOption>describing.</InCorrectOption>
       <CorrectOption>explaining.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2745,11 +2983,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Wundt referred to the process of examining and measuring one's own thoughts and mental activities
-
-        as
-      </Name>
+      <Name>Wundt referred to the process of examining and measuring one's own thoughts and mental activities as</Name>
       <InCorrectOption>evolutionary consciousness.</InCorrectOption>
       <CorrectOption>objective introspection.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2758,11 +2992,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The view that objective introspection could be used on thoughts as well as physical sensations is known
-
-        as
-      </Name>
+      <Name>The view that objective introspection could be used on thoughts as well as physical sensations is known as</Name>
       <InCorrectOption>cognitive psychology.</InCorrectOption>
       <CorrectOption>structuralism.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2780,11 +3010,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Which early perspective in psychology, associated with William James, focused on how the mind allows
-
-        people to adapt, live, work, and play?
-      </Name>
+      <Name>Which early perspective in psychology, associated with William James, focused on how the mind allows people to adapt, live, work, and play?</Name>
       <InCorrectOption>psychoanalysis.</InCorrectOption>
       <CorrectOption>functionalism.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2856,11 +3082,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        The idea that sexual orientation may be related to the birth order of male children was posited by
-
-        researchers in the field of
-      </Name>
+      <Name>The idea that sexual orientation may be related to the birth order of male children was posited by researchers in the field of</Name>
       <InCorrectOption>behaviorism.</InCorrectOption>
       <CorrectOption>biopsychology.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2923,11 +3145,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        _____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest
-
-        explanation is more often the best one.
-      </Name>
+      <Name>_____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest explanation is more often the best one.</Name>
       <InCorrectOption>Cognitive perspective-taking.</InCorrectOption>
       <CorrectOption>The law of parsimony.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -2992,11 +3210,7 @@ as per data on the UI deleted or refreshed.-->
     <ActivityQuestionsList>
       <Name>Freud’s theory of psychoanalysis</Name>
       <InCorrectOption>has no place in modern scientific study.</InCorrectOption>
-      <CorrectOption>
-        is still in use by professionals today, with less emphasis on sex and sexual
-
-        motivations.
-      </CorrectOption>
+      <CorrectOption>is still in use by professionals today, with less emphasis on sex and sexual motivations.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
       <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
@@ -3030,11 +3244,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an
-
-        example of
-      </Name>
+      <Name>Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an example of</Name>
       <InCorrectOption>a single-blind study.</InCorrectOption>
       <CorrectOption>confirmation bias.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3043,13 +3253,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Sasha sat in the preschool classroom and watched the children play, writing down how well they interacted
-
-        with each other. The children could see that Sasha was watching them, so they made an attempt to be extra well-behaved
-
-        for her. Sasha's research will be impacted by
-      </Name>
+      <Name>Sasha sat in the preschool classroom and watched the children play, writing down how well they interacted with each other. The children could see that Sasha was watching them, so they made an attempt to be extra well-behaved for her. Sasha's research will be impacted by</Name>
       <InCorrectOption>observer bias.</InCorrectOption>
       <CorrectOption>the observer effect.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3058,11 +3262,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Dr. Jonas wanted to determine what would happen if rats were given food every time they completed a maze.
-
-        He believed they would learn to complete the maze faster. This belief is called
-      </Name>
+      <Name>Dr. Jonas wanted to determine what would happen if rats were given food every time they completed a maze. He believed they would learn to complete the maze faster. This belief is called</Name>
       <InCorrectOption>control.</InCorrectOption>
       <CorrectOption>a prediction.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3080,11 +3280,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        When Mary took the survey in the mall, she noticed that the interviewer was wearing an Obama button. She
-
-        answered the questions more favorably toward Obama than she might otherwise have, probably because
-      </Name>
+      <Name>When Mary took the survey in the mall, she noticed that the interviewer was wearing an Obama button. She answered the questions more favorably toward Obama than she might otherwise have, probably because</Name>
       <InCorrectOption>the survey questions were biased.</InCorrectOption>
       <CorrectOption>of courtesy bias.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3102,11 +3298,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If a researcher is observing a third grade classroom in full view of the students and finds that all the
-
-        students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?
-      </Name>
+      <Name>If a researcher is observing a third grade classroom in full view of the students and finds that all the students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?</Name>
       <InCorrectOption>A survey would be a better approach.</InCorrectOption>
       <CorrectOption>The students’ behavior is due to the observer effect.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3115,11 +3307,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s
-
-        attention will
-      </Name>
+      <Name>According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s attention will</Name>
       <InCorrectOption>be more attached to his mother.</InCorrectOption>
       <CorrectOption>cry again in the future.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3128,11 +3316,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Mrs. Lewis participated in a study in which she was given no treatment for her condition. Mrs. Lewis was
-
-        in the ________ group.
-      </Name>
+      <Name>Mrs. Lewis participated in a study in which she was given no treatment for her condition. Mrs. Lewis was in the ________ group.</Name>
       <InCorrectOption>experimental</InCorrectOption>
       <CorrectOption>control</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3141,11 +3325,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early
-
-        humans’ avoidance of poisonous plants.
-      </Name>
+      <Name>Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early humans’ avoidance of poisonous plants.</Name>
       <InCorrectOption>phobic</InCorrectOption>
       <CorrectOption>adaptive</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3154,11 +3334,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Mary is a psychologist who focuses on the role of the conscious and unconscious mind. To which perspective
-
-        does Mary ascribe?
-      </Name>
+      <Name>Mary is a psychologist who focuses on the role of the conscious and unconscious mind. To which perspective does Mary ascribe?</Name>
       <InCorrectOption>humanistic</InCorrectOption>
       <CorrectOption>psychodynamic</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3167,11 +3343,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Anna is 45-years-old and is suffering from hot flashes and extreme moodiness. From a _____ perspective,
-
-        Anna's symptoms can be attributed to menopause.
-      </Name>
+      <Name>Anna is 45-years-old and is suffering from hot flashes and extreme moodiness. From a _____ perspective, Anna's symptoms can be attributed to menopause.</Name>
       <InCorrectOption>analytical</InCorrectOption>
       <CorrectOption>biopsychological</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3180,13 +3352,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Mrs. O'Connor participated in a study in which she was told she would try out a new allergy medicine. She
-
-        was in the group that received a sugar pill but she believed that the pill did indeed help control her allergy
-
-        symptoms. This phenomenon is known as
-      </Name>
+      <Name>Mrs. O'Connor participated in a study in which she was told she would try out a new allergy medicine. She was in the group that received a sugar pill but she believed that the pill did indeed help control her allergy symptoms. This phenomenon is known as</Name>
       <InCorrectOption>a successful experiment.</InCorrectOption>
       <CorrectOption>the placebo effect.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3195,11 +3361,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A drug company is determining the effects of a treatment for depression. Neither the researcher nor the
-
-        participants know who is getting the treatment and who is being given a sugar pill. This type of study is
-      </Name>
+      <Name>A drug company is determining the effects of a treatment for depression. Neither the researcher nor the participants know who is getting the treatment and who is being given a sugar pill. This type of study is</Name>
       <InCorrectOption>single-blind.</InCorrectOption>
       <CorrectOption>double-blind.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3208,11 +3370,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and
-
-        height have a(n)
-      </Name>
+      <Name>If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and height have a(n)</Name>
       <InCorrectOption>inverse relationship.</InCorrectOption>
       <CorrectOption>positive correlation.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3221,11 +3379,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        Dr. Edwards wants to show a causal relationship between tobacco smoking and cancer. Dr. Edwards
-
-        should
-      </Name>
+      <Name>Dr. Edwards wants to show a causal relationship between tobacco smoking and cancer. Dr. Edwards should</Name>
       <InCorrectOption>observe people smoking.</InCorrectOption>
       <CorrectOption>conduct an experiment using animal participants.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3234,11 +3388,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        In measuring the effect of violent cartoons on childhood aggression, researchers must identify the
-
-        __________ of “aggressive behavior.”
-      </Name>
+      <Name>In measuring the effect of violent cartoons on childhood aggression, researchers must identify the __________ of “aggressive behavior.”</Name>
       <InCorrectOption>hypothesis</InCorrectOption>
       <CorrectOption>operational definition</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3247,11 +3397,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A drug company conducts a study in which the experimenter gives half of the participants the drug being
-
-        tested and the other half a placebo. This is an example of
-      </Name>
+      <Name>A drug company conducts a study in which the experimenter gives half of the participants the drug being tested and the other half a placebo. This is an example of</Name>
       <InCorrectOption>the experimenter effect.</InCorrectOption>
       <CorrectOption>a single-blind study.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3278,11 +3424,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A researcher wants to describe children's normal behavior on the playground. The best method for this
-
-        research is to use
-      </Name>
+      <Name>A researcher wants to describe children's normal behavior on the playground. The best method for this research is to use</Name>
       <InCorrectOption>a case study.</InCorrectOption>
       <CorrectOption>naturalistic observation.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3291,11 +3433,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        In an experiment in which half of the participants are given a caffeinated product and half are given a
-
-        decaffeinated product to determine if caffeine will make them more talkative, the independent variable is
-      </Name>
+      <Name>In an experiment in which half of the participants are given a caffeinated product and half are given a decaffeinated product to determine if caffeine will make them more talkative, the independent variable is</Name>
       <InCorrectOption>the decaffeinated product.</InCorrectOption>
       <CorrectOption>the presence or absence of caffeine.</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3304,11 +3442,7 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
     <ActivityQuestionsList>
-      <Name>
-        A researcher wants to determine how most U.S. college students feel about the president. Which of the
-
-        following groups provides a representative sample for this researcher's survey?
-      </Name>
+      <Name>A researcher wants to determine how most U.S. college students feel about the president. Which of the following groups provides a representative sample for this researcher's survey?</Name>
       <InCorrectOption>honor roll students who have pledged to be truthful</InCorrectOption>
       <CorrectOption>students selected randomly at college campuses across the country</CorrectOption>
       <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
@@ -3326,4 +3460,50 @@ as per data on the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </ActivityQuestionsList>
   </ArrayOfActivityQuestionsList>
+    <!-- Welcome Message-->
+    <ArrayOfWelcomeMessage>
+      <WelcomeMessage>
+      <Message>Welcome to WL course</Message>
+      <WelcomeMessageType>RegTVInsWelcomeMsg</WelcomeMessageType>
+      <IsCreated>true</IsCreated>
+    </WelcomeMessage>
+	  </ArrayOfWelcomeMessage>
+  <!-- Alert-->
+  <ArrayOfAlert>
+    <Alert>
+      <AlertCount>3</AlertCount>
+      <AlertType>RegNotPassedAlertCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>0</AlertCount>
+      <AlertType>RegNewGradesAlertCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>4</AlertCount>
+      <AlertType>RegIdleStudentCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>2</AlertCount>
+      <AlertType>RegPastDueSubmittedCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>6275</AlertCount>
+      <AlertType>RegPastDueNotSubmittedCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>10</AlertCount>
+      <AlertType>RegUnreadCommentsCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>6294</AlertCount>
+      <AlertType>RegAlertsCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+  </ArrayOfAlert>
 </Data>

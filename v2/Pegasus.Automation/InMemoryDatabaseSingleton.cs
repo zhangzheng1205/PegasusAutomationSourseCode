@@ -92,8 +92,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             XmlSerializer xmlSerializer;
             // desearlize data
             DesearlizeOrganzationTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
-            DesearlizeUserTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeCourseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeUserTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeProgramTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeActivityTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeClassTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
@@ -426,7 +426,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
 
 
-        /// <summary>
+             /// <summary>
         /// Desearlize Organization Test Data In Memory.
         /// </summary>
         /// <param name="xmlDocument">Represents an XML document.</param>
@@ -436,7 +436,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private void DesearlizeLicenseTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
-
+          
             xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfLicense");
             xmlSerializer = new XmlSerializer(typeof(List<License>));
             if (xmlNodeList != null && xmlNodeList.Count > 0)

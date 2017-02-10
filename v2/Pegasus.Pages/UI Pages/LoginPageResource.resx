@@ -246,8 +246,8 @@
   <data name="Login_Page_Synapse_CSUser_Username_Id_Locator" xml:space="preserve">
     <value>username</value>
   </data>
-  <data name="Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator" xml:space="preserve">
-    <value>//button[@class='btnnextgen btnnextgen-primary']</value>
+  <data name="Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator" xml:space="preserve">
+    <value>btn-submit</value>
   </data>
   <data name="Login_Page_ConfirmPassword_Textbox_Id_Locator" xml:space="preserve">
     <value>confirmPassword</value>

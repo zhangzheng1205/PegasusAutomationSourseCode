@@ -243,33 +243,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         /// <summary>
         ///   Looks up a localized string similar to imgBtnSave_Update.
         /// </summary>
-        internal static string AddAsessment_Page_Folder_CreateButton_Id_Locator {
-            get {
-                return ResourceManager.GetString("AddAsessment_Page_Folder_CreateButton_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to txtFolderDescription.
-        /// </summary>
-        internal static string AddAsessment_Page_FolderDescription_Id_Locator {
-            get {
-                return ResourceManager.GetString("AddAsessment_Page_FolderDescription_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to txtFolderName.
-        /// </summary>
-        internal static string AddAsessment_Page_FolderName_Id_Locator {
-            get {
-                return ResourceManager.GetString("AddAsessment_Page_FolderName_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to imgBtnSave_Update.
-        /// </summary>
         internal static string AddAsessment_Page_LinkAsset_AddButton_Id_Locator {
             get {
                 return ResourceManager.GetString("AddAsessment_Page_LinkAsset_AddButton_Id_Locator", resourceCulture);

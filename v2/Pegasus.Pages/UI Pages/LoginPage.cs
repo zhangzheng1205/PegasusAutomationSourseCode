@@ -522,7 +522,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                 }
                 if (base.IsElementPresent(By.Id(LoginPageResource.
-                    Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator), Convert.ToInt32
+                    Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator), Convert.ToInt32
                     (LoginPageResource.Login_Page_Custom_TimeToWait)))
                 {
                     //Authenticate User Login
@@ -650,10 +650,10 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getCheckBoxProperty);
             //Wait For Element
             base.WaitForElement(By.ClassName(LoginPageResource.
-                               Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator));
+                               Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator));
             //Get Element Property
             IWebElement getNextButtonProperty = base.GetWebElementPropertiesByClassName
-                (LoginPageResource.Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator);
+                (LoginPageResource.Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator);
             //Click Next Button 
             base.ClickByJavaScriptExecutor(getNextButtonProperty);
             Logger.LogMethodExit("LoginPage", "HandleUserConsentAction",
@@ -768,14 +768,8 @@ namespace Pegasus.Pages.UI_Pages
             }
             else
             {
-                bool sad = base.IsElementPresent(By.XPath("//button[@class='btnnextgen btnnextgen-primary']"), 10);
-                base.WaitForElement(By.XPath(LoginPageResource.
-                    Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator));
-                //Get Element Property
-                IWebElement getSignInButton = base.GetWebElementPropertiesByXPath(LoginPageResource.
-                    Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator);
-                //Click SignIn Button
-                base.ClickByJavaScriptExecutor(getSignInButton);
+                base.SubmitButtonByClassName(LoginPageResource.
+               Login_Page_Submit_Button_ClassName_Locator);
             }
             Thread.Sleep(Convert.ToInt32(LoginPageResource
                 .Login_Page_ThreadTimeToWait_Value));
@@ -834,11 +828,11 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("LoginPage", "ClickSynapseSignInButton",
                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
-            base.WaitForElement(By.XPath(LoginPageResource.
-                Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator));
+            base.WaitForElement(By.ClassName(LoginPageResource.
+                Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator));
             //Get Element Property
-            IWebElement getSignInButton = base.GetWebElementPropertiesByXPath(LoginPageResource.
-                Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator);
+            IWebElement getSignInButton = base.GetWebElementPropertiesByClassName(LoginPageResource.
+                Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator);
             //Click SignIn Button
             base.ClickByJavaScriptExecutor(getSignInButton);
             Logger.LogMethodExit("LoginPage", "ClickSynapseSignInButton",
@@ -1125,7 +1119,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Wait For consent Window
                 if (base.IsElementLoadedInWindow(LoginPageResource.LoginPage_Consent_Window_Title,
-                    By.ClassName(LoginPageResource.Login_Page_Synapse_CSUser_SignIn_Button_Xpath_Locator),
+                    By.ClassName(LoginPageResource.Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator),
                     Convert.ToInt32(LoginPageResource.Login_Page_Custom_TimeToWait)))
                 {
                     isLoginSuccessful = true;
