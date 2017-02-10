@@ -2323,12 +2323,14 @@ namespace Pegasus.Pages.UI_Pages
                 }
                 else
                 {
+
                     //Clicks on the course name
-                    base.WaitForElement(By.LinkText(courseName));
-                    // base.WaitForElement(By.PartialLinkText(courseName));
-                    IWebElement getCourseName = base.GetWebElementPropertiesByLinkText
-                        (courseName);
-                    base.ClickByJavaScriptExecutor(getCourseName);
+                    //Get the course name from the my testbank grid and fill the row index
+                    IWebElement getCourseName = base.GetWebElementPropertiesByXPath(string.Format(
+                      HEDGlobalHomePageResource.
+                      HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_OpenButton_XPath_Locator, courseDivCounter));
+                    //Click on Link
+                    base.PerformMouseClickAction(getCourseName);
                 }
             }
             catch (Exception e)

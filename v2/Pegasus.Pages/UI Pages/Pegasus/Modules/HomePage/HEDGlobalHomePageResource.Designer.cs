@@ -763,6 +763,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;channel-content&apos;]/div/div/div[{0}]/div/div/div[3].
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_OpenButton_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_OpenButton_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@class=&apos;channel-content&apos;]/div/div/div[{0}]/div/div/div[4].
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_XPath_Locator {
