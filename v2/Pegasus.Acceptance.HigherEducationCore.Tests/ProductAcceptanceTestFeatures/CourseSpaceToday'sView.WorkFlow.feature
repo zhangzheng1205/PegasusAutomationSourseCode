@@ -51,12 +51,7 @@ Then I should be on the "Today's View" page
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 Scenario: Validate the functionality of Glossary link in Today's view tab as WLCsSmsInstructor
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Glossary" link
 Then I should be on the "Glossary" page
@@ -67,12 +62,7 @@ Then I should be on the "Today's View" page
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 Scenario: Validate the functionality of Verb Chart link in Today's view tab as WLCsSmsInstructor
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Verb Chart" link
 Then I should be on the "Verb Chart" page
@@ -83,12 +73,7 @@ Then I should be on the "Today's View" page
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 Scenario: Validate the functionality of User Guide link in Today's view tab as WLCsSmsInstructor
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "User Guide" link
 Then I should be on the "Instructor User Guide" page  
@@ -99,14 +84,9 @@ Then I should be on the "Today's View" page
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 Scenario: Validate the functionality of More Resources link in Today's view tab as WLCsSmsInstructor
-Given I browsed the login url for "WLCsSmsInstructor"
-When I logged into the Pegasus as "WLCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MySpanishLabProgram" from the Global Home page as "WLCsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
-When I click on "User Guide" link
+When I click on "More Resources" link
 Then I should be on the "More Resources" page 
 When I close the "More Resources" window
 Then I should be on the "Today's View" page                  

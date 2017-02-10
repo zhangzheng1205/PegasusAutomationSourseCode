@@ -935,18 +935,28 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             base.IsTakeScreenShotDuringEntryExit);
          }
 
-
-         
-         
-         [When(@"I click on ""(.*)"" count")]
-         public void WhenIClickOnCount(Alert.AlertTypeEnum alertType)
+        /// <summary>
+        /// Click on the Alert channel option 
+        /// </summary>
+        /// <param name="alertType">This is the Alert type.</param>
+         [When(@"I click on ""(.*)"" alert option")]
+         public void ClickOnAlertOption(string alertType)
          {
-             Logger.LogMethodEntry("TodaysView", "WhenIClickOnCount",
+             Logger.LogMethodEntry("TodaysView", "ClickOnAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
-             new TodaysViewUxPage().ClickAlertCount(alertType);
-             Logger.LogMethodExit("TodaysView", "WhenIClickOnCount",
+             new TodaysViewUxPage().ClickAlertType(alertType);
+             Logger.LogMethodExit("TodaysView", "ClickOnAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
          }
+
+         //public void WhenIClickOnCount(Alert.AlertTypeEnum alertType)
+         //{
+         //    Logger.LogMethodEntry("TodaysView", "WhenIClickOnCount",
+         //       base.IsTakeScreenShotDuringEntryExit);
+         //    new TodaysViewUxPage().ClickAlertTypeOption(alertType);
+         //    Logger.LogMethodExit("TodaysView", "WhenIClickOnCount",
+         //       base.IsTakeScreenShotDuringEntryExit);
+         //}
 
         /// <summary>
         /// Validate the count of Idle students displayed in the Idle Students frame
@@ -959,11 +969,46 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
              Alert alert = Alert.Get(alertType);
              string getAlert = alert.AlertCount.ToString();
-             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
+             Logger.LogAssertion("GetIdleStudentCount", ScenarioContext.
               Current.ScenarioInfo.Title, () => Assert.AreEqual(getAlert,
               new TodaysViewUxPage().GetIdleStudentCount()));
              Logger.LogMethodExit("TodaysView", "GetIdleStudentCount",
                 base.IsTakeScreenShotDuringEntryExit);
+         }
+
+        /// <summary>
+         /// Verify Student In Alert Channel
+        /// </summary>
+        /// <param name="userType">This is the User type enum.</param>
+         [Then(@"I should see 'Zero' ""(.*)""")]
+         public void VerifyStudentInAlertChannel(User.UserTypeEnum userType)
+         {
+             Logger.LogMethodExit("TodaysView", "VerifyStudentInAlertChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+             //Get User from Memory
+             User user = User.Get("Hed_User_SMS_STU_UC2");
+             string actualIdleStudentName = user.LastName + " , " + user.FirstName;
+             Logger.LogAssertion("VerifyStudentInAlertChannel", ScenarioContext.
+               Current.ScenarioInfo.Title, () => Assert.IsTrue(
+               new TodaysViewUxPage().GetIdleStudentName(actualIdleStudentName)));
+             Logger.LogMethodExit("TodaysView", "VerifyStudentInAlertChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+        /// <summary>
+         /// Verify Idle Student Alert Message
+        /// </summary>
+        /// <param name="p0">This is the message text.</param>
+         [Then(@"I should be displayed with the ""(.*)"" message")]
+         public void VerifyIdleStudentAlertMessage(string messageText)
+         {
+             Logger.LogMethodExit("TodaysView", "VerifyIdleStudentAlertMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+             Logger.LogAssertion("VerifyIdleStudentAlertMessage", ScenarioContext.
+               Current.ScenarioInfo.Title, () => Assert.IsTrue(
+               new TodaysViewUxPage().GetIdleStudentMessage()));
+             Logger.LogMethodExit("TodaysView", "VerifyIdleStudentAlertMessage",
+            base.IsTakeScreenShotDuringEntryExit);
          }
 
     }

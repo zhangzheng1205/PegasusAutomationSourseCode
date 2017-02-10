@@ -5902,7 +5902,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click alert count in Alert channel
         /// </summary>
-        /// <param name="alertType"></param>
+        /// <param name="alertType">This is the alert type enum</param>
         public void ClickAlertCount(Alert.AlertTypeEnum alertType)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "GetWelcomeMessage",
@@ -5998,6 +5998,35 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// CLick on Alert channel option
+        /// </summary>
+        /// <param name="alertType">This is the alert type.</param>
+        public void ClickAlertType(string alertType)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickAlertType",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
+                //Wait for the elements to load
+                base.WaitForElement(By.PartialLinkText(alertType), 10);
+                // click on the Alert option
+                IWebElement clickAlertOption = base.
+                    GetWebElementPropertiesByPartialLinkText(alertType);
+                base.ClickByJavaScriptExecutor(clickAlertOption);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickAlertType",
+                                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Get the idle student count in the Idlestudent frame
         /// </summary>
         /// <returns>Return idle student count.</returns>
@@ -6013,7 +6042,8 @@ namespace Pegasus.Pages.UI_Pages
                     TodaysViewUXPageResource_WindowsTitle);
 
                 base.WaitForElement(By.Id("TVIdlStuDatagrid"));
-                int count = base.GetElementCountByXPath("//table[@id='TVIdlStuDatagrid']/tbody/tr");
+                int count = base.GetElementCountByXPath(
+                    "//table[@id='TVIdlStuDatagrid']/tbody/tr");
                 idleCount = count.ToString();
             }
             catch(Exception e)
@@ -6033,25 +6063,92 @@ namespace Pegasus.Pages.UI_Pages
         {
  	       Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseToolBar",
                         base.IsTakeScreenShotDuringEntryExit);
-           
-           int getCourseToolsCount = base.GetElementCountByXPath(".//*[@id='dvInlineCC']/table/tbody/tr/td");
+            //Fetch the count of COurse tools
+           int getCourseToolsCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+               TodaysView_CoursToolsCount_Xpath_Locator);            
            for(int i=1; i <= getCourseToolsCount; i++)
             {
-                bool jhk = base.IsElementPresent(By.XPath(String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)), 10);
-                base.WaitForElement(By.XPath(String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)));
-                string getCourseToolName = base.GetInnerTextAttributeValueByXPath(string.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i));
+                base.WaitForElement(By.XPath(String.Format(TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i)));
+               //Fetch the course tool name
+                string getCourseToolName = base.GetInnerTextAttributeValueByXPath(
+                    string.Format(TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i));
                 string courseToolOption = getCourseToolName.TrimStart();
-                if (courseToolOption == toolBarOption)
+                if (courseToolOption.Contains(toolBarOption))
                {
                    base.WaitForElement(By.XPath(String.Format
-                       (".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i)));
+                       (TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i)));
                    IWebElement clickCourseTool = base.GetWebElementPropertiesByXPath(
-                       String.Format(".//*[@id='dvInlineCC']/table/tbody/tr/td[{0}]", i));
+                       String.Format(TodaysViewUXPageResource.
+               TodaysView_CoursToolsName_Xpath_Locator, i));
                    base.PerformMouseClickAction(clickCourseTool);
                }
             }     
             Logger.LogMethodExit("TodaysViewUXPage", "ClickOnCourseToolBar",
                         base.IsTakeScreenShotDuringEntryExit);
-        }    
+        }
+
+        /// <summary>
+        /// Fetch the Idelstudent name from Alterts - Idle Students channel
+        /// </summary>
+        /// <param name="actualIdleStudentName">This is the Idle Student name.</param>
+        /// <returns>Tru/False.</returns>
+        public bool GetIdleStudentName(string actualIdleStudentName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentName",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isIdleStudentDisplayed = false;
+            try
+            {               
+                int getstudentsCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                    TodaysViewPageResource_AlertChannel_IdleStudentCount_XPath_Locator);
+                for (int i = 1; i <= getstudentsCount; i++)
+                {
+                    string getIdleStudentName = base.GetElementInnerTextByXPath(string.Format(
+                        TodaysViewUXPageResource.
+                    TodaysViewPageResource_AlertChannel_IdleStudentName_XPath_Locator, i));
+                    if (actualIdleStudentName == getIdleStudentName)
+                    {
+                        isIdleStudentDisplayed = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentName",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isIdleStudentDisplayed;          
+        }
+
+        /// <summary>
+        /// Fetch the message from Idle STudent channel
+        /// </summary>
+        /// <returns>True/False.</returns>
+        public bool GetIdleStudentMessage()
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isIdleStudentAlertTextPresent = false;
+            try
+            {
+                isIdleStudentAlertTextPresent = base.IsElementPresent(
+                    By.ClassName(TodaysViewUXPageResource.
+                    TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator), 10);
+                base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                    TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isIdleStudentAlertTextPresent;
+        }
     }
 }
