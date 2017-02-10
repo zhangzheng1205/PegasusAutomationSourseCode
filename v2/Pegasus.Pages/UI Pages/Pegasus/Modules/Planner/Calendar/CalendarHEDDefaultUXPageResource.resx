@@ -544,7 +544,7 @@
     <value>rdAssigned</value>
   </data>
   <data name="CalendarHEDDefaultUXPage_ClickOn_SetSchedulingOption_XPath_Locator" xml:space="preserve">
-    <value>//div[@id ='PegMenu32']/div[2]/div[4]/span</value>
+    <value>//div[@id='PegMenu32']/div/div[4]/span</value>
   </data>
   <data name="CalendarHEDDefaultUXPage_CmenuIcon_Id_Locator" xml:space="preserve">
     <value>ES_CMenuImg</value>

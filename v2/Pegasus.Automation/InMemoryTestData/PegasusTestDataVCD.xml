@@ -1105,6 +1105,24 @@ the UI deleted or refreshed.-->
 			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
 			<IsCreated>true</IsCreated>
 		</Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegSimpleAssign</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleAssignFutureDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
 	</ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>
@@ -2551,5 +2569,43 @@ the UI deleted or refreshed.-->
 			<IsCreated>true</IsCreated>
 		</ActivityQuestionsList>
 	</ArrayOfActivityQuestionsList>
+  <!-- Alert-->
+  <ArrayOfAlert>
+    <Alert>
+      <AlertCount>3</AlertCount>
+      <AlertType>RegNotPassedAlertCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>0</AlertCount>
+      <AlertType>RegNewGradesAlertCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>2</AlertCount>
+      <AlertType>RegIdleStudentCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>2</AlertCount>
+      <AlertType>RegPastDueSubmittedCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>6275</AlertCount>
+      <AlertType>RegPastDueNotSubmittedCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>10</AlertCount>
+      <AlertType>RegUnreadCommentsCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+    <Alert>
+      <AlertCount>6294</AlertCount>
+      <AlertType>RegAlertsCount</AlertType>
+      <IsCreated>true</IsCreated>
+    </Alert>
+  </ArrayOfAlert>
 </Data>
 

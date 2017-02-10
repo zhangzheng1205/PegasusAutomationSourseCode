@@ -293,6 +293,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'Drag and Drop' in day view of ""(.*)""")]
+        [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'CMenu' in day view of ""(.*)""")]
         public void ValidateDisplayOfAssignedActivityInDayView(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum, string dateType)
         {
@@ -301,7 +302,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
-
             //Assert the Assigned Activity            
             Logger.LogAssertion("VerifyActivityAssigned",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -480,7 +480,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Assert.IsTrue(new CalendarHedDefaultUxPage().ValidateNotes()));
             Logger.LogMethodExit("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
-            Logger.LogMethodExit("AssignmentCalendar", "ValidateDisplayOfNotesInTheDayView", base.IsTakeScreenShotDuringEntryExit);
+            //Logger.LogMethodExit("AssignmentCalendar", "ValidateDisplayOfNotesInTheDayView", base.IsTakeScreenShotDuringEntryExit);
         }
 
         //Then I should be displayed with 'Due date' icon and 'Notes' icon in "Future date"
@@ -528,11 +528,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "ValidateActivityAssignedInViewOfInAdvanceCalender",
                 base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityType);
+           string actualActivityName = activity.Name;
             //Assert the Assigned Activity            
             Logger.LogAssertion("ValidateActivityAssignedInViewOfInAdvanceCalender",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
-                    GetAssignedActNameOnCurrentDayInAdvaceCalender(activity.Name), activity.Name));
+                () => Assert.AreEqual(actualActivityName, new CalendarHedDefaultUxPage().
+                    GetAssignedAvtivityNameInCalendarDayFrame(actualActivityName)));
             Logger.LogMethodEntry("AssignmentCalendar",
                "ValidateActivityAssignedInViewOfInAdvanceCalender",
                base.IsTakeScreenShotDuringEntryExit);
