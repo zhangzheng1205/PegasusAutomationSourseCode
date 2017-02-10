@@ -237,4 +237,10 @@
   <data name="CoursePreviewUX_Page_Badge_Message_Id_Locator" xml:space="preserve">
     <value>badgeImage</value>
   </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="CoursePreviewUXPage_CreateNewFolder_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_BtnAddFolder</value>
+  </data>
 </root>

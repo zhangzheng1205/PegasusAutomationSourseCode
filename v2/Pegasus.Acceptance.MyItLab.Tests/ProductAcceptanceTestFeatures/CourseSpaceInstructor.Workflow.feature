@@ -405,3 +405,17 @@ When I click on the 'Add Course Materials' option
 And I click on the "Add Discussion Topic" asset type
 Then I should be on "Add Discussion Topic" lightbox
 When I create "RegDiscussionTopic" activity
+
+Scenario: Instructor add content from CL to CC via wizard
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+When I click on 'Folder' option
+And I create "RegFolderAsset" activity
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame

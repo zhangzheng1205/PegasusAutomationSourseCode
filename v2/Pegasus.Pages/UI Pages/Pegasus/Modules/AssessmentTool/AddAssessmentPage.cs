@@ -419,6 +419,21 @@ namespace Pegasus.Pages.UI_Pages
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
                         break;
 
+                    case Activity.ActivityTypeEnum.RegFolderAsset:
+                        activityName = "Auto-" + date + "-" + randomValue + "-Folder";
+                        //Select Window
+                        this.SelectCreateNewFolderWindow();
+                        //Enter Activity Title
+                        this.EnterFolderTitle(activityName);
+                        //Enter Description
+                        this.EnterFolderDescription();
+                        // Click create button
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_Folder_CreateButton_Id_Locator));
+                        base.ClickButtonById(AddAssessmentPageResources.
+                            AddAsessment_Page_Folder_CreateButton_Id_Locator);
+                        break;
+
                     case Activity.ActivityTypeEnum.RegFileAsset:
                         activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable File Asset";
                         //Select Window
@@ -928,6 +943,24 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Create New Folder Window.
+        /// </summary>
+        private void SelectCreateNewFolderWindow()
+        {
+            //Select Create Activity Window
+            logger.LogMethodEntry("AddAssessmentPage", "SelectCreateNewFolderWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+            // Select window    
+            base.SelectWindow(base.GetPageTitle);
+            base.SwitchToDefaultWindow();
+            // Switch to iFrame 
+            base.SwitchToIFrameById(AddAssessmentPageResources.
+                AddAssessment_Page_AssetCreation_IFrame_Id_Locator);
+            logger.LogMethodExit("AddAssessmentPage", "SelectCreateNewFolderWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Select Create Activity Window.
         /// </summary>
         private void SelectCreatePageAssetWindow()
@@ -1206,6 +1239,31 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Enter Folder Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterFolderTitle(string activityTitle)
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                             AddAsessment_Page_FolderName_Id_Locator));
+                //Fill the Activity Name in textbox
+                base.FillTextBoxById(AddAssessmentPageResources.
+                             AddAsessment_Page_FolderName_Id_Locator, activityTitle.ToString());
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Enter Activity Title.
         /// </summary>  
         /// <param name="activityTitle">This is Activity Title GUID.</param>
@@ -1361,6 +1419,35 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Enter Folder Title.
+        /// </summary>  
+        /// <param name="activityTitle">This is Activity Title GUID.</param>
+        public void EnterFolderDescription()
+        {
+            //Enter Activity Title
+            logger.LogMethodEntry("AddAssessmentPage", "EnterFolderDescription",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Generate Activity description
+            String date = DateTime.Now.ToString("yyyy/MM/dd");
+            string activityDescription = string.Empty;
+            activityDescription = "Auto-" + "Folder description entered on " + "-" + date;
+            try
+            {
+                base.ClearTextByClassName(AddAssessmentPageResources.
+                    AddAssessment_Page_LinkAsset_Description_TextBox_ClassName);
+                //Fill the Activity Name in textbox
+                base.FillTextBoxByClassName(AddAssessmentPageResources.
+                    AddAssessment_Page_LinkAsset_Description_TextBox_ClassName, activityDescription);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "EnterFolderDescription",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Enter Activity Title.
         /// </summary>  
@@ -2660,6 +2747,9 @@ namespace Pegasus.Pages.UI_Pages
                        }
                         break;
 
+                    case "Add from Library":
+                        getLightBoxName = base.GetInnerTextAttributeValueByClassName("modal-title");
+                        break;
                 }
 
                 // Get the lightbox title based on the class name
@@ -2672,6 +2762,57 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "GetLightBoxTitle",
                     base.IsTakeScreenShotDuringEntryExit);
             return getLightBoxName;
+        }
+
+
+        /// <summary>
+        /// Get lightbox title
+        /// </summary>
+        /// <returns>Return lightbox name.</returns>
+        public string GetActivityName(string activityName)
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "GetActivityName",
+                    base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads("Course Materials");
+                base.SelectWindow("Course Materials");
+
+                base.SwitchToIFrameById("ifrmCoursePreview");
+                
+                int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
+
+                string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[3]").Trim();
+                string getTotalPageCount = getPageCountDetails.Substring(3);
+                int pageCount = Convert.ToInt32(getTotalPageCount);
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+
+                            break;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesByClassName("PD_icn_AssignmentNext");
+                    base.PerformMouseClickAction(getNextIcon);
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "GetActivityName",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
         }
     }
 }

@@ -1077,6 +1077,44 @@ testRunner.When("I create \"RegDiscussionTopic\" activity", ((string)(null)), ((
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor add content from CL to CC via wizard")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void InstructorAddContentFromCLToCCViaWizard()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor add content from CL to CC via wizard", ((string[])(null)));
+#line 409
+this.ScenarioSetup(scenarioInfo);
+#line 410
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 411
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 412
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 413
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 414
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 415
+testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
+                    "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 416
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 417
+testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 418
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 419
+testRunner.When("I click on \'Folder\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 420
+testRunner.And("I create \"RegFolderAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 421
+testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

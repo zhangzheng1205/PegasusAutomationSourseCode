@@ -805,5 +805,53 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I click on ""(.*)"" button in 'Add from Library' lightbox")]
+        public void ClickOnButtonInAddFromLibraryLightbox(string buttonName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickOnButtonInAddFromLibraryLightbox",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickReturnToCourseMaterialsButton(buttonName);
+            Logger.LogMethodExit("CreateActivity", "ClickOnButtonInAddFromLibraryLightbox",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click create new folder option.
+        /// </summary>
+        [When(@"I click on 'Folder' option")]
+        public void ClickCreateFolder()
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickCreateFolder",base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickCreateFolder();
+            Logger.LogMethodExit("CreateActivity", "ClickCreateFolder", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [Then(@"I should be displayed with ""(.*)"" in 'Manage Course Materials' frame")]
+        public void ValidateTheDisplayedOfActivity(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateTheDisplayedOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            //Assert we have correct page opened
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName,
+                    new AddAssessmentPage().
+                    GetActivityName(activityName)));
+            Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayedOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
