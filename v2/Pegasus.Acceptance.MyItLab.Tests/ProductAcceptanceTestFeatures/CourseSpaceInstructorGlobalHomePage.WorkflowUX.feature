@@ -96,8 +96,18 @@ Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstruct
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate enrolled course in "My Courses and Testbanks" channel
-Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
-When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsInstructor" user
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I click on Open button of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+
+Scenario: Validate enrolled course in "My Courses and Testbanks" channel as Student
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I click on Open button of "MyItLabInstructorCourse" as "CsSmsInstructor" user
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
