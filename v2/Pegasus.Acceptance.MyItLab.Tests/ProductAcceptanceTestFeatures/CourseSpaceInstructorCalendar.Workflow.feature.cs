@@ -597,9 +597,6 @@ testRunner.Then("I should see the searched \"RegFutureDateAssignment \" activity
 #line 261
 testRunner.When("I \'Drag and Drop\' the \"RegFutureDateAssignment \" activity of behavioral mode \"Ski" +
                     "llBased\" on \"Future date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 262
-testRunner.Then("I should see the \"RegFutureDateAssignment \" activity of behavioral mode \"SkillBas" +
-                    "ed\" assigned by \'Drag and Drop\' in day view of \"Future date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -259,7 +259,7 @@ Then I should be on the "Calendar" page
 When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
 Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
 When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
-Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
+#Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
 
 #Purpose : Add Notes functionality for future date in Calendar frame
 #MyItLabProgramCourse

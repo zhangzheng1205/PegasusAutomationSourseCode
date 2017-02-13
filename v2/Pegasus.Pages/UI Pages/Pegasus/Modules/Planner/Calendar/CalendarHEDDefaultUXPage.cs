@@ -3508,28 +3508,28 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
 
 
-                base.SelectRadioButtonById("rdSetAvailableDate");
+                //base.SelectRadioButtonById("rdSetAvailableDate");
 
                 
-                base.ClearTextById("txtFromDate");
-                //Enter the stored previous date value
-                base.FillTextBoxById("txtFromDate", getPreviousDate);
-                base.ClearTextById("txtFromHrs");
-                base.FillTextBoxById("txtFromHrs","1");
+                //base.ClearTextById("txtFromDate");
+                ////Enter the stored previous date value
+                //base.FillTextBoxById("txtFromDate", getPreviousDate);
+                //base.ClearTextById("txtFromHrs");
+                //base.FillTextBoxById("txtFromHrs","1");
 
-                base.SelectDropDownValueThroughTextById("cmbFromAMPM", "PM");
+                //base.SelectDropDownValueThroughTextById("cmbFromAMPM", "PM");
 
-                base.ClearTextById("txtToDate");
-                //Enter the stored previous date value
-                base.FillTextBoxById("txtToDate", getPreviousDate);
+                //base.ClearTextById("txtToDate");
+                ////Enter the stored previous date value
+                //base.FillTextBoxById("txtToDate", getPreviousDate);
 
-                base.ClearTextById("txtToHrs");
-                base.FillTextBoxById("txtToHrs", "11");
+                //base.ClearTextById("txtToHrs");
+                //base.FillTextBoxById("txtToHrs", "11");
 
-                base.SelectDropDownValueThroughTextById("cmbToAMPM","PM");
+                //base.SelectDropDownValueThroughTextById("cmbToAMPM","PM");
 
-                base.SelectCheckBoxById("chkBetSDandED");
-                base.SelectCheckBoxById("chkCalNotify");
+                //base.SelectCheckBoxById("chkBetSDandED");
+                //base.SelectCheckBoxById("chkCalNotify");
   
                 //Save the assign details by clicking Save button            
                 base.ClickButtonById(CalendarHEDDefaultUXPageResource.
