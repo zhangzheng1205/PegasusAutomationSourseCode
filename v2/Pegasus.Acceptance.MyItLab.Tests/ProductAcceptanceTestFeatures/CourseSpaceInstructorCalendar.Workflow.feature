@@ -254,12 +254,7 @@ Then I should see the "RegTodayDateAssignment " activity assigned in day view of
 #MyItLabProgramCourse
 #Test Case Id :
 Scenario: Drag and drop a single content to future date and display of Assigned content in Day View as SMS Teacher
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Assignment Calendar" tab
+When I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
 Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
@@ -342,11 +337,6 @@ And I should see the pastdue icon
 #MyItLabProgramCourse
 #Test Case Id :
 Scenario: Cmenu Assign with FutureDate as due date
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
 When I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I search the "RegSimpleAssignFutureDate" activity of behavioral mode "SkillBased"

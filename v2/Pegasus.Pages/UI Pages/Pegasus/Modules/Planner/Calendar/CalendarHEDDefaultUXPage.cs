@@ -3568,8 +3568,8 @@ namespace Pegasus.Pages.UI_Pages
                 DateTime date = DateTime.Today;
                 string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                //Decrement the day by 1
-                DateTime pDate = date.AddDays(1);
+                //Increment the day by 1
+                DateTime pDate = date.AddDays(5);
                 string getPreviousDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
                 bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
@@ -4035,6 +4035,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Decrement the day by 1
                 DateTime pDate = date.AddDays(-1);
                 string getPastDueDate = pDate.ToString();
+                string[] fgh = getPastDueDate.Split(' ');
+                string pastDate = fgh[0];
                 this.SelectCalendarWindow();
                 bool h = base.IsElementPresent(By.XPath("//table[@class ='rsContentTable']/tbody/tr"), 10);
                 int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
@@ -4047,9 +4049,11 @@ namespace Pegasus.Pages.UI_Pages
                       CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                       j <= getColumCount; j++)
                     {
-                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
-
-                        if (getAppDate.Contains(getPastDueDate))
+                       // char[] delimiterChars = { ' ' };
+                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));                        
+                        //string[] words = getAppDate.Split(delimiterChars);
+                        //string currentDay = words[0];
+                        if (getAppDate.Contains(pastDate))
                         {
                             this.SelectCalendarWindow();
 
