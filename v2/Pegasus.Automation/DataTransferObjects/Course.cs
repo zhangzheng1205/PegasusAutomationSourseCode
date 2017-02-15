@@ -108,7 +108,8 @@ namespace Pegasus.Automation.DataTransferObjects
             eTextCourse=79,
             D2LPegasusKioskCourse=80,
             RegMyITLabNewCourseForEnrollment=81,
-            RegMyITLabNewlyCreatedCourse=82
+            RegMyITLabNewlyCreatedCourse=82,
+            RegMyTestAuthoredCourse = 83,
         }
 
         /// <summary>

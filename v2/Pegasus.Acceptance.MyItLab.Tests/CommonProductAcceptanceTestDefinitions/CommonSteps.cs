@@ -316,6 +316,30 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        
+        public void ThenIShouldSeeSuccessfullMessageOnPage(string p0, string p1)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        /// <summary>
+        /// Validate success message from the application
+        /// </summary>
+        /// <param name="successMessage">This is success message.</param>
+        /// <param name="pageName">This is page name.</param>
+        [Then(@"I should see successfull message ""(.*)"" on ""(.*)"" page")]
+        public void ValidateSuccessfullMessage(string successMessage,string pageName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ValidateSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+            Title, () => Assert.AreEqual(successMessage, new HEDGlobalHomePage().
+            GetSuccessMessage(pageName)));
+            Logger.LogMethodExit("CommonSteps", "ValidateSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Verify Course Present In User's Home Page.
         /// </summary>

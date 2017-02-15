@@ -1945,10 +1945,9 @@ namespace Pegasus.Pages.UI_Pages
                 // Switch to Iframe
                 base.SwitchToIFrameById(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePageIframe_ID_Locator);
-                base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator));
-                returnSuccessMessage = base.GetInnerTextAttributeValueByXPath(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator);
+                bool ds = base.IsElementPresent(By.XPath("//div[@class='span11 success-msg']"),10);
+                base.WaitForElement(By.XPath("//div[@class='span11 success-msg']"));
+                returnSuccessMessage = base.GetInnerTextAttributeValueByXPath("//div[@class='span11 success-msg']");
             }
             catch (Exception e)
             {
@@ -2612,7 +2611,7 @@ namespace Pegasus.Pages.UI_Pages
                 int courseDivCounter = 1;
                 //Get HTML Element Property 
                 IWebElement courseTable = base.GetWebElementPropertiesByXPath(
-    string.Format(string.Format(HEDGlobalHomePageResource.HEDGlobalHome_Page_Course_Name_XPath_Locator, courseDivCounter)));
+                string.Format(string.Format(HEDGlobalHomePageResource.HEDGlobalHome_Page_Course_Name_XPath_Locator, courseDivCounter)));
                 //Assign copy status 
                 string coursecopystatus = HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePage_CopyStatus_Text_Id_Locator;
@@ -2769,8 +2768,34 @@ namespace Pegasus.Pages.UI_Pages
             , base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Create Mytest course
+        /// </summary>
+        /// <param name="courseType">This is course type enum.</param>
+        public void CreateMyTestCourse(Course.CourseTypeEnum courseType)
+        {
+            Logger.LogMethodEntry("HEDGlobalHomePage", "CreateMyTestCourse"
+            , base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get course name
+                Course courseName = Course.Get(courseType);
+                string actualCourseName = courseName.Name.ToString();
+
+                //Generate the unique GUID
+                string courseNameGUID = this.GenerateCourseGUID(courseType);
+                //Store the GUID in memory
+                this.StoreCourseGUID(courseNameGUID, courseType);
 
 
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HEDGlobalHomePage", "CreateMyTestCourse"
+            , base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// This methord is to generate the GUID for course name
@@ -2877,8 +2902,13 @@ namespace Pegasus.Pages.UI_Pages
                     case "Mark for Deletion":
                         base.ClickLinkByPartialLinkText(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_MarkforDeletion_Cmenu_LinkText_Locator);
-                        base.ClickButtonById(HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_HomePage_Confirm_Deletion_ID_Locator);
+                        base.WaitUntilWindowLoads(base.GetPageTitle);
+                        Thread.Sleep(1000);
+                        bool dsf = base.IsElementPresent(By.Id("spaConfirm"), 10);
+                        base.WaitForElement(By.Id("confimationModal"));
+                        base.WaitForElement(By.Id("spaConfirm"));
+                        IWebElement getElement = base.GetWebElementPropertiesById("spaConfirm");
+                        base.PerformMouseClickAction(getElement);
                         break;
                     //Select copy as instructor course cmenu option
                     case "Copy as Instructor Course":
@@ -2903,6 +2933,32 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "CmenuOptionForCourse"
                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the success message from the UI
+        /// </summary>
+        /// <returns>Return success message.</returns>
+        public string GetSuccessMessage(string pageName)
+        {
+            string message = string.Empty;
+            try
+            {
+                switch(pageName)
+                {
+                    case "Global Home":
+                        base.WaitUntilWindowLoads(pageName);
+                        base.WaitForElement(By.Id("_ctl12__ctl1_lblMessage"));
+                        message = base.GetInnerTextAttributeValueById("_ctl12__ctl1_lblMessage");
+                        break;
+                }
+
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return message;
         }
 
         /// <summary>
