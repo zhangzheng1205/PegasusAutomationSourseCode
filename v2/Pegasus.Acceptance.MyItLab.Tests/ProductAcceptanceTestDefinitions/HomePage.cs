@@ -316,7 +316,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="courseType">This is course type enum.</param>
         /// <param name="userType">This is user type enum.</param>
         /// <param name="frameName">This is frame name.</param>
-        [Then(@"I should be displayed with ""(.*)"" course as ""(.*)"" in ""(.*)"" frame")]
+        [Then(@"I should be displayed with ""(.*)"" Instructor course as ""(.*)"" in ""(.*)"" frame")]
+        [Then(@"I should be displayed with ""(.*)"" MyTest course as ""(.*)"" in ""(.*)"" frame")]
         public void DisplayedOfCreatedCourseInChannel(Course.CourseTypeEnum courseType,
             User.UserTypeEnum userType, string frameName)
         {

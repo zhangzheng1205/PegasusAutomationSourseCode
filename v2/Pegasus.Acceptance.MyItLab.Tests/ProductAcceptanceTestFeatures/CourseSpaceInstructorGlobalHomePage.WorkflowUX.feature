@@ -77,7 +77,7 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I click on next button with "RegMyITLabNewlyCreatedCourse" course ISBN as search criteria
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "RegMyITLabNewlyCreatedCourse" course
-Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "RegMyITLabNewlyCreatedCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" frame
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -91,7 +91,20 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "MyItLabAuthoredCourse" using course descipline
-Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Master Course should be specified in the in memory
+#Purpose:Verify The MyTest course creation by CsSmsInstructor using course discipline
+Scenario:Validate MyTest course creation from Create a Course catlog based on course decipline
+When I click on "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
+Then I should be displayed with "Create a Course" lightbox
+And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
+When I select "All Disciplines" option in 'Browse by Discipline' dropdown
+Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
+When I click on "Select Testbank" button of "MyTestAuthoredCourse" using course descipline
+Then I should be displayed with "MyTestAuthoredCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" frame
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -138,7 +151,7 @@ And I should see successfull message "Course marked for deletion." on "Global Ho
 Scenario:Validate copy as instructor Course cmenu option of IC course
 Given I am on the "Global Home" page
 When I select cmenu "Copy as Instructor Course" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
-Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" frame
 And I should see successfull message "Copied as instructor course." on "Global Home" page
 
 #Test case ID : 
@@ -149,20 +162,6 @@ Scenario:Validate Unmark for deletion cmenu option of IC course on CsSmsInstruct
 Given I am on the "Global Home" page
 When I select cmenu "Unmark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
 Then I should see successfull message "Course removed from the deletion list." on "Global Home" page
-
-
-#Given I browsed the login url for "CsSmsInstructor"
-#When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-#Then I should logged in successfully
-#Given I am on the "Global Home" page
-#When I click on "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
-#Then I should be displayed with "Create a Course" lightbox
-#And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
-#When I select "All Disciplines" option in 'Browse by Discipline' dropdown
-#Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
-#When I click on "Select Testbank" button of "RegMyTestAuthoredCourse" using course descipline
-#Then I should be displayed with "RegMyTestAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" frame
-
 
 
 

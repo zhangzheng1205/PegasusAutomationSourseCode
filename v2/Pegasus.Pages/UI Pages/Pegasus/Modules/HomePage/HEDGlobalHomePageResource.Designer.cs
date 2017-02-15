@@ -322,6 +322,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_GetCourseId_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_GetCourseId_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl6_pegHello_HelpLink.
         /// </summary>
         internal static string HEDGlobalHome_Page_Help_Link_Id_Locator {
@@ -633,6 +642,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHomePage_HomePage_CopyInterval_time_Text_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CopyInterval_time_Text_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Testbank is being prepared and will be available soon..
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CopyStatus_MyTest_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CopyStatus_MyTest_Id_Locator", resourceCulture);
             }
         }
         
@@ -952,6 +970,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;tblSearchCatalog&apos;]/div[2]/div/div[2]/input.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_TestBank_Button_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_TestBank_Button_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unmark for Deletion.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_UnmarkforDeletion_Cmenu_LinkText_Locator {
@@ -1024,7 +1051,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;coursematchmsg&apos;].
+        ///   Looks up a localized string similar to //div[@id=&apos;coursematchmsg&apos;]/div[2].
         /// </summary>
         internal static string HEDGlobalHomePage_SuccessMessageDisplay_XPath_Locator {
             get {

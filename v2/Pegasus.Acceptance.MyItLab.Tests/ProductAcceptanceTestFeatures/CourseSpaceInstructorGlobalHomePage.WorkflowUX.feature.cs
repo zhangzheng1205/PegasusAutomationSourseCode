@@ -247,8 +247,8 @@ testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Cr
 #line 79
 testRunner.When("I click on \"Select Course\" button of \"RegMyITLabNewlyCreatedCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 80
-testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" course as \"CsSmsInstruc" +
-                    "tor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" Instructor course as \"C" +
+                    "sSmsInstructor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -280,8 +280,41 @@ testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Cr
 testRunner.When("I click on \"Select Course\" button of \"MyItLabAuthoredCourse\" using course descipl" +
                     "ine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 94
-testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" course as \"CsSmsInstructor\" in" +
-                    " \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" Instructor course as \"CsSmsIns" +
+                    "tructor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate MyTest course creation from Create a Course catlog based on course decip" +
+            "line")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGlobalHomePage")]
+        public virtual void ValidateMyTestCourseCreationFromCreateACourseCatlogBasedOnCourseDecipline()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate MyTest course creation from Create a Course catlog based on course decip" +
+                    "line", ((string[])(null)));
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line 101
+testRunner.When("I click on \"Create a Course\" button in \"My Courses and Testbanks\" channel as \"CsS" +
+                    "msInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 102
+testRunner.Then("I should be displayed with \"Create a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 103
+testRunner.And("I should be displayed step \"1\" with \"Search Catalog\" in \"Create a Course\" popup a" +
+                    "s \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 104
+testRunner.When("I select \"All Disciplines\" option in \'Browse by Discipline\' dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 105
+testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Create a Course\" popup as" +
+                    " \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 106
+testRunner.When("I click on \"Select Testbank\" button of \"MyTestAuthoredCourse\" using course descip" +
+                    "line", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
+testRunner.Then("I should be displayed with \"MyTestAuthoredCourse\" MyTest course as \"CsSmsInstruct" +
+                    "or\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -292,17 +325,17 @@ testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" course as 
         public virtual void ValidateEnrolledCourseInMyCoursesAndTestbanksChannel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate enrolled course in \"My Courses and Testbanks\" channel", ((string[])(null)));
-#line 99
+#line 112
 this.ScenarioSetup(scenarioInfo);
-#line 100
+#line 113
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 101
+#line 114
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 115
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 103
+#line 116
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 104
+#line 117
 testRunner.When("I click on Open button of \"MyItLabInstructorCourse\" as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -314,17 +347,17 @@ testRunner.When("I click on Open button of \"MyItLabInstructorCourse\" as \"CsSm
         public virtual void ValidateEnrolledCourseInMyCoursesAndTestbanksChannelAsStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate enrolled course in \"My Courses and Testbanks\" channel as Student", ((string[])(null)));
-#line 106
+#line 119
 this.ScenarioSetup(scenarioInfo);
-#line 107
+#line 120
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 108
+#line 121
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 109
+#line 122
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 110
+#line 123
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 111
+#line 124
 testRunner.When("I click on Open button of \"MyItLabInstructorCourse\" as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -336,18 +369,18 @@ testRunner.When("I click on Open button of \"MyItLabInstructorCourse\" as \"CsSm
         public virtual void ValidateCourseInformationUpdateOnCsSmsInstructorHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate course information update on CsSmsInstructor home page", ((string[])(null)));
-#line 117
+#line 130
 this.ScenarioSetup(scenarioInfo);
-#line 118
+#line 131
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 119
+#line 132
 testRunner.When("I select cmenu \"Edit Course Info\" option of Instructor course \"MyItLabAuthoredCou" +
                     "rse\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 120
+#line 133
 testRunner.Then("I should be displayed with \"Update Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 121
+#line 134
 testRunner.When("I click on \"Update\" button for course \"MyItLabAuthoredCourse\" created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 122
+#line 135
 testRunner.Then("I should see successfull message \"Course updated successfully.\" on \"Global Home\" " +
                     "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -360,17 +393,17 @@ testRunner.Then("I should see successfull message \"Course updated successfully.
         public virtual void ValidateMarkForDeleteCmenuOptionOfICCourseOnCsSmsInstructorHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate mark for delete cmenu option of IC course on CsSmsInstructor home page", ((string[])(null)));
-#line 128
+#line 141
 this.ScenarioSetup(scenarioInfo);
-#line 129
+#line 142
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 130
+#line 143
 testRunner.When("I select cmenu \"Mark for Deletion\" option of Instructor course \"MyItLabAuthoredCo" +
                     "urse\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 144
 testRunner.Then("I should see the \"Marked for Deletion\" status updated for the \"MyItLabAuthoredCou" +
                     "rse\" course as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 132
+#line 145
 testRunner.And("I should see successfull message \"Course marked for deletion.\" on \"Global Home\" p" +
                     "age", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -383,17 +416,17 @@ testRunner.And("I should see successfull message \"Course marked for deletion.\"
         public virtual void ValidateCopyAsInstructorCourseCmenuOptionOfICCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate copy as instructor Course cmenu option of IC course", ((string[])(null)));
-#line 138
+#line 151
 this.ScenarioSetup(scenarioInfo);
-#line 139
+#line 152
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 140
+#line 153
 testRunner.When("I select cmenu \"Copy as Instructor Course\" option of Instructor course \"MyItLabAu" +
                     "thoredCourse\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 141
-testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" course as \"CsSmsInstructor\" in" +
-                    " \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 142
+#line 154
+testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" Instructor course as \"CsSmsIns" +
+                    "tructor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 155
 testRunner.And("I should see successfull message \"Copied as instructor course.\" on \"Global Home\" " +
                     "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -408,14 +441,14 @@ testRunner.And("I should see successfull message \"Copied as instructor course.\
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Unmark for deletion cmenu option of IC course on CsSmsInstructor home pa" +
                     "ge", ((string[])(null)));
-#line 148
+#line 161
 this.ScenarioSetup(scenarioInfo);
-#line 149
+#line 162
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 150
+#line 163
 testRunner.When("I select cmenu \"Unmark for Deletion\" option of Instructor course \"MyItLabAuthored" +
                     "Course\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 164
 testRunner.Then("I should see successfull message \"Course removed from the deletion list.\" on \"Glo" +
                     "bal Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
