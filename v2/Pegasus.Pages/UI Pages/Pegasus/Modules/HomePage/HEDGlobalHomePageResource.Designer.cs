@@ -736,7 +736,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@class = &apos;form-bootstrapWizard&apos;]/ul/li[2]/span/span.
+        ///   Looks up a localized string similar to //div[@id= &apos;mainCatalogTbl&apos;]/ul/li[2]/span/span.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_CreateaCourse_Step2Count_XPath_Locator {
             get {
@@ -759,6 +759,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CreateCourse_ISBN_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;mainCatalogTbl&apos;]/ul/li[2]/span/span[1].
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_CreateCourse_Step2Count_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_CreateCourse_Step2Count_XPath_Locator", resourceCulture);
             }
         }
         
@@ -934,6 +943,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;repeatertbl&apos;]/div[{0}]/div/div/div[2]/div/div/span.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_ProgramRow_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_ProgramRow_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;tblSearchCatalog&apos;]/div[2]/div/div/input.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator {
@@ -1011,6 +1029,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         internal static string HEDGlobalHomePage_MyProfile_Link_ID_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHomePage_MyProfile_Link_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl7_UCPaging_lnkNext.
+        /// </summary>
+        internal static string HEDGlobalHomePage_NextLink_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_NextLink_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl7_UCPaging_lnkSecondNumber.
+        /// </summary>
+        internal static string HEDGlobalHomePage_PageCount_ID_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_PageCount_ID_Locator", resourceCulture);
             }
         }
         

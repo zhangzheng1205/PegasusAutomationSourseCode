@@ -108,6 +108,19 @@ Then I should be displayed with "MyTestAuthoredCourse" MyTest course as "CsSmsIn
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
+#Pre-Condition : Master Course should be specified in the in memory
+#Purpose:Verify The Program course creation by CsSmsInstructor using course discipline
+Scenario: Validate Program course creation from Create a Course catlog based on course decipline
+When I click on "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
+Then I should be displayed with "Create a Course" lightbox
+And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
+When I select "All Disciplines" option in 'Browse by Discipline' dropdown
+Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
+When I click on "Select Program" button of "MyITLabOffice2013Program" using course descipline
+Then I should be displayed with "MyITLabOffice2013Program" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
 #Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate enrolled course in "My Courses and Testbanks" channel
 Given I browsed the login url for "CsSmsInstructor"

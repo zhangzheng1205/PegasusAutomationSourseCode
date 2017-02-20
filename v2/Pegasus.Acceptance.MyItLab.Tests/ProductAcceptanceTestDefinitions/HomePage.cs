@@ -374,18 +374,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar", "SelectCourseToCreateIcCourseByDiscipline",
                base.IsTakeScreenShotDuringEntryExit);
             //Create IC course based on discipline
-            switch(btnName)
-            {
-                case "Select Testbank":
-                    break;
 
-                case "Select Course":
-                    new HEDGlobalHomePage().CreateICCourseByDiscipline(btnName, courseType);
-                    break;
-            }
-
+            new HEDGlobalHomePage().CreateCourseAndCourseByDiscipline(btnName, courseType);
             Logger.LogMethodExit("AssignmentCalendar", "SelectCourseToCreateIcCourseByDiscipline",
-               base.IsTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 

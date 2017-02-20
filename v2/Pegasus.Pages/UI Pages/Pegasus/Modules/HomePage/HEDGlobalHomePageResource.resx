@@ -328,7 +328,7 @@
     <value>//div[@id='bootstrap-wizard-1']/div/ul/li/span/span[2]</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_CreateaCourse_Step2Count_XPath_Locator" xml:space="preserve">
-    <value>//div[@class = 'form-bootstrapWizard']/ul/li[2]/span/span</value>
+    <value>//div[@id= 'mainCatalogTbl']/ul/li[2]/span/span</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_CreateCourse_FinishButton_Id_Locator" xml:space="preserve">
     <value>btnFinish</value>
@@ -461,5 +461,17 @@
   </data>
   <data name="HEDGlobalHome_Page_GetCourseId_XPath_Locator" xml:space="preserve">
     <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_CreateCourse_Step2Count_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='mainCatalogTbl']/ul/li[2]/span/span[1]</value>
+  </data>
+  <data name="HEDGlobalHomePage_NextLink_ID_Locator" xml:space="preserve">
+    <value>_ctl7_UCPaging_lnkNext</value>
+  </data>
+  <data name="HEDGlobalHomePage_PageCount_ID_Locator" xml:space="preserve">
+    <value>_ctl7_UCPaging_lnkSecondNumber</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_ProgramRow_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='repeatertbl']/div[{0}]/div/div/div[2]/div/div/span</value>
   </data>
 </root>
