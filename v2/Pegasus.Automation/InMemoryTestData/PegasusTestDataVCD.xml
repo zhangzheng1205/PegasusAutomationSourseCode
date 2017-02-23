@@ -251,8 +251,8 @@ the UI deleted or refreshed.-->
 			<CourseType>MySpanishLabProgram</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
-			<SectionName>VCD_WLSection</SectionName>
-			<SectionId>CRSKLNA-12003257</SectionId>
+			<SectionName>¡Anda! Curso elemental, Second Edition-P</SectionName>
+			<SectionId>CRSKLYU-10041353</SectionId>
 			<IsPublished>true</IsPublished>
 			<IsApproved>true</IsApproved>
 		</Course>
@@ -723,8 +723,8 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>true</EnrolementStatus>
 		</User>
 		<User>
-			<Name>f196e6dc-9f9c-4782-acd0-c927c4f3b915</Name>
-			<Password>password1</Password>
+			<Name>ux_teacher_1228</Name>
+			<Password>Password1</Password>
 			<Email>manish.singh@imfinity.com</Email>
 			<FirstName>Raghavendra</FirstName>
 			<MiddleName>Pegasus</MiddleName>
@@ -1005,7 +1005,6 @@ the UI deleted or refreshed.-->
 
 the UI deleted or refreshed.-->
 	<ArrayOfActivity>
-
 		<Activity>
 			<Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
 			<ActivityType>SkillStudyPlan</ActivityType>
@@ -1087,43 +1086,55 @@ the UI deleted or refreshed.-->
 			<ActivityType>Folder</ActivityType>
 			<IsCreated>true</IsCreated>
 		</Activity>
-		<Activity>
-			<Name>Windows 8: End-of-Chapter Quiz</Name>
-			<ActivityType>RegPastDueAssignment</ActivityType>
-			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-			<IsCreated>true</IsCreated>
-		</Activity>
-		<Activity>
-			<Name>Word Chapter 1 Skill-Based Training</Name>
-			<ActivityType>RegTodayDateAssignment</ActivityType>
-			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-			<IsCreated>true</IsCreated>
-		</Activity>
-		<Activity>
-			<Name>Word Chapter 1 Project 1A Skill-Based Training</Name>
-			<ActivityType>RegFutureDateAssignment</ActivityType>
-			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-			<IsCreated>true</IsCreated>
-		</Activity>
     <Activity>
-      <Name>Excel Chapter 1 Skill-Based Training</Name>
-      <ActivityType>RegSimpleAssign</ActivityType>
+      <Name>Word Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegTodayDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Project 1A Skill-Based Training</Name>
+      <ActivityType>RegFutureDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Project 1A Skill-Based Training</Name>
+      <ActivityType>RegPastDueAssignment</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
       <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
-      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityType>RegSimpleCmenuAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegSimpleCmenuAssign</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Windows 8: End-of-Chapter Quiz</Name>
+      <ActivityType>RegPastDueCmenuAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleStartDateCmenuAssign</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
       <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
-      <ActivityType>RegSimpleAssignFutureDate</ActivityType>
+      <ActivityType>RegSimpleCmenuAssignFutureDate</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
-	</ArrayOfActivity>
+  </ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>
 		<Product>

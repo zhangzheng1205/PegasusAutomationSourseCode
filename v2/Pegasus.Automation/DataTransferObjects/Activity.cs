@@ -103,7 +103,12 @@ namespace Pegasus.Automation.DataTransferObjects
             RegDiscussionTopic=72,
             RegMILPastDueActivity = 73,
             RegMILForcefullSubmissionActivity = 74,
-            RegFolderAsset =75
+            RegFolderAsset =75,
+            RegPastDueCmenuAssignment =76,
+            RegSimpleStartDateCmenuAssign = 77,
+            RegSimpleCmenuAssignCurrentDate =78,
+            RegSimpleCmenuAssign =79,
+            RegSimpleCmenuAssignFutureDate =80
         }
 
         /// <summary>

@@ -566,6 +566,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_imgSearchClick.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_Search_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_Search_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 8000.
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_SleepTime {
