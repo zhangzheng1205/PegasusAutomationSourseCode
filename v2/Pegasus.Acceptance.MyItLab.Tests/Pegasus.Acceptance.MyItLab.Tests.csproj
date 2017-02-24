@@ -241,11 +241,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructorReport.Workflow.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructor.Workflow.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceInstructor.Workflow.feature</DependentUpon>
-    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorTodaysView.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -340,6 +335,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SMS.WorkFlow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructor.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructor.Workflow.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\WorkSpaceAdmin.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -785,10 +785,6 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorReport.Workflow.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructor.Workflow.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceInstructor.Workflow.feature.cs</LastGenOutput>
-    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorTodaysView.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorTodaysView.Workflow.feature.cs</LastGenOutput>
@@ -864,6 +860,10 @@
     <None Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SMS.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructor.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructor.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\WorkSpaceAdmin.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

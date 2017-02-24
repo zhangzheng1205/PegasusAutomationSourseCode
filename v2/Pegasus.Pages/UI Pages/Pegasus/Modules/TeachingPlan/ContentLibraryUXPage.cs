@@ -665,28 +665,31 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Get Link Count
-                int getLinkCount = base.GetElementCountByXPath(ContentLibraryUXPageResource.
-                        ContentLibraryUX_Page_AddContentOptionCount_Xpath_Locator);
-                for (int rowCount = Convert.ToInt32(ContentLibraryUXPageResource.
-                    ContentLibraryUXPage_Activity_RowCount_InitialValue_AfterSearch);
-                    rowCount <= getLinkCount; rowCount++)
+                //Wait untill window loads and select the window
+                base.WaitUntilWindowLoads(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_CourseMaterials_Window_Name);
+                base.SelectWindow(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_CourseMaterials_Window_Name);
+                // Switch to iFrame
+                base.SwitchToIFrameById("ifrmCoursePreview");
+                base.WaitForElement(By.ClassName("modal-title"));
+                int rowCount = base.GetElementCountByXPath(
+                    "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr");
+                for (int i = Convert.ToInt32(1); i <= rowCount; i++)
                 {
-                    //Get the Name of the Link
-                    string getLinkName = base.GetElementTextByXPath(string.
-                        Format(ContentLibraryUXPageResource.
-                        ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount));
-                    if (getLinkName == activityType)
+                    int colCount = base.GetElementCountByXPath(string.Format(
+                        "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td", i));
+                    for (int j = Convert.ToInt32(1); j <= colCount; j++)
                     {
-                        //Wait for the asset link
-                        base.WaitForElement(By.XPath(string.Format(ContentLibraryUXPageResource.
-                        ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount)));
-                        IWebElement getAssetLink = base.GetWebElementPropertiesByXPath
-                            (string.Format(ContentLibraryUXPageResource.
-                        ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount));
-                        //Click on Activity type
-                        base.ClickByJavaScriptExecutor(getAssetLink);
-                        break;
+                        string optionName = base.GetInnerTextAttributeValueByXPath(string.Format(
+                            "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td[{1}]/div", i,j));
+                        if(optionName.Equals(activityType))
+                        {
+                            IWebElement getOption = base.GetWebElementPropertiesByXPath(string.Format(
+                                "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td[{1}]/div", i, j));
+                            base.PerformMouseClickAction(getOption);
+                            return;
+                        }
                     }
                 }
             }
@@ -2317,5 +2320,6 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return returnButtonName;
         }
+
     }
 }

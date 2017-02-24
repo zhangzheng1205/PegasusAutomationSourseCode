@@ -411,10 +411,10 @@ namespace Pegasus.Pages.UI_Pages
                         //Enter Description
                         this.SelectBookInEtextLinkAsset();
                         // Click add button
-                        base.WaitForElement(By.Id(AddAssessmentPageResources.
-                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator));
-                        base.ClickButtonById(AddAssessmentPageResources.
-                            AddAsessment_Page_LinkAsset_AddButton_Id_Locator);
+                        bool asd = base.IsElementPresent(By.Id("imgBtnSave_Update"),10);
+                        base.WaitForElement(By.Id("imgBtnSave_Update"));
+                        IWebElement getSubmitButton = base.GetWebElementPropertiesById("imgBtnSave_Update");
+                        base.PerformMouseClickAction(getSubmitButton);
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
                         break;
@@ -511,10 +511,8 @@ namespace Pegasus.Pages.UI_Pages
                         this.FillTheHTMLDescription(newHTMLDiscription.ToString());
                         break;
                 }
-
                 //Store Gradable NonGradable Asset
                 this.StoreGradableAsset(activityName, activityTypeEnum);
-
             }
             catch (Exception e)
             {
@@ -2748,6 +2746,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
                     case "Add from Library":
+                    case "Note":
                         getLightBoxName = base.GetInnerTextAttributeValueByClassName("modal-title");
                         break;
                 }
@@ -2778,12 +2777,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitUntilWindowLoads("Course Materials");
                 base.SelectWindow("Course Materials");
-
                 base.SwitchToIFrameById("ifrmCoursePreview");
-                
                 int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
 
-                string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[3]").Trim();
+                string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[4]").Trim();
                 string getTotalPageCount = getPageCountDetails.Substring(3);
                 int pageCount = Convert.ToInt32(getTotalPageCount);
                 for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
@@ -2796,15 +2793,14 @@ namespace Pegasus.Pages.UI_Pages
                             (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
                         if (getActivityName.Equals(activityName))
                         {
-
-                            break;
+                            getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                            return getActivityName;
                         }
                     }
-                    IWebElement getNextIcon = base.GetWebElementPropertiesByClassName("PD_icn_AssignmentNext");
-                    base.PerformMouseClickAction(getNextIcon);
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
                 }
-
-
             }
             catch (Exception e)
             {
@@ -2813,6 +2809,45 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "GetActivityName",
                     base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
+        }
+
+        /// <summary>
+        /// Click activity name.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        public void ClickActivityName(string activityName)
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "ClickActivityName",
+        base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads("Course Materials");
+                base.SelectWindow("Course Materials");
+                base.SwitchToIFrameById("ifrmCoursePreview");
+                int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
+
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            IWebElement getAssetTitle = base.GetWebElementPropertiesByXPath(string.Format
+                                ("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a", rowCount));
+                            base.PerformMouseClickAction(getAssetTitle);
+                            break;
+                        }
+                    }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "ClickActivityName",
+                    base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -243,4 +243,13 @@
   <data name="CoursePreviewUXPage_CreateNewFolder_Button_Id_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_BtnAddFolder</value>
   </data>
+  <data name="CoursePreviewUXPage_GetActivityName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]</value>
+  </data>
+  <data name="CoursePreviewUXPage_GetActivityCount_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="CoursePreviewUXPage_Pagination_Count_XPath_Locator" xml:space="preserve">
+    <value>//td[@class='PD_PRdivpagingCenter']/span[4]</value>
+  </data>
 </root>

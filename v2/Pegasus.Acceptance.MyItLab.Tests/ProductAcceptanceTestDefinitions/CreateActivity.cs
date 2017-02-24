@@ -68,11 +68,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityTypeEnum">This is activity type enum</param>
         /// <param name="behavioralModeEnum">This is behavioral mode enum</param>
-       [When(@"I create a ""(.*)"" of behavioral mode ""(.*)"" type")]
+        [When(@"I create a ""(.*)"" of behavioral mode ""(.*)"" type")]
         public void CreateSIM5ActivityOfBehavioralModeSkillBasedType(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
-            Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType", 
+            Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType",
                 base.IsTakeScreenShotDuringEntryExit);
             //Create Activity
             new AddAssessmentPage().CreateSIM5Activity(activityTypeEnum, behavioralModeEnum);
@@ -581,7 +581,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Click on the asset type
+        /// </summary>
+        /// <param name="assetType">This is asset type.</param>
         [When(@"I click on the ""(.*)"" asset type")]
         public void WhenIClickOnTheAssetType(string assetType)
         {
@@ -593,6 +596,36 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateActivity", "ClickOnTheSAMActivityType",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Reorder the asset
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I reorder ""(.*)""")]
+        public void ReorderAssetInCourseMaterial(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ReorderAssetInCourseMaterial(activityType);
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheSAMActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click cmenu option of asset
+        /// </summary>
+        /// <param name="cmenuOptionName"></param>
+        /// <param name="activityTypeEnum"></param>
+        [When(@"I click on ""(.*)"" cmenu option of ""(.*)"" asset")]
+        public void ClickCmenuOptionOfAsset(string cmenuOptionName, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickCmenuOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().CourseMaterialCmenuFunctionlaity(cmenuOptionName, activityTypeEnum);
+            Logger.LogMethodExit("CreateActivity", "ClickCmenuOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Create Child Same Activity
@@ -826,16 +859,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I click on 'Folder' option")]
         public void ClickCreateFolder()
         {
-            Logger.LogMethodEntry("CreateActivity", "ClickCreateFolder",base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CreateActivity", "ClickCreateFolder", base.IsTakeScreenShotDuringEntryExit);
             new CoursePreviewUXPage().ClickCreateFolder();
             Logger.LogMethodExit("CreateActivity", "ClickCreateFolder", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// 
+        /// Click Materials option in Course Material page
         /// </summary>
-        /// <param name="p0"></param>
-        /// <param name="p1"></param>
+        [When(@"I click on 'Materials' option")]
+        public void ClickMaterialsButton()
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickCreateMaterials();
+            Logger.LogMethodExit("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Validate the activity creation in content frame
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
         [Then(@"I should be displayed with ""(.*)"" in 'Manage Course Materials' frame")]
         public void ValidateTheDisplayedOfActivity(Activity.ActivityTypeEnum activityType)
         {
@@ -850,6 +894,238 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     new AddAssessmentPage().
                     GetActivityName(activityName)));
             Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayedOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Enter inside the assettype
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        [When(@"I enter into ""(.*)"" folder")]
+        public void EnterIntoFolder(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "EnterIntoFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the activity name
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            new AddAssessmentPage().
+                ClickActivityName(activityName);
+            Logger.LogMethodExit("CreateActivity", "EnterIntoFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of asset in Manage Course Materials 
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="tabName">This is tab name.</param>
+        [Then(@"I should be displayed with ""(.*)"" in Manage Course Materials frame of ""(.*)"" tab")]
+        public void ValidateDisplayOfAsset(Activity.ActivityTypeEnum activityTypeEnum, string tabName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateDisplayOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName,
+                    new CoursePreviewUXPage().GetAssetName(activityName, tabName)));
+
+            Logger.LogMethodExit("CreateActivity", "ValidateDisplayOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Show option based on the asset status if hidden
+        /// </summary>
+        /// <param name="actionName">This is action name.</param>
+        /// <param name="activityType">This is activity type.</param>
+        /// <param name="tabName">This is tab name.</param>
+        [When(@"I click ""(.*)"" of ""(.*)"" in ""(.*)"" tab")]
+        public void ClickShowOptionOfAsset(string actionName,
+            Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickShowOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickShowOption(actionName, activityType, tabName);
+            Logger.LogMethodExit("CreateActivity", "ClickShowOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the asset status based on the asset display.
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="status">This is the asset status</param>
+        [Then(@"I should see ""(.*)"" with ""(.*)"" status")]
+        public void ValidateAssetStatus(Activity.ActivityTypeEnum activityType, string status)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickShowOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+            ScenarioContext.Current.ScenarioInfo.Title,
+            () => Assert.AreEqual(status,
+                new CoursePreviewUXPage().GetAssetStatus(activityType)));
+            Logger.LogMethodExit("CreateActivity", "ClickShowOptionOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Copy the asset in Manage course material
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageTitle">This is page title.</param>
+        [When(@"I click 'Copy' of ""(.*)"" in ""(.*)"" tab")]
+        public void ClickCopyOptionManageCourseMaterial(Activity.ActivityTypeEnum activityType, string pageTitle)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickCopyOptionManageCourseMaterial",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickCopyOption(activityType, pageTitle);
+            Logger.LogMethodExit("CreateActivity", "ClickCopyOptionManageCourseMaterial",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the copied asset count
+        /// </summary>
+        /// <param name="copiedAssetCount">This is copied asset count.</param>
+        [Then(@"I should be displayed with count ""(.*)"" in Paste button")]
+        public void ValidateCopiedAssetCount(int copiedAssetCount)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateCopiedAssetCount",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+            ScenarioContext.Current.ScenarioInfo.Title,
+            () => Assert.AreEqual(copiedAssetCount,
+                new CoursePreviewUXPage().GetCopiedAssetCount()));
+            Logger.LogMethodExit("CreateActivity", "ValidateCopiedAssetCount",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Paste the copied asset in the manage course material
+        /// </summary>
+        /// <param name="pasteOptionType">This is paste option type.</param>
+        [When(@"I click on 'Paste' button and I select ""(.*)"" option")]
+        public void PasteTheCopiedAsset(string pasteOptionType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "PasteTheCopiedAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().PasteTheCopiedAsset(pasteOptionType);
+            Logger.LogMethodExit("CreateActivity", "PasteTheCopiedAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Assign the asset in manage course material
+        /// </summary>
+        /// <param name="tabName">This is page name.</param>
+        [When(@"I click on 'Assign' button for ""(.*)"" in ""(.*)"" tab")]
+        public void AssignAssetInManageCourse(Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "AssignAssetInManageCourse",
+            base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickAssignOption(activityType,tabName);
+            Logger.LogMethodExit("CreateActivity", "AssignAssetInManageCourse",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [When(@"I click on 'Delete' button for ""(.*)"" in ""(.*)"" tab")]
+        public void ClickOnButtonForInTab(Activity.ActivityTypeEnum activityType, string pageTitle)
+        {
+            Logger.LogMethodEntry("CreateActivity", "AssignAssetInManageCourse",
+            base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickDeleteOption(activityType, pageTitle);
+            Logger.LogMethodExit("CreateActivity", "AssignAssetInManageCourse",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="status"></param>
+        /// <param name="activityType"></param>
+        /// <param name="pageName"></param>
+        [Then(@"I should see ""(.*)"" status for ""(.*)"" in ""(.*)"" tab")]
+        public void ValidateAssignmentStatus(string status, Activity.ActivityTypeEnum activityType, string pageName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateAssignmentStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+            ScenarioContext.Current.ScenarioInfo.Title,
+            () => Assert.AreEqual(status,
+                new CoursePreviewUXPage().GetAssignmentStatus(activityType, pageName)));
+            Logger.LogMethodExit("CreateActivity", "ValidateAssignmentStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the status message in course material page
+        /// </summary>
+        /// <param name="message">This is success message</param>
+        /// <param name="pageName">This is page name.</param>
+        [Then(@"I should see ""(.*)"" message in ""(.*)"" page")]
+        public void ValidateStatusMessage(string message, string pageName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateStatusMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+            ScenarioContext.Current.ScenarioInfo.Title,
+            () => Assert.AreEqual(message,
+                new CoursePreviewUXPage().GetSuccessMessage(pageName)));
+            Logger.LogMethodExit("CreateActivity", "ValidateStatusMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on note icon in manage course material
+        /// </summary>
+        /// <param name="pageName">This is page name.</param>
+        [When(@"I click on 'Note' icon in ""(.*)"" page")]
+        public void ClickOnNoteIcon(string pageName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickOnNoteIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickNoteIcon(pageName);
+            Logger.LogMethodExit("CreateActivity", "ClickOnNoteIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Edit button in Note lightbox
+        /// </summary>
+        [When(@"I click on 'Edit' button")]
+        public void ClickEditButton()
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickOnNoteIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().ClickEditInNoteWindow();
+            Logger.LogMethodExit("CreateActivity", "ClickOnNoteIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of asset in My course frame 
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        [Then(@"I should be displayed with ""(.*)"" in ""(.*)"" frame")]
+        public void ValidateTheDisplayOfAsset(Activity.ActivityTypeEnum activityType, string pageName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateTheDisplayOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            //Assert we have correct page opened
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName,
+                    new CoursePreviewUXPage().
+                    GetActivityInMyCourse(activityName, pageName)));
+            Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayOfAsset",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 

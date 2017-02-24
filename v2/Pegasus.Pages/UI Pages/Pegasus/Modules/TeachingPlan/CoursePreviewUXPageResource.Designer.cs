@@ -430,6 +430,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr.
+        /// </summary>
+        internal static string CoursePreviewUXPage_GetActivityCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_GetActivityCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2].
+        /// </summary>
+        internal static string CoursePreviewUXPage_GetActivityName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_GetActivityName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //td[@class=&apos;PD_PRdivpagingCenter&apos;]/span[4].
+        /// </summary>
+        internal static string CoursePreviewUXPage_Pagination_Count_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_Pagination_Count_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to rptCoursePreview$next.
         /// </summary>
         internal static string CoursePreviewUXPage_Searched_Table_Next_Id_Locator {

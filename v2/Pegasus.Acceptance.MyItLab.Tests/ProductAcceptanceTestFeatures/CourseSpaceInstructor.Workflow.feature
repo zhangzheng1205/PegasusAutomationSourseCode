@@ -419,3 +419,131 @@ When I click on "Return to Course Materials" button in 'Add from Library' lightb
 When I click on 'Folder' option
 And I create "RegFolderAsset" activity
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+And I click on 'Materials' option
+And I click on the "Add Link" asset type
+Then I should be on "Add Link" lightbox
+When I create "RegLinkAsset" activity
+And I click on the "Add Page" asset type
+Then I should be on "Add Page" lightbox
+When I create "RegPageAsset" activity
+And I click on the "Add eText Link" asset type
+Then I should be on "Add eText Link" lightbox
+When I create "RegEtextLinkAsset" activity
+And I click on the "Add Discussion Topic" asset type
+Then I should be on "Add Discussion Topic" lightbox
+When I create "RegDiscussionTopic" activity
+
+Scenario: Reorder the assets in folder
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+And I reorder "RegLinkAsset"
+
+Scenario: Preview the assets in folder
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+And I click on "Preview" cmenu option of "RegLinkAsset" asset
+
+#-----------------------------------------------------Show/Hide asset in Course Materials ------------------------------------
+Scenario: Search asset in CourseMaterials and Show/Hide as CsSmsInstructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+Then I should be displayed with "RegLinkAsset" in Manage Course Materials frame of "Course Materials" tab
+When I click "Show" of "RegLinkAsset" in "Course Materials" tab
+Then I should see "RegLinkAsset" with "Show" status
+
+#-----------------------------------------------------Copy paste asset in Course Materials ------------------------------------
+Scenario: Search asset in CourseMaterials and Copy paste as CsSmsInstructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+Then I should be displayed with "RegPageAsset" in Manage Course Materials frame of "Course Materials" tab
+When I click 'Copy' of "RegPageAsset" in "Course Materials" tab
+Then I should be displayed with count "1" in Paste button
+When I click on 'Paste' button and I select "Paste at Bottom" option
+
+#-----------------------------------------------------Assign asset using Assign/Unassign option in Course Materials ------------------------------------
+Scenario: Search asset in CourseMaterials and Assign as CsSmsInstructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+Then I should be displayed with "RegEtextLinkAsset" in Manage Course Materials frame of "Course Materials" tab
+When I click on 'Assign' button for "RegEtextLinkAsset" in "Course Materials" tab
+Then I should see "Assigned" status for "RegEtextLinkAsset" in "Course Materials" tab
+
+#-----------------------------------------------------Delete asset using Delete option in Course Materials ------------------------------------
+Scenario: Delete asset using Delete option in Course Materials as CsSmsInstructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I enter into "RegFolderAsset" folder
+Then I should be displayed with "RegEtextLinkAsset" in Manage Course Materials frame of "Course Materials" tab
+When I click on 'Assign' button for "RegPageAsset" in "Course Materials" tab
+When I click on 'Delete' button for "RegPageAsset" in "Course Materials" tab
+Then I should see "Items deleted successfully." message in "Course Materials" page
+
+#-----------------------------------------------------Add notes in Course Materials ------------------------------------
+Scenario: Add note in CourseMaterials as CsSmsInstructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I click on 'Note' icon in "Course Materials" page
+Then I should be on "Note" lightbox
+When I click on 'Edit' button

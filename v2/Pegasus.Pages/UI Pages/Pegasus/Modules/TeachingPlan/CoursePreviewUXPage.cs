@@ -958,6 +958,39 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click Create new folder
+        /// </summary>
+        public void ClickCreateMaterials()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                // Wait for Create folder option to load
+                base.WaitForElement(By.XPath("//div[@class='btnnextgen btnnextgen-primary MarginLeft6']"));
+                // Click Folder option
+                IWebElement getCreateFolder = base.GetWebElementProperties(By.XPath("//div[@class='btnnextgen btnnextgen-primary MarginLeft6']"));
+                base.PerformMouseClickAction(getCreateFolder);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click Return To Course Materials Button
         /// </summary>
         public void ClickReturnToCourseMaterialsButton(string buttonName)
@@ -988,6 +1021,834 @@ namespace Pegasus.Pages.UI_Pages
             "ClickReturnToCourseMaterialsButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Reorder the asset in course materia page
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        public void ReorderAssetInCourseMaterial(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+            int pageCount = Convert.ToInt32(0);
+            try
+            {
+                base.WaitUntilWindowLoads("Course Materials");
+                base.SelectWindow("Course Materials");
+                base.SwitchToIFrameById("ifrmCoursePreview");
+                int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
+
+                bool pageNumberExist = base.IsElementPresent(By.XPath("//td[@class='PD_PRdivpagingCenter']/span[4]"),10);
+
+                if (pageNumberExist == true)
+                {
+                    string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[4]").Trim();
+                    string getTotalPageCount = getPageCountDetails.Substring(3);
+                    pageCount = Convert.ToInt32(getTotalPageCount);
+                }
+                else
+                {
+                    pageCount = Convert.ToInt32(1);
+                }
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            bool tg = base.IsElementPresent(By.XPath("//table[@id='tblCoursePreview']/tbody/tr[1]/td[5]/i"),5);
+                            //Wait for the element
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i",rowCount)));
+                            //Drag and Drop
+                            base.PerformClickAndHoldAction(base.
+                                GetWebElementPropertiesByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount)));
+                            //Wait for the element
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount+1)));
+                            //Drag and Drop
+                            base.PerformClickAndHoldAction(base.
+                                GetWebElementPropertiesByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount+1)));
+                            return;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click cmenu optin of asset in managecourse material.
+        /// </summary>
+        /// <param name="cmenuOptionName">This is cmenu option name.</param>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        public void CourseMaterialCmenuFunctionlaity(string cmenuOptionName, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+             base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+            int pageCount = Convert.ToInt32(0);
+            try
+            {
+                base.WaitUntilWindowLoads("Course Materials");
+                base.SelectWindow("Course Materials");
+                base.SwitchToIFrameById("ifrmCoursePreview");
+                int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
+
+                bool pageNumberExist = base.IsElementPresent(By.XPath("//td[@class='PD_PRdivpagingCenter']/span[4]"), 10);
+
+                if (pageNumberExist == true)
+                {
+                    string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[4]").Trim();
+                    string getTotalPageCount = getPageCountDetails.Substring(3);
+                    pageCount = Convert.ToInt32(getTotalPageCount);
+                }
+                else
+                {
+                    pageCount = Convert.ToInt32(1);
+                }
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            switch(cmenuOptionName)
+                            {
+                                case "Open":
+                                    // Click cmenu icon
+                                    bool te = base.IsElementPresent(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img", rowCount)), 10);
+                                    IWebElement getCmenuOption = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img", rowCount));
+                                    base.PerformMouseClickAction(getCmenuOption);
+                                    // Click cmenu option
+                                    bool asdw = base.IsElementPresent(By.Id("aspnetForm"), 10);
+                                    base.WaitForElement(By.ClassName("cmenu_cont"));
+                                    bool ads = base.IsElementPresent(By.LinkText(cmenuOptionName),10);
+
+                                    break;
+                                case "Edit":
+                                    break;
+                                case "Properties":
+                                    break;
+                                case "Show/Hide":
+                                    break;
+                                case "Get Information":
+                                    break;
+                                case "Remove":
+                                    break;
+                                case "Delete Assignment":
+                                    break;
+                            }
+                            return;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
+
+        /// <summary>
+        /// Get activity display status
+        /// </summary>
+        /// <param name="tabName"></param>
+        public string GetAssetName(string activityName,string tabName)
+        {
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+             base.IsTakeScreenShotDuringEntryExit);
+            int pageCount = Convert.ToInt32(0);
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+              pageCount=  this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            return getActivityName;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+             base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
+
+        /// <summary>
+        /// Check paagination existance in Manage course material
+        /// </summary>
+        private int CheckPaginationStatus()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage", "CheckPaginationStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            int pageCount = Convert.ToInt32(0);
+            try
+            {
+                // Get pagination exist status
+                bool pageNumberExist = base.IsElementPresent(By.XPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_Pagination_Count_XPath_Locator), 5);
+
+                // Check if the page number exist
+                if (pageNumberExist == true)
+                {
+                    // Get page number count
+                    string getPageCountDetails = base.GetInnerTextAttributeValueByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_Pagination_Count_XPath_Locator).Trim();
+                    // Trim and get the page total count
+                    string getTotalPageCount = getPageCountDetails.Substring(3);
+                    // Convert the page number to int
+                    pageCount = Convert.ToInt32(getTotalPageCount);
+                }
+                else
+                {
+                    pageCount = Convert.ToInt32(1);
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("CoursePreviewUXPage", "CheckPaginationStatus", 
+                base.IsTakeScreenShotDuringEntryExit);
+            return pageCount;
+        }
+
+        /// <summary>
+        /// Click on show option
+        /// </summary>
+        /// <param name="actionName">This is action name.</param>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="tabName">This is tab name.</param>
+        public void ClickShowOption(string actionName, Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+                base.IsTakeScreenShotDuringEntryExit);
+            int pageCount = Convert.ToInt32(0);
+
+            // Get the activity name from enum
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+                pageCount = this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            string getActivity = base.GetClassAttributeValueByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a", rowCount));
+                            if (getActivity == "CV_grayedTxt")
+                            {
+                                base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]",rowCount)));
+                                base.SelectCheckBoxByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount));
+
+                                base.WaitForElement(By.XPath("//span[@class='opthide PaddingLeft5']"));
+                                IWebElement getShowOption = base.GetWebElementPropertiesByXPath("//span[@class='opthide PaddingLeft5']");
+                                base.ClickByJavaScriptExecutor(getShowOption);
+                                return;
+                            }
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get asset status
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <returns>Return status.</returns>
+        public string GetAssetStatus(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "GetAssetStatus",
+             base.IsTakeScreenShotDuringEntryExit);
+            string getAssetStatus = string.Empty;
+            // Get the activity name from enum
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            int pageCount = Convert.ToInt32(0);
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+                pageCount = this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            string getShowToStatus = base.GetInnerTextAttributeValueByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[3]/span",rowCount));
+                            string getActivity = base.GetClassAttributeValueByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a", rowCount));
+                            if (getActivity.Contains("CV_composenew1") && getShowToStatus=="All")
+                            {
+                                getAssetStatus = "Show";
+                                return getAssetStatus;
+                            }
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+             ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentLibraryUXPage", "GetAssetStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getAssetStatus;
+        }
+
+        /// <summary>
+        /// Click copy option in Manage course material page
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageTitle">This is page title.</param>
+        public void ClickCopyOption(Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            int pageCount = Convert.ToInt32(0);
+
+            // Get the activity name from enum
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+                pageCount = this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+
+                                base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount)));
+                                base.SelectCheckBoxByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount));
+                                base.WaitForElement(By.Id("aCopy"));
+                                IWebElement getShowOption = base.GetWebElementPropertiesById("aCopy");
+                                base.ClickByJavaScriptExecutor(getShowOption);
+                                return;
+
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get copied asset count.
+        /// </summary>
+        /// <returns>Return copied asset count.</returns>
+        public int GetCopiedAssetCount()
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "GetCopiedAssetCount",
+            base.IsTakeScreenShotDuringEntryExit);
+            int getCopiedAssetCount = Convert.ToInt32(0);
+            try
+            {
+             // Wait untill window loads
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                string getstringCopiedAssetCount = base.GetInnerTextAttributeValueById("_ctl0_InnerPageContent_lblcount");
+                getCopiedAssetCount = Convert.ToInt32(getstringCopiedAssetCount);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "GetCopiedAssetCount",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getCopiedAssetCount;
+        }
+
+        /// <summary>
+        /// Paste the copied asset in manage course material.
+        /// </summary>
+        /// <param name="pasteOptionType">This is paste option type.</param>
+        public void PasteTheCopiedAsset(string pasteOptionType)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "PasteTheCopiedAsset",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                // Wait for Paste button and click
+                base.WaitForElement(By.Id("imgPaste"));
+                IWebElement getPasteOption = base.GetWebElementPropertiesById("imgPaste");
+                base.PerformMouseClickAction(getPasteOption);
+
+                // Select paste option type
+                base.WaitForElement(By.Id("tbldivMenu"));
+                // Switch based on the option type 
+                switch(pasteOptionType)
+                {
+                    case "Paste at Bottom":
+                    base.WaitForElement(By.XPath("//table[@id = 'tbldivMenu']/tbody/tr[4]/td"));
+                    IWebElement getPasteOptionName = base.GetWebElementPropertiesByXPath("//table[@id = 'tbldivMenu']/tbody/tr[4]/td");
+                    base.PerformMouseClickAction(getPasteOptionName);
+                    break;
+
+                    case "Paste at Top":
+                    base.WaitForElement(By.XPath("//table[@id = 'tbldivMenu']/tbody/tr[1]/td"));
+                    getPasteOptionName = base.GetWebElementPropertiesByXPath("//table[@id = 'tbldivMenu']/tbody/tr[1]/td");
+                    base.PerformMouseClickAction(getPasteOptionName);
+                    break;
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "PasteTheCopiedAsset",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click copy option in Manage course material page
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageTitle">This is page title.</param>
+        public void ClickAssignOption(Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            int pageCount = Convert.ToInt32(0);
+
+            // Get the activity name from enum
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+                pageCount = this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount)));
+                            base.SelectCheckBoxByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount));
+                            bool asd = base.IsElementPresent(By.Id("imgAssign"),10);
+                            base.WaitForElement(By.Id("imgAssign"));
+                            IWebElement getShowOption = base.GetWebElementPropertiesById("imgAssign");
+                            base.ClickByJavaScriptExecutor(getShowOption);
+                            // W
+                            base.SwitchToLastOpenedWindow();
+                            bool alertPopupExistStatus = base.IsElementPresent(By.ClassName("alert"),10);
+                            if (alertPopupExistStatus == true)
+                            {
+                                base.ClickButtonById("imgOk");
+                            }
+                            return;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click copy option in Manage course material page
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageTitle">This is page title.</param>
+        public void ClickDeleteOption(Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            int pageCount = Convert.ToInt32(0);
+
+            // Get the activity name from enum
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+                pageCount = this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount)));
+                            base.SelectCheckBoxByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount));
+                            bool asd = base.IsElementPresent(By.Id("imgRemove"), 10);
+                            base.WaitForElement(By.Id("imgRemove"));
+                            IWebElement getShowOption = base.GetWebElementPropertiesById("imgRemove");
+                            base.ClickByJavaScriptExecutor(getShowOption);
+                            // W
+                            base.SwitchToLastOpenedWindow();
+                            bool alertPopupExistStatus = base.IsElementPresent(By.ClassName("alert"),10);
+                            if (alertPopupExistStatus == true)
+                            {
+                                base.ClickButtonById("imgOk");
+                            }
+                            return;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Get the assignment status of the asset assigned
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        /// <returns>Return assignment status.</returns>
+        public string GetAssignmentStatus(Activity.ActivityTypeEnum activityType, string tabName)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            string getAssignmentStatus = string.Empty;
+            int pageCount = Convert.ToInt32(0);
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+
+            // Get the activity name from enum
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+                // Check pagination existance
+                pageCount = this.CheckPaginationStatus();
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div", rowCount)));
+                            getAssignmentStatus = base.GetInnerTextAttributeValueByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div", rowCount));
+                            if (getAssignmentStatus.Contains("Assigned"))
+                            {
+                                return getAssignmentStatus = "Assigned";
+                            }
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return getAssignmentStatus;
+        }
+
+        /// <summary>
+        /// Get success message from application
+        /// </summary>
+        /// <returns>Return success message.</returns>
+        public string GetSuccessMessage(string tabName)
+        {
+            string successMessage = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(tabName);
+                base.SelectWindow(tabName);
+                bool asd = base.IsElementPresent(By.ClassName("messageBoardText"),10);
+                successMessage = base.GetInnerTextAttributeValueByClassName("messageBoardText");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return successMessage;
+        }
+
+        /// <summary>
+        /// Click on note icon.
+        /// </summary>
+        /// <param name="pageName">This is page name.</param>
+        public void ClickNoteIcon(string pageName)
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait for page load
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                // Click note icon
+                base.WaitForElement(By.XPath("//div[@class='greyTxt CMPopupNote']"));
+                IWebElement getNoteIcon = base.GetWebElementPropertiesByXPath("//div[@class='greyTxt CMPopupNote']");
+                base.ClickByJavaScriptExecutor(getNoteIcon);
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click edit button in note window
+        /// </summary>
+        public void ClickEditInNoteWindow()
+        {
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickEditInNoteWindow",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait for page load
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+
+                // Wait for edit button to load and click
+                base.WaitForElement(By.XPath("//button[@class='btnnextgen btnnextgen-primary PageAddCss']"));
+                base.ClickButtonByXPath("//button[@class='btnnextgen btnnextgen-primary PageAddCss']");
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ContentLibraryUXPage", "ClickEditInNoteWindow",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
         
+
+        public string GetActivityInMyCourse(string activityName, string pageName)
+        {
+            Logger.LogMethodEntry("AddAssessmentPage", "GetActivityName",
+            base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageName);
+                base.SelectWindow(pageName);
+                // Switch to iframe
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
+                // Get activity count
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_GetActivityCount_XPath_Locator);
+
+                string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[3]").Trim();
+                string getTotalPageCount = getPageCountDetails.Substring(3);
+                int pageCount = Convert.ToInt32(getTotalPageCount);
+                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                {
+                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                        rowCount++)
+                    {
+                        //Gets the Activity Name
+                        getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a", rowCount)).Trim();
+                        if (getActivityName.Equals(activityName))
+                        {
+                            getActivityName = base.GetElementTextByXPath
+                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a", rowCount)).Trim();
+                            return getActivityName;
+                        }
+                    }
+                    IWebElement getNextIcon = base.GetWebElementPropertiesByClassName("PD_icn_pageNext");
+                    base.ClickByJavaScriptExecutor(getNextIcon);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AddAssessmentPage", "GetActivityName",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
     }
 }
