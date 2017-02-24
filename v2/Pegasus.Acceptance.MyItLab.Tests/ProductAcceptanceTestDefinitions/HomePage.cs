@@ -76,6 +76,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [Then(@"I should be displayed with ""(.*)"" icon in ""(.*)"" channel")]
         [Then(@"I should be displayed with ""(.*)"" button on ""(.*)"" page as ""(.*)"" user")]
         [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel as ""(.*)"" user")]
+        [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel on Home page")]
+        [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel on ""(.*)"" page")]   
         public void DisplayedOfOptionsInChannels(string buttonName, string channelName, string pageName)
         {
             Logger.LogMethodEntry("HomePage", "DisplayedOfOptionsInChannels",
@@ -329,7 +331,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Select Option In View By Dropdown.
         /// </summary>
@@ -374,8 +375,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar", "SelectCourseToCreateIcCourseByDiscipline",
                base.IsTakeScreenShotDuringEntryExit);
             //Create IC course based on discipline
-
-            new HEDGlobalHomePage().CreateCourseAndCourseByDiscipline(btnName, courseType);
+            new HEDGlobalHomePage().CreateCourseByDiscipline(btnName, courseType);
             Logger.LogMethodExit("AssignmentCalendar", "SelectCourseToCreateIcCourseByDiscipline",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -454,6 +454,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        
+        /// <summary>
+        /// This methord is to create verify the program created.
+        /// </summary>
+        /// <param name="courseStatus">This is course status.</param>
+        /// <param name="courseType">This is course type enum.</param>
+        /// <param name="userType">This is user type enum.</param>
+         [Then(@"I should see the program ""(.*)"" created as ""(.*)"" user")]
+        public void ThenIShouldSeeTheProgramCreatedAsUser(Course.CourseTypeEnum programName, User.UserTypeEnum userType)
+        {
+            Logger.LogMethodEntry("GlobalHomePage", "StatusOfCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Validate the course updated status
+            Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+           .ScenarioInfo.Title, () => Assert.IsTrue(new
+           HEDGlobalHomePage().ProgramDisplayOnHomePage(programName, userType)));
+            
+            Logger.LogMethodExit("GlobalHomePage", "StatusOfCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
 
     }
 }

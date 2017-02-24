@@ -4407,6 +4407,8 @@ namespace Pegasus.Pages.UI_Pages
                switch(couseTypeEnum)
                {
                    case Course.CourseTypeEnum.MyItLabAuthoredCourse:
+                   case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                   case Course.CourseTypeEnum.RegMyITLabNewlyCreatedCourse:
                        this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName, userType);
                     break;
 
@@ -4501,7 +4503,7 @@ namespace Pegasus.Pages.UI_Pages
                                 }
                                 break;
 
-                            case "Today's view":
+                            case "Today's View":
                                 switch (optionName)
                                 {
                                     case "Home":
@@ -4570,7 +4572,7 @@ namespace Pegasus.Pages.UI_Pages
                                         }
 
                                         break;
-                                    case "Today's view":
+                                    case "Today's View":
                                         switch (optionName)
                                         {
                                             case "Home":

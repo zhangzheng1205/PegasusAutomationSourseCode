@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span.
+        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/div.
         /// </summary>
         internal static string HEDGlobalHome_Page_GetCourseId_XPath_Locator {
             get {
@@ -367,7 +367,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl6__ctl0__ctl0__ctl0__ctl0_lblHeading.
+        ///   Looks up a localized string similar to _ctl7__ctl0__ctl0__ctl0__ctl0_lblHeading.
         /// </summary>
         internal static string HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID {
             get {
@@ -538,7 +538,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id = &apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span.
+        ///   Looks up a localized string similar to //div[@id =&apos;tblCourse&apos;]/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/div.
         /// </summary>
         internal static string HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator {
             get {
@@ -943,6 +943,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;tblCourse&apos;]/div/div[{0}]/div/div/div[3]/button.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_OpenButton_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_OpenButton_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;repeatertbl&apos;]/div[{0}]/div/div/div[2]/div/div/span.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_ProgramRow_XPath_Locator {
@@ -952,7 +961,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;tblSearchCatalog&apos;]/div[2]/div/div/input.
+        ///   Looks up a localized string similar to //div[@id=&apos;repeatertbl&apos;]/div[{0}]/div[2]/div/div/input.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator {
             get {
@@ -988,7 +997,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;tblSearchCatalog&apos;]/div[2]/div/div[2]/input.
+        ///   Looks up a localized string similar to //div[@id=&apos;repeatertbl&apos;]/div[{0}]/div[2]/div/div[2]/input.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_TestBank_Button_XPath_Locator {
             get {

@@ -84,9 +84,7 @@ Then I should be on the "Today's View" page
 #Products : MyItLab, HSS and World Language.
 #Pre condition : Instructor should be navigated inside the course
 Scenario: Student validate navigate Home link functionality in course header
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
-When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+When I click on "Home" option in "Today's View" tab of "RegMyITLabNewlyCreatedCourse" as "CsSmsStudent" user
 Then I should be on the "Global Home" page
 
 #Purpose:Validate the display of Notifications channels dispalyed in Today's view tab of CsSmsStudent.

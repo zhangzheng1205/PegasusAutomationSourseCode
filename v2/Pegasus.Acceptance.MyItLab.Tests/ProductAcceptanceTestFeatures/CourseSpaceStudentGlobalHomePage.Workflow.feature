@@ -29,6 +29,9 @@ Scenario: Validate enrolled course in "My Courses and Testbanks" channel for SMS
 Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsStudent" in "My Courses and Testbanks" channel
 When I click on Open button of "RegMyITLabNewCourseForEnrollment" as "CsSmsStudent" user
 
+#-----------------------------------------------------------------------------------------------------#
+#Scripts to validate course Header Links#
+#-----------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Help Link functionality on the home page
@@ -71,9 +74,13 @@ And I close the "Privacy" window
 #Products : MyItLab, HSS and World Language.
 #Purpose:Logout as CsSmsStudent from global home of MyItLabInstructorCourse course
 Scenario: Logout of Pegasus as CsSmsStudent from global home
+Given I am on the "Global Home" page
 When I click on "Sign out" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsStudent" user
 Then I should see the successfull message "You have been signed out of the application."
 
+#-----------------------------------------------------------------------------------------------------#
+#Scripts to validate Create Course and Enroll in a course buttons#
+#-----------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The course enrollment for SMS student
@@ -87,6 +94,13 @@ And I should be displayed with message "The Course ID you entered matched the fo
 And I should be displayed with the course name "MyItLabAuthoredCourse"
 When I click "Confirm" button
 Then I should be displayed with "MyItLabAuthoredCourse" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The open button of the course for student
+Scenario: Validate open button functionallity for course as CsSmsStudent
+When I click on Open button of "MyItLabAuthoredCourse" as "CsSmsStudent" user
+Then I should be displayed with "MyItLabAuthoredCourse" course information for "CsSmsStudent" user
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.

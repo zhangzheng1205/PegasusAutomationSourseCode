@@ -3,7 +3,9 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
-
+#-----------------------------------------------------------------------------------------------------#
+							#Scripts to validate course Header Links#
+#-----------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Help Link functionality on the home page
@@ -49,14 +51,22 @@ Scenario: Instructor validate sign out link functionality in course global home
 When I click on "Sign out" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
 Then I should see the successfull message "You have been signed out of the application."
 
-
+#-----------------------------------------------------------------------------------------------------#
+							#Scripts to validate Create Course and Enroll in a course buttons#
+#-----------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The My Courses and Testbanks displayed on the home page
 Scenario:Validate Channels in home page as CsSmsInstructor
+Given I am on the "Global Home" page
 Then I should be displayed with "My Courses and Testbanks" channel  on "Global Home" page as "CsSmsInstructor" user
-And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
-And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user
+And I should be displayed with "Create a Course" button in "My Courses and Testbanks" channel on "Global Home" page
+And I should be displayed with "Enroll in a Course" button in "My Courses and Testbanks" channel on "Global Home" page
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify self enrollment of CsSmsInstructor to the course
+Scenario:Validate Channels in home page as CsSmsInstructor1
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
 Then I should be displayed with "Enroll in a Course" lightbox
 And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsInstructor" user 
@@ -67,6 +77,17 @@ And I should be displayed with the course name "RegMyITLabNewCourseForEnrollment
 When I click "Confirm" button
 Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
+Scenario: Validate open button functionallity for course as CsSmsInstructor
+Given I am on the "Global Home" page
+When I click on Open button of "RegMyITLabNewlyCreatedCourse" as "CsSmsInstructor" user
+Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course information for "CsSmsInstructor" user
+
+#-----------------------------------------------------------------------------------------------------#
+							#Scripts to validate Instructor,MyTest and Program course creation based on ISBN and Decipline#
+#-----------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The course creation by CsSmsInstructor using course ISBN number
@@ -84,7 +105,6 @@ Then I should be displayed with "RegMyITLabNewlyCreatedCourse" Instructor course
 #Pre-Condition : Master Course should be specified in the in memory
 #Purpose:Verify The course creation by CsSmsInstructor using course discipline
 Scenario:Validate course creation from Create a Course catlog based on course decipline
-Given I am on the "Global Home" page
 When I click on "Create a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
 Then I should be displayed with "Create a Course" lightbox
 And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
@@ -117,25 +137,11 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Program" button of "MyITLabOffice2013Program" using course descipline
-Then I should be displayed with "MyITLabOffice2013Program" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should see the program "MyITLabOffice2013Program" created as "CsSmsInstructor" user
 
-#Test case ID : 
-#Products : MyItLab, HSS and World Language.
-#Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
-Scenario: Validate enrolled course in "My Courses and Testbanks" channel
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I click on Open button of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-
-Scenario: Validate enrolled course in "My Courses and Testbanks" channel as Student
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I click on Open button of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-
+#-----------------------------------------------------------------------------------------------------#
+							#Scripts to validate context menu option of the course#
+#-----------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Pre-Condition : Course should be created
@@ -175,6 +181,8 @@ Scenario:Validate Unmark for deletion cmenu option of IC course on CsSmsInstruct
 Given I am on the "Global Home" page
 When I select cmenu "Unmark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
 Then I should see successfull message "Course removed from the deletion list." on "Global Home" page
+
+
 
 
 

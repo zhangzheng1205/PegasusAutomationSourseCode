@@ -256,7 +256,7 @@
     <value>_ctl5__ctl1__ctl0__ctl1__ctl0_btnViewAll</value>
   </data>
   <data name="HEDGlobalHome_Page_MyCoursesandTestbanks_Channel_ID" xml:space="preserve">
-    <value>_ctl6__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
+    <value>_ctl7__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="HEDGlobalHomePage_HomePageIframe_ID_Locator" xml:space="preserve">
     <value>iframeSelfEnrollment</value>
@@ -370,7 +370,7 @@
     <value>btnNext</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='tblSearchCatalog']/div[2]/div/div/input</value>
+    <value>//div[@id='repeatertbl']/div[{0}]/div[2]/div/div/input</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_Confirm_Deletion_ID_Locator" xml:space="preserve">
     <value>confirm</value>
@@ -448,7 +448,7 @@
     <value>lblPersonalProfile</value>
   </data>
   <data name="HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator" xml:space="preserve">
-    <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span</value>
+    <value>//div[@id ='tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/div</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_OpenButton_XPath_Locator" xml:space="preserve">
     <value>//div[@class='channel-content']/div/div/div[{0}]/div/div/div[3]</value>
@@ -457,10 +457,10 @@
     <value>Testbank is being prepared and will be available soon.</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_TestBank_Button_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='tblSearchCatalog']/div[2]/div/div[2]/input</value>
+    <value>//div[@id='repeatertbl']/div[{0}]/div[2]/div/div[2]/input</value>
   </data>
   <data name="HEDGlobalHome_Page_GetCourseId_XPath_Locator" xml:space="preserve">
-    <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/span</value>
+    <value>//div[@id = 'tblCourse']/div/div[{0}]/div/div/div/table/tbody/tr/td/div/div/div[3]/div/span/span/div</value>
   </data>
   <data name="HEDGlobalHomePage_HomePage_CreateCourse_Step2Count_XPath_Locator" xml:space="preserve">
     <value>//div[@id='mainCatalogTbl']/ul/li[2]/span/span[1]</value>
@@ -473,5 +473,8 @@
   </data>
   <data name="HEDGlobalHomePage_HomePage_ProgramRow_XPath_Locator" xml:space="preserve">
     <value>//div[@id='repeatertbl']/div[{0}]/div/div/div[2]/div/div/span</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_OpenButton_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='tblCourse']/div/div[{0}]/div/div/div[3]/button</value>
   </data>
 </root>

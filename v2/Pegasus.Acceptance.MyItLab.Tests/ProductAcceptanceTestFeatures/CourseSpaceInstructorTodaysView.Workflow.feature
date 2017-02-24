@@ -174,10 +174,8 @@ And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" h
 #Purpose:Verify The Home Link functionality inside the course
 #Pre condition : Instructor should be navigated inside the course
 Scenario: Instructor validate navigate Home link functionality in course header
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
 When I click on "Home" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
-Then I should be on the "Homepage" page
+Then I should be on the "Global Home" page
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
