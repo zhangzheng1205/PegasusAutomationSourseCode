@@ -331,6 +331,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MoodleDirectIntegration.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\Sample.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sample.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -856,6 +861,10 @@
     <None Include="ProductAcceptanceTestFeatures\MoodleDirectIntegration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MoodleDirectIntegration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\Sample.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Sample.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
