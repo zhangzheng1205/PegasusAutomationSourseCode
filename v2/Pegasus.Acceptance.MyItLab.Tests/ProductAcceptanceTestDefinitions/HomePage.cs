@@ -320,16 +320,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="frameName">This is frame name.</param>
         [Then(@"I should be displayed with ""(.*)"" Instructor course as ""(.*)"" in ""(.*)"" channel")]
         [Then(@"I should be displayed with ""(.*)"" MyTest course as ""(.*)"" in ""(.*)"" channel")]
-        public void ThenIShouldBeDisplayedWithMyTestCourseAsInChannel(string p0, string p1, string p2)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-        public void ThenIShouldBeDisplayedWithInstructorCourseAsInChannel(string p0, string p1, string p2)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
         public void DisplayedOfCreatedCourseInChannel(Course.CourseTypeEnum courseType,
             User.UserTypeEnum userType, string frameName)
         {
