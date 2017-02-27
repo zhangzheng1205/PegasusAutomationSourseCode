@@ -3134,15 +3134,20 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Select mark for deletion cmenu option
                     case "Mark for Deletion":
-                        base.ClickLinkByPartialLinkText(HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_HomePage_MarkforDeletion_Cmenu_LinkText_Locator);
                         base.WaitUntilWindowLoads(base.GetPageTitle);
-                        Thread.Sleep(1000);
-                        base.WaitForElement(By.Id("confimationModal"));
-                        base.WaitForElement(By.Id("spaConfirm"));
-                        IWebElement getElement = base.GetWebElementPropertiesById("spaConfirm");
-                        base.PerformMouseClickAction(getElement);
-                        break;
+                       base.ClickLinkByPartialLinkText(HEDGlobalHomePageResource.
+                           HEDGlobalHomePage_HomePage_MarkforDeletion_Cmenu_LinkText_Locator);
+                       base.WaitUntilWindowLoads(base.GetPageTitle);
+                       Thread.Sleep(2000);
+                       base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                           HEDGlobalHomePage_HomePage_Deletpopup_Id_Locator));
+                       Thread.Sleep(1000);
+                       base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                           HEDGlobalHomePage_HomePage_DeletOk_Id_Locator));
+                       IWebElement getElement = base.GetWebElementPropertiesById(HEDGlobalHomePageResource.
+                           HEDGlobalHomePage_HomePage_DeletOk_Id_Locator);
+                       base.PerformMouseClickAction(getElement);
+                       break;
                     //Select copy as instructor course cmenu option
                     case "Copy as Instructor Course":
                         base.ClickLinkByPartialLinkText(HEDGlobalHomePageResource.

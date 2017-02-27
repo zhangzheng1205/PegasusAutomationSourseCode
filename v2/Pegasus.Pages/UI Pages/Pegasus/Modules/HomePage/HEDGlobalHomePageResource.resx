@@ -477,4 +477,10 @@
   <data name="HEDGlobalHomePage_HomePage_OpenButton_XPath_Locator" xml:space="preserve">
     <value>//div[@id='tblCourse']/div/div[{0}]/div/div/div[3]/button</value>
   </data>
+  <data name="HEDGlobalHomePage_HomePage_DeletOk_Id_Locator" xml:space="preserve">
+    <value>spaConfirm</value>
+  </data>
+  <data name="HEDGlobalHomePage_HomePage_Deletpopup_Id_Locator" xml:space="preserve">
+    <value>confimationModal</value>
+  </data>
 </root>

@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [Then(@"I should be displayed with ""(.*)"" button on ""(.*)"" page as ""(.*)"" user")]
         [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel as ""(.*)"" user")]
         [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel on Home page")]
-        [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel on ""(.*)"" page")]   
+        [Then(@"I should be displayed with ""(.*)"" button in ""(.*)"" channel on ""(.*)"" page")]
         public void DisplayedOfOptionsInChannels(string buttonName, string channelName, string pageName)
         {
             Logger.LogMethodEntry("HomePage", "DisplayedOfOptionsInChannels",
@@ -318,8 +318,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="courseType">This is course type enum.</param>
         /// <param name="userType">This is user type enum.</param>
         /// <param name="frameName">This is frame name.</param>
-        [Then(@"I should be displayed with ""(.*)"" Instructor course as ""(.*)"" in ""(.*)"" frame")]
-        [Then(@"I should be displayed with ""(.*)"" MyTest course as ""(.*)"" in ""(.*)"" frame")]
+        [Then(@"I should be displayed with ""(.*)"" Instructor course as ""(.*)"" in ""(.*)"" channel")]
+        [Then(@"I should be displayed with ""(.*)"" MyTest course as ""(.*)"" in ""(.*)"" channel")]
+        public void ThenIShouldBeDisplayedWithMyTestCourseAsInChannel(string p0, string p1, string p2)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        public void ThenIShouldBeDisplayedWithInstructorCourseAsInChannel(string p0, string p1, string p2)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
         public void DisplayedOfCreatedCourseInChannel(Course.CourseTypeEnum courseType,
             User.UserTypeEnum userType, string frameName)
         {
@@ -390,14 +400,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I select cmenu ""(.*)"" option of Instructor course ""(.*)"" for ""(.*)""")]
         public void OpenCmenuOption(string cmenuOption, Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
         {
-
             Logger.LogMethodEntry("GlobalHomePage", "OpenCmenuOption",
-               base.IsTakeScreenShotDuringEntryExit);
+   base.IsTakeScreenShotDuringEntryExit);
             //Open the cmenu option of the course on home page
             new HEDGlobalHomePage().CmenuOptionForCourse(cmenuOption, courseType, userType);
-
             Logger.LogMethodExit("GlobalHomePage", "OpenCmenuOption",
-               base.IsTakeScreenShotDuringEntryExit);
+   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -412,9 +420,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
             //Update the course name on home page
             new HEDGlobalHomePage().UpdateCourseInfo(btnName, courseType);
-
             Logger.LogMethodExit("GlobalHomePage", "UpdateTheCourseName",
-               base.IsTakeScreenShotDuringEntryExit);
+    base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -429,9 +436,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
             //Validate the course information updated
             new HEDGlobalHomePage().DisplayOfUpdateCourseName(courseType);
-
             Logger.LogMethodExit("GlobalHomePage", "UpdatedCourseNameOnHomePage",
-               base.IsTakeScreenShotDuringEntryExit);
+   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -449,19 +455,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
             .ScenarioInfo.Title, () => Assert.IsTrue(new
             HEDGlobalHomePage().CourseStatusOnHomePage(courseStatus, courseType)));
-
             Logger.LogMethodExit("GlobalHomePage", "StatusOfCourse",
-               base.IsTakeScreenShotDuringEntryExit);
+   base.IsTakeScreenShotDuringEntryExit);
         }
 
-        
+
         /// <summary>
         /// This methord is to create verify the program created.
         /// </summary>
         /// <param name="courseStatus">This is course status.</param>
         /// <param name="courseType">This is course type enum.</param>
         /// <param name="userType">This is user type enum.</param>
-         [Then(@"I should see the program ""(.*)"" created as ""(.*)"" user")]
+        [Then(@"I should see the program ""(.*)"" created as ""(.*)"" user")]
         public void ThenIShouldSeeTheProgramCreatedAsUser(Course.CourseTypeEnum programName, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("GlobalHomePage", "StatusOfCourse",
@@ -470,9 +475,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
            .ScenarioInfo.Title, () => Assert.IsTrue(new
            HEDGlobalHomePage().ProgramDisplayOnHomePage(programName, userType)));
-            
             Logger.LogMethodExit("GlobalHomePage", "StatusOfCourse",
-               base.IsTakeScreenShotDuringEntryExit);
+   base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

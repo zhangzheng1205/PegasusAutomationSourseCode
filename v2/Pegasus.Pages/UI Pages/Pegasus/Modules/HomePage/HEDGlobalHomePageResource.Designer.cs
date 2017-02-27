@@ -772,6 +772,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to spaConfirm.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_DeletOk_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_DeletOk_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to confimationModal.
+        /// </summary>
+        internal static string HEDGlobalHomePage_HomePage_Deletpopup_Id_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHomePage_HomePage_Deletpopup_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Course Info.
         /// </summary>
         internal static string HEDGlobalHomePage_HomePage_EditCourseInfo_Cmenu_LinkText_Locator {

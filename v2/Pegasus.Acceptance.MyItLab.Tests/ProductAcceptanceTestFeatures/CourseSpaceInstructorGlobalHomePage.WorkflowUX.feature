@@ -66,7 +66,7 @@ And I should be displayed with "Enroll in a Course" button in "My Courses and Te
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify self enrollment of CsSmsInstructor to the course
-Scenario:Validate Channels in home page as CsSmsInstructor1
+Scenario:Validate self enrollment in home page as CsSmsInstructor
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsInstructor" user 
 Then I should be displayed with "Enroll in a Course" lightbox
 And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsInstructor" user 
@@ -98,7 +98,7 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I click on next button with "RegMyITLabNewlyCreatedCourse" course ISBN as search criteria
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "RegMyITLabNewlyCreatedCourse" course
-Then I should be displayed with "RegMyITLabNewlyCreatedCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "RegMyITLabNewlyCreatedCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -111,7 +111,7 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "MyItLabAuthoredCourse" using course descipline
-Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -124,7 +124,7 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Testbank" button of "MyTestAuthoredCourse" using course descipline
-Then I should be displayed with "MyTestAuthoredCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" frame
+Then I should be displayed with "MyTestAuthoredCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.

@@ -202,11 +202,11 @@ testRunner.And("I should be displayed with \"Enroll in a Course\" button in \"My
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate Channels in home page as CsSmsInstructor1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validate self enrollment in home page as CsSmsInstructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGlobalHomePage")]
-        public virtual void ValidateChannelsInHomePageAsCsSmsInstructor1()
+        public virtual void ValidateSelfEnrollmentInHomePageAsCsSmsInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Channels in home page as CsSmsInstructor1", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate self enrollment in home page as CsSmsInstructor", ((string[])(null)));
 #line 69
 this.ScenarioSetup(scenarioInfo);
 #line 70
@@ -282,7 +282,7 @@ testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Cr
 testRunner.When("I click on \"Select Course\" button of \"RegMyITLabNewlyCreatedCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 101
 testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" Instructor course as \"C" +
-                    "sSmsInstructor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "sSmsInstructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -313,7 +313,7 @@ testRunner.When("I click on \"Select Course\" button of \"MyItLabAuthoredCourse\
                     "ine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 114
 testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" Instructor course as \"CsSmsIns" +
-                    "tructor\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "tructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -346,7 +346,7 @@ testRunner.When("I click on \"Select Testbank\" button of \"MyTestAuthoredCourse
                     "line", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 127
 testRunner.Then("I should be displayed with \"MyTestAuthoredCourse\" MyTest course as \"CsSmsInstruct" +
-                    "or\" in \"My Courses and Testbanks\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "or\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
