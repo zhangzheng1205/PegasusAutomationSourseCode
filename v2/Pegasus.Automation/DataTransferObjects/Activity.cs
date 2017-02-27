@@ -108,7 +108,8 @@ namespace Pegasus.Automation.DataTransferObjects
             RegSimpleStartDateCmenuAssign = 77,
             RegSimpleCmenuAssignCurrentDate =78,
             RegSimpleCmenuAssign =79,
-            RegSimpleCmenuAssignFutureDate =80
+            RegSimpleCmenuAssignFutureDate =80,
+            RegWordGrader0 = 81,
         }
 
         /// <summary>

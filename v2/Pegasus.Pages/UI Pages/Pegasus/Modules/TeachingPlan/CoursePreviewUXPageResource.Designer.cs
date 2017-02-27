@@ -448,6 +448,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PD_icn_pageNext.
+        /// </summary>
+        internal static string CoursePreviewUXPage_MyCourse_NextButton_Class_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_MyCourse_NextButton_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //td[@class=&apos;PD_PRdivpagingCenter&apos;]/span[3].
+        /// </summary>
+        internal static string CoursePreviewUXPage_Pagination_Count_MyCourse_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_Pagination_Count_MyCourse_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //td[@class=&apos;PD_PRdivpagingCenter&apos;]/span[4].
         /// </summary>
         internal static string CoursePreviewUXPage_Pagination_Count_XPath_Locator {

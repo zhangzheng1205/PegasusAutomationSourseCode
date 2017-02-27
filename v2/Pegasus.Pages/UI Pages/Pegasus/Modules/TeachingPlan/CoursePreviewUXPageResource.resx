@@ -252,4 +252,10 @@
   <data name="CoursePreviewUXPage_Pagination_Count_XPath_Locator" xml:space="preserve">
     <value>//td[@class='PD_PRdivpagingCenter']/span[4]</value>
   </data>
+  <data name="CoursePreviewUXPage_MyCourse_NextButton_Class_Locator" xml:space="preserve">
+    <value>PD_icn_pageNext</value>
+  </data>
+  <data name="CoursePreviewUXPage_Pagination_Count_MyCourse_XPath_Locator" xml:space="preserve">
+    <value>//td[@class='PD_PRdivpagingCenter']/span[3]</value>
+  </data>
 </root>

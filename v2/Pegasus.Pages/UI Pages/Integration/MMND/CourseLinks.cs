@@ -28,9 +28,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.MMND
          By notification = By.ClassName("NotifyHeader2");
 
        //Iframes on this page
-        string centerFrameSrc = "http://coursehome.next.qaprod.ecollege.com";
-        string gbInsframeSrc = "GBInstructorUX.aspx?";
-        string viewallframeSrc = "CoursePreviewMainUX.aspx?";
+        //string centerFrameSrc = "http://coursehome.next.qaprod.ecollege.com";
+        //string gbInsframeSrc = "GBInstructorUX.aspx?";
+        //string viewallframeSrc = "CoursePreviewMainUX.aspx?";
 
       /// <summary>
       /// Given a Iframe source, switches inside the Iframe

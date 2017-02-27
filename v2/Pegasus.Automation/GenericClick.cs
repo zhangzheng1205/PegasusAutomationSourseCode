@@ -1,5 +1,4 @@
 ﻿
-
 using System.Linq;
 using OpenQA.Selenium.Interactions;
 using Keys = OpenQA.Selenium.Keys;
@@ -110,7 +109,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             //screenshot
                             return true;
                         }
-                        catch { }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
                         //number of opened windows or tabs is changed
                         if (numOfWindows != driver.WindowHandles.Count)
                         {
@@ -165,7 +167,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.Submit:
@@ -174,7 +176,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.DoubleClick:
@@ -185,7 +187,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
 
@@ -202,7 +204,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.JSClick:
@@ -217,7 +219,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.CursorClick:
@@ -230,7 +232,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.SendKeyEnter:
@@ -240,7 +242,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.SendKeyReturn:
@@ -250,7 +252,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case ClickAction.SendKeySpacebar:
@@ -260,7 +262,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                             }
                             catch (Exception e)
                             {
-                                //"SmartClick clicking error: " + e.Message error message
+                                Console.WriteLine(e.Message);
                             }
                             break;
                     }

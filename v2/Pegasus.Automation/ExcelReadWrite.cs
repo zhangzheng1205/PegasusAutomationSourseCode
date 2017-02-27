@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
-using System.Text;
 using Bytescout.Spreadsheet;
 using System.Diagnostics;
 using System.IO;

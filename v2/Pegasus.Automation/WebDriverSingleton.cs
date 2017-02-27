@@ -13,7 +13,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
     public class WebDriverSingleton : IDisposable
     {
         private readonly IWebDriver _webDriver = null;
-        private readonly ISelenium _selenium = null;
+       //private readonly ISelenium _selenium = null;
         private readonly string _browser;
 
         /// <summary>
@@ -55,20 +55,20 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             }
         }
 
-        /// <summary>
-        /// Returns an instance of Selenium
-        /// </summary>
-        public ISelenium Selenium
-        {
-            get
-            {
-                if (_webDriverSingleton == null)
-                {
-                    _webDriverSingleton = new WebDriverSingleton();
-                }
-                return _selenium;
-            }
-        }
+        ///// <summary>
+        ///// Returns an instance of Selenium
+        ///// </summary>
+        //public ISelenium Selenium
+        //{
+        //    get
+        //    {
+        //        if (_webDriverSingleton == null)
+        //        {
+        //            _webDriverSingleton = new WebDriverSingleton();
+        //        }
+        //        return _selenium;
+        //    }
+        //}
 
         /// <summary>
         /// Resets the singleton.

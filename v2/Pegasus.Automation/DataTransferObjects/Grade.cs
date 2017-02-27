@@ -10,6 +10,7 @@ namespace Pegasus.Automation.DataTransferObjects
     /// </summary>
     public class Grade : BaseEntityObject
     {
+
         /// <summary>
         /// This is the type of the grade
         /// </summary>
@@ -21,8 +22,8 @@ namespace Pegasus.Automation.DataTransferObjects
             PegasusEditedGrade = 4,
             D2LDirectIntegrationEditedGrade = 5,
             D2LDirectNewGrade = 6,
-            PegasusEditedGradePerc=7,
-            PegasusNewGradePerc=8
+            PegasusEditedGradePerc = 7,
+            PegasusNewGradePerc = 8,
         }
 
         /// <summary>
@@ -33,7 +34,7 @@ namespace Pegasus.Automation.DataTransferObjects
         /// <summary>
         /// This is the Rumba Section ID
         /// </summary>
-        public string Score { get; set; }
+        public String GradeScore { get; set; }
 
         /// <summary>
         /// Inserts the grade into the database
@@ -71,8 +72,8 @@ namespace Pegasus.Automation.DataTransferObjects
         /// <param name="score">This is the grade name.</param>
         public void UpdateGradeName(string score)
         {
-            Grade Grade = InMemoryDatabaseSingleton.DatabaseInstance.SelectTopOne<Grade>(x => x.Score == Score);
-            Grade.Score = score;
+            Grade Grade = InMemoryDatabaseSingleton.DatabaseInstance.SelectTopOne<Grade>(x => x.GradeScore == GradeScore);
+            Grade.GradeScore = score;
         }
 
         /// <summary>

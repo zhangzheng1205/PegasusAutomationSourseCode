@@ -775,3 +775,46 @@ When I click on the button "Close Assignment"
 Then I should be on the "Course Materials" page
 Then I should see a "Not passed" status for the activity "GradeIT Access 2016 Assessment 5" in "Course Materials" by "CsSmsStudent" 
 
+#--------------------------------------------------- Student launch non gradable asset ----------------------------------------------
+Scenario: Student launch non gradable asset
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+And I should be displayed with "RegFolderAsset" in "Course Materials" frame
+When I enter into "RegFolderAsset" folder in "Course Materials" frame
+Then I should be displayed with status "Not viewed" for "RegLinkAsset"
+When I launch "RegLinkAsset"
+Then I should be displayed with status "Viewed" for "RegLinkAsset" 
+
+
+Scenario: Submit GraderIT HomeWork
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I navigate to "Course Materials" tab
+When I launch "RegWordGrader0"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Access file for 70%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Not passed" for "RegWordGrader0" 

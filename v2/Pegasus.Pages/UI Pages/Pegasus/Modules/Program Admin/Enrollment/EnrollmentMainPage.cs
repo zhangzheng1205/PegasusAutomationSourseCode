@@ -218,6 +218,8 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("EnrollmentMainPage", "AddSelectedUserToSection",
                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            { 
             // Add the selected user as teacher or as student       
             IWebElement addUserButton = base.GetWebElementPropertiesByCssSelector
                     (EnrollmentMainPageResource.
@@ -244,13 +246,19 @@ namespace Pegasus.Pages.UI_Pages
                         ProgramAdministration_Enrollment_AddInstructorUserOption_LinkText_Locator);
                     Thread.Sleep(2000);
                     base.ClickByJavaScriptExecutor(addInstructor);
-                    break;
+
                     //Switch out of the frames
                     base.SwitchToDefaultPageContent();
+                    break;
+                }
+            }
+                catch(Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
 
                     logger.LogMethodExit("EnrollmentMainPage", "AddSelectedUserToSection",
                                     base.IsTakeScreenShotDuringEntryExit);
             }
         }
-    }
 }

@@ -12,7 +12,6 @@ using TechTalk.SpecFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Globalization;
-using Pegasus.Pages.UI_Pages.Integration.D2L;
 using Pegasus.Pages.UI_Pages.Integration.D2L.DirectIntegration;
 
 

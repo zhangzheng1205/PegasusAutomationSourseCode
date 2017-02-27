@@ -26,7 +26,7 @@ namespace Pegasus.Automation
         
         private string certRating = null;
         private IWebElement variableElement = null;
-        private IWebElement scanNext = null;
+        //private IWebElement scanNext = null;
         private bool siteReadyToScan = false;
 
 

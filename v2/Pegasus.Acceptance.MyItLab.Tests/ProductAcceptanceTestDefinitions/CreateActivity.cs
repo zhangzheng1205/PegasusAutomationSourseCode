@@ -917,6 +917,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Enter inside the folder
+        /// </summary>
+        /// <param name="activityType">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        [When(@"I enter into ""(.*)"" folder in ""(.*)"" frame")]
+        public void WhenIEnterIntoFolderInFrame(Activity.ActivityTypeEnum activityType,
+            string pageName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "EnterIntoFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the activity name
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            new CoursePreviewUXPage().
+                ClickActivityName(activityName, pageName);
+            Logger.LogMethodExit("CreateActivity", "EnterIntoFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Validate the display of asset in Manage Course Materials 
         /// </summary>
         /// <param name="activityTypeEnum">This is activity type enum.</param>
@@ -1126,6 +1147,46 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     new CoursePreviewUXPage().
                     GetActivityInMyCourse(activityName, pageName)));
             Logger.LogMethodExit("CreateActivity", "ValidateTheDisplayOfAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of activity status
+        /// </summary>
+        /// <param name="status">This is activity status.</param>
+        /// <param name="activityType">This is activity type enum.</param>
+        [Then(@"I should be displayed with status ""(.*)"" for ""(.*)""")]
+        public void ValidateDisplayOfActivityStatus(string status, Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateDisplayOfActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            //Assert we have correct page opened
+            Logger.LogAssertion("ValidateDisplayOfActivityStatus",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(status,
+                    new CoursePreviewUXPage().
+                    GetActivityStatus(activityName)));
+            Logger.LogMethodExit("CreateActivity", "ValidateDisplayOfActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch the asset by click on asset name.
+        /// </summary>
+        /// <param name="activityType">This ia activity type enum.</param>
+        [When(@"I launch ""(.*)""")]
+        public void ClickAssetLink(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateDisplayOfActivityStatus",
+      base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            //Launch the asset by click on asset title
+            new CoursePreviewUXPage().
+                ClickAssetTitle(activityName);
+            Logger.LogMethodExit("CreateActivity", "ValidateDisplayOfActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 

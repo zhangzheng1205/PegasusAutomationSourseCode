@@ -37,9 +37,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private const string APP_SETTINGS_REMOTE = "isRemote";
         private const string APP_SETTINGS_REMOTE_HUB_URL = "remoteHubUrl";
 
-        private static bool _isChromeExecuted;
+        //private static bool _isChromeExecuted;
         private const bool IsInternetExplorerExecuted = false;
-        private static int _counter = 1;
+        //private static int _counter = 1;
 
         /// <summary>
         /// This is defined static variables.
@@ -216,7 +216,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             proxy.SslProxy = string.Format("127.0.0.1:{0}",proxyport);
 
 
-            var profile = new FirefoxProfile();
+            FirefoxProfile profile = new FirefoxProfile();
             profile.AssumeUntrustedCertificateIssuer = false;
             // get Log Execution Path
             String getExecutingPath = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
@@ -240,8 +240,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             //to be sure that it picks up 32bit of ff always
             string sBrowserExe = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe";
             FirefoxBinary Bin = new FirefoxBinary(sBrowserExe);
-            IWebDriver webDriver = new FirefoxDriver(Bin, profile, TimeSpan.FromMinutes(20));           
-            // IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
+            IWebDriver webDriver = new FirefoxDriver();
+  
             // set page load duration
             webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             // set cursor position center of the screen

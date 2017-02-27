@@ -3661,10 +3661,9 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             // Return the icon display status
             bool iconDisplayStatus = base.IsElementPresent(By.ClassName("cssPastDueDate"), 10);
-            return iconDisplayStatus;
             Logger.LogMethodExit("iconDisplayStatus", "Pastdueactivityicon",
-            base.IsTakeScreenShotDuringEntryExit);
-
+                base.IsTakeScreenShotDuringEntryExit);
+            return iconDisplayStatus;
         }
 
         /// <summary>

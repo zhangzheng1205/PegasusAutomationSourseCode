@@ -1075,7 +1075,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             User user = User.Get(userTypeEnum);
             // Fetch Grades from in memory
             Grade grade = Grade.Get(score);
-            string activityScore = grade.Score.ToString();
+            string activityScore = grade.GradeScore.ToString();
             //Select the window
             new GBInstructorUXPage().SelectGradebookFrame();
             //Assert Grades of Submitted Activity

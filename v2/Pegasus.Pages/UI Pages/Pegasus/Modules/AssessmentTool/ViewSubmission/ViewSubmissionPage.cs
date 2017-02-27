@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         /// The static instance of the logger for the class.
         /// </summary>
         private static readonly Logger Logger = Logger.GetInstance(typeof(ViewSubmissionPage));
-        private static string ViewSubmissionPage_AttemptCount_Xpath_Locator;
+
 
         /// <summary>
         ///Click the StudyPlan Triangle Option Cmenu
@@ -2098,7 +2098,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             Grade grade = new Grade
             {
-                Score = editGrade,
+                GradeScore = editGrade,
                 GradeType = gradeTypeEnum,
                 IsCreated = true,
             };

@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Fetch the data from memory
             User user = User.Get(userTypeEnum);
             Grade grade = Grade.Get(score);
-            string activityScore = grade.Score.ToString();
+            string activityScore = grade.GradeScore.ToString();
             //Assert Grades of Submitted Activity
             Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
@@ -151,7 +151,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Fetch the data from memory
             User user = User.Get(userTypeEnum);
             Grade grade = Grade.Get(score);
-            string activityScore = grade.Score.ToString();
+            string activityScore = grade.GradeScore.ToString();
             Assert.IsTrue(new BlackboardCourseAction().VerifyGradeSynch(activityName
                 , activityScore, user.LastName,
                 user.FirstName, user.Name, partialPageName));
@@ -175,7 +175,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "ValidateActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);
             Grade grade = Grade.Get(gradeType1);
-            string activityScore = grade.Score.ToString();
+            string activityScore = grade.GradeScore.ToString();
             Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(activityScore, new StudentPresentationPage().
                     GetActivityScoreFromCourseMaterialsPageBB(gradeType2, activityName)));

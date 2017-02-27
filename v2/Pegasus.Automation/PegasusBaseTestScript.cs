@@ -28,15 +28,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Instance of Selenium.
         /// </summary>
-        private readonly ISelenium _selenium = WebDriverSingleton.GetInstance().Selenium;
+       // private readonly ISelenium _selenium = WebDriverSingleton.GetInstance().Selenium;
 
         /// <summary>
         /// Returns an instance of Selenium.
         /// </summary>
-        protected ISelenium Selenium
-        {
-            get { return _selenium; }
-        }
+        //protected ISelenium Selenium
+        //{
+        //    get { return _selenium; }
+        //}
 
         /// <summary>
         /// This is the browser.

@@ -2501,9 +2501,10 @@ namespace Pegasus.Pages.UI_Pages
 
                 ExceptionHandler.HandleException(e);
             }
-            return returnStatus;
             Logger.LogMethodExit("HEDGlobalHomePage", "GetCourseOptions"
              , base.IsTakeScreenShotDuringEntryExit);
+            //Return the status
+            return returnStatus;
         }
 
         /// <summary>
@@ -3027,10 +3028,10 @@ namespace Pegasus.Pages.UI_Pages
             courseNameGUID = "Auto-" + date + "-" + randomValue + "-New Course";
             //Store the course name to inmemory
             this.StoreCourseGUID(courseNameGUID, courseType);
-            //Return the course name
-            return courseNameGUID;
             Logger.LogMethodExit("HEDGlobalHomePage", "GenerateCourseGUID"
             , base.IsTakeScreenShotDuringEntryExit);
+            //Return the course name
+            return courseNameGUID;
         }
 
         /// <summary>
