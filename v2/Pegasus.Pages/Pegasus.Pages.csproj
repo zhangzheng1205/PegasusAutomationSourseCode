@@ -38,10 +38,6 @@
     <Reference Include="Bytescout.Spreadsheet">
       <HintPath>..\Pegasus.Automation\bin\Debug\Bytescout.Spreadsheet.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.AutoItX3Lib">
-      <HintPath>..\..\ExternalAssemblies\Interop.AutoItX3Lib.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -3206,6 +3202,12 @@
     <Content Include="TestData\Access\AccessFileFor70Percent\go_a01_grader_a3_Open_Houses.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="AutoItX3, Version=3.0.0.0, ProcessorArchitecture=%2a, Type=win32">
+      <Name>AutoItX3.dll</Name>
+      <HintPath>..\..\ExternalAssemblies\AutoItX3.dll</HintPath>
+    </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

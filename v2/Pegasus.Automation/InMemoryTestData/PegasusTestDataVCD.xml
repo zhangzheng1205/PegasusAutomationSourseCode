@@ -370,15 +370,15 @@ the UI deleted or refreshed.-->
 			<IsPublished>true</IsPublished>
 			<IsApproved>true</IsApproved>
 		</Course>
-		<Course>
-			<Name>Auto-2017/02/21-0781a35b-New Course</Name>
-			<CourseType>MyItLabInstructorCourse</CourseType>
-			<InstructorCourseId>CRSKLHS-10044147</InstructorCourseId>
-			<IsCreated>true</IsCreated>
-			<IsPreferenceStatus>true</IsPreferenceStatus>
-			<IsPublished>true</IsPublished>
-			<IsApproved>true</IsApproved>
-		</Course>
+    <Course>
+      <Name>MyITLab 2016 Automation course</Name>
+      <CourseType>MyItLabInstructorCourse</CourseType>
+      <InstructorCourseId>CRSKLFL-10041126</InstructorCourseId>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
 	</ArrayOfCourse>
 	<!--This is already created users present on the UI to execute the scenarios. This would be change as per data on 
 
@@ -755,17 +755,17 @@ the UI deleted or refreshed.-->
 			<IsCreated>true</IsCreated>
 			<EnrolementStatus>false</EnrolementStatus>
 		</User>
-		<User>
-			<Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
-			<Password>Password@1</Password>
-			<Email>manish.singh@imfinity.com</Email>
-			<FirstName>BDD</FirstName>
-			<MiddleName>Pegasus</MiddleName>
-			<LastName>4227</LastName>
-			<UserType>CsSmsStudent</UserType>
-			<IsCreated>true</IsCreated>
-			<EnrolementStatus>true</EnrolementStatus>
-		</User>
+    <User>
+      <Name>516cgievijaystudent</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>4227</LastName>
+      <UserType>CsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
 		<!--Hard coded Users data for Zero Score "CsSMSStudent".-->
 		<User>
 			<Name>159e88b6-0f14-4e9f-9d4a-26f5b6d1076d</Name>
@@ -1005,7 +1005,31 @@ the UI deleted or refreshed.-->
 
 the UI deleted or refreshed.-->
 	<ArrayOfActivity>
-
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 1]</Name>
+      <ActivityType>RegWordGrader0</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2017/02/17-97347e03-Non Gradable Link Asset</Name>
+      <ActivityType>RegLinkAsset</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2017/02/17-453c0c58-Non Gradable Page Asset</Name>
+      <ActivityType>RegPageAsset</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2017/02/17-d3e1fedd-Folder</Name>
+      <ActivityType>RegFolderAsset</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Auto-2017/02/17-bc145535-Non Gradable Etext Link Asset</Name>
+      <ActivityType>RegEtextLinkAsset</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
 		<Activity>
 			<Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
 			<ActivityType>SkillStudyPlan</ActivityType>
