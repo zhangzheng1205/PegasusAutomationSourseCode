@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.AutoItX3Lib">
-      <HintPath>..\..\ExternalAssemblies\Interop.AutoItX3Lib.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExternalAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
@@ -126,7 +122,12 @@
       <Name>Pegasus.Pages</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <NativeReference Include="AutoItX3, Version=3.0.0.0, ProcessorArchitecture=%2a, Type=win32">
+      <Name>AutoItX3.dll</Name>
+      <HintPath>..\..\ExternalAssemblies\AutoItX3.dll</HintPath>
+    </NativeReference>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CommonProductAcceptanceTestDefinitions\LoginResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
