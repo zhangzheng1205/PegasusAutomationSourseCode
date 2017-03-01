@@ -371,9 +371,9 @@ the UI deleted or refreshed.-->
 			<IsApproved>true</IsApproved>
 		</Course>
     <Course>
-      <Name>MyITLab 2016 Automation course</Name>
+      <Name>Dependent_MIL_VCD</Name>
       <CourseType>MyItLabInstructorCourse</CourseType>
-      <InstructorCourseId>CRSKLFL-10041126</InstructorCourseId>
+      <InstructorCourseId>CRSKLES-10044234</InstructorCourseId>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
@@ -723,7 +723,7 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>true</EnrolementStatus>
 		</User>
 		<User>
-			<Name>517milinstructor1</Name>
+			<Name>ux_teacher_1228</Name>
 			<Password>Password1</Password>
 			<Email>manish.singh@imfinity.com</Email>
 			<FirstName>Raghavendra</FirstName>
@@ -756,9 +756,9 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>false</EnrolementStatus>
 		</User>
     <User>
-      <Name>516cgievijaystudent</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
+      <Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
+      <Password>Password@1</Password>
+      <Email>raghavendra.ga@excelindia.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
       <LastName>4227</LastName>
@@ -1111,24 +1111,24 @@ the UI deleted or refreshed.-->
 			<ActivityType>Folder</ActivityType>
 			<IsCreated>true</IsCreated>
 		</Activity>
-		<Activity>
-			<Name>Windows 8: End-of-Chapter Quiz</Name>
-			<ActivityType>RegPastDueAssignment</ActivityType>
-			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-			<IsCreated>true</IsCreated>
-		</Activity>
-		<Activity>
-			<Name>Word Chapter 1 Skill-Based Training</Name>
-			<ActivityType>RegTodayDateAssignment</ActivityType>
-			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-			<IsCreated>true</IsCreated>
-		</Activity>
-		<Activity>
-			<Name>Word Chapter 1 Project 1A Skill-Based Training</Name>
-			<ActivityType>RegFutureDateAssignment</ActivityType>
-			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-			<IsCreated>true</IsCreated>
-		</Activity>
+    <Activity>
+      <Name>Access Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegPastDueAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegTodayDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegFutureDateAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
     <Activity>
       <Name>Excel Chapter 1 Skill-Based Training</Name>
       <ActivityType>RegSimpleAssign</ActivityType>
@@ -1144,6 +1144,36 @@ the UI deleted or refreshed.-->
     <Activity>
       <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
       <ActivityType>RegSimpleAssignFutureDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleStartDateCmenuAssign</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegSimpleCmenuAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Training [Skill-Based] : Word Chapter 1 Project 1B Skill-Based Training</Name>
+      <ActivityType>RegNewGradedActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegPastDueCmenuAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleCmenuAssignFutureDate</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
@@ -2596,7 +2626,7 @@ the UI deleted or refreshed.-->
   <!-- Alert-->
   <ArrayOfAlert>
     <Alert>
-      <AlertCount>3</AlertCount>
+      <AlertCount>1</AlertCount>
       <AlertType>RegNotPassedAlertCount</AlertType>
       <IsCreated>true</IsCreated>
     </Alert>
@@ -2606,7 +2636,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Alert>
     <Alert>
-      <AlertCount>2</AlertCount>
+      <AlertCount>1</AlertCount>
       <AlertType>RegIdleStudentCount</AlertType>
       <IsCreated>true</IsCreated>
     </Alert>
@@ -2616,17 +2646,17 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Alert>
     <Alert>
-      <AlertCount>6275</AlertCount>
+      <AlertCount>4</AlertCount>
       <AlertType>RegPastDueNotSubmittedCount</AlertType>
       <IsCreated>true</IsCreated>
     </Alert>
     <Alert>
-      <AlertCount>10</AlertCount>
+      <AlertCount>0</AlertCount>
       <AlertType>RegUnreadCommentsCount</AlertType>
       <IsCreated>true</IsCreated>
     </Alert>
     <Alert>
-      <AlertCount>6294</AlertCount>
+      <AlertCount>8</AlertCount>
       <AlertType>RegAlertsCount</AlertType>
       <IsCreated>true</IsCreated>
     </Alert>
