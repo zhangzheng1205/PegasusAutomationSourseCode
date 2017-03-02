@@ -51,7 +51,7 @@
 	<ArrayOfCourse>
 		<!--Hard coded Course data for "Digital Path" Product.-->
 		<Course>
-			<Name>0916 mytest</Name>
+			<Name>MyTest WL Lite Course UI : MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
 			<CourseType>MyTestAuthoredCourse</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>false</IsPreferenceStatus>
@@ -67,7 +67,7 @@
 			<IsApproved>false</IsApproved>
 		</Course>
 		<Course>
-			<Name>MyITLab for Office 2013: GO! Series -Badge</Name>
+			<Name>MyTest WL Lite Course UI : MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
 			<CourseType>MyItLabAuthoredCourse</CourseType>
 			<InstructorCourseId>CRSKL7I-10044180</InstructorCourseId>
 			<IsCreated>true</IsCreated>
@@ -360,7 +360,7 @@
 			<Name>Auto-2017/02/21-1924dfbe-New Course</Name>
 			<CourseType>RegMyITLabNewlyCreatedCourse</CourseType>
 			<InstructorCourseId>CRSKLF3-10042326</InstructorCourseId>
-			<ISBN>1231231231</ISBN>
+			<ISBN>0205050107</ISBN>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
 			<IsPublished>true</IsPublished>
