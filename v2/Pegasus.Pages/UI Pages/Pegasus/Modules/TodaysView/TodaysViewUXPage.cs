@@ -4895,6 +4895,7 @@ namespace Pegasus.Pages.UI_Pages
                                     URL = "http://helpdev.pearsoncmg.com/pegasus/help/mytest/index_Left.htm#CSHID=0|SkinName=frameset";
                                     break;
                                 case "PPE":
+                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "CGIE":
                                     break;
@@ -4925,6 +4926,7 @@ namespace Pegasus.Pages.UI_Pages
                                     URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "PPE":
+                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "CGIE":
                                     break;
@@ -5001,6 +5003,7 @@ namespace Pegasus.Pages.UI_Pages
                                     URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "PPE":
+                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "CGIE":
                                     URL = "http://help.pearsoncmg.com/pegasus/help/stu-wlang/index.htm";
@@ -5029,6 +5032,7 @@ namespace Pegasus.Pages.UI_Pages
                                     URL = "http://help.pearsoncmg.com/pegasus/help/stu-wlang/index.htm";
                                     break;
                                 case "PPE":
+                                    URL = "http://helpdev.pearsoncmg.com/pegasus/help/hed-home/index_Left.htm#CSHID=1|StartTopic=Content%2Fabout_home_page.htm|SkinName=frameset";
                                     break;
                                 case "CGIE":
                                     break;
