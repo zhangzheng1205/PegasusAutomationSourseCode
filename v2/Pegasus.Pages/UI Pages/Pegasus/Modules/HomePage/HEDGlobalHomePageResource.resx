@@ -483,4 +483,7 @@
   <data name="HEDGlobalHomePage_HomePage_Deletpopup_Id_Locator" xml:space="preserve">
     <value>confimationModal</value>
   </data>
+  <data name="HEDGlobalHome_Page_Notification_Channel_ID" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
 </root>

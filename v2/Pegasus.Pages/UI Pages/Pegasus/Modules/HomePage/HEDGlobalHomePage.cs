@@ -1562,8 +1562,10 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
                     case "Notifications":
-                         base.WaitForElement(By.Id("_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading"));
-                        returnChannelName = base.GetInnerTextAttributeValueById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading");
+                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                             HEDGlobalHome_Page_Notification_Channel_ID));
+                         returnChannelName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
+                             HEDGlobalHome_Page_Notification_Channel_ID);
                         break;
                         
                 }
