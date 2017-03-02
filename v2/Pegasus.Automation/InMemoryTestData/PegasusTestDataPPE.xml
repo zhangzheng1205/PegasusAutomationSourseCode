@@ -67,7 +67,7 @@
 			<IsApproved>false</IsApproved>
 		</Course>
 		<Course>
-			<Name>MyTest WL Lite Course UI : MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
+			<Name>General course to test course copy</Name>
 			<CourseType>MyItLabAuthoredCourse</CourseType>
 			<InstructorCourseId>CRSKL7I-10044180</InstructorCourseId>
 			<IsCreated>true</IsCreated>
