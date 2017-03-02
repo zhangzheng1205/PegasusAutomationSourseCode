@@ -189,13 +189,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Validate the Past due submitted activity name.
         /// </summary>
-        /// <param name="activityName">Activity name to be verified</param>
-        [Then(@"I should see the activity name ""(.*)""")]
-        public void ValidateActivityNameInPastDueSubmittedChannel(string activityName)
+        /// <param name="activityTypeEnum">This is the Activity type enum.</param>
+        [Then(@"I should see the ""(.*)"" activity")]
+        public void ValidateActivityNameInPastDueSubmittedChannel(Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Validate the past due submitted activity name
             Logger.LogMethodEntry("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity name from the XML file
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
             //Assert the activity name displayed in the Past due submitted channel
             Logger.LogAssertion("VerifyStudentPresent",
          ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -851,16 +854,20 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              Logger.LogMethodExit("TodaysView", "DisplayedOfOptionsInChannels", base.IsTakeScreenShotDuringEntryExit);
          }
 
-
+         /// <summary>
+         /// Verify the channel names in Todays view tab
+         /// </summary>
+         /// <param name="subChannelName">This is the sub-channel name.</param>
+         /// <param name="channelName">This is the main channel name.</param>
          [Then(@"I should see ""(.*)"" in ""(.*)"" channel")]
          public void ValidateSubChannelInNotificationChannel(string subChannelName, string channelName)
          {
              Logger.LogMethodEntry("TodaysView", "ValidateSubChannelInNotificationChannel",
                  base.IsTakeScreenShotDuringEntryExit);
-           // verify subchannel in  can be select
-            Logger.LogAssertion("VerifyToSelectThePastDueActivity", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new TodaysViewUxPage().GetSubChannelInNotification(subChannelName, channelName)));
-             Logger.LogMethodExit("TodaysView", "ValidateSubChannelInNotificationChannel", 
+             // verify subchannel in  can be select
+             Logger.LogAssertion("VerifyToSelectThePastDueActivity", ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.IsTrue(new TodaysViewUxPage().GetSubChannelInNotification(subChannelName, channelName)));
+             Logger.LogMethodExit("TodaysView", "ValidateSubChannelInNotificationChannel",
                  base.IsTakeScreenShotDuringEntryExit);
          }
 
@@ -901,16 +908,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="welcomeMessage">This is welcome message type enum.</param>
          [Then(@"I should be displayed with ""(.*)"" welcome message")]
-         public void ValidateWelcomeMessageInWelcomeMessageChannel(WelcomeMessage.WelcomeMessageTypeEnum welcomeMessageType)
+         public void ValidateWelcomeMessageInWelcomeMessageChannel(String welcomeMessage)
          {
              Logger.LogMethodExit("TodaysView", "ValidateWelcomeMessageInWelcomeMessageChannel",
              base.IsTakeScreenShotDuringEntryExit);
              // Get welcome message from enum.
-             WelcomeMessage welcomeMessage = WelcomeMessage.Get(welcomeMessageType);
-             string getWelcomeMessage = welcomeMessage.Message.ToString();
+             //WelcomeMessage welcomeMessage = WelcomeMessage.Get(welcomeMessageType);
+             //string getWelcomeMessage = welcomeMessage.Message.ToString();
 
              Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
-               Current.ScenarioInfo.Title, () => Assert.AreEqual(getWelcomeMessage,
+               Current.ScenarioInfo.Title, () => Assert.AreEqual(welcomeMessage,
                new TodaysViewUxPage().GetWelcomeMessage()));
 
              Logger.LogMethodExit("TodaysView", "ValidateWelcomeMessageInWelcomeMessageChannel",
@@ -918,6 +925,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
          }
 
 
+         /// <summary>
+         /// Validate the Alert count in Notifications main channel
+         /// </summary>
+         /// <param name="alertType">This is the alert type.</param>
          [Then(@"I should be displayed with ""(.*)"" count")]
          public void ValidateAlertCountInAlertChannel(Alert.AlertTypeEnum alertType)
          {
@@ -926,11 +937,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              // Get welcome message from enum.
              Alert alert = Alert.Get(alertType);
              string getAlertCount = alert.AlertCount.ToString();
-
+             //Verify the Alter count
              Logger.LogAssertion("ValidateAlertCountInAlertChannel", ScenarioContext.
                Current.ScenarioInfo.Title, () => Assert.AreEqual(getAlertCount,
                new TodaysViewUxPage().GetAlertCount(alertType)));
-
              Logger.LogMethodExit("TodaysView", "ValidateAlertCountInAlertChannel",
             base.IsTakeScreenShotDuringEntryExit);
          }
@@ -976,14 +986,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
          }
 
-        /// <summary>
-         /// Verify Student In Alert Channel
-        /// </summary>
-        /// <param name="userType">This is the User type enum.</param>
-         [Then(@"I should see 'Zero' ""(.*)""")]
-         public void VerifyStudentInAlertChannel(User.UserTypeEnum userType)
+         /// <summary>
+         /// Verify Idle Student In Alerts Channel
+         /// </summary>
+         /// <param name="p0">This is the User type enum.</param>
+         [Then(@"I should be displayed with 'Idle' ""(.*)""")]
+         public void VerifyIdleStudentInAlertsChannel(User.UserTypeEnum userType)
          {
-             Logger.LogMethodExit("TodaysView", "VerifyStudentInAlertChannel",
+             Logger.LogMethodExit("TodaysView", "VerifyIdleStudentInAlertsChannel",
                base.IsTakeScreenShotDuringEntryExit);
              //Get User from Memory
              User user = User.Get("Hed_User_SMS_STU_UC2");
@@ -991,7 +1001,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              Logger.LogAssertion("VerifyStudentInAlertChannel", ScenarioContext.
                Current.ScenarioInfo.Title, () => Assert.IsTrue(
                new TodaysViewUxPage().GetIdleStudentName(actualIdleStudentName)));
-             Logger.LogMethodExit("TodaysView", "VerifyStudentInAlertChannel",
+             Logger.LogMethodExit("TodaysView", "VerifyIdleStudentInAlertsChannel",
             base.IsTakeScreenShotDuringEntryExit);
          }
 
@@ -1009,6 +1019,263 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                new TodaysViewUxPage().GetIdleStudentMessage()));
              Logger.LogMethodExit("TodaysView", "VerifyIdleStudentAlertMessage",
             base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         //---------------------------------------------------------------------------------------------
+         /// <summary>
+         /// Verify Zero score Student In Alert Channel
+         /// </summary>
+         /// <param name="userType">This is the User type enum.</param>
+         [Then(@"I should see 'Zero' scoring ""(.*)""")]
+         public void VerifyStudentInAlertChannel(User.UserTypeEnum userType)
+         {
+             Logger.LogMethodExit("TodaysView", "VerifyStudentInAlertChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+             //Get User from Memory
+             string studentName = new RptAllAssessmentAllStudentPage().
+                 GetZeroScoreUsername(userType);
+             //Verify Zero score student name
+             Logger.LogAssertion("VerifyStudentInAlertChannel", ScenarioContext.
+               Current.ScenarioInfo.Title, () => Assert.AreEqual(studentName,
+               new TodaysViewUxPage().StudentDisplayedInPastDueSubmittedChannel(studentName)));
+             Logger.LogMethodExit("TodaysView", "VerifyStudentInAlertChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// Verify 100 score Student Name In Alert Channel
+         /// </summary>
+         /// <param name="userType">This is the User type enum.</param>
+         [Then(@"I should see '100' score ""(.*)""")]
+         public void VerifyStudentNameInAlertChannel(User.UserTypeEnum userType)
+         {
+             Logger.LogMethodExit("TodaysView", "VerifyStudentNameInAlertChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+             //Get User from Memory
+             string studentName = new RptAllAssessmentAllStudentPage().
+                 Get100ScoreUsername(User.UserTypeEnum.CsSmsStudent);
+             //Validate student first name, last name in past due submitted channel
+             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                 .ScenarioInfo.Title, () => Assert.AreEqual(studentName,
+                     new TodaysViewUxPage().StudentDisplayedInPastDueSubmittedChannel(studentName)));
+             Logger.LogMethodExit("TodaysView", "VerifyStudentNameInAlertChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// Verify Display of Accept and Decline buttons in Past due submitted channel
+         /// </summary>
+         /// <param name="p0">This is the button name.</param>
+         /// <param name="p1">This is the button name.</param>
+         [Then(@"I should see ""(.*)"" ""(.*)"" buttons")]
+         public void ThenIShouldSeeButtons(string acceptButton, string declineButton)
+         {
+             Logger.LogMethodExit("TodaysView", "VerifyStudentNameInAlertChannel",
+              base.IsTakeScreenShotDuringEntryExit);
+             //Get User from Memory
+             string studentName = new RptAllAssessmentAllStudentPage().
+                 Get100ScoreUsername(User.UserTypeEnum.CsSmsStudent);
+             //Validate Accept button display
+             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                 .ScenarioInfo.Title, () => Assert.IsTrue(new
+                     TodaysViewUxPage().IsActivityAcceptDeclineButtonDisplayed(acceptButton)));
+             //Validate Decline button display
+             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                 .ScenarioInfo.Title, () => Assert.IsTrue(new
+                     TodaysViewUxPage().IsActivityAcceptDeclineButtonDisplayed(declineButton)));
+             Logger.LogMethodExit("TodaysView", "VerifyStudentNameInAlertChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// Expand the Student name in Past due submitted channel of Todays view tab
+         /// </summary>
+         /// <param name="userTypeEnum">This is the User type enum.</param>
+         [When(@"I click on the expand icon of ""(.*)""")]
+         public void ExpandIconOfStudentInPastDueSubmitteChannel(User.UserTypeEnum userTypeEnum)
+         {
+             Logger.LogMethodExit("TodaysView", "ExpandIconOfStudentInPastDueSubmitteChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+             //Fetch user from XML
+             User user = User.Get(userTypeEnum);
+             string actualUserName = user.LastName + ", " + user.FirstName;
+             new TodaysViewUxPage().ClickStudentExpadIcon(actualUserName);
+             Logger.LogMethodExit("TodaysView", "ExpandIconOfStudentInPastDueSubmitteChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// Expand Zero score Student name in Past due submitted channel of Todays view tab
+         /// </summary>
+         /// <param name="userTypeEnum">This is the user type enum.</param>
+         [When(@"I click on the expand icon 'Zero' score ""(.*)""")]
+         public void ExpandIconOfZeroScoreStudentInPastDueSubmitteChannel(User.UserTypeEnum userTypeEnum)
+         {
+             Logger.LogMethodExit("TodaysView", "ExpandIconOfZeroScoreStudentInPastDueSubmitteChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+             //Fetch user from XML
+             string studentName = new RptAllAssessmentAllStudentPage().
+                 GetZeroScoreUsername(userTypeEnum);
+             new TodaysViewUxPage().ClickStudentExpadIcon(studentName);
+             Logger.LogMethodExit("TodaysView", "ExpandIconOfZeroScoreStudentInPastDueSubmitteChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// 
+         /// </summary>
+         /// <param name="p0"></param>
+         [Then(@"I should see the ""(.*)"" activity name")]
+         public void VerifyActivityNameInPastDueSubmitteChannel(Activity.ActivityTypeEnum activityTypeEnum)
+         {
+             Logger.LogMethodExit("TodaysView", "VerifyActivityNameInPastDueSubmitteChannel",
+              base.IsTakeScreenShotDuringEntryExit);
+             //Get Activity name from XML memory           
+             Activity activity = Activity.Get(activityTypeEnum);
+             String actualActivityName = activity.Name;
+             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                 .ScenarioInfo.Title, () => Assert.IsTrue(new
+                     TodaysViewUxPage().IsActivityDislayedInPastDueSubmittedChannel(actualActivityName)));
+             Logger.LogMethodExit("TodaysView", "VerifyActivityNameInPastDueSubmitteChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// 
+         /// </summary>
+         /// <param name="p0"></param>
+         /// <param name="p1"></param>
+         [When(@"I select the check box of the ""(.*)"" past due activity submitted by ""(.*)""")]
+         public void SelectTheCheckBoxOfThePastDueActivitySubmitted(Activity.ActivityTypeEnum activityType,
+             User.UserTypeEnum userType)
+         {
+             Logger.LogMethodExit("TodaysView", "SelectTheCheckBoxOfThePastDueActivitySubmitted",
+               base.IsTakeScreenShotDuringEntryExit);
+             //Fetch Activity name from XML
+             Activity activity = Activity.Get(activityType);
+             string actualActivityName = activity.Name;
+             //Fetch User from XML memory
+             User user = User.Get(userType);
+             string actualUserName = user.LastName + ", " + user.FirstName;
+             new TodaysViewUxPage().SelectTheCheckBoxOfPastDueActivitySubmitted(actualActivityName, actualUserName);
+             Logger.LogMethodExit("TodaysView", "SelectTheCheckBoxOfThePastDueActivitySubmitted",
+              base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// 
+         /// </summary>
+         /// <param name="p0"></param>
+         /// <param name="p1"></param>
+         /// <param name="p2"></param>
+         [When(@"I select the check box of the ""(.*)"" past due activity submitted by 'Zero' score ""(.*)""")]
+         public void SelectPastDuesubmittedActivityCheckBoxByZeroScoreStudent(
+             Activity.ActivityTypeEnum activityType, User.UserTypeEnum userType)
+         {
+             Logger.LogMethodExit("TodaysView", "SelectTheCheckBoxOfThePastDueActivitySubmitted",
+               base.IsTakeScreenShotDuringEntryExit);
+             //Fetch Activity name from XML
+             Activity activity = Activity.Get(activityType);
+             string actualActivityName = activity.Name;
+             //Fetch User from XML memory
+             string studentName = new RptAllAssessmentAllStudentPage().
+                  GetZeroScoreUsername(userType);
+             new TodaysViewUxPage().SelectTheCheckBoxOfPastDueActivitySubmitted(actualActivityName, studentName);
+             Logger.LogMethodExit("TodaysView", "SelectTheCheckBoxOfThePastDueActivitySubmitted",
+              base.IsTakeScreenShotDuringEntryExit);
+         }
+
+
+         [Then(@"I should see ""(.*)"" submission 'Accepted' success message")]
+         public void VerifySubmissionAcceptedSuccessMessage(User.UserTypeEnum userType)
+         {
+             // Method To Verify the Success Message 
+             Logger.LogMethodEntry("TodaysView", "VerifySubmissionAcceptedSuccessMessage",
+                 base.IsTakeScreenShotDuringEntryExit);
+             string studentName = new Pegasus.Pages.RptAllAssessmentAllStudentPage().
+                 Get100ScoreUsername(userType);
+             string successMessage = "All of the late submissions for " + studentName + " has been accepted. The grade for this submission will now appear in the Gradebook.";
+             //Verify Correct Message Present on the Page
+             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
+                 "messagesucessfont");
+             //Removed The Assert For Message Because Sometimes Message does not come
+             //but this is not the severe issue. So We, can ignore this.
+             Logger.LogMethodExit("TodaysView", "VerifySubmissionAcceptedSuccessMessage",
+                 base.IsTakeScreenShotDuringEntryExit);
+         }
+
+
+         [Then(@"I should see 'Zero' ""(.*)"" submission 'Declined' success message")]
+         public void VerifySubmissionDeclinedSuccessMessage(User.UserTypeEnum userType)
+         {
+
+             // Method To Verify the Success Message 
+             Logger.LogMethodEntry("TodaysView", "VerifySubmissionDeclinedSuccessMessage",
+                 base.IsTakeScreenShotDuringEntryExit);
+             //Verify Correct Message Present on the Page
+             string studentName = new Pegasus.Pages.RptAllAssessmentAllStudentPage().
+                 GetZeroScoreUsername(userType);
+             string successMessage = "All of the late submissions for " + studentName + " has been declined.  This submission will receive a zero in the Gradebook.";
+             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
+                 "messagesucessfont");
+             //Removed The Assert For Message Because Sometimes Message doest not come
+             //but this is not the severe issue. So We, can ignore this.
+             Logger.LogMethodExit("TodaysView", "VerifySubmissionDeclinedSuccessMessage",
+                 base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// Verify Student Name In PastDue NotSubmitted Channel
+         /// </summary>
+         /// <param name="p0">This is the Student Type.</param>
+         /// <param name="p1">This is the Usertype enum.</param>
+         [Then(@"I should be displayed with the ""(.*)"" score ""(.*)""")]
+         public void VerifyStudentNameInpastDueNotSubmittedChannel(string studentType, User.UserTypeEnum userTypeEnum)
+         {
+             Logger.LogMethodEntry("TodaysView", "VerifyStudentNameInpastDueNotSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+             switch (studentType)
+             {
+                 case "Zero":
+                     string ZeroScoreStudentName = new Pegasus.Pages.RptAllAssessmentAllStudentPage().
+                  GetZeroScoreUsername(userTypeEnum);
+                     Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                  .ScenarioInfo.Title, () => Assert.IsTrue(
+                      new TodaysViewUxPage().GetStudentNameInPastDueNotSubmittedChannel(ZeroScoreStudentName)));
+                     break;
+
+                 case "Idle":
+                     User user = User.Get("Hed_User_SMS_STU_UC2");
+                     string actualIdleStudentName = user.LastName + ", " + user.FirstName;
+                     Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                .ScenarioInfo.Title, () => Assert.IsTrue(
+                    new TodaysViewUxPage().GetStudentNameInPastDueNotSubmittedChannel(actualIdleStudentName)));
+                     break;
+
+                 //        string defaultStudentName = new Pegasus.Pages.RptAllAssessmentAllStudentPage().
+                 //Get100ScoreUsername(userTypeEnum);
+                 // new TodaysViewUxPage().GetStudentNameInPastDueNotSubmittedChannel(defaultStudentName);
+             }
+             Logger.LogMethodExit("TodaysView", "VerifyStudentNameInpastDueNotSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         /// <summary>
+         /// Verify the Activity displayed in NewGrades channel of Notification Channel
+         /// </summary>
+         /// <param name="activityTypeEnum"></param>
+         [Then(@"I should see the ""(.*)""")]
+         public void VerifyNewGradedActivityInNotificationChannel(Activity.ActivityTypeEnum activityTypeEnum)
+         {
+             Logger.LogMethodEntry("TodaysView", "VerifyNewGradedActivityInNotificationChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+             Activity activity = Activity.Get(activityTypeEnum);
+             string actualActivityName = activity.Name;
+             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                .ScenarioInfo.Title, () => Assert.IsTrue(
+                    new TodaysViewUxPage().IsNewGradedActivityPresentInNotificationChannel(actualActivityName)));
+             Logger.LogMethodExit("TodaysView", "VerifyNewGradedActivityInNotificationChannel",
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
     }

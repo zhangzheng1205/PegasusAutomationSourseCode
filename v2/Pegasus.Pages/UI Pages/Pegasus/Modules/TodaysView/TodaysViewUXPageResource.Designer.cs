@@ -241,6 +241,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//div[@id=&apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/div[{0}]/table/tbody/tr/td[3]/div[{1}]/table/tbody/tr/td[1]/input.
+        /// </summary>
+        internal static string TodaysViewUXPage_PastDueSubmittedActivityOfStudent_Checkbox_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPage_PastDueSubmittedActivityOfStudent_Checkbox_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//div[@id=&apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/div[{0}]/table/tbody/tr/td[3]/div[{1}].
+        /// </summary>
+        internal static string TodaysViewUXPage_PastDUeSubmittedChannel_StudentName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPage_PastDUeSubmittedChannel_StudentName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/table.
+        /// </summary>
+        internal static string TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//div[@id=&apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/div[{0}]/table/tbody/tr/td[3]/div.
+        /// </summary>
+        internal static string TodaysViewUXPage_PastDueSubmittedChannel_StudentsCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPage_PastDueSubmittedChannel_StudentsCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a.
+        /// </summary>
+        internal static string TodaysViewUXPage_PastDueSubmittedChannel_StudentsName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPage_PastDueSubmittedChannel_StudentsName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 9.
         /// </summary>
         internal static string TodaysViewUXPage_WelcomeMessage_TextValue {
@@ -1258,6 +1303,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TVInsAnnoucement$contentCntr&apos;]/div[{0}]//td[@class=&apos;IncompleteWorkLastName studenttdpad&apos;].
+        /// </summary>
+        internal static string TodaysViewUXPageResource_TodaysView_StudentName_AlertChannel_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_TodaysView_StudentName_AlertChannel_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to To Do.
         /// </summary>
         internal static string TodaysViewUXPageResource_ToDo_Link_Locator {
@@ -1281,6 +1335,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodaysViewUXPageResource_WindowsTitle {
             get {
                 return ResourceManager.GetString("TodaysViewUXPageResource_WindowsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a.
+        /// </summary>
+        internal static string TodayViewUXPage_StudentName_PastDueSubmittedChannel_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPage_StudentName_PastDueSubmittedChannel_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/table.
+        /// </summary>
+        internal static string TodayViewUXPage_StudentRowCount_PastDueSubmittedChannel_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPage_StudentRowCount_PastDueSubmittedChannel_XPath_Locator", resourceCulture);
             }
         }
         
@@ -2361,7 +2433,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //table[@class =&apos;wc_tblstyle1&apos;]/tbody/tr[2]/td/div/div/font.
+        ///   Looks up a localized string similar to .//*[@id=&apos;tdHeader&apos;]/tbody/tr/td.
         /// </summary>
         internal static string TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator {
             get {

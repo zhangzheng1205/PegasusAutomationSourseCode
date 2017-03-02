@@ -3,15 +3,6 @@
 					I want to manage all the Coursespace Instructor Today's View related usecases 
 					so that I would validate all the coursespace instructor Today's View related scenarios are working fine.
 
-#Purpose : To verify the functionality of alert listed in New Grades channel when logs out and login again to the course
-#Test Case Id : HED_MIL_PWF_590
-#MyItLabInstructorCourse
-Scenario: To verify the functionality of alert listed in New Grades By SMS Instructor
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
-And I should successfully see the alert for New Grades
-When I click New Grades alert option
-
 #Purpose : To Create Test With Basic Random Activity
 #Test Case Id : HED_MIL_PWF_424
 #MyItLabInstructorCourse
@@ -83,18 +74,6 @@ And I should see the alert count updated as "8" in "Not Passed" channel
 When I click on the "Not Passed" option
 Then I should see "8" activity in the "Not Passed" channel
 
-#Purpose : As a instructor i should be notified with alert counts and contents when student does not submits Past due activity.
-#Test case ID : peg-16742.
-#Products : MyItLab, World Languages.
-#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
-#Dependency : One time dependent(This scenario can be run against existing data).
-Scenario: Instructor views Alert update in Past Due Not Submitted channel
-When I navigate to "Today's View" tab
-Then I should see the "Notifications" channels in 'Todays view' page
-And I should see the alert count updated as "0" in "Past Due: Not Submitted" channel
-When I click on the "Past Due: Not Submitted" option
-Then I should see "0" activity in the Past Due: Not Submitted channel
-
 #Purpose : As a instructor i should see the calculation done for the submited activity in "Student Performance".
 #Test case ID : peg-16750.
 #Products : MyItLab, World Languages and HSS.
@@ -105,55 +84,6 @@ When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 When I click on the "Student Performance" option
 Then I should see "50%" as overall Grade in "Student Performance" alert channel
-
-#Purpose : As a instructor i should be notified with alert counts and contents when student submits Past due activity
-#Test case ID : peg-16762.
-#Products : MyItLab, World Languages and HSS.
-#Pre condition : Student should submit the assigned activities post due date.
-#Dependency : One time dependent(This scenario can be run against existing data).
-Scenario: Instructor views Alert update in Past Due Submitted channel
-When I navigate to "Today's View" tab
-Then I should see the "Notifications" channels in 'Todays view' page
-And I should see the alert count updated as "4" in "Past Due: Submitted" channel
-When I click on the "Past Due: Submitted" option
-Then I should see the First, Last name in Past Due: Submitted channel
-When I click on the expand icon of student
-Then I should see the activity name "Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
-
-#Purpose : Instructor accepts past due submission from Past due: Submitted channel.
-#Test case ID : peg-21949.
-#Products : MyItLab, HSS and World Language.
-#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
-#Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
-Scenario: Instructor accepts past due submission from past due submitted channel of activity
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
-When I click on the "Past Due: Submitted" option
-Then I should see the First, Last name in Past Due: Submitted channel
-When I click on the expand icon of student
-Then I should see "Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
-When I selected the check box of the "Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" past due activity submitted
-And I click on "Accept" activities past due date
-Then I should see the 'Accept' success message
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
-
-#Test case ID : peg-21953.
-#Products : MyItLab, HSS and World Language.
-#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
-#Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
-Scenario: Instructor decline past due submission from past due submitted channel of activity
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
-When I click on the "Past Due: Submitted" option
-Then I should see the First, Last name in Past Due: Submitted channel
-When I click on the expand icon of student
-Then I should see "Training [Skill-Based]: PowerPoint Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
-When I selected the check box of the "Training [Skill-Based]: PowerPoint Chapter 1 Skill-Based Training" past due activity submitted
-When I click on "Decline" activities past due date
-Then I should see the 'Decline' success message
 
 #Test case ID : peg-16749.
 #Products : MyItLab, HSS and World Language.
@@ -266,6 +196,9 @@ Then I should be on the "Today's View" page
 And I should be displayed with "Go to Student View" option
 
 
+#---------------------------------------------------------------------------------------------------------------
+				#Verify the channels displayed in Todays View Tab#
+#---------------------------------------------------------------------------------------------------------------
 #Purpose:Validate the display of Notifications channels dispalyed in Today's view tab of CsSmsInstructor.
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -290,6 +223,9 @@ Scenario: Display of Calendar channel in Today's View page of Instructor
 When I navigate to "Today's View" tab
 Then I should be displayed with "Calendar" channel  on "Today's View" page as "CsSmsInstructor" user 
 
+#---------------------------------------------------------------------------------------------------------------
+				#Maximize and Minimize channels in Todays View tab#
+#---------------------------------------------------------------------------------------------------------------
 #Purpose:Validate the functionality of Maximizing and minimizing Notifications channel in Today's View tab
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -298,15 +234,6 @@ When I "Minimize" the "Notifications" channel on "Today's View" tab as "CsSmsIns
 Then I should be displayed with "Maximize" icon in "Notifications" channel of "Today's View" page 
 When I "Maximize" the "Notifications" channel on "Today's View" tab as "CsSmsInstructor"
 Then I should be displayed with "Minmize" icon in "Notifications" channel of "Today's View" page 
-
-#Purpose:Validate the functionality of Moving Announcements channel in Today's View tab
-#Test case ID : 
-#Products : MyItLab, HSS and World Language.
-Scenario: Move Announcements channel in Today's View page of Instructor
-When I "Move Up" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
-Then I should be displayed with "Move Down" icon in "Announcements" channel of "Today's View" page 
-When I "Move Down" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
-Then I should be displayed with "Move Up" icon in "Announcements" channel of "Today's View" page 
 
 #Purpose:Validate the functionality of Maximizing and minimizing Notifications channel in Today's View tab
 #Test case ID : 
@@ -317,6 +244,27 @@ Then I should be displayed with "Maximize" icon in "Announcements" channel of "T
 When I "Maximize" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
 Then I should be displayed with "Minmize" icon in "Announcements" channel of "Today's View" page
 
+#Purpose:Validate the functionality of Maximizing and minimizing Calendar channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Minmize and Minmize Calendar channel in Today's View page of Instructor
+When I "Minimize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Maximize" icon in "Calendar" channel of "Today's View" page 
+When I "Maximize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Minmize" icon in "Calendar" channel of "Today's View" page
+ 
+#---------------------------------------------------------------------------------------------------------------
+				#Moving the channels in Todays View tab#
+#---------------------------------------------------------------------------------------------------------------
+#Purpose:Validate the functionality of Moving Announcements channel in Today's View tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Move Announcements channel in Today's View page of Instructor
+When I "Move Up" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Move Down" icon in "Announcements" channel of "Today's View" page 
+When I "Move Down" the "Announcements" channel on "Today's View" tab as "CsSmsInstructor"
+Then I should be displayed with "Move Up" icon in "Announcements" channel of "Today's View" page 
+
 #Purpose:Validate the functionality of Moving Calendar channel in Today's View tab
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -326,81 +274,134 @@ Then I should be displayed with "Move Down" icon in "Calendar" channel of "Today
 When I "Move Up" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
 Then I should be displayed with "Move Up" icon in "Calendar" channel of "Today's View" page 
  
-#Purpose:Validate the functionality of Maximizing and minimizing Calendar channel in Today's View tab
+#---------------------------------------------------------------------------------------------------------------
+				#Validate the functionality of different sub-channels in Notifications channel#
+#---------------------------------------------------------------------------------------------------------------
+#Purpose: Validate the sub-channels of Notifications channel in Today's view tab
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
-Scenario: Minmize and Minmize Calendar channel in Today's View page of Instructor
-When I "Minimize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
-Then I should be displayed with "Maximize" icon in "Calendar" channel of "Today's View" page 
-When I "Maximize" the "Calendar" channel on "Today's View" tab as "CsSmsInstructor"
-Then I should be displayed with "Minmize" icon in "Calendar" channel of "Today's View" page
-
-
-Scenario: Todays view subchannel validation of notification channel
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Today's View" tab
+Scenario: Todays view subchannel validation in notification channel
+When I navigate to "Today's View" tab
 Then I should see "About This Course" in "Notifications" channel
 Then I should see "Welcome Message" in "Notifications" channel
 Then I should see "Alerts" in "Notifications" channel
 Then I should see "Action Items" in "Notifications" channel
 Then I should see "Performance" in "Notifications" channel
-
+ 
+#Purpose: Validate 'About This Course' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
 Scenario: Validate About This Course channel display
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should see "About This Course" in "Notifications" channel
 When I expand "About This Course" channel
 Then I should be displayed with "You and your students can view this message. To create or edit this message, click Customize." message
 
-
+#Purpose: Validate 'Welcome Message' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
 Scenario: Validate Welcome Message channel display
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should see "Welcome Message" in "Notifications" channel
 When I expand "Welcome Message" channel
-Then I should be displayed with "RegTVInsWelcomeMsg" welcome message
+Then I should be displayed with "You and your students can view this message. To create or edit this message, click Customize." welcome message
 
-
-Scenario: Validate NotPassedAlertCount in Alert channel
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Today's View" tab
+#Purpose: Validate 'Welcome Message' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate Alert Count in Alert channel
+When I navigate to "Today's View" tab
 Then I should see "Alerts" in "Notifications" channel
 When I expand "Alerts" channel
-Then I should be displayed with "RegNotPassedAlertCount" count
-Then I should be displayed with "RegNewGradesAlertCount" count
-Then I should be displayed with "RegIdleStudentCount" count
-Then I should be displayed with "RegPastDueSubmittedCount" count
-Then I should be displayed with "RegPastDueNotSubmittedCount" count
-Then I should be displayed with "RegUnreadCommentsCount" count
+Then I should be displayed with "RegAlertsCount" count
+And I should be displayed with "RegNotPassedAlertCount" count
+And I should be displayed with "RegNewGradesAlertCount" count
+And I should be displayed with "RegIdleStudentCount" count
+And I should be displayed with "RegPastDueSubmittedCount" count
+And I should be displayed with "RegPastDueNotSubmittedCount" count
+And I should be displayed with "RegUnreadCommentsCount" count
 Then I should be displayed with "RegAlertsCount" count
 
-Scenario: Validate IdleStudentCount and display of Idle Student
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Today's View" tab
+#Purpose: Validate 'Idle Student' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+Scenario: Validate IdleStudent displayed and count in Idle Students channel
+When I navigate to "Today's View" tab
 Then I should see "Alerts" in "Notifications" channel
 When I expand "Alerts" channel
 Then I should be displayed with "RegIdleStudentCount" count
 When I click on "Idle Students" alert option
-Then I should see 'Zero' "CsSmsStudent"
+Then I should be displayed with 'Idle' "CsSmsStudent"
 And I should be displayed with the "Students listed here have not entered the course" message 
 
+#Purpose: Validate 'Past Due: Submitted' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Dependancy: One Past due Activity should be submitted by two students
+Scenario: Validate the student and activity in Past due submitted channel of Notifications channel
+When I navigate to "Today's View" tab
+When I expand "Alerts" channel
+Then I should be displayed with "RegPastDueSubmittedCount" count
+When I click on "Past Due: Submitted" alert option
+Then I should see 'Zero' scoring "CsSmsStudent"
+And I should see '100' score "CsSmsStudent"
+And I should see "Accept" "Decline" buttons
+When I click on the expand icon of "CsSmsStudent"
+Then I should see the "RegPastDueAssignment" activity name 
+When I click on the expand icon 'Zero' score "CsSmsStudent"
+Then I should see the "RegPastDueAssignment" activity name 
+
+#Purpose : Instructor accepts past due submission from Past due: Submitted channel.
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Assigned activity should be past due and student should submit the activity after due date.
+#Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
+Scenario: Instructor accept past due submission from past due submitted channel of activity
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I expand "Alerts" channel
+And I click on "Past Due: Submitted" alert option
+And I click on the expand icon of "CsSmsStudent"
+Then I should see the "RegPastDueAssignment" activity name 
+When I select the check box of the "RegPastDueAssignment" past due activity submitted by "CsSmsStudent"
+And I click on "Accept" activities past due date
+Then I should see "CsSmsStudent" submission 'Accepted' success message
+
+
+#Test case ID : peg-21953.
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
+#Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
+Scenario: Instructor declines past due submission from past due submitted channel of activity
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I expand "Alerts" channel
+And I click on "Past Due: Submitted" alert option
+And I click on the expand icon 'Zero' score "CsSmsStudent"
+Then I should see the "RegPastDueAssignment" activity name 
+When I select the check box of the "RegPastDueAssignment" past due activity submitted by 'Zero' score "CsSmsStudent"
+When I click on "Decline" activities past due date
+Then I should see 'Zero' "CsSmsStudent" submission 'Declined' success message
+
+#Purpose: Validate 'Past Due: Not Submitted' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Dependancy: Past due Activity should not be submitted by students
+Scenario: Validate the student and activity in Past due not submitted channel of Notifications channel
+When I navigate to "Today's View" tab
+When I expand "Alerts" channel
+Then I should be displayed with "RegPastDueNotSubmittedCount" count
+When I click on "Past Due: Not Submitted" alert option
+Then I should be displayed with the "Zero" score "CsSmsStudent" 
+Then I should be displayed with the "Idle" score "CsSmsStudent" 
+
+#Purpose: Validate 'New Grades' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Dependancy: Past due Activity should not be submitted by students
+Scenario: Validate the New Grades channel of Notifications channel in Todays view tab
+When I navigate to "Today's View" tab
+When I expand "Alerts" channel
+Then I should be displayed with "RegNewGradesAlertCount" count
+When I click on "New Grades" alert option
+#Then I should see the "RegNewGradedActivity"

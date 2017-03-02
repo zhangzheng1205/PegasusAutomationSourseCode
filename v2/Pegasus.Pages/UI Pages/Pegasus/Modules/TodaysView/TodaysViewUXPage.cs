@@ -5279,6 +5279,8 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     case "Minmize":
                         // Get text from the application
+                        bool jds = base.IsElementPresent(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator),10);
                         base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator));
                         returnButtonName = base.GetInnerTextAttributeValueByClassName
@@ -5470,6 +5472,8 @@ namespace Pegasus.Pages.UI_Pages
            {
                case "Minimize":
                    // Get text from the application
+                   bool jhj = base.IsElementPresent(By.ClassName(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator),10);
                    base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
                        TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator));
                    //Get Minimize button properties and click
@@ -5648,8 +5652,16 @@ namespace Pegasus.Pages.UI_Pages
        }
 
 
+       /// <summary>
+       /// Fetch the sub-channel name in Notifications channel
+       /// </summary>
+       /// <param name="subChannelName">This is the sub channel name.</param>
+       /// <param name="channelName">This is the main channel name.</param>
+       /// <returns>channel name.</returns>
        public bool GetSubChannelInNotification(string subChannelName, string channelName)
        {
+           Logger.LogMethodEntry("TodaysViewUXPage", "GetSubChannelInNotification",
+                                   base.IsTakeScreenShotDuringEntryExit);
            bool getStatus = false;
            string getSubchannelName = string.Empty;
            try
@@ -5663,8 +5675,8 @@ namespace Pegasus.Pages.UI_Pages
                switch (subChannelName)
                {
                    case "About This Course":
-                          getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator);
+                       getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator);
                        break;
 
                    case "Welcome Message":
@@ -5681,7 +5693,7 @@ namespace Pegasus.Pages.UI_Pages
                    case "Action Items":
                        string AlertItemsName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
                         TodayViewUXPageResource_ActionItems_Title_Xpath_Locator);
-                      getSubchannelName = AlertItemsName.Remove(12);
+                       getSubchannelName = AlertItemsName.Remove(12);
                        break;
 
                    case "Performance":
@@ -5696,13 +5708,16 @@ namespace Pegasus.Pages.UI_Pages
                    getStatus = true;
                }
            }
-            catch(Exception e)
+           catch (Exception e)
            {
                ExceptionHandler.HandleException(e);
            }
+           Logger.LogMethodExit("TodaysViewUXPage", "GetSubChannelInNotification",
+                                   base.IsTakeScreenShotDuringEntryExit);
 
            return getStatus;
        }
+
 
         /// <summary>
         /// Click on expand icon in notification channel.
@@ -5710,6 +5725,9 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="subChannelName">This is subchannel name.</param>
        public void ClickExpanIconInNotificationChannel(string subChannelName)
        {
+           //Click on expand icon in notification channel.
+           Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                                   base.IsTakeScreenShotDuringEntryExit);
            try
            {
                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
@@ -5762,6 +5780,8 @@ namespace Pegasus.Pages.UI_Pages
            {
                ExceptionHandler.HandleException(e);
            }
+           Logger.LogMethodExit("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                            base.IsTakeScreenShotDuringEntryExit);
        }
 
 
@@ -6139,10 +6159,10 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 isIdleStudentAlertTextPresent = base.IsElementPresent(
-                    By.ClassName(TodaysViewUXPageResource.
-                    TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator), 10);
-                base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
-                    TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator));
+                    By.ClassName("IdleStuHelpText"), 10);
+                base.WaitForElement(By.ClassName("IdleStuHelpText"));
+                    //TodaysViewUXPageResource.
+                    //TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator));
             }
             catch (Exception e)
             {
@@ -6151,6 +6171,275 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentMessage",
                         base.IsTakeScreenShotDuringEntryExit);
             return isIdleStudentAlertTextPresent;
+        }
+        /// <summary>
+        /// Validate the student displayed in Past Due Submitted Channel
+        /// </summary>
+        /// <param name="studentName">This is the student name.</param>
+        /// <returns>Student name</returns>
+        public String StudentDisplayedInPastDueSubmittedChannel(string studentName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            string getStudentNameInAlertChannel = string.Empty;
+            try
+            {
+                //Fetch the count of studnet displayed in Pastdue submitted channel
+                base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                    TodayViewUXPage_StudentRowCount_PastDueSubmittedChannel_XPath_Locator));
+                int getStudentRowCountInAlertChannel = base.GetElementCountByXPath(
+                    TodaysViewUXPageResource.
+                    TodayViewUXPage_StudentRowCount_PastDueSubmittedChannel_XPath_Locator);
+                for (int i = 1; i <= getStudentRowCountInAlertChannel; i++)
+                {
+                    //Fetch the student name from Past due submitted channel
+                    getStudentNameInAlertChannel = base.GetElementTextByXPath(string.Format(
+                        TodaysViewUXPageResource.
+                    TodayViewUXPage_StudentName_PastDueSubmittedChannel_XPath_Locator, i));
+                    if (getStudentNameInAlertChannel == studentName)
+                    {
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getStudentNameInAlertChannel;
+        }
+
+        /// <summary>
+        /// Validate the button displayed in Pastdue submitted channel
+        /// </summary>
+        /// <param name="buttonName">This is the button name.</param>
+        /// <returns>True/False.</returns>
+        public bool IsActivityAcceptDeclineButtonDisplayed(string buttonName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsActivityAcceptDeclineButtonDisplayed",
+                             base.IsTakeScreenShotDuringEntryExit);
+            bool isButtonPresentInPastDueSubmittedChannel = false; try
+            {
+                //Verify the button display
+                base.WaitForElement(By.PartialLinkText(buttonName));
+                isButtonPresentInPastDueSubmittedChannel = base.IsElementPresent(By.PartialLinkText(buttonName));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsActivityAcceptDeclineButtonDisplayed",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isButtonPresentInPastDueSubmittedChannel;
+        }
+
+        /// <summary>
+        /// Expan the student in Past due submitted channel
+        /// </summary>
+        /// <param name="actualUserName">This is the user name</param>
+        public void ClickStudentExpadIcon(string actualUserName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                int studentIndex = this.GetStudentIndexInPastDueSubmittedChannel(actualUserName);
+                //Expand the Student
+                base.WaitForElement(By.XPath(string.Format(
+                    "//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[1]",
+                    studentIndex)), 10);
+                IWebElement expandStudent = base.GetWebElementPropertiesByXPath(string.Format(
+                    "//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[1]",
+                    studentIndex));
+                base.PerformMouseClickAction(expandStudent);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the position of Student row in Past due submitted channel
+        /// </summary>
+        /// <param name="actualUserName">This is the actual user name.</param>
+        /// <returns>Student row index.</returns>
+        public int GetStudentIndexInPastDueSubmittedChannel(string actualUserName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            int getStudentIndex = 0;
+            try
+            {
+
+                int getStudentRowCountInAlertChannel = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                    TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator);
+                for (int i = 1; i <= getStudentRowCountInAlertChannel; i++)
+                {
+                    //Fetch the student name from UI
+                    string getStudentNameInAlertChannel = base.GetElementTextByXPath(string.Format(
+                        TodaysViewUXPageResource.
+                    TodaysViewUXPage_PastDueSubmittedChannel_StudentsName_XPath_Locator
+                        , i));
+                    if (getStudentNameInAlertChannel == actualUserName)
+                    {
+                        getStudentIndex = i;
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetIdleStudentMessage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getStudentIndex;
+        }
+
+        /// <summary>
+        /// Validate the Activity Dislay In Past Due Submitted Channel
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <returns>True/False.</returns>
+        public bool IsActivityDislayedInPastDueSubmittedChannel(string activityName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsActivityDislayedInPastDueSubmittedChannel",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isActivityDislayedInPastDueSubmittedChannel = false;
+            try
+            {
+                base.WaitForElement(By.PartialLinkText(activityName));
+                isActivityDislayedInPastDueSubmittedChannel = base.IsElementPresent(By.PartialLinkText(activityName));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "IsActivityDislayedInPastDueSubmittedChannel",
+                       base.IsTakeScreenShotDuringEntryExit);
+            return isActivityDislayedInPastDueSubmittedChannel;
+
+        }
+
+        /// <summary>
+        /// Select The CheckBox Of PastDue Activity Submitted in Todays View channel
+        /// </summary>
+        /// <param name="actualActivityName">This is the actual activity name.</param>
+        /// <param name="actualStudentName">This is the actual student name.</param>
+        public void SelectTheCheckBoxOfPastDueActivitySubmitted(string actualActivityName, string actualStudentName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "SelectTheCheckBoxOfPastDueActivitySubmitted",
+                       base.IsTakeScreenShotDuringEntryExit);
+            string activityNameInPastDueSubmittedChannel = string.Empty;
+            try
+            {
+                //Fetch the Student name from Past due submitted channle of Todays View tab Notifications channel
+                string getStudentNameInPastDueSubmittedChannel = this.
+                    StudentDisplayedInPastDueSubmittedChannel(actualStudentName);
+                //Fetch the row/index of the student displayed in Past due submitted channel
+                int getStudentIndex = this.GetStudentIndexInPastDueSubmittedChannel(actualStudentName);
+                base.WaitForElement(By.XPath(string.Format(TodaysViewUXPageResource.
+                    TodaysViewUXPage_PastDueSubmittedChannel_StudentsCount_XPath_Locator, getStudentIndex)));
+                //Fetch the Activities count displayed in Past due submitted channel
+                int getActivityCountForStudent = base.GetElementCountByXPath(string.Format(
+                   TodaysViewUXPageResource.
+                   TodaysViewUXPage_PastDueSubmittedChannel_StudentsCount_XPath_Locator, getStudentIndex));
+                for (int i = 1; i <= getActivityCountForStudent; i++)
+                {
+                    //Fetch the Activity name in Past Due submitted channel
+                    base.WaitForElement(By.XPath(string.Format(
+                       TodaysViewUXPageResource.
+                       TodaysViewUXPage_PastDUeSubmittedChannel_StudentName_XPath_Locator,
+                        getStudentIndex, i)));
+                    activityNameInPastDueSubmittedChannel = base.GetElementInnerTextByXPath(string.Format(
+                       TodaysViewUXPageResource.
+                       TodaysViewUXPage_PastDUeSubmittedChannel_StudentName_XPath_Locator,
+                        getStudentIndex, i));
+                    if (getStudentNameInPastDueSubmittedChannel == actualStudentName && 
+                        activityNameInPastDueSubmittedChannel.Contains(actualActivityName))
+                    {
+                        //Select the checkbox of the Activity
+                        base.SelectCheckBoxByXPath(String.Format(TodaysViewUXPageResource.
+                           TodaysViewUXPage_PastDueSubmittedActivityOfStudent_Checkbox_XPath_Locator,
+                           getStudentIndex, i));
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "SelectTheCheckBoxOfPastDueActivitySubmitted",
+                       base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="studentName"></param>
+        /// <returns></returns>
+        public bool GetStudentNameInPastDueNotSubmittedChannel(string studentName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameInPastDueNotSubmittedChannel",
+                       base.IsTakeScreenShotDuringEntryExit);
+            bool isStudentDisplayedInPastDueNotSubmittedChannel = false;
+            try
+            {
+                int getActivityCountForStudent2 = base.GetElementCountByXPath("//div[@id='TVInsAnnoucement$contentCntr']/div");
+                for (int i = 1; i <= getActivityCountForStudent2; i++)
+                {
+                    base.WaitForElement(By.XPath(string.Format(TodaysViewUXPageResource.
+                       TodaysViewUXPageResource_TodaysView_StudentName_AlertChannel_XPath_Locator, i)), 10);
+                    string GetStudentNameFromAlertChannel = base.GetElementTextByXPath(string.Format(
+                        TodaysViewUXPageResource.
+                       TodaysViewUXPageResource_TodaysView_StudentName_AlertChannel_XPath_Locator, i));
+                    if (GetStudentNameFromAlertChannel == studentName)
+                    {
+                        isStudentDisplayedInPastDueNotSubmittedChannel = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameInPastDueNotSubmittedChannel",
+                       base.IsTakeScreenShotDuringEntryExit);
+            return isStudentDisplayedInPastDueNotSubmittedChannel;
+        }
+
+        /// <summary>
+        /// Validate the Activity displayed in New Grades channel of Notifications channel
+        /// </summary>
+        /// <param name="studentName">This is the Student name</param>
+        /// <returns>True/False.</returns>
+        public bool IsNewGradedActivityPresentInNotificationChannel(string studentName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsNewGradedActivityPresentInNotificationChannel",
+                     base.IsTakeScreenShotDuringEntryExit);
+            bool isStudentDisplayedInNewGradesChannel = false;
+            try
+            {
+                //Verify the Activity displayed
+                base.WaitForElement(By.PartialLinkText(studentName));
+                isStudentDisplayedInNewGradesChannel = base.IsElementPresent(By.PartialLinkText(studentName));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "IsNewGradedActivityPresentInNotificationChannel",
+                     base.IsTakeScreenShotDuringEntryExit);
+            return isStudentDisplayedInNewGradesChannel;
+
         }
     }
 }

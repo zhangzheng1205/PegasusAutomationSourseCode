@@ -877,7 +877,7 @@
     <value>//div[@id='accordion2']/div[3]/div[2]/div/div/ul/li[6]/a/span</value>
   </data>
   <data name="TodayViewUXPageResource_WelcomeMessage_GetMessage_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class ='wc_tblstyle1']/tbody/tr[2]/td/div/div/font</value>
+    <value>.//*[@id='tdHeader']/tbody/tr/td</value>
   </data>
   <data name="TodaysView_CoursToolsCount_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='dvInlineCC']/table/tbody/tr/td</value>
@@ -893,5 +893,29 @@
   </data>
   <data name="TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator" xml:space="preserve">
     <value>normallabel</value>
+  </data>
+  <data name="TodaysViewUXPage_PastDueSubmittedActivityOfStudent_Checkbox_XPath_Locator" xml:space="preserve">
+    <value>.//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/div[{0}]/table/tbody/tr/td[3]/div[{1}]/table/tbody/tr/td[1]/input</value>
+  </data>
+  <data name="TodaysViewUXPage_PastDUeSubmittedChannel_StudentName_XPath_Locator" xml:space="preserve">
+    <value>.//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/div[{0}]/table/tbody/tr/td[3]/div[{1}]</value>
+  </data>
+  <data name="TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table</value>
+  </data>
+  <data name="TodaysViewUXPage_PastDueSubmittedChannel_StudentsCount_XPath_Locator" xml:space="preserve">
+    <value>.//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/div[{0}]/table/tbody/tr/td[3]/div</value>
+  </data>
+  <data name="TodaysViewUXPage_PastDueSubmittedChannel_StudentsName_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="TodayViewUXPage_StudentName_PastDueSubmittedChannel_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="TodayViewUXPage_StudentRowCount_PastDueSubmittedChannel_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table</value>
+  </data>
+  <data name="TodaysViewUXPageResource_TodaysView_StudentName_AlertChannel_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TVInsAnnoucement$contentCntr']/div[{0}]//td[@class='IncompleteWorkLastName studenttdpad']</value>
   </data>
 </root>
