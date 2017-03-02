@@ -12,6 +12,7 @@ using Pegasus.Pages.CommonPageObjects;
 using System.Configuration;
 using System.Diagnostics;
 using Pegasus.Automation.DataTransferObjects;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -1903,19 +1904,23 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitUntilWindowLoads(pageName);
                 base.SelectWindow(pageName);
-                base.SwitchToIFrameById("ifrmCoursePreview");
-                int getActivityCount = (base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr")) - 1;
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
+                int getActivityCount = (base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator)) - 1;
 
                 for (int rowCount = Convert.ToInt32(3); rowCount <= getActivityCount;
                     rowCount++)
                 {
                     //Gets the Activity Name
                     getActivityName = base.GetElementTextByXPath
-                        (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a", rowCount)).Trim();
+                        (string.Format(CoursePreviewUXPageResource.
+                        CoursePreviewUXPage_Page_Activity_ActivityName_Xpath_locator, rowCount)).Trim();
                     if (getActivityName.Equals(activityName))
                     {
                         IWebElement getAssetTitle = base.GetWebElementPropertiesByXPath(string.Format
-                            ("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a", rowCount));
+                            (CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Assets_Name_Xpath_Locator, rowCount));
                         base.PerformMouseClickAction(getAssetTitle);
                         break;
                     }
@@ -1932,9 +1937,9 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Get the activity status
         /// </summary>
-        /// <param name="activityName"></param>
-        /// <returns></returns>
-        public string GetActivityStatus(string activityName)
+        /// <param name="activityName">This is activity name.</param>
+        /// <returns>Return activity status.</returns>
+        public string GetActivitySubmittedStatus(string activityName, int activityColumnCount)
         {
             Logger.LogMethodEntry("AddAssessmentPage", "GetActivityStatus",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1942,25 +1947,18 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityStatus = string.Empty;
             try
             {
-                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
-                    CoursePreviewUX_Page_Window_Title_Name_HED);
-                base.SelectWindow(CoursePreviewUXPageResource.
-                    CoursePreviewUX_Page_Window_Title_Name_HED);
-                // Switch to iframe
-                base.SwitchToIFrameById("ifrmCoursePreview");
-                // Get activity Count
-                int getActivityCount = (base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr")) - 1;
-
-                for (int rowCount = Convert.ToInt32(3); rowCount <= getActivityCount;
+                for (int rowCount = Convert.ToInt32(3); rowCount <= activityColumnCount;
                     rowCount++)
                 {
                     //Gets the Activity Name
                     getActivityName = base.GetElementTextByXPath
-                        (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a", rowCount)).Trim();
+                        (string.Format(CoursePreviewUXPageResource.
+                        CoursePreviewUXPage_Page_Activity_ActivityName_Xpath_locator, rowCount)).Trim();
                     if (getActivityName.Equals(activityName))
                     {
                         getActivityStatus = base.GetElementTextByXPath
-                        (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[8]/span", rowCount)).Trim();
+                        (string.Format(CoursePreviewUXPageResource.
+                        CoursePreviewUXPage_Page_Activity_ActivityStatus_Xpath_locator, rowCount)).Trim();
                         return getActivityStatus;
                     }
                 }
@@ -1972,6 +1970,163 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("AddAssessmentPage", "ClickActivityName",
                     base.IsTakeScreenShotDuringEntryExit);
             return getActivityStatus;
+        }
+
+        /// <summary>
+        /// Get the activity status
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <returns>Return activity status.</returns>
+        public string GetGradeCount(string activityName, int activityColumnCount)
+        {
+            Logger.LogMethodEntry("AddAssessmentPage", "GetActivityStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            string getActivityStatus = string.Empty;
+            try
+            {
+                for (int rowCount = Convert.ToInt32(3); rowCount <= activityColumnCount;
+                    rowCount++)
+                {
+                    //Gets the Activity Name
+                    getActivityName = base.GetElementTextByXPath
+                        (string.Format(CoursePreviewUXPageResource.
+                        CoursePreviewUXPage_Page_Activity_ActivityName_Xpath_locator, rowCount)).Trim();
+                    if (getActivityName.Equals(activityName))
+                    {
+                        getActivityStatus = base.GetElementTextByXPath
+                        (string.Format(CoursePreviewUXPageResource.
+                        CoursePreviewUXPage_Page_Activity_GetGrade_Xpath_locator, rowCount)).Trim();
+                        return getActivityStatus;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AddAssessmentPage", "ClickActivityName",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivityStatus;
+        }
+
+        /// <summary>
+        /// Get Status Of Submitted Grader IT Activity In CourseMaterial.
+        /// </summary>
+        /// <param name="assetName">This is Activity Name.</param>
+        /// <returns>Activity Status.</returns>
+        public string GetActivityStatus(string assetName, string activityStatus)
+        {
+            //Get Status Of Submitted Activity In CourseMaterial
+            Logger.LogMethodEntry("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText variable
+            string getActivitySubmittedStatus = string.Empty;
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                //Get The Activity Name In CourseMaterial
+                int activityColumnCount =
+                    this.GetTheActivityCountInCourseMaterial();
+                //Get the status text
+                getActivitySubmittedStatus = this.GetActivitySubmittedStatus(assetName,activityColumnCount);
+                //Start Stop Watch 
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                //Clicks Till Course Gets Out of Inactive State
+                //If still time is pending to verify assigned to copy state
+                while (getActivitySubmittedStatus != activityStatus)
+                {
+
+                    if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
+
+                    {
+                        base.RefreshTheCurrentPage();
+                        //new CommonPage().ManageTheActivityFolderLevelNavigation(
+                        //assetName, activityUnderTabName, userTypeEnum);
+                        //Select Window And Frame
+                        this.SelectWindowAndFrame();
+                        //Get The Activity Name In CourseMaterial
+                        activityColumnCount =
+                           this.GetTheActivityCountInCourseMaterial();
+                        //Get the status text
+                        getActivitySubmittedStatus = this.GetActivitySubmittedStatus(assetName, activityColumnCount);
+                        if (getActivitySubmittedStatus == activityStatus)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivitySubmittedStatus;
+        }
+
+
+        /// <summary>
+        /// Select Window And Frame
+        /// </summary>
+        private void SelectWindowAndFrame()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "SelectWindowAndFrame",
+                    base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUX_Page_Window_Title_Name_HED);
+                // Switch to iframe
+                base.SwitchToIFrameById("ifrmCoursePreview");
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "SelectWindowAndFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Return activity column number
+        /// </summary>
+        /// <returns>return activity column number</returns>
+        private int GetTheActivityCountInCourseMaterial()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "SelectWindowAndFrame",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            int activityColumnNumber = Convert.ToInt32(StudentPresentationPageResource.
+                StudentPresentation_Page_Loop_Initializer_Value);
+
+            try
+            {
+                //Wait for the element
+                base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator));
+                // Get activity Count
+                int getActivityCount = (base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator)) - 1;
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "SelectWindowAndFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            return activityColumnNumber;
         }
 
         /// <summary>
@@ -2027,6 +2182,66 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public bool GetGradeAndActivityStatus(string grade,
+            string assetName, string pageName)
+        {
+            //Get Status Of Submitted Activity In CourseMaterial
+            Logger.LogMethodEntry("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize status variable
+            string getGradeStatus = string.Empty;
+            bool status = false;
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+
+                string submittedGrade = grade + "%";
+
+                //Get The Activity Name In CourseMaterial
+                int activityColumnCount =
+                    this.GetTheActivityCountInCourseMaterial();
+                //Get the status text
+                getGradeStatus = this.GetGradeCount(assetName, activityColumnCount);
+                //Start Stop Watch 
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
+                //Clicks Till Course Gets Out of Inactive State
+                //If still time is pending to verify assigned to copy state
+                while (getGradeStatus != submittedGrade)
+                {
+                    if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
+                    {
+                        base.RefreshTheCurrentPage();
+                        //new CommonPage().ManageTheActivityFolderLevelNavigation(
+                        //assetName, activityUnderTabName, userTypeEnum);
+                        //Select Window And Frame
+                        this.SelectWindowAndFrame();
+                        //Get The Activity Name In CourseMaterial
+                        activityColumnCount =
+                           this.GetTheActivityCountInCourseMaterial();
+                        //Get the status text
+                        getGradeStatus = this.GetGradeCount(assetName, activityColumnCount);
+                        if (getGradeStatus == submittedGrade)
+                        {
+                            status = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            return status;
         }
     }
 }

@@ -1167,10 +1167,43 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(status,
                     new CoursePreviewUXPage().
-                    GetActivityStatus(activityName)));
+                    GetActivityStatus(activityName, status)));
             Logger.LogMethodExit("CreateActivity", "ValidateDisplayOfActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Validate grades display in manage course material
+        /// </summary>
+        /// <param name="gradeTypeEnum">This is grade type enum.</param>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="pageName">This is page name.</param>
+        [Then(@"I should see ""(.*)"" score for the activity ""(.*)"" in ""(.*)"" page")]
+        public void ValidateTheGradesDisplayInManageCourseWork(Grade.GradeTypeEnum gradeTypeEnum, 
+            Activity.ActivityTypeEnum activityTypeEnum, string pageName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ValidateTheGradesDisplayInManageCourseWork",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Get the grade from inmemory
+            Grade grade = Grade.Get(gradeTypeEnum);
+            string gradeScore = grade.GradeScore.ToString();
+
+            // Get activity name
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+
+            //Assert we have correct page opened
+            Logger.LogAssertion("ValidateDisplayOfActivityStatus",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(
+                    new CoursePreviewUXPage().
+                    GetGradeAndActivityStatus(gradeScore, activityName, pageName)));
+
+            Logger.LogMethodExit("CreateActivity", "ValidateTheGradesDisplayInManageCourseWork",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
 
         /// <summary>
         /// Launch the asset by click on asset name.

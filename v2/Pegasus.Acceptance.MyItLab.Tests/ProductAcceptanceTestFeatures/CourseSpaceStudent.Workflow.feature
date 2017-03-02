@@ -818,3 +818,4 @@ Then I should see success message on successful submission
 When I click on the button "Close Assignment"
 Then I should be on the "Course Materials" page
 Then I should be displayed with status "Not passed" for "RegWordGrader0" 
+And I should see "GraderITWord0Score" score for the activity "RegWordGrader0" in "Course Materials" page

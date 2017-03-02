@@ -258,4 +258,16 @@
   <data name="CoursePreviewUXPage_Pagination_Count_MyCourse_XPath_Locator" xml:space="preserve">
     <value>//td[@class='PD_PRdivpagingCenter']/span[3]</value>
   </data>
+  <data name="CoursePreviewUXPage_Page_Activity_ActivityName_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_ActivityStatus_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[8]/span</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_GetGrade_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
 </root>

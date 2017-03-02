@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
                          */
                     case "Grader Access file for 70%":
 
-                        Process process = Process.Start(@"E:\SeleniumGrid\AutoItScripts\UploadGrader2016a.exe");
+                        Process process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016WordFor0Score.exe");
                                               
                         break;
                 }
