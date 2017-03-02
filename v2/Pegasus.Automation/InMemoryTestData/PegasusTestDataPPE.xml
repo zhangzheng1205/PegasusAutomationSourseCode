@@ -51,7 +51,7 @@
 	<ArrayOfCourse>
 		<!--Hard coded Course data for "Digital Path" Product.-->
 		<Course>
-			<Name>MyTest WL Lite Course UI : MySpanishLab for ¡Anda! Curso elemental, 2e</Name>
+			<Name>General course to test course copy</Name>
 			<CourseType>MyTestAuthoredCourse</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>false</IsPreferenceStatus>
@@ -281,7 +281,7 @@
 			<IsApproved>false</IsApproved>
 		</Course>
 		<Course>
-			<Name>0617_WLProduct</Name>
+			<Name>[GA] new</Name>
 			<CourseType>MyITLabOffice2013Program</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
@@ -367,7 +367,7 @@
 			<IsApproved>true</IsApproved>
 		</Course>
 		<Course>
-			<Name>Dependent_MIL_VCD</Name>
+			<Name>Dependent_MIL_PPE</Name>
 			<CourseType>MyItLabInstructorCourse</CourseType>
 			<InstructorCourseId>CRSKLES-10044234</InstructorCourseId>
 			<IsCreated>true</IsCreated>
