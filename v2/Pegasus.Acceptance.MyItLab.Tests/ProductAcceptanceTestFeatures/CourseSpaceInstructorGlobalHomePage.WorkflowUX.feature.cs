@@ -247,11 +247,10 @@ this.ScenarioSetup(scenarioInfo);
 #line 84
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 85
-testRunner.When("I click on Open button of \"RegMyITLabNewlyCreatedCourse\" as \"CsSmsInstructor\" use" +
-                    "r", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Open button of \"MyItLabAuthoredCourse\" as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 86
-testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" course information for " +
-                    "\"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" course information for \"CsSmsI" +
+                    "nstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -423,7 +422,7 @@ testRunner.When("I select cmenu \"Mark for Deletion\" option of Instructor cours
                     "urse\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 163
 testRunner.Then("I should see the \"Marked for Deletion\" status updated for the \"MyItLabAuthoredCou" +
-                    "rse\" course as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "rse\" course as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 164
 testRunner.And("I should see successfull message \"Course marked for deletion.\" on \"Global Home\" p" +
                     "age", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

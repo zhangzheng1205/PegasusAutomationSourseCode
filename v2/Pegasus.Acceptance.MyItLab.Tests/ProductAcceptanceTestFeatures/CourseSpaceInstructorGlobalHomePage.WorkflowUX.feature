@@ -82,12 +82,12 @@ Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "Cs
 #Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate open button functionallity for course as CsSmsInstructor
 Given I am on the "Global Home" page
-When I click on Open button of "RegMyITLabNewlyCreatedCourse" as "CsSmsInstructor" user
-Then I should be displayed with "RegMyITLabNewlyCreatedCourse" course information for "CsSmsInstructor" user
+When I click on Open button of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
+Then I should be displayed with "MyItLabAuthoredCourse" course information for "CsSmsInstructor" user
 
-#-----------------------------------------------------------------------------------------------------#
-							#Scripts to validate Instructor,MyTest and Program course creation based on ISBN and Decipline#
-#-----------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------------#
+		#Scripts to validate Instructor,MyTest and Program course creation based on ISBN and Decipline#
+#---------------------------------------------------------------------------------------------------------#
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The course creation by CsSmsInstructor using course ISBN number
@@ -160,7 +160,7 @@ Then I should see successfull message "Course updated successfully." on "Global 
 Scenario:Validate mark for delete cmenu option of IC course on CsSmsInstructor home page
 Given I am on the "Global Home" page
 When I select cmenu "Mark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
-Then I should see the "Marked for Deletion" status updated for the "MyItLabAuthoredCourse" course as "CsSmsInstructor"
+Then I should see the "Marked for Deletion" status updated for the "MyItLabAuthoredCourse" course as "CsSmsInstructor" user
 And I should see successfull message "Course marked for deletion." on "Global Home" page
 
 #Test case ID : 

@@ -497,6 +497,15 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageInstructorUX.BVT.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageStudentUX.BVT.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageUX.FullBVT.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.MinimizedBuildVerificationTest.MIL.GraderITSubmission.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -599,16 +608,13 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHomePageUX.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorHearderLinksPageUX.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageUX.FullRegression.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageUX.FullBVT.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageInstructorUX.Regression.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageInstructorUX.BVT.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageStudentUX.BVT.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageStudentUX.Regression.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Instructor.AssignmentCalendar.MyItLab.orderedtest">

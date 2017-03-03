@@ -436,7 +436,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="courseStatus">This is course status.</param>
         /// <param name="courseType">This is course type enum.</param>
         /// <param name="userType">This is user type enum.</param>
-        [Then(@"I should see the ""(.*)"" status updated for the ""(.*)"" course as ""(.*)""")]
+        [Then(@"I should see the ""(.*)"" status updated for the ""(.*)"" course as ""(.*)"" user")]
         public void StatusOfCourse(string courseStatus, Course.CourseTypeEnum courseType, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("GlobalHomePage", "StatusOfCourse",

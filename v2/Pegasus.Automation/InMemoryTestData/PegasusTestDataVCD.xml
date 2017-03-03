@@ -32,7 +32,6 @@
 	<!--This is already created courses present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfClass>
 		<Class>
-			s
 			<Name>1fdcb490-ba9b-4842-94f0-a346c90a54ad</Name>
 			<ClassType>DigitalPathMasterLibrary</ClassType>
 			<IsCreated>true</IsCreated>
@@ -720,7 +719,7 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>true</EnrolementStatus>
 		</User>
 		<User>
-			<Name>ux_teacher_1228</Name>
+			<Name>5161csinstructor1</Name>
 			<Password>Password1</Password>
 			<Email>manish.singh@imfinity.com</Email>
 			<FirstName>Raghavendra</FirstName>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest.hedmil.globalhomepageux.fullbvt" storage="d:\feb ux repository\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedmil.globalhomepageux.fullbvt.orderedtest" id="18556b6e-c734-49ce-8a50-6433775c38e0" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="c356fd80-1410-815d-ea55-912e0f0ebd5e" name="UserLoginAsSMSInstructor" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="f7694f93-ea5e-4c25-a952-82f6ce693632" name="orderedtest.hedmil.globalhomepageinstructorux.bvt" storage="orderedtest.hedmil.globalhomepageinstructorux.bvt.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="240831c3-3a92-93db-1dbc-87b24fd80b28" name="UserLoginAsSMSStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="ec002ccb-701f-466f-834c-099f2cfe3527" name="OrderedTest.HEDMIL.GlobalHomePageStudentUX.BVT" storage="orderedtest.hedmil.globalhomepagestudentux.bvt.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
