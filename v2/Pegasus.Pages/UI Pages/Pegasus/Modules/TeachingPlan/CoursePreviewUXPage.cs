@@ -1223,7 +1223,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Check paagination existance in Manage course material
         /// </summary>
-        private int CheckPaginationStatus()
+        public int CheckPaginationStatus()
         {
             Logger.LogMethodEntry("CoursePreviewUXPage", "CheckPaginationStatus",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -1250,11 +1250,11 @@ namespace Pegasus.Pages.UI_Pages
                     pageCount = Convert.ToInt32(1);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodEntry("CoursePreviewUXPage", "CheckPaginationStatus", 
+            Logger.LogMethodEntry("CoursePreviewUXPage", "CheckPaginationStatus",
                 base.IsTakeScreenShotDuringEntryExit);
             return pageCount;
         }
@@ -1682,6 +1682,7 @@ namespace Pegasus.Pages.UI_Pages
                             // W
                             base.SwitchToLastOpenedWindow();
                             bool alertPopupExistStatus = base.IsElementPresent(By.ClassName("alert"),10);
+                            base.WaitForElement(By.Id("imgOk"));
                             if (alertPopupExistStatus == true)
                             {
                                 base.ClickButtonById("imgOk");
@@ -1772,8 +1773,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitUntilWindowLoads(tabName);
                 base.SelectWindow(tabName);
-                bool asd = base.IsElementPresent(By.ClassName("messageBoardText"),10);
-                successMessage = base.GetInnerTextAttributeValueByClassName("messageBoardText");
+                bool asd = base.IsElementPresent(By.ClassName("messagesucessfont"), 10);
+                successMessage = base.GetInnerTextAttributeValueByClassName("messagesucessfont");
             }
             catch (Exception e)
             {

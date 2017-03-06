@@ -2778,11 +2778,14 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitUntilWindowLoads("Course Materials");
                 base.SelectWindow("Course Materials");
                 base.SwitchToIFrameById("ifrmCoursePreview");
+                // Check pagination existance
+                int pageCount = new CoursePreviewUXPage().CheckPaginationStatus();
+                //Get the ACtivity count in Course Materials tab
                 int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
 
-                string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[4]").Trim();
-                string getTotalPageCount = getPageCountDetails.Substring(3);
-                int pageCount = Convert.ToInt32(getTotalPageCount);
+                //string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[4]").Trim();
+                //string getTotalPageCount = getPageCountDetails.Substring(3);
+                //int pageCount = Convert.ToInt32(getTotalPageCount);
                 for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
                 {
                     for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
