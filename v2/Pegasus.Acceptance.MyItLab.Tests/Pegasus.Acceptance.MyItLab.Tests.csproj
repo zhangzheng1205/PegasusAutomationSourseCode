@@ -497,6 +497,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.EditGrade.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BB.GradeSync.NewGrades.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.CourseMaterialsInstructorUX.Regression.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageInstructorUX.BVT.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -621,6 +624,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.TodaysViewUXInstructor.Regression.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.CourseMaterialsInstructorUX.BVT.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">

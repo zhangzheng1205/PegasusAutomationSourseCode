@@ -719,7 +719,7 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>true</EnrolementStatus>
 		</User>
 		<User>
-			<Name>5161csinstructor1</Name>
+			<Name>ux_teacher_1228</Name>
 			<Password>Password1</Password>
 			<Email>manish.singh@imfinity.com</Email>
 			<FirstName>Raghavendra</FirstName>
@@ -1149,6 +1149,24 @@ the UI deleted or refreshed.-->
 			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
 			<IsCreated>true</IsCreated>
 		</Activity>
+    <Activity>
+      <Name>Auto-2017/03/03-de9a37ef-Folder</Name>
+      <ActivityType>RegFolderAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegEtextLinkAsset</Name>
+      <ActivityType>RegEtextLinkAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegPageAsset</Name>
+      <ActivityType>RegPageAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
 	</ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>

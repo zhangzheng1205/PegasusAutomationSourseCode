@@ -665,14 +665,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Wait untill window loads and select the window
-                base.WaitUntilWindowLoads(ContentLibraryUXPageResource.
-                    ContentLibraryUX_Page_CourseMaterials_Window_Name);
-                base.SelectWindow(ContentLibraryUXPageResource.
-                    ContentLibraryUX_Page_CourseMaterials_Window_Name);
-                // Switch to iFrame
-                base.SwitchToIFrameById("ifrmCoursePreview");
-                base.WaitForElement(By.ClassName("modal-title"));
+                //Switch to Add Materials popup in Course Materials tab
+                this.SwithToAddMaterialsPopupInCourseMaterials();
                 int rowCount = base.GetElementCountByXPath(
                     "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr");
                 for (int i = Convert.ToInt32(1); i <= rowCount; i++)
@@ -681,10 +675,12 @@ namespace Pegasus.Pages.UI_Pages
                         "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td", i));
                     for (int j = Convert.ToInt32(1); j <= colCount; j++)
                     {
+                        //Fetch the Assety type 
                         string optionName = base.GetInnerTextAttributeValueByXPath(string.Format(
-                            "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td[{1}]/div", i,j));
-                        if(optionName.Equals(activityType))
+                            "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td[{1}]/div", i, j));
+                        if (optionName.Equals(activityType))
                         {
+                            //CLick on the asset creation link
                             IWebElement getOption = base.GetWebElementPropertiesByXPath(string.Format(
                                 "//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td[{1}]/div", i, j));
                             base.PerformMouseClickAction(getOption);
@@ -698,6 +694,25 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ContentLibraryUXPage", "ClickOnActivityType",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Swith To Add Materials Popup In Course Materials
+        /// </summary>
+        public void SwithToAddMaterialsPopupInCourseMaterials()
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "SwithToAddMaterialsPopupInCourseMaterials",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Wait untill window loads and select the window
+            base.WaitUntilWindowLoads(ContentLibraryUXPageResource.
+                ContentLibraryUX_Page_CourseMaterials_Window_Name);
+            base.SelectWindow(ContentLibraryUXPageResource.
+                ContentLibraryUX_Page_CourseMaterials_Window_Name);
+            // Switch to iFrame
+            base.SwitchToIFrameById("ifrmCoursePreview");
+            base.WaitForElement(By.ClassName("modal-title"));
+            logger.LogMethodExit("ContentLibraryUXPage", "SwithToAddMaterialsPopupInCourseMaterials",
                base.IsTakeScreenShotDuringEntryExit);
         }
 

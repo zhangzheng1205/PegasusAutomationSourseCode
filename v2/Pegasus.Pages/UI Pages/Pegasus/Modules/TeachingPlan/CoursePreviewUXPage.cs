@@ -924,7 +924,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Click Create new folder
+        /// Click Create new folder in Course Materials tab
         /// </summary>
         public void ClickCreateFolder()
         {
@@ -1607,12 +1607,14 @@ namespace Pegasus.Pages.UI_Pages
                         if (getActivityName.Equals(activityName))
                         {
                             base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount)));
+                            //Select the Checkbox of the activity
                             base.SelectCheckBoxByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]", rowCount));
                             bool asd = base.IsElementPresent(By.Id("imgAssign"),10);
                             base.WaitForElement(By.Id("imgAssign"));
+                            //Assign the Activity
                             IWebElement getShowOption = base.GetWebElementPropertiesById("imgAssign");
                             base.ClickByJavaScriptExecutor(getShowOption);
-                            // W
+                            // Check if the Assign Alert popup if dispalyed
                             base.SwitchToLastOpenedWindow();
                             bool alertPopupExistStatus = base.IsElementPresent(By.ClassName("alert"),10);
                             if (alertPopupExistStatus == true)
@@ -1630,7 +1632,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            Logger.LogMethodExit("ContentLibraryUXPage", "ClickCopyOption",
             base.IsTakeScreenShotDuringEntryExit);
         }
 

@@ -400,6 +400,10 @@ namespace Pegasus.Pages.UI_Pages
                             AddAsessment_Page_LinkAsset_AddButton_Id_Locator);
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
+                        //Swith To Add Materials Popup In Course Materials tab
+                        new ContentLibraryUXPage().SwithToAddMaterialsPopupInCourseMaterials();
+                        //Click on CLose button in Add Materials popup
+                        this.CloseAddMaterialsPopupInCourseMaterials();
                         break;
 
                     case Activity.ActivityTypeEnum.RegEtextLinkAsset:
@@ -411,7 +415,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Enter Description
                         this.SelectBookInEtextLinkAsset();
                         // Click add button
-                        bool asd = base.IsElementPresent(By.Id("imgBtnSave_Update"),10);
+                        bool asd = base.IsElementPresent(By.Id("imgBtnSave_Update"), 10);
                         base.WaitForElement(By.Id("imgBtnSave_Update"));
                         IWebElement getSubmitButton = base.GetWebElementPropertiesById("imgBtnSave_Update");
                         base.PerformMouseClickAction(getSubmitButton);
@@ -432,17 +436,19 @@ namespace Pegasus.Pages.UI_Pages
                             AddAsessment_Page_Folder_CreateButton_Id_Locator));
                         base.ClickButtonById(AddAssessmentPageResources.
                             AddAsessment_Page_Folder_CreateButton_Id_Locator);
+                        //Refresh the page to display new folder created
+                        base.RefreshTheCurrentPage();
                         break;
 
                     case Activity.ActivityTypeEnum.RegFileAsset:
                         activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable File Asset";
                         //Select Window
                         this.SelectCreateFileAssetWindow();
-                       string getGraderItWordFilePathFor70Percent = (AutomationConfigurationManager.PegasusPagesTestDataPath + 
-                            UploadCompletedFilesResource.UploadCompleteFile_Page_GraderIT_Word_File_70Percent_Path).
-                        Replace("file:\\", "");
+                        string getGraderItWordFilePathFor70Percent = (AutomationConfigurationManager.PegasusPagesTestDataPath +
+                             UploadCompletedFilesResource.UploadCompleteFile_Page_GraderIT_Word_File_70Percent_Path).
+                         Replace("file:\\", "");
                         //Upload the xls File
-                       base.UploadFile(getGraderItWordFilePathFor70Percent, By.Id("txtFile"));
+                        base.UploadFile(getGraderItWordFilePathFor70Percent, By.Id("txtFile"));
                         //Enter Activity Title
                         this.EnterFileAssetTitle(activityName);
                         //Enter Description
@@ -460,7 +466,7 @@ namespace Pegasus.Pages.UI_Pages
                         activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Multiple File Asset";
                         //Select Window
                         this.SelectCreateFileAssetWindow();
-                        getGraderItWordFilePathFor70Percent = (AutomationConfigurationManager.PegasusPagesTestDataPath + 
+                        getGraderItWordFilePathFor70Percent = (AutomationConfigurationManager.PegasusPagesTestDataPath +
                             UploadCompletedFilesResource.UploadCompleteFile_Page_GraderIT_Word_File_70Percent_Path).
                         Replace("file:\\", "");
                         //Upload the xls File
@@ -498,17 +504,25 @@ namespace Pegasus.Pages.UI_Pages
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
                         break;
- 
+
                     case Activity.ActivityTypeEnum.RegDiscussionTopic:
                         activityName = "Auto-" + date + "-" + randomValue + "-Non Gradable Discussion Topic";
                         //Select Window
-                        this.SelectCreateLinkAssetWindow();
+                        this.SelectCreateEtextLinkAssetWindow();
+                        //this.SelectCreateLinkAssetWindow();
                         // Enter title in discussion topic
                         this.EnterDiscussionTopicTitle(activityName);
                         //Enter discussion topic description
                         this.EnterDiscussionTopicDescription();
                         //Fill The HTML Description
                         this.FillTheHTMLDescription(newHTMLDiscription.ToString());
+                        ////Click On Add And Close Button
+                        //Click On Add And Close Button
+                        new ContentBrowserUXPage().ClickOnAddAndCloseButton();
+                        //Swith To Add Materials Popup In Course Materials tab
+                        new ContentLibraryUXPage().SwithToAddMaterialsPopupInCourseMaterials();
+                        //Click on CLose button in Add Materials popup
+                        this.CloseAddMaterialsPopupInCourseMaterials();
                         break;
                 }
                 //Store Gradable NonGradable Asset
@@ -521,6 +535,22 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage",
                 "EnterAssetDetails",
                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Close the Add Materials Poupup
+        /// </summary>
+        private void CloseAddMaterialsPopupInCourseMaterials()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "CloseAddMaterialsPopupInCourseMaterials",
+                   base.IsTakeScreenShotDuringEntryExit);
+            bool htgs = base.IsElementPresent(By.XPath(".//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button"), 10);
+            base.WaitForElement(By.XPath(".//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button"));
+            base.ClickButtonByXPath(".//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button");
+            logger.LogMethodExit("AddAssessmentPage",
+                    "CloseAddMaterialsPopupInCourseMaterials",
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -703,7 +733,7 @@ namespace Pegasus.Pages.UI_Pages
 
                     case Activity.ActivityBehavioralModesEnum.SkillBased:
                         //Create SIM5Skill Behavoiral Mode Activity
-                        this.CreateSIM5SkillBehavioralModeActivity(activityName,behavioralModeEnum);
+                        this.CreateSIM5SkillBehavioralModeActivity(activityName, behavioralModeEnum);
                         //Store Activity Details In Memory
                         this.StoreActivityDetails(activityTypeEnum, behavioralModeEnum, activityName);
                         break;
@@ -740,7 +770,7 @@ namespace Pegasus.Pages.UI_Pages
                 Guid activity = Guid.NewGuid();
                 string activityName = activity.ToString();
                 //Create SIM5 Skill Based Activity
-               this.CreateSkillBasedActivity(activityName, behavioralModeEnum);
+                this.CreateSkillBasedActivity(activityName, behavioralModeEnum);
 
             }
             catch (Exception e)
@@ -750,14 +780,14 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "CreateSIM5Activity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
-      
+
 
 
         /// <summary>
         /// Create SIM5 Skill Behavioral Mode Activity
         /// </summary>
         /// <param name="activityName">This is activityName</param>
-        private void CreateSIM5SkillBehavioralModeActivity(string activityName, 
+        private void CreateSIM5SkillBehavioralModeActivity(string activityName,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5SkillBehavioralModeActivity",
@@ -780,7 +810,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Activity Window
             this.SelectCreateActivityWindow();
             //Click On Save and Return Button
-            new RandomTopicListPage().ClickOnSaveAndReturnButton();            
+            new RandomTopicListPage().ClickOnSaveAndReturnButton();
             logger.LogMethodExit("AddAssessmentPage", "CreateSIM5SkillBehavioralModeActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -796,10 +826,10 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5SkillBasedActivity",
                   base.IsTakeScreenShotDuringEntryExit);
-            
+
             //Create Skill Based SIM5 Activity
             this.CreateSkillBasedActivity(activityName, behavioralModeEnum);
-           
+
             logger.LogMethodExit("AddAssessmentPage", "CreateSIM5SkillBasedActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -813,7 +843,7 @@ namespace Pegasus.Pages.UI_Pages
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             //Create The Activity Using Behavioral ModeType.
-            logger.LogMethodEntry("AddAssessmentPage", 
+            logger.LogMethodEntry("AddAssessmentPage",
                 "CreateTheActivityUsingBehavioralModeType",
                   base.IsTakeScreenShotDuringEntryExit);
             //Select Create Activity Window
@@ -830,14 +860,14 @@ namespace Pegasus.Pages.UI_Pages
                     //Select Doc based Behavioral Mode
                     this.SelectDocBasedBehavioralMode();
                     break;
-            }            
+            }
             //Click On Save And Continue Button
             this.ClickOnSaveAndContinueButton();
             //Select Create Random Activity
             this.SelectCreateRandomActivity();
             //Click On Add Question Link
             new RandomTopicListPage().ClickOnAddQuestionLink();
-            logger.LogMethodExit("AddAssessmentPage", 
+            logger.LogMethodExit("AddAssessmentPage",
                 "CreateTheActivityUsingBehavioralModeType",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -858,11 +888,11 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Activity Window
             this.SelectCreateActivityWindow();
             //Fill Asset name
-            this.FillAssetName(activityName);            
+            this.FillAssetName(activityName);
             //Click On Save And Continue Button
             this.ClickOnSaveAndContinueButton();
             //Click On Add Question Link
-            new RandomTopicListPage().ClickOnAddQuestionLink();            
+            new RandomTopicListPage().ClickOnAddQuestionLink();
             logger.LogMethodExit("AddAssessmentPage",
                 "CreateSkillBasedActivity",
                    base.IsTakeScreenShotDuringEntryExit);
@@ -873,14 +903,14 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
         /// <param name="behavioralModeEnum">This is behavioral Mode Type Enum. </param>
-        private void CreateSIMActivityOfBehavioralModeType(string activityName, 
+        private void CreateSIMActivityOfBehavioralModeType(string activityName,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             //Create SIM Activity Of Behavioral ModeType
             logger.LogMethodEntry("AddAssessmentPage", "CreateSIMActivityOfBehavioralModeType",
                   base.IsTakeScreenShotDuringEntryExit);
             //Create Object for ContentBrowserUXPage
-            ContentBrowserUXPage contentBrowserUXPage = new ContentBrowserUXPage();            
+            ContentBrowserUXPage contentBrowserUXPage = new ContentBrowserUXPage();
             //Create The Activity
             this.CreateTheActivityUsingBehavioralModeType(activityName, behavioralModeEnum);
             //Select the Question Type
@@ -891,7 +921,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Activity.ActivityBehavioralModesEnum.SkillBased:
                     //Search the Question
                     contentBrowserUXPage.SearchTheQuestionInSelectQuestionWindow(
-                        AddAssessmentPageResources.AddAssement_Page_Search_QuestionName); 
+                        AddAssessmentPageResources.AddAssement_Page_Search_QuestionName);
                     break;
                 case Activity.ActivityBehavioralModesEnum.DocBased:
                     Question questionName = Question.Get(
@@ -899,11 +929,11 @@ namespace Pegasus.Pages.UI_Pages
                     //Search the Question
                     new ContentBrowserUXPage().SelectQuestion(questionName.Name);
                     break;
-            }                               
+            }
             logger.LogMethodExit("AddAssessmentPage", "CreateSIMActivityOfBehavioralModeType",
                    base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Select Create Activity Window.
         /// </summary>
@@ -932,10 +962,10 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
             // Select window    
             base.SelectWindow(base.GetPageTitle);
-                base.SwitchToDefaultWindow();
+            base.SwitchToDefaultWindow();
             // Switch to iFrame 
-                base.SwitchToIFrameById(AddAssessmentPageResources.
-                    AddAssessment_Page_AssetCreation_IFrame_Id_Locator);
+            base.SwitchToIFrameById(AddAssessmentPageResources.
+                AddAssessment_Page_AssetCreation_IFrame_Id_Locator);
             logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -982,10 +1012,10 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
             // Select window    
             base.SelectWindow(base.GetPageTitle);
-                base.SwitchToDefaultWindow();
+            base.SwitchToDefaultWindow();
             // Switch to iFrame 
-                base.SwitchToIFrameById(AddAssessmentPageResources.
-                    AddAssessment_Page_EtextLinkAssetCreation_IFrame_Id_Locator);
+            base.SwitchToIFrameById(AddAssessmentPageResources.
+                AddAssessment_Page_EtextLinkAssetCreation_IFrame_Id_Locator);
             logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssetWindow",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1104,7 +1134,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Continue
             this.ClickOnSaveAndContinueButton();
             //Select Create Assignment Activity Window
-            this.SelectCreateAssignmentActivityWindow();            
+            this.SelectCreateAssignmentActivityWindow();
             //Click On Add Question Link
             new RandomTopicListPage().ClickOnAddQuestionLink();
             //Select Question From Bank Option
@@ -1112,13 +1142,13 @@ namespace Pegasus.Pages.UI_Pages
             //Get Essat Question Details From Memory
             Question fileUploadQuestion = Question.Get(Question.QuestionTypeEnum.FileUpload);
             //Select Essay Question
-            new ContentBrowserUXPage().SelectQuestion(fileUploadQuestion.Name); 
+            new ContentBrowserUXPage().SelectQuestion(fileUploadQuestion.Name);
             //Select Create Assignment Activity Window
-            this.SelectCreateAssignmentActivityWindow();       
+            this.SelectCreateAssignmentActivityWindow();
             //Check Activity Selected
             new RandomTopicListPage().WaitForQuestionToDisplay();
             //Select Create Assignment Activity Window
-            this.SelectCreateAssignmentActivityWindow();       
+            this.SelectCreateAssignmentActivityWindow();
             //Click On Save and Return Button
             new RandomTopicListPage().ClickOnSaveAndReturnButton();
             logger.LogMethodExit("AddAssessmentPage", "CreateAssignmentBehavioralModeActivity",
@@ -1276,7 +1306,7 @@ namespace Pegasus.Pages.UI_Pages
                              AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName));
                 //Fill the Activity Name in textbox
                 base.FillTextBoxById(AddAssessmentPageResources.
-                             AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName, 
+                             AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName,
                              activityTitle.ToString());
             }
             catch (Exception e)
@@ -1302,7 +1332,7 @@ namespace Pegasus.Pages.UI_Pages
                     AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator));
                 //Fill the Activity Name in textbox
                 base.FillTextBoxById(AddAssessmentPageResources.
-                    AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator, 
+                    AddAssessment_Page_DiscussionTopic_Title_TextBox_Id_Locator,
                     activityTitle.ToString());
             }
             catch (Exception e)
@@ -1492,12 +1522,13 @@ namespace Pegasus.Pages.UI_Pages
             activityDescription = "Auto-" + "Discussion Topic description entered on " + "-" + date;
             try
             {
+                bool dfgd = base.IsElementPresent(By.ClassName("cssDiscussionTextArea"), 10);
+                //base.ClearTextByClassName(AddAssessmentPageResources.
+                //    AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName);
 
-                base.ClearTextById(AddAssessmentPageResources.
-                    AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName);
+                base.ClearTextByClassName("cssDiscussionTextArea");
                 //Fill the Activity Name in textbox
-                base.FillTextBoxById(AddAssessmentPageResources.
-                    AddAssessment_Page_DiscussionTopic_Description_TextBox_ClassName, 
+                base.FillTextBoxByClassName("cssDiscussionTextArea",
                     activityDescription);
 
             }
@@ -1523,7 +1554,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                     AddAssessment_Page_EtextLinkAsset_SelectBook_Id_Locator));
                 base.SelectDropDownValueThroughIndexById(AddAssessmentPageResources.
-                    AddAssessment_Page_EtextLinkAsset_SelectBook_Id_Locator,1);
+                    AddAssessment_Page_EtextLinkAsset_SelectBook_Id_Locator, 1);
             }
             catch (Exception e)
             {
@@ -1656,7 +1687,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("AddAssessmentPage", "CreatePreTestActivity",
                   base.IsTakeScreenShotDuringEntryExit);
             //Generate Activity Name GUID
-            Guid activityName = Guid.NewGuid();            
+            Guid activityName = Guid.NewGuid();
             try
             {
                 //Select Pretest Window
@@ -1664,7 +1695,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Activity Title
                 this.EnterActivityTitle(activityName.ToString());
                 //Store PreTest Details
-                this.StoreGradableAsset(activityName.ToString(), Activity.ActivityTypeEnum.PreTest);                        
+                this.StoreGradableAsset(activityName.ToString(), Activity.ActivityTypeEnum.PreTest);
                 //Click On Save and Continue Button
                 this.ClickOnSaveAndContinueButton();
             }
@@ -1762,7 +1793,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage",
                "SelectCreateRandomActivity",
@@ -1799,7 +1830,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         /// <param name="behavioralModeEnum">This is Activity Behavioral mode type Enum.</param>
-        public void CreateSimGraderITActivity(Activity.ActivityTypeEnum 
+        public void CreateSimGraderITActivity(Activity.ActivityTypeEnum
             activityTypeEnum, Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             //Select Create Random Activity
@@ -1861,22 +1892,22 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         /// <param name="behavioralModeEnum">This is Activity Behavioral mode type Enum.</param>
         /// <param name="activityName">This is Activity Name.</param>
-        private void StoreSimGraderActivityDetails(Activity.ActivityTypeEnum activityTypeEnum, 
+        private void StoreSimGraderActivityDetails(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum, Guid activityName)
         {
             //Store Activity Details In Memory
             logger.LogMethodEntry("AddAssessmentPage",
                 "CreateSimGraderITActivity",
-                  base.IsTakeScreenShotDuringEntryExit);            
-                //Store the activity in memory
-                Activity newActivityTest = new Activity
-                {
-                    Name = activityName.ToString(),
-                    ActivityType = activityTypeEnum,
-                    ActivityBehavioralMode = behavioralModeEnum,
-                    IsCreated = true,
-                };
-                newActivityTest.StoreActivityInMemory();            
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Store the activity in memory
+            Activity newActivityTest = new Activity
+            {
+                Name = activityName.ToString(),
+                ActivityType = activityTypeEnum,
+                ActivityBehavioralMode = behavioralModeEnum,
+                IsCreated = true,
+            };
+            newActivityTest.StoreActivityInMemory();
             logger.LogMethodExit("AddAssessmentPage",
                 "CreateSimGraderITActivity",
                    base.IsTakeScreenShotDuringEntryExit);
@@ -1940,12 +1971,12 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     case Activity.ActivityTypeEnum.SIMStudyPlan2010:
                         new SIMStudyPlanDefaultUXPage().CreateSIMStudyPlanUsingSIMQuestions(
-                            activityTypeEnum, behavioralModeEnum);                        
+                            activityTypeEnum, behavioralModeEnum);
                         break;
                     case Activity.ActivityTypeEnum.SIMStudyPlan2007:
                         //Create SIM Study Plan Using 2007 SIM Questions
                         new SIMStudyPlanDefaultUXPage().CreateSIMStudyPlanUsing2007SIMQuestions(
-                            activityTypeEnum, behavioralModeEnum);                        
+                            activityTypeEnum, behavioralModeEnum);
                         break;
                 }
             }
@@ -1954,7 +1985,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("AddAssessmentPage","CreateSIMActivity",
+            logger.LogMethodExit("AddAssessmentPage", "CreateSIMActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1962,7 +1993,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Create The Instructor Gradable Activity.
         /// </summary>
         /// <param name="activityTypeEnum">This is activity type enum.</param>
-        public void CreateTheInstructorGradableActivity(Activity.ActivityTypeEnum 
+        public void CreateTheInstructorGradableActivity(Activity.ActivityTypeEnum
             activityTypeEnum)
         {
             //Create The Instructor Gradable Activity
@@ -1997,7 +2028,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreateTheInstructorGradableActivity",
                     base.IsTakeScreenShotDuringEntryExit);
@@ -2020,7 +2051,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Start and End Message
                 this.EnterStartandEndMessage();
                 //Message Save Close Button
-                this.MessageSaveCloseButton();                
+                this.MessageSaveCloseButton();
             }
             catch (Exception e)
             {
@@ -2088,14 +2119,14 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickTheActivityMessageSubTab()
         {
             //Click The Activity Message SubTab
-            logger.LogMethodEntry("AddAssessmentPage", 
+            logger.LogMethodEntry("AddAssessmentPage",
                 "ClickTheActivityMessageSubTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Create Random Activity
             this.SelectCreateRandomActivity();
             //Click on Message Tab
             this.ClickonMessageTab();
-            logger.LogMethodExit("AddAssessmentPage", 
+            logger.LogMethodExit("AddAssessmentPage",
                 "ClickTheActivityMessageSubTab",
                     base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2106,7 +2137,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickonMessageTab()
         {
             //Click on Message Tab
-            logger.LogMethodEntry("AddAssessmentPage","ClickonMessageTab",
+            logger.LogMethodEntry("AddAssessmentPage", "ClickonMessageTab",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2123,7 +2154,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("AddAssessmentPage","ClickonMessageTab",
+            logger.LogMethodExit("AddAssessmentPage", "ClickonMessageTab",
                     base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2138,7 +2169,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("AddAssessmentPage",
                 "CreateGradableActivityUsingEssayQuestion",
                 base.IsTakeScreenShotDuringEntryExit);
-            SkillBasedAssessmentPage skillBasedAssessmentPage = 
+            SkillBasedAssessmentPage skillBasedAssessmentPage =
                 new SkillBasedAssessmentPage();
             try
             {
@@ -2153,7 +2184,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the Create Random Activity window
                 this.SelectCreateRandomActivity();
                 //enter the message
-                this.EnterActivityMessage();                
+                this.EnterActivityMessage();
             }
             catch (Exception e)
             {
@@ -2178,7 +2209,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Create Random Activity window
             this.SelectCreateRandomActivity();
             //enter the message
-            this.EnterActivityMessage();           
+            this.EnterActivityMessage();
             logger.LogMethodExit("AddAssessmentPage",
                  "EnterTheMessageForActivity",
                      base.IsTakeScreenShotDuringEntryExit);
@@ -2724,25 +2755,26 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitUntilWindowLoads(base.GetPageTitle);
                 // Switch to default window lightbox
                 base.SwitchToDefaultWindow();
-                switch(lightBoxName)
+                switch (lightBoxName)
                 {
                     case "Add Link":
                     case "Add File":
                     case "Add Multiple Files":
-                    case "Add Discussion Topic":
                         getLightBoxName = base.GetInnerTextAttributeValueByClassName("boostrap-model-title");
                         break;
 
                     case "Add eText Link":
+                    case "Add Discussion Topic":
+                        bool hdfag = base.IsElementPresent(By.Id("openModalPopupHeader"), 10);
                         getLightBoxName = base.GetInnerTextAttributeValueById("openModalPopupHeader");
                         break;
 
-                    case"Add Page":
-                       string getPageTitle = base.GetPageTitle;
-                       if (getPageTitle == "Create page")
-                       {
-                           getLightBoxName= "Add Page";
-                       }
+                    case "Add Page":
+                        string getPageTitle = base.GetPageTitle;
+                        if (getPageTitle == "Create page")
+                        {
+                            getLightBoxName = "Add Page";
+                        }
                         break;
 
                     case "Add from Library":
@@ -2754,7 +2786,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Get the lightbox title based on the class name
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -2801,6 +2833,7 @@ namespace Pegasus.Pages.UI_Pages
                             return getActivityName;
                         }
                     }
+                    //Click on Next icon to go to next page in COurse Materials tab
                     IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
                     base.ClickByJavaScriptExecutor(getNextIcon);
                 }
@@ -2830,20 +2863,21 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrameById("ifrmCoursePreview");
                 int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
 
-                    for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
-                        rowCount++)
+                for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
+                    rowCount++)
+                {
+                    //Gets the Activity Name
+                    getActivityName = base.GetElementTextByXPath
+                        (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                    if (getActivityName.Equals(activityName))
                     {
-                        //Gets the Activity Name
-                        getActivityName = base.GetElementTextByXPath
-                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
-                        if (getActivityName.Equals(activityName))
-                        {
-                            IWebElement getAssetTitle = base.GetWebElementPropertiesByXPath(string.Format
-                                ("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a", rowCount));
-                            base.PerformMouseClickAction(getAssetTitle);
-                            break;
-                        }
+                        //Click on the Activity / Folder name 
+                        IWebElement getAssetTitle = base.GetWebElementPropertiesByXPath(string.Format
+                            ("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a", rowCount));
+                        base.PerformMouseClickAction(getAssetTitle);
+                        break;
                     }
+                }
             }
             catch (Exception e)
             {

@@ -839,10 +839,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// 
+        /// Click on the button in Add From Library Lightbox
         /// </summary>
-        /// <param name="p0"></param>
-        /// <param name="p1"></param>
+        /// <param name="p0">This is the Button Name.</param>
         [When(@"I click on ""(.*)"" button in 'Add from Library' lightbox")]
         public void ClickOnButtonInAddFromLibraryLightbox(string buttonName)
         {

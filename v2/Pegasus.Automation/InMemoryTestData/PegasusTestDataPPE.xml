@@ -369,7 +369,7 @@
 		<Course>
 			<Name>Dependent_MIL_PPE</Name>
 			<CourseType>MyItLabInstructorCourse</CourseType>
-			<InstructorCourseId>CRSKLES-10044234</InstructorCourseId>
+			<InstructorCourseId>CRSKLSG-241539</InstructorCourseId>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
 			<IsPublished>true</IsPublished>
@@ -1149,6 +1149,24 @@ the UI deleted or refreshed.-->
 			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
 			<IsCreated>true</IsCreated>
 		</Activity>
+    <Activity>
+      <Name>Auto-2017/03/03-de9a37ef-Folder</Name>
+      <ActivityType>RegFolderAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegEtextLinkAsset</Name>
+      <ActivityType>RegEtextLinkAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegPageAsset</Name>
+      <ActivityType>RegPageAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
 	</ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>
