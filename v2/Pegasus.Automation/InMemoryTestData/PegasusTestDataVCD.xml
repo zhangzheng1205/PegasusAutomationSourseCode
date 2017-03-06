@@ -1167,6 +1167,12 @@ the UI deleted or refreshed.-->
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>RegLinkAsset</Name>
+      <ActivityType>RegLinkAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
 	</ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>
