@@ -345,4 +345,19 @@
   <data name="CourseContentUXPage_CSShowHideCmenuOption_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='referenceId8']/table/tbody/tr/td/div[2]/a[3]</value>
   </data>
+  <data name="ContentLibraryUX_Page_AddMaterialsLightBox_ActivityType_ColumnCount_Count_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td</value>
+  </data>
+  <data name="ContentLibraryUX_Page_AddMaterialsLightBox_ActivityType_Count_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr</value>
+  </data>
+  <data name="ContentLibraryUX_Page_AddMaterialsLightBox_AssetType_Count_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_ContentList']/tbody/tr[{0}]/td[{1}]/div</value>
+  </data>
+  <data name="ContentLibraryUX_Page_CourseMaterials_IFrame_ID_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="CourseContentUXPage_AttributeType_Xpath_Locator" xml:space="preserve">
+    <value>title</value>
+  </data>
 </root>

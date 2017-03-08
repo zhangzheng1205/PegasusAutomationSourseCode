@@ -351,4 +351,46 @@
   <data name="AddAsessment_Page_Folder_CreateButton_Id_Locator" xml:space="preserve">
     <value>imgBtnSave_Update</value>
   </data>
+  <data name="AddAssessment_Page_CourseMaterials_AddNote__ClassName_Locator" xml:space="preserve">
+    <value>modal-title</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterials_AddPageTitle" xml:space="preserve">
+    <value>Create page</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterials_AddPage_LightBox_Name" xml:space="preserve">
+    <value>Add Page</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterials_eTextandDT__ID_Locator" xml:space="preserve">
+    <value>openModalPopupHeader</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterials_LinkAndFile__ID_Locator" xml:space="preserve">
+    <value>boostrap-model-title</value>
+  </data>
+  <data name="AddAsessment_Page_AddCourseMaterials_CloseButton_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button</value>
+  </data>
+  <data name="AddAsessment_Page_Close_DiscussionTopic_Popup_PartialLinkText_Locator" xml:space="preserve">
+    <value>Save and Close</value>
+  </data>
+  <data name="AddAsessment_Page_DiscussionTopic_HTML_Resource_ID_Locator" xml:space="preserve">
+    <value>txtHTMLEditor_textarea</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterialstab_ActivityCount_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterialstab_ActivityName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterialstab_ActivitySelect_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterialstab_NextPage_Link_XPath_Locator" xml:space="preserve">
+    <value>rptCoursePreview$next</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterials_Iframe_ID_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="AddAssessment_Page_CourseMaterials_WindowName" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
 </root>

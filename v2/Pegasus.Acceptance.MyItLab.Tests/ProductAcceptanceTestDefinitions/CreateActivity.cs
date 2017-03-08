@@ -721,11 +721,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I configure the 'Grades' preference")]
         public void ConfigureGradesPreferenceSAMActivity()
         {
-            Logger.LogMethodEntry("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CreateActivity", 
+                "ConfigureGradesPreferenceSAMActivity", 
+                base.IsTakeScreenShotDuringEntryExit);
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
             // Configure Grades
             addAssessmentPage.ConfigureGradesForSamActivity();
-            Logger.LogMethodExit("CreateActivity", "ConfigureGradesPreferenceSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CreateActivity", 
+                "ConfigureGradesPreferenceSAMActivity", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -734,11 +738,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I add 'HelpLinks'")]
         public void AddHelpLinksSAMActivity()
         {
-            Logger.LogMethodEntry("CreateActivity", "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CreateActivity", 
+                "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
             //Enter HelpLinks
             addAssessmentPage.AddHelpLinks();
-            Logger.LogMethodExit("CreateActivity", "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CreateActivity", 
+                "AddHelpLinksSAMActivity", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -748,7 +754,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="questionType">This is Type of question to be Added.</param>
         /// <param name="sectionNumber">This is the Section Number.</param>
         [Then(@"I add '(.*)' questions of type ""(.*)"" at Section ""(.*)""")]
-        public void AddQuestionsToASection(int numberOfQuestions, string questionType, string sectionNumber)
+        public void AddQuestionsToASection(int numberOfQuestions, 
+            string questionType, string sectionNumber)
         {
             // Add Questions To A Section
             Logger.LogMethodEntry("CreateActivity", "AddQuestionsToASection",
@@ -858,9 +865,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I click on 'Folder' option")]
         public void ClickCreateFolder()
         {
-            Logger.LogMethodEntry("CreateActivity", "ClickCreateFolder", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CreateActivity", "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
             new CoursePreviewUXPage().ClickCreateFolder();
-            Logger.LogMethodExit("CreateActivity", "ClickCreateFolder", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CreateActivity", "ClickCreateFolder", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -869,9 +878,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I click on 'Materials' option")]
         public void ClickMaterialsButton()
         {
-            Logger.LogMethodEntry("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CreateActivity", "ClickMaterialsButton", 
+                base.IsTakeScreenShotDuringEntryExit);
             new CoursePreviewUXPage().ClickCreateMaterials();
-            Logger.LogMethodExit("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CreateActivity", "ClickMaterialsButton", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -998,12 +1009,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityType">This is activity type enum.</param>
         /// <param name="pageTitle">This is page title.</param>
         [When(@"I click 'Copy' of ""(.*)"" in ""(.*)"" tab")]
-        public void ClickCopyOptionManageCourseMaterial(Activity.ActivityTypeEnum activityType, string pageTitle)
+        public void ClickCopyOptionManageCourseMaterial(Activity.ActivityTypeEnum activityType, 
+            string pageTitle)
         {
-            Logger.LogMethodEntry("CreateActivity", "ClickCopyOptionManageCourseMaterial",
+            Logger.LogMethodEntry("CreateActivity", 
+                "ClickCopyOptionManageCourseMaterial",
                 base.IsTakeScreenShotDuringEntryExit);
             new CoursePreviewUXPage().ClickCopyOption(activityType, pageTitle);
-            Logger.LogMethodExit("CreateActivity", "ClickCopyOptionManageCourseMaterial",
+            Logger.LogMethodExit("CreateActivity", 
+                "ClickCopyOptionManageCourseMaterial",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1043,7 +1057,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="tabName">This is page name.</param>
         [When(@"I click on 'Assign' button for ""(.*)"" in ""(.*)"" tab")]
-        public void AssignAssetInManageCourse(Activity.ActivityTypeEnum activityType, string tabName)
+        public void AssignAssetInManageCourse(Activity.ActivityTypeEnum activityType, 
+            string tabName)
         {
             Logger.LogMethodEntry("CreateActivity", "AssignAssetInManageCourse",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1054,7 +1069,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
 
         [When(@"I click on 'Delete' button for ""(.*)"" in ""(.*)"" tab")]
-        public void ClickOnButtonForInTab(Activity.ActivityTypeEnum activityType, string pageTitle)
+        public void ClickOnButtonForInTab(Activity.ActivityTypeEnum activityType, 
+            string pageTitle)
         {
             Logger.LogMethodEntry("CreateActivity", "AssignAssetInManageCourse",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1070,7 +1086,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityType"></param>
         /// <param name="pageName"></param>
         [Then(@"I should see ""(.*)"" status for ""(.*)"" in ""(.*)"" tab")]
-        public void ValidateAssignmentStatus(string status, Activity.ActivityTypeEnum activityType, string pageName)
+        public void ValidateAssignmentStatus(string status, Activity.ActivityTypeEnum activityType, 
+            string pageName)
         {
             Logger.LogMethodEntry("CreateActivity", "ValidateAssignmentStatus",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -1133,7 +1150,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityTypeEnum">This is activity type enum.</param>
         /// <param name="pageName">This is page name.</param>
         [Then(@"I should be displayed with ""(.*)"" in ""(.*)"" frame")]
-        public void ValidateTheDisplayOfAsset(Activity.ActivityTypeEnum activityType, string pageName)
+        public void ValidateTheDisplayOfAsset(Activity.ActivityTypeEnum activityType, 
+            string pageName)
         {
             Logger.LogMethodEntry("CreateActivity", "ValidateTheDisplayOfAsset",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -1198,7 +1216,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     new CoursePreviewUXPage().
                     GetGradeAndActivityStatus(gradeScore, activityName, pageName)));
 
-            Logger.LogMethodExit("CreateActivity", "ValidateTheGradesDisplayInManageCourseWork",
+            Logger.LogMethodExit("CreateActivity", 
+                "ValidateTheGradesDisplayInManageCourseWork",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1211,14 +1230,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [When(@"I launch ""(.*)""")]
         public void ClickAssetLink(Activity.ActivityTypeEnum activityType)
         {
-            Logger.LogMethodEntry("CreateActivity", "ValidateDisplayOfActivityStatus",
+            Logger.LogMethodEntry("CreateActivity", 
+                "ValidateDisplayOfActivityStatus",
       base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityType);
             string activityName = activity.Name.ToString();
             //Launch the asset by click on asset title
             new CoursePreviewUXPage().
                 ClickAssetTitle(activityName);
-            Logger.LogMethodExit("CreateActivity", "ValidateDisplayOfActivityStatus",
+            Logger.LogMethodExit("CreateActivity", 
+                "ValidateDisplayOfActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 

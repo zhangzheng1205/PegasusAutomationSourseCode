@@ -494,12 +494,14 @@ namespace Pegasus.Pages.UI_Pages
                         //Enter Description
                         this.EnterPageAssetDescription();
                         //Fill The HTML Description
-                        this.FillTheHTMLDescription(newHTMLDiscription.ToString());
-
+                        this.FillTheHTMLDescription(activityTypeEnum, 
+                            newHTMLDiscription.ToString());
                         // Click add button
                         base.WaitForElement(By.Id(AddAssessmentPageResources.
                             AddAsessment_Page_PageAsset_AddButton_Id_Locator));
-                        IWebElement getElement = base.GetWebElementPropertiesById("_ctl0__ctl0_phBody_PageContent_btnSave_Return");
+                        IWebElement getElement = base.GetWebElementPropertiesById(
+                            AddAssessmentPageResources.
+                            AddAsessment_Page_PageAsset_AddButton_Id_Locator);
                         base.PerformMouseClickAction(getElement);
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
@@ -515,8 +517,13 @@ namespace Pegasus.Pages.UI_Pages
                         //Enter discussion topic description
                         this.EnterDiscussionTopicDescription();
                         //Fill The HTML Description
-                        this.FillTheHTMLDescription(newHTMLDiscription.ToString());
-                        ////Click On Add And Close Button
+                        this.FillTheHTMLDescription(activityTypeEnum, newHTMLDiscription.ToString());
+                        ////Click On Save And Close Button
+                        base.WaitForElement(By.PartialLinkText(
+                            AddAssessmentPageResources.
+                            AddAsessment_Page_Close_DiscussionTopic_Popup_PartialLinkText_Locator));
+                        base.ClickButtonByPartialLinkText(AddAssessmentPageResources.
+                            AddAsessment_Page_Close_DiscussionTopic_Popup_PartialLinkText_Locator);
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
                         //Swith To Add Materials Popup In Course Materials tab
@@ -545,9 +552,12 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("AddAssessmentPage",
                 "CloseAddMaterialsPopupInCourseMaterials",
                    base.IsTakeScreenShotDuringEntryExit);
-            bool htgs = base.IsElementPresent(By.XPath(".//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button"), 10);
-            base.WaitForElement(By.XPath(".//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button"));
-            base.ClickButtonByXPath(".//*[@id='_ctl0_InnerPageContent_ucAddContentPullDownMenu_DivAddContMenu']/div[3]/button");
+            //Wait for Close button to load
+            base.WaitForElement(By.XPath(AddAssessmentPageResources.
+                            AddAsessment_Page_AddCourseMaterials_CloseButton_XPath_Locator));
+            //Click on CLose button
+            base.ClickButtonByXPath(AddAssessmentPageResources.
+                            AddAsessment_Page_AddCourseMaterials_CloseButton_XPath_Locator);
             logger.LogMethodExit("AddAssessmentPage",
                     "CloseAddMaterialsPopupInCourseMaterials",
                        base.IsTakeScreenShotDuringEntryExit);
@@ -557,7 +567,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Fill The HTML Description.
         /// </summary>
         /// <param name="newHTMLDiscription">This is HTML Description.</param>
-        private void FillTheHTMLDescription(string newHTMLDiscription)
+        private void FillTheHTMLDescription(Activity.ActivityTypeEnum activityTypeEnum, string newHTMLDiscription)
         {
             //Fill The HTML Description
             logger.LogMethodEntry("PegasusHTMLUXPage", "FillTheHTMLDescription",
@@ -565,7 +575,6 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Element
             base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator));
-
             // Click on ShowHTML button
             base.PerformFocusOnElementActionById(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator);
@@ -575,14 +584,28 @@ namespace Pegasus.Pages.UI_Pages
             //Click the sourse link
             base.PerformClickAndHoldAction(getHTMLSourceButton);
             base.PerformDoubleClickAction(getHTMLSourceButton);
-            //Wait For HTML Editor
-            base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
+            switch(activityTypeEnum)
+            {
+                case Activity.ActivityTypeEnum.RegPageAsset:
+                    //Wait For HTML Editor to load in Page asset create window
+                    base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator));
-            // Fill Description text in HTMLEditor textbox
-            base.FillTextBoxById(PegasusHTMLUXPageResource.
-                PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator,
-                newHTMLDiscription.ToString());
-            base.SwitchToDefaultPageContent();
+                // Fill Description text in HTMLEditor textbox
+                base.FillTextBoxById(PegasusHTMLUXPageResource.
+                    PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator,
+                    newHTMLDiscription.ToString());
+                break;
+
+                case Activity.ActivityTypeEnum.RegDiscussionTopic:
+                //Wait For HTML Editor to load in DiscussionTopic create window
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAsessment_Page_DiscussionTopic_HTML_Resource_ID_Locator));
+                base.FillTextBoxById(AddAssessmentPageResources.
+                            AddAsessment_Page_DiscussionTopic_HTML_Resource_ID_Locator,
+                    newHTMLDiscription.ToString());
+                break;
+            }
+            base.SwitchToDefaultPageContent();            
             logger.LogMethodExit("PegasusHTMLUXPage", "FillTheHTMLDescription",
                      base.IsTakeScreenShotDuringEntryExit);
         }
@@ -2760,30 +2783,42 @@ namespace Pegasus.Pages.UI_Pages
                     case "Add Link":
                     case "Add File":
                     case "Add Multiple Files":
-                        getLightBoxName = base.GetInnerTextAttributeValueByClassName("boostrap-model-title");
+                                 base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_LinkAndFile__ID_Locator));
+                        getLightBoxName = base.
+                            GetInnerTextAttributeValueByClassName(AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_LinkAndFile__ID_Locator);
                         break;
 
                     case "Add eText Link":
                     case "Add Discussion Topic":
-                        bool hdfag = base.IsElementPresent(By.Id("openModalPopupHeader"), 10);
-                        getLightBoxName = base.GetInnerTextAttributeValueById("openModalPopupHeader");
+                        base.WaitForElement(By.Id(AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_eTextandDT__ID_Locator));
+                        getLightBoxName = base.
+                            GetInnerTextAttributeValueById(AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_eTextandDT__ID_Locator);
                         break;
 
                     case "Add Page":
                         string getPageTitle = base.GetPageTitle;
-                        if (getPageTitle == "Create page")
+                        if (getPageTitle == AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_AddPageTitle) 
                         {
-                            getLightBoxName = "Add Page";
+                            getLightBoxName = AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_AddPage_LightBox_Name;
                         }
                         break;
 
                     case "Add from Library":
                     case "Note":
-                        getLightBoxName = base.GetInnerTextAttributeValueByClassName("modal-title");
+                        base.WaitForElement(By.ClassName(AddAssessmentPageResources.
+                           AddAssessment_Page_CourseMaterials_AddNote__ClassName_Locator));
+                        // Get the lightbox title based on the class name
+                        getLightBoxName = base.GetInnerTextAttributeValueByClassName
+                            (AddAssessmentPageResources.
+                            AddAssessment_Page_CourseMaterials_AddNote__ClassName_Locator);
                         break;
-                }
-
-                // Get the lightbox title based on the class name
+                }               
 
             }
             catch (Exception e)
@@ -2797,7 +2832,7 @@ namespace Pegasus.Pages.UI_Pages
 
 
         /// <summary>
-        /// Get lightbox title
+        /// Get Activity name in Course Materials tab
         /// </summary>
         /// <returns>Return lightbox name.</returns>
         public string GetActivityName(string activityName)
@@ -2807,34 +2842,41 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
-                base.WaitUntilWindowLoads("Course Materials");
-                base.SelectWindow("Course Materials");
-                base.SwitchToIFrameById("ifrmCoursePreview");
+                base.WaitUntilWindowLoads(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterials_WindowName);
+                base.SelectWindow(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterials_WindowName);
+                base.SwitchToIFrameById(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterials_Iframe_ID_Locator);
                 // Check pagination existance
                 int pageCount = new CoursePreviewUXPage().CheckPaginationStatus();
-                //Get the ACtivity count in Course Materials tab
-                int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
-
-                //string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[4]").Trim();
-                //string getTotalPageCount = getPageCountDetails.Substring(3);
-                //int pageCount = Convert.ToInt32(getTotalPageCount);
+                //Get the Activity count in Course Materials tab
+                int getActivityCount = base.GetElementCountByXPath(
+                    AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterialstab_ActivityCount_XPath_Locator);   
                 for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
                 {
                     for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
                         rowCount++)
                     {
-                        //Gets the Activity Name
+                        //Fetch the Activity Name
                         getActivityName = base.GetElementTextByXPath
-                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                            (string.Format(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterialstab_ActivityName_XPath_Locator,                           
+                             rowCount)).Trim();
                         if (getActivityName.Equals(activityName))
                         {
                             getActivityName = base.GetElementTextByXPath
-                            (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                            (string.Format(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterialstab_ActivityName_XPath_Locator,
+                    rowCount)).Trim();
                             return getActivityName;
                         }
                     }
-                    //Click on Next icon to go to next page in COurse Materials tab
-                    IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                    //Click on Next icon to go to next page in Course Materials tab
+                    IWebElement getNextIcon = base.
+                        GetWebElementPropertiesById(AddAssessmentPageResources.
+                        AddAssessment_Page_CourseMaterialstab_NextPage_Link_XPath_Locator);
                     base.ClickByJavaScriptExecutor(getNextIcon);
                 }
             }
@@ -2858,22 +2900,33 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
-                base.WaitUntilWindowLoads("Course Materials");
-                base.SelectWindow("Course Materials");
-                base.SwitchToIFrameById("ifrmCoursePreview");
-                int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
+                //Select Course Materials window
+                base.WaitUntilWindowLoads(AddAssessmentPageResources.
+                     AddAssessment_Page_CourseMaterials_WindowName);
+                base.SelectWindow(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterials_WindowName);
+                //Switch to Iframe
+                base.SwitchToIFrameById(AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterials_Iframe_ID_Locator);
+                int getActivityCount = base.GetElementCountByXPath(
+                    AddAssessmentPageResources.
+                    AddAssessment_Page_CourseMaterialstab_ActivityCount_XPath_Locator);
 
                 for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
                     rowCount++)
                 {
                     //Gets the Activity Name
                     getActivityName = base.GetElementTextByXPath
-                        (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
+                        (string.Format(AddAssessmentPageResources.
+                        AddAssessment_Page_CourseMaterialstab_ActivityName_XPath_Locator,
+                        rowCount)).Trim();
                     if (getActivityName.Equals(activityName))
                     {
                         //Click on the Activity / Folder name 
-                        IWebElement getAssetTitle = base.GetWebElementPropertiesByXPath(string.Format
-                            ("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a", rowCount));
+                        IWebElement getAssetTitle = base.GetWebElementPropertiesByXPath(
+                            string.Format(AddAssessmentPageResources.
+                        AddAssessment_Page_CourseMaterialstab_ActivitySelect_XPath_Locator
+                            , rowCount));
                         base.PerformMouseClickAction(getAssetTitle);
                         break;
                     }

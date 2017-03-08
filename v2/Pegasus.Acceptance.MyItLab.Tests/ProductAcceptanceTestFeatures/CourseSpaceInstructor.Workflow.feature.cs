@@ -992,8 +992,11 @@ testRunner.Then("I should be on \"Add Discussion Topic\" lightbox", ((string)(nu
 #line 390
 testRunner.When("I create \"RegDiscussionTopic\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 391
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
+                    "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 392
+testRunner.And("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 393
 testRunner.Then("I should be displayed with \"RegDiscussionTopic\" in \'Manage Course Materials\' fram" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -1006,22 +1009,22 @@ testRunner.Then("I should be displayed with \"RegDiscussionTopic\" in \'Manage C
         public virtual void ReorderTheAssetsInsideTheFolderInCourseMaterialsTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reorder the assets inside the folder in Course materials tab", ((string[])(null)));
-#line 397
-this.ScenarioSetup(scenarioInfo);
 #line 398
+this.ScenarioSetup(scenarioInfo);
+#line 399
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 399
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 400
-testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 401
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 402
-testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 403
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 404
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 405
 testRunner.And("I reorder \"RegLinkAsset\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1033,22 +1036,22 @@ testRunner.And("I reorder \"RegLinkAsset\"", ((string)(null)), ((TechTalk.SpecFl
         public virtual void PreviewTheAssetsInFolder()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Preview the assets in folder", ((string[])(null)));
-#line 409
-this.ScenarioSetup(scenarioInfo);
 #line 410
+this.ScenarioSetup(scenarioInfo);
+#line 411
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 411
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 412
-testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 413
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 414
-testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 415
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 416
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 417
 testRunner.And("I click on \"Preview\" cmenu option of \"RegLinkAsset\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1060,25 +1063,25 @@ testRunner.And("I click on \"Preview\" cmenu option of \"RegLinkAsset\" asset", 
         public virtual void SearchAssetInCourseMaterialsAndShowHideAsCsSmsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset in CourseMaterials and Show/Hide as CsSmsInstructor", ((string[])(null)));
-#line 424
-this.ScenarioSetup(scenarioInfo);
 #line 425
+this.ScenarioSetup(scenarioInfo);
+#line 426
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 426
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 427
-testRunner.And("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 428
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 429
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 430
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 431
 testRunner.Then("I should be displayed with \"RegLinkAsset\" in Manage Course Materials frame of \"Co" +
                     "urse Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 431
-testRunner.When("I click \"Show\" of \"RegLinkAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 432
+testRunner.When("I click \"Show\" of \"RegLinkAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 433
 testRunner.Then("I should see \"RegLinkAsset\" with \"Show\" status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1090,27 +1093,27 @@ testRunner.Then("I should see \"RegLinkAsset\" with \"Show\" status", ((string)(
         public virtual void SearchAssetInCourseMaterialsAndCopyPasteAsCsSmsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset in CourseMaterials and Copy paste as CsSmsInstructor", ((string[])(null)));
-#line 440
-this.ScenarioSetup(scenarioInfo);
 #line 441
+this.ScenarioSetup(scenarioInfo);
+#line 442
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 442
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 443
-testRunner.And("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 444
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 445
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 446
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 447
 testRunner.Then("I should be displayed with \"RegPageAsset\" in Manage Course Materials frame of \"Co" +
                     "urse Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 447
-testRunner.When("I click \'Copy\' of \"RegPageAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 448
-testRunner.Then("I should be displayed with count \"1\" in Paste button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click \'Copy\' of \"RegPageAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 449
+testRunner.Then("I should be displayed with count \"1\" in Paste button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 450
 testRunner.When("I click on \'Paste\' button and I select \"Paste at Bottom\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -1122,25 +1125,25 @@ testRunner.When("I click on \'Paste\' button and I select \"Paste at Bottom\" op
         public virtual void SearchAssetInCourseMaterialsAndAssignAsCsSmsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search asset in CourseMaterials and Assign as CsSmsInstructor", ((string[])(null)));
-#line 457
-this.ScenarioSetup(scenarioInfo);
 #line 458
+this.ScenarioSetup(scenarioInfo);
+#line 459
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 459
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 460
-testRunner.And("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 461
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 462
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 463
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 464
 testRunner.Then("I should be displayed with \"RegLinkAsset\" in Manage Course Materials frame of \"Co" +
                     "urse Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 464
-testRunner.When("I click on \'Assign\' button for \"RegLinkAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 465
+testRunner.When("I click on \'Assign\' button for \"RegLinkAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 466
 testRunner.Then("I should see \"Assigned\" status for \"RegLinkAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1152,27 +1155,27 @@ testRunner.Then("I should see \"Assigned\" status for \"RegLinkAsset\" in \"Cour
         public virtual void DeleteAssetUsingDeleteOptionInCourseMaterialsAsCsSmsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete asset using Delete option in Course Materials as CsSmsInstructor", ((string[])(null)));
-#line 473
-this.ScenarioSetup(scenarioInfo);
 #line 474
+this.ScenarioSetup(scenarioInfo);
+#line 475
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 475
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 476
-testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 477
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 478
-testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 479
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 480
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 481
 testRunner.Then("I should be displayed with \"RegEtextLinkAsset\" in Manage Course Materials frame o" +
                     "f \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 481
-testRunner.When("I click on \'Delete\' button for \"RegPageAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 482
+testRunner.When("I click on \'Delete\' button for \"RegPageAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 483
 testRunner.Then("I should see \"Items deleted successfully.\" message in \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1184,24 +1187,24 @@ testRunner.Then("I should see \"Items deleted successfully.\" message in \"Cours
         public virtual void AddNoteInCourseMaterialsAsCsSmsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add note in CourseMaterials as CsSmsInstructor", ((string[])(null)));
-#line 490
-this.ScenarioSetup(scenarioInfo);
 #line 491
+this.ScenarioSetup(scenarioInfo);
+#line 492
 testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 492
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 493
-testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 494
-testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on \"Add from Library\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 495
-testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 496
-testRunner.When("I click on \'Note\' icon in \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 497
-testRunner.Then("I should be on \"Note\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on \'Note\' icon in \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 498
+testRunner.Then("I should be on \"Note\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 499
 testRunner.When("I click on \'Edit\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();

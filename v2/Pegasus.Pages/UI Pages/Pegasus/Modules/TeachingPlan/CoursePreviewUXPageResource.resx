@@ -270,4 +270,73 @@
   <data name="CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr</value>
   </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_CreateMaterials_Button_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='btnnextgen btnnextgen-primary MarginLeft6']</value>
+  </data>
+  <data name="CoursePreviewUX_Page_CourseMaterials_ReturnToCourseMaterials_XPath_Locator" xml:space="preserve">
+    <value>//button[@class='btnnextgen btnnextgen-default']</value>
+  </data>
+  <data name="CoursePreviewUXPage_Action_Successful_Classname_Locator" xml:space="preserve">
+    <value>messagesucessfont</value>
+  </data>
+  <data name="CoursePreviewUXPage_Activity_Copy_XPath_Locator" xml:space="preserve">
+    <value>aCopy</value>
+  </data>
+  <data name="CoursePreviewUXPage_Activity_ExpectedStatus" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div</value>
+  </data>
+  <data name="CoursePreviewUXPage_ActualActivityStatus" xml:space="preserve">
+    <value>CV_grayedTxt</value>
+  </data>
+  <data name="CoursePreviewUXPage_AssignActivity_button_ID_Locator" xml:space="preserve">
+    <value>imgAssign</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterials_alertPopup_Classname_Locator" xml:space="preserve">
+    <value>alert</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterials_alertPopup_OKButton_ID_Locator" xml:space="preserve">
+    <value>imgOk</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_ActivityCopiedCount_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblcount</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_ClickNoteOption_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='greyTxt CMPopupNote']</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_EditNoteOption_XPath_Locator" xml:space="preserve">
+    <value>//button[@class='btnnextgen btnnextgen-primary PageAddCss']</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_PasteAtBottom_XPath_Locator" xml:space="preserve">
+    <value>//table[@id ='tbldivMenu']/tbody/tr[4]/td</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_PasteAtTop_XPath_Locator" xml:space="preserve">
+    <value>//table[@id = 'tbldivMenu']/tbody/tr[1]/td</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_PasteButton_Id_Locator" xml:space="preserve">
+    <value>imgPaste</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_SelectPasteButton_Id_Locator" xml:space="preserve">
+    <value>tbldivMenu</value>
+  </data>
+  <data name="CoursePreviewUXPage_GetActivityStatus" xml:space="preserve">
+    <value>CV_composenew1</value>
+  </data>
+  <data name="CoursePreviewUXPage_GetActivityStatus_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="CoursePreviewUXPage_GetShowStatus_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[3]/span</value>
+  </data>
+  <data name="CoursePreviewUXPage_OpenActivity_CMenu_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img</value>
+  </data>
+  <data name="CoursePreviewUXPage_SelectActivity_Checkbox_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]</value>
+  </data>
+  <data name="CoursePreviewUXPage_SelectActivity_Delete_button_ID_Locator" xml:space="preserve">
+    <value>imgRemove</value>
+  </data>
+  <data name="CoursePreviewUXPage_ShowLink_XPath_Locator" xml:space="preserve">
+    <value>//span[@class='opthide PaddingLeft5']</value>
+  </data>
 </root>

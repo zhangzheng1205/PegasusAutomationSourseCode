@@ -388,7 +388,8 @@ When I click on 'Materials' option
 And I click on the "Add Discussion Topic" asset type
 Then I should be on "Add Discussion Topic" lightbox
 When I create "RegDiscussionTopic" activity
-When I enter into "RegFolderAsset" folder
+And I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+And I enter into "RegFolderAsset" folder
 Then I should be displayed with "RegDiscussionTopic" in 'Manage Course Materials' frame
 
 #Purpose: Re-order the assets inside new folder in Course materials tab
