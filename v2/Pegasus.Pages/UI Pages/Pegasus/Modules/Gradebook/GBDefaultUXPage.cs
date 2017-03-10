@@ -897,7 +897,7 @@ namespace Pegasus.Pages.UI_Pages
                         base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToIFrameById(GBDefaultUXPageResource.
                 GBDefaultUXPage_Grades_Frame_ID_Locator);
-            string getActivityName = string.Empty;
+            string actualActivityName = string.Empty;
             base.WaitForElement(By.XPath(GBDefaultUXPageResource.
                 GBDefaultUXPage_StudentGrades_ActivityCount_XPath_Locator));
             //Get the Activity count in Grades tab
@@ -906,9 +906,10 @@ namespace Pegasus.Pages.UI_Pages
             for (int i = 1; i <= getActivityCount; i++)
             {
                 //Get the Activity name in Grades tab
-                getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
+                string getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
                     GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
-                if (getActivityName == activityName)
+                 actualActivityName = getActivityName.TrimEnd();
+                if (actualActivityName == activityName)
                 {
                     break;
                 }
@@ -917,7 +918,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBDefaultUXPage",
                          "IsActivityDisplayedInGradesTab",
                         base.IsTakeScreenShotDuringEntryExit);
-            return getActivityName;
+            return actualActivityName;
         }
 
         /// <summary>

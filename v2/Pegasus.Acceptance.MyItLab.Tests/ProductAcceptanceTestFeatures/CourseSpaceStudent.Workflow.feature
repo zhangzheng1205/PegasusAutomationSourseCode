@@ -792,17 +792,203 @@ Then I should be displayed with status "Not viewed" for "RegLinkAsset"
 When I launch "RegLinkAsset"
 Then I should be displayed with status "Viewed" for "RegLinkAsset" 
 
-
-Scenario: Submit GraderIT HomeWork
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
+#--------------------------------------------------------------------------------------------------------------------------
+										#Submit WORD Grader Activity having 0, 70, 100 scores#
+#--------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting GraderIT Word activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Word activity with 0 score
 When I navigate to "Course Materials" tab
-When I launch "RegWordGrader0"
+When I launch "RegWordGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Word file for 0%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Not passed" for "RegWordGraderActivity" 
+When I click on "view submission" cmenu option of "RegWordGraderActivity" as "CsSmsStudent" user
+Then I should be on the "View Submission" page
+And I should see "RegWordGraderActivity" activity name
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+And I should see "RegWordGraderActivity" activity in Grades tab with "GraderIT0Score" grade
+
+#Purpose : Submitting GraderIT Word activity and Student scoring a 70%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Word activity with 70 score
+When I navigate to "Course Materials" tab
+When I launch "RegWordGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Word file for 70%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegWordGraderActivity" 
+And I should see "RegWordGraderActivity" activity in Grades tab with "GraderIT70Score" grade
+
+#Purpose : Submitting GraderIT Word activity and Student scoring a 100%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Word activity with 100 score
+When I navigate to "Course Materials" tab
+When I launch "RegWordGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Word file for 100%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegWordGraderActivity" 
+And I should see "RegWordGraderActivity" activity in Grades tab with "GraderIT100Score" grade
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Submit EXCEL Grader Activity having 0, 70, 100 scores#
+#--------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting GraderIT Excel activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Excel activity with 0 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Excel file for 0%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Not passed" for "RegExcelGraderActivity" 
+And I should see "RegExcelGraderActivity" activity in Grades tab with "GraderIT0Score" grade
+
+#Purpose : Submitting GraderIT Excel activity and Student scoring a 70%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Excel activity with 70 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Excel file for 70%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegExcelGraderActivity" 
+And I should see "RegExcelGraderActivity" activity in Grades tab with "GraderIT70Score" grade
+
+#Purpose : Submitting GraderIT Excel activity and Student scoring a 100%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Excel activity with 100 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Excel file for 100%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegExcelGraderActivity" 
+And I should see "RegExcelGraderActivity" activity in Grades tab with "GraderIT100Score" grade
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Submit ACCESS Grader Activity having 0, 70, 100 scores#
+#--------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting GraderIT Access activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Access activity with 0 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Access file for 0%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Not passed" for "RegAccessGraderActivity" 
+And I should see "RegAccessGraderActivity" activity in Grades tab with "GraderIT0Score" grade
+
+#Purpose : Submitting GraderIT Access activity and Student scoring a 70%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Access activity with 70 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
 Then I should see a pop up with "Download Materials" and "Choose File" 
 When I click on the button "Download Materials" 
 And I click on the button "Download All Files" 
@@ -817,5 +1003,108 @@ When I click on the button "Submit for Grading"
 Then I should see success message on successful submission
 When I click on the button "Close Assignment"
 Then I should be on the "Course Materials" page
-Then I should be displayed with status "Not passed" for "RegWordGrader0" 
-And I should see "GraderITWord0Score" score for the activity "RegWordGrader0" in "Course Materials" page
+Then I should be displayed with status "Passed" for "RegAccessGraderActivity" 
+And I should see "RegAccessGraderActivity" activity in Grades tab with "GraderIT70Score" grade
+
+#Purpose : Submitting GraderIT Access activity and Student scoring a 100%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT Access activity with 100 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader Access file for 100%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegAccessGraderActivity" 
+And I should see "RegAccessGraderActivity" activity in Grades tab with "GraderIT100Score" grade
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Submit POWERPOINT Grader Activity having 0, 70, 100 scores#
+#--------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT PowerPoint activity with 0 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader PowerPoint file for 0%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Not passed" for "RegPowerPointGraderActivity" 
+And I should see "RegPowerPointGraderActivity" activity in Grades tab with "GraderIT0Score" grade
+
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 70%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT PowerPoint activity with 70 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader PowerPoint file for 70%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegPowerPointGraderActivity" 
+And I should see "RegPowerPointGraderActivity" activity in Grades tab with "GraderIT70Score" grade
+
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 100%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting GraderIT PowerPoint activity with 100 score
+When I navigate to "Course Materials" tab
+When I launch "RegExcelGraderActivity"
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Download Materials" 
+And I click on the button "Download All Files" 
+Then I successfully download the files 
+When I click on the button "Close" 
+Then I should see a pop up with "Download Materials" and "Choose File" 
+When I click on the button "Choose File" 
+And I upload the downloaded file "Grader PowerPoint file for 100%" for course 2016
+And I click on the button "Upload" 
+Then I should see success message on upload
+When I click on the button "Submit for Grading"  
+Then I should see success message on successful submission
+When I click on the button "Close Assignment"
+Then I should be on the "Course Materials" page
+Then I should be displayed with status "Passed" for "RegPowerPointGraderActivity" 
+And I should see "RegPowerPointGraderActivity" activity in Grades tab with "GraderIT100Score" grade

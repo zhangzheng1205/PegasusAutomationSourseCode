@@ -1228,7 +1228,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityType">This ia activity type enum.</param>
         [When(@"I launch ""(.*)""")]
-        public void ClickAssetLink(Activity.ActivityTypeEnum activityType)
+        public void StudentLaunchAsset(Activity.ActivityTypeEnum activityType)
         {
             Logger.LogMethodEntry("CreateActivity", 
                 "ValidateDisplayOfActivityStatus",
@@ -1237,7 +1237,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             string activityName = activity.Name.ToString();
             //Launch the asset by click on asset title
             new CoursePreviewUXPage().
-                ClickAssetTitle(activityName);
+                StudentLaunchAssetInCourseMaterials(activityName);
             Logger.LogMethodExit("CreateActivity", 
                 "ValidateDisplayOfActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);

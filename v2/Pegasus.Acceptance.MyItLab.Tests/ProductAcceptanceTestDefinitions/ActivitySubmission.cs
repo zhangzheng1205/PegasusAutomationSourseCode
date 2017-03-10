@@ -1041,7 +1041,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         [Then(@"I should see a pop up with ""(.*)"" and ""(.*)""")]
         public void IsTestPresentationPageLaunched(string downloadButtonText, string uploadButtonText)
         {
-            new PresentationPage().VerifyTestPresentationPageButtons(downloadButtonText, uploadButtonText);
+            Logger.LogMethodEntry("CommonSteps", "IsTestPresentationPageLaunched",
+            base.IsTakeScreenShotDuringEntryExit);     
+            new PresentationPage().VerifyTestPresentationPageButtons(
+                downloadButtonText, uploadButtonText);
+            Logger.LogMethodExit("CommonSteps", "IsTestPresentationPageLaunched",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

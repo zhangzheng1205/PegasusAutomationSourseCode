@@ -367,9 +367,9 @@
 			<IsApproved>true</IsApproved>
 		</Course>
 		<Course>
-			<Name>Dependent_MIL_PPE</Name>
+			<Name>MyITLab 0ffice 2016 -sec 2</Name>
 			<CourseType>MyItLabInstructorCourse</CourseType>
-			<InstructorCourseId>CRSKLSG-241539</InstructorCourseId>
+			<InstructorCourseId>CRSKL8T-180433</InstructorCourseId>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
 			<IsPublished>true</IsPublished>
@@ -1173,6 +1173,31 @@ the UI deleted or refreshed.-->
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegWordGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegExcelGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegAccessGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegPowerPointGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    
 	</ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>
@@ -2657,4 +2682,22 @@ the UI deleted or refreshed.-->
 			<IsCreated>true</IsCreated>
 		</Alert>
 	</ArrayOfAlert>
+
+  <ArrayOfGrade>
+    <Grade>
+      <GradeScore>0</GradeScore>
+      <GradeType>GraderIT0Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT70Score</GradeType>
+      <IsCreated>true</IsCreated>    
+  </Grade>
+    <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT100Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+  </ArrayOfGrade>
 </Data>

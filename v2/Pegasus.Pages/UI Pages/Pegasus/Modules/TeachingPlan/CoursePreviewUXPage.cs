@@ -2140,7 +2140,7 @@ namespace Pegasus.Pages.UI_Pages
 
                     if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
 
-                    {
+                      {
                         base.RefreshTheCurrentPage();
                         //new CommonPage().ManageTheActivityFolderLevelNavigation(
                         //assetName, activityUnderTabName, userTypeEnum);
@@ -2205,7 +2205,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectWindowAndFrame",
                     base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
-            int activityColumnNumber = Convert.ToInt32(StudentPresentationPageResource.
+            int getActivityCount = Convert.ToInt32(StudentPresentationPageResource.
                 StudentPresentation_Page_Loop_Initializer_Value);
 
             try
@@ -2214,7 +2214,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator));
                 // Get activity Count
-                int getActivityCount = (base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                getActivityCount = (base.GetElementCountByXPath(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator)) - 1;
             }
             catch(Exception e)
@@ -2224,15 +2224,16 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CoursePreviewUXPage",
             "SelectWindowAndFrame",
                 base.IsTakeScreenShotDuringEntryExit);
-            return activityColumnNumber;
+            return getActivityCount;
         }
 
         /// <summary>
-        /// 
+        /// Student launches the Activity in Course materials tab
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
-        public void ClickAssetTitle(string activityName)
+        public void StudentLaunchAssetInCourseMaterials(string activityName)
         {
+            //Student launches the Activity in Course materials tab
             Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
             base.IsTakeScreenShotDuringEntryExit);
             int pageCount = Convert.ToInt32(0);
@@ -2242,12 +2243,15 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
+                //Wait for Course Materials tab to load
                 base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
                     CoursePreviewUX_Page_Window_Title_Name_HED);
+                //Select Course Materials tab to load
                 base.SelectWindow(CoursePreviewUXPageResource.
                     CoursePreviewUX_Page_Window_Title_Name_HED);
                 base.SwitchToIFrameById(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator);
+                //Fetch the Activity count in Course Materials tab
                 int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_GetActivityCount_XPath_Locator);
                 // Check pagination existance
@@ -2257,12 +2261,13 @@ namespace Pegasus.Pages.UI_Pages
                     for (int rowCount = Convert.ToInt32(3); rowCount <= getActivityCount;
                         rowCount++)
                     {
-                        //Gets the Activity Name
+                        //Fetch the Activity Name
                         getActivityName = base.GetElementTextByXPath
                             (string.Format(CoursePreviewUXPageResource.
                             CoursePreviewUX_Page_Assets_Name_Xpath_Locator, rowCount)).Trim();
                         if (getActivityName.Equals(activityName))
                         {
+                            //Click on the Asset
                             IWebElement getAssetLink = base.GetWebElementPropertiesByXPath(
                                 string.Format(CoursePreviewUXPageResource.
                             CoursePreviewUX_Page_Assets_Name_Xpath_Locator, rowCount));
@@ -2270,6 +2275,7 @@ namespace Pegasus.Pages.UI_Pages
                             return;
                         }
                     }
+                    //Click on the next page icon
                     IWebElement getNextIcon = base.GetWebElementPropertiesByClassName(
                         CoursePreviewUXPageResource.
                         CoursePreviewUXPage_MyCourse_NextButton_Class_Locator);
@@ -2284,6 +2290,13 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="grade"></param>
+        /// <param name="assetName"></param>
+        /// <param name="pageName"></param>
+        /// <returns></returns>
         public bool GetGradeAndActivityStatus(string grade,
             string assetName, string pageName)
         {

@@ -1369,20 +1369,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
        /// <param name="activityName">This is the Activity type enum.</param>
        /// <param name="activityGrade">This is the activity grade.</param>
         [Then(@"I should see ""(.*)"" activity in Grades tab with ""(.*)"" grade")]
-        public void VerifyActivityDisplayInTab(Activity.ActivityTypeEnum activityTypeEnum, String activityGrade)
+        public void VerifyActivityDisplayInTab(Activity.ActivityTypeEnum activityTypeEnum, 
+            Grade.GradeTypeEnum gradeTypeEnum)
         {
             Logger.LogMethodEntry("Gradebook",
                            "VerifyActivityDisplayInTab",
                           base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the Activity name from XML
             Activity activity = Activity.Get(activityTypeEnum);
             String activityName = activity.Name;
+            //Fetch the Grade from XML
+            Grade grade = Grade.Get(gradeTypeEnum);
+            String activityExpectedGrade = activity.Name;
+
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                         Current.ScenarioInfo.Title, () => Assert.AreEqual
                             (activityName, new GBDefaultUXPage().IsActivityDisplayedInGradesTab(activityName)));
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                         Current.ScenarioInfo.Title, () => Assert.AreEqual
-                            (activityGrade, new GBDefaultUXPage().
-                            IsActivityGradeDisplayedInGradesTab(activityName, activityGrade)));
+                            (activityExpectedGrade, new GBDefaultUXPage().
+                            IsActivityGradeDisplayedInGradesTab(activityName, activityExpectedGrade)));
             Logger.LogMethodExit("Gradebook",
                "VerifyActivityDisplayInTab",
               base.IsTakeScreenShotDuringEntryExit);
@@ -1403,7 +1409,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                           base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             String activityName = activity.Name;
-            //new GBDefaultUXPage().ClickOnActivitycMenuOption(cmenuOption, activityName, userTypeEnum);
+            new GBDefaultUXPage().
+            ClickOnActivitycMenuOption(cmenuOption, activityName, userTypeEnum);
             Logger.LogMethodExit("Gradebook",
                "VerifySavedActivityDisplayInCustomView",
               base.IsTakeScreenShotDuringEntryExit);

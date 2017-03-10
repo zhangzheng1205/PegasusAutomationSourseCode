@@ -252,30 +252,61 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             //Upload graderIT file
             logger.LogMethodEntry("UploadCompletedFilesPage", "UploadGraderItFile",
                 base.IsTakeScreenShotDuringEntryExit);
+            Process process;
             try
             {
                 Thread.Sleep(10000);
                 switch (uploadFileName)
                 {
-                    //To Support this execution save the AutoIt exe file at E:/SeleniumGrid/AutoItScripts/ path at remote and
-                    // E:/SeleniumGrid/AutoItScripts/ at Local.Also your file for upload should be mantained at
-                    // E:/SeleniumGrid/TestData at remote and D:/SeleniumGrid/TestData
-                        /*AutoIT Script used at remote for reference
-                         #region --- Au3Recorder generated code Start (v3.3.9.5 KeyboardLayout=00000409)  ---
-                          Sleep(30000)
-                          WinWait('Open')
-                          Sleep(2000)
-                          Send("E:\SeleniumGrid\TestData\Access\AccessFileFor70Percent\go_a01_grader_a3_Open_Houses")
-                          Sleep(2000)
-                          Send("{ENTER}")
-                        #endregion --- Au3Recorder generated code End ---
-                         */
-                    case "Grader Access file for 70%":
-
-                        Process process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016WordFor0Score.exe");
-                                              
+                    case "Grader Word file for 0%":
+                         process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016WordFor0Score.exe");                                              
                         break;
-                }
+
+                    case "Grader Word file for 70%":
+                         process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016WordFor70Score.exe");                                              
+                        break;
+
+                    case "Grader Word file for 100%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016WordFor100Score.exe");
+                         break;
+
+                    case "Grader Excel file for 0%":
+                         process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016ExcelFor0Score.exe");                                              
+                        break;
+
+                    case "Grader Excel file for 70%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016ExcelFor70Score.exe");
+                        break;
+
+                    case "Grader Excel file for 100%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016ExcelFor100Score.exe");
+                        break;
+
+                    case "Grader Access file for 0%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016AccessFor0Score.exe");
+                        break;
+
+                    case "Grader Access file for 70%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016AccessFor70Score.exe");
+                        break;
+
+                    case "Grader Access file for 100%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016AccessFor100Score.exe");
+                        break;
+
+                    case "Grader PowerPoint file for 0%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016PowerPointFor0Score.exe");
+                        break;
+
+                    case "Grader PowerPoint file for 70%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016PowerPointFor70Score.exe");
+                        break;
+
+                    case "Grader PowerPoint file for 100%":
+                        process = Process.Start(@"D:\AutomationData\AutoItScripts\UploadGrader2016PowerPointFor100Score.exe");
+                        break;
+
+                                        }
             }
 
             catch (Exception e)

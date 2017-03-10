@@ -24,15 +24,9 @@ namespace Pegasus.Automation.DataTransferObjects
             D2LDirectNewGrade = 6,
             PegasusEditedGradePerc = 7,
             PegasusNewGradePerc = 8,
-            GraderITWord0Score = 9,
-            GraderITWord70Score = 10,
-            GraderITWord100Score =11,
-            GraderITExcel0Score = 12,
-            GraderITExcel70Score =13,
-            GraderITExcel100Score =14,
-            GraderITPowerPoint0Score = 15,
-            GraderITPowerPoint70Score = 16,
-            GraderITPowerPoint100Score = 17,
+            GraderIT0Score = 9,
+            GraderIT70Score = 10,
+            GraderIT100Score =11            
         }
 
         /// <summary>

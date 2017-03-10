@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
         /// <summary>
         /// Click on Button on basis of button text.
         /// </summary>
-        /// <param name="buttonText"></param>
+        /// <param name="buttonText">This is the button Name.</param>
         public void ClickButton(string buttonText)
         {
             logger.LogMethodEntry("PresentationPage", "ClickButton",
@@ -259,6 +259,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
                         buttonElement = base.GetWebElementProperties(download2CssSelector);
                         break;
                     case "Close":
+                        bool jd = base.IsElementPresent(By.CssSelector(PresentationPageResource.
+                            PresentationPage_Page_Close_Button_CssSelector_Locator), 10);
                         base.WaitForElement(closeDownloadCssSelector);
                         buttonElement = base.GetWebElementProperties(closeDownloadCssSelector);
                         break;
@@ -292,7 +294,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
         /// </summary>
         /// <param name="expectedDownloadButton"> this is expected Download Button.</param>
         /// <param name="expectedUploadButton">This is expected Uopload Button.</param>
-        /// <returns></returns>
+        /// <returns>True/False</returns>
         public bool VerifyTestPresentationPageButtons(string expectedDownloadButton,string expectedUploadButton)
         {
             logger.LogMethodEntry("PresentationPage", "VerifyTestPresentationPageButtons",
@@ -308,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
                 //Verify download and upload buttons
                 downloadPresent = base.IsElementPresent(download1CssSelector, 10);
                 uploadPresent = base.IsElementPresent(chooseFileCssSelector, 10);
-                if (downloadPresent & uploadPresent)
+                if (downloadPresent & uploadPresent == true)
                 {
                     buttonsPresent = true;
                 }
