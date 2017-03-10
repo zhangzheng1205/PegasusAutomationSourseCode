@@ -804,7 +804,87 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Create SIM5 Activity.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode Enum.</param>
+        public void CreatePreTest(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create Activity
+            logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5Activity",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
 
+                IWebElement preTest1 = base.GetWebElementPropertiesByXPath(AddAssessmentPageResources.
+               AddAsessment_Page_OpenPreTestCreationPage_XPath_Locator);
+                base.ClickByJavaScriptExecutor(preTest1);
+                //Switch to last open Window
+                base.SwitchToLastOpenedWindow();
+                //Wait for Add and Close button
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+AddAsessment_Page_SAveCopyAddandClose_ID_Locator));
+                //Get Property of Add and Close button
+                IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesById(AddAssessmentPageResources.
+               AddAsessment_Page_SAveCopyAddandClose_ID_Locator);
+                //Click on Add and Close button
+                base.ClickByJavaScriptExecutor(GetAddAndCloseButton);
+                //Generate Random Number
+                string randomNumber = base.GetRandomNumber(AddAssessmentPageResources.
+                    AddAsessment_Page_RandomNumber_Character,
+                    Convert.ToInt32(AddAssessmentPageResources.
+                    AddAsessment_Page_RandomNumber_Length));
+                //Generate GUID for Activity Name
+                Guid activity = Guid.NewGuid();
+                string activityName = activity.ToString();
+                //Create SIM5 Skill Based Activity
+                this.CreateSkillBasedPreTest(activityName, behavioralModeEnum);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "CreateSIM5Activity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create SIM5 Activity.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode Enum.</param>
+        public void CreatePostTest(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create Activity
+            logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5Activity",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                IWebElement postTest1 = base.GetWebElementPropertiesByXPath(AddAssessmentPageResources.
+AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
+                base.ClickByJavaScriptExecutor(postTest1);
+                //Generate Random Number
+                string randomNumber = base.GetRandomNumber(AddAssessmentPageResources.
+                    AddAsessment_Page_RandomNumber_Character,
+                    Convert.ToInt32(AddAssessmentPageResources.
+                    AddAsessment_Page_RandomNumber_Length));
+                //Generate GUID for Activity Name
+                Guid activity = Guid.NewGuid();
+                string activityName = activity.ToString();
+                //Create SIM5 Skill Based Post TEst
+                this.CreateSkillBasedPostTest(activityName, behavioralModeEnum);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "CreateSIM5Activity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Create SIM5 Skill Behavioral Mode Activity
@@ -920,6 +1000,61 @@ namespace Pegasus.Pages.UI_Pages
                 "CreateSkillBasedActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Create the SkillBasedActivity.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode.</param>
+        public void CreateSkillBasedPreTest(string activityName,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create The Activity Using Behavioral ModeType.
+            logger.LogMethodEntry("AddAssessmentPage",
+                "CreateSkillBasedActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Select Create Activity Window
+            base.SwitchToDefaultWindow();
+            base.WaitUntilWindowLoads("Create Pre-test:");
+            bool dsd = base.IsElementPresent(By.Id("txtAssname"), 5);
+            //Fill Asset name
+            this.FillAssetName(activityName);
+            //Click On Save And Continue Button
+            this.ClickOnSaveAndContinueButton();
+            //Click On Add Question Link
+            new RandomTopicListPage().ClickOnAddQuestionLink();
+            logger.LogMethodExit("AddAssessmentPage",
+                "CreateSkillBasedActivity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create the SkillBasedActivity.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode.</param>
+        public void CreateSkillBasedPostTest(string activityName,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create The Activity Using Behavioral ModeType.
+            logger.LogMethodEntry("AddAssessmentPage",
+                "CreateSkillBasedActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Select Create Activity Window
+            //base.SwitchToDefaultWindow();
+            //base.WaitUntilWindowLoads("Create Post-test:");
+            //bool dsd = base.IsElementPresent(By.Id("txtAssname"), 5);
+            //Fill Asset name
+            this.FillAssetName(activityName);
+            //Click On Save And Continue Button
+            this.ClickOnSaveAndContinueButton();
+            //Click On Add Question Link
+            new RandomTopicListPage().ClickOnAddQuestionLink();
+            logger.LogMethodExit("AddAssessmentPage",
+                "CreateSkillBasedActivity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Create SIM Activity Of Behavioral ModeType.
@@ -1634,6 +1769,7 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.SelectRadioButtonById("radSkill");
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                         AddAsessment_Page_SaveAndContinue_Button_Id_Locator));
                 base.FocusOnElementById(AddAssessmentPageResources.

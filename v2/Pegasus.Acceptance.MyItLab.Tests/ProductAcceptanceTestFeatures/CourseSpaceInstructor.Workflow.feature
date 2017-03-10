@@ -497,3 +497,32 @@ Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' fr
 When I click on 'Note' icon in "Course Materials" page
 Then I should be on "Note" lightbox
 When I click on 'Edit' button
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Create Pre Test,Post Test and Study Plan#
+#--------------------------------------------------------------------------------------------------------------------------
+#Purpose: Delete the asset using Delete option inside new folder in Course materials tab
+#MyItLabProgramCourse
+#Testcase ID:
+Scenario: Instructor create studyplan in course materials
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+And I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+When I enter into "RegFolderAsset" folder
+And I click on 'Materials' option
+And I click on the "myitlab Study Plan" asset type
+Then I should be on "Add myitlab Study Plan" page
+When I save the "StudyPlan" details tab
+Then I should be on "Build Study Plan" tab 
+When I create a "SIM5Activity" of behavioral mode "SkillBased" Pretest
+And I add "SIM5" question in created "Exam [Skill-Based]" activity
+And I create pre test 
+And I create a "SIM5Activity" of behavioral mode "SkillBased" posttest
+And I add "SIM5" question in created "Exam [Skill-Based]" activity
+And I create post test

@@ -592,30 +592,32 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for last opened window
                 base.SwitchToLastOpenedWindow();
                 //Wait for element 'All Question Type'
-                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_IframeId_locator));
-                //Switch to Iframe
-                base.SwitchToIFrameById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_IframeId_locator);
+                base.SwitchToIFrameById("openModalPopupframe");
+                bool dsad = base.IsElementPresent(By.XPath("//div [@id = 'div3']/input"), 5);
+               
+                
+
                 //Wait for All QuestionTypes checkbox
-                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_Id));
+                base.WaitForElement(By.XPath("//div [@id = 'div3']/input"));
                 //Get Properity for All Question Types checkbox
-                IWebElement GetAllQuestionTypeCheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_Id);
+                IWebElement GetAllQuestionTypeCheckBox1 = base.GetWebElementPropertiesByXPath("//div [@id = 'div3']/input");
                 //Uncheck checkbox for All QuestionTypes
-                base.ClickByJavaScriptExecutor(GetAllQuestionTypeCheckBox);
+                base.ClickByJavaScriptExecutor(GetAllQuestionTypeCheckBox1);
+                              
+                
+
                 //Wait for checkbox element for SIM5 Question
-                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_SIM5Question_CheckBox_Id));
+                base.WaitForElement(By.Id("chkQuestionTypeList_3"));
                 //Get WebElement property for SIM5 check box
-                IWebElement GetSIM5CheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_SIM5Question_CheckBox_Id);
+                IWebElement GetSIM5CheckBox1 = base.GetWebElementPropertiesById("chkQuestionTypeList_3");
                 //Select the checkbox for SIM5 Question
-                base.ClickByJavaScriptExecutor(GetSIM5CheckBox);
-                //Click on Search button
-                base.ClickButtonById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AdvancedSearch_Search_Button_Id);
+                base.ClickByJavaScriptExecutor(GetSIM5CheckBox1);
+
+               
+                base.ClickButtonById("btnAdvSearch");
+                
+               
+               
             }
             catch (Exception e)
             {

@@ -661,7 +661,6 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                
                 //Switch to last open window
                 base.SwitchToLastOpenedWindow();
                 //Click on 'Add Questions' link

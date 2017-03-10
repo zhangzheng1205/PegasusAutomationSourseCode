@@ -20,14 +20,13 @@ namespace Pegasus.Pages.UI_Pages
     /// This class handles Course Preview Page Actions.
     /// </summary>
     public class CoursePreviewUXPage : BasePage
-
     {
         //Locators for eText S11 launch at HED
         By toolDropDown = By.CssSelector("a[id*='tools']");
         By eTextDropDownOption = By.CssSelector("div[title='eText']");
         By eTextDirectSpan = By.CssSelector("span[id*='tdHEDEbook']");
         By eTextDirectTd = By.CssSelector("td[id*='tdHEDEbook']");
-      
+
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
@@ -179,8 +178,8 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Launch Etext via Tool DropDown if present or directly via eText link
-               tooldropDownPres= base.IsElementPresent (toolDropDown, 10);
-               if(tooldropDownPres)
+                tooldropDownPres = base.IsElementPresent(toolDropDown, 10);
+                if (tooldropDownPres)
                 {
                     IWebElement dropDown = WebDriver.FindElement(toolDropDown);
                     base.ClickByJavaScriptExecutor(dropDown);
@@ -188,27 +187,27 @@ namespace Pegasus.Pages.UI_Pages
                     etextLink = WebDriver.FindElement(eTextDropDownOption);
                 }
 
-                else 
+                else
                 {
                     base.SwitchToDefaultWindow();
-                   //Launch Direct eText link as instructor
+                    //Launch Direct eText link as instructor
                     bool span = base.IsElementPresent(eTextDirectSpan, 10);
-                   if(span)
-                   {
-                       base.WaitForElement(eTextDirectSpan);
-                       etextLink = WebDriver.FindElement(eTextDirectSpan);
-                   }
-                   else
-                   //Launch Direct eText link as student
-                   {
-                       base.WaitForElement(eTextDirectTd);
-                       etextLink = WebDriver.FindElement(eTextDirectTd);
-                   }
-                  
+                    if (span)
+                    {
+                        base.WaitForElement(eTextDirectSpan);
+                        etextLink = WebDriver.FindElement(eTextDirectSpan);
+                    }
+                    else
+                    //Launch Direct eText link as student
+                    {
+                        base.WaitForElement(eTextDirectTd);
+                        etextLink = WebDriver.FindElement(eTextDirectTd);
+                    }
+
                 }
                 //Click on link
                 base.ClickByJavaScriptExecutor(etextLink);
-  
+
             }
             catch (Exception e)
             {
@@ -607,10 +606,10 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 base.SwitchToDefaultPageContent();
-           SelectAssignmentsToDoWindow();
-           this.SwitchToIFrameBySource("StudTodoDone.aspx?From=VTD");
-           ICollection<IWebElement> objectTryAgainButtonCollections = base.GetWebElementsCollectionByCssSelector
-                    (CoursePreviewUXPageResource.CoursePreviewUX_Page_TryAgain_Button_Class_Locator);
+                SelectAssignmentsToDoWindow();
+                this.SwitchToIFrameBySource("StudTodoDone.aspx?From=VTD");
+                ICollection<IWebElement> objectTryAgainButtonCollections = base.GetWebElementsCollectionByCssSelector
+                         (CoursePreviewUXPageResource.CoursePreviewUX_Page_TryAgain_Button_Class_Locator);
                 objectText = objectTryAgainButtonCollections.ElementAt(0).Text;
             }
             catch (Exception e)
@@ -781,12 +780,12 @@ namespace Pegasus.Pages.UI_Pages
                     break;
 
                 case "Open":
-                        //Click on Open cmenu option of activity
-                        IWebElement getOpen = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
-                            CoursePreviewMainUX_Page_Open_Xpath_Locator);
-                        base.PerformMouseClickAction(getOpen);                    
-                        break;
-                    
+                    //Click on Open cmenu option of activity
+                    IWebElement getOpen = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Open_Xpath_Locator);
+                    base.PerformMouseClickAction(getOpen);
+                    break;
+
                 case "View Grades":
                     //Click on View Grades cmenu option
                     IWebElement getViewGrades = base.GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
@@ -831,7 +830,7 @@ namespace Pegasus.Pages.UI_Pages
                         CoursePreviewMainUX_Page_FolderOpen_Xpath_Locator);
                     base.PerformMouseClickAction(getOpen);
                     break;
-                
+
             }
             Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickCmenuOptionByStudentOfFolder",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -950,7 +949,7 @@ namespace Pegasus.Pages.UI_Pages
                     CoursePreviewUXPage_CreateNewFolder_Button_Id_Locator));
                 base.PerformMouseClickAction(getCreateFolder);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -980,7 +979,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Wait for Create folder option to load
                 base.WaitForElement(By.XPath(
                     CoursePreviewUXPageResource.
-                    CoursePreviewUXPage_CourseMaterial_CreateMaterials_Button_XPath_Locator));                
+                    CoursePreviewUXPage_CourseMaterial_CreateMaterials_Button_XPath_Locator));
                 // Click Folder option
                 IWebElement getCreateFolder = base.GetWebElementProperties(
                     By.XPath(CoursePreviewUXPageResource.
@@ -1048,7 +1047,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrameById("ifrmCoursePreview");
                 int getActivityCount = base.GetElementCountByXPath("//table[@id='tblCoursePreview']/tbody/tr");
 
-                bool pageNumberExist = base.IsElementPresent(By.XPath("//td[@class='PD_PRdivpagingCenter']/span[4]"),10);
+                bool pageNumberExist = base.IsElementPresent(By.XPath("//td[@class='PD_PRdivpagingCenter']/span[4]"), 10);
 
                 if (pageNumberExist == true)
                 {
@@ -1070,17 +1069,17 @@ namespace Pegasus.Pages.UI_Pages
                             (string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]", rowCount)).Trim();
                         if (getActivityName.Equals(activityName))
                         {
-                            bool tg = base.IsElementPresent(By.XPath("//table[@id='tblCoursePreview']/tbody/tr[1]/td[5]/i"),5);
+                            bool tg = base.IsElementPresent(By.XPath("//table[@id='tblCoursePreview']/tbody/tr[1]/td[5]/i"), 5);
                             //Wait for the element
-                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i",rowCount)));
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount)));
                             //Drag and Drop
                             base.PerformClickAndHoldAction(base.
                                 GetWebElementPropertiesByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount)));
                             //Wait for the element
-                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount+1)));
+                            base.WaitForElement(By.XPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount + 1)));
                             //Drag and Drop
                             base.PerformClickAndHoldAction(base.
-                                GetWebElementPropertiesByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount+1)));
+                                GetWebElementPropertiesByXPath(string.Format("//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[5]/i", rowCount + 1)));
                             return;
                         }
                     }
@@ -1146,13 +1145,13 @@ namespace Pegasus.Pages.UI_Pages
                             CoursePreviewUXPage_GetActivityName_XPath_Locator, rowCount)).Trim();
                         if (getActivityName.Equals(activityName))
                         {
-                            switch(cmenuOptionName)
+                            switch (cmenuOptionName)
                             {
                                 case "Open":
                                     // Click cmenu icon
                                     bool te = base.IsElementPresent(By.XPath(
                                         string.Format(CoursePreviewUXPageResource.
-                            CoursePreviewUXPage_OpenActivity_CMenu_XPath_Locator, 
+                            CoursePreviewUXPage_OpenActivity_CMenu_XPath_Locator,
                                         rowCount)), 10);
                                     IWebElement getCmenuOption = base.GetWebElementPropertiesByXPath(
                                         string.Format(CoursePreviewUXPageResource.
@@ -1160,7 +1159,7 @@ namespace Pegasus.Pages.UI_Pages
                                     base.PerformMouseClickAction(getCmenuOption);
                                     // Click cmenu option                                    
                                     base.WaitForElement(By.ClassName("cmenu_cont"));
-                                    bool ads = base.IsElementPresent(By.LinkText(cmenuOptionName),10);
+                                    bool ads = base.IsElementPresent(By.LinkText(cmenuOptionName), 10);
 
                                     break;
                                 case "Edit":
@@ -1184,7 +1183,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.ClickByJavaScriptExecutor(getNextIcon);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -1194,7 +1193,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Get activity display status
         /// </summary>
         /// <param name="tabName"></param>
-        public string GetAssetName(string activityName,string tabName)
+        public string GetAssetName(string activityName, string tabName)
         {
             Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
              base.IsTakeScreenShotDuringEntryExit);
@@ -1211,7 +1210,7 @@ namespace Pegasus.Pages.UI_Pages
                 int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_GetActivityCount_XPath_Locator);
                 // Check pagination existance
-              pageCount=  this.CheckPaginationStatus();
+                pageCount = this.CheckPaginationStatus();
                 for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
                 {
                     for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
@@ -1327,7 +1326,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="actionName">This is action name.</param>
         /// <param name="activityType">This is activity type enum.</param>
         /// <param name="tabName">This is tab name.</param>
-        public void ClickShowOption(string actionName, Activity.ActivityTypeEnum activityType, 
+        public void ClickShowOption(string actionName, Activity.ActivityTypeEnum activityType,
             string tabName)
         {
             Logger.LogMethodExit("ContentLibraryUXPage", "ReorderAssetInCourseMaterial",
@@ -1367,13 +1366,13 @@ namespace Pegasus.Pages.UI_Pages
                             CoursePreviewUXPage_GetActivityStatus_XPath_Locator
                                 , rowCount));
                             if (getActivityStatus == CoursePreviewUXPageResource.
-                            CoursePreviewUXPage_ActualActivityStatus)                                
+                            CoursePreviewUXPage_ActualActivityStatus)
                             {
                                 base.WaitForElement(By.XPath(string.Format(CoursePreviewUXPageResource.
                             CoursePreviewUXPage_SelectActivity_Checkbox_XPath_Locator
-                                    ,rowCount)));
+                                    , rowCount)));
                                 base.SelectCheckBoxByXPath(string.Format(CoursePreviewUXPageResource.
-                            CoursePreviewUXPage_SelectActivity_Checkbox_XPath_Locator, rowCount));                               
+                            CoursePreviewUXPage_SelectActivity_Checkbox_XPath_Locator, rowCount));
                                 //Click on Show option
                                 base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
                             CoursePreviewUXPage_ShowLink_XPath_Locator));
@@ -1443,12 +1442,12 @@ namespace Pegasus.Pages.UI_Pages
                         {
                             string getShowToStatus = base.GetInnerTextAttributeValueByXPath
                                 (string.Format(CoursePreviewUXPageResource.
-                        CoursePreviewUXPage_GetShowStatus_XPath_Locator,rowCount));                           
+                        CoursePreviewUXPage_GetShowStatus_XPath_Locator, rowCount));
                             string getActivity = base.GetClassAttributeValueByXPath
                                 (string.Format(CoursePreviewUXPageResource.
                                 CoursePreviewUXPage_GetActivityStatus_XPath_Locator, rowCount));
                             if (getActivity.Contains(CoursePreviewUXPageResource.
-                                CoursePreviewUXPage_GetActivityStatus)&& getShowToStatus=="All")
+                                CoursePreviewUXPage_GetActivityStatus) && getShowToStatus == "All")
                             {
                                 getAssetStatus = "Show";
                                 return getAssetStatus;
@@ -1463,7 +1462,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-             ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodEntry("ContentLibraryUXPage", "GetAssetStatus",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1519,8 +1518,8 @@ namespace Pegasus.Pages.UI_Pages
                             IWebElement getShowOption = base.GetWebElementPropertiesById(
                                 CoursePreviewUXPageResource.
                     CoursePreviewUXPage_Activity_Copy_XPath_Locator);
-                                base.ClickByJavaScriptExecutor(getShowOption);
-                                return;
+                            base.ClickByJavaScriptExecutor(getShowOption);
+                            return;
 
                         }
                     }
@@ -1549,7 +1548,7 @@ namespace Pegasus.Pages.UI_Pages
             int getCopiedAssetCount = Convert.ToInt32(0);
             try
             {
-             // Wait untill window loads
+                // Wait untill window loads
                 base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
                     CoursePreviewUX_Page_Window_Title_Name_HED);
                 base.SelectWindow(CoursePreviewUXPageResource.
@@ -1600,7 +1599,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_CourseMaterial_SelectPasteButton_Id_Locator));
                 // Switch based on the option type 
-                switch(pasteOptionType)
+                switch (pasteOptionType)
                 {
                     case "Paste at Bottom":
                         base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
@@ -1608,20 +1607,20 @@ namespace Pegasus.Pages.UI_Pages
                         IWebElement getPasteOptionName = base.GetWebElementPropertiesByXPath(
                             CoursePreviewUXPageResource.
                             CoursePreviewUXPage_CourseMaterial_PasteAtBottom_XPath_Locator);
-                    base.PerformMouseClickAction(getPasteOptionName);
-                    break;
+                        base.PerformMouseClickAction(getPasteOptionName);
+                        break;
 
                     case "Paste at Top":
-                    base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
-                        CoursePreviewUXPage_CourseMaterial_PasteAtTop_XPath_Locator));
-                    getPasteOptionName = base.GetWebElementPropertiesByXPath(
-                        CoursePreviewUXPageResource.
-                        CoursePreviewUXPage_CourseMaterial_PasteAtTop_XPath_Locator);
-                    base.PerformMouseClickAction(getPasteOptionName);
-                    break;
+                        base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_CourseMaterial_PasteAtTop_XPath_Locator));
+                        getPasteOptionName = base.GetWebElementPropertiesByXPath(
+                            CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_CourseMaterial_PasteAtTop_XPath_Locator);
+                        base.PerformMouseClickAction(getPasteOptionName);
+                        break;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -1821,7 +1820,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Gets the Activity Name
                         getActivityName = base.GetElementTextByXPath
                             (string.Format(CoursePreviewUXPageResource.
-                            CoursePreviewUXPage_GetActivityName_XPath_Locator, 
+                            CoursePreviewUXPage_GetActivityName_XPath_Locator,
                             rowCount)).Trim();
                         if (getActivityName.Equals(activityName))
                         {
@@ -1899,7 +1898,7 @@ namespace Pegasus.Pages.UI_Pages
                     CoursePreviewUXPage_CourseMaterial_ClickNoteOption_XPath_Locator);
                 base.ClickByJavaScriptExecutor(getNoteIcon);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -1931,14 +1930,14 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickButtonByXPath(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_CourseMaterial_EditNoteOption_XPath_Locator);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ContentLibraryUXPage", "ClickEditInNoteWindow",
             base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
 
         public string GetActivityInMyCourse(string activityName, string pageName)
         {
@@ -1953,7 +1952,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Switch to iframe
                 base.SwitchToIFrameById(CoursePreviewUXPageResource.
                     CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
-               
+
                 string getPageCountDetails = base.GetInnerTextAttributeValueByXPath("//td[@class='PD_PRdivpagingCenter']/span[3]").Trim();
                 string getTotalPageCount = getPageCountDetails.Substring(17).Trim();
                 int pageCount = Convert.ToInt32(getTotalPageCount);
@@ -1993,7 +1992,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Click activity name.
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
-        public void ClickActivityName(string activityName,string pageName)
+        public void ClickActivityName(string activityName, string pageName)
         {
             Logger.LogMethodEntry("AddAssessmentPage", "ClickActivityName",
         base.IsTakeScreenShotDuringEntryExit);
@@ -2129,7 +2128,7 @@ namespace Pegasus.Pages.UI_Pages
                 int activityColumnCount =
                     this.GetTheActivityCountInCourseMaterial();
                 //Get the status text
-                getActivitySubmittedStatus = this.GetActivitySubmittedStatus(assetName,activityColumnCount);
+                getActivitySubmittedStatus = this.GetActivitySubmittedStatus(assetName, activityColumnCount);
                 //Start Stop Watch 
                 Stopwatch stopWatch = new Stopwatch();
                 stopWatch.Start();
@@ -2140,7 +2139,7 @@ namespace Pegasus.Pages.UI_Pages
 
                     if (stopWatch.Elapsed.TotalMinutes < 10 == false) break;
 
-                      {
+                    {
                         base.RefreshTheCurrentPage();
                         //new CommonPage().ManageTheActivityFolderLevelNavigation(
                         //assetName, activityUnderTabName, userTypeEnum);
@@ -2186,7 +2185,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Switch to iframe
                 base.SwitchToIFrameById("ifrmCoursePreview");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -2217,7 +2216,7 @@ namespace Pegasus.Pages.UI_Pages
                 getActivityCount = (base.GetElementCountByXPath(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator)) - 1;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -2356,5 +2355,139 @@ namespace Pegasus.Pages.UI_Pages
 
             return status;
         }
+
+        /// <summary>
+        /// Save Study Plan Details
+        /// </summary>
+        /// <param name="studyPlanName">This is Study Plan name.</param>
+        public void SaveStudyPlanDetails(Activity.ActivityTypeEnum studyPlanName)
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait untill add myitlab study plan window loads
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.CoursePreviewUXPage_AddStudyPlanPage_Pagename);
+                // Generate GUID for course
+                Guid assesmentGUID = Guid.NewGuid();
+                //Get the system date
+                String date = DateTime.Now.ToString("yyyy/MM/dd");
+                //Fetch the random value
+                string randomValue = assesmentGUID.ToString().Split('-')[0];
+                //Store empty value to courseNameGUID variable
+                string studyPlanGUID = string.Empty;
+                //Append the data and New Course string
+                studyPlanGUID = "Auto-" + date + "-" + randomValue + "-Study Plan";
+                //Fiil study plan name
+                base.FillTextBoxById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanName_ID_Locator, studyPlanGUID);
+
+                //Fiil study plan description
+                base.FillTextBoxById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanDesc_ID_Locator, studyPlanGUID);
+                //Save study plan details page
+
+                base.ClickButtonById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanDetails_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Switch to Build study plan tab
+        /// </summary>
+        public string SwitchToTab()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            string buildSpTab = string.Empty;
+            try
+            {
+                //Wait for the build study plan tab
+                base.WaitTillElementFound(By.Id(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanTabName_ID_Locator));
+                //Get the build study plan tab name
+                buildSpTab = base.GetElementInnerTextById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanTabName_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Return the tab name            
+            return buildSpTab;
+        }
+
+        /// <summary>
+        /// Create pre test
+        /// </summary>
+        public void CreatePretest()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+
+                //Switch to create pre test window
+                base.SwitchToWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator);
+                //Save the pretest
+                base.ClickButtonById(CoursePreviewUXPageResource.
+                CoursePreviewUXPage_StudyPlanSavePreTest_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+        "ClickCreateFolder",
+        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create post test
+        /// </summary>
+        public void CreatePosttest()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Switch to create pre test window
+
+                base.SwitchToWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator);
+                //Save the pretest  
+
+                base.ClickButtonById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanSavePostTest_ID_Locator);
+                //Save the edit or create study plan page
+
+                base.ClickButtonById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_SaveStudyPlan_ID_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
     }
 }
