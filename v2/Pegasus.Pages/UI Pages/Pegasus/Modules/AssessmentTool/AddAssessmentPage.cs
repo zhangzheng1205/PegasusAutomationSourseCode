@@ -825,7 +825,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToLastOpenedWindow();
                 //Wait for Add and Close button
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
-AddAsessment_Page_SAveCopyAddandClose_ID_Locator));
+        AddAsessment_Page_SAveCopyAddandClose_ID_Locator));
                 //Get Property of Add and Close button
                 IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesById(AddAssessmentPageResources.
                AddAsessment_Page_SAveCopyAddandClose_ID_Locator);
@@ -2919,7 +2919,7 @@ AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
                     case "Add Link":
                     case "Add File":
                     case "Add Multiple Files":
-                                 base.WaitForElement(By.Id(AddAssessmentPageResources.
+                        base.WaitForElement(By.ClassName(AddAssessmentPageResources.
                             AddAssessment_Page_CourseMaterials_LinkAndFile__ID_Locator));
                         getLightBoxName = base.
                             GetInnerTextAttributeValueByClassName(AddAssessmentPageResources.

@@ -1225,9 +1225,12 @@ namespace Pegasus.Pages.UI_Pages
                             return getActivityName;
                         }
                     }
-                    IWebElement getNextIcon = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.
-                        CoursePreviewUXPage_Searched_Table_Next_Id_Locator);
-                    base.ClickByJavaScriptExecutor(getNextIcon);
+                    bool iconStatus = base.IsElementPresent(By.Id("rptCoursePreview$next"), 10);
+                    if (iconStatus == true)
+                    {
+                        IWebElement getNextIcon = base.GetWebElementPropertiesById("rptCoursePreview$next");
+                        base.ClickByJavaScriptExecutor(getNextIcon);
+                    }
                 }
             }
             catch (Exception e)
@@ -1782,6 +1785,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Get the assignment status of the asset assigned
         /// </summary>

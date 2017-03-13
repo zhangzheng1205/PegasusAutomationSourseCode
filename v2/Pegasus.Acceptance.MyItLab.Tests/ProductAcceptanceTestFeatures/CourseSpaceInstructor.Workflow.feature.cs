@@ -1171,8 +1171,8 @@ testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Cours
 #line 480
 testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 481
-testRunner.Then("I should be displayed with \"RegEtextLinkAsset\" in Manage Course Materials frame o" +
-                    "f \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"RegPageAsset\" in Manage Course Materials frame of \"Co" +
+                    "urse Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 482
 testRunner.When("I click on \'Delete\' button for \"RegPageAsset\" in \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 483

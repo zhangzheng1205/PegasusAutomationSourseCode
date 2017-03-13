@@ -3161,10 +3161,14 @@ namespace Pegasus.Pages.UI_Pages
                     case "Copy as Instructor Course":
                         base.ClickLinkByPartialLinkText(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Cmenu_LinkText_Locator);
+                        base.WaitUntilWindowLoads(base.GetPageTitle);
                         base.SwitchToIFrameById(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator);
-                        base.ClickButtonById(HEDGlobalHomePageResource.
+                        bool saw = base.IsElementPresent(By.Id("imgbtnSave"), 10);
+                        base.WaitForElement(By.Id("imgbtnSave"));
+                        IWebElement getButton = base.GetWebElementPropertiesById(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator);
+                        base.PerformMouseClickAction(getButton);
                         break;
                     //Select unmark for deletion cmenu option
                     case "Unmark for Deletion":

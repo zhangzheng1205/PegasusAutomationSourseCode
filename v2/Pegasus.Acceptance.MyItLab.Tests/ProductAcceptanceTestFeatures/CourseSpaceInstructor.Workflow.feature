@@ -478,7 +478,7 @@ Then I should be on "Add from Library" lightbox
 When I click on "Return to Course Materials" button in 'Add from Library' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 When I enter into "RegFolderAsset" folder
-Then I should be displayed with "RegEtextLinkAsset" in Manage Course Materials frame of "Course Materials" tab
+Then I should be displayed with "RegPageAsset" in Manage Course Materials frame of "Course Materials" tab
 When I click on 'Delete' button for "RegPageAsset" in "Course Materials" tab
 Then I should see "Items deleted successfully." message in "Course Materials" page
 
