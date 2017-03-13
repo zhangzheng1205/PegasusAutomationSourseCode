@@ -61,24 +61,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //td[@id = &apos;ETContainer&apos;]/table/thead/tr[2]/td/table/thead/tr[2]/td/i/span.
-        /// </summary>
-        internal static string AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator {
-            get {
-                return ResourceManager.GetString("AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to //td[@id = &apos;DTContainer&apos;]/table/thead/tr[2]/td/table/thead/tr[2]/td/span.
-        /// </summary>
-        internal static string AddAsessment_Page_OpenPreTestCreationPage_XPath_Locator {
-            get {
-                return ResourceManager.GetString("AddAsessment_Page_OpenPreTestCreationPage_XPath_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to _ctl0_PopupPageContent_imgBtnAdd_Close.
         /// </summary>
         internal static string AddAsessment_Page_SAveCopyAddandClose_ID_Locator {

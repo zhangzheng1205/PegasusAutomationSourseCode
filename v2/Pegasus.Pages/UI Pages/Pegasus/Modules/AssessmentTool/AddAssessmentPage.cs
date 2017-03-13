@@ -818,8 +818,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
 
-                IWebElement preTest1 = base.GetWebElementPropertiesByXPath(AddAssessmentPageResources.
-               AddAsessment_Page_OpenPreTestCreationPage_XPath_Locator);
+                //Switch to add myitlab study plan window
+                base.WaitUntilWindowLoads("Add myitlab Study Plan");
+                IWebElement preTest1 = base.GetWebElementPropertiesByXPath(
+                    AddAssessmentPageResources.
+               AddAsessment_Page_OpenPreTestCreation_XPath_Locator);
                 base.ClickByJavaScriptExecutor(preTest1);
                 //Switch to last open Window
                 base.SwitchToLastOpenedWindow();

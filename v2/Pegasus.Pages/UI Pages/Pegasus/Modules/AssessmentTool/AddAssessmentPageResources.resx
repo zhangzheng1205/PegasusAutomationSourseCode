@@ -393,4 +393,13 @@
   <data name="AddAssessment_Page_CourseMaterials_WindowName" xml:space="preserve">
     <value>Course Materials</value>
   </data>
+  <data name="AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator" xml:space="preserve">
+    <value>//td[@id = 'ETContainer']/table/thead/tr[2]/td/table/thead/tr[2]/td/i/span</value>
+  </data>
+  <data name="AddAsessment_Page_OpenPreTestCreation_XPath_Locator" xml:space="preserve">
+    <value>//td[@id = 'DTContainer']/table/thead/tr[2]/td/table/thead/tr[2]/td/span</value>
+  </data>
+  <data name="AddAsessment_Page_SAveCopyAddandClose_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_imgBtnAdd_Close</value>
+  </data>
 </root>
