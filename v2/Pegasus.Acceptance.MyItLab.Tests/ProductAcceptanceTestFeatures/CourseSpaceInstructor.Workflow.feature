@@ -520,9 +520,14 @@ And I click on the "myitlab Study Plan" asset type
 Then I should be on "Add myitlab Study Plan" page
 When I save the "StudyPlan" details tab
 Then I should be on "Build Study Plan" tab 
-When I create a "SIM5Activity" of behavioral mode "SkillBased" Pretest
+When I create a "Sim5PreTest" of behavioral mode "SkillBased" Pretest
 And I add "SIM5" question in created "Exam [Skill-Based]" activity
-And I create pre test 
-And I create a "SIM5Activity" of behavioral mode "SkillBased" posttest
+And I create "Sim5PreTest" pre test 
+Then I should see the "Sim5PreTest" pre test created
+When I create a "Sim5PostTest" of behavioral mode "SkillBased" posttest
 And I add "SIM5" question in created "Exam [Skill-Based]" activity
-And I create post test
+And I create "Sim5PostTest" post test
+Then I should see the "Sim5PostTest" post test created 
+When I save the study plan
+Then I should see the successfull message "Study Plan added successfully."
+

@@ -820,18 +820,18 @@ namespace Pegasus.Pages.UI_Pages
 
                 //Switch to add myitlab study plan window
                 base.WaitUntilWindowLoads("Add myitlab Study Plan");
-                IWebElement preTest1 = base.GetWebElementPropertiesByXPath(
+                IWebElement preTest = base.GetWebElementPropertiesByXPath(
                     AddAssessmentPageResources.
-               AddAsessment_Page_OpenPreTestCreation_XPath_Locator);
-                base.ClickByJavaScriptExecutor(preTest1);
+                AddAsessment_Page_OpenPreTestCreation_XPath_Locator);
+                base.ClickByJavaScriptExecutor(preTest);
                 //Switch to last open Window
                 base.SwitchToLastOpenedWindow();
                 //Wait for Add and Close button
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
-        AddAsessment_Page_SAveCopyAddandClose_ID_Locator));
+                AddAsessment_Page_SAveCopyAddandClose_ID_Locator));
                 //Get Property of Add and Close button
                 IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesById(AddAssessmentPageResources.
-               AddAsessment_Page_SAveCopyAddandClose_ID_Locator);
+                AddAsessment_Page_SAveCopyAddandClose_ID_Locator);
                 //Click on Add and Close button
                 base.ClickByJavaScriptExecutor(GetAddAndCloseButton);
                 //Generate Random Number
@@ -842,6 +842,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Generate GUID for Activity Name
                 Guid activity = Guid.NewGuid();
                 string activityName = activity.ToString();
+                //Stor Activity Name
+                this.StoreActivityDetails(activityTypeEnum, behavioralModeEnum, activityName);
                 //Create SIM5 Skill Based Activity
                 this.CreateSkillBasedPreTest(activityName, behavioralModeEnum);
 
@@ -867,9 +869,9 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                IWebElement postTest1 = base.GetWebElementPropertiesByXPath(AddAssessmentPageResources.
-AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
-                base.ClickByJavaScriptExecutor(postTest1);
+                IWebElement postTest = base.GetWebElementPropertiesByXPath(AddAssessmentPageResources.
+                AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
+                base.ClickByJavaScriptExecutor(postTest);
                 //Generate Random Number
                 string randomNumber = base.GetRandomNumber(AddAssessmentPageResources.
                     AddAsessment_Page_RandomNumber_Character,
@@ -878,6 +880,8 @@ AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
                 //Generate GUID for Activity Name
                 Guid activity = Guid.NewGuid();
                 string activityName = activity.ToString();
+                //Stor Activity Name
+                this.StoreActivityDetails(activityTypeEnum, behavioralModeEnum, activityName);
                 //Create SIM5 Skill Based Post TEst
                 this.CreateSkillBasedPostTest(activityName, behavioralModeEnum);
             }
@@ -1043,11 +1047,6 @@ AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
             logger.LogMethodEntry("AddAssessmentPage",
                 "CreateSkillBasedActivity",
                   base.IsTakeScreenShotDuringEntryExit);
-            //Select Create Activity Window
-            //base.SwitchToDefaultWindow();
-            //base.WaitUntilWindowLoads("Create Post-test:");
-            //bool dsd = base.IsElementPresent(By.Id("txtAssname"), 5);
-            //Fill Asset name
             this.FillAssetName(activityName);
             //Click On Save And Continue Button
             this.ClickOnSaveAndContinueButton();
@@ -1816,7 +1815,7 @@ AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
         /// <param name="behvioralModeTypeEnum">This is Behavioral Mode Enum.</param>
         /// <param name="activityName">This is Activity Name.</param>
         public void StoreActivityDetails(Activity.ActivityTypeEnum activityTypeEnum,
-            Activity.ActivityBehavioralModesEnum behvioralModeTypeEnum, String activityName)
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum, String activityName)
         {
             logger.LogMethodEntry("AddAssessmentPage", "StoreActivityDetails",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -1827,7 +1826,7 @@ AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator);
                 {
                     Name = activityName,
                     ActivityType = activityTypeEnum,
-                    ActivityBehavioralMode = behvioralModeTypeEnum,
+                    ActivityBehavioralMode = behavioralModeEnum,
                     IsCreated = true,
                 };
                 newActivityTest.StoreActivityInMemory();

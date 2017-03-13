@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                     ContentBrowserUX_Page_Window_Title_Name);
                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AddandClose_Id_Locator));
-                IWebElement getSaveCloseButton=base.GetWebElementPropertiesById
+                IWebElement getSaveCloseButton = base.GetWebElementPropertiesById
                     (ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AddandClose_Id_Locator);
                 //Click on Add and CLose Button
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception ex)
             {
                 ExceptionHandler.HandleException(ex);
-            } 
+            }
 
             Logger.LogMethodExit("ContentBrowserUXPage", "SelectActivityForPreTest",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Entry
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectSIMQuestionFolder",
                 base.IsTakeScreenShotDuringEntryExit);
-           
+
             try
             {
                 base.WaitUntilWindowLoads(ContentBrowserUXPageResource.
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AddandClose_Id_Locator));
                 //Click on Add and CLose Button
-                IWebElement getPropertyOfAddAndCloseButton=base.
+                IWebElement getPropertyOfAddAndCloseButton = base.
                     GetWebElementPropertiesById(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AddandClose_Id_Locator);
                 base.ClickByJavaScriptExecutor(getPropertyOfAddAndCloseButton);
@@ -330,11 +330,11 @@ namespace Pegasus.Pages.UI_Pages
                 Question questionName = Question.Get(
                      Question.QuestionTypeEnum.TrueFalse);
                 //Select Check Box of Question
-                this.SelectCheckBoxOfActivity(questionName.Name);                
+                this.SelectCheckBoxOfActivity(questionName.Name);
                 //Wait for page load
                 base.SetPageLoadWaitTime(5);
                 //Click on the save ans close button
-                this.ClickOnAddAndCloseButtonToSelectQuestions();                
+                this.ClickOnAddAndCloseButtonToSelectQuestions();
             }
             catch (Exception e)
             {
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Search SIM5 Question
                 this.SearchSIM5Question();
                 //Select and Add SIM5 question
-                this.SelectAndAddSIM5Question();            
+                this.SelectAndAddSIM5Question();
             }
             catch (Exception e)
             {
@@ -548,38 +548,38 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectAndAddSIM5Question",
                           base.IsTakeScreenShotDuringEntryExit);
-             try
-             {
-                 //Switch to last open window
-                 base.SwitchToLastOpenedWindow();
-                 //Switch to Iframe
-                 base.SwitchToIFrameById(ContentBrowserUXPageResource.
-                     ContentBrowserUX_Page_CourseMaterialsLibrary_Iframe_Id_Locator);
-                 //Wait for element to select first SIM5 question
-                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                     ContentBrowserUX_Page_CourseMaterialsLibrary_FirstSIM5Question_CheckBox_Id_Locator));
-                 //Get checkbox property for first SIM5 question 
-                 IWebElement GetFirstSIM5QuestionCheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
-                     ContentBrowserUX_Page_CourseMaterialsLibrary_FirstSIM5Question_CheckBox_Id_Locator);
-                 //Select first SIM5 question
-                 base.ClickByJavaScriptExecutor(GetFirstSIM5QuestionCheckBox);
-                 //Switch to last open Window
-                 base.SwitchToLastOpenedWindow();
-                 //Wait for Add and Close button
-                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                     ContentBrowserUX_Page_AddAndClose_Button_Id_Locator));
-                 //Get Property of Add and Close button
-                 IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
-                     ContentBrowserUX_Page_AddAndClose_Button_Id_Locator);
-                 //Click on Add and Close button
-                 base.ClickByJavaScriptExecutor(GetAddAndCloseButton);
-             }
-             catch (Exception e)
-             {
-                 ExceptionHandler.HandleException(e);
-             }
-             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectAndAddSIM5Question",
-                        base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Switch to last open window
+                base.SwitchToLastOpenedWindow();
+                //Switch to Iframe
+                base.SwitchToIFrameById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_CourseMaterialsLibrary_Iframe_Id_Locator);
+                //Wait for element to select first SIM5 question
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_CourseMaterialsLibrary_FirstSIM5Question_CheckBox_Id_Locator));
+                //Get checkbox property for first SIM5 question 
+                IWebElement GetFirstSIM5QuestionCheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_CourseMaterialsLibrary_FirstSIM5Question_CheckBox_Id_Locator);
+                //Select first SIM5 question
+                base.ClickByJavaScriptExecutor(GetFirstSIM5QuestionCheckBox);
+                //Switch to last open Window
+                base.SwitchToLastOpenedWindow();
+                //Wait for Add and Close button
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AddAndClose_Button_Id_Locator));
+                //Get Property of Add and Close button
+                IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AddAndClose_Button_Id_Locator);
+                //Click on Add and Close button
+                base.ClickByJavaScriptExecutor(GetAddAndCloseButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentBrowserUXPage", "SelectAndAddSIM5Question",
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         private void SearchSIM5Question()
@@ -594,30 +594,19 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for element 'All Question Type'
                 base.SwitchToIFrameById("openModalPopupframe");
                 bool dsad = base.IsElementPresent(By.XPath("//div [@id = 'div3']/input"), 5);
-               
-                
-
                 //Wait for All QuestionTypes checkbox
                 base.WaitForElement(By.XPath("//div [@id = 'div3']/input"));
                 //Get Properity for All Question Types checkbox
                 IWebElement GetAllQuestionTypeCheckBox1 = base.GetWebElementPropertiesByXPath("//div [@id = 'div3']/input");
                 //Uncheck checkbox for All QuestionTypes
                 base.ClickByJavaScriptExecutor(GetAllQuestionTypeCheckBox1);
-                              
-                
-
                 //Wait for checkbox element for SIM5 Question
                 base.WaitForElement(By.Id("chkQuestionTypeList_3"));
                 //Get WebElement property for SIM5 check box
                 IWebElement GetSIM5CheckBox1 = base.GetWebElementPropertiesById("chkQuestionTypeList_3");
                 //Select the checkbox for SIM5 Question
                 base.ClickByJavaScriptExecutor(GetSIM5CheckBox1);
-
-               
                 base.ClickButtonById("btnAdvSearch");
-                
-               
-               
             }
             catch (Exception e)
             {
@@ -661,7 +650,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ContentBrowserUXPage", "ClickOnAdvancedSearchLink",
                        base.IsTakeScreenShotDuringEntryExit);
         }
-             
+
 
         /// <summary>
         /// Click On Add and Close Button.

@@ -1305,8 +1305,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Create study plan Pre test
         /// </summary>
-        [When(@"I create pre test")]
-        public void AddPreTest()
+        [When(@"I create ""(.*)"" pre test")]
+        public void AddPreTest(string preTest)
         {
             Logger.LogMethodEntry("AddPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
             //Create pre test
@@ -1315,10 +1315,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Create studety plan Post test
+        /// Create study plan Post test
         /// </summary>
-        [When(@"I create post test")]
-        public void AddPostTest()
+        [When(@"I create ""(.*)"" post test")]
+        public void AddPostTest(string postTest)
         {
             Logger.LogMethodEntry("AddPostTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
             //Create post test
@@ -1326,5 +1326,52 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AddPostTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Display of create of pre test
+        /// </summary>
+        [Then(@"I should see the ""(.*)"" pre test created")]
+        public void DisplayOfCreatedPreTest(Activity.ActivityTypeEnum preTest)
+        {
+            Logger.LogMethodEntry("DisplayOfCreatedPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            //Create post test
+            Activity preTestName = Activity.Get(preTest);
+            string actualPreTestname = preTestName.Name.ToString();
+            Logger.LogAssertion("DisplayOfCreatedPreTest",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(actualPreTestname,
+                    new CoursePreviewUXPage().CreatedPreTestName()));
+            Logger.LogMethodExit("DisplayOfCreatedPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Display of create of post test
+        /// </summary>
+        [Then(@"I should see the ""(.*)"" post test created")]
+                public void DisplayOfCreatedPostTest(Activity.ActivityTypeEnum postTest)
+        {
+            Logger.LogMethodEntry("DisplayOfCreatedPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            //Create post test
+            Activity postTestName = Activity.Get(postTest);
+            string actualPostTestname = postTestName.Name.ToString();
+            Logger.LogAssertion("DisplayOfCreatedPreTest",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(actualPostTestname,
+                    new CoursePreviewUXPage().CreatedPostTestName()));
+            Logger.LogMethodExit("DisplayOfCreatedPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+        /// Display of create of post test
+        /// </summary>
+        [When(@"I save the study plan")]
+        public void CreateStudyPlan()
+        {
+            Logger.LogMethodEntry("DisplayOfCreatedPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            //Save study plan after addin pre test and post test
+            new CoursePreviewUXPage().SaveStudyPlan();
+            Logger.LogMethodExit("DisplayOfCreatedPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
+
+

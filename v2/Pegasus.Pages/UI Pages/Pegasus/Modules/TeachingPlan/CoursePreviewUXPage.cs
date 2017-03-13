@@ -2445,11 +2445,13 @@ namespace Pegasus.Pages.UI_Pages
             {
 
                 //Switch to create pre test window
-                base.SwitchToWindow(CoursePreviewUXPageResource.
-                    CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator);                                             
                 //Save the pretest
-                base.ClickButtonById(CoursePreviewUXPageResource.
+                IWebElement saveAndReturn = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.
                 CoursePreviewUXPage_StudyPlanSavePreTest_ID_Locator);
+                base.ClickByJavaScriptExecutor(saveAndReturn);
+                Thread.Sleep(5000);
             }
             catch (Exception e)
             {
@@ -2470,19 +2472,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Switch to create pre test window
-
-                base.SwitchToWindow(CoursePreviewUXPageResource.
-                    CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator);
-                //Save the pretest  
-
-                base.ClickButtonById(CoursePreviewUXPageResource.
+                //Switch to create post test window
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator);                                            
+                //Save the posttest  
+                                base.ClickButtonById(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_StudyPlanSavePostTest_ID_Locator);
-                //Save the edit or create study plan page
-
-                base.ClickButtonById(CoursePreviewUXPageResource.
-                    CoursePreviewUXPage_SaveStudyPlan_ID_Locator);
-            }
+                            }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -2493,5 +2489,85 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
+        /// <summary>
+        /// Display of created post test
+        /// </summary>
+        public string CreatedPreTestName()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            string preTestName = string.Empty;
+            try
+            {
+                //Get the pre test title
+                preTestName = base.GetElementInnerTextById(CoursePreviewUXPageResource.
+                  CoursePreviewUXPage_PreTestTitle_ID_Locator);       
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            return preTestName;
+        }
+        
+        
+             /// <summary>
+        /// Display of created post test
+        /// </summary>
+        public string CreatedPostTestName()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            string postTestName = string.Empty;
+            try
+            {
+                //Get the pre test title
+                postTestName = base.GetElementInnerTextById(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_PostTestTitle_ID_Locator);                               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            return postTestName;
+        }
+
+        
+        /// <summary>
+        /// Display of created post test
+        /// </summary>
+        public string SaveStudyPlan()
+        {
+            Logger.LogMethodEntry("CoursePreviewUXPage",
+                "ClickCreateFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            string postTestName = string.Empty;
+            try
+            {
+                //Get the pre test title
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_AddStudyPlanMIL_ID_Locator);
+                base.SelectWindow(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_AddStudyPlanMIL_ID_Locator);
+                base.ClickButtonById(CoursePreviewUXPageResource.
+                CoursePreviewUXPage_SaveStudyPlan_ID_Locator);                             
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewUXPage",
+            "ClickCreateFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            return postTestName;
+        }
     }
 }

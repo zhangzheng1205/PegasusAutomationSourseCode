@@ -355,7 +355,7 @@
     <value>_ctl0__ctl0_phBody_PageContent_txtModuleName</value>
   </data>
   <data name="CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator" xml:space="preserve">
-    <value>Create Pre-test:</value>
+    <value>Create Post-test</value>
   </data>
   <data name="CoursePreviewUXPage_StudyPlanSavePostTest_ID_Locator" xml:space="preserve">
     <value>cmdTabTopicsFinish</value>
@@ -365,5 +365,17 @@
   </data>
   <data name="CoursePreviewUXPage_StudyPlanTabName_ID_Locator" xml:space="preserve">
     <value>cmdTabSP</value>
+  </data>
+  <data name="CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator" xml:space="preserve">
+    <value>Create Pre-test:</value>
+  </data>
+  <data name="CoursePreviewUXPage_AddStudyPlanMIL_ID_Locator" xml:space="preserve">
+    <value>Add myitlab Study Plan</value>
+  </data>
+  <data name="CoursePreviewUXPage_PostTestTitle_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_ETName</value>
+  </data>
+  <data name="CoursePreviewUXPage_PreTestTitle_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_DTName</value>
   </data>
 </root>
