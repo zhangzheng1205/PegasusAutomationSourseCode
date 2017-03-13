@@ -833,5 +833,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
                 return ResourceManager.GetString("CoursePreviewUXPage_StudyPlanTabName_ID_Locator", resourceCulture);
             }
         }
+
+        public static string CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator { get; set; }
     }
 }

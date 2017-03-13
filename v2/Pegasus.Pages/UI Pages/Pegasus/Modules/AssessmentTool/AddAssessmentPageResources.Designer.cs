@@ -887,5 +887,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
                 return ResourceManager.GetString("TestEnvironment_Key", resourceCulture);
             }
         }
+
+        public static string AddAsessment_Page_OpenPreTestCreationPage_XPath_Locator { get; set; }
+
+        public static string AddAsessment_Page_SAveCopyAddandClose_ID_Locator { get; set; }
+
+        public static string AddAsessment_Page_OpenPostTestCeationPage_XPath_Locator { get; set; }
     }
 }

@@ -80,7 +80,40 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Create a SIM5 SkillBased Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum</param>
+        /// <param name="behavioralModeEnum">This is behavioral mode enum</param>
+        [When(@"I create a ""(.*)"" of behavioral mode ""(.*)"" Pretest")]
+        public void CreateSPPretest(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create Activity
+            new AddAssessmentPage().CreatePreTest(activityTypeEnum, behavioralModeEnum);
 
+            Logger.LogMethodExit("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Create a SIM5 SkillBased Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum</param>
+        /// <param name="behavioralModeEnum">This is behavioral mode enum</param>
+        [When(@"I create a ""(.*)"" of behavioral mode ""(.*)"" posttest")]
+
+        public void CreateSPPosttest(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create Activity
+            new AddAssessmentPage().CreatePostTest(activityTypeEnum, behavioralModeEnum);
+            Logger.LogMethodExit("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
         /// <summary>
@@ -1241,6 +1274,56 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateActivity", 
                 "ValidateDisplayOfActivityStatus",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Save Study Plan details tab
+        /// </summary>
+        [When(@"I save the ""(.*)"" details tab")]
+        public void SaveStudyPlan(Activity.ActivityTypeEnum studyPlanName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            //Save study plan
+            new CoursePreviewUXPage().SaveStudyPlanDetails(studyPlanName);
+            Logger.LogMethodExit("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Save Study Plan details tab
+        /// </summary>
+        [Then(@"I should be on ""(.*)"" tab")]
+        public void SwitchToTab(string tabName)
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("SwitchToTab", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(tabName,
+                   new CoursePreviewUXPage().
+                   SwitchToTab()));
+            Logger.LogMethodExit("CreateActivity", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create study plan Pre test
+        /// </summary>
+        [When(@"I create pre test")]
+        public void AddPreTest()
+        {
+            Logger.LogMethodEntry("AddPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            //Create pre test
+            new CoursePreviewUXPage().CreatePretest();
+            Logger.LogMethodExit("AddPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create studety plan Post test
+        /// </summary>
+        [When(@"I create post test")]
+        public void AddPostTest()
+        {
+            Logger.LogMethodEntry("AddPostTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
+            //Create post test
+            new CoursePreviewUXPage().CreatePosttest();
+            Logger.LogMethodExit("AddPostTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
     }
