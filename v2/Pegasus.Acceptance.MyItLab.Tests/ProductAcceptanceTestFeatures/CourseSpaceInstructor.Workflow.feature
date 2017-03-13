@@ -505,11 +505,6 @@ When I click on 'Edit' button
 #MyItLabProgramCourse
 #Testcase ID:
 Scenario: Instructor create studyplan in course materials
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
 And I should be on "Add from Library" lightbox
