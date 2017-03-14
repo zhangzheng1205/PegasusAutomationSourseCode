@@ -367,9 +367,9 @@
 			<IsApproved>true</IsApproved>
 		</Course>
 		<Course>
-			<Name>MyITLab 0ffice 2016 -sec 2</Name>
+			<Name>Automation_BVT_MIL</Name>
 			<CourseType>MyItLabInstructorCourse</CourseType>
-			<InstructorCourseId>CRSKL8T-180433</InstructorCourseId>
+			<InstructorCourseId>CRSKLY1-250712</InstructorCourseId>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
 			<IsPublished>true</IsPublished>
@@ -1197,7 +1197,18 @@ the UI deleted or refreshed.-->
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
-    
+		<Activity>
+			<Name>RegLinkAsset</Name>
+			<ActivityType>Sim5PreTest</ActivityType>
+			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+			<IsCreated>true</IsCreated>
+		</Activity>
+		<Activity>
+			<Name>RegLinkAsset</Name>
+			<ActivityType>Sim5PostTest</ActivityType>
+			<ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+			<IsCreated>true</IsCreated>
+		</Activity>    
 	</ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>

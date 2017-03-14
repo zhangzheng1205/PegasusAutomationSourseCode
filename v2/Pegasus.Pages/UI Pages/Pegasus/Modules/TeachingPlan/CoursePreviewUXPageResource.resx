@@ -369,13 +369,10 @@
   <data name="CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator" xml:space="preserve">
     <value>Create Pre-test:</value>
   </data>
-  <data name="CoursePreviewUXPage_AddStudyPlanMIL_ID_Locator" xml:space="preserve">
-    <value>Add myitlab Study Plan</value>
-  </data>
-  <data name="CoursePreviewUXPage_PostTestTitle_ID_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent_ETName</value>
-  </data>
-  <data name="CoursePreviewUXPage_PreTestTitle_ID_Locator" xml:space="preserve">
+  <data name="CoursePreviewUXPage_SPPretestName_ID_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent_DTName</value>
+  </data>
+  <data name="CoursePreviewUXPage_PTName_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_ETName</value>
   </data>
 </root>

@@ -1108,3 +1108,17 @@ When I click on the button "Close Assignment"
 Then I should be on the "Course Materials" page
 Then I should be displayed with status "Passed" for "RegPowerPointGraderActivity" 
 And I should see "RegPowerPointGraderActivity" activity in Grades tab with "GraderIT100Score" grade
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Submit Pre Test,Post Test of Study Plan#
+#--------------------------------------------------------------------------------------------------------------------------
+#Purpose: Submit Pre test and Post test in Course materials tab
+#MyItLabProgramCourse
+#Testcase ID:
+Scenario: Submit pre test as CsSmsStudent
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab

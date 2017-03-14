@@ -329,12 +329,7 @@ Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' fr
 #MyItLabProgramCourse
 #Testcase ID: 
 Scenario: Instructor creating Link asset inside a folder
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-When I enter into "RegFolderAsset" folder
-And I click on 'Materials' option
+When I click on 'Materials' option
 And I click on the "Add Link" asset type
 Then I should be on "Add Link" lightbox
 When I create "RegLinkAsset" activity
@@ -347,12 +342,7 @@ Then I should be displayed with "RegLinkAsset" in 'Manage Course Materials' fram
 #MyItLabProgramCourse
 #Testcase ID: 
 Scenario: Instructor creating Page asset inside a folder
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-And I enter into "RegFolderAsset" folder
-And I click on 'Materials' option
+When I click on 'Materials' option
 And I click on the "Add Page" asset type
 Then I should be on "Add Page" lightbox
 When I create "RegPageAsset" activity
@@ -363,11 +353,6 @@ Then I should be displayed with "RegPageAsset" in 'Manage Course Materials' fram
 #MyItLabProgramCourse
 #Testcase ID: 
 Scenario: Instructor creating e-Text Link asset inside a folder
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-And I enter into "RegFolderAsset" folder
 When I click on 'Materials' option
 And I click on the "Add eText Link" asset type
 Then I should be on "Add eText Link" lightbox
@@ -379,11 +364,6 @@ Then I should be displayed with "RegEtextLinkAsset" in 'Manage Course Materials'
 #MyItLabProgramCourse
 #Testcase ID: 
 Scenario: Instructor creating Discussion Topic asset inside a folder
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-And I enter into "RegFolderAsset" folder
 When I click on 'Materials' option
 And I click on the "Add Discussion Topic" asset type
 Then I should be on "Add Discussion Topic" lightbox
@@ -501,14 +481,10 @@ When I click on 'Edit' button
 #--------------------------------------------------------------------------------------------------------------------------
 										#Create Pre Test,Post Test and Study Plan#
 #--------------------------------------------------------------------------------------------------------------------------
-#Purpose: Delete the asset using Delete option inside new folder in Course materials tab
+#Purpose: Create Pre Test,Post Test and Study Plan inside new folder in Course materials tab
 #MyItLabProgramCourse
 #Testcase ID:
 Scenario: Instructor create studyplan in course materials
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
 When I enter into "RegFolderAsset" folder
 And I click on 'Materials' option
 And I click on the "myitlab Study Plan" asset type
@@ -517,11 +493,11 @@ When I save the "StudyPlan" details tab
 Then I should be on "Build Study Plan" tab 
 When I create a "Sim5PreTest" of behavioral mode "SkillBased" Pretest
 And I add "SIM5" question in created "Exam [Skill-Based]" activity
-And I create "Sim5PreTest" pre test 
+And I save "Sim5PreTest" pre test 
 Then I should see the "Sim5PreTest" pre test created
 When I create a "Sim5PostTest" of behavioral mode "SkillBased" posttest
 And I add "SIM5" question in created "Exam [Skill-Based]" activity
-And I create "Sim5PostTest" post test
+And I save "Sim5PostTest" post test
 Then I should see the "Sim5PostTest" post test created 
 When I save the study plan
 Then I should see the successfull message "Study Plan added successfully."

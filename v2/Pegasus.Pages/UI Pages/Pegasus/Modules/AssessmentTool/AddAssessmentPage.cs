@@ -842,7 +842,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Generate GUID for Activity Name
                 Guid activity = Guid.NewGuid();
                 string activityName = activity.ToString();
-                //Stor Activity Name
+                //Store Activity Name
                 this.StoreActivityDetails(activityTypeEnum, behavioralModeEnum, activityName);
                 //Create SIM5 Skill Based Activity
                 this.CreateSkillBasedPreTest(activityName, behavioralModeEnum);

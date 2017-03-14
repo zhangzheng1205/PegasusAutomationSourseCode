@@ -823,5 +823,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         public static string CoursePreviewUXPage_PostTestTitle_ID_Locator { get; set; }
 
         public static string CoursePreviewUXPage_AddStudyPlanMIL_ID_Locator { get; set; }
+
+
+        public static string CoursePreviewUXPage_SPPosttestName_ID_Locator { get; set; }
+
+        public static string CoursePreviewUXPage_SPPretestName_ID_Locator { get; set; }
     }
 }

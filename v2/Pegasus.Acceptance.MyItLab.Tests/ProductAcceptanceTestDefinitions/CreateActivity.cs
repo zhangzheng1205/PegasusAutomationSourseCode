@@ -1305,24 +1305,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Create study plan Pre test
         /// </summary>
-        [When(@"I create ""(.*)"" pre test")]
+        [When(@"I save ""(.*)"" pre test")]
         public void AddPreTest(string preTest)
         {
             Logger.LogMethodEntry("AddPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
             //Create pre test
-            new CoursePreviewUXPage().CreatePretest();
+            new CoursePreviewUXPage().SavePretest();
             Logger.LogMethodExit("AddPreTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Create study plan Post test
         /// </summary>
-        [When(@"I create ""(.*)"" post test")]
+        [When(@"I save ""(.*)"" post test")]
         public void AddPostTest(string postTest)
         {
             Logger.LogMethodEntry("AddPostTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
             //Create post test
-            new CoursePreviewUXPage().CreatePosttest();
+            new CoursePreviewUXPage().SavePosttest();
             Logger.LogMethodExit("AddPostTest", "ClickMaterialsButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
