@@ -1240,6 +1240,59 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodExit("CommonSteps", "DisplayOfPastDueRedIcon",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+//--------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Validate Activity Status For The Activity.
+        /// </summary>
+        /// <param name="activityStatus"></param>
+        /// <param name="activityName"></param>
+        [Then(@"I should see the status ""(.*)"" for the activity ""(.*)""")]
+        public void ValidateActivityStatusForTheActivity(string activityStatus,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activty name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInCourseMaterial(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate score of the submitted activity.
+        /// </summary>
+        /// <param name="activityScore">Activity score.</param>
+        /// <param name="activityName">Activity name.</param>
+        [Then(@"I should see ""(.*)"" score for the activity ""(.*)"" in course material page")]
+        public void VerifyActivityScoreInCourseMaterialPage(Grade.GradeTypeEnum gradeTypeEnum, 
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Validate the submitted activity score
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activty name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            //Fetch Activty Score from XML
+            Grade grade = Grade.Get(gradeTypeEnum);
+            string activityGrade = grade.GradeScore;
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityGrade, new StudentPresentationPage().
+                    GetActivityScoreFromCourseMaterialsPage(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 }
 
 }

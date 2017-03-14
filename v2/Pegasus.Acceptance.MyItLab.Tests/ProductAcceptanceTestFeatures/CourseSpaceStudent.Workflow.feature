@@ -1122,3 +1122,97 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
 When I navigate to "Course Materials" tab
+
+#---------------------------------------------------------------------------------------------------------------------------
+										#Submit Word SIM Activity having 0, 70, 100 scores#
+#---------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting SIM5 Word activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting Word SIM Activity and scoring 0
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegWordSIMActivity" activity as "CsSmsStudent" with "ZeroScore" score
+And I click on submit button answering incorrectly of "Word" type "Exam" activity "RegWordSIMActivity" by "ZeroScore" student
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegWordSIMActivity"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity0Score" grade
+
+#Purpose : Folder Navigation and student validating view submission for SIM5 Word activity in Grades tab
+#Test case ID :
+#Products : MyItLab.
+#Pre condition : 
+Scenario: Student validating view submission for SIM5 Word activity
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity0Score" grade
+When I click on "view submission" cmenu option of "RegWordSIMActivity" as "CsSmsStudent" user
+Then I should be on the "View Submission" page
+And I should see "RegWordSIMActivity" activity name 
+And I should see 'Attempts' grid with "Date" "Grade" columns having "2" entries as "CsSmsStudent" user
+When I click on attempt having "100" grade as "CsSmsStudent"
+Then I should see "CsSmsStudent" with "100%" score 
+
+
+#Purpose: Validate SIM5 Word activity 'New Grades' channel of Notifications channel in Today's view tab
+#Test case ID : 
+#Products : MyItLab.
+#Dependancy: SIM5 Activity should be submitted by students
+Scenario: Student validates the New Grades channel of Notifications channel in Todays view tab
+When I navigate to "Today's View" tab
+When I expand "Alerts" channel
+When I click on "New Grades" alert option
+Then I should see the "RegWordGraderActivity"
+
+#Purpose : Submitting SIM5 Word activity and Student scoring a 70%
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting  Word Activity and scoring 70
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "RegWordSIMActivity" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegWordSIMActivity" activity as "CsSmsStudent"
+And I attempt questions in "RegWordSIMActivity" to score "SimActivity70Score" 
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegWordSIMActivity"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity70Score" grade
+When I click on "view submission" cmenu option of "RegCustomViewActivity1" as "CsSmsStudent" user
+Then I should be on the "View Submission" page
+And I should see "RegCustomViewActivity1" activity name 
+And I should see 'Attempts' grid with "Date" "Grade" columns having "2" entries as "CsSmsStudent" user
+When I click on attempt having "100" grade as "CsSmsStudent"
+Then I should see "CsSmsStudent" with "100%" score 
+
+#Purpose : Submitting SIM5 Word activity and Student scoring a 100%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting  Word Activity and scoring 100
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegWordSIMActivity" activity as "CsSmsStudent"
+And I attempt questions in "RegWordSIMActivity" to score "SimActivity100Score" 
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegWordSIMActivity"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity100Score" grade

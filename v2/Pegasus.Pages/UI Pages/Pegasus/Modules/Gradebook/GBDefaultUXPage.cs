@@ -944,7 +944,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Get the Activity Grade in Grades tab
                 getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
-                    GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
+                    GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i)).TrimEnd();
                 if (getActivityName == activityName)
                 {
                     getActivitygrade = base.GetElementInnerTextByXPath(string.Format(

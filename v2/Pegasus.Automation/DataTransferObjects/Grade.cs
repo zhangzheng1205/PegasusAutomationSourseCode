@@ -26,7 +26,10 @@ namespace Pegasus.Automation.DataTransferObjects
             PegasusNewGradePerc = 8,
             GraderIT0Score = 9,
             GraderIT70Score = 10,
-            GraderIT100Score =11            
+            GraderIT100Score =11,     
+            SimActivity0Score=12,
+            SimActivity70Score=13,
+            SimActivity100Score=14
         }
 
         /// <summary>

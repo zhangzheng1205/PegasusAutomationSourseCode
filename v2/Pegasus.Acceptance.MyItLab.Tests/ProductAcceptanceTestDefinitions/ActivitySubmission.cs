@@ -1075,9 +1075,89 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             Assert.IsTrue(new PresentationPage().VerifySuccessfulSubmission());
         }
+        //-------------------------------------------------------------------------------------------------------
 
+        /// <summary>
+        /// Open The Activity To Launch Based On Scnerio.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="studentName">This is User type enum</param>
+        /// <param name="scenerioName">This is scenerio name.</param>
+        [When(@"I launch the ""(.*)"" activity as ""(.*)"" with ""(.*)"" score")]
+        public void OpenTheActivityToLaunchBasedOnScnerio(Activity.ActivityTypeEnum activityTypeEnum,
+            User.UserTypeEnum studentName, string scenerioName)
+        {
+            //Open The Activity To Launch Based On Scnerio
+            Logger.LogMethodEntry("ActivitySubmission",
+            "OpenTheActivityToLaunchBasedOnScnerio",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            StudentPresentationPage studentPresentationPage =
+                new StudentPresentationPage();
+            //Select Window And Frame
+            studentPresentationPage.SelectWindowAndFrame();
+            //wait for frame to load
+            studentPresentationPage.WaitForActivitytoLoad(activityName);
+            //Select the window
+            studentPresentationPage.SelectSimActivityStudentWindowName(studentName,
+                activityName, scenerioName);
+            Logger.LogMethodExit("ActivitySubmission",
+                "OpenTheActivityToLaunchBasedOnScnerio",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Open the activity
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="studentName">This is User type enum</param>
+        [When(@"I launch the ""(.*)"" activity as ""(.*)""")]
+         public void OpenTheActivityToLaunch(Activity.ActivityTypeEnum activityTypeEnum,
+            User.UserTypeEnum studentName)
+        {
+            // Open The Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+            "OpenTheActivityToLaunch",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            StudentPresentationPage studentPresentationPage =
+                new StudentPresentationPage();
+            //Select Window And Frame
+            studentPresentationPage.SelectWindowAndFrame();
+            //wait for frame to load
+            studentPresentationPage.WaitForActivitytoLoad(activityName);
+            studentPresentationPage.SelectSimActivityStudentWindowName(studentName, activityName);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Sim5 Word Questions Submission.
+        /// </summary>
+        /// <param name="attemptPercentage"></param>
+        /// <param name="activityName"></param>
+        [When(@"I attempt questions in ""(.*)"" to score ""(.*)""")]
+        public void AttemptQuestionsForWordActivity(
+            Activity.ActivityTypeEnum activityTypeEnum, Grade.GradeTypeEnum gradeTypeEnum)
+        {
+            //Sim5 Power Point Questions Submission
+            Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            //Fetch ActivityGrade name from XML
+            Grade grade = Grade.Get(gradeTypeEnum);
+            string attemptPercentage = grade.GradeScore;
+            //Attempt Sim5 Power Point Questions
+            new StudentPresentationPage().AttemptSim5WordActivityQuestions(attemptPercentage, activityName);
+            Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+        }
 
     }
 }

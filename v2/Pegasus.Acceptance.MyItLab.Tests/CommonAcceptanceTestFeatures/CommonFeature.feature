@@ -180,6 +180,14 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
 
+#Purpose: Login as Zero score SMS Student and Navigate to MyItLabInstructorCourse
+Scenario: User Login as Zero score SMS Student and Navigate to MyItLabInstructorCourse
+Given I browsed the login url for "CsSmsStudent"
+When I login as "scoring 0" into the pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+
 #Purpose: Login as Zero Score SMS Student
 Scenario: User login as SMS student to score zero percent in Globalhomepage
 Given I browsed the login url for "CsSmsStudent"
@@ -396,3 +404,12 @@ And I click on "To Do" subtab in "Assignments" tab as "CsSmsStudent" user
 Then I should be on the "Assignments - To Do" page
 When I click on "Custom View" subtab in "Grades" tab as "CsSmsStudent" user
 Then I should be on the "Custom View" page
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The Signout link functionality displayed on the home page
+Scenario: Student validate  Sign out link functionality in course header
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on "Sign out" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsStudent" user
+Then I should see the successfull message "You have been signed out of the application."

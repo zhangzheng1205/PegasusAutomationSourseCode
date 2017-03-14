@@ -922,6 +922,8 @@ testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.Spec
 testRunner.Then("I should be displayed with \"RegNewGradesAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 406
 testRunner.When("I click on \"New Grades\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 407
+testRunner.Then("I should see the \"RegNewGradedActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

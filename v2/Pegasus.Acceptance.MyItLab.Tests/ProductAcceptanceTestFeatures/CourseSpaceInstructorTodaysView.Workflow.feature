@@ -404,4 +404,4 @@ When I navigate to "Today's View" tab
 When I expand "Alerts" channel
 Then I should be displayed with "RegNewGradesAlertCount" count
 When I click on "New Grades" alert option
-#Then I should see the "RegNewGradedActivity"
+Then I should see the "RegNewGradedActivity"

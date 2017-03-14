@@ -113,7 +113,11 @@ namespace Pegasus.Automation.DataTransferObjects
             RegExcelGraderActivity =82,
             RegAccessGraderActivity =83,
             RegPowerPointGraderActivity=84,
-            RegNewGradedActivity = 85
+            RegNewGradedActivity = 85,
+            RegWordSIMActivity = 86,
+            RegExcelSIMActivity = 87,
+            RegAccessSIMActivity = 88,
+            RegPowerPointSIMActivity = 89,
 
         }
 
