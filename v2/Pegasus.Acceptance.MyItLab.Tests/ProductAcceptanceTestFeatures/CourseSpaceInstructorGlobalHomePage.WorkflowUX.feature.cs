@@ -441,11 +441,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 171
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 172
-testRunner.When("I select cmenu \"Copy as Instructor Course\" option of Instructor course \"RegMyITLa" +
-                    "bNewlyCreatedCourse\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select cmenu \"Copy as Instructor Course\" option of Instructor course \"MyItLabAu" +
+                    "thoredCourse\" for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 173
-testRunner.Then("I should be displayed with \"RegMyITLabNewlyCreatedCourse\" MyTest course as \"CsSms" +
-                    "Instructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" MyTest course as \"CsSmsInstruc" +
+                    "tor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 174
 testRunner.And("I should see successfull message \"Copied as instructor course.\" on \"Global Home\" " +
                     "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

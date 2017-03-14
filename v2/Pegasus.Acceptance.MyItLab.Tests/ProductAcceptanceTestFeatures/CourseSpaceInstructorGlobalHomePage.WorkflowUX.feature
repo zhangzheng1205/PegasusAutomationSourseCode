@@ -169,8 +169,8 @@ And I should see successfull message "Course marked for deletion." on "Global Ho
 #Purpose:Verify " Copy as Instructor Course" cmenu option on home page
 Scenario:Validate copy as instructor Course cmenu option of IC course
 Given I am on the "Global Home" page
-When I select cmenu "Copy as Instructor Course" option of Instructor course "RegMyITLabNewlyCreatedCourse" for "CsSmsInstructor"
-Then I should be displayed with "RegMyITLabNewlyCreatedCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+When I select cmenu "Copy as Instructor Course" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
+Then I should be displayed with "MyItLabAuthoredCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 And I should see successfull message "Copied as instructor course." on "Global Home" page
 
 #Test case ID : 
