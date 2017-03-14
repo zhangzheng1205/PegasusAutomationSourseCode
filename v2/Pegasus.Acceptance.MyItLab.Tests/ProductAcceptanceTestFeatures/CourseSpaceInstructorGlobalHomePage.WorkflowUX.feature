@@ -82,8 +82,8 @@ Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "Cs
 #Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate open button functionallity for course as CsSmsInstructor
 Given I am on the "Global Home" page
-When I click on Open button of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
-Then I should be displayed with "MyItLabAuthoredCourse" course information for "CsSmsInstructor" user
+When I click on Open button of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be displayed with "MyItLabInstructorCourse" course information for "CsSmsInstructor" user
 
 #---------------------------------------------------------------------------------------------------------#
 		#Scripts to validate Instructor,MyTest and Program course creation based on ISBN and Decipline#
@@ -110,8 +110,8 @@ Then I should be displayed with "Create a Course" lightbox
 And I should be displayed step "1" with "Search Catalog" in "Create a Course" popup as "CsSmsInstructor" user
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
-When I click on "Select Course" button of "MyItLabAuthoredCourse" using course descipline
-Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+When I click on "Select Course" button of "MyItLabInstructorCourse" using course descipline
+Then I should be displayed with "MyItLabInstructorCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.

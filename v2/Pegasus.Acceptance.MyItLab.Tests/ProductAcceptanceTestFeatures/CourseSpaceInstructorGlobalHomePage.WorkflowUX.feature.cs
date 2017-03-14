@@ -247,10 +247,10 @@ this.ScenarioSetup(scenarioInfo);
 #line 84
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 85
-testRunner.When("I click on Open button of \"MyItLabAuthoredCourse\" as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Open button of \"MyItLabInstructorCourse\" as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 86
-testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" course information for \"CsSmsI" +
-                    "nstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"MyItLabInstructorCourse\" course information for \"CsSm" +
+                    "sInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -308,11 +308,11 @@ testRunner.When("I select \"All Disciplines\" option in \'Browse by Discipline\'
 testRunner.Then("I should be displayed step \"2\" with \"Select Course\" in \"Create a Course\" popup as" +
                     " \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 113
-testRunner.When("I click on \"Select Course\" button of \"MyItLabAuthoredCourse\" using course descipl" +
-                    "ine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Select Course\" button of \"MyItLabInstructorCourse\" using course desci" +
+                    "pline", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 114
-testRunner.Then("I should be displayed with \"MyItLabAuthoredCourse\" Instructor course as \"CsSmsIns" +
-                    "tructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"MyItLabInstructorCourse\" Instructor course as \"CsSmsI" +
+                    "nstructor\" in \"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
