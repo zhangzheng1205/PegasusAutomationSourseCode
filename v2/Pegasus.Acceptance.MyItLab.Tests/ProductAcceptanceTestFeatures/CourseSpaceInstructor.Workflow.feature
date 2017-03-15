@@ -329,24 +329,23 @@ Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' fr
 #MyItLabProgramCourse
 #Testcase ID: 
 Scenario: Instructor creating Link asset inside a folder
+When I enter into "RegFolderAsset" folder
 When I click on 'Materials' option
 And I click on the "Add Link" asset type
 Then I should be on "Add Link" lightbox
 When I create "RegLinkAsset" activity
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-When I enter into "RegFolderAsset" folder
 Then I should be displayed with "RegLinkAsset" in 'Manage Course Materials' frame
 
 #Purpose: Creating Page asset inside new folder in Course materials tab
 #MyItLabProgramCourse
 #Testcase ID: 
 Scenario: Instructor creating Page asset inside a folder
+#When I enter into "RegFolderAsset" folder
 When I click on 'Materials' option
 And I click on the "Add Page" asset type
 Then I should be on "Add Page" lightbox
 When I create "RegPageAsset" activity
-And I click on "Return to Course Materials" button in 'Add from Library' lightbox
+#And I click on "Return to Course Materials" button in 'Add from Library' lightbox
 Then I should be displayed with "RegPageAsset" in 'Manage Course Materials' frame
 
 #Purpose: Creating e-Text link inside new folder in Course materials tab
@@ -403,12 +402,6 @@ And I click on "Preview" cmenu option of "RegLinkAsset" asset
 #MyItLabProgramCourse
 #Testcase ID:
 Scenario: Search asset in CourseMaterials and Show/Hide as CsSmsInstructor
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-When I enter into "RegFolderAsset" folder
-Then I should be displayed with "RegLinkAsset" in Manage Course Materials frame of "Course Materials" tab
 When I click "Show" of "RegLinkAsset" in "Course Materials" tab
 Then I should see "RegLinkAsset" with "Show" status
 
@@ -436,12 +429,12 @@ When I click on 'Paste' button and I select "Paste at Bottom" option
 #MyItLabProgramCourse
 #Testcase ID:
 Scenario: Search asset in CourseMaterials and Assign as CsSmsInstructor
-When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
-Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
-When I enter into "RegFolderAsset" folder
-Then I should be displayed with "RegLinkAsset" in Manage Course Materials frame of "Course Materials" tab
+#When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+#Then I should be on the "Course Materials" page
+#And I should be on "Add from Library" lightbox
+#When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+#When I enter into "RegFolderAsset" folder
+#Then I should be displayed with "RegLinkAsset" in Manage Course Materials frame of "Course Materials" tab
 When I click on 'Assign' button for "RegLinkAsset" in "Course Materials" tab
 Then I should see "Assigned" status for "RegLinkAsset" in "Course Materials" tab
 

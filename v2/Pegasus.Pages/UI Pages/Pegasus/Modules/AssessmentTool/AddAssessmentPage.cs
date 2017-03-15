@@ -401,9 +401,9 @@ namespace Pegasus.Pages.UI_Pages
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
                         //Swith To Add Materials Popup In Course Materials tab
-                        new ContentLibraryUXPage().SwithToAddMaterialsPopupInCourseMaterials();
+                        //new ContentLibraryUXPage().SwithToAddMaterialsPopupInCourseMaterials();
                         //Click on CLose button in Add Materials popup
-                        this.CloseAddMaterialsPopupInCourseMaterials();
+                        //this.CloseAddMaterialsPopupInCourseMaterials();
                         break;
 
                     case Activity.ActivityTypeEnum.RegEtextLinkAsset:
@@ -519,11 +519,12 @@ namespace Pegasus.Pages.UI_Pages
                         //Fill The HTML Description
                         this.FillTheHTMLDescription(activityTypeEnum, newHTMLDiscription.ToString());
                         ////Click On Save And Close Button
+                        base.SwitchToIFrameById("openModalPopupframe");
+                        bool tgr = base.IsElementPresent(By.Id("imgBtnSave"), 10);
                         base.WaitForElement(By.PartialLinkText(
                             AddAssessmentPageResources.
                             AddAsessment_Page_Close_DiscussionTopic_Popup_PartialLinkText_Locator));
-                        base.ClickButtonByPartialLinkText(AddAssessmentPageResources.
-                            AddAsessment_Page_Close_DiscussionTopic_Popup_PartialLinkText_Locator);
+                        base.ClickButtonById("imgBtnSave");
                         //Click On Add And Close Button
                         new ContentBrowserUXPage().ClickOnAddAndCloseButton();
                         //Swith To Add Materials Popup In Course Materials tab
@@ -553,6 +554,8 @@ namespace Pegasus.Pages.UI_Pages
                 "CloseAddMaterialsPopupInCourseMaterials",
                    base.IsTakeScreenShotDuringEntryExit);
             //Wait for Close button to load
+            bool hfd = base.IsElementPresent(By.XPath(AddAssessmentPageResources.
+                            AddAsessment_Page_AddCourseMaterials_CloseButton_XPath_Locator),10);
             base.WaitForElement(By.XPath(AddAssessmentPageResources.
                             AddAsessment_Page_AddCourseMaterials_CloseButton_XPath_Locator));
             //Click on CLose button

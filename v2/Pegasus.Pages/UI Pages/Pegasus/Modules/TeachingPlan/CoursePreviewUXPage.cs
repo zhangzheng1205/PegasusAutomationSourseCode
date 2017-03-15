@@ -1686,12 +1686,17 @@ namespace Pegasus.Pages.UI_Pages
                             base.ClickByJavaScriptExecutor(getShowOption);
                             // Check if the Assign Alert popup if dispalyed
                             base.SwitchToLastOpenedWindow();
-                            bool alertPopupExistStatus = base.IsElementPresent(By.ClassName(CoursePreviewUXPageResource.
+                            bool alertPopupExistStatus1 = base.IsElementPresent(By.ClassName(CoursePreviewUXPageResource.
                                 CoursePreviewUXPage_CourseMaterials_alertPopup_Classname_Locator), 10);
+                            base.SwitchToIFrameById("ifrmCoursePreview");
+                            bool alertPopupExistStatus = base.IsElementPresent(By.Id("confimationModal"), 10);
                             if (alertPopupExistStatus == true)
                             {
-                                base.ClickButtonById(CoursePreviewUXPageResource.
-                                CoursePreviewUXPage_CourseMaterials_alertPopup_OKButton_ID_Locator);
+                                //Click on Ok in confirmation popup
+                                bool jui = base.IsElementPresent(By.Id("confirm"), 10);
+                                base.ClickButtonById("confirm");
+                                //base.ClickButtonById(CoursePreviewUXPageResource.
+                                //CoursePreviewUXPage_CourseMaterials_alertPopup_OKButton_ID_Locator);
                             }
                             return;
                         }
