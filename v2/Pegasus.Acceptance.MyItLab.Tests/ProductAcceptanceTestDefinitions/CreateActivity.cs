@@ -1126,8 +1126,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyNewActivityTypeName",
             ScenarioContext.Current.ScenarioInfo.Title,
-            () => Assert.AreEqual(status,
-                new CoursePreviewUXPage().GetAssignmentStatus(activityType, pageName)));
+            () => Assert.IsTrue(
+                new CoursePreviewUXPage().GetAssignmentStatus(activityType, pageName, status)));
             Logger.LogMethodExit("CreateActivity", "ValidateAssignmentStatus",
                 base.IsTakeScreenShotDuringEntryExit);
         }

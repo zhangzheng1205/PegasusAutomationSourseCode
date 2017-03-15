@@ -1799,11 +1799,12 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="activityType">This is activity type enum.</param>
         /// <param name="pageName">This is page name.</param>
         /// <returns>Return assignment status.</returns>
-        public string GetAssignmentStatus(Activity.ActivityTypeEnum activityType, string tabName)
+        public bool GetAssignmentStatus(Activity.ActivityTypeEnum activityType, string tabName, string status)
         {
             Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
             base.IsTakeScreenShotDuringEntryExit);
-            string getAssignmentStatus = string.Empty;
+            string getactualAssignmentStatus = string.Empty;
+            bool getAssignmentStatus = false;
             int pageCount = Convert.ToInt32(0);
             // Initialize the asset name variable to empty
             string getAssetName = string.Empty;
@@ -1838,14 +1839,12 @@ namespace Pegasus.Pages.UI_Pages
                             base.WaitForElement(By.XPath(string.Format(
                                 CoursePreviewUXPageResource.
                             CoursePreviewUXPage_Activity_ExpectedStatus, rowCount)));
-                            getAssignmentStatus = base.GetInnerTextAttributeValueByXPath(
+                            getactualAssignmentStatus = base.GetInnerTextAttributeValueByXPath(
                                 string.Format(CoursePreviewUXPageResource.
                             CoursePreviewUXPage_Activity_ExpectedStatus, rowCount));
-                            if (getAssignmentStatus.Contains(CoursePreviewUXPageResource.
-                                CoursePreviewUXPage_Activity_ExpectedStatus))
+                            if (getactualAssignmentStatus.Contains(status))
                             {
-                                return getAssignmentStatus = CoursePreviewUXPageResource.
-                                CoursePreviewUXPage_Activity_ExpectedStatus;
+                                return getAssignmentStatus = true;
                             }
                         }
                     }
