@@ -49,6 +49,7 @@
 		</Class>
 	</ArrayOfClass>
 	<ArrayOfCourse>
+		
 		<!--Hard coded Course data for "Digital Path" Product.-->
 		<Course>
 			<Name>General course to test course copy</Name>
