@@ -948,7 +948,7 @@ namespace Pegasus.Pages.UI_Pages
                 if (getActivityName == activityName)
                 {
                     getActivitygrade = base.GetElementInnerTextByXPath(string.Format(
-                        GBDefaultUXPageResource.GBDefaultUXPage_StudentGrades_Activity_Grade_XPath_Locator, i));
+                        GBDefaultUXPageResource.GBDefaultUXPage_StudentGrades_Activity_Grade_XPath_Locator, i)).TrimEnd();
                     break;
                 }
             }

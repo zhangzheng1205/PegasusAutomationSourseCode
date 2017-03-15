@@ -1369,7 +1369,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
        /// <param name="activityName">This is the Activity type enum.</param>
        /// <param name="activityGrade">This is the activity grade.</param>
         [Then(@"I should see ""(.*)"" activity in Grades tab with ""(.*)"" grade")]
-        public void VerifyActivityDisplayInTab(Activity.ActivityTypeEnum activityTypeEnum, 
+        public void VerifyActivityDisplayInTab(Activity.ActivityTypeEnum activityTypeEnum,
             Grade.GradeTypeEnum gradeTypeEnum)
         {
             Logger.LogMethodEntry("Gradebook",
@@ -1380,7 +1380,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             String activityName = activity.Name;
             //Fetch the Grade from XML
             Grade grade = Grade.Get(gradeTypeEnum);
-            String activityExpectedGrade = activity.Name;
+            String activityExpectedGrade = grade.GradeScore;
 
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                         Current.ScenarioInfo.Title, () => Assert.AreEqual
