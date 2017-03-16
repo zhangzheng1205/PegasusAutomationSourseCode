@@ -1610,6 +1610,74 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                           "ValidateSubmissionGrade",
                          base.IsTakeScreenShotDuringEntryExit);            
         }
+
+        [Then(@"I should see the score ""(.*)"" for ""(.*)"" activity for ""(.*)""")]
+        public void ThenIShouldSeeTheScoreForActivityFor(string activityScore, Activity.ActivityTypeEnum activityTypeEnum, User.UserTypeEnum userTypeEnum)
+        {
+            //Verify The Score Of Activity
+            Logger.LogMethodEntry("Gradebook",
+                "VerifyTheScoreOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+            User user = User.Get(userTypeEnum);
+            //Select the window
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (activityScore, new GBInstructorUXPage().GetActivityStatus(
+                    activityName, user.LastName, user.FirstName)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifyTheScoreOfActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see score ""(.*)"" for ""(.*)"" activity submitted by ""(.*)""")]
+        public void ValidateSubmissionScoreInGradeBook(int score, Activity.ActivityTypeEnum activityTypeEnum, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("Gradebook",
+                "VerifyTheScoreOfActivityBasedOnScenerio",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            // Get the activity name
+            Activity activityType = Activity.Get(activityTypeEnum);
+            string activityName = activityType.Name.ToString();
+
+            // Get User details
+            User userType = User.Get(userTypeEnum);
+            string firstName = userType.FirstName.ToString();
+            string lastName = userType.LastName.ToString();
+            string userName = userType.Name.ToString();
+
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (score, new GBDefaultUXPage().GetActivityScore(
+                    activityName, lastName, firstName)));
+
+            Logger.LogMethodExit("Gradebook",
+                "VerifyTheScoreOfActivityBasedOnScenerio",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the activity in the Gradebook
+        /// </summary>
+        /// <param name="activityTypeEnum"></param>
+        /// <param name="tabName"></param>
+        /// <param name="userType"></param>
+        [When(@"I select ""(.*)"" in ""(.*)"" as ""(.*)""")]
+        public void SelectActivityNameInGB(Activity.ActivityTypeEnum activityTypeEnum,
+            string tabName, User.UserTypeEnum userType)
+        {
+            //Manage The Activity Folder Level Navigation
+            Logger.LogMethodEntry("Gradebook", "SelectActivityNameInGB", base.IsTakeScreenShotDuringEntryExit);
+            new GBDefaultUXPage().SelectFolderInGradeBook(activityTypeEnum, tabName, userType);
+            Logger.LogMethodExit("Gradebook", "SelectActivityNameInGB", base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
   

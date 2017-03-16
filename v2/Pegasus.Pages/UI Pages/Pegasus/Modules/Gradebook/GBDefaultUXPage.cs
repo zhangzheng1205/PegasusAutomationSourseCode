@@ -12,6 +12,8 @@ using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission;
+using Pegasus.Pages.CommonPageObjects;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -1021,7 +1023,84 @@ namespace Pegasus.Pages.UI_Pages
                          "SelectActivitycMenuOption",
                         base.IsTakeScreenShotDuringEntryExit);
         }
-             
+
+        /// <summary>
+        /// Select folder in gradebook
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="activityUnderTabName">This is tab name.</param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        public void SelectFolderInGradeBook(Activity.ActivityTypeEnum activityTypeEnum,
+        string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name.ToString();
+
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            base.SelectWindow(base.GetPageTitle);
+            //Manage The Folder Navigation
+            new CommonPage().ManageTheActivityFolderLevelNavigation(
+               activityName, activityUnderTabName, userTypeEnum);
+            logger.LogMethodExit("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Return the activity score from Instructore Gradebook 
+        /// </summary>
+        /// <param name="activityName">This is activity type enum.</param>
+        /// <param name="lastName">This is last name.</param>
+        /// <param name="firstName">This is first name.</param>
+        /// <returns>Return score.</returns>
+        public int GetActivityScore(string activityName, string lastName, string firstName)
+        {
+            int returnActivityScore = Convert.ToInt32(0);
+            try
+            {
+                // Wait untill page loads
+                base.WaitUntilWindowLoads(GBDefaultUXPageResource.
+                    GBDefaultUXPage_Gradebook_Page_Name);
+                base.SelectWindow(GBDefaultUXPageResource.
+                    GBDefaultUXPage_Gradebook_Page_Name);
+
+                // Switch to iframe
+                base.SwitchToIFrameById(GBDefaultUXPageResource.
+                    GBDefaultUXPage_Grades_Frame_ID_Locator);
+
+                bool sadas = base.IsElementPresent(By.XPath("//table[@class='GBGridHolder']/tbody/tr/td/div/table/tbody/tr"), 10);
+                int getUserCount = (base.GetElementCountByXPath("//table[@class='GBGridHolder']/tbody/tr/td/div/table/tbody/tr")) / 2;
+                for (int i = 1; i <= getUserCount; i++)
+                {
+                    bool hgsd = base.IsElementPresent(By.XPath(string.Format("//table[@class='GBGridHolder']/tbody/tr/td/div/table/tbody/tr[{0}]/td[2]/span", i)), 10);
+                    string getActivityName = base.GetElementInnerTextByXPath(string.Format("//table[@class='GBGridHolder']/tbody/tr/td/div/table/tbody/tr[{0}]/td[2]/span", i));
+                    if (getActivityName == activityName)
+                    {
+                        bool hgssad = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i)), 10);
+                        IWebElement activityName1 = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i));
+                        base.PerformMouseHoverAction(activityName1);
+                        Thread.Sleep(2000);
+                        bool jh = base.IsElementPresent(By.XPath(string.Format(".//*[@id='spFeed']/input")), 10);
+                        IWebElement cmenuOption1 = base.GetWebElementPropertiesByXPath(string.Format(".//*[@id='spFeed']/input"));
+                        base.PerformMouseClickAction(cmenuOption1);
+
+                        Thread.Sleep(1000);
+                        // base.SelectDropDownOptionById("35d15ecb-88ec-40a1-b497-2095239d1ac7", cmenuOption);
+                        bool jhrjt = base.IsElementPresent(By.XPath("//a[@class = 'PU_render']"), 10);
+                        bool hgfks = base.IsElementPresent(By.XPath("//div[contains(@id,'reference')]"), 10);
+                        Thread.Sleep(2000);
+                        IWebElement activityCmenu = base.GetWebElementPropertiesByPartialLinkText("cmenuOption");
+                        base.PerformMouseClickAction(activityCmenu);
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            return returnActivityScore;
+        }
     }
 }
 

@@ -248,7 +248,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                            this.SelectWordActivityFolderNavigationInInstructorGradebook(CommonPageResource.
                                             CommonPage_Gradebook_BackArrow_Id_Locator, userTypeEnum, activityUnderTabName);
                                         break;
-                                    case "Word Chapter 1 Grader Project [Assessment 3]":
+                                    case "Word Chapter 1 Grader Project [Homework 3] (Project G)":
                                             this.SelectWordActivityGraderFolderNavigationInInstructorGradebook(CommonPageResource.
                                             CommonPage_Gradebook_BackArrow_Id_Locator, userTypeEnum, activityUnderTabName);
                                         break;
@@ -1084,25 +1084,25 @@ namespace Pegasus.Pages.CommonPageObjects
                 "SelectWordActivityFolderNavigationInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder1Postion = this.NavigateToActivityFolderInInstructorGradebookLevel1(
+                CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder2Postion = this.NavigateToActivityFolderInInstructorGradebookLevel2(
+                Folder1Postion, CommonPageResource.
                 CommonPage_Word2013_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder3Postion = this.NavigateToActivityFolderInInstructorGradebookLevel3(
+                Folder1Postion,Folder2Postion, CommonPageResource.
                 CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
                 webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder4Postion = this.NavigateToActivityFolderInInstructorGradebookLevel4
+                (Folder1Postion,Folder2Postion,Folder3Postion, CommonPageResource.
                 CommonPage_WordChapter1Activities_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            this.NavigateToActivityFolderInInstructorGradebookLevel5(Folder1Postion,
+                Folder2Postion,Folder3Postion,Folder4Postion, CommonPageResource.
                 CommonPage_WordChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectWordActivityFolderNavigationInInstructorGradebook",
@@ -1121,31 +1121,36 @@ namespace Pegasus.Pages.CommonPageObjects
                 "SelectWordActivityFolderNavigationInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+
+            int Folder1Postion = this.NavigateToActivityFolderInInstructorGradebookLevel1
+                (CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+
+            int Folder2Postion = this.NavigateToActivityFolderInInstructorGradebookLevel2
+                (Folder1Postion, CommonPageResource.
                 CommonPage_Word2013_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+
+            int Folder3Postion = this.NavigateToActivityFolderInInstructorGradebookLevel3
+                (Folder1Postion,Folder2Postion, CommonPageResource.
                 CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
                 webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+
+            int Folder4Postion = this.NavigateToActivityFolderInInstructorGradebookLevel4
+                (Folder1Postion,Folder2Postion,Folder3Postion, CommonPageResource.
                 CommonPage_WordChapter1Activities_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            //bool dsf = base.IsElementPresent(By.PartialLinkText(CommonPageResource.
-            //    CommonPage_WordChapter1SimulationActivities_FolderName), 10);
-            this.NavigateToActivityFolderInInstructorGradebook("Word Chapter 1: Grader Activities", webElementToWait);
+
+            this.NavigateToActivityFolderInInstructorGradebookLevel5(Folder1Postion,
+                Folder2Postion,Folder3Postion,Folder4Postion,"Word Chapter 1: Grader Activities",
+                webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectWordActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         ///Select Access Activity Folder Navigation In Instructor Gradebook.
         /// </summary>
@@ -1158,25 +1163,25 @@ namespace Pegasus.Pages.CommonPageObjects
                 "SelectAccessActivityFolderNavigationInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder1Postion = this.NavigateToActivityFolderInInstructorGradebookLevel1
+                (CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder2Postion = this.NavigateToActivityFolderInInstructorGradebookLevel2
+                (Folder1Postion, CommonPageResource.
                 CommonPage_Access2013_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder3Postion = this.NavigateToActivityFolderInInstructorGradebookLevel3
+                (Folder1Postion, Folder2Postion, CommonPageResource.
                 CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName,
                 webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder4Postion = this.NavigateToActivityFolderInInstructorGradebookLevel4
+                (Folder1Postion,Folder2Postion,Folder3Postion, CommonPageResource.
                 CommonPage_AccessChapter1Activities_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            this.NavigateToActivityFolderInInstructorGradebookLevel5(Folder1Postion, 
+                Folder2Postion, Folder3Postion,Folder4Postion, CommonPageResource.
                 CommonPage_AccessChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectAccessActivityFolderNavigationInInstructorGradebook",
@@ -1195,25 +1200,25 @@ namespace Pegasus.Pages.CommonPageObjects
                 "SelectExcelActivityFolderNavigationInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder1Postion = this.NavigateToActivityFolderInInstructorGradebookLevel1(
+                CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder2Postion = this.NavigateToActivityFolderInInstructorGradebookLevel2(
+                Folder1Postion,CommonPageResource.
                 CommonPage_Excel2013_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder3Postion = this.NavigateToActivityFolderInInstructorGradebookLevel3(
+                Folder1Postion, Folder2Postion, CommonPageResource.
                 CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName,
                 webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder4Postion = this.NavigateToActivityFolderInInstructorGradebookLevel4(
+                Folder1Postion,Folder2Postion,Folder3Postion, CommonPageResource.
                 CommonPage_ExcelChapter1Activities_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            this.NavigateToActivityFolderInInstructorGradebookLevel5(Folder1Postion, 
+                Folder2Postion, Folder3Postion, Folder4Postion, CommonPageResource.
                 CommonPage_ExcelChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectExcelActivityFolderNavigationInInstructorGradebook",
@@ -1232,25 +1237,25 @@ namespace Pegasus.Pages.CommonPageObjects
                 "SelectExcelActivityFolderNavigationInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+           int Folder1Postion= this.NavigateToActivityFolderInInstructorGradebookLevel1(
+               CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder2Postion= this.NavigateToActivityFolderInInstructorGradebookLevel2(
+                Folder1Postion,CommonPageResource.
                 CommonPage_Excel2013_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder3Postion = this.NavigateToActivityFolderInInstructorGradebookLevel3(
+                Folder1Postion, Folder2Postion,CommonPageResource.
                 CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName,
                 webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            int Folder4Postion = this.NavigateToActivityFolderInInstructorGradebookLevel4(
+                Folder1Postion,Folder2Postion,Folder3Postion, CommonPageResource.
                 CommonPage_ExcelChapter1Activities_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+            this.NavigateToActivityFolderInInstructorGradebookLevel5(Folder1Postion, 
+                Folder2Postion, Folder3Postion,Folder4Postion,CommonPageResource.
                 CommonPage_ExcelChapter1GraderActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectExcelActivityFolderNavigationInInstructorGradebook",
@@ -1269,25 +1274,25 @@ namespace Pegasus.Pages.CommonPageObjects
                 "SelectPowerPointActivityFolderNavigationInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+           int Folder1Postion= this.NavigateToActivityFolderInInstructorGradebookLevel1(
+               CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+           int Folder2Postion = this.NavigateToActivityFolderInInstructorGradebookLevel2(
+               Folder1Postion, CommonPageResource.
                 ComonPage_PowerPoint2013_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+           int Folder3Postion = this.NavigateToActivityFolderInInstructorGradebookLevel3(
+               Folder1Postion,Folder2Postion, CommonPageResource.
                 CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName,
                 webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+           int Folder4Postion = this.NavigateToActivityFolderInInstructorGradebookLevel4(
+               Folder1Postion,Folder2Postion,Folder3Postion, CommonPageResource.
                 CommonPage_PowerPointChapter1Activities_FolderName, webElementToWait);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook(CommonPageResource.
+           this.NavigateToActivityFolderInInstructorGradebookLevel5(Folder1Postion,
+               Folder2Postion,Folder3Postion,Folder4Postion,CommonPageResource.
                 CommonPage_PowerPointChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage",
                 "SelectPowerPointActivityFolderNavigationInInstructorGradebook",
@@ -1299,44 +1304,254 @@ namespace Pegasus.Pages.CommonPageObjects
         /// </summary>
         /// <param name="folderName">This is folder name.</param>
         /// <param name="webElementToWait">This is wait element.</param>
-        private void NavigateToActivityFolderInInstructorGradebook(string folderName,
+        private int NavigateToActivityFolderInInstructorGradebookLevel1(string folderName,
             string webElementToWait)
         {
             //Navigate To Activity Folder In Instructor Gradebook
             Logger.LogMethodEntry("CommonPage",
                 "NavigateToActivityFolderInInstructorGradebook",
                base.IsTakeScreenShotDuringEntryExit);
+            int Folder1Postion = Convert.ToInt32(0);
             //Initialize Variable
             int getFolderCount = Convert.ToInt32(CommonPageResource.
                 ComonPage_Folder_Count_Initial_Value);
             string getFolderText = string.Empty;
             //Get Folder Count 
             base.WaitForElement(By.XPath(CommonPageResource.
-               ComonPage_Folder_Count_Xpath_Locator));
+                CommonPageResource_Gradebook_GetLevel1FolderCount_Xpath));
             getFolderCount = base.GetElementCountByXPath(CommonPageResource.
-                ComonPage_Folder_Count_Xpath_Locator);
+                CommonPageResource_Gradebook_GetLevel1FolderCount_Xpath);
             for (int i = Convert.ToInt32(CommonPageResource.
                 ComonPage_Loop_Initializer); i <= getFolderCount; i++)
             {
                 //Get Folder Text
-                base.WaitForElement(By.XPath(string.Format(
-                    CommonPageResource.ComonPage_Folder_Text_Xpath_Locator, i)));
-                getFolderText = base.GetElementTextByXPath(string.Format(
-                    CommonPageResource.ComonPage_Folder_Text_Xpath_Locator, i));
+                base.WaitForElement(By.XPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel1FolderText_Xpath, i)));
+                getFolderText = base.GetElementTextByXPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel1FolderText_Xpath, i));
                 if (getFolderText == folderName)
                 {
                     //Click on Folder
+                    Folder1Postion = i;
                     base.WaitForElement(By.XPath(
                         string.Format(CommonPageResource.
-                        ComonPage_Folder_Name_Xpath_Locator, i)));
+                        CommonPageResource_Gradebook_GetLevel1Folder_ExpantIcon_Xpath, i)));
                     IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath(
                         string.Format(CommonPageResource.
-                        ComonPage_Folder_Name_Xpath_Locator, i));
-                    Thread.Sleep(Convert.ToInt32(CommonPageResource.
-                        ComonPage_Wait_Time));
+                        CommonPageResource_Gradebook_GetLevel1Folder_ExpantIcon_Xpath, i));
                     base.ClickByJavaScriptExecutor(getFolderNameProperty);
-                    Thread.Sleep(7000);
+                    base.WaitUntilWindowLoads(base.GetPageTitle);
                     // base.WaitForElement(By.Id(webElementToWait));
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+            return Folder1Postion;
+        }
+
+        /// <summary>
+        /// Navigate To Activity Folder In Instructor Gradebook.
+        /// </summary>
+        /// <param name="folderName">This is folder name.</param>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private int NavigateToActivityFolderInInstructorGradebookLevel2(int Folder1Postion,
+            string folderName,
+            string webElementToWait)
+        {
+            //Navigate To Activity Folder In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            string getFolderText = string.Empty;
+            int Folder2Postion = Convert.ToInt32(0);
+            //Initialize Variable
+            int getSubFolderCount = Convert.ToInt32(CommonPageResource.
+                ComonPage_Folder_Count_Initial_Value);
+            // Get subfolder count
+            getSubFolderCount = base.GetElementCountByXPath(string.Format(CommonPageResource.
+                CommonPageResource_Gradebook_GetLevel2FolderCount_Xpath, Folder1Postion));
+
+            for (int i = Convert.ToInt32(CommonPageResource.
+                ComonPage_Loop_Initializer); i <= getSubFolderCount; i++)
+            {
+                base.WaitForElement(By.XPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel2FolderText_Xpath, Folder1Postion, i)));
+                getFolderText = base.GetElementTextByXPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel2FolderText_Xpath, Folder1Postion, i));
+                if (getFolderText == folderName)
+                {
+                    Folder2Postion = i;
+                    //Click on Folder
+                    base.WaitForElement(By.XPath(string.Format(CommonPageResource.
+                        CommonPageResource_Gradebook_GetLevel2Folder_ExpantIcon_Xpath, 
+                        Folder1Postion, Folder2Postion)));
+                    IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath
+                        (string.Format(CommonPageResource.
+                        CommonPageResource_Gradebook_GetLevel2Folder_ExpantIcon_Xpath, 
+                        Folder1Postion, Folder2Postion));
+                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
+                    base.WaitUntilWindowLoads(base.GetPageTitle);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+            return Folder2Postion;
+        }
+
+        /// <summary>
+        /// Navigate To Activity Folder In Instructor Gradebook.
+        /// </summary>
+        /// <param name="folderName">This is folder name.</param>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private int NavigateToActivityFolderInInstructorGradebookLevel3(int Folder1Postion,
+            int Folder2Postion, string folderName,
+            string webElementToWait)
+        {
+            //Navigate To Activity Folder In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            string getFolderText = string.Empty;
+            int Folder3Postion = Convert.ToInt32(0);
+            //Initialize Variable
+            int getSubFolderCount = Convert.ToInt32(CommonPageResource.
+                ComonPage_Folder_Count_Initial_Value);
+            // Get subfolder count
+            getSubFolderCount = base.GetElementCountByXPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel3FolderCount_Xpath, Folder1Postion, Folder2Postion));
+            for (int i = Convert.ToInt32(CommonPageResource.
+                ComonPage_Loop_Initializer); i <= getSubFolderCount; i++)
+            {
+                base.WaitForElement(By.XPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel3FolderText_Xpath,
+                    Folder1Postion, Folder2Postion, i)));
+                getFolderText = base.GetElementTextByXPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel3FolderText_Xpath, 
+                    Folder1Postion, Folder2Postion, i));
+                if (getFolderText == folderName)
+                {
+                    Folder3Postion = i;
+                    //Click on Folder
+                    base.WaitForElement(By.XPath(
+                        string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel3Folder_ExpantIcon_Xpath, 
+                    Folder1Postion, Folder2Postion, Folder3Postion)));
+                    IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel3Folder_ExpantIcon_Xpath, 
+                    Folder1Postion, Folder2Postion, Folder3Postion));
+                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
+                    base.WaitUntilWindowLoads(base.GetPageTitle);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+            return Folder3Postion;
+        }
+
+        /// <summary>
+        /// Navigate To Activity Folder In Instructor Gradebook.
+        /// </summary>
+        /// <param name="folderName">This is folder name.</param>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private int NavigateToActivityFolderInInstructorGradebookLevel4(int Folder1Postion,
+            int Folder2Postion,int Folder3Postion, string folderName,
+            string webElementToWait)
+        {
+            //Navigate To Activity Folder In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            string getFolderText = string.Empty;
+            int Folder4Postion = Convert.ToInt32(0);
+            //Initialize Variable
+            int getSubFolderCount = Convert.ToInt32(CommonPageResource.
+                ComonPage_Folder_Count_Initial_Value);
+            // Get subfolder count
+            getSubFolderCount = base.GetElementCountByXPath(string.Format(
+                    CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel4FolderCount_Xpath, 
+                    Folder1Postion, Folder2Postion, Folder3Postion));
+            for (int i = Convert.ToInt32(CommonPageResource.
+                ComonPage_Loop_Initializer); i <= getSubFolderCount; i++)
+            {
+
+                base.WaitForElement(By.XPath(string.Format(
+                CommonPageResource.
+                CommonPageResource_Gradebook_GetLevel4FolderText_Xpath, Folder1Postion, Folder2Postion, 
+                Folder3Postion, i)));
+                getFolderText = base.GetElementTextByXPath(string.Format(CommonPageResource.
+                CommonPageResource_Gradebook_GetLevel4FolderText_Xpath,Folder1Postion, 
+                Folder2Postion, Folder3Postion, i));
+                if (getFolderText == folderName)
+                {
+                    Folder4Postion = i;
+                    //Click on Folder
+                    base.WaitForElement(By.XPath(
+                        string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel4Folder_ExpantIcon_Xpath, Folder1Postion, Folder2Postion, 
+                    Folder3Postion, Folder4Postion)));
+                    IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel4Folder_ExpantIcon_Xpath, Folder1Postion, Folder2Postion, 
+                    Folder3Postion, Folder4Postion));
+                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
+                    base.WaitUntilWindowLoads(base.GetPageTitle);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+            return Folder4Postion;
+        }
+
+        /// <summary>
+        /// Navigate To Activity Folder In Instructor Gradebook.
+        /// </summary>
+        /// <param name="folderName">This is folder name.</param>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void NavigateToActivityFolderInInstructorGradebookLevel5(int Folder1Postion,int Folder2Postion,int Folder3Postion,
+            int Folder4Postion, string folderName,
+            string webElementToWait)
+        {
+            //Navigate To Activity Folder In Instructor Gradebook
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            string getFolderText = string.Empty;
+            //Initialize Variable
+            int Folder5Postion = Convert.ToInt32(0);
+            int getSubFolderCount = Convert.ToInt32(CommonPageResource.
+                ComonPage_Folder_Count_Initial_Value);
+            // Get subfolder count
+            getSubFolderCount = base.GetElementCountByXPath(string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel5FolderCount_Xpath, Folder1Postion, Folder2Postion, Folder3Postion, Folder4Postion));
+            for (int i = Convert.ToInt32(CommonPageResource.
+                ComonPage_Loop_Initializer); i <= getSubFolderCount; i++)
+            {
+                base.WaitForElement(By.XPath(string.Format(CommonPageResource.
+                  CommonPageResource_Gradebook_GetLevel5FolderText_Xpath, Folder1Postion, Folder2Postion, Folder3Postion, Folder4Postion, i)));
+                getFolderText = base.GetElementTextByXPath(string.Format(CommonPageResource.
+                  CommonPageResource_Gradebook_GetLevel5FolderText_Xpath, Folder1Postion, Folder2Postion, Folder3Postion, Folder4Postion, i));
+                if (getFolderText == folderName)
+                {
+                    Folder5Postion = i;
+                    //Click on Folder
+                    base.WaitForElement(By.XPath(
+                        string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel5Folder_ExpantIcon_Xpath, Folder1Postion, Folder2Postion, Folder3Postion, Folder4Postion, Folder5Postion)));
+                    IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CommonPageResource.
+                    CommonPageResource_Gradebook_GetLevel5Folder_ExpantIcon_Xpath, Folder1Postion, Folder2Postion, Folder3Postion, Folder4Postion, Folder5Postion));
+                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
+                    base.WaitUntilWindowLoads(base.GetPageTitle);
                     break;
                 }
             }
@@ -1607,12 +1822,12 @@ namespace Pegasus.Pages.CommonPageObjects
                                 {
                                     // folder navigation based on activity name
                                     case "Take the Chapter 1 Exam":
-                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                        this.NavigateToActivityFolderInInstructorGradebookLevel1(
                                             CommonPageResource.CommonPage_Chapter1TheScienceofPsychology_FolderName
                                           , CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                     case "Take the Chapter 3 Exam":
-                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                        this.NavigateToActivityFolderInInstructorGradebookLevel1(
                                             CommonPageResource.CommonPage_Chapter3_Sensation_and_Perception_FolderName,
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
@@ -1620,11 +1835,11 @@ namespace Pegasus.Pages.CommonPageObjects
                                     case "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]":
                                     case "SAM 01-19 Singular y plural.  [Gramática 3. Sustantivos singulares y plurales] Voice Recording.":
                                     case "SAM 01-01 Las familias famosas. [Vocabulario 1. La familia]":
-                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                        int Folder1Postion = this.NavigateToActivityFolderInInstructorGradebookLevel1(
                                             "Capítulo 01: ¿Quiénes somos?",
                                             CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
-                                        this.NavigateToActivityFolderInInstructorGradebook(
-                                           "STUDENT ACTIVITIES MANUAL",
+                                        this.NavigateToActivityFolderInInstructorGradebookLevel2(
+                                           Folder1Postion,"STUDENT ACTIVITIES MANUAL",
                                            CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                 }
@@ -2311,8 +2526,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateToBBGradeSynchFolderAtGradeBook",
                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the SubFolder Folder
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateToActivityFolderInInstructorGradebook("BB Grade Synch Testing", webElementToWait);
+            this.NavigateToActivityFolderInInstructorGradebookLevel1("BB Grade Synch Testing", webElementToWait);
                Logger.LogMethodExit("CommonPage",
                 "NavigateToBBGradeSynchFolderAtGradeBook",
               base.IsTakeScreenShotDuringEntryExit);

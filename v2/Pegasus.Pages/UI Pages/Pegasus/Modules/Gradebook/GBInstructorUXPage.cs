@@ -2112,8 +2112,6 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize VariableVariable
             int userRowNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
-            bool gggh12 = base.IsElementPresent(By.XPath(GBInstructorUXPageResource.
-                GBInstructorUX_Page_UserCount_Xpath_Locator),10);
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_UserCount_Xpath_Locator));
             //Get User Count
