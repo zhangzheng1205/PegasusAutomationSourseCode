@@ -432,4 +432,19 @@
   <data name="ViewSubmission_SubmitStudentAnswerButton_Id_Locator" xml:space="preserve">
     <value>_ctl0_PopupPageContent_submissionDetailMaster__ctl1_btnFroceSubmit</value>
   </data>
+  <data name="ViewSubmissionPage_Click_UserName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id ='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div</value>
+  </data>
+  <data name="ViewSubmissionPage_GetActivityName_Id_Value" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_divActivityName</value>
+  </data>
+  <data name="ViewSubmissionPage_GetScore_Id_Value" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblVSInstructorHeaderGrade</value>
+  </data>
+  <data name="ViewSubmissionPage_GetUserName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id ='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div/div</value>
+  </data>
+  <data name="ViewSubmissionPage_UserCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id ='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span</value>
+  </data>
 </root>

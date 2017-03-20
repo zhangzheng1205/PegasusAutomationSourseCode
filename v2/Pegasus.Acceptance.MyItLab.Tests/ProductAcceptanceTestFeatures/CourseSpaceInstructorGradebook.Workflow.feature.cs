@@ -689,6 +689,74 @@ testRunner.Then("I should see the score \"0\" for \"RegWordSIMActivity\" activit
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor validate SIM5 submission in viewsubmission from Gradebook")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void InstructorValidateSIM5SubmissionInViewsubmissionFromGradebook()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor validate SIM5 submission in viewsubmission from Gradebook", ((string[])(null)));
+#line 279
+this.ScenarioSetup(scenarioInfo);
+#line 280
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 281
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 282
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 283
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 284
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 285
+testRunner.When("I click on \"Grades\" subtab in \"Gradebook\" tab as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 286
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 287
+testRunner.When("I select \"RegWordSIMActivity\" in \"Gradebook\" as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 288
+testRunner.When("I click the cmenu \"ViewAllSubmissions\" of asset \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 289
+testRunner.Then("I should be displayed with \"SimActivity0Score\" for \"RegWordSIMActivity\"  for \"CsS" +
+                    "msStudent\" user \"scoring 0\" scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor delete grades in view submission from gradebook")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void InstructorDeleteGradesInViewSubmissionFromGradebook()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor delete grades in view submission from gradebook", ((string[])(null)));
+#line 294
+this.ScenarioSetup(scenarioInfo);
+#line 295
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 296
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 297
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 298
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 299
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 300
+testRunner.When("I click on \"Grades\" subtab in \"Gradebook\" tab as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 301
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 302
+testRunner.When("I select \"RegWordSIMActivity\" in \"Gradebook\" as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 303
+testRunner.When("I click the cmenu \"ViewAllSubmissions\" of asset \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 304
+testRunner.And("I delete all submission for \"RegWordSIMActivity\" of \"CsSmsStudent\" user \"scoring " +
+                    "0\" scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

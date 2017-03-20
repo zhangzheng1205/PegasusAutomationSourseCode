@@ -1678,6 +1678,78 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new GBDefaultUXPage().SelectFolderInGradeBook(activityTypeEnum, tabName, userType);
             Logger.LogMethodExit("Gradebook", "SelectActivityNameInGB", base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Validate the display of Grades in view submission
+        /// </summary>
+        /// <param name="gradeTypeEnum">This is Grade type enum.</param>
+        /// <param name="scenerioName">This is scenario name.</param>
+        /// <param name="activityType">This is activity type.</param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        [Then(@"I should be displayed with ""(.*)"" for ""(.*)""  for ""(.*)"" user ""(.*)"" scenario")]
+        public void ValidateDisplayOfGradesInViewSubmission(Grade.GradeTypeEnum gradeTypeEnum, Activity.ActivityTypeEnum activityType, 
+            User.UserTypeEnum userTypeEnum, string scenerioName)
+        {
+            Logger.LogMethodEntry("Gradebook", "ValidateDisplayOfGradesInViewSubmission", base.IsTakeScreenShotDuringEntryExit);
+            //Assert Grades of Submitted Activity in view submission
+
+            // Get the grade
+            Grade grade = Grade.Get(gradeTypeEnum);
+            string gradeScore = grade.GradeScore.ToString();
+            int score = Convert.ToInt32(gradeScore);
+
+            //Get the user of the given type from Memory Data Store
+            User user = new LoginContentPage().
+                SelectUserDetailsBaesdOnScenerio(scenerioName, userTypeEnum);
+
+            //Get User name
+            string userName = user.Name.ToString();
+            string firstName = user.FirstName.ToString();
+            string lastName = user.LastName.ToString();
+
+            //Get activity name
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.IsTrue
+                 (new ViewSubmissionPage().GetViewSubmissionScoreStatus(score,
+                    activityName, lastName, firstName)));
+            Logger.LogMethodExit("Gradebook", "ValidateDisplayOfGradesInViewSubmission", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        //Then I should be displayed with "SimActivity0Score" for "RegWordSIMActivity"  for "CsSmsStudent" user "scoring 0" scenario
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        [When(@"I delete all submission for ""(.*)"" of ""(.*)"" user ""(.*)"" scenario")]
+        public void WhenIDeleteAllSubmissionForOfUserScenario(Activity.ActivityTypeEnum activityType, User.UserTypeEnum userTypeEnum, 
+            string scenerioName)
+        {
+            Logger.LogMethodEntry("Gradebook", "ValidateDisplayOfGradesInViewSubmission", base.IsTakeScreenShotDuringEntryExit);
+
+            //Get the user of the given type from Memory Data Store
+            User user = new LoginContentPage().
+                SelectUserDetailsBaesdOnScenerio(scenerioName, userTypeEnum);
+
+            //Get User name
+            string userName = user.Name.ToString();
+            string firstName = user.FirstName.ToString();
+            string lastName = user.LastName.ToString();
+
+            //Get activity name
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+
+            new ViewSubmissionPage().DeleteGradeInGradeBook(
+                    activityName, lastName, firstName);
+        }
+
     }
 }
   

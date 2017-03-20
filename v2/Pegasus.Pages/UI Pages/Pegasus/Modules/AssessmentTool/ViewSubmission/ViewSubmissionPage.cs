@@ -3118,5 +3118,107 @@ namespace Pegasus.Pages.UI_Pages
             }
             return isStudentQuestionScoreDisplayed;
         }
+
+        /// <summary>
+        /// Get the grade status in view submission
+        /// </summary>
+        /// <param name="score">This is submission score.</param>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="lastName">This is user last name.</param>
+        /// <param name="firstName">This is user first name.</param>
+        /// <returns>Return score existance status.</returns>
+        public bool GetViewSubmissionScoreStatus(int score,string activityName,string lastName,string firstName)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "GetViewSubmissionScoreStatus",
+                         base.IsTakeScreenShotDuringEntryExit);
+            bool getGradeStatus = false;
+            string expectedScore = score.ToString() + "%";
+            try
+            {
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+
+                // Concatinate the user first name and last name
+                string lastNameFirstName = lastName + "," + " " + firstName;
+
+                // Get activity name
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_GetActivityName_Id_Value));
+                string getActivityName = base.GetInnerTextAttributeValueById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_GetActivityName_Id_Value);
+                this.GetUserNameInViewSubmission(lastNameFirstName);
+                string getScore = base.GetInnerTextAttributeValueById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_GetScore_Id_Value);
+                if (getScore==expectedScore && getActivityName == activityName)
+                {
+                    getGradeStatus = true;
+                }
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ViewSubmissionPage",
+                          "GetViewSubmissionScoreStatus",
+                         base.IsTakeScreenShotDuringEntryExit);
+            return getGradeStatus;
+        }
+
+        /// <summary>
+        /// Get user name in view submission popup
+        /// </summary>
+        /// <param name="lastNameFirstName">This is user name.</param>
+        private void GetUserNameInViewSubmission(string lastNameFirstName)
+        {
+            // Get User count
+            int getUserCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                ViewSubmissionPage_UserCount_Xpath_Locator);
+            for (int i = Convert.ToInt32(1); i <= getUserCount; i++)
+            {
+                // Get user name text
+                string getUserName = base.GetTitleAttributeValueByXPath(string.Format(ViewSubmissionPageResource.
+                    ViewSubmissionPage_GetUserName_Xpath_Locator, i));
+
+                if (getUserName == lastNameFirstName)
+                {
+                    // Click on Username
+                    IWebElement getExpandButton = base.GetWebElementPropertiesByXPath(String.Format(ViewSubmissionPageResource.
+                        ViewSubmissionPage_Click_UserName_Xpath_Locator, i));
+                        base.ClickByJavaScriptExecutor(getExpandButton);
+                        Thread.Sleep(2000);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="firstName"></param>
+        public void DeleteGradeInGradeBook(string activityName, string lastName, string firstName)
+        {
+            try
+            {
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+
+                // Concatinate the user first name and last name
+                string lastNameFirstName = lastName + "," + " " + firstName;
+
+                //Click username in viewsubmission
+                this.GetUserNameInViewSubmission(lastNameFirstName);
+
+                base.WaitForElement(By.Id("divdelete"));
+                IWebElement getOption = base.GetWebElementPropertiesById("divdelete");
+                base.ClickByJavaScriptExecutor(getOption);
+
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+        }
     }
 }

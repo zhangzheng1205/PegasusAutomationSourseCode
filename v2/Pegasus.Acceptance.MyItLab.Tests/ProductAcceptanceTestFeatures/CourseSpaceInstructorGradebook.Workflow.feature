@@ -271,3 +271,34 @@ When I click on "Grades" subtab in "Gradebook" tab as "CsSmsInstructor" user
 Then I should be on the "Gradebook" page
 When I select "RegWordSIMActivity" in "Gradebook" as "CsSmsInstructor"
 Then I should see the score "0" for "RegWordSIMActivity" activity for "CsSmsStudent"
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Validate Grades in Viewsubmission as Instructor#
+#--------------------------------------------------------------------------------------------------------------------------
+
+Scenario: Instructor validate SIM5 submission in viewsubmission from Gradebook
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Grades" subtab in "Gradebook" tab as "CsSmsInstructor" user
+Then I should be on the "Gradebook" page
+When I select "RegWordSIMActivity" in "Gradebook" as "CsSmsInstructor"
+When I click the cmenu "ViewAllSubmissions" of asset "RegWordSIMActivity" 
+Then I should be displayed with "SimActivity0Score" for "RegWordSIMActivity"  for "CsSmsStudent" user "scoring 0" scenario
+
+#--------------------------------------------------------------------------------------------------------------------------
+										#Delete Grades in Viewsubmission as Instructor#
+#--------------------------------------------------------------------------------------------------------------------------
+Scenario: Instructor delete grades in view submission from gradebook
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I click on "Grades" subtab in "Gradebook" tab as "CsSmsInstructor" user
+Then I should be on the "Gradebook" page
+When I select "RegWordSIMActivity" in "Gradebook" as "CsSmsInstructor"
+When I click the cmenu "ViewAllSubmissions" of asset "RegWordSIMActivity" 
+And I delete all submission for "RegWordSIMActivity" of "CsSmsStudent" user "scoring 0" scenario
