@@ -2009,7 +2009,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 this.SelectSimActivityZeroScoreStudentWindowName(activityName, studentType);
                 //Answer incorrectly
-                this.SIM5QuestionIncorrectAnswer(activityMode, applicationType, activityName);
+                //this.SIM5QuestionIncorrectAnswer(activityMode, applicationType, activityName);
                 //Click on SIM5 activity Submit button
                 this.ClickOnSim5ActivitySubmitButton();
                 base.SwitchToDefaultWindow();

@@ -2798,20 +2798,21 @@ namespace Pegasus.Pages.UI_Pages
                          "IsAttemptGridPresentInViewSubmissionPage",
                         base.IsTakeScreenShotDuringEntryExit);
             bool isAttemptGridDetailsPresent = false;
-            int getAttemptsCount = 0;
+            int getAttemptsColumnCount = 0;
             string getDateColumnName = string.Empty;
             string getGradeColumnName = string.Empty;
             try
             {
-                getAttemptsCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                //Get count of columns in Attempts grid in left frame
+                getAttemptsColumnCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
                     ViewSubmissionPage_AttemptCount_Xpath_Locator);
                 getDateColumnName = base.GetElementTextByXPath(ViewSubmissionPageResource.
                     ViewSubmissionPage_DateColumnName_Xpath_Locator);
                 getGradeColumnName = base.GetElementTextByXPath(ViewSubmissionPageResource.
                     ViewSubmissionPage_GradeColumnName_Xpath_Locator);
                 if (dateColumnName == getDateColumnName
-                    && gradeColumnName == getGradeColumnName && 
-                    totalAttemptRows == getAttemptsCount)
+                    && gradeColumnName == getGradeColumnName &&
+                    totalAttemptRows == getAttemptsColumnCount)
                 {
                     isAttemptGridDetailsPresent = true;
                 }
@@ -2859,32 +2860,22 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ViewSubmissionPage",
                          "ClickOnActivityAttemptToViewSubmission",
                         base.IsTakeScreenShotDuringEntryExit);
-            int getAttemptsCount = base.GetElementCountByXPath(
-                ViewSubmissionPageResource.ViewSubmissionPage_ActivityAttemptCount_Xpath_Locator);
-            for (int i = 1; i <= getAttemptsCount; i++)
+            try
             {
-                try
-                {
-                    base.WaitForElement(By.XPath(String.Format(ViewSubmissionPageResource.
-                       ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator, i)));
-                    String getActivityGrade = base.GetElementTextByXPath(String.Format(
-                        ViewSubmissionPageResource.
-                       ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator, i));
-                    if (getActivityGrade.Contains(activityGrade))
-                    {
-                         IWebElement clickActivity = base.GetWebElementPropertiesByXPath(String.Format(
-                         ViewSubmissionPageResource.
-                       ViewSubmissionPage_ActivityAttemptGrade_Xpath_Locator, i));
-                        base.ClickByJavaScriptExecutor(clickActivity);
-                        break;
-                    }
-                }
-
-                catch (Exception e)
-                {
-                    ExceptionHandler.HandleException(e);
-                }
+                base.WaitForElement(By.XPath(String.Format(ViewSubmissionPageResource.
+                    ViewSubmissionPage_StudentViewSubmissionPage_ActivityAttemptRow_XPath_Locator,
+                    activityGrade)));
+                IWebElement selectActivityAttempt = base.GetWebElementPropertiesByXPath(
+                    string.Format(String.Format(ViewSubmissionPageResource.
+                    ViewSubmissionPage_StudentViewSubmissionPage_ActivityAttemptRow_XPath_Locator,
+                    activityGrade)));
+                base.ClickByJavaScriptExecutor(selectActivityAttempt);
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
             Logger.LogMethodExit("ViewSubmissionPage",
                          "ClickOnActivityAttemptToViewSubmission",
                         base.IsTakeScreenShotDuringEntryExit);
@@ -2899,14 +2890,16 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ViewSubmissionPage",
                          "GetActivityScoreInViewSubmission",
                         base.IsTakeScreenShotDuringEntryExit);
-            string activityGrade = string.Empty;
+            string actualActivityGrade = string.Empty;
             try
             {
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmissionPage_ActivityGrade_Id_Locator));
                 //Fetch the activity score
-                activityGrade = base.GetElementInnerTextById(ViewSubmissionPageResource.
-                    ViewSubmissionPage_ActivityGrade_Id_Locator);
+                string activityGrade = base.GetElementInnerTextById(ViewSubmissionPageResource.
+                     ViewSubmissionPage_ActivityGrade_Id_Locator);
+                string[] grade = activityGrade.Split('%');
+                actualActivityGrade = grade[0];
             }
             catch (Exception e)
             {
@@ -2916,7 +2909,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ViewSubmissionPage",
                         "GetActivityScoreInViewSubmission",
                        base.IsTakeScreenShotDuringEntryExit);
-            return activityGrade;
+            return actualActivityGrade;
         }
 
         /// <summary>
@@ -2933,8 +2926,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmissionPage_StudentNameDisplay_Id_Locator));
-                studentName = base.GetElementInnerTextById(ViewSubmissionPageResource.
-                    ViewSubmissionPage_StudentName_Id_Locator);
+                studentName = base.GetElementInnerTextById("_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblStudentName");
                 base.CloseBrowserWindow();
             }
             catch (Exception e)
@@ -3241,6 +3233,49 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("ViewSubmissionPage",
               "DeleteGradeInGradeBook",
              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of Attempt grid in Student view submission page
+        /// </summary>
+        /// <param name="attemptGrid">This is the Attempt grid name.</param>
+        /// <param name="dateColumnName">This is the Date column name.</param>
+        /// <param name="gradeColumnName">This is the Grade Column name.</param>
+        /// <param name="totalAttemptRows">This is the number of attempt rows.</param>
+        /// <returns>True/False.</returns>
+        public bool IsAttemptGridPresentInStudentViewSubmissionPage1(string dateColumnName,
+            string gradeColumnName, int totalAttemptRows)
+        {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsAttemptGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            bool isAttemptGridDetailsPresent = false;
+            int getAttemptsCount = 0;
+            string getDateColumnName = string.Empty;
+            string getGradeColumnName = string.Empty;
+            try
+            {
+                getAttemptsCount = base.GetElementCountByXPath(ViewSubmissionPageResource.
+                    ViewSubmissionPage_AttemptCount_Xpath_Locator);
+                getDateColumnName = base.GetElementTextByXPath(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DateColumnName_Xpath_Locator);
+                getGradeColumnName = base.GetElementTextByXPath(ViewSubmissionPageResource.
+                    ViewSubmissionPage_GradeColumnName_Xpath_Locator);
+                if (dateColumnName == getDateColumnName
+                    && gradeColumnName == getGradeColumnName &&
+                    totalAttemptRows == getAttemptsCount)
+                {
+                    isAttemptGridDetailsPresent = true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                         "IsAttemptGridPresentInViewSubmissionPage",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return isAttemptGridDetailsPresent;
         }
     }
 }

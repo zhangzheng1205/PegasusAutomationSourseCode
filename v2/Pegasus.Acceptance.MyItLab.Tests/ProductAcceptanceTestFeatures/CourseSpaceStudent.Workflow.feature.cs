@@ -1874,17 +1874,10 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 820
 testRunner.Then("I should be displayed with status \"Not passed\" for \"RegWordGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 821
-testRunner.When("I click on \"view submission\" cmenu option of \"RegWordGraderActivity\" as \"CsSmsStu" +
-                    "dent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 822
-testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 823
-testRunner.And("I should see \"RegWordGraderActivity\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 824
 testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 825
+#line 822
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 826
+#line 823
 testRunner.And("I should see \"RegWordGraderActivity\" activity in Grades tab with \"GraderIT0Score\"" +
                     " grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1897,43 +1890,43 @@ testRunner.And("I should see \"RegWordGraderActivity\" activity in Grades tab wi
         public virtual void StudentSubmittingGraderITWordActivityWith70Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Word activity with 70 score", ((string[])(null)));
-#line 833
+#line 830
 this.ScenarioSetup(scenarioInfo);
-#line 834
+#line 831
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 835
+#line 832
 testRunner.When("I launch \"RegWordGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 836
+#line 833
 testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 837
+#line 834
 testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 838
+#line 835
 testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 839
+#line 836
 testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 840
+#line 837
 testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 841
+#line 838
 testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 842
+#line 839
 testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 843
+#line 840
 testRunner.And("I upload the downloaded file \"Grader Word file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 844
+#line 841
 testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 845
+#line 842
 testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 846
+#line 843
 testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 847
+#line 844
 testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 848
+#line 845
 testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 849
+#line 846
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 850
+#line 847
 testRunner.Then("I should be displayed with status \"Passed\" for \"RegWordGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 851
+#line 848
 testRunner.And("I should see \"RegWordGraderActivity\" activity in Grades tab with \"GraderIT70Score" +
                     "\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1946,45 +1939,75 @@ testRunner.And("I should see \"RegWordGraderActivity\" activity in Grades tab wi
         public virtual void StudentSubmittingGraderITWordActivityWith100Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Word activity with 100 score", ((string[])(null)));
-#line 858
+#line 855
 this.ScenarioSetup(scenarioInfo);
-#line 859
+#line 856
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 860
+#line 857
 testRunner.When("I launch \"RegWordGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 861
+#line 858
 testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 862
+#line 859
 testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 863
+#line 860
 testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 864
+#line 861
 testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 865
+#line 862
 testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 866
+#line 863
 testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 867
+#line 864
 testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 868
+#line 865
 testRunner.And("I upload the downloaded file \"Grader Word file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 869
+#line 866
 testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 870
+#line 867
 testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 871
+#line 868
 testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 872
+#line 869
 testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 873
+#line 870
 testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 874
+#line 871
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 875
+#line 872
 testRunner.Then("I should be displayed with status \"Passed\" for \"RegWordGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 876
+#line 873
 testRunner.And("I should see \"RegWordGraderActivity\" activity in Grades tab with \"GraderIT100Scor" +
                     "e\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student validating view submission for Word Grader activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentValidatingViewSubmissionForWordGraderActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating view submission for Word Grader activity", ((string[])(null)));
+#line 879
+this.ScenarioSetup(scenarioInfo);
+#line 880
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 881
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 883
+testRunner.Then("I should see \"RegWordGraderActivity\" activity in Grades tab with \"SimActivity0Sco" +
+                    "re\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 884
+testRunner.When("I click on \"View Submissions\" cmenu option of \"RegWordGraderActivity\" as \"CsSmsSt" +
+                    "udent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 885
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 886
+testRunner.And("I should see \"RegWordGraderActivity\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 887
+testRunner.When("I click on attempt \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 888
+testRunner.Then("I should see \"scoring 0\" \"CsSmsStudent\" with \"GraderIT0Score\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1995,43 +2018,43 @@ testRunner.And("I should see \"RegWordGraderActivity\" activity in Grades tab wi
         public virtual void StudentSubmittingGraderITExcelActivityWith0Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Excel activity with 0 score", ((string[])(null)));
-#line 886
-this.ScenarioSetup(scenarioInfo);
-#line 887
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 888
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 889
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 890
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 891
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 892
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 893
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 894
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 895
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 896
-testRunner.And("I upload the downloaded file \"Grader Excel file for 0%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 897
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 898
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 899
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 900
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 901
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 902
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 903
-testRunner.Then("I should be displayed with status \"Not passed\" for \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 904
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 905
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 906
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 907
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 908
+testRunner.And("I upload the downloaded file \"Grader Excel file for 0%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 909
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 910
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 911
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 912
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 913
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 914
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 915
+testRunner.Then("I should be displayed with status \"Not passed\" for \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 916
 testRunner.And("I should see \"RegExcelGraderActivity\" activity in Grades tab with \"GraderIT0Score" +
                     "\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2044,43 +2067,43 @@ testRunner.And("I should see \"RegExcelGraderActivity\" activity in Grades tab w
         public virtual void StudentSubmittingGraderITExcelActivityWith70Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Excel activity with 70 score", ((string[])(null)));
-#line 911
-this.ScenarioSetup(scenarioInfo);
-#line 912
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 913
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 914
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 915
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 916
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 917
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 918
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 919
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 920
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 921
-testRunner.And("I upload the downloaded file \"Grader Excel file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 922
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 923
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 924
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 925
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 926
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 927
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 928
-testRunner.Then("I should be displayed with status \"Passed\" for \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 929
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 930
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 931
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 932
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 933
+testRunner.And("I upload the downloaded file \"Grader Excel file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 934
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 935
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 936
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 937
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 938
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 939
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 940
+testRunner.Then("I should be displayed with status \"Passed\" for \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 941
 testRunner.And("I should see \"RegExcelGraderActivity\" activity in Grades tab with \"GraderIT70Scor" +
                     "e\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2093,43 +2116,43 @@ testRunner.And("I should see \"RegExcelGraderActivity\" activity in Grades tab w
         public virtual void StudentSubmittingGraderITExcelActivityWith100Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Excel activity with 100 score", ((string[])(null)));
-#line 936
-this.ScenarioSetup(scenarioInfo);
-#line 937
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 938
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 939
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 940
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 941
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 942
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 943
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 944
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 945
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 946
-testRunner.And("I upload the downloaded file \"Grader Excel file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 947
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 948
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 949
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 950
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 951
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 952
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 953
-testRunner.Then("I should be displayed with status \"Passed\" for \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 954
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 955
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 956
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 957
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 958
+testRunner.And("I upload the downloaded file \"Grader Excel file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 959
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 960
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 961
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 962
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 963
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 964
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 965
+testRunner.Then("I should be displayed with status \"Passed\" for \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 966
 testRunner.And("I should see \"RegExcelGraderActivity\" activity in Grades tab with \"GraderIT100Sco" +
                     "re\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2142,43 +2165,43 @@ testRunner.And("I should see \"RegExcelGraderActivity\" activity in Grades tab w
         public virtual void StudentSubmittingGraderITAccessActivityWith0Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Access activity with 0 score", ((string[])(null)));
-#line 964
-this.ScenarioSetup(scenarioInfo);
-#line 965
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 966
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 967
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 968
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 969
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 970
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 971
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 972
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 973
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 974
-testRunner.And("I upload the downloaded file \"Grader Access file for 0%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 975
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 976
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 977
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 978
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 979
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 980
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 981
-testRunner.Then("I should be displayed with status \"Not passed\" for \"RegAccessGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 982
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 983
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 984
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 985
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 986
+testRunner.And("I upload the downloaded file \"Grader Access file for 0%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 987
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 988
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 989
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 990
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 991
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 992
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 993
+testRunner.Then("I should be displayed with status \"Not passed\" for \"RegAccessGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 994
 testRunner.And("I should see \"RegAccessGraderActivity\" activity in Grades tab with \"GraderIT0Scor" +
                     "e\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2191,43 +2214,43 @@ testRunner.And("I should see \"RegAccessGraderActivity\" activity in Grades tab 
         public virtual void StudentSubmittingGraderITAccessActivityWith70Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Access activity with 70 score", ((string[])(null)));
-#line 989
-this.ScenarioSetup(scenarioInfo);
-#line 990
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 991
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 992
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 993
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 994
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 995
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 996
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 997
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 998
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 999
-testRunner.And("I upload the downloaded file \"Grader Access file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1000
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1001
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 1002
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1003
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1004
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1005
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1006
-testRunner.Then("I should be displayed with status \"Passed\" for \"RegAccessGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1007
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1008
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1009
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1010
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1011
+testRunner.And("I upload the downloaded file \"Grader Access file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1012
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1013
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1014
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1015
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1016
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1017
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1018
+testRunner.Then("I should be displayed with status \"Passed\" for \"RegAccessGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1019
 testRunner.And("I should see \"RegAccessGraderActivity\" activity in Grades tab with \"GraderIT70Sco" +
                     "re\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2240,43 +2263,43 @@ testRunner.And("I should see \"RegAccessGraderActivity\" activity in Grades tab 
         public virtual void StudentSubmittingGraderITAccessActivityWith100Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT Access activity with 100 score", ((string[])(null)));
-#line 1014
-this.ScenarioSetup(scenarioInfo);
-#line 1015
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1016
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1017
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1018
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1019
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1020
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1021
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1022
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1023
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1024
-testRunner.And("I upload the downloaded file \"Grader Access file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1025
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1026
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 1027
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1028
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1029
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1030
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1031
-testRunner.Then("I should be displayed with status \"Passed\" for \"RegAccessGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1032
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1033
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1034
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1035
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1036
+testRunner.And("I upload the downloaded file \"Grader Access file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1037
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1038
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1039
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1040
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1041
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1042
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1043
+testRunner.Then("I should be displayed with status \"Passed\" for \"RegAccessGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1044
 testRunner.And("I should see \"RegAccessGraderActivity\" activity in Grades tab with \"GraderIT100Sc" +
                     "ore\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2289,43 +2312,43 @@ testRunner.And("I should see \"RegAccessGraderActivity\" activity in Grades tab 
         public virtual void StudentSubmittingGraderITPowerPointActivityWith0Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT PowerPoint activity with 0 score", ((string[])(null)));
-#line 1042
-this.ScenarioSetup(scenarioInfo);
-#line 1043
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1044
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1045
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1046
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1047
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1048
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1049
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1050
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1051
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1052
-testRunner.And("I upload the downloaded file \"Grader PowerPoint file for 0%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1053
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1054
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 1055
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1056
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1057
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1058
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1059
-testRunner.Then("I should be displayed with status \"Not passed\" for \"RegPowerPointGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1060
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1061
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1062
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1063
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1064
+testRunner.And("I upload the downloaded file \"Grader PowerPoint file for 0%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1065
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1066
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1067
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1068
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1069
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1070
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1071
+testRunner.Then("I should be displayed with status \"Not passed\" for \"RegPowerPointGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1072
 testRunner.And("I should see \"RegPowerPointGraderActivity\" activity in Grades tab with \"GraderIT0" +
                     "Score\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2338,43 +2361,43 @@ testRunner.And("I should see \"RegPowerPointGraderActivity\" activity in Grades 
         public virtual void StudentSubmittingGraderITPowerPointActivityWith70Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT PowerPoint activity with 70 score", ((string[])(null)));
-#line 1067
-this.ScenarioSetup(scenarioInfo);
-#line 1068
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1069
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1070
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1071
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1072
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1073
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1074
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1075
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1076
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1077
-testRunner.And("I upload the downloaded file \"Grader PowerPoint file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1078
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1079
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 1080
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1081
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1082
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1083
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1084
-testRunner.Then("I should be displayed with status \"Passed\" for \"RegPowerPointGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1085
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1086
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1087
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1088
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1089
+testRunner.And("I upload the downloaded file \"Grader PowerPoint file for 70%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1090
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1091
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1092
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1093
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1094
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1095
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1096
+testRunner.Then("I should be displayed with status \"Passed\" for \"RegPowerPointGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1097
 testRunner.And("I should see \"RegPowerPointGraderActivity\" activity in Grades tab with \"GraderIT7" +
                     "0Score\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2387,43 +2410,43 @@ testRunner.And("I should see \"RegPowerPointGraderActivity\" activity in Grades 
         public virtual void StudentSubmittingGraderITPowerPointActivityWith100Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting GraderIT PowerPoint activity with 100 score", ((string[])(null)));
-#line 1092
-this.ScenarioSetup(scenarioInfo);
-#line 1093
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1094
-testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1095
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1096
-testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1097
-testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1098
-testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1099
-testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1100
-testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1101
-testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1102
-testRunner.And("I upload the downloaded file \"Grader PowerPoint file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1103
-testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1104
-testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 1105
-testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1106
-testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I launch \"RegExcelGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1107
-testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1108
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on the button \"Download Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1109
-testRunner.Then("I should be displayed with status \"Passed\" for \"RegPowerPointGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the button \"Download All Files\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1110
+testRunner.Then("I successfully download the files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1111
+testRunner.When("I click on the button \"Close\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1112
+testRunner.Then("I should see a pop up with \"Download Materials\" and \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1113
+testRunner.When("I click on the button \"Choose File\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1114
+testRunner.And("I upload the downloaded file \"Grader PowerPoint file for 100%\" for course 2016", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1115
+testRunner.And("I click on the button \"Upload\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1116
+testRunner.Then("I should see success message on upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1117
+testRunner.When("I click on the button \"Submit for Grading\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1118
+testRunner.Then("I should see success message on successful submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1119
+testRunner.When("I click on the button \"Close Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1120
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1121
+testRunner.Then("I should be displayed with status \"Passed\" for \"RegPowerPointGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1122
 testRunner.And("I should see \"RegPowerPointGraderActivity\" activity in Grades tab with \"GraderIT1" +
                     "00Score\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -2436,20 +2459,20 @@ testRunner.And("I should see \"RegPowerPointGraderActivity\" activity in Grades 
         public virtual void SubmitPreTestAsCsSmsStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit pre test as CsSmsStudent", ((string[])(null)));
-#line 1118
+#line 1130
 this.ScenarioSetup(scenarioInfo);
-#line 1119
+#line 1131
 testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 1120
+#line 1132
 testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1121
+#line 1133
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1122
+#line 1134
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 1123
+#line 1135
 testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
                     "msStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1124
+#line 1136
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -2461,32 +2484,32 @@ testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((Te
         public virtual void StudentSubmittingWordSIMActivityAndScoring0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting Word SIM Activity and scoring 0", ((string[])(null)));
-#line 1134
+#line 1146
 this.ScenarioSetup(scenarioInfo);
-#line 1135
+#line 1147
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1136
+#line 1148
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1137
+#line 1149
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1138
+#line 1150
 testRunner.And("I launch the \"RegWordSIMActivity\" activity as \"CsSmsStudent\" with \"ZeroScore\" sco" +
                     "re", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1139
+#line 1151
 testRunner.And("I click on submit button answering incorrectly of \"Word\" type \"Exam\" activity \"Re" +
                     "gWordSIMActivity\" by \"ZeroScore\" student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1140
+#line 1152
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1141
+#line 1153
 testRunner.And("I should see the status \"Not passed\" for the activity \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1142
+#line 1154
 testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1143
+#line 1155
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1144
+#line 1156
 testRunner.When("I navigate to \"RegWordSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1145
+#line 1157
 testRunner.Then("I should see \"RegWordSIMActivity\" activity in Grades tab with \"SimActivity0Score\"" +
                     " grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -2499,31 +2522,28 @@ testRunner.Then("I should see \"RegWordSIMActivity\" activity in Grades tab with
         public virtual void StudentValidatingViewSubmissionForSIM5WordActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating view submission for SIM5 Word activity", ((string[])(null)));
-#line 1151
+#line 1163
 this.ScenarioSetup(scenarioInfo);
-#line 1152
+#line 1164
 testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1153
+#line 1165
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1154
+#line 1166
 testRunner.When("I navigate to \"RegWordSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1155
+#line 1167
 testRunner.Then("I should see \"RegWordSIMActivity\" activity in Grades tab with \"SimActivity0Score\"" +
                     " grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1156
-testRunner.When("I click on \"view submission\" cmenu option of \"RegWordSIMActivity\" as \"CsSmsStuden" +
-                    "t\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1157
+#line 1168
+testRunner.When("I click on \"View Submissions\" cmenu option of \"RegWordSIMActivity\" as \"CsSmsStude" +
+                    "nt\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1169
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1158
+#line 1170
 testRunner.And("I should see \"RegWordSIMActivity\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1159
-testRunner.And("I should see \'Attempts\' grid with \"Date\" \"Grade\" columns having \"2\" entries as \"C" +
-                    "sSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1160
-testRunner.When("I click on attempt having \"100\" grade as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1161
-testRunner.Then("I should see \"CsSmsStudent\" with \"100%\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1171
+testRunner.When("I click on attempt \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1172
+testRunner.Then("I should see \"scoring 0\" \"CsSmsStudent\" with \"SimActivity0Score\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -2536,15 +2556,15 @@ testRunner.Then("I should see \"CsSmsStudent\" with \"100%\" score", ((string)(n
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validates the New Grades channel of Notifications channel in Todays view " +
                     "tab", ((string[])(null)));
-#line 1168
+#line 1178
 this.ScenarioSetup(scenarioInfo);
-#line 1169
+#line 1179
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1170
+#line 1180
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1171
+#line 1181
 testRunner.When("I click on \"New Grades\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1172
+#line 1182
 testRunner.Then("I should see the \"RegWordGraderActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -2556,56 +2576,45 @@ testRunner.Then("I should see the \"RegWordGraderActivity\"", ((string)(null)), 
         public virtual void StudentSubmittingWordActivityAndScoring70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting  Word Activity and scoring 70", ((string[])(null)));
-#line 1178
-this.ScenarioSetup(scenarioInfo);
-#line 1179
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 1180
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1181
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1182
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 1183
-testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
-                    "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1184
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1185
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1186
-testRunner.When("I select \"RegWordSIMActivity\" in \"Course Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1187
-testRunner.And("I launch the \"RegWordSIMActivity\" activity as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1188
-testRunner.And("I attempt questions in \"RegWordSIMActivity\" to score \"SimActivity70Score\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 1189
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1190
-testRunner.And("I should see the status \"Not passed\" for the activity \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1191
-testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"RegWordSIMActivity\" in \"Course Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1192
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I launch the \"RegWordSIMActivity\" activity as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1193
-testRunner.When("I navigate to \"RegWordSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I attempt questions in \"RegWordSIMActivity\" to score \"SimActivity70Score\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1194
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1195
+testRunner.And("I should see the status \"Not passed\" for the activity \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1196
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1197
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1198
+testRunner.When("I navigate to \"RegWordSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1199
 testRunner.Then("I should see \"RegWordSIMActivity\" activity in Grades tab with \"SimActivity70Score" +
                     "\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1195
+#line 1200
 testRunner.When("I click on \"view submission\" cmenu option of \"RegCustomViewActivity1\" as \"CsSmsSt" +
                     "udent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1196
+#line 1201
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1197
+#line 1202
 testRunner.And("I should see \"RegCustomViewActivity1\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1198
+#line 1203
 testRunner.And("I should see \'Attempts\' grid with \"Date\" \"Grade\" columns having \"2\" entries as \"C" +
                     "sSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1199
-testRunner.When("I click on attempt having \"100\" grade as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1200
-testRunner.Then("I should see \"CsSmsStudent\" with \"100%\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1204
+testRunner.When("I click on attempt \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1205
+testRunner.Then("I should see \"scoring 100\" \"CsSmsStudent\" with \"SimActivity70Score\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -2616,30 +2625,30 @@ testRunner.Then("I should see \"CsSmsStudent\" with \"100%\" score", ((string)(n
         public virtual void StudentSubmittingWordActivityAndScoring100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting  Word Activity and scoring 100", ((string[])(null)));
-#line 1207
+#line 1212
 this.ScenarioSetup(scenarioInfo);
-#line 1208
+#line 1213
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1209
+#line 1214
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1210
+#line 1215
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1211
-testRunner.And("I launch the \"RegWordSIMActivity\" activity as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1212
-testRunner.And("I attempt questions in \"RegWordSIMActivity\" to score \"SimActivity100Score\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1213
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1214
-testRunner.And("I should see the status \"Not passed\" for the activity \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1215
-testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1216
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I launch the \"RegWordSIMActivity\" activity as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1217
-testRunner.When("I navigate to \"RegWordSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I attempt questions in \"RegWordSIMActivity\" to score \"SimActivity100Score\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1218
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1219
+testRunner.And("I should see the status \"Not passed\" for the activity \"RegWordSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1220
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1221
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1222
+testRunner.When("I navigate to \"RegWordSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1223
 testRunner.Then("I should see \"RegWordSIMActivity\" activity in Grades tab with \"SimActivity100Scor" +
                     "e\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

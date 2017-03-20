@@ -20,7 +20,7 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This class handles Pegasus GBDefaultUX Page Actions
     /// </summary>
-    public class GBDefaultUXPage:BasePage
+    public class GBDefaultUXPage : BasePage
     {
         /// <summary>
         /// The Static Instance Of The Logger For The Class
@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
             //Initialized Variable
             string getActivityName = string.Empty;
             try
-            {                
+            {
                 //Select Course Home Window
                 new CourseContentUXPage().SelectFrameInWindow(GBDefaultUXPageResource.
                     GBDefaultUXPage_Gradebook_CourseHome_Window,
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Course Home Window
                 new CourseContentUXPage().SelectFrameInWindow(GBDefaultUXPageResource.
                     GBDefaultUXPage_Gradebook_CourseHome_Window,
-                    GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_Center_Frame);               
+                    GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_Center_Frame);
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator));
                 //Switch to Frame
@@ -148,15 +148,15 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize VariableVariable
             string getActivityGrade = string.Empty;
             try
-            {               
+            {
                 //Select the course home window
-                new CourseHomeListItemViewPage().SelectCourseHomeWindow();                
+                new CourseHomeListItemViewPage().SelectCourseHomeWindow();
                 //Switch to Frame
                 base.SwitchToIFrame(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator);
                 //Get Activity Score
-                getActivityGrade =new GBInstructorUXPage().
-                    GetActivityStatus(activityName, userLastName,userFirstName);
+                getActivityGrade = new GBInstructorUXPage().
+                    GetActivityStatus(activityName, userLastName, userFirstName);
             }
             catch (Exception e)
             {
@@ -351,7 +351,7 @@ namespace Pegasus.Pages.UI_Pages
                     ("#srcGBFrame"));
 
                 WebDriver.SwitchTo().Frame(frame);
-           
+
                 // Getting the counts of Activity  
                 int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentCount_Xpath_Locator);
@@ -396,10 +396,10 @@ namespace Pegasus.Pages.UI_Pages
 
             IWebElement frame = base.GetWebElementProperties(By.CssSelector
                 ("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"));
-          
+
             WebDriver.SwitchTo().Frame(frame);
-           
-                
+
+
             logger.LogMethodExit("GBDefaultUXPage", "SwitchToTeacherGradebookIframe",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -417,7 +417,7 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             //Initialized Variable
             string getActivityName = string.Empty;
-         
+
             try
             {
                 // Getting the counts of Activity                    
@@ -452,7 +452,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="activityColumnNo">This is the Activity column count.</param>
         /// <param name="activityName">This is Activity Name.</param>
-        public void ClickViewSubmissionOption(int activityColumnNo,string activityName)
+        public void ClickViewSubmissionOption(int activityColumnNo, string activityName)
         {
             logger.LogMethodEntry("GBDefaultUXPage", "ClickViewSubmissionOption",
                           base.IsTakeScreenShotDuringEntryExit);
@@ -600,14 +600,14 @@ namespace Pegasus.Pages.UI_Pages
                 //bool pres = base.IsElementPresent(By.CssSelector(string.Format("iframe[src='{0}']", GBDefaultUXPageResource.
                 //GBDefaultUXPage_Page_CourseContent_Iframe_srcText)), 10);
                 bool pres1 = base.IsElementPresent(By.CssSelector("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"), 10);
-               
-                IWebElement frame=base.GetWebElementProperties(By.CssSelector
+
+                IWebElement frame = base.GetWebElementProperties(By.CssSelector
                     ("#classes-Grades-gadget-chrome iframe[id='frmCourseContainer']"));
                 //base.WaitForElement(By.CssSelector(string.Format("iframe[src='{0}']",GBDefaultUXPageResource.
                 //GBDefaultUXPage_Page_CourseContent_Iframe_srcText)));
                 WebDriver.SwitchTo().Frame(frame);
                 //base.SwitchToIFrameBySource(GBDefaultUXPageResource.
-                
+
 
                 IWebElement searchFilter = base.GetWebElementPropertiesByCssSelector(GBDefaultUXPageResource.
                    GBDefaultUXPage_Page_Gradebook_TitleSearchButton_cssSelector_Value);
@@ -631,7 +631,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBInstructorUXPage",
                 "SearchAssetInDPInstructorGradebook",
                 base.IsTakeScreenShotDuringEntryExit);
-            
+
 
         }
 
@@ -910,7 +910,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get the Activity name in Grades tab
                 string getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
                     GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
-                 actualActivityName = getActivityName.TrimEnd();
+                actualActivityName = getActivityName.TrimEnd();
                 if (actualActivityName == activityName)
                 {
                     break;
@@ -986,6 +986,11 @@ namespace Pegasus.Pages.UI_Pages
                         base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on Student View SUbmission Cmenu option in Grades tab
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option name.</param>
+        /// <param name="activityName">This is the activity name.</param>
         private void SelectActivitycMenuOption(string cmenuOption, string activityName)
         {
             logger.LogMethodEntry("GBDefaultUXPage",
@@ -993,30 +998,55 @@ namespace Pegasus.Pages.UI_Pages
                         base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToIFrameById("srcGBFrame");
             string getActivityName = string.Empty;
-            base.WaitForElement(By.XPath("//table[@id='GridStudent']/tbody/tr"));
-            int getActivityCount = base.GetElementCountByXPath("//table[@id='GridStudent']/tbody/tr");
+            //Get the activity count in Grades right frame
+            base.WaitForElement(By.XPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGradesTab_ActivityCount_XPath_Locator));
+            int getActivityCount = base.GetElementCountByXPath(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGradesTab_ActivityCount_XPath_Locator);
             for (int i = 1; i <= getActivityCount; i++)
             {
-                bool hgsd = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i)), 10);
-                getActivityName = base.GetElementInnerTextByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", i));
+                //Get the Activity name from grades frame
+                getActivityName = base.GetElementInnerTextByXPath(string.Format(
+                    GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGradesTab_ActivityName_XPath_Locator, i)).TrimEnd();
                 if (getActivityName == activityName)
                 {
-                    bool hgssad = base.IsElementPresent(By.XPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i)), 10);
-                    IWebElement activityName1 = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span/a", i));
+                    //Mouse hover on the Activity in grades frame
+                    IWebElement activityName1 = base.GetWebElementPropertiesByXPath(
+                        string.Format(GBDefaultUXPageResource.
+                          GBDefaultUXPage_StudentGradesTab_ActivityName_XPath_Locator, i));
                     base.PerformMouseHoverAction(activityName1);
                     Thread.Sleep(2000);
-                    bool jh = base.IsElementPresent(By.XPath(string.Format(".//*[@id='spFeed']/input")), 10);
-                    IWebElement cmenuOption1 = base.GetWebElementPropertiesByXPath(string.Format(".//*[@id='spFeed']/input"));
+                    //Click on CMenu option of the activity
+                    IWebElement cmenuOption1 = base.GetWebElementPropertiesByXPath(string.Format(
+                        GBDefaultUXPageResource.
+                          GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Click_XPath_Locator));
                     base.PerformMouseClickAction(cmenuOption1);
-
                     Thread.Sleep(1000);
-                    base.SelectDropDownOptionById("35d15ecb-88ec-40a1-b497-2095239d1ac7", cmenuOption);
-                    bool jhrjt = base.IsElementPresent(By.XPath("//a[@class = 'PU_render']"), 10);
-                    bool hgfks = base.IsElementPresent(By.XPath("//div[contains(@id,'reference')]"), 10);
-                    Thread.Sleep(2000);
-                    IWebElement activityCmenu = base.GetWebElementPropertiesByPartialLinkText("cmenuOption");
-                    base.PerformMouseClickAction(activityCmenu);
-
+                    //CLick on the cmenu option in Grades tab
+                    bool jk = base.IsElementPresent(By.PartialLinkText(cmenuOption), 10);
+                    IWebElement getCmenuOptionlink = base.GetWebElementPropertiesByPartialLinkText(cmenuOption);
+                    base.ClickByJavaScriptExecutor(getCmenuOptionlink);
+                    //int getCmenuOptionCount = base.GetElementCountByXPath(
+                    //    GBDefaultUXPageResource.
+                    //      GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Options_Count_XPath_Locator);
+                    //for (int j = 1; j <= getCmenuOptionCount; j++)
+                    //{
+                    //    //Get the cmenu option name from UI
+                    //    string cmenuOptionName = base.GetElementInnerTextByXPath(
+                    //        string.Format(GBDefaultUXPageResource.
+                    //      GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator, j)).TrimStart();
+                    //    if (cmenuOption == cmenuOptionName)
+                    //    {
+                    //        //Click on the cmenu option
+                    //        IWebElement getCmenulink = base.GetWebElementPropertiesByXPath(
+                    //            string.Format(GBDefaultUXPageResource.
+                    //      GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator, j));
+                    //        base.ClickByJavaScriptExecutor(getCmenulink);
+                    //        break;
+                    //    }
+                    //}
+                    break;
                 }
             }
             logger.LogMethodExit("GBDefaultUXPage",

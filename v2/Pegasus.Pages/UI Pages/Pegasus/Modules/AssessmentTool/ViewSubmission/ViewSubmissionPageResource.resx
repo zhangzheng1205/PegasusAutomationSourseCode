@@ -456,4 +456,7 @@
   <data name="ViewSubmissionPage_DeleteOption_Id_Value" xml:space="preserve">
     <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblDeleteSubmissionAll</value>
   </data>
+  <data name="ViewSubmissionPage_StudentViewSubmissionPage_ActivityAttemptRow_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[1]</value>
+  </data>
 </root>

@@ -428,5 +428,50 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
                 return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_WordChapter1_SimulationActivities_FolderName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId8&apos;]/table/tbody/tr/td/div[2]/a[{0}].
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;spFeed&apos;]/input.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Click_XPath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Click_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId8&apos;]/table/tbody/tr/td/div[2]/a.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Options_Count_XPath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Options_Count_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGradesTab_ActivityCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGradesTab_ActivityCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[2]/span/span/a.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGradesTab_ActivityName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGradesTab_ActivityName_XPath_Locator", resourceCulture);
+            }
+        }
     }
 }

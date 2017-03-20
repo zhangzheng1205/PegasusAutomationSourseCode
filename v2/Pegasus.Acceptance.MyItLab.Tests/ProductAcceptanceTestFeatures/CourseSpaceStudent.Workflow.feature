@@ -818,9 +818,6 @@ Then I should see success message on successful submission
 When I click on the button "Close Assignment"
 Then I should be on the "Course Materials" page
 Then I should be displayed with status "Not passed" for "RegWordGraderActivity" 
-When I click on "view submission" cmenu option of "RegWordGraderActivity" as "CsSmsStudent" user
-Then I should be on the "View Submission" page
-And I should see "RegWordGraderActivity" activity name
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 And I should see "RegWordGraderActivity" activity in Grades tab with "GraderIT0Score" grade
@@ -874,6 +871,21 @@ When I click on the button "Close Assignment"
 Then I should be on the "Course Materials" page
 Then I should be displayed with status "Passed" for "RegWordGraderActivity" 
 And I should see "RegWordGraderActivity" activity in Grades tab with "GraderIT100Score" grade
+
+#Purpose : Folder Navigation and student validating view submission for Word Grader activity in Grades tab
+#Test case ID :
+#Products : MyItLab.
+#Pre condition : 
+Scenario: Student validating view submission for Word Grader activity
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+#When I navigate to "RegWordGraderActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegWordGraderActivity" activity in Grades tab with "GraderIT0Score" grade
+When I click on "View Submissions" cmenu option of "RegWordGraderActivity" as "CsSmsStudent" user
+Then I should be on the "View Submission" page
+And I should see "RegWordGraderActivity" activity name 
+When I click on attempt "1"
+Then I should see "scoring 0" "CsSmsStudent" with "GraderIT0Score" score 
 
 #--------------------------------------------------------------------------------------------------------------------------
 										#Submit EXCEL Grader Activity having 0, 70, 100 scores#
@@ -1153,13 +1165,11 @@ When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity0Score" grade
-When I click on "view submission" cmenu option of "RegWordSIMActivity" as "CsSmsStudent" user
+When I click on "View Submissions" cmenu option of "RegWordSIMActivity" as "CsSmsStudent" user
 Then I should be on the "View Submission" page
 And I should see "RegWordSIMActivity" activity name 
-And I should see 'Attempts' grid with "Date" "Grade" columns having "2" entries as "CsSmsStudent" user
-When I click on attempt having "100" grade as "CsSmsStudent"
-Then I should see "CsSmsStudent" with "100%" score 
-
+When I click on attempt "1"
+Then I should see "scoring 0" "CsSmsStudent" with "SimActivity0Score" score 
 
 #Purpose: Validate SIM5 Word activity 'New Grades' channel of Notifications channel in Today's view tab
 #Test case ID : 
@@ -1176,11 +1186,6 @@ Then I should see the "RegWordGraderActivity"
 #Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
 #Dependency : Always dependent.
 Scenario: Student submitting  Word Activity and scoring 70
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "RegWordSIMActivity" in "Course Materials" by "CsSmsStudent"
@@ -1196,8 +1201,8 @@ When I click on "view submission" cmenu option of "RegCustomViewActivity1" as "C
 Then I should be on the "View Submission" page
 And I should see "RegCustomViewActivity1" activity name 
 And I should see 'Attempts' grid with "Date" "Grade" columns having "2" entries as "CsSmsStudent" user
-When I click on attempt having "100" grade as "CsSmsStudent"
-Then I should see "CsSmsStudent" with "100%" score 
+When I click on attempt "1"
+Then I should see "scoring 100" "CsSmsStudent" with "SimActivity70Score" score 
 
 #Purpose : Submitting SIM5 Word activity and Student scoring a 100%
 #Test case ID : 

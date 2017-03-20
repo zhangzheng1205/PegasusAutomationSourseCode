@@ -1463,16 +1463,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
         /// <summary>
         /// CLick on the required attemp row to view the submission details
-        /// </summary>
+             /// </summary>
         /// <param name="activityScore">This is the activity score.</param>
         /// <param name="userTypeEnum">This is the user type enum.</param>
-        [When(@"I click on attempt having ""(.*)"" grade as ""(.*)""")]
-        public void ViewActivitySubmission(String activityScore, User.UserTypeEnum userTypeEnum)
+        [When(@"I click on attempt ""(.*)""")]
+        public void ViewActivitySubmission(String attemptNumber)
         {
             Logger.LogMethodEntry("Gradebook",
                             "VerifyAtemptsGridInViewSubmission",
                            base.IsTakeScreenShotDuringEntryExit);
-            new ViewSubmissionPage().ClickOnActivityAttemptToViewSubmission(activityScore);
+            new ViewSubmissionPage().
+                ClickOnActivityAttemptToViewSubmission(attemptNumber);
             Logger.LogMethodExit("Gradebook",
                            "VerifyAtemptsGridInViewSubmission",
                           base.IsTakeScreenShotDuringEntryExit);
