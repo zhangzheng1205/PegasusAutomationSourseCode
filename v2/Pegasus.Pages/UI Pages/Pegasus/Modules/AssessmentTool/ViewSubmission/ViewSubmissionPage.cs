@@ -3192,13 +3192,16 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// 
+        /// Delete all submission in the view submission popup
         /// </summary>
-        /// <param name="activityName"></param>
-        /// <param name="lastName"></param>
-        /// <param name="firstName"></param>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="lastName">This is user last name.</param>
+        /// <param name="firstName">This is user first name.</param>
         public void DeleteGradeInGradeBook(string activityName, string lastName, string firstName)
         {
+            Logger.LogMethodEntry("ViewSubmissionPage",
+                          "DeleteGradeInGradeBook",
+                         base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select View Submission Window
@@ -3210,15 +3213,34 @@ namespace Pegasus.Pages.UI_Pages
                 //Click username in viewsubmission
                 this.GetUserNameInViewSubmission(lastNameFirstName);
 
-                base.WaitForElement(By.Id("divdelete"));
-                IWebElement getOption = base.GetWebElementPropertiesById("divdelete");
+                // Click on Delete option
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteIcon_Id_Value));
+                IWebElement getOption = base.GetWebElementPropertiesById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteIcon_Id_Value);
                 base.ClickByJavaScriptExecutor(getOption);
 
+                //Click on "Delete all submission"
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteOption_Id_Value), 10);
+                IWebElement getDeleteOption = base.GetWebElementPropertiesById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteOption_Id_Value);
+                base.ClickByJavaScriptExecutor(getDeleteOption);
+
+                // Click Yes button in the confirmation popup
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteConfirmation_Id_Value));
+                IWebElement getConfirmationOption = base.GetWebElementPropertiesById(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteConfirmation_Id_Value);
+                base.ClickByJavaScriptExecutor(getConfirmationOption);
             }
             catch(Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
+            Logger.LogMethodExit("ViewSubmissionPage",
+              "DeleteGradeInGradeBook",
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -447,4 +447,13 @@
   <data name="ViewSubmissionPage_UserCount_Xpath_Locator" xml:space="preserve">
     <value>//div[@id ='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span</value>
   </data>
+  <data name="ViewSubmissionPage_DeleteConfirmation_Id_Value" xml:space="preserve">
+    <value>VSbtnDeleteYesClientALL</value>
+  </data>
+  <data name="ViewSubmissionPage_DeleteIcon_Id_Value" xml:space="preserve">
+    <value>divdelete</value>
+  </data>
+  <data name="ViewSubmissionPage_DeleteOption_Id_Value" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblDeleteSubmissionAll</value>
+  </data>
 </root>
