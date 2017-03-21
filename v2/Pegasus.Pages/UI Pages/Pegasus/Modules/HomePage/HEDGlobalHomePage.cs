@@ -2824,8 +2824,10 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get total pages on catalog
-                string pageNumberCount = base.GetElementInnerTextById(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_PageCount_ID_Locator);
+                bool hb = base.IsElementPresent(By.XPath("//td[@class='tdPagingPadTop']/span/a[4]"), 10);
+                string pageNumberCount = base.GetElementInnerTextByXPath("//td[@class='tdPagingPadTop']/span/a[4]");
+                //string pageNumberCount1 = base.GetElementInnerTextById(HEDGlobalHomePageResource.
+                //    HEDGlobalHomePage_PageCount_ID_Locator);
                 int totalPageCount = Convert.ToInt32(pageNumberCount);
                 for (int j = 1; j <= totalPageCount; j++)
                 {
@@ -2920,8 +2922,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get total pages on catalog
-                string pageNumberCount = base.GetElementInnerTextById
-                    (HEDGlobalHomePageResource.HEDGlobalHomePage_PageCount_ID_Locator);
+                string pageNumberCount = base.GetElementInnerTextByXPath("//td[@class='tdPagingPadTop']/span/a[4]");
                 int totalPageCount = Convert.ToInt32(pageNumberCount);
                 for (int j = 1; j <= totalPageCount; j++)
                 {

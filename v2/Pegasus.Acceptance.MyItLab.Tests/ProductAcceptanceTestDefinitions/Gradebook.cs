@@ -1484,14 +1484,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="userTypeEnum">This is the user type enum.</param>
         /// <param name="activityScore">This is the activity score.</param>
-        [Then(@"I should see ""(.*)"" with ""(.*)"" score")]
-        public void VerifyActivityScoreInViewSubmission(User.UserTypeEnum userTypeEnum, String activityScore)
+        [Then(@"I should see ""(.*)"" ""(.*)"" with ""(.*)"" score")]
+        public void VerifyActivityScoreInViewSubmission(string scenerioName, User.UserTypeEnum userTypeEnum, String activityScore)
         {
             Logger.LogMethodEntry("Gradebook",
                             "VerifyActivityScoreInViewSubmission",
                            base.IsTakeScreenShotDuringEntryExit);
-            User user = User.Get(userTypeEnum);
-            string expectedUserName = user.LastName + ", " + user.FirstName;
+            //Get the user of the given type from Memory Data Store
+            User user = new LoginContentPage().
+                SelectUserDetailsBaesdOnScenerio(scenerioName, userTypeEnum);
+                 string expectedUserName = user.LastName + ", " + user.FirstName;
             Logger.LogAssertion("VerifyActivityDisplayInTab", ScenarioContext.
                        Current.ScenarioInfo.Title, () => Assert.AreEqual
                            (activityScore, new ViewSubmissionPage().GetActivityScoreInViewSubmission()));
@@ -1612,24 +1614,29 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                          base.IsTakeScreenShotDuringEntryExit);            
         }
 
-        [Then(@"I should see the score ""(.*)"" for ""(.*)"" activity for ""(.*)""")]
-        public void ThenIShouldSeeTheScoreForActivityFor(string activityScore, Activity.ActivityTypeEnum activityTypeEnum, User.UserTypeEnum userTypeEnum)
+        [Then(@"I should see the score ""(.*)"" for ""(.*)"" activity for ""(.*)"" ""(.*)""")]
+        public void ThenIShouldSeeTheScoreForActivityFor(Grade.GradeTypeEnum gradeTypeEnum,
+             Activity.ActivityTypeEnum activityTypeEnum, string scenerioName, User.UserTypeEnum userTypeEnum)
         {
             //Verify The Score Of Activity
             Logger.LogMethodEntry("Gradebook",
                 "VerifyTheScoreOfActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Fetch the data from memory
-
+            //Fetch the Activity data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             string activityName = activity.Name.ToString();
-            User user = User.Get(userTypeEnum);
+            //Fetch the Grade data from memory
+            Grade grade = Grade.Get(gradeTypeEnum);
+            string activityGrade = grade.GradeScore;
+            //Get the user of the given type from Memory Data Store
+            User user = new LoginContentPage().
+                SelectUserDetailsBaesdOnScenerio(scenerioName, userTypeEnum);
             //Select the window
             new GBInstructorUXPage().SelectGradebookFrame();
             //Assert Grades of Submitted Activity
             Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                 (activityScore, new GBInstructorUXPage().GetActivityStatus(
+                 (activityGrade, new GBInstructorUXPage().GetActivityStatus(
                     activityName, user.LastName, user.FirstName)));
             Logger.LogMethodExit("Gradebook",
                 "VerifyTheScoreOfActivity",

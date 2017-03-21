@@ -1140,36 +1140,41 @@ testRunner.When("I click on \'Edit\' button", ((string)(null)), ((TechTalk.SpecF
 #line 480
 this.ScenarioSetup(scenarioInfo);
 #line 481
-testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Materials\" tab as \"CsSmsIn" +
+                    "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 482
-testRunner.And("I click on \'Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on \"Return to Course Materials\" button in \'Add from Library\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 483
-testRunner.And("I click on the \"myitlab Study Plan\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 484
-testRunner.Then("I should be on \"Add myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on \'Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 485
-testRunner.When("I save the \"StudyPlan\" details tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click on the \"myitlab Study Plan\" asset type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 486
-testRunner.Then("I should be on \"Build Study Plan\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on \"Add myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 487
-testRunner.When("I create a \"Sim5PreTest\" of behavioral mode \"SkillBased\" Pretest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I save the \"StudyPlan\" details tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 488
-testRunner.And("I add \"SIM5\" question in created \"Exam [Skill-Based]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on \"Build Study Plan\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 489
-testRunner.And("I save \"Sim5PreTest\" pre test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I create a \"Sim5PreTest\" of behavioral mode \"SkillBased\" Pretest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 490
-testRunner.Then("I should see the \"Sim5PreTest\" pre test created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 491
-testRunner.When("I create a \"Sim5PostTest\" of behavioral mode \"SkillBased\" posttest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 492
 testRunner.And("I add \"SIM5\" question in created \"Exam [Skill-Based]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 491
+testRunner.And("I save \"Sim5PreTest\" pre test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 492
+testRunner.Then("I should see the \"Sim5PreTest\" pre test created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 493
-testRunner.And("I save \"Sim5PostTest\" post test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I create a \"Sim5PostTest\" of behavioral mode \"SkillBased\" posttest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 494
-testRunner.Then("I should see the \"Sim5PostTest\" post test created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I add \"SIM5\" question in created \"Exam [Skill-Based]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 495
-testRunner.When("I save the study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I save \"Sim5PostTest\" post test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 496
+testRunner.Then("I should see the \"Sim5PostTest\" post test created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 497
+testRunner.When("I save the study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 498
 testRunner.Then("I should see the successfull message \"Study Plan added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1993,7 +1993,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Activity Column Count
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCount",
            base.IsTakeScreenShotDuringEntryExit);
-            //Initialize VariableVariable
+            //Initialize Variable
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
             this.SelectGradebookFrame();
@@ -2535,6 +2535,8 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GBInstructorUXPage", "ClickTheCmenuIconInGradebook",
                          base.IsTakeScreenShotDuringEntryExit);
             //Get Element Property
+            //base.FocusOnElementByXPath(string.Format(GBInstructorUXPageResource.
+            //    GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount));
             IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath
                 (String.Format(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount));

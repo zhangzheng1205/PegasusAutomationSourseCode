@@ -1995,8 +1995,8 @@ testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.Spe
 #line 881
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 883
-testRunner.Then("I should see \"RegWordGraderActivity\" activity in Grades tab with \"SimActivity0Sco" +
-                    "re\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"RegWordGraderActivity\" activity in Grades tab with \"GraderIT0Score\"" +
+                    " grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 884
 testRunner.When("I click on \"View Submissions\" cmenu option of \"RegWordGraderActivity\" as \"CsSmsSt" +
                     "udent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -2542,8 +2542,6 @@ testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)),
 testRunner.And("I should see \"RegWordSIMActivity\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1171
 testRunner.When("I click on attempt \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1172
-testRunner.Then("I should see \"scoring 0\" \"CsSmsStudent\" with \"SimActivity0Score\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

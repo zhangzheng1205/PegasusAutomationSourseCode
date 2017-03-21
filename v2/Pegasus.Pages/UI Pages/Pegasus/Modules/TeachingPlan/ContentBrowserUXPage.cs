@@ -606,7 +606,9 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement GetSIM5CheckBox1 = base.GetWebElementPropertiesById("chkQuestionTypeList_3");
                 //Select the checkbox for SIM5 Question
                 base.ClickByJavaScriptExecutor(GetSIM5CheckBox1);
-                base.ClickButtonById("btnAdvSearch");
+                //Click on Search button
+                IWebElement clickSearchButton = base.GetWebElementPropertiesById("btnAdvSearch");
+                base.ClickByJavaScriptExecutor(clickSearchButton);
             }
             catch (Exception e)
             {

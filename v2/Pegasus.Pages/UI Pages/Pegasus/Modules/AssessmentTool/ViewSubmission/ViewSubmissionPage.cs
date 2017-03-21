@@ -2870,6 +2870,7 @@ namespace Pegasus.Pages.UI_Pages
                     ViewSubmissionPage_StudentViewSubmissionPage_ActivityAttemptRow_XPath_Locator,
                     activityGrade)));
                 base.ClickByJavaScriptExecutor(selectActivityAttempt);
+                base.CloseBrowserWindow();
             }
             catch (Exception e)
             {
@@ -3146,7 +3147,9 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     getGradeStatus = true;
                 }
-            }
+                //Close the VIew Submission popup window
+                //base.CloseBrowserWindow();
+             }
             catch(Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -3179,6 +3182,7 @@ namespace Pegasus.Pages.UI_Pages
                         ViewSubmissionPage_Click_UserName_Xpath_Locator, i));
                         base.ClickByJavaScriptExecutor(getExpandButton);
                         Thread.Sleep(2000);
+                        break;
                 }
             }
         }
@@ -3206,6 +3210,9 @@ namespace Pegasus.Pages.UI_Pages
                 this.GetUserNameInViewSubmission(lastNameFirstName);
 
                 // Click on Delete option
+                bool gnd = base.IsElementPresent(By.Id("lnkDelete"), 10);
+                bool dka = base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                    ViewSubmissionPage_DeleteIcon_Id_Value), 10);
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmissionPage_DeleteIcon_Id_Value));
                 IWebElement getOption = base.GetWebElementPropertiesById(ViewSubmissionPageResource.

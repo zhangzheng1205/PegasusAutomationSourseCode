@@ -1169,7 +1169,7 @@ When I click on "View Submissions" cmenu option of "RegWordSIMActivity" as "CsSm
 Then I should be on the "View Submission" page
 And I should see "RegWordSIMActivity" activity name 
 When I click on attempt "1"
-Then I should see "scoring 0" "CsSmsStudent" with "SimActivity0Score" score 
+#Then I should see "scoring 0" "CsSmsStudent" with "SimActivity0Score" score 
 
 #Purpose: Validate SIM5 Word activity 'New Grades' channel of Notifications channel in Today's view tab
 #Test case ID : 

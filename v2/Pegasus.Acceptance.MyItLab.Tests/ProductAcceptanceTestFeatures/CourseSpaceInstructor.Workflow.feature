@@ -478,6 +478,8 @@ When I click on 'Edit' button
 #MyItLabProgramCourse
 #Testcase ID:
 Scenario: Instructor create studyplan in course materials
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
 When I enter into "RegFolderAsset" folder
 And I click on 'Materials' option
 And I click on the "myitlab Study Plan" asset type
