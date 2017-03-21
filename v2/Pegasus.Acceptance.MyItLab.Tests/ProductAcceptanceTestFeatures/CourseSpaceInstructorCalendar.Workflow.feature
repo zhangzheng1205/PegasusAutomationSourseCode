@@ -95,6 +95,22 @@ And I should be displayed with "Month view" option in "Advanced Calendar" of "Ca
 When I click on "Day" view in Advance calender
 Then I should see the "RegTodayDateAssignment " activity assigned in day view of Advance calender
 
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+									# Drag drop asset for current , Future and Past date #
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+#Purpose : Drag and drop a single content to Curremt date and display of Assigned content in Day View
+#MyItLabProgramCourse
+#Test Case Id :
+Scenario: Drag and drop a single content to Current date and validate the display of assigned content in Day view
+When I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "SIM5StudyPlan " activity of behavioral mode "SkillBased"
+Then I should see the searched "SIM5StudyPlan" activity of behavioral mode "SkillBased"
+When I 'Drag and Drop' the "SIM5StudyPlan " activity of behavioral mode "SkillBased" on "Current date"
+Then I should see "SIM5StudyPlan" activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in "Current date" day view 
+
+
 #Purpose : Drag and drop a single content to future date and display of Assigned content in Day View
 #MyItLabProgramCourse
 #Test Case Id :
@@ -104,18 +120,23 @@ Then I should be on the "Calendar" page
 When I search the "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
 Then I should see the searched "RegFutureDateAssignment " activity of behavioral mode "SkillBased"
 When I 'Drag and Drop' the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" on "Future date"
-Then I should see the "RegFutureDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Future date"
+Then I should see "RegFutureDateAssignment" activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in "Future date" day view 
 
 #Purpose : Drag and drop a single content to previous date and display of Assigned content in Day View
 #MyItLabProgramCourse
 #Test Case Id :
 Scenario: Drag and drop a single content to previous date and display of Assigned content in Day View as SMS Teacher
-When I navigate to "Assignment Calendar" tab
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
+And I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I search the "RegPastDueAssignment " activity of behavioral mode "SkillBased"
 Then I should see the searched "RegPastDueAssignment " activity of behavioral mode "SkillBased"
 When I 'Drag and Drop' the "RegPastDueAssignment " activity of behavioral mode "SkillBased" on "Future date"
-Then I should see the "RegPastDueAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "PastDue date"
+Then I should see "RegFutureDateAssignment" activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in "Future date" day view 
 
 #Purpose : Add Notes functionality for future date in Calendar frame
 #MyItLabProgramCourse
@@ -159,7 +180,7 @@ Then I should be on the "Calendar" page
 When I search the "RegSimpleCmenuAssignCurrentDate" activity of behavioral mode "SkillBased"
 Then I should see the searched "RegSimpleCmenuAssignCurrentDate" activity of behavioral mode "SkillBased"
 When I "Assign with due date" for "Current Date" of activity "RegSimpleCmenuAssignCurrentDate"
-Then I should see the "RegSimpleCmenuAssignCurrentDate " activity of behavioral mode "SkillBased" assigned by 'CMenu' in day view of "Current date"
+Then I should see the "RegSimpleCmenuAssignFutureDate" activity of behavioral mode "SkillBased" assigned by 'CMenu' in "Current date" of day view 
 Then I should be on the "Calendar" page
 
 #Purpose : Cmenu Simple Assign with due date for CurrentDate 
@@ -171,7 +192,7 @@ Then I should be on the "Calendar" page
 When I search the "RegSimpleCmenuAssign" activity of behavioral mode "SkillBased"
 Then I should see the searched "RegSimpleCmenuAssign" activity of behavioral mode "SkillBased"
 When I "Simple assign" for "Current Date" of activity "RegSimpleAssign"
-Then I should see the "RegSimpleCmenuAssign" activity of behavioral mode "SkillBased" assigned by 'CMenu' in day view of "Current date"
+Then I should see the "RegSimpleCmenuAssignFutureDate" activity of behavioral mode "SkillBased" assigned by 'CMenu' in "Current date" of day view 
 And I should be on the "Calendar" page
 
 #Purpose : Cmenu assign of single content to past due date
@@ -185,7 +206,7 @@ Then I should see the searched "RegPastDueCmenuAssignment" activity of behaviora
 When I click cmenu "Set Scheduling Options" of activity "RegPastDueCmenuAssignment"
 Then I should see the "Assign" popup
 When I assign the searched activity to past due date
-Then I should see the "RegPastDueCmenuAssignment " activity of behavioral mode "SkillBased" assigned by 'CMenu' in day view of "PastDue date"
+Then I should see the "RegSimpleCmenuAssignFutureDate" activity of behavioral mode "SkillBased" assigned by 'CMenu' in "PastDue date" of day view 
 Then I should be on the "Calendar" page
 And I should see the pastdue icon
 
@@ -198,7 +219,7 @@ Then I should be on the "Calendar" page
 When I search the "RegSimpleCmenuAssignFutureDate" activity of behavioral mode "SkillBased"
 Then I should see the searched "RegSimpleCmenuAssignFutureDate" activity of behavioral mode "SkillBased"
 When I "Assign with due date" for "Future Date" of activity "RegSimpleCmenuAssignFutureDate"
-Then I should see the "RegSimpleCmenuAssignFutureDate " activity of behavioral mode "SkillBased" assigned by 'CMenu' in day view of "Future date"
+Then I should see the "RegSimpleCmenuAssignFutureDate" activity of behavioral mode "SkillBased" assigned by 'CMenu' in "Future date" of day view 
 Then I should be on the "Calendar" page
 
 #Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
@@ -238,9 +259,3 @@ When I select the current date
 Then I should see the assigned content "RegSimpleCmenuAssignCurrentDate" in the day view
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
-
-
-
-
-
-

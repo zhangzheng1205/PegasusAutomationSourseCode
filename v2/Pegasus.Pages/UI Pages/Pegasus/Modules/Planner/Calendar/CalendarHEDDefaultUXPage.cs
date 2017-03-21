@@ -204,11 +204,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for 10 Secs
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
-                bool IframeExist = base.IsElementPresent(By.Id("iframeContentList"), 10);
+                bool IframeExist = base.IsElementPresent(By.Id("openModalPopupframe"), 10);
                 if (IframeExist == true)
                 {
                     // Switch to iframe
-                    base.SwitchToIFrameById("iframeContentList");
+                    base.SwitchToIFrameById("openModalPopupframe");
 
                     IWebElement getOkButton = base.GetWebElementPropertiesById("_ctl0_InnerPageContent_btnYes");
                     base.ClickByJavaScriptExecutor(getOkButton);
@@ -323,6 +323,20 @@ namespace Pegasus.Pages.UI_Pages
                             //Wait for the element
                             base.PerformMoveToElementClickAction(base.
                                 GetWebElementPropertiesByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
+                            //Wait for 10 Secs
+                            Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_SleepTime));
+                            bool IframeExist = base.IsElementPresent(By.Id("openModalPopupframe"), 10);
+                            if (IframeExist == true)
+                            {
+                                // Switch to iframe
+                                base.SwitchToIFrameById("openModalPopupframe");
+
+                                IWebElement getOkButton = base.GetWebElementPropertiesById("_ctl0_InnerPageContent_btnYes");
+                                base.ClickByJavaScriptExecutor(getOkButton);
+                            }
+                            Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_SleepTime));
                             exitLoop = true;
                             break;
                         }
@@ -607,6 +621,7 @@ namespace Pegasus.Pages.UI_Pages
                         CalendarHEDDefaultUXPage_AssignedActivityDay_Xpath_Locator);
                     //Click on the Date to enter the Day view and see the assignments
                     base.ClickByJavaScriptExecutor(getDayViewImage);
+                    Thread.Sleep(4000);
                 }
             }
             catch (Exception e)
@@ -662,19 +677,24 @@ namespace Pegasus.Pages.UI_Pages
                 string getDate = date.ToString("d");
                 //Get the future date
                 string getFutureDate = GetFutureDate(date);
-
+                //Select Calendar Window
+                this.SelectCalendarWindow();
+                // Get row count
                 int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
                 for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                     i <= getRowCount && !exitLoop; i++)
                 {
+                    // Get the column count 
                     int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
                     for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                       CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                       j <= getColumCount; j++)
                     {
+                        // Get date from the application calendar
                         getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
 
+                        // Compare application date with the future date
                         if (getAppDate == getFutureDate)
                         {
                             this.SelectCalendarWindow();

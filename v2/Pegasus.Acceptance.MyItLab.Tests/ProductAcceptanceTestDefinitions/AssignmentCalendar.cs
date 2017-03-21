@@ -292,8 +292,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'Drag and Drop' in day view of ""(.*)""")]
-        [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'CMenu' in day view of ""(.*)""")]
+        [Then(@"I should see the ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'CMenu' in ""(.*)"" of day view")]
+        public void ValidateDisplayOfAssignedActivity(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum, string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
+            //Assert the Assigned Activity            
+            Logger.LogAssertion("VerifyActivityAssigned",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                    GetAssignedActivityNameBasedOnDay(activity.Name, dateType), activity.Name));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [Then(@"I should see ""(.*)"" activity of behavioral mode ""(.*)"" assigned by 'Drag and Drop' in ""(.*)"" day view")]
         public void ValidateDisplayOfAssignedActivityInDayView(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum activityBehavioralModeEnum, string dateType)
         {
@@ -311,6 +330,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "DisplayOfAssignedActivityInDayView",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Validate the assigned activity display in day view.

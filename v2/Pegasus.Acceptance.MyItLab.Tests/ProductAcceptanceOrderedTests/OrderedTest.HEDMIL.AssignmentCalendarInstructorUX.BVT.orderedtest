@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.HEDMIL.AssignmentCalendarInstructorUX.BVT" storage="d:\pegasusautomation517\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedmil.assignmentcalendarinstructorux.bvt.orderedtest" id="e105fff2-9b87-4c4c-90e8-6613cef0557f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="9e05bb72-8602-878f-239e-ec81dd505a84" name="DragAndDropASingleContentToCurrentDateAndValidateTheDisplayOfAssignedContentInDayView" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="101b3b7a-c8de-0aa4-6d75-c3d6a1077239" name="DragAndDropASingleContentToFutureDateAndDisplayOfAssignedContentInDayViewAsSMSTeacher" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
