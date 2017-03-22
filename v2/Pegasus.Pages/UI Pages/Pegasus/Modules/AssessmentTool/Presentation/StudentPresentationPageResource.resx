@@ -1602,4 +1602,22 @@
   <data name="StudentPresentation_Page_Question_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='nextQuextion']/div[{0}]</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_SPCancelButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_btnReturn</value>
+  </data>
+  <data name="StudentPresentation_Page_Confirm_ID_Locator" xml:space="preserve">
+    <value>confirm</value>
+  </data>
+  <data name="StudentPresentation_Page_MILSP_Window_Locator" xml:space="preserve">
+    <value>myitlab Study Plan</value>
+  </data>
+  <data name="StudentPresentation_Page_StartPostTest_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='ETContainer']/div/div[2]/div[4]/div</value>
+  </data>
+  <data name="StudentPresentation_Page_StartPreTestBtn_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'DTContainer']/div[2]/div/div/div[4]/div</value>
+  </data>
+  <data name="StudentPresentation_Page_StartTraining_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'DTContainer']/div[2]/div/div/div[8]/div</value>
+  </data>
 </root>

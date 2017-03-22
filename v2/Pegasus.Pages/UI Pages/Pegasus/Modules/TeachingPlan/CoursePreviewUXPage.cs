@@ -2246,7 +2246,6 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
             base.IsTakeScreenShotDuringEntryExit);
             int pageCount = Convert.ToInt32(0);
-
             // Initialize the asset name variable to empty
             string getAssetName = string.Empty;
             string getActivityName = string.Empty;
@@ -2286,9 +2285,9 @@ namespace Pegasus.Pages.UI_Pages
                     }
                     //Click on the next page icon
                     IWebElement getNextIcon = base.GetWebElementPropertiesByClassName(
-                        CoursePreviewUXPageResource.
-                        CoursePreviewUXPage_MyCourse_NextButton_Class_Locator);
-                    base.ClickByJavaScriptExecutor(getNextIcon);
+                      CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_NextButton_Class_Locator);
+                    base.ClickByJavaScriptExecutor(getNextIcon);                
                 }
             }
             catch (Exception e)

@@ -405,6 +405,19 @@ Scenario: Search asset in CourseMaterials and Show/Hide as CsSmsInstructor
 When I click "Show" of "RegLinkAsset" in "Course Materials" tab
 Then I should see "RegLinkAsset" with "Show" status
 
+
+#Purpose: Show/Hide the assets inside new folder in Course materials tab
+#MyItLabProgramCourse
+#Testcase ID:
+Scenario: Show the folder asset in Course Materials
+When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
+Then I should be on the "Course Materials" page
+Then I should be on "Add from Library" lightbox
+When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
+When I click "Show" of "RegFolderAsset" in "Course Materials" tab
+Then I should see "RegFolderAsset" with "Show" status
+
 #-----------------------------------------------------------------------------------------------------------------------------
 										#Copy paste asset in Course Materials#
 #-----------------------------------------------------------------------------------------------------------------------------

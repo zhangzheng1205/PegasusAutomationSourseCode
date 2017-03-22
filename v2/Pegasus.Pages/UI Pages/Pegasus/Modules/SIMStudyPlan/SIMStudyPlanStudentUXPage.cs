@@ -227,12 +227,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                        base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
-                          SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator));
+                base.WaitForElement(By.XPath("//div[@id = 'DTContainer']/div[2]/div/div/div[8]/div"));
                         //Click on 'Start Training' button                
                         IWebElement clickStartTraining= base.GetWebElementPropertiesByXPath(
-                         SIMStudyPlanStudentUXPageResource.
-                          SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator);
+                         "//div[@id = 'DTContainer']/div[2]/div/div/div[8]/div");
                         base.ClickByJavaScriptExecutor(clickStartTraining);
             }
             catch (Exception e)

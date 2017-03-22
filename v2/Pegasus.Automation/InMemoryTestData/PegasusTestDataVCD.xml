@@ -1017,6 +1017,11 @@ the UI deleted or refreshed.-->
       <ActivityType>StudyPlan</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
+	  <Activity>
+		  <Name>Auto-2017/03/15-ee751cbc-Study Plan</Name>
+		  <ActivityType>SIM5StudyPlan</ActivityType>
+		  <IsCreated>true</IsCreated>
+	  </Activity>
     <Activity>
       <Name>Auto-2016/08/01-38f619e6-Activity</Name>
       <ActivityType>RegChildAbruptActivity</ActivityType>
@@ -1150,7 +1155,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Auto-2017/03/03-de9a37ef-Folder</Name>
+      <Name>Auto-2017/03/15-f9c1b9b8-Folder</Name>
       <ActivityType>RegFolderAsset</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
@@ -1222,17 +1227,23 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>RegLinkAsset</Name>
+      <Name>24d5a76c-e5ad-4583-ba78-e370f9b9f1c6</Name>
       <ActivityType>Sim5PreTest</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>RegLinkAsset</Name>
+      <Name>da0b879e-e786-44dd-98dd-29137a60daa5</Name>
       <ActivityType>Sim5PostTest</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
+	  <Activity>
+		  <Name>Auto-2017/03/15-ee751cbc-Study Plan</Name>
+		  <ActivityType>SIMTrainingActivity</ActivityType>
+		  <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+		  <IsCreated>true</IsCreated>
+	  </Activity>
   </ArrayOfActivity>
 	<!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
 	<ArrayOfProduct>

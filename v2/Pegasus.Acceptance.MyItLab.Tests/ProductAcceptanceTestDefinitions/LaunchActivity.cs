@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on submit button
             new StudentPresentationPage().SubmitSIMActivityWithoutAnswering
-                (applicationType, activityMode, activityName, studentType);
+                (applicationType, activityMode, activityName);
             Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -177,6 +177,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        
         /// <summary>
         /// Verify the Score and status of the activity.
         /// </summary>
@@ -264,7 +265,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
         //----------------------------------------------------------------------------------------------
-        /// <summary>
+       
+         /// <summary>
         /// Click on Submit button in SIM5
         /// presentation page after answering a question incorrectly.
         /// </summary>
@@ -282,12 +284,63 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Activity activity = Activity.Get(activityTypeEnum);
             string activityName = activity.Name;
             //Click on submit button
+            //Answer access questions
             new StudentPresentationPage().SubmitSIMActivityWithoutAnswering
-                (applicationType, activityMode, activityName, studentType);
+                (applicationType, activityMode, activityName);
             Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
-        
+        /// <summary>
+        /// Click on Submit button in SIM5
+        /// presentation page after answering a question incorrectly.
+        /// </summary>
+        /// <param name="activityMode">This is activity mode name.</param>
+        /// <param name="activityName">This of the activity name.</param>
+        /// <param name="applicationType">This is activity type name.</param>
+        [When(@"I click on submit button answering incorrectly of ""(.*)"" type ""(.*)"" activity ""(.*)"" by CsSmsStudent")]
+        public void ClickonSubmitButtonAfterAnsweringIncorrectly(string applicationType,
+            string activityMode, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Submit SIM5 Excel type activity
+            Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activty name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            //Click on submit button
+            //Answer access questions
+            new StudentPresentationPage().SubmitSIMActivityWithoutAnswering
+                (applicationType, activityMode, activityName);
+            Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Submit button in SIM5
+        /// presentation page after answering a question incorrectly.
+        /// </summary>
+        /// <param name="activityMode">This is activity mode name.</param>
+        /// <param name="activityName">This of the activity name.</param>
+        /// <param name="applicationType">This is activity type name.</param>
+        [When(@"I submit ""(.*)"" type ""(.*)"" activity ""(.*)"" by ""(.*)"" student")]
+        public void WhenISubmitTypeActivityByStudent(string applicationType,
+            string activityMode, Activity.ActivityTypeEnum activityTypeEnum, string studentType)
+        {
+            //Submit SIM5 Excel type activity
+            Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activty name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            //Click on submit button
+            //Answer access questions
+            new StudentPresentationPage().AccessSecondQuestion
+                ("1A_Advising");
+           Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
+               base.IsTakeScreenShotDuringEntryExit);
+}
+
+
     }
 }

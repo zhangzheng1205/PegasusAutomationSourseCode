@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifySimActivitySubmissionInCourseMaterials",
                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
-            Activity activity = Activity.Get(activityTypeEnum, behavioralModeEnum);
+            Activity activity = Activity.Get(activityTypeEnum);
             // Assert Activity Submission
             Logger.LogAssertion("VerifyActivitySubmission", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityStatus,
@@ -1159,5 +1159,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             IsTakeScreenShotDuringEntryExit);
         }
 
+        
+         /// <summary>
+        /// Launch Pre test.
+        /// </summary>
+        /// <param name="attemptPercentage"></param>
+        /// <param name="activityName"></param>
+        [When(@"I click on the ""(.*)"" button of ""(.*)"" study plan")]
+        public void AttemptQuestionsForWordActivity(string buttonName,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Sim5 Power Point Questions Submission
+            Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().LaunchPreTest(buttonName, activityTypeEnum);
+            Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+        }
+              
     }
 }

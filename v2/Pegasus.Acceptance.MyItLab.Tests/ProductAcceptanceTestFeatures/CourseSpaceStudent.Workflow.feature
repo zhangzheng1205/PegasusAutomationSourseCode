@@ -1221,3 +1221,37 @@ When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity100Score" grade
+
+#---------------------------------------------------------------------------------------------------------------------------
+										#Submit SIM5 Pre Test#
+#---------------------------------------------------------------------------------------------------------------------------
+# Purpose: SIM5 pre test submission and study plan sataus for 0 scored pre test 
+# TestCase ID: 
+#MyItLabInstructorCourse
+Scenario: Submit SIM5 study Plan PreTest as SMS Student
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+And I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I enter into "RegFolderAsset" folder in "Course Materials" frame
+And I launch "SIM5StudyPlan"
+And I click on the "Start Pre-Test" button of "SIM5StudyPlan" study plan
+And I click on submit button answering incorrectly of "Word" type "Exam" activity "Sim5PreTest" by CsSmsStudent
+Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+
+# Purpose: SIM5 training submission and study plan sataus after training
+# TestCase ID: 
+#MyItLabInstructorCourse
+Scenario: Submit SIM5 study Plan training as SMS Student 100 score
+When I launch "SIM5StudyPlan"
+And I click on the "Start Training" button of "SIM5StudyPlan" study plan
+And I submit "Word" type "Exam" activity "SIMTrainingActivity" by "CsSmsStudent" student
+Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+
+# Purpose: SIM5 post test submission and study plan sataus for 100 score 
+# TestCase ID: 
+#MyItLabInstructorCourse
+Scenario: Submit SIM5 study Plan post test as SMS Student 100 score with completed status
+When I launch "SIM5StudyPlan"
+And I click on the "Start Post-Test" button of "SIM5StudyPlan" study plan
+And I submit "Word" type "Exam" activity "Sim5PostTest" by "CsSmsStudent" student
+Then I should see the "Completed" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
