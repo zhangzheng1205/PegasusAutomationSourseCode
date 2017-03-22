@@ -417,6 +417,14 @@ Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' fr
 When I click "Show" of "RegFolderAsset" in "Course Materials" tab
 Then I should see "RegFolderAsset" with "Show" status
 
+#Purpose: Show/Hide the assets inside new folder in Course materials tab
+#MyItLabProgramCourse
+#Testcase ID:
+Scenario: Show the study plan asset in Course Materials
+Then I should be displayed with "SIM5StudyPlan" in 'Manage Course Materials' frame
+When I click "Show" of "SIM5StudyPlan" in "Course Materials" tab
+Then I should see "SIM5StudyPlan" with "Show" status
+
 #-----------------------------------------------------------------------------------------------------------------------------
 										#Copy paste asset in Course Materials#
 #-----------------------------------------------------------------------------------------------------------------------------
@@ -493,7 +501,7 @@ Scenario: Instructor create studyplan in course materials
 When I click on 'Materials' option
 And I click on the "myitlab Study Plan" asset type
 Then I should be on "Add myitlab Study Plan" page
-When I save the "StudyPlan" details tab
+When I save the "SIM5StudyPlan" details tab
 Then I should be on "Build Study Plan" tab 
 When I create a "Sim5PreTest" of behavioral mode "SkillBased" Pretest
 And I add "SIM5" question in created "Exam [Skill-Based]" activity

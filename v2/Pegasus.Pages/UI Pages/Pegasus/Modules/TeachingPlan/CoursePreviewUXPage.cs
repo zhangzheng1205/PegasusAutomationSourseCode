@@ -1379,13 +1379,19 @@ namespace Pegasus.Pages.UI_Pages
                                 base.SelectCheckBoxByXPath(string.Format(CoursePreviewUXPageResource.
                             CoursePreviewUXPage_SelectActivity_Checkbox_XPath_Locator, rowCount));
                                 //Click on Show option
-                                base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
-                            CoursePreviewUXPage_ShowLink_XPath_Locator));
-                                IWebElement getShowOption = base.GetWebElementPropertiesByXPath(
-                                    CoursePreviewUXPageResource.
-                            CoursePreviewUXPage_ShowLink_XPath_Locator);
-                                base.ClickByJavaScriptExecutor(getShowOption);
-                                return;
+                                bool getHiddenStatus = base.IsElementPresent(By.XPath(CoursePreviewUXPageResource.
+                            CoursePreviewUXPage_ShowLink_XPath_Locator), 5);
+                                if (getHiddenStatus == true)
+                                {
+
+                                    base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
+                                CoursePreviewUXPage_ShowLink_XPath_Locator));
+                                    IWebElement getShowOption = base.GetWebElementPropertiesByXPath(
+                                        CoursePreviewUXPageResource.
+                                CoursePreviewUXPage_ShowLink_XPath_Locator);
+                                    base.ClickByJavaScriptExecutor(getShowOption);
+                                }
+                                    return;
                             }
                         }
                     }

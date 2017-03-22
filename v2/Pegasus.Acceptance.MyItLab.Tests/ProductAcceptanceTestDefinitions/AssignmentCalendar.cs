@@ -354,7 +354,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         [Then(@"I should see ""(.*)"" activity assigned by '(.*)' in ""(.*)"" day view")]
-        public void DragAndDropActiivty(Activity.ActivityTypeEnum activityTypeEnum,
+        public void DragAndDropActiivty(Activity.ActivityTypeEnum activityTypeEnum,string dragAndDrop,
             string dateType)
         {
             Logger.LogMethodEntry("AssignmentCalendar",
