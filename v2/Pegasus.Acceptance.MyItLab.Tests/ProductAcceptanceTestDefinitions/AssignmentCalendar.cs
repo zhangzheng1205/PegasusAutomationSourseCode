@@ -176,6 +176,28 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see the searched ""(.*)"" activity")]
+        public void DisplayOfSearchedAsset(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Display Of Searched Activity
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DisplayOfSearchedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity =
+                Activity.Get(activityTypeEnum);
+            //Assert the Searched Activity            
+            Logger.LogAssertion("VerifySearchedActivity",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activity.Name,
+                    new CalendarHedDefaultUxPage().
+                GetSearchedActivityName()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DisplayOfSearchedActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Display Of Searched Activity.
         /// </summary>
@@ -331,6 +353,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see ""(.*)"" activity assigned by '(.*)' in ""(.*)"" day view")]
+        public void DragAndDropActiivty(Activity.ActivityTypeEnum activityTypeEnum,
+            string dateType)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            //Assert the Assigned Activity            
+            Logger.LogAssertion("VerifyActivityAssigned",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
+                    GetAssignedActivityNameBasedOnDay(activity.Name, dateType), activity.Name));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "DisplayOfAssignedActivityInDayView",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Validate the assigned activity display in day view.

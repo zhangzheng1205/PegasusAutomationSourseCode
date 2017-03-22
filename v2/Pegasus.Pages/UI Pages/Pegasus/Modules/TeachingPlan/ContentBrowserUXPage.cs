@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Search SIM5 Question
                 this.SearchSIM5Question();
                 //Select and Add SIM5 question
-                this.SelectAndAddSIM5Question();
+                this.SearchAndAddSIM52ndquestion();
             }
             catch (Exception e)
             {
@@ -650,10 +650,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToLastOpenedWindow();
                 //Wait for element 'All Question Type'
                 base.SwitchToIFrameById(ContentBrowserUXPageResource.
-            ContentBrowserUX_Page_AdvanceSearchPopUp_Id_Locator);
+                ContentBrowserUX_Page_AdvanceSearchPopUp_Id_Locator);
                 //Wait for All QuestionTypes checkbox
                 base.WaitForElement(By.XPath(ContentBrowserUXPageResource.
-            ContentBrowserUX_Page_AllQuestion_XPath_Locator));
+                ContentBrowserUX_Page_AllQuestion_XPath_Locator));
                 //Get Properity for All Question Types checkbox
                 IWebElement GetAllQuestionTypeCheckBox = base.GetWebElementPropertiesByXPath(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AllQuestion_XPath_Locator);

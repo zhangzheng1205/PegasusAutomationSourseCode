@@ -72,7 +72,7 @@ Then I should be on the "Calendar" page
 When I search the "RegLinkAsset" activity
 Then I should see the searched "RegLinkAsset" activity in content frame
 When I 'Drag and Drop' the "RegLinkAsset" activity on "Current date"
- Then I should see the "RegLinkAsset" activity assigned by 'Drag and Drop' in day view of "Current date"
+Then I should see the "RegLinkAsset" activity assigned by 'Drag and Drop' in day view of "Current date"
  #______________________________________________________________________________________________________________
 
 #Purpose : Drag and drop a single content to current date and display of Assigned content in Day View
@@ -83,8 +83,6 @@ When I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I search the "RegTodayDateAssignment " activity of behavioral mode "SkillBased"
 Then I should see the searched "RegTodayDateAssignment " activity of behavioral mode "SkillBased"
-When I click on "Advanced Calendar" option in calender frame of "Calendar" page
-And I 
 When I 'Drag and Drop' the "RegTodayDateAssignment " activity of behavioral mode "SkillBased" on "Current date"
 Then I should see the "RegTodayDateAssignment " activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view of "Current date"
 When I click on "Advanced Calendar" option in calender frame of "Calendar" page
@@ -105,10 +103,10 @@ Then I should see the "RegTodayDateAssignment " activity assigned in day view of
 Scenario: Drag and drop a single content to Current date and validate the display of assigned content in Day view
 When I navigate to "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-When I search the "SIM5StudyPlan " activity of behavioral mode "SkillBased"
-Then I should see the searched "SIM5StudyPlan" activity of behavioral mode "SkillBased"
-When I 'Drag and Drop' the "SIM5StudyPlan " activity of behavioral mode "SkillBased" on "Current date"
-Then I should see "SIM5StudyPlan" activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in "Current date" day view 
+When I search the "SIM5StudyPlan " activity
+Then I should see the searched "SIM5StudyPlan" activity 
+When I 'Drag and Drop' the "SIM5StudyPlan " activity on "Current date"
+Then I should see "SIM5StudyPlan" activity assigned by 'Drag and Drop' in "Current date" day view 
 
 
 #Purpose : Drag and drop a single content to future date and display of Assigned content in Day View

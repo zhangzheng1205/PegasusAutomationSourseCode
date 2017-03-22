@@ -368,8 +368,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     //Click on Select Questions from Bank
                     new SkillBasedAssessmentPage().SelectQuestionFromQuestionBank();
                     //Click on Advanced Search option
-                   // new ContentBrowserUXPage().SearchAndAddSIM5question();
-                    new ContentBrowserUXPage().SearchAndAddSIM52ndquestion();
+                    new ContentBrowserUXPage().SearchAndAddSIM5question();
                     break;
                 case "Native":
                     //Create Pegasus native questions

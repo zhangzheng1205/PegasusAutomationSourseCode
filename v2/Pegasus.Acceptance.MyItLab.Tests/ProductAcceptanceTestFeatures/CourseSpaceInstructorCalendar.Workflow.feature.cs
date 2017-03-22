@@ -214,7 +214,7 @@ testRunner.Then("I should see the searched \"RegLinkAsset\" activity in content 
 #line 74
 testRunner.When("I \'Drag and Drop\' the \"RegLinkAsset\" activity on \"Current date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 75
- testRunner.Then("I should see the \"RegLinkAsset\" activity assigned by \'Drag and Drop\' in day view " +
+testRunner.Then("I should see the \"RegLinkAsset\" activity assigned by \'Drag and Drop\' in day view " +
                     "of \"Current date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -240,32 +240,28 @@ testRunner.When("I search the \"RegTodayDateAssignment \" activity of behavioral
 testRunner.Then("I should see the searched \"RegTodayDateAssignment \" activity of behavioral mode \"" +
                     "SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 86
-testRunner.When("I click on \"Advanced Calendar\" option in calender frame of \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
-testRunner.And("I", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
 testRunner.When("I \'Drag and Drop\' the \"RegTodayDateAssignment \" activity of behavioral mode \"Skil" +
                     "lBased\" on \"Current date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
+#line 87
 testRunner.Then("I should see the \"RegTodayDateAssignment \" activity of behavioral mode \"SkillBase" +
                     "d\" assigned by \'Drag and Drop\' in day view of \"Current date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 90
+#line 88
 testRunner.When("I click on \"Advanced Calendar\" option in calender frame of \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
+#line 89
 testRunner.Then("I should be displayed with \"Assignments\" option in \"Advanced Calendar\" of \"Calend" +
                     "ar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 92
+#line 90
 testRunner.And("I should be displayed with \"Calendar Widget\" option in \"Advanced Calendar\" of \"Ca" +
                     "lendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 91
 testRunner.And("I should be displayed with \"Calendar Viewby\" option in \"Advanced Calendar\" of \"Ca" +
                     "lendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 92
 testRunner.And("I should be displayed with \"Month view\" option in \"Advanced Calendar\" of \"Calenda" +
                     "r\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 95
+#line 93
 testRunner.When("I click on \"Day\" view in Advance calender", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
+#line 94
 testRunner.Then("I should see the \"RegTodayDateAssignment \" activity assigned in day view of Advan" +
                     "ce calender", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -280,23 +276,21 @@ testRunner.Then("I should see the \"RegTodayDateAssignment \" activity assigned 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop a single content to Current date and validate the display of assign" +
                     "ed content in Day view", ((string[])(null)));
-#line 105
+#line 103
 this.ScenarioSetup(scenarioInfo);
-#line 106
+#line 104
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 107
+#line 105
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 106
+testRunner.When("I search the \"SIM5StudyPlan \" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
+testRunner.Then("I should see the searched \"SIM5StudyPlan\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 108
-testRunner.When("I search the \"SIM5StudyPlan \" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I \'Drag and Drop\' the \"SIM5StudyPlan \" activity on \"Current date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 109
-testRunner.Then("I should see the searched \"SIM5StudyPlan\" activity of behavioral mode \"SkillBased" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 110
-testRunner.When("I \'Drag and Drop\' the \"SIM5StudyPlan \" activity of behavioral mode \"SkillBased\" o" +
-                    "n \"Current date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 111
-testRunner.Then("I should see \"SIM5StudyPlan\" activity of behavioral mode \"SkillBased\" assigned by" +
-                    " \'Drag and Drop\' in \"Current date\" day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"SIM5StudyPlan\" activity assigned by \'Drag and Drop\' in \"Current dat" +
+                    "e\" day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -309,21 +303,21 @@ testRunner.Then("I should see \"SIM5StudyPlan\" activity of behavioral mode \"Sk
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop a single content to future date and display of Assigned content in " +
                     "Day View as SMS Teacher", ((string[])(null)));
-#line 117
+#line 115
 this.ScenarioSetup(scenarioInfo);
-#line 118
+#line 116
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 119
+#line 117
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 120
+#line 118
 testRunner.When("I search the \"RegFutureDateAssignment \" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 119
 testRunner.Then("I should see the searched \"RegFutureDateAssignment \" activity of behavioral mode " +
                     "\"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 122
+#line 120
 testRunner.When("I \'Drag and Drop\' the \"RegFutureDateAssignment \" activity of behavioral mode \"Ski" +
                     "llBased\" on \"Future date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 123
+#line 121
 testRunner.Then("I should see \"RegFutureDateAssignment\" activity of behavioral mode \"SkillBased\" a" +
                     "ssigned by \'Drag and Drop\' in \"Future date\" day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -338,32 +332,32 @@ testRunner.Then("I should see \"RegFutureDateAssignment\" activity of behavioral
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop a single content to previous date and display of Assigned content i" +
                     "n Day View as SMS Teacher", ((string[])(null)));
-#line 128
+#line 126
 this.ScenarioSetup(scenarioInfo);
-#line 129
+#line 127
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 130
+#line 128
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 129
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 132
+#line 130
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 133
+#line 131
 testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
                     "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 134
+#line 132
 testRunner.And("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
+#line 133
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 136
+#line 134
 testRunner.When("I search the \"RegPastDueAssignment \" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 137
+#line 135
 testRunner.Then("I should see the searched \"RegPastDueAssignment \" activity of behavioral mode \"Sk" +
                     "illBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 138
+#line 136
 testRunner.When("I \'Drag and Drop\' the \"RegPastDueAssignment \" activity of behavioral mode \"SkillB" +
                     "ased\" on \"Future date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 139
+#line 137
 testRunner.Then("I should see \"RegFutureDateAssignment\" activity of behavioral mode \"SkillBased\" a" +
                     "ssigned by \'Drag and Drop\' in \"Future date\" day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -376,23 +370,23 @@ testRunner.Then("I should see \"RegFutureDateAssignment\" activity of behavioral
         public virtual void AddNotesFunctionalityForFutureDateInCalendarFrame()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Notes functionality for future date in Calendar frame", ((string[])(null)));
-#line 144
+#line 142
 this.ScenarioSetup(scenarioInfo);
-#line 145
+#line 143
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 146
+#line 144
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 147
+#line 145
 testRunner.When("I click on \"Future date\" in normal calender view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 148
+#line 146
 testRunner.When("I click on \"Add Notes\" icon in \"Future date\" date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 149
+#line 147
 testRunner.Then("I should be displayed with \"Add Note\" wizard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 150
+#line 148
 testRunner.When("I \"Create\" notes and click on \'Save and Close\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 149
 testRunner.Then("I should be displayed with the notes in the day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 153
+#line 151
 testRunner.Then("I should be displayed with \'Due date\' icon and \'Notes\' icon in \"Future date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -404,37 +398,37 @@ testRunner.Then("I should be displayed with \'Due date\' icon and \'Notes\' icon
         public virtual void EditNotesFunctionalityForFutureDateInCalendarFrame()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Notes functionality for future date in Calendar frame", ((string[])(null)));
-#line 158
+#line 156
 this.ScenarioSetup(scenarioInfo);
-#line 159
+#line 157
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 160
+#line 158
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 161
+#line 159
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 162
+#line 160
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 163
+#line 161
 testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
                     "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
+#line 162
 testRunner.And("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
+#line 163
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 166
+#line 164
 testRunner.When("I click on \"Future date\" in normal calender view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
+#line 165
 testRunner.And("I click on \"Edit\" icon in \"Future date\" date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 168
+#line 166
 testRunner.Then("I should be displayed with \"Add Note\" wizard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 169
+#line 167
 testRunner.When("I \"Edit\" notes and click on \'Save and Close\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 170
+#line 168
 testRunner.Then("I should see the successfull message \"Note updated successfully.\" in \"Calendar\" w" +
                     "indow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 171
+#line 169
 testRunner.When("I click on \"Delete\" icon in \"Future date\" date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
+#line 170
 testRunner.And("I click Ok button in confirmation lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -446,25 +440,25 @@ testRunner.And("I click Ok button in confirmation lightbox", ((string)(null)), (
         public virtual void CmenuAssignWithCurrentDateAsDueDate()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cmenu Assign with CurrentDate as due date", ((string[])(null)));
-#line 177
+#line 175
 this.ScenarioSetup(scenarioInfo);
-#line 178
+#line 176
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 179
+#line 177
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 180
+#line 178
 testRunner.When("I search the \"RegSimpleCmenuAssignCurrentDate\" activity of behavioral mode \"Skill" +
                     "Based\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 181
+#line 179
 testRunner.Then("I should see the searched \"RegSimpleCmenuAssignCurrentDate\" activity of behaviora" +
                     "l mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 182
+#line 180
 testRunner.When("I \"Assign with due date\" for \"Current Date\" of activity \"RegSimpleCmenuAssignCurr" +
                     "entDate\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 183
+#line 181
 testRunner.Then("I should see the \"RegSimpleCmenuAssignFutureDate\" activity of behavioral mode \"Sk" +
                     "illBased\" assigned by \'CMenu\' in \"Current date\" of day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 184
+#line 182
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -476,23 +470,23 @@ testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((Tech
         public virtual void CmenuSimpleAssignWithDueDateForCurrentDate()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cmenu SimpleAssign with due date for CurrentDate", ((string[])(null)));
-#line 189
+#line 187
 this.ScenarioSetup(scenarioInfo);
-#line 190
+#line 188
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 191
+#line 189
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 192
+#line 190
 testRunner.When("I search the \"RegSimpleCmenuAssign\" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 193
+#line 191
 testRunner.Then("I should see the searched \"RegSimpleCmenuAssign\" activity of behavioral mode \"Ski" +
                     "llBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 194
+#line 192
 testRunner.When("I \"Simple assign\" for \"Current Date\" of activity \"RegSimpleAssign\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 195
+#line 193
 testRunner.Then("I should see the \"RegSimpleCmenuAssignFutureDate\" activity of behavioral mode \"Sk" +
                     "illBased\" assigned by \'CMenu\' in \"Current date\" of day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 196
+#line 194
 testRunner.And("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -504,30 +498,30 @@ testRunner.And("I should be on the \"Calendar\" page", ((string)(null)), ((TechT
         public virtual void CmenuAssignFromAssignmentCalendarToPastdueDate()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cmenu assign from Assignment Calendar to pastdue date", ((string[])(null)));
-#line 201
+#line 199
 this.ScenarioSetup(scenarioInfo);
-#line 202
+#line 200
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 203
+#line 201
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 204
+#line 202
 testRunner.When("I search the \"RegPastDueCmenuAssignment\" activity of behavioral mode \"SkillBased\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 205
+#line 203
 testRunner.Then("I should see the searched \"RegPastDueCmenuAssignment\" activity of behavioral mode" +
                     " \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 206
+#line 204
 testRunner.When("I click cmenu \"Set Scheduling Options\" of activity \"RegPastDueCmenuAssignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 207
+#line 205
 testRunner.Then("I should see the \"Assign\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 208
+#line 206
 testRunner.When("I assign the searched activity to past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 209
+#line 207
 testRunner.Then("I should see the \"RegSimpleCmenuAssignFutureDate\" activity of behavioral mode \"Sk" +
                     "illBased\" assigned by \'CMenu\' in \"PastDue date\" of day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 210
+#line 208
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 211
+#line 209
 testRunner.And("I should see the pastdue icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -539,25 +533,25 @@ testRunner.And("I should see the pastdue icon", ((string)(null)), ((TechTalk.Spe
         public virtual void CmenuAssignWithFutureDateAsDueDate()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cmenu Assign with FutureDate as due date", ((string[])(null)));
-#line 216
+#line 214
 this.ScenarioSetup(scenarioInfo);
-#line 217
+#line 215
 testRunner.When("I navigate to \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 218
+#line 216
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 219
+#line 217
 testRunner.When("I search the \"RegSimpleCmenuAssignFutureDate\" activity of behavioral mode \"SkillB" +
                     "ased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 220
+#line 218
 testRunner.Then("I should see the searched \"RegSimpleCmenuAssignFutureDate\" activity of behavioral" +
                     " mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 221
+#line 219
 testRunner.When("I \"Assign with due date\" for \"Future Date\" of activity \"RegSimpleCmenuAssignFutur" +
                     "eDate\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 222
+#line 220
 testRunner.Then("I should see the \"RegSimpleCmenuAssignFutureDate\" activity of behavioral mode \"Sk" +
                     "illBased\" assigned by \'CMenu\' in \"Future date\" of day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 223
+#line 221
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -569,32 +563,32 @@ testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((Tech
         public virtual void ToValidateTheDisplayOfStartDateIconInCalendarFrameBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate the display of start date icon in calendar frame by SMS Instructor", ((string[])(null)));
-#line 227
+#line 225
 this.ScenarioSetup(scenarioInfo);
-#line 228
+#line 226
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 229
+#line 227
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 230
+#line 228
 testRunner.When("I search the \"RegSimpleStartDateCmenuAssign\" activity of behavioral mode \"SkillBa" +
                     "sed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 231
+#line 229
 testRunner.Then("I should see the searched \"RegSimpleStartDateCmenuAssign\" activity of behavioral " +
                     "mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 232
+#line 230
 testRunner.When("I click cmenu \"Set Scheduling Options\" of activity \"RegSimpleStartDateCmenuAssign" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 233
+#line 231
 testRunner.Then("I should see the \"Properties\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 234
+#line 232
 testRunner.When("I assign the asset for current date in the properties popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 235
+#line 233
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 236
+#line 234
 testRunner.And("I should see the startdate Icon in calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 237
+#line 235
 testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 238
+#line 236
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -608,22 +602,22 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the Status of the assigned Content in the Status Column By SMS Instructo" +
                     "r", ((string[])(null)));
-#line 243
+#line 241
 this.ScenarioSetup(scenarioInfo);
-#line 244
+#line 242
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 245
+#line 243
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 246
+#line 244
 testRunner.When("I search the \"SIM5Activity\" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 247
+#line 245
 testRunner.Then("I should see the searched \"SIM5Activity\" activity of behavioral mode \"SkillBased\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 248
+#line 246
 testRunner.And("I should see the Status of the assigned content in status column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 249
+#line 247
 testRunner.When("I select \'Home\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 250
+#line 248
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -635,22 +629,22 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
         public virtual void ToCheckTheCurrentDateAssignedContentInTheCalendarBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the current date assigned content in the calendar by SMS Instructor", ((string[])(null)));
-#line 254
+#line 252
 this.ScenarioSetup(scenarioInfo);
-#line 255
+#line 253
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 256
+#line 254
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 257
+#line 255
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 258
+#line 256
 testRunner.When("I select the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 259
+#line 257
 testRunner.Then("I should see the assigned content \"RegSimpleCmenuAssignCurrentDate\" in the day vi" +
                     "ew", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 260
+#line 258
 testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 261
+#line 259
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
