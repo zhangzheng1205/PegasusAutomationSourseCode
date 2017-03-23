@@ -638,6 +638,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorViewSubmissionUX.BVT.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.CourseCleanUpScript.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

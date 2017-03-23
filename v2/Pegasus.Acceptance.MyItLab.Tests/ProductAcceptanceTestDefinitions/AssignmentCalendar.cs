@@ -136,9 +136,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search the Activity
             Logger.LogMethodEntry("AssignmentCalendar", "SearchActivity",
-
-
-                base.IsTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Search the Activity            

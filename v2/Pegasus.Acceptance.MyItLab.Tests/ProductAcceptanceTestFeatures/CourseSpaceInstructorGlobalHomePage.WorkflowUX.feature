@@ -158,16 +158,6 @@ Then I should see successfull message "Course updated successfully." on "Global 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #Pre-Condition : Course should be created
-#Purpose:Verify "Mark for Deletion" cmenu option on home page
-Scenario:Validate mark for delete cmenu option of IC course on CsSmsInstructor home page
-Given I am on the "Global Home" page
-When I select cmenu "Mark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
-Then I should see the "Marked for Deletion" status updated for the "MyItLabAuthoredCourse" course as "CsSmsInstructor" user
-And I should see successfull message "Course marked for deletion." on "Global Home" page
-
-#Test case ID : 
-#Products : MyItLab, HSS and World Language.
-#Pre-Condition : Course should be created
 #Purpose:Verify " Copy as Instructor Course" cmenu option on home page
 Scenario:Validate copy as instructor Course cmenu option of IC course
 Given I am on the "Global Home" page
@@ -184,7 +174,26 @@ Given I am on the "Global Home" page
 When I select cmenu "Unmark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
 Then I should see successfull message "Course removed from the deletion list." on "Global Home" page
 
+#-----------------------------------------------------------------------------------------------------#
+							#Scripts to clean-up the course created By automation#
+#-----------------------------------------------------------------------------------------------------#
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Verify "Mark for Deletion" cmenu option on home page for created course
+Scenario:Delete the course created on home page
+Given I am on the "Global Home" page
+When I select cmenu "Mark for Deletion" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
+Then I should see the "Marked for Deletion" status updated for the "MyItLabAuthoredCourse" course as "CsSmsInstructor" user
+And I should see successfull message "Course marked for deletion." on "Global Home" page
 
-
-
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Verify "Mark for Deletion" cmenu option on home page of copied course
+Scenario:Delete the copied course on home page
+Given I am on the "Global Home" page
+When I select cmenu "Mark for Deletion" option of Instructor course "MyItLabInstructorCourse" for "CsSmsInstructor"
+Then I should see the "Marked for Deletion" status updated for the "MyItLabInstructorCourse" course as "CsSmsInstructor" user
+And I should see successfull message "Course marked for deletion." on "Global Home" page
