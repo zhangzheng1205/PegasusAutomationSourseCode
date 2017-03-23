@@ -1229,11 +1229,6 @@ Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity1
 # TestCase ID: 
 #MyItLabInstructorCourse
 Scenario: Submit SIM5 study Plan PreTest as SMS Student
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I enter into "RegFolderAsset" folder in "Course Materials" frame

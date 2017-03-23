@@ -3045,6 +3045,32 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// This methord is to generate the GUID for course name
+        /// </summary>
+        /// <param name="courseType">This is course choosen to create.</param>
+        private string GenerateCopiedCourseGUID(Course.CourseTypeEnum courseType)
+        {
+            Logger.LogMethodEntry("HEDGlobalHomePage", "GenerateCourseGUID"
+       , base.IsTakeScreenShotDuringEntryExit);
+            // Generate GUID for course
+            Guid CourseGUID = Guid.NewGuid();
+            //Get the system date
+            String date = DateTime.Now.ToString("yyyy/MM/dd");
+            //Fetch the random value
+            string randomValue = CourseGUID.ToString().Split('-')[0];
+            //Store empty value to courseNameGUID variable
+            string courseNameGUID = string.Empty;
+            //Append the data and New Course string
+            courseNameGUID = "Auto-" + date + "-" + randomValue + "- Course Copy";
+            //Store the course name to inmemory
+            this.StoreCourseGUID(courseNameGUID, courseType);
+            Logger.LogMethodExit("HEDGlobalHomePage", "GenerateCourseGUID"
+            , base.IsTakeScreenShotDuringEntryExit);
+            //Return the course name
+            return courseNameGUID;
+        }
+
+        /// <summary>
         /// This methord is to store the GUID in inmemory
         /// </summary>
         /// <param name="courseNameGUID">This is generated course GUID.</param>
@@ -3166,6 +3192,16 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitUntilWindowLoads(base.GetPageTitle);
                         base.SwitchToIFrameById(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_CopyasInstructorCourse_Iframe_ID_Locator);
+                        //Get course name
+                        Course courseName = Course.Get(courseType);
+                        string actualCourseName = courseName.Name.ToString();
+                        //Generate the unique GUID
+                        string courseNameGUID = this.GenerateCopiedCourseGUID(courseType);                    
+                        //Clear the Course name text box
+                        base.WaitForElement(By.Id("txtCourseName"));
+                        base.ClearTextById("txtCourseName");
+                        //Fill the course name textbox
+                        base.FillTextBoxById("txtCourseName", courseNameGUID);
                         bool saw = base.IsElementPresent(By.Id("imgbtnSave"), 10);
                         base.WaitForElement(By.Id("imgbtnSave"));
                         IWebElement getButton = base.GetWebElementPropertiesById(HEDGlobalHomePageResource.
