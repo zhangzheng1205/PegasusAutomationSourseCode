@@ -113,7 +113,6 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "MyItLabAuthoredCourse" using course descipline
-Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
@@ -139,8 +138,27 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I select "All Disciplines" option in 'Browse by Discipline' dropdown
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Program" button of "MyITLabOffice2013Program" using course descipline
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Master Course should be specified in the in memory
+#Purpose:Verify the display of newly created course from Create a Course catlog based on course decipline
+Scenario: Verify the display of newly created course from Create a Course catlog based on course decipline
+Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Master Course should be specified in the in memory
+#Purpose:Verify the display of newly created program from Create a Course catlog based on course decipline
+Scenario: Verify the display of newly created program from Create a Course catlog based on course decipline
 Then I should see the program "MyITLabOffice2013Program" created as "CsSmsInstructor" user
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Pre-Condition : Course should be created
+#Purpose:Validate display of copy as instructor Course cmenu option of IC course
+Scenario: Validate display of copy as instructor Course cmenu option of IC course
+Then I should be displayed with "MyItLabInstructorCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 #-----------------------------------------------------------------------------------------------------#
 							#Scripts to validate context menu option of the course#
 #-----------------------------------------------------------------------------------------------------#
@@ -162,8 +180,7 @@ Then I should see successfull message "Course updated successfully." on "Global 
 Scenario:Validate copy as instructor Course cmenu option of IC course
 Given I am on the "Global Home" page
 When I select cmenu "Copy as Instructor Course" option of Instructor course "MyItLabInstructorCourse" for "CsSmsInstructor"
-Then I should be displayed with "MyItLabInstructorCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
-And I should see successfull message "Copied as instructor course." on "Global Home" page
+
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.

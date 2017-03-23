@@ -326,7 +326,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("HomePage", "DisplayedOfEnrolledCourseInChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             //Get course details from my testbank
-            new HEDGlobalHomePage().GetCreatedCourseDetailsInChannel(courseType, frameName);
+            //Compare the step number with the app step number
+            Logger.LogAssertion("DisplayedOfOptionInHeader", ScenarioContext.Current.ScenarioInfo.
+               Title, () => Assert.IsTrue(new HEDGlobalHomePage().GetCreatedCourseDetailsInChannel(courseType, frameName)));
             Logger.LogMethodExit("HomePage", "DisplayedOfEnrolledCourseInChannel",
                 base.IsTakeScreenShotDuringEntryExit);
         }
