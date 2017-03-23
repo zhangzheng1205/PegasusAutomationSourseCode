@@ -98,6 +98,8 @@ And I should be displayed step "1" with "Search Catalog" in "Create a Course" po
 When I click on next button with "RegMyITLabNewlyCreatedCourse" course ISBN as search criteria
 Then I should be displayed step "2" with "Select Course" in "Create a Course" popup as "CsSmsInstructor" user
 When I click on "Select Course" button of "RegMyITLabNewlyCreatedCourse" course
+
+Scenario: Validate the display of newly created course
 Then I should be displayed with "RegMyITLabNewlyCreatedCourse" Instructor course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 
 #Test case ID : 
@@ -169,8 +171,8 @@ And I should see successfull message "Course marked for deletion." on "Global Ho
 #Purpose:Verify " Copy as Instructor Course" cmenu option on home page
 Scenario:Validate copy as instructor Course cmenu option of IC course
 Given I am on the "Global Home" page
-When I select cmenu "Copy as Instructor Course" option of Instructor course "MyItLabAuthoredCourse" for "CsSmsInstructor"
-Then I should be displayed with "MyItLabAuthoredCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
+When I select cmenu "Copy as Instructor Course" option of Instructor course "MyItLabInstructorCourse" for "CsSmsInstructor"
+Then I should be displayed with "MyItLabInstructorCourse" MyTest course as "CsSmsInstructor" in "My Courses and Testbanks" channel
 And I should see successfull message "Copied as instructor course." on "Global Home" page
 
 #Test case ID : 

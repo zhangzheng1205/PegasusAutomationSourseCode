@@ -158,9 +158,7 @@ And I close the "Privacy" window
 #Products : MyItLab, HSS and World Language.
 #Purpose:Verify The Signout link functionality displayed on the home page
 Scenario: Instructor validate  Sign out link functionality in course header
-When I navigate to "Today's View" tab
-Then I should be on the "Today's View" page
-When I click on "Sign out" option in "Today's View" tab of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+When I click on "Sign out" option as "CsSmsInstructor" user
 Then I should see the successfull message "You have been signed out of the application."
 
 #Test case ID : 

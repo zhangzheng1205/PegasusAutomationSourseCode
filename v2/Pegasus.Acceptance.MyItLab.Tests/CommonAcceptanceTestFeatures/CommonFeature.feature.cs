@@ -1285,8 +1285,7 @@ testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechT
 #line 413
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 414
-testRunner.When("I click on \"Sign out\" option in \"Today\'s View\" tab of \"MyItLabInstructorCourse\" a" +
-                    "s \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Sign out\" option as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 415
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

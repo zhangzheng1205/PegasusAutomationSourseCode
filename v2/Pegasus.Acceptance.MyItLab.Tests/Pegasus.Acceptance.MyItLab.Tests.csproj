@@ -480,7 +480,7 @@
   <ItemGroup>
     <None Include="CommonAcceptanceTestFeatures\CommonFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
+      <LastGenOutput>CommonFeature1.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceOrderedTests\BadgingIntegration.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -633,6 +633,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.AssignmentCalendarInstructorUX.BVT.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.InstructorViewSubmissionUX.BVT.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">

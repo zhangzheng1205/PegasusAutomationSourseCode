@@ -4347,18 +4347,18 @@ namespace Pegasus.Pages.UI_Pages
                     Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_XPath_Locator, eTextcount));
                 //Verify eText in application is same as that in memory
                 if (getEtextName.Equals(eTextName))
-                    {
-                        //Get eText element
-                        IWebElement eTextlink = base.GetWebElementPropertiesByXPath(String.
-                            Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_XPath_Locator, eTextcount));
-                        //Click the eText link
-                        base.PerformMouseClickAction(eTextlink);
-                        break;
-                    }
-             }
+                {
+                    //Get eText element
+                    IWebElement eTextlink = base.GetWebElementPropertiesByXPath(String.
+                        Format(TodaysViewUXPageResource.TodayViewUXPageResource_EText_XPath_Locator, eTextcount));
+                    //Click the eText link
+                    base.PerformMouseClickAction(eTextlink);
+                    break;
+                }
+            }
             Logger.LogMethodExit("TodaysViewUXPage", "ClickEText",
                base.IsTakeScreenShotDuringEntryExit);
-          }
+        }
 
         public void ClickTabUnderMore(string tabName)
         {
@@ -4399,30 +4399,30 @@ namespace Pegasus.Pages.UI_Pages
             string tabName, Course.CourseTypeEnum couseTypeEnum, User.UserTypeEnum userType)
         {
             //verify header option as HED user and perform operation based on the options
-            Logger.LogMethodEntry("TodaysViewUXPage", 
+            Logger.LogMethodEntry("TodaysViewUXPage",
                 "ValidateOptionsInTopHeaderAndPerformOperation",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-               switch(couseTypeEnum)
-               {
-                   case Course.CourseTypeEnum.MyItLabAuthoredCourse:
-                   case Course.CourseTypeEnum.MyItLabInstructorCourse:
-                   case Course.CourseTypeEnum.RegMyITLabNewlyCreatedCourse:
-                       this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName, userType);
-                    break;
+                switch (couseTypeEnum)
+                {
+                    case Course.CourseTypeEnum.MyItLabAuthoredCourse:
+                    case Course.CourseTypeEnum.MyItLabInstructorCourse:
+                    case Course.CourseTypeEnum.RegMyITLabNewlyCreatedCourse:
+                        this.VerifyTheTabExistanceAndPerformOperation(optionName, tabName, userType);
+                        break;
 
-                   case Course.CourseTypeEnum.DigitsCourse:
-                    break;
+                    case Course.CourseTypeEnum.DigitsCourse:
+                        break;
 
-               }
+                }
 
             }
-                catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("TodaysViewUXPage", 
+            Logger.LogMethodExit("TodaysViewUXPage",
                 "ValidateOptionsInTopHeaderAndPerformOperation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -4447,7 +4447,7 @@ namespace Pegasus.Pages.UI_Pages
                     this.ClickOptionInCourseHeader(optionName, tabName, userType);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -4463,7 +4463,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="tabName">This is tab name.</param>
-        private void ClickOptionInCourseHeader(string optionName, string tabName,User.UserTypeEnum userType)
+        private void ClickOptionInCourseHeader(string optionName, string tabName, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCourseHeader",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -4498,7 +4498,7 @@ namespace Pegasus.Pages.UI_Pages
                                     case "My Profile":
                                     case "Privacy":
                                     case "Sign out":
-                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
+                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName, userType);
                                         break;
                                 }
                                 break;
@@ -4534,84 +4534,84 @@ namespace Pegasus.Pages.UI_Pages
                                     case "My Profile":
                                     case "Privacy":
                                     case "Sign out":
-                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
+                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName, userType);
                                         break;
                                 }
 
-                          break;
+                                break;
                         }
                         break;
-                            case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.CsSmsStudent:
 
-                                switch (tabName)
+                        switch (tabName)
+                        {
+                            case "Global Home":
+                                switch (optionName)
                                 {
-                                    case "Global Home":
-                                        switch (optionName)
-                                        {
-                                            case "Help":
-                                                //Wait for the Help Link
-                                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                                    HEDGlobalHomePage_Stu_Help_Link_ID_Locator));
-                                                //Click on Help Link
-                                                base.ClickLinkById(HEDGlobalHomePageResource.
-                                                    HEDGlobalHomePage_Stu_Help_Link_ID_Locator);
-                                                break;
-                                            case "Support":
-                                                //Wait for the Support Link
-                                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                                    HEDGlobalHomePage_Header_Support_Link_ID_Locator));
-                                                //Click on Support Link
-                                                base.ClickLinkById(HEDGlobalHomePageResource.
-                                                    HEDGlobalHomePage_Header_Support_Link_ID_Locator);
-                                                break;
-                                            case "My Profile":
-                                            case "Privacy":
-                                            case "Sign out":
-                                                this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
-                                                break;
-                                        }
-
+                                    case "Help":
+                                        //Wait for the Help Link
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Stu_Help_Link_ID_Locator));
+                                        //Click on Help Link
+                                        base.ClickLinkById(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Stu_Help_Link_ID_Locator);
                                         break;
-                                    case "Today's View":
-                                        switch (optionName)
-                                        {
-                                            case "Home":
-                                                //Wait for the Home Link
-                                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                                    TodayViewUXPageResource_Header_HomeOption_ID_Locator));
-                                                //CLick on Home Link
-                                                base.ClickLinkById(TodaysViewUXPageResource.
-                                                    TodayViewUXPageResource_Header_HomeOption_ID_Locator);
-                                                break;
-                                            case "Help":
-                                                //Wait for the Help Link
-                                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                                    TodayViewUXPageResource_Header_HelpOption_ID_Locator));
-                                                //Click on Help Link
-                                                base.ClickLinkById(TodaysViewUXPageResource.
-                                                    TodayViewUXPageResource_Header_HelpOption_ID_Locator);
-                                                break;
-                                            case "Support":
-                                                //Wait for the Support Link
-                                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                                    TodayViewUXPageResource_Header_SupportOption_ID_Locator));
-                                                //Click on Support Link
-                                                base.ClickLinkById(TodaysViewUXPageResource.
-                                                    TodayViewUXPageResource_Header_SupportOption_ID_Locator);
-                                                break;
+                                    case "Support":
+                                        //Wait for the Support Link
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Header_Support_Link_ID_Locator));
+                                        //Click on Support Link
+                                        base.ClickLinkById(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Header_Support_Link_ID_Locator);
+                                        break;
+                                    case "My Profile":
+                                    case "Privacy":
+                                    case "Sign out":
+                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName, userType);
+                                        break;
+                                }
 
-                                            case "My Profile":
-                                            case "Privacy":
-                                            case "Sign out":
-                                                this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName,userType);
-                                                break;
-                                        }
+                                break;
+                            case "Today's View":
+                                switch (optionName)
+                                {
+                                    case "Home":
+                                        //Wait for the Home Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomeOption_ID_Locator));
+                                        //CLick on Home Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HomeOption_ID_Locator);
+                                        break;
+                                    case "Help":
+                                        //Wait for the Help Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HelpOption_ID_Locator));
+                                        //Click on Help Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_HelpOption_ID_Locator);
+                                        break;
+                                    case "Support":
+                                        //Wait for the Support Link
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SupportOption_ID_Locator));
+                                        //Click on Support Link
+                                        base.ClickLinkById(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SupportOption_ID_Locator);
+                                        break;
+
+                                    case "My Profile":
+                                    case "Privacy":
+                                    case "Sign out":
+                                        this.ClickOptionAvailableInUserDropdownHeader(optionName, tabName, userType);
                                         break;
                                 }
                                 break;
                         }
+                        break;
                 }
-            
+            }
+
 
             catch (Exception e)
             {
@@ -4623,14 +4623,14 @@ namespace Pegasus.Pages.UI_Pages
         }
 
 
-      
+
         /// <summary>
         /// Click the option in course header.
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="tabName">This is tab name.</param>
-        private void ClickOptionAvailableInUserDropdownHeader(string optionName, 
-            string tabName,User.UserTypeEnum userType)
+        private void ClickOptionAvailableInUserDropdownHeader(string optionName,
+            string tabName, User.UserTypeEnum userType)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCourseHeader",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -4657,197 +4657,197 @@ namespace Pegasus.Pages.UI_Pages
                             case "Global Home":
                                 switch (optionName)
                                 {
-                            case "My Profile":
-                                        
-                                //Wait for My Profile option 
+                                    case "My Profile":
+
+                                        //Wait for My Profile option 
                                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                                             HEDGlobalHomePage_MyProfile_Link_ID_Locator));
-                                //Get the properties of My Profile option
-                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
-                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_MyProfile_Link_ID_Locator);
-                                //MouseHover on My Profile option
-                                base.PerformMouseHoverAction(getMyProfileOption);
-                                //CLick on My Profile option
-                                base.PerformMouseClickAction(getMyProfileOption);
-                                break;
+                                        //Get the properties of My Profile option
+                                        IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                            (HEDGlobalHomePageResource.HEDGlobalHomePage_MyProfile_Link_ID_Locator);
+                                        //MouseHover on My Profile option
+                                        base.PerformMouseHoverAction(getMyProfileOption);
+                                        //CLick on My Profile option
+                                        base.PerformMouseClickAction(getMyProfileOption);
+                                        break;
 
-                            case "Privacy":
-                                //Wait for Privacy option
-                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_Privacy_Link_ID_Locator));
-                                //Get the properties of Privacy option
-                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
-                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Privacy_Link_ID_Locator);
-                                //MouseHover on Privacy option
-                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
-                                //CLick on Privacy option
-                                base.PerformMouseClickAction(getPrivacyOption);
-                                break;
+                                    case "Privacy":
+                                        //Wait for Privacy option
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Privacy_Link_ID_Locator));
+                                        //Get the properties of Privacy option
+                                        IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                            (HEDGlobalHomePageResource.HEDGlobalHomePage_Privacy_Link_ID_Locator);
+                                        //MouseHover on Privacy option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                        //CLick on Privacy option
+                                        base.PerformMouseClickAction(getPrivacyOption);
+                                        break;
 
-                            case "Sign out":
-                                //Wait for Sign out option
-                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_Signout_Link_ID_Locator));
-                                //Get the properties of Sign out option
-                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
-                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Signout_Link_ID_Locator);
-                                //MouseHover on Sign out option
-                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
-                                //CLick on Signout option
-                                base.PerformMouseClickAction(getSignoutOption);
-                                break;
+                                    case "Sign out":
+                                        //Wait for Sign out option
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Signout_Link_ID_Locator));
+                                        //Get the properties of Sign out option
+                                        IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                            (HEDGlobalHomePageResource.HEDGlobalHomePage_Signout_Link_ID_Locator);
+                                        //MouseHover on Sign out option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                        //CLick on Signout option
+                                        base.PerformMouseClickAction(getSignoutOption);
+                                        break;
                                 }
                                 break;
 
                             case "Today's view":
                                 switch (optionName)
                                 {
-                                   case "My Profile":
-                                //Wait for My Profile option 
-                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
-                                //Get the properties of My Profile option
-                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
-                                    (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
-                                //MouseHover on My Profile option
-                                base.PerformMouseHoverAction(getMyProfileOption);
-                                //CLick on My Profile option
-                                base.PerformMouseClickAction(getMyProfileOption);
-                                break;
+                                    case "My Profile":
+                                        //Wait for My Profile option 
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
+                                        //Get the properties of My Profile option
+                                        IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                            (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
+                                        //MouseHover on My Profile option
+                                        base.PerformMouseHoverAction(getMyProfileOption);
+                                        //CLick on My Profile option
+                                        base.PerformMouseClickAction(getMyProfileOption);
+                                        break;
 
-                            case "Privacy":
-                                //Wait for Privacy option
-                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
-                                //Get the properties of Privacy option
-                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
-                                    (TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
-                                //MouseHover on Privacy option
-                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
-                                //CLick on Privacy option
-                                base.PerformMouseClickAction(getPrivacyOption);
-                                break;
+                                    case "Privacy":
+                                        //Wait for Privacy option
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
+                                        //Get the properties of Privacy option
+                                        IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                            (TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
+                                        //MouseHover on Privacy option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                        //CLick on Privacy option
+                                        base.PerformMouseClickAction(getPrivacyOption);
+                                        break;
 
-                            case "Sign out":
-                                //Wait for Sign out option
-                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
-                                //Get the properties of Sign out option
-                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
-                                    (TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
-                                //MouseHover on Sign out option
-                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
-                                //CLick on Signout option
-                                base.PerformMouseClickAction(getSignoutOption);
-                                break;
+                                    case "Sign out":
+                                        //Wait for Sign out option
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
+                                        //Get the properties of Sign out option
+                                        IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                            (TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
+                                        //MouseHover on Sign out option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                        //CLick on Signout option
+                                        base.PerformMouseClickAction(getSignoutOption);
+                                        break;
                                 }
 
-                          break;
+                                break;
                         }
                         break;
-                            case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.CsSmsStudent:
 
-                                switch (tabName)
+                        switch (tabName)
+                        {
+                            case "Global Home":
+                                switch (optionName)
                                 {
-                                    case "Global Home":
-                                        switch (optionName)
-                                        {
-                            case "My Profile":
-                                
-                                //Wait for My Profile option 
-                                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                                    HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator));
-                                //Get the properties of My Profile option
-                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
-                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator);
-                                //MouseHover on My Profile option
-                                base.PerformMouseHoverAction(getMyProfileOption);
-                                //CLick on My Profile option
-                                base.PerformMouseClickAction(getMyProfileOption);
-                                break;
+                                    case "My Profile":
 
-                            case "Privacy":
-
-                                bool dsad = base.IsElementPresent(By.Id("_ctl9_PegasushelloK5_aPrivacyPolicy"),10);
-                                //Wait for Privacy option
-                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_Header_Privacy_Link_ID_Locator));
-                                //Get the properties of Privacy option
-                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
-                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_Privacy_Link_ID_Locator);
-                                //MouseHover on Privacy option
-                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
-                                //CLick on Privacy option
-                                base.PerformMouseClickAction(getPrivacyOption);
-                                break;
-
-                            case "Sign out":
-                                //Wait for Sign out option
-                                base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_Header_Signout_Link_ID_Locator));
-                                //Get the properties of Sign out option
-                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
-                                    (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_Signout_Link_ID_Locator);
-                                //MouseHover on Sign out option
-                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
-                                //CLick on Signout option
-                                base.PerformMouseClickAction(getSignoutOption);
-                                break;
-                                        }
-
+                                        //Wait for My Profile option 
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator));
+                                        //Get the properties of My Profile option
+                                        IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                            (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_MyProfile_Link_ID_Locator);
+                                        //MouseHover on My Profile option
+                                        base.PerformMouseHoverAction(getMyProfileOption);
+                                        //CLick on My Profile option
+                                        base.PerformMouseClickAction(getMyProfileOption);
                                         break;
+
+                                    case "Privacy":
+
+                                        bool dsad = base.IsElementPresent(By.Id("_ctl9_PegasushelloK5_aPrivacyPolicy"), 10);
+                                        //Wait for Privacy option
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Header_Privacy_Link_ID_Locator));
+                                        //Get the properties of Privacy option
+                                        IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                            (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_Privacy_Link_ID_Locator);
+                                        //MouseHover on Privacy option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                        //CLick on Privacy option
+                                        base.PerformMouseClickAction(getPrivacyOption);
+                                        break;
+
+                                    case "Sign out":
+                                        //Wait for Sign out option
+                                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                                            HEDGlobalHomePage_Header_Signout_Link_ID_Locator));
+                                        //Get the properties of Sign out option
+                                        IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                            (HEDGlobalHomePageResource.HEDGlobalHomePage_Header_Signout_Link_ID_Locator);
+                                        //MouseHover on Sign out option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                        //CLick on Signout option
+                                        base.PerformMouseClickAction(getSignoutOption);
+                                        break;
+                                }
+
+                                break;
                             case "Today's view":
-                                        switch (optionName)
-                                        {
-                                           case "My Profile":
-                                //Wait for My Profile option 
-                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
-                                //Get the properties of My Profile option
-                                IWebElement getMyProfileOption = base.GetWebElementPropertiesById
-                                    (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
-                                //MouseHover on My Profile option
-                                base.PerformMouseHoverAction(getMyProfileOption);
-                                //CLick on My Profile option
-                                base.PerformMouseClickAction(getMyProfileOption);
-                                break;
+                                switch (optionName)
+                                {
+                                    case "My Profile":
+                                        //Wait for My Profile option 
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_MyProfileOption_ID_Locator));
+                                        //Get the properties of My Profile option
+                                        IWebElement getMyProfileOption = base.GetWebElementPropertiesById
+                                            (TodaysViewUXPageResource.TodayViewUXPageResource_Header_MyProfileOption_ID_Locator);
+                                        //MouseHover on My Profile option
+                                        base.PerformMouseHoverAction(getMyProfileOption);
+                                        //CLick on My Profile option
+                                        base.PerformMouseClickAction(getMyProfileOption);
+                                        break;
 
-                            case "Privacy":
-                                //Wait for Privacy option
-                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
-                                //Get the properties of Privacy option
-                                IWebElement getPrivacyOption = base.GetWebElementPropertiesById
-                                    (TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
-                                //MouseHover on Privacy option
-                                base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
-                                //CLick on Privacy option
-                                base.PerformMouseClickAction(getPrivacyOption);
-                                break;
+                                    case "Privacy":
+                                        //Wait for Privacy option
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator));
+                                        //Get the properties of Privacy option
+                                        IWebElement getPrivacyOption = base.GetWebElementPropertiesById
+                                            (TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_DropDown_PrivacyLink_Id_Locator);
+                                        //MouseHover on Privacy option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getPrivacyOption);
+                                        //CLick on Privacy option
+                                        base.PerformMouseClickAction(getPrivacyOption);
+                                        break;
 
-                            case "Sign out":
-                                //Wait for Sign out option
-                                base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
-                                //Get the properties of Sign out option
-                                IWebElement getSignoutOption = base.GetWebElementPropertiesById
-                                    (TodaysViewUXPageResource.
-                                    TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
-                                //MouseHover on Sign out option
-                                base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
-                                //CLick on Signout option
-                                base.PerformMouseClickAction(getSignoutOption);
-                                break;
-                                        }
+                                    case "Sign out":
+                                        //Wait for Sign out option
+                                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator));
+                                        //Get the properties of Sign out option
+                                        IWebElement getSignoutOption = base.GetWebElementPropertiesById
+                                            (TodaysViewUXPageResource.
+                                            TodayViewUXPageResource_Header_SignOutOption_ID_Locator);
+                                        //MouseHover on Sign out option
+                                        base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+                                        //CLick on Signout option
+                                        base.PerformMouseClickAction(getSignoutOption);
                                         break;
                                 }
                                 break;
                         }
+                        break;
                 }
-            
+            }
+
 
             catch (Exception e)
             {
@@ -4858,7 +4858,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-           
+
         /// <summary>
         /// Checks if the Instructor URL and the page title is present
         /// </summary>
@@ -4966,7 +4966,7 @@ namespace Pegasus.Pages.UI_Pages
             return status;
         }
 
-               
+
 
         /// <summary>
         /// Checks if the Student URL and the page title is present
@@ -4988,10 +4988,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to specified page title
                 base.SwitchToWindow(pageTitle);
 
-                                    
-                            switch(pageTitle)
-                            {
-                                case "Home Page Help":
+
+                switch (pageTitle)
+                {
+                    case "Home Page Help":
                         {
                             //Get the current page URL from the application
                             string getApplicationURL = base.GetCurrentUrl;
@@ -5020,7 +5020,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
 
-                                case "Student Help":
+                    case "Student Help":
                         {
                             //Get the current page URL from the application
                             string getApplicationURL = base.GetCurrentUrl;
@@ -5047,7 +5047,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
 
-                   case "Pearson Education Customer Technical Support":
+                    case "Pearson Education Customer Technical Support":
                         //Get the User name from application
                         string getUser = base.GetInnerTextAttributeValueById(TodaysViewUXPageResource.
                             TodayViewUXPageResource_Support_PopUp_Id_Locator);
@@ -5066,7 +5066,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "GetStudPageURLAndPageTitle",
                                  base.IsTakeScreenShotDuringEntryExit);
-           return status;
+            return status;
         }
 
         /// <summary>
@@ -5083,7 +5083,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 base.SwitchToDefaultWindow();
-                
+
                 //Wait for the window to load
                 base.WaitUntilWindowLoads(base.GetPageTitle);
                 string getmessage = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.
@@ -5184,7 +5184,7 @@ namespace Pegasus.Pages.UI_Pages
                             (TodaysViewUXPageResource.
                             TodayViewUXPageResource_Header_GoToStudentViewLink_ClassName_Locator);
                         break;
-                        
+
                     case "Return to Instructor View":
                         //Wait for 'Return to Instructor View' option
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
@@ -5269,7 +5269,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="buttonName">This is Button Name.</param>
         /// <param name="pageName">This is Page Name.</param>
         /// <returns>Return button name of present in the channel.</returns>
-        public string GetNotificationsChannelIconsTodaysView(string buttonName,string pageName)
+        public string GetNotificationsChannelIconsTodaysView(string buttonName, string pageName)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "GetNotificationsChannelIconsTodaysView",
                                  base.IsTakeScreenShotDuringEntryExit);
@@ -5284,7 +5284,7 @@ namespace Pegasus.Pages.UI_Pages
                     case "Minmize":
                         // Get text from the application
                         bool jds = base.IsElementPresent(By.ClassName(TodaysViewUXPageResource.
-                            TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator),10);
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator), 10);
                         base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator));
                         returnButtonName = base.GetInnerTextAttributeValueByClassName
@@ -5312,7 +5312,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TodaysViewUXPage", "GetNotificationsChannelIconsTodaysView",
                                  base.IsTakeScreenShotDuringEntryExit);
@@ -5377,12 +5377,12 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
-                 Logger.LogMethodExit("TodaysViewUXPage", "GetAnnouncementsChannelIconsTodaysView",
-                                 base.IsTakeScreenShotDuringEntryExit);
-                 // Convert the text to lowercase and return the value
-                 return returnButtonName.ToLower();
+            Logger.LogMethodExit("TodaysViewUXPage", "GetAnnouncementsChannelIconsTodaysView",
+                            base.IsTakeScreenShotDuringEntryExit);
+            // Convert the text to lowercase and return the value
+            return returnButtonName.ToLower();
         }
 
         /// <summary>
@@ -5391,13 +5391,13 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="buttonName">This is Button Name.</param>
         /// <param name="pageName">This is Page Name.</param>
         /// <returns>Return status of channel existance.</returns>
-       public string GetCalendarChannelIconsTodaysView(string buttonName, string pageName)
+        public string GetCalendarChannelIconsTodaysView(string buttonName, string pageName)
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "GetCalendarChannelIconsTodaysView",
                                    base.IsTakeScreenShotDuringEntryExit);
             string returnButtonName = string.Empty;
             try
-            {               
+            {
                 // Wait untill window loads
                 base.WaitUntilWindowLoads(pageName);
 
@@ -5430,393 +5430,393 @@ namespace Pegasus.Pages.UI_Pages
                             TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator);
                         break;
 
-                case "Move Down":
-                    // Get text from the application
+                    case "Move Down":
+                        // Get text from the application
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CalendarFrame_MoveDownButton_Xpath_Locator));
                         returnButtonName = base.GetTitleAttributeValueByXPath(TodaysViewUXPageResource.
                             TodayViewUXPageResource_TodaysView_CalendarFrame_MoveDownButton_Xpath_Locator);
-                    break;
+                        break;
 
-                case "Maximize":
-                    // Get text from the application                        
+                    case "Maximize":
+                        // Get text from the application                        
                         base.WaitForElement(By.XPath(
                             TodaysViewUXPageResource.
                               TodayViewUXPageResource_TodaysView_CalendarFrame_MaximizeButton_Xpath_Locator));
                         returnButtonName = base.GetInnerTextAttributeValueByXPath
                             (TodaysViewUXPageResource.
                               TodayViewUXPageResource_TodaysView_CalendarFrame_MaximizeButton_Xpath_Locator);
-                            break;
+                        break;
                 }
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }      
+            }
             Logger.LogMethodExit("TodaysViewUXPage", "GetCalendarChannelIconsTodaysView",
                                   base.IsTakeScreenShotDuringEntryExit);
             // Convert the text to lowercase and return the value
             return returnButtonName.ToLower();
         }
 
-       /// <summary>
-       /// Click on option in notification channel.
-       /// </summary>
-       /// <param name="optionName">This is option name.</param>
-       /// <param name="pageTitle">This is page title.</param>
-       public void ClickOptionInNotificationsChannelTodaysView(string optionName, string pageTitle)
-       {
-           Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInNotificationsChannelTodaysView",
-                                   base.IsTakeScreenShotDuringEntryExit);
-           try 
-	    {	        
-		    // Wait untill window loads
-           base.WaitUntilWindowLoads(pageTitle);
-           switch (optionName)
-           {
-               case "Minimize":
-                   // Get text from the application
-                   bool jhj = base.IsElementPresent(By.ClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator),10);
-                   base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator));
-                   //Get Minimize button properties and click
-                   IWebElement getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
+        /// <summary>
+        /// Click on option in notification channel.
+        /// </summary>
+        /// <param name="optionName">This is option name.</param>
+        /// <param name="pageTitle">This is page title.</param>
+        public void ClickOptionInNotificationsChannelTodaysView(string optionName, string pageTitle)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInNotificationsChannelTodaysView",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageTitle);
+                switch (optionName)
+                {
+                    case "Minimize":
+                        // Get text from the application
+                        bool jhj = base.IsElementPresent(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator), 10);
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator));
+                        //Get Minimize button properties and click
+                        IWebElement getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MinimizeButton_XPath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-               case "Maximize":
-                   // Get text from the application
-                   base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_MaximizeButton_XPath_Locator));
-                   //Get Maximize button properties and click
-                  getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_MaximizeButton_XPath_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
+                    case "Maximize":
+                        // Get text from the application
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_MaximizeButton_XPath_Locator));
+                        //Get Maximize button properties and click
+                        getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                             TodayViewUXPageResource_TodaysView_MaximizeButton_XPath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-               case "Close":
-                   // Get text from the application
-                   base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator));
-                   //CLose the Notification channel
-                   getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
-           }
-	}
-	        catch (Exception e)
-	        {
-		         ExceptionHandler.HandleException(e);
-	        }
-           Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInNotificationsChannelTodaysView",
-                                   base.IsTakeScreenShotDuringEntryExit);
-       }
+                    case "Close":
+                        // Get text from the application
+                        base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator));
+                        //CLose the Notification channel
+                        getOption = base.GetWebElementPropertiesByClassName(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CloseButton_ClassName_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInNotificationsChannelTodaysView",
+                                    base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Click on the option in Announcements channel
         /// </summary>
         /// <param name="optionName">This is the option name.</param>
         /// <param name="pageTitle">This is the page name.</param>
-       public void ClickOptionInAnnouncementsChannelTodaysView(string optionName, string pageTitle)
-       {
-           Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInAnnouncementsChannelTodaysView",
-                                   base.IsTakeScreenShotDuringEntryExit);
-           try 
-	{	        
-		// Wait untill window loads
-           base.WaitUntilWindowLoads(pageTitle);
+        public void ClickOptionInAnnouncementsChannelTodaysView(string optionName, string pageTitle)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInAnnouncementsChannelTodaysView",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageTitle);
 
-           switch (optionName)
-           {
-               case "Move Down":
-                   // Get text from the application
-                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator));
-                   //Move the Announcement channel down
-                   IWebElement getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
+                switch (optionName)
+                {
+                    case "Move Down":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator));
+                        //Move the Announcement channel down
+                        IWebElement getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveDownButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-               case "Move Up":
-                   // Get text from the application
-                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator));
-                   //Move the Announcement channel up
-                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
+                    case "Move Up":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator));
+                        //Move the Announcement channel up
+                        getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MoveUpButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-               case "Minimize":
-                   // Get text from the application
-                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                      TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
-                   //Minimize the Announcement channel 
-                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                      TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
+                    case "Minimize":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                           TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator));
+                        //Minimize the Announcement channel 
+                        getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                           TodayViewUXPageResource_TodaysView_AnnouncementChannel_MinimizeButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-               case "Maximize":
-                   // Get text from the application
-                   base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MaximizeButton_Xpath_Locator));
-                   //Maximize the Announcement channel 
-                   getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_TodaysView_AnnouncementChannel_MaximizeButton_Xpath_Locator);
-                   base.PerformMouseClickAction(getOption);
-                   break;
-           }
-	}
-	        catch (Exception e)
-	        {
-		         ExceptionHandler.HandleException(e);
-	        }
-           Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInAnnouncementsChannelTodaysView",
-                                   base.IsTakeScreenShotDuringEntryExit);
-       }
+                    case "Maximize":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MaximizeButton_Xpath_Locator));
+                        //Maximize the Announcement channel 
+                        getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_AnnouncementChannel_MaximizeButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInAnnouncementsChannelTodaysView",
+                                    base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Click options available in todays view channel
         /// </summary>
         /// <param name="optionName">This is option name.</param>
         /// <param name="pageTitle">This is page title.</param>
-       public void ClickOptionInCalendarChannelTodaysView(string optionName, string pageTitle)
-       {
-           Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCalendarChannelTodaysView",
-                                   base.IsTakeScreenShotDuringEntryExit);
-           try 
-	                {	        
-		             // Wait untill window loads
-                     base.WaitUntilWindowLoads(pageTitle);
+        public void ClickOptionInCalendarChannelTodaysView(string optionName, string pageTitle)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOptionInCalendarChannelTodaysView",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(pageTitle);
 
                 switch (optionName)
-               {
-                   case "Move Up":
-                       // Get text from the application
-                       base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
-                       //Move the Calendar channel up
-                       IWebElement getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
-                       base.PerformMouseClickAction(getOption);
-                       break;
+                {
+                    case "Move Up":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator));
+                        //Move the Calendar channel up
+                        IWebElement getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveUpButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-                   case "Move Down":
-                       // Get text from the application
-                       base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_MoveDownButton_Xpath_Locator));
-                       //Move the Calendar channel down
-                       getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_MoveDownButton_Xpath_Locator);
-                       base.PerformMouseClickAction(getOption);
-                       break;
+                    case "Move Down":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveDownButton_Xpath_Locator));
+                        //Move the Calendar channel down
+                        getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MoveDownButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-                   case "Minimize":
-                       base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                          TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
-                       //Minimize the Calendar channel 
-                       getOption = base.GetWebElementPropertiesByXPath(
-                           TodaysViewUXPageResource.
-                          TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator);
-                       base.PerformMouseClickAction(getOption);
-                       break;
+                    case "Minimize":
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                           TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator));
+                        //Minimize the Calendar channel 
+                        getOption = base.GetWebElementPropertiesByXPath(
+                            TodaysViewUXPageResource.
+                           TodayViewUXPageResource_TodaysView_CalendarFrame_MinimizeButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-                   case "Maximize":
+                    case "Maximize":
                         base.WaitForElement(By.XPath(TodaysViewUXPageResource.
                            TodayViewUXPageResource_TodaysView_CalendarFrame_MaximizeButton_Xpath_Locator));
                         //Maximize the Calendar channel 
-                       getOption = base.GetWebElementPropertiesByXPath(
-                          TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_MaximizeButton_Xpath_Locator);
-                       base.PerformMouseClickAction(getOption);
-                       break;
+                        getOption = base.GetWebElementPropertiesByXPath(
+                           TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_MaximizeButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
 
-                      case "Close":
-                       // Get text from the application
-                       base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator));
+                    case "Close":
+                        // Get text from the application
+                        base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator));
                         //Close the Calendar channel
-                       getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
-                           TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator);
-                       base.PerformMouseClickAction(getOption);
-                       break;
-               }
-	    }
-	        catch (Exception e)
-	        {
-		        ExceptionHandler.HandleException(e);
-	        }
-           Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInCalendarChannelTodaysView",
-                                   base.IsTakeScreenShotDuringEntryExit);
-       }
+                        getOption = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_TodaysView_CalendarFrame_CloseButton_Xpath_Locator);
+                        base.PerformMouseClickAction(getOption);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOptionInCalendarChannelTodaysView",
+                                    base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
-       /// <summary>
-       /// Fetch the sub-channel name in Notifications channel
-       /// </summary>
-       /// <param name="subChannelName">This is the sub channel name.</param>
-       /// <param name="channelName">This is the main channel name.</param>
-       /// <returns>channel name.</returns>
-       public bool GetSubChannelInNotification(string subChannelName, string channelName)
-       {
-           Logger.LogMethodEntry("TodaysViewUXPage", "GetSubChannelInNotification",
-                                   base.IsTakeScreenShotDuringEntryExit);
-           bool getStatus = false;
-           string getSubchannelName = string.Empty;
-           try
-           {
-               base.WaitUntilWindowLoads(TodaysViewUXPageResource.
-                   TodaysViewUXPageResource_WindowsTitle);
+        /// <summary>
+        /// Fetch the sub-channel name in Notifications channel
+        /// </summary>
+        /// <param name="subChannelName">This is the sub channel name.</param>
+        /// <param name="channelName">This is the main channel name.</param>
+        /// <returns>channel name.</returns>
+        public bool GetSubChannelInNotification(string subChannelName, string channelName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetSubChannelInNotification",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            bool getStatus = false;
+            string getSubchannelName = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
 
-               string getNotificationChannelName = base.GetInnerTextAttributeValueById(TodaysViewUXPageResource.
-                   TodayViewUXPageResource_NotificationChannel_Title_Id_Locator);
+                string getNotificationChannelName = base.GetInnerTextAttributeValueById(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_NotificationChannel_Title_Id_Locator);
 
-               switch (subChannelName)
-               {
-                   case "About This Course":
-                       getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator);
-                       break;
+                switch (subChannelName)
+                {
+                    case "About This Course":
+                        getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_AboutThisCourse_Title_Xpath_Locator);
+                        break;
 
-                   case "Welcome Message":
-                       getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_WelcomeMessage_Title_Xpath_Locator);
-                       break;
+                    case "Welcome Message":
+                        getSubchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_WelcomeMessage_Title_Xpath_Locator);
+                        break;
 
-                   case "Alerts":
-                       string AlertchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Alerts_Title_Xpath_Locator);
-                       getSubchannelName = AlertchannelName.Remove(6);
-                       break;
+                    case "Alerts":
+                        string AlertchannelName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_Alerts_Title_Xpath_Locator);
+                        getSubchannelName = AlertchannelName.Remove(6);
+                        break;
 
-                   case "Action Items":
-                       string AlertItemsName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_ActionItems_Title_Xpath_Locator);
-                       getSubchannelName = AlertItemsName.Remove(12);
-                       break;
+                    case "Action Items":
+                        string AlertItemsName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_ActionItems_Title_Xpath_Locator);
+                        getSubchannelName = AlertItemsName.Remove(12);
+                        break;
 
-                   case "Performance":
-                       string performanceName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Performance_Title_Xpath_Locator);
-                       getSubchannelName = performanceName.Remove(11);
-                       break;
-               }
+                    case "Performance":
+                        string performanceName = base.GetInnerTextAttributeValueByXPath(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_Performance_Title_Xpath_Locator);
+                        getSubchannelName = performanceName.Remove(11);
+                        break;
+                }
 
-               if (getNotificationChannelName == channelName && getSubchannelName == subChannelName)
-               {
-                   getStatus = true;
-               }
-           }
-           catch (Exception e)
-           {
-               ExceptionHandler.HandleException(e);
-           }
-           Logger.LogMethodExit("TodaysViewUXPage", "GetSubChannelInNotification",
-                                   base.IsTakeScreenShotDuringEntryExit);
+                if (getNotificationChannelName == channelName && getSubchannelName == subChannelName)
+                {
+                    getStatus = true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "GetSubChannelInNotification",
+                                    base.IsTakeScreenShotDuringEntryExit);
 
-           return getStatus;
-       }
+            return getStatus;
+        }
 
 
         /// <summary>
         /// Click on expand icon in notification channel.
         /// </summary>
         /// <param name="subChannelName">This is subchannel name.</param>
-       public void ClickExpanIconInNotificationChannel(string subChannelName)
-       {
-           //Click on expand icon in notification channel.
-           Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
-                                   base.IsTakeScreenShotDuringEntryExit);
-           try
-           {
-               base.WaitUntilWindowLoads(TodaysViewUXPageResource.
-                   TodaysViewUXPageResource_WindowsTitle);
+        public void ClickExpanIconInNotificationChannel(string subChannelName)
+        {
+            //Click on expand icon in notification channel.
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
 
-               switch (subChannelName)
-               {
-                   case "About This Course": 
-                            base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                                TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator));
-                            IWebElement getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
-                                TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator);
-                            base.PerformMouseClickAction(getIconID);
-                             break;
+                switch (subChannelName)
+                {
+                    case "About This Course":
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator));
+                        IWebElement getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                            TodayViewUXPageResource_AboutThisCourse_ExpandIcon_Id_Locator);
+                        base.PerformMouseClickAction(getIconID);
+                        break;
 
-                   case "Welcome Message":
-                             base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                          TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator));
-                            getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
-                         TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator);
-                            base.PerformMouseClickAction(getIconID);
-                       break;
+                    case "Welcome Message":
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                     TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator));
+                        getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                     TodayViewUXPageResource_WelcomeMessage_ExpandIcon_Id_Locator);
+                        base.PerformMouseClickAction(getIconID);
+                        break;
 
-                   case "Alerts":
-                       base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                      TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator));
-                         getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
-                     TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator);
-                         base.PerformMouseClickAction(getIconID);
-                       break;
+                    case "Alerts":
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator));
+                        getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator);
+                        base.PerformMouseClickAction(getIconID);
+                        break;
 
-                   case "Action Items":
-                       base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                          TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator));
-                       getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
-                      TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator);
-                       base.PerformMouseClickAction(getIconID);
-                       break;
+                    case "Action Items":
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                           TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator));
+                        getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                       TodayViewUXPageResource_ActionItems_ExpandIcon_Id_Locator);
+                        base.PerformMouseClickAction(getIconID);
+                        break;
 
-                   case "Performance":
-                       base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator));
-                       getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator);
-                       base.PerformMouseClickAction(getIconID);
-                       break;
-               }
-           }
-           catch (Exception e)
-           {
-               ExceptionHandler.HandleException(e);
-           }
-           Logger.LogMethodExit("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
-                            base.IsTakeScreenShotDuringEntryExit);
-       }
+                    case "Performance":
+                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator));
+                        getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_Performance_ExpandIcon_Id_Locator);
+                        base.PerformMouseClickAction(getIconID);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                             base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
         /// <summary>
         /// Get success message from About this course message channel.
         /// </summary>
         public string GetAboutThisCourseMessage()
-       {
-           Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
-                                   base.IsTakeScreenShotDuringEntryExit);
-           string getText = string.Empty;
-           try
-           {
-               // Wait untill window loads
-               base.WaitUntilWindowLoads(TodaysViewUXPageResource.
-                   TodaysViewUXPageResource_WindowsTitle);
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                                    base.IsTakeScreenShotDuringEntryExit);
+            string getText = string.Empty;
+            try
+            {
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_WindowsTitle);
 
-               base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
-                   TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator));
-               // Get text of message displayed in About this course channel
-               getText = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.
-                   TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator);
-           }
-            catch(Exception e)
-           {
-               ExceptionHandler.HandleException(e);
+                base.WaitForElement(By.ClassName(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator));
+                // Get text of message displayed in About this course channel
+                getText = base.GetInnerTextAttributeValueByClassName(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_AboutThisCourse_Message_ClassName_Locator);
             }
-           Logger.LogMethodExit("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
-                                   base.IsTakeScreenShotDuringEntryExit);
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickExpanIconInNotificationChannel",
+                                    base.IsTakeScreenShotDuringEntryExit);
             return getText;
-       }
+        }
 
         /// <summary>
         /// Get the welcome message
@@ -5847,7 +5847,7 @@ namespace Pegasus.Pages.UI_Pages
             return getText;
         }
 
-                /// <summary>
+        /// <summary>
         /// Get the welcome message
         /// </summary>
         /// <returns>Return welcome message.</returns>
@@ -5862,7 +5862,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitUntilWindowLoads(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_WindowsTitle);
 
-                switch(alertType)
+                switch (alertType)
                 {
 
                     case Alert.AlertTypeEnum.RegAlertsCount:
@@ -6072,46 +6072,46 @@ namespace Pegasus.Pages.UI_Pages
                     "//table[@id='TVIdlStuDatagrid']/tbody/tr");
                 idleCount = count.ToString();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodEntry("TodaysViewUxPage", "GetIdleStudentCount", 
+            Logger.LogMethodEntry("TodaysViewUxPage", "GetIdleStudentCount",
                 base.IsTakeScreenShotDuringEntryExit);
             return idleCount;
         }
-        
+
         /// <summary>
         /// Click on the Course Tool Bar in Today's view
         /// </summary>
         /// <param name="toolBarOption">This is the Tool bar option.</param>
         public void ClickOnCourseToolBar(string toolBarOption)
         {
- 	       Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseToolBar",
-                        base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseToolBar",
+                         base.IsTakeScreenShotDuringEntryExit);
             //Fetch the count of COurse tools
-           int getCourseToolsCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
-               TodaysView_CoursToolsCount_Xpath_Locator);            
-           for(int i=1; i <= getCourseToolsCount; i++)
+            int getCourseToolsCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                TodaysView_CoursToolsCount_Xpath_Locator);
+            for (int i = 1; i <= getCourseToolsCount; i++)
             {
                 base.WaitForElement(By.XPath(String.Format(TodaysViewUXPageResource.
                TodaysView_CoursToolsName_Xpath_Locator, i)));
-               //Fetch the course tool name
+                //Fetch the course tool name
                 string getCourseToolName = base.GetInnerTextAttributeValueByXPath(
                     string.Format(TodaysViewUXPageResource.
                TodaysView_CoursToolsName_Xpath_Locator, i));
                 string courseToolOption = getCourseToolName.TrimStart();
                 if (courseToolOption.Contains(toolBarOption))
-               {
-                   base.WaitForElement(By.XPath(String.Format
-                       (TodaysViewUXPageResource.
-               TodaysView_CoursToolsName_Xpath_Locator, i)));
-                   IWebElement clickCourseTool = base.GetWebElementPropertiesByXPath(
-                       String.Format(TodaysViewUXPageResource.
-               TodaysView_CoursToolsName_Xpath_Locator, i));
-                   base.PerformMouseClickAction(clickCourseTool);
-               }
-            }     
+                {
+                    base.WaitForElement(By.XPath(String.Format
+                        (TodaysViewUXPageResource.
+                TodaysView_CoursToolsName_Xpath_Locator, i)));
+                    IWebElement clickCourseTool = base.GetWebElementPropertiesByXPath(
+                        String.Format(TodaysViewUXPageResource.
+                TodaysView_CoursToolsName_Xpath_Locator, i));
+                    base.PerformMouseClickAction(clickCourseTool);
+                }
+            }
             Logger.LogMethodExit("TodaysViewUXPage", "ClickOnCourseToolBar",
                         base.IsTakeScreenShotDuringEntryExit);
         }
@@ -6127,7 +6127,7 @@ namespace Pegasus.Pages.UI_Pages
                         base.IsTakeScreenShotDuringEntryExit);
             bool isIdleStudentDisplayed = false;
             try
-            {               
+            {
                 int getstudentsCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
                     TodaysViewPageResource_AlertChannel_IdleStudentCount_XPath_Locator);
                 for (int i = 1; i <= getstudentsCount; i++)
@@ -6148,7 +6148,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodEntry("TodaysViewUXPage", "GetIdleStudentName",
                         base.IsTakeScreenShotDuringEntryExit);
-            return isIdleStudentDisplayed;          
+            return isIdleStudentDisplayed;
         }
 
         /// <summary>
@@ -6165,8 +6165,8 @@ namespace Pegasus.Pages.UI_Pages
                 isIdleStudentAlertTextPresent = base.IsElementPresent(
                     By.ClassName("IdleStuHelpText"), 10);
                 base.WaitForElement(By.ClassName("IdleStuHelpText"));
-                    //TodaysViewUXPageResource.
-                    //TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator));
+                //TodaysViewUXPageResource.
+                //TodaysViewPageResource_AlertChannel_IdleSTudent_MessageText_ClassName_Locator));
             }
             catch (Exception e)
             {
@@ -6364,7 +6364,7 @@ namespace Pegasus.Pages.UI_Pages
                        TodaysViewUXPageResource.
                        TodaysViewUXPage_PastDUeSubmittedChannel_StudentName_XPath_Locator,
                         getStudentIndex, i));
-                    if (getStudentNameInPastDueSubmittedChannel == actualStudentName && 
+                    if (getStudentNameInPastDueSubmittedChannel == actualStudentName &&
                         activityNameInPastDueSubmittedChannel.Contains(actualActivityName))
                     {
                         //Select the checkbox of the Activity
@@ -6444,6 +6444,35 @@ namespace Pegasus.Pages.UI_Pages
                      base.IsTakeScreenShotDuringEntryExit);
             return isStudentDisplayedInNewGradesChannel;
 
+        }
+
+        /// <summary>
+        /// Click On Course Header Dropdown
+        /// </summary>
+        /// <param name="optionName">This is the option name.</param>
+        public void ClickOnCourseHeaderDropdown(string optionName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseHeaderDropdown",
+                     base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(base.GetPageTitle);
+            base.SwitchToDefaultWindow();
+            //Wait for the Dropdown icon
+            base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                         TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator));
+            //Get the properties of dropdown icon
+            IWebElement getInstructorProfileDrodownIcon = base.GetWebElementPropertiesByXPath
+                (TodaysViewUXPageResource.TodayViewUXPageResource_DropDown_MyProfileOption_XPath_Locator);
+            //Click on Dropdown icon
+            base.ClickByJavaScriptExecutor(getInstructorProfileDrodownIcon);
+            //Wait for Sign out option
+            base.WaitForElement(By.PartialLinkText(optionName));
+            //Get the properties of Sign out option
+            IWebElement getSignoutOption = base.GetWebElementPropertiesByPartialLinkText
+                (optionName);
+            //MouseHover on Sign out option
+            base.PerformMouseHoverByJavaScriptExecutor(getSignoutOption);
+            //CLick on Signout option
+            base.PerformMouseClickAction(getSignoutOption);
         }
     }
 }

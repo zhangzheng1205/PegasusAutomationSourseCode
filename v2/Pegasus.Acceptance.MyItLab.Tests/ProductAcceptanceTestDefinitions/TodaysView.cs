@@ -1278,5 +1278,30 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
          }
 
-    }
+         /// <summary>
+         /// This is to verify header option as HED user and perform operation based on the options
+         /// </summary>
+         /// <param name="optionName">This is the option name.</param>
+         /// <param name="tabName">This is the tab name.</param>
+         /// <param name="couseTypeEnum">This is course type enum.</param>
+         /// <param name="userType">This is user type enum</param>
+         [When(@"I click on ""(.*)"" option as ""(.*)"" user")]
+         public void WhenIClickOnOptionAsUser(string optionName, User.UserTypeEnum userType)
+         {
+              Logger.LogMethodEntry("TodaysView", "VerifyTheHeaderOptions",
+                 base.IsTakeScreenShotDuringEntryExit);
+              switch (userType)
+              {
+                  case User.UserTypeEnum.CsSmsInstructor:
+                  case User.UserTypeEnum.CsSmsStudent:
+                      new TodaysViewUxPage().ClickOnCourseHeaderDropdown
+                              (optionName);
+                      break;
+              }
+              Logger.LogMethodExit("TodaysView", "VerifyTheHeaderOptions",
+                  base.IsTakeScreenShotDuringEntryExit);
+         }
+
+         
+      }
 }

@@ -2597,6 +2597,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     case Course.CourseTypeEnum.MyItLabAuthoredCourse:
                     case Course.CourseTypeEnum.RegMyITLabNewlyCreatedCourse:
+                    case Course.CourseTypeEnum.MyItLabInstructorCourse:
                         this.refreshTillIcCourseCopy(courseName, courseCopyStatusMessageIC);
                         break;
                     case Course.CourseTypeEnum.MyTestAuthoredCourse:

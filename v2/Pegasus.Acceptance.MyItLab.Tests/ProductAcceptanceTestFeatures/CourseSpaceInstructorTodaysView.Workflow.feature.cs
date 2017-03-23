@@ -400,13 +400,8 @@ testRunner.And("I close the \"Privacy\" window", ((string)(null)), ((TechTalk.Sp
 #line 160
 this.ScenarioSetup(scenarioInfo);
 #line 161
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Sign out\" option as \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 162
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 163
-testRunner.When("I click on \"Sign out\" option in \"Today\'s View\" tab of \"MyItLabInstructorCourse\" a" +
-                    "s \"CsSmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -419,13 +414,13 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void VerifyTheCourseTitleAndIDDisplayInTheCourseHeader()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the course title and ID display in the course header", ((string[])(null)));
-#line 169
+#line 167
 this.ScenarioSetup(scenarioInfo);
-#line 170
+#line 168
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 171
+#line 169
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 172
+#line 170
 testRunner.And("I should be displayed with \"MyItLabInstructorCourse\" course information for \"CsSm" +
                     "sInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -438,17 +433,17 @@ testRunner.And("I should be displayed with \"MyItLabInstructorCourse\" course in
         public virtual void VerifyTheDisplayAndFunctionalyToPreferenceOptionInCourseHeader()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the display and functionaly to \"Preference\" option in course header", ((string[])(null)));
-#line 177
+#line 175
 this.ScenarioSetup(scenarioInfo);
-#line 178
+#line 176
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 179
+#line 177
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 180
+#line 178
 testRunner.And("I should be displayed with \"Preferences\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 181
+#line 179
 testRunner.When("I click on \"Preferences\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 182
+#line 180
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -462,23 +457,23 @@ testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the display and functionaly to \"Go to Student View\" option in course heade" +
                     "r", ((string[])(null)));
-#line 188
+#line 186
 this.ScenarioSetup(scenarioInfo);
-#line 189
+#line 187
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 190
+#line 188
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 191
+#line 189
 testRunner.And("I should be displayed with \"Go to Student View\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 192
+#line 190
 testRunner.When("I click on \"Go to Student View\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 193
+#line 191
 testRunner.Then("I should be displayed with \"Return to Instructor View\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 194
+#line 192
 testRunner.When("I click on \"Return to Instructor View\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 195
+#line 193
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 196
+#line 194
 testRunner.And("I should be displayed with \"Go to Student View\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -490,11 +485,11 @@ testRunner.And("I should be displayed with \"Go to Student View\" option", ((str
         public virtual void DisplayOfNotificationsChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Notifications channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 206
+#line 204
 this.ScenarioSetup(scenarioInfo);
-#line 207
+#line 205
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 208
+#line 206
 testRunner.Then("I should be displayed with \"Notifications\" channel  on \"Today\'s View\" page as \"Cs" +
                     "SmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -507,11 +502,11 @@ testRunner.Then("I should be displayed with \"Notifications\" channel  on \"Toda
         public virtual void DisplayOfAnnouncementsChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Announcements channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 214
+#line 212
 this.ScenarioSetup(scenarioInfo);
-#line 215
+#line 213
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 216
+#line 214
 testRunner.Then("I should be displayed with \"Announcements\" channel  on \"Today\'s View\" page as \"Cs" +
                     "SmsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -524,11 +519,11 @@ testRunner.Then("I should be displayed with \"Announcements\" channel  on \"Toda
         public virtual void DisplayOfCalendarChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Calendar channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 222
+#line 220
 this.ScenarioSetup(scenarioInfo);
-#line 223
+#line 221
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 224
+#line 222
 testRunner.Then("I should be displayed with \"Calendar\" channel  on \"Today\'s View\" page as \"CsSmsIn" +
                     "structor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -541,18 +536,18 @@ testRunner.Then("I should be displayed with \"Calendar\" channel  on \"Today\'s 
         public virtual void MinmizeAndMinmizeNotificationsChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minmize and Minmize Notifications  channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 232
+#line 230
 this.ScenarioSetup(scenarioInfo);
-#line 233
+#line 231
 testRunner.When("I \"Minimize\" the \"Notifications\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
                     "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 234
+#line 232
 testRunner.Then("I should be displayed with \"Maximize\" icon in \"Notifications\" channel of \"Today\'s" +
                     " View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 235
+#line 233
 testRunner.When("I \"Maximize\" the \"Notifications\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
                     "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 236
+#line 234
 testRunner.Then("I should be displayed with \"Minmize\" icon in \"Notifications\" channel of \"Today\'s " +
                     "View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -565,18 +560,18 @@ testRunner.Then("I should be displayed with \"Minmize\" icon in \"Notifications\
         public virtual void MinmizeAndMinmizeAnnouncementsChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minmize and Minmize Announcements channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 241
+#line 239
 this.ScenarioSetup(scenarioInfo);
-#line 242
+#line 240
 testRunner.When("I \"Minimize\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
                     "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 243
+#line 241
 testRunner.Then("I should be displayed with \"Maximize\" icon in \"Announcements\" channel of \"Today\'s" +
                     " View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 244
+#line 242
 testRunner.When("I \"Maximize\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstructo" +
                     "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 245
+#line 243
 testRunner.Then("I should be displayed with \"Minmize\" icon in \"Announcements\" channel of \"Today\'s " +
                     "View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -589,16 +584,16 @@ testRunner.Then("I should be displayed with \"Minmize\" icon in \"Announcements\
         public virtual void MinmizeAndMinmizeCalendarChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minmize and Minmize Calendar channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 250
+#line 248
 this.ScenarioSetup(scenarioInfo);
-#line 251
+#line 249
 testRunner.When("I \"Minimize\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 252
+#line 250
 testRunner.Then("I should be displayed with \"Maximize\" icon in \"Calendar\" channel of \"Today\'s View" +
                     "\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 253
+#line 251
 testRunner.When("I \"Maximize\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 254
+#line 252
 testRunner.Then("I should be displayed with \"Minmize\" icon in \"Calendar\" channel of \"Today\'s View\"" +
                     " page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -611,18 +606,18 @@ testRunner.Then("I should be displayed with \"Minmize\" icon in \"Calendar\" cha
         public virtual void MoveAnnouncementsChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move Announcements channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 262
+#line 260
 this.ScenarioSetup(scenarioInfo);
-#line 263
+#line 261
 testRunner.When("I \"Move Up\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstructor" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 264
+#line 262
 testRunner.Then("I should be displayed with \"Move Down\" icon in \"Announcements\" channel of \"Today\'" +
                     "s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 265
+#line 263
 testRunner.When("I \"Move Down\" the \"Announcements\" channel on \"Today\'s View\" tab as \"CsSmsInstruct" +
                     "or\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 266
+#line 264
 testRunner.Then("I should be displayed with \"Move Up\" icon in \"Announcements\" channel of \"Today\'s " +
                     "View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -635,16 +630,16 @@ testRunner.Then("I should be displayed with \"Move Up\" icon in \"Announcements\
         public virtual void MoveCalendarChannelInTodaySViewPageOfInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move Calendar channel in Today\'s View page of Instructor", ((string[])(null)));
-#line 271
+#line 269
 this.ScenarioSetup(scenarioInfo);
-#line 272
+#line 270
 testRunner.When("I \"Move Down\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 273
+#line 271
 testRunner.Then("I should be displayed with \"Move Down\" icon in \"Calendar\" channel of \"Today\'s Vie" +
                     "w\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 274
+#line 272
 testRunner.When("I \"Move Up\" the \"Calendar\" channel on \"Today\'s View\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 275
+#line 273
 testRunner.Then("I should be displayed with \"Move Up\" icon in \"Calendar\" channel of \"Today\'s View\"" +
                     " page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -657,19 +652,19 @@ testRunner.Then("I should be displayed with \"Move Up\" icon in \"Calendar\" cha
         public virtual void TodaysViewSubchannelValidationInNotificationChannel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Todays view subchannel validation in notification channel", ((string[])(null)));
-#line 283
+#line 281
 this.ScenarioSetup(scenarioInfo);
-#line 284
+#line 282
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 285
+#line 283
 testRunner.Then("I should see \"About This Course\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 286
+#line 284
 testRunner.Then("I should see \"Welcome Message\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 287
+#line 285
 testRunner.Then("I should see \"Alerts\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 288
+#line 286
 testRunner.Then("I should see \"Action Items\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 289
+#line 287
 testRunner.Then("I should see \"Performance\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -681,15 +676,15 @@ testRunner.Then("I should see \"Performance\" in \"Notifications\" channel", ((s
         public virtual void ValidateAboutThisCourseChannelDisplay()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate About This Course channel display", ((string[])(null)));
-#line 294
+#line 292
 this.ScenarioSetup(scenarioInfo);
-#line 295
+#line 293
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 296
+#line 294
 testRunner.Then("I should see \"About This Course\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 297
+#line 295
 testRunner.When("I expand \"About This Course\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 298
+#line 296
 testRunner.Then("I should be displayed with \"You and your students can view this message. To creat" +
                     "e or edit this message, click Customize.\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -702,15 +697,15 @@ testRunner.Then("I should be displayed with \"You and your students can view thi
         public virtual void ValidateWelcomeMessageChannelDisplay()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Welcome Message channel display", ((string[])(null)));
-#line 303
+#line 301
 this.ScenarioSetup(scenarioInfo);
-#line 304
+#line 302
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 305
+#line 303
 testRunner.Then("I should see \"Welcome Message\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 306
+#line 304
 testRunner.When("I expand \"Welcome Message\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 307
+#line 305
 testRunner.Then("I should be displayed with \"You and your students can view this message. To creat" +
                     "e or edit this message, click Customize.\" welcome message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -723,29 +718,29 @@ testRunner.Then("I should be displayed with \"You and your students can view thi
         public virtual void ValidateAlertCountInAlertChannel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Alert Count in Alert channel", ((string[])(null)));
-#line 312
+#line 310
 this.ScenarioSetup(scenarioInfo);
-#line 313
+#line 311
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 314
+#line 312
 testRunner.Then("I should see \"Alerts\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 315
+#line 313
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 316
+#line 314
 testRunner.Then("I should be displayed with \"RegAlertsCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 317
+#line 315
 testRunner.And("I should be displayed with \"RegNotPassedAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 318
+#line 316
 testRunner.And("I should be displayed with \"RegNewGradesAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 319
+#line 317
 testRunner.And("I should be displayed with \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 320
+#line 318
 testRunner.And("I should be displayed with \"RegPastDueSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 321
+#line 319
 testRunner.And("I should be displayed with \"RegPastDueNotSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 322
+#line 320
 testRunner.And("I should be displayed with \"RegUnreadCommentsCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 323
+#line 321
 testRunner.Then("I should be displayed with \"RegAlertsCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -757,21 +752,21 @@ testRunner.Then("I should be displayed with \"RegAlertsCount\" count", ((string)
         public virtual void ValidateIdleStudentDisplayedAndCountInIdleStudentsChannel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate IdleStudent displayed and count in Idle Students channel", ((string[])(null)));
-#line 328
+#line 326
 this.ScenarioSetup(scenarioInfo);
-#line 329
+#line 327
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 330
+#line 328
 testRunner.Then("I should see \"Alerts\" in \"Notifications\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 331
+#line 329
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 332
+#line 330
 testRunner.Then("I should be displayed with \"RegIdleStudentCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 333
+#line 331
 testRunner.When("I click on \"Idle Students\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 334
+#line 332
 testRunner.Then("I should be displayed with \'Idle\' \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 335
+#line 333
 testRunner.And("I should be displayed with the \"Students listed here have not entered the course\"" +
                     " message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -786,29 +781,29 @@ testRunner.And("I should be displayed with the \"Students listed here have not e
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the student and activity in Past due submitted channel of Notifications " +
                     "channel", ((string[])(null)));
-#line 341
+#line 339
 this.ScenarioSetup(scenarioInfo);
-#line 342
+#line 340
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 343
+#line 341
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 344
+#line 342
 testRunner.Then("I should be displayed with \"RegPastDueSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 345
+#line 343
 testRunner.When("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 346
+#line 344
 testRunner.Then("I should see \'Zero\' scoring \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 347
+#line 345
 testRunner.And("I should see \'100\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 348
+#line 346
 testRunner.And("I should see \"Accept\" \"Decline\" buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 349
+#line 347
 testRunner.When("I click on the expand icon of \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 350
+#line 348
 testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 351
+#line 349
 testRunner.When("I click on the expand icon \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 352
+#line 350
 testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -822,26 +817,26 @@ testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((str
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor accept past due submission from past due submitted channel of activity" +
                     "", ((string[])(null)));
-#line 359
+#line 357
 this.ScenarioSetup(scenarioInfo);
-#line 360
+#line 358
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 361
+#line 359
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 362
+#line 360
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 363
+#line 361
 testRunner.And("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 364
+#line 362
 testRunner.And("I click on the expand icon of \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 365
+#line 363
 testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 366
+#line 364
 testRunner.When("I select the check box of the \"RegPastDueAssignment\" past due activity submitted " +
                     "by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 367
+#line 365
 testRunner.And("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 368
+#line 366
 testRunner.Then("I should see \"CsSmsStudent\" submission \'Accepted\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -855,26 +850,26 @@ testRunner.Then("I should see \"CsSmsStudent\" submission \'Accepted\' success m
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor declines past due submission from past due submitted channel of activi" +
                     "ty", ((string[])(null)));
-#line 375
+#line 373
 this.ScenarioSetup(scenarioInfo);
-#line 376
+#line 374
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 377
+#line 375
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 378
+#line 376
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 379
+#line 377
 testRunner.And("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 380
+#line 378
 testRunner.And("I click on the expand icon \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 381
+#line 379
 testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 382
+#line 380
 testRunner.When("I select the check box of the \"RegPastDueAssignment\" past due activity submitted " +
                     "by \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 383
+#line 381
 testRunner.When("I click on \"Decline\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 384
+#line 382
 testRunner.Then("I should see \'Zero\' \"CsSmsStudent\" submission \'Declined\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -888,19 +883,19 @@ testRunner.Then("I should see \'Zero\' \"CsSmsStudent\" submission \'Declined\' 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the student and activity in Past due not submitted channel of Notificati" +
                     "ons channel", ((string[])(null)));
-#line 390
+#line 388
 this.ScenarioSetup(scenarioInfo);
-#line 391
+#line 389
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 392
+#line 390
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 393
+#line 391
 testRunner.Then("I should be displayed with \"RegPastDueNotSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 394
+#line 392
 testRunner.When("I click on \"Past Due: Not Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 395
+#line 393
 testRunner.Then("I should be displayed with the \"Zero\" score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 396
+#line 394
 testRunner.Then("I should be displayed with the \"Idle\" score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -912,17 +907,17 @@ testRunner.Then("I should be displayed with the \"Idle\" score \"CsSmsStudent\""
         public virtual void ValidateTheNewGradesChannelOfNotificationsChannelInTodaysViewTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the New Grades channel of Notifications channel in Todays view tab", ((string[])(null)));
-#line 402
+#line 400
 this.ScenarioSetup(scenarioInfo);
-#line 403
+#line 401
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 404
+#line 402
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 405
+#line 403
 testRunner.Then("I should be displayed with \"RegNewGradesAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 406
+#line 404
 testRunner.When("I click on \"New Grades\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 407
+#line 405
 testRunner.Then("I should see the \"RegNewGradedActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
