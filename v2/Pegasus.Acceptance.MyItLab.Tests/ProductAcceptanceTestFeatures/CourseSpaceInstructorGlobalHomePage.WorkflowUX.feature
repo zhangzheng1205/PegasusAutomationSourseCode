@@ -82,8 +82,8 @@ Then I should be displayed with "RegMyITLabNewCourseForEnrollment" course as "Cs
 #Purpose:Verify The enrolled course in "My Courses and Testbanks" channel on the home page
 Scenario: Validate open button functionallity for course as CsSmsInstructor
 Given I am on the "Global Home" page
-When I click on Open button of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
-Then I should be displayed with "MyItLabAuthoredCourse" course information for "CsSmsInstructor" user
+When I click on Open button of "MyItLabInstructorCourse" as "CsSmsInstructor" user
+Then I should be displayed with "MyItLabInstructorCourse" course information for "CsSmsInstructor" user
 
 #---------------------------------------------------------------------------------------------------------#
 		#Scripts to validate Instructor,MyTest and Program course creation based on ISBN and Decipline#
@@ -150,7 +150,7 @@ Then I should be displayed with "MyItLabAuthoredCourse" Instructor course as "Cs
 #Products : MyItLab, HSS and World Language.
 #Pre-Condition : Master Course should be specified in the in memory
 #Purpose:Verify the display of newly created program from Create a Course catlog based on course decipline
-Scenario: Verify the display of newly created program from Create a Course catlog based on course decipline
+Scenario: Verify the display of newly created program from Create a Course catlog based on course deciplinecopy
 Then I should see the program "MyITLabOffice2013Program" created as "CsSmsInstructor" user
 
 #Test case ID : 

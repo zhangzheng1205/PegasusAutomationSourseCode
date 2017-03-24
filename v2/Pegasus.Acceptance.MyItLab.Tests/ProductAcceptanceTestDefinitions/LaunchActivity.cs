@@ -341,6 +341,21 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
 }
 
-
+        /// <summary>
+        /// Click on Submit button in the student presentation page
+        /// </summary>
+        /// <param name="activityTypeEnum">This is the Activity type enum.</param>
+        /// <param name="studentType">This is the student type</param>
+        [When(@"I click on submit button of ""(.*)"" activity by ""(.*)"" CsSmsStudent")]
+        public void SubmitSIM5Activity(Activity.ActivityTypeEnum activityTypeEnum, string studentType)
+        {
+            Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
+                           base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activty name from XML
+            Activity activity = Activity.Get(activityTypeEnum);
+            string activityName = activity.Name;
+            new StudentPresentationPage().SubmitSIMActivity
+                (activityName, studentType);
+        }
     }
 }

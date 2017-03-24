@@ -2042,6 +2042,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 this.SelectSim5PresentationWindow(activityName);
+                
                 //Answer incorrectly
                 //this.SIM5QuestionIncorrectAnswer(activityMode, applicationType, activityName);
                 //Click on SIM5 activity Submit button
@@ -8330,6 +8331,34 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
             "SelectCorrectAnswer", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on submit button
+        /// in SIM5 presentation window.
+        /// </summary>
+        /// <param name="activityName">Name of the activity.</param>
+        public void SubmitSIMActivity(string activityName, string studentType)
+        {
+            //Submit SIM5 activity
+            logger.LogMethodEntry("StudentPresentationPage",
+                "SubmitSIMActivityWithoutAnswering",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                this.SelectSimActivityZeroScoreStudentWindowName(activityName, studentType);
+                //Click on SIM5 activity Submit button
+                this.ClickOnSim5ActivitySubmitButton();
+                //Switch to default window
+                base.SwitchToDefaultWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                 "SubmitSIMActivityWithoutAnswering",
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

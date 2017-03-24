@@ -1148,7 +1148,7 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the "RegWordSIMActivity" activity as "CsSmsStudent" with "ZeroScore" score
-And I click on submit button answering incorrectly of "Word" type "Exam" activity "RegWordSIMActivity" by "ZeroScore" student
+And I click on submit button of "RegWordSIMActivity" activity by "ZeroScore" CsSmsStudent
 Then I should be on the "Course Materials" page
 And I should see the status "Not passed" for the activity "RegWordSIMActivity"
 When I navigate to "Grades" tab

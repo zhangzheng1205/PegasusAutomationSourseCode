@@ -2571,24 +2571,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.StoreCourseGUID(courseNameGUID, courseType);
                 //Fill the course name
                 this.FillCourseDetails(courseNameGUID);
-                //Get the course ID and store to inmemory
-                int rowCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
-               HEDGlobalHomePage_GetCourseCount_XPath_Locator);
-
-                for (int i = 1; i <= rowCount; i++)
-                {
-                    string courseTable = base.GetElementTextByXPath(string.Format(
-                        HEDGlobalHomePageResource.HEDGlobalHome_Page_Course_Name_XPath_Locator, i));
-                    if (courseTable.Contains(courseNameGUID))
-                    {
-                        //Get the ID of the course
-                        string courseId = base.GetElementTextByXPath(string.Format(HEDGlobalHomePageResource.
-                        HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator, i));
-                        string courseIDForEnrollment = courseId.Substring(4);
-                        this.StoreCourseIdGUID(courseIDForEnrollment, courseNameGUID, courseType);
-                        break;
-                    }
-                }
+                this.GetCourseID(courseType, courseNameGUID);
             }
             catch (Exception e)
             {
@@ -2597,6 +2580,33 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "CreateICCourseByISBN"
              , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="courseType"></param>
+        /// <param name="courseNameGUID"></param>
+        private void GetCourseID(Course.CourseTypeEnum courseType, string courseNameGUID)
+        {
+            //Get the course ID and store to inmemory
+            int rowCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
+           HEDGlobalHomePage_GetCourseCount_XPath_Locator);
+
+            for (int i = 1; i <= rowCount; i++)
+            {
+                string courseTable = base.GetElementTextByXPath(string.Format(
+                    HEDGlobalHomePageResource.HEDGlobalHome_Page_Course_Name_XPath_Locator, i));
+                if (courseTable.Contains(courseNameGUID))
+                {
+                    //Get the ID of the course
+                    string courseId = base.GetElementTextByXPath(string.Format(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_GetCreatedCourseID_XPath_Locator, i));
+                    string courseIDForEnrollment = courseId.Substring(4);
+                    this.StoreCourseIdGUID(courseIDForEnrollment, courseNameGUID, courseType);
+                    break;
+                }
+            }
         }
 
         /// <summary>
@@ -3072,8 +3082,8 @@ namespace Pegasus.Pages.UI_Pages
                                 base.ClickByJavaScriptExecutor(selectCourse);
                                 //Fill the program details
                                 string programName = courseNameGUID.ToString();
-                                string ProgamCourseName = programName + "Program";
-                                this.FillCourseDetails(ProgamCourseName);
+                                //string ProgamCourseName = programName + "Program";
+                                this.FillCourseDetails(programName);
                                 return;
                             }
                         }
@@ -3318,7 +3328,10 @@ namespace Pegasus.Pages.UI_Pages
                         IWebElement getButton = base.GetWebElementPropertiesById(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator);
                         base.PerformMouseClickAction(getButton);
+                        //Fetch course ID from InMemory
+                        this.GetCourseID(courseType, courseNameGUID);
                         break;
+
                     //Select unmark for deletion cmenu option
                     case "Unmark for Deletion":
                         base.ClickLinkByPartialLinkText(HEDGlobalHomePageResource.
@@ -3500,23 +3513,27 @@ namespace Pegasus.Pages.UI_Pages
             Course coursename = Course.Get(programName);
             //Get the actual course name
             string actualCourseName = coursename.Name.ToString();
-            int getCourseCount = base.GetElementCountByXPath
-                (HEDGlobalHomePageResource.HEDGlobalHomePage_GetCourseCount_XPath_Locator);
-            //Compare the row text and identify the course
-            for (int i = 1; i <= getCourseCount; i++)
+            try
             {
-                //Gett he course details form the course table
-                string courseTitle = base.GetElementTextByXPath(string.Format
-                    (HEDGlobalHomePageResource.HEDGlobalHomePage_GetCourseTitle_CourseListGrid_XPath_Locator, i));
+                int getCourseCount = base.GetElementCountByXPath
+                       (HEDGlobalHomePageResource.HEDGlobalHomePage_GetCourseCount_XPath_Locator);
                 //Compare the row text and identify the course
-                string statusOfCourse = base.GetElementTextByXPath(string.Format
-                    (HEDGlobalHomePageResource.HEDGlobalHomePage_StatusOfCourse_CourseListGrid_XPath_Locator, i));
-                //Compare course and status of the course
-                if (courseTitle.Contains(actualCourseName) == true)
+                for (int i = 1; i <= getCourseCount; i++)
                 {
-                    returnCourseStatus = true;
-                    break;
+                    //Gett he course details form the course table
+                    string courseTitle = base.GetElementTextByXPath(string.Format
+                        (HEDGlobalHomePageResource.HEDGlobalHomePage_GetCourseTitle_CourseListGrid_XPath_Locator, i));
+                    //Compare course and status of the course
+                    if (courseTitle.Equals(actualCourseName))
+                    {
+                        returnCourseStatus = true;
+                        break;
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
             }
             //Return the the status if program exists
             return returnCourseStatus;

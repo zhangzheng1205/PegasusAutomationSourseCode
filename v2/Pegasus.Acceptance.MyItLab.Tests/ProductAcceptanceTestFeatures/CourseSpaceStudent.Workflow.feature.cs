@@ -2497,8 +2497,8 @@ testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario
 testRunner.And("I launch the \"RegWordSIMActivity\" activity as \"CsSmsStudent\" with \"ZeroScore\" sco" +
                     "re", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1151
-testRunner.And("I click on submit button answering incorrectly of \"Word\" type \"Exam\" activity \"Re" +
-                    "gWordSIMActivity\" by \"ZeroScore\" student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on submit button of \"RegWordSIMActivity\" activity by \"ZeroScore\" CsSmsStu" +
+                    "dent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1152
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1153
