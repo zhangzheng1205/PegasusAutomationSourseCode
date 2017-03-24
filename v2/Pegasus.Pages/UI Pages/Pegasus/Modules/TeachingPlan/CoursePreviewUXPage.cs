@@ -2397,15 +2397,22 @@ namespace Pegasus.Pages.UI_Pages
                 //Stor Activity Name
                 this.StoreStudyPlanDetails(studyPlanName, studyPlanGUID);
                 //Fiil study plan name
+                base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanName_ID_Locator));
                 base.FillTextBoxById(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_StudyPlanName_ID_Locator, studyPlanGUID);
                 //Fiil study plan description
+                base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_StudyPlanDesc_ID_Locator));
                 base.FillTextBoxById(CoursePreviewUXPageResource.
                     CoursePreviewUXPage_StudyPlanDesc_ID_Locator, studyPlanGUID);
                 //Save study plan details page
-
-                base.ClickButtonById(CoursePreviewUXPageResource.
+                base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                CoursePreviewUXPage_StudyPlanDetails_ID_Locator));
+                IWebElement getButton = base.GetWebElementPropertiesById(
+                    CoursePreviewUXPageResource.
                     CoursePreviewUXPage_StudyPlanDetails_ID_Locator);
+                base.ClickByJavaScriptExecutor(getButton);
             }
             catch (Exception e)
             {
@@ -2531,6 +2538,7 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
+
         /// <summary>
         /// Display of created post test
         /// </summary>
@@ -2542,11 +2550,18 @@ namespace Pegasus.Pages.UI_Pages
             string preTestName = string.Empty;
             try
             {
-                //Get the pre test title
+                // Wait untill window loads
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+              CoursePreviewUXPage_AddStudyPlanPage_Pagename);
                 base.SelectWindow(CoursePreviewUXPageResource.
               CoursePreviewUXPage_AddStudyPlanPage_Pagename);
-                preTestName = base.GetElementInnerTextById
-                    ("_ctl0__ctl0_phBody_PageContent_DTName");
+                // Get post test title
+                bool sasa = base.IsElementPresent(By.XPath("//span[@class='lib1n simAfterPrePostTest_Txt']"), 10);
+                base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_SPPretestName_Xpath_Locator));
+                preTestName = base.GetElementInnerTextByXPath
+                    (CoursePreviewUXPageResource.
+                    CoursePreviewUXPage_SPPretestName_Xpath_Locator);
             }
             catch (Exception e)
             {
@@ -2557,7 +2572,6 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             return preTestName;
         }
-
 
         /// <summary>
         /// Display of created post test

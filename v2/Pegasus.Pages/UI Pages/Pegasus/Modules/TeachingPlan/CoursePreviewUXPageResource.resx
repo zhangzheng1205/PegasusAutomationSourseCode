@@ -120,6 +120,15 @@
   <data name="CouresPreviewUX_Page_AssignmentsToDo_Window_Title" xml:space="preserve">
     <value>Assignments - To Do</value>
   </data>
+  <data name="CouresPreviewUX_Page_DivTodoListNodes_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TodoList']/div[{0}]</value>
+  </data>
+  <data name="CouresPreviewUX_Page_TodoListNodes_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TodoList']/div[{0}]/descendant::td[@class='coloumn_4']/div/a</value>
+  </data>
+  <data name="CouresPreviewUX_Page_TodoList_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TodoList']/div</value>
+  </data>
   <data name="CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator" xml:space="preserve">
     <value>//div[@id='TodoList']/div/div</value>
   </data>
@@ -141,141 +150,6 @@
   <data name="CouresPreviewUX_Page_ToDo_Window_Title" xml:space="preserve">
     <value>ToDo</value>
   </data>
-  <data name="CoursePreviewUX_Page_Activity_WebElement_Property_Name" xml:space="preserve">
-    <value>id</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Assets_Count_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Assets_Name_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a</value>
-  </data>
-  <data name="CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator" xml:space="preserve">
-    <value>ifrmCoursePreview</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Etext_Link" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Loop_Initialization_Value" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="CoursePreviewUX_Page_PastDueDateIcon_Class_Id_Locator" xml:space="preserve">
-    <value>CC_Past_due</value>
-  </data>
-  <data name="CoursePreviewUX_Page_PastDueDateIcon_WebelementProperty_Id_PartialValue" xml:space="preserve">
-    <value>span_</value>
-  </data>
-  <data name="CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator" xml:space="preserve">
-    <value>//span[@id='{0}']/img</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Sleep_Time" xml:space="preserve">
-    <value>5000</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Window_Title_Name_HED" xml:space="preserve">
-    <value>Course Materials</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Activity_Essay_Text_to_Fill" xml:space="preserve">
-    <value>essay</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Activity_Window_Title_Name_HED" xml:space="preserve">
-    <value>SAM Activity</value>
-  </data>
-  <data name="CoursePreviewUX_Page_IFrame_Id_Locator" xml:space="preserve">
-    <value>ifrmCoursePreview</value>
-  </data>
-  <data name="CoursePreviewUX_Page_ToDoList_Div_Id_Locator" xml:space="preserve">
-    <value>TodoList</value>
-  </data>
-  <data name="CouresPreviewUX_Page_DivTodoListNodes_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='TodoList']/div[{0}]</value>
-  </data>
-  <data name="CouresPreviewUX_Page_TodoListNodes_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='TodoList']/div[{0}]/descendant::td[@class='coloumn_4']/div/a</value>
-  </data>
-  <data name="CouresPreviewUX_Page_TodoList_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='TodoList']/div</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Coloumn2_CssSelector_Locator" xml:space="preserve">
-    <value>.coloumn_2</value>
-  </data>
-  <data name="CoursePreviewUX_Page_ImDone_Button_Class_Locator" xml:space="preserve">
-    <value>.btn_Done_m</value>
-  </data>
-  <data name="CoursePreviewUX_Page_StartButton_CssSelector_Locator" xml:space="preserve">
-    <value>a[id='btnStart']</value>
-  </data>
-  <data name="CoursePreviewUX_Page_TryAgain_Button_Class_Locator" xml:space="preserve">
-    <value>.btn_TryAgain</value>
-  </data>
-  <data name="CoursePreviewUX_Page_ScoreValue_CssSelector_Locator" xml:space="preserve">
-    <value>.txtMinorcss</value>
-  </data>
-  <data name="CoursePreviewUXPage_ElementLoad_Time_Value" xml:space="preserve">
-    <value>3000</value>
-  </data>
-  <data name="CoursePreviewUXPage_Searched_Table_Next_Id_Locator" xml:space="preserve">
-    <value>rptCoursePreview$next</value>
-  </data>
-  <data name="CoursePreviewUX_Page_ActivityName_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Activity_Counter" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Activity_Count_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
-  </data>
-  <data name="CoursePreviewUX_Page_CoursePreview_Id_Locator" xml:space="preserve">
-    <value>tblCoursePreview</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Customized_TimeOut" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Search_Time_Value" xml:space="preserve">
-    <value>7000</value>
-  </data>
-  <data name="CoursePreviewUX_Page_Badge_Message_Id_Locator" xml:space="preserve">
-    <value>badgeImage</value>
-  </data>
-  <data name="CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator" xml:space="preserve">
-    <value>ifrmCoursePreview</value>
-  </data>
-  <data name="CoursePreviewUXPage_CreateNewFolder_Button_Id_Locator" xml:space="preserve">
-    <value>_ctl0_InnerPageContent_BtnAddFolder</value>
-  </data>
-  <data name="CoursePreviewUXPage_GetActivityName_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]</value>
-  </data>
-  <data name="CoursePreviewUXPage_GetActivityCount_XPath_Locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
-  </data>
-  <data name="CoursePreviewUXPage_Pagination_Count_XPath_Locator" xml:space="preserve">
-    <value>//td[@class='PD_PRdivpagingCenter']/span[4]</value>
-  </data>
-  <data name="CoursePreviewUXPage_MyCourse_NextButton_Class_Locator" xml:space="preserve">
-    <value>PD_icn_pageNext</value>
-  </data>
-  <data name="CoursePreviewUXPage_Pagination_Count_MyCourse_XPath_Locator" xml:space="preserve">
-    <value>//td[@class='PD_PRdivpagingCenter']/span[3]</value>
-  </data>
-  <data name="CoursePreviewUXPage_Page_Activity_ActivityName_Xpath_locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a</value>
-  </data>
-  <data name="CoursePreviewUXPage_Page_Activity_ActivityStatus_Xpath_locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[8]/span</value>
-  </data>
-  <data name="CoursePreviewUXPage_Page_Activity_GetGrade_Xpath_locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]</value>
-  </data>
-  <data name="CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator" xml:space="preserve">
-    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
-  </data>
-  <data name="CoursePreviewUXPage_CourseMaterial_CreateMaterials_Button_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='btnnextgen btnnextgen-primary MarginLeft6']</value>
-  </data>
-  <data name="CoursePreviewUX_Page_CourseMaterials_ReturnToCourseMaterials_XPath_Locator" xml:space="preserve">
-    <value>//button[@class='btnnextgen btnnextgen-default']</value>
-  </data>
   <data name="CoursePreviewUXPage_Action_Successful_Classname_Locator" xml:space="preserve">
     <value>messagesucessfont</value>
   </data>
@@ -287,6 +161,9 @@
   </data>
   <data name="CoursePreviewUXPage_ActualActivityStatus" xml:space="preserve">
     <value>CV_grayedTxt</value>
+  </data>
+  <data name="CoursePreviewUXPage_AddStudyPlanPage_Pagename" xml:space="preserve">
+    <value>Add myitlab Study Plan</value>
   </data>
   <data name="CoursePreviewUXPage_AssignActivity_button_ID_Locator" xml:space="preserve">
     <value>imgAssign</value>
@@ -303,8 +180,14 @@
   <data name="CoursePreviewUXPage_CourseMaterial_ClickNoteOption_XPath_Locator" xml:space="preserve">
     <value>//div[@class='greyTxt CMPopupNote']</value>
   </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_CreateMaterials_Button_XPath_Locator" xml:space="preserve">
+    <value>//div[@class='btnnextgen btnnextgen-primary MarginLeft6']</value>
+  </data>
   <data name="CoursePreviewUXPage_CourseMaterial_EditNoteOption_XPath_Locator" xml:space="preserve">
     <value>//button[@class='btnnextgen btnnextgen-primary PageAddCss']</value>
+  </data>
+  <data name="CoursePreviewUXPage_CourseMaterial_iframe_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
   </data>
   <data name="CoursePreviewUXPage_CourseMaterial_PasteAtBottom_XPath_Locator" xml:space="preserve">
     <value>//table[@id ='tbldivMenu']/tbody/tr[4]/td</value>
@@ -318,6 +201,18 @@
   <data name="CoursePreviewUXPage_CourseMaterial_SelectPasteButton_Id_Locator" xml:space="preserve">
     <value>tbldivMenu</value>
   </data>
+  <data name="CoursePreviewUXPage_CreateNewFolder_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_BtnAddFolder</value>
+  </data>
+  <data name="CoursePreviewUXPage_ElementLoad_Time_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="CoursePreviewUXPage_GetActivityCount_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="CoursePreviewUXPage_GetActivityName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]</value>
+  </data>
   <data name="CoursePreviewUXPage_GetActivityStatus" xml:space="preserve">
     <value>CV_composenew1</value>
   </data>
@@ -327,8 +222,38 @@
   <data name="CoursePreviewUXPage_GetShowStatus_XPath_Locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[3]/span</value>
   </data>
+  <data name="CoursePreviewUXPage_MyCourse_NextButton_Class_Locator" xml:space="preserve">
+    <value>PD_icn_pageNext</value>
+  </data>
   <data name="CoursePreviewUXPage_OpenActivity_CMenu_XPath_Locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_ActivityName_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_ActivityStatus_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[8]/span</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_GetGrade_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]</value>
+  </data>
+  <data name="CoursePreviewUXPage_Page_Activity_TotalCount_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="CoursePreviewUXPage_Pagination_Count_MyCourse_XPath_Locator" xml:space="preserve">
+    <value>//td[@class='PD_PRdivpagingCenter']/span[3]</value>
+  </data>
+  <data name="CoursePreviewUXPage_Pagination_Count_XPath_Locator" xml:space="preserve">
+    <value>//td[@class='PD_PRdivpagingCenter']/span[4]</value>
+  </data>
+  <data name="CoursePreviewUXPage_PTName_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_ETName</value>
+  </data>
+  <data name="CoursePreviewUXPage_SaveStudyPlan_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_lbtnSave</value>
+  </data>
+  <data name="CoursePreviewUXPage_Searched_Table_Next_Id_Locator" xml:space="preserve">
+    <value>rptCoursePreview$next</value>
   </data>
   <data name="CoursePreviewUXPage_SelectActivity_Checkbox_XPath_Locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[1]</value>
@@ -339,11 +264,11 @@
   <data name="CoursePreviewUXPage_ShowLink_XPath_Locator" xml:space="preserve">
     <value>//span[@class='opthide PaddingLeft5']</value>
   </data>
-  <data name="CoursePreviewUXPage_AddStudyPlanPage_Pagename" xml:space="preserve">
-    <value>Add myitlab Study Plan</value>
+  <data name="CoursePreviewUXPage_SPPretestName_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_DTName</value>
   </data>
-  <data name="CoursePreviewUXPage_SaveStudyPlan_ID_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent_lbtnSave</value>
+  <data name="CoursePreviewUXPage_SPPretestName_Xpath_Locator" xml:space="preserve">
+    <value>//span[@class='lib1n simAfterPrePostTest_Txt']</value>
   </data>
   <data name="CoursePreviewUXPage_StudyPlanDesc_ID_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent_txtModuleDesc</value>
@@ -357,6 +282,9 @@
   <data name="CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator" xml:space="preserve">
     <value>Create Post-test</value>
   </data>
+  <data name="CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator" xml:space="preserve">
+    <value>Create Pre-test:</value>
+  </data>
   <data name="CoursePreviewUXPage_StudyPlanSavePostTest_ID_Locator" xml:space="preserve">
     <value>cmdTabTopicsFinish</value>
   </data>
@@ -366,13 +294,88 @@
   <data name="CoursePreviewUXPage_StudyPlanTabName_ID_Locator" xml:space="preserve">
     <value>cmdTabSP</value>
   </data>
-  <data name="CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator" xml:space="preserve">
-    <value>Create Pre-test:</value>
+  <data name="CoursePreviewUX_Page_ActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]</value>
   </data>
-  <data name="CoursePreviewUXPage_SPPretestName_ID_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent_DTName</value>
+  <data name="CoursePreviewUX_Page_Activity_Counter" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="CoursePreviewUXPage_PTName_ID_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent_ETName</value>
+  <data name="CoursePreviewUX_Page_Activity_Count_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Activity_Essay_Text_to_Fill" xml:space="preserve">
+    <value>essay</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Activity_WebElement_Property_Name" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Activity_Window_Title_Name_HED" xml:space="preserve">
+    <value>SAM Activity</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Assets_Count_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Assets_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Badge_Message_Id_Locator" xml:space="preserve">
+    <value>badgeImage</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Coloumn2_CssSelector_Locator" xml:space="preserve">
+    <value>.coloumn_2</value>
+  </data>
+  <data name="CoursePreviewUX_Page_CourseMaterials_ReturnToCourseMaterials_XPath_Locator" xml:space="preserve">
+    <value>//button[@class='btnnextgen btnnextgen-default']</value>
+  </data>
+  <data name="CoursePreviewUX_Page_CoursePreview_Id_Locator" xml:space="preserve">
+    <value>tblCoursePreview</value>
+  </data>
+  <data name="CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Customized_TimeOut" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Etext_Link" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook</value>
+  </data>
+  <data name="CoursePreviewUX_Page_IFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="CoursePreviewUX_Page_ImDone_Button_Class_Locator" xml:space="preserve">
+    <value>.btn_Done_m</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Loop_Initialization_Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CoursePreviewUX_Page_PastDueDateIcon_Class_Id_Locator" xml:space="preserve">
+    <value>CC_Past_due</value>
+  </data>
+  <data name="CoursePreviewUX_Page_PastDueDateIcon_WebelementProperty_Id_PartialValue" xml:space="preserve">
+    <value>span_</value>
+  </data>
+  <data name="CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='{0}']/img</value>
+  </data>
+  <data name="CoursePreviewUX_Page_ScoreValue_CssSelector_Locator" xml:space="preserve">
+    <value>.txtMinorcss</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Search_Time_Value" xml:space="preserve">
+    <value>7000</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Sleep_Time" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="CoursePreviewUX_Page_StartButton_CssSelector_Locator" xml:space="preserve">
+    <value>a[id='btnStart']</value>
+  </data>
+  <data name="CoursePreviewUX_Page_ToDoList_Div_Id_Locator" xml:space="preserve">
+    <value>TodoList</value>
+  </data>
+  <data name="CoursePreviewUX_Page_TryAgain_Button_Class_Locator" xml:space="preserve">
+    <value>.btn_TryAgain</value>
+  </data>
+  <data name="CoursePreviewUX_Page_Window_Title_Name_HED" xml:space="preserve">
+    <value>Course Materials</value>
   </data>
 </root>

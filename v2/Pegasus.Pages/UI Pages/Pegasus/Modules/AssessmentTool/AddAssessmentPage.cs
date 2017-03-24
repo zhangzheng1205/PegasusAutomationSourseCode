@@ -1026,7 +1026,6 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Activity Window
             base.SwitchToDefaultWindow();
             base.WaitUntilWindowLoads("Create Pre-test:");
-            bool dsd = base.IsElementPresent(By.Id("txtAssname"), 5);
             //Fill Asset name
             this.FillAssetName(activityName);
             //Click On Save And Continue Button

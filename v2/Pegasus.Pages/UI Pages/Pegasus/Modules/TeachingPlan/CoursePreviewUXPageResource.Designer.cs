@@ -61,15 +61,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl0_PopupPageContent_imgBtnAdd_Close.
-        /// </summary>
-        internal static string AddAsessment_Page_SAveCopyAddandClose_ID_Locator {
-            get {
-                return ResourceManager.GetString("AddAsessment_Page_SAveCopyAddandClose_ID_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Assignments - To Do.
         /// </summary>
         internal static string CouresPreviewUX_Page_AssignmentsToDo_Window_Title {
@@ -709,6 +700,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent_ETName.
+        /// </summary>
+        internal static string CoursePreviewUXPage_PTName_ID_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_PTName_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent_lbtnSave.
         /// </summary>
         internal static string CoursePreviewUXPage_SaveStudyPlan_ID_Locator {
@@ -754,6 +754,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent_DTName.
+        /// </summary>
+        internal static string CoursePreviewUXPage_SPPretestName_ID_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_SPPretestName_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@class=&apos;lib1n simAfterPrePostTest_Txt&apos;].
+        /// </summary>
+        internal static string CoursePreviewUXPage_SPPretestName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_SPPretestName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent_txtModuleDesc.
         /// </summary>
         internal static string CoursePreviewUXPage_StudyPlanDesc_ID_Locator {
@@ -781,11 +799,20 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create Pre-test:.
+        ///   Looks up a localized string similar to Create Post-test.
         /// </summary>
         internal static string CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewUXPage_StudyPlanPostTestWin_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Pre-test:.
+        /// </summary>
+        internal static string CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator", resourceCulture);
             }
         }
         
@@ -815,18 +842,5 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
                 return ResourceManager.GetString("CoursePreviewUXPage_StudyPlanTabName_ID_Locator", resourceCulture);
             }
         }
-
-        public static string CoursePreviewUXPage_StudyPlanPreTestWin_ID_Locator { get; set; }
-
-        public static string CoursePreviewUXPage_PreTestTitle_ID_Locator { get; set; }
-
-        public static string CoursePreviewUXPage_PostTestTitle_ID_Locator { get; set; }
-
-        public static string CoursePreviewUXPage_AddStudyPlanMIL_ID_Locator { get; set; }
-
-
-        public static string CoursePreviewUXPage_SPPosttestName_ID_Locator { get; set; }
-
-        public static string CoursePreviewUXPage_SPPretestName_ID_Locator { get; set; }
     }
 }

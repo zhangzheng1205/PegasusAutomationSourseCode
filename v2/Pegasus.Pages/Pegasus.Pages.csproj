@@ -3106,7 +3106,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewUXPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CoursePreviewUXPageResource1.Designer.cs</LastGenOutput>
+      <LastGenOutput>CoursePreviewUXPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\StudTodoDonePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

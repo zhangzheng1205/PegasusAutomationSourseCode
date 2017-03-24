@@ -763,7 +763,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="courseName">This is the course name.</param>
         /// <param name="courseDivCounter">This is the div count.</param>
-        private void ClickCourseNameOnHomePage
+        private void ClickCourseNameOnHomePage1
             (string courseName, int courseDivCounter)
         {
             //Get HTML Element Property 
@@ -771,18 +771,23 @@ namespace Pegasus.Pages.UI_Pages
             //HEDGlobalHome_Page_Course_Table_Row_XPath_Locator
             IWebElement courseTable = base.GetWebElementPropertiesByXPath(
                 string.Format("//div[@class='channel-content']/div/div/div[{0}]", courseDivCounter));
-            if (!courseTable.Text.Contains(courseName))
+            if (!courseTable.Text.Equals(courseName))
             {
                 //Get The Course From Each Row
                 while (!courseTable.Text.Equals(courseName))
                 {
                     courseDivCounter = courseDivCounter + 1;
+
+                    string getCourseNameFromApplication = base.GetInnerTextAttributeValueByXPath(
+                    string.Format(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Course_Name_XPath_Locator, courseDivCounter));
+
                     //Get Course Row Text
                     string getCourseRowText = base.GetElementTextByXPath(string.Format(
                       HEDGlobalHomePageResource.
                       HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
                     //If Course Present on the User Home Page
-                    if (getCourseRowText.Contains(courseName))
+                    if (getCourseNameFromApplication.Equals(courseName))
                     {
                         //Wait For Element
                         base.WaitForElement(By.PartialLinkText(courseName));
@@ -806,6 +811,54 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement getCourseName = base.GetWebElementPropertiesByPartialLinkText(courseName);
                 base.ClickByJavaScriptExecutor(getCourseName);
             }
+        }
+
+        /// <summary>
+        /// This methord is to refresh browser till Instructor course copy
+        /// </summary>
+        /// <param name="courseName">This is course name choosen to create.</param>
+        /// <param name="courseCopyStatusMessageMyTest">This is course copy status message.</param>
+        private void ClickCourseNameOnHomePage(string courseName, int courseDivCounter)
+        {
+            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickCourseNameOnHomePage"
+            , base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
+                                           HEDGlobalHome_Page_Window_Title_Name);
+                base.SelectWindow(HEDGlobalHomePageResource.
+                                   HEDGlobalHome_Page_Window_Title_Name);
+                // Get course count
+                int getCourseCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
+                    HEDGlobalHome_GetCourse_Count_Xparth_Locator);
+                for (int i = courseDivCounter; i <= getCourseCount; i++)
+                {
+
+                    string getCourseName = base.GetInnerTextAttributeValueByXPath(
+                    string.Format(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Course_Name_XPath_Locator, i));
+                    //Get Course Row Text
+                    string getCourseRowText = base.GetElementTextByXPath(string.Format(
+                    HEDGlobalHomePageResource.HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, i));
+                    if (getCourseName.Equals(courseName))
+                    {
+                        // Enter inside course
+                        IWebElement getCourse = base.GetWebElementPropertiesByXPath(string.Format(
+                            HEDGlobalHomePageResource.
+                        HEDGlobalHome_Page_Course_Name_XPath_Locator, i));
+                        base.ClickByJavaScriptExecutor(getCourse);
+                        break;
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HEDGlobalHomePage", "ClickCourseNameOnHomePage"
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2285,65 +2338,49 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Select the course on home page.
+        /// This methord is to refresh browser till Instructor course copy
         /// </summary>
-        /// <param name="courseName">This is the course name.</param>
-        /// <param name="courseDivCounter">This is the div count.</param>
-        private void ClickOpenButtonOnHomePage
-            (string courseName, int courseDivCounter)
+        /// <param name="courseName">This is course name choosen to create.</param>
+        /// <param name="courseCopyStatusMessageMyTest">This is course copy status message.</param>
+        private void ClickOpenButtonOnHomePage(string courseName, int courseDivCounter)
         {
-            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnCourseLink"
-                , base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickCourseNameOnHomePage"
+            , base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Get HTML Element Property 
-                IWebElement courseTable = base.GetWebElementPropertiesByXPath(
+                //Select Window
+                base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
+                                           HEDGlobalHome_Page_Window_Title_Name);
+                base.SelectWindow(HEDGlobalHomePageResource.
+                                   HEDGlobalHome_Page_Window_Title_Name);
+                // Get course count
+                int getCourseCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
+                    HEDGlobalHome_GetCourse_Count_Xparth_Locator);
+                for (int i = courseDivCounter; i <= getCourseCount; i++)
+                {
+                    // Get Course name
+                    string getCourseName = base.GetInnerTextAttributeValueByXPath(
                     string.Format(HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
-                if (!courseTable.Text.Contains(courseName))
-                {
-                    //Get The Course From Each Row
-                    while (!courseTable.Text.Contains(courseName))
+                    HEDGlobalHome_Page_Course_Name_XPath_Locator, i));
+
+                    if (getCourseName.Equals(courseName))
                     {
-                        courseDivCounter = courseDivCounter + 1;
-                        //Get Course Row Text
-                        string getCourseRowText = base.GetElementTextByXPath(string.Format(
-                          HEDGlobalHomePageResource.
-                          HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCounter));
-                        //If Course Present on the User Home Page
-                        if (getCourseRowText.Contains(courseName))
-                        {
-                            //Wait For Element
-                            base.WaitForElement(By.PartialLinkText(courseName));
-                            //Clicks on the course
-                            base.FillEmptyTextByPartialLinkText(courseName);
-                            //Get the course name from the my testbank grid and fill the row index
-                            IWebElement getCourseName = base.GetWebElementPropertiesByXPath(string.Format(
+                        // Enter inside course
+                        IWebElement getCourse = base.GetWebElementPropertiesByXPath(string.Format(
                             HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_HomePage_OpenButton_XPath_Locator, courseDivCounter));
-                            //Click on Link
-                            base.PerformMouseClickAction(getCourseName);
-                            break;
-                        }
+                            HEDGlobalHomePage_HomePage_OpenButton_XPath_Locator, i));
+                        base.ClickByJavaScriptExecutor(getCourse);
+                        break;
                     }
-                }
-                else
-                {
-                    //Get the course name from the my testbank grid and fill the row index
-                    IWebElement getCourseName = base.GetWebElementPropertiesByXPath(string.Format(
-                      HEDGlobalHomePageResource.
-                      HEDGlobalHomePage_HomePage_EnrollInACourse_GetCourseRow_OpenButton_XPath_Locator, courseDivCounter));
-                    //Click on Link
-                    base.PerformMouseClickAction(getCourseName);
+
                 }
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("HEDGlobalHomePage", "OpenTheCourse"
-             , base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("HEDGlobalHomePage", "ClickCourseNameOnHomePage"
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

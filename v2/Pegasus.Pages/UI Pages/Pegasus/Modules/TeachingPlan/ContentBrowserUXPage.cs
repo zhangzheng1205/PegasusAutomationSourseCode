@@ -608,7 +608,7 @@ namespace Pegasus.Pages.UI_Pages
                     string GetQuestionTitle = base.GetElementInnerTextByXPath(string.Format(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_GetQuestionTitle_Iframe_Id_Locator, i));
                     //Compare the question title
-                    if (GetQuestionTitle.Contains(ContentBrowserUXPageResource.
+                    if (GetQuestionTitle.Equals(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_2nsAccessQuestion_Iframe_Id_Locator))
                     {
                         //Get Property of Add and Close button

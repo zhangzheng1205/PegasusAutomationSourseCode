@@ -486,4 +486,7 @@
   <data name="HEDGlobalHome_Page_Notification_Channel_ID" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
+  <data name="HEDGlobalHome_GetCourse_Count_Xparth_Locator" xml:space="preserve">
+    <value>//div[@id='tblCourse']/div/div</value>
+  </data>
 </root>
