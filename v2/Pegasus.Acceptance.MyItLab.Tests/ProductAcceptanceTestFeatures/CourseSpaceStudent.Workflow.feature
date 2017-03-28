@@ -1161,10 +1161,6 @@ Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity0
 #Products : MyItLab.
 #Pre condition : 
 Scenario: Student validating view submission for SIM5 Word activity
-When I navigate to "Grades" tab
-Then I should be on the "Gradebook" page
-When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
-Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity0Score" grade
 When I click on "View Submissions" cmenu option of "RegWordSIMActivity" as "CsSmsStudent" user
 Then I should be on the "View Submission" page
 And I should see "RegWordSIMActivity" activity name 
@@ -1234,15 +1230,14 @@ Then I should be on the "Course Materials" page
 When I enter into "RegFolderAsset" folder in "Course Materials" frame
 And I launch "SIM5StudyPlan"
 And I click on the "Start Pre-Test" button of "SIM5StudyPlan" study plan
-And I click on submit button answering incorrectly of "Word" type "Exam" activity "Sim5PreTest" by CsSmsStudent
-Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+And I click on submit button of "Sim5PreTest" activity by "ZeroScore" CsSmsStudent
+#Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
 
 # Purpose: SIM5 training submission and study plan sataus after training
 # TestCase ID: 
 #MyItLabInstructorCourse
 Scenario: Submit SIM5 study Plan training as SMS Student 100 score
-When I launch "SIM5StudyPlan"
-And I click on the "Start Training" button of "SIM5StudyPlan" study plan
+When I click on the "Start Training" button of "SIM5StudyPlan" study plan
 And I submit "Word" type "Exam" activity "SIMTrainingActivity" by "CsSmsStudent" student
 Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
 

@@ -8299,9 +8299,11 @@ namespace Pegasus.Pages.UI_Pages
                             //Wait for button to load
                             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                             StudentPresentation_Page_StartTraining_XPath_Locator));
+                            bool dfa = base.IsElementPresent(By.XPath("//div[@class='btnnextgen btnnextgen-default']"),10);
                             //Launch Pre Test
-                            base.ClickButtonByXPath(StudentPresentationPageResource.
-                                StudentPresentation_Page_StartTraining_XPath_Locator);
+                            IWebElement clickStartTraining = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                                StudentPresentation_Page_StartTraining_XPath_Locator);                           
+                            base.PerformMouseClickAction(clickStartTraining);                        
                             Thread.Sleep(5000);
                             this.IsPageLoading();
                             base.SwitchToLastOpenedWindow();

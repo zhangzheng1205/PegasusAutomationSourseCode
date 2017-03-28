@@ -6454,7 +6454,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCourseHeaderDropdown",
                      base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(base.GetPageTitle);
+            //base.WaitUntilWindowLoads(base.GetPageTitle);
             base.SwitchToDefaultWindow();
             //Wait for the Dropdown icon
             base.WaitForElement(By.XPath(TodaysViewUXPageResource.

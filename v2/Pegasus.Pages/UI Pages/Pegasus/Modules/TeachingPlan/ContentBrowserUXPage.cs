@@ -597,36 +597,25 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to Iframe
                 base.SwitchToIFrameById(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_CourseMaterialsLibrary_Iframe_Id_Locator);
-                //Get the total question count
-
-                int QuestionCount = base.GetElementCountByXPath(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_QuestionCount_XPath_Locator);
-                //Select the desired SIM5 question
-                for (int i = 1; i <= QuestionCount; i++)
-                {
-                    //Get the question text from the searched results
-                    string GetQuestionTitle = base.GetElementInnerTextByXPath(string.Format(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_GetQuestionTitle_Iframe_Id_Locator, i));
-                    //Compare the question title
-                    if (GetQuestionTitle.Equals(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_2nsAccessQuestion_Iframe_Id_Locator))
-                    {
-                        //Get Property of Add and Close button
-                        IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesByXPath(string.Format(ContentBrowserUXPageResource.
-                        ContentBrowserUX_Page_GetAddAndCloseButton_XPath_Locator, i));
-                        //Click on Add and Close button
-                        base.ClickByJavaScriptExecutor(GetAddAndCloseButton);
-                        break;
-                    }
-
-                }
+                //Search question
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_SearchTextBox_ID_Locator));
+                base.FillTextBoxById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_SearchTextBox_ID_Locator, ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_2nsAccessQuestion_Iframe_Id_Locator);
+                base.PressEnterKeyById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_SearchTextBox_ID_Locator);
+                //Select the searched question
+                base.SelectCheckBoxById(ContentBrowserUXPageResource.
+                    ContentBrowser_Page_AccessQuestion2_CheckBox_ID_Locator);
                 //Switch to last open Window
                 base.SwitchToLastOpenedWindow();
                 //Wait for Add and Close button
                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AddAndClose_Button_Id_Locator));
                 //Get Property of Add and Close button
-                IWebElement GetQuestionAddAndCloseButton = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                IWebElement GetQuestionAddAndCloseButton = base.GetWebElementPropertiesById(
+                    ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_AddAndClose_Button_Id_Locator);
                 //Click on Add and Close button
                 base.ClickByJavaScriptExecutor(GetQuestionAddAndCloseButton);
