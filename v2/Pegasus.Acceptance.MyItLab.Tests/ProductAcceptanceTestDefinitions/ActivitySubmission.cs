@@ -81,6 +81,33 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Verify Sim Activity Submission In CourseMaterials.
+        /// </summary>
+        /// <param name="activityStatus">This is Activity Status.</param>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode Enum.</param>
+        [Then(@"I should see the ""(.*)"" status of the ""(.*)"" activity under ""(.*)"" tab")]
+        public void VerifySimActivitySubmissionInToDo(string activityStatus,
+            Activity.ActivityTypeEnum activityTypeEnum,
+            string tabName)
+        {
+            //Verify Sim Activity Submission In CourseMaterials
+            Logger.LogMethodEntry("ActivitySubmission",
+                "VerifySimActivitySubmissionInCourseMaterials",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            // Assert Activity Submission
+            Logger.LogAssertion("VerifyActivitySubmission", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(activityStatus,
+                    new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInToDo(activity.Name, activityStatus, tabName)));
+            Logger.LogMethodExit("ActivitySubmission",
+                "VerifySimActivitySubmissionInCourseMaterials",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+        /// <summary>
         /// Verify Sim Activity Submission In Calendar.
         /// </summary>
         /// <param name="activityStatus">This is Activity Status.</param>

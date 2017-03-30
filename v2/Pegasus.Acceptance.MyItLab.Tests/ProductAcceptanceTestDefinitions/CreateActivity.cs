@@ -1277,6 +1277,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Launch the asset by click on asset name under To Do.
+        /// </summary>
+        /// <param name="activityType">This ia activity type enum.</param>
+        [When(@"I launch ""(.*)"" asset")]
+        public void WhenILaunchAsset(Activity.ActivityTypeEnum activityType)
+        {
+            Logger.LogMethodEntry("CreateActivity",
+                "ValidateDisplayOfActivityStatus",
+      base.IsTakeScreenShotDuringEntryExit);
+            Activity activity = Activity.Get(activityType);
+            string activityName = activity.Name.ToString();
+            //Launch the asset by click on asset title
+            new CoursePreviewUXPage().
+                StudentLaunchAssetInToDo(activityName);
+            Logger.LogMethodExit("CreateActivity",
+                "ValidateDisplayOfActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Save Study Plan details tab
         /// </summary>
         [When(@"I save the ""(.*)"" details tab")]

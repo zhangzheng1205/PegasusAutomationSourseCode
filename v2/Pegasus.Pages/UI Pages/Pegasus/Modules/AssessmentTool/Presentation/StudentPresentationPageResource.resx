@@ -1620,4 +1620,10 @@
   <data name="StudentPresentation_Page_StartTraining_XPath_Locator" xml:space="preserve">
     <value>//div[@id = 'DTContainer']/div[2]/div/div/div[8]/div</value>
   </data>
+  <data name="StudentPresentation_Page_GetAssestName_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TodoList']/div/div[{0}]/div/div[2]/div[1]/table/tbody/tr/td[2]/div[1]</value>
+  </data>
+  <data name="StudentPresentation_Page_GetAssestStatus_XPath_Locator" xml:space="preserve">
+    <value>//div[@id = 'TodoList']/div/div[{0}]/div/div[2]/div[2]/table/tbody/tr/td[2]/div/div[2]</value>
+  </data>
 </root>

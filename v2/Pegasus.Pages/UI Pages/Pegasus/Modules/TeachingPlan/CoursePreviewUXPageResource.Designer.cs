@@ -628,11 +628,47 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assignments - To Do.
+        /// </summary>
+        internal static string CoursePreviewUXPage_MyCourse_AssignmentsToDo_TabName_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_MyCourse_AssignmentsToDo_TabName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/div[1]/table/tbody/tr/td[2]/div[1].
+        /// </summary>
+        internal static string CoursePreviewUXPage_MyCourse_GetActivityName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_MyCourse_GetActivityName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PD_icn_pageNext.
         /// </summary>
         internal static string CoursePreviewUXPage_MyCourse_NextButton_Class_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewUXPage_MyCourse_NextButton_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div.
+        /// </summary>
+        internal static string CoursePreviewUXPage_MyCourse_NoOfActivities_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_MyCourse_NoOfActivities_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmCoursePreview.
+        /// </summary>
+        internal static string CoursePreviewUXPage_MyCourse_ToDOListFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUXPage_MyCourse_ToDOListFrame_Id_Locator", resourceCulture);
             }
         }
         

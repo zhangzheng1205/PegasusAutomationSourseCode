@@ -539,6 +539,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/div[1]/table/tbody/tr/td[2]/div[1].
+        /// </summary>
+        internal static string StudentPresentation_Page_GetAssestName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_GetAssestName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id = &apos;TodoList&apos;]/div/div[{0}]/div/div[2]/div[2]/table/tbody/tr/td[2]/div/div[2].
+        /// </summary>
+        internal static string StudentPresentation_Page_GetAssestStatus_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_GetAssestStatus_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Homework.
         /// </summary>
         internal static string StudentPresentation_Page_Homework_Window_Name {

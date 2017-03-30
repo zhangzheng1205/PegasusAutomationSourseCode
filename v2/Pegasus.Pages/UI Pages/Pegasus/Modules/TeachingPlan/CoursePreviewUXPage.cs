@@ -1391,7 +1391,7 @@ namespace Pegasus.Pages.UI_Pages
                                 CoursePreviewUXPage_ShowLink_XPath_Locator);
                                     base.ClickByJavaScriptExecutor(getShowOption);
                                 }
-                                    return;
+                                return;
                             }
                         }
                     }
@@ -2293,8 +2293,68 @@ namespace Pegasus.Pages.UI_Pages
                     IWebElement getNextIcon = base.GetWebElementPropertiesByClassName(
                       CoursePreviewUXPageResource.
                       CoursePreviewUXPage_MyCourse_NextButton_Class_Locator);
-                    base.ClickByJavaScriptExecutor(getNextIcon);                
+                    base.ClickByJavaScriptExecutor(getNextIcon);
                 }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Student launches the Activity in To Do tab
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        public void StudentLaunchAssetInToDo(string activityName)
+        {
+            //Student launches the Activity in Assignments tab
+            Logger.LogMethodEntry("ContentLibraryUXPage", "ClickCopyOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Initialize the asset name variable to empty
+            string getAssetName = string.Empty;
+            string getActivityName = string.Empty;
+            try
+            {
+                //Wait for Assignments tab to load
+                base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_AssignmentsToDo_TabName_Locator);
+                //Select Assignments tab to load
+                base.SelectWindow(CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_AssignmentsToDo_TabName_Locator);
+
+                base.SwitchToIFrameById(CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_ToDOListFrame_Id_Locator);
+                //Fetch the Activity count in Assignments tab  
+
+                int getActivityCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_NoOfActivities_XPath_Locator);
+                // Check pagination existance 
+                for (int rowCount = 2; rowCount <= getActivityCount;
+                        rowCount++)
+                {
+                    //Fetch the Activity Name
+
+                    getActivityName = base.GetElementTextByXPath
+                        (string.Format(CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_GetActivityName_XPath_Locator, rowCount)).Trim();
+                    if (getActivityName.Equals(activityName))
+                    {
+                        //Click on the Asset
+                        IWebElement getAssetLink = base.GetWebElementPropertiesByXPath(
+                            string.Format(CoursePreviewUXPageResource.
+                      CoursePreviewUXPage_MyCourse_GetActivityName_XPath_Locator, rowCount));
+                        base.ClickByJavaScriptExecutor(getAssetLink);
+                        return;
+                    }
+                }
+                //Click on the next page icon
+                IWebElement getNextIcon = base.GetWebElementPropertiesByClassName(
+                  CoursePreviewUXPageResource.
+                  CoursePreviewUXPage_MyCourse_NextButton_Class_Locator);
+                base.ClickByJavaScriptExecutor(getNextIcon);
             }
             catch (Exception e)
             {
