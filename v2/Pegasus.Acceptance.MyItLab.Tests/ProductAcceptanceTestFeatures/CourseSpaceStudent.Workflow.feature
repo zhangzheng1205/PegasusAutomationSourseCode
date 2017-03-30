@@ -1219,7 +1219,7 @@ When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity100Score" grade
 
 #---------------------------------------------------------------------------------------------------------------------------
-										#Submit SIM5 Pre Test#
+										#Submit SIM5 Pre Test under View All Content#
 #---------------------------------------------------------------------------------------------------------------------------
 # Purpose: SIM5 pre test submission and study plan sataus for 0 scored pre test 
 # TestCase ID: 
@@ -1230,14 +1230,15 @@ Then I should be on the "Course Materials" page
 When I enter into "RegFolderAsset" folder in "Course Materials" frame
 And I launch "SIM5StudyPlan"
 And I click on the "Start Pre-Test" button of "SIM5StudyPlan" study plan
-And I click on submit button of "Sim5PreTest" activity by "ZeroScore" CsSmsStudent
-#Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+And I click on submit button answering incorrectly of "Word" type "Exam" activity "Sim5PreTest" by CsSmsStudent
+Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
 
 # Purpose: SIM5 training submission and study plan sataus after training
 # TestCase ID: 
 #MyItLabInstructorCourse
 Scenario: Submit SIM5 study Plan training as SMS Student 100 score
-When I click on the "Start Training" button of "SIM5StudyPlan" study plan
+When I launch "SIM5StudyPlan"
+And I click on the "Start Training" button of "SIM5StudyPlan" study plan
 And I submit "Word" type "Exam" activity "SIMTrainingActivity" by "CsSmsStudent" student
 Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
 
@@ -1249,3 +1250,37 @@ When I launch "SIM5StudyPlan"
 And I click on the "Start Post-Test" button of "SIM5StudyPlan" study plan
 And I submit "Word" type "Exam" activity "Sim5PostTest" by "CsSmsStudent" student
 Then I should see the "Completed" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+
+#---------------------------------------------------------------------------------------------------------------------------#
+										#Study Plan submission under Assignments(To Do)#
+#---------------------------------------------------------------------------------------------------------------------------#
+
+# Purpose: SIM5 pre test submission and study plan sataus for 0 scored pre test under To Do
+# TestCase ID: 
+#MyItLabInstructorCourse
+Scenario: Submit SIM5 study plan PreTest under To Do list
+When I click on "To Do" subtab in "Assignments" tab as "CsSmsStudent" user
+Then I should be on the "Assignments - To Do" page
+When I launch "SIM5StudyPlan" asset
+And I click on the "Start Pre-Test" button of "SIM5StudyPlan" study plan
+And I click on submit button answering incorrectly of "Word" type "Exam" activity "Sim5PreTest" by CsSmsStudent
+Then I should see the "In Progress" status of the "SIM5StudyPlan" activity under "To Do" tab
+
+# Purpose: SIM5 training submission and study plan sataus after training
+# TestCase ID: 
+#MyItLabInstructorCourse
+Scenario: Submit SIM5 study Plan training as SMS Student 100 score under To Do
+When I launch "SIM5StudyPlan" asset
+And I click on the "Start Training" button of "SIM5StudyPlan" study plan
+And I submit "Word" type "Exam" activity "SIMTrainingActivity" by "CsSmsStudent" student
+Then I should see the "In Progress" status of the "SIM5StudyPlan" activity under "To Do" tab
+
+# Purpose: SIM5 post test submission and study plan sataus for 100 score 
+# TestCase ID: 
+#MyItLabInstructorCourse
+Scenario: Submit SIM5 study Plan post test as SMS Student 100 score under To Do
+When I launch "SIM5StudyPlan" asset
+And I click on the "Start Post-Test" button of "SIM5StudyPlan" study plan
+And I submit "Word" type "Exam" activity "Sim5PostTest" by "CsSmsStudent" student
+And I click on "Completed" subtab in "Assignments" tab as "CsSmsStudent" user
+Then I should see the "Completed" status of the "SIM5StudyPlan" activity under "Completed" tab

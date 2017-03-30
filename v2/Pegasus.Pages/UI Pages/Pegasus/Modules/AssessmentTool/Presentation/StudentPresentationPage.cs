@@ -22,6 +22,7 @@ using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
 using Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -1428,6 +1429,48 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch To Frame
                 base.SwitchToIFrameById(StudentPresentationPageResource.
                     StudentPresentation_Page_Content_Frame_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "SelectWindowAndFrame",
+                      base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Window And Frame.
+        /// </summary>
+        public void SelectWindowAndAssignmentFrame(string tabName)
+        {
+            //Select Window And Frame
+            logger.LogMethodEntry("StudentPresentationPage", "SelectWindowAndFrame",
+                       base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (tabName)
+                {
+                    case "To Do":
+                        Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                                StudentPresentation_Page_Sleep_Value));
+                        base.WaitUntilWindowLoads("Assignments - To Do");
+                        //Select Window
+                        base.SelectWindow("Assignments - To Do");
+                        //Switch To Frame
+                        base.SwitchToIFrameById(StudentPresentationPageResource.
+                            StudentPresentation_Page_Content_Frame_Id_Locator);
+                        break;
+                    case "Completed":
+                        Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                                StudentPresentation_Page_Sleep_Value));
+                        base.WaitUntilWindowLoads("Assignments - Done");
+                        //Select Window
+                        base.SelectWindow("Assignments - Done");
+                        //Switch To Frame
+                        base.SwitchToIFrameById(StudentPresentationPageResource.
+                            StudentPresentation_Page_Content_Frame_Id_Locator);
+                        break;
+                }
             }
             catch (Exception e)
             {
@@ -8361,6 +8404,54 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage",
                  "SubmitSIMActivityWithoutAnswering",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Status Of Submitted Activity In CourseMaterial.
+        /// </summary>
+        /// <param name="assetName">This is Activity Name.</param>
+        /// <returns>Activity Status.</returns>
+        public string GetStatusOfSubmittedActivityInToDo(string assetName, string activityStatus, string tabName)
+        {
+            //Get Status Of Submitted Activity In CourseMaterial
+            logger.LogMethodEntry("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText variable
+            string getActivitySubmittedStatus = string.Empty;
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndAssignmentFrame(tabName);
+                //Fetch the Activity count in To Do tab                 
+                int getActivityCount = base.GetElementCountByXPath
+                    (CoursePreviewUXPageResource.CoursePreviewUXPage_MyCourse_NoOfActivities_XPath_Locator);
+                // Check pagination existance
+                for (int rowCount = 2; rowCount <= getActivityCount;
+                        rowCount++)
+                {
+                    //Fetch the Activity Name
+                    string getActivityName = base.GetElementTextByXPath
+                         (string.Format(StudentPresentationPageResource.
+                 StudentPresentation_Page_GetAssestName_XPath_Locator, rowCount)).Trim();
+                    if (getActivityName.Equals(assetName))
+                    {
+                        //Get the particular asset name
+                        getActivitySubmittedStatus = base.GetElementTextByXPath(string.Format
+                          (StudentPresentationPageResource.
+                StudentPresentation_Page_GetAssestStatus_XPath_Locator, rowCount));
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                "GetStatusOfSubmittedActivityInCourseMaterial",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getActivitySubmittedStatus;
         }
     }
 }
