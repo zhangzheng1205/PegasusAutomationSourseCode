@@ -1230,8 +1230,8 @@ Then I should be on the "Course Materials" page
 When I enter into "RegFolderAsset" folder in "Course Materials" frame
 And I launch "SIM5StudyPlan"
 And I click on the "Start Pre-Test" button of "SIM5StudyPlan" study plan
-And I click on submit button answering incorrectly of "Word" type "Exam" activity "Sim5PreTest" by CsSmsStudent
-Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+And I click on submit button of "Sim5PreTest" activity by "ZeroScore" CsSmsStudent
+#Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
 
 # Purpose: SIM5 training submission and study plan sataus after training
 # TestCase ID: 
