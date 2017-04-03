@@ -527,7 +527,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Click on Advanced Search option
-                this.ClickOnAdvancedSearchLink();
+                //this.ClickOnAdvancedSearchLink();
                 //Search SIM5 Question
                 this.SearchSIM5Question();
                 //Select and Add SIM5 question
@@ -597,14 +597,14 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to Iframe
                 base.SwitchToIFrameById(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_CourseMaterialsLibrary_Iframe_Id_Locator);
-                //Search question
-                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_SearchTextBox_ID_Locator));
-                base.FillTextBoxById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_SearchTextBox_ID_Locator, ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_2nsAccessQuestion_Iframe_Id_Locator);
-                base.PressEnterKeyById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_SearchTextBox_ID_Locator);
+                ////Search question
+                //base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_SearchTextBox_ID_Locator));
+                //base.FillTextBoxById(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_SearchTextBox_ID_Locator, ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_2nsAccessQuestion_Iframe_Id_Locator);
+                //base.PressEnterKeyById(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_SearchTextBox_ID_Locator);
                 //Select the searched question
                 base.SelectCheckBoxById(ContentBrowserUXPageResource.
                     ContentBrowser_Page_AccessQuestion2_CheckBox_ID_Locator);
@@ -637,29 +637,45 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Wait for last opened window
                 base.SwitchToLastOpenedWindow();
-                //Wait for element 'All Question Type'
-                base.SwitchToIFrameById(ContentBrowserUXPageResource.
-                ContentBrowserUX_Page_AdvanceSearchPopUp_Id_Locator);
-                //Wait for All QuestionTypes checkbox
-                base.WaitForElement(By.XPath(ContentBrowserUXPageResource.
-                ContentBrowserUX_Page_AllQuestion_XPath_Locator));
-                //Get Properity for All Question Types checkbox
-                IWebElement GetAllQuestionTypeCheckBox = base.GetWebElementPropertiesByXPath(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_AllQuestion_XPath_Locator);
-                //Uncheck checkbox for All QuestionTypes
-                base.ClickByJavaScriptExecutor(GetAllQuestionTypeCheckBox);
-                //Wait for checkbox element for SIM5 Question
+                //Wait for IFrame
                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_SIM5Questions_Button_Id_Locator));
+                    ContentBrowserUX_Page_Frame_Id_Locator));
+                //Switch to Iframe
+                base.SwitchToIFrameById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_Frame_Id_Locator);
+                // Search the question in Search textbox
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_Search_Textbox_Id_Locator));
+                base.FillTextBoxById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_Search_Textbox_Id_Locator, ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_2nsAccessQuestion_Iframe_Id_Locator);
+                //Press enter key to perform search action
+                base.PressEnterKeyById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_SearchTextBox_ID_Locator);
+                
+                ////Wait for element 'All Question Type'
+                //base.SwitchToIFrameById(ContentBrowserUXPageResource.
+                //ContentBrowserUX_Page_AdvanceSearchPopUp_Id_Locator);
+                ////Wait for All QuestionTypes checkbox
+                //base.WaitForElement(By.XPath(ContentBrowserUXPageResource.
+                //ContentBrowserUX_Page_AllQuestion_XPath_Locator));
+                ////Get Properity for All Question Types checkbox
+                //IWebElement GetAllQuestionTypeCheckBox = base.GetWebElementPropertiesByXPath(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_AllQuestion_XPath_Locator);
+                ////Uncheck checkbox for All QuestionTypes
+                //base.ClickByJavaScriptExecutor(GetAllQuestionTypeCheckBox);
+                ////Wait for checkbox element for SIM5 Question
+                //base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_SIM5Questions_Button_Id_Locator));
 
-                //Get WebElement property for SIM5 check box
-                IWebElement GetSIM5CheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_SIM5Questions_Button_Id_Locator);
-                //Select the checkbox for SIM5 Question
-                base.ClickByJavaScriptExecutor(GetSIM5CheckBox);
-                IWebElement getClickButton = base.GetWebElementProperties(By.Id(ContentBrowserUXPageResource.
-                    ContentBrowserUX_Page_Search_Button_Id_Locator));
-                base.ClickByJavaScriptExecutor(getClickButton);
+                ////Get WebElement property for SIM5 check box
+                //IWebElement GetSIM5CheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_SIM5Questions_Button_Id_Locator);
+                ////Select the checkbox for SIM5 Question
+                //base.ClickByJavaScriptExecutor(GetSIM5CheckBox);
+                //IWebElement getClickButton = base.GetWebElementProperties(By.Id(ContentBrowserUXPageResource.
+                //    ContentBrowserUX_Page_Search_Button_Id_Locator));
+                //base.ClickByJavaScriptExecutor(getClickButton);
             }
             catch (Exception e)
             {

@@ -280,9 +280,6 @@ testRunner.And("I should be displayed with message \"The Course ID you entered m
 testRunner.And("I should be displayed with the course name \"MyItLabInstructorCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 95
 testRunner.When("I click \"Confirm\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
-testRunner.Then("I should be displayed with \"MyItLabInstructorCourse\" course as \"CsSmsStudent\" in " +
-                    "\"My Courses and Testbanks\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -93,7 +93,7 @@ Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course
 And I should be displayed with message "The Course ID you entered matched the following instructor and course."
 And I should be displayed with the course name "MyItLabInstructorCourse"
 When I click "Confirm" button
-Then I should be displayed with "MyItLabInstructorCourse" course as "CsSmsStudent" in "My Courses and Testbanks" channel
+#Then I should be displayed with "MyItLabInstructorCourse" course as "CsSmsStudent" in "My Courses and Testbanks" channel
 
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.

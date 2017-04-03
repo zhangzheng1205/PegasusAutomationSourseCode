@@ -1231,14 +1231,13 @@ When I enter into "RegFolderAsset" folder in "Course Materials" frame
 And I launch "SIM5StudyPlan"
 And I click on the "Start Pre-Test" button of "SIM5StudyPlan" study plan
 And I click on submit button of "Sim5PreTest" activity by "ZeroScore" CsSmsStudent
-#Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
+
 
 # Purpose: SIM5 training submission and study plan sataus after training
 # TestCase ID: 
 #MyItLabInstructorCourse
 Scenario: Submit SIM5 study Plan training as SMS Student 100 score
-When I launch "SIM5StudyPlan"
-And I click on the "Start Training" button of "SIM5StudyPlan" study plan
+When I click on the "Start Training" button of "SIM5StudyPlan" study plan
 And I submit "Word" type "Exam" activity "SIMTrainingActivity" by "CsSmsStudent" student
 Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
 
@@ -1284,3 +1283,4 @@ And I click on the "Start Post-Test" button of "SIM5StudyPlan" study plan
 And I submit "Word" type "Exam" activity "Sim5PostTest" by "CsSmsStudent" student
 And I click on "Completed" subtab in "Assignments" tab as "CsSmsStudent" user
 Then I should see the "Completed" status of the "SIM5StudyPlan" activity under "Completed" tab
+

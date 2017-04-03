@@ -330,9 +330,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Submit SIM5 Excel type activity
             Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Fetch Activty name from XML
-            Activity activity = Activity.Get(activityTypeEnum);
-            string activityName = activity.Name;
+            ////Fetch Activty name from XML
+            //Activity activity = Activity.Get(activityTypeEnum);
+            //string activityName = activity.Name;
             //Click on submit button
             //Answer access questions
             new StudentPresentationPage().AccessSecondQuestion
