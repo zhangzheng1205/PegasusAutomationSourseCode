@@ -1550,25 +1550,25 @@ namespace Pegasus.Pages.UI_Pages
                             HEDGlobalHomePage_HomePage_CreateaCourse_ID_Locator);
                         break;
 
-                    case "Enroll in a Course":
-                        //Wait for Enroll in a Course light box
-                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator));
-                        //Get the name of the lightbox
-                        getLightboxName = base.GetInnerTextAttributeValueById(
-                            HEDGlobalHomePageResource.
-                            HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator);
-                        break;
+                    //case "Enroll in a Course":
+                    //    //Wait for Enroll in a Course light box
+                    //    base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                    //        HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator));
+                    //    //Get the name of the lightbox
+                    //    getLightboxName = base.GetInnerTextAttributeValueById(
+                    //        HEDGlobalHomePageResource.
+                    //        HEDGlobalHomePage_HomePage_EnrollInCourse_ID_Locator);
+                    //    break;
 
                     case "Update Course":
+                    case "Self Enrollment":
                         //Wait for Enroll in a Course light box
                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_Update_Course_ID_Locator));
                         //Get the name of the lightbox
                         getLightboxName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_Update_Course_ID_Locator);
-                        break;
-
+                        break;                   
                 }
             }
             catch (Exception e)
@@ -1881,11 +1881,10 @@ namespace Pegasus.Pages.UI_Pages
                 string courseID = course.InstructorCourseId.ToString();
                 // Wait for Course ID text box to load
                 base.SelectWindow(base.GetPageTitle);
-                bool dafdf = base.IsElementPresent(By.Id(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_HomePageIframe_ID_Locator), 10);
+                base.SwitchToIFrameById("openModalPopupframe");
 
-                base.SwitchToIFrameById(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
+                //base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                //    HEDGlobalHomePage_HomePageIframe_ID_Locator);
                 base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                        HedGlobalHome_Page_CourseID_TextBox_Id_Locator));
                 // Fill textbox with course ID
@@ -2004,8 +2003,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(base.GetPageTitle);
 
                 // Switch to Iframe
-                base.SwitchToIFrameById(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
+                base.SwitchToIFrameById("openModalPopupframe");
+                //base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                //    HEDGlobalHomePage_HomePageIframe_ID_Locator);
                 bool ds = base.IsElementPresent(By.XPath("//div[@class='span11 success-msg']"), 10);
                 base.WaitForElement(By.XPath("//div[@class='span11 success-msg']"));
                 returnSuccessMessage = base.GetInnerTextAttributeValueByXPath("//div[@class='span11 success-msg']");
@@ -2030,8 +2030,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(base.GetPageTitle);
 
                 // Switch to Iframe
-                base.SwitchToIFrameById(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
+                //base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                //    HEDGlobalHomePage_HomePageIframe_ID_Locator);
+                base.SwitchToIFrameById("openModalPopupframe");
                 base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                     HEDGlobalHomePage_HomePage_CourseNameFromTheTable_Id_Locator));
                 returnCourseName = base.GetInnerTextAttributeValueById(HEDGlobalHomePageResource.
@@ -2054,8 +2055,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickButton", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(base.GetPageTitle);
             base.SelectWindow(base.GetPageTitle);
-            base.SwitchToIFrameById(HEDGlobalHomePageResource.
-                    HEDGlobalHomePage_HomePageIframe_ID_Locator);
+            base.SwitchToIFrameById("openModalPopupframe");
+            //base.SwitchToIFrameById(HEDGlobalHomePageResource.
+            //        HEDGlobalHomePage_HomePageIframe_ID_Locator);
             base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                 HEDGlobalHomePage_HomePage_EnrollInACourse_Confirm_Id_Locator));
             base.ClickButtonById(HEDGlobalHomePageResource.
@@ -2448,12 +2450,13 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     //Select enroll in a course popup
-                    case "Enroll in a Course":
+                    case "Self Enrollment":
 
                         switch (userType)
                         {
                             case User.UserTypeEnum.CsSmsInstructor:
                                 {
+                                   // base.SwitchToIFrameById("openModalPopupframe")
                                     base.SwitchToIFrameById(HEDGlobalHomePageResource.
                                     HEDGlobalHomePage_HomePage_CreateaCourse_IFrame_Id_Locator);
 
@@ -2467,10 +2470,13 @@ namespace Pegasus.Pages.UI_Pages
                                                 HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Count_XPath_Locator);
                                             int appCount = Convert.ToInt32(count);
                                             //Get appliation step name
-                                            base.WaitForElement(By.ClassName(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Name_ClassName_Locator));
-                                            string appStepName = base.GetInnerTextAttributeValueByClassName(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Name_ClassName_Locator);
+                                            bool sjk = base.IsElementPresent(By.XPath("//div[@class='width-110 pull-left']/label"),10);
+                                            base.WaitForElement(By.XPath("//div[@class='width-110 pull-left']/label"));
+                                            string appStepName = base.GetInnerTextAttributeValueByXPath("//div[@class='width-110 pull-left']/label");
+                                            //base.WaitForElement(By.ClassName(HEDGlobalHomePageResource.
+                                            //    HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Name_ClassName_Locator));
+                                            //string appStepName = base.GetInnerTextAttributeValueByClassName(HEDGlobalHomePageResource.
+                                            //    HEDGlobalHomePage_HomePage_EnrollInACourse_Step1Name_ClassName_Locator);
                                             //Compare appcount and aname with expected ount and name
                                             if (appCount == stepCount && appStepName == stepName)
                                             {
@@ -2496,8 +2502,9 @@ namespace Pegasus.Pages.UI_Pages
 
                             case User.UserTypeEnum.CsSmsStudent:
                                 {
-                                    base.SwitchToIFrameById(HEDGlobalHomePageResource.
-                                        HEDGlobalHomePage_HomePageIframe_ID_Locator);
+                                    base.SwitchToIFrameById("openModalPopupframe");
+                                    //base.SwitchToIFrameById(HEDGlobalHomePageResource.
+                                    //    HEDGlobalHomePage_HomePageIframe_ID_Locator);
                                     switch (stepCount)
                                     {
                                         case 1:

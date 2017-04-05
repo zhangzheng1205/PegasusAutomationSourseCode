@@ -820,6 +820,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
             // Insert User Name in Username TextBox
+            base.ClearTextByCssSelector("#loginname");
             base.FillTextBoxByCssSelector("#loginname", userName);
             Logger.LogMethodExit("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
