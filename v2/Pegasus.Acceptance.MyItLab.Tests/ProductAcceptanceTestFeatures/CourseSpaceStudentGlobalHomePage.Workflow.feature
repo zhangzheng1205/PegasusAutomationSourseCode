@@ -86,10 +86,10 @@ Then I should see the successfull message "You have been signed out of the appli
 #Purpose:Verify The course enrollment for SMS student
 Scenario:Validate self enrollment for student
 When I click on "Enroll in a Course" button in "My Courses and Testbanks" channel as "CsSmsStudent" user
-Then I should be displayed with "Enroll in a Course" lightbox
-And I should be displayed step "1" with "Course ID" in "Enroll in a Course" popup as "CsSmsStudent" user
+Then I should be displayed with "Enroll in a course" lightbox
+And I should be displayed step "1" with "Course ID" in "Enroll in a course" popup as "CsSmsStudent" user
 When I enter "MyItLabInstructorCourse" ID and click submit
-Then I should be displayed step "2" with "Confirm Course" in "Enroll in a Course" popup as "CsSmsStudent" user
+Then I should be displayed step "2" with "Confirm Course" in "Enroll in a course" popup as "CsSmsStudent" user
 And I should be displayed with message "The Course ID you entered matched the following instructor and course."
 And I should be displayed with the course name "MyItLabInstructorCourse"
 When I click "Confirm" button

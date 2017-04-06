@@ -1561,7 +1561,7 @@ namespace Pegasus.Pages.UI_Pages
                     //    break;
 
                     case "Update Course":
-                    case "Self Enrollment":
+                    case "Enroll in a course":
                         //Wait for Enroll in a Course light box
                         base.WaitForElement(By.Id(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_Update_Course_ID_Locator));
@@ -2450,7 +2450,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     //Select enroll in a course popup
-                    case "Self Enrollment":
+                    case "Enroll in a course":
 
                         switch (userType)
                         {

@@ -946,11 +946,11 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Get the Activity Grade in Grades tab
                 getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
-                    GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i)).TrimEnd();
+                    GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i)).Trim();
                 if (getActivityName == activityName)
                 {
                     getActivitygrade = base.GetElementInnerTextByXPath(string.Format(
-                        GBDefaultUXPageResource.GBDefaultUXPage_StudentGrades_Activity_Grade_XPath_Locator, i)).TrimEnd();
+                        GBDefaultUXPageResource.GBDefaultUXPage_StudentGrades_Activity_Grade_XPath_Locator, i)).Trim();
                     break;
                 }
             }
