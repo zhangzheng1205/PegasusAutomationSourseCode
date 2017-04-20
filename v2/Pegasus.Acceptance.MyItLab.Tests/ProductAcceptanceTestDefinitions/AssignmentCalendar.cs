@@ -10,7 +10,7 @@ using Pegasus.Pages.Exceptions;
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     [Binding]
-    public class AssignmentCalendar : PegasusBaseTestFixture
+    public class AssignmentCalendar : BasePage
     {
         /// <summary>
         /// The static instance of the logger for the class.
@@ -1228,12 +1228,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
                "AssignTheAsset",
                base.IsTakeScreenShotDuringEntryExit);
-            base.SelectWindow("Assign");
+            //base.SelectWindow("Assign");
             AssignContentPage assignContentPage = new AssignContentPage();
             //Select 'Assigned' radiobutton
             assignContentPage.SelectAssignRadiobuttonInAssignWindow();
             //Select current date
-            assignContentPage.SelectCurrentDateInAssignWindow();
+            //assignContentPage.SelectCurrentDateInAssignWindow();
+            //Check if "Assign with Due Date" checkbox is selected or not
+            bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+            if (isTextBoxSelected == false)
+            {
+                base.SelectCheckBoxById("ckbAssign");
+            }
             //Set start and end date
             assignContentPage.SetStartAndEndDateAssignWindow();
             //Check availability notification
@@ -1368,6 +1374,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        [When(@"I click on ""(.*)"" link in Calendar frame")]
+        public void ClickBackToMonthLink(string linkName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "AssetAssignmentType",
+              base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().ClickBackToButtonLinkInCalendar(linkName);
+            Logger.LogMethodExit("AssignmentCalendar",
+                "AssetAssignmentType",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

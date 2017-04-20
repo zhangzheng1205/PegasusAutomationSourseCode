@@ -242,6 +242,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to openModalPopupframe.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 40.
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_AssignmentProperties_Link_Id_Locator {
@@ -319,6 +328,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPage_Calendar_WindowName {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPage_Calendar_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@class =&apos;rsContentTable&apos;]/tbody/tr[{0}]/td[{1}]/div/div/a.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@class =&apos;rsContentTable&apos;]/tbody/tr[{0}]/td.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_Day_Column_Count_XPathLocator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_Day_Column_Count_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@class =&apos;rsContentTable&apos;]/tbody/tr.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_Day_Row_Count_XPathLocator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_Day_Row_Count_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@class =&apos;rsContentTable&apos;]/tbody/tr[{0}]/td[{1}].
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator", resourceCulture);
             }
         }
         

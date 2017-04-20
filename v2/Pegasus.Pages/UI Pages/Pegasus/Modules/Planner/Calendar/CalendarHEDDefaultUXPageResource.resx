@@ -576,4 +576,19 @@
   <data name="CalendarHEDDefaultUXPage_Search_Button_Id_Locator" xml:space="preserve">
     <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_imgSearchClick</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator" xml:space="preserve">
+    <value>openModalPopupframe</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator" xml:space="preserve">
+    <value>//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_Day_Column_Count_XPathLocator" xml:space="preserve">
+    <value>//table[@class ='rsContentTable']/tbody/tr[{0}]/td</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_Day_Row_Count_XPathLocator" xml:space="preserve">
+    <value>//table[@class ='rsContentTable']/tbody/tr</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator" xml:space="preserve">
+    <value>//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]</value>
+  </data>
 </root>

@@ -988,7 +988,7 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(4000);
+                //Thread.Sleep(4000);
                 //Click on save button
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
                         (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
@@ -1121,9 +1121,15 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Properties Window
-                this.SelectAssignWindow();
+                //this.SelectPropertiesWindow();
                 Thread.Sleep(Convert.ToInt32(AssignContentPageResource.
                     AssignContent_Page_SleepTime_Value));
+                //Select Assign with Due date checkbox
+                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+                if (isTextBoxSelected == false)
+                {
+                    base.SelectCheckBoxById("ckbAssign");
+                }
                 int calendarRowCount = base.GetElementCountByXPath(AssignContentPageResource.
                     AssignContent_Page_Calendar_RowCount_Xpath_Locator);
                 for (int i = 1; i <= calendarRowCount; i++)
@@ -1192,8 +1198,13 @@ namespace Pegasus.Pages.UI_Pages
                 //Select 'Set End Date as Due Date'
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator));
-                base.SelectCheckBoxById(AssignContentPageResource.
+                bool getEndDateCheckBoxStatus = base.IsElementSelectedById(AssignContentPageResource.
                     AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator);
+                if (getEndDateCheckBoxStatus == false)
+                {
+                    base.SelectCheckBoxById(AssignContentPageResource.
+                        AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator);
+                }
             }
             catch (Exception e)
             {
@@ -1215,14 +1226,17 @@ namespace Pegasus.Pages.UI_Pages
                 User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
                 DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
                 String currentTime = instance.ToString();
-
-                string date = currentTime.Split(' ')[0];
+                String date = DateTime.Now.ToString("MM/dd/yyyy");
+                //string date = currentTime.Split(' ')[0];
                 string hour = (currentTime.Split(' ')[1]).Split(':')[0];
                 string minutes = (currentTime.Split(' ')[1]).Split(':')[1];
                 string dayTime = currentTime.Split(' ')[2];
 
                 //Select Assign Window
-                this.SelectAssignWindow();
+                //this.SelectPropertiesWindow();
+                //Expand Restrict Availability section
+                IWebElement expandRestritAvailabilitySection = base.GetWebElementPropertiesByPartialLinkText("Restrict Availability");
+                base.ClickByJavaScriptExecutor(expandRestritAvailabilitySection);
                 //Check the Set Availability Date Range Radio Button
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator));
@@ -1279,10 +1293,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                this.SelectAssignWindow();
+                //this.SelectPropertiesWindow();
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_Third_Checkbox_Id_Locator));
-                // Selects availability notifuication check box
+                // Selects availability notification check box
                 base.SelectCheckBoxById(AssignContentPageResource.
                     AssignContent_Page_Third_Checkbox_Id_Locator);
                 base.WaitForElement(By.Id(AssignContentPageResource.
@@ -1308,8 +1322,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select Properties Window
-                this.SelectAssignWindow();
+                //Switch to Properties popup window
+                base.SwitchToIFrameById("openModalPopupframe");
                 //Check the Assignd Radio Button               
                 IWebElement getRadioButton = base.GetWebElementPropertiesById(
                     AssignContentPageResource.AssignContent_Page_RadioButton_Assigned_Id_Locator);

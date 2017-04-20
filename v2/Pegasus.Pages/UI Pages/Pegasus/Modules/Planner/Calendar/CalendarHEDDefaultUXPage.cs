@@ -120,6 +120,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Focus on the Text box
                 base.FocusOnElementById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator);
+                base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator);
                 base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator, activityName);
                 //Click on the GO Button
@@ -204,11 +206,13 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for 10 Secs
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
-                bool IframeExist = base.IsElementPresent(By.Id("openModalPopupframe"), 10);
+                bool IframeExist = base.IsElementPresent(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator), 10);
                 if (IframeExist == true)
                 {
                     // Switch to iframe
-                    base.SwitchToIFrameById("openModalPopupframe");
+                    base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator);
 
                     IWebElement getOkButton = base.GetWebElementPropertiesById("_ctl0_InnerPageContent_btnYes");
                     base.ClickByJavaScriptExecutor(getOkButton);
@@ -299,17 +303,22 @@ namespace Pegasus.Pages.UI_Pages
                 string getFutureDate = GetFutureDate(date);
                 //Get the Total Activities Count
                 bool exitLoop = false;
-                int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
+                int getRowCount = base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_Day_Row_Count_XPathLocator);
                 for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                     i <= getRowCount && !exitLoop; ++i)
                 {
-                    int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
+                    int getColumCount = base.GetElementCountByXPath(string.Format(
+                        CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPage_CalendarFrame_Day_Column_Count_XPathLocator, i));
                     for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                       CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                       j <= getColumCount; ++j)
                     {
-                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
+                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format(
+                            CalendarHEDDefaultUXPageResource.
+                            CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator, i, j));
 
                         if (getAppDate == getFutureDate)
                         {
@@ -322,15 +331,19 @@ namespace Pegasus.Pages.UI_Pages
                                 CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
                             //Wait for the element
                             base.PerformMoveToElementClickAction(base.
-                                GetWebElementPropertiesByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
+                                GetWebElementPropertiesByXPath(string.Format(
+                                CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator, i, j)));
                             //Wait for 10 Secs
                             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                                 CalendarHEDDefaultUXPage_SleepTime));
-                            bool IframeExist = base.IsElementPresent(By.Id("openModalPopupframe"), 10);
+                            bool IframeExist = base.IsElementPresent(By.Id(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator), 10);
                             if (IframeExist == true)
                             {
                                 // Switch to iframe
-                                base.SwitchToIFrameById("openModalPopupframe");
+                                base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator);
 
                                 IWebElement getOkButton = base.GetWebElementPropertiesById("_ctl0_InnerPageContent_btnYes");
                                 base.ClickByJavaScriptExecutor(getOkButton);
@@ -380,9 +393,7 @@ namespace Pegasus.Pages.UI_Pages
                     case "PastDue date":
                         this.EnterTheDayViewForAssignedActivityForPastDueDate();
                         break;
-
                 }
-
                 getAssignedActivityName = GetAssignedAvtivityNameInCalendarDayFrame(activityName);
                 //Refresh Current Page
                 base.RefreshTheCurrentPage();
@@ -401,6 +412,11 @@ namespace Pegasus.Pages.UI_Pages
             return getAssignedActivityName;
         }
 
+        /// <summary>
+        /// Get  Assigned Avtivity Name In Calendar Day Frame
+        /// </summary>
+        /// <param name="activityName">This is the Activity name.</param>
+        /// <returns></returns>
         public string GetAssignedAvtivityNameInCalendarDayFrame(string activityName)
         {
             string getAssignedActivityName = string.Empty;
@@ -421,7 +437,7 @@ namespace Pegasus.Pages.UI_Pages
                 getAssignedActivityName = base.GetElementTextByXPath(string.
                     Format("//div[starts-with(@id, 'ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__')]/div[{0}]/div[1]/table/tbody/tr/td[3]/span",
                     rowCount));
-                if (getAssignedActivityName.Contains(activityName))
+                if (getAssignedActivityName.Equals(activityName))
                 {
                     getAssignedActivityName = activityName;
                     break;
@@ -680,31 +696,31 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Calendar Window
                 this.SelectCalendarWindow();
                 // Get row count
-                int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
+                int getRowCount = base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_Day_Row_Count_XPathLocator);                
                 for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                     i <= getRowCount && !exitLoop; i++)
                 {
                     // Get the column count 
-                    int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
+                    int getColumCount = base.GetElementCountByXPath(string.Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_Day_Column_Count_XPathLocator, i));                        
                     for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                       CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                       j <= getColumCount; j++)
                     {
                         // Get date from the application calendar
-                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));
-
+                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator, i, j));
                         // Compare application date with the future date
                         if (getAppDate == getFutureDate)
                         {
                             this.SelectCalendarWindow();
-
-                            //base.PerformMoveToElementClickAction(base.
-                            //    GetWebElementPropertiesByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
-                            base.WaitForElement(By.XPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
-
+                            base.WaitForElement(By.XPath(string.Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator, i, j)));
                             IWebElement getDayViewImage = base.GetWebElementPropertiesByXPath
-                                (string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j));
+                                (string.Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator, i, j));
                             //Click on the Date to enter the Day view and see the assignments
                             base.PerformMouseClickAction(getDayViewImage);
                             exitLoop = true;
@@ -733,7 +749,7 @@ namespace Pegasus.Pages.UI_Pages
                 "GetFutureDate",
                 base.IsTakeScreenShotDuringEntryExit);
             //Add 5 days to current date
-            DateTime fDate = date.AddDays(5);
+            DateTime fDate = date.AddDays(1);
             string getFutureDate = fDate.ToString("d");            
             Logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "GetFutureDate",
@@ -2592,6 +2608,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the calendar window
+                base.RefreshTheCurrentPage();
                 this.SelectCalendarWindow();
                 base.WaitForElement(By.ClassName(CalendarHEDDefaultUXPageResource.
                         CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
@@ -3389,17 +3406,12 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Assign actiivty to previous date.
         /// </summary>
-        public void AssignActiivtyToPreviousDate()
+        public void AssignActivityToPreviousDate()
         {
             Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the Assigned radio button
-                base.SwitchToLastOpenedWindow();
-
-                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
                 //Get the application date
                 string getAppDate = string.Empty;
                 //Get today's date
@@ -3410,21 +3422,7 @@ namespace Pegasus.Pages.UI_Pages
                 DateTime pDate = date.AddDays(-1);
                 string getPreviousDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
-                if(isTextBoxSelected == false)
-                {
-                    base.SelectCheckBoxById("ckbAssign");
-                }
-
-                //Clear the prefilled textbox value
-                base.ClearTextById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
-                //Enter the stored previous date value
-                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
-                //Save the assign details by clicking Save button            
-                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+                this.AssignActivity(getPreviousDate);
             }
             catch (Exception e)
             {
@@ -3437,49 +3435,76 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Assign the activity to the expected date
+        /// </summary>
+        /// <param name="expectedDate">This is the expected date to be assigned.</param>
+        private void AssignActivity(string expectedDate)
+        {
+            //Select the Assigned radio button
+            base.SwitchToLastOpenedWindow();
+            //Switch to Properties popup window
+            base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_AssignmentCalendar_PropertiesWindow_Iframe_Id_Locator);
+            //Select Assign Radiobutton
+            base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);            
+            this.CheckAssignWithDueDateCheckbox();
+            //Clear the prefilled textbox value
+            base.ClearTextById(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
+            //Enter the stored previous date value
+            base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, expectedDate);
+            //Save the assign details by clicking Save button            
+            base.ClickButtonById(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+        }
+
+        /// <summary>
         /// Assign actiivty to previous date.
         /// </summary>
-        public void AssignActiivtyToCurrentDate()
+        public void AssignActivityToCurrentDate()
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string getAppDate = string.Empty;
+                //Get today's date
+                DateTime date = DateTime.Today;
+                string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                this.AssignActivity(getDate);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "AssignActiivtyToPreviousDate",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Assign actiivty to previous date.
+        /// </summary>
+        public void AssignActivityToFutureDate()
         {
             Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the Assigned radio button
-                base.SwitchToLastOpenedWindow();
-
-                //Select the Assigned radio button
-                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
                 //Get the application date
                 string getAppDate = string.Empty;
                 //Get today's date
                 DateTime date = DateTime.Today;
                 string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                //string getPreviousDate = date.ToString(CalendarHEDDefaultUXPageResource.
-                //    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
-                if (isTextBoxSelected == false)
-                {
-                    base.SelectCheckBoxById("ckbAssign");
-                }
-
-                //Clear the prefilled textbox value
-                base.ClearTextById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
-                //Enter the stored previous date value
-                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getDate);
-
-                // Select radio button "Set Available Date"
-                //base.SelectRadioButtonById("rdSetAvailableDate");
-
-
-
-                //Save the assign details by clicking Save button            
-                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
+                //Increment the day by 1 days
+                DateTime pDate = date.AddDays(1);
+                string getFutureDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
+                this.AssignActivity(getFutureDate);
             }
             catch (Exception e)
             {
@@ -3489,6 +3514,24 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("PastDueAssignment", "AssignActiivtyToPreviousDate",
             base.IsTakeScreenShotDuringEntryExit);
 
+        }
+
+        /// <summary>
+        /// Check the status of Assign with Due date checkbox and select if it is not selected
+        /// </summary>
+        private void CheckAssignWithDueDateCheckbox()
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "CheckAssignWithDueDateCheckbox",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Check if "Assign with Due Date" checkbox is selected or not
+            bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
+            if (isTextBoxSelected == false)
+            {
+                //Select the Assign with due date checkbox
+                base.SelectCheckBoxById("ckbAssign");
+            }
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "CheckAssignWithDueDateCheckbox",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -3570,56 +3613,7 @@ namespace Pegasus.Pages.UI_Pages
         }
         
 
-        /// <summary>
-        /// Assign actiivty to previous date.
-        /// </summary>
-        public void AssignActiivtyToFutureDate()
-        {
-            Logger.LogMethodEntry("PastDueAssignment", "AssignActiivtyToPreviousDate",
-            base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                //Select the Assigned radio button
-                base.SwitchToLastOpenedWindow();
-
-                //Select the Assigned radio button
-                base.SelectRadioButtonById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_AssignedButton_Id_Locator);
-                //Get the application date
-                string getAppDate = string.Empty;
-                //Get today's date
-                DateTime date = DateTime.Today;
-                string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                //Increment the day by 1
-                DateTime pDate = date.AddDays(5);
-                string getPreviousDate = pDate.ToString(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                bool isTextBoxSelected = base.IsElementSelectedById("ckbAssign");
-                if (isTextBoxSelected == false)
-                {
-                    base.SelectCheckBoxById("ckbAssign");
-                }
-
-                //Clear the prefilled textbox value
-                base.ClearTextById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
-                //Enter the stored previous date value
-                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, getPreviousDate);
-                //Save the assign details by clicking Save button            
-                base.ClickButtonById(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
-            }
-            catch (Exception e)
-            {
-
-                ExceptionHandler.HandleException(e);
-            }
-            Logger.LogMethodExit("PastDueAssignment", "AssignActiivtyToPreviousDate",
-            base.IsTakeScreenShotDuringEntryExit);
-
-        }
+       
         /// <summary>
         /// Select the Cmenu of the activity.
         /// </summary>
@@ -3633,8 +3627,6 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select the Calendar window
                 this.SelectCalendarWindow();
-                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_Element_Time));
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
                 IWebElement getActivity = base.GetWebElementPropertiesById
@@ -3643,9 +3635,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Hover the mouse on the searched actiivty
                 base.PerformMouseHoverByJavaScriptExecutor(getActivity);
                 //Store the cmenu icon property
-                IWebElement getCmenuIcon = base.GetWebElementPropertiesByClassName
-                    (CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_CmenuIcon_Id_Locator);
+                IWebElement getCmenuIcon = base.GetWebElementPropertiesByXPath
+                    ("//td[@id='tdContextMenu']/span");
                 //Click on cmenu icon
                 base.PerformMouseClickAction(getCmenuIcon);
                 //Focus on the asset
@@ -3677,11 +3668,11 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public bool PastDueActivityIcon()
         {
-            Logger.LogMethodEntry("iconDisplayStatus", "Pastdueactivityicon",
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage", "Pastdueactivityicon",
             base.IsTakeScreenShotDuringEntryExit);
             // Return the icon display status
             bool iconDisplayStatus = base.IsElementPresent(By.ClassName("cssPastDueDate"), 10);
-            Logger.LogMethodExit("iconDisplayStatus", "Pastdueactivityicon",
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage", "Pastdueactivityicon",
                 base.IsTakeScreenShotDuringEntryExit);
             return iconDisplayStatus;
         }
@@ -3999,15 +3990,15 @@ namespace Pegasus.Pages.UI_Pages
             {
                 case "Current Date":
                     this.EnterTheDayViewForAssignedActivity();
-                    new CalendarHedDefaultUxPage().AssignActiivtyToCurrentDate();
+                    new CalendarHedDefaultUxPage().AssignActivityToCurrentDate();
                     break;
 
                 case "Future Date":
-                    new CalendarHedDefaultUxPage().AssignActiivtyToFutureDate();
+                    new CalendarHedDefaultUxPage().AssignActivityToFutureDate();
                     break;
 
                 case "Past Date":
-                    new CalendarHedDefaultUxPage().AssignActiivtyToPreviousDate();
+                    new CalendarHedDefaultUxPage().AssignActivityToPreviousDate();
                     break;
             }
             base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
@@ -4063,31 +4054,30 @@ namespace Pegasus.Pages.UI_Pages
                 string[] fgh = getPastDueDate.Split(' ');
                 string pastDate = fgh[0];
                 this.SelectCalendarWindow();
-                bool h = base.IsElementPresent(By.XPath("//table[@class ='rsContentTable']/tbody/tr"), 10);
-                int getRowCount = base.GetElementCountByXPath("//table[@class ='rsContentTable']/tbody/tr");
+                int getRowCount = base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_CalendarFrame_Day_Row_Count_XPathLocator);
                 for (int i = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                     i <= getRowCount && !exitLoop; i++)
                 {
-                    int getColumCount = base.GetElementCountByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td", i));
+                    int getColumCount = base.GetElementCountByXPath(string.Format(
+                        CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPage_CalendarFrame_Day_Column_Count_XPathLocator, i));
                     for (int j = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                       CalendarHEDDefaultUXPage_Loop_Initializer_Value);
                       j <= getColumCount; j++)
                     {
-                       // char[] delimiterChars = { ' ' };
-                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]/div/div/a", i, j));                        
-                        //string[] words = getAppDate.Split(delimiterChars);
-                        //string currentDay = words[0];
+                        getAppDate = base.GetTitleAttributeValueByXPath(string.Format(
+                            CalendarHEDDefaultUXPageResource.
+                            CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator, i, j));   
                         if (getAppDate.Contains(pastDate))
                         {
                             this.SelectCalendarWindow();
-
-                            //base.PerformMoveToElementClickAction(base.
-                            //    GetWebElementPropertiesByXPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
-                            base.WaitForElement(By.XPath(string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j)));
-
+                            base.WaitForElement(By.XPath(string.Format(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator, i, j)));
                             IWebElement getDayViewImage = base.GetWebElementPropertiesByXPath
-                                (string.Format("//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]", i, j));
+                                (string.Format(CalendarHEDDefaultUXPageResource.
+                                CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator, i, j));
                             //Click on the Date to enter the Day view and see the assignments
                             base.PerformMouseClickAction(getDayViewImage);
                             exitLoop = true;
@@ -4105,6 +4095,27 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        
+
+
+        public void ClickBackToButtonLinkInCalendar(string linkName)
+        {
+            Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "ClickBackToButtonLinkInCalendar",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.PartialLinkText(linkName));
+                IWebElement getBackToMonthLink = base.GetWebElementPropertiesByPartialLinkText(linkName);
+                base.ClickByJavaScriptExecutor(getBackToMonthLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "ClickBackToButtonLinkInCalendar",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
     }
 }
