@@ -2949,7 +2949,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
 
-                    case "Add from Library":
+                    case "Course Materials Wizard":
                     case "Note":
                         base.WaitForElement(By.ClassName(AddAssessmentPageResources.
                            AddAssessment_Page_CourseMaterials_AddNote__ClassName_Locator));
@@ -2988,14 +2988,14 @@ namespace Pegasus.Pages.UI_Pages
                     AddAssessment_Page_CourseMaterials_WindowName);
                 base.SwitchToIFrameById(AddAssessmentPageResources.
                     AddAssessment_Page_CourseMaterials_Iframe_ID_Locator);
-                // Check pagination existance
-                int pageCount = new CoursePreviewUXPage().CheckPaginationStatus();
+                //// Check pagination existance
+                //int pageCount = new CoursePreviewUXPage().CheckPaginationStatus();
                 //Get the Activity count in Course Materials tab
                 int getActivityCount = base.GetElementCountByXPath(
                     AddAssessmentPageResources.
                     AddAssessment_Page_CourseMaterialstab_ActivityCount_XPath_Locator);   
-                for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
-                {
+                //for (int pageNumber = Convert.ToInt32(1); pageNumber <= pageCount; pageNumber++)
+                //{
                     for (int rowCount = Convert.ToInt32(1); rowCount <= getActivityCount;
                         rowCount++)
                     {
@@ -3019,7 +3019,7 @@ namespace Pegasus.Pages.UI_Pages
                         AddAssessment_Page_CourseMaterialstab_NextPage_Link_XPath_Locator);
                     base.ClickByJavaScriptExecutor(getNextIcon);
                 }
-            }
+            //}
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);

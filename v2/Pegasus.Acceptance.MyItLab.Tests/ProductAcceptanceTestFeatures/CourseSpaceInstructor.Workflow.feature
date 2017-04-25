@@ -318,11 +318,11 @@ And I add 'HelpLinks'
 Scenario: Instructor creates new folder in Course Materials tab
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+And I should be on "Course Materials Wizard" lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 And I click on 'Folder' option
 And I create "RegFolderAsset" activity
-And I click on "Return to Course Materials" button in 'Add from Library' lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 
 #Purpose: Creating Link asset inside new folder in Course materials tab
@@ -377,8 +377,8 @@ Then I should be displayed with "RegDiscussionTopic" in 'Manage Course Materials
 Scenario: Reorder the assets inside the folder in Course materials tab
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-Then I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be on "Course Materials Wizard" lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 When I enter into "RegFolderAsset" folder
 And I reorder "RegLinkAsset"
@@ -389,8 +389,8 @@ And I reorder "RegLinkAsset"
 Scenario: Preview the assets in folder
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-Then I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be on "Course Materials Wizard" lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 When I enter into "RegFolderAsset" folder
 And I click on "Preview" cmenu option of "RegLinkAsset" asset
@@ -412,7 +412,7 @@ Then I should see "RegLinkAsset" with "Show" status
 Scenario: Show the folder asset in Course Materials
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 When I click "Show" of "RegFolderAsset" in "Course Materials" tab
 Then I should see "RegFolderAsset" with "Show" status
@@ -434,8 +434,8 @@ Then I should see "SIM5StudyPlan" with "Show" status
 Scenario: Search asset in CourseMaterials and Copy paste as CsSmsInstructor
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-And I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+And I should be on "Course Materials Wizard" lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 When I enter into "RegFolderAsset" folder
 Then I should be displayed with "RegPageAsset" in Manage Course Materials frame of "Course Materials" tab
 When I click 'Copy' of "RegPageAsset" in "Course Materials" tab
@@ -452,7 +452,7 @@ Scenario: Search asset in CourseMaterials and Assign as CsSmsInstructor
 #When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 #Then I should be on the "Course Materials" page
 #And I should be on "Add from Library" lightbox
-#When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+#When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 #When I enter into "RegFolderAsset" folder
 #Then I should be displayed with "RegLinkAsset" in Manage Course Materials frame of "Course Materials" tab
 When I click on 'Assign' button for "RegLinkAsset" in "Course Materials" tab
@@ -467,8 +467,8 @@ Then I should see "Assigned" status for "RegLinkAsset" in "Course Materials" tab
 Scenario: Delete asset using Delete option in Course Materials as CsSmsInstructor
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-Then I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be on "Course Materials Wizard" lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 When I enter into "RegFolderAsset" folder
 Then I should be displayed with "RegPageAsset" in Manage Course Materials frame of "Course Materials" tab
@@ -484,8 +484,8 @@ Then I should see "Items deleted successfully." message in "Course Materials" pa
 Scenario: Add note in CourseMaterials as CsSmsInstructor
 When I click on "Manage Course Materials" subtab in "Course Materials" tab as "CsSmsInstructor" user
 Then I should be on the "Course Materials" page
-Then I should be on "Add from Library" lightbox
-When I click on "Return to Course Materials" button in 'Add from Library' lightbox
+Then I should be on "Course Materials Wizard" lightbox
+When I click on "Return to Course Materials" button in 'Course Materials Wizard' lightbox
 Then I should be displayed with "RegFolderAsset" in 'Manage Course Materials' frame
 When I click on 'Note' icon in "Course Materials" page
 Then I should be on "Note" lightbox

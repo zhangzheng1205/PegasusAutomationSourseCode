@@ -264,14 +264,14 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.When("I click on \"Enroll in a Course\" button in \"My Courses and Testbanks\" channel as \"" +
                     "CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 89
-testRunner.Then("I should be displayed with \"Enroll in a course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be displayed with \"Enroll in a Course\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 90
-testRunner.And("I should be displayed step \"1\" with \"Course ID\" in \"Enroll in a course\" popup as " +
+testRunner.And("I should be displayed step \"1\" with \"Course ID\" in \"Enroll in a Course\" popup as " +
                     "\"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 91
 testRunner.When("I enter \"MyItLabInstructorCourse\" ID and click submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 92
-testRunner.Then("I should be displayed step \"2\" with \"Confirm Course\" in \"Enroll in a course\" popu" +
+testRunner.Then("I should be displayed step \"2\" with \"Confirm Course\" in \"Enroll in a Course\" popu" +
                     "p as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 93
 testRunner.And("I should be displayed with message \"The Course ID you entered matched the followi" +
