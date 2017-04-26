@@ -2509,18 +2509,15 @@ namespace Pegasus.Pages.UI_Pages
                                     {
                                         case 1:
                                             //Get application step count
-                                            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollnCourse_StudStep2_XPath_Locator));
-                                            string count = base.GetInnerTextAttributeValueByXPath
-                                                (HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollnCourse_StudStep2_XPath_Locator);
+                                            bool nsbfr = base.IsElementPresent(By.Id("number1"),10);
+                                            base.WaitForElement(By.Id("number1"));
+                                            string count = base.GetInnerTextAttributeValueById("number1");
+                                            base.WaitForElement(By.Id("number1"));
                                             int appCount = Convert.ToInt32(count);
                                             //Get appliation step name
-                                            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator));
-                                            string appStepName = base.GetInnerTextAttributeValueByXPath
-                                                (HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollInACourse_StepName2Student_XPath_Locator);
+                                            base.WaitForElement(By.Id("number1"));
+                                            bool nsbasfr = base.IsElementPresent(By.XPath(".//*[@id='wizardNav']/li[1]/span/span[2]"), 10);
+                                            string appStepName = base.GetInnerTextAttributeValueByXPath(".//*[@id='wizardNav']/li[1]/span/span[2]");
                                             //Compare appcount and appname with expected ount and name
                                             if (appCount == stepCount && appStepName == stepName)
                                             {
@@ -3339,10 +3336,11 @@ namespace Pegasus.Pages.UI_Pages
                         //Fill the course name textbox
                         base.FillTextBoxById("txtCourseName", courseNameGUID);
                         bool saw = base.IsElementPresent(By.Id("imgbtnSave"), 10);
-                        base.WaitForElement(By.Id("imgbtnSave"));
+                        base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                            HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator));
                         IWebElement getButton = base.GetWebElementPropertiesById(HEDGlobalHomePageResource.
                             HEDGlobalHomePage_HomePage_CopyasInstructorCourseSave_Button_ID_Locator);
-                        base.PerformMouseClickAction(getButton);
+                        base.ClickByJavaScriptExecutor(getButton);
                         //Fetch course ID from InMemory
                         this.GetCourseID(courseType, courseNameGUID);
                         break;
