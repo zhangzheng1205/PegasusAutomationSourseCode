@@ -2509,7 +2509,7 @@ namespace Pegasus.Pages.UI_Pages
                                     {
                                         case 1:
                                             //Get application step count
-                                            bool nsbfr = base.IsElementPresent(By.Id("number1"),10);
+                                            bool nsbfr1 = base.IsElementPresent(By.Id("number1"), 10);
                                             base.WaitForElement(By.Id("number1"));
                                             string count = base.GetInnerTextAttributeValueById("number1");
                                             base.WaitForElement(By.Id("number1"));
@@ -2527,10 +2527,10 @@ namespace Pegasus.Pages.UI_Pages
                                             break;
                                         case 2:
                                             //Get appliation step count
-                                            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollInACourse_Step2Count_XPath_Locator));
-                                            count = base.GetInnerTextAttributeValueByXPath(HEDGlobalHomePageResource.
-                                                HEDGlobalHomePage_HomePage_EnrollInACourse_Step2Count_XPath_Locator);
+                                            bool nsbfr = base.IsElementPresent(By.Id("number2"), 10);
+                                            base.WaitForElement(By.Id("number2"));
+                                            count = base.GetInnerTextAttributeValueById("number2");
+                                            base.WaitForElement(By.Id("number2"));
                                             appCount = Convert.ToInt32(count);
                                             //Compare the appcount with the step count
                                             if (appCount == stepCount)
@@ -2943,57 +2943,57 @@ namespace Pegasus.Pages.UI_Pages
         private void CreateInstructorCourse(string actualCourseName, string courseNameGUID)
         {
             Logger.LogMethodEntry("HEDGlobalHomePage", "CreateInstructorCourse",
-            base.IsTakeScreenShotDuringEntryExit);                         
-                bool getNextButtonStatus;
-                //Fetch the Next button status
-                getNextButtonStatus = base.IsElementPresent(By.XPath("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul//li[@class='next disabled']"), 10);
-                while (!getNextButtonStatus)
+            base.IsTakeScreenShotDuringEntryExit);
+            bool getNextButtonStatus;
+            //Fetch the Next button status
+            getNextButtonStatus = base.IsElementPresent(By.XPath("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul//li[@class='next disabled']"), 10);
+            while (!getNextButtonStatus)
+            {
+                //Fetch the total number of pages including navigators
+                int getTotalPagesCount = base.GetElementCountByXPath("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul/li");
+                for (int i = 3; i <= getTotalPagesCount - 2; i++)
                 {
-                    //Fetch the total number of pages including navigators
-                    int getTotalPagesCount = base.GetElementCountByXPath("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul/li");
-                    for (int i = 3; i <= getTotalPagesCount - 2; i++)
+                    base.WaitForElement(By.XPath(string.Format("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul/li[{0}]", i)));
+                    //Click on the corresponding page number  
+                    IWebElement goToPage = base.GetWebElementPropertiesByXPath(string.Format("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul/li[{0}]", i));
+                    base.ClickByJavaScriptExecutor(goToPage);
                     {
-                        base.WaitForElement(By.XPath(string.Format("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul/li[{0}]", i)));
-                        //Click on the corresponding page number  
-                        IWebElement goToPage = base.GetWebElementPropertiesByXPath(string.Format("//div[@id='_ctl8_UCPagingNexGen_UCPaging']/ul/li[{0}]", i));
-                        base.ClickByJavaScriptExecutor(goToPage);
+                        //Fetch the row count of Courses in catalog page 
+                        int CourseRowCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
+                    HEDGlobalHomePage_HomePage_GetCourse_Table_XPath_Locator);
+                        for (int j = 1; j <= CourseRowCount; j++)
                         {
-                            //Fetch the row count of Courses in catalog page 
-                            int CourseRowCount = base.GetElementCountByXPath(HEDGlobalHomePageResource.
-                        HEDGlobalHomePage_HomePage_GetCourse_Table_XPath_Locator);
-                            for (int j = 1; j <= CourseRowCount; j++)
+                            //Get the course name from catalog
+                            string courseTable = base.GetElementTextByXPath(string.Format(HEDGlobalHomePageResource.
+                                HEDGlobalHomePage_HomePage_GetCourseText_Table_XPath_Locator, j));
+                            if (courseTable.Contains(actualCourseName))
                             {
-                                //Get the course name from catalog
-                                string courseTable = base.GetElementTextByXPath(string.Format(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_HomePage_GetCourseText_Table_XPath_Locator, j));
-                                if (courseTable.Contains(actualCourseName))
-                                {
-                                    //Get the master course name to create course
-                                    IWebElement selectCourse = base.GetWebElementPropertiesByXPath
-                                        (string.Format(HEDGlobalHomePageResource.
-                                    HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator, j));
-                                    base.ClickByJavaScriptExecutor(selectCourse);
-                                    //Fill the program details
-                                    this.FillCourseDetails(courseNameGUID);
-                                    return;
+                                //Get the master course name to create course
+                                IWebElement selectCourse = base.GetWebElementPropertiesByXPath
+                                    (string.Format(HEDGlobalHomePageResource.
+                                HEDGlobalHomePage_HomePage_SelectCourse_Button_XPath_Locator, j));
+                                base.ClickByJavaScriptExecutor(selectCourse);
+                                //Fill the program details
+                                this.FillCourseDetails(courseNameGUID);
+                                return;
 
-                                }
-                            }       
+                            }
                         }
-                        if (i == getTotalPagesCount - 2)
-                        {
-                            //Get the Next button 
-                            int getNextButton = getTotalPagesCount - 1;
-                            //Click on Next button 
-                            IWebElement goToNextPage = base.GetWebElementPropertiesByXPath(
-                                string.Format("//div[@id='rptCoursePreview-pagination-selection']/ul//li[{0}]",
-                                getNextButton));
-                            base.ClickByJavaScriptExecutor(goToNextPage);
-                        }                        
                     }
-                    getNextButtonStatus = base.IsElementPresent(By.XPath("//div[@id='rptCoursePreview-pagination-selection']/ul//li[@class='next disabled']"), 10);
+                    if (i == getTotalPagesCount - 2)
+                    {
+                        //Get the Next button 
+                        int getNextButton = getTotalPagesCount - 1;
+                        //Click on Next button 
+                        IWebElement goToNextPage = base.GetWebElementPropertiesByXPath(
+                            string.Format("//div[@id='rptCoursePreview-pagination-selection']/ul//li[{0}]",
+                            getNextButton));
+                        base.ClickByJavaScriptExecutor(goToNextPage);
+                    }
                 }
+                getNextButtonStatus = base.IsElementPresent(By.XPath("//div[@id='rptCoursePreview-pagination-selection']/ul//li[@class='next disabled']"), 10);
             }
+        }
 
         /// <summary>
         /// Create Mytest course
@@ -3550,6 +3550,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Return the the status if program exists
             return returnCourseStatus;
-        }        
+        }
     }
 }
