@@ -259,6 +259,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access 2013.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_Access2013_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_Access2013_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Activities.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_AccessChapter1_Activities_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_AccessChapter1_Activities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_AccessChapter1_SimulationActivities_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_AccessChapter1_SimulationActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[3]/span.
         /// </summary>
         internal static string GBDefaultUXPage_StudentGrades_Activity_Grade_XPath_Locator {
@@ -286,11 +313,68 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Creating a Worksheet and Charting Data.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_CreatingAWorksheetAndChartingDataExcel2013_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_CreatingAWorksheetAndChartingDataExcel2013_FolderNa" +
+                        "me", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word Chapter 1: Creating Documents with Microsoft Word 2013.
         /// </summary>
         internal static string GBDefaultUXPage_StudentGrades_CreatingDocumentswithMicrosoftWord2013_FolderName {
             get {
                 return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_CreatingDocumentswithMicrosoftWord2013_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel 2013.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_Excel2013_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_Excel2013_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Activities.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_ExcelChapter1_Activities_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_ExcelChapter1_Activities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_ExcelChapter1_SimulationActivities_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_ExcelChapter1_SimulationActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Getting Started with Microsoft Access 2013.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftAccess2013Access2013_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftAccess2013Access2013_Fol" +
+                        "derName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Getting Started with Microsoft.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftPowerpoint2013Access2013_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftPowerpoint2013Access2013" +
+                        "_FolderName", resourceCulture);
             }
         }
         
@@ -372,6 +456,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBDefaultUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator {
             get {
                 return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_Level4SubFolders_Count_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint 2013.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_Powerpoint2013_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_Powerpoint2013_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Activities.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_PowerpointChapter1_Activities_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_PowerpointChapter1_Activities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBDefaultUXPage_StudentGrades_PowerpointChapter1_SimulationActivities_FolderName {
+            get {
+                return ResourceManager.GetString("GBDefaultUXPage_StudentGrades_PowerpointChapter1_SimulationActivities_FolderName", resourceCulture);
             }
         }
         
