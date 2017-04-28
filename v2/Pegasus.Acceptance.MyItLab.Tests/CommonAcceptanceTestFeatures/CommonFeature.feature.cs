@@ -395,10 +395,6 @@ testRunner.Given("I browsed the login url for \"HedProgramAdmin\"", ((string)(nu
 testRunner.When("I logged into the Pegasus as \"HedProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 120
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-<<<<<<< HEAD
-#line 121
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-=======
 #line hidden
             this.ScenarioCleanup();
         }
@@ -409,7 +405,6 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         public virtual void UserLoginAsProgramAdminAndNavigateMyITLabOffice2013ProgramCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as Program Admin and Navigate MyITLabOffice2013Program Course", ((string[])(null)));
->>>>>>> f0d6748d... MIL Production BVT Ordered test
 #line 124
 this.ScenarioSetup(scenarioInfo);
 #line 125
@@ -428,17 +423,12 @@ testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Glo
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as Program Admin and Navigate MyITLabOffice2013Section Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login Program Admin and Navigate MyITLabOffice2013Section Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoginAsProgramAdminAndNavigateMyITLabOffice2013SectionCourse()
+        public virtual void UserLoginProgramAdminAndNavigateMyITLabOffice2013SectionCourse()
         {
-<<<<<<< HEAD
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as Program Admin and Navigate MyITLabOffice2013Section Course", ((string[])(null)));
-#line 128
-=======
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login Program Admin and Navigate MyITLabOffice2013Section Course", ((string[])(null)));
 #line 135
->>>>>>> f0d6748d... MIL Production BVT Ordered test
 this.ScenarioSetup(scenarioInfo);
 #line 136
 testRunner.Given("I browsed the login url for \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");

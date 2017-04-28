@@ -377,22 +377,11 @@ namespace Pegasus.Pages.UI_Pages
             string productType = course.CourseType.ToString();
             // generate new guid section name
             String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
-<<<<<<< HEAD
-            sectionName = "Auto-(" + date + ")-" + productType+"-Section";
-         
-            // Get the Current date
-            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
-            DateTime instance = DateTime.Now;
-            String currentTime = instance.ToString();
-
-
-=======
             sectionName = "Auto-(" + date + ")-" + productType+"-Section";         
             // Get the Current date            
             //User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             //DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
             //String currentTime = instance.ToString();            
->>>>>>> f0d6748d... MIL Production BVT Ordered test
             try
             {                              
                 // selecting the create new section window
