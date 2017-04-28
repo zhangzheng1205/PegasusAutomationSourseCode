@@ -376,45 +376,45 @@
     <value>//div[@id='navTreeView']/div/ul/li</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel1FolderText_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div/span[4]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div/a[3]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel1Folder_ExpantIcon_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div/span[2]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div/a[2]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel2FolderCount_Xpath" xml:space="preserve">
     <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel2FolderText_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/a[3]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel2Folder_ExpantIcon_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/a[2]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel3FolderCount_Xpath" xml:space="preserve">
     <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel3FolderText_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/span[4]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/a[3]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel3Folder_ExpantIcon_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/span[2]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/a[2]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel4FolderCount_Xpath" xml:space="preserve">
     <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel4FolderText_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/span[4]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/a[3]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel4Folder_ExpantIcon_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/span[2]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/a[2]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel5FolderCount_Xpath" xml:space="preserve">
     <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel5FolderText_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/span[4]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/a[3]</value>
   </data>
   <data name="CommonPageResource_Gradebook_GetLevel5Folder_ExpantIcon_Xpath" xml:space="preserve">
-    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/span[4]</value>
+    <value>//div[@id='navTreeView']/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/a[3]</value>
   </data>
 </root>

@@ -1110,34 +1110,16 @@ namespace Pegasus.Pages.UI_Pages
                     base.PerformMouseHoverAction(activityName1);
                     Thread.Sleep(2000);
                     //Click on CMenu option of the activity
+                    bool asd = base.IsElementPresent(By.XPath(string.Format(
+                        ".//*[@id='spFeed']/a")), 10);
                     IWebElement cmenuOption1 = base.GetWebElementPropertiesByXPath(string.Format(
-                        GBDefaultUXPageResource.
-                          GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Click_XPath_Locator));
+                        ".//*[@id='spFeed']/a"));
                     base.PerformMouseClickAction(cmenuOption1);
                     Thread.Sleep(1000);
                     //CLick on the cmenu option in Grades tab
                     bool jk = base.IsElementPresent(By.PartialLinkText(cmenuOption), 10);
                     IWebElement getCmenuOptionlink = base.GetWebElementPropertiesByPartialLinkText(cmenuOption);
                     base.ClickByJavaScriptExecutor(getCmenuOptionlink);
-                    //int getCmenuOptionCount = base.GetElementCountByXPath(
-                    //    GBDefaultUXPageResource.
-                    //      GBDefaultUXPage_StudentGradesTab_ActivityCmenu_Options_Count_XPath_Locator);
-                    //for (int j = 1; j <= getCmenuOptionCount; j++)
-                    //{
-                    //    //Get the cmenu option name from UI
-                    //    string cmenuOptionName = base.GetElementInnerTextByXPath(
-                    //        string.Format(GBDefaultUXPageResource.
-                    //      GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator, j)).TrimStart();
-                    //    if (cmenuOption == cmenuOptionName)
-                    //    {
-                    //        //Click on the cmenu option
-                    //        IWebElement getCmenulink = base.GetWebElementPropertiesByXPath(
-                    //            string.Format(GBDefaultUXPageResource.
-                    //      GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator, j));
-                    //        base.ClickByJavaScriptExecutor(getCmenulink);
-                    //        break;
-                    //    }
-                    //}
                     break;
                 }
             }

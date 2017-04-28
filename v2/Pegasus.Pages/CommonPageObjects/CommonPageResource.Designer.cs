@@ -610,7 +610,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div/span[2].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div/a[2].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel1Folder_ExpantIcon_Xpath {
             get {
@@ -628,7 +628,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div/span[4].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div/a[3].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel1FolderText_Xpath {
             get {
@@ -637,7 +637,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/a[2].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel2Folder_ExpantIcon_Xpath {
             get {
@@ -655,7 +655,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div/a[3].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel2FolderText_Xpath {
             get {
@@ -664,7 +664,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/span[2].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/a[2].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel3Folder_ExpantIcon_Xpath {
             get {
@@ -682,7 +682,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/span[4].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div/a[3].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel3FolderText_Xpath {
             get {
@@ -691,7 +691,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/span[2].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/a[2].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel4Folder_ExpantIcon_Xpath {
             get {
@@ -709,7 +709,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/span[4].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div/a[3].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel4FolderText_Xpath {
             get {
@@ -718,7 +718,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/span[4].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/a[3].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel5Folder_ExpantIcon_Xpath {
             get {
@@ -736,7 +736,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/span[4].
+        ///   Looks up a localized string similar to //div[@id=&apos;navTreeView&apos;]/div/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[2]/ul/li[{4}]/div/a[3].
         /// </summary>
         internal static string CommonPageResource_Gradebook_GetLevel5FolderText_Xpath {
             get {
