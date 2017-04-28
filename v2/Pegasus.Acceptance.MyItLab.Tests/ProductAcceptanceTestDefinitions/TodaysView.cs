@@ -703,6 +703,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     // Check user type 
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.CsSmsStudent:
+                case User.UserTypeEnum.HedProgramAdmin:
                 new TodaysViewUxPage().ValidateOptionsInTopHeaderAndPerformOperation
                         (optionName, tabName, couseTypeEnum, userType);
                 break;

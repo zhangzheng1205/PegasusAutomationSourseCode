@@ -4473,6 +4473,7 @@ namespace Pegasus.Pages.UI_Pages
                 switch (userType)
                 {
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HedProgramAdmin:
 
                         switch (tabName)
                         {

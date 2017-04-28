@@ -506,6 +506,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.GlobalHomePageStudentUX.BVT.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.HEDUX.ProductionFullBVT .orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.HEDUX.FullBVT.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

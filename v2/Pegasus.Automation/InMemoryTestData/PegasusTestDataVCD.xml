@@ -285,8 +285,8 @@
 			<CourseType>MyITLabOffice2013Program</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
-			<SectionName>Dependent_MIL_VCD Test</SectionName>
-			<SectionId>CRSKLZY-10045825</SectionId>
+			<SectionName>Dependent_MIL_UX_VCD</SectionName>
+			<SectionId>CRSKLGS-10045584</SectionId>
 			<IsPublished>true</IsPublished>
 			<IsApproved>true</IsApproved>
 		</Course>
@@ -367,9 +367,9 @@
 			<IsApproved>true</IsApproved>
 		</Course>
 		<Course>
-			<Name>Dependent_MIL_VCD Test</Name>
+			<Name>Dependent_MIL_VCD</Name>
 			<CourseType>MyItLabInstructorCourse</CourseType>
-			<InstructorCourseId>CRSKLZY-10045825</InstructorCourseId>
+			<InstructorCourseId>CRSKLES-10044234</InstructorCourseId>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
 			<IsPublished>true</IsPublished>
@@ -719,12 +719,12 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>true</EnrolementStatus>
 		</User>
 		<User>
-			<Name>517vcdautoinstructor1</Name>
+			<Name>311488b6-0f14-4e9f-9d4a-26f5b6d1076d</Name>
 			<Password>Password1</Password>
 			<Email>manish.singh@imfinity.com</Email>
-			<FirstName>2CD</FirstName>
+			<FirstName>BDD</FirstName>
 			<MiddleName>Pegasus</MiddleName>
-			<LastName>BDD</LastName>
+			<LastName>sm6p</LastName>
 			<UserType>CsSmsInstructor</UserType>
 			<IsCreated>true</IsCreated>
 			<EnrolementStatus>true</EnrolementStatus>
@@ -752,12 +752,12 @@ the UI deleted or refreshed.-->
 			<EnrolementStatus>false</EnrolementStatus>
 		</User>
 		<User>
-			<Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
+			<Name>24d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
 			<Password>Password@1</Password>
 			<Email>raghavendra.ga@excelindia.com</Email>
-			<FirstName>1CD</FirstName>
+			<FirstName>BDD</FirstName>
 			<MiddleName>Pegasus</MiddleName>
-			<LastName>BDD</LastName>
+			<LastName>60c6</LastName>
 			<UserType>CsSmsStudent</UserType>
 			<IsCreated>true</IsCreated>
 			<EnrolementStatus>true</EnrolementStatus>
@@ -1018,7 +1018,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
 	  <Activity>
-		  <Name>Word Chapter 1 Skill-Based Training</Name>
+		  <Name>Auto-2017/03/15-ee751cbc-Study Plan</Name>
 		  <ActivityType>SIM5StudyPlan</ActivityType>
 		  <IsCreated>true</IsCreated>
 	  </Activity>
@@ -1149,18 +1149,6 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Access Chapter 1 Skill-Based Training</Name>
-      <ActivityType>RegPastDueAcceptAssignment</ActivityType>
-      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-      <IsCreated>true</IsCreated>
-    </Activity>
-    <Activity>
-      <Name>Access Chapter 1 Project 1B Skill-Based Training</Name>
-      <ActivityType>RegPastDueDeclineAssignment</ActivityType>
-      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-      <IsCreated>true</IsCreated>
-    </Activity>
-    <Activity>
       <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
       <ActivityType>RegSimpleCmenuAssignFutureDate</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
@@ -1227,7 +1215,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Access Chapter 1 Project 1A Skill-Based Training</Name>
+      <Name>Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
       <ActivityType>RegAccessSIMActivity</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
@@ -1253,12 +1241,6 @@ the UI deleted or refreshed.-->
 	  <Activity>
 		  <Name>Auto-2017/03/15-ee751cbc-Study Plan</Name>
 		  <ActivityType>SIMTrainingActivity</ActivityType>
-		  <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
-		  <IsCreated>true</IsCreated>
-	  </Activity>
-  <Activity>
-		  <Name>Word Chapter</Name>
-		  <ActivityType>RegAssignUnassignActivity</ActivityType>
 		  <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
 		  <IsCreated>true</IsCreated>
 	  </Activity>

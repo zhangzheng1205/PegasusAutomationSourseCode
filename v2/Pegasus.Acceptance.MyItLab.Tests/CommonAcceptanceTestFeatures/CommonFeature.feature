@@ -113,6 +113,13 @@ Given I am on the "Global Home" page
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 
 #User enter into the program course
+#Purpose: Login as Program Admin 
+Scenario: User Login as Program Admin 
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Then I should logged in successfully
+
+#User enter into the program course
 #Purpose: Login as Program Admin and Navigate to MyITLabOffice2013Program
 Scenario: User Login as Program Admin and Navigate MyITLabOffice2013Program Course
 Given I browsed the login url for "HedProgramAdmin"

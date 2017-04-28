@@ -377,6 +377,7 @@ namespace Pegasus.Pages.UI_Pages
             string productType = course.CourseType.ToString();
             // generate new guid section name
             String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+<<<<<<< HEAD
             sectionName = "Auto-(" + date + ")-" + productType+"-Section";
          
             // Get the Current date
@@ -385,9 +386,15 @@ namespace Pegasus.Pages.UI_Pages
             String currentTime = instance.ToString();
 
 
+=======
+            sectionName = "Auto-(" + date + ")-" + productType+"-Section";         
+            // Get the Current date            
+            //User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+            //DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+            //String currentTime = instance.ToString();            
+>>>>>>> f0d6748d... MIL Production BVT Ordered test
             try
-            {
-                              
+            {                              
                 // selecting the create new section window
                 this.SelectAddNewSectionWindow();
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
@@ -399,33 +406,52 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectingTemplateFromDropDown(courseTypeEnum);
                 // enter no. of section count in text box 
                 this.EnterSectionCount(courseTypeEnum);
-                // get date format
-                string getStartDateFormat = base.GetElementTextById(AddNewSectionPageResource.
-                    AddNewSection_Page_Section_StartDate_Format_Id_Locator);
-                string getEndDateFormat = base.GetElementTextById(AddNewSectionPageResource.
-                    AddNewSection_Page_Section_EndDate_Format_Id_Locator);
+                //Enter Start date 
+                base.WaitForElement(By.Id(AddNewSectionPageResource.
+              AddNewSection_Page_StartDate_TextBox_Id_Locator));
+                //Enter Start Date
+                string startDate = DateTime.Now.ToString();                
+                string[] actualStartDate = startDate.Split(' ');
+                string sectionStartDate = actualStartDate[0];
+                base.FillTextBoxById(AddNewSectionPageResource.
+                                         AddNewSection_Page_StartDate_TextBox_Id_Locator, sectionStartDate);
+                base.WaitForElement(By.Id(AddNewSectionPageResource.
+                                              AddNewSection_Page_EndDate_TextBox_Id_Locator));
+                //Enter End Date
+                string endDate = DateTime.Now.AddDays(90).ToString();
+                string[] actualEndDate = endDate.Split(' ');
+                string sectionEndDate = actualEndDate[0];
+                base.FillTextBoxById(AddNewSectionPageResource.
+                                         AddNewSection_Page_EndDate_TextBox_Id_Locator, sectionEndDate);
+                
+                
+                //// get date format
+                //string getStartDateFormat = base.GetElementTextById(AddNewSectionPageResource.
+                //    AddNewSection_Page_Section_StartDate_Format_Id_Locator);
+                //string getEndDateFormat = base.GetElementTextById(AddNewSectionPageResource.
+                //    AddNewSection_Page_Section_EndDate_Format_Id_Locator);
 
-                // select section date based on acceptable format 
-                if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
-                    AddNewSection_Page_Section_Actual_StartDate_Format_DDMMYYYY)
-                    && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
-                    AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
-                {
-                    // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(instance.ToString(AddNewSectionPageResource.
-                        AddNewSection_Page_Date_Format_DDMMYYYY), instance.AddDays(90).
-                        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
-                }
-                if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
-                   AddNewSection_Page_Section_Actual_StartDate_Format_MMDDYYYY)
-                   && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
-                   AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
-                {
-                    // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(instance.ToString(AddNewSectionPageResource.
-                        AddNewSection_Page_Date_Format_MMDDYYYY), instance.AddDays(90).
-                        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
-                }
+                //// select section date based on acceptable format 
+                //if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
+                //    AddNewSection_Page_Section_Actual_StartDate_Format_DDMMYYYY)
+                //    && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
+                //    AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
+                //{
+                //    // enter section start and end date                           
+                //    this.AddSectionStartAndEndDate(instance.ToString(AddNewSectionPageResource.
+                //        AddNewSection_Page_Date_Format_DDMMYYYY), instance.AddDays(90).
+                //        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
+                //}
+                //if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
+                //   AddNewSection_Page_Section_Actual_StartDate_Format_MMDDYYYY)
+                //   && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
+                //   AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
+                //{
+                //    // enter section start and end date                           
+                //    this.AddSectionStartAndEndDate(instance.ToString(AddNewSectionPageResource.
+                //        AddNewSection_Page_Date_Format_MMDDYYYY), instance.AddDays(90).
+                //        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
+                //}
                 // check copy content check box
                 if (base.IsElementSelectedById(AddNewSectionPageResource.
                     AddNewSection_Page_Copycontent_Checkbox_Id_Locator))

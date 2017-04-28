@@ -51,6 +51,13 @@ Scenario: Instructor validate sign out link functionality in course global home
 When I click on "Sign out" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
 Then I should see the successfull message "You have been signed out of the application."
 
+#Test case ID : 
+#Products : MyItLab, HSS and World Language.
+#Purpose:Verify The Signout link functionality displayed on the home page by ProgramAdmin
+Scenario: Program admin validate sign out link functionality in course global home
+When I click on "Sign out" option in "Global Home" tab of "MyItLabAuthoredCourse" as "CsSmsInstructor" user
+Then I should see the successfull message "You have been signed out of the application."
+
 #-----------------------------------------------------------------------------------------------------#
 							#Scripts to validate Create Course and Enroll in a course buttons#
 #-----------------------------------------------------------------------------------------------------#
