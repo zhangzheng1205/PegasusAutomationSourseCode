@@ -33,10 +33,10 @@ namespace Pegasus.Pages.UI_Pages
             //Create New Section 
             Logger.LogMethodEntry("AddNewSectionPage", "CreateNewSection",
                 base.IsTakeScreenShotDuringEntryExit);
-                string sectionName = string.Empty;
+            string sectionName = string.Empty;
             try
             {
-               sectionName= FillingSectionDetails(courseTypeEnum);
+                sectionName = FillingSectionDetails(courseTypeEnum);
                 // save and close section
                 this.SaveAndCloseAddNewSection();
                 // Storing the Section ID
@@ -55,12 +55,12 @@ namespace Pegasus.Pages.UI_Pages
                             Course.CourseTypeEnum.HSSMyPsychLabProgram);
                         break;
                     case Course.CourseTypeEnum.GraderITSIM5Course:
-               
+
                         new ManageTemplatePage().StoreSectionID(sectionName,
                           Course.CourseTypeEnum.MyItLabProgramCourse);
                         break;
                     case Course.CourseTypeEnum.MyITLabForOffice2013Master:
-                   
+
                         new ManageTemplatePage().StoreSectionID(sectionName,
                             Course.CourseTypeEnum.MyITLabOffice2013Program);
                         new ManageTemplatePage().StoreSectionNameForJobDependentInMemory(sectionName,
@@ -96,20 +96,20 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("AddNewSectionPage", "FilterTheTemplateUsingParentTemplateDD",
                 base.IsTakeScreenShotDuringEntryExit);
             try
-            {                
+            {
                 //Switch To IFrame
                 this.SwitchToIFrame();
                 //Wait for Parent Template DropDown
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
-                    AddNewSection_Page_ParentTemplate_DropDown_ID_Loator));  
-               // Get Course Details By Enum Value
+                    AddNewSection_Page_ParentTemplate_DropDown_ID_Loator));
+                // Get Course Details By Enum Value
                 Course course = Course.Get(courseTypeEnum);
                 //Select Parent Template DropDown 
                 base.SelectDropDownValueThroughTextByName(
-                    AddNewSectionPageResource.AddNewSection_Page_ParentTemplate_DropDown_ID_Loator, 
+                    AddNewSectionPageResource.AddNewSection_Page_ParentTemplate_DropDown_ID_Loator,
                     course.Name);
                 //Switch To IFrame
-                this.SwitchToIFrame();      
+                this.SwitchToIFrame();
             }
             catch (Exception e)
             {
@@ -138,37 +138,37 @@ namespace Pegasus.Pages.UI_Pages
         /// Verify Created Section Available in the Filter Section List.
         /// </summary>
         public string VerifyCreatedSectionInFilterTemplateList(string courseName)
-        {           
+        {
             //Verify Created Section Available in the Filter Section List
             Logger.LogMethodEntry("AddNewSectionPage", "VerifyCreatedSectionInFilterTemplateList",
                 base.IsTakeScreenShotDuringEntryExit);
             string sectionName = string.Empty;
             try
-            {    
-               //get Section Row Count
+            {
+                //get Section Row Count
                 int GetSectionRowCount = base.GetElementCountByXPath(
                     AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Table_Id_Locator
                     );
                 //Iterate for Respective Section In Table
-                for(
+                for (
                     int setSectionRowCount =
-                        Convert.ToInt32(AddNewSectionPageResource.AddNewSection_Page_TemplateList_Index_Value); 
-                        setSectionRowCount <=GetSectionRowCount; setSectionRowCount++)
+                        Convert.ToInt32(AddNewSectionPageResource.AddNewSection_Page_TemplateList_Index_Value);
+                        setSectionRowCount <= GetSectionRowCount; setSectionRowCount++)
                 {
                     //Wait for the element
                     base.WaitForElement(By.XPath(String.Format(
                         AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator,
                         setSectionRowCount)));
-                   //Get Section Name From SectionList
+                    //Get Section Name From SectionList
                     sectionName =
                         base.GetTitleAttributeValueByXPath(String.Format(
                         AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator,
                         setSectionRowCount));
-                    if (sectionName.Contains(courseName))
+                    if (sectionName.Equals(courseName))
                     {
                         break;
                     }
-                }               
+                }
             }
             catch (Exception e)
             {
@@ -204,8 +204,8 @@ namespace Pegasus.Pages.UI_Pages
                     base.FillTextBoxById(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.
                             AddNewSection_Page_MilCourse_Section_NoList_Value);
-                    break;                
-                
+                    break;
+
                 case Course.CourseTypeEnum.GraderITSIM5Course:
                     // Enter section count in Drop Down box
                     base.FillTextBoxById(AddNewSectionPageResource.
@@ -329,7 +329,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter End Date
             base.FillTextBoxById(AddNewSectionPageResource.
                                      AddNewSection_Page_EndDate_TextBox_Id_Locator, sectionEndDate);
-           
+
             Logger.LogMethodExit("AddNewSectionPage", "AddSectionStartAndEndDate",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -377,13 +377,13 @@ namespace Pegasus.Pages.UI_Pages
             string productType = course.CourseType.ToString();
             // generate new guid section name
             String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
-            sectionName = "Auto-(" + date + ")-" + productType+"-Section";         
+            sectionName = "Auto-(" + date + ")-" + productType + "-Section";
             // Get the Current date            
             //User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             //DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
             //String currentTime = instance.ToString();            
             try
-            {                              
+            {
                 // selecting the create new section window
                 this.SelectAddNewSectionWindow();
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
@@ -399,7 +399,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
               AddNewSection_Page_StartDate_TextBox_Id_Locator));
                 //Enter Start Date
-                string startDate = DateTime.Now.ToString();                
+                string startDate = DateTime.Now.ToString();
                 string[] actualStartDate = startDate.Split(' ');
                 string sectionStartDate = actualStartDate[0];
                 base.FillTextBoxById(AddNewSectionPageResource.
@@ -412,8 +412,8 @@ namespace Pegasus.Pages.UI_Pages
                 string sectionEndDate = actualEndDate[0];
                 base.FillTextBoxById(AddNewSectionPageResource.
                                          AddNewSection_Page_EndDate_TextBox_Id_Locator, sectionEndDate);
-                
-                
+
+
                 //// get date format
                 //string getStartDateFormat = base.GetElementTextById(AddNewSectionPageResource.
                 //    AddNewSection_Page_Section_StartDate_Format_Id_Locator);
@@ -501,7 +501,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Store Section Details
                 course.SharedLibraryName = sharedLibraryName;
 
-              
+
                 // save and close section
                 base.WaitForElement(By.Id("imgbtnSave"));
                 //Get Element Property
@@ -515,8 +515,8 @@ namespace Pegasus.Pages.UI_Pages
                 // Select defalut window
                 base.SelectWindow(AddNewSectionPageResource
                     .AddNewSection_Page_ParentWindow_Page_Title);
-             
-             
+
+
             }
             catch (Exception e)
             {
@@ -536,45 +536,45 @@ namespace Pegasus.Pages.UI_Pages
             //Create New Section 
             Logger.LogMethodEntry("AddNewSectionPage", "CreateNewSharedLibrary",
                 base.IsTakeScreenShotDuringEntryExit);
-         String copyTemplate = string.Empty;
-         String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
-         copyTemplate = "Auto-(" + date + ")-" + "Copy Template";   
+            String copyTemplate = string.Empty;
+            String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
+            copyTemplate = "Auto-(" + date + ")-" + "Copy Template";
             // generate new guid section name
-           
+
             // Get the Current date
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
             String currentTime = instance.ToString();
 
-                // selecting the create new section window
+            // selecting the create new section window
             base.WaitUntilWindowLoads("Copy as Template");
-                // Select Window
+            // Select Window
             base.SelectWindow("Copy as Template");
-                base.WaitForElement(By.Id(AddNewSectionPageResource.
-                    AddNewSection_Page_CourseName_TextName_Id_Locator));
-                // enter the section name
-                base.ClearTextById(AddNewSectionPageResource.
-                  AddNewSection_Page_CourseName_TextName_Id_Locator);
-                base.FillTextBoxById(AddNewSectionPageResource.
-                  AddNewSection_Page_CourseName_TextName_Id_Locator, copyTemplate);
-           
-                Course course = Course.Get(courseTypeEnum);
-                //Store Section Details
-                 course.CopyTemplateName = copyTemplate;
+            base.WaitForElement(By.Id(AddNewSectionPageResource.
+                AddNewSection_Page_CourseName_TextName_Id_Locator));
+            // enter the section name
+            base.ClearTextById(AddNewSectionPageResource.
+              AddNewSection_Page_CourseName_TextName_Id_Locator);
+            base.FillTextBoxById(AddNewSectionPageResource.
+              AddNewSection_Page_CourseName_TextName_Id_Locator, copyTemplate);
 
-                  // save and close section
-                base.WaitForElement(By.Id("imgbtnSave"));
-                //Get Element Property
-                IWebElement getCloseElementButtonProperty = base.GetWebElementPropertiesById(
-                    "imgbtnSave");
-                //Click on Button
-                base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
-                //Wait for the Popup to Close
-                base.IsPopUpClosed(Convert.ToInt32(AddNewSectionPageResource.
-                    AddNewSection_Page_NumberOfWindows_Value));
-                // Select defalut window
-                base.SelectWindow(AddNewSectionPageResource
-                    .AddNewSection_Page_ParentWindow_Page_Title);
+            Course course = Course.Get(courseTypeEnum);
+            //Store Section Details
+            course.CopyTemplateName = copyTemplate;
+
+            // save and close section
+            base.WaitForElement(By.Id("imgbtnSave"));
+            //Get Element Property
+            IWebElement getCloseElementButtonProperty = base.GetWebElementPropertiesById(
+                "imgbtnSave");
+            //Click on Button
+            base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
+            //Wait for the Popup to Close
+            base.IsPopUpClosed(Convert.ToInt32(AddNewSectionPageResource.
+                AddNewSection_Page_NumberOfWindows_Value));
+            // Select defalut window
+            base.SelectWindow(AddNewSectionPageResource
+                .AddNewSection_Page_ParentWindow_Page_Title);
 
             Logger.LogMethodExit("AddNewSectionPage", "CreateNewSharedLibrary",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -593,9 +593,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             String sharedLibraryCopyTemplateName = string.Empty;
             String date = DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss");
-            sharedLibraryCopyTemplateName = "Auto-(" + date + ")-" + "Shared Library Copy Template";   
+            sharedLibraryCopyTemplateName = "Auto-(" + date + ")-" + "Shared Library Copy Template";
             // generate new guid section name
-                 
+
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
             String currentTime = instance.ToString();
@@ -614,7 +614,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Course course = Course.Get(courseTypeEnum);
             //Store Section Details
-            
+
             course.SharedLibraryCopyTemplateName = sharedLibraryCopyTemplateName;
 
             // save and close section
@@ -665,7 +665,7 @@ namespace Pegasus.Pages.UI_Pages
                   AddNewSection_Page_CourseName_TextName_Id_Locator);
                 base.FillTextBoxById(AddNewSectionPageResource.
                   AddNewSection_Page_CourseName_TextName_Id_Locator, sharedLibraryName);
-           
+
                 // get date format
                 string getStartDateFormat = base.GetElementTextById(AddNewSectionPageResource.
                     AddNewSection_Page_Section_StartDate_Format_Id_Locator);
@@ -693,7 +693,7 @@ namespace Pegasus.Pages.UI_Pages
                         AddNewSection_Page_Date_Format_MMDDYYYY), instance.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
                 }
-              
+
             }
 
             catch (Exception e)

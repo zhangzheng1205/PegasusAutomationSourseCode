@@ -102,6 +102,10 @@ Scenario: Validate open button functionallity for course as CsSmsStudent
 When I click on Open button of "MyItLabInstructorCourse" as "CsSmsStudent" user
 Then I should be displayed with "MyItLabInstructorCourse" course information for "CsSmsStudent" user
 
+Scenario: Validate open button functionallity for MyITLabOffice2013Program as CsSmsStudent
+When I click on Open button of "MyITLabOffice2013Program" as "CsSmsStudent" user
+Then I should be displayed with "MyITLabOffice2013Program" course information for "CsSmsStudent" user
+
 #Test case ID : 
 #Products : MyItLab, HSS and World Language.
 #PreCondition : Course should be in marked for deletion by CsSMSInstructor
