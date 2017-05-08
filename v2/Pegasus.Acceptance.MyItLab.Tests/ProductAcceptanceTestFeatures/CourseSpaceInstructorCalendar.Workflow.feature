@@ -206,3 +206,25 @@ And I should be displayed with "Calendar Viewby" option in "Advanced Calendar" o
 And I should be displayed with "Month view" option in "Advanced Calendar" of "Calendar" page
 When I click on "Day" view in Advance calender
 Then I should see the "RegTodayDateAssignment " activity assigned in day view of Advance calender
+
+#Purpose : Assign One Content using Assign/Unassign Link by SMSInstructor
+#MyItLabProgramCourse
+#Test Case Id :
+Scenario: Assign One Activity using Assign/Unassign Link by SMSInstructor
+When I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "RegAssignUnassignActivity" activity of behavioral mode "SkillBased"
+And I select "1" activity
+And I click the 'Assign/UnAssign' link
+Then I should see "Assigned" status for the activity
+
+#Purpose : Assign More than One Content using Assign/Unassign Link by SMSInstructor
+#MyItLabProgramCourse
+#Test Case Id :
+Scenario: Assign More than One Activity using Assign/Unassign Link by SMSInstructor
+When I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "RegAssignUnassignActivity" activity of behavioral mode "SkillBased"
+And I select "2" activity
+And I click the 'Assign/UnAssign' link
+Then I should see "Assigned" status for the activity

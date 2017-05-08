@@ -2645,24 +2645,138 @@ testRunner.Then("I should see \"RegWordSIMActivity\" activity in Grades tab with
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submitting Excel SIM Activity and scoring 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentSubmittingExcelSIMActivityAndScoring0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting Excel SIM Activity and scoring 0", ((string[])(null)));
+#line 1229
+this.ScenarioSetup(scenarioInfo);
+#line 1230
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1231
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1232
+testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
+                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1233
+testRunner.And("I launch the \"RegExcelSIMActivity\" activity as \"CsSmsStudent\" with \"ZeroScore\" sc" +
+                    "ore", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1234
+testRunner.And("I click on submit button of \"RegExcelSIMActivity\" activity by \"ZeroScore\" CsSmsSt" +
+                    "udent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1235
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1236
+testRunner.And("I should see the status \"Not passed\" for the activity \"RegExcelSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1237
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1238
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1239
+testRunner.When("I navigate to \"RegExcelSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1240
+testRunner.Then("I should see \"RegExcelSIMActivity\" activity in Grades tab with \"SimActivity0Score" +
+                    "\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submitting Access SIM Activity and scoring 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentSubmittingAccessSIMActivityAndScoring0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting Access SIM Activity and scoring 0", ((string[])(null)));
+#line 1250
+this.ScenarioSetup(scenarioInfo);
+#line 1251
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1252
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1253
+testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
+                    "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1254
+testRunner.And("I launch the \"RegAccessSIMActivity\" activity as \"CsSmsStudent\" with \"ZeroScore\" s" +
+                    "core", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1255
+testRunner.And("I click on submit button of \"RegAccessSIMActivity\" activity by \"ZeroScore\" CsSmsS" +
+                    "tudent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1256
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1257
+testRunner.And("I should see the status \"Not passed\" for the activity \"RegAccessSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1258
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1259
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1260
+testRunner.When("I navigate to \"RegAccessSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1261
+testRunner.Then("I should see \"RegAccessSIMActivity\" activity in Grades tab with \"SimActivity0Scor" +
+                    "e\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submitting Powerpoint SIM Activity and scoring 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentSubmittingPowerpointSIMActivityAndScoring0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting Powerpoint SIM Activity and scoring 0", ((string[])(null)));
+#line 1271
+this.ScenarioSetup(scenarioInfo);
+#line 1272
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1273
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1274
+testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
+                    "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1275
+testRunner.And("I launch the \"RegPowerPointSIMActivity\" activity as \"CsSmsStudent\" with \"ZeroScor" +
+                    "e\" score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1276
+testRunner.And("I click on submit button of \"RegPowerPointSIMActivity\" activity by \"ZeroScore\" Cs" +
+                    "SmsStudent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1277
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1278
+testRunner.And("I should see the status \"Not passed\" for the activity \"RegPowerPointSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 1279
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1280
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 1281
+testRunner.When("I navigate to \"RegPowerPointSIMActivity\" activity in \"Grades\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 1282
+testRunner.Then("I should see \"RegPowerPointSIMActivity\" activity in Grades tab with \"SimActivity0" +
+                    "Score\" grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Submit SIM5 study Plan PreTest as SMS Student")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
         public virtual void SubmitSIM5StudyPlanPreTestAsSMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit SIM5 study Plan PreTest as SMS Student", ((string[])(null)));
-#line 1227
+#line 1289
 this.ScenarioSetup(scenarioInfo);
-#line 1228
+#line 1290
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1229
+#line 1291
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1230
+#line 1292
 testRunner.When("I enter into \"RegFolderAsset\" folder in \"Course Materials\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1231
+#line 1293
 testRunner.And("I launch \"SIM5StudyPlan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1232
+#line 1294
 testRunner.And("I click on the \"Start Pre-Test\" button of \"SIM5StudyPlan\" study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1233
+#line 1295
 testRunner.And("I click on submit button of \"Sim5PreTest\" activity by \"ZeroScore\" CsSmsStudent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -2674,14 +2788,14 @@ testRunner.And("I click on submit button of \"Sim5PreTest\" activity by \"ZeroSc
         public virtual void SubmitSIM5StudyPlanTrainingAsSMSStudent100Score()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit SIM5 study Plan training as SMS Student 100 score", ((string[])(null)));
-#line 1239
+#line 1301
 this.ScenarioSetup(scenarioInfo);
-#line 1240
+#line 1302
 testRunner.When("I click on the \"Start Training\" button of \"SIM5StudyPlan\" study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1241
+#line 1303
 testRunner.And("I submit \"Word\" type \"Exam\" activity \"SIMTrainingActivity\" by \"CsSmsStudent\" stud" +
                     "ent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1242
+#line 1304
 testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\" activity of behavior" +
                     "al mode \"SkillBased\" type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -2694,15 +2808,15 @@ testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\
         public virtual void SubmitSIM5StudyPlanPostTestAsSMSStudent100ScoreWithCompletedStatus()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit SIM5 study Plan post test as SMS Student 100 score with completed status", ((string[])(null)));
-#line 1247
+#line 1309
 this.ScenarioSetup(scenarioInfo);
-#line 1248
+#line 1310
 testRunner.When("I launch \"SIM5StudyPlan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1249
+#line 1311
 testRunner.And("I click on the \"Start Post-Test\" button of \"SIM5StudyPlan\" study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1250
+#line 1312
 testRunner.And("I submit \"Word\" type \"Exam\" activity \"Sim5PostTest\" by \"CsSmsStudent\" student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1251
+#line 1313
 testRunner.Then("I should see the \"Completed\" status of the \"SIM5StudyPlan\" activity of behavioral" +
                     " mode \"SkillBased\" type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -2715,20 +2829,20 @@ testRunner.Then("I should see the \"Completed\" status of the \"SIM5StudyPlan\" 
         public virtual void SubmitSIM5StudyPlanPreTestUnderToDoList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit SIM5 study plan PreTest under To Do list", ((string[])(null)));
-#line 1260
+#line 1322
 this.ScenarioSetup(scenarioInfo);
-#line 1261
+#line 1323
 testRunner.When("I click on \"To Do\" subtab in \"Assignments\" tab as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1262
+#line 1324
 testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 1263
+#line 1325
 testRunner.When("I launch \"SIM5StudyPlan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1264
+#line 1326
 testRunner.And("I click on the \"Start Pre-Test\" button of \"SIM5StudyPlan\" study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1265
+#line 1327
 testRunner.And("I click on submit button answering incorrectly of \"Word\" type \"Exam\" activity \"Si" +
                     "m5PreTest\" by CsSmsStudent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1266
+#line 1328
 testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\" activity under \"To D" +
                     "o\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -2741,16 +2855,16 @@ testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\
         public virtual void SubmitSIM5StudyPlanTrainingAsSMSStudent100ScoreUnderToDo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit SIM5 study Plan training as SMS Student 100 score under To Do", ((string[])(null)));
-#line 1271
+#line 1333
 this.ScenarioSetup(scenarioInfo);
-#line 1272
+#line 1334
 testRunner.When("I launch \"SIM5StudyPlan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1273
+#line 1335
 testRunner.And("I click on the \"Start Training\" button of \"SIM5StudyPlan\" study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1274
+#line 1336
 testRunner.And("I submit \"Word\" type \"Exam\" activity \"SIMTrainingActivity\" by \"CsSmsStudent\" stud" +
                     "ent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1275
+#line 1337
 testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\" activity under \"To D" +
                     "o\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -2763,17 +2877,17 @@ testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\
         public virtual void SubmitSIM5StudyPlanPostTestAsSMSStudent100ScoreUnderToDo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Submit SIM5 study Plan post test as SMS Student 100 score under To Do", ((string[])(null)));
-#line 1280
+#line 1342
 this.ScenarioSetup(scenarioInfo);
-#line 1281
+#line 1343
 testRunner.When("I launch \"SIM5StudyPlan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 1282
+#line 1344
 testRunner.And("I click on the \"Start Post-Test\" button of \"SIM5StudyPlan\" study plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1283
+#line 1345
 testRunner.And("I submit \"Word\" type \"Exam\" activity \"Sim5PostTest\" by \"CsSmsStudent\" student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1284
+#line 1346
 testRunner.And("I click on \"Completed\" subtab in \"Assignments\" tab as \"CsSmsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 1285
+#line 1347
 testRunner.Then("I should see the \"Completed\" status of the \"SIM5StudyPlan\" activity under \"Comple" +
                     "ted\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

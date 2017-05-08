@@ -118,7 +118,7 @@ namespace Pegasus.Automation.DataTransferObjects
             RegExcelSIMActivity = 87,
             RegAccessSIMActivity = 88,
             RegPowerPointSIMActivity = 89,
-
+            RegAssignUnassignActivity = 90
         }
 
         /// <summary>

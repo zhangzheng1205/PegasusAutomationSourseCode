@@ -656,6 +656,18 @@ namespace Pegasus.Pages.UI_Pages
                             case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                 this.NavigateToWordChapter1SimulationActivitiesFolder();
                                 break;
+
+                            case "Excel Chapter 1 Skill-Based Training":
+                                this.NavigateToExcelChapter1SimulationActivitiesFolder();
+                                break;
+
+                            case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.NavigateToAccessChapter1SimulationActivitiesFolder();
+                                break;
+
+                            case "PowerPoint Chapter 1 Skill-Based Training":
+                                this.NavigateToPowerpointChapter1SimulationActivitiesFolder();
+                                break;
                         }
                         break;
                 }
@@ -696,6 +708,84 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// This method is to navigate inside the Excel simulation folder 
+        /// </summary>
+        private void NavigateToExcelChapter1SimulationActivitiesFolder()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Navigate inside the Word 1st folder 
+            int f1Index = this.FolderLevel1Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Excel2013_FolderName);
+            //Navigate into 2nd folder
+            int f2Index = this.FolderLevel2Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_CreatingAWorksheetAndChartingDataExcel2013_FolderName, f1Index);            
+            //Navigate into 3rd folder
+            int f3Index = this.FolderLevel3Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_ExcelChapter1_Activities_FolderName, f1Index, f2Index);            
+            //Navigate into 4th folder
+            this.FolderLevel4Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_ExcelChapter1_SimulationActivities_FolderName, 
+                f1Index, f2Index, f3Index);
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This method is to navigate inside the Access simulation folder 
+        /// </summary>
+        private void NavigateToAccessChapter1SimulationActivitiesFolder()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Navigate inside the Word 1st folder 
+            int f1Index = this.FolderLevel1Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Access2013_FolderName);
+            //Navigate into 2nd folder
+            int f2Index = this.FolderLevel2Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftAccess2013Access2013_FolderName, f1Index);
+            //Navigate into 3rd folder
+            int f3Index = this.FolderLevel3Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_AccessChapter1_Activities_FolderName, f1Index, f2Index);
+            //Navigate into 4th folder
+            this.FolderLevel4Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_AccessChapter1_SimulationActivities_FolderName,
+                f1Index, f2Index, f3Index);
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This method is to navigate inside the Powerpoint simulation folder 
+        /// </summary>
+        private void NavigateToPowerpointChapter1SimulationActivitiesFolder()
+        {
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //Navigate inside the Word 1st folder 
+            int f1Index = this.FolderLevel1Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_Powerpoint2013_FolderName);
+            //Navigate into 2nd folder
+            int f2Index = this.FolderLevel2Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftPowerpoint2013Access2013_FolderName, f1Index);
+            //Navigate into 3rd folder
+            int f3Index = this.FolderLevel3Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_PowerpointChapter1_Activities_FolderName, f1Index, f2Index);
+            //Navigate into 4th folder
+            this.FolderLevel4Navigation(GBDefaultUXPageResource.
+                GBDefaultUXPage_StudentGrades_PowerpointChapter1_SimulationActivities_FolderName,
+                f1Index, f2Index, f3Index);
+            logger.LogMethodEntry("GBDefaultUXPage",
+                         "FolderLevelNavigation",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Navigate inside folder at the root level
         /// </summary>
         /// <param name="activityFolderName">This is the Folder name.</param>
@@ -716,9 +806,10 @@ namespace Pegasus.Pages.UI_Pages
                 GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator));
             int getFolderCount = base.GetElementCountByXPath(string.Format(GBDefaultUXPageResource.
                 GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator));
-            for (activityFolder1Index = 1; activityFolder1Index <= getFolderCount; activityFolder1Index++)
+            for (activityFolder1Index = 2; activityFolder1Index <= getFolderCount; activityFolder1Index++)
             {
                 //Get the name of the folder
+                bool jsd = base.IsElementPresent(By.XPath("//div[@class='ko-childrens']/ul/li[2]/div[1]/a[3]"), 10);
                 base.WaitForElement(By.XPath(string.Format(GBDefaultUXPageResource.
                     GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator, activityFolder1Index)));
                 string getFolderName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
@@ -911,7 +1002,8 @@ namespace Pegasus.Pages.UI_Pages
                 string getActivityName = base.GetElementInnerTextByXPath(string.Format(GBDefaultUXPageResource.
                     GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
                 actualActivityName = getActivityName.TrimEnd();
-                if (actualActivityName == activityName)
+                //Used Contains to compare since the activity name in UI is not displayed completely
+                if (actualActivityName.Contains(activityName))
                 {
                     break;
                 }

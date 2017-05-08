@@ -1219,6 +1219,68 @@ When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity100Score" grade
 
 #---------------------------------------------------------------------------------------------------------------------------
+										#Submit Excel SIM Activity having 0 score#
+#---------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting SIM5 Excel activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting Excel SIM Activity and scoring 0
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegExcelSIMActivity" activity as "CsSmsStudent" with "ZeroScore" score
+And I click on submit button of "RegExcelSIMActivity" activity by "ZeroScore" CsSmsStudent
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegExcelSIMActivity"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegExcelSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegExcelSIMActivity" activity in Grades tab with "SimActivity0Score" grade
+
+#---------------------------------------------------------------------------------------------------------------------------
+										#Submit Access SIM Activity having 0 score#
+#---------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting SIM5 Access activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting Access SIM Activity and scoring 0
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegAccessSIMActivity" activity as "CsSmsStudent" with "ZeroScore" score
+And I click on submit button of "RegAccessSIMActivity" activity by "ZeroScore" CsSmsStudent
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegAccessSIMActivity"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegAccessSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegAccessSIMActivity" activity in Grades tab with "SimActivity0Score" grade
+
+#---------------------------------------------------------------------------------------------------------------------------
+										#Submit Powerpoint SIM Activity having 0 score#
+#---------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting SIM5 Powerpoint activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting Powerpoint SIM Activity and scoring 0
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegPowerPointSIMActivity" activity as "CsSmsStudent" with "ZeroScore" score
+And I click on submit button of "RegPowerPointSIMActivity" activity by "ZeroScore" CsSmsStudent
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegPowerPointSIMActivity"
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "RegPowerPointSIMActivity" activity in "Grades" by "CsSmsStudent"
+Then I should see "RegPowerPointSIMActivity" activity in Grades tab with "SimActivity0Score" grade
+#---------------------------------------------------------------------------------------------------------------------------
 										#Submit SIM5 Pre Test under View All Content#
 #---------------------------------------------------------------------------------------------------------------------------
 # Purpose: SIM5 pre test submission and study plan sataus for 0 scored pre test 

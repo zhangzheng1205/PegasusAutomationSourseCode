@@ -196,25 +196,25 @@
     <value>Word Chapter 1: Creating Documents with Microsoft Word 2013</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level1Folder_PlusIcon_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-childrens']/ul/li[{0}]/div/span[2]</value>
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div/a[2]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level2Folder_PlusIcon_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[2]</value>
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/a[2]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level2SubFolders_Count_XPath_Locator" xml:space="preserve">
     <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level2SubFolder_Name_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/span[4]</value>
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div/a[3]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level3Folder_PlusIcon_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[2]</value>
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/a[2]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level3SubFolders_Count_XPath_Locator" xml:space="preserve">
     <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level3SubFolder_Name_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/span[4]</value>
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[1]/a[3]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Level4Folder_XPath_Locator" xml:space="preserve">
     <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li[{3}]/div[1]</value>
@@ -223,13 +223,13 @@
     <value>//div[@class='ko-childrens']/ul/li[{0}]/div[2]/ul/li[{1}]/div[2]/ul/li[{2}]/div[2]/ul/li</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_RootFolderPlus_Xpath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/span[2]</value>
+    <value>//div[@class='ko-dropdown-menu ko-dropdown-menu-overlay']/ul/li/div/a[2]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Count_XPath_Locator" xml:space="preserve">
     <value>//div[@class='ko-childrens']/ul/li</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_SubFoldersInRoot_Name_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='ko-childrens']/ul/li[{0}]/div/span[4]</value>
+    <value>//div[@class='ko-childrens']/ul/li[{0}]/div[1]/a[3]</value>
   </data>
   <data name="GBDefaultUXPage_StudentGrades_Word2013_FolderName" xml:space="preserve">
     <value>Word 2013</value>
@@ -254,5 +254,41 @@
   </data>
   <data name="GBDefaultUXPage_StudentGradesTab_Activity_CmenuOption_Click_XPath_Locator" xml:space="preserve">
     <value>//div[@id='referenceId8']/table/tbody/tr/td/div[2]/a[{0}]</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_Access2013_FolderName" xml:space="preserve">
+    <value>Access 2013</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_AccessChapter1_Activities_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Activities</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_AccessChapter1_SimulationActivities_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_CreatingAWorksheetAndChartingDataExcel2013_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Creating a Worksheet and Charting Data</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_Excel2013_FolderName" xml:space="preserve">
+    <value>Excel 2013</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_ExcelChapter1_Activities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Activities</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_ExcelChapter1_SimulationActivities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftAccess2013Access2013_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Getting Started with Microsoft Access 2013</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_GettingStartedWithMicrosoftPowerpoint2013Access2013_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Getting Started with Microsoft PowerPoint</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_Powerpoint2013_FolderName" xml:space="preserve">
+    <value>PowerPoint 2013</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_PowerpointChapter1_Activities_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Activities</value>
+  </data>
+  <data name="GBDefaultUXPage_StudentGrades_PowerpointChapter1_SimulationActivities_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Simulation Activities</value>
   </data>
 </root>

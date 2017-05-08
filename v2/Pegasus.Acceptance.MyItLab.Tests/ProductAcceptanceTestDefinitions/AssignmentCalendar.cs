@@ -116,12 +116,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search the Activity
             Logger.LogMethodEntry("AssignmentCalendar", "SearchActivity",
-
-
                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
-            //Search the Activity            
+            //Search the Activity    
             new CalendarHedDefaultUxPage().SearchTheActivity(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar", "SearchActivity",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -1383,6 +1381,49 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new CalendarHedDefaultUxPage().ClickBackToButtonLinkInCalendar(linkName);
             Logger.LogMethodExit("AssignmentCalendar",
                 "AssetAssignmentType",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activityCount"></param>
+        [When(@"I select ""(.*)"" activity")]
+        public void SelectActivityCheckbox(int activityCount)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "SelectActivityCheckbox",
+              base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().SelectActivitiesToAssignInCalendar(activityCount);
+            Logger.LogMethodExit("AssignmentCalendar",
+                "SelectActivityCheckbox",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [When(@"I click the 'Assign/UnAssign' link")]
+        public void ClickAssignUnassignLinkInCalendar()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "ClickAssignUnassignLinkInCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().AssignUnAssignContentsInCalendar();
+            Logger.LogMethodExit("AssignmentCalendar",
+                "ClickAssignUnassignLinkInCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see ""(.*)"" status for the activity")]
+        public void ThenIShouldSeeTheStatusForTheActivity(string expectedActivityStatus)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "ClickAssignUnassignLinkInCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyCheckMarkIconInCalendar",
+               ScenarioContext.Current.ScenarioInfo.
+               Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                   GetActivityStatusInCalendar()));            
+            Logger.LogMethodExit("AssignmentCalendar",
+                "ClickAssignUnassignLinkInCalendar",
               base.IsTakeScreenShotDuringEntryExit);
         }
     }
