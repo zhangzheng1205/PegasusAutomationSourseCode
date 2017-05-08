@@ -641,7 +641,10 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.CourseCleanUpScript.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.Prod.StudentSubmissionUX.BVT.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.StudentSubmissionUX.PWF.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.HEDMIL.AssignmentCalendarInstructorUX.PWF.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest1.StudentSubmissionFor70and100Score.orderedtest">

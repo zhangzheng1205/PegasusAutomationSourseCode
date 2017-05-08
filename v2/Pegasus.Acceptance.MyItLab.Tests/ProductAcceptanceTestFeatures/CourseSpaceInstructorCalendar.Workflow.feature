@@ -142,7 +142,35 @@ Then I should see the "RegPastDueCmenuAssignment" activity of behavioral mode "S
 #When I click on "Back to Month" link in Calendar frame
 Then I should be on the "Calendar" page
 
-#Purpose : Cmenu assign of single content to past due date
+#Purpose : Cmenu assign of single content to past due date to accept student submission
+#MyItLabProgramCourse
+#Test Case Id :
+Scenario: Cmenu assign from Assignment Calendar to pastdue date to accept submission from student
+When I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "RegPastDueAcceptAssignment" activity of behavioral mode "SkillBased"
+Then I should see the searched "RegPastDueAcceptAssignment" activity of behavioral mode "SkillBased"
+When I click cmenu "Set Scheduling Options" of activity "RegPastDueAcceptAssignment"
+When I assign the searched activity to past due date
+Then I should see the "RegPastDueAcceptAssignment" activity of behavioral mode "SkillBased" assigned by 'CMenu' in "PastDue date" of day view 
+#When I click on "Back to Month" link in Calendar frame
+Then I should be on the "Calendar" page
+
+#Purpose : Cmenu assign of single content to past due date to decline student submission
+#MyItLabProgramCourse
+#Test Case Id :
+Scenario: Cmenu assign from Assignment Calendar to pastdue date to decline submission from student
+When I navigate to "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I search the "RegPastDueDeclineAssignment" activity of behavioral mode "SkillBased"
+Then I should see the searched "RegPastDueDeclineAssignment" activity of behavioral mode "SkillBased"
+When I click cmenu "Set Scheduling Options" of activity "RegPastDueDeclineAssignment"
+When I assign the searched activity to past due date
+Then I should see the "RegPastDueDeclineAssignment" activity of behavioral mode "SkillBased" assigned by 'CMenu' in "PastDue date" of day view 
+#When I click on "Back to Month" link in Calendar frame
+Then I should be on the "Calendar" page
+
+#Purpose : Cmenu assign of single content to future date
 #MyItLabProgramCourse
 #Test Case Id :
 Scenario: Cmenu Assign with FutureDate as due date
@@ -207,6 +235,9 @@ And I should be displayed with "Month view" option in "Advanced Calendar" of "Ca
 When I click on "Day" view in Advance calender
 Then I should see the "RegTodayDateAssignment " activity assigned in day view of Advance calender
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+									# Assign the assets using Assign / UnAssign link #
+#---------------------------------------------------------------------------------------------------------------------------------------------------
 #Purpose : Assign One Content using Assign/Unassign Link by SMSInstructor
 #MyItLabProgramCourse
 #Test Case Id :

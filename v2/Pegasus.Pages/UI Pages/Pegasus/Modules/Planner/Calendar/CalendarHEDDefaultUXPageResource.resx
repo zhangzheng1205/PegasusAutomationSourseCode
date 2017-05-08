@@ -591,4 +591,16 @@
   <data name="CalendarHEDDefaultUXPage_CalendarFrame_ExpectedDate_XPathLocator" xml:space="preserve">
     <value>//table[@class ='rsContentTable']/tbody/tr[{0}]/td[{1}]</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_ActivitiesSearched_XPathLocator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div[1]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_ActivityCheckBox_Select_XPathLocator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div[{0}]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_Activity_Status_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div[1]/div[2]/div[2]/div/span/div/div[2]/span[@title='Assigned']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_CalendarFrame_AssignUnassignLink_ID_Locator" xml:space="preserve">
+    <value>imgAssign</value>
+  </data>
 </root>

@@ -3452,10 +3452,10 @@ namespace Pegasus.Pages.UI_Pages
             //Clear the prefilled textbox value
             base.ClearTextById(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator);
-            //Enter the stored previous date value
+            //Enter the stored expected date value
             base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_DueDateTextBox_Id_Locator, expectedDate);
-            //Save the assign details by clicking Save button            
+            //Save the assign details by clicking Save button  
             base.ClickButtonById(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_SaveButton_Id_Locator);
         }
@@ -3474,8 +3474,8 @@ namespace Pegasus.Pages.UI_Pages
                 DateTime date = DateTime.Today;
                 string getDate = date.ToString(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_CurrentCalendarCell_Id_Locator);
-                this.AssignActivity(getDate);
-            }
+                this.AssignActivity(getDate);                
+                }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -4119,23 +4119,25 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// 
+        /// Select Activities To Assign In Calendar
         /// </summary>
-        /// <param name="activityCount"></param>
+        /// <param name="activityCount">This is the number of activities to be selected.</param>
         public void SelectActivitiesToAssignInCalendar(int activityCount)
         {
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectActivitiesToAssignInCalendar",
                base.IsTakeScreenShotDuringEntryExit);
             this.SelectCalendarWindow();
-            bool afd = base.IsElementPresent(By.XPath("//div[@id='grdSearch_Container']/div[1]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input"), 10);
-            base.WaitForElement(By.XPath("//div[@id='grdSearch_Container']/div[1]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input"));
+            base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_ActivitiesSearched_XPathLocator));
             for (int i = 1; i <= activityCount; i++)
-            {
-                bool aafd = base.IsElementPresent(By.XPath(string.Format("//div[@id='grdSearch_Container']/div[{0}]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input", i)), 10);
-                base.WaitForElement(By.XPath("//div[@id='grdSearch_Container']/div[1]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input"));
+            {               
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_ActivityCheckBox_Select_XPathLocator));
                 //Select the activity check box
-                IWebElement clickActivityCheckBox = base.GetWebElementPropertiesByXPath(string.Format("//div[@id='grdSearch_Container']/div[{0}]/div[1]/div/div/table[@class='ES_ColtextTable']/tbody/tr/td[1]/input", i));
+                IWebElement clickActivityCheckBox = base.GetWebElementPropertiesByXPath(
+                    string.Format(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_ActivityCheckBox_Select_XPathLocator, i));
                 base.ClickByJavaScriptExecutor(clickActivityCheckBox);
             }
             Logger.LogMethodExit("CalendarHEDDefaultUXPage",
@@ -4152,8 +4154,11 @@ namespace Pegasus.Pages.UI_Pages
                 "AssignUnAssignContentsInCalendar",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Assign/UnAssign link
-            base.WaitForElement(By.Id("imgAssign"));
-            IWebElement getAssignUnassignLink = base.GetWebElementPropertiesById("imgAssign");
+            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_AssignUnassignLink_ID_Locator));
+            IWebElement getAssignUnassignLink = base.GetWebElementPropertiesById(
+                CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_AssignUnassignLink_ID_Locator);
             base.ClickByJavaScriptExecutor(getAssignUnassignLink);
             Logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "AssignUnAssignContentsInCalendar",
@@ -4174,10 +4179,13 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the GO Button to update the assigned status[Auto referesh is not yet implemented]
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_Search_Button_Id_Locator));
+            //Fetch the Activity status from UI
             base.WaitForElement(By.XPath(
-                "//div[@id='grdSearch_Container']/div[1]/div[2]/div[2]/div/span/div/div[2]/span[@title='Assigned']"));
+                CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_Activity_Status_XPath_Locator));
             isActivityAssignedInCaledar = base.IsElementPresent(By.XPath(
-                "//div[@id='grdSearch_Container']/div[1]/div[2]/div[2]/div/span/div/div[2]/span[@title='Assigned']"), 10);
+                CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_CalendarFrame_Activity_Status_XPath_Locator), 10);
             return isActivityAssignedInCaledar;
             Logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "GetActivityStatusInCalendar",

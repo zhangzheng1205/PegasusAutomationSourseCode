@@ -281,12 +281,12 @@
 			<IsApproved>false</IsApproved>
 		</Course>
 		<Course>
-			<Name>0617_WLProduct</Name>
+			<Name>VCD_ProgramAdminCourse</Name>
 			<CourseType>MyITLabOffice2013Program</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
-			<SectionName>Trial1</SectionName>
-			<SectionId>CRSKLNU-14003411</SectionId>
+			<SectionName>Dependent_MIL_VCD Test</SectionName>
+			<SectionId>CRSKLZY-10045825</SectionId>
 			<IsPublished>true</IsPublished>
 			<IsApproved>true</IsApproved>
 		</Course>
@@ -1018,7 +1018,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
 	  <Activity>
-		  <Name>Auto-2017/03/15-ee751cbc-Study Plan</Name>
+		  <Name>Word Chapter 1 Skill-Based Training</Name>
 		  <ActivityType>SIM5StudyPlan</ActivityType>
 		  <IsCreated>true</IsCreated>
 	  </Activity>
@@ -1145,6 +1145,18 @@ the UI deleted or refreshed.-->
     <Activity>
       <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
       <ActivityType>RegPastDueCmenuAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegPastDueAcceptAssignment</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Project 1A Skill-Based Training</Name>
+      <ActivityType>RegPastDueDeclineAssignment</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>

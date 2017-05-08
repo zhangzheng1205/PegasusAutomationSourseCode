@@ -1385,9 +1385,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// 
+        /// Select the assets to assign
         /// </summary>
-        /// <param name="activityCount"></param>
+        /// <param name="activityCount">This is the activity count.</param>
         [When(@"I select ""(.*)"" activity")]
         public void SelectActivityCheckbox(int activityCount)
         {

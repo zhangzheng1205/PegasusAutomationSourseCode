@@ -332,6 +332,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;grdSearch_Container&apos;]/div[1]/div[1]/div/div/table[@class=&apos;ES_ColtextTable&apos;]/tbody/tr/td[1]/input.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_ActivitiesSearched_XPathLocator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_ActivitiesSearched_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;grdSearch_Container&apos;]/div[1]/div[2]/div[2]/div/span/div/div[2]/span[@title=&apos;Assigned&apos;].
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_Activity_Status_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_Activity_Status_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;grdSearch_Container&apos;]/div[{0}]/div[1]/div/div/table[@class=&apos;ES_ColtextTable&apos;]/tbody/tr/td[1]/input.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_ActivityCheckBox_Select_XPathLocator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_ActivityCheckBox_Select_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgAssign.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_CalendarFrame_AssignUnassignLink_ID_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_CalendarFrame_AssignUnassignLink_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@class =&apos;rsContentTable&apos;]/tbody/tr[{0}]/td[{1}]/div/div/a.
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_CalendarFrame_Date_XPathLocator {

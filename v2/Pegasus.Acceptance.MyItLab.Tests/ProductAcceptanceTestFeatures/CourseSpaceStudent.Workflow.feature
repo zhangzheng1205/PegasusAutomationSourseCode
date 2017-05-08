@@ -1219,7 +1219,7 @@ When I navigate to "RegWordSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegWordSIMActivity" activity in Grades tab with "SimActivity100Score" grade
 
 #---------------------------------------------------------------------------------------------------------------------------
-										#Submit Excel SIM Activity having 0 score#
+										#Submit Excel SIM5 Activity having 0 score#
 #---------------------------------------------------------------------------------------------------------------------------
 #Purpose : Submitting SIM5 Excel activity and Student scoring a 0%
 #Test case ID : 
@@ -1240,7 +1240,7 @@ When I navigate to "RegExcelSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegExcelSIMActivity" activity in Grades tab with "SimActivity0Score" grade
 
 #---------------------------------------------------------------------------------------------------------------------------
-										#Submit Access SIM Activity having 0 score#
+										#Submit Access SIM5 Activity having 0 score#
 #---------------------------------------------------------------------------------------------------------------------------
 #Purpose : Submitting SIM5 Access activity and Student scoring a 0%
 #Test case ID : 
@@ -1261,7 +1261,32 @@ When I navigate to "RegAccessSIMActivity" activity in "Grades" by "CsSmsStudent"
 Then I should see "RegAccessSIMActivity" activity in Grades tab with "SimActivity0Score" grade
 
 #---------------------------------------------------------------------------------------------------------------------------
-										#Submit Powerpoint SIM Activity having 0 score#
+										#Submit Access SIM5 PastDue Activities 
+#---------------------------------------------------------------------------------------------------------------------------
+#Purpose : Submitting SIM5 Access activity and Student scoring a 0%
+#Test case ID : 
+#Products : MyItLab.
+#Pre condition : This test case depends on SIM5 activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student submitting Access SIM5 pastdue activity
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegPastDueAcceptAssignment" activity as "CsSmsStudent" with "ZeroScore" score
+And I click on submit button of "RegPastDueAcceptAssignment" activity by "ZeroScore" CsSmsStudent
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegAccessSIMActivity"
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Project 1A Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "RegPastDueDeclineAssignment" activity as "CsSmsStudent" with "ZeroScore" score
+And I click on submit button of "RegPastDueDeclineAssignment" activity by "ZeroScore" CsSmsStudent
+Then I should be on the "Course Materials" page
+And I should see the status "Not passed" for the activity "RegPastDueDeclineAssignment"
+
+
+#---------------------------------------------------------------------------------------------------------------------------
+										#Submit Powerpoint SIM5 Activity having 0 score#
 #---------------------------------------------------------------------------------------------------------------------------
 #Purpose : Submitting SIM5 Powerpoint activity and Student scoring a 0%
 #Test case ID : 
