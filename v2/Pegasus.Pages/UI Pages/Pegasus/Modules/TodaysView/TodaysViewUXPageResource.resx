@@ -127,7 +127,7 @@
     <value>//table[@id='TodaysViewMessageDatagrid']/tbody/tr</value>
   </data>
   <data name="TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[2]/a</value>
+    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[2]/a</value>
   </data>
   <data name="TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator" xml:space="preserve">
     <value>PDS_DueSpan</value>
@@ -901,13 +901,13 @@
     <value>.//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/div[{0}]/table/tbody/tr/td[3]/div[{1}]</value>
   </data>
   <data name="TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator" xml:space="preserve">
-    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table</value>
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission']/table</value>
   </data>
   <data name="TodaysViewUXPage_PastDueSubmittedChannel_StudentsCount_XPath_Locator" xml:space="preserve">
     <value>.//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/div[{0}]/table/tbody/tr/td[3]/div</value>
   </data>
   <data name="TodaysViewUXPage_PastDueSubmittedChannel_StudentsName_XPath_Locator" xml:space="preserve">
-    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a</value>
+    <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a</value>
   </data>
   <data name="TodayViewUXPage_StudentName_PastDueSubmittedChannel_XPath_Locator" xml:space="preserve">
     <value>//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a</value>

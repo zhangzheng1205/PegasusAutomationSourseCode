@@ -2744,7 +2744,7 @@ testRunner.And("I click on submit button of \"RegPastDueAcceptAssignment\" activ
 #line 1277
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1278
-testRunner.And("I should see the status \"Not passed\" for the activity \"RegAccessSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the status \"Submitted Late\" for the activity \"RegAccessSIMActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 1279
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 1280
@@ -2761,8 +2761,8 @@ testRunner.And("I click on submit button of \"RegPastDueDeclineAssignment\" acti
 #line 1284
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 1285
-testRunner.And("I should see the status \"Not passed\" for the activity \"RegPastDueDeclineAssignmen" +
-                    "t\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the status \"Submitted Late\" for the activity \"RegPastDueDeclineAssig" +
+                    "nment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

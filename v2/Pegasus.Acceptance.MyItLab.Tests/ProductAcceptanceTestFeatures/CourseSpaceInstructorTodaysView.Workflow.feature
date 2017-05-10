@@ -355,15 +355,24 @@ Then I should see the "RegPastDueAssignment" activity name
 #Pre condition : Assigned activity should be past due and student should submit the activity after due date.
 #Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
 Scenario: Instructor accept past due submission from past due submitted channel of activity
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I expand "Alerts" channel
 And I click on "Past Due: Submitted" alert option
 And I click on the expand icon of "CsSmsStudent"
-Then I should see the "RegPastDueAssignment" activity name 
-When I select the check box of the "RegPastDueAssignment" past due activity submitted by "CsSmsStudent"
+Then I should see the "RegPastDueAcceptAssignment" activity name 
+When I select the check box of the "RegPastDueAcceptAssignment" past due activity submitted by "CsSmsStudent"
 And I click on "Accept" activities past due date
 Then I should see "CsSmsStudent" submission 'Accepted' success message
+When I select the check box of the "RegPastDueDeclineAssignment" past due activity submitted by 'Zero' score "CsSmsStudent"
+When I click on "Decline" activities past due date
+Then I should see 'Zero' "CsSmsStudent" submission 'Declined' success message
+
 
 
 #Test case ID : peg-21953.
@@ -376,8 +385,8 @@ Then I should be on the "Today's View" page
 When I expand "Alerts" channel
 And I click on "Past Due: Submitted" alert option
 And I click on the expand icon 'Zero' score "CsSmsStudent"
-Then I should see the "RegPastDueAssignment" activity name 
-When I select the check box of the "RegPastDueAssignment" past due activity submitted by 'Zero' score "CsSmsStudent"
+Then I should see the "RegPastDueDeclineAssignment" activity name 
+When I select the check box of the "RegPastDueDeclineAssignment" past due activity submitted by 'Zero' score "CsSmsStudent"
 When I click on "Decline" activities past due date
 Then I should see 'Zero' "CsSmsStudent" submission 'Declined' success message
 

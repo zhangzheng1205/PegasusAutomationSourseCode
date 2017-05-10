@@ -820,24 +820,42 @@ testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((str
 #line 357
 this.ScenarioSetup(scenarioInfo);
 #line 358
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 359
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 360
-testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 361
-testRunner.And("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 362
-testRunner.And("I click on the expand icon of \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
+                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 363
-testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 364
-testRunner.When("I select the check box of the \"RegPastDueAssignment\" past due activity submitted " +
-                    "by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 365
-testRunner.And("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 366
+testRunner.And("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 367
+testRunner.And("I click on the expand icon of \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 368
+testRunner.Then("I should see the \"RegPastDueAcceptAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 369
+testRunner.When("I select the check box of the \"RegPastDueAcceptAssignment\" past due activity subm" +
+                    "itted by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 370
+testRunner.And("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 371
 testRunner.Then("I should see \"CsSmsStudent\" submission \'Accepted\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 372
+testRunner.When("I select the check box of the \"RegPastDueDeclineAssignment\" past due activity sub" +
+                    "mitted by \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 373
+testRunner.When("I click on \"Decline\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 374
+testRunner.Then("I should see \'Zero\' \"CsSmsStudent\" submission \'Declined\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -850,26 +868,26 @@ testRunner.Then("I should see \"CsSmsStudent\" submission \'Accepted\' success m
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor declines past due submission from past due submitted channel of activi" +
                     "ty", ((string[])(null)));
-#line 373
-this.ScenarioSetup(scenarioInfo);
-#line 374
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 375
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 376
-testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 377
-testRunner.And("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 378
-testRunner.And("I click on the expand icon \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 379
-testRunner.Then("I should see the \"RegPastDueAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 380
-testRunner.When("I select the check box of the \"RegPastDueAssignment\" past due activity submitted " +
-                    "by \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 381
-testRunner.When("I click on \"Decline\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 382
+this.ScenarioSetup(scenarioInfo);
+#line 383
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 384
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 385
+testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 386
+testRunner.And("I click on \"Past Due: Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 387
+testRunner.And("I click on the expand icon \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 388
+testRunner.Then("I should see the \"RegPastDueDeclineAssignment\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 389
+testRunner.When("I select the check box of the \"RegPastDueDeclineAssignment\" past due activity sub" +
+                    "mitted by \'Zero\' score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 390
+testRunner.When("I click on \"Decline\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 391
 testRunner.Then("I should see \'Zero\' \"CsSmsStudent\" submission \'Declined\' success message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -883,19 +901,19 @@ testRunner.Then("I should see \'Zero\' \"CsSmsStudent\" submission \'Declined\' 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the student and activity in Past due not submitted channel of Notificati" +
                     "ons channel", ((string[])(null)));
-#line 388
+#line 397
 this.ScenarioSetup(scenarioInfo);
-#line 389
+#line 398
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 390
+#line 399
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 391
+#line 400
 testRunner.Then("I should be displayed with \"RegPastDueNotSubmittedCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 392
+#line 401
 testRunner.When("I click on \"Past Due: Not Submitted\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 393
+#line 402
 testRunner.Then("I should be displayed with the \"Zero\" score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 394
+#line 403
 testRunner.Then("I should be displayed with the \"Idle\" score \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -907,17 +925,17 @@ testRunner.Then("I should be displayed with the \"Idle\" score \"CsSmsStudent\""
         public virtual void ValidateTheNewGradesChannelOfNotificationsChannelInTodaysViewTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the New Grades channel of Notifications channel in Todays view tab", ((string[])(null)));
-#line 400
+#line 409
 this.ScenarioSetup(scenarioInfo);
-#line 401
+#line 410
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 402
+#line 411
 testRunner.When("I expand \"Alerts\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 403
+#line 412
 testRunner.Then("I should be displayed with \"RegNewGradesAlertCount\" count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 404
+#line 413
 testRunner.When("I click on \"New Grades\" alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 405
+#line 414
 testRunner.Then("I should see the \"RegNewGradedActivity\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

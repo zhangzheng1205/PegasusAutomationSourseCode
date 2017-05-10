@@ -367,9 +367,9 @@
 			<IsApproved>true</IsApproved>
 		</Course>
 		<Course>
-			<Name>Dependent_MIL_VCD</Name>
+			<Name>Dependent_MIL_VCD Test</Name>
 			<CourseType>MyItLabInstructorCourse</CourseType>
-			<InstructorCourseId>CRSKLES-10044234</InstructorCourseId>
+			<InstructorCourseId>CRSKLZY-10045825</InstructorCourseId>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
 			<IsPublished>true</IsPublished>
@@ -1155,7 +1155,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Access Chapter 1 Project 1A Skill-Based Training</Name>
+      <Name>Access Chapter 1 Project 1B Skill-Based Training</Name>
       <ActivityType>RegPastDueDeclineAssignment</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
@@ -1227,7 +1227,7 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
+      <Name>Access Chapter 1 Project 1A Skill-Based Training</Name>
       <ActivityType>RegAccessSIMActivity</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>

@@ -1275,14 +1275,14 @@ When I select "Access Chapter 1 Skill-Based Training" in "Course Materials" by "
 And I launch the "RegPastDueAcceptAssignment" activity as "CsSmsStudent" with "ZeroScore" score
 And I click on submit button of "RegPastDueAcceptAssignment" activity by "ZeroScore" CsSmsStudent
 Then I should be on the "Course Materials" page
-And I should see the status "Not passed" for the activity "RegAccessSIMActivity"
+And I should see the status "Submitted Late" for the activity "RegAccessSIMActivity"
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Project 1A Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the "RegPastDueDeclineAssignment" activity as "CsSmsStudent" with "ZeroScore" score
 And I click on submit button of "RegPastDueDeclineAssignment" activity by "ZeroScore" CsSmsStudent
 Then I should be on the "Course Materials" page
-And I should see the status "Not passed" for the activity "RegPastDueDeclineAssignment"
+And I should see the status "Submitted Late" for the activity "RegPastDueDeclineAssignment"
 
 
 #---------------------------------------------------------------------------------------------------------------------------

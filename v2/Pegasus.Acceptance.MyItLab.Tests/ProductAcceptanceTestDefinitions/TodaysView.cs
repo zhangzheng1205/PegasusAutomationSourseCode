@@ -1097,9 +1097,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              Logger.LogMethodExit("TodaysView", "ExpandIconOfStudentInPastDueSubmitteChannel",
                 base.IsTakeScreenShotDuringEntryExit);
              //Fetch user from XML
-             User user = User.Get(userTypeEnum);
-             string actualUserName = user.LastName + ", " + user.FirstName;
-             new TodaysViewUxPage().ClickStudentExpadIcon(actualUserName);
+             string studentName = new RptAllAssessmentAllStudentPage().
+                 GetZeroScoreUsername(userTypeEnum);
+             new TodaysViewUxPage().ClickStudentExpadIcon(studentName);
              Logger.LogMethodExit("TodaysView", "ExpandIconOfStudentInPastDueSubmitteChannel",
                 base.IsTakeScreenShotDuringEntryExit);
          }
@@ -1155,9 +1155,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              Activity activity = Activity.Get(activityType);
              string actualActivityName = activity.Name;
              //Fetch User from XML memory
-             User user = User.Get(userType);
-             string actualUserName = user.LastName + ", " + user.FirstName;
-             new TodaysViewUxPage().SelectTheCheckBoxOfPastDueActivitySubmitted(actualActivityName, actualUserName);
+             string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(userType);
+             new TodaysViewUxPage().SelectTheCheckBoxOfPastDueActivitySubmitted(actualActivityName, studentName);
              Logger.LogMethodExit("TodaysView", "SelectTheCheckBoxOfThePastDueActivitySubmitted",
               base.IsTakeScreenShotDuringEntryExit);
          }

@@ -5756,10 +5756,8 @@ namespace Pegasus.Pages.UI_Pages
                         break;
 
                     case "Alerts":
-                        base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                       TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator));
-                        getIconID = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
-                    TodayViewUXPageResource_Alerts_ExpandIcon_Id_Locator);
+                        base.WaitForElement(By.PartialLinkText(subChannelName));
+                        getIconID = base.GetWebElementPropertiesByPartialLinkText(subChannelName);
                         base.PerformMouseClickAction(getIconID);
                         break;
 
@@ -6252,10 +6250,10 @@ namespace Pegasus.Pages.UI_Pages
                 int studentIndex = this.GetStudentIndexInPastDueSubmittedChannel(actualUserName);
                 //Expand the Student
                 base.WaitForElement(By.XPath(string.Format(
-                    "//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[1]",
+                    "//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[1]",
                     studentIndex)), 10);
                 IWebElement expandStudent = base.GetWebElementPropertiesByXPath(string.Format(
-                    "//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[1]",
+                    "//div[@id = '_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission']/table[{0}]/tbody/tr/td[1]",
                     studentIndex));
                 base.PerformMouseClickAction(expandStudent);
             }
@@ -6279,7 +6277,7 @@ namespace Pegasus.Pages.UI_Pages
             int getStudentIndex = 0;
             try
             {
-
+                bool jkd = base.IsElementPresent(By.XPath("//div[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission']/table"), 10);
                 int getStudentRowCountInAlertChannel = base.GetElementCountByXPath(TodaysViewUXPageResource.
                     TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator);
                 for (int i = 1; i <= getStudentRowCountInAlertChannel; i++)

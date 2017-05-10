@@ -1003,7 +1003,7 @@ namespace Pegasus.Pages.UI_Pages
                     GBDefaultUXPage_StudentGrades_ActivityName_XPath_Locator, i));
                 actualActivityName = getActivityName.TrimEnd();
                 //Used Contains to compare since the activity name in UI is not displayed completely
-                if (actualActivityName.Contains(activityName))
+                if (actualActivityName.Equals(activityName))
                 {
                     break;
                 }

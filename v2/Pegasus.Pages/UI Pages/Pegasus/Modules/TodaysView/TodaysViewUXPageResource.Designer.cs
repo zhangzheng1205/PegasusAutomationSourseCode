@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/table.
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission&apos;]/table.
         /// </summary>
         internal static string TodaysViewUXPage_PastDueSubmittedChannel_StudentRowCount_XPath_Locator {
             get {
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl2__ctl1_tvPastDueSubmission&apos;]/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a.
+        ///   Looks up a localized string similar to //div[@id = &apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl0__ctl0__ctl1__ctl0_parentChannels__ctl1__ctl1_tvPastDueSubmission&apos;]/table[{0}]/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a.
         /// </summary>
         internal static string TodaysViewUXPage_PastDueSubmittedChannel_StudentsName_XPath_Locator {
             get {
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1&apos;]/table/tbody/tr/td[2]/a.
+        ///   Looks up a localized string similar to //div[@id=&apos;div__ctl0__ctl0_phBody_PageContent__ctl0__ctl1__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1&apos;]/table/tbody/tr/td[2]/a.
         /// </summary>
         internal static string TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator {
             get {
