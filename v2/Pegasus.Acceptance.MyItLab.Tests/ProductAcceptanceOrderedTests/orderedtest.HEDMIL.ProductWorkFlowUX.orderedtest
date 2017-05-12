@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest.HEDMIL.ProductWorkFlowUX" storage="d:\may 9th 2017 ux live\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.hedmil.productworkflowux.orderedtest" id="f1d9d811-fb97-4014-a0ed-ad2b9d5e41fd" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="3e52ff41-d17e-4475-925d-20a13282ce1f" name="orderedtest.HEDMIL.prodprogramadmin.bvt.myitlabUX" storage="orderedtest.hedmil.prodprogramadmin.bvt.myitlabux.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="81874a23-e72c-46d1-bee4-2364f7f48ca2" name="orderedtest.hedmil.assignmentcalendarinstructorux.pwf" storage="orderedtest.hedmil.assignmentcalendarinstructorux.pwf.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -265,7 +265,7 @@
 			<IsApproved>true</IsApproved>
 		</Course>
 		<Course>
-			<Name>VCD_Automation_MyITLab for Office 2013: GO! Series + Technology in Action</Name>
+			<Name>Automation- MyITLab for Office 2013: GO! Series + Technology in Action [08.01.13]</Name>
 			<CourseType>MyITLabForOffice2013Master</CourseType>
 			<IsCreated>true</IsCreated>
 			<IsPreferenceStatus>true</IsPreferenceStatus>
@@ -722,9 +722,9 @@ the UI deleted or refreshed.-->
 			<Name>517vcdautoinstructor1</Name>
 			<Password>Password1</Password>
 			<Email>manish.singh@imfinity.com</Email>
-			<FirstName>Raghavendra</FirstName>
+			<FirstName>2CD</FirstName>
 			<MiddleName>Pegasus</MiddleName>
-			<LastName>Annaiah</LastName>
+			<LastName>BDD</LastName>
 			<UserType>CsSmsInstructor</UserType>
 			<IsCreated>true</IsCreated>
 			<EnrolementStatus>true</EnrolementStatus>
@@ -755,9 +755,9 @@ the UI deleted or refreshed.-->
 			<Name>23d278f4-6cc3-4806-ae59-1777ca7e2201</Name>
 			<Password>Password@1</Password>
 			<Email>raghavendra.ga@excelindia.com</Email>
-			<FirstName>Raghavendra</FirstName>
+			<FirstName>1CD</FirstName>
 			<MiddleName>Pegasus</MiddleName>
-			<LastName>Annaiah</LastName>
+			<LastName>BDD</LastName>
 			<UserType>CsSmsStudent</UserType>
 			<IsCreated>true</IsCreated>
 			<EnrolementStatus>true</EnrolementStatus>

@@ -1218,7 +1218,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             //Assign actiivty to past due date
             Logger.LogMethodEntry("CommonSteps", "AssignActivityToPastDueDate",
              base.IsTakeScreenShotDuringEntryExit);
-            new CalendarHedDefaultUxPage().AssignActiivtyToPreviousDate();
+            new CalendarHedDefaultUxPage().AssignActivityToPreviousDate();
             Logger.LogMethodExit("CommonSteps", "AssignActivityToPastDueDate",
                 base.IsTakeScreenShotDuringEntryExit);
         }

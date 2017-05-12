@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
          
             // Get the Current date
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
-            DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+            DateTime instance = DateTime.Now;
             String currentTime = instance.ToString();
 
 
