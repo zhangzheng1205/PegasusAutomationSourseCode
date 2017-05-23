@@ -840,15 +840,15 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 321
 testRunner.And("I should be on \"Course Materials Wizard\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 322
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 323
 testRunner.And("I click on \'Folder\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 324
 testRunner.And("I create \"RegFolderAsset\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 325
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 326
 testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -970,8 +970,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 380
 testRunner.Then("I should be on \"Course Materials Wizard\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 381
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 382
 testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 383
@@ -998,8 +998,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 392
 testRunner.Then("I should be on \"Course Materials Wizard\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 393
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 394
 testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 395
@@ -1040,8 +1040,8 @@ testRunner.When("I click on \"Manage Course Materials\" subtab in \"Course Mater
 #line 414
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 415
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 416
 testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 417
@@ -1086,8 +1086,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 437
 testRunner.And("I should be on \"Course Materials Wizard\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 438
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 439
 testRunner.When("I enter into \"RegFolderAsset\" folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 440
@@ -1135,8 +1135,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 470
 testRunner.Then("I should be on \"Course Materials Wizard\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 471
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 472
 testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 473
@@ -1168,8 +1168,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 487
 testRunner.Then("I should be on \"Course Materials Wizard\" lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 488
-testRunner.When("I click on \"Return to Course Materials\" button in \'Course Materials Wizard\' light" +
-                    "box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Return to Manage Course Materials\" button in \'Course Materials Wizard" +
+                    "\' lightbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 489
 testRunner.Then("I should be displayed with \"RegFolderAsset\" in \'Manage Course Materials\' frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 490
