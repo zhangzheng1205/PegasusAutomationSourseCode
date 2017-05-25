@@ -186,10 +186,9 @@ namespace Pegasus.Pages.UI_Pages
                     (EnrollmentMainPageResource.
                     ProgramAdministration_Enrollment_nthrowuser_CSSSelector_Locator, i)));
                 //Get the user name of each user with iteration
-                string userNameActual = base.GetElementInnerTextByCssSelector
+                string userNameActual = base.GetTitleAttributeValueByXPath
                    (string.Format
-                    (EnrollmentMainPageResource.
-                    ProgramAdministration_Enrollment_nthrowuser_CSSSelector_Locator, i));
+                    ("//table[@id='grdManageUsers']/tbody/tr[{0}]/td[2]/table/tbody/tr/th/span", i));
                 //Match actual username with expected
                 if (userNameActual == userName)
                 {
@@ -219,46 +218,46 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("EnrollmentMainPage", "AddSelectedUserToSection",
                          base.IsTakeScreenShotDuringEntryExit);
             try
-            { 
-            // Add the selected user as teacher or as student       
-            IWebElement addUserButton = base.GetWebElementPropertiesByCssSelector
-                    (EnrollmentMainPageResource.
-                    ProgramAdministration_Enrollment_AddUserButton_CSSSelector_Locator);
-            Thread.Sleep(2000);
-            base.ClickByJavaScriptExecutor(addUserButton);
-            //Select usertype on enrollment
-            switch (userType)
             {
-                //Enroll Student for MIL product
-                case "CsSmsStudent":
-                case "WLCsSmsStudent":
-                case "HSSCsSmsStudent":
-                    IWebElement addStudent = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
-                        ProgramAdministration_Enrollment_AddStudentUserOption_LinkText_Locator);
-                    Thread.Sleep(2000);
-                    base.ClickByJavaScriptExecutor(addStudent);
-                    break;
-                //EnrollInstructor for MIL product
-                case "CsSmsInstructor":
-                case "WLCsSmsInstructor":
-                case "HSSCsSmsInstructor":
-                    IWebElement addInstructor = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
-                        ProgramAdministration_Enrollment_AddInstructorUserOption_LinkText_Locator);
-                    Thread.Sleep(2000);
-                    base.ClickByJavaScriptExecutor(addInstructor);
-
-                    //Switch out of the frames
-                    base.SwitchToDefaultPageContent();
-                    break;
-                }
-            }
-                catch(Exception e)
+                // Add the selected user as teacher or as student       
+                IWebElement addUserButton = base.GetWebElementPropertiesByCssSelector
+                        (EnrollmentMainPageResource.
+                        ProgramAdministration_Enrollment_AddUserButton_CSSSelector_Locator);
+                Thread.Sleep(2000);
+                base.ClickByJavaScriptExecutor(addUserButton);
+                //Select usertype on enrollment
+                switch (userType)
                 {
-                    ExceptionHandler.HandleException(e);
-                }
+                    //Enroll Student for MIL product
+                    case "CsSmsStudent":
+                    case "WLCsSmsStudent":
+                    case "HSSCsSmsStudent":
+                        IWebElement addStudent = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
+                            ProgramAdministration_Enrollment_AddStudentUserOption_LinkText_Locator);
+                        Thread.Sleep(2000);
+                        base.ClickByJavaScriptExecutor(addStudent);
+                        break;
+                    //EnrollInstructor for MIL product
+                    case "CsSmsInstructor":
+                    case "WLCsSmsInstructor":
+                    case "HSSCsSmsInstructor":
+                        IWebElement addInstructor = base.GetWebElementPropertiesByLinkText(EnrollmentMainPageResource.
+                            ProgramAdministration_Enrollment_AddInstructorUserOption_LinkText_Locator);
+                        Thread.Sleep(2000);
+                        base.ClickByJavaScriptExecutor(addInstructor);
 
-                    logger.LogMethodExit("EnrollmentMainPage", "AddSelectedUserToSection",
-                                    base.IsTakeScreenShotDuringEntryExit);
+                        //Switch out of the frames
+                        base.SwitchToDefaultPageContent();
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("EnrollmentMainPage", "AddSelectedUserToSection",
+                            base.IsTakeScreenShotDuringEntryExit);
         }
+    }
 }
