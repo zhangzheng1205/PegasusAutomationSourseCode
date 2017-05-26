@@ -265,7 +265,7 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>VCD_Automation_MyITLab for Office 2013: GO! Series + Technology in Action</Name>
+      <Name>PPE_ MyITLab for Office 2013: GO! Series + Technology in Action</Name>
       <CourseType>MyITLabForOffice2013Master</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -281,12 +281,12 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>[GA] new</Name>
+      <Name>PPE_Dependant_Automation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>Automation_BVT_MIL</SectionName>
-      <SectionId>CRSKLY1-250712</SectionId>
+      <SectionName>Dependent_MIL_PPE</SectionName>
+      <SectionId>CRSKL78-4041322</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
@@ -367,7 +367,7 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>Automation_BVT_MIL</Name>
+      <Name>Dependent_MIL_2016_PPE</Name>
       <CourseType>MyItLabInstructorCourse</CourseType>
       <InstructorCourseId>CRSKLY1-250712</InstructorCourseId>
       <IsCreated>true</IsCreated>
@@ -686,12 +686,12 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>085aae15-93c4-45c3-988d-cd6cf893eb84</Name>
-      <Password>Password@1</Password>
+      <Name>4b8928b9-5fb4-4d4b-9290-95048963bc21</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>defc</LastName>
+      <LastName>f4e4</LastName>
       <UserType>HedProgramAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
