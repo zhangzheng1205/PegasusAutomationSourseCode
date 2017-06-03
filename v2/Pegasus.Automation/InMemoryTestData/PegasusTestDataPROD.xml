@@ -75,7 +75,7 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-        <Course>
+    <Course>
       <Name>Automation Section</Name>
       <CourseType>RegWLMasterCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -334,7 +334,7 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
-      <Course>
+    <Course>
       <Name>QA e Text</Name>
       <CourseType>eTextCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -373,6 +373,36 @@
     <Grade>
       <Score>100</Score>
       <GradeType>PegasusNewGradePerc</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>0</GradeScore>
+      <GradeType>GraderIT0Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT70Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT100Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>0</GradeScore>
+      <GradeType>SimActivity0Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>70</GradeScore>
+      <GradeType>SimActivity70Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>100</GradeScore>
+      <GradeType>SimActivity100Score</GradeType>
       <IsCreated>true</IsCreated>
     </Grade>
   </ArrayOfGrade>
@@ -489,7 +519,7 @@
       <UserType>HEDWSCTGPublisherAdmin</UserType>
       <IsCreated>true</IsCreated>
     </User>
-     <User>
+    <User>
       <Name>qaautomationtesting</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -576,7 +606,7 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-        <User>
+    <User>
       <Name>nitprodstud5154</Name>
       <Password>password1</Password>
       <Email>nithyananda.p@excelindia.com</Email>
@@ -826,7 +856,7 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
-        <User>
+    <User>
       <Name>depins011</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -1154,7 +1184,7 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <!--S11 etext Instructor and student-->
-      <User>
+    <User>
       <Name>qadeployhedins</Name>
       <Password>password1</Password>
       <Email>deepaanand@excelindia.com</Email>
@@ -1165,7 +1195,7 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-      <User>
+    <User>
       <Name>qa_deploy_stu</Name>
       <Password>password1</Password>
       <Email>deepaanand@excelindia.com</Email>
@@ -1177,7 +1207,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
   </ArrayOfUser>
-   <!--Hard coded Grades data.-->
+  <!--Hard coded Grades data.-->
   <ArrayOfGrade>
     <Grade>
       <Score>100</Score>
@@ -1210,7 +1240,7 @@
   </ArrayOfProgram>
   <!--This is already created activity present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivity>
-      <Activity>
+    <Activity>
       <Name>Auto Reg GB Preference-2016/09/02-e345153f-Folder</Name>
       <ActivityType>RegFolderGBPreference</ActivityType>
       <IsCreated>true</IsCreated>
@@ -1229,6 +1259,66 @@
     <Activity>
       <Name>Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
       <ActivityType>RegWordSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegExcelSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegAccessSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>PowerPoint Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegPowerPointSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegWordGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegExcelGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegAccessGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegPowerPointGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Training [Skill-Based] : Word Chapter 1 Project 1B Skill-Based Training</Name>
+      <ActivityType>RegNewGradedActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleAssignFutureDate</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
@@ -1372,7 +1462,7 @@
       <ActivityType>BBEditActivity</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
-   </ArrayOfActivity>
+  </ArrayOfActivity>
   <ArrayOfToolLinks>
     <ToolLinks>
       <Name>MyPsychLab Manage Course Materials</Name>
@@ -1399,7 +1489,7 @@
       <IsCreated>true</IsCreated>
     </Question>
   </ArrayOfQuestion>
-  
+
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
@@ -1408,7 +1498,7 @@
       <IsCreated>true</IsCreated>
     </Class>
     <!--Contineo Class Name for Course Creation-->
-     <Class>
+    <Class>
       <Name>Computer OS - 1(A-B) - 15-16</Name>
       <ClassType>DigitalPathContineoMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
@@ -1423,17 +1513,17 @@
       <ClassType>MediaServerClass</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
-      <Class>
-        <Name>Writing_Coach</Name>
-        <ClassType>DigitalPathWCMasterLibrary</ClassType>
-        <IsCreated>true</IsCreated>
-      </Class>
+    <Class>
+      <Name>Writing_Coach</Name>
+      <ClassType>DigitalPathWCMasterLibrary</ClassType>
+      <IsCreated>true</IsCreated>
+    </Class>
     <Class>
       <Name>PROD_eText_Class</Name>
       <ClassType>S7eTextClass</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
-    </ArrayOfClass>
+  </ArrayOfClass>
   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
     <Product>
@@ -1452,13 +1542,13 @@
       <ProductType>DigitalPathDemo</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
-     <Product>
+    <Product>
       <Name>Writing Coach</Name>
       <ProductType>MediaServer</ProductType>
       <PeriodName>05162abf</PeriodName>
       <IsCreated>true</IsCreated>
     </Product>
-     <Product>
+    <Product>
       <Name>QA Prentice Hall Writing Coach, NA</Name>
       <ProductType>WritingCoach</ProductType>
       <PeriodName>05162abf</PeriodName>
