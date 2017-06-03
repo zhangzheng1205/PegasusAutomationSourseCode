@@ -1227,6 +1227,12 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
+      <Name>Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegWordSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
       <Name>5065e506-4d66-464c-8b5a-d92ce09655b0</Name>
       <ActivityType>SIM5StudyPlan</ActivityType>
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
