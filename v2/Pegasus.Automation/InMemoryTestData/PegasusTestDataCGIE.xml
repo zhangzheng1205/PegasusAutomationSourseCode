@@ -401,6 +401,36 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Grade>
     <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT0Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT70Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>28.6</GradeScore>
+      <GradeType>GraderIT100Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>0</GradeScore>
+      <GradeType>SimActivity0Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>70</GradeScore>
+      <GradeType>SimActivity70Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
+      <GradeScore>100</GradeScore>
+      <GradeType>SimActivity100Score</GradeType>
+      <IsCreated>true</IsCreated>
+    </Grade>
+    <Grade>
       <Score>100</Score>
       <GradeType>PegasusNewGrade</GradeType>
       <IsCreated>true</IsCreated>
@@ -1143,6 +1173,12 @@ the UI deleted or refreshed.-->
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
+      <Name>24d5a76c-e5ad-4583-ba78-e370f9b9f1c6</Name>
+      <ActivityType>Sim5PreTest</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
       <Name>40f5554d-25af-4295-ac3d-82d8c2b19c2c</Name>
       <ActivityType>eText</ActivityType>
       <IsCreated>true</IsCreated>
@@ -1150,6 +1186,90 @@ the UI deleted or refreshed.-->
     <Activity>
       <Name>8405d01b-d9ac-4884-94cf-b0658ba0c7ec</Name>
       <ActivityType>StudyPlan</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Training [Skill-Based] : Word Chapter 1 Project 1B Skill-Based Training</Name>
+      <ActivityType>RegNewGradedActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleAssignCurrentDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegSimpleAssignFutureDate</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegLinkAsset</Name>
+      <ActivityType>Sim5PreTest</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegLinkAsset</Name>
+      <ActivityType>Sim5PostTest</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegWordGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegExcelGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegAccessGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Grader Project [Homework 3] (Project G)</Name>
+      <ActivityType>RegPowerPointGraderActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>RegLinkAsset</Name>
+      <ActivityType>RegLinkAsset</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegWordSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Excel Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegExcelSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)</Name>
+      <ActivityType>RegAccessSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>PowerPoint Chapter 1 Skill-Based Training</Name>
+      <ActivityType>RegPowerPointSIMActivity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
