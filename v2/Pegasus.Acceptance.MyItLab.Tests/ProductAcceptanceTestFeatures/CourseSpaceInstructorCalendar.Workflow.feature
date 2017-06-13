@@ -193,7 +193,7 @@ Then I should see the searched "RegSimpleStartDateCmenuAssign" activity of behav
 When I click cmenu "Set Scheduling Options" of activity "RegSimpleStartDateCmenuAssign" 
 When I assign the asset for current date in the properties popup
 Then I should be on the "Calendar" page
-And I should see the startdate Icon in calendar frame
+#And I should see the startdate Icon in calendar frame
 #When I click on "Back to Month" link in Calendar frame
 Then I should be on the "Calendar" page
 
